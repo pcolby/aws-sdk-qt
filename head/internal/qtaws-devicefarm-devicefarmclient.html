@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- devicefarmclient.cpp -->
+  <title>DeviceFarmClient Class | DeviceFarm</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdevicefarm-index.html">DeviceFarm</a></li>
+<li><a href="qtawsdevicefarm-module.html">C++ Classes</a></li>
+<li>DeviceFarmClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DeviceFarmClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-devicefarm-devicefarmclient.html">QtAws::DeviceFarm::DeviceFarmClient</a>)<br/></span>
+<!-- $$$DeviceFarmClient-brief -->
+<p>The <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> class provides access to the AWS Device Farm service. <a href="#details">More...</a></p>
+<!-- @@@DeviceFarmClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DeviceFarmClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-devicefarm-devicefarmclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#DeviceFarmClient">DeviceFarmClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#DeviceFarmClient-1">DeviceFarmClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDevicePoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createDevicePool">createDevicePool</a></b>(const CreateDevicePoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInstanceProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createInstanceProfile">createInstanceProfile</a></b>(const CreateInstanceProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNetworkProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createNetworkProfile">createNetworkProfile</a></b>(const CreateNetworkProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createProject">createProject</a></b>(const CreateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRemoteAccessSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createRemoteAccessSession">createRemoteAccessSession</a></b>(const CreateRemoteAccessSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createUpload">createUpload</a></b>(const CreateUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateVPCEConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#createVPCEConfiguration">createVPCEConfiguration</a></b>(const CreateVPCEConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDevicePoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteDevicePool">deleteDevicePool</a></b>(const DeleteDevicePoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInstanceProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteInstanceProfile">deleteInstanceProfile</a></b>(const DeleteInstanceProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNetworkProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteNetworkProfile">deleteNetworkProfile</a></b>(const DeleteNetworkProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteProject">deleteProject</a></b>(const DeleteProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRemoteAccessSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteRemoteAccessSession">deleteRemoteAccessSession</a></b>(const DeleteRemoteAccessSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteRun">deleteRun</a></b>(const DeleteRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteUpload">deleteUpload</a></b>(const DeleteUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVPCEConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#deleteVPCEConfiguration">deleteVPCEConfiguration</a></b>(const DeleteVPCEConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getAccountSettings">getAccountSettings</a></b>(const GetAccountSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getDevice">getDevice</a></b>(const GetDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeviceInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getDeviceInstance">getDeviceInstance</a></b>(const GetDeviceInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDevicePoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getDevicePool">getDevicePool</a></b>(const GetDevicePoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDevicePoolCompatibilityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getDevicePoolCompatibility">getDevicePoolCompatibility</a></b>(const GetDevicePoolCompatibilityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getInstanceProfile">getInstanceProfile</a></b>(const GetInstanceProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getJob">getJob</a></b>(const GetJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetNetworkProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getNetworkProfile">getNetworkProfile</a></b>(const GetNetworkProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOfferingStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getOfferingStatus">getOfferingStatus</a></b>(const GetOfferingStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getProject">getProject</a></b>(const GetProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRemoteAccessSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getRemoteAccessSession">getRemoteAccessSession</a></b>(const GetRemoteAccessSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getRun">getRun</a></b>(const GetRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSuiteResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getSuite">getSuite</a></b>(const GetSuiteRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getTest">getTest</a></b>(const GetTestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getUpload">getUpload</a></b>(const GetUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVPCEConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#getVPCEConfiguration">getVPCEConfiguration</a></b>(const GetVPCEConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InstallToRemoteAccessSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#installToRemoteAccessSession">installToRemoteAccessSession</a></b>(const InstallToRemoteAccessSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListArtifactsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listArtifacts">listArtifacts</a></b>(const ListArtifactsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeviceInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listDeviceInstances">listDeviceInstances</a></b>(const ListDeviceInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDevicePoolsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listDevicePools">listDevicePools</a></b>(const ListDevicePoolsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDevicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listDevices">listDevices</a></b>(const ListDevicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInstanceProfilesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listInstanceProfiles">listInstanceProfiles</a></b>(const ListInstanceProfilesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listJobs">listJobs</a></b>(const ListJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListNetworkProfilesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listNetworkProfiles">listNetworkProfiles</a></b>(const ListNetworkProfilesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOfferingPromotionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listOfferingPromotions">listOfferingPromotions</a></b>(const ListOfferingPromotionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOfferingTransactionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listOfferingTransactions">listOfferingTransactions</a></b>(const ListOfferingTransactionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOfferingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listOfferings">listOfferings</a></b>(const ListOfferingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listProjects">listProjects</a></b>(const ListProjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRemoteAccessSessionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listRemoteAccessSessions">listRemoteAccessSessions</a></b>(const ListRemoteAccessSessionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRunsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listRuns">listRuns</a></b>(const ListRunsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSamplesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listSamples">listSamples</a></b>(const ListSamplesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSuitesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listSuites">listSuites</a></b>(const ListSuitesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTestsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listTests">listTests</a></b>(const ListTestsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUniqueProblemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listUniqueProblems">listUniqueProblems</a></b>(const ListUniqueProblemsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUploadsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listUploads">listUploads</a></b>(const ListUploadsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVPCEConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#listVPCEConfigurations">listVPCEConfigurations</a></b>(const ListVPCEConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PurchaseOfferingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#purchaseOffering">purchaseOffering</a></b>(const PurchaseOfferingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RenewOfferingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#renewOffering">renewOffering</a></b>(const RenewOfferingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ScheduleRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#scheduleRun">scheduleRun</a></b>(const ScheduleRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopRemoteAccessSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#stopRemoteAccessSession">stopRemoteAccessSession</a></b>(const StopRemoteAccessSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#stopRun">stopRun</a></b>(const StopRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDeviceInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateDeviceInstance">updateDeviceInstance</a></b>(const UpdateDeviceInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDevicePoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateDevicePool">updateDevicePool</a></b>(const UpdateDevicePoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateInstanceProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateInstanceProfile">updateInstanceProfile</a></b>(const UpdateInstanceProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNetworkProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateNetworkProfile">updateNetworkProfile</a></b>(const UpdateNetworkProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateProject">updateProject</a></b>(const UpdateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateVPCEConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmclient.html#updateVPCEConfiguration">updateVPCEConfiguration</a></b>(const UpdateVPCEConfigurationRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DeviceFarmClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> class provides access to the AWS Device Farm service.</p>
+<p>AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical phones, tablets, and other devices in the</p>
+</div>
+<!-- @@@DeviceFarmClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DeviceFarmClient[overload1]$$$DeviceFarmClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DeviceFarmClient"><a name="DeviceFarmClient"></a>DeviceFarmClient::<span class="name">DeviceFarmClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@DeviceFarmClient -->
+<!-- $$$DeviceFarmClient$$$DeviceFarmClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DeviceFarmClient-1"><a name="DeviceFarmClient-1"></a>DeviceFarmClient::<span class="name">DeviceFarmClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-devicefarm-devicefarmclient.html#DeviceFarmClient">DeviceFarmClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@DeviceFarmClient -->
+<!-- $$$createDevicePool[overload1]$$$createDevicePoolconstCreateDevicePoolRequest& -->
+<h3 class="fn" id="createDevicePool"><a name="createDevicePool"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createdevicepoolresponse.html">CreateDevicePoolResponse</a></span> *DeviceFarmClient::<span class="name">createDevicePool</span>(const <span class="type"><a href="qtaws-devicefarm-createdevicepoolrequest.html">CreateDevicePoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createdevicepoolresponse.html">CreateDevicePoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a device</p>
+<!-- @@@createDevicePool -->
+<!-- $$$createInstanceProfile[overload1]$$$createInstanceProfileconstCreateInstanceProfileRequest& -->
+<h3 class="fn" id="createInstanceProfile"><a name="createInstanceProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createinstanceprofileresponse.html">CreateInstanceProfileResponse</a></span> *DeviceFarmClient::<span class="name">createInstanceProfile</span>(const <span class="type"><a href="qtaws-devicefarm-createinstanceprofilerequest.html">CreateInstanceProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createinstanceprofileresponse.html">CreateInstanceProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a profile that can be applied to one or more private fleet device</p>
+<!-- @@@createInstanceProfile -->
+<!-- $$$createNetworkProfile[overload1]$$$createNetworkProfileconstCreateNetworkProfileRequest& -->
+<h3 class="fn" id="createNetworkProfile"><a name="createNetworkProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createnetworkprofileresponse.html">CreateNetworkProfileResponse</a></span> *DeviceFarmClient::<span class="name">createNetworkProfile</span>(const <span class="type"><a href="qtaws-devicefarm-createnetworkprofilerequest.html">CreateNetworkProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createnetworkprofileresponse.html">CreateNetworkProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a network</p>
+<!-- @@@createNetworkProfile -->
+<!-- $$$createProject[overload1]$$$createProjectconstCreateProjectRequest& -->
+<h3 class="fn" id="createProject"><a name="createProject"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createprojectresponse.html">CreateProjectResponse</a></span> *DeviceFarmClient::<span class="name">createProject</span>(const <span class="type"><a href="qtaws-devicefarm-createprojectrequest.html">CreateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createprojectresponse.html">CreateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new</p>
+<!-- @@@createProject -->
+<!-- $$$createRemoteAccessSession[overload1]$$$createRemoteAccessSessionconstCreateRemoteAccessSessionRequest& -->
+<h3 class="fn" id="createRemoteAccessSession"><a name="createRemoteAccessSession"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createremoteaccesssessionresponse.html">CreateRemoteAccessSessionResponse</a></span> *DeviceFarmClient::<span class="name">createRemoteAccessSession</span>(const <span class="type"><a href="qtaws-devicefarm-createremoteaccesssessionrequest.html">CreateRemoteAccessSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createremoteaccesssessionresponse.html">CreateRemoteAccessSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Specifies and starts a remote access</p>
+<!-- @@@createRemoteAccessSession -->
+<!-- $$$createUpload[overload1]$$$createUploadconstCreateUploadRequest& -->
+<h3 class="fn" id="createUpload"><a name="createUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createuploadresponse.html">CreateUploadResponse</a></span> *DeviceFarmClient::<span class="name">createUpload</span>(const <span class="type"><a href="qtaws-devicefarm-createuploadrequest.html">CreateUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createuploadresponse.html">CreateUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads an app or test</p>
+<!-- @@@createUpload -->
+<!-- $$$createVPCEConfiguration[overload1]$$$createVPCEConfigurationconstCreateVPCEConfigurationRequest& -->
+<h3 class="fn" id="createVPCEConfiguration"><a name="createVPCEConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-createvpceconfigurationresponse.html">CreateVPCEConfigurationResponse</a></span> *DeviceFarmClient::<span class="name">createVPCEConfiguration</span>(const <span class="type"><a href="qtaws-devicefarm-createvpceconfigurationrequest.html">CreateVPCEConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-createvpceconfigurationresponse.html">CreateVPCEConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC)</p>
+<!-- @@@createVPCEConfiguration -->
+<!-- $$$deleteDevicePool[overload1]$$$deleteDevicePoolconstDeleteDevicePoolRequest& -->
+<h3 class="fn" id="deleteDevicePool"><a name="deleteDevicePool"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deletedevicepoolresponse.html">DeleteDevicePoolResponse</a></span> *DeviceFarmClient::<span class="name">deleteDevicePool</span>(const <span class="type"><a href="qtaws-devicefarm-deletedevicepoolrequest.html">DeleteDevicePoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deletedevicepoolresponse.html">DeleteDevicePoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the</p>
+<!-- @@@deleteDevicePool -->
+<!-- $$$deleteInstanceProfile[overload1]$$$deleteInstanceProfileconstDeleteInstanceProfileRequest& -->
+<h3 class="fn" id="deleteInstanceProfile"><a name="deleteInstanceProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deleteinstanceprofileresponse.html">DeleteInstanceProfileResponse</a></span> *DeviceFarmClient::<span class="name">deleteInstanceProfile</span>(const <span class="type"><a href="qtaws-devicefarm-deleteinstanceprofilerequest.html">DeleteInstanceProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deleteinstanceprofileresponse.html">DeleteInstanceProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a profile that can be applied to one or more private device</p>
+<!-- @@@deleteInstanceProfile -->
+<!-- $$$deleteNetworkProfile[overload1]$$$deleteNetworkProfileconstDeleteNetworkProfileRequest& -->
+<h3 class="fn" id="deleteNetworkProfile"><a name="deleteNetworkProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deletenetworkprofileresponse.html">DeleteNetworkProfileResponse</a></span> *DeviceFarmClient::<span class="name">deleteNetworkProfile</span>(const <span class="type"><a href="qtaws-devicefarm-deletenetworkprofilerequest.html">DeleteNetworkProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deletenetworkprofileresponse.html">DeleteNetworkProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a network</p>
+<!-- @@@deleteNetworkProfile -->
+<!-- $$$deleteProject[overload1]$$$deleteProjectconstDeleteProjectRequest& -->
+<h3 class="fn" id="deleteProject"><a name="deleteProject"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deleteprojectresponse.html">DeleteProjectResponse</a></span> *DeviceFarmClient::<span class="name">deleteProject</span>(const <span class="type"><a href="qtaws-devicefarm-deleteprojectrequest.html">DeleteProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deleteprojectresponse.html">DeleteProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an AWS Device Farm project, given the project</p>
+<p>ARN&gt;</p>
+<p>&lt;b&gt;Note&lt;/b&gt; Deleting this resource does not stop an in-progress</p>
+<!-- @@@deleteProject -->
+<!-- $$$deleteRemoteAccessSession[overload1]$$$deleteRemoteAccessSessionconstDeleteRemoteAccessSessionRequest& -->
+<h3 class="fn" id="deleteRemoteAccessSession"><a name="deleteRemoteAccessSession"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deleteremoteaccesssessionresponse.html">DeleteRemoteAccessSessionResponse</a></span> *DeviceFarmClient::<span class="name">deleteRemoteAccessSession</span>(const <span class="type"><a href="qtaws-devicefarm-deleteremoteaccesssessionrequest.html">DeleteRemoteAccessSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deleteremoteaccesssessionresponse.html">DeleteRemoteAccessSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a completed remote access session and its</p>
+<!-- @@@deleteRemoteAccessSession -->
+<!-- $$$deleteRun[overload1]$$$deleteRunconstDeleteRunRequest& -->
+<h3 class="fn" id="deleteRun"><a name="deleteRun"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deleterunresponse.html">DeleteRunResponse</a></span> *DeviceFarmClient::<span class="name">deleteRun</span>(const <span class="type"><a href="qtaws-devicefarm-deleterunrequest.html">DeleteRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deleterunresponse.html">DeleteRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the run, given the run</p>
+<p>ARN&gt;</p>
+<p>&lt;b&gt;Note&lt;/b&gt; Deleting this resource does not stop an in-progress</p>
+<!-- @@@deleteRun -->
+<!-- $$$deleteUpload[overload1]$$$deleteUploadconstDeleteUploadRequest& -->
+<h3 class="fn" id="deleteUpload"><a name="deleteUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deleteuploadresponse.html">DeleteUploadResponse</a></span> *DeviceFarmClient::<span class="name">deleteUpload</span>(const <span class="type"><a href="qtaws-devicefarm-deleteuploadrequest.html">DeleteUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deleteuploadresponse.html">DeleteUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an upload given the upload</p>
+<!-- @@@deleteUpload -->
+<!-- $$$deleteVPCEConfiguration[overload1]$$$deleteVPCEConfigurationconstDeleteVPCEConfigurationRequest& -->
+<h3 class="fn" id="deleteVPCEConfiguration"><a name="deleteVPCEConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-deletevpceconfigurationresponse.html">DeleteVPCEConfigurationResponse</a></span> *DeviceFarmClient::<span class="name">deleteVPCEConfiguration</span>(const <span class="type"><a href="qtaws-devicefarm-deletevpceconfigurationrequest.html">DeleteVPCEConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-deletevpceconfigurationresponse.html">DeleteVPCEConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a configuration for your Amazon Virtual Private Cloud (VPC)</p>
+<!-- @@@deleteVPCEConfiguration -->
+<!-- $$$getAccountSettings[overload1]$$$getAccountSettingsconstGetAccountSettingsRequest& -->
+<h3 class="fn" id="getAccountSettings"><a name="getAccountSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getaccountsettingsresponse.html">GetAccountSettingsResponse</a></span> *DeviceFarmClient::<span class="name">getAccountSettings</span>(const <span class="type"><a href="qtaws-devicefarm-getaccountsettingsrequest.html">GetAccountSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getaccountsettingsresponse.html">GetAccountSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the</p>
+<!-- @@@getAccountSettings -->
+<!-- $$$getDevice[overload1]$$$getDeviceconstGetDeviceRequest& -->
+<h3 class="fn" id="getDevice"><a name="getDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getdeviceresponse.html">GetDeviceResponse</a></span> *DeviceFarmClient::<span class="name">getDevice</span>(const <span class="type"><a href="qtaws-devicefarm-getdevicerequest.html">GetDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getdeviceresponse.html">GetDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a unique device</p>
+<!-- @@@getDevice -->
+<!-- $$$getDeviceInstance[overload1]$$$getDeviceInstanceconstGetDeviceInstanceRequest& -->
+<h3 class="fn" id="getDeviceInstance"><a name="getDeviceInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getdeviceinstanceresponse.html">GetDeviceInstanceResponse</a></span> *DeviceFarmClient::<span class="name">getDeviceInstance</span>(const <span class="type"><a href="qtaws-devicefarm-getdeviceinstancerequest.html">GetDeviceInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getdeviceinstanceresponse.html">GetDeviceInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a device instance belonging to a private device</p>
+<!-- @@@getDeviceInstance -->
+<!-- $$$getDevicePool[overload1]$$$getDevicePoolconstGetDevicePoolRequest& -->
+<h3 class="fn" id="getDevicePool"><a name="getDevicePool"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getdevicepoolresponse.html">GetDevicePoolResponse</a></span> *DeviceFarmClient::<span class="name">getDevicePool</span>(const <span class="type"><a href="qtaws-devicefarm-getdevicepoolrequest.html">GetDevicePoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getdevicepoolresponse.html">GetDevicePoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a device</p>
+<!-- @@@getDevicePool -->
+<!-- $$$getDevicePoolCompatibility[overload1]$$$getDevicePoolCompatibilityconstGetDevicePoolCompatibilityRequest& -->
+<h3 class="fn" id="getDevicePoolCompatibility"><a name="getDevicePoolCompatibility"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getdevicepoolcompatibilityresponse.html">GetDevicePoolCompatibilityResponse</a></span> *DeviceFarmClient::<span class="name">getDevicePoolCompatibility</span>(const <span class="type"><a href="qtaws-devicefarm-getdevicepoolcompatibilityrequest.html">GetDevicePoolCompatibilityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getdevicepoolcompatibilityresponse.html">GetDevicePoolCompatibilityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about compatibility with a device</p>
+<!-- @@@getDevicePoolCompatibility -->
+<!-- $$$getInstanceProfile[overload1]$$$getInstanceProfileconstGetInstanceProfileRequest& -->
+<h3 class="fn" id="getInstanceProfile"><a name="getInstanceProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getinstanceprofileresponse.html">GetInstanceProfileResponse</a></span> *DeviceFarmClient::<span class="name">getInstanceProfile</span>(const <span class="type"><a href="qtaws-devicefarm-getinstanceprofilerequest.html">GetInstanceProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getinstanceprofileresponse.html">GetInstanceProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified instance</p>
+<!-- @@@getInstanceProfile -->
+<!-- $$$getJob[overload1]$$$getJobconstGetJobRequest& -->
+<h3 class="fn" id="getJob"><a name="getJob"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getjobresponse.html">GetJobResponse</a></span> *DeviceFarmClient::<span class="name">getJob</span>(const <span class="type"><a href="qtaws-devicefarm-getjobrequest.html">GetJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getjobresponse.html">GetJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getJob -->
+<!-- $$$getNetworkProfile[overload1]$$$getNetworkProfileconstGetNetworkProfileRequest& -->
+<h3 class="fn" id="getNetworkProfile"><a name="getNetworkProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getnetworkprofileresponse.html">GetNetworkProfileResponse</a></span> *DeviceFarmClient::<span class="name">getNetworkProfile</span>(const <span class="type"><a href="qtaws-devicefarm-getnetworkprofilerequest.html">GetNetworkProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getnetworkprofileresponse.html">GetNetworkProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a network</p>
+<!-- @@@getNetworkProfile -->
+<!-- $$$getOfferingStatus[overload1]$$$getOfferingStatusconstGetOfferingStatusRequest& -->
+<h3 class="fn" id="getOfferingStatus"><a name="getOfferingStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getofferingstatusresponse.html">GetOfferingStatusResponse</a></span> *DeviceFarmClient::<span class="name">getOfferingStatus</span>(const <span class="type"><a href="qtaws-devicefarm-getofferingstatusrequest.html">GetOfferingStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getofferingstatusresponse.html">GetOfferingStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the user is not permitted to invoke the operation. Please contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@getOfferingStatus -->
+<!-- $$$getProject[overload1]$$$getProjectconstGetProjectRequest& -->
+<h3 class="fn" id="getProject"><a name="getProject"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getprojectresponse.html">GetProjectResponse</a></span> *DeviceFarmClient::<span class="name">getProject</span>(const <span class="type"><a href="qtaws-devicefarm-getprojectrequest.html">GetProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getprojectresponse.html">GetProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getProject -->
+<!-- $$$getRemoteAccessSession[overload1]$$$getRemoteAccessSessionconstGetRemoteAccessSessionRequest& -->
+<h3 class="fn" id="getRemoteAccessSession"><a name="getRemoteAccessSession"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getremoteaccesssessionresponse.html">GetRemoteAccessSessionResponse</a></span> *DeviceFarmClient::<span class="name">getRemoteAccessSession</span>(const <span class="type"><a href="qtaws-devicefarm-getremoteaccesssessionrequest.html">GetRemoteAccessSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getremoteaccesssessionresponse.html">GetRemoteAccessSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a link to a currently running remote access</p>
+<!-- @@@getRemoteAccessSession -->
+<!-- $$$getRun[overload1]$$$getRunconstGetRunRequest& -->
+<h3 class="fn" id="getRun"><a name="getRun"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getrunresponse.html">GetRunResponse</a></span> *DeviceFarmClient::<span class="name">getRun</span>(const <span class="type"><a href="qtaws-devicefarm-getrunrequest.html">GetRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getrunresponse.html">GetRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getRun -->
+<!-- $$$getSuite[overload1]$$$getSuiteconstGetSuiteRequest& -->
+<h3 class="fn" id="getSuite"><a name="getSuite"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getsuiteresponse.html">GetSuiteResponse</a></span> *DeviceFarmClient::<span class="name">getSuite</span>(const <span class="type"><a href="qtaws-devicefarm-getsuiterequest.html">GetSuiteRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getsuiteresponse.html">GetSuiteResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getSuite -->
+<!-- $$$getTest[overload1]$$$getTestconstGetTestRequest& -->
+<h3 class="fn" id="getTest"><a name="getTest"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-gettestresponse.html">GetTestResponse</a></span> *DeviceFarmClient::<span class="name">getTest</span>(const <span class="type"><a href="qtaws-devicefarm-gettestrequest.html">GetTestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-gettestresponse.html">GetTestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getTest -->
+<!-- $$$getUpload[overload1]$$$getUploadconstGetUploadRequest& -->
+<h3 class="fn" id="getUpload"><a name="getUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getuploadresponse.html">GetUploadResponse</a></span> *DeviceFarmClient::<span class="name">getUpload</span>(const <span class="type"><a href="qtaws-devicefarm-getuploadrequest.html">GetUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getuploadresponse.html">GetUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an</p>
+<!-- @@@getUpload -->
+<!-- $$$getVPCEConfiguration[overload1]$$$getVPCEConfigurationconstGetVPCEConfigurationRequest& -->
+<h3 class="fn" id="getVPCEConfiguration"><a name="getVPCEConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-getvpceconfigurationresponse.html">GetVPCEConfigurationResponse</a></span> *DeviceFarmClient::<span class="name">getVPCEConfiguration</span>(const <span class="type"><a href="qtaws-devicefarm-getvpceconfigurationrequest.html">GetVPCEConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-getvpceconfigurationresponse.html">GetVPCEConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC)</p>
+<!-- @@@getVPCEConfiguration -->
+<!-- $$$installToRemoteAccessSession[overload1]$$$installToRemoteAccessSessionconstInstallToRemoteAccessSessionRequest& -->
+<h3 class="fn" id="installToRemoteAccessSession"><a name="installToRemoteAccessSession"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-installtoremoteaccesssessionresponse.html">InstallToRemoteAccessSessionResponse</a></span> *DeviceFarmClient::<span class="name">installToRemoteAccessSession</span>(const <span class="type"><a href="qtaws-devicefarm-installtoremoteaccesssessionrequest.html">InstallToRemoteAccessSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-installtoremoteaccesssessionresponse.html">InstallToRemoteAccessSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa</p>
+<!-- @@@installToRemoteAccessSession -->
+<!-- $$$listArtifacts[overload1]$$$listArtifactsconstListArtifactsRequest& -->
+<h3 class="fn" id="listArtifacts"><a name="listArtifacts"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listartifactsresponse.html">ListArtifactsResponse</a></span> *DeviceFarmClient::<span class="name">listArtifacts</span>(const <span class="type"><a href="qtaws-devicefarm-listartifactsrequest.html">ListArtifactsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listartifactsresponse.html">ListArtifactsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about</p>
+<!-- @@@listArtifacts -->
+<!-- $$$listDeviceInstances[overload1]$$$listDeviceInstancesconstListDeviceInstancesRequest& -->
+<h3 class="fn" id="listDeviceInstances"><a name="listDeviceInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listdeviceinstancesresponse.html">ListDeviceInstancesResponse</a></span> *DeviceFarmClient::<span class="name">listDeviceInstances</span>(const <span class="type"><a href="qtaws-devicefarm-listdeviceinstancesrequest.html">ListDeviceInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listdeviceinstancesresponse.html">ListDeviceInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the private device instances associated with one or more AWS</p>
+<!-- @@@listDeviceInstances -->
+<!-- $$$listDevicePools[overload1]$$$listDevicePoolsconstListDevicePoolsRequest& -->
+<h3 class="fn" id="listDevicePools"><a name="listDevicePools"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listdevicepoolsresponse.html">ListDevicePoolsResponse</a></span> *DeviceFarmClient::<span class="name">listDevicePools</span>(const <span class="type"><a href="qtaws-devicefarm-listdevicepoolsrequest.html">ListDevicePoolsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listdevicepoolsresponse.html">ListDevicePoolsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about device</p>
+<!-- @@@listDevicePools -->
+<!-- $$$listDevices[overload1]$$$listDevicesconstListDevicesRequest& -->
+<h3 class="fn" id="listDevices"><a name="listDevices"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listdevicesresponse.html">ListDevicesResponse</a></span> *DeviceFarmClient::<span class="name">listDevices</span>(const <span class="type"><a href="qtaws-devicefarm-listdevicesrequest.html">ListDevicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listdevicesresponse.html">ListDevicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about unique device</p>
+<!-- @@@listDevices -->
+<!-- $$$listInstanceProfiles[overload1]$$$listInstanceProfilesconstListInstanceProfilesRequest& -->
+<h3 class="fn" id="listInstanceProfiles"><a name="listInstanceProfiles"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listinstanceprofilesresponse.html">ListInstanceProfilesResponse</a></span> *DeviceFarmClient::<span class="name">listInstanceProfiles</span>(const <span class="type"><a href="qtaws-devicefarm-listinstanceprofilesrequest.html">ListInstanceProfilesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listinstanceprofilesresponse.html">ListInstanceProfilesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all the instance profiles in an AWS</p>
+<!-- @@@listInstanceProfiles -->
+<!-- $$$listJobs[overload1]$$$listJobsconstListJobsRequest& -->
+<h3 class="fn" id="listJobs"><a name="listJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listjobsresponse.html">ListJobsResponse</a></span> *DeviceFarmClient::<span class="name">listJobs</span>(const <span class="type"><a href="qtaws-devicefarm-listjobsrequest.html">ListJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listjobsresponse.html">ListJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about jobs for a given test</p>
+<!-- @@@listJobs -->
+<!-- $$$listNetworkProfiles[overload1]$$$listNetworkProfilesconstListNetworkProfilesRequest& -->
+<h3 class="fn" id="listNetworkProfiles"><a name="listNetworkProfiles"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listnetworkprofilesresponse.html">ListNetworkProfilesResponse</a></span> *DeviceFarmClient::<span class="name">listNetworkProfiles</span>(const <span class="type"><a href="qtaws-devicefarm-listnetworkprofilesrequest.html">ListNetworkProfilesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listnetworkprofilesresponse.html">ListNetworkProfilesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of available network</p>
+<!-- @@@listNetworkProfiles -->
+<!-- $$$listOfferingPromotions[overload1]$$$listOfferingPromotionsconstListOfferingPromotionsRequest& -->
+<h3 class="fn" id="listOfferingPromotions"><a name="listOfferingPromotions"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listofferingpromotionsresponse.html">ListOfferingPromotionsResponse</a></span> *DeviceFarmClient::<span class="name">listOfferingPromotions</span>(const <span class="type"><a href="qtaws-devicefarm-listofferingpromotionsrequest.html">ListOfferingPromotionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listofferingpromotionsresponse.html">ListOfferingPromotionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the caller is not permitted to invoke the operation. Contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@listOfferingPromotions -->
+<!-- $$$listOfferingTransactions[overload1]$$$listOfferingTransactionsconstListOfferingTransactionsRequest& -->
+<h3 class="fn" id="listOfferingTransactions"><a name="listOfferingTransactions"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listofferingtransactionsresponse.html">ListOfferingTransactionsResponse</a></span> *DeviceFarmClient::<span class="name">listOfferingTransactions</span>(const <span class="type"><a href="qtaws-devicefarm-listofferingtransactionsrequest.html">ListOfferingTransactionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listofferingtransactionsresponse.html">ListOfferingTransactionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the user is not permitted to invoke the operation. Please contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@listOfferingTransactions -->
+<!-- $$$listOfferings[overload1]$$$listOfferingsconstListOfferingsRequest& -->
+<h3 class="fn" id="listOfferings"><a name="listOfferings"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listofferingsresponse.html">ListOfferingsResponse</a></span> *DeviceFarmClient::<span class="name">listOfferings</span>(const <span class="type"><a href="qtaws-devicefarm-listofferingsrequest.html">ListOfferingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listofferingsresponse.html">ListOfferingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the user is not permitted to invoke the operation. Please contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@listOfferings -->
+<!-- $$$listProjects[overload1]$$$listProjectsconstListProjectsRequest& -->
+<h3 class="fn" id="listProjects"><a name="listProjects"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listprojectsresponse.html">ListProjectsResponse</a></span> *DeviceFarmClient::<span class="name">listProjects</span>(const <span class="type"><a href="qtaws-devicefarm-listprojectsrequest.html">ListProjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listprojectsresponse.html">ListProjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about</p>
+<!-- @@@listProjects -->
+<!-- $$$listRemoteAccessSessions[overload1]$$$listRemoteAccessSessionsconstListRemoteAccessSessionsRequest& -->
+<h3 class="fn" id="listRemoteAccessSessions"><a name="listRemoteAccessSessions"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listremoteaccesssessionsresponse.html">ListRemoteAccessSessionsResponse</a></span> *DeviceFarmClient::<span class="name">listRemoteAccessSessions</span>(const <span class="type"><a href="qtaws-devicefarm-listremoteaccesssessionsrequest.html">ListRemoteAccessSessionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listremoteaccesssessionsresponse.html">ListRemoteAccessSessionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all currently running remote access</p>
+<!-- @@@listRemoteAccessSessions -->
+<!-- $$$listRuns[overload1]$$$listRunsconstListRunsRequest& -->
+<h3 class="fn" id="listRuns"><a name="listRuns"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listrunsresponse.html">ListRunsResponse</a></span> *DeviceFarmClient::<span class="name">listRuns</span>(const <span class="type"><a href="qtaws-devicefarm-listrunsrequest.html">ListRunsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listrunsresponse.html">ListRunsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about runs, given an AWS Device Farm project</p>
+<!-- @@@listRuns -->
+<!-- $$$listSamples[overload1]$$$listSamplesconstListSamplesRequest& -->
+<h3 class="fn" id="listSamples"><a name="listSamples"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listsamplesresponse.html">ListSamplesResponse</a></span> *DeviceFarmClient::<span class="name">listSamples</span>(const <span class="type"><a href="qtaws-devicefarm-listsamplesrequest.html">ListSamplesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listsamplesresponse.html">ListSamplesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about samples, given an AWS Device Farm project</p>
+<!-- @@@listSamples -->
+<!-- $$$listSuites[overload1]$$$listSuitesconstListSuitesRequest& -->
+<h3 class="fn" id="listSuites"><a name="listSuites"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listsuitesresponse.html">ListSuitesResponse</a></span> *DeviceFarmClient::<span class="name">listSuites</span>(const <span class="type"><a href="qtaws-devicefarm-listsuitesrequest.html">ListSuitesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listsuitesresponse.html">ListSuitesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about test suites for a given</p>
+<!-- @@@listSuites -->
+<!-- $$$listTests[overload1]$$$listTestsconstListTestsRequest& -->
+<h3 class="fn" id="listTests"><a name="listTests"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listtestsresponse.html">ListTestsResponse</a></span> *DeviceFarmClient::<span class="name">listTests</span>(const <span class="type"><a href="qtaws-devicefarm-listtestsrequest.html">ListTestsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listtestsresponse.html">ListTestsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about tests in a given test</p>
+<!-- @@@listTests -->
+<!-- $$$listUniqueProblems[overload1]$$$listUniqueProblemsconstListUniqueProblemsRequest& -->
+<h3 class="fn" id="listUniqueProblems"><a name="listUniqueProblems"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listuniqueproblemsresponse.html">ListUniqueProblemsResponse</a></span> *DeviceFarmClient::<span class="name">listUniqueProblems</span>(const <span class="type"><a href="qtaws-devicefarm-listuniqueproblemsrequest.html">ListUniqueProblemsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listuniqueproblemsresponse.html">ListUniqueProblemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about unique</p>
+<!-- @@@listUniqueProblems -->
+<!-- $$$listUploads[overload1]$$$listUploadsconstListUploadsRequest& -->
+<h3 class="fn" id="listUploads"><a name="listUploads"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listuploadsresponse.html">ListUploadsResponse</a></span> *DeviceFarmClient::<span class="name">listUploads</span>(const <span class="type"><a href="qtaws-devicefarm-listuploadsrequest.html">ListUploadsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listuploadsresponse.html">ListUploadsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about uploads, given an AWS Device Farm project</p>
+<!-- @@@listUploads -->
+<!-- $$$listVPCEConfigurations[overload1]$$$listVPCEConfigurationsconstListVPCEConfigurationsRequest& -->
+<h3 class="fn" id="listVPCEConfigurations"><a name="listVPCEConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-listvpceconfigurationsresponse.html">ListVPCEConfigurationsResponse</a></span> *DeviceFarmClient::<span class="name">listVPCEConfigurations</span>(const <span class="type"><a href="qtaws-devicefarm-listvpceconfigurationsrequest.html">ListVPCEConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-listvpceconfigurationsresponse.html">ListVPCEConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS</p>
+<!-- @@@listVPCEConfigurations -->
+<!-- $$$purchaseOffering[overload1]$$$purchaseOfferingconstPurchaseOfferingRequest& -->
+<h3 class="fn" id="purchaseOffering"><a name="purchaseOffering"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-purchaseofferingresponse.html">PurchaseOfferingResponse</a></span> *DeviceFarmClient::<span class="name">purchaseOffering</span>(const <span class="type"><a href="qtaws-devicefarm-purchaseofferingrequest.html">PurchaseOfferingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-purchaseofferingresponse.html">PurchaseOfferingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the user is not permitted to invoke the operation. Please contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@purchaseOffering -->
+<!-- $$$renewOffering[overload1]$$$renewOfferingconstRenewOfferingRequest& -->
+<h3 class="fn" id="renewOffering"><a name="renewOffering"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-renewofferingresponse.html">RenewOfferingResponse</a></span> *DeviceFarmClient::<span class="name">renewOffering</span>(const <span class="type"><a href="qtaws-devicefarm-renewofferingrequest.html">RenewOfferingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-renewofferingresponse.html">RenewOfferingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Explicitly sets the quantity of devices to renew for an offering, starting from the &lt;code&gt;effectiveDate&lt;/code&gt; of the next period. The API returns a &lt;code&gt;NotEligible&lt;/code&gt; error if the user is not permitted to invoke the operation. Please contact &lt;a href=&quot;mailto:aws-devicefarm-support@amazon.com&quot;&gt;aws-devicefarm-support@amazon.com&lt;/a&gt; if you believe that you should be able to invoke this</p>
+<!-- @@@renewOffering -->
+<!-- $$$scheduleRun[overload1]$$$scheduleRunconstScheduleRunRequest& -->
+<h3 class="fn" id="scheduleRun"><a name="scheduleRun"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-schedulerunresponse.html">ScheduleRunResponse</a></span> *DeviceFarmClient::<span class="name">scheduleRun</span>(const <span class="type"><a href="qtaws-devicefarm-schedulerunrequest.html">ScheduleRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-schedulerunresponse.html">ScheduleRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Schedules a</p>
+<!-- @@@scheduleRun -->
+<!-- $$$stopRemoteAccessSession[overload1]$$$stopRemoteAccessSessionconstStopRemoteAccessSessionRequest& -->
+<h3 class="fn" id="stopRemoteAccessSession"><a name="stopRemoteAccessSession"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-stopremoteaccesssessionresponse.html">StopRemoteAccessSessionResponse</a></span> *DeviceFarmClient::<span class="name">stopRemoteAccessSession</span>(const <span class="type"><a href="qtaws-devicefarm-stopremoteaccesssessionrequest.html">StopRemoteAccessSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-stopremoteaccesssessionresponse.html">StopRemoteAccessSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Ends a specified remote access</p>
+<!-- @@@stopRemoteAccessSession -->
+<!-- $$$stopRun[overload1]$$$stopRunconstStopRunRequest& -->
+<h3 class="fn" id="stopRun"><a name="stopRun"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-stoprunresponse.html">StopRunResponse</a></span> *DeviceFarmClient::<span class="name">stopRun</span>(const <span class="type"><a href="qtaws-devicefarm-stoprunrequest.html">StopRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-stoprunresponse.html">StopRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already</p>
+<!-- @@@stopRun -->
+<!-- $$$updateDeviceInstance[overload1]$$$updateDeviceInstanceconstUpdateDeviceInstanceRequest& -->
+<h3 class="fn" id="updateDeviceInstance"><a name="updateDeviceInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updatedeviceinstanceresponse.html">UpdateDeviceInstanceResponse</a></span> *DeviceFarmClient::<span class="name">updateDeviceInstance</span>(const <span class="type"><a href="qtaws-devicefarm-updatedeviceinstancerequest.html">UpdateDeviceInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updatedeviceinstanceresponse.html">UpdateDeviceInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates information about an existing private device</p>
+<!-- @@@updateDeviceInstance -->
+<!-- $$$updateDevicePool[overload1]$$$updateDevicePoolconstUpdateDevicePoolRequest& -->
+<h3 class="fn" id="updateDevicePool"><a name="updateDevicePool"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updatedevicepoolresponse.html">UpdateDevicePoolResponse</a></span> *DeviceFarmClient::<span class="name">updateDevicePool</span>(const <span class="type"><a href="qtaws-devicefarm-updatedevicepoolrequest.html">UpdateDevicePoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updatedevicepoolresponse.html">UpdateDevicePoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at</p>
+<!-- @@@updateDevicePool -->
+<!-- $$$updateInstanceProfile[overload1]$$$updateInstanceProfileconstUpdateInstanceProfileRequest& -->
+<h3 class="fn" id="updateInstanceProfile"><a name="updateInstanceProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updateinstanceprofileresponse.html">UpdateInstanceProfileResponse</a></span> *DeviceFarmClient::<span class="name">updateInstanceProfile</span>(const <span class="type"><a href="qtaws-devicefarm-updateinstanceprofilerequest.html">UpdateInstanceProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updateinstanceprofileresponse.html">UpdateInstanceProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates information about an existing private device instance</p>
+<!-- @@@updateInstanceProfile -->
+<!-- $$$updateNetworkProfile[overload1]$$$updateNetworkProfileconstUpdateNetworkProfileRequest& -->
+<h3 class="fn" id="updateNetworkProfile"><a name="updateNetworkProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updatenetworkprofileresponse.html">UpdateNetworkProfileResponse</a></span> *DeviceFarmClient::<span class="name">updateNetworkProfile</span>(const <span class="type"><a href="qtaws-devicefarm-updatenetworkprofilerequest.html">UpdateNetworkProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updatenetworkprofileresponse.html">UpdateNetworkProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the network profile with specific</p>
+<!-- @@@updateNetworkProfile -->
+<!-- $$$updateProject[overload1]$$$updateProjectconstUpdateProjectRequest& -->
+<h3 class="fn" id="updateProject"><a name="updateProject"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updateprojectresponse.html">UpdateProjectResponse</a></span> *DeviceFarmClient::<span class="name">updateProject</span>(const <span class="type"><a href="qtaws-devicefarm-updateprojectrequest.html">UpdateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updateprojectresponse.html">UpdateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the specified project name, given the project ARN and a new</p>
+<!-- @@@updateProject -->
+<!-- $$$updateVPCEConfiguration[overload1]$$$updateVPCEConfigurationconstUpdateVPCEConfigurationRequest& -->
+<h3 class="fn" id="updateVPCEConfiguration"><a name="updateVPCEConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-devicefarm-updatevpceconfigurationresponse.html">UpdateVPCEConfigurationResponse</a></span> *DeviceFarmClient::<span class="name">updateVPCEConfiguration</span>(const <span class="type"><a href="qtaws-devicefarm-updatevpceconfigurationrequest.html">UpdateVPCEConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-devicefarm-devicefarmclient.html">DeviceFarmClient</a> service, and returns a pointer to an <a href="qtaws-devicefarm-updatevpceconfigurationresponse.html">UpdateVPCEConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint</p>
+<!-- @@@updateVPCEConfiguration -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

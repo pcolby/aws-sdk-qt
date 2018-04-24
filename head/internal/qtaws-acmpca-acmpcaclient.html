@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- acmpcaclient.cpp -->
+  <title>AcmpcaClient Class | ACMPCA</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsacmpca-index.html">ACMPCA</a></li>
+<li><a href="qtawsacmpca-module.html">C++ Classes</a></li>
+<li>AcmpcaClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AcmpcaClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-acmpca-acmpcaclient.html">QtAws::ACMPCA::AcmpcaClient</a>)<br/></span>
+<!-- $$$AcmpcaClient-brief -->
+<p>The <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> class provides access to the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service. <a href="#details">More...</a></p>
+<!-- @@@AcmpcaClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AcmpcaClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-acmpca-acmpcaclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#AcmpcaClient">AcmpcaClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#AcmpcaClient-1">AcmpcaClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#createCertificateAuthority">createCertificateAuthority</a></b>(const CreateCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCertificateAuthorityAuditReportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#createCertificateAuthorityAuditReport">createCertificateAuthorityAuditReport</a></b>(const CreateCertificateAuthorityAuditReportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#deleteCertificateAuthority">deleteCertificateAuthority</a></b>(const DeleteCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#describeCertificateAuthority">describeCertificateAuthority</a></b>(const DescribeCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCertificateAuthorityAuditReportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#describeCertificateAuthorityAuditReport">describeCertificateAuthorityAuditReport</a></b>(const DescribeCertificateAuthorityAuditReportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#getCertificate">getCertificate</a></b>(const GetCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCertificateAuthorityCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#getCertificateAuthorityCertificate">getCertificateAuthorityCertificate</a></b>(const GetCertificateAuthorityCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCertificateAuthorityCsrResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#getCertificateAuthorityCsr">getCertificateAuthorityCsr</a></b>(const GetCertificateAuthorityCsrRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportCertificateAuthorityCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#importCertificateAuthorityCertificate">importCertificateAuthorityCertificate</a></b>(const ImportCertificateAuthorityCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IssueCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#issueCertificate">issueCertificate</a></b>(const IssueCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCertificateAuthoritiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#listCertificateAuthorities">listCertificateAuthorities</a></b>(const ListCertificateAuthoritiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RevokeCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#revokeCertificate">revokeCertificate</a></b>(const RevokeCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#tagCertificateAuthority">tagCertificateAuthority</a></b>(const TagCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#untagCertificateAuthority">untagCertificateAuthority</a></b>(const UntagCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCertificateAuthorityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acmpca-acmpcaclient.html#updateCertificateAuthority">updateCertificateAuthority</a></b>(const UpdateCertificateAuthorityRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AcmpcaClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> class provides access to the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.</p>
+<p>You can use the ACM PCA API to create a private certificate authority (CA). You must first call the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt; function. If successful, the function returns an Amazon Resource Name (ARN) for your private CA. Use this ARN as input to the &lt;a&gt;GetCertificateAuthorityCsr&lt;/a&gt; function to retrieve the certificate signing request (CSR) for your private CA certificate. Sign the CSR using the root or an intermediate CA in your on-premises PKI hierarchy, and call the &lt;a&gt;ImportCertificateAuthorityCertificate&lt;/a&gt; to import your signed private CA certificate into ACM PCA.</p>
+<p>&lt;/p</p>
+<p>Use your private CA to issue and revoke certificates. These are private certificates that identify and secure client computers, servers, applications, services, devices, and users over SSLS/TLS connections within your organization. Call the &lt;a&gt;IssueCertificate&lt;/a&gt; function to issue a certificate. Call the &lt;a&gt;RevokeCertificate&lt;/a&gt; function to revoke a certificate.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Certificates issued by your private CA can be trusted only within your organization, not</p>
+<p>publicly&gt; &lt;/note&gt;</p>
+<p>Your private CA can optionally create a certificate revocation list (CRL) to track the certificates you revoke. To create a CRL, you must specify a &lt;a&gt;RevocationConfiguration&lt;/a&gt; object when you call the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt; function. ACM PCA writes the CRL to an S3 bucket that you specify. You must specify a bucket policy that grants ACM PCA write permission.</p>
+<p>&lt;/p</p>
+<p>You can also call the &lt;a&gt;CreateCertificateAuthorityAuditReport&lt;/a&gt; to create an optional audit report that lists every time the CA private key is used. The private key is used for signing when the &lt;b&gt;IssueCertificate&lt;/b&gt; or &lt;b&gt;RevokeCertificate&lt;/b&gt; function is called.</p>
+</div>
+<!-- @@@AcmpcaClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AcmpcaClient[overload1]$$$AcmpcaClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AcmpcaClient"><a name="AcmpcaClient"></a>AcmpcaClient::<span class="name">AcmpcaClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AcmpcaClient -->
+<!-- $$$AcmpcaClient$$$AcmpcaClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AcmpcaClient-1"><a name="AcmpcaClient-1"></a>AcmpcaClient::<span class="name">AcmpcaClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-acmpca-acmpcaclient.html#AcmpcaClient">AcmpcaClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AcmpcaClient -->
+<!-- $$$createCertificateAuthority[overload1]$$$createCertificateAuthorityconstCreateCertificateAuthorityRequest& -->
+<h3 class="fn" id="createCertificateAuthority"><a name="createCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-createcertificateauthorityresponse.html">CreateCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">createCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-createcertificateauthorityrequest.html">CreateCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-createcertificateauthorityresponse.html">CreateCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a private subordinate certificate authority (CA). You must specify the CA configuration, the revocation configuration, the CA type, and an optional idempotency token. The CA configuration specifies the name of the algorithm and key size to be used to create the CA private key, the type of signing algorithm that the CA uses to sign, and X.500 subject information. The CRL (certificate revocation list) configuration specifies the CRL expiration period in days (the validity period of the CRL), the Amazon S3 bucket that will contain the CRL, and a CNAME alias for the S3 bucket that is included in certificates issued by the CA. If successful, this function returns the Amazon Resource Name (ARN) of the</p>
+<!-- @@@createCertificateAuthority -->
+<!-- $$$createCertificateAuthorityAuditReport[overload1]$$$createCertificateAuthorityAuditReportconstCreateCertificateAuthorityAuditReportRequest& -->
+<h3 class="fn" id="createCertificateAuthorityAuditReport"><a name="createCertificateAuthorityAuditReport"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-createcertificateauthorityauditreportresponse.html">CreateCertificateAuthorityAuditReportResponse</a></span> *AcmpcaClient::<span class="name">createCertificateAuthorityAuditReport</span>(const <span class="type"><a href="qtaws-acmpca-createcertificateauthorityauditreportrequest.html">CreateCertificateAuthorityAuditReportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-createcertificateauthorityauditreportresponse.html">CreateCertificateAuthorityAuditReportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an audit report that lists every time that the your CA private key is used. The report is saved in the Amazon S3 bucket that you specify on input. The &lt;a&gt;IssueCertificate&lt;/a&gt; and &lt;a&gt;RevokeCertificate&lt;/a&gt; functions use the private key. You can generate a new report every 30</p>
+<!-- @@@createCertificateAuthorityAuditReport -->
+<!-- $$$deleteCertificateAuthority[overload1]$$$deleteCertificateAuthorityconstDeleteCertificateAuthorityRequest& -->
+<h3 class="fn" id="deleteCertificateAuthority"><a name="deleteCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-deletecertificateauthorityresponse.html">DeleteCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">deleteCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-deletecertificateauthorityrequest.html">DeleteCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-deletecertificateauthorityresponse.html">DeleteCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the private certificate authority (CA) that you created or started to create by calling the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt; function. This action requires that you enter an ARN (Amazon Resource Name) for the private CA that you want to delete. You can find the ARN by calling the &lt;a&gt;ListCertificateAuthorities&lt;/a&gt; function. You can delete the CA if you are waiting for it to be created (the &lt;b&gt;Status&lt;/b&gt; field of the &lt;a&gt;CertificateAuthority&lt;/a&gt; is &lt;code&gt;CREATING&lt;/code&gt;) or if the CA has been created but you haven't yet imported the signed certificate (the &lt;b&gt;Status&lt;/b&gt; is &lt;code&gt;PENDING_CERTIFICATE&lt;/code&gt;) into ACM PCA. If you've already imported the certificate, you cannot delete the CA unless it has been disabled for more than 30 days. To disable a CA, call the &lt;a&gt;UpdateCertificateAuthority&lt;/a&gt; function and set the &lt;b&gt;CertificateAuthorityStatus&lt;/b&gt; argument to &lt;code&gt;DISABLED&lt;/code&gt;.</p>
+<!-- @@@deleteCertificateAuthority -->
+<!-- $$$describeCertificateAuthority[overload1]$$$describeCertificateAuthorityconstDescribeCertificateAuthorityRequest& -->
+<h3 class="fn" id="describeCertificateAuthority"><a name="describeCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-describecertificateauthorityresponse.html">DescribeCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">describeCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-describecertificateauthorityrequest.html">DescribeCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-describecertificateauthorityresponse.html">DescribeCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about your private certificate authority (CA). You specify the private CA on input by its ARN (Amazon Resource Name). The output contains the status of your CA. This can be any of the following:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;CREATING:&lt;/b&gt; ACM PCA is creating your private certificate</p>
+<p>authority&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;PENDING_CERTIFICATE:&lt;/b&gt; The certificate is pending. You must use your on-premises root or subordinate CA to sign your private CA CSR and then import it into PCA.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;ACTIVE:&lt;/b&gt; Your private CA is</p>
+<p>active&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;DISABLED:&lt;/b&gt; Your private CA has been</p>
+<p>disabled&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;EXPIRED:&lt;/b&gt; Your private CA certificate has</p>
+<p>expired&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;FAILED:&lt;/b&gt; Your private CA has failed. Your CA can fail for problems such a network outage or backend AWS failure or other errors. A failed CA can never return to the pending state. You must create a new CA.</p>
+<!-- @@@describeCertificateAuthority -->
+<!-- $$$describeCertificateAuthorityAuditReport[overload1]$$$describeCertificateAuthorityAuditReportconstDescribeCertificateAuthorityAuditReportRequest& -->
+<h3 class="fn" id="describeCertificateAuthorityAuditReport"><a name="describeCertificateAuthorityAuditReport"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-describecertificateauthorityauditreportresponse.html">DescribeCertificateAuthorityAuditReportResponse</a></span> *AcmpcaClient::<span class="name">describeCertificateAuthorityAuditReport</span>(const <span class="type"><a href="qtaws-acmpca-describecertificateauthorityauditreportrequest.html">DescribeCertificateAuthorityAuditReportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-describecertificateauthorityauditreportresponse.html">DescribeCertificateAuthorityAuditReportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about a specific audit report created by calling the &lt;a&gt;CreateCertificateAuthorityAuditReport&lt;/a&gt; function. Audit information is created every time the certificate authority (CA) private key is used. The private key is used when you call the &lt;a&gt;IssueCertificate&lt;/a&gt; function or the &lt;a&gt;RevokeCertificate&lt;/a&gt; function.</p>
+<!-- @@@describeCertificateAuthorityAuditReport -->
+<!-- $$$getCertificate[overload1]$$$getCertificateconstGetCertificateRequest& -->
+<h3 class="fn" id="getCertificate"><a name="getCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-getcertificateresponse.html">GetCertificateResponse</a></span> *AcmpcaClient::<span class="name">getCertificate</span>(const <span class="type"><a href="qtaws-acmpca-getcertificaterequest.html">GetCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-getcertificateresponse.html">GetCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a certificate from your private CA. The ARN of the certificate is returned when you call the &lt;a&gt;IssueCertificate&lt;/a&gt; function. You must specify both the ARN of your private CA and the ARN of the issued certificate when calling the &lt;b&gt;GetCertificate&lt;/b&gt; function. You can retrieve the certificate if it is in the &lt;b&gt;ISSUED&lt;/b&gt; state. You can call the &lt;a&gt;CreateCertificateAuthorityAuditReport&lt;/a&gt; function to create a report that contains information about all of the certificates issued and revoked by your private CA.</p>
+<!-- @@@getCertificate -->
+<!-- $$$getCertificateAuthorityCertificate[overload1]$$$getCertificateAuthorityCertificateconstGetCertificateAuthorityCertificateRequest& -->
+<h3 class="fn" id="getCertificateAuthorityCertificate"><a name="getCertificateAuthorityCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-getcertificateauthoritycertificateresponse.html">GetCertificateAuthorityCertificateResponse</a></span> *AcmpcaClient::<span class="name">getCertificateAuthorityCertificate</span>(const <span class="type"><a href="qtaws-acmpca-getcertificateauthoritycertificaterequest.html">GetCertificateAuthorityCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-getcertificateauthoritycertificateresponse.html">GetCertificateAuthorityCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the certificate and certificate chain for your private certificate authority (CA). Both the certificate and the chain are base64 PEM-encoded. The chain does not include the CA certificate. Each certificate in the chain signs the one before it.</p>
+<!-- @@@getCertificateAuthorityCertificate -->
+<!-- $$$getCertificateAuthorityCsr[overload1]$$$getCertificateAuthorityCsrconstGetCertificateAuthorityCsrRequest& -->
+<h3 class="fn" id="getCertificateAuthorityCsr"><a name="getCertificateAuthorityCsr"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-getcertificateauthoritycsrresponse.html">GetCertificateAuthorityCsrResponse</a></span> *AcmpcaClient::<span class="name">getCertificateAuthorityCsr</span>(const <span class="type"><a href="qtaws-acmpca-getcertificateauthoritycsrrequest.html">GetCertificateAuthorityCsrRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-getcertificateauthoritycsrresponse.html">GetCertificateAuthorityCsrResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the certificate signing request (CSR) for your private certificate authority (CA). The CSR is created when you call the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt; function. Take the CSR to your on-premises X.509 infrastructure and sign it by using your root or a subordinate CA. Then import the signed certificate back into ACM PCA by calling the &lt;a&gt;ImportCertificateAuthorityCertificate&lt;/a&gt; function. The CSR is returned as a base64 PEM-encoded string.</p>
+<!-- @@@getCertificateAuthorityCsr -->
+<!-- $$$importCertificateAuthorityCertificate[overload1]$$$importCertificateAuthorityCertificateconstImportCertificateAuthorityCertificateRequest& -->
+<h3 class="fn" id="importCertificateAuthorityCertificate"><a name="importCertificateAuthorityCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-importcertificateauthoritycertificateresponse.html">ImportCertificateAuthorityCertificateResponse</a></span> *AcmpcaClient::<span class="name">importCertificateAuthorityCertificate</span>(const <span class="type"><a href="qtaws-acmpca-importcertificateauthoritycertificaterequest.html">ImportCertificateAuthorityCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-importcertificateauthoritycertificateresponse.html">ImportCertificateAuthorityCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Imports your signed private CA certificate into ACM PCA. Before you can call this function, you must create the private certificate authority by calling the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt; function. You must then generate a certificate signing request (CSR) by calling the &lt;a&gt;GetCertificateAuthorityCsr&lt;/a&gt; function. Take the CSR to your on-premises CA and use the root certificate or a subordinate certificate to sign it. Create a certificate chain and copy the signed certificate and the certificate chain to your working directory.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Your certificate chain must not include the private CA certificate that you are</p>
+<p>importing&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>Your on-premises CA certificate must be the last certificate in your chain. The subordinate certificate, if any, that your root CA signed must be next to last. The subordinate certificate signed by the preceding subordinate CA must come next, and so on until your chain is built.</p>
+<p>&lt;/p &lt;/note&gt; &lt;note&gt;</p>
+<p>The chain must be</p>
+<!-- @@@importCertificateAuthorityCertificate -->
+<!-- $$$issueCertificate[overload1]$$$issueCertificateconstIssueCertificateRequest& -->
+<h3 class="fn" id="issueCertificate"><a name="issueCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-issuecertificateresponse.html">IssueCertificateResponse</a></span> *AcmpcaClient::<span class="name">issueCertificate</span>(const <span class="type"><a href="qtaws-acmpca-issuecertificaterequest.html">IssueCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-issuecertificateresponse.html">IssueCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uses your private certificate authority (CA) to issue a client certificate. This function returns the Amazon Resource Name (ARN) of the certificate. You can retrieve the certificate by calling the &lt;a&gt;GetCertificate&lt;/a&gt; function and specifying the ARN.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You cannot use the ACM &lt;b&gt;ListCertificateAuthorities&lt;/b&gt; function to retrieve the ARNs of the certificates that you issue by using ACM</p>
+<!-- @@@issueCertificate -->
+<!-- $$$listCertificateAuthorities[overload1]$$$listCertificateAuthoritiesconstListCertificateAuthoritiesRequest& -->
+<h3 class="fn" id="listCertificateAuthorities"><a name="listCertificateAuthorities"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-listcertificateauthoritiesresponse.html">ListCertificateAuthoritiesResponse</a></span> *AcmpcaClient::<span class="name">listCertificateAuthorities</span>(const <span class="type"><a href="qtaws-acmpca-listcertificateauthoritiesrequest.html">ListCertificateAuthoritiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-listcertificateauthoritiesresponse.html">ListCertificateAuthoritiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the private certificate authorities that you created by using the &lt;a&gt;CreateCertificateAuthority&lt;/a&gt;</p>
+<!-- @@@listCertificateAuthorities -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-listtagsresponse.html">ListTagsResponse</a></span> *AcmpcaClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-acmpca-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags, if any, that are associated with your private CA. Tags are labels that you can use to identify and organize your CAs. Each tag consists of a key and an optional value. Call the &lt;a&gt;TagCertificateAuthority&lt;/a&gt; function to add one or more tags to your CA. Call the &lt;a&gt;UntagCertificateAuthority&lt;/a&gt; function to remove tags.</p>
+<!-- @@@listTags -->
+<!-- $$$revokeCertificate[overload1]$$$revokeCertificateconstRevokeCertificateRequest& -->
+<h3 class="fn" id="revokeCertificate"><a name="revokeCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-revokecertificateresponse.html">RevokeCertificateResponse</a></span> *AcmpcaClient::<span class="name">revokeCertificate</span>(const <span class="type"><a href="qtaws-acmpca-revokecertificaterequest.html">RevokeCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-revokecertificateresponse.html">RevokeCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Revokes a certificate that you issued by calling the &lt;a&gt;IssueCertificate&lt;/a&gt; function. If you enable a certificate revocation list (CRL) when you create or update your private CA, information about the revoked certificates will be included in the CRL. ACM PCA writes the CRL to an S3 bucket that you specify. For more information about revocation, see the &lt;a&gt;CrlConfiguration&lt;/a&gt; structure. ACM PCA also writes revocation information to the audit report. For more information, see &lt;a&gt;CreateCertificateAuthorityAuditReport&lt;/a&gt;.</p>
+<!-- @@@revokeCertificate -->
+<!-- $$$tagCertificateAuthority[overload1]$$$tagCertificateAuthorityconstTagCertificateAuthorityRequest& -->
+<h3 class="fn" id="tagCertificateAuthority"><a name="tagCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-tagcertificateauthorityresponse.html">TagCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">tagCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-tagcertificateauthorityrequest.html">TagCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-tagcertificateauthorityresponse.html">TagCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more tags to your private CA. Tags are labels that you can use to identify and organize your AWS resources. Each tag consists of a key and an optional value. You specify the private CA on input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair. You can apply a tag to just one private CA if you want to identify a specific characteristic of that CA, or you can apply the same tag to multiple private CAs if you want to filter for a common relationship among those CAs. To remove one or more tags, use the &lt;a&gt;UntagCertificateAuthority&lt;/a&gt; function. Call the &lt;a&gt;ListTags&lt;/a&gt; function to see what tags are associated with your CA.</p>
+<!-- @@@tagCertificateAuthority -->
+<!-- $$$untagCertificateAuthority[overload1]$$$untagCertificateAuthorityconstUntagCertificateAuthorityRequest& -->
+<h3 class="fn" id="untagCertificateAuthority"><a name="untagCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-untagcertificateauthorityresponse.html">UntagCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">untagCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-untagcertificateauthorityrequest.html">UntagCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-untagcertificateauthorityresponse.html">UntagCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Remove one or more tags from your private CA. A tag consists of a key-value pair. If you do not specify the value portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the tag is removed only if it is associated with the specified value. To add tags to a private CA, use the &lt;a&gt;TagCertificateAuthority&lt;/a&gt;. Call the &lt;a&gt;ListTags&lt;/a&gt; function to see what tags are associated with your CA.</p>
+<!-- @@@untagCertificateAuthority -->
+<!-- $$$updateCertificateAuthority[overload1]$$$updateCertificateAuthorityconstUpdateCertificateAuthorityRequest& -->
+<h3 class="fn" id="updateCertificateAuthority"><a name="updateCertificateAuthority"></a><code>[slot] </code><span class="type"><a href="qtaws-acmpca-updatecertificateauthorityresponse.html">UpdateCertificateAuthorityResponse</a></span> *AcmpcaClient::<span class="name">updateCertificateAuthority</span>(const <span class="type"><a href="qtaws-acmpca-updatecertificateauthorityrequest.html">UpdateCertificateAuthorityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acmpca-acmpcaclient.html">AcmpcaClient</a> service, and returns a pointer to an <a href="qtaws-acmpca-updatecertificateauthorityresponse.html">UpdateCertificateAuthorityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the status or configuration of a private certificate authority (CA). Your private CA must be in the &lt;b&gt; &lt;code&gt;ACTIVE&lt;/code&gt; &lt;/b&gt; or &lt;b&gt; &lt;code&gt;DISABLED&lt;/code&gt; &lt;/b&gt; state before you can update it. You can disable a private CA that is in the &lt;b&gt; &lt;code&gt;ACTIVE&lt;/code&gt; &lt;/b&gt; state or make a CA that is in the &lt;b&gt; &lt;code&gt;DISABLED&lt;/code&gt; &lt;/b&gt; state active</p>
+<!-- @@@updateCertificateAuthority -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

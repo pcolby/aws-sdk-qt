@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- elasticbeanstalkrequest.cpp -->
+  <title>ElasticBeanstalkRequest Class | ElasticBeanstalk</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawselasticbeanstalk-index.html">ElasticBeanstalk</a></li>
+<li><a href="qtawselasticbeanstalk-module.html">C++ Classes</a></li>
+<li>ElasticBeanstalkRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ElasticBeanstalkRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">QtAws::ElasticBeanstalk::ElasticBeanstalkRequest</a>)<br/></span>
+<!-- $$$ElasticBeanstalkRequest-brief -->
+<p>The <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">ElasticBeanstalkRequest</a> class provides an interface for <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> requests. <a href="#details">More...</a></p>
+<!-- @@@ElasticBeanstalkRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ElasticBeanstalkRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-elasticbeanstalk-abortenvironmentupdaterequest.html">QtAws::ElasticBeanstalk::AbortEnvironmentUpdateRequest</a>, <a href="qtaws-elasticbeanstalk-applyenvironmentmanagedactionrequest.html">QtAws::ElasticBeanstalk::ApplyEnvironmentManagedActionRequest</a>, <a href="qtaws-elasticbeanstalk-checkdnsavailabilityrequest.html">QtAws::ElasticBeanstalk::CheckDNSAvailabilityRequest</a>, <a href="qtaws-elasticbeanstalk-composeenvironmentsrequest.html">QtAws::ElasticBeanstalk::ComposeEnvironmentsRequest</a>, <a href="qtaws-elasticbeanstalk-createapplicationrequest.html">QtAws::ElasticBeanstalk::CreateApplicationRequest</a>, <a href="qtaws-elasticbeanstalk-createapplicationversionrequest.html">QtAws::ElasticBeanstalk::CreateApplicationVersionRequest</a>, <a href="qtaws-elasticbeanstalk-createconfigurationtemplaterequest.html">QtAws::ElasticBeanstalk::CreateConfigurationTemplateRequest</a>, <a href="qtaws-elasticbeanstalk-createenvironmentrequest.html">QtAws::ElasticBeanstalk::CreateEnvironmentRequest</a>, <a href="qtaws-elasticbeanstalk-createplatformversionrequest.html">QtAws::ElasticBeanstalk::CreatePlatformVersionRequest</a>, <a href="qtaws-elasticbeanstalk-deleteapplicationrequest.html">QtAws::ElasticBeanstalk::DeleteApplicationRequest</a>, <a href="qtaws-elasticbeanstalk-deleteapplicationversionrequest.html">QtAws::ElasticBeanstalk::DeleteApplicationVersionRequest</a>, <a href="qtaws-elasticbeanstalk-deleteconfigurationtemplaterequest.html">QtAws::ElasticBeanstalk::DeleteConfigurationTemplateRequest</a>, <a href="qtaws-elasticbeanstalk-deleteenvironmentconfigurationrequest.html">QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationRequest</a>, <a href="qtaws-elasticbeanstalk-deleteplatformversionrequest.html">QtAws::ElasticBeanstalk::DeletePlatformVersionRequest</a>, <a href="qtaws-elasticbeanstalk-describeapplicationsrequest.html">QtAws::ElasticBeanstalk::DescribeApplicationsRequest</a>, <a href="qtaws-elasticbeanstalk-describeapplicationversionsrequest.html">QtAws::ElasticBeanstalk::DescribeApplicationVersionsRequest</a>, <a href="qtaws-elasticbeanstalk-describeconfigurationoptionsrequest.html">QtAws::ElasticBeanstalk::DescribeConfigurationOptionsRequest</a>, <a href="qtaws-elasticbeanstalk-describeconfigurationsettingsrequest.html">QtAws::ElasticBeanstalk::DescribeConfigurationSettingsRequest</a>, <a href="qtaws-elasticbeanstalk-describeenvironmenthealthrequest.html">QtAws::ElasticBeanstalk::DescribeEnvironmentHealthRequest</a>, <a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionhistoryrequest.html">QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryRequest</a>, <a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionsrequest.html">QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionsRequest</a>, <a href="qtaws-elasticbeanstalk-describeenvironmentresourcesrequest.html">QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesRequest</a>, <a href="qtaws-elasticbeanstalk-describeenvironmentsrequest.html">QtAws::ElasticBeanstalk::DescribeEnvironmentsRequest</a>, <a href="qtaws-elasticbeanstalk-describeeventsrequest.html">QtAws::ElasticBeanstalk::DescribeEventsRequest</a>, <a href="qtaws-elasticbeanstalk-describeinstanceshealthrequest.html">QtAws::ElasticBeanstalk::DescribeInstancesHealthRequest</a>, <a href="qtaws-elasticbeanstalk-describeplatformversionrequest.html">QtAws::ElasticBeanstalk::DescribePlatformVersionRequest</a>, <a href="qtaws-elasticbeanstalk-listplatformversionsrequest.html">QtAws::ElasticBeanstalk::ListPlatformVersionsRequest</a>, <a href="qtaws-elasticbeanstalk-listtagsforresourcerequest.html">QtAws::ElasticBeanstalk::ListTagsForResourceRequest</a>, <a href="qtaws-elasticbeanstalk-rebuildenvironmentrequest.html">QtAws::ElasticBeanstalk::RebuildEnvironmentRequest</a>, <a href="qtaws-elasticbeanstalk-requestenvironmentinforequest.html">QtAws::ElasticBeanstalk::RequestEnvironmentInfoRequest</a>, <a href="qtaws-elasticbeanstalk-restartappserverrequest.html">QtAws::ElasticBeanstalk::RestartAppServerRequest</a>, <a href="qtaws-elasticbeanstalk-retrieveenvironmentinforequest.html">QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoRequest</a>, <a href="qtaws-elasticbeanstalk-swapenvironmentcnamesrequest.html">QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsRequest</a>, <a href="qtaws-elasticbeanstalk-terminateenvironmentrequest.html">QtAws::ElasticBeanstalk::TerminateEnvironmentRequest</a>, <a href="qtaws-elasticbeanstalk-updateapplicationrequest.html">QtAws::ElasticBeanstalk::UpdateApplicationRequest</a>, <a href="qtaws-elasticbeanstalk-updateapplicationresourcelifecyclerequest.html">QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleRequest</a>, <a href="qtaws-elasticbeanstalk-updateapplicationversionrequest.html">QtAws::ElasticBeanstalk::UpdateApplicationVersionRequest</a>, <a href="qtaws-elasticbeanstalk-updateconfigurationtemplaterequest.html">QtAws::ElasticBeanstalk::UpdateConfigurationTemplateRequest</a>, <a href="qtaws-elasticbeanstalk-updateenvironmentrequest.html">QtAws::ElasticBeanstalk::UpdateEnvironmentRequest</a>, <a href="qtaws-elasticbeanstalk-updatetagsforresourcerequest.html">QtAws::ElasticBeanstalk::UpdateTagsForResourceRequest</a>, and <a href="qtaws-elasticbeanstalk-validateconfigurationsettingsrequest.html">QtAws::ElasticBeanstalk::ValidateConfigurationSettingsRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#Action-enum">Action</a></b> { AbortEnvironmentUpdateAction, ApplyEnvironmentManagedActionAction, CheckDNSAvailabilityAction, ComposeEnvironmentsAction, ..., ValidateConfigurationSettingsAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest">ElasticBeanstalkRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest-1">ElasticBeanstalkRequest</a></b>(const ElasticBeanstalkRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ElasticBeanstalkRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#operator-eq">operator=</a></b>(const ElasticBeanstalkRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#operator-eq-eq">operator==</a></b>(const ElasticBeanstalkRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest-2">ElasticBeanstalkRequest</a></b>(ElasticBeanstalkRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ElasticBeanstalkRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">ElasticBeanstalkRequest</a> class provides an interface for <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> requests.</p>
+</div>
+<!-- @@@ElasticBeanstalkRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AbortEnvironmentUpdateAction$$$ApplyEnvironmentManagedActionAction$$$CheckDNSAvailabilityAction$$$ComposeEnvironmentsAction$$$CreateApplicationAction$$$CreateApplicationVersionAction$$$CreateConfigurationTemplateAction$$$CreateEnvironmentAction$$$CreatePlatformVersionAction$$$CreateStorageLocationAction$$$DeleteApplicationAction$$$DeleteApplicationVersionAction$$$DeleteConfigurationTemplateAction$$$DeleteEnvironmentConfigurationAction$$$DeletePlatformVersionAction$$$DescribeAccountAttributesAction$$$DescribeApplicationVersionsAction$$$DescribeApplicationsAction$$$DescribeConfigurationOptionsAction$$$DescribeConfigurationSettingsAction$$$DescribeEnvironmentHealthAction$$$DescribeEnvironmentManagedActionHistoryAction$$$DescribeEnvironmentManagedActionsAction$$$DescribeEnvironmentResourcesAction$$$DescribeEnvironmentsAction$$$DescribeEventsAction$$$DescribeInstancesHealthAction$$$DescribePlatformVersionAction$$$ListAvailableSolutionStacksAction$$$ListPlatformVersionsAction$$$ListTagsForResourceAction$$$RebuildEnvironmentAction$$$RequestEnvironmentInfoAction$$$RestartAppServerAction$$$RetrieveEnvironmentInfoAction$$$SwapEnvironmentCNAMEsAction$$$TerminateEnvironmentAction$$$UpdateApplicationAction$$$UpdateApplicationResourceLifecycleAction$$$UpdateApplicationVersionAction$$$UpdateConfigurationTemplateAction$$$UpdateEnvironmentAction$$$UpdateTagsForResourceAction$$$ValidateConfigurationSettingsAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum ElasticBeanstalkRequest::<span class="name">Action</span><br/>flags ElasticBeanstalkRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::AbortEnvironmentUpdateAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> AbortEnvironmentUpdate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ApplyEnvironmentManagedActionAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ApplyEnvironmentManagedAction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CheckDNSAvailabilityAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CheckDNSAvailability action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ComposeEnvironmentsAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ComposeEnvironments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreateApplicationAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreateApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreateApplicationVersionAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreateApplicationVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreateConfigurationTemplateAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreateConfigurationTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreateEnvironmentAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreateEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreatePlatformVersionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreatePlatformVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::CreateStorageLocationAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> CreateStorageLocation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DeleteApplicationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DeleteApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DeleteApplicationVersionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DeleteApplicationVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DeleteConfigurationTemplateAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DeleteConfigurationTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DeleteEnvironmentConfigurationAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DeleteEnvironmentConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DeletePlatformVersionAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DeletePlatformVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeAccountAttributesAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeAccountAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeApplicationVersionsAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeApplicationVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeApplicationsAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeApplications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeConfigurationOptionsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeConfigurationOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeConfigurationSettingsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeConfigurationSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEnvironmentHealthAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEnvironmentHealth action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEnvironmentManagedActionHistoryAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEnvironmentManagedActionHistory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEnvironmentManagedActionsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEnvironmentManagedActions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEnvironmentResourcesAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEnvironmentResources action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEnvironmentsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEnvironments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeEventsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribeInstancesHealthAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribeInstancesHealth action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::DescribePlatformVersionAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> DescribePlatformVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ListAvailableSolutionStacksAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ListAvailableSolutionStacks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ListPlatformVersionsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ListPlatformVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::RebuildEnvironmentAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> RebuildEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::RequestEnvironmentInfoAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> RequestEnvironmentInfo action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::RestartAppServerAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> RestartAppServer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::RetrieveEnvironmentInfoAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> RetrieveEnvironmentInfo action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::SwapEnvironmentCNAMEsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> SwapEnvironmentCNAMEs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::TerminateEnvironmentAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> TerminateEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateApplicationAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateApplicationResourceLifecycleAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateApplicationResourceLifecycle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateApplicationVersionAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateApplicationVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateConfigurationTemplateAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateConfigurationTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateEnvironmentAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::UpdateTagsForResourceAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> UpdateTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticBeanstalk::ElasticBeanstalkRequest::ValidateConfigurationSettingsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> ValidateConfigurationSettings action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ElasticBeanstalkRequest[overload1]$$$ElasticBeanstalkRequestconstAction -->
+<h3 class="fn" id="ElasticBeanstalkRequest"><a name="ElasticBeanstalkRequest"></a>ElasticBeanstalkRequest::<span class="name">ElasticBeanstalkRequest</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">ElasticBeanstalkRequest</a> object for <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> <i>action</i>.</p>
+<!-- @@@ElasticBeanstalkRequest -->
+<!-- $$$ElasticBeanstalkRequest$$$ElasticBeanstalkRequestconstElasticBeanstalkRequest& -->
+<h3 class="fn" id="ElasticBeanstalkRequest-1"><a name="ElasticBeanstalkRequest-1"></a>ElasticBeanstalkRequest::<span class="name">ElasticBeanstalkRequest</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest">ElasticBeanstalkRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@ElasticBeanstalkRequest -->
+<!-- $$$ElasticBeanstalkRequest$$$ElasticBeanstalkRequestElasticBeanstalkRequestPrivate*const -->
+<h3 class="fn" id="ElasticBeanstalkRequest-2"><a name="ElasticBeanstalkRequest-2"></a><code>[protected] </code>ElasticBeanstalkRequest::<span class="name">ElasticBeanstalkRequest</span>(<span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequestprivate.html">ElasticBeanstalkRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">ElasticBeanstalkRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequestprivate.html">ElasticBeanstalkRequestPrivate</a>.</p>
+<!-- @@@ElasticBeanstalkRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#Action-enum">Action</a></span> ElasticBeanstalkRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> ElasticBeanstalkRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> ElasticBeanstalkRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> ElasticBeanstalkRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> ElasticBeanstalkRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> ElasticBeanstalkRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;ElasticBeanstalkRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> ElasticBeanstalkRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> ElasticBeanstalkRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> ElasticBeanstalkRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> ElasticBeanstalkRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> ElasticBeanstalkRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-elasticbeanstalk.html">ElasticBeanstalk</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constElasticBeanstalkRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest">ElasticBeanstalkRequest</a></span> &amp;ElasticBeanstalkRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest">ElasticBeanstalkRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html">ElasticBeanstalkRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constElasticBeanstalkRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> ElasticBeanstalkRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-elasticbeanstalkrequest.html#ElasticBeanstalkRequest">ElasticBeanstalkRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

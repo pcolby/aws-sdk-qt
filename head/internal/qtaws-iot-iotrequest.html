@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotrequest.cpp -->
+  <title>IoTRequest Class | IoT</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiot-index.html">IoT</a></li>
+<li><a href="qtawsiot-module.html">C++ Classes</a></li>
+<li>IoTRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iot-iotrequest.html">QtAws::IoT::IoTRequest</a>)<br/></span>
+<!-- $$$IoTRequest-brief -->
+<p>The <a href="qtaws-iot-iotrequest.html">IoTRequest</a> class provides an interface for IoT requests. <a href="#details">More...</a></p>
+<!-- @@@IoTRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-iot-acceptcertificatetransferrequest.html">QtAws::IoT::AcceptCertificateTransferRequest</a>, <a href="qtaws-iot-addthingtothinggrouprequest.html">QtAws::IoT::AddThingToThingGroupRequest</a>, <a href="qtaws-iot-associatetargetswithjobrequest.html">QtAws::IoT::AssociateTargetsWithJobRequest</a>, <a href="qtaws-iot-attachpolicyrequest.html">QtAws::IoT::AttachPolicyRequest</a>, <a href="qtaws-iot-attachprincipalpolicyrequest.html">QtAws::IoT::AttachPrincipalPolicyRequest</a>, <a href="qtaws-iot-attachthingprincipalrequest.html">QtAws::IoT::AttachThingPrincipalRequest</a>, <a href="qtaws-iot-cancelcertificatetransferrequest.html">QtAws::IoT::CancelCertificateTransferRequest</a>, <a href="qtaws-iot-canceljobrequest.html">QtAws::IoT::CancelJobRequest</a>, <a href="qtaws-iot-cleardefaultauthorizerrequest.html">QtAws::IoT::ClearDefaultAuthorizerRequest</a>, <a href="qtaws-iot-createauthorizerrequest.html">QtAws::IoT::CreateAuthorizerRequest</a>, <a href="qtaws-iot-createcertificatefromcsrrequest.html">QtAws::IoT::CreateCertificateFromCsrRequest</a>, <a href="qtaws-iot-createjobrequest.html">QtAws::IoT::CreateJobRequest</a>, <a href="qtaws-iot-createkeysandcertificaterequest.html">QtAws::IoT::CreateKeysAndCertificateRequest</a>, <a href="qtaws-iot-createotaupdaterequest.html">QtAws::IoT::CreateOTAUpdateRequest</a>, <a href="qtaws-iot-createpolicyrequest.html">QtAws::IoT::CreatePolicyRequest</a>, <a href="qtaws-iot-createpolicyversionrequest.html">QtAws::IoT::CreatePolicyVersionRequest</a>, <a href="qtaws-iot-createrolealiasrequest.html">QtAws::IoT::CreateRoleAliasRequest</a>, <a href="qtaws-iot-createstreamrequest.html">QtAws::IoT::CreateStreamRequest</a>, <a href="qtaws-iot-createthinggrouprequest.html">QtAws::IoT::CreateThingGroupRequest</a>, <a href="qtaws-iot-createthingrequest.html">QtAws::IoT::CreateThingRequest</a>, <a href="qtaws-iot-createthingtyperequest.html">QtAws::IoT::CreateThingTypeRequest</a>, <a href="qtaws-iot-createtopicrulerequest.html">QtAws::IoT::CreateTopicRuleRequest</a>, <a href="qtaws-iot-deleteauthorizerrequest.html">QtAws::IoT::DeleteAuthorizerRequest</a>, <a href="qtaws-iot-deletecacertificaterequest.html">QtAws::IoT::DeleteCACertificateRequest</a>, <a href="qtaws-iot-deletecertificaterequest.html">QtAws::IoT::DeleteCertificateRequest</a>, <a href="qtaws-iot-deleteotaupdaterequest.html">QtAws::IoT::DeleteOTAUpdateRequest</a>, <a href="qtaws-iot-deletepolicyrequest.html">QtAws::IoT::DeletePolicyRequest</a>, <a href="qtaws-iot-deletepolicyversionrequest.html">QtAws::IoT::DeletePolicyVersionRequest</a>, <a href="qtaws-iot-deleteregistrationcoderequest.html">QtAws::IoT::DeleteRegistrationCodeRequest</a>, <a href="qtaws-iot-deleterolealiasrequest.html">QtAws::IoT::DeleteRoleAliasRequest</a>, <a href="qtaws-iot-deletestreamrequest.html">QtAws::IoT::DeleteStreamRequest</a>, <a href="qtaws-iot-deletethinggrouprequest.html">QtAws::IoT::DeleteThingGroupRequest</a>, <a href="qtaws-iot-deletethingrequest.html">QtAws::IoT::DeleteThingRequest</a>, <a href="qtaws-iot-deletethingtyperequest.html">QtAws::IoT::DeleteThingTypeRequest</a>, <a href="qtaws-iot-deletetopicrulerequest.html">QtAws::IoT::DeleteTopicRuleRequest</a>, <a href="qtaws-iot-deletev2logginglevelrequest.html">QtAws::IoT::DeleteV2LoggingLevelRequest</a>, <a href="qtaws-iot-deprecatethingtyperequest.html">QtAws::IoT::DeprecateThingTypeRequest</a>, <a href="qtaws-iot-describeauthorizerrequest.html">QtAws::IoT::DescribeAuthorizerRequest</a>, <a href="qtaws-iot-describecacertificaterequest.html">QtAws::IoT::DescribeCACertificateRequest</a>, <a href="qtaws-iot-describecertificaterequest.html">QtAws::IoT::DescribeCertificateRequest</a>, <a href="qtaws-iot-describedefaultauthorizerrequest.html">QtAws::IoT::DescribeDefaultAuthorizerRequest</a>, <a href="qtaws-iot-describeendpointrequest.html">QtAws::IoT::DescribeEndpointRequest</a>, <a href="qtaws-iot-describeeventconfigurationsrequest.html">QtAws::IoT::DescribeEventConfigurationsRequest</a>, <a href="qtaws-iot-describeindexrequest.html">QtAws::IoT::DescribeIndexRequest</a>, <a href="qtaws-iot-describejobexecutionrequest.html">QtAws::IoT::DescribeJobExecutionRequest</a>, <a href="qtaws-iot-describejobrequest.html">QtAws::IoT::DescribeJobRequest</a>, <a href="qtaws-iot-describerolealiasrequest.html">QtAws::IoT::DescribeRoleAliasRequest</a>, <a href="qtaws-iot-describestreamrequest.html">QtAws::IoT::DescribeStreamRequest</a>, <a href="qtaws-iot-describethinggrouprequest.html">QtAws::IoT::DescribeThingGroupRequest</a>, <a href="qtaws-iot-describethingregistrationtaskrequest.html">QtAws::IoT::DescribeThingRegistrationTaskRequest</a>, <a href="qtaws-iot-describethingrequest.html">QtAws::IoT::DescribeThingRequest</a>, <a href="qtaws-iot-describethingtyperequest.html">QtAws::IoT::DescribeThingTypeRequest</a>, <a href="qtaws-iot-detachpolicyrequest.html">QtAws::IoT::DetachPolicyRequest</a>, <a href="qtaws-iot-detachprincipalpolicyrequest.html">QtAws::IoT::DetachPrincipalPolicyRequest</a>, <a href="qtaws-iot-detachthingprincipalrequest.html">QtAws::IoT::DetachThingPrincipalRequest</a>, <a href="qtaws-iot-disabletopicrulerequest.html">QtAws::IoT::DisableTopicRuleRequest</a>, <a href="qtaws-iot-enabletopicrulerequest.html">QtAws::IoT::EnableTopicRuleRequest</a>, <a href="qtaws-iot-geteffectivepoliciesrequest.html">QtAws::IoT::GetEffectivePoliciesRequest</a>, <a href="qtaws-iot-getindexingconfigurationrequest.html">QtAws::IoT::GetIndexingConfigurationRequest</a>, <a href="qtaws-iot-getjobdocumentrequest.html">QtAws::IoT::GetJobDocumentRequest</a>, <a href="qtaws-iot-getloggingoptionsrequest.html">QtAws::IoT::GetLoggingOptionsRequest</a>, <a href="qtaws-iot-getotaupdaterequest.html">QtAws::IoT::GetOTAUpdateRequest</a>, <a href="qtaws-iot-getpolicyrequest.html">QtAws::IoT::GetPolicyRequest</a>, <a href="qtaws-iot-getpolicyversionrequest.html">QtAws::IoT::GetPolicyVersionRequest</a>, <a href="qtaws-iot-getregistrationcoderequest.html">QtAws::IoT::GetRegistrationCodeRequest</a>, <a href="qtaws-iot-gettopicrulerequest.html">QtAws::IoT::GetTopicRuleRequest</a>, <a href="qtaws-iot-getv2loggingoptionsrequest.html">QtAws::IoT::GetV2LoggingOptionsRequest</a>, <a href="qtaws-iot-listattachedpoliciesrequest.html">QtAws::IoT::ListAttachedPoliciesRequest</a>, <a href="qtaws-iot-listauthorizersrequest.html">QtAws::IoT::ListAuthorizersRequest</a>, <a href="qtaws-iot-listcacertificatesrequest.html">QtAws::IoT::ListCACertificatesRequest</a>, <a href="qtaws-iot-listcertificatesbycarequest.html">QtAws::IoT::ListCertificatesByCARequest</a>, <a href="qtaws-iot-listcertificatesrequest.html">QtAws::IoT::ListCertificatesRequest</a>, <a href="qtaws-iot-listindicesrequest.html">QtAws::IoT::ListIndicesRequest</a>, <a href="qtaws-iot-listjobexecutionsforjobrequest.html">QtAws::IoT::ListJobExecutionsForJobRequest</a>, <a href="qtaws-iot-listjobexecutionsforthingrequest.html">QtAws::IoT::ListJobExecutionsForThingRequest</a>, <a href="qtaws-iot-listjobsrequest.html">QtAws::IoT::ListJobsRequest</a>, <a href="qtaws-iot-listotaupdatesrequest.html">QtAws::IoT::ListOTAUpdatesRequest</a>, <a href="qtaws-iot-listoutgoingcertificatesrequest.html">QtAws::IoT::ListOutgoingCertificatesRequest</a>, <a href="qtaws-iot-listpoliciesrequest.html">QtAws::IoT::ListPoliciesRequest</a>, <a href="qtaws-iot-listpolicyprincipalsrequest.html">QtAws::IoT::ListPolicyPrincipalsRequest</a>, <a href="qtaws-iot-listpolicyversionsrequest.html">QtAws::IoT::ListPolicyVersionsRequest</a>, <a href="qtaws-iot-listprincipalpoliciesrequest.html">QtAws::IoT::ListPrincipalPoliciesRequest</a>, <a href="qtaws-iot-listprincipalthingsrequest.html">QtAws::IoT::ListPrincipalThingsRequest</a>, <a href="qtaws-iot-listrolealiasesrequest.html">QtAws::IoT::ListRoleAliasesRequest</a>, <a href="qtaws-iot-liststreamsrequest.html">QtAws::IoT::ListStreamsRequest</a>, <a href="qtaws-iot-listtargetsforpolicyrequest.html">QtAws::IoT::ListTargetsForPolicyRequest</a>, <a href="qtaws-iot-listthinggroupsforthingrequest.html">QtAws::IoT::ListThingGroupsForThingRequest</a>, <a href="qtaws-iot-listthinggroupsrequest.html">QtAws::IoT::ListThingGroupsRequest</a>, <a href="qtaws-iot-listthingprincipalsrequest.html">QtAws::IoT::ListThingPrincipalsRequest</a>, <a href="qtaws-iot-listthingregistrationtaskreportsrequest.html">QtAws::IoT::ListThingRegistrationTaskReportsRequest</a>, <a href="qtaws-iot-listthingregistrationtasksrequest.html">QtAws::IoT::ListThingRegistrationTasksRequest</a>, <a href="qtaws-iot-listthingsinthinggrouprequest.html">QtAws::IoT::ListThingsInThingGroupRequest</a>, <a href="qtaws-iot-listthingsrequest.html">QtAws::IoT::ListThingsRequest</a>, <a href="qtaws-iot-listthingtypesrequest.html">QtAws::IoT::ListThingTypesRequest</a>, <a href="qtaws-iot-listtopicrulesrequest.html">QtAws::IoT::ListTopicRulesRequest</a>, <a href="qtaws-iot-listv2logginglevelsrequest.html">QtAws::IoT::ListV2LoggingLevelsRequest</a>, <a href="qtaws-iot-registercacertificaterequest.html">QtAws::IoT::RegisterCACertificateRequest</a>, <a href="qtaws-iot-registercertificaterequest.html">QtAws::IoT::RegisterCertificateRequest</a>, <a href="qtaws-iot-registerthingrequest.html">QtAws::IoT::RegisterThingRequest</a>, <a href="qtaws-iot-rejectcertificatetransferrequest.html">QtAws::IoT::RejectCertificateTransferRequest</a>, <a href="qtaws-iot-removethingfromthinggrouprequest.html">QtAws::IoT::RemoveThingFromThingGroupRequest</a>, <a href="qtaws-iot-replacetopicrulerequest.html">QtAws::IoT::ReplaceTopicRuleRequest</a>, <a href="qtaws-iot-searchindexrequest.html">QtAws::IoT::SearchIndexRequest</a>, <a href="qtaws-iot-setdefaultauthorizerrequest.html">QtAws::IoT::SetDefaultAuthorizerRequest</a>, <a href="qtaws-iot-setdefaultpolicyversionrequest.html">QtAws::IoT::SetDefaultPolicyVersionRequest</a>, <a href="qtaws-iot-setloggingoptionsrequest.html">QtAws::IoT::SetLoggingOptionsRequest</a>, <a href="qtaws-iot-setv2logginglevelrequest.html">QtAws::IoT::SetV2LoggingLevelRequest</a>, <a href="qtaws-iot-setv2loggingoptionsrequest.html">QtAws::IoT::SetV2LoggingOptionsRequest</a>, <a href="qtaws-iot-startthingregistrationtaskrequest.html">QtAws::IoT::StartThingRegistrationTaskRequest</a>, <a href="qtaws-iot-stopthingregistrationtaskrequest.html">QtAws::IoT::StopThingRegistrationTaskRequest</a>, <a href="qtaws-iot-testauthorizationrequest.html">QtAws::IoT::TestAuthorizationRequest</a>, <a href="qtaws-iot-testinvokeauthorizerrequest.html">QtAws::IoT::TestInvokeAuthorizerRequest</a>, <a href="qtaws-iot-transfercertificaterequest.html">QtAws::IoT::TransferCertificateRequest</a>, <a href="qtaws-iot-updateauthorizerrequest.html">QtAws::IoT::UpdateAuthorizerRequest</a>, <a href="qtaws-iot-updatecacertificaterequest.html">QtAws::IoT::UpdateCACertificateRequest</a>, <a href="qtaws-iot-updatecertificaterequest.html">QtAws::IoT::UpdateCertificateRequest</a>, <a href="qtaws-iot-updateeventconfigurationsrequest.html">QtAws::IoT::UpdateEventConfigurationsRequest</a>, <a href="qtaws-iot-updateindexingconfigurationrequest.html">QtAws::IoT::UpdateIndexingConfigurationRequest</a>, <a href="qtaws-iot-updaterolealiasrequest.html">QtAws::IoT::UpdateRoleAliasRequest</a>, <a href="qtaws-iot-updatestreamrequest.html">QtAws::IoT::UpdateStreamRequest</a>, <a href="qtaws-iot-updatethinggrouprequest.html">QtAws::IoT::UpdateThingGroupRequest</a>, <a href="qtaws-iot-updatethinggroupsforthingrequest.html">QtAws::IoT::UpdateThingGroupsForThingRequest</a>, and <a href="qtaws-iot-updatethingrequest.html">QtAws::IoT::UpdateThingRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-iot-iotrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#Action-enum">Action</a></b> { AcceptCertificateTransferAction, AddThingToThingGroupAction, AssociateTargetsWithJobAction, AttachPolicyAction, ..., UpdateThingGroupsForThingAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#IoTRequest">IoTRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#IoTRequest-1">IoTRequest</a></b>(const IoTRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IoTRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#operator-eq">operator=</a></b>(const IoTRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#operator-eq-eq">operator==</a></b>(const IoTRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#IoTRequest-2">IoTRequest</a></b>(IoTRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iot-iotrequest.html">IoTRequest</a> class provides an interface for IoT requests.</p>
+</div>
+<!-- @@@IoTRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AcceptCertificateTransferAction$$$AddThingToThingGroupAction$$$AssociateTargetsWithJobAction$$$AttachPolicyAction$$$AttachPrincipalPolicyAction$$$AttachThingPrincipalAction$$$CancelCertificateTransferAction$$$CancelJobAction$$$ClearDefaultAuthorizerAction$$$CreateAuthorizerAction$$$CreateCertificateFromCsrAction$$$CreateJobAction$$$CreateKeysAndCertificateAction$$$CreateOTAUpdateAction$$$CreatePolicyAction$$$CreatePolicyVersionAction$$$CreateRoleAliasAction$$$CreateStreamAction$$$CreateThingAction$$$CreateThingGroupAction$$$CreateThingTypeAction$$$CreateTopicRuleAction$$$DeleteAuthorizerAction$$$DeleteCACertificateAction$$$DeleteCertificateAction$$$DeleteOTAUpdateAction$$$DeletePolicyAction$$$DeletePolicyVersionAction$$$DeleteRegistrationCodeAction$$$DeleteRoleAliasAction$$$DeleteStreamAction$$$DeleteThingAction$$$DeleteThingGroupAction$$$DeleteThingTypeAction$$$DeleteTopicRuleAction$$$DeleteV2LoggingLevelAction$$$DeprecateThingTypeAction$$$DescribeAuthorizerAction$$$DescribeCACertificateAction$$$DescribeCertificateAction$$$DescribeDefaultAuthorizerAction$$$DescribeEndpointAction$$$DescribeEventConfigurationsAction$$$DescribeIndexAction$$$DescribeJobAction$$$DescribeJobExecutionAction$$$DescribeRoleAliasAction$$$DescribeStreamAction$$$DescribeThingAction$$$DescribeThingGroupAction$$$DescribeThingRegistrationTaskAction$$$DescribeThingTypeAction$$$DetachPolicyAction$$$DetachPrincipalPolicyAction$$$DetachThingPrincipalAction$$$DisableTopicRuleAction$$$EnableTopicRuleAction$$$GetEffectivePoliciesAction$$$GetIndexingConfigurationAction$$$GetJobDocumentAction$$$GetLoggingOptionsAction$$$GetOTAUpdateAction$$$GetPolicyAction$$$GetPolicyVersionAction$$$GetRegistrationCodeAction$$$GetTopicRuleAction$$$GetV2LoggingOptionsAction$$$ListAttachedPoliciesAction$$$ListAuthorizersAction$$$ListCACertificatesAction$$$ListCertificatesAction$$$ListCertificatesByCAAction$$$ListIndicesAction$$$ListJobExecutionsForJobAction$$$ListJobExecutionsForThingAction$$$ListJobsAction$$$ListOTAUpdatesAction$$$ListOutgoingCertificatesAction$$$ListPoliciesAction$$$ListPolicyPrincipalsAction$$$ListPolicyVersionsAction$$$ListPrincipalPoliciesAction$$$ListPrincipalThingsAction$$$ListRoleAliasesAction$$$ListStreamsAction$$$ListTargetsForPolicyAction$$$ListThingGroupsAction$$$ListThingGroupsForThingAction$$$ListThingPrincipalsAction$$$ListThingRegistrationTaskReportsAction$$$ListThingRegistrationTasksAction$$$ListThingTypesAction$$$ListThingsAction$$$ListThingsInThingGroupAction$$$ListTopicRulesAction$$$ListV2LoggingLevelsAction$$$RegisterCACertificateAction$$$RegisterCertificateAction$$$RegisterThingAction$$$RejectCertificateTransferAction$$$RemoveThingFromThingGroupAction$$$ReplaceTopicRuleAction$$$SearchIndexAction$$$SetDefaultAuthorizerAction$$$SetDefaultPolicyVersionAction$$$SetLoggingOptionsAction$$$SetV2LoggingLevelAction$$$SetV2LoggingOptionsAction$$$StartThingRegistrationTaskAction$$$StopThingRegistrationTaskAction$$$TestAuthorizationAction$$$TestInvokeAuthorizerAction$$$TransferCertificateAction$$$UpdateAuthorizerAction$$$UpdateCACertificateAction$$$UpdateCertificateAction$$$UpdateEventConfigurationsAction$$$UpdateIndexingConfigurationAction$$$UpdateRoleAliasAction$$$UpdateStreamAction$$$UpdateThingAction$$$UpdateThingGroupAction$$$UpdateThingGroupsForThingAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum IoTRequest::<span class="name">Action</span><br/>flags IoTRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as IoT requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AcceptCertificateTransferAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">IoT AcceptCertificateTransfer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AddThingToThingGroupAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">IoT AddThingToThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AssociateTargetsWithJobAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">IoT AssociateTargetsWithJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AttachPolicyAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">IoT AttachPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AttachPrincipalPolicyAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">IoT AttachPrincipalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::AttachThingPrincipalAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">IoT AttachThingPrincipal action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CancelCertificateTransferAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">IoT CancelCertificateTransfer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CancelJobAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">IoT CancelJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ClearDefaultAuthorizerAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">IoT ClearDefaultAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateAuthorizerAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">IoT CreateAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateCertificateFromCsrAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">IoT CreateCertificateFromCsr action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateJobAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">IoT CreateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateKeysAndCertificateAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">IoT CreateKeysAndCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateOTAUpdateAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">IoT CreateOTAUpdate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreatePolicyAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">IoT CreatePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreatePolicyVersionAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">IoT CreatePolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateRoleAliasAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">IoT CreateRoleAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateStreamAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">IoT CreateStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateThingAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">IoT CreateThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateThingGroupAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">IoT CreateThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateThingTypeAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">IoT CreateThingType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::CreateTopicRuleAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">IoT CreateTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteAuthorizerAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">IoT DeleteAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteCACertificateAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">IoT DeleteCACertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteCertificateAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">IoT DeleteCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteOTAUpdateAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">IoT DeleteOTAUpdate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeletePolicyAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">IoT DeletePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeletePolicyVersionAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">IoT DeletePolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteRegistrationCodeAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">IoT DeleteRegistrationCode action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteRoleAliasAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">IoT DeleteRoleAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteStreamAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">IoT DeleteStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteThingAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">IoT DeleteThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteThingGroupAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">IoT DeleteThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteThingTypeAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">IoT DeleteThingType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteTopicRuleAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">IoT DeleteTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeleteV2LoggingLevelAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">IoT DeleteV2LoggingLevel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DeprecateThingTypeAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">IoT DeprecateThingType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeAuthorizerAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">IoT DescribeAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeCACertificateAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">IoT DescribeCACertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeCertificateAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">IoT DescribeCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeDefaultAuthorizerAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">IoT DescribeDefaultAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeEndpointAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">IoT DescribeEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeEventConfigurationsAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">IoT DescribeEventConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeIndexAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">IoT DescribeIndex action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeJobAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">IoT DescribeJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeJobExecutionAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">IoT DescribeJobExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeRoleAliasAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">IoT DescribeRoleAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeStreamAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">IoT DescribeStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeThingAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">IoT DescribeThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeThingGroupAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">IoT DescribeThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeThingRegistrationTaskAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">IoT DescribeThingRegistrationTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DescribeThingTypeAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">IoT DescribeThingType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DetachPolicyAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">IoT DetachPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DetachPrincipalPolicyAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">IoT DetachPrincipalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DetachThingPrincipalAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">IoT DetachThingPrincipal action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::DisableTopicRuleAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">IoT DisableTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::EnableTopicRuleAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">IoT EnableTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetEffectivePoliciesAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">IoT GetEffectivePolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetIndexingConfigurationAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">IoT GetIndexingConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetJobDocumentAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">IoT GetJobDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetLoggingOptionsAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">IoT GetLoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetOTAUpdateAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">IoT GetOTAUpdate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetPolicyAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">IoT GetPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetPolicyVersionAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">IoT GetPolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetRegistrationCodeAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">IoT GetRegistrationCode action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetTopicRuleAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">IoT GetTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::GetV2LoggingOptionsAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">IoT GetV2LoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListAttachedPoliciesAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">IoT ListAttachedPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListAuthorizersAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">IoT ListAuthorizers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListCACertificatesAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">IoT ListCACertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListCertificatesAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">IoT ListCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListCertificatesByCAAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">IoT ListCertificatesByCA action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListIndicesAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">IoT ListIndices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListJobExecutionsForJobAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">IoT ListJobExecutionsForJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListJobExecutionsForThingAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">IoT ListJobExecutionsForThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListJobsAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">IoT ListJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListOTAUpdatesAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">IoT ListOTAUpdates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListOutgoingCertificatesAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">IoT ListOutgoingCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListPoliciesAction</code></td><td class="topAlign tblval"><code>78</code></td><td class="topAlign">IoT ListPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListPolicyPrincipalsAction</code></td><td class="topAlign tblval"><code>79</code></td><td class="topAlign">IoT ListPolicyPrincipals action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListPolicyVersionsAction</code></td><td class="topAlign tblval"><code>80</code></td><td class="topAlign">IoT ListPolicyVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListPrincipalPoliciesAction</code></td><td class="topAlign tblval"><code>81</code></td><td class="topAlign">IoT ListPrincipalPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListPrincipalThingsAction</code></td><td class="topAlign tblval"><code>82</code></td><td class="topAlign">IoT ListPrincipalThings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListRoleAliasesAction</code></td><td class="topAlign tblval"><code>83</code></td><td class="topAlign">IoT ListRoleAliases action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListStreamsAction</code></td><td class="topAlign tblval"><code>84</code></td><td class="topAlign">IoT ListStreams action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListTargetsForPolicyAction</code></td><td class="topAlign tblval"><code>85</code></td><td class="topAlign">IoT ListTargetsForPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingGroupsAction</code></td><td class="topAlign tblval"><code>86</code></td><td class="topAlign">IoT ListThingGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingGroupsForThingAction</code></td><td class="topAlign tblval"><code>87</code></td><td class="topAlign">IoT ListThingGroupsForThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingPrincipalsAction</code></td><td class="topAlign tblval"><code>88</code></td><td class="topAlign">IoT ListThingPrincipals action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingRegistrationTaskReportsAction</code></td><td class="topAlign tblval"><code>89</code></td><td class="topAlign">IoT ListThingRegistrationTaskReports action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingRegistrationTasksAction</code></td><td class="topAlign tblval"><code>90</code></td><td class="topAlign">IoT ListThingRegistrationTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingTypesAction</code></td><td class="topAlign tblval"><code>91</code></td><td class="topAlign">IoT ListThingTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingsAction</code></td><td class="topAlign tblval"><code>92</code></td><td class="topAlign">IoT ListThings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListThingsInThingGroupAction</code></td><td class="topAlign tblval"><code>93</code></td><td class="topAlign">IoT ListThingsInThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListTopicRulesAction</code></td><td class="topAlign tblval"><code>94</code></td><td class="topAlign">IoT ListTopicRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ListV2LoggingLevelsAction</code></td><td class="topAlign tblval"><code>95</code></td><td class="topAlign">IoT ListV2LoggingLevels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::RegisterCACertificateAction</code></td><td class="topAlign tblval"><code>96</code></td><td class="topAlign">IoT RegisterCACertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::RegisterCertificateAction</code></td><td class="topAlign tblval"><code>97</code></td><td class="topAlign">IoT RegisterCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::RegisterThingAction</code></td><td class="topAlign tblval"><code>98</code></td><td class="topAlign">IoT RegisterThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::RejectCertificateTransferAction</code></td><td class="topAlign tblval"><code>99</code></td><td class="topAlign">IoT RejectCertificateTransfer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::RemoveThingFromThingGroupAction</code></td><td class="topAlign tblval"><code>100</code></td><td class="topAlign">IoT RemoveThingFromThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::ReplaceTopicRuleAction</code></td><td class="topAlign tblval"><code>101</code></td><td class="topAlign">IoT ReplaceTopicRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SearchIndexAction</code></td><td class="topAlign tblval"><code>102</code></td><td class="topAlign">IoT SearchIndex action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SetDefaultAuthorizerAction</code></td><td class="topAlign tblval"><code>103</code></td><td class="topAlign">IoT SetDefaultAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SetDefaultPolicyVersionAction</code></td><td class="topAlign tblval"><code>104</code></td><td class="topAlign">IoT SetDefaultPolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SetLoggingOptionsAction</code></td><td class="topAlign tblval"><code>105</code></td><td class="topAlign">IoT SetLoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SetV2LoggingLevelAction</code></td><td class="topAlign tblval"><code>106</code></td><td class="topAlign">IoT SetV2LoggingLevel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::SetV2LoggingOptionsAction</code></td><td class="topAlign tblval"><code>107</code></td><td class="topAlign">IoT SetV2LoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::StartThingRegistrationTaskAction</code></td><td class="topAlign tblval"><code>108</code></td><td class="topAlign">IoT StartThingRegistrationTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::StopThingRegistrationTaskAction</code></td><td class="topAlign tblval"><code>109</code></td><td class="topAlign">IoT StopThingRegistrationTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::TestAuthorizationAction</code></td><td class="topAlign tblval"><code>110</code></td><td class="topAlign">IoT TestAuthorization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::TestInvokeAuthorizerAction</code></td><td class="topAlign tblval"><code>111</code></td><td class="topAlign">IoT TestInvokeAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::TransferCertificateAction</code></td><td class="topAlign tblval"><code>112</code></td><td class="topAlign">IoT TransferCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateAuthorizerAction</code></td><td class="topAlign tblval"><code>113</code></td><td class="topAlign">IoT UpdateAuthorizer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateCACertificateAction</code></td><td class="topAlign tblval"><code>114</code></td><td class="topAlign">IoT UpdateCACertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateCertificateAction</code></td><td class="topAlign tblval"><code>115</code></td><td class="topAlign">IoT UpdateCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateEventConfigurationsAction</code></td><td class="topAlign tblval"><code>116</code></td><td class="topAlign">IoT UpdateEventConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateIndexingConfigurationAction</code></td><td class="topAlign tblval"><code>117</code></td><td class="topAlign">IoT UpdateIndexingConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateRoleAliasAction</code></td><td class="topAlign tblval"><code>118</code></td><td class="topAlign">IoT UpdateRoleAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateStreamAction</code></td><td class="topAlign tblval"><code>119</code></td><td class="topAlign">IoT UpdateStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateThingAction</code></td><td class="topAlign tblval"><code>120</code></td><td class="topAlign">IoT UpdateThing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateThingGroupAction</code></td><td class="topAlign tblval"><code>121</code></td><td class="topAlign">IoT UpdateThingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoT::IoTRequest::UpdateThingGroupsForThingAction</code></td><td class="topAlign tblval"><code>122</code></td><td class="topAlign">IoT UpdateThingGroupsForThing action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTRequest[overload1]$$$IoTRequestconstAction -->
+<h3 class="fn" id="IoTRequest"><a name="IoTRequest"></a>IoTRequest::<span class="name">IoTRequest</span>(const <span class="type"><a href="qtaws-iot-iotrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-iot-iotrequest.html">IoTRequest</a> object for IoT <i>action</i>.</p>
+<!-- @@@IoTRequest -->
+<!-- $$$IoTRequest$$$IoTRequestconstIoTRequest& -->
+<h3 class="fn" id="IoTRequest-1"><a name="IoTRequest-1"></a>IoTRequest::<span class="name">IoTRequest</span>(const <span class="type"><a href="qtaws-iot-iotrequest.html#IoTRequest">IoTRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@IoTRequest -->
+<!-- $$$IoTRequest$$$IoTRequestIoTRequestPrivate*const -->
+<h3 class="fn" id="IoTRequest-2"><a name="IoTRequest-2"></a><code>[protected] </code>IoTRequest::<span class="name">IoTRequest</span>(<span class="type"><a href="qtaws-iot-iotrequestprivate.html">IoTRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-iot-iotrequest.html">IoTRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-iot-iotrequestprivate.html">IoTRequestPrivate</a>.</p>
+<!-- @@@IoTRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-iot-iotrequest.html#Action-enum">Action</a></span> IoTRequest::<span class="name">action</span>() const</h3>
+<p>Returns the IoT action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> IoTRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the IoT action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> IoTRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the IoT API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> IoTRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> IoTRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> IoTRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;IoTRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> IoTRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-iot-iotrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the IoT action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> IoTRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the IoT API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> IoTRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> IoTRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-iot-iotrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> IoTRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the IoT request using the given <i>endpoint</i>.</p>
+<p>This IoT implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-iot-iotrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constIoTRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-iot-iotrequest.html#IoTRequest">IoTRequest</a></span> &amp;IoTRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-iot-iotrequest.html#IoTRequest">IoTRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-iot-iotrequest.html">IoTRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constIoTRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> IoTRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-iot-iotrequest.html#IoTRequest">IoTRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- kmsclient.cpp -->
+  <title>KmsClient Class | KMS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawskms-index.html">KMS</a></li>
+<li><a href="qtawskms-module.html">C++ Classes</a></li>
+<li>KmsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">KmsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-kms-kmsclient.html">QtAws::KMS::KmsClient</a>)<br/></span>
+<!-- $$$KmsClient-brief -->
+<p>The <a href="qtaws-kms-kmsclient.html">KmsClient</a> class provides access to the AWS Key Management Service (KMS) service. <a href="#details">More...</a></p>
+<!-- @@@KmsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;KmsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-kms-kmsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#KmsClient">KmsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#KmsClient-1">KmsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CancelKeyDeletionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#cancelKeyDeletion">cancelKeyDeletion</a></b>(const CancelKeyDeletionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#createAlias">createAlias</a></b>(const CreateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGrantResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#createGrant">createGrant</a></b>(const CreateGrantRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#createKey">createKey</a></b>(const CreateKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DecryptResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#decrypt">decrypt</a></b>(const DecryptRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#deleteAlias">deleteAlias</a></b>(const DeleteAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteImportedKeyMaterialResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#deleteImportedKeyMaterial">deleteImportedKeyMaterial</a></b>(const DeleteImportedKeyMaterialRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#describeKey">describeKey</a></b>(const DescribeKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#disableKey">disableKey</a></b>(const DisableKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableKeyRotationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#disableKeyRotation">disableKeyRotation</a></b>(const DisableKeyRotationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#enableKey">enableKey</a></b>(const EnableKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableKeyRotationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#enableKeyRotation">enableKeyRotation</a></b>(const EnableKeyRotationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EncryptResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#encrypt">encrypt</a></b>(const EncryptRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GenerateDataKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#generateDataKey">generateDataKey</a></b>(const GenerateDataKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GenerateDataKeyWithoutPlaintextResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#generateDataKeyWithoutPlaintext">generateDataKeyWithoutPlaintext</a></b>(const GenerateDataKeyWithoutPlaintextRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GenerateRandomResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#generateRandom">generateRandom</a></b>(const GenerateRandomRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetKeyPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#getKeyPolicy">getKeyPolicy</a></b>(const GetKeyPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetKeyRotationStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#getKeyRotationStatus">getKeyRotationStatus</a></b>(const GetKeyRotationStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetParametersForImportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#getParametersForImport">getParametersForImport</a></b>(const GetParametersForImportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportKeyMaterialResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#importKeyMaterial">importKeyMaterial</a></b>(const ImportKeyMaterialRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAliasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listAliases">listAliases</a></b>(const ListAliasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGrantsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listGrants">listGrants</a></b>(const ListGrantsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListKeyPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listKeyPolicies">listKeyPolicies</a></b>(const ListKeyPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listKeys">listKeys</a></b>(const ListKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listResourceTags">listResourceTags</a></b>(const ListResourceTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRetirableGrantsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#listRetirableGrants">listRetirableGrants</a></b>(const ListRetirableGrantsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutKeyPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#putKeyPolicy">putKeyPolicy</a></b>(const PutKeyPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReEncryptResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#reEncrypt">reEncrypt</a></b>(const ReEncryptRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RetireGrantResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#retireGrant">retireGrant</a></b>(const RetireGrantRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RevokeGrantResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#revokeGrant">revokeGrant</a></b>(const RevokeGrantRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ScheduleKeyDeletionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#scheduleKeyDeletion">scheduleKeyDeletion</a></b>(const ScheduleKeyDeletionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#updateAlias">updateAlias</a></b>(const UpdateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateKeyDescriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsclient.html#updateKeyDescription">updateKeyDescription</a></b>(const UpdateKeyDescriptionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$KmsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-kms-kmsclient.html">KmsClient</a> class provides access to the AWS Key Management Service (KMS) service.</p>
+<p>&lt;fullname&gt;AWS Key Management Service&lt;/fullname&gt;</p>
+<p>AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS operations that you can call programmatically. For general information about AWS KMS, see the &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/&quot;&gt;AWS Key Management Service Developer</p>
+<p>Guide&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .Net, iOS, Android, etc.)&#x2e; The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying requests automatically. For more information about the AWS SDKs, including how to download and install them, see &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;Tools for Amazon Web</p>
+<p>Services&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>We recommend that you use the AWS SDKs to make programmatic API calls to AWS</p>
+<p>KMS&gt;</p>
+<p>Clients must support TLS (Transport Layer Security) 1.0&#x2e; We recommend TLS 1.2&#x2e; Clients must also support cipher suites with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral Diffie-Hellman (ECDHE). Most modern systems such as Java 7 and later support these</p>
+<p>modes&gt;</p>
+<p>&lt;b&gt;Signing Requests&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you &lt;i&gt;do not&lt;/i&gt; use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security credentials that you can use to sign</p>
+<p>requests&gt;</p>
+<p>All AWS KMS operations require &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt;Signature Version</p>
+<p>4&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Logging API Requests&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>AWS KMS supports AWS CloudTrail, a service that logs AWS API calls and related events for your AWS account and delivers them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail, including how to turn it on and find your log files, see the &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/&quot;&gt;AWS CloudTrail User</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Additional Resources&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>For more information about credentials and request signing, see the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html&quot;&gt;AWS Security Credentials&lt;/a&gt; - This topic provides general information about the types of credentials used for accessing</p>
+<p>AWS&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html&quot;&gt;Temporary Security Credentials&lt;/a&gt; - This section of the &lt;i&gt;IAM User Guide&lt;/i&gt; describes how to create and use temporary security</p>
+<p>credentials&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt;Signature Version 4 Signing Process&lt;/a&gt; - This set of topics walks you through the process of signing a request using an access key ID and a secret access</p>
+<p>key&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Commonly Used APIs&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely perform actions other than these, such as creating keys and assigning policies, by using the</p>
+<p>console&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;Encrypt&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;Decrypt&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GenerateDataKey&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GenerateDataKeyWithoutPlaintext&lt;/a&gt;</p>
+</div>
+<!-- @@@KmsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$KmsClient[overload1]$$$KmsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="KmsClient"><a name="KmsClient"></a>KmsClient::<span class="name">KmsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-kms-kmsclient.html">KmsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@KmsClient -->
+<!-- $$$KmsClient$$$KmsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="KmsClient-1"><a name="KmsClient-1"></a>KmsClient::<span class="name">KmsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-kms-kmsclient.html#KmsClient">KmsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@KmsClient -->
+<!-- $$$cancelKeyDeletion[overload1]$$$cancelKeyDeletionconstCancelKeyDeletionRequest& -->
+<h3 class="fn" id="cancelKeyDeletion"><a name="cancelKeyDeletion"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-cancelkeydeletionresponse.html">CancelKeyDeletionResponse</a></span> *KmsClient::<span class="name">cancelKeyDeletion</span>(const <span class="type"><a href="qtaws-kms-cancelkeydeletionrequest.html">CancelKeyDeletionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-cancelkeydeletionresponse.html">CancelKeyDeletionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels the deletion of a customer master key (CMK). When this operation is successful, the CMK is set to the &lt;code&gt;Disabled&lt;/code&gt; state. To enable a CMK, use &lt;a&gt;EnableKey&lt;/a&gt;. You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>For more information about scheduling and canceling deletion of a CMK, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html&quot;&gt;Deleting Customer Master Keys&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@cancelKeyDeletion -->
+<!-- $$$createAlias[overload1]$$$createAliasconstCreateAliasRequest& -->
+<h3 class="fn" id="createAlias"><a name="createAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-createaliasresponse.html">CreateAliasResponse</a></span> *KmsClient::<span class="name">createAlias</span>(const <span class="type"><a href="qtaws-kms-createaliasrequest.html">CreateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-createaliasresponse.html">CreateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a display name for a customer master key (CMK). You can use an alias to identify a CMK in selected operations, such as &lt;a&gt;Encrypt&lt;/a&gt; and &lt;a&gt;GenerateDataKey&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>Each CMK can have multiple aliases, but each alias points to only one CMK. The alias name must be unique in the AWS account and region. To simplify code that runs in multiple regions, use the same alias name, but point it to a different CMK in each region.</p>
+<p>&lt;/p</p>
+<p>Because an alias is not a property of a CMK, you can delete and change the aliases of a CMK without affecting the CMK. Also, aliases do not appear in the response from the &lt;a&gt;DescribeKey&lt;/a&gt; operation. To get the aliases of all CMKs, use the &lt;a&gt;ListAliases&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>An alias must start with the word &lt;code&gt;alias&lt;/code&gt; followed by a forward slash (&lt;code&gt;alias/&lt;/code&gt;). The alias name can contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). Alias names cannot begin with &lt;code&gt;aws&lt;/code&gt;; that alias name prefix is reserved by Amazon Web Services</p>
+<p>(AWS)&gt;</p>
+<p>The alias and the CMK it is mapped to must be in the same AWS account and the same region. You cannot perform this operation on an alias in a different AWS</p>
+<p>account&gt;</p>
+<p>To map an existing alias to a different CMK, call</p>
+<!-- @@@createAlias -->
+<!-- $$$createGrant[overload1]$$$createGrantconstCreateGrantRequest& -->
+<h3 class="fn" id="createGrant"><a name="createGrant"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-creategrantresponse.html">CreateGrantResponse</a></span> *KmsClient::<span class="name">createGrant</span>(const <span class="type"><a href="qtaws-kms-creategrantrequest.html">CreateGrantRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-creategrantresponse.html">CreateGrantResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a grant to a customer master key (CMK). The grant specifies who can use the CMK and under what conditions. When setting permissions, grants are an alternative to key policies.</p>
+<p>&lt;/p</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId parameter. For more information about grants, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/grants.html&quot;&gt;Grants&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@createGrant -->
+<!-- $$$createKey[overload1]$$$createKeyconstCreateKeyRequest& -->
+<h3 class="fn" id="createKey"><a name="createKey"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-createkeyresponse.html">CreateKeyResponse</a></span> *KmsClient::<span class="name">createKey</span>(const <span class="type"><a href="qtaws-kms-createkeyrequest.html">CreateKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-createkeyresponse.html">CreateKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a customer master key (CMK) in the caller's AWS</p>
+<p>account&gt;</p>
+<p>You can use a CMK to encrypt small amounts of data (4 KiB or less) directly, but CMKs are more commonly used to encrypt data encryption keys (DEKs), which are used to encrypt raw data. For more information about DEKs and the difference between CMKs and DEKs, see the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The &lt;a&gt;GenerateDataKey&lt;/a&gt;</p>
+<p>operatio&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html&quot;&gt;AWS Key Management Service Concepts&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer Guide&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You cannot use this operation to create a CMK in a different AWS</p>
+<!-- @@@createKey -->
+<!-- $$$decrypt[overload1]$$$decryptconstDecryptRequest& -->
+<h3 class="fn" id="decrypt"><a name="decrypt"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-decryptresponse.html">DecryptResponse</a></span> *KmsClient::<span class="name">decrypt</span>(const <span class="type"><a href="qtaws-kms-decryptrequest.html">DecryptRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-decryptresponse.html">DecryptResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Decrypts ciphertext. Ciphertext is plaintext that has been previously encrypted by using any of the following</p>
+<p>operations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GenerateDataKey&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GenerateDataKeyWithoutPlaintext&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;Encrypt&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Note that if a caller has been granted access permissions to all keys (through, for example, IAM user policies that grant &lt;code&gt;Decrypt&lt;/code&gt; permission on all resources), then ciphertext encrypted by using keys in other accounts where the key grants access to the caller can be decrypted. To remedy this, we recommend that you do not grant &lt;code&gt;Decrypt&lt;/code&gt; access in an IAM user policy. Instead grant &lt;code&gt;Decrypt&lt;/code&gt; access only in key policies. If you must grant &lt;code&gt;Decrypt&lt;/code&gt; access in an IAM user policy, you should scope the resource to specific keys or to specific trusted</p>
+<!-- @@@decrypt -->
+<!-- $$$deleteAlias[overload1]$$$deleteAliasconstDeleteAliasRequest& -->
+<h3 class="fn" id="deleteAlias"><a name="deleteAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-deletealiasresponse.html">DeleteAliasResponse</a></span> *KmsClient::<span class="name">deleteAlias</span>(const <span class="type"><a href="qtaws-kms-deletealiasrequest.html">DeleteAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-deletealiasresponse.html">DeleteAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified alias. You cannot perform this operation on an alias in a different AWS account.</p>
+<p>&lt;/p</p>
+<p>Because an alias is not a property of a CMK, you can delete and change the aliases of a CMK without affecting the CMK. Also, aliases do not appear in the response from the &lt;a&gt;DescribeKey&lt;/a&gt; operation. To get the aliases of all CMKs, use the &lt;a&gt;ListAliases&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>Each CMK can have multiple aliases. To change the alias of a CMK, use &lt;a&gt;DeleteAlias&lt;/a&gt; to delete the current alias and &lt;a&gt;CreateAlias&lt;/a&gt; to create a new alias. To associate an existing alias with a different customer master key (CMK), call</p>
+<!-- @@@deleteAlias -->
+<!-- $$$deleteImportedKeyMaterial[overload1]$$$deleteImportedKeyMaterialconstDeleteImportedKeyMaterialRequest& -->
+<h3 class="fn" id="deleteImportedKeyMaterial"><a name="deleteImportedKeyMaterial"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-deleteimportedkeymaterialresponse.html">DeleteImportedKeyMaterialResponse</a></span> *KmsClient::<span class="name">deleteImportedKeyMaterial</span>(const <span class="type"><a href="qtaws-kms-deleteimportedkeymaterialrequest.html">DeleteImportedKeyMaterialRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-deleteimportedkeymaterialresponse.html">DeleteImportedKeyMaterialResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes key material that you previously imported. This operation makes the specified customer master key (CMK) unusable. For more information about importing key material into AWS KMS, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html&quot;&gt;Importing Key Material&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer Guide&lt;/i&gt;. You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>When the specified CMK is in the &lt;code&gt;PendingDeletion&lt;/code&gt; state, this operation does not change the CMK's state. Otherwise, it changes the CMK's state to</p>
+<p>&lt;code&gt;PendingImport&lt;/code&gt;&gt;</p>
+<p>After you delete key material, you can use &lt;a&gt;ImportKeyMaterial&lt;/a&gt; to reimport the same key material into the</p>
+<!-- @@@deleteImportedKeyMaterial -->
+<!-- $$$describeKey[overload1]$$$describeKeyconstDescribeKeyRequest& -->
+<h3 class="fn" id="describeKey"><a name="describeKey"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-describekeyresponse.html">DescribeKeyResponse</a></span> *KmsClient::<span class="name">describeKey</span>(const <span class="type"><a href="qtaws-kms-describekeyrequest.html">DescribeKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-describekeyresponse.html">DescribeKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides detailed information about the specified customer master key</p>
+<p>(CMK)&gt;</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the KeyId</p>
+<!-- @@@describeKey -->
+<!-- $$$disableKey[overload1]$$$disableKeyconstDisableKeyRequest& -->
+<h3 class="fn" id="disableKey"><a name="disableKey"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-disablekeyresponse.html">DisableKeyResponse</a></span> *KmsClient::<span class="name">disableKey</span>(const <span class="type"><a href="qtaws-kms-disablekeyrequest.html">DisableKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-disablekeyresponse.html">DisableKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the state of a customer master key (CMK) to disabled, thereby preventing its use for cryptographic operations. You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>For more information about how key state affects the use of a CMK, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html&quot;&gt;How Key State Affects the Use of a Customer Master Key&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@disableKey -->
+<!-- $$$disableKeyRotation[overload1]$$$disableKeyRotationconstDisableKeyRotationRequest& -->
+<h3 class="fn" id="disableKeyRotation"><a name="disableKeyRotation"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-disablekeyrotationresponse.html">DisableKeyRotationResponse</a></span> *KmsClient::<span class="name">disableKeyRotation</span>(const <span class="type"><a href="qtaws-kms-disablekeyrotationrequest.html">DisableKeyRotationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-disablekeyrotationresponse.html">DisableKeyRotationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@disableKeyRotation -->
+<!-- $$$enableKey[overload1]$$$enableKeyconstEnableKeyRequest& -->
+<h3 class="fn" id="enableKey"><a name="enableKey"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-enablekeyresponse.html">EnableKeyResponse</a></span> *KmsClient::<span class="name">enableKey</span>(const <span class="type"><a href="qtaws-kms-enablekeyrequest.html">EnableKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-enablekeyresponse.html">EnableKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the state of a customer master key (CMK) to enabled, thereby permitting its use for cryptographic operations. You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@enableKey -->
+<!-- $$$enableKeyRotation[overload1]$$$enableKeyRotationconstEnableKeyRotationRequest& -->
+<h3 class="fn" id="enableKeyRotation"><a name="enableKeyRotation"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-enablekeyrotationresponse.html">EnableKeyRotationResponse</a></span> *KmsClient::<span class="name">enableKeyRotation</span>(const <span class="type"><a href="qtaws-kms-enablekeyrotationrequest.html">EnableKeyRotationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-enablekeyrotationresponse.html">EnableKeyRotationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables automatic rotation of the key material for the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@enableKeyRotation -->
+<!-- $$$encrypt[overload1]$$$encryptconstEncryptRequest& -->
+<h3 class="fn" id="encrypt"><a name="encrypt"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-encryptresponse.html">EncryptResponse</a></span> *KmsClient::<span class="name">encrypt</span>(const <span class="type"><a href="qtaws-kms-encryptrequest.html">EncryptRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-encryptresponse.html">EncryptResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Encrypts plaintext into ciphertext by using a customer master key (CMK). The &lt;code&gt;Encrypt&lt;/code&gt; operation has two primary use</p>
+<p>cases&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You can encrypt up to 4 kilobytes (4096 bytes) of arbitrary data such as an RSA key, a database password, or other sensitive</p>
+<p>information&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>To move encrypted data from one AWS region to another, you can use this operation to encrypt in the new region the plaintext data key that was used to encrypt the data in the original region. This provides you with an encrypted copy of the data key that can be decrypted in the new region and used there to decrypt the encrypted</p>
+<p>data&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the KeyId</p>
+<p>parameter&gt;</p>
+<p>Unless you are moving encrypted data from one region to another, you don't use this operation to encrypt a generated data key within a region. To get data keys that are already encrypted, call the &lt;a&gt;GenerateDataKey&lt;/a&gt; or &lt;a&gt;GenerateDataKeyWithoutPlaintext&lt;/a&gt; operation. Data keys don't need to be encrypted again by calling</p>
+<p>&lt;code&gt;Encrypt&lt;/code&gt;&gt;</p>
+<p>To encrypt data locally in your application, use the &lt;a&gt;GenerateDataKey&lt;/a&gt; operation to return a plaintext data encryption key and a copy of the key encrypted under the CMK of your</p>
+<!-- @@@encrypt -->
+<!-- $$$generateDataKey[overload1]$$$generateDataKeyconstGenerateDataKeyRequest& -->
+<h3 class="fn" id="generateDataKey"><a name="generateDataKey"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-generatedatakeyresponse.html">GenerateDataKeyResponse</a></span> *KmsClient::<span class="name">generateDataKey</span>(const <span class="type"><a href="qtaws-kms-generatedatakeyrequest.html">GenerateDataKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-generatedatakeyresponse.html">GenerateDataKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a data encryption key that you can use in your application to encrypt data locally.</p>
+<p>&lt;/p</p>
+<p>You must specify the customer master key (CMK) under which to generate the data key. You must also specify the length of the data key using either the &lt;code&gt;KeySpec&lt;/code&gt; or &lt;code&gt;NumberOfBytes&lt;/code&gt; field. You must specify one field or the other, but not both. For common key lengths (128-bit and 256-bit symmetric keys), we recommend that you use &lt;code&gt;KeySpec&lt;/code&gt;. To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the KeyId</p>
+<p>parameter&gt;</p>
+<p>This operation returns a plaintext copy of the data key in the &lt;code&gt;Plaintext&lt;/code&gt; field of the response, and an encrypted copy of the data key in the &lt;code&gt;CiphertextBlob&lt;/code&gt; field. The data key is encrypted under the CMK specified in the &lt;code&gt;KeyId&lt;/code&gt; field of the request.</p>
+<p>&lt;/p</p>
+<p>We recommend that you use the following pattern to encrypt data locally in your</p>
+<p>application&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use this operation (&lt;code&gt;GenerateDataKey&lt;/code&gt;) to get a data encryption</p>
+<p>key&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use the plaintext data encryption key (returned in the &lt;code&gt;Plaintext&lt;/code&gt; field of the response) to encrypt data locally, then erase the plaintext data key from</p>
+<p>memory&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Store the encrypted data key (returned in the &lt;code&gt;CiphertextBlob&lt;/code&gt; field of the response) alongside the locally encrypted</p>
+<p>data&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>To decrypt data</p>
+<p>locally&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use the &lt;a&gt;Decrypt&lt;/a&gt; operation to decrypt the encrypted data key into a plaintext copy of the data</p>
+<p>key&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use the plaintext data key to decrypt data locally, then erase the plaintext data key from</p>
+<p>memory&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>To return only an encrypted copy of the data key, use &lt;a&gt;GenerateDataKeyWithoutPlaintext&lt;/a&gt;. To return a random byte string that is cryptographically secure, use</p>
+<p>&lt;a&gt;GenerateRandom&lt;/a&gt;&gt;</p>
+<p>If you use the optional &lt;code&gt;EncryptionContext&lt;/code&gt; field, you must store at least enough information to be able to reconstruct the full encryption context when you later send the ciphertext to the &lt;a&gt;Decrypt&lt;/a&gt; operation. It is a good practice to choose an encryption context that you can reconstruct on the fly to better secure the ciphertext. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html&quot;&gt;Encryption Context&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@generateDataKey -->
+<!-- $$$generateDataKeyWithoutPlaintext[overload1]$$$generateDataKeyWithoutPlaintextconstGenerateDataKeyWithoutPlaintextRequest& -->
+<h3 class="fn" id="generateDataKeyWithoutPlaintext"><a name="generateDataKeyWithoutPlaintext"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-generatedatakeywithoutplaintextresponse.html">GenerateDataKeyWithoutPlaintextResponse</a></span> *KmsClient::<span class="name">generateDataKeyWithoutPlaintext</span>(const <span class="type"><a href="qtaws-kms-generatedatakeywithoutplaintextrequest.html">GenerateDataKeyWithoutPlaintextRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-generatedatakeywithoutplaintextresponse.html">GenerateDataKeyWithoutPlaintextResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a data encryption key encrypted under a customer master key (CMK). This operation is identical to &lt;a&gt;GenerateDataKey&lt;/a&gt; but returns only the encrypted copy of the data key.</p>
+<p>&lt;/p</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the KeyId</p>
+<p>parameter&gt;</p>
+<p>This operation is useful in a system that has multiple components with different degrees of trust. For example, consider a system that stores encrypted data in containers. Each container stores the encrypted data and an encrypted copy of the data key. One component of the system, called the &lt;i&gt;control plane&lt;/i&gt;, creates new containers. When it creates a new container, it uses this operation (&lt;code&gt;GenerateDataKeyWithoutPlaintext&lt;/code&gt;) to get an encrypted data key and then stores it in the container. Later, a different component of the system, called the &lt;i&gt;data plane&lt;/i&gt;, puts encrypted data into the containers. To do this, it passes the encrypted data key to the &lt;a&gt;Decrypt&lt;/a&gt; operation, then uses the returned plaintext data key to encrypt data, and finally stores the encrypted data in the container. In this system, the control plane never sees the plaintext data</p>
+<!-- @@@generateDataKeyWithoutPlaintext -->
+<!-- $$$generateRandom[overload1]$$$generateRandomconstGenerateRandomRequest& -->
+<h3 class="fn" id="generateRandom"><a name="generateRandom"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-generaterandomresponse.html">GenerateRandomResponse</a></span> *KmsClient::<span class="name">generateRandom</span>(const <span class="type"><a href="qtaws-kms-generaterandomrequest.html">GenerateRandomRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-generaterandomresponse.html">GenerateRandomResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a random byte string that is cryptographically</p>
+<p>secure&gt;</p>
+<p>For more information about entropy and random number generation, see the &lt;a href=&quot;https://d0.awsstatic.com/whitepapers/KMS-Cryptographic-Details.pdf&quot;&gt;AWS Key Management Service Cryptographic Details&lt;/a&gt;</p>
+<!-- @@@generateRandom -->
+<!-- $$$getKeyPolicy[overload1]$$$getKeyPolicyconstGetKeyPolicyRequest& -->
+<h3 class="fn" id="getKeyPolicy"><a name="getKeyPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-getkeypolicyresponse.html">GetKeyPolicyResponse</a></span> *KmsClient::<span class="name">getKeyPolicy</span>(const <span class="type"><a href="qtaws-kms-getkeypolicyrequest.html">GetKeyPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-getkeypolicyresponse.html">GetKeyPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a key policy attached to the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@getKeyPolicy -->
+<!-- $$$getKeyRotationStatus[overload1]$$$getKeyRotationStatusconstGetKeyRotationStatusRequest& -->
+<h3 class="fn" id="getKeyRotationStatus"><a name="getKeyRotationStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-getkeyrotationstatusresponse.html">GetKeyRotationStatusResponse</a></span> *KmsClient::<span class="name">getKeyRotationStatus</span>(const <span class="type"><a href="qtaws-kms-getkeyrotationstatusrequest.html">GetKeyRotationStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-getkeyrotationstatusresponse.html">GetKeyRotationStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a Boolean value that indicates whether automatic rotation of the key material is enabled for the specified customer master key</p>
+<p>(CMK)&gt;</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId</p>
+<!-- @@@getKeyRotationStatus -->
+<!-- $$$getParametersForImport[overload1]$$$getParametersForImportconstGetParametersForImportRequest& -->
+<h3 class="fn" id="getParametersForImport"><a name="getParametersForImport"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-getparametersforimportresponse.html">GetParametersForImportResponse</a></span> *KmsClient::<span class="name">getParametersForImport</span>(const <span class="type"><a href="qtaws-kms-getparametersforimportrequest.html">GetParametersForImportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-getparametersforimportresponse.html">GetParametersForImportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the items you need in order to import key material into AWS KMS from your existing key management infrastructure. For more information about importing key material into AWS KMS, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html&quot;&gt;Importing Key Material&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You must specify the key ID of the customer master key (CMK) into which you will import key material. This CMK's &lt;code&gt;Origin&lt;/code&gt; must be &lt;code&gt;EXTERNAL&lt;/code&gt;. You must also specify the wrapping algorithm and type of wrapping key (public key) that you will use to encrypt the key material. You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>This operation returns a public key and an import token. Use the public key to encrypt the key material. Store the import token to send with a subsequent &lt;a&gt;ImportKeyMaterial&lt;/a&gt; request. The public key and import token from the same response must be used together. These items are valid for 24 hours. When they expire, they cannot be used for a subsequent &lt;a&gt;ImportKeyMaterial&lt;/a&gt; request. To get new ones, send another &lt;code&gt;GetParametersForImport&lt;/code&gt;</p>
+<!-- @@@getParametersForImport -->
+<!-- $$$importKeyMaterial[overload1]$$$importKeyMaterialconstImportKeyMaterialRequest& -->
+<h3 class="fn" id="importKeyMaterial"><a name="importKeyMaterial"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-importkeymaterialresponse.html">ImportKeyMaterialResponse</a></span> *KmsClient::<span class="name">importKeyMaterial</span>(const <span class="type"><a href="qtaws-kms-importkeymaterialrequest.html">ImportKeyMaterialRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-importkeymaterialresponse.html">ImportKeyMaterialResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Imports key material into an existing AWS KMS customer master key (CMK) that was created without key material. You cannot perform this operation on a CMK in a different AWS account. For more information about creating CMKs with no key material and then importing key material, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html&quot;&gt;Importing Key Material&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Before using this operation, call &lt;a&gt;GetParametersForImport&lt;/a&gt;. Its response includes a public key and an import token. Use the public key to encrypt the key material. Then, submit the import token from the same &lt;code&gt;GetParametersForImport&lt;/code&gt;</p>
+<p>response&gt;</p>
+<p>When calling this operation, you must specify the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The key ID or key ARN of a CMK with no key material. Its &lt;code&gt;Origin&lt;/code&gt; must be</p>
+<p>&lt;code&gt;EXTERNAL&lt;/code&gt;&gt;</p>
+<p>To create a CMK with no key material, call &lt;a&gt;CreateKey&lt;/a&gt; and set the value of its &lt;code&gt;Origin&lt;/code&gt; parameter to &lt;code&gt;EXTERNAL&lt;/code&gt;. To get the &lt;code&gt;Origin&lt;/code&gt; of a CMK, call</p>
+<p>&lt;a&gt;DescribeKey&lt;/a&gt;.&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The encrypted key material. To get the public key to encrypt the key material, call</p>
+<p>&lt;a&gt;GetParametersForImport&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The import token that &lt;a&gt;GetParametersForImport&lt;/a&gt; returned. This token and the public key used to encrypt the key material must have come from the same</p>
+<p>response&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Whether the key material expires and if so, when. If you set an expiration date, you can change it only by reimporting the same key material and specifying a new expiration date. If the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. To use the CMK again, you must reimport the same key</p>
+<p>material&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>When this operation is successful, the CMK's key state changes from &lt;code&gt;PendingImport&lt;/code&gt; to &lt;code&gt;Enabled&lt;/code&gt;, and you can use the CMK. After you successfully import key material into a CMK, you can reimport the same key material into that CMK, but you cannot import different key</p>
+<!-- @@@importKeyMaterial -->
+<!-- $$$listAliases[overload1]$$$listAliasesconstListAliasesRequest& -->
+<h3 class="fn" id="listAliases"><a name="listAliases"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listaliasesresponse.html">ListAliasesResponse</a></span> *KmsClient::<span class="name">listAliases</span>(const <span class="type"><a href="qtaws-kms-listaliasesrequest.html">ListAliasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listaliasesresponse.html">ListAliasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of all aliases in the caller's AWS account and region. You cannot list aliases in other accounts. For more information about aliases, see</p>
+<p>&lt;a&gt;CreateAlias&lt;/a&gt;&gt;</p>
+<p>The response might include several aliases that do not have a &lt;code&gt;TargetKeyId&lt;/code&gt; field because they are not associated with a CMK. These are predefined aliases that are reserved for CMKs managed by AWS services. If an alias is not associated with a CMK, the alias does not count against the &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/limits.html#aliases-limit&quot;&gt;alias limit&lt;/a&gt; for your</p>
+<!-- @@@listAliases -->
+<!-- $$$listGrants[overload1]$$$listGrantsconstListGrantsRequest& -->
+<h3 class="fn" id="listGrants"><a name="listGrants"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listgrantsresponse.html">ListGrantsResponse</a></span> *KmsClient::<span class="name">listGrants</span>(const <span class="type"><a href="qtaws-kms-listgrantsrequest.html">ListGrantsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listgrantsresponse.html">ListGrantsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of all grants for the specified customer master key</p>
+<p>(CMK)&gt;</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId</p>
+<!-- @@@listGrants -->
+<!-- $$$listKeyPolicies[overload1]$$$listKeyPoliciesconstListKeyPoliciesRequest& -->
+<h3 class="fn" id="listKeyPolicies"><a name="listKeyPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listkeypoliciesresponse.html">ListKeyPoliciesResponse</a></span> *KmsClient::<span class="name">listKeyPolicies</span>(const <span class="type"><a href="qtaws-kms-listkeypoliciesrequest.html">ListKeyPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listkeypoliciesresponse.html">ListKeyPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the names of the key policies that are attached to a customer master key (CMK). This operation is designed to get policy names that you can use in a &lt;a&gt;GetKeyPolicy&lt;/a&gt; operation. However, the only valid policy name is &lt;code&gt;default&lt;/code&gt;. You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@listKeyPolicies -->
+<!-- $$$listKeys[overload1]$$$listKeysconstListKeysRequest& -->
+<h3 class="fn" id="listKeys"><a name="listKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listkeysresponse.html">ListKeysResponse</a></span> *KmsClient::<span class="name">listKeys</span>(const <span class="type"><a href="qtaws-kms-listkeysrequest.html">ListKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listkeysresponse.html">ListKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of all customer master keys (CMKs) in the caller's AWS account and</p>
+<!-- @@@listKeys -->
+<!-- $$$listResourceTags[overload1]$$$listResourceTagsconstListResourceTagsRequest& -->
+<h3 class="fn" id="listResourceTags"><a name="listResourceTags"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listresourcetagsresponse.html">ListResourceTagsResponse</a></span> *KmsClient::<span class="name">listResourceTags</span>(const <span class="type"><a href="qtaws-kms-listresourcetagsrequest.html">ListResourceTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listresourcetagsresponse.html">ListResourceTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all tags for the specified customer master key</p>
+<p>(CMK)&gt;</p>
+<p>You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@listResourceTags -->
+<!-- $$$listRetirableGrants[overload1]$$$listRetirableGrantsconstListRetirableGrantsRequest& -->
+<h3 class="fn" id="listRetirableGrants"><a name="listRetirableGrants"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-listretirablegrantsresponse.html">ListRetirableGrantsResponse</a></span> *KmsClient::<span class="name">listRetirableGrants</span>(const <span class="type"><a href="qtaws-kms-listretirablegrantsrequest.html">ListRetirableGrantsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-listretirablegrantsresponse.html">ListRetirableGrantsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all grants for which the grant's &lt;code&gt;RetiringPrincipal&lt;/code&gt; matches the one</p>
+<p>specified&gt;</p>
+<p>A typical use is to list all grants that you are able to retire. To retire a grant, use</p>
+<!-- @@@listRetirableGrants -->
+<!-- $$$putKeyPolicy[overload1]$$$putKeyPolicyconstPutKeyPolicyRequest& -->
+<h3 class="fn" id="putKeyPolicy"><a name="putKeyPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-putkeypolicyresponse.html">PutKeyPolicyResponse</a></span> *KmsClient::<span class="name">putKeyPolicy</span>(const <span class="type"><a href="qtaws-kms-putkeypolicyrequest.html">PutKeyPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-putkeypolicyresponse.html">PutKeyPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a key policy to the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>For more information about key policies, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html&quot;&gt;Key Policies&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@putKeyPolicy -->
+<!-- $$$reEncrypt[overload1]$$$reEncryptconstReEncryptRequest& -->
+<h3 class="fn" id="reEncrypt"><a name="reEncrypt"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-reencryptresponse.html">ReEncryptResponse</a></span> *KmsClient::<span class="name">reEncrypt</span>(const <span class="type"><a href="qtaws-kms-reencryptrequest.html">ReEncryptRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-reencryptresponse.html">ReEncryptResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Encrypts data on the server side with a new customer master key (CMK) without exposing the plaintext of the data on the client side. The data is first decrypted and then reencrypted. You can also use this operation to change the encryption context of a ciphertext.</p>
+<p>&lt;/p</p>
+<p>You can reencrypt data using CMKs in different AWS</p>
+<p>accounts&gt;</p>
+<p>Unlike other operations, &lt;code&gt;ReEncrypt&lt;/code&gt; is authorized twice, once as &lt;code&gt;ReEncryptFrom&lt;/code&gt; on the source CMK and once as &lt;code&gt;ReEncryptTo&lt;/code&gt; on the destination CMK. We recommend that you include the &lt;code&gt;&quot;kms:ReEncrypt*&quot;&lt;/code&gt; permission in your &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html&quot;&gt;key policies&lt;/a&gt; to permit reencryption from or to the CMK. This permission is automatically included in the key policy when you create a CMK through the console, but you must include it manually when you create a CMK programmatically or when you set a key policy with the &lt;a&gt;PutKeyPolicy&lt;/a&gt;</p>
+<!-- @@@reEncrypt -->
+<!-- $$$retireGrant[overload1]$$$retireGrantconstRetireGrantRequest& -->
+<h3 class="fn" id="retireGrant"><a name="retireGrant"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-retiregrantresponse.html">RetireGrantResponse</a></span> *KmsClient::<span class="name">retireGrant</span>(const <span class="type"><a href="qtaws-kms-retiregrantrequest.html">RetireGrantRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-retiregrantresponse.html">RetireGrantResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retires a grant. To clean up, you can retire a grant when you're done using it. You should revoke a grant when you intend to actively deny operations that depend on it. The following are permitted to call this</p>
+<p>API&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The AWS account (root user) under which the grant was</p>
+<p>create&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;RetiringPrincipal&lt;/code&gt;, if present in the</p>
+<p>gran&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;GranteePrincipal&lt;/code&gt;, if &lt;code&gt;RetireGrant&lt;/code&gt; is an operation specified in the</p>
+<p>gran&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You must identify the grant to retire by its grant token or by a combination of the grant ID and the Amazon Resource Name (ARN) of the customer master key (CMK). A grant token is a unique variable-length base64-encoded string. A grant ID is a 64 character unique identifier of a grant. The &lt;a&gt;CreateGrant&lt;/a&gt; operation returns</p>
+<!-- @@@retireGrant -->
+<!-- $$$revokeGrant[overload1]$$$revokeGrantconstRevokeGrantRequest& -->
+<h3 class="fn" id="revokeGrant"><a name="revokeGrant"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-revokegrantresponse.html">RevokeGrantResponse</a></span> *KmsClient::<span class="name">revokeGrant</span>(const <span class="type"><a href="qtaws-kms-revokegrantrequest.html">RevokeGrantRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-revokegrantresponse.html">RevokeGrantResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Revokes the specified grant for the specified customer master key (CMK). You can revoke a grant to actively deny operations that depend on</p>
+<p>it&gt;</p>
+<p>To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the KeyId</p>
+<!-- @@@revokeGrant -->
+<!-- $$$scheduleKeyDeletion[overload1]$$$scheduleKeyDeletionconstScheduleKeyDeletionRequest& -->
+<h3 class="fn" id="scheduleKeyDeletion"><a name="scheduleKeyDeletion"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-schedulekeydeletionresponse.html">ScheduleKeyDeletionResponse</a></span> *KmsClient::<span class="name">scheduleKeyDeletion</span>(const <span class="type"><a href="qtaws-kms-schedulekeydeletionrequest.html">ScheduleKeyDeletionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-schedulekeydeletionresponse.html">ScheduleKeyDeletionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Schedules the deletion of a customer master key (CMK). You may provide a waiting period, specified in days, before deletion occurs. If you do not provide a waiting period, the default period of 30 days is used. When this operation is successful, the state of the CMK changes to &lt;code&gt;PendingDeletion&lt;/code&gt;. Before the waiting period ends, you can use &lt;a&gt;CancelKeyDeletion&lt;/a&gt; to cancel the deletion of the CMK. After the waiting period ends, AWS KMS deletes the CMK and all AWS KMS data associated with it, including all aliases that refer to</p>
+<p>it&gt;</p>
+<p>You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt; &lt;b&gt;</p>
+<p>Deleting a CMK is a destructive and potentially dangerous operation. When a CMK is deleted, all data that was encrypted under the CMK is rendered unrecoverable. To restrict the use of a CMK without deleting it, use</p>
+<p>&lt;a&gt;DisableKey&lt;/a&gt;&gt; &lt;/b&gt;</p>
+<p>For more information about scheduling a CMK for deletion, see &lt;a href=&quot;http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html&quot;&gt;Deleting Customer Master Keys&lt;/a&gt; in the &lt;i&gt;AWS Key Management Service Developer</p>
+<!-- @@@scheduleKeyDeletion -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-tagresourceresponse.html">TagResourceResponse</a></span> *KmsClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-kms-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or overwrites one or more tags for the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty (null)</p>
+<p>strings&gt;</p>
+<p>You cannot use the same tag key more than once per CMK. For example, consider a CMK with one tag whose tag key is &lt;code&gt;Purpose&lt;/code&gt; and tag value is &lt;code&gt;Test&lt;/code&gt;. If you send a &lt;code&gt;TagResource&lt;/code&gt; request for this CMK with a tag key of &lt;code&gt;Purpose&lt;/code&gt; and a tag value of &lt;code&gt;Prod&lt;/code&gt;, it does not create a second tag. Instead, the original tag is overwritten with the new tag</p>
+<p>value&gt;</p>
+<p>For information about the rules that apply to tag keys and tag values, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html&quot;&gt;User-Defined Tag Restrictions&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-untagresourceresponse.html">UntagResourceResponse</a></span> *KmsClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-kms-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified tag or tags from the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS</p>
+<p>account&gt;</p>
+<p>To remove a tag, you specify the tag key for each tag to remove. You do not specify the tag value. To overwrite the tag value for an existing tag, use</p>
+<!-- @@@untagResource -->
+<!-- $$$updateAlias[overload1]$$$updateAliasconstUpdateAliasRequest& -->
+<h3 class="fn" id="updateAlias"><a name="updateAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-updatealiasresponse.html">UpdateAliasResponse</a></span> *KmsClient::<span class="name">updateAlias</span>(const <span class="type"><a href="qtaws-kms-updatealiasrequest.html">UpdateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-updatealiasresponse.html">UpdateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates an existing alias with a different customer master key (CMK). Each CMK can have multiple aliases, but the aliases must be unique within the account and region. You cannot perform this operation on an alias in a different AWS</p>
+<p>account&gt;</p>
+<p>This operation works only on existing aliases. To change the alias of a CMK to a new value, use &lt;a&gt;CreateAlias&lt;/a&gt; to create a new alias and &lt;a&gt;DeleteAlias&lt;/a&gt; to delete the old</p>
+<p>alias&gt;</p>
+<p>Because an alias is not a property of a CMK, you can create, update, and delete the aliases of a CMK without affecting the CMK. Also, aliases do not appear in the response from the &lt;a&gt;DescribeKey&lt;/a&gt; operation. To get the aliases of all CMKs in the account, use the &lt;a&gt;ListAliases&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>An alias name can contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). An alias must start with the word &lt;code&gt;alias&lt;/code&gt; followed by a forward slash (&lt;code&gt;alias/&lt;/code&gt;). The alias name can contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). Alias names cannot begin with &lt;code&gt;aws&lt;/code&gt;; that alias name prefix is reserved by Amazon Web Services</p>
+<!-- @@@updateAlias -->
+<!-- $$$updateKeyDescription[overload1]$$$updateKeyDescriptionconstUpdateKeyDescriptionRequest& -->
+<h3 class="fn" id="updateKeyDescription"><a name="updateKeyDescription"></a><code>[slot] </code><span class="type"><a href="qtaws-kms-updatekeydescriptionresponse.html">UpdateKeyDescriptionResponse</a></span> *KmsClient::<span class="name">updateKeyDescription</span>(const <span class="type"><a href="qtaws-kms-updatekeydescriptionrequest.html">UpdateKeyDescriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kms-kmsclient.html">KmsClient</a> service, and returns a pointer to an <a href="qtaws-kms-updatekeydescriptionresponse.html">UpdateKeyDescriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the description of a customer master key (CMK). To see the decription of a CMK, use &lt;a&gt;DescribeKey&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You cannot perform this operation on a CMK in a different AWS</p>
+<!-- @@@updateKeyDescription -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

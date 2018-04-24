@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mobilerequest.cpp -->
+  <title>MobileRequest Class | Mobile</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmobile-index.html">Mobile</a></li>
+<li><a href="qtawsmobile-module.html">C++ Classes</a></li>
+<li>MobileRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MobileRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mobile-mobilerequest.html">QtAws::Mobile::MobileRequest</a>)<br/></span>
+<!-- $$$MobileRequest-brief -->
+<p>The <a href="qtaws-mobile-mobilerequest.html">MobileRequest</a> class provides an interface for Mobile requests. <a href="#details">More...</a></p>
+<!-- @@@MobileRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MobileRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-mobile-createprojectrequest.html">QtAws::Mobile::CreateProjectRequest</a>, <a href="qtaws-mobile-deleteprojectrequest.html">QtAws::Mobile::DeleteProjectRequest</a>, <a href="qtaws-mobile-describebundlerequest.html">QtAws::Mobile::DescribeBundleRequest</a>, <a href="qtaws-mobile-describeprojectrequest.html">QtAws::Mobile::DescribeProjectRequest</a>, <a href="qtaws-mobile-exportbundlerequest.html">QtAws::Mobile::ExportBundleRequest</a>, <a href="qtaws-mobile-exportprojectrequest.html">QtAws::Mobile::ExportProjectRequest</a>, <a href="qtaws-mobile-listbundlesrequest.html">QtAws::Mobile::ListBundlesRequest</a>, <a href="qtaws-mobile-listprojectsrequest.html">QtAws::Mobile::ListProjectsRequest</a>, and <a href="qtaws-mobile-updateprojectrequest.html">QtAws::Mobile::UpdateProjectRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-mobile-mobilerequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#Action-enum">Action</a></b> { CreateProjectAction, DeleteProjectAction, DescribeBundleAction, DescribeProjectAction, ..., UpdateProjectAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#MobileRequest">MobileRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#MobileRequest-1">MobileRequest</a></b>(const MobileRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> MobileRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#operator-eq">operator=</a></b>(const MobileRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#operator-eq-eq">operator==</a></b>(const MobileRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#MobileRequest-2">MobileRequest</a></b>(MobileRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobilerequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MobileRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mobile-mobilerequest.html">MobileRequest</a> class provides an interface for Mobile requests.</p>
+</div>
+<!-- @@@MobileRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateProjectAction$$$DeleteProjectAction$$$DescribeBundleAction$$$DescribeProjectAction$$$ExportBundleAction$$$ExportProjectAction$$$ListBundlesAction$$$ListProjectsAction$$$UpdateProjectAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum MobileRequest::<span class="name">Action</span><br/>flags MobileRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Mobile requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::CreateProjectAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Mobile CreateProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::DeleteProjectAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Mobile DeleteProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::DescribeBundleAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Mobile DescribeBundle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::DescribeProjectAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Mobile DescribeProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::ExportBundleAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Mobile ExportBundle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::ExportProjectAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Mobile ExportProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::ListBundlesAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Mobile ListBundles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::ListProjectsAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Mobile ListProjects action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Mobile::MobileRequest::UpdateProjectAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Mobile UpdateProject action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MobileRequest[overload1]$$$MobileRequestconstAction -->
+<h3 class="fn" id="MobileRequest"><a name="MobileRequest"></a>MobileRequest::<span class="name">MobileRequest</span>(const <span class="type"><a href="qtaws-mobile-mobilerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-mobile-mobilerequest.html">MobileRequest</a> object for Mobile <i>action</i>.</p>
+<!-- @@@MobileRequest -->
+<!-- $$$MobileRequest$$$MobileRequestconstMobileRequest& -->
+<h3 class="fn" id="MobileRequest-1"><a name="MobileRequest-1"></a>MobileRequest::<span class="name">MobileRequest</span>(const <span class="type"><a href="qtaws-mobile-mobilerequest.html#MobileRequest">MobileRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@MobileRequest -->
+<!-- $$$MobileRequest$$$MobileRequestMobileRequestPrivate*const -->
+<h3 class="fn" id="MobileRequest-2"><a name="MobileRequest-2"></a><code>[protected] </code>MobileRequest::<span class="name">MobileRequest</span>(<span class="type"><a href="qtaws-mobile-mobilerequestprivate.html">MobileRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-mobile-mobilerequest.html">MobileRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-mobile-mobilerequestprivate.html">MobileRequestPrivate</a>.</p>
+<!-- @@@MobileRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-mobile-mobilerequest.html#Action-enum">Action</a></span> MobileRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Mobile action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> MobileRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Mobile action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> MobileRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Mobile API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> MobileRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> MobileRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> MobileRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;MobileRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> MobileRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-mobile-mobilerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Mobile action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> MobileRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Mobile API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> MobileRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> MobileRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-mobile-mobilerequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> MobileRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Mobile request using the given <i>endpoint</i>.</p>
+<p>This Mobile implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-mobile-mobilerequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constMobileRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-mobile-mobilerequest.html#MobileRequest">MobileRequest</a></span> &amp;MobileRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-mobile-mobilerequest.html#MobileRequest">MobileRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-mobile-mobilerequest.html">MobileRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constMobileRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> MobileRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-mobile-mobilerequest.html#MobileRequest">MobileRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

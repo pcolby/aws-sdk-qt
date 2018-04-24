@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- codecommitrequest.cpp -->
+  <title>CodeCommitRequest Class | CodeCommit</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscodecommit-index.html">CodeCommit</a></li>
+<li><a href="qtawscodecommit-module.html">C++ Classes</a></li>
+<li>CodeCommitRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CodeCommitRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-codecommit-codecommitrequest.html">QtAws::CodeCommit::CodeCommitRequest</a>)<br/></span>
+<!-- $$$CodeCommitRequest-brief -->
+<p>The <a href="qtaws-codecommit-codecommitrequest.html">CodeCommitRequest</a> class provides an interface for <a href="qtaws-codecommit.html">CodeCommit</a> requests. <a href="#details">More...</a></p>
+<!-- @@@CodeCommitRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CodeCommitRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-codecommit-batchgetrepositoriesrequest.html">QtAws::CodeCommit::BatchGetRepositoriesRequest</a>, <a href="qtaws-codecommit-createbranchrequest.html">QtAws::CodeCommit::CreateBranchRequest</a>, <a href="qtaws-codecommit-createpullrequestrequest.html">QtAws::CodeCommit::CreatePullRequestRequest</a>, <a href="qtaws-codecommit-createrepositoryrequest.html">QtAws::CodeCommit::CreateRepositoryRequest</a>, <a href="qtaws-codecommit-deletebranchrequest.html">QtAws::CodeCommit::DeleteBranchRequest</a>, <a href="qtaws-codecommit-deletecommentcontentrequest.html">QtAws::CodeCommit::DeleteCommentContentRequest</a>, <a href="qtaws-codecommit-deleterepositoryrequest.html">QtAws::CodeCommit::DeleteRepositoryRequest</a>, <a href="qtaws-codecommit-describepullrequesteventsrequest.html">QtAws::CodeCommit::DescribePullRequestEventsRequest</a>, <a href="qtaws-codecommit-getblobrequest.html">QtAws::CodeCommit::GetBlobRequest</a>, <a href="qtaws-codecommit-getbranchrequest.html">QtAws::CodeCommit::GetBranchRequest</a>, <a href="qtaws-codecommit-getcommentrequest.html">QtAws::CodeCommit::GetCommentRequest</a>, <a href="qtaws-codecommit-getcommentsforcomparedcommitrequest.html">QtAws::CodeCommit::GetCommentsForComparedCommitRequest</a>, <a href="qtaws-codecommit-getcommentsforpullrequestrequest.html">QtAws::CodeCommit::GetCommentsForPullRequestRequest</a>, <a href="qtaws-codecommit-getcommitrequest.html">QtAws::CodeCommit::GetCommitRequest</a>, <a href="qtaws-codecommit-getdifferencesrequest.html">QtAws::CodeCommit::GetDifferencesRequest</a>, <a href="qtaws-codecommit-getmergeconflictsrequest.html">QtAws::CodeCommit::GetMergeConflictsRequest</a>, <a href="qtaws-codecommit-getpullrequestrequest.html">QtAws::CodeCommit::GetPullRequestRequest</a>, <a href="qtaws-codecommit-getrepositoryrequest.html">QtAws::CodeCommit::GetRepositoryRequest</a>, <a href="qtaws-codecommit-getrepositorytriggersrequest.html">QtAws::CodeCommit::GetRepositoryTriggersRequest</a>, <a href="qtaws-codecommit-listbranchesrequest.html">QtAws::CodeCommit::ListBranchesRequest</a>, <a href="qtaws-codecommit-listpullrequestsrequest.html">QtAws::CodeCommit::ListPullRequestsRequest</a>, <a href="qtaws-codecommit-listrepositoriesrequest.html">QtAws::CodeCommit::ListRepositoriesRequest</a>, <a href="qtaws-codecommit-mergepullrequestbyfastforwardrequest.html">QtAws::CodeCommit::MergePullRequestByFastForwardRequest</a>, <a href="qtaws-codecommit-postcommentforcomparedcommitrequest.html">QtAws::CodeCommit::PostCommentForComparedCommitRequest</a>, <a href="qtaws-codecommit-postcommentforpullrequestrequest.html">QtAws::CodeCommit::PostCommentForPullRequestRequest</a>, <a href="qtaws-codecommit-postcommentreplyrequest.html">QtAws::CodeCommit::PostCommentReplyRequest</a>, <a href="qtaws-codecommit-putfilerequest.html">QtAws::CodeCommit::PutFileRequest</a>, <a href="qtaws-codecommit-putrepositorytriggersrequest.html">QtAws::CodeCommit::PutRepositoryTriggersRequest</a>, <a href="qtaws-codecommit-testrepositorytriggersrequest.html">QtAws::CodeCommit::TestRepositoryTriggersRequest</a>, <a href="qtaws-codecommit-updatecommentrequest.html">QtAws::CodeCommit::UpdateCommentRequest</a>, <a href="qtaws-codecommit-updatedefaultbranchrequest.html">QtAws::CodeCommit::UpdateDefaultBranchRequest</a>, <a href="qtaws-codecommit-updatepullrequestdescriptionrequest.html">QtAws::CodeCommit::UpdatePullRequestDescriptionRequest</a>, <a href="qtaws-codecommit-updatepullrequeststatusrequest.html">QtAws::CodeCommit::UpdatePullRequestStatusRequest</a>, <a href="qtaws-codecommit-updatepullrequesttitlerequest.html">QtAws::CodeCommit::UpdatePullRequestTitleRequest</a>, <a href="qtaws-codecommit-updaterepositorydescriptionrequest.html">QtAws::CodeCommit::UpdateRepositoryDescriptionRequest</a>, and <a href="qtaws-codecommit-updaterepositorynamerequest.html">QtAws::CodeCommit::UpdateRepositoryNameRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-codecommit-codecommitrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#Action-enum">Action</a></b> { BatchGetRepositoriesAction, CreateBranchAction, CreatePullRequestAction, CreateRepositoryAction, ..., UpdateRepositoryNameAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest">CodeCommitRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest-1">CodeCommitRequest</a></b>(const CodeCommitRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CodeCommitRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#operator-eq">operator=</a></b>(const CodeCommitRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#operator-eq-eq">operator==</a></b>(const CodeCommitRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest-2">CodeCommitRequest</a></b>(CodeCommitRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CodeCommitRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-codecommit-codecommitrequest.html">CodeCommitRequest</a> class provides an interface for <a href="qtaws-codecommit.html">CodeCommit</a> requests.</p>
+</div>
+<!-- @@@CodeCommitRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$BatchGetRepositoriesAction$$$CreateBranchAction$$$CreatePullRequestAction$$$CreateRepositoryAction$$$DeleteBranchAction$$$DeleteCommentContentAction$$$DeleteRepositoryAction$$$DescribePullRequestEventsAction$$$GetBlobAction$$$GetBranchAction$$$GetCommentAction$$$GetCommentsForComparedCommitAction$$$GetCommentsForPullRequestAction$$$GetCommitAction$$$GetDifferencesAction$$$GetMergeConflictsAction$$$GetPullRequestAction$$$GetRepositoryAction$$$GetRepositoryTriggersAction$$$ListBranchesAction$$$ListPullRequestsAction$$$ListRepositoriesAction$$$MergePullRequestByFastForwardAction$$$PostCommentForComparedCommitAction$$$PostCommentForPullRequestAction$$$PostCommentReplyAction$$$PutFileAction$$$PutRepositoryTriggersAction$$$TestRepositoryTriggersAction$$$UpdateCommentAction$$$UpdateDefaultBranchAction$$$UpdatePullRequestDescriptionAction$$$UpdatePullRequestStatusAction$$$UpdatePullRequestTitleAction$$$UpdateRepositoryDescriptionAction$$$UpdateRepositoryNameAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum CodeCommitRequest::<span class="name">Action</span><br/>flags CodeCommitRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-codecommit.html">CodeCommit</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::BatchGetRepositoriesAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> BatchGetRepositories action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::CreateBranchAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> CreateBranch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::CreatePullRequestAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> CreatePullRequest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::CreateRepositoryAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> CreateRepository action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::DeleteBranchAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> DeleteBranch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::DeleteCommentContentAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> DeleteCommentContent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::DeleteRepositoryAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> DeleteRepository action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::DescribePullRequestEventsAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> DescribePullRequestEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetBlobAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetBlob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetBranchAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetBranch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetCommentAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetCommentsForComparedCommitAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetCommentsForComparedCommit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetCommentsForPullRequestAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetCommentsForPullRequest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetCommitAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetCommit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetDifferencesAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetDifferences action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetMergeConflictsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetMergeConflicts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetPullRequestAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetPullRequest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetRepositoryAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetRepository action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::GetRepositoryTriggersAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> GetRepositoryTriggers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::ListBranchesAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> ListBranches action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::ListPullRequestsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> ListPullRequests action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::ListRepositoriesAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> ListRepositories action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::MergePullRequestByFastForwardAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> MergePullRequestByFastForward action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::PostCommentForComparedCommitAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> PostCommentForComparedCommit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::PostCommentForPullRequestAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> PostCommentForPullRequest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::PostCommentReplyAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> PostCommentReply action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::PutFileAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> PutFile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::PutRepositoryTriggersAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> PutRepositoryTriggers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::TestRepositoryTriggersAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> TestRepositoryTriggers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdateCommentAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdateComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdateDefaultBranchAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdateDefaultBranch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdatePullRequestDescriptionAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdatePullRequestDescription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdatePullRequestStatusAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdatePullRequestStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdatePullRequestTitleAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdatePullRequestTitle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdateRepositoryDescriptionAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdateRepositoryDescription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CodeCommit::CodeCommitRequest::UpdateRepositoryNameAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-codecommit.html">CodeCommit</a> UpdateRepositoryName action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CodeCommitRequest[overload1]$$$CodeCommitRequestconstAction -->
+<h3 class="fn" id="CodeCommitRequest"><a name="CodeCommitRequest"></a>CodeCommitRequest::<span class="name">CodeCommitRequest</span>(const <span class="type"><a href="qtaws-codecommit-codecommitrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-codecommit-codecommitrequest.html">CodeCommitRequest</a> object for <a href="qtaws-codecommit.html">CodeCommit</a> <i>action</i>.</p>
+<!-- @@@CodeCommitRequest -->
+<!-- $$$CodeCommitRequest$$$CodeCommitRequestconstCodeCommitRequest& -->
+<h3 class="fn" id="CodeCommitRequest-1"><a name="CodeCommitRequest-1"></a>CodeCommitRequest::<span class="name">CodeCommitRequest</span>(const <span class="type"><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest">CodeCommitRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@CodeCommitRequest -->
+<!-- $$$CodeCommitRequest$$$CodeCommitRequestCodeCommitRequestPrivate*const -->
+<h3 class="fn" id="CodeCommitRequest-2"><a name="CodeCommitRequest-2"></a><code>[protected] </code>CodeCommitRequest::<span class="name">CodeCommitRequest</span>(<span class="type">CodeCommitRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-codecommit-codecommitrequest.html">CodeCommitRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from CodeCommitRequestPrivate.</p>
+<!-- @@@CodeCommitRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-codecommit-codecommitrequest.html#Action-enum">Action</a></span> CodeCommitRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-codecommit.html">CodeCommit</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> CodeCommitRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-codecommit.html">CodeCommit</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> CodeCommitRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-codecommit.html">CodeCommit</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> CodeCommitRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> CodeCommitRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> CodeCommitRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;CodeCommitRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> CodeCommitRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-codecommit-codecommitrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-codecommit.html">CodeCommit</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> CodeCommitRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-codecommit.html">CodeCommit</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> CodeCommitRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> CodeCommitRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-codecommit-codecommitrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> CodeCommitRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-codecommit.html">CodeCommit</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-codecommit.html">CodeCommit</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-codecommit-codecommitrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constCodeCommitRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest">CodeCommitRequest</a></span> &amp;CodeCommitRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest">CodeCommitRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-codecommit-codecommitrequest.html">CodeCommitRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constCodeCommitRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> CodeCommitRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-codecommit-codecommitrequest.html#CodeCommitRequest">CodeCommitRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

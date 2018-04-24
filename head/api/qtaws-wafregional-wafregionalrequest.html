@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wafregionalrequest.cpp -->
+  <title>WAFRegionalRequest Class | WAFRegional</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawswafregional-index.html">WAFRegional</a></li>
+<li><a href="qtawswafregional-module.html">C++ Classes</a></li>
+<li>WAFRegionalRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WAFRegionalRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-wafregional-wafregionalrequest.html">QtAws::WAFRegional::WAFRegionalRequest</a>)<br/></span>
+<!-- $$$WAFRegionalRequest-brief -->
+<p>The <a href="qtaws-wafregional-wafregionalrequest.html">WAFRegionalRequest</a> class provides an interface for <a href="qtaws-wafregional.html">WAFRegional</a> requests. <a href="#details">More...</a></p>
+<!-- @@@WAFRegionalRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WAFRegionalRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-wafregional-associatewebaclrequest.html">QtAws::WAFRegional::AssociateWebACLRequest</a>, <a href="qtaws-wafregional-createbytematchsetrequest.html">QtAws::WAFRegional::CreateByteMatchSetRequest</a>, <a href="qtaws-wafregional-creategeomatchsetrequest.html">QtAws::WAFRegional::CreateGeoMatchSetRequest</a>, <a href="qtaws-wafregional-createipsetrequest.html">QtAws::WAFRegional::CreateIPSetRequest</a>, <a href="qtaws-wafregional-createratebasedrulerequest.html">QtAws::WAFRegional::CreateRateBasedRuleRequest</a>, <a href="qtaws-wafregional-createregexmatchsetrequest.html">QtAws::WAFRegional::CreateRegexMatchSetRequest</a>, <a href="qtaws-wafregional-createregexpatternsetrequest.html">QtAws::WAFRegional::CreateRegexPatternSetRequest</a>, <a href="qtaws-wafregional-createrulegrouprequest.html">QtAws::WAFRegional::CreateRuleGroupRequest</a>, <a href="qtaws-wafregional-createrulerequest.html">QtAws::WAFRegional::CreateRuleRequest</a>, <a href="qtaws-wafregional-createsizeconstraintsetrequest.html">QtAws::WAFRegional::CreateSizeConstraintSetRequest</a>, <a href="qtaws-wafregional-createsqlinjectionmatchsetrequest.html">QtAws::WAFRegional::CreateSqlInjectionMatchSetRequest</a>, <a href="qtaws-wafregional-createwebaclrequest.html">QtAws::WAFRegional::CreateWebACLRequest</a>, <a href="qtaws-wafregional-createxssmatchsetrequest.html">QtAws::WAFRegional::CreateXssMatchSetRequest</a>, <a href="qtaws-wafregional-deletebytematchsetrequest.html">QtAws::WAFRegional::DeleteByteMatchSetRequest</a>, <a href="qtaws-wafregional-deletegeomatchsetrequest.html">QtAws::WAFRegional::DeleteGeoMatchSetRequest</a>, <a href="qtaws-wafregional-deleteipsetrequest.html">QtAws::WAFRegional::DeleteIPSetRequest</a>, <a href="qtaws-wafregional-deletepermissionpolicyrequest.html">QtAws::WAFRegional::DeletePermissionPolicyRequest</a>, <a href="qtaws-wafregional-deleteratebasedrulerequest.html">QtAws::WAFRegional::DeleteRateBasedRuleRequest</a>, <a href="qtaws-wafregional-deleteregexmatchsetrequest.html">QtAws::WAFRegional::DeleteRegexMatchSetRequest</a>, <a href="qtaws-wafregional-deleteregexpatternsetrequest.html">QtAws::WAFRegional::DeleteRegexPatternSetRequest</a>, <a href="qtaws-wafregional-deleterulegrouprequest.html">QtAws::WAFRegional::DeleteRuleGroupRequest</a>, <a href="qtaws-wafregional-deleterulerequest.html">QtAws::WAFRegional::DeleteRuleRequest</a>, <a href="qtaws-wafregional-deletesizeconstraintsetrequest.html">QtAws::WAFRegional::DeleteSizeConstraintSetRequest</a>, <a href="qtaws-wafregional-deletesqlinjectionmatchsetrequest.html">QtAws::WAFRegional::DeleteSqlInjectionMatchSetRequest</a>, <a href="qtaws-wafregional-deletewebaclrequest.html">QtAws::WAFRegional::DeleteWebACLRequest</a>, <a href="qtaws-wafregional-deletexssmatchsetrequest.html">QtAws::WAFRegional::DeleteXssMatchSetRequest</a>, <a href="qtaws-wafregional-disassociatewebaclrequest.html">QtAws::WAFRegional::DisassociateWebACLRequest</a>, <a href="qtaws-wafregional-getbytematchsetrequest.html">QtAws::WAFRegional::GetByteMatchSetRequest</a>, <a href="qtaws-wafregional-getchangetokenrequest.html">QtAws::WAFRegional::GetChangeTokenRequest</a>, <a href="qtaws-wafregional-getchangetokenstatusrequest.html">QtAws::WAFRegional::GetChangeTokenStatusRequest</a>, <a href="qtaws-wafregional-getgeomatchsetrequest.html">QtAws::WAFRegional::GetGeoMatchSetRequest</a>, <a href="qtaws-wafregional-getipsetrequest.html">QtAws::WAFRegional::GetIPSetRequest</a>, <a href="qtaws-wafregional-getpermissionpolicyrequest.html">QtAws::WAFRegional::GetPermissionPolicyRequest</a>, <a href="qtaws-wafregional-getratebasedrulemanagedkeysrequest.html">QtAws::WAFRegional::GetRateBasedRuleManagedKeysRequest</a>, <a href="qtaws-wafregional-getratebasedrulerequest.html">QtAws::WAFRegional::GetRateBasedRuleRequest</a>, <a href="qtaws-wafregional-getregexmatchsetrequest.html">QtAws::WAFRegional::GetRegexMatchSetRequest</a>, <a href="qtaws-wafregional-getregexpatternsetrequest.html">QtAws::WAFRegional::GetRegexPatternSetRequest</a>, <a href="qtaws-wafregional-getrulegrouprequest.html">QtAws::WAFRegional::GetRuleGroupRequest</a>, <a href="qtaws-wafregional-getrulerequest.html">QtAws::WAFRegional::GetRuleRequest</a>, <a href="qtaws-wafregional-getsampledrequestsrequest.html">QtAws::WAFRegional::GetSampledRequestsRequest</a>, <a href="qtaws-wafregional-getsizeconstraintsetrequest.html">QtAws::WAFRegional::GetSizeConstraintSetRequest</a>, <a href="qtaws-wafregional-getsqlinjectionmatchsetrequest.html">QtAws::WAFRegional::GetSqlInjectionMatchSetRequest</a>, <a href="qtaws-wafregional-getwebaclforresourcerequest.html">QtAws::WAFRegional::GetWebACLForResourceRequest</a>, <a href="qtaws-wafregional-getwebaclrequest.html">QtAws::WAFRegional::GetWebACLRequest</a>, <a href="qtaws-wafregional-getxssmatchsetrequest.html">QtAws::WAFRegional::GetXssMatchSetRequest</a>, <a href="qtaws-wafregional-listactivatedrulesinrulegrouprequest.html">QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequest</a>, <a href="qtaws-wafregional-listbytematchsetsrequest.html">QtAws::WAFRegional::ListByteMatchSetsRequest</a>, <a href="qtaws-wafregional-listgeomatchsetsrequest.html">QtAws::WAFRegional::ListGeoMatchSetsRequest</a>, <a href="qtaws-wafregional-listipsetsrequest.html">QtAws::WAFRegional::ListIPSetsRequest</a>, <a href="qtaws-wafregional-listratebasedrulesrequest.html">QtAws::WAFRegional::ListRateBasedRulesRequest</a>, <a href="qtaws-wafregional-listregexmatchsetsrequest.html">QtAws::WAFRegional::ListRegexMatchSetsRequest</a>, <a href="qtaws-wafregional-listregexpatternsetsrequest.html">QtAws::WAFRegional::ListRegexPatternSetsRequest</a>, <a href="qtaws-wafregional-listresourcesforwebaclrequest.html">QtAws::WAFRegional::ListResourcesForWebACLRequest</a>, <a href="qtaws-wafregional-listrulegroupsrequest.html">QtAws::WAFRegional::ListRuleGroupsRequest</a>, <a href="qtaws-wafregional-listrulesrequest.html">QtAws::WAFRegional::ListRulesRequest</a>, <a href="qtaws-wafregional-listsizeconstraintsetsrequest.html">QtAws::WAFRegional::ListSizeConstraintSetsRequest</a>, <a href="qtaws-wafregional-listsqlinjectionmatchsetsrequest.html">QtAws::WAFRegional::ListSqlInjectionMatchSetsRequest</a>, <a href="qtaws-wafregional-listsubscribedrulegroupsrequest.html">QtAws::WAFRegional::ListSubscribedRuleGroupsRequest</a>, <a href="qtaws-wafregional-listwebaclsrequest.html">QtAws::WAFRegional::ListWebACLsRequest</a>, <a href="qtaws-wafregional-listxssmatchsetsrequest.html">QtAws::WAFRegional::ListXssMatchSetsRequest</a>, <a href="qtaws-wafregional-putpermissionpolicyrequest.html">QtAws::WAFRegional::PutPermissionPolicyRequest</a>, <a href="qtaws-wafregional-updatebytematchsetrequest.html">QtAws::WAFRegional::UpdateByteMatchSetRequest</a>, <a href="qtaws-wafregional-updategeomatchsetrequest.html">QtAws::WAFRegional::UpdateGeoMatchSetRequest</a>, <a href="qtaws-wafregional-updateipsetrequest.html">QtAws::WAFRegional::UpdateIPSetRequest</a>, <a href="qtaws-wafregional-updateratebasedrulerequest.html">QtAws::WAFRegional::UpdateRateBasedRuleRequest</a>, <a href="qtaws-wafregional-updateregexmatchsetrequest.html">QtAws::WAFRegional::UpdateRegexMatchSetRequest</a>, <a href="qtaws-wafregional-updateregexpatternsetrequest.html">QtAws::WAFRegional::UpdateRegexPatternSetRequest</a>, <a href="qtaws-wafregional-updaterulegrouprequest.html">QtAws::WAFRegional::UpdateRuleGroupRequest</a>, <a href="qtaws-wafregional-updaterulerequest.html">QtAws::WAFRegional::UpdateRuleRequest</a>, <a href="qtaws-wafregional-updatesizeconstraintsetrequest.html">QtAws::WAFRegional::UpdateSizeConstraintSetRequest</a>, <a href="qtaws-wafregional-updatesqlinjectionmatchsetrequest.html">QtAws::WAFRegional::UpdateSqlInjectionMatchSetRequest</a>, <a href="qtaws-wafregional-updatewebaclrequest.html">QtAws::WAFRegional::UpdateWebACLRequest</a>, and <a href="qtaws-wafregional-updatexssmatchsetrequest.html">QtAws::WAFRegional::UpdateXssMatchSetRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-wafregional-wafregionalrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#Action-enum">Action</a></b> { AssociateWebACLAction, CreateByteMatchSetAction, CreateGeoMatchSetAction, CreateIPSetAction, ..., UpdateXssMatchSetAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest">WAFRegionalRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest-1">WAFRegionalRequest</a></b>(const WAFRegionalRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> WAFRegionalRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#operator-eq">operator=</a></b>(const WAFRegionalRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#operator-eq-eq">operator==</a></b>(const WAFRegionalRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest-2">WAFRegionalRequest</a></b>(WAFRegionalRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-wafregional-wafregionalrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WAFRegionalRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-wafregional-wafregionalrequest.html">WAFRegionalRequest</a> class provides an interface for <a href="qtaws-wafregional.html">WAFRegional</a> requests.</p>
+</div>
+<!-- @@@WAFRegionalRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AssociateWebACLAction$$$CreateByteMatchSetAction$$$CreateGeoMatchSetAction$$$CreateIPSetAction$$$CreateRateBasedRuleAction$$$CreateRegexMatchSetAction$$$CreateRegexPatternSetAction$$$CreateRuleAction$$$CreateRuleGroupAction$$$CreateSizeConstraintSetAction$$$CreateSqlInjectionMatchSetAction$$$CreateWebACLAction$$$CreateXssMatchSetAction$$$DeleteByteMatchSetAction$$$DeleteGeoMatchSetAction$$$DeleteIPSetAction$$$DeletePermissionPolicyAction$$$DeleteRateBasedRuleAction$$$DeleteRegexMatchSetAction$$$DeleteRegexPatternSetAction$$$DeleteRuleAction$$$DeleteRuleGroupAction$$$DeleteSizeConstraintSetAction$$$DeleteSqlInjectionMatchSetAction$$$DeleteWebACLAction$$$DeleteXssMatchSetAction$$$DisassociateWebACLAction$$$GetByteMatchSetAction$$$GetChangeTokenAction$$$GetChangeTokenStatusAction$$$GetGeoMatchSetAction$$$GetIPSetAction$$$GetPermissionPolicyAction$$$GetRateBasedRuleAction$$$GetRateBasedRuleManagedKeysAction$$$GetRegexMatchSetAction$$$GetRegexPatternSetAction$$$GetRuleAction$$$GetRuleGroupAction$$$GetSampledRequestsAction$$$GetSizeConstraintSetAction$$$GetSqlInjectionMatchSetAction$$$GetWebACLAction$$$GetWebACLForResourceAction$$$GetXssMatchSetAction$$$ListActivatedRulesInRuleGroupAction$$$ListByteMatchSetsAction$$$ListGeoMatchSetsAction$$$ListIPSetsAction$$$ListRateBasedRulesAction$$$ListRegexMatchSetsAction$$$ListRegexPatternSetsAction$$$ListResourcesForWebACLAction$$$ListRuleGroupsAction$$$ListRulesAction$$$ListSizeConstraintSetsAction$$$ListSqlInjectionMatchSetsAction$$$ListSubscribedRuleGroupsAction$$$ListWebACLsAction$$$ListXssMatchSetsAction$$$PutPermissionPolicyAction$$$UpdateByteMatchSetAction$$$UpdateGeoMatchSetAction$$$UpdateIPSetAction$$$UpdateRateBasedRuleAction$$$UpdateRegexMatchSetAction$$$UpdateRegexPatternSetAction$$$UpdateRuleAction$$$UpdateRuleGroupAction$$$UpdateSizeConstraintSetAction$$$UpdateSqlInjectionMatchSetAction$$$UpdateWebACLAction$$$UpdateXssMatchSetAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum WAFRegionalRequest::<span class="name">Action</span><br/>flags WAFRegionalRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-wafregional.html">WAFRegional</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::AssociateWebACLAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> AssociateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateByteMatchSetAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateGeoMatchSetAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateIPSetAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateRateBasedRuleAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateRegexMatchSetAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateRegexPatternSetAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateRuleAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateRuleGroupAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateWebACLAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::CreateXssMatchSetAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> CreateXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteByteMatchSetAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteGeoMatchSetAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteIPSetAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeletePermissionPolicyAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeletePermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteRateBasedRuleAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteRegexMatchSetAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteRegexPatternSetAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteRuleAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteRuleGroupAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteWebACLAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DeleteXssMatchSetAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DeleteXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::DisassociateWebACLAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> DisassociateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetByteMatchSetAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetChangeTokenAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetChangeToken action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetChangeTokenStatusAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetChangeTokenStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetGeoMatchSetAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetIPSetAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetPermissionPolicyAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetPermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRateBasedRuleAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRateBasedRuleManagedKeysAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRateBasedRuleManagedKeys action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRegexMatchSetAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRegexPatternSetAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRuleAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetRuleGroupAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetSampledRequestsAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetSampledRequests action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetWebACLAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetWebACLForResourceAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetWebACLForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::GetXssMatchSetAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> GetXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListActivatedRulesInRuleGroupAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListActivatedRulesInRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListByteMatchSetsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListByteMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListGeoMatchSetsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListGeoMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListIPSetsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListIPSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListRateBasedRulesAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListRateBasedRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListRegexMatchSetsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListRegexMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListRegexPatternSetsAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListRegexPatternSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListResourcesForWebACLAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListResourcesForWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListRuleGroupsAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListRuleGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListRulesAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListSizeConstraintSetsAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListSizeConstraintSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListSqlInjectionMatchSetsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListSqlInjectionMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListSubscribedRuleGroupsAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListSubscribedRuleGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListWebACLsAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListWebACLs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::ListXssMatchSetsAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> ListXssMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::PutPermissionPolicyAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> PutPermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateByteMatchSetAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateGeoMatchSetAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateIPSetAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateRateBasedRuleAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateRegexMatchSetAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateRegexPatternSetAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateRuleAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateRuleGroupAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateWebACLAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAFRegional::WAFRegionalRequest::UpdateXssMatchSetAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign"><a href="qtaws-wafregional.html">WAFRegional</a> UpdateXssMatchSet action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WAFRegionalRequest[overload1]$$$WAFRegionalRequestconstAction -->
+<h3 class="fn" id="WAFRegionalRequest"><a name="WAFRegionalRequest"></a>WAFRegionalRequest::<span class="name">WAFRegionalRequest</span>(const <span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-wafregional-wafregionalrequest.html">WAFRegionalRequest</a> object for <a href="qtaws-wafregional.html">WAFRegional</a> <i>action</i>.</p>
+<!-- @@@WAFRegionalRequest -->
+<!-- $$$WAFRegionalRequest$$$WAFRegionalRequestconstWAFRegionalRequest& -->
+<h3 class="fn" id="WAFRegionalRequest-1"><a name="WAFRegionalRequest-1"></a>WAFRegionalRequest::<span class="name">WAFRegionalRequest</span>(const <span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest">WAFRegionalRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@WAFRegionalRequest -->
+<!-- $$$WAFRegionalRequest$$$WAFRegionalRequestWAFRegionalRequestPrivate*const -->
+<h3 class="fn" id="WAFRegionalRequest-2"><a name="WAFRegionalRequest-2"></a><code>[protected] </code>WAFRegionalRequest::<span class="name">WAFRegionalRequest</span>(<span class="type">WAFRegionalRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-wafregional-wafregionalrequest.html">WAFRegionalRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from WAFRegionalRequestPrivate.</p>
+<!-- @@@WAFRegionalRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#Action-enum">Action</a></span> WAFRegionalRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-wafregional.html">WAFRegional</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> WAFRegionalRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-wafregional.html">WAFRegional</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> WAFRegionalRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-wafregional.html">WAFRegional</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> WAFRegionalRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> WAFRegionalRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> WAFRegionalRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;WAFRegionalRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> WAFRegionalRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-wafregional.html">WAFRegional</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> WAFRegionalRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-wafregional.html">WAFRegional</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> WAFRegionalRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> WAFRegionalRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-wafregional-wafregionalrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> WAFRegionalRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-wafregional.html">WAFRegional</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-wafregional.html">WAFRegional</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-wafregional-wafregionalrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constWAFRegionalRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest">WAFRegionalRequest</a></span> &amp;WAFRegionalRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest">WAFRegionalRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-wafregional-wafregionalrequest.html">WAFRegionalRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constWAFRegionalRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> WAFRegionalRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-wafregional-wafregionalrequest.html#WAFRegionalRequest">WAFRegionalRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

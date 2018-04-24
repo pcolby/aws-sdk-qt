@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sagemakerrequest.cpp -->
+  <title>SageMakerRequest Class | SageMaker</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssagemaker-index.html">SageMaker</a></li>
+<li><a href="qtawssagemaker-module.html">C++ Classes</a></li>
+<li>SageMakerRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SageMakerRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sagemaker-sagemakerrequest.html">QtAws::SageMaker::SageMakerRequest</a>)<br/></span>
+<!-- $$$SageMakerRequest-brief -->
+<p>The <a href="qtaws-sagemaker-sagemakerrequest.html">SageMakerRequest</a> class provides an interface for <a href="qtaws-sagemaker.html">SageMaker</a> requests. <a href="#details">More...</a></p>
+<!-- @@@SageMakerRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SageMakerRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-sagemaker-addtagsrequest.html">QtAws::SageMaker::AddTagsRequest</a>, <a href="qtaws-sagemaker-createendpointconfigrequest.html">QtAws::SageMaker::CreateEndpointConfigRequest</a>, <a href="qtaws-sagemaker-createendpointrequest.html">QtAws::SageMaker::CreateEndpointRequest</a>, <a href="qtaws-sagemaker-createmodelrequest.html">QtAws::SageMaker::CreateModelRequest</a>, <a href="qtaws-sagemaker-createnotebookinstancelifecycleconfigrequest.html">QtAws::SageMaker::CreateNotebookInstanceLifecycleConfigRequest</a>, <a href="qtaws-sagemaker-createnotebookinstancerequest.html">QtAws::SageMaker::CreateNotebookInstanceRequest</a>, <a href="qtaws-sagemaker-createpresignednotebookinstanceurlrequest.html">QtAws::SageMaker::CreatePresignedNotebookInstanceUrlRequest</a>, <a href="qtaws-sagemaker-createtrainingjobrequest.html">QtAws::SageMaker::CreateTrainingJobRequest</a>, <a href="qtaws-sagemaker-deleteendpointconfigrequest.html">QtAws::SageMaker::DeleteEndpointConfigRequest</a>, <a href="qtaws-sagemaker-deleteendpointrequest.html">QtAws::SageMaker::DeleteEndpointRequest</a>, <a href="qtaws-sagemaker-deletemodelrequest.html">QtAws::SageMaker::DeleteModelRequest</a>, <a href="qtaws-sagemaker-deletenotebookinstancelifecycleconfigrequest.html">QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigRequest</a>, <a href="qtaws-sagemaker-deletenotebookinstancerequest.html">QtAws::SageMaker::DeleteNotebookInstanceRequest</a>, <a href="qtaws-sagemaker-deletetagsrequest.html">QtAws::SageMaker::DeleteTagsRequest</a>, <a href="qtaws-sagemaker-describeendpointconfigrequest.html">QtAws::SageMaker::DescribeEndpointConfigRequest</a>, <a href="qtaws-sagemaker-describeendpointrequest.html">QtAws::SageMaker::DescribeEndpointRequest</a>, <a href="qtaws-sagemaker-describemodelrequest.html">QtAws::SageMaker::DescribeModelRequest</a>, <a href="qtaws-sagemaker-describenotebookinstancelifecycleconfigrequest.html">QtAws::SageMaker::DescribeNotebookInstanceLifecycleConfigRequest</a>, <a href="qtaws-sagemaker-describenotebookinstancerequest.html">QtAws::SageMaker::DescribeNotebookInstanceRequest</a>, <a href="qtaws-sagemaker-describetrainingjobrequest.html">QtAws::SageMaker::DescribeTrainingJobRequest</a>, <a href="qtaws-sagemaker-listendpointconfigsrequest.html">QtAws::SageMaker::ListEndpointConfigsRequest</a>, <a href="qtaws-sagemaker-listendpointsrequest.html">QtAws::SageMaker::ListEndpointsRequest</a>, <a href="qtaws-sagemaker-listmodelsrequest.html">QtAws::SageMaker::ListModelsRequest</a>, <a href="qtaws-sagemaker-listnotebookinstancelifecycleconfigsrequest.html">QtAws::SageMaker::ListNotebookInstanceLifecycleConfigsRequest</a>, <a href="qtaws-sagemaker-listnotebookinstancesrequest.html">QtAws::SageMaker::ListNotebookInstancesRequest</a>, <a href="qtaws-sagemaker-listtagsrequest.html">QtAws::SageMaker::ListTagsRequest</a>, <a href="qtaws-sagemaker-listtrainingjobsrequest.html">QtAws::SageMaker::ListTrainingJobsRequest</a>, <a href="qtaws-sagemaker-startnotebookinstancerequest.html">QtAws::SageMaker::StartNotebookInstanceRequest</a>, <a href="qtaws-sagemaker-stopnotebookinstancerequest.html">QtAws::SageMaker::StopNotebookInstanceRequest</a>, <a href="qtaws-sagemaker-stoptrainingjobrequest.html">QtAws::SageMaker::StopTrainingJobRequest</a>, <a href="qtaws-sagemaker-updateendpointrequest.html">QtAws::SageMaker::UpdateEndpointRequest</a>, <a href="qtaws-sagemaker-updateendpointweightsandcapacitiesrequest.html">QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesRequest</a>, <a href="qtaws-sagemaker-updatenotebookinstancelifecycleconfigrequest.html">QtAws::SageMaker::UpdateNotebookInstanceLifecycleConfigRequest</a>, and <a href="qtaws-sagemaker-updatenotebookinstancerequest.html">QtAws::SageMaker::UpdateNotebookInstanceRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-sagemaker-sagemakerrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#Action-enum">Action</a></b> { AddTagsAction, CreateEndpointAction, CreateEndpointConfigAction, CreateModelAction, ..., UpdateNotebookInstanceLifecycleConfigAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest">SageMakerRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest-1">SageMakerRequest</a></b>(const SageMakerRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SageMakerRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#operator-eq">operator=</a></b>(const SageMakerRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#operator-eq-eq">operator==</a></b>(const SageMakerRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest-2">SageMakerRequest</a></b>(SageMakerRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SageMakerRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sagemaker-sagemakerrequest.html">SageMakerRequest</a> class provides an interface for <a href="qtaws-sagemaker.html">SageMaker</a> requests.</p>
+</div>
+<!-- @@@SageMakerRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddTagsAction$$$CreateEndpointAction$$$CreateEndpointConfigAction$$$CreateModelAction$$$CreateNotebookInstanceAction$$$CreateNotebookInstanceLifecycleConfigAction$$$CreatePresignedNotebookInstanceUrlAction$$$CreateTrainingJobAction$$$DeleteEndpointAction$$$DeleteEndpointConfigAction$$$DeleteModelAction$$$DeleteNotebookInstanceAction$$$DeleteNotebookInstanceLifecycleConfigAction$$$DeleteTagsAction$$$DescribeEndpointAction$$$DescribeEndpointConfigAction$$$DescribeModelAction$$$DescribeNotebookInstanceAction$$$DescribeNotebookInstanceLifecycleConfigAction$$$DescribeTrainingJobAction$$$ListEndpointConfigsAction$$$ListEndpointsAction$$$ListModelsAction$$$ListNotebookInstanceLifecycleConfigsAction$$$ListNotebookInstancesAction$$$ListTagsAction$$$ListTrainingJobsAction$$$StartNotebookInstanceAction$$$StopNotebookInstanceAction$$$StopTrainingJobAction$$$UpdateEndpointAction$$$UpdateEndpointWeightsAndCapacitiesAction$$$UpdateNotebookInstanceAction$$$UpdateNotebookInstanceLifecycleConfigAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SageMakerRequest::<span class="name">Action</span><br/>flags SageMakerRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-sagemaker.html">SageMaker</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::AddTagsAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> AddTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateEndpointAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateEndpointConfigAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateEndpointConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateModelAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateNotebookInstanceAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateNotebookInstanceLifecycleConfigAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateNotebookInstanceLifecycleConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreatePresignedNotebookInstanceUrlAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreatePresignedNotebookInstanceUrl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::CreateTrainingJobAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> CreateTrainingJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteEndpointAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteEndpointConfigAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteEndpointConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteModelAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteNotebookInstanceAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteNotebookInstanceLifecycleConfigAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteNotebookInstanceLifecycleConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DeleteTagsAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DeleteTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeEndpointAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeEndpointConfigAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeEndpointConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeModelAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeNotebookInstanceAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeNotebookInstanceLifecycleConfigAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeNotebookInstanceLifecycleConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::DescribeTrainingJobAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> DescribeTrainingJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListEndpointConfigsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListEndpointConfigs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListEndpointsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListEndpoints action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListModelsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListModels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListNotebookInstanceLifecycleConfigsAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListNotebookInstanceLifecycleConfigs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListNotebookInstancesAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListNotebookInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListTagsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::ListTrainingJobsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> ListTrainingJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::StartNotebookInstanceAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> StartNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::StopNotebookInstanceAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> StopNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::StopTrainingJobAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> StopTrainingJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::UpdateEndpointAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> UpdateEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::UpdateEndpointWeightsAndCapacitiesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> UpdateEndpointWeightsAndCapacities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::UpdateNotebookInstanceAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> UpdateNotebookInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SageMaker::SageMakerRequest::UpdateNotebookInstanceLifecycleConfigAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-sagemaker.html">SageMaker</a> UpdateNotebookInstanceLifecycleConfig action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SageMakerRequest[overload1]$$$SageMakerRequestconstAction -->
+<h3 class="fn" id="SageMakerRequest"><a name="SageMakerRequest"></a>SageMakerRequest::<span class="name">SageMakerRequest</span>(const <span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-sagemaker-sagemakerrequest.html">SageMakerRequest</a> object for <a href="qtaws-sagemaker.html">SageMaker</a> <i>action</i>.</p>
+<!-- @@@SageMakerRequest -->
+<!-- $$$SageMakerRequest$$$SageMakerRequestconstSageMakerRequest& -->
+<h3 class="fn" id="SageMakerRequest-1"><a name="SageMakerRequest-1"></a>SageMakerRequest::<span class="name">SageMakerRequest</span>(const <span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest">SageMakerRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SageMakerRequest -->
+<!-- $$$SageMakerRequest$$$SageMakerRequestSageMakerRequestPrivate*const -->
+<h3 class="fn" id="SageMakerRequest-2"><a name="SageMakerRequest-2"></a><code>[protected] </code>SageMakerRequest::<span class="name">SageMakerRequest</span>(<span class="type"><a href="qtaws-sagemaker-sagemakerrequestprivate.html">SageMakerRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-sagemaker-sagemakerrequest.html">SageMakerRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-sagemaker-sagemakerrequestprivate.html">SageMakerRequestPrivate</a>.</p>
+<!-- @@@SageMakerRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#Action-enum">Action</a></span> SageMakerRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-sagemaker.html">SageMaker</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SageMakerRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-sagemaker.html">SageMaker</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SageMakerRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-sagemaker.html">SageMaker</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SageMakerRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SageMakerRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SageMakerRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SageMakerRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SageMakerRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-sagemaker.html">SageMaker</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SageMakerRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-sagemaker.html">SageMaker</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SageMakerRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SageMakerRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-sagemaker-sagemakerrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SageMakerRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-sagemaker.html">SageMaker</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-sagemaker.html">SageMaker</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-sagemaker-sagemakerrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSageMakerRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest">SageMakerRequest</a></span> &amp;SageMakerRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest">SageMakerRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-sagemaker-sagemakerrequest.html">SageMakerRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSageMakerRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SageMakerRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-sagemaker-sagemakerrequest.html#SageMakerRequest">SageMakerRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

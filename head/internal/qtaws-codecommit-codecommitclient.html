@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- codecommitclient.cpp -->
+  <title>CodeCommitClient Class | CodeCommit</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscodecommit-index.html">CodeCommit</a></li>
+<li><a href="qtawscodecommit-module.html">C++ Classes</a></li>
+<li>CodeCommitClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CodeCommitClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-codecommit-codecommitclient.html">QtAws::CodeCommit::CodeCommitClient</a>)<br/></span>
+<!-- $$$CodeCommitClient-brief -->
+<p>The <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> class provides access to the AWS <a href="qtaws-codecommit.html">CodeCommit</a> service. <a href="#details">More...</a></p>
+<!-- @@@CodeCommitClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CodeCommitClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-codecommit-codecommitclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#CodeCommitClient">CodeCommitClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#CodeCommitClient-1">CodeCommitClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetRepositoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#batchGetRepositories">batchGetRepositories</a></b>(const BatchGetRepositoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBranchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#createBranch">createBranch</a></b>(const CreateBranchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePullRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#createPullRequest">createPullRequest</a></b>(const CreatePullRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRepositoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#createRepository">createRepository</a></b>(const CreateRepositoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBranchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#deleteBranch">deleteBranch</a></b>(const DeleteBranchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCommentContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#deleteCommentContent">deleteCommentContent</a></b>(const DeleteCommentContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRepositoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#deleteRepository">deleteRepository</a></b>(const DeleteRepositoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePullRequestEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#describePullRequestEvents">describePullRequestEvents</a></b>(const DescribePullRequestEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBlobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getBlob">getBlob</a></b>(const GetBlobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBranchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getBranch">getBranch</a></b>(const GetBranchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getComment">getComment</a></b>(const GetCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCommentsForComparedCommitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getCommentsForComparedCommit">getCommentsForComparedCommit</a></b>(const GetCommentsForComparedCommitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCommentsForPullRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getCommentsForPullRequest">getCommentsForPullRequest</a></b>(const GetCommentsForPullRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCommitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getCommit">getCommit</a></b>(const GetCommitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDifferencesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getDifferences">getDifferences</a></b>(const GetDifferencesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMergeConflictsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getMergeConflicts">getMergeConflicts</a></b>(const GetMergeConflictsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPullRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getPullRequest">getPullRequest</a></b>(const GetPullRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRepositoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getRepository">getRepository</a></b>(const GetRepositoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRepositoryTriggersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#getRepositoryTriggers">getRepositoryTriggers</a></b>(const GetRepositoryTriggersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBranchesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#listBranches">listBranches</a></b>(const ListBranchesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPullRequestsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#listPullRequests">listPullRequests</a></b>(const ListPullRequestsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRepositoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#listRepositories">listRepositories</a></b>(const ListRepositoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> MergePullRequestByFastForwardResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#mergePullRequestByFastForward">mergePullRequestByFastForward</a></b>(const MergePullRequestByFastForwardRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PostCommentForComparedCommitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#postCommentForComparedCommit">postCommentForComparedCommit</a></b>(const PostCommentForComparedCommitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PostCommentForPullRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#postCommentForPullRequest">postCommentForPullRequest</a></b>(const PostCommentForPullRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PostCommentReplyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#postCommentReply">postCommentReply</a></b>(const PostCommentReplyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutFileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#putFile">putFile</a></b>(const PutFileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRepositoryTriggersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#putRepositoryTriggers">putRepositoryTriggers</a></b>(const PutRepositoryTriggersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestRepositoryTriggersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#testRepositoryTriggers">testRepositoryTriggers</a></b>(const TestRepositoryTriggersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updateComment">updateComment</a></b>(const UpdateCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDefaultBranchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updateDefaultBranch">updateDefaultBranch</a></b>(const UpdateDefaultBranchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePullRequestDescriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updatePullRequestDescription">updatePullRequestDescription</a></b>(const UpdatePullRequestDescriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePullRequestStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updatePullRequestStatus">updatePullRequestStatus</a></b>(const UpdatePullRequestStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePullRequestTitleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updatePullRequestTitle">updatePullRequestTitle</a></b>(const UpdatePullRequestTitleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRepositoryDescriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updateRepositoryDescription">updateRepositoryDescription</a></b>(const UpdateRepositoryDescriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRepositoryNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codecommit-codecommitclient.html#updateRepositoryName">updateRepositoryName</a></b>(const UpdateRepositoryNameRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CodeCommitClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> class provides access to the AWS <a href="qtaws-codecommit.html">CodeCommit</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-codecommit.html">CodeCommit</a>&lt;/fullname&gt;</p>
+<p>This is the &lt;i&gt;AWS <a href="qtaws-codecommit.html">CodeCommit</a> API Reference&lt;/i&gt;. This reference provides descriptions of the operations and data types for AWS <a href="qtaws-codecommit.html">CodeCommit</a> API along with usage</p>
+<p>examples&gt;</p>
+<p>You can use the AWS <a href="qtaws-codecommit.html">CodeCommit</a> API to work with the following</p>
+<p>objects&gt;</p>
+<p>Repositories, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;BatchGetRepositories&lt;/a&gt;, which returns information about one or more repositories associated with your AWS</p>
+<p>account&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateRepository&lt;/a&gt;, which creates an AWS <a href="qtaws-codecommit.html">CodeCommit</a></p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteRepository&lt;/a&gt;, which deletes an AWS <a href="qtaws-codecommit.html">CodeCommit</a></p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetRepository&lt;/a&gt;, which returns information about a specified</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListRepositories&lt;/a&gt;, which lists all AWS <a href="qtaws-codecommit.html">CodeCommit</a> repositories associated with your AWS</p>
+<p>account&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateRepositoryDescription&lt;/a&gt;, which sets or updates the description of the</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateRepositoryName&lt;/a&gt;, which changes the name of the repository. If you change the name of a repository, no other users of that repository will be able to access it until you send them the new HTTPS or SSH URL to</p>
+<p>use&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Branches, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateBranch&lt;/a&gt;, which creates a new branch in a specified</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteBranch&lt;/a&gt;, which deletes the specified branch in a repository unless it is the default</p>
+<p>branch&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetBranch&lt;/a&gt;, which returns information about a specified</p>
+<p>branch&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListBranches&lt;/a&gt;, which lists all branches for a specified</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateDefaultBranch&lt;/a&gt;, which changes the default branch for a</p>
+<p>repository&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Files, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutFile&lt;/a&gt;, which adds or modifies a file in a specified repository and</p>
+<p>branch&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Information about committed code in a repository, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetBlob&lt;/a&gt;, which returns the base-64 encoded content of an individual Git blob object within a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetCommit&lt;/a&gt;, which returns information about a commit, including commit messages and author and committer</p>
+<p>information&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetDifferences&lt;/a&gt;, which returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified</p>
+<p>reference)&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Pull requests, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreatePullRequest&lt;/a&gt;, which creates a pull request in a specified</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribePullRequestEvents&lt;/a&gt;, which returns information about one or more pull request</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetCommentsForPullRequest&lt;/a&gt;, which returns information about comments on a specified pull</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetMergeConflicts&lt;/a&gt;, which returns information about merge conflicts between the source and destination branch in a pull</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetPullRequest&lt;/a&gt;, which returns information about a specified pull</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListPullRequests&lt;/a&gt;, which lists all pull requests for a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;MergePullRequestByFastForward&lt;/a&gt;, which merges the source destination branch of a pull request into the specified destination branch for that pull request using the fast-forward merge</p>
+<p>option&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PostCommentForPullRequest&lt;/a&gt;, which posts a comment to a pull request at the specified line, file, or</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdatePullRequestDescription&lt;/a&gt;, which updates the description of a pull</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdatePullRequestStatus&lt;/a&gt;, which updates the status of a pull</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdatePullRequestTitle&lt;/a&gt;, which updates the title of a pull</p>
+<p>request&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Information about comments in a repository, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteCommentContent&lt;/a&gt;, which deletes the content of a comment on a commit in a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetComment&lt;/a&gt;, which returns information about a comment on a</p>
+<p>commit&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetCommentsForComparedCommit&lt;/a&gt;, which returns information about comments on the comparison between two commit specifiers in a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PostCommentForComparedCommit&lt;/a&gt;, which creates a comment on the comparison between two commit specifiers in a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PostCommentReply&lt;/a&gt;, which creates a reply to a</p>
+<p>comment&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateComment&lt;/a&gt;, which updates the content of a comment on a commit in a</p>
+<p>repository&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Triggers, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetRepositoryTriggers&lt;/a&gt;, which returns information about triggers configured for a</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutRepositoryTriggers&lt;/a&gt;, which replaces all triggers for a repository and can be used to create or delete</p>
+<p>triggers&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;TestRepositoryTriggers&lt;/a&gt;, which tests the functionality of a repository trigger by sending data to the trigger</p>
+<p>target&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For information about how to use AWS <a href="qtaws-codecommit.html">CodeCommit</a>, see the &lt;a href=&quot;http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html&quot;&gt;AWS <a href="qtaws-codecommit.html">CodeCommit</a> User</p>
+</div>
+<!-- @@@CodeCommitClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CodeCommitClient[overload1]$$$CodeCommitClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeCommitClient"><a name="CodeCommitClient"></a>CodeCommitClient::<span class="name">CodeCommitClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CodeCommitClient -->
+<!-- $$$CodeCommitClient$$$CodeCommitClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeCommitClient-1"><a name="CodeCommitClient-1"></a>CodeCommitClient::<span class="name">CodeCommitClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-codecommit-codecommitclient.html#CodeCommitClient">CodeCommitClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CodeCommitClient -->
+<!-- $$$batchGetRepositories[overload1]$$$batchGetRepositoriesconstBatchGetRepositoriesRequest& -->
+<h3 class="fn" id="batchGetRepositories"><a name="batchGetRepositories"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-batchgetrepositoriesresponse.html">BatchGetRepositoriesResponse</a></span> *CodeCommitClient::<span class="name">batchGetRepositories</span>(const <span class="type"><a href="qtaws-codecommit-batchgetrepositoriesrequest.html">BatchGetRepositoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-batchgetrepositoriesresponse.html">BatchGetRepositoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about one or more</p>
+<p>repositories&gt; &lt;note&gt;</p>
+<p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web</p>
+<!-- @@@batchGetRepositories -->
+<!-- $$$createBranch[overload1]$$$createBranchconstCreateBranchRequest& -->
+<h3 class="fn" id="createBranch"><a name="createBranch"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-createbranchresponse.html">CreateBranchResponse</a></span> *CodeCommitClient::<span class="name">createBranch</span>(const <span class="type"><a href="qtaws-codecommit-createbranchrequest.html">CreateBranchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-createbranchresponse.html">CreateBranchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new branch in a repository and points the branch to a</p>
+<p>commit&gt; &lt;note&gt;</p>
+<p>Calling the create branch operation does not set a repository's default branch. To do this, call the update default branch</p>
+<!-- @@@createBranch -->
+<!-- $$$createPullRequest[overload1]$$$createPullRequestconstCreatePullRequestRequest& -->
+<h3 class="fn" id="createPullRequest"><a name="createPullRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-createpullrequestresponse.html">CreatePullRequestResponse</a></span> *CodeCommitClient::<span class="name">createPullRequest</span>(const <span class="type"><a href="qtaws-codecommit-createpullrequestrequest.html">CreatePullRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-createpullrequestresponse.html">CreatePullRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a pull request in the specified</p>
+<!-- @@@createPullRequest -->
+<!-- $$$createRepository[overload1]$$$createRepositoryconstCreateRepositoryRequest& -->
+<h3 class="fn" id="createRepository"><a name="createRepository"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-createrepositoryresponse.html">CreateRepositoryResponse</a></span> *CodeCommitClient::<span class="name">createRepository</span>(const <span class="type"><a href="qtaws-codecommit-createrepositoryrequest.html">CreateRepositoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-createrepositoryresponse.html">CreateRepositoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new, empty</p>
+<!-- @@@createRepository -->
+<!-- $$$deleteBranch[overload1]$$$deleteBranchconstDeleteBranchRequest& -->
+<h3 class="fn" id="deleteBranch"><a name="deleteBranch"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-deletebranchresponse.html">DeleteBranchResponse</a></span> *CodeCommitClient::<span class="name">deleteBranch</span>(const <span class="type"><a href="qtaws-codecommit-deletebranchrequest.html">DeleteBranchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-deletebranchresponse.html">DeleteBranchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a branch from a repository, unless that branch is the default branch for the repository.</p>
+<!-- @@@deleteBranch -->
+<!-- $$$deleteCommentContent[overload1]$$$deleteCommentContentconstDeleteCommentContentRequest& -->
+<h3 class="fn" id="deleteCommentContent"><a name="deleteCommentContent"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-deletecommentcontentresponse.html">DeleteCommentContentResponse</a></span> *CodeCommitClient::<span class="name">deleteCommentContent</span>(const <span class="type"><a href="qtaws-codecommit-deletecommentcontentrequest.html">DeleteCommentContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-deletecommentcontentresponse.html">DeleteCommentContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the content of a comment made on a change, file, or commit in a</p>
+<!-- @@@deleteCommentContent -->
+<!-- $$$deleteRepository[overload1]$$$deleteRepositoryconstDeleteRepositoryRequest& -->
+<h3 class="fn" id="deleteRepository"><a name="deleteRepository"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-deleterepositoryresponse.html">DeleteRepositoryResponse</a></span> *CodeCommitClient::<span class="name">deleteRepository</span>(const <span class="type"><a href="qtaws-codecommit-deleterepositoryrequest.html">DeleteRepositoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-deleterepositoryresponse.html">DeleteRepositoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a repository. If a specified repository was already deleted, a null repository ID will be</p>
+<p>returned&gt; &lt;b&gt;</p>
+<p>Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push calls to the deleted repository will</p>
+<!-- @@@deleteRepository -->
+<!-- $$$describePullRequestEvents[overload1]$$$describePullRequestEventsconstDescribePullRequestEventsRequest& -->
+<h3 class="fn" id="describePullRequestEvents"><a name="describePullRequestEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-describepullrequesteventsresponse.html">DescribePullRequestEventsResponse</a></span> *CodeCommitClient::<span class="name">describePullRequestEvents</span>(const <span class="type"><a href="qtaws-codecommit-describepullrequesteventsrequest.html">DescribePullRequestEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-describepullrequesteventsresponse.html">DescribePullRequestEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about one or more pull request</p>
+<!-- @@@describePullRequestEvents -->
+<!-- $$$getBlob[overload1]$$$getBlobconstGetBlobRequest& -->
+<h3 class="fn" id="getBlob"><a name="getBlob"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getblobresponse.html">GetBlobResponse</a></span> *CodeCommitClient::<span class="name">getBlob</span>(const <span class="type"><a href="qtaws-codecommit-getblobrequest.html">GetBlobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getblobresponse.html">GetBlobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the base-64 encoded content of an individual blob within a</p>
+<!-- @@@getBlob -->
+<!-- $$$getBranch[overload1]$$$getBranchconstGetBranchRequest& -->
+<h3 class="fn" id="getBranch"><a name="getBranch"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getbranchresponse.html">GetBranchResponse</a></span> *CodeCommitClient::<span class="name">getBranch</span>(const <span class="type"><a href="qtaws-codecommit-getbranchrequest.html">GetBranchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getbranchresponse.html">GetBranchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a repository branch, including its name and the last commit</p>
+<!-- @@@getBranch -->
+<!-- $$$getComment[overload1]$$$getCommentconstGetCommentRequest& -->
+<h3 class="fn" id="getComment"><a name="getComment"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getcommentresponse.html">GetCommentResponse</a></span> *CodeCommitClient::<span class="name">getComment</span>(const <span class="type"><a href="qtaws-codecommit-getcommentrequest.html">GetCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getcommentresponse.html">GetCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the content of a comment made on a change, file, or commit in a</p>
+<!-- @@@getComment -->
+<!-- $$$getCommentsForComparedCommit[overload1]$$$getCommentsForComparedCommitconstGetCommentsForComparedCommitRequest& -->
+<h3 class="fn" id="getCommentsForComparedCommit"><a name="getCommentsForComparedCommit"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getcommentsforcomparedcommitresponse.html">GetCommentsForComparedCommitResponse</a></span> *CodeCommitClient::<span class="name">getCommentsForComparedCommit</span>(const <span class="type"><a href="qtaws-codecommit-getcommentsforcomparedcommitrequest.html">GetCommentsForComparedCommitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getcommentsforcomparedcommitresponse.html">GetCommentsForComparedCommitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about comments made on the comparison between two</p>
+<!-- @@@getCommentsForComparedCommit -->
+<!-- $$$getCommentsForPullRequest[overload1]$$$getCommentsForPullRequestconstGetCommentsForPullRequestRequest& -->
+<h3 class="fn" id="getCommentsForPullRequest"><a name="getCommentsForPullRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getcommentsforpullrequestresponse.html">GetCommentsForPullRequestResponse</a></span> *CodeCommitClient::<span class="name">getCommentsForPullRequest</span>(const <span class="type"><a href="qtaws-codecommit-getcommentsforpullrequestrequest.html">GetCommentsForPullRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getcommentsforpullrequestresponse.html">GetCommentsForPullRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns comments made on a pull</p>
+<!-- @@@getCommentsForPullRequest -->
+<!-- $$$getCommit[overload1]$$$getCommitconstGetCommitRequest& -->
+<h3 class="fn" id="getCommit"><a name="getCommit"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getcommitresponse.html">GetCommitResponse</a></span> *CodeCommitClient::<span class="name">getCommit</span>(const <span class="type"><a href="qtaws-codecommit-getcommitrequest.html">GetCommitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getcommitresponse.html">GetCommitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a commit, including commit message and committer</p>
+<!-- @@@getCommit -->
+<!-- $$$getDifferences[overload1]$$$getDifferencesconstGetDifferencesRequest& -->
+<h3 class="fn" id="getDifferences"><a name="getDifferences"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getdifferencesresponse.html">GetDifferencesResponse</a></span> *CodeCommitClient::<span class="name">getDifferences</span>(const <span class="type"><a href="qtaws-codecommit-getdifferencesrequest.html">GetDifferencesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getdifferencesresponse.html">GetDifferencesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified reference). Results can be limited to a specified</p>
+<!-- @@@getDifferences -->
+<!-- $$$getMergeConflicts[overload1]$$$getMergeConflictsconstGetMergeConflictsRequest& -->
+<h3 class="fn" id="getMergeConflicts"><a name="getMergeConflicts"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getmergeconflictsresponse.html">GetMergeConflictsResponse</a></span> *CodeCommitClient::<span class="name">getMergeConflicts</span>(const <span class="type"><a href="qtaws-codecommit-getmergeconflictsrequest.html">GetMergeConflictsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getmergeconflictsresponse.html">GetMergeConflictsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about merge conflicts between the before and after commit IDs for a pull request in a</p>
+<!-- @@@getMergeConflicts -->
+<!-- $$$getPullRequest[overload1]$$$getPullRequestconstGetPullRequestRequest& -->
+<h3 class="fn" id="getPullRequest"><a name="getPullRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getpullrequestresponse.html">GetPullRequestResponse</a></span> *CodeCommitClient::<span class="name">getPullRequest</span>(const <span class="type"><a href="qtaws-codecommit-getpullrequestrequest.html">GetPullRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getpullrequestresponse.html">GetPullRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a pull request in a specified</p>
+<!-- @@@getPullRequest -->
+<!-- $$$getRepository[overload1]$$$getRepositoryconstGetRepositoryRequest& -->
+<h3 class="fn" id="getRepository"><a name="getRepository"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getrepositoryresponse.html">GetRepositoryResponse</a></span> *CodeCommitClient::<span class="name">getRepository</span>(const <span class="type"><a href="qtaws-codecommit-getrepositoryrequest.html">GetRepositoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getrepositoryresponse.html">GetRepositoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a</p>
+<p>repository&gt; &lt;note&gt;</p>
+<p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web</p>
+<!-- @@@getRepository -->
+<!-- $$$getRepositoryTriggers[overload1]$$$getRepositoryTriggersconstGetRepositoryTriggersRequest& -->
+<h3 class="fn" id="getRepositoryTriggers"><a name="getRepositoryTriggers"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-getrepositorytriggersresponse.html">GetRepositoryTriggersResponse</a></span> *CodeCommitClient::<span class="name">getRepositoryTriggers</span>(const <span class="type"><a href="qtaws-codecommit-getrepositorytriggersrequest.html">GetRepositoryTriggersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-getrepositorytriggersresponse.html">GetRepositoryTriggersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about triggers configured for a</p>
+<!-- @@@getRepositoryTriggers -->
+<!-- $$$listBranches[overload1]$$$listBranchesconstListBranchesRequest& -->
+<h3 class="fn" id="listBranches"><a name="listBranches"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-listbranchesresponse.html">ListBranchesResponse</a></span> *CodeCommitClient::<span class="name">listBranches</span>(const <span class="type"><a href="qtaws-codecommit-listbranchesrequest.html">ListBranchesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-listbranchesresponse.html">ListBranchesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more branches in a</p>
+<!-- @@@listBranches -->
+<!-- $$$listPullRequests[overload1]$$$listPullRequestsconstListPullRequestsRequest& -->
+<h3 class="fn" id="listPullRequests"><a name="listPullRequests"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-listpullrequestsresponse.html">ListPullRequestsResponse</a></span> *CodeCommitClient::<span class="name">listPullRequests</span>(const <span class="type"><a href="qtaws-codecommit-listpullrequestsrequest.html">ListPullRequestsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-listpullrequestsresponse.html">ListPullRequestsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of pull requests for a specified repository. The return list can be refined by pull request status or pull request author</p>
+<!-- @@@listPullRequests -->
+<!-- $$$listRepositories[overload1]$$$listRepositoriesconstListRepositoriesRequest& -->
+<h3 class="fn" id="listRepositories"><a name="listRepositories"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-listrepositoriesresponse.html">ListRepositoriesResponse</a></span> *CodeCommitClient::<span class="name">listRepositories</span>(const <span class="type"><a href="qtaws-codecommit-listrepositoriesrequest.html">ListRepositoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-listrepositoriesresponse.html">ListRepositoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more</p>
+<!-- @@@listRepositories -->
+<!-- $$$mergePullRequestByFastForward[overload1]$$$mergePullRequestByFastForwardconstMergePullRequestByFastForwardRequest& -->
+<h3 class="fn" id="mergePullRequestByFastForward"><a name="mergePullRequestByFastForward"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-mergepullrequestbyfastforwardresponse.html">MergePullRequestByFastForwardResponse</a></span> *CodeCommitClient::<span class="name">mergePullRequestByFastForward</span>(const <span class="type"><a href="qtaws-codecommit-mergepullrequestbyfastforwardrequest.html">MergePullRequestByFastForwardRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-mergepullrequestbyfastforwardresponse.html">MergePullRequestByFastForwardResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the specified commit using the fast-forward merge</p>
+<!-- @@@mergePullRequestByFastForward -->
+<!-- $$$postCommentForComparedCommit[overload1]$$$postCommentForComparedCommitconstPostCommentForComparedCommitRequest& -->
+<h3 class="fn" id="postCommentForComparedCommit"><a name="postCommentForComparedCommit"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-postcommentforcomparedcommitresponse.html">PostCommentForComparedCommitResponse</a></span> *CodeCommitClient::<span class="name">postCommentForComparedCommit</span>(const <span class="type"><a href="qtaws-codecommit-postcommentforcomparedcommitrequest.html">PostCommentForComparedCommitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-postcommentforcomparedcommitresponse.html">PostCommentForComparedCommitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Posts a comment on the comparison between two</p>
+<!-- @@@postCommentForComparedCommit -->
+<!-- $$$postCommentForPullRequest[overload1]$$$postCommentForPullRequestconstPostCommentForPullRequestRequest& -->
+<h3 class="fn" id="postCommentForPullRequest"><a name="postCommentForPullRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-postcommentforpullrequestresponse.html">PostCommentForPullRequestResponse</a></span> *CodeCommitClient::<span class="name">postCommentForPullRequest</span>(const <span class="type"><a href="qtaws-codecommit-postcommentforpullrequestrequest.html">PostCommentForPullRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-postcommentforpullrequestresponse.html">PostCommentForPullRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Posts a comment on a pull</p>
+<!-- @@@postCommentForPullRequest -->
+<!-- $$$postCommentReply[overload1]$$$postCommentReplyconstPostCommentReplyRequest& -->
+<h3 class="fn" id="postCommentReply"><a name="postCommentReply"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-postcommentreplyresponse.html">PostCommentReplyResponse</a></span> *CodeCommitClient::<span class="name">postCommentReply</span>(const <span class="type"><a href="qtaws-codecommit-postcommentreplyrequest.html">PostCommentReplyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-postcommentreplyresponse.html">PostCommentReplyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Posts a comment in reply to an existing comment on a comparison between commits or a pull</p>
+<!-- @@@postCommentReply -->
+<!-- $$$putFile[overload1]$$$putFileconstPutFileRequest& -->
+<h3 class="fn" id="putFile"><a name="putFile"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-putfileresponse.html">PutFileResponse</a></span> *CodeCommitClient::<span class="name">putFile</span>(const <span class="type"><a href="qtaws-codecommit-putfilerequest.html">PutFileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-putfileresponse.html">PutFileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates a file in an AWS <a href="qtaws-codecommit.html">CodeCommit</a></p>
+<!-- @@@putFile -->
+<!-- $$$putRepositoryTriggers[overload1]$$$putRepositoryTriggersconstPutRepositoryTriggersRequest& -->
+<h3 class="fn" id="putRepositoryTriggers"><a name="putRepositoryTriggers"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-putrepositorytriggersresponse.html">PutRepositoryTriggersResponse</a></span> *CodeCommitClient::<span class="name">putRepositoryTriggers</span>(const <span class="type"><a href="qtaws-codecommit-putrepositorytriggersrequest.html">PutRepositoryTriggersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-putrepositorytriggersresponse.html">PutRepositoryTriggersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Replaces all triggers for a repository. This can be used to create or delete</p>
+<!-- @@@putRepositoryTriggers -->
+<!-- $$$testRepositoryTriggers[overload1]$$$testRepositoryTriggersconstTestRepositoryTriggersRequest& -->
+<h3 class="fn" id="testRepositoryTriggers"><a name="testRepositoryTriggers"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-testrepositorytriggersresponse.html">TestRepositoryTriggersResponse</a></span> *CodeCommitClient::<span class="name">testRepositoryTriggers</span>(const <span class="type"><a href="qtaws-codecommit-testrepositorytriggersrequest.html">TestRepositoryTriggersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-testrepositorytriggersresponse.html">TestRepositoryTriggersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Tests the functionality of repository triggers by sending information to the trigger target. If real data is available in the repository, the test will send data from the last commit. If no data is available, sample data will be</p>
+<!-- @@@testRepositoryTriggers -->
+<!-- $$$updateComment[overload1]$$$updateCommentconstUpdateCommentRequest& -->
+<h3 class="fn" id="updateComment"><a name="updateComment"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updatecommentresponse.html">UpdateCommentResponse</a></span> *CodeCommitClient::<span class="name">updateComment</span>(const <span class="type"><a href="qtaws-codecommit-updatecommentrequest.html">UpdateCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updatecommentresponse.html">UpdateCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Replaces the contents of a</p>
+<!-- @@@updateComment -->
+<!-- $$$updateDefaultBranch[overload1]$$$updateDefaultBranchconstUpdateDefaultBranchRequest& -->
+<h3 class="fn" id="updateDefaultBranch"><a name="updateDefaultBranch"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updatedefaultbranchresponse.html">UpdateDefaultBranchResponse</a></span> *CodeCommitClient::<span class="name">updateDefaultBranch</span>(const <span class="type"><a href="qtaws-codecommit-updatedefaultbranchrequest.html">UpdateDefaultBranchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updatedefaultbranchresponse.html">UpdateDefaultBranchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets or changes the default branch name for the specified</p>
+<p>repository&gt; &lt;note&gt;</p>
+<p>If you use this operation to change the default branch name to the current default branch name, a success message is returned even though the default branch did not</p>
+<!-- @@@updateDefaultBranch -->
+<!-- $$$updatePullRequestDescription[overload1]$$$updatePullRequestDescriptionconstUpdatePullRequestDescriptionRequest& -->
+<h3 class="fn" id="updatePullRequestDescription"><a name="updatePullRequestDescription"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updatepullrequestdescriptionresponse.html">UpdatePullRequestDescriptionResponse</a></span> *CodeCommitClient::<span class="name">updatePullRequestDescription</span>(const <span class="type"><a href="qtaws-codecommit-updatepullrequestdescriptionrequest.html">UpdatePullRequestDescriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updatepullrequestdescriptionresponse.html">UpdatePullRequestDescriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Replaces the contents of the description of a pull</p>
+<!-- @@@updatePullRequestDescription -->
+<!-- $$$updatePullRequestStatus[overload1]$$$updatePullRequestStatusconstUpdatePullRequestStatusRequest& -->
+<h3 class="fn" id="updatePullRequestStatus"><a name="updatePullRequestStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updatepullrequeststatusresponse.html">UpdatePullRequestStatusResponse</a></span> *CodeCommitClient::<span class="name">updatePullRequestStatus</span>(const <span class="type"><a href="qtaws-codecommit-updatepullrequeststatusrequest.html">UpdatePullRequestStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updatepullrequeststatusresponse.html">UpdatePullRequestStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the status of a pull request.</p>
+<!-- @@@updatePullRequestStatus -->
+<!-- $$$updatePullRequestTitle[overload1]$$$updatePullRequestTitleconstUpdatePullRequestTitleRequest& -->
+<h3 class="fn" id="updatePullRequestTitle"><a name="updatePullRequestTitle"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updatepullrequesttitleresponse.html">UpdatePullRequestTitleResponse</a></span> *CodeCommitClient::<span class="name">updatePullRequestTitle</span>(const <span class="type"><a href="qtaws-codecommit-updatepullrequesttitlerequest.html">UpdatePullRequestTitleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updatepullrequesttitleresponse.html">UpdatePullRequestTitleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Replaces the title of a pull</p>
+<!-- @@@updatePullRequestTitle -->
+<!-- $$$updateRepositoryDescription[overload1]$$$updateRepositoryDescriptionconstUpdateRepositoryDescriptionRequest& -->
+<h3 class="fn" id="updateRepositoryDescription"><a name="updateRepositoryDescription"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updaterepositorydescriptionresponse.html">UpdateRepositoryDescriptionResponse</a></span> *CodeCommitClient::<span class="name">updateRepositoryDescription</span>(const <span class="type"><a href="qtaws-codecommit-updaterepositorydescriptionrequest.html">UpdateRepositoryDescriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updaterepositorydescriptionresponse.html">UpdateRepositoryDescriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets or changes the comment or description for a</p>
+<p>repository&gt; &lt;note&gt;</p>
+<p>The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make sure that you HTML-encode the description field in any application that uses this API to display the repository description on a web</p>
+<!-- @@@updateRepositoryDescription -->
+<!-- $$$updateRepositoryName[overload1]$$$updateRepositoryNameconstUpdateRepositoryNameRequest& -->
+<h3 class="fn" id="updateRepositoryName"><a name="updateRepositoryName"></a><code>[slot] </code><span class="type"><a href="qtaws-codecommit-updaterepositorynameresponse.html">UpdateRepositoryNameResponse</a></span> *CodeCommitClient::<span class="name">updateRepositoryName</span>(const <span class="type"><a href="qtaws-codecommit-updaterepositorynamerequest.html">UpdateRepositoryNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codecommit-codecommitclient.html">CodeCommitClient</a> service, and returns a pointer to an <a href="qtaws-codecommit-updaterepositorynameresponse.html">UpdateRepositoryNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix &quot;.git&quot; is prohibited. For a full description of the limits on repository names, see &lt;a href=&quot;http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html&quot;&gt;Limits&lt;/a&gt; in the AWS <a href="qtaws-codecommit.html">CodeCommit</a> User</p>
+<!-- @@@updateRepositoryName -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

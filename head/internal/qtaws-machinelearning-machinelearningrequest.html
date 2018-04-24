@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- machinelearningrequest.cpp -->
+  <title>MachineLearningRequest Class | MachineLearning</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmachinelearning-index.html">MachineLearning</a></li>
+<li><a href="qtawsmachinelearning-module.html">C++ Classes</a></li>
+<li>MachineLearningRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MachineLearningRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-machinelearning-machinelearningrequest.html">QtAws::MachineLearning::MachineLearningRequest</a>)<br/></span>
+<!-- $$$MachineLearningRequest-brief -->
+<p>The <a href="qtaws-machinelearning-machinelearningrequest.html">MachineLearningRequest</a> class provides an interface for <a href="qtaws-machinelearning.html">MachineLearning</a> requests. <a href="#details">More...</a></p>
+<!-- @@@MachineLearningRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MachineLearningRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-machinelearning-addtagsrequest.html">QtAws::MachineLearning::AddTagsRequest</a>, <a href="qtaws-machinelearning-createbatchpredictionrequest.html">QtAws::MachineLearning::CreateBatchPredictionRequest</a>, <a href="qtaws-machinelearning-createdatasourcefromrdsrequest.html">QtAws::MachineLearning::CreateDataSourceFromRDSRequest</a>, <a href="qtaws-machinelearning-createdatasourcefromredshiftrequest.html">QtAws::MachineLearning::CreateDataSourceFromRedshiftRequest</a>, <a href="qtaws-machinelearning-createdatasourcefroms3request.html">QtAws::MachineLearning::CreateDataSourceFromS3Request</a>, <a href="qtaws-machinelearning-createevaluationrequest.html">QtAws::MachineLearning::CreateEvaluationRequest</a>, <a href="qtaws-machinelearning-createmlmodelrequest.html">QtAws::MachineLearning::CreateMLModelRequest</a>, <a href="qtaws-machinelearning-createrealtimeendpointrequest.html">QtAws::MachineLearning::CreateRealtimeEndpointRequest</a>, <a href="qtaws-machinelearning-deletebatchpredictionrequest.html">QtAws::MachineLearning::DeleteBatchPredictionRequest</a>, <a href="qtaws-machinelearning-deletedatasourcerequest.html">QtAws::MachineLearning::DeleteDataSourceRequest</a>, <a href="qtaws-machinelearning-deleteevaluationrequest.html">QtAws::MachineLearning::DeleteEvaluationRequest</a>, <a href="qtaws-machinelearning-deletemlmodelrequest.html">QtAws::MachineLearning::DeleteMLModelRequest</a>, <a href="qtaws-machinelearning-deleterealtimeendpointrequest.html">QtAws::MachineLearning::DeleteRealtimeEndpointRequest</a>, <a href="qtaws-machinelearning-deletetagsrequest.html">QtAws::MachineLearning::DeleteTagsRequest</a>, <a href="qtaws-machinelearning-describebatchpredictionsrequest.html">QtAws::MachineLearning::DescribeBatchPredictionsRequest</a>, <a href="qtaws-machinelearning-describedatasourcesrequest.html">QtAws::MachineLearning::DescribeDataSourcesRequest</a>, <a href="qtaws-machinelearning-describeevaluationsrequest.html">QtAws::MachineLearning::DescribeEvaluationsRequest</a>, <a href="qtaws-machinelearning-describemlmodelsrequest.html">QtAws::MachineLearning::DescribeMLModelsRequest</a>, <a href="qtaws-machinelearning-describetagsrequest.html">QtAws::MachineLearning::DescribeTagsRequest</a>, <a href="qtaws-machinelearning-getbatchpredictionrequest.html">QtAws::MachineLearning::GetBatchPredictionRequest</a>, <a href="qtaws-machinelearning-getdatasourcerequest.html">QtAws::MachineLearning::GetDataSourceRequest</a>, <a href="qtaws-machinelearning-getevaluationrequest.html">QtAws::MachineLearning::GetEvaluationRequest</a>, <a href="qtaws-machinelearning-getmlmodelrequest.html">QtAws::MachineLearning::GetMLModelRequest</a>, <a href="qtaws-machinelearning-predictrequest.html">QtAws::MachineLearning::PredictRequest</a>, <a href="qtaws-machinelearning-updatebatchpredictionrequest.html">QtAws::MachineLearning::UpdateBatchPredictionRequest</a>, <a href="qtaws-machinelearning-updatedatasourcerequest.html">QtAws::MachineLearning::UpdateDataSourceRequest</a>, <a href="qtaws-machinelearning-updateevaluationrequest.html">QtAws::MachineLearning::UpdateEvaluationRequest</a>, and <a href="qtaws-machinelearning-updatemlmodelrequest.html">QtAws::MachineLearning::UpdateMLModelRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-machinelearning-machinelearningrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#Action-enum">Action</a></b> { AddTagsAction, CreateBatchPredictionAction, CreateDataSourceFromRDSAction, CreateDataSourceFromRedshiftAction, ..., UpdateMLModelAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest">MachineLearningRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest-1">MachineLearningRequest</a></b>(const MachineLearningRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> MachineLearningRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#operator-eq">operator=</a></b>(const MachineLearningRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#operator-eq-eq">operator==</a></b>(const MachineLearningRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest-2">MachineLearningRequest</a></b>(MachineLearningRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MachineLearningRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-machinelearning-machinelearningrequest.html">MachineLearningRequest</a> class provides an interface for <a href="qtaws-machinelearning.html">MachineLearning</a> requests.</p>
+</div>
+<!-- @@@MachineLearningRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddTagsAction$$$CreateBatchPredictionAction$$$CreateDataSourceFromRDSAction$$$CreateDataSourceFromRedshiftAction$$$CreateDataSourceFromS3Action$$$CreateEvaluationAction$$$CreateMLModelAction$$$CreateRealtimeEndpointAction$$$DeleteBatchPredictionAction$$$DeleteDataSourceAction$$$DeleteEvaluationAction$$$DeleteMLModelAction$$$DeleteRealtimeEndpointAction$$$DeleteTagsAction$$$DescribeBatchPredictionsAction$$$DescribeDataSourcesAction$$$DescribeEvaluationsAction$$$DescribeMLModelsAction$$$DescribeTagsAction$$$GetBatchPredictionAction$$$GetDataSourceAction$$$GetEvaluationAction$$$GetMLModelAction$$$PredictAction$$$UpdateBatchPredictionAction$$$UpdateDataSourceAction$$$UpdateEvaluationAction$$$UpdateMLModelAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum MachineLearningRequest::<span class="name">Action</span><br/>flags MachineLearningRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-machinelearning.html">MachineLearning</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::AddTagsAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> AddTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateBatchPredictionAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateBatchPrediction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateDataSourceFromRDSAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateDataSourceFromRDS action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateDataSourceFromRedshiftAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateDataSourceFromRedshift action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateDataSourceFromS3Action</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateDataSourceFromS3 action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateEvaluationAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateEvaluation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateMLModelAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateMLModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::CreateRealtimeEndpointAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> CreateRealtimeEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteBatchPredictionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteBatchPrediction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteDataSourceAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteDataSource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteEvaluationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteEvaluation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteMLModelAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteMLModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteRealtimeEndpointAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteRealtimeEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DeleteTagsAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DeleteTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DescribeBatchPredictionsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DescribeBatchPredictions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DescribeDataSourcesAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DescribeDataSources action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DescribeEvaluationsAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DescribeEvaluations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DescribeMLModelsAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DescribeMLModels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::DescribeTagsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> DescribeTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::GetBatchPredictionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> GetBatchPrediction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::GetDataSourceAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> GetDataSource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::GetEvaluationAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> GetEvaluation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::GetMLModelAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> GetMLModel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::PredictAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> Predict action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::UpdateBatchPredictionAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> UpdateBatchPrediction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::UpdateDataSourceAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> UpdateDataSource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::UpdateEvaluationAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> UpdateEvaluation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::MachineLearning::MachineLearningRequest::UpdateMLModelAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-machinelearning.html">MachineLearning</a> UpdateMLModel action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MachineLearningRequest[overload1]$$$MachineLearningRequestconstAction -->
+<h3 class="fn" id="MachineLearningRequest"><a name="MachineLearningRequest"></a>MachineLearningRequest::<span class="name">MachineLearningRequest</span>(const <span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-machinelearning-machinelearningrequest.html">MachineLearningRequest</a> object for <a href="qtaws-machinelearning.html">MachineLearning</a> <i>action</i>.</p>
+<!-- @@@MachineLearningRequest -->
+<!-- $$$MachineLearningRequest$$$MachineLearningRequestconstMachineLearningRequest& -->
+<h3 class="fn" id="MachineLearningRequest-1"><a name="MachineLearningRequest-1"></a>MachineLearningRequest::<span class="name">MachineLearningRequest</span>(const <span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest">MachineLearningRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@MachineLearningRequest -->
+<!-- $$$MachineLearningRequest$$$MachineLearningRequestMachineLearningRequestPrivate*const -->
+<h3 class="fn" id="MachineLearningRequest-2"><a name="MachineLearningRequest-2"></a><code>[protected] </code>MachineLearningRequest::<span class="name">MachineLearningRequest</span>(<span class="type"><a href="qtaws-machinelearning-machinelearningrequestprivate.html">MachineLearningRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-machinelearning-machinelearningrequest.html">MachineLearningRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-machinelearning-machinelearningrequestprivate.html">MachineLearningRequestPrivate</a>.</p>
+<!-- @@@MachineLearningRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#Action-enum">Action</a></span> MachineLearningRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-machinelearning.html">MachineLearning</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> MachineLearningRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-machinelearning.html">MachineLearning</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> MachineLearningRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-machinelearning.html">MachineLearning</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> MachineLearningRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> MachineLearningRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> MachineLearningRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;MachineLearningRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> MachineLearningRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-machinelearning.html">MachineLearning</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> MachineLearningRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-machinelearning.html">MachineLearning</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> MachineLearningRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> MachineLearningRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-machinelearning-machinelearningrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> MachineLearningRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-machinelearning.html">MachineLearning</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-machinelearning.html">MachineLearning</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-machinelearning-machinelearningrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constMachineLearningRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest">MachineLearningRequest</a></span> &amp;MachineLearningRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest">MachineLearningRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-machinelearning-machinelearningrequest.html">MachineLearningRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constMachineLearningRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> MachineLearningRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-machinelearning-machinelearningrequest.html#MachineLearningRequest">MachineLearningRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

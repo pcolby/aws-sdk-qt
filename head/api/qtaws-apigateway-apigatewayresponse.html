@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- apigatewayresponse.cpp -->
+  <title>APIGatewayResponse Class | APIGateway</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsapigateway-index.html">APIGateway</a></li>
+<li><a href="qtawsapigateway-module.html">C++ Classes</a></li>
+<li>APIGatewayResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">APIGatewayResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-apigateway-apigatewayresponse.html">QtAws::APIGateway::APIGatewayResponse</a>)<br/></span>
+<!-- $$$APIGatewayResponse-brief -->
+<p>The <a href="qtaws-apigateway-apigatewayresponse.html">APIGatewayResponse</a> class provides an interface for <a href="qtaws-apigateway.html">APIGateway</a> responses. <a href="#details">More...</a></p>
+<!-- @@@APIGatewayResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;APIGatewayResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-apigateway-createapikeyresponse.html">QtAws::APIGateway::CreateApiKeyResponse</a>, <a href="qtaws-apigateway-createauthorizerresponse.html">QtAws::APIGateway::CreateAuthorizerResponse</a>, <a href="qtaws-apigateway-createbasepathmappingresponse.html">QtAws::APIGateway::CreateBasePathMappingResponse</a>, <a href="qtaws-apigateway-createdeploymentresponse.html">QtAws::APIGateway::CreateDeploymentResponse</a>, <a href="qtaws-apigateway-createdocumentationpartresponse.html">QtAws::APIGateway::CreateDocumentationPartResponse</a>, <a href="qtaws-apigateway-createdocumentationversionresponse.html">QtAws::APIGateway::CreateDocumentationVersionResponse</a>, <a href="qtaws-apigateway-createdomainnameresponse.html">QtAws::APIGateway::CreateDomainNameResponse</a>, <a href="qtaws-apigateway-createmodelresponse.html">QtAws::APIGateway::CreateModelResponse</a>, <a href="qtaws-apigateway-createrequestvalidatorresponse.html">QtAws::APIGateway::CreateRequestValidatorResponse</a>, <a href="qtaws-apigateway-createresourceresponse.html">QtAws::APIGateway::CreateResourceResponse</a>, <a href="qtaws-apigateway-createrestapiresponse.html">QtAws::APIGateway::CreateRestApiResponse</a>, <a href="qtaws-apigateway-createstageresponse.html">QtAws::APIGateway::CreateStageResponse</a>, <a href="qtaws-apigateway-createusageplankeyresponse.html">QtAws::APIGateway::CreateUsagePlanKeyResponse</a>, <a href="qtaws-apigateway-createusageplanresponse.html">QtAws::APIGateway::CreateUsagePlanResponse</a>, <a href="qtaws-apigateway-createvpclinkresponse.html">QtAws::APIGateway::CreateVpcLinkResponse</a>, <a href="qtaws-apigateway-deleteapikeyresponse.html">QtAws::APIGateway::DeleteApiKeyResponse</a>, <a href="qtaws-apigateway-deleteauthorizerresponse.html">QtAws::APIGateway::DeleteAuthorizerResponse</a>, <a href="qtaws-apigateway-deletebasepathmappingresponse.html">QtAws::APIGateway::DeleteBasePathMappingResponse</a>, <a href="qtaws-apigateway-deleteclientcertificateresponse.html">QtAws::APIGateway::DeleteClientCertificateResponse</a>, <a href="qtaws-apigateway-deletedeploymentresponse.html">QtAws::APIGateway::DeleteDeploymentResponse</a>, <a href="qtaws-apigateway-deletedocumentationpartresponse.html">QtAws::APIGateway::DeleteDocumentationPartResponse</a>, <a href="qtaws-apigateway-deletedocumentationversionresponse.html">QtAws::APIGateway::DeleteDocumentationVersionResponse</a>, <a href="qtaws-apigateway-deletedomainnameresponse.html">QtAws::APIGateway::DeleteDomainNameResponse</a>, <a href="qtaws-apigateway-deletegatewayresponseresponse.html">QtAws::APIGateway::DeleteGatewayResponseResponse</a>, <a href="qtaws-apigateway-deleteintegrationresponse.html">QtAws::APIGateway::DeleteIntegrationResponse</a>, <a href="qtaws-apigateway-deleteintegrationresponseresponse.html">QtAws::APIGateway::DeleteIntegrationResponseResponse</a>, <a href="qtaws-apigateway-deletemethodresponse.html">QtAws::APIGateway::DeleteMethodResponse</a>, <a href="qtaws-apigateway-deletemethodresponseresponse.html">QtAws::APIGateway::DeleteMethodResponseResponse</a>, <a href="qtaws-apigateway-deletemodelresponse.html">QtAws::APIGateway::DeleteModelResponse</a>, <a href="qtaws-apigateway-deleterequestvalidatorresponse.html">QtAws::APIGateway::DeleteRequestValidatorResponse</a>, <a href="qtaws-apigateway-deleteresourceresponse.html">QtAws::APIGateway::DeleteResourceResponse</a>, <a href="qtaws-apigateway-deleterestapiresponse.html">QtAws::APIGateway::DeleteRestApiResponse</a>, <a href="qtaws-apigateway-deletestageresponse.html">QtAws::APIGateway::DeleteStageResponse</a>, <a href="qtaws-apigateway-deleteusageplankeyresponse.html">QtAws::APIGateway::DeleteUsagePlanKeyResponse</a>, <a href="qtaws-apigateway-deleteusageplanresponse.html">QtAws::APIGateway::DeleteUsagePlanResponse</a>, <a href="qtaws-apigateway-deletevpclinkresponse.html">QtAws::APIGateway::DeleteVpcLinkResponse</a>, <a href="qtaws-apigateway-flushstageauthorizerscacheresponse.html">QtAws::APIGateway::FlushStageAuthorizersCacheResponse</a>, <a href="qtaws-apigateway-flushstagecacheresponse.html">QtAws::APIGateway::FlushStageCacheResponse</a>, <a href="qtaws-apigateway-generateclientcertificateresponse.html">QtAws::APIGateway::GenerateClientCertificateResponse</a>, <a href="qtaws-apigateway-getaccountresponse.html">QtAws::APIGateway::GetAccountResponse</a>, <a href="qtaws-apigateway-getapikeyresponse.html">QtAws::APIGateway::GetApiKeyResponse</a>, <a href="qtaws-apigateway-getapikeysresponse.html">QtAws::APIGateway::GetApiKeysResponse</a>, <a href="qtaws-apigateway-getauthorizerresponse.html">QtAws::APIGateway::GetAuthorizerResponse</a>, <a href="qtaws-apigateway-getauthorizersresponse.html">QtAws::APIGateway::GetAuthorizersResponse</a>, <a href="qtaws-apigateway-getbasepathmappingresponse.html">QtAws::APIGateway::GetBasePathMappingResponse</a>, <a href="qtaws-apigateway-getbasepathmappingsresponse.html">QtAws::APIGateway::GetBasePathMappingsResponse</a>, <a href="qtaws-apigateway-getclientcertificateresponse.html">QtAws::APIGateway::GetClientCertificateResponse</a>, <a href="qtaws-apigateway-getclientcertificatesresponse.html">QtAws::APIGateway::GetClientCertificatesResponse</a>, <a href="qtaws-apigateway-getdeploymentresponse.html">QtAws::APIGateway::GetDeploymentResponse</a>, <a href="qtaws-apigateway-getdeploymentsresponse.html">QtAws::APIGateway::GetDeploymentsResponse</a>, <a href="qtaws-apigateway-getdocumentationpartresponse.html">QtAws::APIGateway::GetDocumentationPartResponse</a>, <a href="qtaws-apigateway-getdocumentationpartsresponse.html">QtAws::APIGateway::GetDocumentationPartsResponse</a>, <a href="qtaws-apigateway-getdocumentationversionresponse.html">QtAws::APIGateway::GetDocumentationVersionResponse</a>, <a href="qtaws-apigateway-getdocumentationversionsresponse.html">QtAws::APIGateway::GetDocumentationVersionsResponse</a>, <a href="qtaws-apigateway-getdomainnameresponse.html">QtAws::APIGateway::GetDomainNameResponse</a>, <a href="qtaws-apigateway-getdomainnamesresponse.html">QtAws::APIGateway::GetDomainNamesResponse</a>, <a href="qtaws-apigateway-getexportresponse.html">QtAws::APIGateway::GetExportResponse</a>, <a href="qtaws-apigateway-getgatewayresponseresponse.html">QtAws::APIGateway::GetGatewayResponseResponse</a>, <a href="qtaws-apigateway-getgatewayresponsesresponse.html">QtAws::APIGateway::GetGatewayResponsesResponse</a>, <a href="qtaws-apigateway-getintegrationresponse.html">QtAws::APIGateway::GetIntegrationResponse</a>, <a href="qtaws-apigateway-getintegrationresponseresponse.html">QtAws::APIGateway::GetIntegrationResponseResponse</a>, <a href="qtaws-apigateway-getmethodresponse.html">QtAws::APIGateway::GetMethodResponse</a>, <a href="qtaws-apigateway-getmethodresponseresponse.html">QtAws::APIGateway::GetMethodResponseResponse</a>, <a href="qtaws-apigateway-getmodelresponse.html">QtAws::APIGateway::GetModelResponse</a>, <a href="qtaws-apigateway-getmodelsresponse.html">QtAws::APIGateway::GetModelsResponse</a>, <a href="qtaws-apigateway-getmodeltemplateresponse.html">QtAws::APIGateway::GetModelTemplateResponse</a>, <a href="qtaws-apigateway-getrequestvalidatorresponse.html">QtAws::APIGateway::GetRequestValidatorResponse</a>, <a href="qtaws-apigateway-getrequestvalidatorsresponse.html">QtAws::APIGateway::GetRequestValidatorsResponse</a>, <a href="qtaws-apigateway-getresourceresponse.html">QtAws::APIGateway::GetResourceResponse</a>, <a href="qtaws-apigateway-getresourcesresponse.html">QtAws::APIGateway::GetResourcesResponse</a>, <a href="qtaws-apigateway-getrestapiresponse.html">QtAws::APIGateway::GetRestApiResponse</a>, <a href="qtaws-apigateway-getrestapisresponse.html">QtAws::APIGateway::GetRestApisResponse</a>, <a href="qtaws-apigateway-getsdkresponse.html">QtAws::APIGateway::GetSdkResponse</a>, <a href="qtaws-apigateway-getsdktyperesponse.html">QtAws::APIGateway::GetSdkTypeResponse</a>, <a href="qtaws-apigateway-getsdktypesresponse.html">QtAws::APIGateway::GetSdkTypesResponse</a>, <a href="qtaws-apigateway-getstageresponse.html">QtAws::APIGateway::GetStageResponse</a>, <a href="qtaws-apigateway-getstagesresponse.html">QtAws::APIGateway::GetStagesResponse</a>, <a href="qtaws-apigateway-gettagsresponse.html">QtAws::APIGateway::GetTagsResponse</a>, <a href="qtaws-apigateway-getusageplankeyresponse.html">QtAws::APIGateway::GetUsagePlanKeyResponse</a>, <a href="qtaws-apigateway-getusageplankeysresponse.html">QtAws::APIGateway::GetUsagePlanKeysResponse</a>, <a href="qtaws-apigateway-getusageplanresponse.html">QtAws::APIGateway::GetUsagePlanResponse</a>, <a href="qtaws-apigateway-getusageplansresponse.html">QtAws::APIGateway::GetUsagePlansResponse</a>, <a href="qtaws-apigateway-getusageresponse.html">QtAws::APIGateway::GetUsageResponse</a>, <a href="qtaws-apigateway-getvpclinkresponse.html">QtAws::APIGateway::GetVpcLinkResponse</a>, <a href="qtaws-apigateway-getvpclinksresponse.html">QtAws::APIGateway::GetVpcLinksResponse</a>, <a href="qtaws-apigateway-importapikeysresponse.html">QtAws::APIGateway::ImportApiKeysResponse</a>, <a href="qtaws-apigateway-importdocumentationpartsresponse.html">QtAws::APIGateway::ImportDocumentationPartsResponse</a>, <a href="qtaws-apigateway-importrestapiresponse.html">QtAws::APIGateway::ImportRestApiResponse</a>, <a href="qtaws-apigateway-putgatewayresponseresponse.html">QtAws::APIGateway::PutGatewayResponseResponse</a>, <a href="qtaws-apigateway-putintegrationresponse.html">QtAws::APIGateway::PutIntegrationResponse</a>, <a href="qtaws-apigateway-putintegrationresponseresponse.html">QtAws::APIGateway::PutIntegrationResponseResponse</a>, <a href="qtaws-apigateway-putmethodresponse.html">QtAws::APIGateway::PutMethodResponse</a>, <a href="qtaws-apigateway-putmethodresponseresponse.html">QtAws::APIGateway::PutMethodResponseResponse</a>, <a href="qtaws-apigateway-putrestapiresponse.html">QtAws::APIGateway::PutRestApiResponse</a>, <a href="qtaws-apigateway-tagresourceresponse.html">QtAws::APIGateway::TagResourceResponse</a>, <a href="qtaws-apigateway-testinvokeauthorizerresponse.html">QtAws::APIGateway::TestInvokeAuthorizerResponse</a>, <a href="qtaws-apigateway-testinvokemethodresponse.html">QtAws::APIGateway::TestInvokeMethodResponse</a>, <a href="qtaws-apigateway-untagresourceresponse.html">QtAws::APIGateway::UntagResourceResponse</a>, <a href="qtaws-apigateway-updateaccountresponse.html">QtAws::APIGateway::UpdateAccountResponse</a>, <a href="qtaws-apigateway-updateapikeyresponse.html">QtAws::APIGateway::UpdateApiKeyResponse</a>, <a href="qtaws-apigateway-updateauthorizerresponse.html">QtAws::APIGateway::UpdateAuthorizerResponse</a>, <a href="qtaws-apigateway-updatebasepathmappingresponse.html">QtAws::APIGateway::UpdateBasePathMappingResponse</a>, <a href="qtaws-apigateway-updateclientcertificateresponse.html">QtAws::APIGateway::UpdateClientCertificateResponse</a>, <a href="qtaws-apigateway-updatedeploymentresponse.html">QtAws::APIGateway::UpdateDeploymentResponse</a>, <a href="qtaws-apigateway-updatedocumentationpartresponse.html">QtAws::APIGateway::UpdateDocumentationPartResponse</a>, <a href="qtaws-apigateway-updatedocumentationversionresponse.html">QtAws::APIGateway::UpdateDocumentationVersionResponse</a>, <a href="qtaws-apigateway-updatedomainnameresponse.html">QtAws::APIGateway::UpdateDomainNameResponse</a>, <a href="qtaws-apigateway-updategatewayresponseresponse.html">QtAws::APIGateway::UpdateGatewayResponseResponse</a>, <a href="qtaws-apigateway-updateintegrationresponse.html">QtAws::APIGateway::UpdateIntegrationResponse</a>, <a href="qtaws-apigateway-updateintegrationresponseresponse.html">QtAws::APIGateway::UpdateIntegrationResponseResponse</a>, <a href="qtaws-apigateway-updatemethodresponse.html">QtAws::APIGateway::UpdateMethodResponse</a>, <a href="qtaws-apigateway-updatemethodresponseresponse.html">QtAws::APIGateway::UpdateMethodResponseResponse</a>, <a href="qtaws-apigateway-updatemodelresponse.html">QtAws::APIGateway::UpdateModelResponse</a>, <a href="qtaws-apigateway-updaterequestvalidatorresponse.html">QtAws::APIGateway::UpdateRequestValidatorResponse</a>, <a href="qtaws-apigateway-updateresourceresponse.html">QtAws::APIGateway::UpdateResourceResponse</a>, <a href="qtaws-apigateway-updaterestapiresponse.html">QtAws::APIGateway::UpdateRestApiResponse</a>, <a href="qtaws-apigateway-updatestageresponse.html">QtAws::APIGateway::UpdateStageResponse</a>, <a href="qtaws-apigateway-updateusageplanresponse.html">QtAws::APIGateway::UpdateUsagePlanResponse</a>, <a href="qtaws-apigateway-updateusageresponse.html">QtAws::APIGateway::UpdateUsageResponse</a>, and <a href="qtaws-apigateway-updatevpclinkresponse.html">QtAws::APIGateway::UpdateVpcLinkResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-apigateway-apigatewayresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayresponse.html#APIGatewayResponse">APIGatewayResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$APIGatewayResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-apigateway-apigatewayresponse.html">APIGatewayResponse</a> class provides an interface for <a href="qtaws-apigateway.html">APIGateway</a> responses.</p>
+</div>
+<!-- @@@APIGatewayResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$APIGatewayResponse[overload1]$$$APIGatewayResponseQObject*const -->
+<h3 class="fn" id="APIGatewayResponse"><a name="APIGatewayResponse"></a>APIGatewayResponse::<span class="name">APIGatewayResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-apigateway-apigatewayresponse.html">APIGatewayResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@APIGatewayResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> APIGatewayResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

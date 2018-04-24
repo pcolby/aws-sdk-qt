@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- directconnectrequest.cpp -->
+  <title>DirectConnectRequest Class | DirectConnect</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdirectconnect-index.html">DirectConnect</a></li>
+<li><a href="qtawsdirectconnect-module.html">C++ Classes</a></li>
+<li>DirectConnectRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DirectConnectRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-directconnect-directconnectrequest.html">QtAws::DirectConnect::DirectConnectRequest</a>)<br/></span>
+<!-- $$$DirectConnectRequest-brief -->
+<p>The <a href="qtaws-directconnect-directconnectrequest.html">DirectConnectRequest</a> class provides an interface for <a href="qtaws-directconnect.html">DirectConnect</a> requests. <a href="#details">More...</a></p>
+<!-- @@@DirectConnectRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DirectConnectRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-directconnect-allocateconnectiononinterconnectrequest.html">QtAws::DirectConnect::AllocateConnectionOnInterconnectRequest</a>, <a href="qtaws-directconnect-allocatehostedconnectionrequest.html">QtAws::DirectConnect::AllocateHostedConnectionRequest</a>, <a href="qtaws-directconnect-allocateprivatevirtualinterfacerequest.html">QtAws::DirectConnect::AllocatePrivateVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-allocatepublicvirtualinterfacerequest.html">QtAws::DirectConnect::AllocatePublicVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-associateconnectionwithlagrequest.html">QtAws::DirectConnect::AssociateConnectionWithLagRequest</a>, <a href="qtaws-directconnect-associatehostedconnectionrequest.html">QtAws::DirectConnect::AssociateHostedConnectionRequest</a>, <a href="qtaws-directconnect-associatevirtualinterfacerequest.html">QtAws::DirectConnect::AssociateVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-confirmconnectionrequest.html">QtAws::DirectConnect::ConfirmConnectionRequest</a>, <a href="qtaws-directconnect-confirmprivatevirtualinterfacerequest.html">QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-confirmpublicvirtualinterfacerequest.html">QtAws::DirectConnect::ConfirmPublicVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-createbgppeerrequest.html">QtAws::DirectConnect::CreateBGPPeerRequest</a>, <a href="qtaws-directconnect-createconnectionrequest.html">QtAws::DirectConnect::CreateConnectionRequest</a>, <a href="qtaws-directconnect-createdirectconnectgatewayassociationrequest.html">QtAws::DirectConnect::CreateDirectConnectGatewayAssociationRequest</a>, <a href="qtaws-directconnect-createdirectconnectgatewayrequest.html">QtAws::DirectConnect::CreateDirectConnectGatewayRequest</a>, <a href="qtaws-directconnect-createinterconnectrequest.html">QtAws::DirectConnect::CreateInterconnectRequest</a>, <a href="qtaws-directconnect-createlagrequest.html">QtAws::DirectConnect::CreateLagRequest</a>, <a href="qtaws-directconnect-createprivatevirtualinterfacerequest.html">QtAws::DirectConnect::CreatePrivateVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-createpublicvirtualinterfacerequest.html">QtAws::DirectConnect::CreatePublicVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-deletebgppeerrequest.html">QtAws::DirectConnect::DeleteBGPPeerRequest</a>, <a href="qtaws-directconnect-deleteconnectionrequest.html">QtAws::DirectConnect::DeleteConnectionRequest</a>, <a href="qtaws-directconnect-deletedirectconnectgatewayassociationrequest.html">QtAws::DirectConnect::DeleteDirectConnectGatewayAssociationRequest</a>, <a href="qtaws-directconnect-deletedirectconnectgatewayrequest.html">QtAws::DirectConnect::DeleteDirectConnectGatewayRequest</a>, <a href="qtaws-directconnect-deleteinterconnectrequest.html">QtAws::DirectConnect::DeleteInterconnectRequest</a>, <a href="qtaws-directconnect-deletelagrequest.html">QtAws::DirectConnect::DeleteLagRequest</a>, <a href="qtaws-directconnect-deletevirtualinterfacerequest.html">QtAws::DirectConnect::DeleteVirtualInterfaceRequest</a>, <a href="qtaws-directconnect-describeconnectionloarequest.html">QtAws::DirectConnect::DescribeConnectionLoaRequest</a>, <a href="qtaws-directconnect-describeconnectionsoninterconnectrequest.html">QtAws::DirectConnect::DescribeConnectionsOnInterconnectRequest</a>, <a href="qtaws-directconnect-describeconnectionsrequest.html">QtAws::DirectConnect::DescribeConnectionsRequest</a>, <a href="qtaws-directconnect-describedirectconnectgatewayassociationsrequest.html">QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsRequest</a>, <a href="qtaws-directconnect-describedirectconnectgatewayattachmentsrequest.html">QtAws::DirectConnect::DescribeDirectConnectGatewayAttachmentsRequest</a>, <a href="qtaws-directconnect-describedirectconnectgatewaysrequest.html">QtAws::DirectConnect::DescribeDirectConnectGatewaysRequest</a>, <a href="qtaws-directconnect-describehostedconnectionsrequest.html">QtAws::DirectConnect::DescribeHostedConnectionsRequest</a>, <a href="qtaws-directconnect-describeinterconnectloarequest.html">QtAws::DirectConnect::DescribeInterconnectLoaRequest</a>, <a href="qtaws-directconnect-describeinterconnectsrequest.html">QtAws::DirectConnect::DescribeInterconnectsRequest</a>, <a href="qtaws-directconnect-describelagsrequest.html">QtAws::DirectConnect::DescribeLagsRequest</a>, <a href="qtaws-directconnect-describeloarequest.html">QtAws::DirectConnect::DescribeLoaRequest</a>, <a href="qtaws-directconnect-describetagsrequest.html">QtAws::DirectConnect::DescribeTagsRequest</a>, <a href="qtaws-directconnect-describevirtualinterfacesrequest.html">QtAws::DirectConnect::DescribeVirtualInterfacesRequest</a>, <a href="qtaws-directconnect-disassociateconnectionfromlagrequest.html">QtAws::DirectConnect::DisassociateConnectionFromLagRequest</a>, <a href="qtaws-directconnect-tagresourcerequest.html">QtAws::DirectConnect::TagResourceRequest</a>, <a href="qtaws-directconnect-untagresourcerequest.html">QtAws::DirectConnect::UntagResourceRequest</a>, and <a href="qtaws-directconnect-updatelagrequest.html">QtAws::DirectConnect::UpdateLagRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-directconnect-directconnectrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#Action-enum">Action</a></b> { AllocateConnectionOnInterconnectAction, AllocateHostedConnectionAction, AllocatePrivateVirtualInterfaceAction, AllocatePublicVirtualInterfaceAction, ..., UpdateLagAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest">DirectConnectRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest-1">DirectConnectRequest</a></b>(const DirectConnectRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DirectConnectRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#operator-eq">operator=</a></b>(const DirectConnectRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#operator-eq-eq">operator==</a></b>(const DirectConnectRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest-2">DirectConnectRequest</a></b>(DirectConnectRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DirectConnectRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-directconnect-directconnectrequest.html">DirectConnectRequest</a> class provides an interface for <a href="qtaws-directconnect.html">DirectConnect</a> requests.</p>
+</div>
+<!-- @@@DirectConnectRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AllocateConnectionOnInterconnectAction$$$AllocateHostedConnectionAction$$$AllocatePrivateVirtualInterfaceAction$$$AllocatePublicVirtualInterfaceAction$$$AssociateConnectionWithLagAction$$$AssociateHostedConnectionAction$$$AssociateVirtualInterfaceAction$$$ConfirmConnectionAction$$$ConfirmPrivateVirtualInterfaceAction$$$ConfirmPublicVirtualInterfaceAction$$$CreateBGPPeerAction$$$CreateConnectionAction$$$CreateDirectConnectGatewayAction$$$CreateDirectConnectGatewayAssociationAction$$$CreateInterconnectAction$$$CreateLagAction$$$CreatePrivateVirtualInterfaceAction$$$CreatePublicVirtualInterfaceAction$$$DeleteBGPPeerAction$$$DeleteConnectionAction$$$DeleteDirectConnectGatewayAction$$$DeleteDirectConnectGatewayAssociationAction$$$DeleteInterconnectAction$$$DeleteLagAction$$$DeleteVirtualInterfaceAction$$$DescribeConnectionLoaAction$$$DescribeConnectionsAction$$$DescribeConnectionsOnInterconnectAction$$$DescribeDirectConnectGatewayAssociationsAction$$$DescribeDirectConnectGatewayAttachmentsAction$$$DescribeDirectConnectGatewaysAction$$$DescribeHostedConnectionsAction$$$DescribeInterconnectLoaAction$$$DescribeInterconnectsAction$$$DescribeLagsAction$$$DescribeLoaAction$$$DescribeLocationsAction$$$DescribeTagsAction$$$DescribeVirtualGatewaysAction$$$DescribeVirtualInterfacesAction$$$DisassociateConnectionFromLagAction$$$TagResourceAction$$$UntagResourceAction$$$UpdateLagAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum DirectConnectRequest::<span class="name">Action</span><br/>flags DirectConnectRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-directconnect.html">DirectConnect</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AllocateConnectionOnInterconnectAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AllocateConnectionOnInterconnect action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AllocateHostedConnectionAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AllocateHostedConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AllocatePrivateVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AllocatePrivateVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AllocatePublicVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AllocatePublicVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AssociateConnectionWithLagAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AssociateConnectionWithLag action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AssociateHostedConnectionAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AssociateHostedConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::AssociateVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> AssociateVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::ConfirmConnectionAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> ConfirmConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::ConfirmPrivateVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> ConfirmPrivateVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::ConfirmPublicVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> ConfirmPublicVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateBGPPeerAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateBGPPeer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateConnectionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateDirectConnectGatewayAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateDirectConnectGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateDirectConnectGatewayAssociationAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateDirectConnectGatewayAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateInterconnectAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateInterconnect action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreateLagAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreateLag action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreatePrivateVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreatePrivateVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::CreatePublicVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> CreatePublicVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteBGPPeerAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteBGPPeer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteConnectionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteDirectConnectGatewayAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteDirectConnectGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteDirectConnectGatewayAssociationAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteDirectConnectGatewayAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteInterconnectAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteInterconnect action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteLagAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteLag action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DeleteVirtualInterfaceAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DeleteVirtualInterface action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeConnectionLoaAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeConnectionLoa action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeConnectionsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeConnections action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeConnectionsOnInterconnectAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeConnectionsOnInterconnect action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeDirectConnectGatewayAssociationsAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeDirectConnectGatewayAssociations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeDirectConnectGatewayAttachmentsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeDirectConnectGatewayAttachments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeDirectConnectGatewaysAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeDirectConnectGateways action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeHostedConnectionsAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeHostedConnections action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeInterconnectLoaAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeInterconnectLoa action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeInterconnectsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeInterconnects action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeLagsAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeLags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeLoaAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeLoa action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeLocationsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeLocations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeTagsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeVirtualGatewaysAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeVirtualGateways action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DescribeVirtualInterfacesAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DescribeVirtualInterfaces action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::DisassociateConnectionFromLagAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> DisassociateConnectionFromLag action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::TagResourceAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> TagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::UntagResourceAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> UntagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectConnect::DirectConnectRequest::UpdateLagAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-directconnect.html">DirectConnect</a> UpdateLag action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DirectConnectRequest[overload1]$$$DirectConnectRequestconstAction -->
+<h3 class="fn" id="DirectConnectRequest"><a name="DirectConnectRequest"></a>DirectConnectRequest::<span class="name">DirectConnectRequest</span>(const <span class="type"><a href="qtaws-directconnect-directconnectrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-directconnect-directconnectrequest.html">DirectConnectRequest</a> object for <a href="qtaws-directconnect.html">DirectConnect</a> <i>action</i>.</p>
+<!-- @@@DirectConnectRequest -->
+<!-- $$$DirectConnectRequest$$$DirectConnectRequestconstDirectConnectRequest& -->
+<h3 class="fn" id="DirectConnectRequest-1"><a name="DirectConnectRequest-1"></a>DirectConnectRequest::<span class="name">DirectConnectRequest</span>(const <span class="type"><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest">DirectConnectRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@DirectConnectRequest -->
+<!-- $$$DirectConnectRequest$$$DirectConnectRequestDirectConnectRequestPrivate*const -->
+<h3 class="fn" id="DirectConnectRequest-2"><a name="DirectConnectRequest-2"></a><code>[protected] </code>DirectConnectRequest::<span class="name">DirectConnectRequest</span>(<span class="type">DirectConnectRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-directconnect-directconnectrequest.html">DirectConnectRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from DirectConnectRequestPrivate.</p>
+<!-- @@@DirectConnectRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-directconnect-directconnectrequest.html#Action-enum">Action</a></span> DirectConnectRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-directconnect.html">DirectConnect</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> DirectConnectRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-directconnect.html">DirectConnect</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> DirectConnectRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-directconnect.html">DirectConnect</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> DirectConnectRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> DirectConnectRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> DirectConnectRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;DirectConnectRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> DirectConnectRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-directconnect-directconnectrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-directconnect.html">DirectConnect</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> DirectConnectRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-directconnect.html">DirectConnect</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> DirectConnectRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> DirectConnectRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-directconnect-directconnectrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> DirectConnectRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-directconnect.html">DirectConnect</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-directconnect.html">DirectConnect</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-directconnect-directconnectrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constDirectConnectRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest">DirectConnectRequest</a></span> &amp;DirectConnectRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest">DirectConnectRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-directconnect-directconnectrequest.html">DirectConnectRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constDirectConnectRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> DirectConnectRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-directconnect-directconnectrequest.html#DirectConnectRequest">DirectConnectRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

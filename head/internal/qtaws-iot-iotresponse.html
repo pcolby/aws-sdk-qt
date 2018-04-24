@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotresponse.cpp -->
+  <title>IoTResponse Class | IoT</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiot-index.html">IoT</a></li>
+<li><a href="qtawsiot-module.html">C++ Classes</a></li>
+<li>IoTResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iot-iotresponse.html">QtAws::IoT::IoTResponse</a>)<br/></span>
+<!-- $$$IoTResponse-brief -->
+<p>The <a href="qtaws-iot-iotresponse.html">IoTResponse</a> class provides an interface for IoT responses. <a href="#details">More...</a></p>
+<!-- @@@IoTResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-iot-acceptcertificatetransferresponse.html">QtAws::IoT::AcceptCertificateTransferResponse</a>, <a href="qtaws-iot-addthingtothinggroupresponse.html">QtAws::IoT::AddThingToThingGroupResponse</a>, <a href="qtaws-iot-associatetargetswithjobresponse.html">QtAws::IoT::AssociateTargetsWithJobResponse</a>, <a href="qtaws-iot-attachpolicyresponse.html">QtAws::IoT::AttachPolicyResponse</a>, <a href="qtaws-iot-attachprincipalpolicyresponse.html">QtAws::IoT::AttachPrincipalPolicyResponse</a>, <a href="qtaws-iot-attachthingprincipalresponse.html">QtAws::IoT::AttachThingPrincipalResponse</a>, <a href="qtaws-iot-cancelcertificatetransferresponse.html">QtAws::IoT::CancelCertificateTransferResponse</a>, <a href="qtaws-iot-canceljobresponse.html">QtAws::IoT::CancelJobResponse</a>, <a href="qtaws-iot-cleardefaultauthorizerresponse.html">QtAws::IoT::ClearDefaultAuthorizerResponse</a>, <a href="qtaws-iot-createauthorizerresponse.html">QtAws::IoT::CreateAuthorizerResponse</a>, <a href="qtaws-iot-createcertificatefromcsrresponse.html">QtAws::IoT::CreateCertificateFromCsrResponse</a>, <a href="qtaws-iot-createjobresponse.html">QtAws::IoT::CreateJobResponse</a>, <a href="qtaws-iot-createkeysandcertificateresponse.html">QtAws::IoT::CreateKeysAndCertificateResponse</a>, <a href="qtaws-iot-createotaupdateresponse.html">QtAws::IoT::CreateOTAUpdateResponse</a>, <a href="qtaws-iot-createpolicyresponse.html">QtAws::IoT::CreatePolicyResponse</a>, <a href="qtaws-iot-createpolicyversionresponse.html">QtAws::IoT::CreatePolicyVersionResponse</a>, <a href="qtaws-iot-createrolealiasresponse.html">QtAws::IoT::CreateRoleAliasResponse</a>, <a href="qtaws-iot-createstreamresponse.html">QtAws::IoT::CreateStreamResponse</a>, <a href="qtaws-iot-createthinggroupresponse.html">QtAws::IoT::CreateThingGroupResponse</a>, <a href="qtaws-iot-createthingresponse.html">QtAws::IoT::CreateThingResponse</a>, <a href="qtaws-iot-createthingtyperesponse.html">QtAws::IoT::CreateThingTypeResponse</a>, <a href="qtaws-iot-createtopicruleresponse.html">QtAws::IoT::CreateTopicRuleResponse</a>, <a href="qtaws-iot-deleteauthorizerresponse.html">QtAws::IoT::DeleteAuthorizerResponse</a>, <a href="qtaws-iot-deletecacertificateresponse.html">QtAws::IoT::DeleteCACertificateResponse</a>, <a href="qtaws-iot-deletecertificateresponse.html">QtAws::IoT::DeleteCertificateResponse</a>, <a href="qtaws-iot-deleteotaupdateresponse.html">QtAws::IoT::DeleteOTAUpdateResponse</a>, <a href="qtaws-iot-deletepolicyresponse.html">QtAws::IoT::DeletePolicyResponse</a>, <a href="qtaws-iot-deletepolicyversionresponse.html">QtAws::IoT::DeletePolicyVersionResponse</a>, <a href="qtaws-iot-deleteregistrationcoderesponse.html">QtAws::IoT::DeleteRegistrationCodeResponse</a>, <a href="qtaws-iot-deleterolealiasresponse.html">QtAws::IoT::DeleteRoleAliasResponse</a>, <a href="qtaws-iot-deletestreamresponse.html">QtAws::IoT::DeleteStreamResponse</a>, <a href="qtaws-iot-deletethinggroupresponse.html">QtAws::IoT::DeleteThingGroupResponse</a>, <a href="qtaws-iot-deletethingresponse.html">QtAws::IoT::DeleteThingResponse</a>, <a href="qtaws-iot-deletethingtyperesponse.html">QtAws::IoT::DeleteThingTypeResponse</a>, <a href="qtaws-iot-deletetopicruleresponse.html">QtAws::IoT::DeleteTopicRuleResponse</a>, <a href="qtaws-iot-deletev2logginglevelresponse.html">QtAws::IoT::DeleteV2LoggingLevelResponse</a>, <a href="qtaws-iot-deprecatethingtyperesponse.html">QtAws::IoT::DeprecateThingTypeResponse</a>, <a href="qtaws-iot-describeauthorizerresponse.html">QtAws::IoT::DescribeAuthorizerResponse</a>, <a href="qtaws-iot-describecacertificateresponse.html">QtAws::IoT::DescribeCACertificateResponse</a>, <a href="qtaws-iot-describecertificateresponse.html">QtAws::IoT::DescribeCertificateResponse</a>, <a href="qtaws-iot-describedefaultauthorizerresponse.html">QtAws::IoT::DescribeDefaultAuthorizerResponse</a>, <a href="qtaws-iot-describeendpointresponse.html">QtAws::IoT::DescribeEndpointResponse</a>, <a href="qtaws-iot-describeeventconfigurationsresponse.html">QtAws::IoT::DescribeEventConfigurationsResponse</a>, <a href="qtaws-iot-describeindexresponse.html">QtAws::IoT::DescribeIndexResponse</a>, <a href="qtaws-iot-describejobexecutionresponse.html">QtAws::IoT::DescribeJobExecutionResponse</a>, <a href="qtaws-iot-describejobresponse.html">QtAws::IoT::DescribeJobResponse</a>, <a href="qtaws-iot-describerolealiasresponse.html">QtAws::IoT::DescribeRoleAliasResponse</a>, <a href="qtaws-iot-describestreamresponse.html">QtAws::IoT::DescribeStreamResponse</a>, <a href="qtaws-iot-describethinggroupresponse.html">QtAws::IoT::DescribeThingGroupResponse</a>, <a href="qtaws-iot-describethingregistrationtaskresponse.html">QtAws::IoT::DescribeThingRegistrationTaskResponse</a>, <a href="qtaws-iot-describethingresponse.html">QtAws::IoT::DescribeThingResponse</a>, <a href="qtaws-iot-describethingtyperesponse.html">QtAws::IoT::DescribeThingTypeResponse</a>, <a href="qtaws-iot-detachpolicyresponse.html">QtAws::IoT::DetachPolicyResponse</a>, <a href="qtaws-iot-detachprincipalpolicyresponse.html">QtAws::IoT::DetachPrincipalPolicyResponse</a>, <a href="qtaws-iot-detachthingprincipalresponse.html">QtAws::IoT::DetachThingPrincipalResponse</a>, <a href="qtaws-iot-disabletopicruleresponse.html">QtAws::IoT::DisableTopicRuleResponse</a>, <a href="qtaws-iot-enabletopicruleresponse.html">QtAws::IoT::EnableTopicRuleResponse</a>, <a href="qtaws-iot-geteffectivepoliciesresponse.html">QtAws::IoT::GetEffectivePoliciesResponse</a>, <a href="qtaws-iot-getindexingconfigurationresponse.html">QtAws::IoT::GetIndexingConfigurationResponse</a>, <a href="qtaws-iot-getjobdocumentresponse.html">QtAws::IoT::GetJobDocumentResponse</a>, <a href="qtaws-iot-getloggingoptionsresponse.html">QtAws::IoT::GetLoggingOptionsResponse</a>, <a href="qtaws-iot-getotaupdateresponse.html">QtAws::IoT::GetOTAUpdateResponse</a>, <a href="qtaws-iot-getpolicyresponse.html">QtAws::IoT::GetPolicyResponse</a>, <a href="qtaws-iot-getpolicyversionresponse.html">QtAws::IoT::GetPolicyVersionResponse</a>, <a href="qtaws-iot-getregistrationcoderesponse.html">QtAws::IoT::GetRegistrationCodeResponse</a>, <a href="qtaws-iot-gettopicruleresponse.html">QtAws::IoT::GetTopicRuleResponse</a>, <a href="qtaws-iot-getv2loggingoptionsresponse.html">QtAws::IoT::GetV2LoggingOptionsResponse</a>, <a href="qtaws-iot-listattachedpoliciesresponse.html">QtAws::IoT::ListAttachedPoliciesResponse</a>, <a href="qtaws-iot-listauthorizersresponse.html">QtAws::IoT::ListAuthorizersResponse</a>, <a href="qtaws-iot-listcacertificatesresponse.html">QtAws::IoT::ListCACertificatesResponse</a>, <a href="qtaws-iot-listcertificatesbycaresponse.html">QtAws::IoT::ListCertificatesByCAResponse</a>, <a href="qtaws-iot-listcertificatesresponse.html">QtAws::IoT::ListCertificatesResponse</a>, <a href="qtaws-iot-listindicesresponse.html">QtAws::IoT::ListIndicesResponse</a>, <a href="qtaws-iot-listjobexecutionsforjobresponse.html">QtAws::IoT::ListJobExecutionsForJobResponse</a>, <a href="qtaws-iot-listjobexecutionsforthingresponse.html">QtAws::IoT::ListJobExecutionsForThingResponse</a>, <a href="qtaws-iot-listjobsresponse.html">QtAws::IoT::ListJobsResponse</a>, <a href="qtaws-iot-listotaupdatesresponse.html">QtAws::IoT::ListOTAUpdatesResponse</a>, <a href="qtaws-iot-listoutgoingcertificatesresponse.html">QtAws::IoT::ListOutgoingCertificatesResponse</a>, <a href="qtaws-iot-listpoliciesresponse.html">QtAws::IoT::ListPoliciesResponse</a>, <a href="qtaws-iot-listpolicyprincipalsresponse.html">QtAws::IoT::ListPolicyPrincipalsResponse</a>, <a href="qtaws-iot-listpolicyversionsresponse.html">QtAws::IoT::ListPolicyVersionsResponse</a>, <a href="qtaws-iot-listprincipalpoliciesresponse.html">QtAws::IoT::ListPrincipalPoliciesResponse</a>, <a href="qtaws-iot-listprincipalthingsresponse.html">QtAws::IoT::ListPrincipalThingsResponse</a>, <a href="qtaws-iot-listrolealiasesresponse.html">QtAws::IoT::ListRoleAliasesResponse</a>, <a href="qtaws-iot-liststreamsresponse.html">QtAws::IoT::ListStreamsResponse</a>, <a href="qtaws-iot-listtargetsforpolicyresponse.html">QtAws::IoT::ListTargetsForPolicyResponse</a>, <a href="qtaws-iot-listthinggroupsforthingresponse.html">QtAws::IoT::ListThingGroupsForThingResponse</a>, <a href="qtaws-iot-listthinggroupsresponse.html">QtAws::IoT::ListThingGroupsResponse</a>, <a href="qtaws-iot-listthingprincipalsresponse.html">QtAws::IoT::ListThingPrincipalsResponse</a>, <a href="qtaws-iot-listthingregistrationtaskreportsresponse.html">QtAws::IoT::ListThingRegistrationTaskReportsResponse</a>, <a href="qtaws-iot-listthingregistrationtasksresponse.html">QtAws::IoT::ListThingRegistrationTasksResponse</a>, <a href="qtaws-iot-listthingsinthinggroupresponse.html">QtAws::IoT::ListThingsInThingGroupResponse</a>, <a href="qtaws-iot-listthingsresponse.html">QtAws::IoT::ListThingsResponse</a>, <a href="qtaws-iot-listthingtypesresponse.html">QtAws::IoT::ListThingTypesResponse</a>, <a href="qtaws-iot-listtopicrulesresponse.html">QtAws::IoT::ListTopicRulesResponse</a>, <a href="qtaws-iot-listv2logginglevelsresponse.html">QtAws::IoT::ListV2LoggingLevelsResponse</a>, <a href="qtaws-iot-registercacertificateresponse.html">QtAws::IoT::RegisterCACertificateResponse</a>, <a href="qtaws-iot-registercertificateresponse.html">QtAws::IoT::RegisterCertificateResponse</a>, <a href="qtaws-iot-registerthingresponse.html">QtAws::IoT::RegisterThingResponse</a>, <a href="qtaws-iot-rejectcertificatetransferresponse.html">QtAws::IoT::RejectCertificateTransferResponse</a>, <a href="qtaws-iot-removethingfromthinggroupresponse.html">QtAws::IoT::RemoveThingFromThingGroupResponse</a>, <a href="qtaws-iot-replacetopicruleresponse.html">QtAws::IoT::ReplaceTopicRuleResponse</a>, <a href="qtaws-iot-searchindexresponse.html">QtAws::IoT::SearchIndexResponse</a>, <a href="qtaws-iot-setdefaultauthorizerresponse.html">QtAws::IoT::SetDefaultAuthorizerResponse</a>, <a href="qtaws-iot-setdefaultpolicyversionresponse.html">QtAws::IoT::SetDefaultPolicyVersionResponse</a>, <a href="qtaws-iot-setloggingoptionsresponse.html">QtAws::IoT::SetLoggingOptionsResponse</a>, <a href="qtaws-iot-setv2logginglevelresponse.html">QtAws::IoT::SetV2LoggingLevelResponse</a>, <a href="qtaws-iot-setv2loggingoptionsresponse.html">QtAws::IoT::SetV2LoggingOptionsResponse</a>, <a href="qtaws-iot-startthingregistrationtaskresponse.html">QtAws::IoT::StartThingRegistrationTaskResponse</a>, <a href="qtaws-iot-stopthingregistrationtaskresponse.html">QtAws::IoT::StopThingRegistrationTaskResponse</a>, <a href="qtaws-iot-testauthorizationresponse.html">QtAws::IoT::TestAuthorizationResponse</a>, <a href="qtaws-iot-testinvokeauthorizerresponse.html">QtAws::IoT::TestInvokeAuthorizerResponse</a>, <a href="qtaws-iot-transfercertificateresponse.html">QtAws::IoT::TransferCertificateResponse</a>, <a href="qtaws-iot-updateauthorizerresponse.html">QtAws::IoT::UpdateAuthorizerResponse</a>, <a href="qtaws-iot-updatecacertificateresponse.html">QtAws::IoT::UpdateCACertificateResponse</a>, <a href="qtaws-iot-updatecertificateresponse.html">QtAws::IoT::UpdateCertificateResponse</a>, <a href="qtaws-iot-updateeventconfigurationsresponse.html">QtAws::IoT::UpdateEventConfigurationsResponse</a>, <a href="qtaws-iot-updateindexingconfigurationresponse.html">QtAws::IoT::UpdateIndexingConfigurationResponse</a>, <a href="qtaws-iot-updaterolealiasresponse.html">QtAws::IoT::UpdateRoleAliasResponse</a>, <a href="qtaws-iot-updatestreamresponse.html">QtAws::IoT::UpdateStreamResponse</a>, <a href="qtaws-iot-updatethinggroupresponse.html">QtAws::IoT::UpdateThingGroupResponse</a>, <a href="qtaws-iot-updatethinggroupsforthingresponse.html">QtAws::IoT::UpdateThingGroupsForThingResponse</a>, and <a href="qtaws-iot-updatethingresponse.html">QtAws::IoT::UpdateThingResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-iot-iotresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotresponse.html#IoTResponse">IoTResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotresponse.html#IoTResponse-1">IoTResponse</a></b>(IoTResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iot-iotresponse.html">IoTResponse</a> class provides an interface for IoT responses.</p>
+</div>
+<!-- @@@IoTResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTResponse[overload1]$$$IoTResponseQObject*const -->
+<h3 class="fn" id="IoTResponse"><a name="IoTResponse"></a>IoTResponse::<span class="name">IoTResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iot-iotresponse.html">IoTResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@IoTResponse -->
+<!-- $$$IoTResponse$$$IoTResponseIoTResponsePrivate*constQObject*const -->
+<h3 class="fn" id="IoTResponse-1"><a name="IoTResponse-1"></a><code>[protected] </code>IoTResponse::<span class="name">IoTResponse</span>(<span class="type"><a href="qtaws-iot-iotresponseprivate.html">IoTResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-iot-iotresponse.html">IoTResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-iot-iotresponseprivate.html">IoTResponsePrivate</a>.</p>
+<!-- @@@IoTResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> IoTResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

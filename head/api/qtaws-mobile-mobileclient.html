@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mobileclient.cpp -->
+  <title>MobileClient Class | Mobile</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmobile-index.html">Mobile</a></li>
+<li><a href="qtawsmobile-module.html">C++ Classes</a></li>
+<li>MobileClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MobileClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mobile-mobileclient.html">QtAws::Mobile::MobileClient</a>)<br/></span>
+<!-- $$$MobileClient-brief -->
+<p>The <a href="qtaws-mobile-mobileclient.html">MobileClient</a> class provides access to the AWS Mobile service. <a href="#details">More...</a></p>
+<!-- @@@MobileClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MobileClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mobile-mobileclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#MobileClient">MobileClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#MobileClient-1">MobileClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#createProject">createProject</a></b>(const CreateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#deleteProject">deleteProject</a></b>(const DeleteProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBundleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#describeBundle">describeBundle</a></b>(const DescribeBundleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#describeProject">describeProject</a></b>(const DescribeProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExportBundleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#exportBundle">exportBundle</a></b>(const ExportBundleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExportProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#exportProject">exportProject</a></b>(const ExportProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBundlesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#listBundles">listBundles</a></b>(const ListBundlesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#listProjects">listProjects</a></b>(const ListProjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mobile-mobileclient.html#updateProject">updateProject</a></b>(const UpdateProjectRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MobileClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mobile-mobileclient.html">MobileClient</a> class provides access to the AWS Mobile service.</p>
+<p>AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those resources.</p>
+</div>
+<!-- @@@MobileClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MobileClient[overload1]$$$MobileClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MobileClient"><a name="MobileClient"></a>MobileClient::<span class="name">MobileClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mobile-mobileclient.html">MobileClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MobileClient -->
+<!-- $$$MobileClient$$$MobileClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MobileClient-1"><a name="MobileClient-1"></a>MobileClient::<span class="name">MobileClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mobile-mobileclient.html#MobileClient">MobileClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MobileClient -->
+<!-- $$$createProject[overload1]$$$createProjectconstCreateProjectRequest& -->
+<h3 class="fn" id="createProject"><a name="createProject"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-createprojectresponse.html">CreateProjectResponse</a></span> *MobileClient::<span class="name">createProject</span>(const <span class="type"><a href="qtaws-mobile-createprojectrequest.html">CreateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-createprojectresponse.html">CreateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an AWS Mobile Hub project.</p>
+<!-- @@@createProject -->
+<!-- $$$deleteProject[overload1]$$$deleteProjectconstDeleteProjectRequest& -->
+<h3 class="fn" id="deleteProject"><a name="deleteProject"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-deleteprojectresponse.html">DeleteProjectResponse</a></span> *MobileClient::<span class="name">deleteProject</span>(const <span class="type"><a href="qtaws-mobile-deleteprojectrequest.html">DeleteProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-deleteprojectresponse.html">DeleteProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Delets a project in AWS Mobile Hub.</p>
+<!-- @@@deleteProject -->
+<!-- $$$describeBundle[overload1]$$$describeBundleconstDescribeBundleRequest& -->
+<h3 class="fn" id="describeBundle"><a name="describeBundle"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-describebundleresponse.html">DescribeBundleResponse</a></span> *MobileClient::<span class="name">describeBundle</span>(const <span class="type"><a href="qtaws-mobile-describebundlerequest.html">DescribeBundleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-describebundleresponse.html">DescribeBundleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get the bundle details for the requested bundle id.</p>
+<!-- @@@describeBundle -->
+<!-- $$$describeProject[overload1]$$$describeProjectconstDescribeProjectRequest& -->
+<h3 class="fn" id="describeProject"><a name="describeProject"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-describeprojectresponse.html">DescribeProjectResponse</a></span> *MobileClient::<span class="name">describeProject</span>(const <span class="type"><a href="qtaws-mobile-describeprojectrequest.html">DescribeProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-describeprojectresponse.html">DescribeProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets details about a project in AWS Mobile Hub.</p>
+<!-- @@@describeProject -->
+<!-- $$$exportBundle[overload1]$$$exportBundleconstExportBundleRequest& -->
+<h3 class="fn" id="exportBundle"><a name="exportBundle"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-exportbundleresponse.html">ExportBundleResponse</a></span> *MobileClient::<span class="name">exportBundle</span>(const <span class="type"><a href="qtaws-mobile-exportbundlerequest.html">ExportBundleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-exportbundleresponse.html">ExportBundleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources.</p>
+<!-- @@@exportBundle -->
+<!-- $$$exportProject[overload1]$$$exportProjectconstExportProjectRequest& -->
+<h3 class="fn" id="exportProject"><a name="exportProject"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-exportprojectresponse.html">ExportProjectResponse</a></span> *MobileClient::<span class="name">exportProject</span>(const <span class="type"><a href="qtaws-mobile-exportprojectrequest.html">ExportProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-exportprojectresponse.html">ExportProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account.</p>
+<!-- @@@exportProject -->
+<!-- $$$listBundles[overload1]$$$listBundlesconstListBundlesRequest& -->
+<h3 class="fn" id="listBundles"><a name="listBundles"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-listbundlesresponse.html">ListBundlesResponse</a></span> *MobileClient::<span class="name">listBundles</span>(const <span class="type"><a href="qtaws-mobile-listbundlesrequest.html">ListBundlesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-listbundlesresponse.html">ListBundlesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List all available bundles.</p>
+<!-- @@@listBundles -->
+<!-- $$$listProjects[overload1]$$$listProjectsconstListProjectsRequest& -->
+<h3 class="fn" id="listProjects"><a name="listProjects"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-listprojectsresponse.html">ListProjectsResponse</a></span> *MobileClient::<span class="name">listProjects</span>(const <span class="type"><a href="qtaws-mobile-listprojectsrequest.html">ListProjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-listprojectsresponse.html">ListProjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists projects in AWS Mobile Hub.</p>
+<!-- @@@listProjects -->
+<!-- $$$updateProject[overload1]$$$updateProjectconstUpdateProjectRequest& -->
+<h3 class="fn" id="updateProject"><a name="updateProject"></a><code>[slot] </code><span class="type"><a href="qtaws-mobile-updateprojectresponse.html">UpdateProjectResponse</a></span> *MobileClient::<span class="name">updateProject</span>(const <span class="type"><a href="qtaws-mobile-updateprojectrequest.html">UpdateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mobile-mobileclient.html">MobileClient</a> service, and returns a pointer to an <a href="qtaws-mobile-updateprojectresponse.html">UpdateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Update an existing project.</p>
+<!-- @@@updateProject -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

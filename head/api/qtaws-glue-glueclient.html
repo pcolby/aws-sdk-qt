@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- glueclient.cpp -->
+  <title>GlueClient Class | Glue</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsglue-index.html">Glue</a></li>
+<li><a href="qtawsglue-module.html">C++ Classes</a></li>
+<li>GlueClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GlueClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-glue-glueclient.html">QtAws::Glue::GlueClient</a>)<br/></span>
+<!-- $$$GlueClient-brief -->
+<p>The <a href="qtaws-glue-glueclient.html">GlueClient</a> class provides access to the AWS Glue service. <a href="#details">More...</a></p>
+<!-- @@@GlueClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GlueClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-glue-glueclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#GlueClient">GlueClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#GlueClient-1">GlueClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchCreatePartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchCreatePartition">batchCreatePartition</a></b>(const BatchCreatePartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchDeleteConnection">batchDeleteConnection</a></b>(const BatchDeleteConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeletePartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchDeletePartition">batchDeletePartition</a></b>(const BatchDeletePartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchDeleteTable">batchDeleteTable</a></b>(const BatchDeleteTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteTableVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchDeleteTableVersion">batchDeleteTableVersion</a></b>(const BatchDeleteTableVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetPartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchGetPartition">batchGetPartition</a></b>(const BatchGetPartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchStopJobRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#batchStopJobRun">batchStopJobRun</a></b>(const BatchStopJobRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateClassifierResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createClassifier">createClassifier</a></b>(const CreateClassifierRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createConnection">createConnection</a></b>(const CreateConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createCrawler">createCrawler</a></b>(const CreateCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDatabaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createDatabase">createDatabase</a></b>(const CreateDatabaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDevEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createDevEndpoint">createDevEndpoint</a></b>(const CreateDevEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createJob">createJob</a></b>(const CreateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createPartition">createPartition</a></b>(const CreatePartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateScriptResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createScript">createScript</a></b>(const CreateScriptRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createTable">createTable</a></b>(const CreateTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createTrigger">createTrigger</a></b>(const CreateTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserDefinedFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#createUserDefinedFunction">createUserDefinedFunction</a></b>(const CreateUserDefinedFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteClassifierResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteClassifier">deleteClassifier</a></b>(const DeleteClassifierRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteConnection">deleteConnection</a></b>(const DeleteConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteCrawler">deleteCrawler</a></b>(const DeleteCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDatabaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteDatabase">deleteDatabase</a></b>(const DeleteDatabaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDevEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteDevEndpoint">deleteDevEndpoint</a></b>(const DeleteDevEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteJob">deleteJob</a></b>(const DeleteJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deletePartition">deletePartition</a></b>(const DeletePartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteTable">deleteTable</a></b>(const DeleteTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTableVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteTableVersion">deleteTableVersion</a></b>(const DeleteTableVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteTrigger">deleteTrigger</a></b>(const DeleteTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserDefinedFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#deleteUserDefinedFunction">deleteUserDefinedFunction</a></b>(const DeleteUserDefinedFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCatalogImportStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getCatalogImportStatus">getCatalogImportStatus</a></b>(const GetCatalogImportStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetClassifierResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getClassifier">getClassifier</a></b>(const GetClassifierRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetClassifiersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getClassifiers">getClassifiers</a></b>(const GetClassifiersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getConnection">getConnection</a></b>(const GetConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetConnectionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getConnections">getConnections</a></b>(const GetConnectionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getCrawler">getCrawler</a></b>(const GetCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCrawlerMetricsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getCrawlerMetrics">getCrawlerMetrics</a></b>(const GetCrawlerMetricsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCrawlersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getCrawlers">getCrawlers</a></b>(const GetCrawlersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDatabaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getDatabase">getDatabase</a></b>(const GetDatabaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDatabasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getDatabases">getDatabases</a></b>(const GetDatabasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDataflowGraphResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getDataflowGraph">getDataflowGraph</a></b>(const GetDataflowGraphRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDevEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getDevEndpoint">getDevEndpoint</a></b>(const GetDevEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDevEndpointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getDevEndpoints">getDevEndpoints</a></b>(const GetDevEndpointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getJob">getJob</a></b>(const GetJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getJobRun">getJobRun</a></b>(const GetJobRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobRunsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getJobRuns">getJobRuns</a></b>(const GetJobRunsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getJobs">getJobs</a></b>(const GetJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getMapping">getMapping</a></b>(const GetMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getPartition">getPartition</a></b>(const GetPartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPartitionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getPartitions">getPartitions</a></b>(const GetPartitionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getPlan">getPlan</a></b>(const GetPlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTable">getTable</a></b>(const GetTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTableVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTableVersion">getTableVersion</a></b>(const GetTableVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTableVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTableVersions">getTableVersions</a></b>(const GetTableVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTablesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTables">getTables</a></b>(const GetTablesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTrigger">getTrigger</a></b>(const GetTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTriggersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getTriggers">getTriggers</a></b>(const GetTriggersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUserDefinedFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getUserDefinedFunction">getUserDefinedFunction</a></b>(const GetUserDefinedFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUserDefinedFunctionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#getUserDefinedFunctions">getUserDefinedFunctions</a></b>(const GetUserDefinedFunctionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportCatalogToGlueResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#importCatalogToGlue">importCatalogToGlue</a></b>(const ImportCatalogToGlueRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetJobBookmarkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#resetJobBookmark">resetJobBookmark</a></b>(const ResetJobBookmarkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#startCrawler">startCrawler</a></b>(const StartCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartCrawlerScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#startCrawlerSchedule">startCrawlerSchedule</a></b>(const StartCrawlerScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartJobRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#startJobRun">startJobRun</a></b>(const StartJobRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#startTrigger">startTrigger</a></b>(const StartTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#stopCrawler">stopCrawler</a></b>(const StopCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopCrawlerScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#stopCrawlerSchedule">stopCrawlerSchedule</a></b>(const StopCrawlerScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#stopTrigger">stopTrigger</a></b>(const StopTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateClassifierResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateClassifier">updateClassifier</a></b>(const UpdateClassifierRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateConnection">updateConnection</a></b>(const UpdateConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCrawlerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateCrawler">updateCrawler</a></b>(const UpdateCrawlerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCrawlerScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateCrawlerSchedule">updateCrawlerSchedule</a></b>(const UpdateCrawlerScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDatabaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateDatabase">updateDatabase</a></b>(const UpdateDatabaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDevEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateDevEndpoint">updateDevEndpoint</a></b>(const UpdateDevEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateJob">updateJob</a></b>(const UpdateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePartitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updatePartition">updatePartition</a></b>(const UpdatePartitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateTable">updateTable</a></b>(const UpdateTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTriggerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateTrigger">updateTrigger</a></b>(const UpdateTriggerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserDefinedFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueclient.html#updateUserDefinedFunction">updateUserDefinedFunction</a></b>(const UpdateUserDefinedFunctionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GlueClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-glue-glueclient.html">GlueClient</a> class provides access to the AWS Glue service.</p>
+<p>&lt;fullname&gt;AWS Glue&lt;/fullname&gt;</p>
+<p>Defines the public endpoint for the AWS Glue</p>
+</div>
+<!-- @@@GlueClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GlueClient[overload1]$$$GlueClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GlueClient"><a name="GlueClient"></a>GlueClient::<span class="name">GlueClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-glue-glueclient.html">GlueClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@GlueClient -->
+<!-- $$$GlueClient$$$GlueClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GlueClient-1"><a name="GlueClient-1"></a>GlueClient::<span class="name">GlueClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-glue-glueclient.html#GlueClient">GlueClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@GlueClient -->
+<!-- $$$batchCreatePartition[overload1]$$$batchCreatePartitionconstBatchCreatePartitionRequest& -->
+<h3 class="fn" id="batchCreatePartition"><a name="batchCreatePartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchcreatepartitionresponse.html">BatchCreatePartitionResponse</a></span> *GlueClient::<span class="name">batchCreatePartition</span>(const <span class="type"><a href="qtaws-glue-batchcreatepartitionrequest.html">BatchCreatePartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchcreatepartitionresponse.html">BatchCreatePartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one or more partitions in a batch</p>
+<!-- @@@batchCreatePartition -->
+<!-- $$$batchDeleteConnection[overload1]$$$batchDeleteConnectionconstBatchDeleteConnectionRequest& -->
+<h3 class="fn" id="batchDeleteConnection"><a name="batchDeleteConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchdeleteconnectionresponse.html">BatchDeleteConnectionResponse</a></span> *GlueClient::<span class="name">batchDeleteConnection</span>(const <span class="type"><a href="qtaws-glue-batchdeleteconnectionrequest.html">BatchDeleteConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchdeleteconnectionresponse.html">BatchDeleteConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a list of connection definitions from the Data</p>
+<!-- @@@batchDeleteConnection -->
+<!-- $$$batchDeletePartition[overload1]$$$batchDeletePartitionconstBatchDeletePartitionRequest& -->
+<h3 class="fn" id="batchDeletePartition"><a name="batchDeletePartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchdeletepartitionresponse.html">BatchDeletePartitionResponse</a></span> *GlueClient::<span class="name">batchDeletePartition</span>(const <span class="type"><a href="qtaws-glue-batchdeletepartitionrequest.html">BatchDeletePartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchdeletepartitionresponse.html">BatchDeletePartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes one or more partitions in a batch</p>
+<!-- @@@batchDeletePartition -->
+<!-- $$$batchDeleteTable[overload1]$$$batchDeleteTableconstBatchDeleteTableRequest& -->
+<h3 class="fn" id="batchDeleteTable"><a name="batchDeleteTable"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchdeletetableresponse.html">BatchDeleteTableResponse</a></span> *GlueClient::<span class="name">batchDeleteTable</span>(const <span class="type"><a href="qtaws-glue-batchdeletetablerequest.html">BatchDeleteTableRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchdeletetableresponse.html">BatchDeleteTableResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes multiple tables at</p>
+<!-- @@@batchDeleteTable -->
+<!-- $$$batchDeleteTableVersion[overload1]$$$batchDeleteTableVersionconstBatchDeleteTableVersionRequest& -->
+<h3 class="fn" id="batchDeleteTableVersion"><a name="batchDeleteTableVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchdeletetableversionresponse.html">BatchDeleteTableVersionResponse</a></span> *GlueClient::<span class="name">batchDeleteTableVersion</span>(const <span class="type"><a href="qtaws-glue-batchdeletetableversionrequest.html">BatchDeleteTableVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchdeletetableversionresponse.html">BatchDeleteTableVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified batch of versions of a</p>
+<!-- @@@batchDeleteTableVersion -->
+<!-- $$$batchGetPartition[overload1]$$$batchGetPartitionconstBatchGetPartitionRequest& -->
+<h3 class="fn" id="batchGetPartition"><a name="batchGetPartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchgetpartitionresponse.html">BatchGetPartitionResponse</a></span> *GlueClient::<span class="name">batchGetPartition</span>(const <span class="type"><a href="qtaws-glue-batchgetpartitionrequest.html">BatchGetPartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchgetpartitionresponse.html">BatchGetPartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves partitions in a batch</p>
+<!-- @@@batchGetPartition -->
+<!-- $$$batchStopJobRun[overload1]$$$batchStopJobRunconstBatchStopJobRunRequest& -->
+<h3 class="fn" id="batchStopJobRun"><a name="batchStopJobRun"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-batchstopjobrunresponse.html">BatchStopJobRunResponse</a></span> *GlueClient::<span class="name">batchStopJobRun</span>(const <span class="type"><a href="qtaws-glue-batchstopjobrunrequest.html">BatchStopJobRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-batchstopjobrunresponse.html">BatchStopJobRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops one or more job runs for a specified job</p>
+<!-- @@@batchStopJobRun -->
+<!-- $$$createClassifier[overload1]$$$createClassifierconstCreateClassifierRequest& -->
+<h3 class="fn" id="createClassifier"><a name="createClassifier"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createclassifierresponse.html">CreateClassifierResponse</a></span> *GlueClient::<span class="name">createClassifier</span>(const <span class="type"><a href="qtaws-glue-createclassifierrequest.html">CreateClassifierRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createclassifierresponse.html">CreateClassifierResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a classifier in the user's account. This may be a &lt;code&gt;GrokClassifier&lt;/code&gt;, an &lt;code&gt;XMLClassifier&lt;/code&gt;, or abbrev &lt;code&gt;JsonClassifier&lt;/code&gt;, depending on which field of the request is</p>
+<!-- @@@createClassifier -->
+<!-- $$$createConnection[overload1]$$$createConnectionconstCreateConnectionRequest& -->
+<h3 class="fn" id="createConnection"><a name="createConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createconnectionresponse.html">CreateConnectionResponse</a></span> *GlueClient::<span class="name">createConnection</span>(const <span class="type"><a href="qtaws-glue-createconnectionrequest.html">CreateConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createconnectionresponse.html">CreateConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a connection definition in the Data</p>
+<!-- @@@createConnection -->
+<!-- $$$createCrawler[overload1]$$$createCrawlerconstCreateCrawlerRequest& -->
+<h3 class="fn" id="createCrawler"><a name="createCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createcrawlerresponse.html">CreateCrawlerResponse</a></span> *GlueClient::<span class="name">createCrawler</span>(const <span class="type"><a href="qtaws-glue-createcrawlerrequest.html">CreateCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createcrawlerresponse.html">CreateCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must be specified, in either the &lt;i&gt;s3Targets&lt;/i&gt; or the &lt;i&gt;jdbcTargets&lt;/i&gt;</p>
+<!-- @@@createCrawler -->
+<!-- $$$createDatabase[overload1]$$$createDatabaseconstCreateDatabaseRequest& -->
+<h3 class="fn" id="createDatabase"><a name="createDatabase"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createdatabaseresponse.html">CreateDatabaseResponse</a></span> *GlueClient::<span class="name">createDatabase</span>(const <span class="type"><a href="qtaws-glue-createdatabaserequest.html">CreateDatabaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createdatabaseresponse.html">CreateDatabaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new database in a Data</p>
+<!-- @@@createDatabase -->
+<!-- $$$createDevEndpoint[overload1]$$$createDevEndpointconstCreateDevEndpointRequest& -->
+<h3 class="fn" id="createDevEndpoint"><a name="createDevEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createdevendpointresponse.html">CreateDevEndpointResponse</a></span> *GlueClient::<span class="name">createDevEndpoint</span>(const <span class="type"><a href="qtaws-glue-createdevendpointrequest.html">CreateDevEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createdevendpointresponse.html">CreateDevEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new</p>
+<!-- @@@createDevEndpoint -->
+<!-- $$$createJob[overload1]$$$createJobconstCreateJobRequest& -->
+<h3 class="fn" id="createJob"><a name="createJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createjobresponse.html">CreateJobResponse</a></span> *GlueClient::<span class="name">createJob</span>(const <span class="type"><a href="qtaws-glue-createjobrequest.html">CreateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createjobresponse.html">CreateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new job</p>
+<!-- @@@createJob -->
+<!-- $$$createPartition[overload1]$$$createPartitionconstCreatePartitionRequest& -->
+<h3 class="fn" id="createPartition"><a name="createPartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createpartitionresponse.html">CreatePartitionResponse</a></span> *GlueClient::<span class="name">createPartition</span>(const <span class="type"><a href="qtaws-glue-createpartitionrequest.html">CreatePartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createpartitionresponse.html">CreatePartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new</p>
+<!-- @@@createPartition -->
+<!-- $$$createScript[overload1]$$$createScriptconstCreateScriptRequest& -->
+<h3 class="fn" id="createScript"><a name="createScript"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createscriptresponse.html">CreateScriptResponse</a></span> *GlueClient::<span class="name">createScript</span>(const <span class="type"><a href="qtaws-glue-createscriptrequest.html">CreateScriptRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createscriptresponse.html">CreateScriptResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Transforms a directed acyclic graph (DAG) into</p>
+<!-- @@@createScript -->
+<!-- $$$createTable[overload1]$$$createTableconstCreateTableRequest& -->
+<h3 class="fn" id="createTable"><a name="createTable"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createtableresponse.html">CreateTableResponse</a></span> *GlueClient::<span class="name">createTable</span>(const <span class="type"><a href="qtaws-glue-createtablerequest.html">CreateTableRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createtableresponse.html">CreateTableResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new table definition in the Data</p>
+<!-- @@@createTable -->
+<!-- $$$createTrigger[overload1]$$$createTriggerconstCreateTriggerRequest& -->
+<h3 class="fn" id="createTrigger"><a name="createTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createtriggerresponse.html">CreateTriggerResponse</a></span> *GlueClient::<span class="name">createTrigger</span>(const <span class="type"><a href="qtaws-glue-createtriggerrequest.html">CreateTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createtriggerresponse.html">CreateTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new</p>
+<!-- @@@createTrigger -->
+<!-- $$$createUserDefinedFunction[overload1]$$$createUserDefinedFunctionconstCreateUserDefinedFunctionRequest& -->
+<h3 class="fn" id="createUserDefinedFunction"><a name="createUserDefinedFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-createuserdefinedfunctionresponse.html">CreateUserDefinedFunctionResponse</a></span> *GlueClient::<span class="name">createUserDefinedFunction</span>(const <span class="type"><a href="qtaws-glue-createuserdefinedfunctionrequest.html">CreateUserDefinedFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-createuserdefinedfunctionresponse.html">CreateUserDefinedFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new function definition in the Data</p>
+<!-- @@@createUserDefinedFunction -->
+<!-- $$$deleteClassifier[overload1]$$$deleteClassifierconstDeleteClassifierRequest& -->
+<h3 class="fn" id="deleteClassifier"><a name="deleteClassifier"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deleteclassifierresponse.html">DeleteClassifierResponse</a></span> *GlueClient::<span class="name">deleteClassifier</span>(const <span class="type"><a href="qtaws-glue-deleteclassifierrequest.html">DeleteClassifierRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deleteclassifierresponse.html">DeleteClassifierResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a classifier from the Data</p>
+<!-- @@@deleteClassifier -->
+<!-- $$$deleteConnection[overload1]$$$deleteConnectionconstDeleteConnectionRequest& -->
+<h3 class="fn" id="deleteConnection"><a name="deleteConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deleteconnectionresponse.html">DeleteConnectionResponse</a></span> *GlueClient::<span class="name">deleteConnection</span>(const <span class="type"><a href="qtaws-glue-deleteconnectionrequest.html">DeleteConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deleteconnectionresponse.html">DeleteConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a connection from the Data</p>
+<!-- @@@deleteConnection -->
+<!-- $$$deleteCrawler[overload1]$$$deleteCrawlerconstDeleteCrawlerRequest& -->
+<h3 class="fn" id="deleteCrawler"><a name="deleteCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletecrawlerresponse.html">DeleteCrawlerResponse</a></span> *GlueClient::<span class="name">deleteCrawler</span>(const <span class="type"><a href="qtaws-glue-deletecrawlerrequest.html">DeleteCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletecrawlerresponse.html">DeleteCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a specified crawler from the Data Catalog, unless the crawler state is</p>
+<!-- @@@deleteCrawler -->
+<!-- $$$deleteDatabase[overload1]$$$deleteDatabaseconstDeleteDatabaseRequest& -->
+<h3 class="fn" id="deleteDatabase"><a name="deleteDatabase"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletedatabaseresponse.html">DeleteDatabaseResponse</a></span> *GlueClient::<span class="name">deleteDatabase</span>(const <span class="type"><a href="qtaws-glue-deletedatabaserequest.html">DeleteDatabaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletedatabaseresponse.html">DeleteDatabaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a specified Database from a Data</p>
+<!-- @@@deleteDatabase -->
+<!-- $$$deleteDevEndpoint[overload1]$$$deleteDevEndpointconstDeleteDevEndpointRequest& -->
+<h3 class="fn" id="deleteDevEndpoint"><a name="deleteDevEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletedevendpointresponse.html">DeleteDevEndpointResponse</a></span> *GlueClient::<span class="name">deleteDevEndpoint</span>(const <span class="type"><a href="qtaws-glue-deletedevendpointrequest.html">DeleteDevEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletedevendpointresponse.html">DeleteDevEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified</p>
+<!-- @@@deleteDevEndpoint -->
+<!-- $$$deleteJob[overload1]$$$deleteJobconstDeleteJobRequest& -->
+<h3 class="fn" id="deleteJob"><a name="deleteJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletejobresponse.html">DeleteJobResponse</a></span> *GlueClient::<span class="name">deleteJob</span>(const <span class="type"><a href="qtaws-glue-deletejobrequest.html">DeleteJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletejobresponse.html">DeleteJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified job definition. If the job definition is not found, no exception is</p>
+<!-- @@@deleteJob -->
+<!-- $$$deletePartition[overload1]$$$deletePartitionconstDeletePartitionRequest& -->
+<h3 class="fn" id="deletePartition"><a name="deletePartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletepartitionresponse.html">DeletePartitionResponse</a></span> *GlueClient::<span class="name">deletePartition</span>(const <span class="type"><a href="qtaws-glue-deletepartitionrequest.html">DeletePartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletepartitionresponse.html">DeletePartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified</p>
+<!-- @@@deletePartition -->
+<!-- $$$deleteTable[overload1]$$$deleteTableconstDeleteTableRequest& -->
+<h3 class="fn" id="deleteTable"><a name="deleteTable"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletetableresponse.html">DeleteTableResponse</a></span> *GlueClient::<span class="name">deleteTable</span>(const <span class="type"><a href="qtaws-glue-deletetablerequest.html">DeleteTableRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletetableresponse.html">DeleteTableResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a table definition from the Data</p>
+<!-- @@@deleteTable -->
+<!-- $$$deleteTableVersion[overload1]$$$deleteTableVersionconstDeleteTableVersionRequest& -->
+<h3 class="fn" id="deleteTableVersion"><a name="deleteTableVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletetableversionresponse.html">DeleteTableVersionResponse</a></span> *GlueClient::<span class="name">deleteTableVersion</span>(const <span class="type"><a href="qtaws-glue-deletetableversionrequest.html">DeleteTableVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletetableversionresponse.html">DeleteTableVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified version of a</p>
+<!-- @@@deleteTableVersion -->
+<!-- $$$deleteTrigger[overload1]$$$deleteTriggerconstDeleteTriggerRequest& -->
+<h3 class="fn" id="deleteTrigger"><a name="deleteTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deletetriggerresponse.html">DeleteTriggerResponse</a></span> *GlueClient::<span class="name">deleteTrigger</span>(const <span class="type"><a href="qtaws-glue-deletetriggerrequest.html">DeleteTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deletetriggerresponse.html">DeleteTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified trigger. If the trigger is not found, no exception is</p>
+<!-- @@@deleteTrigger -->
+<!-- $$$deleteUserDefinedFunction[overload1]$$$deleteUserDefinedFunctionconstDeleteUserDefinedFunctionRequest& -->
+<h3 class="fn" id="deleteUserDefinedFunction"><a name="deleteUserDefinedFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-deleteuserdefinedfunctionresponse.html">DeleteUserDefinedFunctionResponse</a></span> *GlueClient::<span class="name">deleteUserDefinedFunction</span>(const <span class="type"><a href="qtaws-glue-deleteuserdefinedfunctionrequest.html">DeleteUserDefinedFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-deleteuserdefinedfunctionresponse.html">DeleteUserDefinedFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing function definition from the Data</p>
+<!-- @@@deleteUserDefinedFunction -->
+<!-- $$$getCatalogImportStatus[overload1]$$$getCatalogImportStatusconstGetCatalogImportStatusRequest& -->
+<h3 class="fn" id="getCatalogImportStatus"><a name="getCatalogImportStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getcatalogimportstatusresponse.html">GetCatalogImportStatusResponse</a></span> *GlueClient::<span class="name">getCatalogImportStatus</span>(const <span class="type"><a href="qtaws-glue-getcatalogimportstatusrequest.html">GetCatalogImportStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getcatalogimportstatusresponse.html">GetCatalogImportStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the status of a migration</p>
+<!-- @@@getCatalogImportStatus -->
+<!-- $$$getClassifier[overload1]$$$getClassifierconstGetClassifierRequest& -->
+<h3 class="fn" id="getClassifier"><a name="getClassifier"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getclassifierresponse.html">GetClassifierResponse</a></span> *GlueClient::<span class="name">getClassifier</span>(const <span class="type"><a href="qtaws-glue-getclassifierrequest.html">GetClassifierRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getclassifierresponse.html">GetClassifierResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a classifier by</p>
+<!-- @@@getClassifier -->
+<!-- $$$getClassifiers[overload1]$$$getClassifiersconstGetClassifiersRequest& -->
+<h3 class="fn" id="getClassifiers"><a name="getClassifiers"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getclassifiersresponse.html">GetClassifiersResponse</a></span> *GlueClient::<span class="name">getClassifiers</span>(const <span class="type"><a href="qtaws-glue-getclassifiersrequest.html">GetClassifiersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getclassifiersresponse.html">GetClassifiersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all classifier objects in the Data</p>
+<!-- @@@getClassifiers -->
+<!-- $$$getConnection[overload1]$$$getConnectionconstGetConnectionRequest& -->
+<h3 class="fn" id="getConnection"><a name="getConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getconnectionresponse.html">GetConnectionResponse</a></span> *GlueClient::<span class="name">getConnection</span>(const <span class="type"><a href="qtaws-glue-getconnectionrequest.html">GetConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getconnectionresponse.html">GetConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a connection definition from the Data</p>
+<!-- @@@getConnection -->
+<!-- $$$getConnections[overload1]$$$getConnectionsconstGetConnectionsRequest& -->
+<h3 class="fn" id="getConnections"><a name="getConnections"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getconnectionsresponse.html">GetConnectionsResponse</a></span> *GlueClient::<span class="name">getConnections</span>(const <span class="type"><a href="qtaws-glue-getconnectionsrequest.html">GetConnectionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getconnectionsresponse.html">GetConnectionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of connection definitions from the Data</p>
+<!-- @@@getConnections -->
+<!-- $$$getCrawler[overload1]$$$getCrawlerconstGetCrawlerRequest& -->
+<h3 class="fn" id="getCrawler"><a name="getCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getcrawlerresponse.html">GetCrawlerResponse</a></span> *GlueClient::<span class="name">getCrawler</span>(const <span class="type"><a href="qtaws-glue-getcrawlerrequest.html">GetCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getcrawlerresponse.html">GetCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata for a specified</p>
+<!-- @@@getCrawler -->
+<!-- $$$getCrawlerMetrics[overload1]$$$getCrawlerMetricsconstGetCrawlerMetricsRequest& -->
+<h3 class="fn" id="getCrawlerMetrics"><a name="getCrawlerMetrics"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getcrawlermetricsresponse.html">GetCrawlerMetricsResponse</a></span> *GlueClient::<span class="name">getCrawlerMetrics</span>(const <span class="type"><a href="qtaws-glue-getcrawlermetricsrequest.html">GetCrawlerMetricsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getcrawlermetricsresponse.html">GetCrawlerMetricsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metrics about specified</p>
+<!-- @@@getCrawlerMetrics -->
+<!-- $$$getCrawlers[overload1]$$$getCrawlersconstGetCrawlersRequest& -->
+<h3 class="fn" id="getCrawlers"><a name="getCrawlers"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getcrawlersresponse.html">GetCrawlersResponse</a></span> *GlueClient::<span class="name">getCrawlers</span>(const <span class="type"><a href="qtaws-glue-getcrawlersrequest.html">GetCrawlersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getcrawlersresponse.html">GetCrawlersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata for all crawlers defined in the customer</p>
+<!-- @@@getCrawlers -->
+<!-- $$$getDatabase[overload1]$$$getDatabaseconstGetDatabaseRequest& -->
+<h3 class="fn" id="getDatabase"><a name="getDatabase"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getdatabaseresponse.html">GetDatabaseResponse</a></span> *GlueClient::<span class="name">getDatabase</span>(const <span class="type"><a href="qtaws-glue-getdatabaserequest.html">GetDatabaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getdatabaseresponse.html">GetDatabaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the definition of a specified</p>
+<!-- @@@getDatabase -->
+<!-- $$$getDatabases[overload1]$$$getDatabasesconstGetDatabasesRequest& -->
+<h3 class="fn" id="getDatabases"><a name="getDatabases"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getdatabasesresponse.html">GetDatabasesResponse</a></span> *GlueClient::<span class="name">getDatabases</span>(const <span class="type"><a href="qtaws-glue-getdatabasesrequest.html">GetDatabasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getdatabasesresponse.html">GetDatabasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all Databases defined in a given Data</p>
+<!-- @@@getDatabases -->
+<!-- $$$getDataflowGraph[overload1]$$$getDataflowGraphconstGetDataflowGraphRequest& -->
+<h3 class="fn" id="getDataflowGraph"><a name="getDataflowGraph"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getdataflowgraphresponse.html">GetDataflowGraphResponse</a></span> *GlueClient::<span class="name">getDataflowGraph</span>(const <span class="type"><a href="qtaws-glue-getdataflowgraphrequest.html">GetDataflowGraphRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getdataflowgraphresponse.html">GetDataflowGraphResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Transforms a Python script into a directed acyclic graph (DAG).</p>
+<!-- @@@getDataflowGraph -->
+<!-- $$$getDevEndpoint[overload1]$$$getDevEndpointconstGetDevEndpointRequest& -->
+<h3 class="fn" id="getDevEndpoint"><a name="getDevEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getdevendpointresponse.html">GetDevEndpointResponse</a></span> *GlueClient::<span class="name">getDevEndpoint</span>(const <span class="type"><a href="qtaws-glue-getdevendpointrequest.html">GetDevEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getdevendpointresponse.html">GetDevEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a specified</p>
+<!-- @@@getDevEndpoint -->
+<!-- $$$getDevEndpoints[overload1]$$$getDevEndpointsconstGetDevEndpointsRequest& -->
+<h3 class="fn" id="getDevEndpoints"><a name="getDevEndpoints"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getdevendpointsresponse.html">GetDevEndpointsResponse</a></span> *GlueClient::<span class="name">getDevEndpoints</span>(const <span class="type"><a href="qtaws-glue-getdevendpointsrequest.html">GetDevEndpointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getdevendpointsresponse.html">GetDevEndpointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all the DevEndpoints in this AWS</p>
+<!-- @@@getDevEndpoints -->
+<!-- $$$getJob[overload1]$$$getJobconstGetJobRequest& -->
+<h3 class="fn" id="getJob"><a name="getJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getjobresponse.html">GetJobResponse</a></span> *GlueClient::<span class="name">getJob</span>(const <span class="type"><a href="qtaws-glue-getjobrequest.html">GetJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getjobresponse.html">GetJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves an existing job</p>
+<!-- @@@getJob -->
+<!-- $$$getJobRun[overload1]$$$getJobRunconstGetJobRunRequest& -->
+<h3 class="fn" id="getJobRun"><a name="getJobRun"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getjobrunresponse.html">GetJobRunResponse</a></span> *GlueClient::<span class="name">getJobRun</span>(const <span class="type"><a href="qtaws-glue-getjobrunrequest.html">GetJobRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getjobrunresponse.html">GetJobRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the metadata for a given job</p>
+<!-- @@@getJobRun -->
+<!-- $$$getJobRuns[overload1]$$$getJobRunsconstGetJobRunsRequest& -->
+<h3 class="fn" id="getJobRuns"><a name="getJobRuns"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getjobrunsresponse.html">GetJobRunsResponse</a></span> *GlueClient::<span class="name">getJobRuns</span>(const <span class="type"><a href="qtaws-glue-getjobrunsrequest.html">GetJobRunsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getjobrunsresponse.html">GetJobRunsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata for all runs of a given job</p>
+<!-- @@@getJobRuns -->
+<!-- $$$getJobs[overload1]$$$getJobsconstGetJobsRequest& -->
+<h3 class="fn" id="getJobs"><a name="getJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getjobsresponse.html">GetJobsResponse</a></span> *GlueClient::<span class="name">getJobs</span>(const <span class="type"><a href="qtaws-glue-getjobsrequest.html">GetJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getjobsresponse.html">GetJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all current job</p>
+<!-- @@@getJobs -->
+<!-- $$$getMapping[overload1]$$$getMappingconstGetMappingRequest& -->
+<h3 class="fn" id="getMapping"><a name="getMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getmappingresponse.html">GetMappingResponse</a></span> *GlueClient::<span class="name">getMapping</span>(const <span class="type"><a href="qtaws-glue-getmappingrequest.html">GetMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getmappingresponse.html">GetMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates</p>
+<!-- @@@getMapping -->
+<!-- $$$getPartition[overload1]$$$getPartitionconstGetPartitionRequest& -->
+<h3 class="fn" id="getPartition"><a name="getPartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getpartitionresponse.html">GetPartitionResponse</a></span> *GlueClient::<span class="name">getPartition</span>(const <span class="type"><a href="qtaws-glue-getpartitionrequest.html">GetPartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getpartitionresponse.html">GetPartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a specified</p>
+<!-- @@@getPartition -->
+<!-- $$$getPartitions[overload1]$$$getPartitionsconstGetPartitionsRequest& -->
+<h3 class="fn" id="getPartitions"><a name="getPartitions"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getpartitionsresponse.html">GetPartitionsResponse</a></span> *GlueClient::<span class="name">getPartitions</span>(const <span class="type"><a href="qtaws-glue-getpartitionsrequest.html">GetPartitionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getpartitionsresponse.html">GetPartitionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about the partitions in a</p>
+<!-- @@@getPartitions -->
+<!-- $$$getPlan[overload1]$$$getPlanconstGetPlanRequest& -->
+<h3 class="fn" id="getPlan"><a name="getPlan"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getplanresponse.html">GetPlanResponse</a></span> *GlueClient::<span class="name">getPlan</span>(const <span class="type"><a href="qtaws-glue-getplanrequest.html">GetPlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getplanresponse.html">GetPlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets code to perform a specified</p>
+<!-- @@@getPlan -->
+<!-- $$$getTable[overload1]$$$getTableconstGetTableRequest& -->
+<h3 class="fn" id="getTable"><a name="getTable"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettableresponse.html">GetTableResponse</a></span> *GlueClient::<span class="name">getTable</span>(const <span class="type"><a href="qtaws-glue-gettablerequest.html">GetTableRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettableresponse.html">GetTableResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the &lt;code&gt;Table&lt;/code&gt; definition in a Data Catalog for a specified</p>
+<!-- @@@getTable -->
+<!-- $$$getTableVersion[overload1]$$$getTableVersionconstGetTableVersionRequest& -->
+<h3 class="fn" id="getTableVersion"><a name="getTableVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettableversionresponse.html">GetTableVersionResponse</a></span> *GlueClient::<span class="name">getTableVersion</span>(const <span class="type"><a href="qtaws-glue-gettableversionrequest.html">GetTableVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettableversionresponse.html">GetTableVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a specified version of a</p>
+<!-- @@@getTableVersion -->
+<!-- $$$getTableVersions[overload1]$$$getTableVersionsconstGetTableVersionsRequest& -->
+<h3 class="fn" id="getTableVersions"><a name="getTableVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettableversionsresponse.html">GetTableVersionsResponse</a></span> *GlueClient::<span class="name">getTableVersions</span>(const <span class="type"><a href="qtaws-glue-gettableversionsrequest.html">GetTableVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettableversionsresponse.html">GetTableVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of strings that identify available versions of a specified</p>
+<!-- @@@getTableVersions -->
+<!-- $$$getTables[overload1]$$$getTablesconstGetTablesRequest& -->
+<h3 class="fn" id="getTables"><a name="getTables"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettablesresponse.html">GetTablesResponse</a></span> *GlueClient::<span class="name">getTables</span>(const <span class="type"><a href="qtaws-glue-gettablesrequest.html">GetTablesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettablesresponse.html">GetTablesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the definitions of some or all of the tables in a given</p>
+<!-- @@@getTables -->
+<!-- $$$getTrigger[overload1]$$$getTriggerconstGetTriggerRequest& -->
+<h3 class="fn" id="getTrigger"><a name="getTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettriggerresponse.html">GetTriggerResponse</a></span> *GlueClient::<span class="name">getTrigger</span>(const <span class="type"><a href="qtaws-glue-gettriggerrequest.html">GetTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettriggerresponse.html">GetTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the definition of a</p>
+<!-- @@@getTrigger -->
+<!-- $$$getTriggers[overload1]$$$getTriggersconstGetTriggersRequest& -->
+<h3 class="fn" id="getTriggers"><a name="getTriggers"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-gettriggersresponse.html">GetTriggersResponse</a></span> *GlueClient::<span class="name">getTriggers</span>(const <span class="type"><a href="qtaws-glue-gettriggersrequest.html">GetTriggersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-gettriggersresponse.html">GetTriggersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets all the triggers associated with a</p>
+<!-- @@@getTriggers -->
+<!-- $$$getUserDefinedFunction[overload1]$$$getUserDefinedFunctionconstGetUserDefinedFunctionRequest& -->
+<h3 class="fn" id="getUserDefinedFunction"><a name="getUserDefinedFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getuserdefinedfunctionresponse.html">GetUserDefinedFunctionResponse</a></span> *GlueClient::<span class="name">getUserDefinedFunction</span>(const <span class="type"><a href="qtaws-glue-getuserdefinedfunctionrequest.html">GetUserDefinedFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getuserdefinedfunctionresponse.html">GetUserDefinedFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a specified function definition from the Data</p>
+<!-- @@@getUserDefinedFunction -->
+<!-- $$$getUserDefinedFunctions[overload1]$$$getUserDefinedFunctionsconstGetUserDefinedFunctionsRequest& -->
+<h3 class="fn" id="getUserDefinedFunctions"><a name="getUserDefinedFunctions"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-getuserdefinedfunctionsresponse.html">GetUserDefinedFunctionsResponse</a></span> *GlueClient::<span class="name">getUserDefinedFunctions</span>(const <span class="type"><a href="qtaws-glue-getuserdefinedfunctionsrequest.html">GetUserDefinedFunctionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-getuserdefinedfunctionsresponse.html">GetUserDefinedFunctionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a multiple function definitions from the Data</p>
+<!-- @@@getUserDefinedFunctions -->
+<!-- $$$importCatalogToGlue[overload1]$$$importCatalogToGlueconstImportCatalogToGlueRequest& -->
+<h3 class="fn" id="importCatalogToGlue"><a name="importCatalogToGlue"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-importcatalogtoglueresponse.html">ImportCatalogToGlueResponse</a></span> *GlueClient::<span class="name">importCatalogToGlue</span>(const <span class="type"><a href="qtaws-glue-importcatalogtogluerequest.html">ImportCatalogToGlueRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-importcatalogtoglueresponse.html">ImportCatalogToGlueResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Imports an existing Athena Data Catalog to AWS</p>
+<!-- @@@importCatalogToGlue -->
+<!-- $$$resetJobBookmark[overload1]$$$resetJobBookmarkconstResetJobBookmarkRequest& -->
+<h3 class="fn" id="resetJobBookmark"><a name="resetJobBookmark"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-resetjobbookmarkresponse.html">ResetJobBookmarkResponse</a></span> *GlueClient::<span class="name">resetJobBookmark</span>(const <span class="type"><a href="qtaws-glue-resetjobbookmarkrequest.html">ResetJobBookmarkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-resetjobbookmarkresponse.html">ResetJobBookmarkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resets a bookmark</p>
+<!-- @@@resetJobBookmark -->
+<!-- $$$startCrawler[overload1]$$$startCrawlerconstStartCrawlerRequest& -->
+<h3 class="fn" id="startCrawler"><a name="startCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-startcrawlerresponse.html">StartCrawlerResponse</a></span> *GlueClient::<span class="name">startCrawler</span>(const <span class="type"><a href="qtaws-glue-startcrawlerrequest.html">StartCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-startcrawlerresponse.html">StartCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, does</p>
+<!-- @@@startCrawler -->
+<!-- $$$startCrawlerSchedule[overload1]$$$startCrawlerScheduleconstStartCrawlerScheduleRequest& -->
+<h3 class="fn" id="startCrawlerSchedule"><a name="startCrawlerSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-startcrawlerscheduleresponse.html">StartCrawlerScheduleResponse</a></span> *GlueClient::<span class="name">startCrawlerSchedule</span>(const <span class="type"><a href="qtaws-glue-startcrawlerschedulerequest.html">StartCrawlerScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-startcrawlerscheduleresponse.html">StartCrawlerScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes the schedule state of the specified crawler to &lt;code&gt;SCHEDULED&lt;/code&gt;, unless the crawler is already running or the schedule state is already</p>
+<!-- @@@startCrawlerSchedule -->
+<!-- $$$startJobRun[overload1]$$$startJobRunconstStartJobRunRequest& -->
+<h3 class="fn" id="startJobRun"><a name="startJobRun"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-startjobrunresponse.html">StartJobRunResponse</a></span> *GlueClient::<span class="name">startJobRun</span>(const <span class="type"><a href="qtaws-glue-startjobrunrequest.html">StartJobRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-startjobrunresponse.html">StartJobRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a job run using a job</p>
+<!-- @@@startJobRun -->
+<!-- $$$startTrigger[overload1]$$$startTriggerconstStartTriggerRequest& -->
+<h3 class="fn" id="startTrigger"><a name="startTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-starttriggerresponse.html">StartTriggerResponse</a></span> *GlueClient::<span class="name">startTrigger</span>(const <span class="type"><a href="qtaws-glue-starttriggerrequest.html">StartTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-starttriggerresponse.html">StartTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts an existing trigger. See &lt;a href=&quot;http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html&quot;&gt;Triggering Jobs&lt;/a&gt; for information about how different types of trigger are</p>
+<!-- @@@startTrigger -->
+<!-- $$$stopCrawler[overload1]$$$stopCrawlerconstStopCrawlerRequest& -->
+<h3 class="fn" id="stopCrawler"><a name="stopCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-stopcrawlerresponse.html">StopCrawlerResponse</a></span> *GlueClient::<span class="name">stopCrawler</span>(const <span class="type"><a href="qtaws-glue-stopcrawlerrequest.html">StopCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-stopcrawlerresponse.html">StopCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>If the specified crawler is running, stops the</p>
+<!-- @@@stopCrawler -->
+<!-- $$$stopCrawlerSchedule[overload1]$$$stopCrawlerScheduleconstStopCrawlerScheduleRequest& -->
+<h3 class="fn" id="stopCrawlerSchedule"><a name="stopCrawlerSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-stopcrawlerscheduleresponse.html">StopCrawlerScheduleResponse</a></span> *GlueClient::<span class="name">stopCrawlerSchedule</span>(const <span class="type"><a href="qtaws-glue-stopcrawlerschedulerequest.html">StopCrawlerScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-stopcrawlerscheduleresponse.html">StopCrawlerScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the schedule state of the specified crawler to &lt;code&gt;NOT_SCHEDULED&lt;/code&gt;, but does not stop the crawler if it is already</p>
+<!-- @@@stopCrawlerSchedule -->
+<!-- $$$stopTrigger[overload1]$$$stopTriggerconstStopTriggerRequest& -->
+<h3 class="fn" id="stopTrigger"><a name="stopTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-stoptriggerresponse.html">StopTriggerResponse</a></span> *GlueClient::<span class="name">stopTrigger</span>(const <span class="type"><a href="qtaws-glue-stoptriggerrequest.html">StopTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-stoptriggerresponse.html">StopTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a specified</p>
+<!-- @@@stopTrigger -->
+<!-- $$$updateClassifier[overload1]$$$updateClassifierconstUpdateClassifierRequest& -->
+<h3 class="fn" id="updateClassifier"><a name="updateClassifier"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updateclassifierresponse.html">UpdateClassifierResponse</a></span> *GlueClient::<span class="name">updateClassifier</span>(const <span class="type"><a href="qtaws-glue-updateclassifierrequest.html">UpdateClassifierRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updateclassifierresponse.html">UpdateClassifierResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing classifier (a &lt;code&gt;GrokClassifier&lt;/code&gt;, &lt;code&gt;XMLClassifier&lt;/code&gt;, or &lt;code&gt;JsonClassifier&lt;/code&gt;, depending on which field is</p>
+<!-- @@@updateClassifier -->
+<!-- $$$updateConnection[overload1]$$$updateConnectionconstUpdateConnectionRequest& -->
+<h3 class="fn" id="updateConnection"><a name="updateConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updateconnectionresponse.html">UpdateConnectionResponse</a></span> *GlueClient::<span class="name">updateConnection</span>(const <span class="type"><a href="qtaws-glue-updateconnectionrequest.html">UpdateConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updateconnectionresponse.html">UpdateConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a connection definition in the Data</p>
+<!-- @@@updateConnection -->
+<!-- $$$updateCrawler[overload1]$$$updateCrawlerconstUpdateCrawlerRequest& -->
+<h3 class="fn" id="updateCrawler"><a name="updateCrawler"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatecrawlerresponse.html">UpdateCrawlerResponse</a></span> *GlueClient::<span class="name">updateCrawler</span>(const <span class="type"><a href="qtaws-glue-updatecrawlerrequest.html">UpdateCrawlerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatecrawlerresponse.html">UpdateCrawlerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a crawler. If a crawler is running, you must stop it using &lt;code&gt;StopCrawler&lt;/code&gt; before updating</p>
+<!-- @@@updateCrawler -->
+<!-- $$$updateCrawlerSchedule[overload1]$$$updateCrawlerScheduleconstUpdateCrawlerScheduleRequest& -->
+<h3 class="fn" id="updateCrawlerSchedule"><a name="updateCrawlerSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatecrawlerscheduleresponse.html">UpdateCrawlerScheduleResponse</a></span> *GlueClient::<span class="name">updateCrawlerSchedule</span>(const <span class="type"><a href="qtaws-glue-updatecrawlerschedulerequest.html">UpdateCrawlerScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatecrawlerscheduleresponse.html">UpdateCrawlerScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the schedule of a crawler using a &lt;code&gt;cron&lt;/code&gt; expression.</p>
+<!-- @@@updateCrawlerSchedule -->
+<!-- $$$updateDatabase[overload1]$$$updateDatabaseconstUpdateDatabaseRequest& -->
+<h3 class="fn" id="updateDatabase"><a name="updateDatabase"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatedatabaseresponse.html">UpdateDatabaseResponse</a></span> *GlueClient::<span class="name">updateDatabase</span>(const <span class="type"><a href="qtaws-glue-updatedatabaserequest.html">UpdateDatabaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatedatabaseresponse.html">UpdateDatabaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing database definition in a Data</p>
+<!-- @@@updateDatabase -->
+<!-- $$$updateDevEndpoint[overload1]$$$updateDevEndpointconstUpdateDevEndpointRequest& -->
+<h3 class="fn" id="updateDevEndpoint"><a name="updateDevEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatedevendpointresponse.html">UpdateDevEndpointResponse</a></span> *GlueClient::<span class="name">updateDevEndpoint</span>(const <span class="type"><a href="qtaws-glue-updatedevendpointrequest.html">UpdateDevEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatedevendpointresponse.html">UpdateDevEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified</p>
+<!-- @@@updateDevEndpoint -->
+<!-- $$$updateJob[overload1]$$$updateJobconstUpdateJobRequest& -->
+<h3 class="fn" id="updateJob"><a name="updateJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatejobresponse.html">UpdateJobResponse</a></span> *GlueClient::<span class="name">updateJob</span>(const <span class="type"><a href="qtaws-glue-updatejobrequest.html">UpdateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatejobresponse.html">UpdateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing job</p>
+<!-- @@@updateJob -->
+<!-- $$$updatePartition[overload1]$$$updatePartitionconstUpdatePartitionRequest& -->
+<h3 class="fn" id="updatePartition"><a name="updatePartition"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatepartitionresponse.html">UpdatePartitionResponse</a></span> *GlueClient::<span class="name">updatePartition</span>(const <span class="type"><a href="qtaws-glue-updatepartitionrequest.html">UpdatePartitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatepartitionresponse.html">UpdatePartitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a</p>
+<!-- @@@updatePartition -->
+<!-- $$$updateTable[overload1]$$$updateTableconstUpdateTableRequest& -->
+<h3 class="fn" id="updateTable"><a name="updateTable"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatetableresponse.html">UpdateTableResponse</a></span> *GlueClient::<span class="name">updateTable</span>(const <span class="type"><a href="qtaws-glue-updatetablerequest.html">UpdateTableRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatetableresponse.html">UpdateTableResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a metadata table in the Data</p>
+<!-- @@@updateTable -->
+<!-- $$$updateTrigger[overload1]$$$updateTriggerconstUpdateTriggerRequest& -->
+<h3 class="fn" id="updateTrigger"><a name="updateTrigger"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updatetriggerresponse.html">UpdateTriggerResponse</a></span> *GlueClient::<span class="name">updateTrigger</span>(const <span class="type"><a href="qtaws-glue-updatetriggerrequest.html">UpdateTriggerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updatetriggerresponse.html">UpdateTriggerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a trigger</p>
+<!-- @@@updateTrigger -->
+<!-- $$$updateUserDefinedFunction[overload1]$$$updateUserDefinedFunctionconstUpdateUserDefinedFunctionRequest& -->
+<h3 class="fn" id="updateUserDefinedFunction"><a name="updateUserDefinedFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-glue-updateuserdefinedfunctionresponse.html">UpdateUserDefinedFunctionResponse</a></span> *GlueClient::<span class="name">updateUserDefinedFunction</span>(const <span class="type"><a href="qtaws-glue-updateuserdefinedfunctionrequest.html">UpdateUserDefinedFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glue-glueclient.html">GlueClient</a> service, and returns a pointer to an <a href="qtaws-glue-updateuserdefinedfunctionresponse.html">UpdateUserDefinedFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing function definition in the Data</p>
+<!-- @@@updateUserDefinedFunction -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

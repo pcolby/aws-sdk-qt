@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- pinpointrequest.cpp -->
+  <title>PinpointRequest Class | Pinpoint</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawspinpoint-index.html">Pinpoint</a></li>
+<li><a href="qtawspinpoint-module.html">C++ Classes</a></li>
+<li>PinpointRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">PinpointRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-pinpoint-pinpointrequest.html">QtAws::Pinpoint::PinpointRequest</a>)<br/></span>
+<!-- $$$PinpointRequest-brief -->
+<p>The <a href="qtaws-pinpoint-pinpointrequest.html">PinpointRequest</a> class provides an interface for Pinpoint requests. <a href="#details">More...</a></p>
+<!-- @@@PinpointRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;PinpointRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-pinpoint-createapprequest.html">QtAws::Pinpoint::CreateAppRequest</a>, <a href="qtaws-pinpoint-createcampaignrequest.html">QtAws::Pinpoint::CreateCampaignRequest</a>, <a href="qtaws-pinpoint-createexportjobrequest.html">QtAws::Pinpoint::CreateExportJobRequest</a>, <a href="qtaws-pinpoint-createimportjobrequest.html">QtAws::Pinpoint::CreateImportJobRequest</a>, <a href="qtaws-pinpoint-createsegmentrequest.html">QtAws::Pinpoint::CreateSegmentRequest</a>, <a href="qtaws-pinpoint-deleteadmchannelrequest.html">QtAws::Pinpoint::DeleteAdmChannelRequest</a>, <a href="qtaws-pinpoint-deleteapnschannelrequest.html">QtAws::Pinpoint::DeleteApnsChannelRequest</a>, <a href="qtaws-pinpoint-deleteapnssandboxchannelrequest.html">QtAws::Pinpoint::DeleteApnsSandboxChannelRequest</a>, <a href="qtaws-pinpoint-deleteapnsvoipchannelrequest.html">QtAws::Pinpoint::DeleteApnsVoipChannelRequest</a>, <a href="qtaws-pinpoint-deleteapnsvoipsandboxchannelrequest.html">QtAws::Pinpoint::DeleteApnsVoipSandboxChannelRequest</a>, <a href="qtaws-pinpoint-deleteapprequest.html">QtAws::Pinpoint::DeleteAppRequest</a>, <a href="qtaws-pinpoint-deletebaiduchannelrequest.html">QtAws::Pinpoint::DeleteBaiduChannelRequest</a>, <a href="qtaws-pinpoint-deletecampaignrequest.html">QtAws::Pinpoint::DeleteCampaignRequest</a>, <a href="qtaws-pinpoint-deleteemailchannelrequest.html">QtAws::Pinpoint::DeleteEmailChannelRequest</a>, <a href="qtaws-pinpoint-deleteendpointrequest.html">QtAws::Pinpoint::DeleteEndpointRequest</a>, <a href="qtaws-pinpoint-deleteeventstreamrequest.html">QtAws::Pinpoint::DeleteEventStreamRequest</a>, <a href="qtaws-pinpoint-deletegcmchannelrequest.html">QtAws::Pinpoint::DeleteGcmChannelRequest</a>, <a href="qtaws-pinpoint-deletesegmentrequest.html">QtAws::Pinpoint::DeleteSegmentRequest</a>, <a href="qtaws-pinpoint-deletesmschannelrequest.html">QtAws::Pinpoint::DeleteSmsChannelRequest</a>, <a href="qtaws-pinpoint-getadmchannelrequest.html">QtAws::Pinpoint::GetAdmChannelRequest</a>, <a href="qtaws-pinpoint-getapnschannelrequest.html">QtAws::Pinpoint::GetApnsChannelRequest</a>, <a href="qtaws-pinpoint-getapnssandboxchannelrequest.html">QtAws::Pinpoint::GetApnsSandboxChannelRequest</a>, <a href="qtaws-pinpoint-getapnsvoipchannelrequest.html">QtAws::Pinpoint::GetApnsVoipChannelRequest</a>, <a href="qtaws-pinpoint-getapnsvoipsandboxchannelrequest.html">QtAws::Pinpoint::GetApnsVoipSandboxChannelRequest</a>, <a href="qtaws-pinpoint-getapplicationsettingsrequest.html">QtAws::Pinpoint::GetApplicationSettingsRequest</a>, <a href="qtaws-pinpoint-getapprequest.html">QtAws::Pinpoint::GetAppRequest</a>, <a href="qtaws-pinpoint-getappsrequest.html">QtAws::Pinpoint::GetAppsRequest</a>, <a href="qtaws-pinpoint-getbaiduchannelrequest.html">QtAws::Pinpoint::GetBaiduChannelRequest</a>, <a href="qtaws-pinpoint-getcampaignactivitiesrequest.html">QtAws::Pinpoint::GetCampaignActivitiesRequest</a>, <a href="qtaws-pinpoint-getcampaignrequest.html">QtAws::Pinpoint::GetCampaignRequest</a>, <a href="qtaws-pinpoint-getcampaignsrequest.html">QtAws::Pinpoint::GetCampaignsRequest</a>, <a href="qtaws-pinpoint-getcampaignversionrequest.html">QtAws::Pinpoint::GetCampaignVersionRequest</a>, <a href="qtaws-pinpoint-getcampaignversionsrequest.html">QtAws::Pinpoint::GetCampaignVersionsRequest</a>, <a href="qtaws-pinpoint-getemailchannelrequest.html">QtAws::Pinpoint::GetEmailChannelRequest</a>, <a href="qtaws-pinpoint-getendpointrequest.html">QtAws::Pinpoint::GetEndpointRequest</a>, <a href="qtaws-pinpoint-geteventstreamrequest.html">QtAws::Pinpoint::GetEventStreamRequest</a>, <a href="qtaws-pinpoint-getexportjobrequest.html">QtAws::Pinpoint::GetExportJobRequest</a>, <a href="qtaws-pinpoint-getexportjobsrequest.html">QtAws::Pinpoint::GetExportJobsRequest</a>, <a href="qtaws-pinpoint-getgcmchannelrequest.html">QtAws::Pinpoint::GetGcmChannelRequest</a>, <a href="qtaws-pinpoint-getimportjobrequest.html">QtAws::Pinpoint::GetImportJobRequest</a>, <a href="qtaws-pinpoint-getimportjobsrequest.html">QtAws::Pinpoint::GetImportJobsRequest</a>, <a href="qtaws-pinpoint-getsegmentexportjobsrequest.html">QtAws::Pinpoint::GetSegmentExportJobsRequest</a>, <a href="qtaws-pinpoint-getsegmentimportjobsrequest.html">QtAws::Pinpoint::GetSegmentImportJobsRequest</a>, <a href="qtaws-pinpoint-getsegmentrequest.html">QtAws::Pinpoint::GetSegmentRequest</a>, <a href="qtaws-pinpoint-getsegmentsrequest.html">QtAws::Pinpoint::GetSegmentsRequest</a>, <a href="qtaws-pinpoint-getsegmentversionrequest.html">QtAws::Pinpoint::GetSegmentVersionRequest</a>, <a href="qtaws-pinpoint-getsegmentversionsrequest.html">QtAws::Pinpoint::GetSegmentVersionsRequest</a>, <a href="qtaws-pinpoint-getsmschannelrequest.html">QtAws::Pinpoint::GetSmsChannelRequest</a>, <a href="qtaws-pinpoint-puteventstreamrequest.html">QtAws::Pinpoint::PutEventStreamRequest</a>, <a href="qtaws-pinpoint-sendmessagesrequest.html">QtAws::Pinpoint::SendMessagesRequest</a>, <a href="qtaws-pinpoint-sendusersmessagesrequest.html">QtAws::Pinpoint::SendUsersMessagesRequest</a>, <a href="qtaws-pinpoint-updateadmchannelrequest.html">QtAws::Pinpoint::UpdateAdmChannelRequest</a>, <a href="qtaws-pinpoint-updateapnschannelrequest.html">QtAws::Pinpoint::UpdateApnsChannelRequest</a>, <a href="qtaws-pinpoint-updateapnssandboxchannelrequest.html">QtAws::Pinpoint::UpdateApnsSandboxChannelRequest</a>, <a href="qtaws-pinpoint-updateapnsvoipchannelrequest.html">QtAws::Pinpoint::UpdateApnsVoipChannelRequest</a>, <a href="qtaws-pinpoint-updateapnsvoipsandboxchannelrequest.html">QtAws::Pinpoint::UpdateApnsVoipSandboxChannelRequest</a>, <a href="qtaws-pinpoint-updateapplicationsettingsrequest.html">QtAws::Pinpoint::UpdateApplicationSettingsRequest</a>, <a href="qtaws-pinpoint-updatebaiduchannelrequest.html">QtAws::Pinpoint::UpdateBaiduChannelRequest</a>, <a href="qtaws-pinpoint-updatecampaignrequest.html">QtAws::Pinpoint::UpdateCampaignRequest</a>, <a href="qtaws-pinpoint-updateemailchannelrequest.html">QtAws::Pinpoint::UpdateEmailChannelRequest</a>, <a href="qtaws-pinpoint-updateendpointrequest.html">QtAws::Pinpoint::UpdateEndpointRequest</a>, <a href="qtaws-pinpoint-updateendpointsbatchrequest.html">QtAws::Pinpoint::UpdateEndpointsBatchRequest</a>, <a href="qtaws-pinpoint-updategcmchannelrequest.html">QtAws::Pinpoint::UpdateGcmChannelRequest</a>, <a href="qtaws-pinpoint-updatesegmentrequest.html">QtAws::Pinpoint::UpdateSegmentRequest</a>, and <a href="qtaws-pinpoint-updatesmschannelrequest.html">QtAws::Pinpoint::UpdateSmsChannelRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-pinpoint-pinpointrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#Action-enum">Action</a></b> { CreateAppAction, CreateCampaignAction, CreateExportJobAction, CreateImportJobAction, ..., UpdateSmsChannelAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest">PinpointRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest-1">PinpointRequest</a></b>(const PinpointRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PinpointRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#operator-eq">operator=</a></b>(const PinpointRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#operator-eq-eq">operator==</a></b>(const PinpointRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest-2">PinpointRequest</a></b>(PinpointRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$PinpointRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-pinpoint-pinpointrequest.html">PinpointRequest</a> class provides an interface for Pinpoint requests.</p>
+</div>
+<!-- @@@PinpointRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateAppAction$$$CreateCampaignAction$$$CreateExportJobAction$$$CreateImportJobAction$$$CreateSegmentAction$$$DeleteAdmChannelAction$$$DeleteApnsChannelAction$$$DeleteApnsSandboxChannelAction$$$DeleteApnsVoipChannelAction$$$DeleteApnsVoipSandboxChannelAction$$$DeleteAppAction$$$DeleteBaiduChannelAction$$$DeleteCampaignAction$$$DeleteEmailChannelAction$$$DeleteEndpointAction$$$DeleteEventStreamAction$$$DeleteGcmChannelAction$$$DeleteSegmentAction$$$DeleteSmsChannelAction$$$GetAdmChannelAction$$$GetApnsChannelAction$$$GetApnsSandboxChannelAction$$$GetApnsVoipChannelAction$$$GetApnsVoipSandboxChannelAction$$$GetAppAction$$$GetApplicationSettingsAction$$$GetAppsAction$$$GetBaiduChannelAction$$$GetCampaignAction$$$GetCampaignActivitiesAction$$$GetCampaignVersionAction$$$GetCampaignVersionsAction$$$GetCampaignsAction$$$GetEmailChannelAction$$$GetEndpointAction$$$GetEventStreamAction$$$GetExportJobAction$$$GetExportJobsAction$$$GetGcmChannelAction$$$GetImportJobAction$$$GetImportJobsAction$$$GetSegmentAction$$$GetSegmentExportJobsAction$$$GetSegmentImportJobsAction$$$GetSegmentVersionAction$$$GetSegmentVersionsAction$$$GetSegmentsAction$$$GetSmsChannelAction$$$PutEventStreamAction$$$SendMessagesAction$$$SendUsersMessagesAction$$$UpdateAdmChannelAction$$$UpdateApnsChannelAction$$$UpdateApnsSandboxChannelAction$$$UpdateApnsVoipChannelAction$$$UpdateApnsVoipSandboxChannelAction$$$UpdateApplicationSettingsAction$$$UpdateBaiduChannelAction$$$UpdateCampaignAction$$$UpdateEmailChannelAction$$$UpdateEndpointAction$$$UpdateEndpointsBatchAction$$$UpdateGcmChannelAction$$$UpdateSegmentAction$$$UpdateSmsChannelAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum PinpointRequest::<span class="name">Action</span><br/>flags PinpointRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Pinpoint requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::CreateAppAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Pinpoint CreateApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::CreateCampaignAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Pinpoint CreateCampaign action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::CreateExportJobAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Pinpoint CreateExportJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::CreateImportJobAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Pinpoint CreateImportJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::CreateSegmentAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Pinpoint CreateSegment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteAdmChannelAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Pinpoint DeleteAdmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteApnsChannelAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Pinpoint DeleteApnsChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteApnsSandboxChannelAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Pinpoint DeleteApnsSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteApnsVoipChannelAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Pinpoint DeleteApnsVoipChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteApnsVoipSandboxChannelAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Pinpoint DeleteApnsVoipSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteAppAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Pinpoint DeleteApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteBaiduChannelAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Pinpoint DeleteBaiduChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteCampaignAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Pinpoint DeleteCampaign action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteEmailChannelAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Pinpoint DeleteEmailChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteEndpointAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Pinpoint DeleteEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteEventStreamAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Pinpoint DeleteEventStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteGcmChannelAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Pinpoint DeleteGcmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteSegmentAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Pinpoint DeleteSegment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::DeleteSmsChannelAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Pinpoint DeleteSmsChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetAdmChannelAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Pinpoint GetAdmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetApnsChannelAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Pinpoint GetApnsChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetApnsSandboxChannelAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Pinpoint GetApnsSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetApnsVoipChannelAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Pinpoint GetApnsVoipChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetApnsVoipSandboxChannelAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Pinpoint GetApnsVoipSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetAppAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Pinpoint GetApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetApplicationSettingsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Pinpoint GetApplicationSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetAppsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Pinpoint GetApps action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetBaiduChannelAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Pinpoint GetBaiduChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetCampaignAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Pinpoint GetCampaign action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetCampaignActivitiesAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Pinpoint GetCampaignActivities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetCampaignVersionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Pinpoint GetCampaignVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetCampaignVersionsAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Pinpoint GetCampaignVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetCampaignsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Pinpoint GetCampaigns action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetEmailChannelAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Pinpoint GetEmailChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetEndpointAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Pinpoint GetEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetEventStreamAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Pinpoint GetEventStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetExportJobAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Pinpoint GetExportJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetExportJobsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Pinpoint GetExportJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetGcmChannelAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Pinpoint GetGcmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetImportJobAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Pinpoint GetImportJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetImportJobsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Pinpoint GetImportJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Pinpoint GetSegment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentExportJobsAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Pinpoint GetSegmentExportJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentImportJobsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Pinpoint GetSegmentImportJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentVersionAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Pinpoint GetSegmentVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentVersionsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Pinpoint GetSegmentVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSegmentsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Pinpoint GetSegments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::GetSmsChannelAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Pinpoint GetSmsChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::PutEventStreamAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Pinpoint PutEventStream action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::SendMessagesAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Pinpoint SendMessages action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::SendUsersMessagesAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Pinpoint SendUsersMessages action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateAdmChannelAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Pinpoint UpdateAdmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateApnsChannelAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Pinpoint UpdateApnsChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateApnsSandboxChannelAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Pinpoint UpdateApnsSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateApnsVoipChannelAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Pinpoint UpdateApnsVoipChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateApnsVoipSandboxChannelAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Pinpoint UpdateApnsVoipSandboxChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateApplicationSettingsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">Pinpoint UpdateApplicationSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateBaiduChannelAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">Pinpoint UpdateBaiduChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateCampaignAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">Pinpoint UpdateCampaign action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateEmailChannelAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">Pinpoint UpdateEmailChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateEndpointAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">Pinpoint UpdateEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateEndpointsBatchAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">Pinpoint UpdateEndpointsBatch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateGcmChannelAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">Pinpoint UpdateGcmChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateSegmentAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">Pinpoint UpdateSegment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Pinpoint::PinpointRequest::UpdateSmsChannelAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">Pinpoint UpdateSmsChannel action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$PinpointRequest[overload1]$$$PinpointRequestconstAction -->
+<h3 class="fn" id="PinpointRequest"><a name="PinpointRequest"></a>PinpointRequest::<span class="name">PinpointRequest</span>(const <span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-pinpoint-pinpointrequest.html">PinpointRequest</a> object for Pinpoint <i>action</i>.</p>
+<!-- @@@PinpointRequest -->
+<!-- $$$PinpointRequest$$$PinpointRequestconstPinpointRequest& -->
+<h3 class="fn" id="PinpointRequest-1"><a name="PinpointRequest-1"></a>PinpointRequest::<span class="name">PinpointRequest</span>(const <span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest">PinpointRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@PinpointRequest -->
+<!-- $$$PinpointRequest$$$PinpointRequestPinpointRequestPrivate*const -->
+<h3 class="fn" id="PinpointRequest-2"><a name="PinpointRequest-2"></a><code>[protected] </code>PinpointRequest::<span class="name">PinpointRequest</span>(<span class="type"><a href="qtaws-pinpoint-pinpointrequestprivate.html">PinpointRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-pinpoint-pinpointrequest.html">PinpointRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-pinpoint-pinpointrequestprivate.html">PinpointRequestPrivate</a>.</p>
+<!-- @@@PinpointRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#Action-enum">Action</a></span> PinpointRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Pinpoint action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> PinpointRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Pinpoint action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> PinpointRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Pinpoint API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> PinpointRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> PinpointRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> PinpointRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;PinpointRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> PinpointRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Pinpoint action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> PinpointRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Pinpoint API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> PinpointRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> PinpointRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-pinpoint-pinpointrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> PinpointRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Pinpoint request using the given <i>endpoint</i>.</p>
+<p>This Pinpoint implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-pinpoint-pinpointrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constPinpointRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest">PinpointRequest</a></span> &amp;PinpointRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest">PinpointRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-pinpoint-pinpointrequest.html">PinpointRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constPinpointRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> PinpointRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-pinpoint-pinpointrequest.html#PinpointRequest">PinpointRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

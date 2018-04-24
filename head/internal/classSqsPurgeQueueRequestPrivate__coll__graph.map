@@ -1,5 +1,0 @@
-<map id="SqsPurgeQueueRequestPrivate" name="SqsPurgeQueueRequestPrivate">
-<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="41,95,176,121"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="117,5,303,32"/>
-<area shape="rect" id="node4" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="201,95,347,121"/>
-</map>

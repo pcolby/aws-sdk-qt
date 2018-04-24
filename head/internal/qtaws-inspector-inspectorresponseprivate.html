@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- inspectorresponse.cpp -->
+  <title>InspectorResponsePrivate Class | Inspector</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsinspector-index.html">Inspector</a></li>
+<li><a href="qtawsinspector-module.html">C++ Classes</a></li>
+<li>InspectorResponsePrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">InspectorResponsePrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-inspector-inspectorresponseprivate.html">QtAws::Inspector::InspectorResponsePrivate</a>)<br/></span>
+<!-- $$$InspectorResponsePrivate-brief -->
+<p>The <a href="qtaws-inspector-inspectorresponseprivate.html">InspectorResponsePrivate</a> class provides private implementation for <a href="qtaws-inspector-inspectorresponse.html">InspectorResponse</a>. <a href="#details">More...</a></p>
+<!-- @@@InspectorResponsePrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;InspectorResponsePrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponseprivate.html">QtAws::Core::AwsAbstractResponsePrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-inspector-addattributestofindingsresponseprivate.html">QtAws::Inspector::AddAttributesToFindingsResponsePrivate</a>, <a href="qtaws-inspector-createassessmenttargetresponseprivate.html">QtAws::Inspector::CreateAssessmentTargetResponsePrivate</a>, <a href="qtaws-inspector-createassessmenttemplateresponseprivate.html">QtAws::Inspector::CreateAssessmentTemplateResponsePrivate</a>, <a href="qtaws-inspector-createresourcegroupresponseprivate.html">QtAws::Inspector::CreateResourceGroupResponsePrivate</a>, <a href="qtaws-inspector-deleteassessmentrunresponseprivate.html">QtAws::Inspector::DeleteAssessmentRunResponsePrivate</a>, <a href="qtaws-inspector-deleteassessmenttargetresponseprivate.html">QtAws::Inspector::DeleteAssessmentTargetResponsePrivate</a>, <a href="qtaws-inspector-deleteassessmenttemplateresponseprivate.html">QtAws::Inspector::DeleteAssessmentTemplateResponsePrivate</a>, <a href="qtaws-inspector-describeassessmentrunsresponseprivate.html">QtAws::Inspector::DescribeAssessmentRunsResponsePrivate</a>, <a href="qtaws-inspector-describeassessmenttargetsresponseprivate.html">QtAws::Inspector::DescribeAssessmentTargetsResponsePrivate</a>, <a href="qtaws-inspector-describeassessmenttemplatesresponseprivate.html">QtAws::Inspector::DescribeAssessmentTemplatesResponsePrivate</a>, <a href="qtaws-inspector-describecrossaccountaccessroleresponseprivate.html">QtAws::Inspector::DescribeCrossAccountAccessRoleResponsePrivate</a>, <a href="qtaws-inspector-describefindingsresponseprivate.html">QtAws::Inspector::DescribeFindingsResponsePrivate</a>, <a href="qtaws-inspector-describeresourcegroupsresponseprivate.html">QtAws::Inspector::DescribeResourceGroupsResponsePrivate</a>, <a href="qtaws-inspector-describerulespackagesresponseprivate.html">QtAws::Inspector::DescribeRulesPackagesResponsePrivate</a>, <a href="qtaws-inspector-getassessmentreportresponseprivate.html">QtAws::Inspector::GetAssessmentReportResponsePrivate</a>, <a href="qtaws-inspector-gettelemetrymetadataresponseprivate.html">QtAws::Inspector::GetTelemetryMetadataResponsePrivate</a>, <a href="qtaws-inspector-listassessmentrunagentsresponseprivate.html">QtAws::Inspector::ListAssessmentRunAgentsResponsePrivate</a>, <a href="qtaws-inspector-listassessmentrunsresponseprivate.html">QtAws::Inspector::ListAssessmentRunsResponsePrivate</a>, <a href="qtaws-inspector-listassessmenttargetsresponseprivate.html">QtAws::Inspector::ListAssessmentTargetsResponsePrivate</a>, <a href="qtaws-inspector-listassessmenttemplatesresponseprivate.html">QtAws::Inspector::ListAssessmentTemplatesResponsePrivate</a>, <a href="qtaws-inspector-listeventsubscriptionsresponseprivate.html">QtAws::Inspector::ListEventSubscriptionsResponsePrivate</a>, <a href="qtaws-inspector-listfindingsresponseprivate.html">QtAws::Inspector::ListFindingsResponsePrivate</a>, <a href="qtaws-inspector-listrulespackagesresponseprivate.html">QtAws::Inspector::ListRulesPackagesResponsePrivate</a>, <a href="qtaws-inspector-listtagsforresourceresponseprivate.html">QtAws::Inspector::ListTagsForResourceResponsePrivate</a>, <a href="qtaws-inspector-previewagentsresponseprivate.html">QtAws::Inspector::PreviewAgentsResponsePrivate</a>, <a href="qtaws-inspector-registercrossaccountaccessroleresponseprivate.html">QtAws::Inspector::RegisterCrossAccountAccessRoleResponsePrivate</a>, <a href="qtaws-inspector-removeattributesfromfindingsresponseprivate.html">QtAws::Inspector::RemoveAttributesFromFindingsResponsePrivate</a>, <a href="qtaws-inspector-settagsforresourceresponseprivate.html">QtAws::Inspector::SetTagsForResourceResponsePrivate</a>, <a href="qtaws-inspector-startassessmentrunresponseprivate.html">QtAws::Inspector::StartAssessmentRunResponsePrivate</a>, <a href="qtaws-inspector-stopassessmentrunresponseprivate.html">QtAws::Inspector::StopAssessmentRunResponsePrivate</a>, <a href="qtaws-inspector-subscribetoeventresponseprivate.html">QtAws::Inspector::SubscribeToEventResponsePrivate</a>, <a href="qtaws-inspector-unsubscribefromeventresponseprivate.html">QtAws::Inspector::UnsubscribeFromEventResponsePrivate</a>, and <a href="qtaws-inspector-updateassessmenttargetresponseprivate.html">QtAws::Inspector::UpdateAssessmentTargetResponsePrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-inspector-inspectorresponseprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorresponseprivate.html#InspectorResponsePrivate">InspectorResponsePrivate</a></b>(InspectorResponse * const <i>q</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$InspectorResponsePrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-inspector-inspectorresponseprivate.html">InspectorResponsePrivate</a> class provides private implementation for <a href="qtaws-inspector-inspectorresponse.html">InspectorResponse</a>.</p>
+</div>
+<!-- @@@InspectorResponsePrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$InspectorResponsePrivate[overload1]$$$InspectorResponsePrivateInspectorResponse*const -->
+<h3 class="fn" id="InspectorResponsePrivate"><a name="InspectorResponsePrivate"></a>InspectorResponsePrivate::<span class="name">InspectorResponsePrivate</span>(<span class="type"><a href="qtaws-inspector-inspectorresponse.html">InspectorResponse</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-inspector-inspectorresponseprivate.html">InspectorResponsePrivate</a> object with public implementation <i>q</i>.</p>
+<!-- @@@InspectorResponsePrivate -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

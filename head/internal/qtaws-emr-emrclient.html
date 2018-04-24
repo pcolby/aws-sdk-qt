@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- emrclient.cpp -->
+  <title>EmrClient Class | EMR</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsemr-index.html">EMR</a></li>
+<li><a href="qtawsemr-module.html">C++ Classes</a></li>
+<li>EmrClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">EmrClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-emr-emrclient.html">QtAws::EMR::EmrClient</a>)<br/></span>
+<!-- $$$EmrClient-brief -->
+<p>The <a href="qtaws-emr-emrclient.html">EmrClient</a> class provides access to the Amazon Elastic MapReduce ( EMR) service. <a href="#details">More...</a></p>
+<!-- @@@EmrClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;EmrClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-emr-emrclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#EmrClient">EmrClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#EmrClient-1">EmrClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddInstanceFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#addInstanceFleet">addInstanceFleet</a></b>(const AddInstanceFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddInstanceGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#addInstanceGroups">addInstanceGroups</a></b>(const AddInstanceGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddJobFlowStepsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#addJobFlowSteps">addJobFlowSteps</a></b>(const AddJobFlowStepsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#addTags">addTags</a></b>(const AddTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelStepsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#cancelSteps">cancelSteps</a></b>(const CancelStepsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSecurityConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#createSecurityConfiguration">createSecurityConfiguration</a></b>(const CreateSecurityConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSecurityConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#deleteSecurityConfiguration">deleteSecurityConfiguration</a></b>(const DeleteSecurityConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#describeCluster">describeCluster</a></b>(const DescribeClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobFlowsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#describeJobFlows">describeJobFlows</a></b>(const DescribeJobFlowsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSecurityConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#describeSecurityConfiguration">describeSecurityConfiguration</a></b>(const DescribeSecurityConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStepResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#describeStep">describeStep</a></b>(const DescribeStepRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBootstrapActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listBootstrapActions">listBootstrapActions</a></b>(const ListBootstrapActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listClusters">listClusters</a></b>(const ListClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInstanceFleetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listInstanceFleets">listInstanceFleets</a></b>(const ListInstanceFleetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInstanceGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listInstanceGroups">listInstanceGroups</a></b>(const ListInstanceGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listInstances">listInstances</a></b>(const ListInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSecurityConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listSecurityConfigurations">listSecurityConfigurations</a></b>(const ListSecurityConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListStepsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#listSteps">listSteps</a></b>(const ListStepsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyInstanceFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#modifyInstanceFleet">modifyInstanceFleet</a></b>(const ModifyInstanceFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyInstanceGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#modifyInstanceGroups">modifyInstanceGroups</a></b>(const ModifyInstanceGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutAutoScalingPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#putAutoScalingPolicy">putAutoScalingPolicy</a></b>(const PutAutoScalingPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveAutoScalingPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#removeAutoScalingPolicy">removeAutoScalingPolicy</a></b>(const RemoveAutoScalingPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#removeTags">removeTags</a></b>(const RemoveTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RunJobFlowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#runJobFlow">runJobFlow</a></b>(const RunJobFlowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetTerminationProtectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#setTerminationProtection">setTerminationProtection</a></b>(const SetTerminationProtectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetVisibleToAllUsersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#setVisibleToAllUsers">setVisibleToAllUsers</a></b>(const SetVisibleToAllUsersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateJobFlowsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-emr-emrclient.html#terminateJobFlows">terminateJobFlows</a></b>(const TerminateJobFlowsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$EmrClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-emr-emrclient.html">EmrClient</a> class provides access to the Amazon Elastic MapReduce ( EMR) service.</p>
+<p>Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine learning, scientific simulation, and data</p>
+</div>
+<!-- @@@EmrClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$EmrClient[overload1]$$$EmrClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EmrClient"><a name="EmrClient"></a>EmrClient::<span class="name">EmrClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-emr-emrclient.html">EmrClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@EmrClient -->
+<!-- $$$EmrClient$$$EmrClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EmrClient-1"><a name="EmrClient-1"></a>EmrClient::<span class="name">EmrClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-emr-emrclient.html#EmrClient">EmrClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@EmrClient -->
+<!-- $$$addInstanceFleet[overload1]$$$addInstanceFleetconstAddInstanceFleetRequest& -->
+<h3 class="fn" id="addInstanceFleet"><a name="addInstanceFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-addinstancefleetresponse.html">AddInstanceFleetResponse</a></span> *EmrClient::<span class="name">addInstanceFleet</span>(const <span class="type"><a href="qtaws-emr-addinstancefleetrequest.html">AddInstanceFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-addinstancefleetresponse.html">AddInstanceFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an instance fleet to a running</p>
+<p>cluster&gt; &lt;note&gt;</p>
+<p>The instance fleet configuration is available only in Amazon EMR versions 4.8&#x2e;0 and later, excluding</p>
+<!-- @@@addInstanceFleet -->
+<!-- $$$addInstanceGroups[overload1]$$$addInstanceGroupsconstAddInstanceGroupsRequest& -->
+<h3 class="fn" id="addInstanceGroups"><a name="addInstanceGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-addinstancegroupsresponse.html">AddInstanceGroupsResponse</a></span> *EmrClient::<span class="name">addInstanceGroups</span>(const <span class="type"><a href="qtaws-emr-addinstancegroupsrequest.html">AddInstanceGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-addinstancegroupsresponse.html">AddInstanceGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more instance groups to a running</p>
+<!-- @@@addInstanceGroups -->
+<!-- $$$addJobFlowSteps[overload1]$$$addJobFlowStepsconstAddJobFlowStepsRequest& -->
+<h3 class="fn" id="addJobFlowSteps"><a name="addJobFlowSteps"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-addjobflowstepsresponse.html">AddJobFlowStepsResponse</a></span> *EmrClient::<span class="name">addJobFlowSteps</span>(const <span class="type"><a href="qtaws-emr-addjobflowstepsrequest.html">AddJobFlowStepsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-addjobflowstepsresponse.html">AddJobFlowStepsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>AddJobFlowSteps adds new steps to a running cluster. A maximum of 256 steps are allowed in each job</p>
+<p>flow&gt;</p>
+<p>If your cluster is long-running (such as a Hive data warehouse) or complex, you may require more than 256 steps to process your data. You can bypass the 256-step limitation in various ways, including using SSH to connect to the master node and submitting queries directly to the software running on the master node, such as Hive and Hadoop. For more information on how to do this, see &lt;a href=&quot;http://docs.aws.amazon.com/emr/latest/ManagementGuide/AddMoreThan256Steps.html&quot;&gt;Add More than 256 Steps to a Cluster&lt;/a&gt; in the &lt;i&gt;Amazon EMR Management</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>A step specifies the location of a JAR file stored either on the master node of the cluster or in Amazon S3. Each step is performed by the main function of the main class of the JAR file. The main class can be specified either in the manifest of the JAR or by using the MainFunction parameter of the</p>
+<p>step&gt;</p>
+<p>Amazon EMR executes each step in the order listed. For a step to be considered complete, the main function must exit with a zero exit code and all Hadoop jobs started while the step was running must have completed and run</p>
+<p>successfully&gt;</p>
+<p>You can only add steps to a cluster that is in one of the following states: STARTING, BOOTSTRAPPING, RUNNING, or</p>
+<!-- @@@addJobFlowSteps -->
+<!-- $$$addTags[overload1]$$$addTagsconstAddTagsRequest& -->
+<h3 class="fn" id="addTags"><a name="addTags"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-addtagsresponse.html">AddTagsResponse</a></span> *EmrClient::<span class="name">addTags</span>(const <span class="type"><a href="qtaws-emr-addtagsrequest.html">AddTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-addtagsresponse.html">AddTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds tags to an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping clusters to track your Amazon EMR resource allocation costs. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html&quot;&gt;Tag Clusters&lt;/a&gt;.</p>
+<!-- @@@addTags -->
+<!-- $$$cancelSteps[overload1]$$$cancelStepsconstCancelStepsRequest& -->
+<h3 class="fn" id="cancelSteps"><a name="cancelSteps"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-cancelstepsresponse.html">CancelStepsResponse</a></span> *EmrClient::<span class="name">cancelSteps</span>(const <span class="type"><a href="qtaws-emr-cancelstepsrequest.html">CancelStepsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-cancelstepsresponse.html">CancelStepsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8&#x2e;0 and later, excluding version 5.0&#x2e;0&#x2e; A maximum of 256 steps are allowed in each CancelSteps request. CancelSteps is idempotent but asynchronous; it does not guarantee a step will be canceled, even if the request is successfully submitted. You can only cancel steps that are in a &lt;code&gt;PENDING&lt;/code&gt;</p>
+<!-- @@@cancelSteps -->
+<!-- $$$createSecurityConfiguration[overload1]$$$createSecurityConfigurationconstCreateSecurityConfigurationRequest& -->
+<h3 class="fn" id="createSecurityConfiguration"><a name="createSecurityConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-createsecurityconfigurationresponse.html">CreateSecurityConfigurationResponse</a></span> *EmrClient::<span class="name">createSecurityConfiguration</span>(const <span class="type"><a href="qtaws-emr-createsecurityconfigurationrequest.html">CreateSecurityConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-createsecurityconfigurationresponse.html">CreateSecurityConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a security configuration, which is stored in the service and can be specified when a cluster is</p>
+<!-- @@@createSecurityConfiguration -->
+<!-- $$$deleteSecurityConfiguration[overload1]$$$deleteSecurityConfigurationconstDeleteSecurityConfigurationRequest& -->
+<h3 class="fn" id="deleteSecurityConfiguration"><a name="deleteSecurityConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-deletesecurityconfigurationresponse.html">DeleteSecurityConfigurationResponse</a></span> *EmrClient::<span class="name">deleteSecurityConfiguration</span>(const <span class="type"><a href="qtaws-emr-deletesecurityconfigurationrequest.html">DeleteSecurityConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-deletesecurityconfigurationresponse.html">DeleteSecurityConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a security</p>
+<!-- @@@deleteSecurityConfiguration -->
+<!-- $$$describeCluster[overload1]$$$describeClusterconstDescribeClusterRequest& -->
+<h3 class="fn" id="describeCluster"><a name="describeCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-describeclusterresponse.html">DescribeClusterResponse</a></span> *EmrClient::<span class="name">describeCluster</span>(const <span class="type"><a href="qtaws-emr-describeclusterrequest.html">DescribeClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-describeclusterresponse.html">DescribeClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on. For information about the cluster steps, see</p>
+<!-- @@@describeCluster -->
+<!-- $$$describeJobFlows[overload1]$$$describeJobFlowsconstDescribeJobFlowsRequest& -->
+<h3 class="fn" id="describeJobFlows"><a name="describeJobFlows"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-describejobflowsresponse.html">DescribeJobFlowsResponse</a></span> *EmrClient::<span class="name">describeJobFlows</span>(const <span class="type"><a href="qtaws-emr-describejobflowsrequest.html">DescribeJobFlowsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-describejobflowsresponse.html">DescribeJobFlowsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This API is deprecated and will eventually be removed. We recommend you use &lt;a&gt;ListClusters&lt;/a&gt;, &lt;a&gt;DescribeCluster&lt;/a&gt;, &lt;a&gt;ListSteps&lt;/a&gt;, &lt;a&gt;ListInstanceGroups&lt;/a&gt; and &lt;a&gt;ListBootstrapActions&lt;/a&gt;</p>
+<p>instead&gt;</p>
+<p>DescribeJobFlows returns a list of job flows that match all of the supplied parameters. The parameters can include a list of job flow IDs, job flow states, and restrictions on job flow creation date and</p>
+<p>time&gt;</p>
+<p>Regardless of supplied parameters, only job flows created within the last two months are</p>
+<p>returned&gt;</p>
+<p>If no parameters are supplied, then job flows matching either of the following criteria are</p>
+<p>returned&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Job flows created and completed in the last two</p>
+<p>week&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Job flows created within the last two months that are in one of the following states: &lt;code&gt;RUNNING&lt;/code&gt;, &lt;code&gt;WAITING&lt;/code&gt;, &lt;code&gt;SHUTTING_DOWN&lt;/code&gt;, &lt;code&gt;STARTING&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Amazon EMR can return a maximum of 512 job flow</p>
+<!-- @@@describeJobFlows -->
+<!-- $$$describeSecurityConfiguration[overload1]$$$describeSecurityConfigurationconstDescribeSecurityConfigurationRequest& -->
+<h3 class="fn" id="describeSecurityConfiguration"><a name="describeSecurityConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-describesecurityconfigurationresponse.html">DescribeSecurityConfigurationResponse</a></span> *EmrClient::<span class="name">describeSecurityConfiguration</span>(const <span class="type"><a href="qtaws-emr-describesecurityconfigurationrequest.html">DescribeSecurityConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-describesecurityconfigurationresponse.html">DescribeSecurityConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides the details of a security configuration by returning the configuration</p>
+<!-- @@@describeSecurityConfiguration -->
+<!-- $$$describeStep[overload1]$$$describeStepconstDescribeStepRequest& -->
+<h3 class="fn" id="describeStep"><a name="describeStep"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-describestepresponse.html">DescribeStepResponse</a></span> *EmrClient::<span class="name">describeStep</span>(const <span class="type"><a href="qtaws-emr-describesteprequest.html">DescribeStepRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-describestepresponse.html">DescribeStepResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides more detail about the cluster</p>
+<!-- @@@describeStep -->
+<!-- $$$listBootstrapActions[overload1]$$$listBootstrapActionsconstListBootstrapActionsRequest& -->
+<h3 class="fn" id="listBootstrapActions"><a name="listBootstrapActions"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listbootstrapactionsresponse.html">ListBootstrapActionsResponse</a></span> *EmrClient::<span class="name">listBootstrapActions</span>(const <span class="type"><a href="qtaws-emr-listbootstrapactionsrequest.html">ListBootstrapActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listbootstrapactionsresponse.html">ListBootstrapActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides information about the bootstrap actions associated with a</p>
+<!-- @@@listBootstrapActions -->
+<!-- $$$listClusters[overload1]$$$listClustersconstListClustersRequest& -->
+<h3 class="fn" id="listClusters"><a name="listClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listclustersresponse.html">ListClustersResponse</a></span> *EmrClient::<span class="name">listClusters</span>(const <span class="type"><a href="qtaws-emr-listclustersrequest.html">ListClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listclustersresponse.html">ListClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides the status of all clusters visible to this AWS account. Allows you to filter the list of clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a maximum of 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListClusters</p>
+<!-- @@@listClusters -->
+<!-- $$$listInstanceFleets[overload1]$$$listInstanceFleetsconstListInstanceFleetsRequest& -->
+<h3 class="fn" id="listInstanceFleets"><a name="listInstanceFleets"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listinstancefleetsresponse.html">ListInstanceFleetsResponse</a></span> *EmrClient::<span class="name">listInstanceFleets</span>(const <span class="type"><a href="qtaws-emr-listinstancefleetsrequest.html">ListInstanceFleetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listinstancefleetsresponse.html">ListInstanceFleetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all available details about the instance fleets in a</p>
+<p>cluster&gt; &lt;note&gt;</p>
+<p>The instance fleet configuration is available only in Amazon EMR versions 4.8&#x2e;0 and later, excluding 5.0&#x2e;x</p>
+<!-- @@@listInstanceFleets -->
+<!-- $$$listInstanceGroups[overload1]$$$listInstanceGroupsconstListInstanceGroupsRequest& -->
+<h3 class="fn" id="listInstanceGroups"><a name="listInstanceGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listinstancegroupsresponse.html">ListInstanceGroupsResponse</a></span> *EmrClient::<span class="name">listInstanceGroups</span>(const <span class="type"><a href="qtaws-emr-listinstancegroupsrequest.html">ListInstanceGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listinstancegroupsresponse.html">ListInstanceGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides all available details about the instance groups in a</p>
+<!-- @@@listInstanceGroups -->
+<!-- $$$listInstances[overload1]$$$listInstancesconstListInstancesRequest& -->
+<h3 class="fn" id="listInstances"><a name="listInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listinstancesresponse.html">ListInstancesResponse</a></span> *EmrClient::<span class="name">listInstances</span>(const <span class="type"><a href="qtaws-emr-listinstancesrequest.html">ListInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listinstancesresponse.html">ListInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides information for all active EC2 instances and EC2 instances terminated in the last 30 days, up to a maximum of 2,000. EC2 instances in any of the following states are considered active: AWAITING_FULFILLMENT, PROVISIONING, BOOTSTRAPPING,</p>
+<!-- @@@listInstances -->
+<!-- $$$listSecurityConfigurations[overload1]$$$listSecurityConfigurationsconstListSecurityConfigurationsRequest& -->
+<h3 class="fn" id="listSecurityConfigurations"><a name="listSecurityConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-listsecurityconfigurationsresponse.html">ListSecurityConfigurationsResponse</a></span> *EmrClient::<span class="name">listSecurityConfigurations</span>(const <span class="type"><a href="qtaws-emr-listsecurityconfigurationsrequest.html">ListSecurityConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-listsecurityconfigurationsresponse.html">ListSecurityConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the security configurations visible to this account, providing their creation dates and times, and their names. This call returns a maximum of 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListSecurityConfigurations</p>
+<!-- @@@listSecurityConfigurations -->
+<!-- $$$listSteps[overload1]$$$listStepsconstListStepsRequest& -->
+<h3 class="fn" id="listSteps"><a name="listSteps"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-liststepsresponse.html">ListStepsResponse</a></span> *EmrClient::<span class="name">listSteps</span>(const <span class="type"><a href="qtaws-emr-liststepsrequest.html">ListStepsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-liststepsresponse.html">ListStepsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a list of steps for the cluster in reverse order unless you specify stepIds with the</p>
+<!-- @@@listSteps -->
+<!-- $$$modifyInstanceFleet[overload1]$$$modifyInstanceFleetconstModifyInstanceFleetRequest& -->
+<h3 class="fn" id="modifyInstanceFleet"><a name="modifyInstanceFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-modifyinstancefleetresponse.html">ModifyInstanceFleetResponse</a></span> *EmrClient::<span class="name">modifyInstanceFleet</span>(const <span class="type"><a href="qtaws-emr-modifyinstancefleetrequest.html">ModifyInstanceFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-modifyinstancefleetresponse.html">ModifyInstanceFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the target On-Demand and target Spot capacities for the instance fleet with the specified InstanceFleetID within the cluster specified using ClusterID. The call either succeeds or fails</p>
+<p>atomically&gt; &lt;note&gt;</p>
+<p>The instance fleet configuration is available only in Amazon EMR versions 4.8&#x2e;0 and later, excluding 5.0&#x2e;x</p>
+<!-- @@@modifyInstanceFleet -->
+<!-- $$$modifyInstanceGroups[overload1]$$$modifyInstanceGroupsconstModifyInstanceGroupsRequest& -->
+<h3 class="fn" id="modifyInstanceGroups"><a name="modifyInstanceGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-modifyinstancegroupsresponse.html">ModifyInstanceGroupsResponse</a></span> *EmrClient::<span class="name">modifyInstanceGroups</span>(const <span class="type"><a href="qtaws-emr-modifyinstancegroupsrequest.html">ModifyInstanceGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-modifyinstancegroupsresponse.html">ModifyInstanceGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>ModifyInstanceGroups modifies the number of nodes and configuration settings of an instance group. The input parameters include the new target instance count for the group and the instance group ID. The call will either succeed or fail</p>
+<!-- @@@modifyInstanceGroups -->
+<!-- $$$putAutoScalingPolicy[overload1]$$$putAutoScalingPolicyconstPutAutoScalingPolicyRequest& -->
+<h3 class="fn" id="putAutoScalingPolicy"><a name="putAutoScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-putautoscalingpolicyresponse.html">PutAutoScalingPolicyResponse</a></span> *EmrClient::<span class="name">putAutoScalingPolicy</span>(const <span class="type"><a href="qtaws-emr-putautoscalingpolicyrequest.html">PutAutoScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-putautoscalingpolicyresponse.html">PutAutoScalingPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates an automatic scaling policy for a core instance group or task instance group in an Amazon EMR cluster. The automatic scaling policy defines how an instance group dynamically adds and terminates EC2 instances in response to the value of a CloudWatch</p>
+<!-- @@@putAutoScalingPolicy -->
+<!-- $$$removeAutoScalingPolicy[overload1]$$$removeAutoScalingPolicyconstRemoveAutoScalingPolicyRequest& -->
+<h3 class="fn" id="removeAutoScalingPolicy"><a name="removeAutoScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-removeautoscalingpolicyresponse.html">RemoveAutoScalingPolicyResponse</a></span> *EmrClient::<span class="name">removeAutoScalingPolicy</span>(const <span class="type"><a href="qtaws-emr-removeautoscalingpolicyrequest.html">RemoveAutoScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-removeautoscalingpolicyresponse.html">RemoveAutoScalingPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes an automatic scaling policy from a specified instance group within an EMR</p>
+<!-- @@@removeAutoScalingPolicy -->
+<!-- $$$removeTags[overload1]$$$removeTagsconstRemoveTagsRequest& -->
+<h3 class="fn" id="removeTags"><a name="removeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-removetagsresponse.html">RemoveTagsResponse</a></span> *EmrClient::<span class="name">removeTags</span>(const <span class="type"><a href="qtaws-emr-removetagsrequest.html">RemoveTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-removetagsresponse.html">RemoveTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from an Amazon EMR resource. Tags make it easier to associate clusters in various ways, such as grouping clusters to track your Amazon EMR resource allocation costs. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-tags.html&quot;&gt;Tag Clusters&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>The following example removes the stack tag with value Prod from a</p>
+<!-- @@@removeTags -->
+<!-- $$$runJobFlow[overload1]$$$runJobFlowconstRunJobFlowRequest& -->
+<h3 class="fn" id="runJobFlow"><a name="runJobFlow"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-runjobflowresponse.html">RunJobFlowResponse</a></span> *EmrClient::<span class="name">runJobFlow</span>(const <span class="type"><a href="qtaws-emr-runjobflowrequest.html">RunJobFlowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-runjobflowresponse.html">RunJobFlowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>RunJobFlow creates and starts running a new cluster (job flow). The cluster runs the steps specified. After the steps complete, the cluster stops and the HDFS partition is lost. To prevent loss of data, configure the last step of the job flow to store results in Amazon S3. If the &lt;a&gt;JobFlowInstancesConfig&lt;/a&gt; &lt;code&gt;KeepJobFlowAliveWhenNoSteps&lt;/code&gt; parameter is set to &lt;code&gt;TRUE&lt;/code&gt;, the cluster transitions to the WAITING state rather than shutting down after the steps have completed.</p>
+<p>&lt;/p</p>
+<p>For additional protection, you can set the &lt;a&gt;JobFlowInstancesConfig&lt;/a&gt; &lt;code&gt;TerminationProtected&lt;/code&gt; parameter to &lt;code&gt;TRUE&lt;/code&gt; to lock the cluster and prevent it from being terminated by API call, user intervention, or in the event of a job flow</p>
+<p>error&gt;</p>
+<p>A maximum of 256 steps are allowed in each job</p>
+<p>flow&gt;</p>
+<p>If your cluster is long-running (such as a Hive data warehouse) or complex, you may require more than 256 steps to process your data. You can bypass the 256-step limitation in various ways, including using the SSH shell to connect to the master node and submitting queries directly to the software running on the master node, such as Hive and Hadoop. For more information on how to do this, see &lt;a href=&quot;http://docs.aws.amazon.com/emr/latest/ManagementGuide/AddMoreThan256Steps.html&quot;&gt;Add More than 256 Steps to a Cluster&lt;/a&gt; in the &lt;i&gt;Amazon EMR Management</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For long running clusters, we recommend that you periodically store your</p>
+<p>results&gt; &lt;note&gt;</p>
+<p>The instance fleets configuration is available only in Amazon EMR versions 4.8&#x2e;0 and later, excluding 5.0&#x2e;x versions. The RunJobFlow request can contain InstanceFleets parameters or InstanceGroups parameters, but not</p>
+<!-- @@@runJobFlow -->
+<!-- $$$setTerminationProtection[overload1]$$$setTerminationProtectionconstSetTerminationProtectionRequest& -->
+<h3 class="fn" id="setTerminationProtection"><a name="setTerminationProtection"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-setterminationprotectionresponse.html">SetTerminationProtectionResponse</a></span> *EmrClient::<span class="name">setTerminationProtection</span>(const <span class="type"><a href="qtaws-emr-setterminationprotectionrequest.html">SetTerminationProtectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-setterminationprotectionresponse.html">SetTerminationProtectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>SetTerminationProtection locks a cluster (job flow) so the EC2 instances in the cluster cannot be terminated by user intervention, an API call, or in the event of a job-flow error. The cluster still terminates upon successful completion of the job flow. Calling &lt;code&gt;SetTerminationProtection&lt;/code&gt; on a cluster is similar to calling the Amazon EC2 &lt;code&gt;DisableAPITermination&lt;/code&gt; API on all EC2 instances in a</p>
+<p>cluster&gt;</p>
+<p>&lt;code&gt;SetTerminationProtection&lt;/code&gt; is used to prevent accidental termination of a cluster and to ensure that in the event of an error, the instances persist so that you can recover any data stored in their ephemeral instance</p>
+<p>storage&gt;</p>
+<p>To terminate a cluster that has been locked by setting &lt;code&gt;SetTerminationProtection&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;, you must first unlock the job flow by a subsequent call to &lt;code&gt;SetTerminationProtection&lt;/code&gt; in which you set the value to &lt;code&gt;false&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>For more information, see&lt;a href=&quot;http://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html&quot;&gt;Managing Cluster Termination&lt;/a&gt; in the &lt;i&gt;Amazon EMR Management Guide&lt;/i&gt;.</p>
+<!-- @@@setTerminationProtection -->
+<!-- $$$setVisibleToAllUsers[overload1]$$$setVisibleToAllUsersconstSetVisibleToAllUsersRequest& -->
+<h3 class="fn" id="setVisibleToAllUsers"><a name="setVisibleToAllUsers"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-setvisibletoallusersresponse.html">SetVisibleToAllUsersResponse</a></span> *EmrClient::<span class="name">setVisibleToAllUsers</span>(const <span class="type"><a href="qtaws-emr-setvisibletoallusersrequest.html">SetVisibleToAllUsersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-setvisibletoallusersresponse.html">SetVisibleToAllUsersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets whether all AWS Identity and Access Management (IAM) users under your account can access the specified clusters (job flows). This action works on running clusters. You can also set the visibility of a cluster when you launch it using the &lt;code&gt;VisibleToAllUsers&lt;/code&gt; parameter of &lt;a&gt;RunJobFlow&lt;/a&gt;. The SetVisibleToAllUsers action can be called only by an IAM user who created the cluster or the AWS account that owns the</p>
+<!-- @@@setVisibleToAllUsers -->
+<!-- $$$terminateJobFlows[overload1]$$$terminateJobFlowsconstTerminateJobFlowsRequest& -->
+<h3 class="fn" id="terminateJobFlows"><a name="terminateJobFlows"></a><code>[slot] </code><span class="type"><a href="qtaws-emr-terminatejobflowsresponse.html">TerminateJobFlowsResponse</a></span> *EmrClient::<span class="name">terminateJobFlows</span>(const <span class="type"><a href="qtaws-emr-terminatejobflowsrequest.html">TerminateJobFlowsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-emr-emrclient.html">EmrClient</a> service, and returns a pointer to an <a href="qtaws-emr-terminatejobflowsresponse.html">TerminateJobFlowsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>TerminateJobFlows shuts a list of clusters (job flows) down. When a job flow is shut down, any step not yet completed is canceled and the EC2 instances on which the cluster is running are stopped. Any log files not already saved are uploaded to Amazon S3 if a LogUri was specified when the cluster was</p>
+<p>created&gt;</p>
+<p>The maximum number of clusters allowed is 10. The call to &lt;code&gt;TerminateJobFlows&lt;/code&gt; is asynchronous. Depending on the configuration of the cluster, it may take up to 1-5 minutes for the cluster to completely terminate and release allocated resources, such as Amazon EC2</p>
+<!-- @@@terminateJobFlows -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

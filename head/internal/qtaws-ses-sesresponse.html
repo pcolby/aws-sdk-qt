@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sesresponse.cpp -->
+  <title>SesResponse Class | SES</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsses-index.html">SES</a></li>
+<li><a href="qtawsses-module.html">C++ Classes</a></li>
+<li>SesResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SesResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ses-sesresponse.html">QtAws::SES::SesResponse</a>)<br/></span>
+<!-- $$$SesResponse-brief -->
+<p>The <a href="qtaws-ses-sesresponse.html">SesResponse</a> class provides an interface for SES responses. <a href="#details">More...</a></p>
+<!-- @@@SesResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SesResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-ses-clonereceiptrulesetresponse.html">QtAws::SES::CloneReceiptRuleSetResponse</a>, <a href="qtaws-ses-createconfigurationseteventdestinationresponse.html">QtAws::SES::CreateConfigurationSetEventDestinationResponse</a>, <a href="qtaws-ses-createconfigurationsetresponse.html">QtAws::SES::CreateConfigurationSetResponse</a>, <a href="qtaws-ses-createconfigurationsettrackingoptionsresponse.html">QtAws::SES::CreateConfigurationSetTrackingOptionsResponse</a>, <a href="qtaws-ses-createcustomverificationemailtemplateresponse.html">QtAws::SES::CreateCustomVerificationEmailTemplateResponse</a>, <a href="qtaws-ses-createreceiptfilterresponse.html">QtAws::SES::CreateReceiptFilterResponse</a>, <a href="qtaws-ses-createreceiptruleresponse.html">QtAws::SES::CreateReceiptRuleResponse</a>, <a href="qtaws-ses-createreceiptrulesetresponse.html">QtAws::SES::CreateReceiptRuleSetResponse</a>, <a href="qtaws-ses-createtemplateresponse.html">QtAws::SES::CreateTemplateResponse</a>, <a href="qtaws-ses-deleteconfigurationseteventdestinationresponse.html">QtAws::SES::DeleteConfigurationSetEventDestinationResponse</a>, <a href="qtaws-ses-deleteconfigurationsetresponse.html">QtAws::SES::DeleteConfigurationSetResponse</a>, <a href="qtaws-ses-deleteconfigurationsettrackingoptionsresponse.html">QtAws::SES::DeleteConfigurationSetTrackingOptionsResponse</a>, <a href="qtaws-ses-deletecustomverificationemailtemplateresponse.html">QtAws::SES::DeleteCustomVerificationEmailTemplateResponse</a>, <a href="qtaws-ses-deleteidentitypolicyresponse.html">QtAws::SES::DeleteIdentityPolicyResponse</a>, <a href="qtaws-ses-deleteidentityresponse.html">QtAws::SES::DeleteIdentityResponse</a>, <a href="qtaws-ses-deletereceiptfilterresponse.html">QtAws::SES::DeleteReceiptFilterResponse</a>, <a href="qtaws-ses-deletereceiptruleresponse.html">QtAws::SES::DeleteReceiptRuleResponse</a>, <a href="qtaws-ses-deletereceiptrulesetresponse.html">QtAws::SES::DeleteReceiptRuleSetResponse</a>, <a href="qtaws-ses-deletetemplateresponse.html">QtAws::SES::DeleteTemplateResponse</a>, <a href="qtaws-ses-deleteverifiedemailaddressresponse.html">QtAws::SES::DeleteVerifiedEmailAddressResponse</a>, <a href="qtaws-ses-describeactivereceiptrulesetresponse.html">QtAws::SES::DescribeActiveReceiptRuleSetResponse</a>, <a href="qtaws-ses-describeconfigurationsetresponse.html">QtAws::SES::DescribeConfigurationSetResponse</a>, <a href="qtaws-ses-describereceiptruleresponse.html">QtAws::SES::DescribeReceiptRuleResponse</a>, <a href="qtaws-ses-describereceiptrulesetresponse.html">QtAws::SES::DescribeReceiptRuleSetResponse</a>, <a href="qtaws-ses-getaccountsendingenabledresponse.html">QtAws::SES::GetAccountSendingEnabledResponse</a>, <a href="qtaws-ses-getcustomverificationemailtemplateresponse.html">QtAws::SES::GetCustomVerificationEmailTemplateResponse</a>, <a href="qtaws-ses-getidentitydkimattributesresponse.html">QtAws::SES::GetIdentityDkimAttributesResponse</a>, <a href="qtaws-ses-getidentitymailfromdomainattributesresponse.html">QtAws::SES::GetIdentityMailFromDomainAttributesResponse</a>, <a href="qtaws-ses-getidentitynotificationattributesresponse.html">QtAws::SES::GetIdentityNotificationAttributesResponse</a>, <a href="qtaws-ses-getidentitypoliciesresponse.html">QtAws::SES::GetIdentityPoliciesResponse</a>, <a href="qtaws-ses-getidentityverificationattributesresponse.html">QtAws::SES::GetIdentityVerificationAttributesResponse</a>, <a href="qtaws-ses-getsendquotaresponse.html">QtAws::SES::GetSendQuotaResponse</a>, <a href="qtaws-ses-getsendstatisticsresponse.html">QtAws::SES::GetSendStatisticsResponse</a>, <a href="qtaws-ses-gettemplateresponse.html">QtAws::SES::GetTemplateResponse</a>, <a href="qtaws-ses-listconfigurationsetsresponse.html">QtAws::SES::ListConfigurationSetsResponse</a>, <a href="qtaws-ses-listcustomverificationemailtemplatesresponse.html">QtAws::SES::ListCustomVerificationEmailTemplatesResponse</a>, <a href="qtaws-ses-listidentitiesresponse.html">QtAws::SES::ListIdentitiesResponse</a>, <a href="qtaws-ses-listidentitypoliciesresponse.html">QtAws::SES::ListIdentityPoliciesResponse</a>, <a href="qtaws-ses-listreceiptfiltersresponse.html">QtAws::SES::ListReceiptFiltersResponse</a>, <a href="qtaws-ses-listreceiptrulesetsresponse.html">QtAws::SES::ListReceiptRuleSetsResponse</a>, <a href="qtaws-ses-listtemplatesresponse.html">QtAws::SES::ListTemplatesResponse</a>, <a href="qtaws-ses-listverifiedemailaddressesresponse.html">QtAws::SES::ListVerifiedEmailAddressesResponse</a>, <a href="qtaws-ses-putidentitypolicyresponse.html">QtAws::SES::PutIdentityPolicyResponse</a>, <a href="qtaws-ses-reorderreceiptrulesetresponse.html">QtAws::SES::ReorderReceiptRuleSetResponse</a>, <a href="qtaws-ses-sendbounceresponse.html">QtAws::SES::SendBounceResponse</a>, <a href="qtaws-ses-sendbulktemplatedemailresponse.html">QtAws::SES::SendBulkTemplatedEmailResponse</a>, <a href="qtaws-ses-sendcustomverificationemailresponse.html">QtAws::SES::SendCustomVerificationEmailResponse</a>, <a href="qtaws-ses-sendemailresponse.html">QtAws::SES::SendEmailResponse</a>, <a href="qtaws-ses-sendrawemailresponse.html">QtAws::SES::SendRawEmailResponse</a>, <a href="qtaws-ses-sendtemplatedemailresponse.html">QtAws::SES::SendTemplatedEmailResponse</a>, <a href="qtaws-ses-setactivereceiptrulesetresponse.html">QtAws::SES::SetActiveReceiptRuleSetResponse</a>, <a href="qtaws-ses-setidentitydkimenabledresponse.html">QtAws::SES::SetIdentityDkimEnabledResponse</a>, <a href="qtaws-ses-setidentityfeedbackforwardingenabledresponse.html">QtAws::SES::SetIdentityFeedbackForwardingEnabledResponse</a>, <a href="qtaws-ses-setidentityheadersinnotificationsenabledresponse.html">QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponse</a>, <a href="qtaws-ses-setidentitymailfromdomainresponse.html">QtAws::SES::SetIdentityMailFromDomainResponse</a>, <a href="qtaws-ses-setidentitynotificationtopicresponse.html">QtAws::SES::SetIdentityNotificationTopicResponse</a>, <a href="qtaws-ses-setreceiptrulepositionresponse.html">QtAws::SES::SetReceiptRulePositionResponse</a>, <a href="qtaws-ses-testrendertemplateresponse.html">QtAws::SES::TestRenderTemplateResponse</a>, <a href="qtaws-ses-updateaccountsendingenabledresponse.html">QtAws::SES::UpdateAccountSendingEnabledResponse</a>, <a href="qtaws-ses-updateconfigurationseteventdestinationresponse.html">QtAws::SES::UpdateConfigurationSetEventDestinationResponse</a>, <a href="qtaws-ses-updateconfigurationsetreputationmetricsenabledresponse.html">QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledResponse</a>, <a href="qtaws-ses-updateconfigurationsetsendingenabledresponse.html">QtAws::SES::UpdateConfigurationSetSendingEnabledResponse</a>, <a href="qtaws-ses-updateconfigurationsettrackingoptionsresponse.html">QtAws::SES::UpdateConfigurationSetTrackingOptionsResponse</a>, <a href="qtaws-ses-updatecustomverificationemailtemplateresponse.html">QtAws::SES::UpdateCustomVerificationEmailTemplateResponse</a>, <a href="qtaws-ses-updatereceiptruleresponse.html">QtAws::SES::UpdateReceiptRuleResponse</a>, <a href="qtaws-ses-updatetemplateresponse.html">QtAws::SES::UpdateTemplateResponse</a>, <a href="qtaws-ses-verifydomaindkimresponse.html">QtAws::SES::VerifyDomainDkimResponse</a>, <a href="qtaws-ses-verifydomainidentityresponse.html">QtAws::SES::VerifyDomainIdentityResponse</a>, <a href="qtaws-ses-verifyemailaddressresponse.html">QtAws::SES::VerifyEmailAddressResponse</a>, and <a href="qtaws-ses-verifyemailidentityresponse.html">QtAws::SES::VerifyEmailIdentityResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-ses-sesresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesresponse.html#SesResponse">SesResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesresponse.html#SesResponse-1">SesResponse</a></b>(SesResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SesResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ses-sesresponse.html">SesResponse</a> class provides an interface for SES responses.</p>
+</div>
+<!-- @@@SesResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SesResponse[overload1]$$$SesResponseQObject*const -->
+<h3 class="fn" id="SesResponse"><a name="SesResponse"></a>SesResponse::<span class="name">SesResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ses-sesresponse.html">SesResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@SesResponse -->
+<!-- $$$SesResponse$$$SesResponseSesResponsePrivate*constQObject*const -->
+<h3 class="fn" id="SesResponse-1"><a name="SesResponse-1"></a><code>[protected] </code>SesResponse::<span class="name">SesResponse</span>(<span class="type"><a href="qtaws-ses-sesresponseprivate.html">SesResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-ses-sesresponse.html">SesResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-ses-sesresponseprivate.html">SesResponsePrivate</a>.</p>
+<!-- @@@SesResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> SesResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

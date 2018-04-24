@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- efsclient.cpp -->
+  <title>EfsClient Class | EFS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsefs-index.html">EFS</a></li>
+<li><a href="qtawsefs-module.html">C++ Classes</a></li>
+<li>EfsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">EfsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-efs-efsclient.html">QtAws::EFS::EfsClient</a>)<br/></span>
+<!-- $$$EfsClient-brief -->
+<p>The <a href="qtaws-efs-efsclient.html">EfsClient</a> class provides access to the Amazon Elastic File System (EFS) service. <a href="#details">More...</a></p>
+<!-- @@@EfsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;EfsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-efs-efsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#EfsClient">EfsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#EfsClient-1">EfsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateFileSystemResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#createFileSystem">createFileSystem</a></b>(const CreateFileSystemRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMountTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#createMountTarget">createMountTarget</a></b>(const CreateMountTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#createTags">createTags</a></b>(const CreateTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFileSystemResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#deleteFileSystem">deleteFileSystem</a></b>(const DeleteFileSystemRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMountTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#deleteMountTarget">deleteMountTarget</a></b>(const DeleteMountTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeFileSystemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#describeFileSystems">describeFileSystems</a></b>(const DescribeFileSystemsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMountTargetSecurityGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#describeMountTargetSecurityGroups">describeMountTargetSecurityGroups</a></b>(const DescribeMountTargetSecurityGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMountTargetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#describeMountTargets">describeMountTargets</a></b>(const DescribeMountTargetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyMountTargetSecurityGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-efs-efsclient.html#modifyMountTargetSecurityGroups">modifyMountTargetSecurityGroups</a></b>(const ModifyMountTargetSecurityGroupsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$EfsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-efs-efsclient.html">EfsClient</a> class provides access to the Amazon Elastic File System (EFS) service.</p>
+<p>&lt;fullname&gt;Amazon Elastic File System&lt;/fullname&gt;</p>
+<p>Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove files, so your applications have the storage they need, when they need it. For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/efs/latest/ug/api-reference.html&quot;&gt;User</p>
+</div>
+<!-- @@@EfsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$EfsClient[overload1]$$$EfsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EfsClient"><a name="EfsClient"></a>EfsClient::<span class="name">EfsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-efs-efsclient.html">EfsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@EfsClient -->
+<!-- $$$EfsClient$$$EfsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EfsClient-1"><a name="EfsClient-1"></a>EfsClient::<span class="name">EfsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-efs-efsclient.html#EfsClient">EfsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@EfsClient -->
+<!-- $$$createFileSystem[overload1]$$$createFileSystemconstCreateFileSystemRequest& -->
+<h3 class="fn" id="createFileSystem"><a name="createFileSystem"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-createfilesystemresponse.html">CreateFileSystemResponse</a></span> *EfsClient::<span class="name">createFileSystem</span>(const <span class="type"><a href="qtaws-efs-createfilesystemrequest.html">CreateFileSystemRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-createfilesystemresponse.html">CreateFileSystemResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new, empty file system. The operation requires a creation token in the request that Amazon EFS uses to ensure idempotent creation (calling the operation with same creation token has no effect). If a file system does not currently exist that is owned by the caller's AWS account with the specified creation token, this operation does the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Creates a new, empty file system. The file system will have an Amazon EFS assigned ID, and an initial lifecycle state</p>
+<p>&lt;code&gt;creating&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Returns with the description of the created file</p>
+<p>system&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Otherwise, this operation returns a &lt;code&gt;FileSystemAlreadyExists&lt;/code&gt; error with the ID of the existing file</p>
+<p>system&gt; &lt;note&gt;</p>
+<p>For basic use cases, you can use a randomly generated UUID for the creation</p>
+<p>token&gt; &lt;/note&gt;</p>
+<p>The idempotent operation allows you to retry a &lt;code&gt;CreateFileSystem&lt;/code&gt; call without risk of creating an extra file system. This can happen when an initial call fails in a way that leaves it uncertain whether or not a file system was actually created. An example might be that a transport level timeout occurred or your connection was reset. As long as you use the same creation token, if the initial call had succeeded in creating a file system, the client can learn of its existence from the &lt;code&gt;FileSystemAlreadyExists&lt;/code&gt;</p>
+<p>error&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;CreateFileSystem&lt;/code&gt; call returns while the file system's lifecycle state is still &lt;code&gt;creating&lt;/code&gt;. You can check the file system creation status by calling the &lt;a&gt;DescribeFileSystems&lt;/a&gt; operation, which among other things returns the file system</p>
+<p>state&gt; &lt;/note&gt;</p>
+<p>This operation also takes an optional &lt;code&gt;PerformanceMode&lt;/code&gt; parameter that you choose for your file system. We recommend &lt;code&gt;generalPurpose&lt;/code&gt; performance mode for most file systems. File systems using the &lt;code&gt;maxIO&lt;/code&gt; performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. The performance mode can't be changed after the file system has been created. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html&quot;&gt;Amazon EFS: Performance</p>
+<p>Modes&lt;/a&gt;&gt;</p>
+<p>After the file system is fully created, Amazon EFS sets its lifecycle state to &lt;code&gt;available&lt;/code&gt;, at which point you can create one or more mount targets for the file system in your VPC. For more information, see &lt;a&gt;CreateMountTarget&lt;/a&gt;. You mount your Amazon EFS file system on an EC2 instances in your VPC via the mount target. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html&quot;&gt;Amazon EFS: How it Works&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:CreateFileSystem&lt;/code&gt; action.</p>
+<!-- @@@createFileSystem -->
+<!-- $$$createMountTarget[overload1]$$$createMountTargetconstCreateMountTargetRequest& -->
+<h3 class="fn" id="createMountTarget"><a name="createMountTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-createmounttargetresponse.html">CreateMountTargetResponse</a></span> *EfsClient::<span class="name">createMountTarget</span>(const <span class="type"><a href="qtaws-efs-createmounttargetrequest.html">CreateMountTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-createmounttargetresponse.html">CreateMountTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount</p>
+<p>target&gt;</p>
+<p>You can create one mount target in each Availability Zone in your VPC. All EC2 instances in a VPC within a given Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount target in order to access their file system. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html&quot;&gt;Amazon EFS: How it Works&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>In the request, you also specify a file system ID for which you are creating the mount target and the file system's lifecycle state must be &lt;code&gt;available&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;DescribeFileSystems&lt;/a&gt;&gt;</p>
+<p>In the request, you also provide a subnet ID, which determines the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>VPC in which Amazon EFS creates the mount</p>
+<p>targe&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Availability Zone in which Amazon EFS creates the mount</p>
+<p>targe&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>IP address range from which Amazon EFS selects the IP address of the mount target (if you don't specify an IP address in the</p>
+<p>request&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>After creating the mount target, Amazon EFS returns a response that includes, a &lt;code&gt;MountTargetId&lt;/code&gt; and an &lt;code&gt;IpAddress&lt;/code&gt;. You use this IP address when mounting the file system in an EC2 instance. You can also use the mount target's DNS name when mounting the file system. The EC2 instance on which you mount the file system via the mount target can resolve the mount target's DNS name to its IP address. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html#how-it-works-implementation&quot;&gt;How it Works: Implementation Overview&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>Note that you can create mount targets for a file system in only one VPC, and there can be only one mount target per Availability Zone. That is, if the file system already has one or more mount targets created for it, the subnet specified in the request to add another mount target must meet the following</p>
+<p>requirements&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Must belong to the same VPC as the subnets of the existing mount</p>
+<p>target&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Must not be in the same Availability Zone as any of the subnets of the existing mount</p>
+<p>target&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the request satisfies the requirements, Amazon EFS does the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Creates a new mount target in the specified</p>
+<p>subnet&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Also creates a new network interface in the subnet as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If the request provides an &lt;code&gt;IpAddress&lt;/code&gt;, Amazon EFS assigns that IP address to the network interface. Otherwise, Amazon EFS assigns a free address in the subnet (in the same way that the Amazon EC2 &lt;code&gt;CreateNetworkInterface&lt;/code&gt; call does when a request does not specify a primary private IP</p>
+<p>address)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the request provides &lt;code&gt;SecurityGroups&lt;/code&gt;, this network interface is associated with those security groups. Otherwise, it belongs to the default security group for the subnet's</p>
+<p>VPC&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Assigns the description &lt;code&gt;Mount target &lt;i&gt;fsmt-id&lt;/i&gt; for file system &lt;i&gt;fs-id&lt;/i&gt; &lt;/code&gt; where &lt;code&gt; &lt;i&gt;fsmt-id&lt;/i&gt; &lt;/code&gt; is the mount target ID, and &lt;code&gt; &lt;i&gt;fs-id&lt;/i&gt; &lt;/code&gt; is the</p>
+<p>&lt;code&gt;FileSystemId&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Sets the &lt;code&gt;requesterManaged&lt;/code&gt; property of the network interface to &lt;code&gt;true&lt;/code&gt;, and the &lt;code&gt;requesterId&lt;/code&gt; value to</p>
+<p>&lt;code&gt;EFS&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Each Amazon EFS mount target has one corresponding requester-managed EC2 network interface. After the network interface is created, Amazon EFS sets the &lt;code&gt;NetworkInterfaceId&lt;/code&gt; field in the mount target's description to the network interface ID, and the &lt;code&gt;IpAddress&lt;/code&gt; field to its address. If network interface creation fails, the entire &lt;code&gt;CreateMountTarget&lt;/code&gt; operation</p>
+<p>fails&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;CreateMountTarget&lt;/code&gt; call returns only after creating the network interface, but while the mount target state is still &lt;code&gt;creating&lt;/code&gt;, you can check the mount target creation status by calling the &lt;a&gt;DescribeMountTargets&lt;/a&gt; operation, which among other things returns the mount target</p>
+<p>state&gt; &lt;/note&gt;</p>
+<p>We recommend you create a mount target in each of the Availability Zones. There are cost considerations for using a file system in an Availability Zone through a mount target created in another Availability Zone. For more information, see &lt;a href=&quot;http://aws.amazon.com/efs/&quot;&gt;Amazon EFS&lt;/a&gt;. In addition, by always using a mount target local to the instance's Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount target is created goes down, then you won't be able to access your file system through that mount target.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the following action on the file</p>
+<p>system&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;elasticfilesystem:CreateMountTarget&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation also requires permissions for the following Amazon EC2</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DescribeSubnets&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DescribeNetworkInterfaces&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:CreateNetworkInterface&lt;/code&gt;</p>
+<!-- @@@createMountTarget -->
+<!-- $$$createTags[overload1]$$$createTagsconstCreateTagsRequest& -->
+<h3 class="fn" id="createTags"><a name="createTags"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-createtagsresponse.html">CreateTagsResponse</a></span> *EfsClient::<span class="name">createTags</span>(const <span class="type"><a href="qtaws-efs-createtagsrequest.html">CreateTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-createtagsresponse.html">CreateTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the request already exists on the file system, this operation overwrites its value with the value provided in the request. If you add the &lt;code&gt;Name&lt;/code&gt; tag to your file system, Amazon EFS returns it in the response to the &lt;a&gt;DescribeFileSystems&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;elasticfilesystem:CreateTags&lt;/code&gt;</p>
+<!-- @@@createTags -->
+<!-- $$$deleteFileSystem[overload1]$$$deleteFileSystemconstDeleteFileSystemRequest& -->
+<h3 class="fn" id="deleteFileSystem"><a name="deleteFileSystem"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-deletefilesystemresponse.html">DeleteFileSystemResponse</a></span> *EfsClient::<span class="name">deleteFileSystem</span>(const <span class="type"><a href="qtaws-efs-deletefilesystemrequest.html">DeleteFileSystemRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-deletefilesystemresponse.html">DeleteFileSystemResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a file system, permanently severing access to its contents. Upon return, the file system no longer exists and you can't access any contents of the deleted file</p>
+<p>system&gt;</p>
+<p>You can't delete a file system that is in use. That is, if the file system has any mount targets, you must first delete them. For more information, see &lt;a&gt;DescribeMountTargets&lt;/a&gt; and &lt;a&gt;DeleteMountTarget&lt;/a&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>The &lt;code&gt;DeleteFileSystem&lt;/code&gt; call returns while the file system state is still &lt;code&gt;deleting&lt;/code&gt;. You can check the file system deletion status by calling the &lt;a&gt;DescribeFileSystems&lt;/a&gt; operation, which returns a list of file systems in your account. If you pass file system ID or creation token for the deleted file system, the &lt;a&gt;DescribeFileSystems&lt;/a&gt; returns a &lt;code&gt;404 FileSystemNotFound&lt;/code&gt;</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:DeleteFileSystem&lt;/code&gt;</p>
+<!-- @@@deleteFileSystem -->
+<!-- $$$deleteMountTarget[overload1]$$$deleteMountTargetconstDeleteMountTargetRequest& -->
+<h3 class="fn" id="deleteMountTarget"><a name="deleteMountTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-deletemounttargetresponse.html">DeleteMountTargetResponse</a></span> *EfsClient::<span class="name">deleteMountTarget</span>(const <span class="type"><a href="qtaws-efs-deletemounttargetrequest.html">DeleteMountTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-deletemounttargetresponse.html">DeleteMountTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified mount</p>
+<p>target&gt;</p>
+<p>This operation forcibly breaks any mounts of the file system via the mount target that is being deleted, which might disrupt instances or applications using those mounts. To avoid applications getting cut off abruptly, you might consider unmounting any mounts of the mount target, if feasible. The operation also deletes the associated network interface. Uncommitted writes may be lost, but breaking a mount target using this operation does not corrupt the file system itself. The file system you created remains. You can mount an EC2 instance in your VPC via another mount</p>
+<p>target&gt;</p>
+<p>This operation requires permissions for the following action on the file</p>
+<p>system&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;elasticfilesystem:DeleteMountTarget&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;DeleteMountTarget&lt;/code&gt; call returns while the mount target state is still &lt;code&gt;deleting&lt;/code&gt;. You can check the mount target deletion by calling the &lt;a&gt;DescribeMountTargets&lt;/a&gt; operation, which returns a list of mount target descriptions for the given file system.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>The operation also requires permissions for the following Amazon EC2 action on the mount target's network</p>
+<p>interface&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DeleteNetworkInterface&lt;/code&gt;</p>
+<!-- @@@deleteMountTarget -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-deletetagsresponse.html">DeleteTagsResponse</a></span> *EfsClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-efs-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified tags from a file system. If the &lt;code&gt;DeleteTags&lt;/code&gt; request includes a tag key that does not exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&quot;&gt;Tag Restrictions&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:DeleteTags&lt;/code&gt;</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeFileSystems[overload1]$$$describeFileSystemsconstDescribeFileSystemsRequest& -->
+<h3 class="fn" id="describeFileSystems"><a name="describeFileSystems"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-describefilesystemsresponse.html">DescribeFileSystemsResponse</a></span> *EfsClient::<span class="name">describeFileSystems</span>(const <span class="type"><a href="qtaws-efs-describefilesystemsrequest.html">DescribeFileSystemsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-describefilesystemsresponse.html">DescribeFileSystemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the description of a specific Amazon EFS file system if either the file system &lt;code&gt;CreationToken&lt;/code&gt; or the &lt;code&gt;FileSystemId&lt;/code&gt; is provided. Otherwise, it returns descriptions of all file systems owned by the caller's AWS account in the AWS Region of the endpoint that you're</p>
+<p>calling&gt;</p>
+<p>When retrieving all file system descriptions, you can optionally specify the &lt;code&gt;MaxItems&lt;/code&gt; parameter to limit the number of descriptions in a response. If more file system descriptions remain, Amazon EFS returns a &lt;code&gt;NextMarker&lt;/code&gt;, an opaque token, in the response. In this case, you should send a subsequent request with the &lt;code&gt;Marker&lt;/code&gt; request parameter set to the value of &lt;code&gt;NextMarker&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>To retrieve a list of your file system descriptions, this operation is used in an iterative process, where &lt;code&gt;DescribeFileSystems&lt;/code&gt; is called first without the &lt;code&gt;Marker&lt;/code&gt; and then the operation continues to call it with the &lt;code&gt;Marker&lt;/code&gt; parameter set to the value of the &lt;code&gt;NextMarker&lt;/code&gt; from the previous response until the response has no &lt;code&gt;NextMarker&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>The implementation may return fewer than &lt;code&gt;MaxItems&lt;/code&gt; file system descriptions while still including a &lt;code&gt;NextMarker&lt;/code&gt; value.</p>
+<p>&lt;/p</p>
+<p>The order of file systems returned in the response of one &lt;code&gt;DescribeFileSystems&lt;/code&gt; call and the order of file systems returned across the responses of a multi-call iteration is unspecified.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:DescribeFileSystems&lt;/code&gt; action.</p>
+<!-- @@@describeFileSystems -->
+<!-- $$$describeMountTargetSecurityGroups[overload1]$$$describeMountTargetSecurityGroupsconstDescribeMountTargetSecurityGroupsRequest& -->
+<h3 class="fn" id="describeMountTargetSecurityGroups"><a name="describeMountTargetSecurityGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-describemounttargetsecuritygroupsresponse.html">DescribeMountTargetSecurityGroupsResponse</a></span> *EfsClient::<span class="name">describeMountTargetSecurityGroups</span>(const <span class="type"><a href="qtaws-efs-describemounttargetsecuritygroupsrequest.html">DescribeMountTargetSecurityGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-describemounttargetsecuritygroupsresponse.html">DescribeMountTargetSecurityGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the security groups currently in effect for a mount target. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not</p>
+<p>&lt;code&gt;deleted&lt;/code&gt;&gt;</p>
+<p>This operation requires permissions for the following</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;elasticfilesystem:DescribeMountTargetSecurityGroups&lt;/code&gt; action on the mount target's file system.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DescribeNetworkInterfaceAttribute&lt;/code&gt; action on the mount target's network interface.</p>
+<!-- @@@describeMountTargetSecurityGroups -->
+<!-- $$$describeMountTargets[overload1]$$$describeMountTargetsconstDescribeMountTargetsRequest& -->
+<h3 class="fn" id="describeMountTargets"><a name="describeMountTargets"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-describemounttargetsresponse.html">DescribeMountTargetsResponse</a></span> *EfsClient::<span class="name">describeMountTargets</span>(const <span class="type"><a href="qtaws-efs-describemounttargetsrequest.html">DescribeMountTargetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-describemounttargetsresponse.html">DescribeMountTargetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the descriptions of all the current mount targets, or a specific mount target, for a file system. When requesting all of the current mount targets, the order of mount targets returned in the response is</p>
+<p>unspecified&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:DescribeMountTargets&lt;/code&gt; action, on either the file system ID that you specify in &lt;code&gt;FileSystemId&lt;/code&gt;, or on the file system of the mount target that you specify in</p>
+<!-- @@@describeMountTargets -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-describetagsresponse.html">DescribeTagsResponse</a></span> *EfsClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-efs-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the tags associated with a file system. The order of tags returned in the response of one &lt;code&gt;DescribeTags&lt;/code&gt; call and the order of tags returned across the responses of a multi-call iteration (when using pagination) is unspecified.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;elasticfilesystem:DescribeTags&lt;/code&gt; action.</p>
+<!-- @@@describeTags -->
+<!-- $$$modifyMountTargetSecurityGroups[overload1]$$$modifyMountTargetSecurityGroupsconstModifyMountTargetSecurityGroupsRequest& -->
+<h3 class="fn" id="modifyMountTargetSecurityGroups"><a name="modifyMountTargetSecurityGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-efs-modifymounttargetsecuritygroupsresponse.html">ModifyMountTargetSecurityGroupsResponse</a></span> *EfsClient::<span class="name">modifyMountTargetSecurityGroups</span>(const <span class="type"><a href="qtaws-efs-modifymounttargetsecuritygroupsrequest.html">ModifyMountTargetSecurityGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-efs-efsclient.html">EfsClient</a> service, and returns a pointer to an <a href="qtaws-efs-modifymounttargetsecuritygroupsresponse.html">ModifyMountTargetSecurityGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the set of security groups in effect for a mount</p>
+<p>target&gt;</p>
+<p>When you create a mount target, Amazon EFS also creates a new network interface. For more information, see &lt;a&gt;CreateMountTarget&lt;/a&gt;. This operation replaces the security groups in effect for the network interface associated with a mount target, with the &lt;code&gt;SecurityGroups&lt;/code&gt; provided in the request. This operation requires that the network interface of the mount target has been created and the lifecycle state of the mount target is not &lt;code&gt;deleted&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>The operation requires permissions for the following</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;elasticfilesystem:ModifyMountTargetSecurityGroups&lt;/code&gt; action on the mount target's file system.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:ModifyNetworkInterfaceAttribute&lt;/code&gt; action on the mount target's network interface.</p>
+<!-- @@@modifyMountTargetSecurityGroups -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

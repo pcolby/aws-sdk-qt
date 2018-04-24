@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- applicationdiscoveryserviceclient.cpp -->
+  <title>ApplicationDiscoveryServiceClient Class | ApplicationDiscoveryService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsapplicationdiscoveryservice-index.html">ApplicationDiscoveryService</a></li>
+<li><a href="qtawsapplicationdiscoveryservice-module.html">C++ Classes</a></li>
+<li>ApplicationDiscoveryServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ApplicationDiscoveryServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient</a>)<br/></span>
+<!-- $$$ApplicationDiscoveryServiceClient-brief -->
+<p>The <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> class provides access to the AWS Application Discovery Service service. <a href="#details">More...</a></p>
+<!-- @@@ApplicationDiscoveryServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ApplicationDiscoveryServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#ApplicationDiscoveryServiceClient">ApplicationDiscoveryServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#ApplicationDiscoveryServiceClient-1">ApplicationDiscoveryServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateConfigurationItemsToApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#associateConfigurationItemsToApplication">associateConfigurationItemsToApplication</a></b>(const AssociateConfigurationItemsToApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#createApplication">createApplication</a></b>(const CreateApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#createTags">createTags</a></b>(const CreateTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApplicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#deleteApplications">deleteApplications</a></b>(const DeleteApplicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAgentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#describeAgents">describeAgents</a></b>(const DescribeAgentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#describeConfigurations">describeConfigurations</a></b>(const DescribeConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeExportConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#describeExportConfigurations">describeExportConfigurations</a></b>(const DescribeExportConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeExportTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#describeExportTasks">describeExportTasks</a></b>(const DescribeExportTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateConfigurationItemsFromApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#disassociateConfigurationItemsFromApplication">disassociateConfigurationItemsFromApplication</a></b>(const DisassociateConfigurationItemsFromApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExportConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#exportConfigurations">exportConfigurations</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDiscoverySummaryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#getDiscoverySummary">getDiscoverySummary</a></b>(const GetDiscoverySummaryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#listConfigurations">listConfigurations</a></b>(const ListConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListServerNeighborsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#listServerNeighbors">listServerNeighbors</a></b>(const ListServerNeighborsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartDataCollectionByAgentIdsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#startDataCollectionByAgentIds">startDataCollectionByAgentIds</a></b>(const StartDataCollectionByAgentIdsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartExportTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#startExportTask">startExportTask</a></b>(const StartExportTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopDataCollectionByAgentIdsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#stopDataCollectionByAgentIds">stopDataCollectionByAgentIds</a></b>(const StopDataCollectionByAgentIdsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#updateApplication">updateApplication</a></b>(const UpdateApplicationRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ApplicationDiscoveryServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> class provides access to the AWS Application Discovery Service service.</p>
+<p>&lt;fullname&gt;AWS Application Discovery Service&lt;/fullname&gt;</p>
+<p>AWS Application Discovery Service helps you plan application migration projects by automatically identifying servers, virtual machines (VMs), software, and software dependencies running in your on-premises data centers. Application Discovery Service also collects application performance data, which can help you assess the outcome of your migration. The data collected by Application Discovery Service is securely retained in an AWS-hosted and managed database in the cloud. You can export the data as a CSV or XML file into your preferred visualization tool or cloud-migration solution to plan your migration. For more information, see &lt;a href=&quot;http://aws.amazon.com/application-discovery/faqs/&quot;&gt;AWS Application Discovery Service</p>
+<p>FAQ&lt;/a&gt;&gt;</p>
+<p>Application Discovery Service offers two modes of</p>
+<p>operation&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Agentless discovery&lt;/b&gt; mode is recommended for environments that use VMware vCenter Server. This mode doesn't require you to install an agent on each host. Agentless discovery gathers server information regardless of the operating systems, which minimizes the time required for initial on-premises infrastructure assessment. Agentless discovery doesn't collect information about software and software dependencies. It also doesn't work in non-VMware environments.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Agent-based discovery&lt;/b&gt; mode collects a richer set of data than agentless discovery by using the AWS Application Discovery Agent, which you install on one or more hosts in your data center. The agent captures infrastructure and application information, including an inventory of installed software applications, system and process performance, resource utilization, and network dependencies between workloads. The information collected by agents is secured at rest and in transit to the Application Discovery Service database in the cloud.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>We recommend that you use agent-based discovery for non-VMware environments and to collect information about software and software dependencies. You can also run agent-based and agentless discovery simultaneously. Use agentless discovery to quickly complete the initial infrastructure assessment and then install agents on select</p>
+<p>hosts&gt;</p>
+<p>Application Discovery Service integrates with application discovery solutions from AWS Partner Network (APN) partners. Third-party application discovery tools can query Application Discovery Service and write to the Application Discovery Service database using a public API. You can then import the data into either a visualization tool or cloud-migration</p>
+<p>solution&gt; &lt;b&gt;</p>
+<p>Application Discovery Service doesn't gather sensitive information. All data is handled according to the &lt;a href=&quot;http://aws.amazon.com/privacy/&quot;&gt;AWS Privacy Policy&lt;/a&gt;. You can operate Application Discovery Service offline to inspect collected data before it is shared with the</p>
+<p>service&gt; &lt;/b&gt;</p>
+<p>Your AWS account must be granted access to Application Discovery Service, a process called &lt;i&gt;whitelisting&lt;/i&gt;. This is true for AWS partners and customers alike. To request access, &lt;a href=&quot;http://aws.amazon.com/application-discovery/&quot;&gt;sign up for Application Discovery Service&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for Application Discovery Service. The topic for each action shows the API request parameters and the response. Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform that you're using. For more information, see &lt;a href=&quot;http://aws.amazon.com/tools/#SDKs&quot;&gt;AWS</p>
+<p>SDKs&lt;/a&gt;&gt;</p>
+<p>This guide is intended for use with the &lt;a href=&quot;http://docs.aws.amazon.com/application-discovery/latest/userguide/&quot;&gt; &lt;i&gt;AWS Application Discovery Service User Guide&lt;/i&gt;</p>
+</div>
+<!-- @@@ApplicationDiscoveryServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ApplicationDiscoveryServiceClient[overload1]$$$ApplicationDiscoveryServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ApplicationDiscoveryServiceClient"><a name="ApplicationDiscoveryServiceClient"></a>ApplicationDiscoveryServiceClient::<span class="name">ApplicationDiscoveryServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ApplicationDiscoveryServiceClient -->
+<!-- $$$ApplicationDiscoveryServiceClient$$$ApplicationDiscoveryServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ApplicationDiscoveryServiceClient-1"><a name="ApplicationDiscoveryServiceClient-1"></a>ApplicationDiscoveryServiceClient::<span class="name">ApplicationDiscoveryServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html#ApplicationDiscoveryServiceClient">ApplicationDiscoveryServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ApplicationDiscoveryServiceClient -->
+<!-- $$$associateConfigurationItemsToApplication[overload1]$$$associateConfigurationItemsToApplicationconstAssociateConfigurationItemsToApplicationRequest& -->
+<h3 class="fn" id="associateConfigurationItemsToApplication"><a name="associateConfigurationItemsToApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-associateconfigurationitemstoapplicationresponse.html">AssociateConfigurationItemsToApplicationResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">associateConfigurationItemsToApplication</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-associateconfigurationitemstoapplicationrequest.html">AssociateConfigurationItemsToApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-associateconfigurationitemstoapplicationresponse.html">AssociateConfigurationItemsToApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates one or more configuration items with an</p>
+<!-- @@@associateConfigurationItemsToApplication -->
+<!-- $$$createApplication[overload1]$$$createApplicationconstCreateApplicationRequest& -->
+<h3 class="fn" id="createApplication"><a name="createApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-createapplicationresponse.html">CreateApplicationResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">createApplication</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-createapplicationrequest.html">CreateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-createapplicationresponse.html">CreateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an application with the given name and</p>
+<!-- @@@createApplication -->
+<!-- $$$createTags[overload1]$$$createTagsconstCreateTagsRequest& -->
+<h3 class="fn" id="createTags"><a name="createTags"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-createtagsresponse.html">CreateTagsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">createTags</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-createtagsrequest.html">CreateTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-createtagsresponse.html">CreateTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts a list of multiple configuration</p>
+<!-- @@@createTags -->
+<!-- $$$deleteApplications[overload1]$$$deleteApplicationsconstDeleteApplicationsRequest& -->
+<h3 class="fn" id="deleteApplications"><a name="deleteApplications"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-deleteapplicationsresponse.html">DeleteApplicationsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">deleteApplications</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-deleteapplicationsrequest.html">DeleteApplicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-deleteapplicationsresponse.html">DeleteApplicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a list of applications and their associations with configuration</p>
+<!-- @@@deleteApplications -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-deletetagsresponse.html">DeleteTagsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the association between configuration items and one or more tags. This API accepts a list of multiple configuration</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeAgents[overload1]$$$describeAgentsconstDescribeAgentsRequest& -->
+<h3 class="fn" id="describeAgents"><a name="describeAgents"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-describeagentsresponse.html">DescribeAgentsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">describeAgents</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-describeagentsrequest.html">DescribeAgentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-describeagentsresponse.html">DescribeAgentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not specify an</p>
+<!-- @@@describeAgents -->
+<!-- $$$describeConfigurations[overload1]$$$describeConfigurationsconstDescribeConfigurationsRequest& -->
+<h3 class="fn" id="describeConfigurations"><a name="describeConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-describeconfigurationsresponse.html">DescribeConfigurationsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">describeConfigurations</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-describeconfigurationsrequest.html">DescribeConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-describeconfigurationsresponse.html">DescribeConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the output for a &lt;i&gt;server&lt;/i&gt; configuration item includes a list of attributes about the server, such as host name, operating system, and number of network</p>
+<p>cards&gt;</p>
+<p>For a complete list of outputs for each asset type, see &lt;a href=&quot;http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations&quot;&gt;Using the DescribeConfigurations</p>
+<!-- @@@describeConfigurations -->
+<!-- $$$describeExportConfigurations[overload1]$$$describeExportConfigurationsconstDescribeExportConfigurationsRequest& -->
+<h3 class="fn" id="describeExportConfigurations"><a name="describeExportConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-describeexportconfigurationsresponse.html">DescribeExportConfigurationsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">describeExportConfigurations</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-describeexportconfigurationsrequest.html">DescribeExportConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-describeexportconfigurationsresponse.html">DescribeExportConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated. Use &lt;code&gt;DescribeExportTasks&lt;/code&gt;</p>
+<p>instead&gt;</p>
+<p>Retrieves the status of a given export process. You can retrieve status from a maximum of 100</p>
+<!-- @@@describeExportConfigurations -->
+<!-- $$$describeExportTasks[overload1]$$$describeExportTasksconstDescribeExportTasksRequest& -->
+<h3 class="fn" id="describeExportTasks"><a name="describeExportTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-describeexporttasksresponse.html">DescribeExportTasksResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">describeExportTasks</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-describeexporttasksrequest.html">DescribeExportTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-describeexporttasksresponse.html">DescribeExportTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve status of one or more export tasks. You can retrieve the status of up to 100 export</p>
+<!-- @@@describeExportTasks -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-describetagsresponse.html">DescribeTagsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to a specific configuration</p>
+<!-- @@@describeTags -->
+<!-- $$$disassociateConfigurationItemsFromApplication[overload1]$$$disassociateConfigurationItemsFromApplicationconstDisassociateConfigurationItemsFromApplicationRequest& -->
+<h3 class="fn" id="disassociateConfigurationItemsFromApplication"><a name="disassociateConfigurationItemsFromApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-disassociateconfigurationitemsfromapplicationresponse.html">DisassociateConfigurationItemsFromApplicationResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">disassociateConfigurationItemsFromApplication</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-disassociateconfigurationitemsfromapplicationrequest.html">DisassociateConfigurationItemsFromApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-disassociateconfigurationitemsfromapplicationresponse.html">DisassociateConfigurationItemsFromApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates one or more configuration items from an</p>
+<!-- @@@disassociateConfigurationItemsFromApplication -->
+<!-- $$$exportConfigurations[overload1]$$$exportConfigurations -->
+<h3 class="fn" id="exportConfigurations"><a name="exportConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-exportconfigurationsresponse.html">ExportConfigurationsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">exportConfigurations</span>()</h3>
+<p>Sends a ExportConfigurations request to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-exportconfigurationsresponse.html">ExportConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated. Use &lt;code&gt;StartExportTask&lt;/code&gt;</p>
+<p>instead&gt;</p>
+<p>Exports all discovered configuration data to an Amazon S3 bucket or an application that enables you to view and evaluate the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API returns an export ID that you can query using the &lt;i&gt;DescribeExportConfigurations&lt;/i&gt; API. The system imposes a limit of two configuration exports in six</p>
+<!-- @@@exportConfigurations -->
+<!-- $$$getDiscoverySummary[overload1]$$$getDiscoverySummaryconstGetDiscoverySummaryRequest& -->
+<h3 class="fn" id="getDiscoverySummary"><a name="getDiscoverySummary"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-getdiscoverysummaryresponse.html">GetDiscoverySummaryResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">getDiscoverySummary</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-getdiscoverysummaryrequest.html">GetDiscoverySummaryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-getdiscoverysummaryresponse.html">GetDiscoverySummaryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a short summary of discovered</p>
+<!-- @@@getDiscoverySummary -->
+<!-- $$$listConfigurations[overload1]$$$listConfigurationsconstListConfigurationsRequest& -->
+<h3 class="fn" id="listConfigurations"><a name="listConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-listconfigurationsresponse.html">ListConfigurationsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">listConfigurations</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-listconfigurationsrequest.html">ListConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-listconfigurationsresponse.html">ListConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria identifies the relationship</p>
+<!-- @@@listConfigurations -->
+<!-- $$$listServerNeighbors[overload1]$$$listServerNeighborsconstListServerNeighborsRequest& -->
+<h3 class="fn" id="listServerNeighbors"><a name="listServerNeighbors"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-listserverneighborsresponse.html">ListServerNeighborsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">listServerNeighbors</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-listserverneighborsrequest.html">ListServerNeighborsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-listserverneighborsresponse.html">ListServerNeighborsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of servers that are one network hop away from a specified</p>
+<!-- @@@listServerNeighbors -->
+<!-- $$$startDataCollectionByAgentIds[overload1]$$$startDataCollectionByAgentIdsconstStartDataCollectionByAgentIdsRequest& -->
+<h3 class="fn" id="startDataCollectionByAgentIds"><a name="startDataCollectionByAgentIds"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-startdatacollectionbyagentidsresponse.html">StartDataCollectionByAgentIdsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">startDataCollectionByAgentIds</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-startdatacollectionbyagentidsrequest.html">StartDataCollectionByAgentIdsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-startdatacollectionbyagentidsresponse.html">StartDataCollectionByAgentIdsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Instructs the specified agents or connectors to start collecting</p>
+<!-- @@@startDataCollectionByAgentIds -->
+<!-- $$$startExportTask[overload1]$$$startExportTaskconstStartExportTaskRequest& -->
+<h3 class="fn" id="startExportTask"><a name="startExportTask"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-startexporttaskresponse.html">StartExportTaskResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">startExportTask</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-startexporttaskrequest.html">StartExportTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-startexporttaskresponse.html">StartExportTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Begins the export of discovered data to an S3</p>
+<p>bucket&gt;</p>
+<p>If you specify &lt;code&gt;agentIds&lt;/code&gt; in a filter, the task exports up to 72 hours of detailed data collected by the identified Application Discovery Agent, including network, process, and performance details. A time range for exported agent data may be set by using &lt;code&gt;startTime&lt;/code&gt; and &lt;code&gt;endTime&lt;/code&gt;. Export of detailed agent data is limited to five concurrently running exports.</p>
+<p>&lt;/p</p>
+<p>If you do not include an &lt;code&gt;agentIds&lt;/code&gt; filter, summary data is exported that includes both AWS Agentless Discovery Connector data and summary data from AWS Discovery Agents. Export of summary data is limited to two exports per day.</p>
+<!-- @@@startExportTask -->
+<!-- $$$stopDataCollectionByAgentIds[overload1]$$$stopDataCollectionByAgentIdsconstStopDataCollectionByAgentIdsRequest& -->
+<h3 class="fn" id="stopDataCollectionByAgentIds"><a name="stopDataCollectionByAgentIds"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-stopdatacollectionbyagentidsresponse.html">StopDataCollectionByAgentIdsResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">stopDataCollectionByAgentIds</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-stopdatacollectionbyagentidsrequest.html">StopDataCollectionByAgentIdsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-stopdatacollectionbyagentidsresponse.html">StopDataCollectionByAgentIdsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Instructs the specified agents or connectors to stop collecting</p>
+<!-- @@@stopDataCollectionByAgentIds -->
+<!-- $$$updateApplication[overload1]$$$updateApplicationconstUpdateApplicationRequest& -->
+<h3 class="fn" id="updateApplication"><a name="updateApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationdiscoveryservice-updateapplicationresponse.html">UpdateApplicationResponse</a></span> *ApplicationDiscoveryServiceClient::<span class="name">updateApplication</span>(const <span class="type"><a href="qtaws-applicationdiscoveryservice-updateapplicationrequest.html">UpdateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">ApplicationDiscoveryServiceClient</a> service, and returns a pointer to an <a href="qtaws-applicationdiscoveryservice-updateapplicationresponse.html">UpdateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates metadata about an</p>
+<!-- @@@updateApplication -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

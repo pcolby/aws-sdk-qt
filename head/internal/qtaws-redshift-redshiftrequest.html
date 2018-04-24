@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- redshiftrequest.cpp -->
+  <title>RedshiftRequest Class | Redshift</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsredshift-index.html">Redshift</a></li>
+<li><a href="qtawsredshift-module.html">C++ Classes</a></li>
+<li>RedshiftRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">RedshiftRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-redshift-redshiftrequest.html">QtAws::Redshift::RedshiftRequest</a>)<br/></span>
+<!-- $$$RedshiftRequest-brief -->
+<p>The <a href="qtaws-redshift-redshiftrequest.html">RedshiftRequest</a> class provides an interface for Redshift requests. <a href="#details">More...</a></p>
+<!-- @@@RedshiftRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;RedshiftRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-redshift-authorizeclustersecuritygroupingressrequest.html">QtAws::Redshift::AuthorizeClusterSecurityGroupIngressRequest</a>, <a href="qtaws-redshift-authorizesnapshotaccessrequest.html">QtAws::Redshift::AuthorizeSnapshotAccessRequest</a>, <a href="qtaws-redshift-copyclustersnapshotrequest.html">QtAws::Redshift::CopyClusterSnapshotRequest</a>, <a href="qtaws-redshift-createclusterparametergrouprequest.html">QtAws::Redshift::CreateClusterParameterGroupRequest</a>, <a href="qtaws-redshift-createclusterrequest.html">QtAws::Redshift::CreateClusterRequest</a>, <a href="qtaws-redshift-createclustersecuritygrouprequest.html">QtAws::Redshift::CreateClusterSecurityGroupRequest</a>, <a href="qtaws-redshift-createclustersnapshotrequest.html">QtAws::Redshift::CreateClusterSnapshotRequest</a>, <a href="qtaws-redshift-createclustersubnetgrouprequest.html">QtAws::Redshift::CreateClusterSubnetGroupRequest</a>, <a href="qtaws-redshift-createeventsubscriptionrequest.html">QtAws::Redshift::CreateEventSubscriptionRequest</a>, <a href="qtaws-redshift-createhsmclientcertificaterequest.html">QtAws::Redshift::CreateHsmClientCertificateRequest</a>, <a href="qtaws-redshift-createhsmconfigurationrequest.html">QtAws::Redshift::CreateHsmConfigurationRequest</a>, <a href="qtaws-redshift-createsnapshotcopygrantrequest.html">QtAws::Redshift::CreateSnapshotCopyGrantRequest</a>, <a href="qtaws-redshift-createtagsrequest.html">QtAws::Redshift::CreateTagsRequest</a>, <a href="qtaws-redshift-deleteclusterparametergrouprequest.html">QtAws::Redshift::DeleteClusterParameterGroupRequest</a>, <a href="qtaws-redshift-deleteclusterrequest.html">QtAws::Redshift::DeleteClusterRequest</a>, <a href="qtaws-redshift-deleteclustersecuritygrouprequest.html">QtAws::Redshift::DeleteClusterSecurityGroupRequest</a>, <a href="qtaws-redshift-deleteclustersnapshotrequest.html">QtAws::Redshift::DeleteClusterSnapshotRequest</a>, <a href="qtaws-redshift-deleteclustersubnetgrouprequest.html">QtAws::Redshift::DeleteClusterSubnetGroupRequest</a>, <a href="qtaws-redshift-deleteeventsubscriptionrequest.html">QtAws::Redshift::DeleteEventSubscriptionRequest</a>, <a href="qtaws-redshift-deletehsmclientcertificaterequest.html">QtAws::Redshift::DeleteHsmClientCertificateRequest</a>, <a href="qtaws-redshift-deletehsmconfigurationrequest.html">QtAws::Redshift::DeleteHsmConfigurationRequest</a>, <a href="qtaws-redshift-deletesnapshotcopygrantrequest.html">QtAws::Redshift::DeleteSnapshotCopyGrantRequest</a>, <a href="qtaws-redshift-deletetagsrequest.html">QtAws::Redshift::DeleteTagsRequest</a>, <a href="qtaws-redshift-describeclusterparametergroupsrequest.html">QtAws::Redshift::DescribeClusterParameterGroupsRequest</a>, <a href="qtaws-redshift-describeclusterparametersrequest.html">QtAws::Redshift::DescribeClusterParametersRequest</a>, <a href="qtaws-redshift-describeclustersecuritygroupsrequest.html">QtAws::Redshift::DescribeClusterSecurityGroupsRequest</a>, <a href="qtaws-redshift-describeclustersnapshotsrequest.html">QtAws::Redshift::DescribeClusterSnapshotsRequest</a>, <a href="qtaws-redshift-describeclustersrequest.html">QtAws::Redshift::DescribeClustersRequest</a>, <a href="qtaws-redshift-describeclustersubnetgroupsrequest.html">QtAws::Redshift::DescribeClusterSubnetGroupsRequest</a>, <a href="qtaws-redshift-describeclusterversionsrequest.html">QtAws::Redshift::DescribeClusterVersionsRequest</a>, <a href="qtaws-redshift-describedefaultclusterparametersrequest.html">QtAws::Redshift::DescribeDefaultClusterParametersRequest</a>, <a href="qtaws-redshift-describeeventcategoriesrequest.html">QtAws::Redshift::DescribeEventCategoriesRequest</a>, <a href="qtaws-redshift-describeeventsrequest.html">QtAws::Redshift::DescribeEventsRequest</a>, <a href="qtaws-redshift-describeeventsubscriptionsrequest.html">QtAws::Redshift::DescribeEventSubscriptionsRequest</a>, <a href="qtaws-redshift-describehsmclientcertificatesrequest.html">QtAws::Redshift::DescribeHsmClientCertificatesRequest</a>, <a href="qtaws-redshift-describehsmconfigurationsrequest.html">QtAws::Redshift::DescribeHsmConfigurationsRequest</a>, <a href="qtaws-redshift-describeloggingstatusrequest.html">QtAws::Redshift::DescribeLoggingStatusRequest</a>, <a href="qtaws-redshift-describeorderableclusteroptionsrequest.html">QtAws::Redshift::DescribeOrderableClusterOptionsRequest</a>, <a href="qtaws-redshift-describereservednodeofferingsrequest.html">QtAws::Redshift::DescribeReservedNodeOfferingsRequest</a>, <a href="qtaws-redshift-describereservednodesrequest.html">QtAws::Redshift::DescribeReservedNodesRequest</a>, <a href="qtaws-redshift-describeresizerequest.html">QtAws::Redshift::DescribeResizeRequest</a>, <a href="qtaws-redshift-describesnapshotcopygrantsrequest.html">QtAws::Redshift::DescribeSnapshotCopyGrantsRequest</a>, <a href="qtaws-redshift-describetablerestorestatusrequest.html">QtAws::Redshift::DescribeTableRestoreStatusRequest</a>, <a href="qtaws-redshift-describetagsrequest.html">QtAws::Redshift::DescribeTagsRequest</a>, <a href="qtaws-redshift-disableloggingrequest.html">QtAws::Redshift::DisableLoggingRequest</a>, <a href="qtaws-redshift-disablesnapshotcopyrequest.html">QtAws::Redshift::DisableSnapshotCopyRequest</a>, <a href="qtaws-redshift-enableloggingrequest.html">QtAws::Redshift::EnableLoggingRequest</a>, <a href="qtaws-redshift-enablesnapshotcopyrequest.html">QtAws::Redshift::EnableSnapshotCopyRequest</a>, <a href="qtaws-redshift-getclustercredentialsrequest.html">QtAws::Redshift::GetClusterCredentialsRequest</a>, <a href="qtaws-redshift-modifyclusteriamrolesrequest.html">QtAws::Redshift::ModifyClusterIamRolesRequest</a>, <a href="qtaws-redshift-modifyclusterparametergrouprequest.html">QtAws::Redshift::ModifyClusterParameterGroupRequest</a>, <a href="qtaws-redshift-modifyclusterrequest.html">QtAws::Redshift::ModifyClusterRequest</a>, <a href="qtaws-redshift-modifyclustersubnetgrouprequest.html">QtAws::Redshift::ModifyClusterSubnetGroupRequest</a>, <a href="qtaws-redshift-modifyeventsubscriptionrequest.html">QtAws::Redshift::ModifyEventSubscriptionRequest</a>, <a href="qtaws-redshift-modifysnapshotcopyretentionperiodrequest.html">QtAws::Redshift::ModifySnapshotCopyRetentionPeriodRequest</a>, <a href="qtaws-redshift-purchasereservednodeofferingrequest.html">QtAws::Redshift::PurchaseReservedNodeOfferingRequest</a>, <a href="qtaws-redshift-rebootclusterrequest.html">QtAws::Redshift::RebootClusterRequest</a>, <a href="qtaws-redshift-resetclusterparametergrouprequest.html">QtAws::Redshift::ResetClusterParameterGroupRequest</a>, <a href="qtaws-redshift-restorefromclustersnapshotrequest.html">QtAws::Redshift::RestoreFromClusterSnapshotRequest</a>, <a href="qtaws-redshift-restoretablefromclustersnapshotrequest.html">QtAws::Redshift::RestoreTableFromClusterSnapshotRequest</a>, <a href="qtaws-redshift-revokeclustersecuritygroupingressrequest.html">QtAws::Redshift::RevokeClusterSecurityGroupIngressRequest</a>, <a href="qtaws-redshift-revokesnapshotaccessrequest.html">QtAws::Redshift::RevokeSnapshotAccessRequest</a>, and <a href="qtaws-redshift-rotateencryptionkeyrequest.html">QtAws::Redshift::RotateEncryptionKeyRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-redshift-redshiftrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#Action-enum">Action</a></b> { AuthorizeClusterSecurityGroupIngressAction, AuthorizeSnapshotAccessAction, CopyClusterSnapshotAction, CreateClusterAction, ..., RotateEncryptionKeyAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest">RedshiftRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest-1">RedshiftRequest</a></b>(const RedshiftRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RedshiftRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#operator-eq">operator=</a></b>(const RedshiftRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#operator-eq-eq">operator==</a></b>(const RedshiftRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest-2">RedshiftRequest</a></b>(RedshiftRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$RedshiftRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-redshift-redshiftrequest.html">RedshiftRequest</a> class provides an interface for Redshift requests.</p>
+</div>
+<!-- @@@RedshiftRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AuthorizeClusterSecurityGroupIngressAction$$$AuthorizeSnapshotAccessAction$$$CopyClusterSnapshotAction$$$CreateClusterAction$$$CreateClusterParameterGroupAction$$$CreateClusterSecurityGroupAction$$$CreateClusterSnapshotAction$$$CreateClusterSubnetGroupAction$$$CreateEventSubscriptionAction$$$CreateHsmClientCertificateAction$$$CreateHsmConfigurationAction$$$CreateSnapshotCopyGrantAction$$$CreateTagsAction$$$DeleteClusterAction$$$DeleteClusterParameterGroupAction$$$DeleteClusterSecurityGroupAction$$$DeleteClusterSnapshotAction$$$DeleteClusterSubnetGroupAction$$$DeleteEventSubscriptionAction$$$DeleteHsmClientCertificateAction$$$DeleteHsmConfigurationAction$$$DeleteSnapshotCopyGrantAction$$$DeleteTagsAction$$$DescribeClusterParameterGroupsAction$$$DescribeClusterParametersAction$$$DescribeClusterSecurityGroupsAction$$$DescribeClusterSnapshotsAction$$$DescribeClusterSubnetGroupsAction$$$DescribeClusterVersionsAction$$$DescribeClustersAction$$$DescribeDefaultClusterParametersAction$$$DescribeEventCategoriesAction$$$DescribeEventSubscriptionsAction$$$DescribeEventsAction$$$DescribeHsmClientCertificatesAction$$$DescribeHsmConfigurationsAction$$$DescribeLoggingStatusAction$$$DescribeOrderableClusterOptionsAction$$$DescribeReservedNodeOfferingsAction$$$DescribeReservedNodesAction$$$DescribeResizeAction$$$DescribeSnapshotCopyGrantsAction$$$DescribeTableRestoreStatusAction$$$DescribeTagsAction$$$DisableLoggingAction$$$DisableSnapshotCopyAction$$$EnableLoggingAction$$$EnableSnapshotCopyAction$$$GetClusterCredentialsAction$$$ModifyClusterAction$$$ModifyClusterIamRolesAction$$$ModifyClusterParameterGroupAction$$$ModifyClusterSubnetGroupAction$$$ModifyEventSubscriptionAction$$$ModifySnapshotCopyRetentionPeriodAction$$$PurchaseReservedNodeOfferingAction$$$RebootClusterAction$$$ResetClusterParameterGroupAction$$$RestoreFromClusterSnapshotAction$$$RestoreTableFromClusterSnapshotAction$$$RevokeClusterSecurityGroupIngressAction$$$RevokeSnapshotAccessAction$$$RotateEncryptionKeyAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum RedshiftRequest::<span class="name">Action</span><br/>flags RedshiftRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Redshift requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::AuthorizeClusterSecurityGroupIngressAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Redshift AuthorizeClusterSecurityGroupIngress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::AuthorizeSnapshotAccessAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Redshift AuthorizeSnapshotAccess action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CopyClusterSnapshotAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Redshift CopyClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateClusterAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Redshift CreateCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Redshift CreateClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateClusterSecurityGroupAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Redshift CreateClusterSecurityGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateClusterSnapshotAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Redshift CreateClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateClusterSubnetGroupAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Redshift CreateClusterSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateEventSubscriptionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Redshift CreateEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateHsmClientCertificateAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Redshift CreateHsmClientCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateHsmConfigurationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Redshift CreateHsmConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateSnapshotCopyGrantAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Redshift CreateSnapshotCopyGrant action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::CreateTagsAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Redshift CreateTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteClusterAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Redshift DeleteCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Redshift DeleteClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteClusterSecurityGroupAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Redshift DeleteClusterSecurityGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteClusterSnapshotAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Redshift DeleteClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteClusterSubnetGroupAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Redshift DeleteClusterSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteEventSubscriptionAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Redshift DeleteEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteHsmClientCertificateAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Redshift DeleteHsmClientCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteHsmConfigurationAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Redshift DeleteHsmConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteSnapshotCopyGrantAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Redshift DeleteSnapshotCopyGrant action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DeleteTagsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Redshift DeleteTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterParameterGroupsAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Redshift DescribeClusterParameterGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterParametersAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Redshift DescribeClusterParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterSecurityGroupsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Redshift DescribeClusterSecurityGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterSnapshotsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Redshift DescribeClusterSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterSubnetGroupsAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Redshift DescribeClusterSubnetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClusterVersionsAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Redshift DescribeClusterVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeClustersAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Redshift DescribeClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeDefaultClusterParametersAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Redshift DescribeDefaultClusterParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeEventCategoriesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Redshift DescribeEventCategories action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeEventSubscriptionsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Redshift DescribeEventSubscriptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeEventsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Redshift DescribeEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeHsmClientCertificatesAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Redshift DescribeHsmClientCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeHsmConfigurationsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Redshift DescribeHsmConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeLoggingStatusAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Redshift DescribeLoggingStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeOrderableClusterOptionsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Redshift DescribeOrderableClusterOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeReservedNodeOfferingsAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Redshift DescribeReservedNodeOfferings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeReservedNodesAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Redshift DescribeReservedNodes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeResizeAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Redshift DescribeResize action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeSnapshotCopyGrantsAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Redshift DescribeSnapshotCopyGrants action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeTableRestoreStatusAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Redshift DescribeTableRestoreStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DescribeTagsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Redshift DescribeTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DisableLoggingAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Redshift DisableLogging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::DisableSnapshotCopyAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Redshift DisableSnapshotCopy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::EnableLoggingAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Redshift EnableLogging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::EnableSnapshotCopyAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Redshift EnableSnapshotCopy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::GetClusterCredentialsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Redshift GetClusterCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifyClusterAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Redshift ModifyCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifyClusterIamRolesAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Redshift ModifyClusterIamRoles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifyClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Redshift ModifyClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifyClusterSubnetGroupAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Redshift ModifyClusterSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifyEventSubscriptionAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Redshift ModifyEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ModifySnapshotCopyRetentionPeriodAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Redshift ModifySnapshotCopyRetentionPeriod action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::PurchaseReservedNodeOfferingAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Redshift PurchaseReservedNodeOffering action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RebootClusterAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">Redshift RebootCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::ResetClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">Redshift ResetClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RestoreFromClusterSnapshotAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">Redshift RestoreFromClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RestoreTableFromClusterSnapshotAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">Redshift RestoreTableFromClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RevokeClusterSecurityGroupIngressAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">Redshift RevokeClusterSecurityGroupIngress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RevokeSnapshotAccessAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">Redshift RevokeSnapshotAccess action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Redshift::RedshiftRequest::RotateEncryptionKeyAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">Redshift RotateEncryptionKey action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RedshiftRequest[overload1]$$$RedshiftRequestconstAction -->
+<h3 class="fn" id="RedshiftRequest"><a name="RedshiftRequest"></a>RedshiftRequest::<span class="name">RedshiftRequest</span>(const <span class="type"><a href="qtaws-redshift-redshiftrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-redshift-redshiftrequest.html">RedshiftRequest</a> object for Redshift <i>action</i>.</p>
+<!-- @@@RedshiftRequest -->
+<!-- $$$RedshiftRequest$$$RedshiftRequestconstRedshiftRequest& -->
+<h3 class="fn" id="RedshiftRequest-1"><a name="RedshiftRequest-1"></a>RedshiftRequest::<span class="name">RedshiftRequest</span>(const <span class="type"><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest">RedshiftRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@RedshiftRequest -->
+<!-- $$$RedshiftRequest$$$RedshiftRequestRedshiftRequestPrivate*const -->
+<h3 class="fn" id="RedshiftRequest-2"><a name="RedshiftRequest-2"></a><code>[protected] </code>RedshiftRequest::<span class="name">RedshiftRequest</span>(<span class="type"><a href="qtaws-redshift-redshiftrequestprivate.html">RedshiftRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-redshift-redshiftrequest.html">RedshiftRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-redshift-redshiftrequestprivate.html">RedshiftRequestPrivate</a>.</p>
+<!-- @@@RedshiftRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-redshift-redshiftrequest.html#Action-enum">Action</a></span> RedshiftRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Redshift action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> RedshiftRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Redshift action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> RedshiftRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Redshift API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> RedshiftRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> RedshiftRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> RedshiftRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;RedshiftRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> RedshiftRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-redshift-redshiftrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Redshift action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> RedshiftRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Redshift API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> RedshiftRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> RedshiftRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-redshift-redshiftrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> RedshiftRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Redshift request using the given <i>endpoint</i>.</p>
+<p>This Redshift implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-redshift-redshiftrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constRedshiftRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest">RedshiftRequest</a></span> &amp;RedshiftRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest">RedshiftRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-redshift-redshiftrequest.html">RedshiftRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constRedshiftRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> RedshiftRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-redshift-redshiftrequest.html#RedshiftRequest">RedshiftRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

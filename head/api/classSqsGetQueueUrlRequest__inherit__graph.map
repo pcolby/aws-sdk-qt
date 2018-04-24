@@ -1,4 +1,0 @@
-<map id="SqsGetQueueUrlRequest" name="SqsGetQueueUrlRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="43,80,138,107"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="17,5,164,32"/>
-</map>

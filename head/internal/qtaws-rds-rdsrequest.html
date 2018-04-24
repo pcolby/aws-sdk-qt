@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- rdsrequest.cpp -->
+  <title>RdsRequest Class | RDS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsrds-index.html">RDS</a></li>
+<li><a href="qtawsrds-module.html">C++ Classes</a></li>
+<li>RdsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">RdsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-rds-rdsrequest.html">QtAws::RDS::RdsRequest</a>)<br/></span>
+<!-- $$$RdsRequest-brief -->
+<p>The <a href="qtaws-rds-rdsrequest.html">RdsRequest</a> class provides an interface for RDS requests. <a href="#details">More...</a></p>
+<!-- @@@RdsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;RdsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-rds-addroletodbclusterrequest.html">QtAws::RDS::AddRoleToDBClusterRequest</a>, <a href="qtaws-rds-addsourceidentifiertosubscriptionrequest.html">QtAws::RDS::AddSourceIdentifierToSubscriptionRequest</a>, <a href="qtaws-rds-addtagstoresourcerequest.html">QtAws::RDS::AddTagsToResourceRequest</a>, <a href="qtaws-rds-applypendingmaintenanceactionrequest.html">QtAws::RDS::ApplyPendingMaintenanceActionRequest</a>, <a href="qtaws-rds-authorizedbsecuritygroupingressrequest.html">QtAws::RDS::AuthorizeDBSecurityGroupIngressRequest</a>, <a href="qtaws-rds-copydbclusterparametergrouprequest.html">QtAws::RDS::CopyDBClusterParameterGroupRequest</a>, <a href="qtaws-rds-copydbclustersnapshotrequest.html">QtAws::RDS::CopyDBClusterSnapshotRequest</a>, <a href="qtaws-rds-copydbparametergrouprequest.html">QtAws::RDS::CopyDBParameterGroupRequest</a>, <a href="qtaws-rds-copydbsnapshotrequest.html">QtAws::RDS::CopyDBSnapshotRequest</a>, <a href="qtaws-rds-copyoptiongrouprequest.html">QtAws::RDS::CopyOptionGroupRequest</a>, <a href="qtaws-rds-createdbclusterparametergrouprequest.html">QtAws::RDS::CreateDBClusterParameterGroupRequest</a>, <a href="qtaws-rds-createdbclusterrequest.html">QtAws::RDS::CreateDBClusterRequest</a>, <a href="qtaws-rds-createdbclustersnapshotrequest.html">QtAws::RDS::CreateDBClusterSnapshotRequest</a>, <a href="qtaws-rds-createdbinstancereadreplicarequest.html">QtAws::RDS::CreateDBInstanceReadReplicaRequest</a>, <a href="qtaws-rds-createdbinstancerequest.html">QtAws::RDS::CreateDBInstanceRequest</a>, <a href="qtaws-rds-createdbparametergrouprequest.html">QtAws::RDS::CreateDBParameterGroupRequest</a>, <a href="qtaws-rds-createdbsecuritygrouprequest.html">QtAws::RDS::CreateDBSecurityGroupRequest</a>, <a href="qtaws-rds-createdbsnapshotrequest.html">QtAws::RDS::CreateDBSnapshotRequest</a>, <a href="qtaws-rds-createdbsubnetgrouprequest.html">QtAws::RDS::CreateDBSubnetGroupRequest</a>, <a href="qtaws-rds-createeventsubscriptionrequest.html">QtAws::RDS::CreateEventSubscriptionRequest</a>, <a href="qtaws-rds-createoptiongrouprequest.html">QtAws::RDS::CreateOptionGroupRequest</a>, <a href="qtaws-rds-deletedbclusterparametergrouprequest.html">QtAws::RDS::DeleteDBClusterParameterGroupRequest</a>, <a href="qtaws-rds-deletedbclusterrequest.html">QtAws::RDS::DeleteDBClusterRequest</a>, <a href="qtaws-rds-deletedbclustersnapshotrequest.html">QtAws::RDS::DeleteDBClusterSnapshotRequest</a>, <a href="qtaws-rds-deletedbinstancerequest.html">QtAws::RDS::DeleteDBInstanceRequest</a>, <a href="qtaws-rds-deletedbparametergrouprequest.html">QtAws::RDS::DeleteDBParameterGroupRequest</a>, <a href="qtaws-rds-deletedbsecuritygrouprequest.html">QtAws::RDS::DeleteDBSecurityGroupRequest</a>, <a href="qtaws-rds-deletedbsnapshotrequest.html">QtAws::RDS::DeleteDBSnapshotRequest</a>, <a href="qtaws-rds-deletedbsubnetgrouprequest.html">QtAws::RDS::DeleteDBSubnetGroupRequest</a>, <a href="qtaws-rds-deleteeventsubscriptionrequest.html">QtAws::RDS::DeleteEventSubscriptionRequest</a>, <a href="qtaws-rds-deleteoptiongrouprequest.html">QtAws::RDS::DeleteOptionGroupRequest</a>, <a href="qtaws-rds-describeaccountattributesrequest.html">QtAws::RDS::DescribeAccountAttributesRequest</a>, <a href="qtaws-rds-describecertificatesrequest.html">QtAws::RDS::DescribeCertificatesRequest</a>, <a href="qtaws-rds-describedbclusterparametergroupsrequest.html">QtAws::RDS::DescribeDBClusterParameterGroupsRequest</a>, <a href="qtaws-rds-describedbclusterparametersrequest.html">QtAws::RDS::DescribeDBClusterParametersRequest</a>, <a href="qtaws-rds-describedbclustersnapshotattributesrequest.html">QtAws::RDS::DescribeDBClusterSnapshotAttributesRequest</a>, <a href="qtaws-rds-describedbclustersnapshotsrequest.html">QtAws::RDS::DescribeDBClusterSnapshotsRequest</a>, <a href="qtaws-rds-describedbclustersrequest.html">QtAws::RDS::DescribeDBClustersRequest</a>, <a href="qtaws-rds-describedbengineversionsrequest.html">QtAws::RDS::DescribeDBEngineVersionsRequest</a>, <a href="qtaws-rds-describedbinstancesrequest.html">QtAws::RDS::DescribeDBInstancesRequest</a>, <a href="qtaws-rds-describedblogfilesrequest.html">QtAws::RDS::DescribeDBLogFilesRequest</a>, <a href="qtaws-rds-describedbparametergroupsrequest.html">QtAws::RDS::DescribeDBParameterGroupsRequest</a>, <a href="qtaws-rds-describedbparametersrequest.html">QtAws::RDS::DescribeDBParametersRequest</a>, <a href="qtaws-rds-describedbsecuritygroupsrequest.html">QtAws::RDS::DescribeDBSecurityGroupsRequest</a>, <a href="qtaws-rds-describedbsnapshotattributesrequest.html">QtAws::RDS::DescribeDBSnapshotAttributesRequest</a>, <a href="qtaws-rds-describedbsnapshotsrequest.html">QtAws::RDS::DescribeDBSnapshotsRequest</a>, <a href="qtaws-rds-describedbsubnetgroupsrequest.html">QtAws::RDS::DescribeDBSubnetGroupsRequest</a>, <a href="qtaws-rds-describeenginedefaultclusterparametersrequest.html">QtAws::RDS::DescribeEngineDefaultClusterParametersRequest</a>, <a href="qtaws-rds-describeenginedefaultparametersrequest.html">QtAws::RDS::DescribeEngineDefaultParametersRequest</a>, <a href="qtaws-rds-describeeventcategoriesrequest.html">QtAws::RDS::DescribeEventCategoriesRequest</a>, <a href="qtaws-rds-describeeventsrequest.html">QtAws::RDS::DescribeEventsRequest</a>, <a href="qtaws-rds-describeeventsubscriptionsrequest.html">QtAws::RDS::DescribeEventSubscriptionsRequest</a>, <a href="qtaws-rds-describeoptiongroupoptionsrequest.html">QtAws::RDS::DescribeOptionGroupOptionsRequest</a>, <a href="qtaws-rds-describeoptiongroupsrequest.html">QtAws::RDS::DescribeOptionGroupsRequest</a>, <a href="qtaws-rds-describeorderabledbinstanceoptionsrequest.html">QtAws::RDS::DescribeOrderableDBInstanceOptionsRequest</a>, <a href="qtaws-rds-describependingmaintenanceactionsrequest.html">QtAws::RDS::DescribePendingMaintenanceActionsRequest</a>, <a href="qtaws-rds-describereserveddbinstancesofferingsrequest.html">QtAws::RDS::DescribeReservedDBInstancesOfferingsRequest</a>, <a href="qtaws-rds-describereserveddbinstancesrequest.html">QtAws::RDS::DescribeReservedDBInstancesRequest</a>, <a href="qtaws-rds-describesourceregionsrequest.html">QtAws::RDS::DescribeSourceRegionsRequest</a>, <a href="qtaws-rds-describevaliddbinstancemodificationsrequest.html">QtAws::RDS::DescribeValidDBInstanceModificationsRequest</a>, <a href="qtaws-rds-downloaddblogfileportionrequest.html">QtAws::RDS::DownloadDBLogFilePortionRequest</a>, <a href="qtaws-rds-failoverdbclusterrequest.html">QtAws::RDS::FailoverDBClusterRequest</a>, <a href="qtaws-rds-listtagsforresourcerequest.html">QtAws::RDS::ListTagsForResourceRequest</a>, <a href="qtaws-rds-modifydbclusterparametergrouprequest.html">QtAws::RDS::ModifyDBClusterParameterGroupRequest</a>, <a href="qtaws-rds-modifydbclusterrequest.html">QtAws::RDS::ModifyDBClusterRequest</a>, <a href="qtaws-rds-modifydbclustersnapshotattributerequest.html">QtAws::RDS::ModifyDBClusterSnapshotAttributeRequest</a>, <a href="qtaws-rds-modifydbinstancerequest.html">QtAws::RDS::ModifyDBInstanceRequest</a>, <a href="qtaws-rds-modifydbparametergrouprequest.html">QtAws::RDS::ModifyDBParameterGroupRequest</a>, <a href="qtaws-rds-modifydbsnapshotattributerequest.html">QtAws::RDS::ModifyDBSnapshotAttributeRequest</a>, <a href="qtaws-rds-modifydbsnapshotrequest.html">QtAws::RDS::ModifyDBSnapshotRequest</a>, <a href="qtaws-rds-modifydbsubnetgrouprequest.html">QtAws::RDS::ModifyDBSubnetGroupRequest</a>, <a href="qtaws-rds-modifyeventsubscriptionrequest.html">QtAws::RDS::ModifyEventSubscriptionRequest</a>, <a href="qtaws-rds-modifyoptiongrouprequest.html">QtAws::RDS::ModifyOptionGroupRequest</a>, <a href="qtaws-rds-promotereadreplicadbclusterrequest.html">QtAws::RDS::PromoteReadReplicaDBClusterRequest</a>, <a href="qtaws-rds-promotereadreplicarequest.html">QtAws::RDS::PromoteReadReplicaRequest</a>, <a href="qtaws-rds-purchasereserveddbinstancesofferingrequest.html">QtAws::RDS::PurchaseReservedDBInstancesOfferingRequest</a>, <a href="qtaws-rds-rebootdbinstancerequest.html">QtAws::RDS::RebootDBInstanceRequest</a>, <a href="qtaws-rds-removerolefromdbclusterrequest.html">QtAws::RDS::RemoveRoleFromDBClusterRequest</a>, <a href="qtaws-rds-removesourceidentifierfromsubscriptionrequest.html">QtAws::RDS::RemoveSourceIdentifierFromSubscriptionRequest</a>, <a href="qtaws-rds-removetagsfromresourcerequest.html">QtAws::RDS::RemoveTagsFromResourceRequest</a>, <a href="qtaws-rds-resetdbclusterparametergrouprequest.html">QtAws::RDS::ResetDBClusterParameterGroupRequest</a>, <a href="qtaws-rds-resetdbparametergrouprequest.html">QtAws::RDS::ResetDBParameterGroupRequest</a>, <a href="qtaws-rds-restoredbclusterfroms3request.html">QtAws::RDS::RestoreDBClusterFromS3Request</a>, <a href="qtaws-rds-restoredbclusterfromsnapshotrequest.html">QtAws::RDS::RestoreDBClusterFromSnapshotRequest</a>, <a href="qtaws-rds-restoredbclustertopointintimerequest.html">QtAws::RDS::RestoreDBClusterToPointInTimeRequest</a>, <a href="qtaws-rds-restoredbinstancefromdbsnapshotrequest.html">QtAws::RDS::RestoreDBInstanceFromDBSnapshotRequest</a>, <a href="qtaws-rds-restoredbinstancefroms3request.html">QtAws::RDS::RestoreDBInstanceFromS3Request</a>, <a href="qtaws-rds-restoredbinstancetopointintimerequest.html">QtAws::RDS::RestoreDBInstanceToPointInTimeRequest</a>, <a href="qtaws-rds-revokedbsecuritygroupingressrequest.html">QtAws::RDS::RevokeDBSecurityGroupIngressRequest</a>, <a href="qtaws-rds-startdbinstancerequest.html">QtAws::RDS::StartDBInstanceRequest</a>, and <a href="qtaws-rds-stopdbinstancerequest.html">QtAws::RDS::StopDBInstanceRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-rds-rdsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#Action-enum">Action</a></b> { AddRoleToDBClusterAction, AddSourceIdentifierToSubscriptionAction, AddTagsToResourceAction, ApplyPendingMaintenanceActionAction, ..., StopDBInstanceAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#RdsRequest">RdsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#RdsRequest-1">RdsRequest</a></b>(const RdsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RdsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#operator-eq">operator=</a></b>(const RdsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#operator-eq-eq">operator==</a></b>(const RdsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#RdsRequest-2">RdsRequest</a></b>(RdsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$RdsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-rds-rdsrequest.html">RdsRequest</a> class provides an interface for RDS requests.</p>
+</div>
+<!-- @@@RdsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddRoleToDBClusterAction$$$AddSourceIdentifierToSubscriptionAction$$$AddTagsToResourceAction$$$ApplyPendingMaintenanceActionAction$$$AuthorizeDBSecurityGroupIngressAction$$$CopyDBClusterParameterGroupAction$$$CopyDBClusterSnapshotAction$$$CopyDBParameterGroupAction$$$CopyDBSnapshotAction$$$CopyOptionGroupAction$$$CreateDBClusterAction$$$CreateDBClusterParameterGroupAction$$$CreateDBClusterSnapshotAction$$$CreateDBInstanceAction$$$CreateDBInstanceReadReplicaAction$$$CreateDBParameterGroupAction$$$CreateDBSecurityGroupAction$$$CreateDBSnapshotAction$$$CreateDBSubnetGroupAction$$$CreateEventSubscriptionAction$$$CreateOptionGroupAction$$$DeleteDBClusterAction$$$DeleteDBClusterParameterGroupAction$$$DeleteDBClusterSnapshotAction$$$DeleteDBInstanceAction$$$DeleteDBParameterGroupAction$$$DeleteDBSecurityGroupAction$$$DeleteDBSnapshotAction$$$DeleteDBSubnetGroupAction$$$DeleteEventSubscriptionAction$$$DeleteOptionGroupAction$$$DescribeAccountAttributesAction$$$DescribeCertificatesAction$$$DescribeDBClusterParameterGroupsAction$$$DescribeDBClusterParametersAction$$$DescribeDBClusterSnapshotAttributesAction$$$DescribeDBClusterSnapshotsAction$$$DescribeDBClustersAction$$$DescribeDBEngineVersionsAction$$$DescribeDBInstancesAction$$$DescribeDBLogFilesAction$$$DescribeDBParameterGroupsAction$$$DescribeDBParametersAction$$$DescribeDBSecurityGroupsAction$$$DescribeDBSnapshotAttributesAction$$$DescribeDBSnapshotsAction$$$DescribeDBSubnetGroupsAction$$$DescribeEngineDefaultClusterParametersAction$$$DescribeEngineDefaultParametersAction$$$DescribeEventCategoriesAction$$$DescribeEventSubscriptionsAction$$$DescribeEventsAction$$$DescribeOptionGroupOptionsAction$$$DescribeOptionGroupsAction$$$DescribeOrderableDBInstanceOptionsAction$$$DescribePendingMaintenanceActionsAction$$$DescribeReservedDBInstancesAction$$$DescribeReservedDBInstancesOfferingsAction$$$DescribeSourceRegionsAction$$$DescribeValidDBInstanceModificationsAction$$$DownloadDBLogFilePortionAction$$$FailoverDBClusterAction$$$ListTagsForResourceAction$$$ModifyDBClusterAction$$$ModifyDBClusterParameterGroupAction$$$ModifyDBClusterSnapshotAttributeAction$$$ModifyDBInstanceAction$$$ModifyDBParameterGroupAction$$$ModifyDBSnapshotAction$$$ModifyDBSnapshotAttributeAction$$$ModifyDBSubnetGroupAction$$$ModifyEventSubscriptionAction$$$ModifyOptionGroupAction$$$PromoteReadReplicaAction$$$PromoteReadReplicaDBClusterAction$$$PurchaseReservedDBInstancesOfferingAction$$$RebootDBInstanceAction$$$RemoveRoleFromDBClusterAction$$$RemoveSourceIdentifierFromSubscriptionAction$$$RemoveTagsFromResourceAction$$$ResetDBClusterParameterGroupAction$$$ResetDBParameterGroupAction$$$RestoreDBClusterFromS3Action$$$RestoreDBClusterFromSnapshotAction$$$RestoreDBClusterToPointInTimeAction$$$RestoreDBInstanceFromDBSnapshotAction$$$RestoreDBInstanceFromS3Action$$$RestoreDBInstanceToPointInTimeAction$$$RevokeDBSecurityGroupIngressAction$$$StartDBInstanceAction$$$StopDBInstanceAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum RdsRequest::<span class="name">Action</span><br/>flags RdsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as RDS requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::AddRoleToDBClusterAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">RDS AddRoleToDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::AddSourceIdentifierToSubscriptionAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">RDS AddSourceIdentifierToSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::AddTagsToResourceAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">RDS AddTagsToResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ApplyPendingMaintenanceActionAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">RDS ApplyPendingMaintenanceAction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::AuthorizeDBSecurityGroupIngressAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">RDS AuthorizeDBSecurityGroupIngress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CopyDBClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">RDS CopyDBClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CopyDBClusterSnapshotAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">RDS CopyDBClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CopyDBParameterGroupAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">RDS CopyDBParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CopyDBSnapshotAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">RDS CopyDBSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CopyOptionGroupAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">RDS CopyOptionGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBClusterAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">RDS CreateDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">RDS CreateDBClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBClusterSnapshotAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">RDS CreateDBClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBInstanceAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">RDS CreateDBInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBInstanceReadReplicaAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">RDS CreateDBInstanceReadReplica action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBParameterGroupAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">RDS CreateDBParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBSecurityGroupAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">RDS CreateDBSecurityGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBSnapshotAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">RDS CreateDBSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateDBSubnetGroupAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">RDS CreateDBSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateEventSubscriptionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">RDS CreateEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::CreateOptionGroupAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">RDS CreateOptionGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBClusterAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">RDS DeleteDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">RDS DeleteDBClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBClusterSnapshotAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">RDS DeleteDBClusterSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBInstanceAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">RDS DeleteDBInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBParameterGroupAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">RDS DeleteDBParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBSecurityGroupAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">RDS DeleteDBSecurityGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBSnapshotAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">RDS DeleteDBSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteDBSubnetGroupAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">RDS DeleteDBSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteEventSubscriptionAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">RDS DeleteEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DeleteOptionGroupAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">RDS DeleteOptionGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeAccountAttributesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">RDS DescribeAccountAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeCertificatesAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">RDS DescribeCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBClusterParameterGroupsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">RDS DescribeDBClusterParameterGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBClusterParametersAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">RDS DescribeDBClusterParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBClusterSnapshotAttributesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">RDS DescribeDBClusterSnapshotAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBClusterSnapshotsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">RDS DescribeDBClusterSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBClustersAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">RDS DescribeDBClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBEngineVersionsAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">RDS DescribeDBEngineVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBInstancesAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">RDS DescribeDBInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBLogFilesAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">RDS DescribeDBLogFiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBParameterGroupsAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">RDS DescribeDBParameterGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBParametersAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">RDS DescribeDBParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBSecurityGroupsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">RDS DescribeDBSecurityGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBSnapshotAttributesAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">RDS DescribeDBSnapshotAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBSnapshotsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">RDS DescribeDBSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeDBSubnetGroupsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">RDS DescribeDBSubnetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeEngineDefaultClusterParametersAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">RDS DescribeEngineDefaultClusterParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeEngineDefaultParametersAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">RDS DescribeEngineDefaultParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeEventCategoriesAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">RDS DescribeEventCategories action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeEventSubscriptionsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">RDS DescribeEventSubscriptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeEventsAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">RDS DescribeEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeOptionGroupOptionsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">RDS DescribeOptionGroupOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeOptionGroupsAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">RDS DescribeOptionGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeOrderableDBInstanceOptionsAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">RDS DescribeOrderableDBInstanceOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribePendingMaintenanceActionsAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">RDS DescribePendingMaintenanceActions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeReservedDBInstancesAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">RDS DescribeReservedDBInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeReservedDBInstancesOfferingsAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">RDS DescribeReservedDBInstancesOfferings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeSourceRegionsAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">RDS DescribeSourceRegions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DescribeValidDBInstanceModificationsAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">RDS DescribeValidDBInstanceModifications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::DownloadDBLogFilePortionAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">RDS DownloadDBLogFilePortion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::FailoverDBClusterAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">RDS FailoverDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">RDS ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBClusterAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">RDS ModifyDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">RDS ModifyDBClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBClusterSnapshotAttributeAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">RDS ModifyDBClusterSnapshotAttribute action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBInstanceAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">RDS ModifyDBInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBParameterGroupAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">RDS ModifyDBParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBSnapshotAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">RDS ModifyDBSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBSnapshotAttributeAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">RDS ModifyDBSnapshotAttribute action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyDBSubnetGroupAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">RDS ModifyDBSubnetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyEventSubscriptionAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">RDS ModifyEventSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ModifyOptionGroupAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">RDS ModifyOptionGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::PromoteReadReplicaAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">RDS PromoteReadReplica action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::PromoteReadReplicaDBClusterAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">RDS PromoteReadReplicaDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::PurchaseReservedDBInstancesOfferingAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">RDS PurchaseReservedDBInstancesOffering action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RebootDBInstanceAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">RDS RebootDBInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RemoveRoleFromDBClusterAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">RDS RemoveRoleFromDBCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RemoveSourceIdentifierFromSubscriptionAction</code></td><td class="topAlign tblval"><code>78</code></td><td class="topAlign">RDS RemoveSourceIdentifierFromSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RemoveTagsFromResourceAction</code></td><td class="topAlign tblval"><code>79</code></td><td class="topAlign">RDS RemoveTagsFromResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ResetDBClusterParameterGroupAction</code></td><td class="topAlign tblval"><code>80</code></td><td class="topAlign">RDS ResetDBClusterParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::ResetDBParameterGroupAction</code></td><td class="topAlign tblval"><code>81</code></td><td class="topAlign">RDS ResetDBParameterGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBClusterFromS3Action</code></td><td class="topAlign tblval"><code>82</code></td><td class="topAlign">RDS RestoreDBClusterFromS3 action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBClusterFromSnapshotAction</code></td><td class="topAlign tblval"><code>83</code></td><td class="topAlign">RDS RestoreDBClusterFromSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBClusterToPointInTimeAction</code></td><td class="topAlign tblval"><code>84</code></td><td class="topAlign">RDS RestoreDBClusterToPointInTime action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBInstanceFromDBSnapshotAction</code></td><td class="topAlign tblval"><code>85</code></td><td class="topAlign">RDS RestoreDBInstanceFromDBSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBInstanceFromS3Action</code></td><td class="topAlign tblval"><code>86</code></td><td class="topAlign">RDS RestoreDBInstanceFromS3 action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RestoreDBInstanceToPointInTimeAction</code></td><td class="topAlign tblval"><code>87</code></td><td class="topAlign">RDS RestoreDBInstanceToPointInTime action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::RevokeDBSecurityGroupIngressAction</code></td><td class="topAlign tblval"><code>88</code></td><td class="topAlign">RDS RevokeDBSecurityGroupIngress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::StartDBInstanceAction</code></td><td class="topAlign tblval"><code>89</code></td><td class="topAlign">RDS StartDBInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::RDS::RdsRequest::StopDBInstanceAction</code></td><td class="topAlign tblval"><code>90</code></td><td class="topAlign">RDS StopDBInstance action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RdsRequest[overload1]$$$RdsRequestconstAction -->
+<h3 class="fn" id="RdsRequest"><a name="RdsRequest"></a>RdsRequest::<span class="name">RdsRequest</span>(const <span class="type"><a href="qtaws-rds-rdsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-rds-rdsrequest.html">RdsRequest</a> object for RDS <i>action</i>.</p>
+<!-- @@@RdsRequest -->
+<!-- $$$RdsRequest$$$RdsRequestconstRdsRequest& -->
+<h3 class="fn" id="RdsRequest-1"><a name="RdsRequest-1"></a>RdsRequest::<span class="name">RdsRequest</span>(const <span class="type"><a href="qtaws-rds-rdsrequest.html#RdsRequest">RdsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@RdsRequest -->
+<!-- $$$RdsRequest$$$RdsRequestRdsRequestPrivate*const -->
+<h3 class="fn" id="RdsRequest-2"><a name="RdsRequest-2"></a><code>[protected] </code>RdsRequest::<span class="name">RdsRequest</span>(<span class="type"><a href="qtaws-rds-rdsrequestprivate.html">RdsRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-rds-rdsrequest.html">RdsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-rds-rdsrequestprivate.html">RdsRequestPrivate</a>.</p>
+<!-- @@@RdsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-rds-rdsrequest.html#Action-enum">Action</a></span> RdsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the RDS action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> RdsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the RDS action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> RdsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the RDS API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> RdsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> RdsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> RdsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;RdsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> RdsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-rds-rdsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the RDS action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> RdsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the RDS API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> RdsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> RdsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-rds-rdsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> RdsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the RDS request using the given <i>endpoint</i>.</p>
+<p>This RDS implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-rds-rdsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constRdsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-rds-rdsrequest.html#RdsRequest">RdsRequest</a></span> &amp;RdsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-rds-rdsrequest.html#RdsRequest">RdsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-rds-rdsrequest.html">RdsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constRdsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> RdsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-rds-rdsrequest.html#RdsRequest">RdsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

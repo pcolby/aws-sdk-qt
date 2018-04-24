@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- appsyncclient.cpp -->
+  <title>AppSyncClient Class | AppSync</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsappsync-index.html">AppSync</a></li>
+<li><a href="qtawsappsync-module.html">C++ Classes</a></li>
+<li>AppSyncClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AppSyncClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-appsync-appsyncclient.html">QtAws::AppSync::AppSyncClient</a>)<br/></span>
+<!-- $$$AppSyncClient-brief -->
+<p>The <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> class provides access to the AWS <a href="qtaws-appsync.html">AppSync</a> service. <a href="#details">More...</a></p>
+<!-- @@@AppSyncClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AppSyncClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-appsync-appsyncclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#AppSyncClient">AppSyncClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#AppSyncClient-1">AppSyncClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#createApiKey">createApiKey</a></b>(const CreateApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#createDataSource">createDataSource</a></b>(const CreateDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGraphqlApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#createGraphqlApi">createGraphqlApi</a></b>(const CreateGraphqlApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResolverResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#createResolver">createResolver</a></b>(const CreateResolverRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#createType">createType</a></b>(const CreateTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#deleteApiKey">deleteApiKey</a></b>(const DeleteApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#deleteDataSource">deleteDataSource</a></b>(const DeleteDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGraphqlApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#deleteGraphqlApi">deleteGraphqlApi</a></b>(const DeleteGraphqlApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteResolverResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#deleteResolver">deleteResolver</a></b>(const DeleteResolverRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#deleteType">deleteType</a></b>(const DeleteTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getDataSource">getDataSource</a></b>(const GetDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGraphqlApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getGraphqlApi">getGraphqlApi</a></b>(const GetGraphqlApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntrospectionSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getIntrospectionSchema">getIntrospectionSchema</a></b>(const GetIntrospectionSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetResolverResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getResolver">getResolver</a></b>(const GetResolverRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSchemaCreationStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getSchemaCreationStatus">getSchemaCreationStatus</a></b>(const GetSchemaCreationStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#getType">getType</a></b>(const GetTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListApiKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#listApiKeys">listApiKeys</a></b>(const ListApiKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDataSourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#listDataSources">listDataSources</a></b>(const ListDataSourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGraphqlApisResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#listGraphqlApis">listGraphqlApis</a></b>(const ListGraphqlApisRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResolversResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#listResolvers">listResolvers</a></b>(const ListResolversRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#listTypes">listTypes</a></b>(const ListTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartSchemaCreationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#startSchemaCreation">startSchemaCreation</a></b>(const StartSchemaCreationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#updateApiKey">updateApiKey</a></b>(const UpdateApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#updateDataSource">updateDataSource</a></b>(const UpdateDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGraphqlApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#updateGraphqlApi">updateGraphqlApi</a></b>(const UpdateGraphqlApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateResolverResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#updateResolver">updateResolver</a></b>(const UpdateResolverRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appsync-appsyncclient.html#updateType">updateType</a></b>(const UpdateTypeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AppSyncClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> class provides access to the AWS <a href="qtaws-appsync.html">AppSync</a> service.</p>
+<p>AWS <a href="qtaws-appsync.html">AppSync</a> provides API actions for creating and interacting with data sources using GraphQL from your</p>
+</div>
+<!-- @@@AppSyncClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AppSyncClient[overload1]$$$AppSyncClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AppSyncClient"><a name="AppSyncClient"></a>AppSyncClient::<span class="name">AppSyncClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AppSyncClient -->
+<!-- $$$AppSyncClient$$$AppSyncClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AppSyncClient-1"><a name="AppSyncClient-1"></a>AppSyncClient::<span class="name">AppSyncClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-appsync-appsyncclient.html#AppSyncClient">AppSyncClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AppSyncClient -->
+<!-- $$$createApiKey[overload1]$$$createApiKeyconstCreateApiKeyRequest& -->
+<h3 class="fn" id="createApiKey"><a name="createApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-createapikeyresponse.html">CreateApiKeyResponse</a></span> *AppSyncClient::<span class="name">createApiKey</span>(const <span class="type"><a href="qtaws-appsync-createapikeyrequest.html">CreateApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-createapikeyresponse.html">CreateApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a unique key that you can distribute to clients who are executing your</p>
+<!-- @@@createApiKey -->
+<!-- $$$createDataSource[overload1]$$$createDataSourceconstCreateDataSourceRequest& -->
+<h3 class="fn" id="createDataSource"><a name="createDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-createdatasourceresponse.html">CreateDataSourceResponse</a></span> *AppSyncClient::<span class="name">createDataSource</span>(const <span class="type"><a href="qtaws-appsync-createdatasourcerequest.html">CreateDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-createdatasourceresponse.html">CreateDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;DataSource&lt;/code&gt;</p>
+<!-- @@@createDataSource -->
+<!-- $$$createGraphqlApi[overload1]$$$createGraphqlApiconstCreateGraphqlApiRequest& -->
+<h3 class="fn" id="createGraphqlApi"><a name="createGraphqlApi"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-creategraphqlapiresponse.html">CreateGraphqlApiResponse</a></span> *AppSyncClient::<span class="name">createGraphqlApi</span>(const <span class="type"><a href="qtaws-appsync-creategraphqlapirequest.html">CreateGraphqlApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-creategraphqlapiresponse.html">CreateGraphqlApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;GraphqlApi&lt;/code&gt;</p>
+<!-- @@@createGraphqlApi -->
+<!-- $$$createResolver[overload1]$$$createResolverconstCreateResolverRequest& -->
+<h3 class="fn" id="createResolver"><a name="createResolver"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-createresolverresponse.html">CreateResolverResponse</a></span> *AppSyncClient::<span class="name">createResolver</span>(const <span class="type"><a href="qtaws-appsync-createresolverrequest.html">CreateResolverRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-createresolverresponse.html">CreateResolverResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;Resolver&lt;/code&gt;</p>
+<p>object&gt;</p>
+<p>A resolver converts incoming requests into a format that a data source can understand and converts the data source's responses into</p>
+<!-- @@@createResolver -->
+<!-- $$$createType[overload1]$$$createTypeconstCreateTypeRequest& -->
+<h3 class="fn" id="createType"><a name="createType"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-createtyperesponse.html">CreateTypeResponse</a></span> *AppSyncClient::<span class="name">createType</span>(const <span class="type"><a href="qtaws-appsync-createtyperequest.html">CreateTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-createtyperesponse.html">CreateTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;Type&lt;/code&gt;</p>
+<!-- @@@createType -->
+<!-- $$$deleteApiKey[overload1]$$$deleteApiKeyconstDeleteApiKeyRequest& -->
+<h3 class="fn" id="deleteApiKey"><a name="deleteApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-deleteapikeyresponse.html">DeleteApiKeyResponse</a></span> *AppSyncClient::<span class="name">deleteApiKey</span>(const <span class="type"><a href="qtaws-appsync-deleteapikeyrequest.html">DeleteApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-deleteapikeyresponse.html">DeleteApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an API</p>
+<!-- @@@deleteApiKey -->
+<!-- $$$deleteDataSource[overload1]$$$deleteDataSourceconstDeleteDataSourceRequest& -->
+<h3 class="fn" id="deleteDataSource"><a name="deleteDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-deletedatasourceresponse.html">DeleteDataSourceResponse</a></span> *AppSyncClient::<span class="name">deleteDataSource</span>(const <span class="type"><a href="qtaws-appsync-deletedatasourcerequest.html">DeleteDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-deletedatasourceresponse.html">DeleteDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;code&gt;DataSource&lt;/code&gt;</p>
+<!-- @@@deleteDataSource -->
+<!-- $$$deleteGraphqlApi[overload1]$$$deleteGraphqlApiconstDeleteGraphqlApiRequest& -->
+<h3 class="fn" id="deleteGraphqlApi"><a name="deleteGraphqlApi"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-deletegraphqlapiresponse.html">DeleteGraphqlApiResponse</a></span> *AppSyncClient::<span class="name">deleteGraphqlApi</span>(const <span class="type"><a href="qtaws-appsync-deletegraphqlapirequest.html">DeleteGraphqlApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-deletegraphqlapiresponse.html">DeleteGraphqlApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;code&gt;GraphqlApi&lt;/code&gt;</p>
+<!-- @@@deleteGraphqlApi -->
+<!-- $$$deleteResolver[overload1]$$$deleteResolverconstDeleteResolverRequest& -->
+<h3 class="fn" id="deleteResolver"><a name="deleteResolver"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-deleteresolverresponse.html">DeleteResolverResponse</a></span> *AppSyncClient::<span class="name">deleteResolver</span>(const <span class="type"><a href="qtaws-appsync-deleteresolverrequest.html">DeleteResolverRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-deleteresolverresponse.html">DeleteResolverResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;code&gt;Resolver&lt;/code&gt;</p>
+<!-- @@@deleteResolver -->
+<!-- $$$deleteType[overload1]$$$deleteTypeconstDeleteTypeRequest& -->
+<h3 class="fn" id="deleteType"><a name="deleteType"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-deletetyperesponse.html">DeleteTypeResponse</a></span> *AppSyncClient::<span class="name">deleteType</span>(const <span class="type"><a href="qtaws-appsync-deletetyperequest.html">DeleteTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-deletetyperesponse.html">DeleteTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;code&gt;Type&lt;/code&gt;</p>
+<!-- @@@deleteType -->
+<!-- $$$getDataSource[overload1]$$$getDataSourceconstGetDataSourceRequest& -->
+<h3 class="fn" id="getDataSource"><a name="getDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-getdatasourceresponse.html">GetDataSourceResponse</a></span> *AppSyncClient::<span class="name">getDataSource</span>(const <span class="type"><a href="qtaws-appsync-getdatasourcerequest.html">GetDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-getdatasourceresponse.html">GetDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a &lt;code&gt;DataSource&lt;/code&gt;</p>
+<!-- @@@getDataSource -->
+<!-- $$$getGraphqlApi[overload1]$$$getGraphqlApiconstGetGraphqlApiRequest& -->
+<h3 class="fn" id="getGraphqlApi"><a name="getGraphqlApi"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-getgraphqlapiresponse.html">GetGraphqlApiResponse</a></span> *AppSyncClient::<span class="name">getGraphqlApi</span>(const <span class="type"><a href="qtaws-appsync-getgraphqlapirequest.html">GetGraphqlApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-getgraphqlapiresponse.html">GetGraphqlApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a &lt;code&gt;GraphqlApi&lt;/code&gt;</p>
+<!-- @@@getGraphqlApi -->
+<!-- $$$getIntrospectionSchema[overload1]$$$getIntrospectionSchemaconstGetIntrospectionSchemaRequest& -->
+<h3 class="fn" id="getIntrospectionSchema"><a name="getIntrospectionSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-getintrospectionschemaresponse.html">GetIntrospectionSchemaResponse</a></span> *AppSyncClient::<span class="name">getIntrospectionSchema</span>(const <span class="type"><a href="qtaws-appsync-getintrospectionschemarequest.html">GetIntrospectionSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-getintrospectionschemaresponse.html">GetIntrospectionSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the introspection schema for a GraphQL</p>
+<!-- @@@getIntrospectionSchema -->
+<!-- $$$getResolver[overload1]$$$getResolverconstGetResolverRequest& -->
+<h3 class="fn" id="getResolver"><a name="getResolver"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-getresolverresponse.html">GetResolverResponse</a></span> *AppSyncClient::<span class="name">getResolver</span>(const <span class="type"><a href="qtaws-appsync-getresolverrequest.html">GetResolverRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-getresolverresponse.html">GetResolverResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a &lt;code&gt;Resolver&lt;/code&gt;</p>
+<!-- @@@getResolver -->
+<!-- $$$getSchemaCreationStatus[overload1]$$$getSchemaCreationStatusconstGetSchemaCreationStatusRequest& -->
+<h3 class="fn" id="getSchemaCreationStatus"><a name="getSchemaCreationStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-getschemacreationstatusresponse.html">GetSchemaCreationStatusResponse</a></span> *AppSyncClient::<span class="name">getSchemaCreationStatus</span>(const <span class="type"><a href="qtaws-appsync-getschemacreationstatusrequest.html">GetSchemaCreationStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-getschemacreationstatusresponse.html">GetSchemaCreationStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the current status of a schema creation</p>
+<!-- @@@getSchemaCreationStatus -->
+<!-- $$$getType[overload1]$$$getTypeconstGetTypeRequest& -->
+<h3 class="fn" id="getType"><a name="getType"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-gettyperesponse.html">GetTypeResponse</a></span> *AppSyncClient::<span class="name">getType</span>(const <span class="type"><a href="qtaws-appsync-gettyperequest.html">GetTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-gettyperesponse.html">GetTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a &lt;code&gt;Type&lt;/code&gt;</p>
+<!-- @@@getType -->
+<!-- $$$listApiKeys[overload1]$$$listApiKeysconstListApiKeysRequest& -->
+<h3 class="fn" id="listApiKeys"><a name="listApiKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listapikeysresponse.html">ListApiKeysResponse</a></span> *AppSyncClient::<span class="name">listApiKeys</span>(const <span class="type"><a href="qtaws-appsync-listapikeysrequest.html">ListApiKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listapikeysresponse.html">ListApiKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the API keys for a given</p>
+<!-- @@@listApiKeys -->
+<!-- $$$listDataSources[overload1]$$$listDataSourcesconstListDataSourcesRequest& -->
+<h3 class="fn" id="listDataSources"><a name="listDataSources"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listdatasourcesresponse.html">ListDataSourcesResponse</a></span> *AppSyncClient::<span class="name">listDataSources</span>(const <span class="type"><a href="qtaws-appsync-listdatasourcesrequest.html">ListDataSourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listdatasourcesresponse.html">ListDataSourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the data sources for a given</p>
+<!-- @@@listDataSources -->
+<!-- $$$listGraphqlApis[overload1]$$$listGraphqlApisconstListGraphqlApisRequest& -->
+<h3 class="fn" id="listGraphqlApis"><a name="listGraphqlApis"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listgraphqlapisresponse.html">ListGraphqlApisResponse</a></span> *AppSyncClient::<span class="name">listGraphqlApis</span>(const <span class="type"><a href="qtaws-appsync-listgraphqlapisrequest.html">ListGraphqlApisRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listgraphqlapisresponse.html">ListGraphqlApisResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your GraphQL</p>
+<!-- @@@listGraphqlApis -->
+<!-- $$$listResolvers[overload1]$$$listResolversconstListResolversRequest& -->
+<h3 class="fn" id="listResolvers"><a name="listResolvers"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listresolversresponse.html">ListResolversResponse</a></span> *AppSyncClient::<span class="name">listResolvers</span>(const <span class="type"><a href="qtaws-appsync-listresolversrequest.html">ListResolversRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listresolversresponse.html">ListResolversResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the resolvers for a given API and</p>
+<!-- @@@listResolvers -->
+<!-- $$$listTypes[overload1]$$$listTypesconstListTypesRequest& -->
+<h3 class="fn" id="listTypes"><a name="listTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listtypesresponse.html">ListTypesResponse</a></span> *AppSyncClient::<span class="name">listTypes</span>(const <span class="type"><a href="qtaws-appsync-listtypesrequest.html">ListTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listtypesresponse.html">ListTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the types for a given</p>
+<!-- @@@listTypes -->
+<!-- $$$startSchemaCreation[overload1]$$$startSchemaCreationconstStartSchemaCreationRequest& -->
+<h3 class="fn" id="startSchemaCreation"><a name="startSchemaCreation"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-startschemacreationresponse.html">StartSchemaCreationResponse</a></span> *AppSyncClient::<span class="name">startSchemaCreation</span>(const <span class="type"><a href="qtaws-appsync-startschemacreationrequest.html">StartSchemaCreationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-startschemacreationresponse.html">StartSchemaCreationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new schema to your GraphQL</p>
+<p>API&gt;</p>
+<p>This operation is asynchronous. Use to determine when it has</p>
+<!-- @@@startSchemaCreation -->
+<!-- $$$updateApiKey[overload1]$$$updateApiKeyconstUpdateApiKeyRequest& -->
+<h3 class="fn" id="updateApiKey"><a name="updateApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-updateapikeyresponse.html">UpdateApiKeyResponse</a></span> *AppSyncClient::<span class="name">updateApiKey</span>(const <span class="type"><a href="qtaws-appsync-updateapikeyrequest.html">UpdateApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-updateapikeyresponse.html">UpdateApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an API</p>
+<!-- @@@updateApiKey -->
+<!-- $$$updateDataSource[overload1]$$$updateDataSourceconstUpdateDataSourceRequest& -->
+<h3 class="fn" id="updateDataSource"><a name="updateDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-updatedatasourceresponse.html">UpdateDataSourceResponse</a></span> *AppSyncClient::<span class="name">updateDataSource</span>(const <span class="type"><a href="qtaws-appsync-updatedatasourcerequest.html">UpdateDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-updatedatasourceresponse.html">UpdateDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;code&gt;DataSource&lt;/code&gt;</p>
+<!-- @@@updateDataSource -->
+<!-- $$$updateGraphqlApi[overload1]$$$updateGraphqlApiconstUpdateGraphqlApiRequest& -->
+<h3 class="fn" id="updateGraphqlApi"><a name="updateGraphqlApi"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-updategraphqlapiresponse.html">UpdateGraphqlApiResponse</a></span> *AppSyncClient::<span class="name">updateGraphqlApi</span>(const <span class="type"><a href="qtaws-appsync-updategraphqlapirequest.html">UpdateGraphqlApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-updategraphqlapiresponse.html">UpdateGraphqlApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;code&gt;GraphqlApi&lt;/code&gt;</p>
+<!-- @@@updateGraphqlApi -->
+<!-- $$$updateResolver[overload1]$$$updateResolverconstUpdateResolverRequest& -->
+<h3 class="fn" id="updateResolver"><a name="updateResolver"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-updateresolverresponse.html">UpdateResolverResponse</a></span> *AppSyncClient::<span class="name">updateResolver</span>(const <span class="type"><a href="qtaws-appsync-updateresolverrequest.html">UpdateResolverRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-updateresolverresponse.html">UpdateResolverResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;code&gt;Resolver&lt;/code&gt;</p>
+<!-- @@@updateResolver -->
+<!-- $$$updateType[overload1]$$$updateTypeconstUpdateTypeRequest& -->
+<h3 class="fn" id="updateType"><a name="updateType"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-updatetyperesponse.html">UpdateTypeResponse</a></span> *AppSyncClient::<span class="name">updateType</span>(const <span class="type"><a href="qtaws-appsync-updatetyperequest.html">UpdateTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-updatetyperesponse.html">UpdateTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;code&gt;Type&lt;/code&gt;</p>
+<!-- @@@updateType -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

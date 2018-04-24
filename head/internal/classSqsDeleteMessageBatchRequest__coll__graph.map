@@ -1,5 +1,0 @@
-<map id="SqsDeleteMessageBatchRequest" name="SqsDeleteMessageBatchRequest">
-<area shape="rect" id="node2" href="$classSqsRequest.html" title="Interface class for providing SQS requests. " alt="" coords="67,95,162,121"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="143,5,289,32"/>
-<area shape="rect" id="node4" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="187,95,373,121"/>
-</map>

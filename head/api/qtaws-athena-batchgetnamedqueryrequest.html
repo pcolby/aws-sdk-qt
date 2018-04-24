@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- batchgetnamedqueryrequest.cpp -->
+  <title>BatchGetNamedQueryRequest Class | Athena</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsathena-index.html">Athena</a></li>
+<li><a href="qtawsathena-module.html">C++ Classes</a></li>
+<li>BatchGetNamedQueryRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">BatchGetNamedQueryRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-athena-batchgetnamedqueryrequest.html">QtAws::Athena::BatchGetNamedQueryRequest</a>)<br/></span>
+<!-- $$$BatchGetNamedQueryRequest-brief -->
+<p>The <a href="qtaws-athena-batchgetnamedqueryrequest.html">BatchGetNamedQueryRequest</a> class provides an interface for Athena BatchGetNamedQuery requests. <a href="#details">More...</a></p>
+<!-- @@@BatchGetNamedQueryRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BatchGetNamedQueryRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-athena-athenarequest.html">QtAws::Athena::AthenaRequest</a></td></tr></table></div><ul>
+<li><a href="qtaws-athena-batchgetnamedqueryrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-batchgetnamedqueryrequest.html#BatchGetNamedQueryRequest">BatchGetNamedQueryRequest</a></b>(const BatchGetNamedQueryRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-batchgetnamedqueryrequest.html#BatchGetNamedQueryRequest-1">BatchGetNamedQueryRequest</a></b>()</td></tr>
+</table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-batchgetnamedqueryrequest.html#isValid">isValid</a></b>() const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-athena-athenarequest.html#public-functions">QtAws::Athena::AthenaRequest</a></li>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QtAws::Core::AwsAbstractResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-batchgetnamedqueryrequest.html#response">response</a></b>(QNetworkReply * const <i>reply</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-athena-athenarequest.html#protected-functions">QtAws::Athena::AthenaRequest</a></li>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$BatchGetNamedQueryRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-athena-batchgetnamedqueryrequest.html">BatchGetNamedQueryRequest</a> class provides an interface for Athena BatchGetNamedQuery requests.</p>
+<p>Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/what-is.html&quot;&gt;What is Amazon Athena&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+</div>
+<p><b>See also </b><a href="qtaws-athena-athenaclient.html#batchGetNamedQuery">AthenaClient::batchGetNamedQuery</a>.</p>
+<!-- @@@BatchGetNamedQueryRequest -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$BatchGetNamedQueryRequest[overload1]$$$BatchGetNamedQueryRequestconstBatchGetNamedQueryRequest& -->
+<h3 class="fn" id="BatchGetNamedQueryRequest"><a name="BatchGetNamedQueryRequest"></a>BatchGetNamedQueryRequest::<span class="name">BatchGetNamedQueryRequest</span>(const <span class="type"><a href="qtaws-athena-batchgetnamedqueryrequest.html#BatchGetNamedQueryRequest">BatchGetNamedQueryRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@BatchGetNamedQueryRequest -->
+<!-- $$$BatchGetNamedQueryRequest$$$BatchGetNamedQueryRequest -->
+<h3 class="fn" id="BatchGetNamedQueryRequest-1"><a name="BatchGetNamedQueryRequest-1"></a>BatchGetNamedQueryRequest::<span class="name">BatchGetNamedQueryRequest</span>()</h3>
+<p>Constructs a <a href="qtaws-athena-batchgetnamedqueryrequest.html">BatchGetNamedQueryRequest</a> object.</p>
+<!-- @@@BatchGetNamedQueryRequest -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><code>[override virtual] </code><span class="type">bool</span> BatchGetNamedQueryRequest::<span class="name">isValid</span>() const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#isValid">AwsAbstractRequest::isValid</a>().</p>
+<!-- @@@isValid -->
+<!-- $$$response[overload1]$$$responseQNetworkReply*const -->
+<h3 class="fn" id="response"><a name="response"></a><code>[override virtual protected] </code><span class="type">QtAws::Core::AwsAbstractResponse</span> *BatchGetNamedQueryRequest::<span class="name">response</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#response">AwsAbstractRequest::response</a>().</p>
+<p>Returns a <a href="qtaws-athena-batchgetnamedqueryresponse.html">BatchGetNamedQueryResponse</a> object to process <i>reply</i>.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#send">QtAws::Core::AwsAbstractClient::send</a>.</p>
+<!-- @@@response -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

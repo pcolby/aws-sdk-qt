@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudformationrequest.cpp -->
+  <title>CloudFormationRequest Class | CloudFormation</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudformation-index.html">CloudFormation</a></li>
+<li><a href="qtawscloudformation-module.html">C++ Classes</a></li>
+<li>CloudFormationRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudFormationRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudformation-cloudformationrequest.html">QtAws::CloudFormation::CloudFormationRequest</a>)<br/></span>
+<!-- $$$CloudFormationRequest-brief -->
+<p>The <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> class provides an interface for <a href="qtaws-cloudformation.html">CloudFormation</a> requests. <a href="#details">More...</a></p>
+<!-- @@@CloudFormationRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudFormationRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-cloudformation-cancelupdatestackrequest.html">QtAws::CloudFormation::CancelUpdateStackRequest</a>, <a href="qtaws-cloudformation-continueupdaterollbackrequest.html">QtAws::CloudFormation::ContinueUpdateRollbackRequest</a>, <a href="qtaws-cloudformation-createchangesetrequest.html">QtAws::CloudFormation::CreateChangeSetRequest</a>, <a href="qtaws-cloudformation-createstackinstancesrequest.html">QtAws::CloudFormation::CreateStackInstancesRequest</a>, <a href="qtaws-cloudformation-createstackrequest.html">QtAws::CloudFormation::CreateStackRequest</a>, <a href="qtaws-cloudformation-createstacksetrequest.html">QtAws::CloudFormation::CreateStackSetRequest</a>, <a href="qtaws-cloudformation-deletechangesetrequest.html">QtAws::CloudFormation::DeleteChangeSetRequest</a>, <a href="qtaws-cloudformation-deletestackinstancesrequest.html">QtAws::CloudFormation::DeleteStackInstancesRequest</a>, <a href="qtaws-cloudformation-deletestackrequest.html">QtAws::CloudFormation::DeleteStackRequest</a>, <a href="qtaws-cloudformation-deletestacksetrequest.html">QtAws::CloudFormation::DeleteStackSetRequest</a>, <a href="qtaws-cloudformation-describeaccountlimitsrequest.html">QtAws::CloudFormation::DescribeAccountLimitsRequest</a>, <a href="qtaws-cloudformation-describechangesetrequest.html">QtAws::CloudFormation::DescribeChangeSetRequest</a>, <a href="qtaws-cloudformation-describestackeventsrequest.html">QtAws::CloudFormation::DescribeStackEventsRequest</a>, <a href="qtaws-cloudformation-describestackinstancerequest.html">QtAws::CloudFormation::DescribeStackInstanceRequest</a>, <a href="qtaws-cloudformation-describestackresourcerequest.html">QtAws::CloudFormation::DescribeStackResourceRequest</a>, <a href="qtaws-cloudformation-describestackresourcesrequest.html">QtAws::CloudFormation::DescribeStackResourcesRequest</a>, <a href="qtaws-cloudformation-describestacksetoperationrequest.html">QtAws::CloudFormation::DescribeStackSetOperationRequest</a>, <a href="qtaws-cloudformation-describestacksetrequest.html">QtAws::CloudFormation::DescribeStackSetRequest</a>, <a href="qtaws-cloudformation-describestacksrequest.html">QtAws::CloudFormation::DescribeStacksRequest</a>, <a href="qtaws-cloudformation-estimatetemplatecostrequest.html">QtAws::CloudFormation::EstimateTemplateCostRequest</a>, <a href="qtaws-cloudformation-executechangesetrequest.html">QtAws::CloudFormation::ExecuteChangeSetRequest</a>, <a href="qtaws-cloudformation-getstackpolicyrequest.html">QtAws::CloudFormation::GetStackPolicyRequest</a>, <a href="qtaws-cloudformation-gettemplaterequest.html">QtAws::CloudFormation::GetTemplateRequest</a>, <a href="qtaws-cloudformation-gettemplatesummaryrequest.html">QtAws::CloudFormation::GetTemplateSummaryRequest</a>, <a href="qtaws-cloudformation-listchangesetsrequest.html">QtAws::CloudFormation::ListChangeSetsRequest</a>, <a href="qtaws-cloudformation-listexportsrequest.html">QtAws::CloudFormation::ListExportsRequest</a>, <a href="qtaws-cloudformation-listimportsrequest.html">QtAws::CloudFormation::ListImportsRequest</a>, <a href="qtaws-cloudformation-liststackinstancesrequest.html">QtAws::CloudFormation::ListStackInstancesRequest</a>, <a href="qtaws-cloudformation-liststackresourcesrequest.html">QtAws::CloudFormation::ListStackResourcesRequest</a>, <a href="qtaws-cloudformation-liststacksetoperationresultsrequest.html">QtAws::CloudFormation::ListStackSetOperationResultsRequest</a>, <a href="qtaws-cloudformation-liststacksetoperationsrequest.html">QtAws::CloudFormation::ListStackSetOperationsRequest</a>, <a href="qtaws-cloudformation-liststacksetsrequest.html">QtAws::CloudFormation::ListStackSetsRequest</a>, <a href="qtaws-cloudformation-liststacksrequest.html">QtAws::CloudFormation::ListStacksRequest</a>, <a href="qtaws-cloudformation-setstackpolicyrequest.html">QtAws::CloudFormation::SetStackPolicyRequest</a>, <a href="qtaws-cloudformation-signalresourcerequest.html">QtAws::CloudFormation::SignalResourceRequest</a>, <a href="qtaws-cloudformation-stopstacksetoperationrequest.html">QtAws::CloudFormation::StopStackSetOperationRequest</a>, <a href="qtaws-cloudformation-updatestackinstancesrequest.html">QtAws::CloudFormation::UpdateStackInstancesRequest</a>, <a href="qtaws-cloudformation-updatestackrequest.html">QtAws::CloudFormation::UpdateStackRequest</a>, <a href="qtaws-cloudformation-updatestacksetrequest.html">QtAws::CloudFormation::UpdateStackSetRequest</a>, <a href="qtaws-cloudformation-updateterminationprotectionrequest.html">QtAws::CloudFormation::UpdateTerminationProtectionRequest</a>, and <a href="qtaws-cloudformation-validatetemplaterequest.html">QtAws::CloudFormation::ValidateTemplateRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-cloudformation-cloudformationrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">Action</a></b> { CancelUpdateStackAction, ContinueUpdateRollbackAction, CreateChangeSetAction, CreateStackAction, ..., ValidateTemplateAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest">CloudFormationRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest-1">CloudFormationRequest</a></b>(const CloudFormationRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CloudFormationRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#operator-eq">operator=</a></b>(const CloudFormationRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#operator-eq-eq">operator==</a></b>(const CloudFormationRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest-2">CloudFormationRequest</a></b>(CloudFormationRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudFormationRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> class provides an interface for <a href="qtaws-cloudformation.html">CloudFormation</a> requests.</p>
+</div>
+<!-- @@@CloudFormationRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CancelUpdateStackAction$$$ContinueUpdateRollbackAction$$$CreateChangeSetAction$$$CreateStackAction$$$CreateStackInstancesAction$$$CreateStackSetAction$$$DeleteChangeSetAction$$$DeleteStackAction$$$DeleteStackInstancesAction$$$DeleteStackSetAction$$$DescribeAccountLimitsAction$$$DescribeChangeSetAction$$$DescribeStackEventsAction$$$DescribeStackInstanceAction$$$DescribeStackResourceAction$$$DescribeStackResourcesAction$$$DescribeStackSetAction$$$DescribeStackSetOperationAction$$$DescribeStacksAction$$$EstimateTemplateCostAction$$$ExecuteChangeSetAction$$$GetStackPolicyAction$$$GetTemplateAction$$$GetTemplateSummaryAction$$$ListChangeSetsAction$$$ListExportsAction$$$ListImportsAction$$$ListStackInstancesAction$$$ListStackResourcesAction$$$ListStackSetOperationResultsAction$$$ListStackSetOperationsAction$$$ListStackSetsAction$$$ListStacksAction$$$SetStackPolicyAction$$$SignalResourceAction$$$StopStackSetOperationAction$$$UpdateStackAction$$$UpdateStackInstancesAction$$$UpdateStackSetAction$$$UpdateTerminationProtectionAction$$$ValidateTemplateAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum CloudFormationRequest::<span class="name">Action</span><br/>flags CloudFormationRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-cloudformation.html">CloudFormation</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::CancelUpdateStackAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> CancelUpdateStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ContinueUpdateRollbackAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ContinueUpdateRollback action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::CreateChangeSetAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> CreateChangeSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::CreateStackAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> CreateStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::CreateStackInstancesAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> CreateStackInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::CreateStackSetAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> CreateStackSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DeleteChangeSetAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DeleteChangeSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DeleteStackAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DeleteStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DeleteStackInstancesAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DeleteStackInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DeleteStackSetAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DeleteStackSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeAccountLimitsAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeAccountLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeChangeSetAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeChangeSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackEventsAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackInstanceAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackResourceAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackResourcesAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackResources action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackSetAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStackSetOperationAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStackSetOperation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::DescribeStacksAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> DescribeStacks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::EstimateTemplateCostAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> EstimateTemplateCost action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ExecuteChangeSetAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ExecuteChangeSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::GetStackPolicyAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> GetStackPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::GetTemplateAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> GetTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::GetTemplateSummaryAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> GetTemplateSummary action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListChangeSetsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListChangeSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListExportsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListExports action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListImportsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListImports action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStackInstancesAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStackInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStackResourcesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStackResources action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStackSetOperationResultsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStackSetOperationResults action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStackSetOperationsAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStackSetOperations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStackSetsAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStackSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ListStacksAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ListStacks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::SetStackPolicyAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> SetStackPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::SignalResourceAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> SignalResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::StopStackSetOperationAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> StopStackSetOperation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::UpdateStackAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> UpdateStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::UpdateStackInstancesAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> UpdateStackInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::UpdateStackSetAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> UpdateStackSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::UpdateTerminationProtectionAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> UpdateTerminationProtection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudFormation::CloudFormationRequest::ValidateTemplateAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-cloudformation.html">CloudFormation</a> ValidateTemplate action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudFormationRequest[overload1]$$$CloudFormationRequestconstAction -->
+<h3 class="fn" id="CloudFormationRequest"><a name="CloudFormationRequest"></a>CloudFormationRequest::<span class="name">CloudFormationRequest</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> object for <a href="qtaws-cloudformation.html">CloudFormation</a> <i>action</i>.</p>
+<!-- @@@CloudFormationRequest -->
+<!-- $$$CloudFormationRequest$$$CloudFormationRequestconstCloudFormationRequest& -->
+<h3 class="fn" id="CloudFormationRequest-1"><a name="CloudFormationRequest-1"></a>CloudFormationRequest::<span class="name">CloudFormationRequest</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest">CloudFormationRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@CloudFormationRequest -->
+<!-- $$$CloudFormationRequest$$$CloudFormationRequestCloudFormationRequestPrivate*const -->
+<h3 class="fn" id="CloudFormationRequest-2"><a name="CloudFormationRequest-2"></a><code>[protected] </code>CloudFormationRequest::<span class="name">CloudFormationRequest</span>(<span class="type">CloudFormationRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from CloudFormationRequestPrivate.</p>
+<!-- @@@CloudFormationRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">Action</a></span> CloudFormationRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-cloudformation.html">CloudFormation</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> CloudFormationRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-cloudformation.html">CloudFormation</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> CloudFormationRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-cloudformation.html">CloudFormation</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> CloudFormationRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> CloudFormationRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> CloudFormationRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;CloudFormationRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> CloudFormationRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-cloudformation.html">CloudFormation</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> CloudFormationRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-cloudformation.html">CloudFormation</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> CloudFormationRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> CloudFormationRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-cloudformation-cloudformationrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> CloudFormationRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-cloudformation.html">CloudFormation</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-cloudformation.html">CloudFormation</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-cloudformation-cloudformationrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constCloudFormationRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest">CloudFormationRequest</a></span> &amp;CloudFormationRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest">CloudFormationRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constCloudFormationRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> CloudFormationRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#CloudFormationRequest">CloudFormationRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

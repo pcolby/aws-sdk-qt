@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['firehoseclient',['FirehoseClient',['../classAWS_1_1Firehose_1_1FirehoseClient.html',1,'AWS::Firehose']]]
-];

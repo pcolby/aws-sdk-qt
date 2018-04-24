@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudformationresponse.cpp -->
+  <title>CloudFormationResponse Class | CloudFormation</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudformation-index.html">CloudFormation</a></li>
+<li><a href="qtawscloudformation-module.html">C++ Classes</a></li>
+<li>CloudFormationResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudFormationResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudformation-cloudformationresponse.html">QtAws::CloudFormation::CloudFormationResponse</a>)<br/></span>
+<!-- $$$CloudFormationResponse-brief -->
+<p>The <a href="qtaws-cloudformation-cloudformationresponse.html">CloudFormationResponse</a> class provides an interface for <a href="qtaws-cloudformation.html">CloudFormation</a> responses. <a href="#details">More...</a></p>
+<!-- @@@CloudFormationResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudFormationResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-cloudformation-cancelupdatestackresponse.html">QtAws::CloudFormation::CancelUpdateStackResponse</a>, <a href="qtaws-cloudformation-continueupdaterollbackresponse.html">QtAws::CloudFormation::ContinueUpdateRollbackResponse</a>, <a href="qtaws-cloudformation-createchangesetresponse.html">QtAws::CloudFormation::CreateChangeSetResponse</a>, <a href="qtaws-cloudformation-createstackinstancesresponse.html">QtAws::CloudFormation::CreateStackInstancesResponse</a>, <a href="qtaws-cloudformation-createstackresponse.html">QtAws::CloudFormation::CreateStackResponse</a>, <a href="qtaws-cloudformation-createstacksetresponse.html">QtAws::CloudFormation::CreateStackSetResponse</a>, <a href="qtaws-cloudformation-deletechangesetresponse.html">QtAws::CloudFormation::DeleteChangeSetResponse</a>, <a href="qtaws-cloudformation-deletestackinstancesresponse.html">QtAws::CloudFormation::DeleteStackInstancesResponse</a>, <a href="qtaws-cloudformation-deletestackresponse.html">QtAws::CloudFormation::DeleteStackResponse</a>, <a href="qtaws-cloudformation-deletestacksetresponse.html">QtAws::CloudFormation::DeleteStackSetResponse</a>, <a href="qtaws-cloudformation-describeaccountlimitsresponse.html">QtAws::CloudFormation::DescribeAccountLimitsResponse</a>, <a href="qtaws-cloudformation-describechangesetresponse.html">QtAws::CloudFormation::DescribeChangeSetResponse</a>, <a href="qtaws-cloudformation-describestackeventsresponse.html">QtAws::CloudFormation::DescribeStackEventsResponse</a>, <a href="qtaws-cloudformation-describestackinstanceresponse.html">QtAws::CloudFormation::DescribeStackInstanceResponse</a>, <a href="qtaws-cloudformation-describestackresourceresponse.html">QtAws::CloudFormation::DescribeStackResourceResponse</a>, <a href="qtaws-cloudformation-describestackresourcesresponse.html">QtAws::CloudFormation::DescribeStackResourcesResponse</a>, <a href="qtaws-cloudformation-describestacksetoperationresponse.html">QtAws::CloudFormation::DescribeStackSetOperationResponse</a>, <a href="qtaws-cloudformation-describestacksetresponse.html">QtAws::CloudFormation::DescribeStackSetResponse</a>, <a href="qtaws-cloudformation-describestacksresponse.html">QtAws::CloudFormation::DescribeStacksResponse</a>, <a href="qtaws-cloudformation-estimatetemplatecostresponse.html">QtAws::CloudFormation::EstimateTemplateCostResponse</a>, <a href="qtaws-cloudformation-executechangesetresponse.html">QtAws::CloudFormation::ExecuteChangeSetResponse</a>, <a href="qtaws-cloudformation-getstackpolicyresponse.html">QtAws::CloudFormation::GetStackPolicyResponse</a>, <a href="qtaws-cloudformation-gettemplateresponse.html">QtAws::CloudFormation::GetTemplateResponse</a>, <a href="qtaws-cloudformation-gettemplatesummaryresponse.html">QtAws::CloudFormation::GetTemplateSummaryResponse</a>, <a href="qtaws-cloudformation-listchangesetsresponse.html">QtAws::CloudFormation::ListChangeSetsResponse</a>, <a href="qtaws-cloudformation-listexportsresponse.html">QtAws::CloudFormation::ListExportsResponse</a>, <a href="qtaws-cloudformation-listimportsresponse.html">QtAws::CloudFormation::ListImportsResponse</a>, <a href="qtaws-cloudformation-liststackinstancesresponse.html">QtAws::CloudFormation::ListStackInstancesResponse</a>, <a href="qtaws-cloudformation-liststackresourcesresponse.html">QtAws::CloudFormation::ListStackResourcesResponse</a>, <a href="qtaws-cloudformation-liststacksetoperationresultsresponse.html">QtAws::CloudFormation::ListStackSetOperationResultsResponse</a>, <a href="qtaws-cloudformation-liststacksetoperationsresponse.html">QtAws::CloudFormation::ListStackSetOperationsResponse</a>, <a href="qtaws-cloudformation-liststacksetsresponse.html">QtAws::CloudFormation::ListStackSetsResponse</a>, <a href="qtaws-cloudformation-liststacksresponse.html">QtAws::CloudFormation::ListStacksResponse</a>, <a href="qtaws-cloudformation-setstackpolicyresponse.html">QtAws::CloudFormation::SetStackPolicyResponse</a>, <a href="qtaws-cloudformation-signalresourceresponse.html">QtAws::CloudFormation::SignalResourceResponse</a>, <a href="qtaws-cloudformation-stopstacksetoperationresponse.html">QtAws::CloudFormation::StopStackSetOperationResponse</a>, <a href="qtaws-cloudformation-updatestackinstancesresponse.html">QtAws::CloudFormation::UpdateStackInstancesResponse</a>, <a href="qtaws-cloudformation-updatestackresponse.html">QtAws::CloudFormation::UpdateStackResponse</a>, <a href="qtaws-cloudformation-updatestacksetresponse.html">QtAws::CloudFormation::UpdateStackSetResponse</a>, <a href="qtaws-cloudformation-updateterminationprotectionresponse.html">QtAws::CloudFormation::UpdateTerminationProtectionResponse</a>, and <a href="qtaws-cloudformation-validatetemplateresponse.html">QtAws::CloudFormation::ValidateTemplateResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-cloudformation-cloudformationresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationresponse.html#CloudFormationResponse">CloudFormationResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationresponse.html#CloudFormationResponse-1">CloudFormationResponse</a></b>(CloudFormationResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudFormationResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudformation-cloudformationresponse.html">CloudFormationResponse</a> class provides an interface for <a href="qtaws-cloudformation.html">CloudFormation</a> responses.</p>
+</div>
+<!-- @@@CloudFormationResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudFormationResponse[overload1]$$$CloudFormationResponseQObject*const -->
+<h3 class="fn" id="CloudFormationResponse"><a name="CloudFormationResponse"></a>CloudFormationResponse::<span class="name">CloudFormationResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudformation-cloudformationresponse.html">CloudFormationResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@CloudFormationResponse -->
+<!-- $$$CloudFormationResponse$$$CloudFormationResponseCloudFormationResponsePrivate*constQObject*const -->
+<h3 class="fn" id="CloudFormationResponse-1"><a name="CloudFormationResponse-1"></a><code>[protected] </code>CloudFormationResponse::<span class="name">CloudFormationResponse</span>(<span class="type"><a href="qtaws-cloudformation-cloudformationresponseprivate.html">CloudFormationResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-cloudformation-cloudformationresponse.html">CloudFormationResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-cloudformation-cloudformationresponseprivate.html">CloudFormationResponsePrivate</a>.</p>
+<!-- @@@CloudFormationResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> CloudFormationResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

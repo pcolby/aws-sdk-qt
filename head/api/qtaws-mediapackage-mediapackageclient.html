@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mediapackageclient.cpp -->
+  <title>MediaPackageClient Class | MediaPackage</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmediapackage-index.html">MediaPackage</a></li>
+<li><a href="qtawsmediapackage-module.html">C++ Classes</a></li>
+<li>MediaPackageClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MediaPackageClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mediapackage-mediapackageclient.html">QtAws::MediaPackage::MediaPackageClient</a>)<br/></span>
+<!-- $$$MediaPackageClient-brief -->
+<p>The <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> class provides access to the AWS Elemental <a href="qtaws-mediapackage.html">MediaPackage</a> service. <a href="#details">More...</a></p>
+<!-- @@@MediaPackageClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MediaPackageClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mediapackage-mediapackageclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#MediaPackageClient">MediaPackageClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#MediaPackageClient-1">MediaPackageClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#createChannel">createChannel</a></b>(const CreateChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateOriginEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#createOriginEndpoint">createOriginEndpoint</a></b>(const CreateOriginEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#deleteChannel">deleteChannel</a></b>(const DeleteChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteOriginEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#deleteOriginEndpoint">deleteOriginEndpoint</a></b>(const DeleteOriginEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#describeChannel">describeChannel</a></b>(const DescribeChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOriginEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#describeOriginEndpoint">describeOriginEndpoint</a></b>(const DescribeOriginEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListChannelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#listChannels">listChannels</a></b>(const ListChannelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOriginEndpointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#listOriginEndpoints">listOriginEndpoints</a></b>(const ListOriginEndpointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RotateChannelCredentialsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#rotateChannelCredentials">rotateChannelCredentials</a></b>(const RotateChannelCredentialsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#updateChannel">updateChannel</a></b>(const UpdateChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateOriginEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediapackage-mediapackageclient.html#updateOriginEndpoint">updateOriginEndpoint</a></b>(const UpdateOriginEndpointRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MediaPackageClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> class provides access to the AWS Elemental <a href="qtaws-mediapackage.html">MediaPackage</a> service.</p>
+</div>
+<!-- @@@MediaPackageClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MediaPackageClient[overload1]$$$MediaPackageClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaPackageClient"><a name="MediaPackageClient"></a>MediaPackageClient::<span class="name">MediaPackageClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MediaPackageClient -->
+<!-- $$$MediaPackageClient$$$MediaPackageClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaPackageClient-1"><a name="MediaPackageClient-1"></a>MediaPackageClient::<span class="name">MediaPackageClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mediapackage-mediapackageclient.html#MediaPackageClient">MediaPackageClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MediaPackageClient -->
+<!-- $$$createChannel[overload1]$$$createChannelconstCreateChannelRequest& -->
+<h3 class="fn" id="createChannel"><a name="createChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-createchannelresponse.html">CreateChannelResponse</a></span> *MediaPackageClient::<span class="name">createChannel</span>(const <span class="type"><a href="qtaws-mediapackage-createchannelrequest.html">CreateChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-createchannelresponse.html">CreateChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createChannel -->
+<!-- $$$createOriginEndpoint[overload1]$$$createOriginEndpointconstCreateOriginEndpointRequest& -->
+<h3 class="fn" id="createOriginEndpoint"><a name="createOriginEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-createoriginendpointresponse.html">CreateOriginEndpointResponse</a></span> *MediaPackageClient::<span class="name">createOriginEndpoint</span>(const <span class="type"><a href="qtaws-mediapackage-createoriginendpointrequest.html">CreateOriginEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-createoriginendpointresponse.html">CreateOriginEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createOriginEndpoint -->
+<!-- $$$deleteChannel[overload1]$$$deleteChannelconstDeleteChannelRequest& -->
+<h3 class="fn" id="deleteChannel"><a name="deleteChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-deletechannelresponse.html">DeleteChannelResponse</a></span> *MediaPackageClient::<span class="name">deleteChannel</span>(const <span class="type"><a href="qtaws-mediapackage-deletechannelrequest.html">DeleteChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-deletechannelresponse.html">DeleteChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteChannel -->
+<!-- $$$deleteOriginEndpoint[overload1]$$$deleteOriginEndpointconstDeleteOriginEndpointRequest& -->
+<h3 class="fn" id="deleteOriginEndpoint"><a name="deleteOriginEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-deleteoriginendpointresponse.html">DeleteOriginEndpointResponse</a></span> *MediaPackageClient::<span class="name">deleteOriginEndpoint</span>(const <span class="type"><a href="qtaws-mediapackage-deleteoriginendpointrequest.html">DeleteOriginEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-deleteoriginendpointresponse.html">DeleteOriginEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteOriginEndpoint -->
+<!-- $$$describeChannel[overload1]$$$describeChannelconstDescribeChannelRequest& -->
+<h3 class="fn" id="describeChannel"><a name="describeChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-describechannelresponse.html">DescribeChannelResponse</a></span> *MediaPackageClient::<span class="name">describeChannel</span>(const <span class="type"><a href="qtaws-mediapackage-describechannelrequest.html">DescribeChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-describechannelresponse.html">DescribeChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeChannel -->
+<!-- $$$describeOriginEndpoint[overload1]$$$describeOriginEndpointconstDescribeOriginEndpointRequest& -->
+<h3 class="fn" id="describeOriginEndpoint"><a name="describeOriginEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-describeoriginendpointresponse.html">DescribeOriginEndpointResponse</a></span> *MediaPackageClient::<span class="name">describeOriginEndpoint</span>(const <span class="type"><a href="qtaws-mediapackage-describeoriginendpointrequest.html">DescribeOriginEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-describeoriginendpointresponse.html">DescribeOriginEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeOriginEndpoint -->
+<!-- $$$listChannels[overload1]$$$listChannelsconstListChannelsRequest& -->
+<h3 class="fn" id="listChannels"><a name="listChannels"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-listchannelsresponse.html">ListChannelsResponse</a></span> *MediaPackageClient::<span class="name">listChannels</span>(const <span class="type"><a href="qtaws-mediapackage-listchannelsrequest.html">ListChannelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-listchannelsresponse.html">ListChannelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listChannels -->
+<!-- $$$listOriginEndpoints[overload1]$$$listOriginEndpointsconstListOriginEndpointsRequest& -->
+<h3 class="fn" id="listOriginEndpoints"><a name="listOriginEndpoints"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-listoriginendpointsresponse.html">ListOriginEndpointsResponse</a></span> *MediaPackageClient::<span class="name">listOriginEndpoints</span>(const <span class="type"><a href="qtaws-mediapackage-listoriginendpointsrequest.html">ListOriginEndpointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-listoriginendpointsresponse.html">ListOriginEndpointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listOriginEndpoints -->
+<!-- $$$rotateChannelCredentials[overload1]$$$rotateChannelCredentialsconstRotateChannelCredentialsRequest& -->
+<h3 class="fn" id="rotateChannelCredentials"><a name="rotateChannelCredentials"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-rotatechannelcredentialsresponse.html">RotateChannelCredentialsResponse</a></span> *MediaPackageClient::<span class="name">rotateChannelCredentials</span>(const <span class="type"><a href="qtaws-mediapackage-rotatechannelcredentialsrequest.html">RotateChannelCredentialsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-rotatechannelcredentialsresponse.html">RotateChannelCredentialsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@rotateChannelCredentials -->
+<!-- $$$updateChannel[overload1]$$$updateChannelconstUpdateChannelRequest& -->
+<h3 class="fn" id="updateChannel"><a name="updateChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-updatechannelresponse.html">UpdateChannelResponse</a></span> *MediaPackageClient::<span class="name">updateChannel</span>(const <span class="type"><a href="qtaws-mediapackage-updatechannelrequest.html">UpdateChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-updatechannelresponse.html">UpdateChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateChannel -->
+<!-- $$$updateOriginEndpoint[overload1]$$$updateOriginEndpointconstUpdateOriginEndpointRequest& -->
+<h3 class="fn" id="updateOriginEndpoint"><a name="updateOriginEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-mediapackage-updateoriginendpointresponse.html">UpdateOriginEndpointResponse</a></span> *MediaPackageClient::<span class="name">updateOriginEndpoint</span>(const <span class="type"><a href="qtaws-mediapackage-updateoriginendpointrequest.html">UpdateOriginEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediapackage-mediapackageclient.html">MediaPackageClient</a> service, and returns a pointer to an <a href="qtaws-mediapackage-updateoriginendpointresponse.html">UpdateOriginEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateOriginEndpoint -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

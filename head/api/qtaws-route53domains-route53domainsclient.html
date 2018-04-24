@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- route53domainsclient.cpp -->
+  <title>Route53DomainsClient Class | Route53Domains</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsroute53domains-index.html">Route53Domains</a></li>
+<li><a href="qtawsroute53domains-module.html">C++ Classes</a></li>
+<li>Route53DomainsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Route53DomainsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-route53domains-route53domainsclient.html">QtAws::Route53Domains::Route53DomainsClient</a>)<br/></span>
+<!-- $$$Route53DomainsClient-brief -->
+<p>The <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> class provides access to the Amazon Route 53 Domains service. <a href="#details">More...</a></p>
+<!-- @@@Route53DomainsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Route53DomainsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-route53domains-route53domainsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#Route53DomainsClient">Route53DomainsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#Route53DomainsClient-1">Route53DomainsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CheckDomainAvailabilityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#checkDomainAvailability">checkDomainAvailability</a></b>(const CheckDomainAvailabilityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CheckDomainTransferabilityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#checkDomainTransferability">checkDomainTransferability</a></b>(const CheckDomainTransferabilityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsForDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#deleteTagsForDomain">deleteTagsForDomain</a></b>(const DeleteTagsForDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableDomainAutoRenewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#disableDomainAutoRenew">disableDomainAutoRenew</a></b>(const DisableDomainAutoRenewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableDomainTransferLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#disableDomainTransferLock">disableDomainTransferLock</a></b>(const DisableDomainTransferLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableDomainAutoRenewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#enableDomainAutoRenew">enableDomainAutoRenew</a></b>(const EnableDomainAutoRenewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableDomainTransferLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#enableDomainTransferLock">enableDomainTransferLock</a></b>(const EnableDomainTransferLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetContactReachabilityStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#getContactReachabilityStatus">getContactReachabilityStatus</a></b>(const GetContactReachabilityStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainDetailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#getDomainDetail">getDomainDetail</a></b>(const GetDomainDetailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainSuggestionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#getDomainSuggestions">getDomainSuggestions</a></b>(const GetDomainSuggestionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOperationDetailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#getOperationDetail">getOperationDetail</a></b>(const GetOperationDetailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDomainsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#listDomains">listDomains</a></b>(const ListDomainsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOperationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#listOperations">listOperations</a></b>(const ListOperationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#listTagsForDomain">listTagsForDomain</a></b>(const ListTagsForDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#registerDomain">registerDomain</a></b>(const RegisterDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RenewDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#renewDomain">renewDomain</a></b>(const RenewDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResendContactReachabilityEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#resendContactReachabilityEmail">resendContactReachabilityEmail</a></b>(const ResendContactReachabilityEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RetrieveDomainAuthCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#retrieveDomainAuthCode">retrieveDomainAuthCode</a></b>(const RetrieveDomainAuthCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TransferDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#transferDomain">transferDomain</a></b>(const TransferDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDomainContactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#updateDomainContact">updateDomainContact</a></b>(const UpdateDomainContactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDomainContactPrivacyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#updateDomainContactPrivacy">updateDomainContactPrivacy</a></b>(const UpdateDomainContactPrivacyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDomainNameserversResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#updateDomainNameservers">updateDomainNameservers</a></b>(const UpdateDomainNameserversRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTagsForDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#updateTagsForDomain">updateTagsForDomain</a></b>(const UpdateTagsForDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ViewBillingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53domains-route53domainsclient.html#viewBilling">viewBilling</a></b>(const ViewBillingRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Route53DomainsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> class provides access to the Amazon Route 53 Domains service.</p>
+<p>Amazon Route 53 API actions let you register domain names and perform related</p>
+</div>
+<!-- @@@Route53DomainsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Route53DomainsClient[overload1]$$$Route53DomainsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="Route53DomainsClient"><a name="Route53DomainsClient"></a>Route53DomainsClient::<span class="name">Route53DomainsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@Route53DomainsClient -->
+<!-- $$$Route53DomainsClient$$$Route53DomainsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="Route53DomainsClient-1"><a name="Route53DomainsClient-1"></a>Route53DomainsClient::<span class="name">Route53DomainsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-route53domains-route53domainsclient.html#Route53DomainsClient">Route53DomainsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@Route53DomainsClient -->
+<!-- $$$checkDomainAvailability[overload1]$$$checkDomainAvailabilityconstCheckDomainAvailabilityRequest& -->
+<h3 class="fn" id="checkDomainAvailability"><a name="checkDomainAvailability"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-checkdomainavailabilityresponse.html">CheckDomainAvailabilityResponse</a></span> *Route53DomainsClient::<span class="name">checkDomainAvailability</span>(const <span class="type"><a href="qtaws-route53domains-checkdomainavailabilityrequest.html">CheckDomainAvailabilityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-checkdomainavailabilityresponse.html">CheckDomainAvailabilityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation checks the availability of one domain name. Note that if the availability status of a domain is pending, you must submit another request to determine the availability of the domain</p>
+<!-- @@@checkDomainAvailability -->
+<!-- $$$checkDomainTransferability[overload1]$$$checkDomainTransferabilityconstCheckDomainTransferabilityRequest& -->
+<h3 class="fn" id="checkDomainTransferability"><a name="checkDomainTransferability"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-checkdomaintransferabilityresponse.html">CheckDomainTransferabilityResponse</a></span> *Route53DomainsClient::<span class="name">checkDomainTransferability</span>(const <span class="type"><a href="qtaws-route53domains-checkdomaintransferabilityrequest.html">CheckDomainTransferabilityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-checkdomaintransferabilityresponse.html">CheckDomainTransferabilityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Checks whether a domain name can be transferred to Amazon Route 53.</p>
+<!-- @@@checkDomainTransferability -->
+<!-- $$$deleteTagsForDomain[overload1]$$$deleteTagsForDomainconstDeleteTagsForDomainRequest& -->
+<h3 class="fn" id="deleteTagsForDomain"><a name="deleteTagsForDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-deletetagsfordomainresponse.html">DeleteTagsForDomainResponse</a></span> *Route53DomainsClient::<span class="name">deleteTagsForDomain</span>(const <span class="type"><a href="qtaws-route53domains-deletetagsfordomainrequest.html">DeleteTagsForDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-deletetagsfordomainresponse.html">DeleteTagsForDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation deletes the specified tags for a</p>
+<p>domain&gt;</p>
+<p>All tag operations are eventually consistent; subsequent operations might not immediately represent all issued</p>
+<!-- @@@deleteTagsForDomain -->
+<!-- $$$disableDomainAutoRenew[overload1]$$$disableDomainAutoRenewconstDisableDomainAutoRenewRequest& -->
+<h3 class="fn" id="disableDomainAutoRenew"><a name="disableDomainAutoRenew"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-disabledomainautorenewresponse.html">DisableDomainAutoRenewResponse</a></span> *Route53DomainsClient::<span class="name">disableDomainAutoRenew</span>(const <span class="type"><a href="qtaws-route53domains-disabledomainautorenewrequest.html">DisableDomainAutoRenewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-disabledomainautorenewresponse.html">DisableDomainAutoRenewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation disables automatic renewal of domain registration for the specified</p>
+<!-- @@@disableDomainAutoRenew -->
+<!-- $$$disableDomainTransferLock[overload1]$$$disableDomainTransferLockconstDisableDomainTransferLockRequest& -->
+<h3 class="fn" id="disableDomainTransferLock"><a name="disableDomainTransferLock"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-disabledomaintransferlockresponse.html">DisableDomainTransferLockResponse</a></span> *Route53DomainsClient::<span class="name">disableDomainTransferLock</span>(const <span class="type"><a href="qtaws-route53domains-disabledomaintransferlockrequest.html">DisableDomainTransferLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-disabledomaintransferlockresponse.html">DisableDomainTransferLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation removes the transfer lock on the domain (specifically the &lt;code&gt;clientTransferProhibited&lt;/code&gt; status) to allow domain transfers. We recommend you refrain from performing this action unless you intend to transfer the domain to a different registrar. Successful submission returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<!-- @@@disableDomainTransferLock -->
+<!-- $$$enableDomainAutoRenew[overload1]$$$enableDomainAutoRenewconstEnableDomainAutoRenewRequest& -->
+<h3 class="fn" id="enableDomainAutoRenew"><a name="enableDomainAutoRenew"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-enabledomainautorenewresponse.html">EnableDomainAutoRenewResponse</a></span> *Route53DomainsClient::<span class="name">enableDomainAutoRenew</span>(const <span class="type"><a href="qtaws-route53domains-enabledomainautorenewrequest.html">EnableDomainAutoRenewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-enabledomainautorenewresponse.html">EnableDomainAutoRenewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration expires. The cost of renewing your domain registration is billed to your AWS</p>
+<p>account&gt;</p>
+<p>The period during which you can renew a domain name varies by TLD. For a list of TLDs and their renewal policies, see &lt;a href=&quot;http://wiki.gandi.net/en/domains/renew#renewal_restoration_and_deletion_times&quot;&gt;&quot;Renewal, restoration, and deletion times&quot;&lt;/a&gt; on the website for our registrar partner, Gandi. Route 53 requires that you renew before the end of the renewal period that is listed on the Gandi website so we can complete processing before the</p>
+<!-- @@@enableDomainAutoRenew -->
+<!-- $$$enableDomainTransferLock[overload1]$$$enableDomainTransferLockconstEnableDomainTransferLockRequest& -->
+<h3 class="fn" id="enableDomainTransferLock"><a name="enableDomainTransferLock"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-enabledomaintransferlockresponse.html">EnableDomainTransferLockResponse</a></span> *Route53DomainsClient::<span class="name">enableDomainTransferLock</span>(const <span class="type"><a href="qtaws-route53domains-enabledomaintransferlockrequest.html">EnableDomainTransferLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-enabledomaintransferlockresponse.html">EnableDomainTransferLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation sets the transfer lock on the domain (specifically the &lt;code&gt;clientTransferProhibited&lt;/code&gt; status) to prevent domain transfers. Successful submission returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<!-- @@@enableDomainTransferLock -->
+<!-- $$$getContactReachabilityStatus[overload1]$$$getContactReachabilityStatusconstGetContactReachabilityStatusRequest& -->
+<h3 class="fn" id="getContactReachabilityStatus"><a name="getContactReachabilityStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-getcontactreachabilitystatusresponse.html">GetContactReachabilityStatusResponse</a></span> *Route53DomainsClient::<span class="name">getContactReachabilityStatus</span>(const <span class="type"><a href="qtaws-route53domains-getcontactreachabilitystatusrequest.html">GetContactReachabilityStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-getcontactreachabilitystatusresponse.html">GetContactReachabilityStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation returns information about whether the registrant contact has</p>
+<p>responded&gt;</p>
+<p>If you want us to resend the email, use the &lt;code&gt;ResendContactReachabilityEmail&lt;/code&gt;</p>
+<!-- @@@getContactReachabilityStatus -->
+<!-- $$$getDomainDetail[overload1]$$$getDomainDetailconstGetDomainDetailRequest& -->
+<h3 class="fn" id="getDomainDetail"><a name="getDomainDetail"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-getdomaindetailresponse.html">GetDomainDetailResponse</a></span> *Route53DomainsClient::<span class="name">getDomainDetail</span>(const <span class="type"><a href="qtaws-route53domains-getdomaindetailrequest.html">GetDomainDetailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-getdomaindetailresponse.html">GetDomainDetailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns detailed information about a specified domain that is associated with the current AWS account. Contact information for the domain is also returned as part of the</p>
+<!-- @@@getDomainDetail -->
+<!-- $$$getDomainSuggestions[overload1]$$$getDomainSuggestionsconstGetDomainSuggestionsRequest& -->
+<h3 class="fn" id="getDomainSuggestions"><a name="getDomainSuggestions"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-getdomainsuggestionsresponse.html">GetDomainSuggestionsResponse</a></span> *Route53DomainsClient::<span class="name">getDomainSuggestions</span>(const <span class="type"><a href="qtaws-route53domains-getdomainsuggestionsrequest.html">GetDomainSuggestionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-getdomainsuggestionsresponse.html">GetDomainSuggestionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The GetDomainSuggestions operation returns a list of suggested domain names given a string, which can either be a domain name or simply a word or phrase (without</p>
+<!-- @@@getDomainSuggestions -->
+<!-- $$$getOperationDetail[overload1]$$$getOperationDetailconstGetOperationDetailRequest& -->
+<h3 class="fn" id="getOperationDetail"><a name="getOperationDetail"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-getoperationdetailresponse.html">GetOperationDetailResponse</a></span> *Route53DomainsClient::<span class="name">getOperationDetail</span>(const <span class="type"><a href="qtaws-route53domains-getoperationdetailrequest.html">GetOperationDetailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-getoperationdetailresponse.html">GetOperationDetailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns the current status of an operation that is not</p>
+<!-- @@@getOperationDetail -->
+<!-- $$$listDomains[overload1]$$$listDomainsconstListDomainsRequest& -->
+<h3 class="fn" id="listDomains"><a name="listDomains"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-listdomainsresponse.html">ListDomainsResponse</a></span> *Route53DomainsClient::<span class="name">listDomains</span>(const <span class="type"><a href="qtaws-route53domains-listdomainsrequest.html">ListDomainsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-listdomainsresponse.html">ListDomainsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns all the domain names registered with Amazon Route 53 for the current AWS</p>
+<!-- @@@listDomains -->
+<!-- $$$listOperations[overload1]$$$listOperationsconstListOperationsRequest& -->
+<h3 class="fn" id="listOperations"><a name="listOperations"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-listoperationsresponse.html">ListOperationsResponse</a></span> *Route53DomainsClient::<span class="name">listOperations</span>(const <span class="type"><a href="qtaws-route53domains-listoperationsrequest.html">ListOperationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-listoperationsresponse.html">ListOperationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns the operation IDs of operations that are not yet</p>
+<!-- @@@listOperations -->
+<!-- $$$listTagsForDomain[overload1]$$$listTagsForDomainconstListTagsForDomainRequest& -->
+<h3 class="fn" id="listTagsForDomain"><a name="listTagsForDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-listtagsfordomainresponse.html">ListTagsForDomainResponse</a></span> *Route53DomainsClient::<span class="name">listTagsForDomain</span>(const <span class="type"><a href="qtaws-route53domains-listtagsfordomainrequest.html">ListTagsForDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-listtagsfordomainresponse.html">ListTagsForDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns all of the tags that are associated with the specified</p>
+<p>domain&gt;</p>
+<p>All tag operations are eventually consistent; subsequent operations might not immediately represent all issued</p>
+<!-- @@@listTagsForDomain -->
+<!-- $$$registerDomain[overload1]$$$registerDomainconstRegisterDomainRequest& -->
+<h3 class="fn" id="registerDomain"><a name="registerDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-registerdomainresponse.html">RegisterDomainResponse</a></span> *Route53DomainsClient::<span class="name">registerDomain</span>(const <span class="type"><a href="qtaws-route53domains-registerdomainrequest.html">RegisterDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-registerdomainresponse.html">RegisterDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation registers a domain. Domains are registered by the AWS registrar partner, Gandi. For some top-level domains (TLDs), this operation requires extra</p>
+<p>parameters&gt;</p>
+<p>When you register a domain, Amazon Route 53 does the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Creates a Amazon Route 53 hosted zone that has the same name as the domain. Amazon Route 53 assigns four name servers to your hosted zone and automatically updates your domain registration with the names of these name</p>
+<p>servers&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Enables autorenew, so your domain registration will renew automatically each year. We'll notify you in advance of the renewal date so you can choose whether to renew the</p>
+<p>registration&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Optionally enables privacy protection, so WHOIS queries return contact information for our registrar partner, Gandi, instead of the information you entered for registrant, admin, and tech</p>
+<p>contacts&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If registration is successful, returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant is notified by</p>
+<p>email&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Charges your AWS account an amount based on the top-level domain. For more information, see &lt;a href=&quot;http://aws.amazon.com/route53/pricing/&quot;&gt;Amazon Route 53</p>
+<!-- @@@registerDomain -->
+<!-- $$$renewDomain[overload1]$$$renewDomainconstRenewDomainRequest& -->
+<h3 class="fn" id="renewDomain"><a name="renewDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-renewdomainresponse.html">RenewDomainResponse</a></span> *Route53DomainsClient::<span class="name">renewDomain</span>(const <span class="type"><a href="qtaws-route53domains-renewdomainrequest.html">RenewDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-renewdomainresponse.html">RenewDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation renews a domain for the specified number of years. The cost of renewing your domain is billed to your AWS</p>
+<p>account&gt;</p>
+<p>We recommend that you renew your domain several weeks before the expiration date. Some TLD registries delete domains before the expiration date if you haven't renewed far enough in advance. For more information about renewing domain registration, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-renew.html&quot;&gt;Renewing Registration for a Domain&lt;/a&gt; in the Amazon Route 53 Developer</p>
+<!-- @@@renewDomain -->
+<!-- $$$resendContactReachabilityEmail[overload1]$$$resendContactReachabilityEmailconstResendContactReachabilityEmailRequest& -->
+<h3 class="fn" id="resendContactReachabilityEmail"><a name="resendContactReachabilityEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-resendcontactreachabilityemailresponse.html">ResendContactReachabilityEmailResponse</a></span> *Route53DomainsClient::<span class="name">resendContactReachabilityEmail</span>(const <span class="type"><a href="qtaws-route53domains-resendcontactreachabilityemailrequest.html">ResendContactReachabilityEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-resendcontactreachabilityemailresponse.html">ResendContactReachabilityEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For operations that require confirmation that the email address for the registrant contact is valid, such as registering a new domain, this operation resends the confirmation email to the current email address for the registrant</p>
+<!-- @@@resendContactReachabilityEmail -->
+<!-- $$$retrieveDomainAuthCode[overload1]$$$retrieveDomainAuthCodeconstRetrieveDomainAuthCodeRequest& -->
+<h3 class="fn" id="retrieveDomainAuthCode"><a name="retrieveDomainAuthCode"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-retrievedomainauthcoderesponse.html">RetrieveDomainAuthCodeResponse</a></span> *Route53DomainsClient::<span class="name">retrieveDomainAuthCode</span>(const <span class="type"><a href="qtaws-route53domains-retrievedomainauthcoderequest.html">RetrieveDomainAuthCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-retrievedomainauthcoderesponse.html">RetrieveDomainAuthCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns the AuthCode for the domain. To transfer a domain to another registrar, you provide this value to the new</p>
+<!-- @@@retrieveDomainAuthCode -->
+<!-- $$$transferDomain[overload1]$$$transferDomainconstTransferDomainRequest& -->
+<h3 class="fn" id="transferDomain"><a name="transferDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-transferdomainresponse.html">TransferDomainResponse</a></span> *Route53DomainsClient::<span class="name">transferDomain</span>(const <span class="type"><a href="qtaws-route53domains-transferdomainrequest.html">TransferDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-transferdomainresponse.html">TransferDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation transfers a domain from another registrar to Amazon Route 53. When the transfer is complete, the domain is registered with the AWS registrar partner,</p>
+<p>Gandi&gt;</p>
+<p>For transfer requirements, a detailed procedure, and information about viewing the status of a domain transfer, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html&quot;&gt;Transferring Registration for a Domain to Amazon Route 53&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If the registrar for your domain is also the DNS service provider for the domain, we highly recommend that you consider transferring your DNS service to Amazon Route 53 or to another DNS service provider before you transfer your registration. Some registrars provide free DNS service when you purchase a domain registration. When you transfer the registration, the previous registrar will not renew your domain registration and could end your DNS service at any</p>
+<p>time&gt; &lt;b&gt;</p>
+<p>If the registrar for your domain is also the DNS service provider for the domain and you don't transfer DNS service to another provider, your website, email, and the web applications associated with the domain might become</p>
+<p>unavailable&gt; &lt;/b&gt;</p>
+<p>If the transfer is successful, this method returns an operation ID that you can use to track the progress and completion of the action. If the transfer doesn't complete successfully, the domain registrant will be notified by</p>
+<!-- @@@transferDomain -->
+<!-- $$$updateDomainContact[overload1]$$$updateDomainContactconstUpdateDomainContactRequest& -->
+<h3 class="fn" id="updateDomainContact"><a name="updateDomainContact"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomaincontactresponse.html">UpdateDomainContactResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainContact</span>(const <span class="type"><a href="qtaws-route53domains-updatedomaincontactrequest.html">UpdateDomainContactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatedomaincontactresponse.html">UpdateDomainContactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the contact information for a particular domain. Information for at least one contact (registrant, administrator, or technical) must be supplied for</p>
+<p>update&gt;</p>
+<p>If the update is successful, this method returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<!-- @@@updateDomainContact -->
+<!-- $$$updateDomainContactPrivacy[overload1]$$$updateDomainContactPrivacyconstUpdateDomainContactPrivacyRequest& -->
+<h3 class="fn" id="updateDomainContactPrivacy"><a name="updateDomainContactPrivacy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomaincontactprivacyresponse.html">UpdateDomainContactPrivacyResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainContactPrivacy</span>(const <span class="type"><a href="qtaws-route53domains-updatedomaincontactprivacyrequest.html">UpdateDomainContactPrivacyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatedomaincontactprivacyresponse.html">UpdateDomainContactPrivacyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the specified domain contact's privacy setting. When the privacy option is enabled, personal information such as postal or email address is hidden from the results of a public WHOIS query. The privacy services are provided by the AWS registrar, Gandi. For more information, see the &lt;a href=&quot;http://www.gandi.net/domain/whois/?currency=USD&amp;amp;amp;lang=en&quot;&gt;Gandi privacy</p>
+<p>features&lt;/a&gt;&gt;</p>
+<p>This operation only affects the privacy of the specified contact type (registrant, administrator, or tech). Successful acceptance returns an operation ID that you can use with &lt;a&gt;GetOperationDetail&lt;/a&gt; to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<!-- @@@updateDomainContactPrivacy -->
+<!-- $$$updateDomainNameservers[overload1]$$$updateDomainNameserversconstUpdateDomainNameserversRequest& -->
+<h3 class="fn" id="updateDomainNameservers"><a name="updateDomainNameservers"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomainnameserversresponse.html">UpdateDomainNameserversResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainNameservers</span>(const <span class="type"><a href="qtaws-route53domains-updatedomainnameserversrequest.html">UpdateDomainNameserversRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatedomainnameserversresponse.html">UpdateDomainNameserversResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation replaces the current set of name servers for the domain with the specified set of name servers. If you use Amazon Route 53 as your DNS service, specify the four name servers in the delegation set for the hosted zone for the</p>
+<p>domain&gt;</p>
+<p>If successful, this operation returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<!-- @@@updateDomainNameservers -->
+<!-- $$$updateTagsForDomain[overload1]$$$updateTagsForDomainconstUpdateTagsForDomainRequest& -->
+<h3 class="fn" id="updateTagsForDomain"><a name="updateTagsForDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatetagsfordomainresponse.html">UpdateTagsForDomainResponse</a></span> *Route53DomainsClient::<span class="name">updateTagsForDomain</span>(const <span class="type"><a href="qtaws-route53domains-updatetagsfordomainrequest.html">UpdateTagsForDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatetagsfordomainresponse.html">UpdateTagsForDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation adds or updates tags for a specified</p>
+<p>domain&gt;</p>
+<p>All tag operations are eventually consistent; subsequent operations might not immediately represent all issued</p>
+<!-- @@@updateTagsForDomain -->
+<!-- $$$viewBilling[overload1]$$$viewBillingconstViewBillingRequest& -->
+<h3 class="fn" id="viewBilling"><a name="viewBilling"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-viewbillingresponse.html">ViewBillingResponse</a></span> *Route53DomainsClient::<span class="name">viewBilling</span>(const <span class="type"><a href="qtaws-route53domains-viewbillingrequest.html">ViewBillingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-viewbillingresponse.html">ViewBillingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all the domain-related billing records for the current AWS account for a specified</p>
+<!-- @@@viewBilling -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

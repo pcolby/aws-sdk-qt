@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- describegamesessionsrequest.cpp -->
+  <title>DescribeGameSessionsRequest Class | GameLift</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsgamelift-index.html">GameLift</a></li>
+<li><a href="qtawsgamelift-module.html">C++ Classes</a></li>
+<li>DescribeGameSessionsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DescribeGameSessionsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-gamelift-describegamesessionsrequest.html">QtAws::GameLift::DescribeGameSessionsRequest</a>)<br/></span>
+<!-- $$$DescribeGameSessionsRequest-brief -->
+<p>The <a href="qtaws-gamelift-describegamesessionsrequest.html">DescribeGameSessionsRequest</a> class provides an interface for <a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessions requests. <a href="#details">More...</a></p>
+<!-- @@@DescribeGameSessionsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DescribeGameSessionsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-gamelift-gameliftrequest.html">QtAws::GameLift::GameLiftRequest</a></td></tr></table></div><ul>
+<li><a href="qtaws-gamelift-describegamesessionsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-describegamesessionsrequest.html#DescribeGameSessionsRequest">DescribeGameSessionsRequest</a></b>(const DescribeGameSessionsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-describegamesessionsrequest.html#DescribeGameSessionsRequest-1">DescribeGameSessionsRequest</a></b>()</td></tr>
+</table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-describegamesessionsrequest.html#isValid">isValid</a></b>() const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-gamelift-gameliftrequest.html#public-functions">QtAws::GameLift::GameLiftRequest</a></li>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QtAws::Core::AwsAbstractResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-describegamesessionsrequest.html#response">response</a></b>(QNetworkReply * const <i>reply</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-gamelift-gameliftrequest.html#protected-functions">QtAws::GameLift::GameLiftRequest</a></li>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DescribeGameSessionsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-gamelift-describegamesessionsrequest.html">DescribeGameSessionsRequest</a> class provides an interface for <a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessions requests.</p>
+<p>&lt;fullname&gt;Amazon <a href="qtaws-gamelift.html">GameLift</a> Service&lt;/fullname&gt;</p>
+<p>Amazon <a href="qtaws-gamelift.html">GameLift</a> is a managed service for developers who need a scalable, dedicated server solution for their multiplayer games. Use Amazon <a href="qtaws-gamelift.html">GameLift</a> for these tasks: (1) set up computing resources and deploy your game servers, (2) run game sessions and get players into games, (3) automatically scale your resources to meet player demand and manage costs, and (4) track in-depth metrics on game server performance and player</p>
+<p>usage&gt;</p>
+<p>The Amazon <a href="qtaws-gamelift.html">GameLift</a> service API includes two important function</p>
+<p>sets&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage game sessions and player access&lt;/b&gt; -- Retrieve information on available game sessions; create new game sessions; send player requests to join a game</p>
+<p>session&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Configure and manage game server resources&lt;/b&gt; -- Manage builds, fleets, queues, and aliases; set autoscaling policies; retrieve logs and</p>
+<p>metrics&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This reference guide describes the low-level service API for Amazon <a href="qtaws-gamelift.html">GameLift</a>. You can use the API functionality with these tools:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The Amazon Web Services software development kit (&lt;a href=&quot;http://aws.amazon.com/tools/#sdk&quot;&gt;AWS SDK&lt;/a&gt;) is available in &lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-supported.html#gamelift-supported-clients&quot;&gt;multiple languages&lt;/a&gt; including C++ and C#. Use the SDK to access the API programmatically from an application, such as a game</p>
+<p>client&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;a href=&quot;http://aws.amazon.com/cli/&quot;&gt;AWS command-line interface&lt;/a&gt; (CLI) tool is primarily useful for handling administrative actions, such as setting up and managing Amazon <a href="qtaws-gamelift.html">GameLift</a> settings and resources. You can use the AWS CLI to manage all of your AWS</p>
+<p>services&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;a href=&quot;https://console.aws.amazon.com/gamelift/home&quot;&gt;AWS Management Console&lt;/a&gt; for Amazon <a href="qtaws-gamelift.html">GameLift</a> provides a web interface to manage your Amazon <a href="qtaws-gamelift.html">GameLift</a> settings and resources. The console includes a dashboard for tracking key resources, including builds and fleets, and displays usage and performance metrics for your games as customizable</p>
+<p>graphs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon <a href="qtaws-gamelift.html">GameLift</a> Local is a tool for testing your game's integration with Amazon <a href="qtaws-gamelift.html">GameLift</a> before deploying it on the service. This tools supports a subset of key API actions, which can be called from either the AWS CLI or programmatically. See &lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/integration-testing-local.html&quot;&gt;Testing an</p>
+<p>Integration&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Learn more&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/&quot;&gt; Developer Guide&lt;/a&gt; -- Read about Amazon <a href="qtaws-gamelift.html">GameLift</a> features and how to use them.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;https://gamedev.amazon.com/forums/tutorials&quot;&gt;Tutorials&lt;/a&gt; -- Get started fast with walkthroughs and sample</p>
+<p>projects&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://aws.amazon.com/blogs/gamedev/&quot;&gt;GameDev Blog&lt;/a&gt; -- Stay up to date with new features and</p>
+<p>techniques&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;https://gamedev.amazon.com/forums/spaces/123/gamelift-discussion.html&quot;&gt;GameDev Forums&lt;/a&gt; -- Connect with the GameDev</p>
+<p>community&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://aws.amazon.com/releasenotes/Amazon-<a href="qtaws-gamelift.html">GameLift</a>/&quot;&gt;Release notes&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/doc-history.html&quot;&gt;document history&lt;/a&gt; -- Stay current with updates to the Amazon <a href="qtaws-gamelift.html">GameLift</a> service, SDKs, and documentation.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;API SUMMARY&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>This list offers a functional overview of the Amazon <a href="qtaws-gamelift.html">GameLift</a> service</p>
+<p>API&gt;</p>
+<p>&lt;b&gt;Managing Games and Players&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>Use these actions to start new game sessions, find existing game sessions, track game session status and other information, and enable player access to game</p>
+<p>sessions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Discover existing game sessions&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;SearchGameSessions&lt;/a&gt; -- Retrieve all available game sessions or search for game sessions that match a set of criteria.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Start new game sessions&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Start new games with Queues to find the best available hosting resources across multiple regions, minimize player latency, and balance game session activity for efficiency and cost effectiveness.</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartGameSessionPlacement&lt;/a&gt; -- Request a new game session placement and add one or more players to</p>
+<p>it&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeGameSessionPlacement&lt;/a&gt; -- Get details on a placement request, including</p>
+<p>status&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopGameSessionPlacement&lt;/a&gt; -- Cancel a placement request.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateGameSession&lt;/a&gt; -- Start a new game session on a specific fleet. &lt;i&gt;Available in Amazon <a href="qtaws-gamelift.html">GameLift</a> Local.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Match players to game sessions with FlexMatch matchmaking&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartMatchmaking&lt;/a&gt; -- Request matchmaking for one players or a group who want to play together.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartMatchBackfill&lt;/a&gt; - Request additional player matches to fill empty slots in an existing game session.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeMatchmaking&lt;/a&gt; -- Get details on a matchmaking request, including</p>
+<p>status&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;AcceptMatch&lt;/a&gt; -- Register that a player accepts a proposed match, for matches that require player acceptance.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopMatchmaking&lt;/a&gt; -- Cancel a matchmaking request.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage game session data&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeGameSessions&lt;/a&gt; -- Retrieve metadata for one or more game sessions, including length of time active and current player count. &lt;i&gt;Available in Amazon <a href="qtaws-gamelift.html">GameLift</a> Local.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeGameSessionDetails&lt;/a&gt; -- Retrieve metadata and the game session protection setting for one or more game</p>
+<p>sessions&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateGameSession&lt;/a&gt; -- Change game session settings, such as maximum player count and join</p>
+<p>policy&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetGameSessionLogUrl&lt;/a&gt; -- Get the location of saved logs for a game</p>
+<p>session&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage player sessions&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreatePlayerSession&lt;/a&gt; -- Send a request for a player to join a game session. &lt;i&gt;Available in Amazon <a href="qtaws-gamelift.html">GameLift</a> Local.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreatePlayerSessions&lt;/a&gt; -- Send a request for multiple players to join a game session. &lt;i&gt;Available in Amazon <a href="qtaws-gamelift.html">GameLift</a> Local.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribePlayerSessions&lt;/a&gt; -- Get details on player activity, including status, playing time, and player data. &lt;i&gt;Available in Amazon <a href="qtaws-gamelift.html">GameLift</a> Local.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Setting Up and Managing Game Servers&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>When setting up Amazon <a href="qtaws-gamelift.html">GameLift</a> resources for your game, you first &lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-intro.html&quot;&gt;create a game build&lt;/a&gt; and upload it to Amazon <a href="qtaws-gamelift.html">GameLift</a>. You can then use these actions to configure and manage a fleet of resources to run your game servers, scale capacity to meet player demand, access performance and utilization metrics, and</p>
+<p>more&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage game builds&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateBuild&lt;/a&gt; -- Create a new build using files stored in an Amazon S3 bucket. To create a build and upload files from a local path, use the AWS CLI command</p>
+<p>&lt;code&gt;upload-build&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListBuilds&lt;/a&gt; -- Get a list of all builds uploaded to a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeBuild&lt;/a&gt; -- Retrieve information associated with a</p>
+<p>build&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateBuild&lt;/a&gt; -- Change build metadata, including build name and</p>
+<p>version&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteBuild&lt;/a&gt; -- Remove a build from Amazon</p>
+<p><a href="qtaws-gamelift.html">GameLift</a>&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage fleets&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateFleet&lt;/a&gt; -- Configure and activate a new fleet to run a build's game</p>
+<p>servers&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListFleets&lt;/a&gt; -- Get a list of all fleet IDs in a Amazon <a href="qtaws-gamelift.html">GameLift</a> region (all</p>
+<p>statuses)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt; -- Terminate a fleet that is no longer running game servers or hosting</p>
+<p>players&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>View / update fleet</p>
+<p>configurations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt; / &lt;a&gt;UpdateFleetAttributes&lt;/a&gt; -- View or change a fleet's metadata and settings for game session protection and resource creation</p>
+<p>limits&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt; / &lt;a&gt;UpdateFleetPortSettings&lt;/a&gt; -- View or change the inbound permissions (IP address and port setting ranges) allowed for a</p>
+<p>fleet&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt; / &lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt; -- View or change what server processes (and how many) to run on each instance in a</p>
+<p>fleet&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Control fleet capacity&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt; -- Retrieve maximum number of instances allowed for the current AWS account and the current usage</p>
+<p>level&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt; / &lt;a&gt;UpdateFleetCapacity&lt;/a&gt; -- Retrieve the capacity settings and the current number of instances in a fleet; adjust fleet capacity settings to scale up or</p>
+<p>down&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Autoscale -- Manage autoscaling rules and apply them to a</p>
+<p>fleet&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; -- Create a new autoscaling policy, or update an existing</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; -- Retrieve an existing autoscaling</p>
+<p>policy&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; -- Delete an autoscaling policy and stop it from affecting a fleet's</p>
+<p>capacity&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage VPC peering connections for fleets&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateVpcPeeringAuthorization&lt;/a&gt; -- Authorize a peering connection to one of your</p>
+<p>VPCs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeVpcPeeringAuthorizations&lt;/a&gt; -- Retrieve valid peering connection authorizations.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteVpcPeeringAuthorization&lt;/a&gt; -- Delete a peering connection</p>
+<p>authorization&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateVpcPeeringConnection&lt;/a&gt; -- Establish a peering connection between the VPC for a Amazon <a href="qtaws-gamelift.html">GameLift</a> fleet and one of your</p>
+<p>VPCs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeVpcPeeringConnections&lt;/a&gt; -- Retrieve information on active or pending VPC peering connections with a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>fleet&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteVpcPeeringConnection&lt;/a&gt; -- Delete a VPC peering connection with a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>fleet&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Access fleet activity statistics&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt; -- Get current data on the number of server processes, game sessions, and players currently active on a</p>
+<p>fleet&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt; -- Get a fleet's logged events for a specified time</p>
+<p>span&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeGameSessions&lt;/a&gt; -- Retrieve metadata associated with one or more game sessions, including length of time active and current player</p>
+<p>count&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Remotely access an instance&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeInstances&lt;/a&gt; -- Get information on each instance in a fleet, including instance ID, IP address, and</p>
+<p>status&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;GetInstanceAccess&lt;/a&gt; -- Request access credentials needed to remotely connect to a specified instance in a</p>
+<p>fleet&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage fleet aliases&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateAlias&lt;/a&gt; -- Define a new alias and optionally assign it to a</p>
+<p>fleet&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListAliases&lt;/a&gt; -- Get all fleet aliases defined in a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeAlias&lt;/a&gt; -- Retrieve information on an existing</p>
+<p>alias&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateAlias&lt;/a&gt; -- Change settings for a alias, such as redirecting it from one fleet to</p>
+<p>another&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteAlias&lt;/a&gt; -- Remove an alias from the</p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ResolveAlias&lt;/a&gt; -- Get the fleet ID that a specified alias points</p>
+<p>to&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage game session queues&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateGameSessionQueue&lt;/a&gt; -- Create a queue for processing requests for new game sessions.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeGameSessionQueues&lt;/a&gt; -- Retrieve game session queues defined in a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateGameSessionQueue&lt;/a&gt; -- Change the configuration of a game session</p>
+<p>queue&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteGameSessionQueue&lt;/a&gt; -- Remove a game session queue from the</p>
+<p>region&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Manage FlexMatch resources&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateMatchmakingConfiguration&lt;/a&gt; -- Create a matchmaking configuration with instructions for building a player group and placing in a new game session.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeMatchmakingConfigurations&lt;/a&gt; -- Retrieve matchmaking configurations defined a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateMatchmakingConfiguration&lt;/a&gt; -- Change settings for matchmaking configuration.</p>
+<p>queue&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteMatchmakingConfiguration&lt;/a&gt; -- Remove a matchmaking configuration from the</p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;CreateMatchmakingRuleSet&lt;/a&gt; -- Create a set of rules to use when searching for player matches.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeMatchmakingRuleSets&lt;/a&gt; -- Retrieve matchmaking rule sets defined in a Amazon <a href="qtaws-gamelift.html">GameLift</a></p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ValidateMatchmakingRuleSet&lt;/a&gt; -- Verify syntax for a set of matchmaking rules.</p>
+</div>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftclient.html#describeGameSessions">GameLiftClient::describeGameSessions</a>.</p>
+<!-- @@@DescribeGameSessionsRequest -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DescribeGameSessionsRequest[overload1]$$$DescribeGameSessionsRequestconstDescribeGameSessionsRequest& -->
+<h3 class="fn" id="DescribeGameSessionsRequest"><a name="DescribeGameSessionsRequest"></a>DescribeGameSessionsRequest::<span class="name">DescribeGameSessionsRequest</span>(const <span class="type"><a href="qtaws-gamelift-describegamesessionsrequest.html#DescribeGameSessionsRequest">DescribeGameSessionsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@DescribeGameSessionsRequest -->
+<!-- $$$DescribeGameSessionsRequest$$$DescribeGameSessionsRequest -->
+<h3 class="fn" id="DescribeGameSessionsRequest-1"><a name="DescribeGameSessionsRequest-1"></a>DescribeGameSessionsRequest::<span class="name">DescribeGameSessionsRequest</span>()</h3>
+<p>Constructs a <a href="qtaws-gamelift-describegamesessionsrequest.html">DescribeGameSessionsRequest</a> object.</p>
+<!-- @@@DescribeGameSessionsRequest -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><code>[override virtual] </code><span class="type">bool</span> DescribeGameSessionsRequest::<span class="name">isValid</span>() const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#isValid">AwsAbstractRequest::isValid</a>().</p>
+<!-- @@@isValid -->
+<!-- $$$response[overload1]$$$responseQNetworkReply*const -->
+<h3 class="fn" id="response"><a name="response"></a><code>[override virtual protected] </code><span class="type">QtAws::Core::AwsAbstractResponse</span> *DescribeGameSessionsRequest::<span class="name">response</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#response">AwsAbstractRequest::response</a>().</p>
+<p>Returns a <a href="qtaws-gamelift-describegamesessionsresponse.html">DescribeGameSessionsResponse</a> object to process <i>reply</i>.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#send">QtAws::Core::AwsAbstractClient::send</a>.</p>
+<!-- @@@response -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

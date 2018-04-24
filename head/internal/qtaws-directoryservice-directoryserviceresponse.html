@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- directoryserviceresponse.cpp -->
+  <title>DirectoryServiceResponse Class | DirectoryService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdirectoryservice-index.html">DirectoryService</a></li>
+<li><a href="qtawsdirectoryservice-module.html">C++ Classes</a></li>
+<li>DirectoryServiceResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DirectoryServiceResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-directoryservice-directoryserviceresponse.html">QtAws::DirectoryService::DirectoryServiceResponse</a>)<br/></span>
+<!-- $$$DirectoryServiceResponse-brief -->
+<p>The <a href="qtaws-directoryservice-directoryserviceresponse.html">DirectoryServiceResponse</a> class provides an interface for <a href="qtaws-directoryservice.html">DirectoryService</a> responses. <a href="#details">More...</a></p>
+<!-- @@@DirectoryServiceResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DirectoryServiceResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-directoryservice-addiproutesresponse.html">QtAws::DirectoryService::AddIpRoutesResponse</a>, <a href="qtaws-directoryservice-addtagstoresourceresponse.html">QtAws::DirectoryService::AddTagsToResourceResponse</a>, <a href="qtaws-directoryservice-cancelschemaextensionresponse.html">QtAws::DirectoryService::CancelSchemaExtensionResponse</a>, <a href="qtaws-directoryservice-connectdirectoryresponse.html">QtAws::DirectoryService::ConnectDirectoryResponse</a>, <a href="qtaws-directoryservice-createaliasresponse.html">QtAws::DirectoryService::CreateAliasResponse</a>, <a href="qtaws-directoryservice-createcomputerresponse.html">QtAws::DirectoryService::CreateComputerResponse</a>, <a href="qtaws-directoryservice-createconditionalforwarderresponse.html">QtAws::DirectoryService::CreateConditionalForwarderResponse</a>, <a href="qtaws-directoryservice-createdirectoryresponse.html">QtAws::DirectoryService::CreateDirectoryResponse</a>, <a href="qtaws-directoryservice-createmicrosoftadresponse.html">QtAws::DirectoryService::CreateMicrosoftADResponse</a>, <a href="qtaws-directoryservice-createsnapshotresponse.html">QtAws::DirectoryService::CreateSnapshotResponse</a>, <a href="qtaws-directoryservice-createtrustresponse.html">QtAws::DirectoryService::CreateTrustResponse</a>, <a href="qtaws-directoryservice-deleteconditionalforwarderresponse.html">QtAws::DirectoryService::DeleteConditionalForwarderResponse</a>, <a href="qtaws-directoryservice-deletedirectoryresponse.html">QtAws::DirectoryService::DeleteDirectoryResponse</a>, <a href="qtaws-directoryservice-deletesnapshotresponse.html">QtAws::DirectoryService::DeleteSnapshotResponse</a>, <a href="qtaws-directoryservice-deletetrustresponse.html">QtAws::DirectoryService::DeleteTrustResponse</a>, <a href="qtaws-directoryservice-deregistereventtopicresponse.html">QtAws::DirectoryService::DeregisterEventTopicResponse</a>, <a href="qtaws-directoryservice-describeconditionalforwardersresponse.html">QtAws::DirectoryService::DescribeConditionalForwardersResponse</a>, <a href="qtaws-directoryservice-describedirectoriesresponse.html">QtAws::DirectoryService::DescribeDirectoriesResponse</a>, <a href="qtaws-directoryservice-describedomaincontrollersresponse.html">QtAws::DirectoryService::DescribeDomainControllersResponse</a>, <a href="qtaws-directoryservice-describeeventtopicsresponse.html">QtAws::DirectoryService::DescribeEventTopicsResponse</a>, <a href="qtaws-directoryservice-describesnapshotsresponse.html">QtAws::DirectoryService::DescribeSnapshotsResponse</a>, <a href="qtaws-directoryservice-describetrustsresponse.html">QtAws::DirectoryService::DescribeTrustsResponse</a>, <a href="qtaws-directoryservice-disableradiusresponse.html">QtAws::DirectoryService::DisableRadiusResponse</a>, <a href="qtaws-directoryservice-disablessoresponse.html">QtAws::DirectoryService::DisableSsoResponse</a>, <a href="qtaws-directoryservice-enableradiusresponse.html">QtAws::DirectoryService::EnableRadiusResponse</a>, <a href="qtaws-directoryservice-enablessoresponse.html">QtAws::DirectoryService::EnableSsoResponse</a>, <a href="qtaws-directoryservice-getdirectorylimitsresponse.html">QtAws::DirectoryService::GetDirectoryLimitsResponse</a>, <a href="qtaws-directoryservice-getsnapshotlimitsresponse.html">QtAws::DirectoryService::GetSnapshotLimitsResponse</a>, <a href="qtaws-directoryservice-listiproutesresponse.html">QtAws::DirectoryService::ListIpRoutesResponse</a>, <a href="qtaws-directoryservice-listschemaextensionsresponse.html">QtAws::DirectoryService::ListSchemaExtensionsResponse</a>, <a href="qtaws-directoryservice-listtagsforresourceresponse.html">QtAws::DirectoryService::ListTagsForResourceResponse</a>, <a href="qtaws-directoryservice-registereventtopicresponse.html">QtAws::DirectoryService::RegisterEventTopicResponse</a>, <a href="qtaws-directoryservice-removeiproutesresponse.html">QtAws::DirectoryService::RemoveIpRoutesResponse</a>, <a href="qtaws-directoryservice-removetagsfromresourceresponse.html">QtAws::DirectoryService::RemoveTagsFromResourceResponse</a>, <a href="qtaws-directoryservice-restorefromsnapshotresponse.html">QtAws::DirectoryService::RestoreFromSnapshotResponse</a>, <a href="qtaws-directoryservice-startschemaextensionresponse.html">QtAws::DirectoryService::StartSchemaExtensionResponse</a>, <a href="qtaws-directoryservice-updateconditionalforwarderresponse.html">QtAws::DirectoryService::UpdateConditionalForwarderResponse</a>, <a href="qtaws-directoryservice-updatenumberofdomaincontrollersresponse.html">QtAws::DirectoryService::UpdateNumberOfDomainControllersResponse</a>, <a href="qtaws-directoryservice-updateradiusresponse.html">QtAws::DirectoryService::UpdateRadiusResponse</a>, and <a href="qtaws-directoryservice-verifytrustresponse.html">QtAws::DirectoryService::VerifyTrustResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-directoryservice-directoryserviceresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceresponse.html#DirectoryServiceResponse">DirectoryServiceResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceresponse.html#DirectoryServiceResponse-1">DirectoryServiceResponse</a></b>(DirectoryServiceResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DirectoryServiceResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-directoryservice-directoryserviceresponse.html">DirectoryServiceResponse</a> class provides an interface for <a href="qtaws-directoryservice.html">DirectoryService</a> responses.</p>
+</div>
+<!-- @@@DirectoryServiceResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DirectoryServiceResponse[overload1]$$$DirectoryServiceResponseQObject*const -->
+<h3 class="fn" id="DirectoryServiceResponse"><a name="DirectoryServiceResponse"></a>DirectoryServiceResponse::<span class="name">DirectoryServiceResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-directoryservice-directoryserviceresponse.html">DirectoryServiceResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@DirectoryServiceResponse -->
+<!-- $$$DirectoryServiceResponse$$$DirectoryServiceResponseDirectoryServiceResponsePrivate*constQObject*const -->
+<h3 class="fn" id="DirectoryServiceResponse-1"><a name="DirectoryServiceResponse-1"></a><code>[protected] </code>DirectoryServiceResponse::<span class="name">DirectoryServiceResponse</span>(<span class="type"><a href="qtaws-directoryservice-directoryserviceresponseprivate.html">DirectoryServiceResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-directoryservice-directoryserviceresponse.html">DirectoryServiceResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-directoryservice-directoryserviceresponseprivate.html">DirectoryServiceResponsePrivate</a>.</p>
+<!-- @@@DirectoryServiceResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> DirectoryServiceResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

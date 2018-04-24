@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- supportclient.cpp -->
+  <title>SupportClient Class | Support</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssupport-index.html">Support</a></li>
+<li><a href="qtawssupport-module.html">C++ Classes</a></li>
+<li>SupportClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SupportClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-support-supportclient.html">QtAws::Support::SupportClient</a>)<br/></span>
+<!-- $$$SupportClient-brief -->
+<p>The <a href="qtaws-support-supportclient.html">SupportClient</a> class provides access to the AWS Support service. <a href="#details">More...</a></p>
+<!-- @@@SupportClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SupportClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-support-supportclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#SupportClient">SupportClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#SupportClient-1">SupportClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddAttachmentsToSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#addAttachmentsToSet">addAttachmentsToSet</a></b>(const AddAttachmentsToSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddCommunicationToCaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#addCommunicationToCase">addCommunicationToCase</a></b>(const AddCommunicationToCaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#createCase">createCase</a></b>(const CreateCaseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAttachmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeAttachment">describeAttachment</a></b>(const DescribeAttachmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeCases">describeCases</a></b>(const DescribeCasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCommunicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeCommunications">describeCommunications</a></b>(const DescribeCommunicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeServicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeServices">describeServices</a></b>(const DescribeServicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSeverityLevelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeSeverityLevels">describeSeverityLevels</a></b>(const DescribeSeverityLevelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrustedAdvisorCheckRefreshStatusesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeTrustedAdvisorCheckRefreshStatuses">describeTrustedAdvisorCheckRefreshStatuses</a></b>(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrustedAdvisorCheckResultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeTrustedAdvisorCheckResult">describeTrustedAdvisorCheckResult</a></b>(const DescribeTrustedAdvisorCheckResultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrustedAdvisorCheckSummariesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeTrustedAdvisorCheckSummaries">describeTrustedAdvisorCheckSummaries</a></b>(const DescribeTrustedAdvisorCheckSummariesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrustedAdvisorChecksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#describeTrustedAdvisorChecks">describeTrustedAdvisorChecks</a></b>(const DescribeTrustedAdvisorChecksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RefreshTrustedAdvisorCheckResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#refreshTrustedAdvisorCheck">refreshTrustedAdvisorCheck</a></b>(const RefreshTrustedAdvisorCheckRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResolveCaseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-support-supportclient.html#resolveCase">resolveCase</a></b>(const ResolveCaseRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SupportClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-support-supportclient.html">SupportClient</a> class provides access to the AWS Support service.</p>
+<p>&lt;fullname&gt;AWS Support&lt;/fullname&gt;</p>
+<p>The AWS Support API reference is intended for programmers who need detailed information about the AWS Support operations and data types. This service enables you to manage your AWS Support cases programmatically. It uses HTTP methods that return results in JSON</p>
+<p>format&gt;</p>
+<p>The AWS Support service also exposes a set of &lt;a href=&quot;http://aws.amazon.com/premiumsupport/trustedadvisor/&quot;&gt;Trusted Advisor&lt;/a&gt; features. You can retrieve a list of checks and their descriptions, get check results, specify checks to refresh, and get the refresh status of checks.</p>
+<p>&lt;/p</p>
+<p>The following list describes the AWS Support case management</p>
+<p>operations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Service names, issue categories, and available severity levels. &lt;/b&gt;The &lt;a&gt;DescribeServices&lt;/a&gt; and &lt;a&gt;DescribeSeverityLevels&lt;/a&gt; operations return AWS service names, service codes, service categories, and problem severity levels. You use these values when you call the &lt;a&gt;CreateCase&lt;/a&gt; operation.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Case creation, case details, and case resolution.&lt;/b&gt; The &lt;a&gt;CreateCase&lt;/a&gt;, &lt;a&gt;DescribeCases&lt;/a&gt;, &lt;a&gt;DescribeAttachment&lt;/a&gt;, and &lt;a&gt;ResolveCase&lt;/a&gt; operations create AWS Support cases, retrieve information about cases, and resolve</p>
+<p>cases&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Case communication.&lt;/b&gt; The &lt;a&gt;DescribeCommunications&lt;/a&gt;, &lt;a&gt;AddCommunicationToCase&lt;/a&gt;, and &lt;a&gt;AddAttachmentsToSet&lt;/a&gt; operations retrieve and add communications and attachments to AWS Support cases.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>The following list describes the operations available from the AWS Support service for Trusted</p>
+<p>Advisor&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt; returns the list of checks that run against your AWS</p>
+<p>resources&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Using the &lt;code&gt;checkId&lt;/code&gt; for a specific check returned by &lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt;, you can call &lt;a&gt;DescribeTrustedAdvisorCheckResult&lt;/a&gt; to obtain the results for the check you</p>
+<p>specified&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorCheckSummaries&lt;/a&gt; returns summarized results for one or more Trusted Advisor</p>
+<p>checks&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;RefreshTrustedAdvisorCheck&lt;/a&gt; requests that Trusted Advisor rerun a specified check.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorCheckRefreshStatuses&lt;/a&gt; reports the refresh status of one or more checks.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For authentication of requests, AWS Support uses &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt;Signature Version 4 Signing</p>
+<p>Process&lt;/a&gt;&gt;</p>
+<p>See &lt;a href=&quot;http://docs.aws.amazon.com/awssupport/latest/user/Welcome.html&quot;&gt;About the AWS Support API&lt;/a&gt; in the &lt;i&gt;AWS Support User Guide&lt;/i&gt; for information about how to use this service to create and manage your support cases, and how to call Trusted Advisor for results of checks on your resources.</p>
+</div>
+<!-- @@@SupportClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SupportClient[overload1]$$$SupportClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SupportClient"><a name="SupportClient"></a>SupportClient::<span class="name">SupportClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-support-supportclient.html">SupportClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SupportClient -->
+<!-- $$$SupportClient$$$SupportClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SupportClient-1"><a name="SupportClient-1"></a>SupportClient::<span class="name">SupportClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-support-supportclient.html#SupportClient">SupportClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SupportClient -->
+<!-- $$$addAttachmentsToSet[overload1]$$$addAttachmentsToSetconstAddAttachmentsToSetRequest& -->
+<h3 class="fn" id="addAttachmentsToSet"><a name="addAttachmentsToSet"></a><code>[slot] </code><span class="type"><a href="qtaws-support-addattachmentstosetresponse.html">AddAttachmentsToSetResponse</a></span> *SupportClient::<span class="name">addAttachmentsToSet</span>(const <span class="type"><a href="qtaws-support-addattachmentstosetrequest.html">AddAttachmentsToSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-addattachmentstosetresponse.html">AddAttachmentsToSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more attachments to an attachment set. If an &lt;code&gt;attachmentSetId&lt;/code&gt; is not specified, a new attachment set is created, and the ID of the set is returned in the response. If an &lt;code&gt;attachmentSetId&lt;/code&gt; is specified, the attachments are added to the specified set, if it</p>
+<p>exists&gt;</p>
+<p>An attachment set is a temporary container for attachments that are to be added to a case or case communication. The set is available for one hour after it is created; the &lt;code&gt;expiryTime&lt;/code&gt; returned in the response indicates when the set expires. The maximum number of attachments in a set is 3, and the maximum size of any attachment in the set is 5</p>
+<!-- @@@addAttachmentsToSet -->
+<!-- $$$addCommunicationToCase[overload1]$$$addCommunicationToCaseconstAddCommunicationToCaseRequest& -->
+<h3 class="fn" id="addCommunicationToCase"><a name="addCommunicationToCase"></a><code>[slot] </code><span class="type"><a href="qtaws-support-addcommunicationtocaseresponse.html">AddCommunicationToCaseResponse</a></span> *SupportClient::<span class="name">addCommunicationToCase</span>(const <span class="type"><a href="qtaws-support-addcommunicationtocaserequest.html">AddCommunicationToCaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-addcommunicationtocaseresponse.html">AddCommunicationToCaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds additional customer communication to an AWS Support case. You use the &lt;code&gt;caseId&lt;/code&gt; value to identify the case to add communication to. You can list a set of email addresses to copy on the communication using the &lt;code&gt;ccEmailAddresses&lt;/code&gt; value. The &lt;code&gt;communicationBody&lt;/code&gt; value contains the text of the</p>
+<p>communication&gt;</p>
+<p>The response indicates the success or failure of the</p>
+<p>request&gt;</p>
+<p>This operation implements a subset of the features of the AWS Support</p>
+<!-- @@@addCommunicationToCase -->
+<!-- $$$createCase[overload1]$$$createCaseconstCreateCaseRequest& -->
+<h3 class="fn" id="createCase"><a name="createCase"></a><code>[slot] </code><span class="type"><a href="qtaws-support-createcaseresponse.html">CreateCaseResponse</a></span> *SupportClient::<span class="name">createCase</span>(const <span class="type"><a href="qtaws-support-createcaserequest.html">CreateCaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-createcaseresponse.html">CreateCaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new case in the AWS Support Center. This operation is modeled on the behavior of the AWS Support Center &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create&quot;&gt;Create Case&lt;/a&gt; page. Its parameters require you to specify the following information:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;issueType.&lt;/b&gt; The type of issue for the case. You can specify either &quot;customer-service&quot; or &quot;technical.&quot; If you do not indicate a value, the default is &quot;technical.&quot;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;serviceCode.&lt;/b&gt; The code for an AWS service. You obtain the &lt;code&gt;serviceCode&lt;/code&gt; by calling &lt;a&gt;DescribeServices&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;categoryCode.&lt;/b&gt; The category for the service defined for the &lt;code&gt;serviceCode&lt;/code&gt; value. You also obtain the category code for a service by calling &lt;a&gt;DescribeServices&lt;/a&gt;. Each AWS service defines its own set of category codes.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;severityCode.&lt;/b&gt; A value that indicates the urgency of the case, which in turn determines the response time according to your service level agreement with AWS Support. You obtain the SeverityCode by calling</p>
+<p>&lt;a&gt;DescribeSeverityLevels&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;subject.&lt;/b&gt; The &lt;b&gt;Subject&lt;/b&gt; field on the AWS Support Center &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create&quot;&gt;Create Case&lt;/a&gt;</p>
+<p>page&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;communicationBody.&lt;/b&gt; The &lt;b&gt;Description&lt;/b&gt; field on the AWS Support Center &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create&quot;&gt;Create Case&lt;/a&gt;</p>
+<p>page&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;attachmentSetId.&lt;/b&gt; The ID of a set of attachments that has been created by using</p>
+<p>&lt;a&gt;AddAttachmentsToSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;language.&lt;/b&gt; The human language in which AWS Support handles the case. English and Japanese are currently</p>
+<p>supported&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;ccEmailAddresses.&lt;/b&gt; The AWS Support Center &lt;b&gt;CC&lt;/b&gt; field on the &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create&quot;&gt;Create Case&lt;/a&gt; page. You can list email addresses to be copied on any correspondence about the case. The account that opens the case is already identified by passing the AWS Credentials in the HTTP POST method or in a method or function call from one of the programming languages supported by an &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;AWS SDK&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;note&gt;</p>
+<p>To add additional communication or attachments to an existing case, use</p>
+<p>&lt;a&gt;AddCommunicationToCase&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>A successful &lt;a&gt;CreateCase&lt;/a&gt; request returns an AWS Support case number. Case numbers are used by the &lt;a&gt;DescribeCases&lt;/a&gt; operation to retrieve existing AWS Support cases.</p>
+<!-- @@@createCase -->
+<!-- $$$describeAttachment[overload1]$$$describeAttachmentconstDescribeAttachmentRequest& -->
+<h3 class="fn" id="describeAttachment"><a name="describeAttachment"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describeattachmentresponse.html">DescribeAttachmentResponse</a></span> *SupportClient::<span class="name">describeAttachment</span>(const <span class="type"><a href="qtaws-support-describeattachmentrequest.html">DescribeAttachmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describeattachmentresponse.html">DescribeAttachmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the attachment that has the specified ID. Attachment IDs are generated by the case management system when you add an attachment to a case or case communication. Attachment IDs are returned in the &lt;a&gt;AttachmentDetails&lt;/a&gt; objects that are returned by the &lt;a&gt;DescribeCommunications&lt;/a&gt;</p>
+<!-- @@@describeAttachment -->
+<!-- $$$describeCases[overload1]$$$describeCasesconstDescribeCasesRequest& -->
+<h3 class="fn" id="describeCases"><a name="describeCases"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describecasesresponse.html">DescribeCasesResponse</a></span> *SupportClient::<span class="name">describeCases</span>(const <span class="type"><a href="qtaws-support-describecasesrequest.html">DescribeCasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describecasesresponse.html">DescribeCasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of cases that you specify by passing one or more case IDs. In addition, you can filter the cases by date by setting values for the &lt;code&gt;afterTime&lt;/code&gt; and &lt;code&gt;beforeTime&lt;/code&gt; request parameters. You can set values for the &lt;code&gt;includeResolvedCases&lt;/code&gt; and &lt;code&gt;includeCommunications&lt;/code&gt; request parameters to control how much information is returned.</p>
+<p>&lt;/p</p>
+<p>Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an</p>
+<p>error&gt;</p>
+<p>The response returns the following in JSON</p>
+<p>format&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>One or more &lt;a&gt;CaseDetails&lt;/a&gt; data types.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>One or more &lt;code&gt;nextToken&lt;/code&gt; values, which specify where to paginate the returned records represented by the &lt;code&gt;CaseDetails&lt;/code&gt;</p>
+<!-- @@@describeCases -->
+<!-- $$$describeCommunications[overload1]$$$describeCommunicationsconstDescribeCommunicationsRequest& -->
+<h3 class="fn" id="describeCommunications"><a name="describeCommunications"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describecommunicationsresponse.html">DescribeCommunicationsResponse</a></span> *SupportClient::<span class="name">describeCommunications</span>(const <span class="type"><a href="qtaws-support-describecommunicationsrequest.html">DescribeCommunicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describecommunicationsresponse.html">DescribeCommunicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns communications (and attachments) for one or more support cases. You can use the &lt;code&gt;afterTime&lt;/code&gt; and &lt;code&gt;beforeTime&lt;/code&gt; parameters to filter by date. You can use the &lt;code&gt;caseId&lt;/code&gt; parameter to restrict the results to a particular</p>
+<p>case&gt;</p>
+<p>Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data might cause an</p>
+<p>error&gt;</p>
+<p>You can use the &lt;code&gt;maxResults&lt;/code&gt; and &lt;code&gt;nextToken&lt;/code&gt; parameters to control the pagination of the result set. Set &lt;code&gt;maxResults&lt;/code&gt; to the number of cases you want displayed on each page, and use &lt;code&gt;nextToken&lt;/code&gt; to specify the resumption of</p>
+<!-- @@@describeCommunications -->
+<!-- $$$describeServices[overload1]$$$describeServicesconstDescribeServicesRequest& -->
+<h3 class="fn" id="describeServices"><a name="describeServices"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describeservicesresponse.html">DescribeServicesResponse</a></span> *SupportClient::<span class="name">describeServices</span>(const <span class="type"><a href="qtaws-support-describeservicesrequest.html">DescribeServicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describeservicesresponse.html">DescribeServicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current list of AWS services and a list of service categories that applies to each one. You then use service names and categories in your &lt;a&gt;CreateCase&lt;/a&gt; requests. Each AWS service has its own set of</p>
+<p>categories&gt;</p>
+<p>The service codes and category codes correspond to the values that are displayed in the &lt;b&gt;Service&lt;/b&gt; and &lt;b&gt;Category&lt;/b&gt; drop-down lists on the AWS Support Center &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create&quot;&gt;Create Case&lt;/a&gt; page. The values in those fields, however, do not necessarily match the service codes and categories returned by the &lt;code&gt;DescribeServices&lt;/code&gt; request. Always use the service codes and categories obtained programmatically. This practice ensures that you always have the most recent set of service and category</p>
+<!-- @@@describeServices -->
+<!-- $$$describeSeverityLevels[overload1]$$$describeSeverityLevelsconstDescribeSeverityLevelsRequest& -->
+<h3 class="fn" id="describeSeverityLevels"><a name="describeSeverityLevels"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describeseveritylevelsresponse.html">DescribeSeverityLevelsResponse</a></span> *SupportClient::<span class="name">describeSeverityLevels</span>(const <span class="type"><a href="qtaws-support-describeseveritylevelsrequest.html">DescribeSeverityLevelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describeseveritylevelsresponse.html">DescribeSeverityLevelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of severity levels that you can assign to an AWS Support case. The severity level for a case is also a field in the &lt;a&gt;CaseDetails&lt;/a&gt; data type included in any &lt;a&gt;CreateCase&lt;/a&gt; request.</p>
+<!-- @@@describeSeverityLevels -->
+<!-- $$$describeTrustedAdvisorCheckRefreshStatuses[overload1]$$$describeTrustedAdvisorCheckRefreshStatusesconstDescribeTrustedAdvisorCheckRefreshStatusesRequest& -->
+<h3 class="fn" id="describeTrustedAdvisorCheckRefreshStatuses"><a name="describeTrustedAdvisorCheckRefreshStatuses"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describetrustedadvisorcheckrefreshstatusesresponse.html">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a></span> *SupportClient::<span class="name">describeTrustedAdvisorCheckRefreshStatuses</span>(const <span class="type"><a href="qtaws-support-describetrustedadvisorcheckrefreshstatusesrequest.html">DescribeTrustedAdvisorCheckRefreshStatusesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describetrustedadvisorcheckrefreshstatusesresponse.html">DescribeTrustedAdvisorCheckRefreshStatusesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the refresh status of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>Some checks are refreshed automatically, and their refresh statuses cannot be retrieved by using this operation. Use of the &lt;code&gt;DescribeTrustedAdvisorCheckRefreshStatuses&lt;/code&gt; operation for these checks causes an &lt;code&gt;InvalidParameterValue&lt;/code&gt;</p>
+<!-- @@@describeTrustedAdvisorCheckRefreshStatuses -->
+<!-- $$$describeTrustedAdvisorCheckResult[overload1]$$$describeTrustedAdvisorCheckResultconstDescribeTrustedAdvisorCheckResultRequest& -->
+<h3 class="fn" id="describeTrustedAdvisorCheckResult"><a name="describeTrustedAdvisorCheckResult"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describetrustedadvisorcheckresultresponse.html">DescribeTrustedAdvisorCheckResultResponse</a></span> *SupportClient::<span class="name">describeTrustedAdvisorCheckResult</span>(const <span class="type"><a href="qtaws-support-describetrustedadvisorcheckresultrequest.html">DescribeTrustedAdvisorCheckResultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describetrustedadvisorcheckresultresponse.html">DescribeTrustedAdvisorCheckResultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the results of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt;&gt;</p>
+<p>The response contains a &lt;a&gt;TrustedAdvisorCheckResult&lt;/a&gt; object, which contains these three</p>
+<p>objects&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;TrustedAdvisorCategorySpecificSummary&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;TrustedAdvisorResourceDetail&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;TrustedAdvisorResourcesSummary&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>In addition, the response contains these</p>
+<p>fields&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;status.&lt;/b&gt; The alert status of the check: &quot;ok&quot; (green), &quot;warning&quot; (yellow), &quot;error&quot; (red), or</p>
+<p>&quot;not_available&quot;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;timestamp.&lt;/b&gt; The time of the last refresh of the</p>
+<p>check&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;checkId.&lt;/b&gt; The unique identifier for the</p>
+<!-- @@@describeTrustedAdvisorCheckResult -->
+<!-- $$$describeTrustedAdvisorCheckSummaries[overload1]$$$describeTrustedAdvisorCheckSummariesconstDescribeTrustedAdvisorCheckSummariesRequest& -->
+<h3 class="fn" id="describeTrustedAdvisorCheckSummaries"><a name="describeTrustedAdvisorCheckSummaries"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describetrustedadvisorchecksummariesresponse.html">DescribeTrustedAdvisorCheckSummariesResponse</a></span> *SupportClient::<span class="name">describeTrustedAdvisorCheckSummaries</span>(const <span class="type"><a href="qtaws-support-describetrustedadvisorchecksummariesrequest.html">DescribeTrustedAdvisorCheckSummariesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describetrustedadvisorchecksummariesresponse.html">DescribeTrustedAdvisorCheckSummariesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the summaries of the results of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by calling</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt;&gt;</p>
+<p>The response contains an array of &lt;a&gt;TrustedAdvisorCheckSummary&lt;/a&gt;</p>
+<!-- @@@describeTrustedAdvisorCheckSummaries -->
+<!-- $$$describeTrustedAdvisorChecks[overload1]$$$describeTrustedAdvisorChecksconstDescribeTrustedAdvisorChecksRequest& -->
+<h3 class="fn" id="describeTrustedAdvisorChecks"><a name="describeTrustedAdvisorChecks"></a><code>[slot] </code><span class="type"><a href="qtaws-support-describetrustedadvisorchecksresponse.html">DescribeTrustedAdvisorChecksResponse</a></span> *SupportClient::<span class="name">describeTrustedAdvisorChecks</span>(const <span class="type"><a href="qtaws-support-describetrustedadvisorchecksrequest.html">DescribeTrustedAdvisorChecksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-describetrustedadvisorchecksresponse.html">DescribeTrustedAdvisorChecksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all available Trusted Advisor checks, including name, ID, category, description, and metadata. You must specify a language code; English (&quot;en&quot;) and Japanese (&quot;ja&quot;) are currently supported. The response contains a &lt;a&gt;TrustedAdvisorCheckDescription&lt;/a&gt; for each</p>
+<!-- @@@describeTrustedAdvisorChecks -->
+<!-- $$$refreshTrustedAdvisorCheck[overload1]$$$refreshTrustedAdvisorCheckconstRefreshTrustedAdvisorCheckRequest& -->
+<h3 class="fn" id="refreshTrustedAdvisorCheck"><a name="refreshTrustedAdvisorCheck"></a><code>[slot] </code><span class="type"><a href="qtaws-support-refreshtrustedadvisorcheckresponse.html">RefreshTrustedAdvisorCheckResponse</a></span> *SupportClient::<span class="name">refreshTrustedAdvisorCheck</span>(const <span class="type"><a href="qtaws-support-refreshtrustedadvisorcheckrequest.html">RefreshTrustedAdvisorCheckRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-refreshtrustedadvisorcheckresponse.html">RefreshTrustedAdvisorCheckResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a refresh of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling</p>
+<p>&lt;a&gt;DescribeTrustedAdvisorChecks&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>Some checks are refreshed automatically, and they cannot be refreshed by using this operation. Use of the &lt;code&gt;RefreshTrustedAdvisorCheck&lt;/code&gt; operation for these checks causes an &lt;code&gt;InvalidParameterValue&lt;/code&gt;</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>The response contains a &lt;a&gt;TrustedAdvisorCheckRefreshStatus&lt;/a&gt; object, which contains these</p>
+<p>fields&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;status.&lt;/b&gt; The refresh status of the check: &quot;none&quot;, &quot;enqueued&quot;, &quot;processing&quot;, &quot;success&quot;, or</p>
+<p>&quot;abandoned&quot;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;millisUntilNextRefreshable.&lt;/b&gt; The amount of time, in milliseconds, until the check is eligible for</p>
+<p>refresh&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;checkId.&lt;/b&gt; The unique identifier for the</p>
+<!-- @@@refreshTrustedAdvisorCheck -->
+<!-- $$$resolveCase[overload1]$$$resolveCaseconstResolveCaseRequest& -->
+<h3 class="fn" id="resolveCase"><a name="resolveCase"></a><code>[slot] </code><span class="type"><a href="qtaws-support-resolvecaseresponse.html">ResolveCaseResponse</a></span> *SupportClient::<span class="name">resolveCase</span>(const <span class="type"><a href="qtaws-support-resolvecaserequest.html">ResolveCaseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-support-supportclient.html">SupportClient</a> service, and returns a pointer to an <a href="qtaws-support-resolvecaseresponse.html">ResolveCaseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Takes a &lt;code&gt;caseId&lt;/code&gt; and returns the initial state of the case along with the state of the case after the call to &lt;a&gt;ResolveCase&lt;/a&gt;</p>
+<!-- @@@resolveCase -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

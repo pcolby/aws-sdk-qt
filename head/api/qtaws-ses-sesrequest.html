@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sesrequest.cpp -->
+  <title>SesRequest Class | SES</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsses-index.html">SES</a></li>
+<li><a href="qtawsses-module.html">C++ Classes</a></li>
+<li>SesRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SesRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ses-sesrequest.html">QtAws::SES::SesRequest</a>)<br/></span>
+<!-- $$$SesRequest-brief -->
+<p>The <a href="qtaws-ses-sesrequest.html">SesRequest</a> class provides an interface for SES requests. <a href="#details">More...</a></p>
+<!-- @@@SesRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SesRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-ses-clonereceiptrulesetrequest.html">QtAws::SES::CloneReceiptRuleSetRequest</a>, <a href="qtaws-ses-createconfigurationseteventdestinationrequest.html">QtAws::SES::CreateConfigurationSetEventDestinationRequest</a>, <a href="qtaws-ses-createconfigurationsetrequest.html">QtAws::SES::CreateConfigurationSetRequest</a>, <a href="qtaws-ses-createconfigurationsettrackingoptionsrequest.html">QtAws::SES::CreateConfigurationSetTrackingOptionsRequest</a>, <a href="qtaws-ses-createcustomverificationemailtemplaterequest.html">QtAws::SES::CreateCustomVerificationEmailTemplateRequest</a>, <a href="qtaws-ses-createreceiptfilterrequest.html">QtAws::SES::CreateReceiptFilterRequest</a>, <a href="qtaws-ses-createreceiptrulerequest.html">QtAws::SES::CreateReceiptRuleRequest</a>, <a href="qtaws-ses-createreceiptrulesetrequest.html">QtAws::SES::CreateReceiptRuleSetRequest</a>, <a href="qtaws-ses-createtemplaterequest.html">QtAws::SES::CreateTemplateRequest</a>, <a href="qtaws-ses-deleteconfigurationseteventdestinationrequest.html">QtAws::SES::DeleteConfigurationSetEventDestinationRequest</a>, <a href="qtaws-ses-deleteconfigurationsetrequest.html">QtAws::SES::DeleteConfigurationSetRequest</a>, <a href="qtaws-ses-deleteconfigurationsettrackingoptionsrequest.html">QtAws::SES::DeleteConfigurationSetTrackingOptionsRequest</a>, <a href="qtaws-ses-deletecustomverificationemailtemplaterequest.html">QtAws::SES::DeleteCustomVerificationEmailTemplateRequest</a>, <a href="qtaws-ses-deleteidentitypolicyrequest.html">QtAws::SES::DeleteIdentityPolicyRequest</a>, <a href="qtaws-ses-deleteidentityrequest.html">QtAws::SES::DeleteIdentityRequest</a>, <a href="qtaws-ses-deletereceiptfilterrequest.html">QtAws::SES::DeleteReceiptFilterRequest</a>, <a href="qtaws-ses-deletereceiptrulerequest.html">QtAws::SES::DeleteReceiptRuleRequest</a>, <a href="qtaws-ses-deletereceiptrulesetrequest.html">QtAws::SES::DeleteReceiptRuleSetRequest</a>, <a href="qtaws-ses-deletetemplaterequest.html">QtAws::SES::DeleteTemplateRequest</a>, <a href="qtaws-ses-deleteverifiedemailaddressrequest.html">QtAws::SES::DeleteVerifiedEmailAddressRequest</a>, <a href="qtaws-ses-describeactivereceiptrulesetrequest.html">QtAws::SES::DescribeActiveReceiptRuleSetRequest</a>, <a href="qtaws-ses-describeconfigurationsetrequest.html">QtAws::SES::DescribeConfigurationSetRequest</a>, <a href="qtaws-ses-describereceiptrulerequest.html">QtAws::SES::DescribeReceiptRuleRequest</a>, <a href="qtaws-ses-describereceiptrulesetrequest.html">QtAws::SES::DescribeReceiptRuleSetRequest</a>, <a href="qtaws-ses-getcustomverificationemailtemplaterequest.html">QtAws::SES::GetCustomVerificationEmailTemplateRequest</a>, <a href="qtaws-ses-getidentitydkimattributesrequest.html">QtAws::SES::GetIdentityDkimAttributesRequest</a>, <a href="qtaws-ses-getidentitymailfromdomainattributesrequest.html">QtAws::SES::GetIdentityMailFromDomainAttributesRequest</a>, <a href="qtaws-ses-getidentitynotificationattributesrequest.html">QtAws::SES::GetIdentityNotificationAttributesRequest</a>, <a href="qtaws-ses-getidentitypoliciesrequest.html">QtAws::SES::GetIdentityPoliciesRequest</a>, <a href="qtaws-ses-getidentityverificationattributesrequest.html">QtAws::SES::GetIdentityVerificationAttributesRequest</a>, <a href="qtaws-ses-gettemplaterequest.html">QtAws::SES::GetTemplateRequest</a>, <a href="qtaws-ses-listconfigurationsetsrequest.html">QtAws::SES::ListConfigurationSetsRequest</a>, <a href="qtaws-ses-listcustomverificationemailtemplatesrequest.html">QtAws::SES::ListCustomVerificationEmailTemplatesRequest</a>, <a href="qtaws-ses-listidentitiesrequest.html">QtAws::SES::ListIdentitiesRequest</a>, <a href="qtaws-ses-listidentitypoliciesrequest.html">QtAws::SES::ListIdentityPoliciesRequest</a>, <a href="qtaws-ses-listreceiptfiltersrequest.html">QtAws::SES::ListReceiptFiltersRequest</a>, <a href="qtaws-ses-listreceiptrulesetsrequest.html">QtAws::SES::ListReceiptRuleSetsRequest</a>, <a href="qtaws-ses-listtemplatesrequest.html">QtAws::SES::ListTemplatesRequest</a>, <a href="qtaws-ses-putidentitypolicyrequest.html">QtAws::SES::PutIdentityPolicyRequest</a>, <a href="qtaws-ses-reorderreceiptrulesetrequest.html">QtAws::SES::ReorderReceiptRuleSetRequest</a>, <a href="qtaws-ses-sendbouncerequest.html">QtAws::SES::SendBounceRequest</a>, <a href="qtaws-ses-sendbulktemplatedemailrequest.html">QtAws::SES::SendBulkTemplatedEmailRequest</a>, <a href="qtaws-ses-sendcustomverificationemailrequest.html">QtAws::SES::SendCustomVerificationEmailRequest</a>, <a href="qtaws-ses-sendemailrequest.html">QtAws::SES::SendEmailRequest</a>, <a href="qtaws-ses-sendrawemailrequest.html">QtAws::SES::SendRawEmailRequest</a>, <a href="qtaws-ses-sendtemplatedemailrequest.html">QtAws::SES::SendTemplatedEmailRequest</a>, <a href="qtaws-ses-setactivereceiptrulesetrequest.html">QtAws::SES::SetActiveReceiptRuleSetRequest</a>, <a href="qtaws-ses-setidentitydkimenabledrequest.html">QtAws::SES::SetIdentityDkimEnabledRequest</a>, <a href="qtaws-ses-setidentityfeedbackforwardingenabledrequest.html">QtAws::SES::SetIdentityFeedbackForwardingEnabledRequest</a>, <a href="qtaws-ses-setidentityheadersinnotificationsenabledrequest.html">QtAws::SES::SetIdentityHeadersInNotificationsEnabledRequest</a>, <a href="qtaws-ses-setidentitymailfromdomainrequest.html">QtAws::SES::SetIdentityMailFromDomainRequest</a>, <a href="qtaws-ses-setidentitynotificationtopicrequest.html">QtAws::SES::SetIdentityNotificationTopicRequest</a>, <a href="qtaws-ses-setreceiptrulepositionrequest.html">QtAws::SES::SetReceiptRulePositionRequest</a>, <a href="qtaws-ses-testrendertemplaterequest.html">QtAws::SES::TestRenderTemplateRequest</a>, <a href="qtaws-ses-updateaccountsendingenabledrequest.html">QtAws::SES::UpdateAccountSendingEnabledRequest</a>, <a href="qtaws-ses-updateconfigurationseteventdestinationrequest.html">QtAws::SES::UpdateConfigurationSetEventDestinationRequest</a>, <a href="qtaws-ses-updateconfigurationsetreputationmetricsenabledrequest.html">QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequest</a>, <a href="qtaws-ses-updateconfigurationsetsendingenabledrequest.html">QtAws::SES::UpdateConfigurationSetSendingEnabledRequest</a>, <a href="qtaws-ses-updateconfigurationsettrackingoptionsrequest.html">QtAws::SES::UpdateConfigurationSetTrackingOptionsRequest</a>, <a href="qtaws-ses-updatecustomverificationemailtemplaterequest.html">QtAws::SES::UpdateCustomVerificationEmailTemplateRequest</a>, <a href="qtaws-ses-updatereceiptrulerequest.html">QtAws::SES::UpdateReceiptRuleRequest</a>, <a href="qtaws-ses-updatetemplaterequest.html">QtAws::SES::UpdateTemplateRequest</a>, <a href="qtaws-ses-verifydomaindkimrequest.html">QtAws::SES::VerifyDomainDkimRequest</a>, <a href="qtaws-ses-verifydomainidentityrequest.html">QtAws::SES::VerifyDomainIdentityRequest</a>, <a href="qtaws-ses-verifyemailaddressrequest.html">QtAws::SES::VerifyEmailAddressRequest</a>, and <a href="qtaws-ses-verifyemailidentityrequest.html">QtAws::SES::VerifyEmailIdentityRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-ses-sesrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#Action-enum">Action</a></b> { CloneReceiptRuleSetAction, CreateConfigurationSetAction, CreateConfigurationSetEventDestinationAction, CreateConfigurationSetTrackingOptionsAction, ..., VerifyEmailIdentityAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#SesRequest">SesRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#SesRequest-1">SesRequest</a></b>(const SesRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SesRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#operator-eq">operator=</a></b>(const SesRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#operator-eq-eq">operator==</a></b>(const SesRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#SesRequest-2">SesRequest</a></b>(SesRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SesRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ses-sesrequest.html">SesRequest</a> class provides an interface for SES requests.</p>
+</div>
+<!-- @@@SesRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CloneReceiptRuleSetAction$$$CreateConfigurationSetAction$$$CreateConfigurationSetEventDestinationAction$$$CreateConfigurationSetTrackingOptionsAction$$$CreateCustomVerificationEmailTemplateAction$$$CreateReceiptFilterAction$$$CreateReceiptRuleAction$$$CreateReceiptRuleSetAction$$$CreateTemplateAction$$$DeleteConfigurationSetAction$$$DeleteConfigurationSetEventDestinationAction$$$DeleteConfigurationSetTrackingOptionsAction$$$DeleteCustomVerificationEmailTemplateAction$$$DeleteIdentityAction$$$DeleteIdentityPolicyAction$$$DeleteReceiptFilterAction$$$DeleteReceiptRuleAction$$$DeleteReceiptRuleSetAction$$$DeleteTemplateAction$$$DeleteVerifiedEmailAddressAction$$$DescribeActiveReceiptRuleSetAction$$$DescribeConfigurationSetAction$$$DescribeReceiptRuleAction$$$DescribeReceiptRuleSetAction$$$GetAccountSendingEnabledAction$$$GetCustomVerificationEmailTemplateAction$$$GetIdentityDkimAttributesAction$$$GetIdentityMailFromDomainAttributesAction$$$GetIdentityNotificationAttributesAction$$$GetIdentityPoliciesAction$$$GetIdentityVerificationAttributesAction$$$GetSendQuotaAction$$$GetSendStatisticsAction$$$GetTemplateAction$$$ListConfigurationSetsAction$$$ListCustomVerificationEmailTemplatesAction$$$ListIdentitiesAction$$$ListIdentityPoliciesAction$$$ListReceiptFiltersAction$$$ListReceiptRuleSetsAction$$$ListTemplatesAction$$$ListVerifiedEmailAddressesAction$$$PutIdentityPolicyAction$$$ReorderReceiptRuleSetAction$$$SendBounceAction$$$SendBulkTemplatedEmailAction$$$SendCustomVerificationEmailAction$$$SendEmailAction$$$SendRawEmailAction$$$SendTemplatedEmailAction$$$SetActiveReceiptRuleSetAction$$$SetIdentityDkimEnabledAction$$$SetIdentityFeedbackForwardingEnabledAction$$$SetIdentityHeadersInNotificationsEnabledAction$$$SetIdentityMailFromDomainAction$$$SetIdentityNotificationTopicAction$$$SetReceiptRulePositionAction$$$TestRenderTemplateAction$$$UpdateAccountSendingEnabledAction$$$UpdateConfigurationSetEventDestinationAction$$$UpdateConfigurationSetReputationMetricsEnabledAction$$$UpdateConfigurationSetSendingEnabledAction$$$UpdateConfigurationSetTrackingOptionsAction$$$UpdateCustomVerificationEmailTemplateAction$$$UpdateReceiptRuleAction$$$UpdateTemplateAction$$$VerifyDomainDkimAction$$$VerifyDomainIdentityAction$$$VerifyEmailAddressAction$$$VerifyEmailIdentityAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SesRequest::<span class="name">Action</span><br/>flags SesRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as SES requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CloneReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">SES CloneReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateConfigurationSetAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">SES CreateConfigurationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateConfigurationSetEventDestinationAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">SES CreateConfigurationSetEventDestination action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateConfigurationSetTrackingOptionsAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">SES CreateConfigurationSetTrackingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateCustomVerificationEmailTemplateAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">SES CreateCustomVerificationEmailTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateReceiptFilterAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">SES CreateReceiptFilter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateReceiptRuleAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">SES CreateReceiptRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">SES CreateReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::CreateTemplateAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">SES CreateTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteConfigurationSetAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">SES DeleteConfigurationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteConfigurationSetEventDestinationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">SES DeleteConfigurationSetEventDestination action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteConfigurationSetTrackingOptionsAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">SES DeleteConfigurationSetTrackingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteCustomVerificationEmailTemplateAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">SES DeleteCustomVerificationEmailTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteIdentityAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">SES DeleteIdentity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteIdentityPolicyAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">SES DeleteIdentityPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteReceiptFilterAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">SES DeleteReceiptFilter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteReceiptRuleAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">SES DeleteReceiptRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">SES DeleteReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteTemplateAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">SES DeleteTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DeleteVerifiedEmailAddressAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">SES DeleteVerifiedEmailAddress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DescribeActiveReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">SES DescribeActiveReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DescribeConfigurationSetAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">SES DescribeConfigurationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DescribeReceiptRuleAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">SES DescribeReceiptRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::DescribeReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">SES DescribeReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetAccountSendingEnabledAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">SES GetAccountSendingEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetCustomVerificationEmailTemplateAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">SES GetCustomVerificationEmailTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetIdentityDkimAttributesAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">SES GetIdentityDkimAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetIdentityMailFromDomainAttributesAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">SES GetIdentityMailFromDomainAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetIdentityNotificationAttributesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">SES GetIdentityNotificationAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetIdentityPoliciesAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">SES GetIdentityPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetIdentityVerificationAttributesAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">SES GetIdentityVerificationAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetSendQuotaAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">SES GetSendQuota action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetSendStatisticsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">SES GetSendStatistics action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::GetTemplateAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">SES GetTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListConfigurationSetsAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">SES ListConfigurationSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListCustomVerificationEmailTemplatesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">SES ListCustomVerificationEmailTemplates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListIdentitiesAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">SES ListIdentities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListIdentityPoliciesAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">SES ListIdentityPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListReceiptFiltersAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">SES ListReceiptFilters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListReceiptRuleSetsAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">SES ListReceiptRuleSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListTemplatesAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">SES ListTemplates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ListVerifiedEmailAddressesAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">SES ListVerifiedEmailAddresses action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::PutIdentityPolicyAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">SES PutIdentityPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::ReorderReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">SES ReorderReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendBounceAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">SES SendBounce action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendBulkTemplatedEmailAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">SES SendBulkTemplatedEmail action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendCustomVerificationEmailAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">SES SendCustomVerificationEmail action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendEmailAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">SES SendEmail action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendRawEmailAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">SES SendRawEmail action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SendTemplatedEmailAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">SES SendTemplatedEmail action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetActiveReceiptRuleSetAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">SES SetActiveReceiptRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetIdentityDkimEnabledAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">SES SetIdentityDkimEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetIdentityFeedbackForwardingEnabledAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">SES SetIdentityFeedbackForwardingEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetIdentityHeadersInNotificationsEnabledAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">SES SetIdentityHeadersInNotificationsEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetIdentityMailFromDomainAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">SES SetIdentityMailFromDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetIdentityNotificationTopicAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">SES SetIdentityNotificationTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::SetReceiptRulePositionAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">SES SetReceiptRulePosition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::TestRenderTemplateAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">SES TestRenderTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateAccountSendingEnabledAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">SES UpdateAccountSendingEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateConfigurationSetEventDestinationAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">SES UpdateConfigurationSetEventDestination action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateConfigurationSetReputationMetricsEnabledAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">SES UpdateConfigurationSetReputationMetricsEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateConfigurationSetSendingEnabledAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">SES UpdateConfigurationSetSendingEnabled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateConfigurationSetTrackingOptionsAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">SES UpdateConfigurationSetTrackingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateCustomVerificationEmailTemplateAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">SES UpdateCustomVerificationEmailTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateReceiptRuleAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">SES UpdateReceiptRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::UpdateTemplateAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">SES UpdateTemplate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::VerifyDomainDkimAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">SES VerifyDomainDkim action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::VerifyDomainIdentityAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">SES VerifyDomainIdentity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::VerifyEmailAddressAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">SES VerifyEmailAddress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SES::SesRequest::VerifyEmailIdentityAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">SES VerifyEmailIdentity action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SesRequest[overload1]$$$SesRequestconstAction -->
+<h3 class="fn" id="SesRequest"><a name="SesRequest"></a>SesRequest::<span class="name">SesRequest</span>(const <span class="type"><a href="qtaws-ses-sesrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-ses-sesrequest.html">SesRequest</a> object for SES <i>action</i>.</p>
+<!-- @@@SesRequest -->
+<!-- $$$SesRequest$$$SesRequestconstSesRequest& -->
+<h3 class="fn" id="SesRequest-1"><a name="SesRequest-1"></a>SesRequest::<span class="name">SesRequest</span>(const <span class="type"><a href="qtaws-ses-sesrequest.html#SesRequest">SesRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SesRequest -->
+<!-- $$$SesRequest$$$SesRequestSesRequestPrivate*const -->
+<h3 class="fn" id="SesRequest-2"><a name="SesRequest-2"></a><code>[protected] </code>SesRequest::<span class="name">SesRequest</span>(<span class="type">SesRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-ses-sesrequest.html">SesRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from SesRequestPrivate.</p>
+<!-- @@@SesRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-ses-sesrequest.html#Action-enum">Action</a></span> SesRequest::<span class="name">action</span>() const</h3>
+<p>Returns the SES action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SesRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the SES action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SesRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the SES API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SesRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SesRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SesRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SesRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SesRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-ses-sesrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the SES action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SesRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the SES API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SesRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SesRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-ses-sesrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SesRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the SES request using the given <i>endpoint</i>.</p>
+<p>This SES implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-ses-sesrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSesRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-ses-sesrequest.html#SesRequest">SesRequest</a></span> &amp;SesRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-ses-sesrequest.html#SesRequest">SesRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-ses-sesrequest.html">SesRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSesRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SesRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-ses-sesrequest.html#SesRequest">SesRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

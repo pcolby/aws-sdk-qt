@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- s3request.cpp -->
+  <title>S3Request Class | S3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawss3-index.html">S3</a></li>
+<li><a href="qtawss3-module.html">C++ Classes</a></li>
+<li>S3Request</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">S3Request Class</h1>
+<span class="small-subtitle">(<a href="qtaws-s3-s3request.html">QtAws::S3::S3Request</a>)<br/></span>
+<!-- $$$S3Request-brief -->
+<p>The <a href="qtaws-s3-s3request.html">S3Request</a> class provides an interface for S3 requests. <a href="#details">More...</a></p>
+<!-- @@@S3Request -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;S3Request&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-s3-abortmultipartuploadrequest.html">QtAws::S3::AbortMultipartUploadRequest</a>, <a href="qtaws-s3-completemultipartuploadrequest.html">QtAws::S3::CompleteMultipartUploadRequest</a>, <a href="qtaws-s3-copyobjectrequest.html">QtAws::S3::CopyObjectRequest</a>, <a href="qtaws-s3-createbucketrequest.html">QtAws::S3::CreateBucketRequest</a>, <a href="qtaws-s3-createmultipartuploadrequest.html">QtAws::S3::CreateMultipartUploadRequest</a>, <a href="qtaws-s3-deletebucketanalyticsconfigurationrequest.html">QtAws::S3::DeleteBucketAnalyticsConfigurationRequest</a>, <a href="qtaws-s3-deletebucketcorsrequest.html">QtAws::S3::DeleteBucketCorsRequest</a>, <a href="qtaws-s3-deletebucketencryptionrequest.html">QtAws::S3::DeleteBucketEncryptionRequest</a>, <a href="qtaws-s3-deletebucketinventoryconfigurationrequest.html">QtAws::S3::DeleteBucketInventoryConfigurationRequest</a>, <a href="qtaws-s3-deletebucketlifecyclerequest.html">QtAws::S3::DeleteBucketLifecycleRequest</a>, <a href="qtaws-s3-deletebucketmetricsconfigurationrequest.html">QtAws::S3::DeleteBucketMetricsConfigurationRequest</a>, <a href="qtaws-s3-deletebucketpolicyrequest.html">QtAws::S3::DeleteBucketPolicyRequest</a>, <a href="qtaws-s3-deletebucketreplicationrequest.html">QtAws::S3::DeleteBucketReplicationRequest</a>, <a href="qtaws-s3-deletebucketrequest.html">QtAws::S3::DeleteBucketRequest</a>, <a href="qtaws-s3-deletebuckettaggingrequest.html">QtAws::S3::DeleteBucketTaggingRequest</a>, <a href="qtaws-s3-deletebucketwebsiterequest.html">QtAws::S3::DeleteBucketWebsiteRequest</a>, <a href="qtaws-s3-deleteobjectrequest.html">QtAws::S3::DeleteObjectRequest</a>, <a href="qtaws-s3-deleteobjectsrequest.html">QtAws::S3::DeleteObjectsRequest</a>, <a href="qtaws-s3-deleteobjecttaggingrequest.html">QtAws::S3::DeleteObjectTaggingRequest</a>, <a href="qtaws-s3-getbucketaccelerateconfigurationrequest.html">QtAws::S3::GetBucketAccelerateConfigurationRequest</a>, <a href="qtaws-s3-getbucketaclrequest.html">QtAws::S3::GetBucketAclRequest</a>, <a href="qtaws-s3-getbucketanalyticsconfigurationrequest.html">QtAws::S3::GetBucketAnalyticsConfigurationRequest</a>, <a href="qtaws-s3-getbucketcorsrequest.html">QtAws::S3::GetBucketCorsRequest</a>, <a href="qtaws-s3-getbucketencryptionrequest.html">QtAws::S3::GetBucketEncryptionRequest</a>, <a href="qtaws-s3-getbucketinventoryconfigurationrequest.html">QtAws::S3::GetBucketInventoryConfigurationRequest</a>, <a href="qtaws-s3-getbucketlifecycleconfigurationrequest.html">QtAws::S3::GetBucketLifecycleConfigurationRequest</a>, <a href="qtaws-s3-getbucketlifecyclerequest.html">QtAws::S3::GetBucketLifecycleRequest</a>, <a href="qtaws-s3-getbucketlocationrequest.html">QtAws::S3::GetBucketLocationRequest</a>, <a href="qtaws-s3-getbucketloggingrequest.html">QtAws::S3::GetBucketLoggingRequest</a>, <a href="qtaws-s3-getbucketmetricsconfigurationrequest.html">QtAws::S3::GetBucketMetricsConfigurationRequest</a>, <a href="qtaws-s3-getbucketnotificationconfigurationrequest.html">QtAws::S3::GetBucketNotificationConfigurationRequest</a>, <a href="qtaws-s3-getbucketnotificationrequest.html">QtAws::S3::GetBucketNotificationRequest</a>, <a href="qtaws-s3-getbucketpolicyrequest.html">QtAws::S3::GetBucketPolicyRequest</a>, <a href="qtaws-s3-getbucketreplicationrequest.html">QtAws::S3::GetBucketReplicationRequest</a>, <a href="qtaws-s3-getbucketrequestpaymentrequest.html">QtAws::S3::GetBucketRequestPaymentRequest</a>, <a href="qtaws-s3-getbuckettaggingrequest.html">QtAws::S3::GetBucketTaggingRequest</a>, <a href="qtaws-s3-getbucketversioningrequest.html">QtAws::S3::GetBucketVersioningRequest</a>, <a href="qtaws-s3-getbucketwebsiterequest.html">QtAws::S3::GetBucketWebsiteRequest</a>, <a href="qtaws-s3-getobjectaclrequest.html">QtAws::S3::GetObjectAclRequest</a>, <a href="qtaws-s3-getobjectrequest.html">QtAws::S3::GetObjectRequest</a>, <a href="qtaws-s3-getobjecttaggingrequest.html">QtAws::S3::GetObjectTaggingRequest</a>, <a href="qtaws-s3-getobjecttorrentrequest.html">QtAws::S3::GetObjectTorrentRequest</a>, <a href="qtaws-s3-headbucketrequest.html">QtAws::S3::HeadBucketRequest</a>, <a href="qtaws-s3-headobjectrequest.html">QtAws::S3::HeadObjectRequest</a>, <a href="qtaws-s3-listbucketanalyticsconfigurationsrequest.html">QtAws::S3::ListBucketAnalyticsConfigurationsRequest</a>, <a href="qtaws-s3-listbucketinventoryconfigurationsrequest.html">QtAws::S3::ListBucketInventoryConfigurationsRequest</a>, <a href="qtaws-s3-listbucketmetricsconfigurationsrequest.html">QtAws::S3::ListBucketMetricsConfigurationsRequest</a>, <a href="qtaws-s3-listmultipartuploadsrequest.html">QtAws::S3::ListMultipartUploadsRequest</a>, <a href="qtaws-s3-listobjectsrequest.html">QtAws::S3::ListObjectsRequest</a>, <a href="qtaws-s3-listobjectsv2request.html">QtAws::S3::ListObjectsV2Request</a>, <a href="qtaws-s3-listobjectversionsrequest.html">QtAws::S3::ListObjectVersionsRequest</a>, <a href="qtaws-s3-listpartsrequest.html">QtAws::S3::ListPartsRequest</a>, <a href="qtaws-s3-putbucketaccelerateconfigurationrequest.html">QtAws::S3::PutBucketAccelerateConfigurationRequest</a>, <a href="qtaws-s3-putbucketaclrequest.html">QtAws::S3::PutBucketAclRequest</a>, <a href="qtaws-s3-putbucketanalyticsconfigurationrequest.html">QtAws::S3::PutBucketAnalyticsConfigurationRequest</a>, <a href="qtaws-s3-putbucketcorsrequest.html">QtAws::S3::PutBucketCorsRequest</a>, <a href="qtaws-s3-putbucketencryptionrequest.html">QtAws::S3::PutBucketEncryptionRequest</a>, <a href="qtaws-s3-putbucketinventoryconfigurationrequest.html">QtAws::S3::PutBucketInventoryConfigurationRequest</a>, <a href="qtaws-s3-putbucketlifecycleconfigurationrequest.html">QtAws::S3::PutBucketLifecycleConfigurationRequest</a>, <a href="qtaws-s3-putbucketlifecyclerequest.html">QtAws::S3::PutBucketLifecycleRequest</a>, <a href="qtaws-s3-putbucketloggingrequest.html">QtAws::S3::PutBucketLoggingRequest</a>, <a href="qtaws-s3-putbucketmetricsconfigurationrequest.html">QtAws::S3::PutBucketMetricsConfigurationRequest</a>, <a href="qtaws-s3-putbucketnotificationconfigurationrequest.html">QtAws::S3::PutBucketNotificationConfigurationRequest</a>, <a href="qtaws-s3-putbucketnotificationrequest.html">QtAws::S3::PutBucketNotificationRequest</a>, <a href="qtaws-s3-putbucketpolicyrequest.html">QtAws::S3::PutBucketPolicyRequest</a>, <a href="qtaws-s3-putbucketreplicationrequest.html">QtAws::S3::PutBucketReplicationRequest</a>, <a href="qtaws-s3-putbucketrequestpaymentrequest.html">QtAws::S3::PutBucketRequestPaymentRequest</a>, <a href="qtaws-s3-putbuckettaggingrequest.html">QtAws::S3::PutBucketTaggingRequest</a>, <a href="qtaws-s3-putbucketversioningrequest.html">QtAws::S3::PutBucketVersioningRequest</a>, <a href="qtaws-s3-putbucketwebsiterequest.html">QtAws::S3::PutBucketWebsiteRequest</a>, <a href="qtaws-s3-putobjectaclrequest.html">QtAws::S3::PutObjectAclRequest</a>, <a href="qtaws-s3-putobjectrequest.html">QtAws::S3::PutObjectRequest</a>, <a href="qtaws-s3-putobjecttaggingrequest.html">QtAws::S3::PutObjectTaggingRequest</a>, <a href="qtaws-s3-restoreobjectrequest.html">QtAws::S3::RestoreObjectRequest</a>, <a href="qtaws-s3-selectobjectcontentrequest.html">QtAws::S3::SelectObjectContentRequest</a>, <a href="qtaws-s3-uploadpartcopyrequest.html">QtAws::S3::UploadPartCopyRequest</a>, and <a href="qtaws-s3-uploadpartrequest.html">QtAws::S3::UploadPartRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-s3-s3request-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#Action-enum">Action</a></b> { AbortMultipartUploadAction, CompleteMultipartUploadAction, CopyObjectAction, CreateBucketAction, ..., UploadPartCopyAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#S3Request">S3Request</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#S3Request-1">S3Request</a></b>(const S3Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> S3Request &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#operator-eq">operator=</a></b>(const S3Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#operator-eq-eq">operator==</a></b>(const S3Request &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#S3Request-2">S3Request</a></b>(S3RequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3request.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$S3Request-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-s3-s3request.html">S3Request</a> class provides an interface for S3 requests.</p>
+</div>
+<!-- @@@S3Request -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AbortMultipartUploadAction$$$CompleteMultipartUploadAction$$$CopyObjectAction$$$CreateBucketAction$$$CreateMultipartUploadAction$$$DeleteBucketAction$$$DeleteBucketAnalyticsConfigurationAction$$$DeleteBucketCorsAction$$$DeleteBucketEncryptionAction$$$DeleteBucketInventoryConfigurationAction$$$DeleteBucketLifecycleAction$$$DeleteBucketMetricsConfigurationAction$$$DeleteBucketPolicyAction$$$DeleteBucketReplicationAction$$$DeleteBucketTaggingAction$$$DeleteBucketWebsiteAction$$$DeleteObjectAction$$$DeleteObjectTaggingAction$$$DeleteObjectsAction$$$GetBucketAccelerateConfigurationAction$$$GetBucketAclAction$$$GetBucketAnalyticsConfigurationAction$$$GetBucketCorsAction$$$GetBucketEncryptionAction$$$GetBucketInventoryConfigurationAction$$$GetBucketLifecycleAction$$$GetBucketLifecycleConfigurationAction$$$GetBucketLocationAction$$$GetBucketLoggingAction$$$GetBucketMetricsConfigurationAction$$$GetBucketNotificationAction$$$GetBucketNotificationConfigurationAction$$$GetBucketPolicyAction$$$GetBucketReplicationAction$$$GetBucketRequestPaymentAction$$$GetBucketTaggingAction$$$GetBucketVersioningAction$$$GetBucketWebsiteAction$$$GetObjectAction$$$GetObjectAclAction$$$GetObjectTaggingAction$$$GetObjectTorrentAction$$$HeadBucketAction$$$HeadObjectAction$$$ListBucketAnalyticsConfigurationsAction$$$ListBucketInventoryConfigurationsAction$$$ListBucketMetricsConfigurationsAction$$$ListBucketsAction$$$ListMultipartUploadsAction$$$ListObjectVersionsAction$$$ListObjectsAction$$$ListObjectsV2Action$$$ListPartsAction$$$PutBucketAccelerateConfigurationAction$$$PutBucketAclAction$$$PutBucketAnalyticsConfigurationAction$$$PutBucketCorsAction$$$PutBucketEncryptionAction$$$PutBucketInventoryConfigurationAction$$$PutBucketLifecycleAction$$$PutBucketLifecycleConfigurationAction$$$PutBucketLoggingAction$$$PutBucketMetricsConfigurationAction$$$PutBucketNotificationAction$$$PutBucketNotificationConfigurationAction$$$PutBucketPolicyAction$$$PutBucketReplicationAction$$$PutBucketRequestPaymentAction$$$PutBucketTaggingAction$$$PutBucketVersioningAction$$$PutBucketWebsiteAction$$$PutObjectAction$$$PutObjectAclAction$$$PutObjectTaggingAction$$$RestoreObjectAction$$$SelectObjectContentAction$$$UploadPartAction$$$UploadPartCopyAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum S3Request::<span class="name">Action</span><br/>flags S3Request::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as S3 requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::AbortMultipartUploadAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">S3 AbortMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::CompleteMultipartUploadAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">S3 CompleteMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::CopyObjectAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">S3 CopyObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::CreateBucketAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">S3 CreateBucket action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::CreateMultipartUploadAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">S3 CreateMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">S3 DeleteBucket action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketAnalyticsConfigurationAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">S3 DeleteBucketAnalyticsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketCorsAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">S3 DeleteBucketCors action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketEncryptionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">S3 DeleteBucketEncryption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketInventoryConfigurationAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">S3 DeleteBucketInventoryConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketLifecycleAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">S3 DeleteBucketLifecycle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketMetricsConfigurationAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">S3 DeleteBucketMetricsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketPolicyAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">S3 DeleteBucketPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketReplicationAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">S3 DeleteBucketReplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketTaggingAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">S3 DeleteBucketTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteBucketWebsiteAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">S3 DeleteBucketWebsite action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteObjectAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">S3 DeleteObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteObjectTaggingAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">S3 DeleteObjectTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::DeleteObjectsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">S3 DeleteObjects action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketAccelerateConfigurationAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">S3 GetBucketAccelerateConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketAclAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">S3 GetBucketAcl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketAnalyticsConfigurationAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">S3 GetBucketAnalyticsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketCorsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">S3 GetBucketCors action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketEncryptionAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">S3 GetBucketEncryption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketInventoryConfigurationAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">S3 GetBucketInventoryConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketLifecycleAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">S3 GetBucketLifecycle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketLifecycleConfigurationAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">S3 GetBucketLifecycleConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketLocationAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">S3 GetBucketLocation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketLoggingAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">S3 GetBucketLogging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketMetricsConfigurationAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">S3 GetBucketMetricsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketNotificationAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">S3 GetBucketNotification action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketNotificationConfigurationAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">S3 GetBucketNotificationConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketPolicyAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">S3 GetBucketPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketReplicationAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">S3 GetBucketReplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketRequestPaymentAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">S3 GetBucketRequestPayment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketTaggingAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">S3 GetBucketTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketVersioningAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">S3 GetBucketVersioning action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetBucketWebsiteAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">S3 GetBucketWebsite action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetObjectAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">S3 GetObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetObjectAclAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">S3 GetObjectAcl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetObjectTaggingAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">S3 GetObjectTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::GetObjectTorrentAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">S3 GetObjectTorrent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::HeadBucketAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">S3 HeadBucket action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::HeadObjectAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">S3 HeadObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListBucketAnalyticsConfigurationsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">S3 ListBucketAnalyticsConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListBucketInventoryConfigurationsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">S3 ListBucketInventoryConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListBucketMetricsConfigurationsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">S3 ListBucketMetricsConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListBucketsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">S3 ListBuckets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListMultipartUploadsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">S3 ListMultipartUploads action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListObjectVersionsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">S3 ListObjectVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListObjectsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">S3 ListObjects action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListObjectsV2Action</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">S3 ListObjectsV2 action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::ListPartsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">S3 ListParts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketAccelerateConfigurationAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">S3 PutBucketAccelerateConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketAclAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">S3 PutBucketAcl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketAnalyticsConfigurationAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">S3 PutBucketAnalyticsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketCorsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">S3 PutBucketCors action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketEncryptionAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">S3 PutBucketEncryption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketInventoryConfigurationAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">S3 PutBucketInventoryConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketLifecycleAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">S3 PutBucketLifecycle action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketLifecycleConfigurationAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">S3 PutBucketLifecycleConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketLoggingAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">S3 PutBucketLogging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketMetricsConfigurationAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">S3 PutBucketMetricsConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketNotificationAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">S3 PutBucketNotification action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketNotificationConfigurationAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">S3 PutBucketNotificationConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketPolicyAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">S3 PutBucketPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketReplicationAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">S3 PutBucketReplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketRequestPaymentAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">S3 PutBucketRequestPayment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketTaggingAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">S3 PutBucketTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketVersioningAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">S3 PutBucketVersioning action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutBucketWebsiteAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">S3 PutBucketWebsite action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutObjectAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">S3 PutObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutObjectAclAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">S3 PutObjectAcl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::PutObjectTaggingAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">S3 PutObjectTagging action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::RestoreObjectAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">S3 RestoreObject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::SelectObjectContentAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">S3 SelectObjectContent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::UploadPartAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">S3 UploadPart action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::S3::S3Request::UploadPartCopyAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">S3 UploadPartCopy action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$S3Request[overload1]$$$S3RequestconstAction -->
+<h3 class="fn" id="S3Request"><a name="S3Request"></a>S3Request::<span class="name">S3Request</span>(const <span class="type"><a href="qtaws-s3-s3request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-s3-s3request.html">S3Request</a> object for S3 <i>action</i>.</p>
+<!-- @@@S3Request -->
+<!-- $$$S3Request$$$S3RequestconstS3Request& -->
+<h3 class="fn" id="S3Request-1"><a name="S3Request-1"></a>S3Request::<span class="name">S3Request</span>(const <span class="type"><a href="qtaws-s3-s3request.html#S3Request">S3Request</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@S3Request -->
+<!-- $$$S3Request$$$S3RequestS3RequestPrivate*const -->
+<h3 class="fn" id="S3Request-2"><a name="S3Request-2"></a><code>[protected] </code>S3Request::<span class="name">S3Request</span>(<span class="type">S3RequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-s3-s3request.html">S3Request</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from S3RequestPrivate.</p>
+<!-- @@@S3Request -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-s3-s3request.html#Action-enum">Action</a></span> S3Request::<span class="name">action</span>() const</h3>
+<p>Returns the S3 action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> S3Request::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the S3 action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> S3Request::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the S3 API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> S3Request::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> S3Request::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> S3Request::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;S3Request::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> S3Request::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-s3-s3request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the S3 action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> S3Request::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the S3 API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> S3Request::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> S3Request::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-s3-s3request.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> S3Request::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the S3 request using the given <i>endpoint</i>.</p>
+<p>This S3 implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-s3-s3request.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constS3Request& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-s3-s3request.html#S3Request">S3Request</a></span> &amp;S3Request::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-s3-s3request.html#S3Request">S3Request</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-s3-s3request.html">S3Request</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constS3Request& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> S3Request::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-s3-s3request.html#S3Request">S3Request</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

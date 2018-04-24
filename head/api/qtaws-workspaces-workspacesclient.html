@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- workspacesclient.cpp -->
+  <title>WorkSpacesClient Class | WorkSpaces</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsworkspaces-index.html">WorkSpaces</a></li>
+<li><a href="qtawsworkspaces-module.html">C++ Classes</a></li>
+<li>WorkSpacesClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WorkSpacesClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-workspaces-workspacesclient.html">QtAws::WorkSpaces::WorkSpacesClient</a>)<br/></span>
+<!-- $$$WorkSpacesClient-brief -->
+<p>The <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> class provides access to the Amazon <a href="qtaws-workspaces.html">WorkSpaces</a> service. <a href="#details">More...</a></p>
+<!-- @@@WorkSpacesClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WorkSpacesClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-workspaces-workspacesclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#WorkSpacesClient">WorkSpacesClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#WorkSpacesClient-1">WorkSpacesClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#createTags">createTags</a></b>(const CreateTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#createWorkspaces">createWorkspaces</a></b>(const CreateWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkspaceBundlesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#describeWorkspaceBundles">describeWorkspaceBundles</a></b>(const DescribeWorkspaceBundlesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkspaceDirectoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#describeWorkspaceDirectories">describeWorkspaceDirectories</a></b>(const DescribeWorkspaceDirectoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#describeWorkspaces">describeWorkspaces</a></b>(const DescribeWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkspacesConnectionStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#describeWorkspacesConnectionStatus">describeWorkspacesConnectionStatus</a></b>(const DescribeWorkspacesConnectionStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyWorkspacePropertiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#modifyWorkspaceProperties">modifyWorkspaceProperties</a></b>(const ModifyWorkspacePropertiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#rebootWorkspaces">rebootWorkspaces</a></b>(const RebootWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebuildWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#rebuildWorkspaces">rebuildWorkspaces</a></b>(const RebuildWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#startWorkspaces">startWorkspaces</a></b>(const StartWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#stopWorkspaces">stopWorkspaces</a></b>(const StopWorkspacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateWorkspacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workspaces-workspacesclient.html#terminateWorkspaces">terminateWorkspaces</a></b>(const TerminateWorkspacesRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WorkSpacesClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> class provides access to the Amazon <a href="qtaws-workspaces.html">WorkSpaces</a> service.</p>
+<p>&lt;fullname&gt;Amazon <a href="qtaws-workspaces.html">WorkSpaces</a> Service&lt;/fullname&gt;</p>
+<p>Amazon <a href="qtaws-workspaces.html">WorkSpaces</a> enables you to provision virtual, cloud-based Microsoft Windows desktops for your</p>
+</div>
+<!-- @@@WorkSpacesClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WorkSpacesClient[overload1]$$$WorkSpacesClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkSpacesClient"><a name="WorkSpacesClient"></a>WorkSpacesClient::<span class="name">WorkSpacesClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@WorkSpacesClient -->
+<!-- $$$WorkSpacesClient$$$WorkSpacesClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkSpacesClient-1"><a name="WorkSpacesClient-1"></a>WorkSpacesClient::<span class="name">WorkSpacesClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-workspaces-workspacesclient.html#WorkSpacesClient">WorkSpacesClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@WorkSpacesClient -->
+<!-- $$$createTags[overload1]$$$createTagsconstCreateTagsRequest& -->
+<h3 class="fn" id="createTags"><a name="createTags"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-createtagsresponse.html">CreateTagsResponse</a></span> *WorkSpacesClient::<span class="name">createTags</span>(const <span class="type"><a href="qtaws-workspaces-createtagsrequest.html">CreateTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-createtagsresponse.html">CreateTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates tags for the specified</p>
+<!-- @@@createTags -->
+<!-- $$$createWorkspaces[overload1]$$$createWorkspacesconstCreateWorkspacesRequest& -->
+<h3 class="fn" id="createWorkspaces"><a name="createWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-createworkspacesresponse.html">CreateWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">createWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-createworkspacesrequest.html">CreateWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-createworkspacesresponse.html">CreateWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one or more</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>This operation is asynchronous and returns before the <a href="qtaws-workspaces.html">WorkSpaces</a> are</p>
+<!-- @@@createWorkspaces -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-deletetagsresponse.html">DeleteTagsResponse</a></span> *WorkSpacesClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-workspaces-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified tags from a</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-describetagsresponse.html">DescribeTagsResponse</a></span> *WorkSpacesClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-workspaces-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the tags for the specified</p>
+<!-- @@@describeTags -->
+<!-- $$$describeWorkspaceBundles[overload1]$$$describeWorkspaceBundlesconstDescribeWorkspaceBundlesRequest& -->
+<h3 class="fn" id="describeWorkspaceBundles"><a name="describeWorkspaceBundles"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-describeworkspacebundlesresponse.html">DescribeWorkspaceBundlesResponse</a></span> *WorkSpacesClient::<span class="name">describeWorkspaceBundles</span>(const <span class="type"><a href="qtaws-workspaces-describeworkspacebundlesrequest.html">DescribeWorkspaceBundlesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-describeworkspacebundlesresponse.html">DescribeWorkspaceBundlesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available WorkSpace</p>
+<p>bundles&gt;</p>
+<p>You can filter the results using either bundle ID or owner, but not</p>
+<!-- @@@describeWorkspaceBundles -->
+<!-- $$$describeWorkspaceDirectories[overload1]$$$describeWorkspaceDirectoriesconstDescribeWorkspaceDirectoriesRequest& -->
+<h3 class="fn" id="describeWorkspaceDirectories"><a name="describeWorkspaceDirectories"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-describeworkspacedirectoriesresponse.html">DescribeWorkspaceDirectoriesResponse</a></span> *WorkSpacesClient::<span class="name">describeWorkspaceDirectories</span>(const <span class="type"><a href="qtaws-workspaces-describeworkspacedirectoriesrequest.html">DescribeWorkspaceDirectoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-describeworkspacedirectoriesresponse.html">DescribeWorkspaceDirectoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available AWS Directory Service directories that are registered with Amazon</p>
+<!-- @@@describeWorkspaceDirectories -->
+<!-- $$$describeWorkspaces[overload1]$$$describeWorkspacesconstDescribeWorkspacesRequest& -->
+<h3 class="fn" id="describeWorkspaces"><a name="describeWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-describeworkspacesresponse.html">DescribeWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">describeWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-describeworkspacesrequest.html">DescribeWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-describeworkspacesresponse.html">DescribeWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>You can filter the results using bundle ID, directory ID, or owner, but you can specify only one filter at a</p>
+<!-- @@@describeWorkspaces -->
+<!-- $$$describeWorkspacesConnectionStatus[overload1]$$$describeWorkspacesConnectionStatusconstDescribeWorkspacesConnectionStatusRequest& -->
+<h3 class="fn" id="describeWorkspacesConnectionStatus"><a name="describeWorkspacesConnectionStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-describeworkspacesconnectionstatusresponse.html">DescribeWorkspacesConnectionStatusResponse</a></span> *WorkSpacesClient::<span class="name">describeWorkspacesConnectionStatus</span>(const <span class="type"><a href="qtaws-workspaces-describeworkspacesconnectionstatusrequest.html">DescribeWorkspacesConnectionStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-describeworkspacesconnectionstatusresponse.html">DescribeWorkspacesConnectionStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the connection status of the specified</p>
+<!-- @@@describeWorkspacesConnectionStatus -->
+<!-- $$$modifyWorkspaceProperties[overload1]$$$modifyWorkspacePropertiesconstModifyWorkspacePropertiesRequest& -->
+<h3 class="fn" id="modifyWorkspaceProperties"><a name="modifyWorkspaceProperties"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-modifyworkspacepropertiesresponse.html">ModifyWorkspacePropertiesResponse</a></span> *WorkSpacesClient::<span class="name">modifyWorkspaceProperties</span>(const <span class="type"><a href="qtaws-workspaces-modifyworkspacepropertiesrequest.html">ModifyWorkspacePropertiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-modifyworkspacepropertiesresponse.html">ModifyWorkspacePropertiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the specified WorkSpace</p>
+<!-- @@@modifyWorkspaceProperties -->
+<!-- $$$rebootWorkspaces[overload1]$$$rebootWorkspacesconstRebootWorkspacesRequest& -->
+<h3 class="fn" id="rebootWorkspaces"><a name="rebootWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-rebootworkspacesresponse.html">RebootWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">rebootWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-rebootworkspacesrequest.html">RebootWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-rebootworkspacesresponse.html">RebootWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reboots the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>You cannot reboot a WorkSpace unless its state is &lt;code&gt;AVAILABLE&lt;/code&gt;, &lt;code&gt;IMPAIRED&lt;/code&gt;, or</p>
+<p>&lt;code&gt;INOPERABLE&lt;/code&gt;&gt;</p>
+<p>This operation is asynchronous and returns before the <a href="qtaws-workspaces.html">WorkSpaces</a> have</p>
+<!-- @@@rebootWorkspaces -->
+<!-- $$$rebuildWorkspaces[overload1]$$$rebuildWorkspacesconstRebuildWorkspacesRequest& -->
+<h3 class="fn" id="rebuildWorkspaces"><a name="rebuildWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-rebuildworkspacesresponse.html">RebuildWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">rebuildWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-rebuildworkspacesrequest.html">RebuildWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-rebuildworkspacesresponse.html">RebuildWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Rebuilds the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>You cannot rebuild a WorkSpace unless its state is &lt;code&gt;AVAILABLE&lt;/code&gt; or</p>
+<p>&lt;code&gt;ERROR&lt;/code&gt;&gt;</p>
+<p>Rebuilding a WorkSpace is a potentially destructive action that can result in the loss of data. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html&quot;&gt;Rebuild a</p>
+<p>WorkSpace&lt;/a&gt;&gt;</p>
+<p>This operation is asynchronous and returns before the <a href="qtaws-workspaces.html">WorkSpaces</a> have been completely</p>
+<!-- @@@rebuildWorkspaces -->
+<!-- $$$startWorkspaces[overload1]$$$startWorkspacesconstStartWorkspacesRequest& -->
+<h3 class="fn" id="startWorkspaces"><a name="startWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-startworkspacesresponse.html">StartWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">startWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-startworkspacesrequest.html">StartWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-startworkspacesresponse.html">StartWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>You cannot start a WorkSpace unless it has a running mode of &lt;code&gt;AutoStop&lt;/code&gt; and a state of</p>
+<!-- @@@startWorkspaces -->
+<!-- $$$stopWorkspaces[overload1]$$$stopWorkspacesconstStopWorkspacesRequest& -->
+<h3 class="fn" id="stopWorkspaces"><a name="stopWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-stopworkspacesresponse.html">StopWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">stopWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-stopworkspacesrequest.html">StopWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-stopworkspacesresponse.html">StopWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>You cannot stop a WorkSpace unless it has a running mode of &lt;code&gt;AutoStop&lt;/code&gt; and a state of &lt;code&gt;AVAILABLE&lt;/code&gt;, &lt;code&gt;IMPAIRED&lt;/code&gt;, &lt;code&gt;UNHEALTHY&lt;/code&gt;, or</p>
+<!-- @@@stopWorkspaces -->
+<!-- $$$terminateWorkspaces[overload1]$$$terminateWorkspacesconstTerminateWorkspacesRequest& -->
+<h3 class="fn" id="terminateWorkspaces"><a name="terminateWorkspaces"></a><code>[slot] </code><span class="type"><a href="qtaws-workspaces-terminateworkspacesresponse.html">TerminateWorkspacesResponse</a></span> *WorkSpacesClient::<span class="name">terminateWorkspaces</span>(const <span class="type"><a href="qtaws-workspaces-terminateworkspacesrequest.html">TerminateWorkspacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workspaces-workspacesclient.html">WorkSpacesClient</a> service, and returns a pointer to an <a href="qtaws-workspaces-terminateworkspacesresponse.html">TerminateWorkspacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Terminates the specified</p>
+<p><a href="qtaws-workspaces.html">WorkSpaces</a>&gt;</p>
+<p>Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive any user data, contact Amazon Web Services before terminating the</p>
+<p>WorkSpace&gt;</p>
+<p>You can terminate a WorkSpace that is in any state except</p>
+<p>&lt;code&gt;SUSPENDED&lt;/code&gt;&gt;</p>
+<p>This operation is asynchronous and returns before the <a href="qtaws-workspaces.html">WorkSpaces</a> have been completely</p>
+<!-- @@@terminateWorkspaces -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

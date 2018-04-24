@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- devicefarmrequest.cpp -->
+  <title>DeviceFarmRequest Class | DeviceFarm</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdevicefarm-index.html">DeviceFarm</a></li>
+<li><a href="qtawsdevicefarm-module.html">C++ Classes</a></li>
+<li>DeviceFarmRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DeviceFarmRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-devicefarm-devicefarmrequest.html">QtAws::DeviceFarm::DeviceFarmRequest</a>)<br/></span>
+<!-- $$$DeviceFarmRequest-brief -->
+<p>The <a href="qtaws-devicefarm-devicefarmrequest.html">DeviceFarmRequest</a> class provides an interface for <a href="qtaws-devicefarm.html">DeviceFarm</a> requests. <a href="#details">More...</a></p>
+<!-- @@@DeviceFarmRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DeviceFarmRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-devicefarm-createdevicepoolrequest.html">QtAws::DeviceFarm::CreateDevicePoolRequest</a>, <a href="qtaws-devicefarm-createinstanceprofilerequest.html">QtAws::DeviceFarm::CreateInstanceProfileRequest</a>, <a href="qtaws-devicefarm-createnetworkprofilerequest.html">QtAws::DeviceFarm::CreateNetworkProfileRequest</a>, <a href="qtaws-devicefarm-createprojectrequest.html">QtAws::DeviceFarm::CreateProjectRequest</a>, <a href="qtaws-devicefarm-createremoteaccesssessionrequest.html">QtAws::DeviceFarm::CreateRemoteAccessSessionRequest</a>, <a href="qtaws-devicefarm-createuploadrequest.html">QtAws::DeviceFarm::CreateUploadRequest</a>, <a href="qtaws-devicefarm-createvpceconfigurationrequest.html">QtAws::DeviceFarm::CreateVPCEConfigurationRequest</a>, <a href="qtaws-devicefarm-deletedevicepoolrequest.html">QtAws::DeviceFarm::DeleteDevicePoolRequest</a>, <a href="qtaws-devicefarm-deleteinstanceprofilerequest.html">QtAws::DeviceFarm::DeleteInstanceProfileRequest</a>, <a href="qtaws-devicefarm-deletenetworkprofilerequest.html">QtAws::DeviceFarm::DeleteNetworkProfileRequest</a>, <a href="qtaws-devicefarm-deleteprojectrequest.html">QtAws::DeviceFarm::DeleteProjectRequest</a>, <a href="qtaws-devicefarm-deleteremoteaccesssessionrequest.html">QtAws::DeviceFarm::DeleteRemoteAccessSessionRequest</a>, <a href="qtaws-devicefarm-deleterunrequest.html">QtAws::DeviceFarm::DeleteRunRequest</a>, <a href="qtaws-devicefarm-deleteuploadrequest.html">QtAws::DeviceFarm::DeleteUploadRequest</a>, <a href="qtaws-devicefarm-deletevpceconfigurationrequest.html">QtAws::DeviceFarm::DeleteVPCEConfigurationRequest</a>, <a href="qtaws-devicefarm-getaccountsettingsrequest.html">QtAws::DeviceFarm::GetAccountSettingsRequest</a>, <a href="qtaws-devicefarm-getdeviceinstancerequest.html">QtAws::DeviceFarm::GetDeviceInstanceRequest</a>, <a href="qtaws-devicefarm-getdevicepoolcompatibilityrequest.html">QtAws::DeviceFarm::GetDevicePoolCompatibilityRequest</a>, <a href="qtaws-devicefarm-getdevicepoolrequest.html">QtAws::DeviceFarm::GetDevicePoolRequest</a>, <a href="qtaws-devicefarm-getdevicerequest.html">QtAws::DeviceFarm::GetDeviceRequest</a>, <a href="qtaws-devicefarm-getinstanceprofilerequest.html">QtAws::DeviceFarm::GetInstanceProfileRequest</a>, <a href="qtaws-devicefarm-getjobrequest.html">QtAws::DeviceFarm::GetJobRequest</a>, <a href="qtaws-devicefarm-getnetworkprofilerequest.html">QtAws::DeviceFarm::GetNetworkProfileRequest</a>, <a href="qtaws-devicefarm-getofferingstatusrequest.html">QtAws::DeviceFarm::GetOfferingStatusRequest</a>, <a href="qtaws-devicefarm-getprojectrequest.html">QtAws::DeviceFarm::GetProjectRequest</a>, <a href="qtaws-devicefarm-getremoteaccesssessionrequest.html">QtAws::DeviceFarm::GetRemoteAccessSessionRequest</a>, <a href="qtaws-devicefarm-getrunrequest.html">QtAws::DeviceFarm::GetRunRequest</a>, <a href="qtaws-devicefarm-getsuiterequest.html">QtAws::DeviceFarm::GetSuiteRequest</a>, <a href="qtaws-devicefarm-gettestrequest.html">QtAws::DeviceFarm::GetTestRequest</a>, <a href="qtaws-devicefarm-getuploadrequest.html">QtAws::DeviceFarm::GetUploadRequest</a>, <a href="qtaws-devicefarm-getvpceconfigurationrequest.html">QtAws::DeviceFarm::GetVPCEConfigurationRequest</a>, <a href="qtaws-devicefarm-installtoremoteaccesssessionrequest.html">QtAws::DeviceFarm::InstallToRemoteAccessSessionRequest</a>, <a href="qtaws-devicefarm-listartifactsrequest.html">QtAws::DeviceFarm::ListArtifactsRequest</a>, <a href="qtaws-devicefarm-listdeviceinstancesrequest.html">QtAws::DeviceFarm::ListDeviceInstancesRequest</a>, <a href="qtaws-devicefarm-listdevicepoolsrequest.html">QtAws::DeviceFarm::ListDevicePoolsRequest</a>, <a href="qtaws-devicefarm-listdevicesrequest.html">QtAws::DeviceFarm::ListDevicesRequest</a>, <a href="qtaws-devicefarm-listinstanceprofilesrequest.html">QtAws::DeviceFarm::ListInstanceProfilesRequest</a>, <a href="qtaws-devicefarm-listjobsrequest.html">QtAws::DeviceFarm::ListJobsRequest</a>, <a href="qtaws-devicefarm-listnetworkprofilesrequest.html">QtAws::DeviceFarm::ListNetworkProfilesRequest</a>, <a href="qtaws-devicefarm-listofferingpromotionsrequest.html">QtAws::DeviceFarm::ListOfferingPromotionsRequest</a>, <a href="qtaws-devicefarm-listofferingsrequest.html">QtAws::DeviceFarm::ListOfferingsRequest</a>, <a href="qtaws-devicefarm-listofferingtransactionsrequest.html">QtAws::DeviceFarm::ListOfferingTransactionsRequest</a>, <a href="qtaws-devicefarm-listprojectsrequest.html">QtAws::DeviceFarm::ListProjectsRequest</a>, <a href="qtaws-devicefarm-listremoteaccesssessionsrequest.html">QtAws::DeviceFarm::ListRemoteAccessSessionsRequest</a>, <a href="qtaws-devicefarm-listrunsrequest.html">QtAws::DeviceFarm::ListRunsRequest</a>, <a href="qtaws-devicefarm-listsamplesrequest.html">QtAws::DeviceFarm::ListSamplesRequest</a>, <a href="qtaws-devicefarm-listsuitesrequest.html">QtAws::DeviceFarm::ListSuitesRequest</a>, <a href="qtaws-devicefarm-listtestsrequest.html">QtAws::DeviceFarm::ListTestsRequest</a>, <a href="qtaws-devicefarm-listuniqueproblemsrequest.html">QtAws::DeviceFarm::ListUniqueProblemsRequest</a>, <a href="qtaws-devicefarm-listuploadsrequest.html">QtAws::DeviceFarm::ListUploadsRequest</a>, <a href="qtaws-devicefarm-listvpceconfigurationsrequest.html">QtAws::DeviceFarm::ListVPCEConfigurationsRequest</a>, <a href="qtaws-devicefarm-purchaseofferingrequest.html">QtAws::DeviceFarm::PurchaseOfferingRequest</a>, <a href="qtaws-devicefarm-renewofferingrequest.html">QtAws::DeviceFarm::RenewOfferingRequest</a>, <a href="qtaws-devicefarm-schedulerunrequest.html">QtAws::DeviceFarm::ScheduleRunRequest</a>, <a href="qtaws-devicefarm-stopremoteaccesssessionrequest.html">QtAws::DeviceFarm::StopRemoteAccessSessionRequest</a>, <a href="qtaws-devicefarm-stoprunrequest.html">QtAws::DeviceFarm::StopRunRequest</a>, <a href="qtaws-devicefarm-updatedeviceinstancerequest.html">QtAws::DeviceFarm::UpdateDeviceInstanceRequest</a>, <a href="qtaws-devicefarm-updatedevicepoolrequest.html">QtAws::DeviceFarm::UpdateDevicePoolRequest</a>, <a href="qtaws-devicefarm-updateinstanceprofilerequest.html">QtAws::DeviceFarm::UpdateInstanceProfileRequest</a>, <a href="qtaws-devicefarm-updatenetworkprofilerequest.html">QtAws::DeviceFarm::UpdateNetworkProfileRequest</a>, <a href="qtaws-devicefarm-updateprojectrequest.html">QtAws::DeviceFarm::UpdateProjectRequest</a>, and <a href="qtaws-devicefarm-updatevpceconfigurationrequest.html">QtAws::DeviceFarm::UpdateVPCEConfigurationRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-devicefarm-devicefarmrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#Action-enum">Action</a></b> { CreateDevicePoolAction, CreateInstanceProfileAction, CreateNetworkProfileAction, CreateProjectAction, ..., UpdateVPCEConfigurationAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest">DeviceFarmRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest-1">DeviceFarmRequest</a></b>(const DeviceFarmRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeviceFarmRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#operator-eq">operator=</a></b>(const DeviceFarmRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#operator-eq-eq">operator==</a></b>(const DeviceFarmRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest-2">DeviceFarmRequest</a></b>(DeviceFarmRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-devicefarm-devicefarmrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DeviceFarmRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-devicefarm-devicefarmrequest.html">DeviceFarmRequest</a> class provides an interface for <a href="qtaws-devicefarm.html">DeviceFarm</a> requests.</p>
+</div>
+<!-- @@@DeviceFarmRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateDevicePoolAction$$$CreateInstanceProfileAction$$$CreateNetworkProfileAction$$$CreateProjectAction$$$CreateRemoteAccessSessionAction$$$CreateUploadAction$$$CreateVPCEConfigurationAction$$$DeleteDevicePoolAction$$$DeleteInstanceProfileAction$$$DeleteNetworkProfileAction$$$DeleteProjectAction$$$DeleteRemoteAccessSessionAction$$$DeleteRunAction$$$DeleteUploadAction$$$DeleteVPCEConfigurationAction$$$GetAccountSettingsAction$$$GetDeviceAction$$$GetDeviceInstanceAction$$$GetDevicePoolAction$$$GetDevicePoolCompatibilityAction$$$GetInstanceProfileAction$$$GetJobAction$$$GetNetworkProfileAction$$$GetOfferingStatusAction$$$GetProjectAction$$$GetRemoteAccessSessionAction$$$GetRunAction$$$GetSuiteAction$$$GetTestAction$$$GetUploadAction$$$GetVPCEConfigurationAction$$$InstallToRemoteAccessSessionAction$$$ListArtifactsAction$$$ListDeviceInstancesAction$$$ListDevicePoolsAction$$$ListDevicesAction$$$ListInstanceProfilesAction$$$ListJobsAction$$$ListNetworkProfilesAction$$$ListOfferingPromotionsAction$$$ListOfferingTransactionsAction$$$ListOfferingsAction$$$ListProjectsAction$$$ListRemoteAccessSessionsAction$$$ListRunsAction$$$ListSamplesAction$$$ListSuitesAction$$$ListTestsAction$$$ListUniqueProblemsAction$$$ListUploadsAction$$$ListVPCEConfigurationsAction$$$PurchaseOfferingAction$$$RenewOfferingAction$$$ScheduleRunAction$$$StopRemoteAccessSessionAction$$$StopRunAction$$$UpdateDeviceInstanceAction$$$UpdateDevicePoolAction$$$UpdateInstanceProfileAction$$$UpdateNetworkProfileAction$$$UpdateProjectAction$$$UpdateVPCEConfigurationAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum DeviceFarmRequest::<span class="name">Action</span><br/>flags DeviceFarmRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-devicefarm.html">DeviceFarm</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateDevicePoolAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateDevicePool action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateInstanceProfileAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateNetworkProfileAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateNetworkProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateProjectAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateRemoteAccessSessionAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateRemoteAccessSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateUploadAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::CreateVPCEConfigurationAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> CreateVPCEConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteDevicePoolAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteDevicePool action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteInstanceProfileAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteNetworkProfileAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteNetworkProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteProjectAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteRemoteAccessSessionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteRemoteAccessSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteRunAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteUploadAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::DeleteVPCEConfigurationAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> DeleteVPCEConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetAccountSettingsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetAccountSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetDeviceAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetDevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetDeviceInstanceAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetDeviceInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetDevicePoolAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetDevicePool action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetDevicePoolCompatibilityAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetDevicePoolCompatibility action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetInstanceProfileAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetJobAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetNetworkProfileAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetNetworkProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetOfferingStatusAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetOfferingStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetProjectAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetRemoteAccessSessionAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetRemoteAccessSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetRunAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetSuiteAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetSuite action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetTestAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetTest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetUploadAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::GetVPCEConfigurationAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> GetVPCEConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::InstallToRemoteAccessSessionAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> InstallToRemoteAccessSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListArtifactsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListArtifacts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListDeviceInstancesAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListDeviceInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListDevicePoolsAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListDevicePools action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListDevicesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListDevices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListInstanceProfilesAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListInstanceProfiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListJobsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListNetworkProfilesAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListNetworkProfiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListOfferingPromotionsAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListOfferingPromotions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListOfferingTransactionsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListOfferingTransactions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListOfferingsAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListOfferings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListProjectsAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListProjects action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListRemoteAccessSessionsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListRemoteAccessSessions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListRunsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListRuns action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListSamplesAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListSamples action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListSuitesAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListSuites action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListTestsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListTests action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListUniqueProblemsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListUniqueProblems action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListUploadsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListUploads action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ListVPCEConfigurationsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ListVPCEConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::PurchaseOfferingAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> PurchaseOffering action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::RenewOfferingAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> RenewOffering action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::ScheduleRunAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> ScheduleRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::StopRemoteAccessSessionAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> StopRemoteAccessSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::StopRunAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> StopRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateDeviceInstanceAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateDeviceInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateDevicePoolAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateDevicePool action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateInstanceProfileAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateNetworkProfileAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateNetworkProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateProjectAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateProject action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DeviceFarm::DeviceFarmRequest::UpdateVPCEConfigurationAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign"><a href="qtaws-devicefarm.html">DeviceFarm</a> UpdateVPCEConfiguration action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DeviceFarmRequest[overload1]$$$DeviceFarmRequestconstAction -->
+<h3 class="fn" id="DeviceFarmRequest"><a name="DeviceFarmRequest"></a>DeviceFarmRequest::<span class="name">DeviceFarmRequest</span>(const <span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-devicefarm-devicefarmrequest.html">DeviceFarmRequest</a> object for <a href="qtaws-devicefarm.html">DeviceFarm</a> <i>action</i>.</p>
+<!-- @@@DeviceFarmRequest -->
+<!-- $$$DeviceFarmRequest$$$DeviceFarmRequestconstDeviceFarmRequest& -->
+<h3 class="fn" id="DeviceFarmRequest-1"><a name="DeviceFarmRequest-1"></a>DeviceFarmRequest::<span class="name">DeviceFarmRequest</span>(const <span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest">DeviceFarmRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@DeviceFarmRequest -->
+<!-- $$$DeviceFarmRequest$$$DeviceFarmRequestDeviceFarmRequestPrivate*const -->
+<h3 class="fn" id="DeviceFarmRequest-2"><a name="DeviceFarmRequest-2"></a><code>[protected] </code>DeviceFarmRequest::<span class="name">DeviceFarmRequest</span>(<span class="type"><a href="qtaws-devicefarm-devicefarmrequestprivate.html">DeviceFarmRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-devicefarm-devicefarmrequest.html">DeviceFarmRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-devicefarm-devicefarmrequestprivate.html">DeviceFarmRequestPrivate</a>.</p>
+<!-- @@@DeviceFarmRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#Action-enum">Action</a></span> DeviceFarmRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-devicefarm.html">DeviceFarm</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> DeviceFarmRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-devicefarm.html">DeviceFarm</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> DeviceFarmRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-devicefarm.html">DeviceFarm</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> DeviceFarmRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> DeviceFarmRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> DeviceFarmRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;DeviceFarmRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> DeviceFarmRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-devicefarm.html">DeviceFarm</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> DeviceFarmRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-devicefarm.html">DeviceFarm</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> DeviceFarmRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> DeviceFarmRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-devicefarm-devicefarmrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> DeviceFarmRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-devicefarm.html">DeviceFarm</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-devicefarm.html">DeviceFarm</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-devicefarm-devicefarmrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constDeviceFarmRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest">DeviceFarmRequest</a></span> &amp;DeviceFarmRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest">DeviceFarmRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-devicefarm-devicefarmrequest.html">DeviceFarmRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constDeviceFarmRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> DeviceFarmRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-devicefarm-devicefarmrequest.html#DeviceFarmRequest">DeviceFarmRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

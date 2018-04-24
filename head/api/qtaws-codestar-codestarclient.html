@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- codestarclient.cpp -->
+  <title>CodeStarClient Class | CodeStar</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscodestar-index.html">CodeStar</a></li>
+<li><a href="qtawscodestar-module.html">C++ Classes</a></li>
+<li>CodeStarClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CodeStarClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-codestar-codestarclient.html">QtAws::CodeStar::CodeStarClient</a>)<br/></span>
+<!-- $$$CodeStarClient-brief -->
+<p>The <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> class provides access to the AWS <a href="qtaws-codestar.html">CodeStar</a> service. <a href="#details">More...</a></p>
+<!-- @@@CodeStarClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CodeStarClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-codestar-codestarclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#CodeStarClient">CodeStarClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#CodeStarClient-1">CodeStarClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateTeamMemberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#associateTeamMember">associateTeamMember</a></b>(const AssociateTeamMemberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#createProject">createProject</a></b>(const CreateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#createUserProfile">createUserProfile</a></b>(const CreateUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#deleteProject">deleteProject</a></b>(const DeleteProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#deleteUserProfile">deleteUserProfile</a></b>(const DeleteUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#describeProject">describeProject</a></b>(const DescribeProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#describeUserProfile">describeUserProfile</a></b>(const DescribeUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateTeamMemberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#disassociateTeamMember">disassociateTeamMember</a></b>(const DisassociateTeamMemberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#listProjects">listProjects</a></b>(const ListProjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#listResources">listResources</a></b>(const ListResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#listTagsForProject">listTagsForProject</a></b>(const ListTagsForProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTeamMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#listTeamMembers">listTeamMembers</a></b>(const ListTeamMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUserProfilesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#listUserProfiles">listUserProfiles</a></b>(const ListUserProfilesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#tagProject">tagProject</a></b>(const TagProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#untagProject">untagProject</a></b>(const UntagProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#updateProject">updateProject</a></b>(const UpdateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTeamMemberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#updateTeamMember">updateTeamMember</a></b>(const UpdateTeamMemberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codestar-codestarclient.html#updateUserProfile">updateUserProfile</a></b>(const UpdateUserProfileRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CodeStarClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> class provides access to the AWS <a href="qtaws-codestar.html">CodeStar</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-codestar.html">CodeStar</a>&lt;/fullname&gt;</p>
+<p>This is the API reference for AWS <a href="qtaws-codestar.html">CodeStar</a>. This reference provides descriptions of the operations and data types for the AWS <a href="qtaws-codestar.html">CodeStar</a> API along with usage</p>
+<p>examples&gt;</p>
+<p>You can use the AWS <a href="qtaws-codestar.html">CodeStar</a> API to work</p>
+<p>with&gt;</p>
+<p>Projects and their resources, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DeleteProject&lt;/code&gt;, which deletes a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DescribeProject&lt;/code&gt;, which lists the attributes of a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListProjects&lt;/code&gt;, which lists all projects associated with your AWS</p>
+<p>account&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListResources&lt;/code&gt;, which lists the resources associated with a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListTagsForProject&lt;/code&gt;, which lists the tags associated with a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;TagProject&lt;/code&gt;, which adds tags to a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UntagProject&lt;/code&gt;, which removes tags from a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UpdateProject&lt;/code&gt;, which updates the attributes of a</p>
+<p>project&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Teams and team members, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;AssociateTeamMember&lt;/code&gt;, which adds an IAM user to the team for a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DisassociateTeamMember&lt;/code&gt;, which removes an IAM user from the team for a</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListTeamMembers&lt;/code&gt;, which lists all the IAM users in the team for a project, including their roles and</p>
+<p>attributes&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UpdateTeamMember&lt;/code&gt;, which updates a team member's attributes in a</p>
+<p>project&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Users, by calling the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;CreateUserProfile&lt;/code&gt;, which creates a user profile that contains data associated with the user across all</p>
+<p>projects&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DeleteUserProfile&lt;/code&gt;, which deletes all user profile information across all</p>
+<p>projects&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DescribeUserProfile&lt;/code&gt;, which describes the profile of a</p>
+<p>user&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListUserProfiles&lt;/code&gt;, which lists all user</p>
+<p>profiles&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UpdateUserProfile&lt;/code&gt;, which updates the profile for a</p>
+</div>
+<!-- @@@CodeStarClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CodeStarClient[overload1]$$$CodeStarClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeStarClient"><a name="CodeStarClient"></a>CodeStarClient::<span class="name">CodeStarClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CodeStarClient -->
+<!-- $$$CodeStarClient$$$CodeStarClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeStarClient-1"><a name="CodeStarClient-1"></a>CodeStarClient::<span class="name">CodeStarClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-codestar-codestarclient.html#CodeStarClient">CodeStarClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CodeStarClient -->
+<!-- $$$associateTeamMember[overload1]$$$associateTeamMemberconstAssociateTeamMemberRequest& -->
+<h3 class="fn" id="associateTeamMember"><a name="associateTeamMember"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-associateteammemberresponse.html">AssociateTeamMemberResponse</a></span> *CodeStarClient::<span class="name">associateTeamMember</span>(const <span class="type"><a href="qtaws-codestar-associateteammemberrequest.html">AssociateTeamMemberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-associateteammemberresponse.html">AssociateTeamMemberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an IAM user to the team for an AWS <a href="qtaws-codestar.html">CodeStar</a></p>
+<!-- @@@associateTeamMember -->
+<!-- $$$createProject[overload1]$$$createProjectconstCreateProjectRequest& -->
+<h3 class="fn" id="createProject"><a name="createProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-createprojectresponse.html">CreateProjectResponse</a></span> *CodeStarClient::<span class="name">createProject</span>(const <span class="type"><a href="qtaws-codestar-createprojectrequest.html">CreateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-createprojectresponse.html">CreateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reserved for future use. To create a project, use the AWS <a href="qtaws-codestar.html">CodeStar</a></p>
+<!-- @@@createProject -->
+<!-- $$$createUserProfile[overload1]$$$createUserProfileconstCreateUserProfileRequest& -->
+<h3 class="fn" id="createUserProfile"><a name="createUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-createuserprofileresponse.html">CreateUserProfileResponse</a></span> *CodeStarClient::<span class="name">createUserProfile</span>(const <span class="type"><a href="qtaws-codestar-createuserprofilerequest.html">CreateUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-createuserprofileresponse.html">CreateUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with the user, in AWS <a href="qtaws-codestar.html">CodeStar</a>. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS</p>
+<!-- @@@createUserProfile -->
+<!-- $$$deleteProject[overload1]$$$deleteProjectconstDeleteProjectRequest& -->
+<h3 class="fn" id="deleteProject"><a name="deleteProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-deleteprojectresponse.html">DeleteProjectResponse</a></span> *CodeStarClient::<span class="name">deleteProject</span>(const <span class="type"><a href="qtaws-codestar-deleteprojectrequest.html">DeleteProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-deleteprojectresponse.html">DeleteProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a project, including project resources. Does not delete users associated with the project, but does delete the IAM roles that allowed access to the</p>
+<!-- @@@deleteProject -->
+<!-- $$$deleteUserProfile[overload1]$$$deleteUserProfileconstDeleteUserProfileRequest& -->
+<h3 class="fn" id="deleteUserProfile"><a name="deleteUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-deleteuserprofileresponse.html">DeleteUserProfileResponse</a></span> *CodeStarClient::<span class="name">deleteUserProfile</span>(const <span class="type"><a href="qtaws-codestar-deleteuserprofilerequest.html">DeleteUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-deleteuserprofileresponse.html">DeleteUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a user profile in AWS <a href="qtaws-codestar.html">CodeStar</a>, including all personal preference data associated with that profile, such as display name and email address. It does not delete the history of that user, for example the history of commits made by that</p>
+<!-- @@@deleteUserProfile -->
+<!-- $$$describeProject[overload1]$$$describeProjectconstDescribeProjectRequest& -->
+<h3 class="fn" id="describeProject"><a name="describeProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-describeprojectresponse.html">DescribeProjectResponse</a></span> *CodeStarClient::<span class="name">describeProject</span>(const <span class="type"><a href="qtaws-codestar-describeprojectrequest.html">DescribeProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-describeprojectresponse.html">DescribeProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a project and its</p>
+<!-- @@@describeProject -->
+<!-- $$$describeUserProfile[overload1]$$$describeUserProfileconstDescribeUserProfileRequest& -->
+<h3 class="fn" id="describeUserProfile"><a name="describeUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-describeuserprofileresponse.html">DescribeUserProfileResponse</a></span> *CodeStarClient::<span class="name">describeUserProfile</span>(const <span class="type"><a href="qtaws-codestar-describeuserprofilerequest.html">DescribeUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-describeuserprofileresponse.html">DescribeUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a user in AWS <a href="qtaws-codestar.html">CodeStar</a> and the user attributes across all</p>
+<!-- @@@describeUserProfile -->
+<!-- $$$disassociateTeamMember[overload1]$$$disassociateTeamMemberconstDisassociateTeamMemberRequest& -->
+<h3 class="fn" id="disassociateTeamMember"><a name="disassociateTeamMember"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-disassociateteammemberresponse.html">DisassociateTeamMemberResponse</a></span> *CodeStarClient::<span class="name">disassociateTeamMember</span>(const <span class="type"><a href="qtaws-codestar-disassociateteammemberrequest.html">DisassociateTeamMemberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-disassociateteammemberresponse.html">DisassociateTeamMemberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS <a href="qtaws-codestar.html">CodeStar</a>. It does not remove the user from</p>
+<!-- @@@disassociateTeamMember -->
+<!-- $$$listProjects[overload1]$$$listProjectsconstListProjectsRequest& -->
+<h3 class="fn" id="listProjects"><a name="listProjects"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-listprojectsresponse.html">ListProjectsResponse</a></span> *CodeStarClient::<span class="name">listProjects</span>(const <span class="type"><a href="qtaws-codestar-listprojectsrequest.html">ListProjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-listprojectsresponse.html">ListProjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all projects in AWS <a href="qtaws-codestar.html">CodeStar</a> associated with your AWS</p>
+<!-- @@@listProjects -->
+<!-- $$$listResources[overload1]$$$listResourcesconstListResourcesRequest& -->
+<h3 class="fn" id="listResources"><a name="listResources"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-listresourcesresponse.html">ListResourcesResponse</a></span> *CodeStarClient::<span class="name">listResources</span>(const <span class="type"><a href="qtaws-codestar-listresourcesrequest.html">ListResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-listresourcesresponse.html">ListResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists resources associated with a project in AWS</p>
+<!-- @@@listResources -->
+<!-- $$$listTagsForProject[overload1]$$$listTagsForProjectconstListTagsForProjectRequest& -->
+<h3 class="fn" id="listTagsForProject"><a name="listTagsForProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-listtagsforprojectresponse.html">ListTagsForProjectResponse</a></span> *CodeStarClient::<span class="name">listTagsForProject</span>(const <span class="type"><a href="qtaws-codestar-listtagsforprojectrequest.html">ListTagsForProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-listtagsforprojectresponse.html">ListTagsForProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the tags for a</p>
+<!-- @@@listTagsForProject -->
+<!-- $$$listTeamMembers[overload1]$$$listTeamMembersconstListTeamMembersRequest& -->
+<h3 class="fn" id="listTeamMembers"><a name="listTeamMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-listteammembersresponse.html">ListTeamMembersResponse</a></span> *CodeStarClient::<span class="name">listTeamMembers</span>(const <span class="type"><a href="qtaws-codestar-listteammembersrequest.html">ListTeamMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-listteammembersresponse.html">ListTeamMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all team members associated with a</p>
+<!-- @@@listTeamMembers -->
+<!-- $$$listUserProfiles[overload1]$$$listUserProfilesconstListUserProfilesRequest& -->
+<h3 class="fn" id="listUserProfiles"><a name="listUserProfiles"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-listuserprofilesresponse.html">ListUserProfilesResponse</a></span> *CodeStarClient::<span class="name">listUserProfiles</span>(const <span class="type"><a href="qtaws-codestar-listuserprofilesrequest.html">ListUserProfilesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-listuserprofilesresponse.html">ListUserProfilesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the user profiles configured for your AWS account in AWS</p>
+<!-- @@@listUserProfiles -->
+<!-- $$$tagProject[overload1]$$$tagProjectconstTagProjectRequest& -->
+<h3 class="fn" id="tagProject"><a name="tagProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-tagprojectresponse.html">TagProjectResponse</a></span> *CodeStarClient::<span class="name">tagProject</span>(const <span class="type"><a href="qtaws-codestar-tagprojectrequest.html">TagProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-tagprojectresponse.html">TagProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds tags to a</p>
+<!-- @@@tagProject -->
+<!-- $$$untagProject[overload1]$$$untagProjectconstUntagProjectRequest& -->
+<h3 class="fn" id="untagProject"><a name="untagProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-untagprojectresponse.html">UntagProjectResponse</a></span> *CodeStarClient::<span class="name">untagProject</span>(const <span class="type"><a href="qtaws-codestar-untagprojectrequest.html">UntagProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-untagprojectresponse.html">UntagProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from a</p>
+<!-- @@@untagProject -->
+<!-- $$$updateProject[overload1]$$$updateProjectconstUpdateProjectRequest& -->
+<h3 class="fn" id="updateProject"><a name="updateProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-updateprojectresponse.html">UpdateProjectResponse</a></span> *CodeStarClient::<span class="name">updateProject</span>(const <span class="type"><a href="qtaws-codestar-updateprojectrequest.html">UpdateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-updateprojectresponse.html">UpdateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a project in AWS</p>
+<!-- @@@updateProject -->
+<!-- $$$updateTeamMember[overload1]$$$updateTeamMemberconstUpdateTeamMemberRequest& -->
+<h3 class="fn" id="updateTeamMember"><a name="updateTeamMember"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-updateteammemberresponse.html">UpdateTeamMemberResponse</a></span> *CodeStarClient::<span class="name">updateTeamMember</span>(const <span class="type"><a href="qtaws-codestar-updateteammemberrequest.html">UpdateTeamMemberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-updateteammemberresponse.html">UpdateTeamMemberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a team member's attributes in an AWS <a href="qtaws-codestar.html">CodeStar</a> project. For example, you can change a team member's role in the project, or change whether they have remote access to project</p>
+<!-- @@@updateTeamMember -->
+<!-- $$$updateUserProfile[overload1]$$$updateUserProfileconstUpdateUserProfileRequest& -->
+<h3 class="fn" id="updateUserProfile"><a name="updateUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-codestar-updateuserprofileresponse.html">UpdateUserProfileResponse</a></span> *CodeStarClient::<span class="name">updateUserProfile</span>(const <span class="type"><a href="qtaws-codestar-updateuserprofilerequest.html">UpdateUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codestar-codestarclient.html">CodeStarClient</a> service, and returns a pointer to an <a href="qtaws-codestar-updateuserprofileresponse.html">UpdateUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a user's profile in AWS <a href="qtaws-codestar.html">CodeStar</a>. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS <a href="qtaws-codestar.html">CodeStar</a>.</p>
+<!-- @@@updateUserProfile -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wafrequest.cpp -->
+  <title>WafRequest Class | WAF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawswaf-index.html">WAF</a></li>
+<li><a href="qtawswaf-module.html">C++ Classes</a></li>
+<li>WafRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WafRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-waf-wafrequest.html">QtAws::WAF::WafRequest</a>)<br/></span>
+<!-- $$$WafRequest-brief -->
+<p>The <a href="qtaws-waf-wafrequest.html">WafRequest</a> class provides an interface for WAF requests. <a href="#details">More...</a></p>
+<!-- @@@WafRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WafRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-waf-createbytematchsetrequest.html">QtAws::WAF::CreateByteMatchSetRequest</a>, <a href="qtaws-waf-creategeomatchsetrequest.html">QtAws::WAF::CreateGeoMatchSetRequest</a>, <a href="qtaws-waf-createipsetrequest.html">QtAws::WAF::CreateIPSetRequest</a>, <a href="qtaws-waf-createratebasedrulerequest.html">QtAws::WAF::CreateRateBasedRuleRequest</a>, <a href="qtaws-waf-createregexmatchsetrequest.html">QtAws::WAF::CreateRegexMatchSetRequest</a>, <a href="qtaws-waf-createregexpatternsetrequest.html">QtAws::WAF::CreateRegexPatternSetRequest</a>, <a href="qtaws-waf-createrulegrouprequest.html">QtAws::WAF::CreateRuleGroupRequest</a>, <a href="qtaws-waf-createrulerequest.html">QtAws::WAF::CreateRuleRequest</a>, <a href="qtaws-waf-createsizeconstraintsetrequest.html">QtAws::WAF::CreateSizeConstraintSetRequest</a>, <a href="qtaws-waf-createsqlinjectionmatchsetrequest.html">QtAws::WAF::CreateSqlInjectionMatchSetRequest</a>, <a href="qtaws-waf-createwebaclrequest.html">QtAws::WAF::CreateWebACLRequest</a>, <a href="qtaws-waf-createxssmatchsetrequest.html">QtAws::WAF::CreateXssMatchSetRequest</a>, <a href="qtaws-waf-deletebytematchsetrequest.html">QtAws::WAF::DeleteByteMatchSetRequest</a>, <a href="qtaws-waf-deletegeomatchsetrequest.html">QtAws::WAF::DeleteGeoMatchSetRequest</a>, <a href="qtaws-waf-deleteipsetrequest.html">QtAws::WAF::DeleteIPSetRequest</a>, <a href="qtaws-waf-deletepermissionpolicyrequest.html">QtAws::WAF::DeletePermissionPolicyRequest</a>, <a href="qtaws-waf-deleteratebasedrulerequest.html">QtAws::WAF::DeleteRateBasedRuleRequest</a>, <a href="qtaws-waf-deleteregexmatchsetrequest.html">QtAws::WAF::DeleteRegexMatchSetRequest</a>, <a href="qtaws-waf-deleteregexpatternsetrequest.html">QtAws::WAF::DeleteRegexPatternSetRequest</a>, <a href="qtaws-waf-deleterulegrouprequest.html">QtAws::WAF::DeleteRuleGroupRequest</a>, <a href="qtaws-waf-deleterulerequest.html">QtAws::WAF::DeleteRuleRequest</a>, <a href="qtaws-waf-deletesizeconstraintsetrequest.html">QtAws::WAF::DeleteSizeConstraintSetRequest</a>, <a href="qtaws-waf-deletesqlinjectionmatchsetrequest.html">QtAws::WAF::DeleteSqlInjectionMatchSetRequest</a>, <a href="qtaws-waf-deletewebaclrequest.html">QtAws::WAF::DeleteWebACLRequest</a>, <a href="qtaws-waf-deletexssmatchsetrequest.html">QtAws::WAF::DeleteXssMatchSetRequest</a>, <a href="qtaws-waf-getbytematchsetrequest.html">QtAws::WAF::GetByteMatchSetRequest</a>, <a href="qtaws-waf-getchangetokenrequest.html">QtAws::WAF::GetChangeTokenRequest</a>, <a href="qtaws-waf-getchangetokenstatusrequest.html">QtAws::WAF::GetChangeTokenStatusRequest</a>, <a href="qtaws-waf-getgeomatchsetrequest.html">QtAws::WAF::GetGeoMatchSetRequest</a>, <a href="qtaws-waf-getipsetrequest.html">QtAws::WAF::GetIPSetRequest</a>, <a href="qtaws-waf-getpermissionpolicyrequest.html">QtAws::WAF::GetPermissionPolicyRequest</a>, <a href="qtaws-waf-getratebasedrulemanagedkeysrequest.html">QtAws::WAF::GetRateBasedRuleManagedKeysRequest</a>, <a href="qtaws-waf-getratebasedrulerequest.html">QtAws::WAF::GetRateBasedRuleRequest</a>, <a href="qtaws-waf-getregexmatchsetrequest.html">QtAws::WAF::GetRegexMatchSetRequest</a>, <a href="qtaws-waf-getregexpatternsetrequest.html">QtAws::WAF::GetRegexPatternSetRequest</a>, <a href="qtaws-waf-getrulegrouprequest.html">QtAws::WAF::GetRuleGroupRequest</a>, <a href="qtaws-waf-getrulerequest.html">QtAws::WAF::GetRuleRequest</a>, <a href="qtaws-waf-getsampledrequestsrequest.html">QtAws::WAF::GetSampledRequestsRequest</a>, <a href="qtaws-waf-getsizeconstraintsetrequest.html">QtAws::WAF::GetSizeConstraintSetRequest</a>, <a href="qtaws-waf-getsqlinjectionmatchsetrequest.html">QtAws::WAF::GetSqlInjectionMatchSetRequest</a>, <a href="qtaws-waf-getwebaclrequest.html">QtAws::WAF::GetWebACLRequest</a>, <a href="qtaws-waf-getxssmatchsetrequest.html">QtAws::WAF::GetXssMatchSetRequest</a>, <a href="qtaws-waf-listactivatedrulesinrulegrouprequest.html">QtAws::WAF::ListActivatedRulesInRuleGroupRequest</a>, <a href="qtaws-waf-listbytematchsetsrequest.html">QtAws::WAF::ListByteMatchSetsRequest</a>, <a href="qtaws-waf-listgeomatchsetsrequest.html">QtAws::WAF::ListGeoMatchSetsRequest</a>, <a href="qtaws-waf-listipsetsrequest.html">QtAws::WAF::ListIPSetsRequest</a>, <a href="qtaws-waf-listratebasedrulesrequest.html">QtAws::WAF::ListRateBasedRulesRequest</a>, <a href="qtaws-waf-listregexmatchsetsrequest.html">QtAws::WAF::ListRegexMatchSetsRequest</a>, <a href="qtaws-waf-listregexpatternsetsrequest.html">QtAws::WAF::ListRegexPatternSetsRequest</a>, <a href="qtaws-waf-listrulegroupsrequest.html">QtAws::WAF::ListRuleGroupsRequest</a>, <a href="qtaws-waf-listrulesrequest.html">QtAws::WAF::ListRulesRequest</a>, <a href="qtaws-waf-listsizeconstraintsetsrequest.html">QtAws::WAF::ListSizeConstraintSetsRequest</a>, <a href="qtaws-waf-listsqlinjectionmatchsetsrequest.html">QtAws::WAF::ListSqlInjectionMatchSetsRequest</a>, <a href="qtaws-waf-listsubscribedrulegroupsrequest.html">QtAws::WAF::ListSubscribedRuleGroupsRequest</a>, <a href="qtaws-waf-listwebaclsrequest.html">QtAws::WAF::ListWebACLsRequest</a>, <a href="qtaws-waf-listxssmatchsetsrequest.html">QtAws::WAF::ListXssMatchSetsRequest</a>, <a href="qtaws-waf-putpermissionpolicyrequest.html">QtAws::WAF::PutPermissionPolicyRequest</a>, <a href="qtaws-waf-updatebytematchsetrequest.html">QtAws::WAF::UpdateByteMatchSetRequest</a>, <a href="qtaws-waf-updategeomatchsetrequest.html">QtAws::WAF::UpdateGeoMatchSetRequest</a>, <a href="qtaws-waf-updateipsetrequest.html">QtAws::WAF::UpdateIPSetRequest</a>, <a href="qtaws-waf-updateratebasedrulerequest.html">QtAws::WAF::UpdateRateBasedRuleRequest</a>, <a href="qtaws-waf-updateregexmatchsetrequest.html">QtAws::WAF::UpdateRegexMatchSetRequest</a>, <a href="qtaws-waf-updateregexpatternsetrequest.html">QtAws::WAF::UpdateRegexPatternSetRequest</a>, <a href="qtaws-waf-updaterulegrouprequest.html">QtAws::WAF::UpdateRuleGroupRequest</a>, <a href="qtaws-waf-updaterulerequest.html">QtAws::WAF::UpdateRuleRequest</a>, <a href="qtaws-waf-updatesizeconstraintsetrequest.html">QtAws::WAF::UpdateSizeConstraintSetRequest</a>, <a href="qtaws-waf-updatesqlinjectionmatchsetrequest.html">QtAws::WAF::UpdateSqlInjectionMatchSetRequest</a>, <a href="qtaws-waf-updatewebaclrequest.html">QtAws::WAF::UpdateWebACLRequest</a>, and <a href="qtaws-waf-updatexssmatchsetrequest.html">QtAws::WAF::UpdateXssMatchSetRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-waf-wafrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#Action-enum">Action</a></b> { CreateByteMatchSetAction, CreateGeoMatchSetAction, CreateIPSetAction, CreateRateBasedRuleAction, ..., UpdateXssMatchSetAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#WafRequest">WafRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#WafRequest-1">WafRequest</a></b>(const WafRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> WafRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#operator-eq">operator=</a></b>(const WafRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#operator-eq-eq">operator==</a></b>(const WafRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#WafRequest-2">WafRequest</a></b>(WafRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WafRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-waf-wafrequest.html">WafRequest</a> class provides an interface for WAF requests.</p>
+</div>
+<!-- @@@WafRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateByteMatchSetAction$$$CreateGeoMatchSetAction$$$CreateIPSetAction$$$CreateRateBasedRuleAction$$$CreateRegexMatchSetAction$$$CreateRegexPatternSetAction$$$CreateRuleAction$$$CreateRuleGroupAction$$$CreateSizeConstraintSetAction$$$CreateSqlInjectionMatchSetAction$$$CreateWebACLAction$$$CreateXssMatchSetAction$$$DeleteByteMatchSetAction$$$DeleteGeoMatchSetAction$$$DeleteIPSetAction$$$DeletePermissionPolicyAction$$$DeleteRateBasedRuleAction$$$DeleteRegexMatchSetAction$$$DeleteRegexPatternSetAction$$$DeleteRuleAction$$$DeleteRuleGroupAction$$$DeleteSizeConstraintSetAction$$$DeleteSqlInjectionMatchSetAction$$$DeleteWebACLAction$$$DeleteXssMatchSetAction$$$GetByteMatchSetAction$$$GetChangeTokenAction$$$GetChangeTokenStatusAction$$$GetGeoMatchSetAction$$$GetIPSetAction$$$GetPermissionPolicyAction$$$GetRateBasedRuleAction$$$GetRateBasedRuleManagedKeysAction$$$GetRegexMatchSetAction$$$GetRegexPatternSetAction$$$GetRuleAction$$$GetRuleGroupAction$$$GetSampledRequestsAction$$$GetSizeConstraintSetAction$$$GetSqlInjectionMatchSetAction$$$GetWebACLAction$$$GetXssMatchSetAction$$$ListActivatedRulesInRuleGroupAction$$$ListByteMatchSetsAction$$$ListGeoMatchSetsAction$$$ListIPSetsAction$$$ListRateBasedRulesAction$$$ListRegexMatchSetsAction$$$ListRegexPatternSetsAction$$$ListRuleGroupsAction$$$ListRulesAction$$$ListSizeConstraintSetsAction$$$ListSqlInjectionMatchSetsAction$$$ListSubscribedRuleGroupsAction$$$ListWebACLsAction$$$ListXssMatchSetsAction$$$PutPermissionPolicyAction$$$UpdateByteMatchSetAction$$$UpdateGeoMatchSetAction$$$UpdateIPSetAction$$$UpdateRateBasedRuleAction$$$UpdateRegexMatchSetAction$$$UpdateRegexPatternSetAction$$$UpdateRuleAction$$$UpdateRuleGroupAction$$$UpdateSizeConstraintSetAction$$$UpdateSqlInjectionMatchSetAction$$$UpdateWebACLAction$$$UpdateXssMatchSetAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum WafRequest::<span class="name">Action</span><br/>flags WafRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as WAF requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateByteMatchSetAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">WAF CreateByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateGeoMatchSetAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">WAF CreateGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateIPSetAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">WAF CreateIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateRateBasedRuleAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">WAF CreateRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateRegexMatchSetAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">WAF CreateRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateRegexPatternSetAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">WAF CreateRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateRuleAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">WAF CreateRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateRuleGroupAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">WAF CreateRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">WAF CreateSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">WAF CreateSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateWebACLAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">WAF CreateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::CreateXssMatchSetAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">WAF CreateXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteByteMatchSetAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">WAF DeleteByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteGeoMatchSetAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">WAF DeleteGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteIPSetAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">WAF DeleteIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeletePermissionPolicyAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">WAF DeletePermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteRateBasedRuleAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">WAF DeleteRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteRegexMatchSetAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">WAF DeleteRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteRegexPatternSetAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">WAF DeleteRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteRuleAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">WAF DeleteRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteRuleGroupAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">WAF DeleteRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">WAF DeleteSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">WAF DeleteSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteWebACLAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">WAF DeleteWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::DeleteXssMatchSetAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">WAF DeleteXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetByteMatchSetAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">WAF GetByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetChangeTokenAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">WAF GetChangeToken action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetChangeTokenStatusAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">WAF GetChangeTokenStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetGeoMatchSetAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">WAF GetGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetIPSetAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">WAF GetIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetPermissionPolicyAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">WAF GetPermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRateBasedRuleAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">WAF GetRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRateBasedRuleManagedKeysAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">WAF GetRateBasedRuleManagedKeys action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRegexMatchSetAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">WAF GetRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRegexPatternSetAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">WAF GetRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRuleAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">WAF GetRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetRuleGroupAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">WAF GetRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetSampledRequestsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">WAF GetSampledRequests action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">WAF GetSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">WAF GetSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetWebACLAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">WAF GetWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::GetXssMatchSetAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">WAF GetXssMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListActivatedRulesInRuleGroupAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">WAF ListActivatedRulesInRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListByteMatchSetsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">WAF ListByteMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListGeoMatchSetsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">WAF ListGeoMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListIPSetsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">WAF ListIPSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListRateBasedRulesAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">WAF ListRateBasedRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListRegexMatchSetsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">WAF ListRegexMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListRegexPatternSetsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">WAF ListRegexPatternSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListRuleGroupsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">WAF ListRuleGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListRulesAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">WAF ListRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListSizeConstraintSetsAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">WAF ListSizeConstraintSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListSqlInjectionMatchSetsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">WAF ListSqlInjectionMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListSubscribedRuleGroupsAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">WAF ListSubscribedRuleGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListWebACLsAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">WAF ListWebACLs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::ListXssMatchSetsAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">WAF ListXssMatchSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::PutPermissionPolicyAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">WAF PutPermissionPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateByteMatchSetAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">WAF UpdateByteMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateGeoMatchSetAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">WAF UpdateGeoMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateIPSetAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">WAF UpdateIPSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateRateBasedRuleAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">WAF UpdateRateBasedRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateRegexMatchSetAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">WAF UpdateRegexMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateRegexPatternSetAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">WAF UpdateRegexPatternSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateRuleAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">WAF UpdateRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateRuleGroupAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">WAF UpdateRuleGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateSizeConstraintSetAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">WAF UpdateSizeConstraintSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateSqlInjectionMatchSetAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">WAF UpdateSqlInjectionMatchSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateWebACLAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">WAF UpdateWebACL action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WAF::WafRequest::UpdateXssMatchSetAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">WAF UpdateXssMatchSet action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WafRequest[overload1]$$$WafRequestconstAction -->
+<h3 class="fn" id="WafRequest"><a name="WafRequest"></a>WafRequest::<span class="name">WafRequest</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-waf-wafrequest.html">WafRequest</a> object for WAF <i>action</i>.</p>
+<!-- @@@WafRequest -->
+<!-- $$$WafRequest$$$WafRequestconstWafRequest& -->
+<h3 class="fn" id="WafRequest-1"><a name="WafRequest-1"></a>WafRequest::<span class="name">WafRequest</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#WafRequest">WafRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@WafRequest -->
+<!-- $$$WafRequest$$$WafRequestWafRequestPrivate*const -->
+<h3 class="fn" id="WafRequest-2"><a name="WafRequest-2"></a><code>[protected] </code>WafRequest::<span class="name">WafRequest</span>(<span class="type">WafRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-waf-wafrequest.html">WafRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from WafRequestPrivate.</p>
+<!-- @@@WafRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-waf-wafrequest.html#Action-enum">Action</a></span> WafRequest::<span class="name">action</span>() const</h3>
+<p>Returns the WAF action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> WafRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the WAF action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> WafRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the WAF API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> WafRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> WafRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> WafRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;WafRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> WafRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the WAF action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> WafRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the WAF API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> WafRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> WafRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-waf-wafrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> WafRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the WAF request using the given <i>endpoint</i>.</p>
+<p>This WAF implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-waf-wafrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constWafRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-waf-wafrequest.html#WafRequest">WafRequest</a></span> &amp;WafRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#WafRequest">WafRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-waf-wafrequest.html">WafRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constWafRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> WafRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#WafRequest">WafRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

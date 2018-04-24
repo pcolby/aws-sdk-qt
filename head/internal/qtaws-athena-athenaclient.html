@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- athenaclient.cpp -->
+  <title>AthenaClient Class | Athena</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsathena-index.html">Athena</a></li>
+<li><a href="qtawsathena-module.html">C++ Classes</a></li>
+<li>AthenaClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AthenaClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-athena-athenaclient.html">QtAws::Athena::AthenaClient</a>)<br/></span>
+<!-- $$$AthenaClient-brief -->
+<p>The <a href="qtaws-athena-athenaclient.html">AthenaClient</a> class provides access to the Amazon Athena service. <a href="#details">More...</a></p>
+<!-- @@@AthenaClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AthenaClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-athena-athenaclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#AthenaClient">AthenaClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#AthenaClient-1">AthenaClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetNamedQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#batchGetNamedQuery">batchGetNamedQuery</a></b>(const BatchGetNamedQueryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetQueryExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#batchGetQueryExecution">batchGetQueryExecution</a></b>(const BatchGetQueryExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNamedQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#createNamedQuery">createNamedQuery</a></b>(const CreateNamedQueryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNamedQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#deleteNamedQuery">deleteNamedQuery</a></b>(const DeleteNamedQueryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetNamedQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#getNamedQuery">getNamedQuery</a></b>(const GetNamedQueryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQueryExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#getQueryExecution">getQueryExecution</a></b>(const GetQueryExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQueryResultsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#getQueryResults">getQueryResults</a></b>(const GetQueryResultsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListNamedQueriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#listNamedQueries">listNamedQueries</a></b>(const ListNamedQueriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListQueryExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#listQueryExecutions">listQueryExecutions</a></b>(const ListQueryExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartQueryExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#startQueryExecution">startQueryExecution</a></b>(const StartQueryExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopQueryExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-athena-athenaclient.html#stopQueryExecution">stopQueryExecution</a></b>(const StopQueryExecutionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AthenaClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-athena-athenaclient.html">AthenaClient</a> class provides access to the Amazon Athena service.</p>
+<p>Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so there is no infrastructure to set up or manage. You pay only for the queries you run. Athena scales automatically—executing queries in parallel—so results are fast, even with large datasets and complex queries. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/what-is.html&quot;&gt;What is Amazon Athena&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+</div>
+<!-- @@@AthenaClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AthenaClient[overload1]$$$AthenaClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AthenaClient"><a name="AthenaClient"></a>AthenaClient::<span class="name">AthenaClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-athena-athenaclient.html">AthenaClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AthenaClient -->
+<!-- $$$AthenaClient$$$AthenaClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AthenaClient-1"><a name="AthenaClient-1"></a>AthenaClient::<span class="name">AthenaClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-athena-athenaclient.html#AthenaClient">AthenaClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AthenaClient -->
+<!-- $$$batchGetNamedQuery[overload1]$$$batchGetNamedQueryconstBatchGetNamedQueryRequest& -->
+<h3 class="fn" id="batchGetNamedQuery"><a name="batchGetNamedQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-batchgetnamedqueryresponse.html">BatchGetNamedQueryResponse</a></span> *AthenaClient::<span class="name">batchGetNamedQuery</span>(const <span class="type"><a href="qtaws-athena-batchgetnamedqueryrequest.html">BatchGetNamedQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-batchgetnamedqueryresponse.html">BatchGetNamedQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID strings. Use &lt;a&gt;ListNamedQueries&lt;/a&gt; to get the list of named query IDs. If information could not be retrieved for a submitted query ID, information about the query ID submitted is listed under &lt;a&gt;UnprocessedNamedQueryId&lt;/a&gt;. Named queries are different from executed queries. Use &lt;a&gt;BatchGetQueryExecution&lt;/a&gt; to get details about each unique query execution, and &lt;a&gt;ListQueryExecutions&lt;/a&gt; to get a list of query execution</p>
+<!-- @@@batchGetNamedQuery -->
+<!-- $$$batchGetQueryExecution[overload1]$$$batchGetQueryExecutionconstBatchGetQueryExecutionRequest& -->
+<h3 class="fn" id="batchGetQueryExecution"><a name="batchGetQueryExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-batchgetqueryexecutionresponse.html">BatchGetQueryExecutionResponse</a></span> *AthenaClient::<span class="name">batchGetQueryExecution</span>(const <span class="type"><a href="qtaws-athena-batchgetqueryexecutionrequest.html">BatchGetQueryExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-batchgetqueryexecutionresponse.html">BatchGetQueryExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of query execution ID strings. To get a list of query execution IDs, use &lt;a&gt;ListQueryExecutions&lt;/a&gt;. Query executions are different from named (saved) queries. Use &lt;a&gt;BatchGetNamedQuery&lt;/a&gt; to get details about named</p>
+<!-- @@@batchGetQueryExecution -->
+<!-- $$$createNamedQuery[overload1]$$$createNamedQueryconstCreateNamedQueryRequest& -->
+<h3 class="fn" id="createNamedQuery"><a name="createNamedQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-createnamedqueryresponse.html">CreateNamedQueryResponse</a></span> *AthenaClient::<span class="name">createNamedQuery</span>(const <span class="type"><a href="qtaws-athena-createnamedqueryrequest.html">CreateNamedQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-createnamedqueryresponse.html">CreateNamedQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a named</p>
+<p>query&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@createNamedQuery -->
+<!-- $$$deleteNamedQuery[overload1]$$$deleteNamedQueryconstDeleteNamedQueryRequest& -->
+<h3 class="fn" id="deleteNamedQuery"><a name="deleteNamedQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-deletenamedqueryresponse.html">DeleteNamedQueryResponse</a></span> *AthenaClient::<span class="name">deleteNamedQuery</span>(const <span class="type"><a href="qtaws-athena-deletenamedqueryrequest.html">DeleteNamedQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-deletenamedqueryresponse.html">DeleteNamedQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a named</p>
+<p>query&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@deleteNamedQuery -->
+<!-- $$$getNamedQuery[overload1]$$$getNamedQueryconstGetNamedQueryRequest& -->
+<h3 class="fn" id="getNamedQuery"><a name="getNamedQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-getnamedqueryresponse.html">GetNamedQueryResponse</a></span> *AthenaClient::<span class="name">getNamedQuery</span>(const <span class="type"><a href="qtaws-athena-getnamedqueryrequest.html">GetNamedQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-getnamedqueryresponse.html">GetNamedQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a single</p>
+<!-- @@@getNamedQuery -->
+<!-- $$$getQueryExecution[overload1]$$$getQueryExecutionconstGetQueryExecutionRequest& -->
+<h3 class="fn" id="getQueryExecution"><a name="getQueryExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-getqueryexecutionresponse.html">GetQueryExecutionResponse</a></span> *AthenaClient::<span class="name">getQueryExecution</span>(const <span class="type"><a href="qtaws-athena-getqueryexecutionrequest.html">GetQueryExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-getqueryexecutionresponse.html">GetQueryExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a single execution of a query. Each time a query executes, information about the query execution is saved with a unique</p>
+<!-- @@@getQueryExecution -->
+<!-- $$$getQueryResults[overload1]$$$getQueryResultsconstGetQueryResultsRequest& -->
+<h3 class="fn" id="getQueryResults"><a name="getQueryResults"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-getqueryresultsresponse.html">GetQueryResultsResponse</a></span> *AthenaClient::<span class="name">getQueryResults</span>(const <span class="type"><a href="qtaws-athena-getqueryresultsrequest.html">GetQueryResultsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-getqueryresultsresponse.html">GetQueryResultsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the results of a single query execution specified by &lt;code&gt;QueryExecutionId&lt;/code&gt;. This request does not execute the query but returns results. Use &lt;a&gt;StartQueryExecution&lt;/a&gt; to run a</p>
+<!-- @@@getQueryResults -->
+<!-- $$$listNamedQueries[overload1]$$$listNamedQueriesconstListNamedQueriesRequest& -->
+<h3 class="fn" id="listNamedQueries"><a name="listNamedQueries"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-listnamedqueriesresponse.html">ListNamedQueriesResponse</a></span> *AthenaClient::<span class="name">listNamedQueries</span>(const <span class="type"><a href="qtaws-athena-listnamedqueriesrequest.html">ListNamedQueriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-listnamedqueriesresponse.html">ListNamedQueriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a list of all available query</p>
+<p>IDs&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@listNamedQueries -->
+<!-- $$$listQueryExecutions[overload1]$$$listQueryExecutionsconstListQueryExecutionsRequest& -->
+<h3 class="fn" id="listQueryExecutions"><a name="listQueryExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-listqueryexecutionsresponse.html">ListQueryExecutionsResponse</a></span> *AthenaClient::<span class="name">listQueryExecutions</span>(const <span class="type"><a href="qtaws-athena-listqueryexecutionsrequest.html">ListQueryExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-listqueryexecutionsresponse.html">ListQueryExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a list of all available query execution</p>
+<p>IDs&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@listQueryExecutions -->
+<!-- $$$startQueryExecution[overload1]$$$startQueryExecutionconstStartQueryExecutionRequest& -->
+<h3 class="fn" id="startQueryExecution"><a name="startQueryExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-startqueryexecutionresponse.html">StartQueryExecutionResponse</a></span> *AthenaClient::<span class="name">startQueryExecution</span>(const <span class="type"><a href="qtaws-athena-startqueryexecutionrequest.html">StartQueryExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-startqueryexecutionresponse.html">StartQueryExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Runs (executes) the SQL query statements contained in the &lt;code&gt;Query&lt;/code&gt;</p>
+<p>string&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@startQueryExecution -->
+<!-- $$$stopQueryExecution[overload1]$$$stopQueryExecutionconstStopQueryExecutionRequest& -->
+<h3 class="fn" id="stopQueryExecution"><a name="stopQueryExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-athena-stopqueryexecutionresponse.html">StopQueryExecutionResponse</a></span> *AthenaClient::<span class="name">stopQueryExecution</span>(const <span class="type"><a href="qtaws-athena-stopqueryexecutionrequest.html">StopQueryExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-athena-athenaclient.html">AthenaClient</a> service, and returns a pointer to an <a href="qtaws-athena-stopqueryexecutionresponse.html">StopQueryExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a query</p>
+<p>execution&gt;</p>
+<p>For code samples using the AWS SDK for Java, see &lt;a href=&quot;http://docs.aws.amazon.com/athena/latest/ug/code-samples.html&quot;&gt;Examples and Code Samples&lt;/a&gt; in the &lt;i&gt;Amazon Athena User</p>
+<!-- @@@stopQueryExecution -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

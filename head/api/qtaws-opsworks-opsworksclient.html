@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- opsworksclient.cpp -->
+  <title>OpsWorksClient Class | OpsWorks</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsopsworks-index.html">OpsWorks</a></li>
+<li><a href="qtawsopsworks-module.html">C++ Classes</a></li>
+<li>OpsWorksClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">OpsWorksClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-opsworks-opsworksclient.html">QtAws::OpsWorks::OpsWorksClient</a>)<br/></span>
+<!-- $$$OpsWorksClient-brief -->
+<p>The <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> class provides access to the AWS <a href="qtaws-opsworks.html">OpsWorks</a> service. <a href="#details">More...</a></p>
+<!-- @@@OpsWorksClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;OpsWorksClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-opsworks-opsworksclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#OpsWorksClient">OpsWorksClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#OpsWorksClient-1">OpsWorksClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssignInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#assignInstance">assignInstance</a></b>(const AssignInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssignVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#assignVolume">assignVolume</a></b>(const AssignVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateElasticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#associateElasticIp">associateElasticIp</a></b>(const AssociateElasticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachElasticLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#attachElasticLoadBalancer">attachElasticLoadBalancer</a></b>(const AttachElasticLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CloneStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#cloneStack">cloneStack</a></b>(const CloneStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createApp">createApp</a></b>(const CreateAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createDeployment">createDeployment</a></b>(const CreateDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createInstance">createInstance</a></b>(const CreateInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLayerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createLayer">createLayer</a></b>(const CreateLayerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createStack">createStack</a></b>(const CreateStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#createUserProfile">createUserProfile</a></b>(const CreateUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deleteApp">deleteApp</a></b>(const DeleteAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deleteInstance">deleteInstance</a></b>(const DeleteInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLayerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deleteLayer">deleteLayer</a></b>(const DeleteLayerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deleteStack">deleteStack</a></b>(const DeleteStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deleteUserProfile">deleteUserProfile</a></b>(const DeleteUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterEcsClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deregisterEcsCluster">deregisterEcsCluster</a></b>(const DeregisterEcsClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterElasticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deregisterElasticIp">deregisterElasticIp</a></b>(const DeregisterElasticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deregisterInstance">deregisterInstance</a></b>(const DeregisterInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterRdsDbInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deregisterRdsDbInstance">deregisterRdsDbInstance</a></b>(const DeregisterRdsDbInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#deregisterVolume">deregisterVolume</a></b>(const DeregisterVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAgentVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeAgentVersions">describeAgentVersions</a></b>(const DescribeAgentVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAppsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeApps">describeApps</a></b>(const DescribeAppsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCommandsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeCommands">describeCommands</a></b>(const DescribeCommandsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDeploymentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeDeployments">describeDeployments</a></b>(const DescribeDeploymentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEcsClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeEcsClusters">describeEcsClusters</a></b>(const DescribeEcsClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeElasticIpsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeElasticIps">describeElasticIps</a></b>(const DescribeElasticIpsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeElasticLoadBalancersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeElasticLoadBalancers">describeElasticLoadBalancers</a></b>(const DescribeElasticLoadBalancersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeInstances">describeInstances</a></b>(const DescribeInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLayersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeLayers">describeLayers</a></b>(const DescribeLayersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLoadBasedAutoScalingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeLoadBasedAutoScaling">describeLoadBasedAutoScaling</a></b>(const DescribeLoadBasedAutoScalingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMyUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeMyUserProfile">describeMyUserProfile</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOperatingSystemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeOperatingSystems">describeOperatingSystems</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describePermissions">describePermissions</a></b>(const DescribePermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRaidArraysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeRaidArrays">describeRaidArrays</a></b>(const DescribeRaidArraysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRdsDbInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeRdsDbInstances">describeRdsDbInstances</a></b>(const DescribeRdsDbInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeServiceErrorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeServiceErrors">describeServiceErrors</a></b>(const DescribeServiceErrorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStackProvisioningParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeStackProvisioningParameters">describeStackProvisioningParameters</a></b>(const DescribeStackProvisioningParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStackSummaryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeStackSummary">describeStackSummary</a></b>(const DescribeStackSummaryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStacksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeStacks">describeStacks</a></b>(const DescribeStacksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTimeBasedAutoScalingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeTimeBasedAutoScaling">describeTimeBasedAutoScaling</a></b>(const DescribeTimeBasedAutoScalingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserProfilesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeUserProfiles">describeUserProfiles</a></b>(const DescribeUserProfilesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVolumesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#describeVolumes">describeVolumes</a></b>(const DescribeVolumesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachElasticLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#detachElasticLoadBalancer">detachElasticLoadBalancer</a></b>(const DetachElasticLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateElasticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#disassociateElasticIp">disassociateElasticIp</a></b>(const DisassociateElasticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHostnameSuggestionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#getHostnameSuggestion">getHostnameSuggestion</a></b>(const GetHostnameSuggestionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GrantAccessResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#grantAccess">grantAccess</a></b>(const GrantAccessRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#rebootInstance">rebootInstance</a></b>(const RebootInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterEcsClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#registerEcsCluster">registerEcsCluster</a></b>(const RegisterEcsClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterElasticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#registerElasticIp">registerElasticIp</a></b>(const RegisterElasticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#registerInstance">registerInstance</a></b>(const RegisterInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterRdsDbInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#registerRdsDbInstance">registerRdsDbInstance</a></b>(const RegisterRdsDbInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#registerVolume">registerVolume</a></b>(const RegisterVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetLoadBasedAutoScalingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#setLoadBasedAutoScaling">setLoadBasedAutoScaling</a></b>(const SetLoadBasedAutoScalingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetPermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#setPermission">setPermission</a></b>(const SetPermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetTimeBasedAutoScalingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#setTimeBasedAutoScaling">setTimeBasedAutoScaling</a></b>(const SetTimeBasedAutoScalingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#startInstance">startInstance</a></b>(const StartInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#startStack">startStack</a></b>(const StartStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#stopInstance">stopInstance</a></b>(const StopInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#stopStack">stopStack</a></b>(const StopStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnassignInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#unassignInstance">unassignInstance</a></b>(const UnassignInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnassignVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#unassignVolume">unassignVolume</a></b>(const UnassignVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateApp">updateApp</a></b>(const UpdateAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateElasticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateElasticIp">updateElasticIp</a></b>(const UpdateElasticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateInstance">updateInstance</a></b>(const UpdateInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateLayerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateLayer">updateLayer</a></b>(const UpdateLayerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMyUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateMyUserProfile">updateMyUserProfile</a></b>(const UpdateMyUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRdsDbInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateRdsDbInstance">updateRdsDbInstance</a></b>(const UpdateRdsDbInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateStack">updateStack</a></b>(const UpdateStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserProfileResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateUserProfile">updateUserProfile</a></b>(const UpdateUserProfileRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksclient.html#updateVolume">updateVolume</a></b>(const UpdateVolumeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$OpsWorksClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> class provides access to the AWS <a href="qtaws-opsworks.html">OpsWorks</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-opsworks.html">OpsWorks</a>&lt;/fullname&gt;</p>
+<p>Welcome to the &lt;i&gt;AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks API Reference&lt;/i&gt;. This guide provides descriptions, syntax, and usage examples for AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks actions and data types, including common parameters and error codes.</p>
+<p>&lt;/p</p>
+<p>AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks is an application management service that provides an integrated experience for overseeing the complete application lifecycle. For information about this product, go to the &lt;a href=&quot;http://aws.amazon.com/opsworks/&quot;&gt;AWS <a href="qtaws-opsworks.html">OpsWorks</a>&lt;/a&gt; details page.</p>
+<p>&lt;/p</p>
+<p>&lt;b&gt;SDKs and CLI&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>The most common way to use the AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks API is by using the AWS Command Line Interface (CLI) or by using one of the AWS SDKs to implement applications in your preferred language. For more information,</p>
+<p>see&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html&quot;&gt;AWS CLI&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html&quot;&gt;AWS SDK for Java&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm&quot;&gt;AWS SDK for .NET&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.<a href="qtaws-opsworks.html">OpsWorks</a>.<a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a>.html&quot;&gt;AWS SDK for PHP 2&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/sdkforruby/api/&quot;&gt;AWS SDK for Ruby&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://aws.amazon.com/documentation/sdkforjavascript/&quot;&gt;AWS SDK for Node.js&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.pythonboto.org/en/latest/ref/opsworks.html&quot;&gt;AWS SDK for Python(Boto)&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Endpoints&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks supports the following endpoints, all HTTPS. You must connect to one of the following endpoints. Stacks can only be accessed or managed within the endpoint in which they are</p>
+<p>created&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>opsworks.us-east-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.us-east-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.us-west-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.us-west-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ca-central-1.amazonaws.com (API only; not available in the AWS</p>
+<p>console&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.eu-west-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.eu-west-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.eu-west-3.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.eu-central-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ap-northeast-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ap-northeast-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ap-south-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ap-southeast-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.ap-southeast-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks.sa-east-1.amazonaws.co&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Chef Versions&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>When you call &lt;a&gt;CreateStack&lt;/a&gt;, &lt;a&gt;CloneStack&lt;/a&gt;, or &lt;a&gt;UpdateStack&lt;/a&gt; we recommend you use the &lt;code&gt;ConfigurationManager&lt;/code&gt; parameter to specify the Chef version. The recommended and default value for Linux stacks is currently 12. Windows stacks use Chef 12.2&#x2e; For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html&quot;&gt;Chef</p>
+<p>Versions&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>You can specify Chef 12, 11.10, or 11.4 for your Linux stack. We recommend migrating your existing Linux stacks to Chef 12 as soon as</p>
+</div>
+<!-- @@@OpsWorksClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$OpsWorksClient[overload1]$$$OpsWorksClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="OpsWorksClient"><a name="OpsWorksClient"></a>OpsWorksClient::<span class="name">OpsWorksClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@OpsWorksClient -->
+<!-- $$$OpsWorksClient$$$OpsWorksClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="OpsWorksClient-1"><a name="OpsWorksClient-1"></a>OpsWorksClient::<span class="name">OpsWorksClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-opsworks-opsworksclient.html#OpsWorksClient">OpsWorksClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@OpsWorksClient -->
+<!-- $$$assignInstance[overload1]$$$assignInstanceconstAssignInstanceRequest& -->
+<h3 class="fn" id="assignInstance"><a name="assignInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-assigninstanceresponse.html">AssignInstanceResponse</a></span> *OpsWorksClient::<span class="name">assignInstance</span>(const <span class="type"><a href="qtaws-opsworks-assigninstancerequest.html">AssignInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-assigninstanceresponse.html">AssignInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assign a registered instance to a</p>
+<p>layer&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You can assign registered on-premises instances to any layer</p>
+<p>type&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You can assign registered Amazon EC2 instances only to custom</p>
+<p>layers&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use this action with instances that were created with AWS <a href="qtaws-opsworks.html">OpsWorks</a></p>
+<p>Stacks&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an AWS Identity and Access Management (IAM) user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@assignInstance -->
+<!-- $$$assignVolume[overload1]$$$assignVolumeconstAssignVolumeRequest& -->
+<h3 class="fn" id="assignVolume"><a name="assignVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-assignvolumeresponse.html">AssignVolumeResponse</a></span> *OpsWorksClient::<span class="name">assignVolume</span>(const <span class="type"><a href="qtaws-opsworks-assignvolumerequest.html">AssignVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-assignvolumeresponse.html">AssignVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns one of the stack's registered Amazon EBS volumes to a specified instance. The volume must first be registered with the stack by calling &lt;a&gt;RegisterVolume&lt;/a&gt;. After you register the volume, you must call &lt;a&gt;UpdateVolume&lt;/a&gt; to specify a mount point before calling &lt;code&gt;AssignVolume&lt;/code&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@assignVolume -->
+<!-- $$$associateElasticIp[overload1]$$$associateElasticIpconstAssociateElasticIpRequest& -->
+<h3 class="fn" id="associateElasticIp"><a name="associateElasticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-associateelasticipresponse.html">AssociateElasticIpResponse</a></span> *OpsWorksClient::<span class="name">associateElasticIp</span>(const <span class="type"><a href="qtaws-opsworks-associateelasticiprequest.html">AssociateElasticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-associateelasticipresponse.html">AssociateElasticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates one of the stack's registered Elastic IP addresses with a specified instance. The address must first be registered with the stack by calling &lt;a&gt;RegisterElasticIp&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@associateElasticIp -->
+<!-- $$$attachElasticLoadBalancer[overload1]$$$attachElasticLoadBalancerconstAttachElasticLoadBalancerRequest& -->
+<h3 class="fn" id="attachElasticLoadBalancer"><a name="attachElasticLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-attachelasticloadbalancerresponse.html">AttachElasticLoadBalancerResponse</a></span> *OpsWorksClient::<span class="name">attachElasticLoadBalancer</span>(const <span class="type"><a href="qtaws-opsworks-attachelasticloadbalancerrequest.html">AttachElasticLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-attachelasticloadbalancerresponse.html">AttachElasticLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches an Elastic Load Balancing load balancer to a specified layer. AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks does not support Application Load Balancer. You can only use Classic Load Balancer with AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/layers-elb.html&quot;&gt;Elastic Load</p>
+<p>Balancing&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>You must create the Elastic Load Balancing instance separately, by using the Elastic Load Balancing console, API, or CLI. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/Welcome.html&quot;&gt; Elastic Load Balancing Developer</p>
+<p>Guide&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@attachElasticLoadBalancer -->
+<!-- $$$cloneStack[overload1]$$$cloneStackconstCloneStackRequest& -->
+<h3 class="fn" id="cloneStack"><a name="cloneStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-clonestackresponse.html">CloneStackResponse</a></span> *OpsWorksClient::<span class="name">cloneStack</span>(const <span class="type"><a href="qtaws-opsworks-clonestackrequest.html">CloneStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-clonestackresponse.html">CloneStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a clone of a specified stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-cloning.html&quot;&gt;Clone a Stack&lt;/a&gt;. By default, all parameters are set to the values used by the parent</p>
+<p>stack&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@cloneStack -->
+<!-- $$$createApp[overload1]$$$createAppconstCreateAppRequest& -->
+<h3 class="fn" id="createApp"><a name="createApp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createappresponse.html">CreateAppResponse</a></span> *OpsWorksClient::<span class="name">createApp</span>(const <span class="type"><a href="qtaws-opsworks-createapprequest.html">CreateAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createappresponse.html">CreateAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an app for a specified stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html&quot;&gt;Creating</p>
+<p>Apps&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createApp -->
+<!-- $$$createDeployment[overload1]$$$createDeploymentconstCreateDeploymentRequest& -->
+<h3 class="fn" id="createDeployment"><a name="createDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createdeploymentresponse.html">CreateDeploymentResponse</a></span> *OpsWorksClient::<span class="name">createDeployment</span>(const <span class="type"><a href="qtaws-opsworks-createdeploymentrequest.html">CreateDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createdeploymentresponse.html">CreateDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Runs deployment or stack commands. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-deploying.html&quot;&gt;Deploying Apps&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-commands.html&quot;&gt;Run Stack</p>
+<p>Commands&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Deploy or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createDeployment -->
+<!-- $$$createInstance[overload1]$$$createInstanceconstCreateInstanceRequest& -->
+<h3 class="fn" id="createInstance"><a name="createInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createinstanceresponse.html">CreateInstanceResponse</a></span> *OpsWorksClient::<span class="name">createInstance</span>(const <span class="type"><a href="qtaws-opsworks-createinstancerequest.html">CreateInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createinstanceresponse.html">CreateInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an instance in a specified stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html&quot;&gt;Adding an Instance to a</p>
+<p>Layer&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createInstance -->
+<!-- $$$createLayer[overload1]$$$createLayerconstCreateLayerRequest& -->
+<h3 class="fn" id="createLayer"><a name="createLayer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createlayerresponse.html">CreateLayerResponse</a></span> *OpsWorksClient::<span class="name">createLayer</span>(const <span class="type"><a href="qtaws-opsworks-createlayerrequest.html">CreateLayerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createlayerresponse.html">CreateLayerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a layer. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html&quot;&gt;How to Create a</p>
+<p>Layer&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>You should use &lt;b&gt;CreateLayer&lt;/b&gt; for noncustom layer types such as PHP App Server only if the stack does not have an existing layer of that type. A stack can have at most one instance of each noncustom layer; if you attempt to create a second instance, &lt;b&gt;CreateLayer&lt;/b&gt; fails. A stack can have an arbitrary number of custom layers, so you can call &lt;b&gt;CreateLayer&lt;/b&gt; as many times as you like for that layer</p>
+<p>type&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createLayer -->
+<!-- $$$createStack[overload1]$$$createStackconstCreateStackRequest& -->
+<h3 class="fn" id="createStack"><a name="createStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createstackresponse.html">CreateStackResponse</a></span> *OpsWorksClient::<span class="name">createStack</span>(const <span class="type"><a href="qtaws-opsworks-createstackrequest.html">CreateStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createstackresponse.html">CreateStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html&quot;&gt;Create a New</p>
+<p>Stack&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createStack -->
+<!-- $$$createUserProfile[overload1]$$$createUserProfileconstCreateUserProfileRequest& -->
+<h3 class="fn" id="createUserProfile"><a name="createUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-createuserprofileresponse.html">CreateUserProfileResponse</a></span> *OpsWorksClient::<span class="name">createUserProfile</span>(const <span class="type"><a href="qtaws-opsworks-createuserprofilerequest.html">CreateUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-createuserprofileresponse.html">CreateUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new user</p>
+<p>profile&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@createUserProfile -->
+<!-- $$$deleteApp[overload1]$$$deleteAppconstDeleteAppRequest& -->
+<h3 class="fn" id="deleteApp"><a name="deleteApp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deleteappresponse.html">DeleteAppResponse</a></span> *OpsWorksClient::<span class="name">deleteApp</span>(const <span class="type"><a href="qtaws-opsworks-deleteapprequest.html">DeleteAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deleteappresponse.html">DeleteAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified</p>
+<p>app&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deleteApp -->
+<!-- $$$deleteInstance[overload1]$$$deleteInstanceconstDeleteInstanceRequest& -->
+<h3 class="fn" id="deleteInstance"><a name="deleteInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deleteinstanceresponse.html">DeleteInstanceResponse</a></span> *OpsWorksClient::<span class="name">deleteInstance</span>(const <span class="type"><a href="qtaws-opsworks-deleteinstancerequest.html">DeleteInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deleteinstanceresponse.html">DeleteInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified instance, which terminates the associated Amazon EC2 instance. You must stop an instance before you can delete</p>
+<p>it&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-delete.html&quot;&gt;Deleting</p>
+<p>Instances&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deleteInstance -->
+<!-- $$$deleteLayer[overload1]$$$deleteLayerconstDeleteLayerRequest& -->
+<h3 class="fn" id="deleteLayer"><a name="deleteLayer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deletelayerresponse.html">DeleteLayerResponse</a></span> *OpsWorksClient::<span class="name">deleteLayer</span>(const <span class="type"><a href="qtaws-opsworks-deletelayerrequest.html">DeleteLayerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deletelayerresponse.html">DeleteLayerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified layer. You must first stop and then delete all associated instances or unassign registered instances. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-delete.html&quot;&gt;How to Delete a</p>
+<p>Layer&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deleteLayer -->
+<!-- $$$deleteStack[overload1]$$$deleteStackconstDeleteStackRequest& -->
+<h3 class="fn" id="deleteStack"><a name="deleteStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deletestackresponse.html">DeleteStackResponse</a></span> *OpsWorksClient::<span class="name">deleteStack</span>(const <span class="type"><a href="qtaws-opsworks-deletestackrequest.html">DeleteStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deletestackresponse.html">DeleteStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified stack. You must first delete all instances, layers, and apps or deregister registered instances. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-shutting.html&quot;&gt;Shut Down a</p>
+<p>Stack&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deleteStack -->
+<!-- $$$deleteUserProfile[overload1]$$$deleteUserProfileconstDeleteUserProfileRequest& -->
+<h3 class="fn" id="deleteUserProfile"><a name="deleteUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deleteuserprofileresponse.html">DeleteUserProfileResponse</a></span> *OpsWorksClient::<span class="name">deleteUserProfile</span>(const <span class="type"><a href="qtaws-opsworks-deleteuserprofilerequest.html">DeleteUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deleteuserprofileresponse.html">DeleteUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a user</p>
+<p>profile&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deleteUserProfile -->
+<!-- $$$deregisterEcsCluster[overload1]$$$deregisterEcsClusterconstDeregisterEcsClusterRequest& -->
+<h3 class="fn" id="deregisterEcsCluster"><a name="deregisterEcsCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deregisterecsclusterresponse.html">DeregisterEcsClusterResponse</a></span> *OpsWorksClient::<span class="name">deregisterEcsCluster</span>(const <span class="type"><a href="qtaws-opsworks-deregisterecsclusterrequest.html">DeregisterEcsClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deregisterecsclusterresponse.html">DeregisterEcsClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters a specified Amazon ECS cluster from a stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-ecscluster.html#workinglayers-ecscluster-delete&quot;&gt; Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a</p>
+<!-- @@@deregisterEcsCluster -->
+<!-- $$$deregisterElasticIp[overload1]$$$deregisterElasticIpconstDeregisterElasticIpRequest& -->
+<h3 class="fn" id="deregisterElasticIp"><a name="deregisterElasticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deregisterelasticipresponse.html">DeregisterElasticIpResponse</a></span> *OpsWorksClient::<span class="name">deregisterElasticIp</span>(const <span class="type"><a href="qtaws-opsworks-deregisterelasticiprequest.html">DeregisterElasticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deregisterelasticipresponse.html">DeregisterElasticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters a specified Elastic IP address. The address can then be registered by another stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deregisterElasticIp -->
+<!-- $$$deregisterInstance[overload1]$$$deregisterInstanceconstDeregisterInstanceRequest& -->
+<h3 class="fn" id="deregisterInstance"><a name="deregisterInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deregisterinstanceresponse.html">DeregisterInstanceResponse</a></span> *OpsWorksClient::<span class="name">deregisterInstance</span>(const <span class="type"><a href="qtaws-opsworks-deregisterinstancerequest.html">DeregisterInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deregisterinstanceresponse.html">DeregisterInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregister a registered Amazon EC2 or on-premises instance. This action removes the instance from the stack and returns it to your control. This action can not be used with instances that were created with AWS <a href="qtaws-opsworks.html">OpsWorks</a></p>
+<p>Stacks&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deregisterInstance -->
+<!-- $$$deregisterRdsDbInstance[overload1]$$$deregisterRdsDbInstanceconstDeregisterRdsDbInstanceRequest& -->
+<h3 class="fn" id="deregisterRdsDbInstance"><a name="deregisterRdsDbInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deregisterrdsdbinstanceresponse.html">DeregisterRdsDbInstanceResponse</a></span> *OpsWorksClient::<span class="name">deregisterRdsDbInstance</span>(const <span class="type"><a href="qtaws-opsworks-deregisterrdsdbinstancerequest.html">DeregisterRdsDbInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deregisterrdsdbinstanceresponse.html">DeregisterRdsDbInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters an Amazon RDS</p>
+<p>instance&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deregisterRdsDbInstance -->
+<!-- $$$deregisterVolume[overload1]$$$deregisterVolumeconstDeregisterVolumeRequest& -->
+<h3 class="fn" id="deregisterVolume"><a name="deregisterVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-deregistervolumeresponse.html">DeregisterVolumeResponse</a></span> *OpsWorksClient::<span class="name">deregisterVolume</span>(const <span class="type"><a href="qtaws-opsworks-deregistervolumerequest.html">DeregisterVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-deregistervolumeresponse.html">DeregisterVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters an Amazon EBS volume. The volume can then be registered by another stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@deregisterVolume -->
+<!-- $$$describeAgentVersions[overload1]$$$describeAgentVersionsconstDescribeAgentVersionsRequest& -->
+<h3 class="fn" id="describeAgentVersions"><a name="describeAgentVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeagentversionsresponse.html">DescribeAgentVersionsResponse</a></span> *OpsWorksClient::<span class="name">describeAgentVersions</span>(const <span class="type"><a href="qtaws-opsworks-describeagentversionsrequest.html">DescribeAgentVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeagentversionsresponse.html">DescribeAgentVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks agent versions. You must specify a stack ID or a configuration manager. &lt;code&gt;DescribeAgentVersions&lt;/code&gt; returns a list of available agent versions for the specified stack or configuration</p>
+<!-- @@@describeAgentVersions -->
+<!-- $$$describeApps[overload1]$$$describeAppsconstDescribeAppsRequest& -->
+<h3 class="fn" id="describeApps"><a name="describeApps"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeappsresponse.html">DescribeAppsResponse</a></span> *OpsWorksClient::<span class="name">describeApps</span>(const <span class="type"><a href="qtaws-opsworks-describeappsrequest.html">DescribeAppsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeappsresponse.html">DescribeAppsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of a specified set of</p>
+<p>apps&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeApps -->
+<!-- $$$describeCommands[overload1]$$$describeCommandsconstDescribeCommandsRequest& -->
+<h3 class="fn" id="describeCommands"><a name="describeCommands"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describecommandsresponse.html">DescribeCommandsResponse</a></span> *OpsWorksClient::<span class="name">describeCommands</span>(const <span class="type"><a href="qtaws-opsworks-describecommandsrequest.html">DescribeCommandsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describecommandsresponse.html">DescribeCommandsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the results of specified</p>
+<p>commands&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeCommands -->
+<!-- $$$describeDeployments[overload1]$$$describeDeploymentsconstDescribeDeploymentsRequest& -->
+<h3 class="fn" id="describeDeployments"><a name="describeDeployments"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describedeploymentsresponse.html">DescribeDeploymentsResponse</a></span> *OpsWorksClient::<span class="name">describeDeployments</span>(const <span class="type"><a href="qtaws-opsworks-describedeploymentsrequest.html">DescribeDeploymentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describedeploymentsresponse.html">DescribeDeploymentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of a specified set of</p>
+<p>deployments&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeDeployments -->
+<!-- $$$describeEcsClusters[overload1]$$$describeEcsClustersconstDescribeEcsClustersRequest& -->
+<h3 class="fn" id="describeEcsClusters"><a name="describeEcsClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeecsclustersresponse.html">DescribeEcsClustersResponse</a></span> *OpsWorksClient::<span class="name">describeEcsClusters</span>(const <span class="type"><a href="qtaws-opsworks-describeecsclustersrequest.html">DescribeEcsClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeecsclustersresponse.html">DescribeEcsClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes Amazon ECS clusters that are registered with a stack. If you specify only a stack ID, you can use the &lt;code&gt;MaxResults&lt;/code&gt; and &lt;code&gt;NextToken&lt;/code&gt; parameters to paginate the response. However, AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks currently supports only one cluster per layer, so the result set has a maximum of one</p>
+<p>element&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack or an attached policy that explicitly grants permission. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<p>Permissions&lt;/a&gt;&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<!-- @@@describeEcsClusters -->
+<!-- $$$describeElasticIps[overload1]$$$describeElasticIpsconstDescribeElasticIpsRequest& -->
+<h3 class="fn" id="describeElasticIps"><a name="describeElasticIps"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeelasticipsresponse.html">DescribeElasticIpsResponse</a></span> *OpsWorksClient::<span class="name">describeElasticIps</span>(const <span class="type"><a href="qtaws-opsworks-describeelasticipsrequest.html">DescribeElasticIpsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeelasticipsresponse.html">DescribeElasticIpsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html&quot;&gt;Elastic IP</p>
+<p>addresses&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeElasticIps -->
+<!-- $$$describeElasticLoadBalancers[overload1]$$$describeElasticLoadBalancersconstDescribeElasticLoadBalancersRequest& -->
+<h3 class="fn" id="describeElasticLoadBalancers"><a name="describeElasticLoadBalancers"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeelasticloadbalancersresponse.html">DescribeElasticLoadBalancersResponse</a></span> *OpsWorksClient::<span class="name">describeElasticLoadBalancers</span>(const <span class="type"><a href="qtaws-opsworks-describeelasticloadbalancersrequest.html">DescribeElasticLoadBalancersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeelasticloadbalancersresponse.html">DescribeElasticLoadBalancersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a stack's Elastic Load Balancing</p>
+<p>instances&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeElasticLoadBalancers -->
+<!-- $$$describeInstances[overload1]$$$describeInstancesconstDescribeInstancesRequest& -->
+<h3 class="fn" id="describeInstances"><a name="describeInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeinstancesresponse.html">DescribeInstancesResponse</a></span> *OpsWorksClient::<span class="name">describeInstances</span>(const <span class="type"><a href="qtaws-opsworks-describeinstancesrequest.html">DescribeInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeinstancesresponse.html">DescribeInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of a set of</p>
+<p>instances&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeInstances -->
+<!-- $$$describeLayers[overload1]$$$describeLayersconstDescribeLayersRequest& -->
+<h3 class="fn" id="describeLayers"><a name="describeLayers"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describelayersresponse.html">DescribeLayersResponse</a></span> *OpsWorksClient::<span class="name">describeLayers</span>(const <span class="type"><a href="qtaws-opsworks-describelayersrequest.html">DescribeLayersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describelayersresponse.html">DescribeLayersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of one or more layers in a specified</p>
+<p>stack&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeLayers -->
+<!-- $$$describeLoadBasedAutoScaling[overload1]$$$describeLoadBasedAutoScalingconstDescribeLoadBasedAutoScalingRequest& -->
+<h3 class="fn" id="describeLoadBasedAutoScaling"><a name="describeLoadBasedAutoScaling"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeloadbasedautoscalingresponse.html">DescribeLoadBasedAutoScalingResponse</a></span> *OpsWorksClient::<span class="name">describeLoadBasedAutoScaling</span>(const <span class="type"><a href="qtaws-opsworks-describeloadbasedautoscalingrequest.html">DescribeLoadBasedAutoScalingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeloadbasedautoscalingresponse.html">DescribeLoadBasedAutoScalingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes load-based auto scaling configurations for specified</p>
+<p>layers&gt; &lt;note&gt;</p>
+<p>You must specify at least one of the</p>
+<p>parameters&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeLoadBasedAutoScaling -->
+<!-- $$$describeMyUserProfile[overload1]$$$describeMyUserProfile -->
+<h3 class="fn" id="describeMyUserProfile"><a name="describeMyUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describemyuserprofileresponse.html">DescribeMyUserProfileResponse</a></span> *OpsWorksClient::<span class="name">describeMyUserProfile</span>()</h3>
+<p>Sends a DescribeMyUserProfile request to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describemyuserprofileresponse.html">DescribeMyUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a user's SSH</p>
+<p>information&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have self-management enabled or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeMyUserProfile -->
+<!-- $$$describeOperatingSystems[overload1]$$$describeOperatingSystems -->
+<h3 class="fn" id="describeOperatingSystems"><a name="describeOperatingSystems"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeoperatingsystemsresponse.html">DescribeOperatingSystemsResponse</a></span> *OpsWorksClient::<span class="name">describeOperatingSystems</span>()</h3>
+<p>Sends a DescribeOperatingSystems request to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeoperatingsystemsresponse.html">DescribeOperatingSystemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the operating systems that are supported by AWS <a href="qtaws-opsworks.html">OpsWorks</a></p>
+<!-- @@@describeOperatingSystems -->
+<!-- $$$describePermissions[overload1]$$$describePermissionsconstDescribePermissionsRequest& -->
+<h3 class="fn" id="describePermissions"><a name="describePermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describepermissionsresponse.html">DescribePermissionsResponse</a></span> *OpsWorksClient::<span class="name">describePermissions</span>(const <span class="type"><a href="qtaws-opsworks-describepermissionsrequest.html">DescribePermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describepermissionsresponse.html">DescribePermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the permissions for a specified</p>
+<p>stack&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describePermissions -->
+<!-- $$$describeRaidArrays[overload1]$$$describeRaidArraysconstDescribeRaidArraysRequest& -->
+<h3 class="fn" id="describeRaidArrays"><a name="describeRaidArrays"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeraidarraysresponse.html">DescribeRaidArraysResponse</a></span> *OpsWorksClient::<span class="name">describeRaidArrays</span>(const <span class="type"><a href="qtaws-opsworks-describeraidarraysrequest.html">DescribeRaidArraysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeraidarraysresponse.html">DescribeRaidArraysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe an instance's RAID</p>
+<p>arrays&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeRaidArrays -->
+<!-- $$$describeRdsDbInstances[overload1]$$$describeRdsDbInstancesconstDescribeRdsDbInstancesRequest& -->
+<h3 class="fn" id="describeRdsDbInstances"><a name="describeRdsDbInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describerdsdbinstancesresponse.html">DescribeRdsDbInstancesResponse</a></span> *OpsWorksClient::<span class="name">describeRdsDbInstances</span>(const <span class="type"><a href="qtaws-opsworks-describerdsdbinstancesrequest.html">DescribeRdsDbInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describerdsdbinstancesresponse.html">DescribeRdsDbInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes Amazon RDS</p>
+<p>instances&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<p>Permissions&lt;/a&gt;&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<!-- @@@describeRdsDbInstances -->
+<!-- $$$describeServiceErrors[overload1]$$$describeServiceErrorsconstDescribeServiceErrorsRequest& -->
+<h3 class="fn" id="describeServiceErrors"><a name="describeServiceErrors"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeserviceerrorsresponse.html">DescribeServiceErrorsResponse</a></span> *OpsWorksClient::<span class="name">describeServiceErrors</span>(const <span class="type"><a href="qtaws-opsworks-describeserviceerrorsrequest.html">DescribeServiceErrorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeserviceerrorsresponse.html">DescribeServiceErrorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks service</p>
+<p>errors&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<p>Permissions&lt;/a&gt;&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<!-- @@@describeServiceErrors -->
+<!-- $$$describeStackProvisioningParameters[overload1]$$$describeStackProvisioningParametersconstDescribeStackProvisioningParametersRequest& -->
+<h3 class="fn" id="describeStackProvisioningParameters"><a name="describeStackProvisioningParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describestackprovisioningparametersresponse.html">DescribeStackProvisioningParametersResponse</a></span> *OpsWorksClient::<span class="name">describeStackProvisioningParameters</span>(const <span class="type"><a href="qtaws-opsworks-describestackprovisioningparametersrequest.html">DescribeStackProvisioningParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describestackprovisioningparametersresponse.html">DescribeStackProvisioningParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of a stack's provisioning</p>
+<p>parameters&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeStackProvisioningParameters -->
+<!-- $$$describeStackSummary[overload1]$$$describeStackSummaryconstDescribeStackSummaryRequest& -->
+<h3 class="fn" id="describeStackSummary"><a name="describeStackSummary"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describestacksummaryresponse.html">DescribeStackSummaryResponse</a></span> *OpsWorksClient::<span class="name">describeStackSummary</span>(const <span class="type"><a href="qtaws-opsworks-describestacksummaryrequest.html">DescribeStackSummaryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describestacksummaryresponse.html">DescribeStackSummaryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the number of layers and apps in a specified stack, and the number of instances in each state, such as &lt;code&gt;running_setup&lt;/code&gt; or</p>
+<p>&lt;code&gt;online&lt;/code&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeStackSummary -->
+<!-- $$$describeStacks[overload1]$$$describeStacksconstDescribeStacksRequest& -->
+<h3 class="fn" id="describeStacks"><a name="describeStacks"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describestacksresponse.html">DescribeStacksResponse</a></span> *OpsWorksClient::<span class="name">describeStacks</span>(const <span class="type"><a href="qtaws-opsworks-describestacksrequest.html">DescribeStacksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describestacksresponse.html">DescribeStacksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests a description of one or more</p>
+<p>stacks&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeStacks -->
+<!-- $$$describeTimeBasedAutoScaling[overload1]$$$describeTimeBasedAutoScalingconstDescribeTimeBasedAutoScalingRequest& -->
+<h3 class="fn" id="describeTimeBasedAutoScaling"><a name="describeTimeBasedAutoScaling"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describetimebasedautoscalingresponse.html">DescribeTimeBasedAutoScalingResponse</a></span> *OpsWorksClient::<span class="name">describeTimeBasedAutoScaling</span>(const <span class="type"><a href="qtaws-opsworks-describetimebasedautoscalingrequest.html">DescribeTimeBasedAutoScalingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describetimebasedautoscalingresponse.html">DescribeTimeBasedAutoScalingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes time-based auto scaling configurations for specified</p>
+<p>instances&gt; &lt;note&gt;</p>
+<p>You must specify at least one of the</p>
+<p>parameters&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeTimeBasedAutoScaling -->
+<!-- $$$describeUserProfiles[overload1]$$$describeUserProfilesconstDescribeUserProfilesRequest& -->
+<h3 class="fn" id="describeUserProfiles"><a name="describeUserProfiles"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describeuserprofilesresponse.html">DescribeUserProfilesResponse</a></span> *OpsWorksClient::<span class="name">describeUserProfiles</span>(const <span class="type"><a href="qtaws-opsworks-describeuserprofilesrequest.html">DescribeUserProfilesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describeuserprofilesresponse.html">DescribeUserProfilesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe specified</p>
+<p>users&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeUserProfiles -->
+<!-- $$$describeVolumes[overload1]$$$describeVolumesconstDescribeVolumesRequest& -->
+<h3 class="fn" id="describeVolumes"><a name="describeVolumes"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-describevolumesresponse.html">DescribeVolumesResponse</a></span> *OpsWorksClient::<span class="name">describeVolumes</span>(const <span class="type"><a href="qtaws-opsworks-describevolumesrequest.html">DescribeVolumesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-describevolumesresponse.html">DescribeVolumesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes an instance's Amazon EBS</p>
+<p>volumes&gt; &lt;note&gt;</p>
+<p>This call accepts only one resource-identifying</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@describeVolumes -->
+<!-- $$$detachElasticLoadBalancer[overload1]$$$detachElasticLoadBalancerconstDetachElasticLoadBalancerRequest& -->
+<h3 class="fn" id="detachElasticLoadBalancer"><a name="detachElasticLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-detachelasticloadbalancerresponse.html">DetachElasticLoadBalancerResponse</a></span> *OpsWorksClient::<span class="name">detachElasticLoadBalancer</span>(const <span class="type"><a href="qtaws-opsworks-detachelasticloadbalancerrequest.html">DetachElasticLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-detachelasticloadbalancerresponse.html">DetachElasticLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a specified Elastic Load Balancing instance from its</p>
+<p>layer&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@detachElasticLoadBalancer -->
+<!-- $$$disassociateElasticIp[overload1]$$$disassociateElasticIpconstDisassociateElasticIpRequest& -->
+<h3 class="fn" id="disassociateElasticIp"><a name="disassociateElasticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-disassociateelasticipresponse.html">DisassociateElasticIpResponse</a></span> *OpsWorksClient::<span class="name">disassociateElasticIp</span>(const <span class="type"><a href="qtaws-opsworks-disassociateelasticiprequest.html">DisassociateElasticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-disassociateelasticipresponse.html">DisassociateElasticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates an Elastic IP address from its instance. The address remains registered with the stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@disassociateElasticIp -->
+<!-- $$$getHostnameSuggestion[overload1]$$$getHostnameSuggestionconstGetHostnameSuggestionRequest& -->
+<h3 class="fn" id="getHostnameSuggestion"><a name="getHostnameSuggestion"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-gethostnamesuggestionresponse.html">GetHostnameSuggestionResponse</a></span> *OpsWorksClient::<span class="name">getHostnameSuggestion</span>(const <span class="type"><a href="qtaws-opsworks-gethostnamesuggestionrequest.html">GetHostnameSuggestionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-gethostnamesuggestionresponse.html">GetHostnameSuggestionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a generated host name for the specified layer, based on the current host name</p>
+<p>theme&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@getHostnameSuggestion -->
+<!-- $$$grantAccess[overload1]$$$grantAccessconstGrantAccessRequest& -->
+<h3 class="fn" id="grantAccess"><a name="grantAccess"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-grantaccessresponse.html">GrantAccessResponse</a></span> *OpsWorksClient::<span class="name">grantAccess</span>(const <span class="type"><a href="qtaws-opsworks-grantaccessrequest.html">GrantAccessRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-grantaccessresponse.html">GrantAccessResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;note&gt;</p>
+<p>This action can be used only with Windows</p>
+<p>stacks&gt; &lt;/note&gt;</p>
+<p>Grants RDP access to a Windows instance for a specified time</p>
+<!-- @@@grantAccess -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-listtagsresponse.html">ListTagsResponse</a></span> *OpsWorksClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-opsworks-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of tags that are applied to the specified stack or</p>
+<!-- @@@listTags -->
+<!-- $$$rebootInstance[overload1]$$$rebootInstanceconstRebootInstanceRequest& -->
+<h3 class="fn" id="rebootInstance"><a name="rebootInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-rebootinstanceresponse.html">RebootInstanceResponse</a></span> *OpsWorksClient::<span class="name">rebootInstance</span>(const <span class="type"><a href="qtaws-opsworks-rebootinstancerequest.html">RebootInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-rebootinstanceresponse.html">RebootInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reboots a specified instance. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html&quot;&gt;Starting, Stopping, and Rebooting</p>
+<p>Instances&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@rebootInstance -->
+<!-- $$$registerEcsCluster[overload1]$$$registerEcsClusterconstRegisterEcsClusterRequest& -->
+<h3 class="fn" id="registerEcsCluster"><a name="registerEcsCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-registerecsclusterresponse.html">RegisterEcsClusterResponse</a></span> *OpsWorksClient::<span class="name">registerEcsCluster</span>(const <span class="type"><a href="qtaws-opsworks-registerecsclusterrequest.html">RegisterEcsClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-registerecsclusterresponse.html">RegisterEcsClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a specified Amazon ECS cluster with a stack. You can register only one cluster with a stack. A cluster can be registered with only one stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-ecscluster.html&quot;&gt; Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt; Managing User</p>
+<!-- @@@registerEcsCluster -->
+<!-- $$$registerElasticIp[overload1]$$$registerElasticIpconstRegisterElasticIpRequest& -->
+<h3 class="fn" id="registerElasticIp"><a name="registerElasticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-registerelasticipresponse.html">RegisterElasticIpResponse</a></span> *OpsWorksClient::<span class="name">registerElasticIp</span>(const <span class="type"><a href="qtaws-opsworks-registerelasticiprequest.html">RegisterElasticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-registerelasticipresponse.html">RegisterElasticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers an Elastic IP address with a specified stack. An address can be registered with only one stack at a time. If the address is already registered, you must first deregister it by calling &lt;a&gt;DeregisterElasticIp&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@registerElasticIp -->
+<!-- $$$registerInstance[overload1]$$$registerInstanceconstRegisterInstanceRequest& -->
+<h3 class="fn" id="registerInstance"><a name="registerInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-registerinstanceresponse.html">RegisterInstanceResponse</a></span> *OpsWorksClient::<span class="name">registerInstance</span>(const <span class="type"><a href="qtaws-opsworks-registerinstancerequest.html">RegisterInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-registerinstanceresponse.html">RegisterInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers instances that were created outside of AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks with a specified</p>
+<p>stack&gt; &lt;note&gt;</p>
+<p>We do not recommend using this action to register instances. The complete registration operation includes two tasks: installing the AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks agent on the instance, and registering the instance with the stack. &lt;code&gt;RegisterInstance&lt;/code&gt; handles only the second step. You should instead use the AWS CLI &lt;code&gt;register&lt;/code&gt; command, which performs the entire registration operation. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/registered-instances-register.html&quot;&gt; Registering an Instance with an AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks</p>
+<p>Stack&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>Registered instances have the same requirements as instances that are created by using the &lt;a&gt;CreateInstance&lt;/a&gt; API. For example, registered instances must be running a supported Linux-based operating system, and they must have a supported instance type. For more information about requirements for instances that you want to register, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/registered-instances-register-registering-preparer.html&quot;&gt; Preparing the</p>
+<p>Instance&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@registerInstance -->
+<!-- $$$registerRdsDbInstance[overload1]$$$registerRdsDbInstanceconstRegisterRdsDbInstanceRequest& -->
+<h3 class="fn" id="registerRdsDbInstance"><a name="registerRdsDbInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-registerrdsdbinstanceresponse.html">RegisterRdsDbInstanceResponse</a></span> *OpsWorksClient::<span class="name">registerRdsDbInstance</span>(const <span class="type"><a href="qtaws-opsworks-registerrdsdbinstancerequest.html">RegisterRdsDbInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-registerrdsdbinstanceresponse.html">RegisterRdsDbInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers an Amazon RDS instance with a</p>
+<p>stack&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@registerRdsDbInstance -->
+<!-- $$$registerVolume[overload1]$$$registerVolumeconstRegisterVolumeRequest& -->
+<h3 class="fn" id="registerVolume"><a name="registerVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-registervolumeresponse.html">RegisterVolumeResponse</a></span> *OpsWorksClient::<span class="name">registerVolume</span>(const <span class="type"><a href="qtaws-opsworks-registervolumerequest.html">RegisterVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-registervolumeresponse.html">RegisterVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers an Amazon EBS volume with a specified stack. A volume can be registered with only one stack at a time. If the volume is already registered, you must first deregister it by calling &lt;a&gt;DeregisterVolume&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@registerVolume -->
+<!-- $$$setLoadBasedAutoScaling[overload1]$$$setLoadBasedAutoScalingconstSetLoadBasedAutoScalingRequest& -->
+<h3 class="fn" id="setLoadBasedAutoScaling"><a name="setLoadBasedAutoScaling"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-setloadbasedautoscalingresponse.html">SetLoadBasedAutoScalingResponse</a></span> *OpsWorksClient::<span class="name">setLoadBasedAutoScaling</span>(const <span class="type"><a href="qtaws-opsworks-setloadbasedautoscalingrequest.html">SetLoadBasedAutoScalingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-setloadbasedautoscalingresponse.html">SetLoadBasedAutoScalingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Specify the load-based auto scaling configuration for a specified layer. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autoscaling.html&quot;&gt;Managing Load with Time-based and Load-based</p>
+<p>Instances&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>To use load-based auto scaling, you must create a set of load-based auto scaling instances. Load-based auto scaling operates only on the instances from that set, so you must ensure that you have created enough instances to handle the maximum anticipated</p>
+<p>load&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@setLoadBasedAutoScaling -->
+<!-- $$$setPermission[overload1]$$$setPermissionconstSetPermissionRequest& -->
+<h3 class="fn" id="setPermission"><a name="setPermission"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-setpermissionresponse.html">SetPermissionResponse</a></span> *OpsWorksClient::<span class="name">setPermission</span>(const <span class="type"><a href="qtaws-opsworks-setpermissionrequest.html">SetPermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-setpermissionresponse.html">SetPermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Specifies a user's permissions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workingsecurity.html&quot;&gt;Security and</p>
+<p>Permissions&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@setPermission -->
+<!-- $$$setTimeBasedAutoScaling[overload1]$$$setTimeBasedAutoScalingconstSetTimeBasedAutoScalingRequest& -->
+<h3 class="fn" id="setTimeBasedAutoScaling"><a name="setTimeBasedAutoScaling"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-settimebasedautoscalingresponse.html">SetTimeBasedAutoScalingResponse</a></span> *OpsWorksClient::<span class="name">setTimeBasedAutoScaling</span>(const <span class="type"><a href="qtaws-opsworks-settimebasedautoscalingrequest.html">SetTimeBasedAutoScalingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-settimebasedautoscalingresponse.html">SetTimeBasedAutoScalingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Specify the time-based auto scaling configuration for a specified instance. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-autoscaling.html&quot;&gt;Managing Load with Time-based and Load-based</p>
+<p>Instances&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@setTimeBasedAutoScaling -->
+<!-- $$$startInstance[overload1]$$$startInstanceconstStartInstanceRequest& -->
+<h3 class="fn" id="startInstance"><a name="startInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-startinstanceresponse.html">StartInstanceResponse</a></span> *OpsWorksClient::<span class="name">startInstance</span>(const <span class="type"><a href="qtaws-opsworks-startinstancerequest.html">StartInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-startinstanceresponse.html">StartInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a specified instance. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html&quot;&gt;Starting, Stopping, and Rebooting</p>
+<p>Instances&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@startInstance -->
+<!-- $$$startStack[overload1]$$$startStackconstStartStackRequest& -->
+<h3 class="fn" id="startStack"><a name="startStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-startstackresponse.html">StartStackResponse</a></span> *OpsWorksClient::<span class="name">startStack</span>(const <span class="type"><a href="qtaws-opsworks-startstackrequest.html">StartStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-startstackresponse.html">StartStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a stack's</p>
+<p>instances&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@startStack -->
+<!-- $$$stopInstance[overload1]$$$stopInstanceconstStopInstanceRequest& -->
+<h3 class="fn" id="stopInstance"><a name="stopInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-stopinstanceresponse.html">StopInstanceResponse</a></span> *OpsWorksClient::<span class="name">stopInstance</span>(const <span class="type"><a href="qtaws-opsworks-stopinstancerequest.html">StopInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-stopinstanceresponse.html">StopInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a specified instance. When you stop a standard instance, the data disappears and must be reinstalled when you restart the instance. You can stop an Amazon EBS-backed instance without losing data. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-starting.html&quot;&gt;Starting, Stopping, and Rebooting</p>
+<p>Instances&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@stopInstance -->
+<!-- $$$stopStack[overload1]$$$stopStackconstStopStackRequest& -->
+<h3 class="fn" id="stopStack"><a name="stopStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-stopstackresponse.html">StopStackResponse</a></span> *OpsWorksClient::<span class="name">stopStack</span>(const <span class="type"><a href="qtaws-opsworks-stopstackrequest.html">StopStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-stopstackresponse.html">StopStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a specified</p>
+<p>stack&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@stopStack -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-tagresourceresponse.html">TagResourceResponse</a></span> *OpsWorksClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-opsworks-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Apply cost-allocation tags to a specified stack or layer in AWS <a href="qtaws-opsworks.html">OpsWorks</a> Stacks. For more information about how tagging works, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/tagging.html&quot;&gt;Tags&lt;/a&gt; in the AWS <a href="qtaws-opsworks.html">OpsWorks</a> User</p>
+<!-- @@@tagResource -->
+<!-- $$$unassignInstance[overload1]$$$unassignInstanceconstUnassignInstanceRequest& -->
+<h3 class="fn" id="unassignInstance"><a name="unassignInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-unassigninstanceresponse.html">UnassignInstanceResponse</a></span> *OpsWorksClient::<span class="name">unassignInstance</span>(const <span class="type"><a href="qtaws-opsworks-unassigninstancerequest.html">UnassignInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-unassigninstanceresponse.html">UnassignInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Unassigns a registered instance from all of it's layers. The instance remains in the stack as an unassigned instance and can be assigned to another layer, as needed. You cannot use this action with instances that were created with AWS <a href="qtaws-opsworks.html">OpsWorks</a></p>
+<p>Stacks&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@unassignInstance -->
+<!-- $$$unassignVolume[overload1]$$$unassignVolumeconstUnassignVolumeRequest& -->
+<h3 class="fn" id="unassignVolume"><a name="unassignVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-unassignvolumeresponse.html">UnassignVolumeResponse</a></span> *OpsWorksClient::<span class="name">unassignVolume</span>(const <span class="type"><a href="qtaws-opsworks-unassignvolumerequest.html">UnassignVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-unassignvolumeresponse.html">UnassignVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Unassigns an assigned Amazon EBS volume. The volume remains registered with the stack. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@unassignVolume -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-untagresourceresponse.html">UntagResourceResponse</a></span> *OpsWorksClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-opsworks-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from a specified stack or</p>
+<!-- @@@untagResource -->
+<!-- $$$updateApp[overload1]$$$updateAppconstUpdateAppRequest& -->
+<h3 class="fn" id="updateApp"><a name="updateApp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updateappresponse.html">UpdateAppResponse</a></span> *OpsWorksClient::<span class="name">updateApp</span>(const <span class="type"><a href="qtaws-opsworks-updateapprequest.html">UpdateAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updateappresponse.html">UpdateAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified</p>
+<p>app&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Deploy or Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateApp -->
+<!-- $$$updateElasticIp[overload1]$$$updateElasticIpconstUpdateElasticIpRequest& -->
+<h3 class="fn" id="updateElasticIp"><a name="updateElasticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updateelasticipresponse.html">UpdateElasticIpResponse</a></span> *OpsWorksClient::<span class="name">updateElasticIp</span>(const <span class="type"><a href="qtaws-opsworks-updateelasticiprequest.html">UpdateElasticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updateelasticipresponse.html">UpdateElasticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a registered Elastic IP address's name. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateElasticIp -->
+<!-- $$$updateInstance[overload1]$$$updateInstanceconstUpdateInstanceRequest& -->
+<h3 class="fn" id="updateInstance"><a name="updateInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updateinstanceresponse.html">UpdateInstanceResponse</a></span> *OpsWorksClient::<span class="name">updateInstance</span>(const <span class="type"><a href="qtaws-opsworks-updateinstancerequest.html">UpdateInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updateinstanceresponse.html">UpdateInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified</p>
+<p>instance&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateInstance -->
+<!-- $$$updateLayer[overload1]$$$updateLayerconstUpdateLayerRequest& -->
+<h3 class="fn" id="updateLayer"><a name="updateLayer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updatelayerresponse.html">UpdateLayerResponse</a></span> *OpsWorksClient::<span class="name">updateLayer</span>(const <span class="type"><a href="qtaws-opsworks-updatelayerrequest.html">UpdateLayerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updatelayerresponse.html">UpdateLayerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified</p>
+<p>layer&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateLayer -->
+<!-- $$$updateMyUserProfile[overload1]$$$updateMyUserProfileconstUpdateMyUserProfileRequest& -->
+<h3 class="fn" id="updateMyUserProfile"><a name="updateMyUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updatemyuserprofileresponse.html">UpdateMyUserProfileResponse</a></span> *OpsWorksClient::<span class="name">updateMyUserProfile</span>(const <span class="type"><a href="qtaws-opsworks-updatemyuserprofilerequest.html">UpdateMyUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updatemyuserprofileresponse.html">UpdateMyUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a user's SSH public</p>
+<p>key&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have self-management enabled or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateMyUserProfile -->
+<!-- $$$updateRdsDbInstance[overload1]$$$updateRdsDbInstanceconstUpdateRdsDbInstanceRequest& -->
+<h3 class="fn" id="updateRdsDbInstance"><a name="updateRdsDbInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updaterdsdbinstanceresponse.html">UpdateRdsDbInstanceResponse</a></span> *OpsWorksClient::<span class="name">updateRdsDbInstance</span>(const <span class="type"><a href="qtaws-opsworks-updaterdsdbinstancerequest.html">UpdateRdsDbInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updaterdsdbinstanceresponse.html">UpdateRdsDbInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an Amazon RDS</p>
+<p>instance&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateRdsDbInstance -->
+<!-- $$$updateStack[overload1]$$$updateStackconstUpdateStackRequest& -->
+<h3 class="fn" id="updateStack"><a name="updateStack"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updatestackresponse.html">UpdateStackResponse</a></span> *OpsWorksClient::<span class="name">updateStack</span>(const <span class="type"><a href="qtaws-opsworks-updatestackrequest.html">UpdateStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updatestackresponse.html">UpdateStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified</p>
+<p>stack&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateStack -->
+<!-- $$$updateUserProfile[overload1]$$$updateUserProfileconstUpdateUserProfileRequest& -->
+<h3 class="fn" id="updateUserProfile"><a name="updateUserProfile"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updateuserprofileresponse.html">UpdateUserProfileResponse</a></span> *OpsWorksClient::<span class="name">updateUserProfile</span>(const <span class="type"><a href="qtaws-opsworks-updateuserprofilerequest.html">UpdateUserProfileRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updateuserprofileresponse.html">UpdateUserProfileResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a specified user</p>
+<p>profile&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateUserProfile -->
+<!-- $$$updateVolume[overload1]$$$updateVolumeconstUpdateVolumeRequest& -->
+<h3 class="fn" id="updateVolume"><a name="updateVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworks-updatevolumeresponse.html">UpdateVolumeResponse</a></span> *OpsWorksClient::<span class="name">updateVolume</span>(const <span class="type"><a href="qtaws-opsworks-updatevolumerequest.html">UpdateVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworks-opsworksclient.html">OpsWorksClient</a> service, and returns a pointer to an <a href="qtaws-opsworks-updatevolumeresponse.html">UpdateVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an Amazon EBS volume's name or mount point. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/resources.html&quot;&gt;Resource</p>
+<p>Management&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Required Permissions&lt;/b&gt;: To use this action, an IAM user must have a Manage permissions level for the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see &lt;a href=&quot;http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html&quot;&gt;Managing User</p>
+<!-- @@@updateVolume -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

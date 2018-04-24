@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- storagegatewayclient.cpp -->
+  <title>StorageGatewayClient Class | StorageGateway</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsstoragegateway-index.html">StorageGateway</a></li>
+<li><a href="qtawsstoragegateway-module.html">C++ Classes</a></li>
+<li>StorageGatewayClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">StorageGatewayClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-storagegateway-storagegatewayclient.html">QtAws::StorageGateway::StorageGatewayClient</a>)<br/></span>
+<!-- $$$StorageGatewayClient-brief -->
+<p>The <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> class provides access to the AWS Storage Gateway service. <a href="#details">More...</a></p>
+<!-- @@@StorageGatewayClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;StorageGatewayClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-storagegateway-storagegatewayclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#StorageGatewayClient">StorageGatewayClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#StorageGatewayClient-1">StorageGatewayClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> ActivateGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#activateGateway">activateGateway</a></b>(const ActivateGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#addCache">addCache</a></b>(const AddCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddUploadBufferResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#addUploadBuffer">addUploadBuffer</a></b>(const AddUploadBufferRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddWorkingStorageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#addWorkingStorage">addWorkingStorage</a></b>(const AddWorkingStorageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelArchivalResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#cancelArchival">cancelArchival</a></b>(const CancelArchivalRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelRetrievalResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#cancelRetrieval">cancelRetrieval</a></b>(const CancelRetrievalRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCachediSCSIVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createCachediSCSIVolume">createCachediSCSIVolume</a></b>(const CreateCachediSCSIVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNFSFileShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createNFSFileShare">createNFSFileShare</a></b>(const CreateNFSFileShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createSnapshot">createSnapshot</a></b>(const CreateSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSnapshotFromVolumeRecoveryPointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createSnapshotFromVolumeRecoveryPoint">createSnapshotFromVolumeRecoveryPoint</a></b>(const CreateSnapshotFromVolumeRecoveryPointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStorediSCSIVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createStorediSCSIVolume">createStorediSCSIVolume</a></b>(const CreateStorediSCSIVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTapeWithBarcodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createTapeWithBarcode">createTapeWithBarcode</a></b>(const CreateTapeWithBarcodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTapesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#createTapes">createTapes</a></b>(const CreateTapesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBandwidthRateLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteBandwidthRateLimit">deleteBandwidthRateLimit</a></b>(const DeleteBandwidthRateLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteChapCredentialsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteChapCredentials">deleteChapCredentials</a></b>(const DeleteChapCredentialsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFileShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteFileShare">deleteFileShare</a></b>(const DeleteFileShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteGateway">deleteGateway</a></b>(const DeleteGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSnapshotScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteSnapshotSchedule">deleteSnapshotSchedule</a></b>(const DeleteSnapshotScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTapeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteTape">deleteTape</a></b>(const DeleteTapeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTapeArchiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteTapeArchive">deleteTapeArchive</a></b>(const DeleteTapeArchiveRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVolumeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#deleteVolume">deleteVolume</a></b>(const DeleteVolumeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBandwidthRateLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeBandwidthRateLimit">describeBandwidthRateLimit</a></b>(const DescribeBandwidthRateLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeCache">describeCache</a></b>(const DescribeCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCachediSCSIVolumesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeCachediSCSIVolumes">describeCachediSCSIVolumes</a></b>(const DescribeCachediSCSIVolumesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeChapCredentialsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeChapCredentials">describeChapCredentials</a></b>(const DescribeChapCredentialsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeGatewayInformationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeGatewayInformation">describeGatewayInformation</a></b>(const DescribeGatewayInformationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceStartTimeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeMaintenanceStartTime">describeMaintenanceStartTime</a></b>(const DescribeMaintenanceStartTimeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNFSFileSharesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeNFSFileShares">describeNFSFileShares</a></b>(const DescribeNFSFileSharesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSnapshotScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeSnapshotSchedule">describeSnapshotSchedule</a></b>(const DescribeSnapshotScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStorediSCSIVolumesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeStorediSCSIVolumes">describeStorediSCSIVolumes</a></b>(const DescribeStorediSCSIVolumesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTapeArchivesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeTapeArchives">describeTapeArchives</a></b>(const DescribeTapeArchivesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTapeRecoveryPointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeTapeRecoveryPoints">describeTapeRecoveryPoints</a></b>(const DescribeTapeRecoveryPointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTapesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeTapes">describeTapes</a></b>(const DescribeTapesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUploadBufferResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeUploadBuffer">describeUploadBuffer</a></b>(const DescribeUploadBufferRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVTLDevicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeVTLDevices">describeVTLDevices</a></b>(const DescribeVTLDevicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkingStorageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#describeWorkingStorage">describeWorkingStorage</a></b>(const DescribeWorkingStorageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#disableGateway">disableGateway</a></b>(const DisableGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFileSharesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listFileShares">listFileShares</a></b>(const ListFileSharesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGatewaysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listGateways">listGateways</a></b>(const ListGatewaysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListLocalDisksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listLocalDisks">listLocalDisks</a></b>(const ListLocalDisksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTapesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listTapes">listTapes</a></b>(const ListTapesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVolumeInitiatorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listVolumeInitiators">listVolumeInitiators</a></b>(const ListVolumeInitiatorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVolumeRecoveryPointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listVolumeRecoveryPoints">listVolumeRecoveryPoints</a></b>(const ListVolumeRecoveryPointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVolumesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#listVolumes">listVolumes</a></b>(const ListVolumesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> NotifyWhenUploadedResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#notifyWhenUploaded">notifyWhenUploaded</a></b>(const NotifyWhenUploadedRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RefreshCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#refreshCache">refreshCache</a></b>(const RefreshCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#resetCache">resetCache</a></b>(const ResetCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RetrieveTapeArchiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#retrieveTapeArchive">retrieveTapeArchive</a></b>(const RetrieveTapeArchiveRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RetrieveTapeRecoveryPointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#retrieveTapeRecoveryPoint">retrieveTapeRecoveryPoint</a></b>(const RetrieveTapeRecoveryPointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetLocalConsolePasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#setLocalConsolePassword">setLocalConsolePassword</a></b>(const SetLocalConsolePasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ShutdownGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#shutdownGateway">shutdownGateway</a></b>(const ShutdownGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#startGateway">startGateway</a></b>(const StartGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBandwidthRateLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateBandwidthRateLimit">updateBandwidthRateLimit</a></b>(const UpdateBandwidthRateLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateChapCredentialsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateChapCredentials">updateChapCredentials</a></b>(const UpdateChapCredentialsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGatewayInformationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateGatewayInformation">updateGatewayInformation</a></b>(const UpdateGatewayInformationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGatewaySoftwareNowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateGatewaySoftwareNow">updateGatewaySoftwareNow</a></b>(const UpdateGatewaySoftwareNowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMaintenanceStartTimeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateMaintenanceStartTime">updateMaintenanceStartTime</a></b>(const UpdateMaintenanceStartTimeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNFSFileShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateNFSFileShare">updateNFSFileShare</a></b>(const UpdateNFSFileShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSnapshotScheduleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateSnapshotSchedule">updateSnapshotSchedule</a></b>(const UpdateSnapshotScheduleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateVTLDeviceTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayclient.html#updateVTLDeviceType">updateVTLDeviceType</a></b>(const UpdateVTLDeviceTypeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$StorageGatewayClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> class provides access to the AWS Storage Gateway service.</p>
+<p>&lt;fullname&gt;AWS Storage Gateway Service&lt;/fullname&gt;</p>
+<p>AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure. The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster</p>
+<p>recovery&gt;</p>
+<p>Use the following links to get started using the &lt;i&gt;AWS Storage Gateway Service API</p>
+<p>Reference&lt;/i&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders&quot;&gt;AWS Storage Gateway Required Request Headers&lt;/a&gt;: Describes the required headers that you must send with every POST request to AWS Storage</p>
+<p>Gateway&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests&quot;&gt;Signing Requests&lt;/a&gt;: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign such a</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses&quot;&gt;Error Responses&lt;/a&gt;: Provides reference information about AWS Storage Gateway</p>
+<p>errors&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html&quot;&gt;Operations in AWS Storage Gateway&lt;/a&gt;: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response elements, possible errors, and examples of requests and</p>
+<p>responses&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region&quot;&gt;AWS Storage Gateway Regions and Endpoints:&lt;/a&gt; Provides a list of each region and endpoints available for use with AWS Storage Gateway.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;note&gt;</p>
+<p>AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in Storage Gateway the ID for a volume might be &lt;code&gt;vol-AA22BB012345DAF670&lt;/code&gt;. When you use this ID with the EC2 API, you must change it to &lt;code&gt;vol-aa22bb012345daf670&lt;/code&gt;. Otherwise, the EC2 API might not behave as</p>
+<p>expected&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format. Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April 2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information, see &lt;a href=&quot;https://aws.amazon.com/ec2/faqs/#longer-ids&quot;&gt;Longer EC2 and EBS Resource</p>
+<p>IDs&lt;/a&gt;&gt;</p>
+<p>For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the</p>
+<p>following&gt;</p>
+<p>&lt;code&gt;arn:aws:storagegateway:us-west-2:111122223333:gateway/sgw-12A3456B/volume/vol-1122AABBCCDDEEFFG&lt;/code&gt;&gt;</p>
+<p>A snapshot ID with the longer ID format looks like the following:</p>
+<p>&lt;code&gt;snap-78e226633445566ee&lt;/code&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;https://forums.aws.amazon.com/ann.jspa?annID=3557&quot;&gt;Announcement: Heads-up – Longer AWS Storage Gateway volume and snapshot IDs coming in</p>
+</div>
+<!-- @@@StorageGatewayClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$StorageGatewayClient[overload1]$$$StorageGatewayClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="StorageGatewayClient"><a name="StorageGatewayClient"></a>StorageGatewayClient::<span class="name">StorageGatewayClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@StorageGatewayClient -->
+<!-- $$$StorageGatewayClient$$$StorageGatewayClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="StorageGatewayClient-1"><a name="StorageGatewayClient-1"></a>StorageGatewayClient::<span class="name">StorageGatewayClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-storagegateway-storagegatewayclient.html#StorageGatewayClient">StorageGatewayClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@StorageGatewayClient -->
+<!-- $$$activateGateway[overload1]$$$activateGatewayconstActivateGatewayRequest& -->
+<h3 class="fn" id="activateGateway"><a name="activateGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-activategatewayresponse.html">ActivateGatewayResponse</a></span> *StorageGatewayClient::<span class="name">activateGateway</span>(const <span class="type"><a href="qtaws-storagegateway-activategatewayrequest.html">ActivateGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-activategatewayresponse.html">ActivateGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Activates the gateway you previously deployed on your host. In the activation process, you specify information such as the region you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the gateway snapshot schedule window, an activation key, and a name for your gateway. The activation process also associates your gateway with your account; for more information, see</p>
+<p>&lt;a&gt;UpdateGatewayInformation&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>You must turn on the gateway VM before you can activate your</p>
+<!-- @@@activateGateway -->
+<!-- $$$addCache[overload1]$$$addCacheconstAddCacheRequest& -->
+<h3 class="fn" id="addCache"><a name="addCache"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-addcacheresponse.html">AddCacheResponse</a></span> *StorageGatewayClient::<span class="name">addCache</span>(const <span class="type"><a href="qtaws-storagegateway-addcacherequest.html">AddCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-addcacheresponse.html">AddCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures one or more gateway local disks as cache for a gateway. This operation is only supported in the cached volume, tape and file gateway type (see &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html&quot;&gt;Storage Gateway</p>
+<p>Concepts&lt;/a&gt;)&gt;</p>
+<p>In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add cache, and one or more disk IDs that you want to configure as</p>
+<!-- @@@addCache -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *StorageGatewayClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-storagegateway-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more tags to the specified resource. You use tags to add metadata to resources, which you can use to categorize these resources. For example, you can categorize resources by purpose, owner, environment, or team. Each tag consists of a key and a value, which you define. You can add tags to the following AWS Storage Gateway</p>
+<p>resources&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Storage gateways of all</p>
+<p>type&gt; &lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Storage</p>
+<p>Volume&gt; &lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Virtual</p>
+<p>Tape&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You can create a maximum of 10 tags for each resource. Virtual tapes and storage volumes that are recovered to a new gateway maintain their</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$addUploadBuffer[overload1]$$$addUploadBufferconstAddUploadBufferRequest& -->
+<h3 class="fn" id="addUploadBuffer"><a name="addUploadBuffer"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-adduploadbufferresponse.html">AddUploadBufferResponse</a></span> *StorageGatewayClient::<span class="name">addUploadBuffer</span>(const <span class="type"><a href="qtaws-storagegateway-adduploadbufferrequest.html">AddUploadBufferRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-adduploadbufferresponse.html">AddUploadBufferResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures one or more gateway local disks as upload buffer for a specified gateway. This operation is supported for the stored volume, cached volume and tape gateway</p>
+<p>types&gt;</p>
+<p>In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add upload buffer, and one or more disk IDs that you want to configure as upload</p>
+<!-- @@@addUploadBuffer -->
+<!-- $$$addWorkingStorage[overload1]$$$addWorkingStorageconstAddWorkingStorageRequest& -->
+<h3 class="fn" id="addWorkingStorage"><a name="addWorkingStorage"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-addworkingstorageresponse.html">AddWorkingStorageResponse</a></span> *StorageGatewayClient::<span class="name">addWorkingStorage</span>(const <span class="type"><a href="qtaws-storagegateway-addworkingstoragerequest.html">AddWorkingStorageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-addworkingstorageresponse.html">AddWorkingStorageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures one or more gateway local disks as working storage for a gateway. This operation is only supported in the stored volume gateway type. This operation is deprecated in cached volume API version 20120630. Use &lt;a&gt;AddUploadBuffer&lt;/a&gt;</p>
+<p>instead&gt; &lt;note&gt;</p>
+<p>Working storage is also referred to as upload buffer. You can also use the &lt;a&gt;AddUploadBuffer&lt;/a&gt; operation to add upload buffer to a stored volume</p>
+<p>gateway&gt; &lt;/note&gt;</p>
+<p>In the request, you specify the gateway Amazon Resource Name (ARN) to which you want to add working storage, and one or more disk IDs that you want to configure as working</p>
+<!-- @@@addWorkingStorage -->
+<!-- $$$cancelArchival[overload1]$$$cancelArchivalconstCancelArchivalRequest& -->
+<h3 class="fn" id="cancelArchival"><a name="cancelArchival"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-cancelarchivalresponse.html">CancelArchivalResponse</a></span> *StorageGatewayClient::<span class="name">cancelArchival</span>(const <span class="type"><a href="qtaws-storagegateway-cancelarchivalrequest.html">CancelArchivalRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-cancelarchivalresponse.html">CancelArchivalResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels archiving of a virtual tape to the virtual tape shelf (VTS) after the archiving process is initiated. This operation is only supported in the tape gateway</p>
+<!-- @@@cancelArchival -->
+<!-- $$$cancelRetrieval[overload1]$$$cancelRetrievalconstCancelRetrievalRequest& -->
+<h3 class="fn" id="cancelRetrieval"><a name="cancelRetrieval"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-cancelretrievalresponse.html">CancelRetrievalResponse</a></span> *StorageGatewayClient::<span class="name">cancelRetrieval</span>(const <span class="type"><a href="qtaws-storagegateway-cancelretrievalrequest.html">CancelRetrievalRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-cancelretrievalresponse.html">CancelRetrievalResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels retrieval of a virtual tape from the virtual tape shelf (VTS) to a gateway after the retrieval process is initiated. The virtual tape is returned to the VTS. This operation is only supported in the tape gateway</p>
+<!-- @@@cancelRetrieval -->
+<!-- $$$createCachediSCSIVolume[overload1]$$$createCachediSCSIVolumeconstCreateCachediSCSIVolumeRequest& -->
+<h3 class="fn" id="createCachediSCSIVolume"><a name="createCachediSCSIVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createcachediscsivolumeresponse.html">CreateCachediSCSIVolumeResponse</a></span> *StorageGatewayClient::<span class="name">createCachediSCSIVolume</span>(const <span class="type"><a href="qtaws-storagegateway-createcachediscsivolumerequest.html">CreateCachediSCSIVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createcachediscsivolumeresponse.html">CreateCachediSCSIVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a cached volume on a specified cached volume gateway. This operation is only supported in the cached volume gateway</p>
+<p>type&gt; &lt;note&gt;</p>
+<p>Cache storage must be allocated to the gateway before you can create a cached volume. Use the &lt;a&gt;AddCache&lt;/a&gt; operation to add cache storage to a gateway.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>In the request, you must specify the gateway, size of the volume in bytes, the iSCSI target name, an IP address on which to expose the target, and a unique client token. In response, the gateway creates the volume and returns information about it. This information includes the volume Amazon Resource Name (ARN), its size, and the iSCSI target ARN that initiators can use to connect to the volume</p>
+<p>target&gt;</p>
+<p>Optionally, you can provide the ARN for an existing volume as the &lt;code&gt;SourceVolumeARN&lt;/code&gt; for this cached volume, which creates an exact copy of the existing volume’s latest recovery point. The &lt;code&gt;VolumeSizeInBytes&lt;/code&gt; value must be equal to or larger than the size of the copied volume, in</p>
+<!-- @@@createCachediSCSIVolume -->
+<!-- $$$createNFSFileShare[overload1]$$$createNFSFileShareconstCreateNFSFileShareRequest& -->
+<h3 class="fn" id="createNFSFileShare"><a name="createNFSFileShare"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createnfsfileshareresponse.html">CreateNFSFileShareResponse</a></span> *StorageGatewayClient::<span class="name">createNFSFileShare</span>(const <span class="type"><a href="qtaws-storagegateway-createnfsfilesharerequest.html">CreateNFSFileShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createnfsfileshareresponse.html">CreateNFSFileShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a file share on an existing file gateway. In Storage Gateway, a file share is a file system mount point backed by Amazon S3 cloud storage. Storage Gateway exposes file shares using a Network File System (NFS) interface. This operation is only supported in the file gateway</p>
+<p>type&gt; &lt;b&gt;</p>
+<p>File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region, activate it. For information about how to activate AWS STS, see Activating and Deactivating AWS STS in an AWS Region in the AWS Identity and Access Management User Guide.</p>
+<p>&lt;/p</p>
+<p>File gateway does not support creating hard or symbolic links on a file</p>
+<!-- @@@createNFSFileShare -->
+<!-- $$$createSnapshot[overload1]$$$createSnapshotconstCreateSnapshotRequest& -->
+<h3 class="fn" id="createSnapshot"><a name="createSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createsnapshotresponse.html">CreateSnapshotResponse</a></span> *StorageGatewayClient::<span class="name">createSnapshot</span>(const <span class="type"><a href="qtaws-storagegateway-createsnapshotrequest.html">CreateSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createsnapshotresponse.html">CreateSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a snapshot of a</p>
+<p>volume&gt;</p>
+<p>AWS Storage Gateway provides the ability to back up point-in-time snapshots of your data to Amazon Simple Storage (S3) for durable off-site recovery, as well as import the data to an Amazon Elastic Block Store (EBS) volume in Amazon Elastic Compute Cloud (EC2). You can take snapshots of your gateway volume on a scheduled or ad-hoc basis. This API enables you to take ad-hoc snapshot. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot&quot;&gt;Editing a Snapshot</p>
+<p>Schedule&lt;/a&gt;&gt;</p>
+<p>In the CreateSnapshot request you identify the volume by providing its Amazon Resource Name (ARN). You must also provide description for the snapshot. When AWS Storage Gateway takes the snapshot of specified volume, the snapshot and description appears in the AWS Storage Gateway Console. In response, AWS Storage Gateway returns you a snapshot ID. You can use this snapshot ID to check the snapshot progress or later use it when you want to create a volume from a snapshot. This operation is only supported in stored and cached volume gateway</p>
+<p>type&gt; &lt;note&gt;</p>
+<p>To list or delete a snapshot, you must use the Amazon EC2 API. For more information, see DescribeSnapshots or DeleteSnapshot in the &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Operations.html&quot;&gt;EC2 API</p>
+<p>reference&lt;/a&gt;&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html&quot;&gt;Welcome&lt;/a&gt;</p>
+<!-- @@@createSnapshot -->
+<!-- $$$createSnapshotFromVolumeRecoveryPoint[overload1]$$$createSnapshotFromVolumeRecoveryPointconstCreateSnapshotFromVolumeRecoveryPointRequest& -->
+<h3 class="fn" id="createSnapshotFromVolumeRecoveryPoint"><a name="createSnapshotFromVolumeRecoveryPoint"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createsnapshotfromvolumerecoverypointresponse.html">CreateSnapshotFromVolumeRecoveryPointResponse</a></span> *StorageGatewayClient::<span class="name">createSnapshotFromVolumeRecoveryPoint</span>(const <span class="type"><a href="qtaws-storagegateway-createsnapshotfromvolumerecoverypointrequest.html">CreateSnapshotFromVolumeRecoveryPointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createsnapshotfromvolumerecoverypointresponse.html">CreateSnapshotFromVolumeRecoveryPointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a snapshot of a gateway from a volume recovery point. This operation is only supported in the cached volume gateway</p>
+<p>type&gt;</p>
+<p>A volume recovery point is a point in time at which all data of the volume is consistent and from which you can create a snapshot. To get a list of volume recovery point for cached volume gateway, use</p>
+<p>&lt;a&gt;ListVolumeRecoveryPoints&lt;/a&gt;&gt;</p>
+<p>In the &lt;code&gt;CreateSnapshotFromVolumeRecoveryPoint&lt;/code&gt; request, you identify the volume by providing its Amazon Resource Name (ARN). You must also provide a description for the snapshot. When the gateway takes a snapshot of the specified volume, the snapshot and its description appear in the AWS Storage Gateway console. In response, the gateway returns you a snapshot ID. You can use this snapshot ID to check the snapshot progress or later use it when you want to create a volume from a</p>
+<p>snapshot&gt; &lt;note&gt;</p>
+<p>To list or delete a snapshot, you must use the Amazon EC2 API. For more information, in &lt;i&gt;Amazon Elastic Compute Cloud API</p>
+<!-- @@@createSnapshotFromVolumeRecoveryPoint -->
+<!-- $$$createStorediSCSIVolume[overload1]$$$createStorediSCSIVolumeconstCreateStorediSCSIVolumeRequest& -->
+<h3 class="fn" id="createStorediSCSIVolume"><a name="createStorediSCSIVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createstorediscsivolumeresponse.html">CreateStorediSCSIVolumeResponse</a></span> *StorageGatewayClient::<span class="name">createStorediSCSIVolume</span>(const <span class="type"><a href="qtaws-storagegateway-createstorediscsivolumerequest.html">CreateStorediSCSIVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createstorediscsivolumeresponse.html">CreateStorediSCSIVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a volume on a specified gateway. This operation is only supported in the stored volume gateway</p>
+<p>type&gt;</p>
+<p>The size of the volume to create is inferred from the disk size. You can choose to preserve existing data on the disk, create volume from an existing snapshot, or create an empty volume. If you choose to create an empty gateway volume, then any existing data on the disk is</p>
+<p>erased&gt;</p>
+<p>In the request you must specify the gateway and the disk information on which you are creating the volume. In response, the gateway creates the volume and returns volume information such as the volume Amazon Resource Name (ARN), its size, and the iSCSI target ARN that initiators can use to connect to the volume</p>
+<!-- @@@createStorediSCSIVolume -->
+<!-- $$$createTapeWithBarcode[overload1]$$$createTapeWithBarcodeconstCreateTapeWithBarcodeRequest& -->
+<h3 class="fn" id="createTapeWithBarcode"><a name="createTapeWithBarcode"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createtapewithbarcoderesponse.html">CreateTapeWithBarcodeResponse</a></span> *StorageGatewayClient::<span class="name">createTapeWithBarcode</span>(const <span class="type"><a href="qtaws-storagegateway-createtapewithbarcoderequest.html">CreateTapeWithBarcodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createtapewithbarcoderesponse.html">CreateTapeWithBarcodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a virtual tape by using your own barcode. You write data to the virtual tape and then archive the tape. A barcode is unique and can not be reused if it has already been used on a tape . This applies to barcodes used on deleted tapes. This operation is only supported in the tape gateway</p>
+<p>type&gt; &lt;note&gt;</p>
+<p>Cache storage must be allocated to the gateway before you can create a virtual tape. Use the &lt;a&gt;AddCache&lt;/a&gt; operation to add cache storage to a</p>
+<!-- @@@createTapeWithBarcode -->
+<!-- $$$createTapes[overload1]$$$createTapesconstCreateTapesRequest& -->
+<h3 class="fn" id="createTapes"><a name="createTapes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-createtapesresponse.html">CreateTapesResponse</a></span> *StorageGatewayClient::<span class="name">createTapes</span>(const <span class="type"><a href="qtaws-storagegateway-createtapesrequest.html">CreateTapesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-createtapesresponse.html">CreateTapesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes. This operation is only supported in the tape gateway</p>
+<p>type&gt; &lt;note&gt;</p>
+<p>Cache storage must be allocated to the gateway before you can create virtual tapes. Use the &lt;a&gt;AddCache&lt;/a&gt; operation to add cache storage to a gateway.</p>
+<!-- @@@createTapes -->
+<!-- $$$deleteBandwidthRateLimit[overload1]$$$deleteBandwidthRateLimitconstDeleteBandwidthRateLimitRequest& -->
+<h3 class="fn" id="deleteBandwidthRateLimit"><a name="deleteBandwidthRateLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletebandwidthratelimitresponse.html">DeleteBandwidthRateLimitResponse</a></span> *StorageGatewayClient::<span class="name">deleteBandwidthRateLimit</span>(const <span class="type"><a href="qtaws-storagegateway-deletebandwidthratelimitrequest.html">DeleteBandwidthRateLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletebandwidthratelimitresponse.html">DeleteBandwidthRateLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the bandwidth rate limits of a gateway. You can delete either the upload and download bandwidth rate limit, or you can delete both. If you delete only one of the limits, the other limit remains unchanged. To specify which gateway to work with, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<!-- @@@deleteBandwidthRateLimit -->
+<!-- $$$deleteChapCredentials[overload1]$$$deleteChapCredentialsconstDeleteChapCredentialsRequest& -->
+<h3 class="fn" id="deleteChapCredentials"><a name="deleteChapCredentials"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletechapcredentialsresponse.html">DeleteChapCredentialsResponse</a></span> *StorageGatewayClient::<span class="name">deleteChapCredentials</span>(const <span class="type"><a href="qtaws-storagegateway-deletechapcredentialsrequest.html">DeleteChapCredentialsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletechapcredentialsresponse.html">DeleteChapCredentialsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target and initiator</p>
+<!-- @@@deleteChapCredentials -->
+<!-- $$$deleteFileShare[overload1]$$$deleteFileShareconstDeleteFileShareRequest& -->
+<h3 class="fn" id="deleteFileShare"><a name="deleteFileShare"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletefileshareresponse.html">DeleteFileShareResponse</a></span> *StorageGatewayClient::<span class="name">deleteFileShare</span>(const <span class="type"><a href="qtaws-storagegateway-deletefilesharerequest.html">DeleteFileShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletefileshareresponse.html">DeleteFileShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a file share from a file gateway. This operation is only supported in the file gateway</p>
+<!-- @@@deleteFileShare -->
+<!-- $$$deleteGateway[overload1]$$$deleteGatewayconstDeleteGatewayRequest& -->
+<h3 class="fn" id="deleteGateway"><a name="deleteGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletegatewayresponse.html">DeleteGatewayResponse</a></span> *StorageGatewayClient::<span class="name">deleteGateway</span>(const <span class="type"><a href="qtaws-storagegateway-deletegatewayrequest.html">DeleteGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletegatewayresponse.html">DeleteGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a gateway. To specify which gateway to delete, use the Amazon Resource Name (ARN) of the gateway in your request. The operation deletes the gateway; however, it does not delete the gateway virtual machine (VM) from your host</p>
+<p>computer&gt;</p>
+<p>After you delete a gateway, you cannot reactivate it. Completed snapshots of the gateway volumes are not deleted upon deleting the gateway, however, pending snapshots will not complete. After you delete a gateway, your next step is to remove it from your</p>
+<p>environment&gt; &lt;b&gt;</p>
+<p>You no longer pay software charges after the gateway is deleted; however, your existing Amazon EBS snapshots persist and you will continue to be billed for these snapshots. You can choose to remove all remaining Amazon EBS snapshots by canceling your Amazon EC2 subscription. If you prefer not to cancel your Amazon EC2 subscription, you can delete your snapshots using the Amazon EC2 console. For more information, see the &lt;a href=&quot;http://aws.amazon.com/storagegateway&quot;&gt; AWS Storage Gateway Detail Page&lt;/a&gt;.</p>
+<!-- @@@deleteGateway -->
+<!-- $$$deleteSnapshotSchedule[overload1]$$$deleteSnapshotScheduleconstDeleteSnapshotScheduleRequest& -->
+<h3 class="fn" id="deleteSnapshotSchedule"><a name="deleteSnapshotSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletesnapshotscheduleresponse.html">DeleteSnapshotScheduleResponse</a></span> *StorageGatewayClient::<span class="name">deleteSnapshotSchedule</span>(const <span class="type"><a href="qtaws-storagegateway-deletesnapshotschedulerequest.html">DeleteSnapshotScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletesnapshotscheduleresponse.html">DeleteSnapshotScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a snapshot of a</p>
+<p>volume&gt;</p>
+<p>You can take snapshots of your gateway volumes on a scheduled or ad hoc basis. This API action enables you to delete a snapshot schedule for a volume. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/WorkingWithSnapshots.html&quot;&gt;Working with Snapshots&lt;/a&gt;. In the &lt;code&gt;DeleteSnapshotSchedule&lt;/code&gt; request, you identify the volume by providing its Amazon Resource Name (ARN). This operation is only supported in stored and cached volume gateway</p>
+<p>types&gt; &lt;note&gt;</p>
+<p>To list or delete a snapshot, you must use the Amazon EC2 API. in &lt;i&gt;Amazon Elastic Compute Cloud API</p>
+<!-- @@@deleteSnapshotSchedule -->
+<!-- $$$deleteTape[overload1]$$$deleteTapeconstDeleteTapeRequest& -->
+<h3 class="fn" id="deleteTape"><a name="deleteTape"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletetaperesponse.html">DeleteTapeResponse</a></span> *StorageGatewayClient::<span class="name">deleteTape</span>(const <span class="type"><a href="qtaws-storagegateway-deletetaperequest.html">DeleteTapeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletetaperesponse.html">DeleteTapeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified virtual tape. This operation is only supported in the tape gateway</p>
+<!-- @@@deleteTape -->
+<!-- $$$deleteTapeArchive[overload1]$$$deleteTapeArchiveconstDeleteTapeArchiveRequest& -->
+<h3 class="fn" id="deleteTapeArchive"><a name="deleteTapeArchive"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletetapearchiveresponse.html">DeleteTapeArchiveResponse</a></span> *StorageGatewayClient::<span class="name">deleteTapeArchive</span>(const <span class="type"><a href="qtaws-storagegateway-deletetapearchiverequest.html">DeleteTapeArchiveRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletetapearchiveresponse.html">DeleteTapeArchiveResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified virtual tape from the virtual tape shelf (VTS). This operation is only supported in the tape gateway</p>
+<!-- @@@deleteTapeArchive -->
+<!-- $$$deleteVolume[overload1]$$$deleteVolumeconstDeleteVolumeRequest& -->
+<h3 class="fn" id="deleteVolume"><a name="deleteVolume"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-deletevolumeresponse.html">DeleteVolumeResponse</a></span> *StorageGatewayClient::<span class="name">deleteVolume</span>(const <span class="type"><a href="qtaws-storagegateway-deletevolumerequest.html">DeleteVolumeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-deletevolumeresponse.html">DeleteVolumeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified storage volume that you previously created using the &lt;a&gt;CreateCachediSCSIVolume&lt;/a&gt; or &lt;a&gt;CreateStorediSCSIVolume&lt;/a&gt; API. This operation is only supported in the cached volume and stored volume types. For stored volume gateways, the local disk that was configured as the storage volume is not deleted. You can reuse the local disk to create another storage volume.</p>
+<p>&lt;/p</p>
+<p>Before you delete a volume, make sure there are no iSCSI connections to the volume you are deleting. You should also make sure there is no snapshot in progress. You can use the Amazon Elastic Compute Cloud (Amazon EC2) API to query snapshots on the volume you are deleting and check the snapshot status. For more information, go to &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeSnapshots.html&quot;&gt;DescribeSnapshots&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud API</p>
+<p>Reference&lt;/i&gt;&gt;</p>
+<p>In the request, you must provide the Amazon Resource Name (ARN) of the storage volume you want to</p>
+<!-- @@@deleteVolume -->
+<!-- $$$describeBandwidthRateLimit[overload1]$$$describeBandwidthRateLimitconstDescribeBandwidthRateLimitRequest& -->
+<h3 class="fn" id="describeBandwidthRateLimit"><a name="describeBandwidthRateLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describebandwidthratelimitresponse.html">DescribeBandwidthRateLimitResponse</a></span> *StorageGatewayClient::<span class="name">describeBandwidthRateLimit</span>(const <span class="type"><a href="qtaws-storagegateway-describebandwidthratelimitrequest.html">DescribeBandwidthRateLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describebandwidthratelimitresponse.html">DescribeBandwidthRateLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the bandwidth rate limits of a gateway. By default, these limits are not set, which means no bandwidth rate limiting is in</p>
+<p>effect&gt;</p>
+<p>This operation only returns a value for a bandwidth rate limit only if the limit is set. If no limits are set for the gateway, then this operation returns only the gateway ARN in the response body. To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<!-- @@@describeBandwidthRateLimit -->
+<!-- $$$describeCache[overload1]$$$describeCacheconstDescribeCacheRequest& -->
+<h3 class="fn" id="describeCache"><a name="describeCache"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describecacheresponse.html">DescribeCacheResponse</a></span> *StorageGatewayClient::<span class="name">describeCache</span>(const <span class="type"><a href="qtaws-storagegateway-describecacherequest.html">DescribeCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describecacheresponse.html">DescribeCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the cache of a gateway. This operation is only supported in the cached volume, tape and file gateway</p>
+<p>types&gt;</p>
+<p>The response includes disk IDs that are configured as cache, and it includes the amount of cache allocated and</p>
+<!-- @@@describeCache -->
+<!-- $$$describeCachediSCSIVolumes[overload1]$$$describeCachediSCSIVolumesconstDescribeCachediSCSIVolumesRequest& -->
+<h3 class="fn" id="describeCachediSCSIVolumes"><a name="describeCachediSCSIVolumes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describecachediscsivolumesresponse.html">DescribeCachediSCSIVolumesResponse</a></span> *StorageGatewayClient::<span class="name">describeCachediSCSIVolumes</span>(const <span class="type"><a href="qtaws-storagegateway-describecachediscsivolumesrequest.html">DescribeCachediSCSIVolumesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describecachediscsivolumesresponse.html">DescribeCachediSCSIVolumesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of the gateway volumes specified in the request. This operation is only supported in the cached volume gateway</p>
+<p>types&gt;</p>
+<p>The list of gateway volumes in the request must be from one gateway. In the response Amazon Storage Gateway returns volume information sorted by volume Amazon Resource Name</p>
+<!-- @@@describeCachediSCSIVolumes -->
+<!-- $$$describeChapCredentials[overload1]$$$describeChapCredentialsconstDescribeChapCredentialsRequest& -->
+<h3 class="fn" id="describeChapCredentials"><a name="describeChapCredentials"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describechapcredentialsresponse.html">DescribeChapCredentialsResponse</a></span> *StorageGatewayClient::<span class="name">describeChapCredentials</span>(const <span class="type"><a href="qtaws-storagegateway-describechapcredentialsrequest.html">DescribeChapCredentialsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describechapcredentialsresponse.html">DescribeChapCredentialsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of Challenge-Handshake Authentication Protocol (CHAP) credentials information for a specified iSCSI target, one for each target-initiator</p>
+<!-- @@@describeChapCredentials -->
+<!-- $$$describeGatewayInformation[overload1]$$$describeGatewayInformationconstDescribeGatewayInformationRequest& -->
+<h3 class="fn" id="describeGatewayInformation"><a name="describeGatewayInformation"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describegatewayinformationresponse.html">DescribeGatewayInformationResponse</a></span> *StorageGatewayClient::<span class="name">describeGatewayInformation</span>(const <span class="type"><a href="qtaws-storagegateway-describegatewayinformationrequest.html">DescribeGatewayInformationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describegatewayinformationresponse.html">DescribeGatewayInformationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns metadata about a gateway such as its name, network interfaces, configured time zone, and the state (whether the gateway is running or not). To specify which gateway to describe, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<!-- @@@describeGatewayInformation -->
+<!-- $$$describeMaintenanceStartTime[overload1]$$$describeMaintenanceStartTimeconstDescribeMaintenanceStartTimeRequest& -->
+<h3 class="fn" id="describeMaintenanceStartTime"><a name="describeMaintenanceStartTime"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describemaintenancestarttimeresponse.html">DescribeMaintenanceStartTimeResponse</a></span> *StorageGatewayClient::<span class="name">describeMaintenanceStartTime</span>(const <span class="type"><a href="qtaws-storagegateway-describemaintenancestarttimerequest.html">DescribeMaintenanceStartTimeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describemaintenancestarttimeresponse.html">DescribeMaintenanceStartTimeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are in terms of the gateway's time</p>
+<!-- @@@describeMaintenanceStartTime -->
+<!-- $$$describeNFSFileShares[overload1]$$$describeNFSFileSharesconstDescribeNFSFileSharesRequest& -->
+<h3 class="fn" id="describeNFSFileShares"><a name="describeNFSFileShares"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describenfsfilesharesresponse.html">DescribeNFSFileSharesResponse</a></span> *StorageGatewayClient::<span class="name">describeNFSFileShares</span>(const <span class="type"><a href="qtaws-storagegateway-describenfsfilesharesrequest.html">DescribeNFSFileSharesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describenfsfilesharesresponse.html">DescribeNFSFileSharesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a description for one or more file shares from a file gateway. This operation is only supported in the file gateway</p>
+<!-- @@@describeNFSFileShares -->
+<!-- $$$describeSnapshotSchedule[overload1]$$$describeSnapshotScheduleconstDescribeSnapshotScheduleRequest& -->
+<h3 class="fn" id="describeSnapshotSchedule"><a name="describeSnapshotSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describesnapshotscheduleresponse.html">DescribeSnapshotScheduleResponse</a></span> *StorageGatewayClient::<span class="name">describeSnapshotSchedule</span>(const <span class="type"><a href="qtaws-storagegateway-describesnapshotschedulerequest.html">DescribeSnapshotScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describesnapshotscheduleresponse.html">DescribeSnapshotScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the snapshot schedule for the specified gateway volume. The snapshot schedule information includes intervals at which snapshots are automatically initiated on the volume. This operation is only supported in the cached volume and stored volume</p>
+<!-- @@@describeSnapshotSchedule -->
+<!-- $$$describeStorediSCSIVolumes[overload1]$$$describeStorediSCSIVolumesconstDescribeStorediSCSIVolumesRequest& -->
+<h3 class="fn" id="describeStorediSCSIVolumes"><a name="describeStorediSCSIVolumes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describestorediscsivolumesresponse.html">DescribeStorediSCSIVolumesResponse</a></span> *StorageGatewayClient::<span class="name">describeStorediSCSIVolumes</span>(const <span class="type"><a href="qtaws-storagegateway-describestorediscsivolumesrequest.html">DescribeStorediSCSIVolumesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describestorediscsivolumesresponse.html">DescribeStorediSCSIVolumesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the description of the gateway volumes specified in the request. The list of gateway volumes in the request must be from one gateway. In the response Amazon Storage Gateway returns volume information sorted by volume ARNs. This operation is only supported in stored volume gateway</p>
+<!-- @@@describeStorediSCSIVolumes -->
+<!-- $$$describeTapeArchives[overload1]$$$describeTapeArchivesconstDescribeTapeArchivesRequest& -->
+<h3 class="fn" id="describeTapeArchives"><a name="describeTapeArchives"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describetapearchivesresponse.html">DescribeTapeArchivesResponse</a></span> *StorageGatewayClient::<span class="name">describeTapeArchives</span>(const <span class="type"><a href="qtaws-storagegateway-describetapearchivesrequest.html">DescribeTapeArchivesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describetapearchivesresponse.html">DescribeTapeArchivesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of specified virtual tapes in the virtual tape shelf (VTS). This operation is only supported in the tape gateway</p>
+<p>type&gt;</p>
+<p>If a specific &lt;code&gt;TapeARN&lt;/code&gt; is not specified, AWS Storage Gateway returns a description of all virtual tapes found in the VTS associated with your</p>
+<!-- @@@describeTapeArchives -->
+<!-- $$$describeTapeRecoveryPoints[overload1]$$$describeTapeRecoveryPointsconstDescribeTapeRecoveryPointsRequest& -->
+<h3 class="fn" id="describeTapeRecoveryPoints"><a name="describeTapeRecoveryPoints"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describetaperecoverypointsresponse.html">DescribeTapeRecoveryPointsResponse</a></span> *StorageGatewayClient::<span class="name">describeTapeRecoveryPoints</span>(const <span class="type"><a href="qtaws-storagegateway-describetaperecoverypointsrequest.html">DescribeTapeRecoveryPointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describetaperecoverypointsresponse.html">DescribeTapeRecoveryPointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of virtual tape recovery points that are available for the specified tape</p>
+<p>gateway&gt;</p>
+<p>A recovery point is a point-in-time view of a virtual tape at which all the data on the virtual tape is consistent. If your gateway crashes, virtual tapes that have recovery points can be recovered to a new gateway. This operation is only supported in the tape gateway</p>
+<!-- @@@describeTapeRecoveryPoints -->
+<!-- $$$describeTapes[overload1]$$$describeTapesconstDescribeTapesRequest& -->
+<h3 class="fn" id="describeTapes"><a name="describeTapes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describetapesresponse.html">DescribeTapesResponse</a></span> *StorageGatewayClient::<span class="name">describeTapes</span>(const <span class="type"><a href="qtaws-storagegateway-describetapesrequest.html">DescribeTapesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describetapesresponse.html">DescribeTapesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a &lt;code&gt;TapeARN&lt;/code&gt; is not specified, returns a description of all virtual tapes associated with the specified gateway. This operation is only supported in the tape gateway</p>
+<!-- @@@describeTapes -->
+<!-- $$$describeUploadBuffer[overload1]$$$describeUploadBufferconstDescribeUploadBufferRequest& -->
+<h3 class="fn" id="describeUploadBuffer"><a name="describeUploadBuffer"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describeuploadbufferresponse.html">DescribeUploadBufferResponse</a></span> *StorageGatewayClient::<span class="name">describeUploadBuffer</span>(const <span class="type"><a href="qtaws-storagegateway-describeuploadbufferrequest.html">DescribeUploadBufferRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describeuploadbufferresponse.html">DescribeUploadBufferResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the upload buffer of a gateway. This operation is supported for the stored volume, cached volume and tape gateway</p>
+<p>types&gt;</p>
+<p>The response includes disk IDs that are configured as upload buffer space, and it includes the amount of upload buffer space allocated and</p>
+<!-- @@@describeUploadBuffer -->
+<!-- $$$describeVTLDevices[overload1]$$$describeVTLDevicesconstDescribeVTLDevicesRequest& -->
+<h3 class="fn" id="describeVTLDevices"><a name="describeVTLDevices"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describevtldevicesresponse.html">DescribeVTLDevicesResponse</a></span> *StorageGatewayClient::<span class="name">describeVTLDevices</span>(const <span class="type"><a href="qtaws-storagegateway-describevtldevicesrequest.html">DescribeVTLDevicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describevtldevicesresponse.html">DescribeVTLDevicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of virtual tape library (VTL) devices for the specified tape gateway. In the response, AWS Storage Gateway returns VTL device</p>
+<p>information&gt;</p>
+<p>This operation is only supported in the tape gateway</p>
+<!-- @@@describeVTLDevices -->
+<!-- $$$describeWorkingStorage[overload1]$$$describeWorkingStorageconstDescribeWorkingStorageRequest& -->
+<h3 class="fn" id="describeWorkingStorage"><a name="describeWorkingStorage"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-describeworkingstorageresponse.html">DescribeWorkingStorageResponse</a></span> *StorageGatewayClient::<span class="name">describeWorkingStorage</span>(const <span class="type"><a href="qtaws-storagegateway-describeworkingstoragerequest.html">DescribeWorkingStorageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-describeworkingstorageresponse.html">DescribeWorkingStorageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the working storage of a gateway. This operation is only supported in the stored volumes gateway type. This operation is deprecated in cached volumes API version (20120630). Use DescribeUploadBuffer</p>
+<p>instead&gt; &lt;note&gt;</p>
+<p>Working storage is also referred to as upload buffer. You can also use the DescribeUploadBuffer operation to add upload buffer to a stored volume</p>
+<p>gateway&gt; &lt;/note&gt;</p>
+<p>The response includes disk IDs that are configured as working storage, and it includes the amount of working storage allocated and</p>
+<!-- @@@describeWorkingStorage -->
+<!-- $$$disableGateway[overload1]$$$disableGatewayconstDisableGatewayRequest& -->
+<h3 class="fn" id="disableGateway"><a name="disableGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-disablegatewayresponse.html">DisableGatewayResponse</a></span> *StorageGatewayClient::<span class="name">disableGateway</span>(const <span class="type"><a href="qtaws-storagegateway-disablegatewayrequest.html">DisableGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-disablegatewayresponse.html">DisableGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables a tape gateway when the gateway is no longer functioning. For example, if your gateway VM is damaged, you can disable the gateway so you can recover virtual</p>
+<p>tapes&gt;</p>
+<p>Use this operation for a tape gateway that is not reachable or not functioning. This operation is only supported in the tape gateway</p>
+<p>type&gt; &lt;b&gt;</p>
+<p>Once a gateway is disabled it cannot be</p>
+<!-- @@@disableGateway -->
+<!-- $$$listFileShares[overload1]$$$listFileSharesconstListFileSharesRequest& -->
+<h3 class="fn" id="listFileShares"><a name="listFileShares"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listfilesharesresponse.html">ListFileSharesResponse</a></span> *StorageGatewayClient::<span class="name">listFileShares</span>(const <span class="type"><a href="qtaws-storagegateway-listfilesharesrequest.html">ListFileSharesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listfilesharesresponse.html">ListFileSharesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user account. This operation is only supported in the file gateway</p>
+<!-- @@@listFileShares -->
+<!-- $$$listGateways[overload1]$$$listGatewaysconstListGatewaysRequest& -->
+<h3 class="fn" id="listGateways"><a name="listGateways"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listgatewaysresponse.html">ListGatewaysResponse</a></span> *StorageGatewayClient::<span class="name">listGateways</span>(const <span class="type"><a href="qtaws-storagegateway-listgatewaysrequest.html">ListGatewaysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listgatewaysresponse.html">ListGatewaysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists gateways owned by an AWS account in a region specified in the request. The returned list is ordered by gateway Amazon Resource Name</p>
+<p>(ARN)&gt;</p>
+<p>By default, the operation returns a maximum of 100 gateways. This operation supports pagination that allows you to optionally reduce the number of gateways returned in a</p>
+<p>response&gt;</p>
+<p>If you have more gateways than are returned in a response (that is, the response returns only a truncated list of your gateways), the response contains a marker that you can specify in your next request to fetch the next page of</p>
+<!-- @@@listGateways -->
+<!-- $$$listLocalDisks[overload1]$$$listLocalDisksconstListLocalDisksRequest& -->
+<h3 class="fn" id="listLocalDisks"><a name="listLocalDisks"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listlocaldisksresponse.html">ListLocalDisksResponse</a></span> *StorageGatewayClient::<span class="name">listLocalDisks</span>(const <span class="type"><a href="qtaws-storagegateway-listlocaldisksrequest.html">ListLocalDisksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listlocaldisksresponse.html">ListLocalDisksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the gateway's local disks. To specify which gateway to describe, you use the Amazon Resource Name (ARN) of the gateway in the body of the</p>
+<p>request&gt;</p>
+<p>The request returns a list of all disks, specifying which are configured as working storage, cache storage, or stored volume or not configured at all. The response includes a &lt;code&gt;DiskStatus&lt;/code&gt; field. This field can have a value of present (the disk is available to use), missing (the disk is no longer connected to the gateway), or mismatch (the disk node is occupied by a disk that has incorrect metadata or the disk content is</p>
+<!-- @@@listLocalDisks -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *StorageGatewayClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-storagegateway-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags that have been added to the specified resource. This operation is only supported in the cached volume, stored volume and tape gateway</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$listTapes[overload1]$$$listTapesconstListTapesRequest& -->
+<h3 class="fn" id="listTapes"><a name="listTapes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listtapesresponse.html">ListTapesResponse</a></span> *StorageGatewayClient::<span class="name">listTapes</span>(const <span class="type"><a href="qtaws-storagegateway-listtapesrequest.html">ListTapesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listtapesresponse.html">ListTapesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists virtual tapes in your virtual tape library (VTL) and your virtual tape shelf (VTS). You specify the tapes to list by specifying one or more tape Amazon Resource Names (ARNs). If you don't specify a tape ARN, the operation lists all virtual tapes in both your VTL and</p>
+<p>VTS&gt;</p>
+<p>This operation supports pagination. By default, the operation returns a maximum of up to 100 tapes. You can optionally specify the &lt;code&gt;Limit&lt;/code&gt; parameter in the body to limit the number of tapes in the response. If the number of tapes returned in the response is truncated, the response includes a &lt;code&gt;Marker&lt;/code&gt; element that you can use in your subsequent request to retrieve the next set of tapes. This operation is only supported in the tape gateway</p>
+<!-- @@@listTapes -->
+<!-- $$$listVolumeInitiators[overload1]$$$listVolumeInitiatorsconstListVolumeInitiatorsRequest& -->
+<h3 class="fn" id="listVolumeInitiators"><a name="listVolumeInitiators"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listvolumeinitiatorsresponse.html">ListVolumeInitiatorsResponse</a></span> *StorageGatewayClient::<span class="name">listVolumeInitiators</span>(const <span class="type"><a href="qtaws-storagegateway-listvolumeinitiatorsrequest.html">ListVolumeInitiatorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listvolumeinitiatorsresponse.html">ListVolumeInitiatorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists iSCSI initiators that are connected to a volume. You can use this operation to determine whether a volume is being used or not. This operation is only supported in the cached volume and stored volume gateway</p>
+<!-- @@@listVolumeInitiators -->
+<!-- $$$listVolumeRecoveryPoints[overload1]$$$listVolumeRecoveryPointsconstListVolumeRecoveryPointsRequest& -->
+<h3 class="fn" id="listVolumeRecoveryPoints"><a name="listVolumeRecoveryPoints"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listvolumerecoverypointsresponse.html">ListVolumeRecoveryPointsResponse</a></span> *StorageGatewayClient::<span class="name">listVolumeRecoveryPoints</span>(const <span class="type"><a href="qtaws-storagegateway-listvolumerecoverypointsrequest.html">ListVolumeRecoveryPointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listvolumerecoverypointsresponse.html">ListVolumeRecoveryPointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the recovery points for a specified gateway. This operation is only supported in the cached volume gateway</p>
+<p>type&gt;</p>
+<p>Each cache volume has one recovery point. A volume recovery point is a point in time at which all data of the volume is consistent and from which you can create a snapshot or clone a new cached volume from a source volume. To create a snapshot from a volume recovery point use the &lt;a&gt;CreateSnapshotFromVolumeRecoveryPoint&lt;/a&gt;</p>
+<!-- @@@listVolumeRecoveryPoints -->
+<!-- $$$listVolumes[overload1]$$$listVolumesconstListVolumesRequest& -->
+<h3 class="fn" id="listVolumes"><a name="listVolumes"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-listvolumesresponse.html">ListVolumesResponse</a></span> *StorageGatewayClient::<span class="name">listVolumes</span>(const <span class="type"><a href="qtaws-storagegateway-listvolumesrequest.html">ListVolumesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-listvolumesresponse.html">ListVolumesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the iSCSI stored volumes of a gateway. Results are sorted by volume ARN. The response includes only the volume ARNs. If you want additional volume information, use the &lt;a&gt;DescribeStorediSCSIVolumes&lt;/a&gt; or the &lt;a&gt;DescribeCachediSCSIVolumes&lt;/a&gt;</p>
+<p>API&gt;</p>
+<p>The operation supports pagination. By default, the operation returns a maximum of up to 100 volumes. You can optionally specify the &lt;code&gt;Limit&lt;/code&gt; field in the body to limit the number of volumes in the response. If the number of volumes returned in the response is truncated, the response includes a Marker field. You can use this Marker value in your subsequent request to retrieve the next set of volumes. This operation is only supported in the cached volume and stored volume gateway</p>
+<!-- @@@listVolumes -->
+<!-- $$$notifyWhenUploaded[overload1]$$$notifyWhenUploadedconstNotifyWhenUploadedRequest& -->
+<h3 class="fn" id="notifyWhenUploaded"><a name="notifyWhenUploaded"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-notifywhenuploadedresponse.html">NotifyWhenUploadedResponse</a></span> *StorageGatewayClient::<span class="name">notifyWhenUploaded</span>(const <span class="type"><a href="qtaws-storagegateway-notifywhenuploadedrequest.html">NotifyWhenUploadedRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-notifywhenuploadedresponse.html">NotifyWhenUploadedResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends you notification through CloudWatch Events when all files written to your NFS file share have been uploaded to Amazon</p>
+<p>S3&gt;</p>
+<p>AWS Storage Gateway can send a notification through Amazon CloudWatch Events when all files written to your file share up to that point in time have been uploaded to Amazon S3. These files include files written to the NFS file share up to the time that you make a request for notification. When the upload is done, Storage Gateway sends you notification through an Amazon CloudWatch Event. You can configure CloudWatch Events to send the notification through event targets such as Amazon SNS or AWS Lambda function. This operation is only supported in the file gateway</p>
+<p>type&gt;</p>
+<p>For more information, see Getting File Upload Notification in the Storage Gateway User Guide (https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification).</p>
+<!-- @@@notifyWhenUploaded -->
+<!-- $$$refreshCache[overload1]$$$refreshCacheconstRefreshCacheRequest& -->
+<h3 class="fn" id="refreshCache"><a name="refreshCache"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-refreshcacheresponse.html">RefreshCacheResponse</a></span> *StorageGatewayClient::<span class="name">refreshCache</span>(const <span class="type"><a href="qtaws-storagegateway-refreshcacherequest.html">RefreshCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-refreshcacheresponse.html">RefreshCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Refreshes the cache for the specified file share. This operation finds objects in the Amazon S3 bucket that were added, removed or replaced since the gateway last listed the bucket's contents and cached the results. This operation is only supported in the file gateway</p>
+<!-- @@@refreshCache -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *StorageGatewayClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-storagegateway-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes one or more tags from the specified resource. This operation is only supported in the cached volume, stored volume and tape gateway</p>
+<!-- @@@removeTagsFromResource -->
+<!-- $$$resetCache[overload1]$$$resetCacheconstResetCacheRequest& -->
+<h3 class="fn" id="resetCache"><a name="resetCache"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-resetcacheresponse.html">ResetCacheResponse</a></span> *StorageGatewayClient::<span class="name">resetCache</span>(const <span class="type"><a href="qtaws-storagegateway-resetcacherequest.html">ResetCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-resetcacheresponse.html">ResetCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resets all cache disks that have encountered a error and makes the disks available for reconfiguration as cache storage. If your cache disk encounters a error, the gateway prevents read and write operations on virtual tapes in the gateway. For example, an error can occur when a disk is corrupted or removed from the gateway. When a cache is reset, the gateway loses its cache storage. At this point you can reconfigure the disks as cache disks. This operation is only supported in the cached volume and tape</p>
+<p>types&gt; &lt;b&gt;</p>
+<p>If the cache disk you are resetting contains data that has not been uploaded to Amazon S3 yet, that data can be lost. After you reset cache disks, there will be no configured cache disks left in the gateway, so you must configure at least one new cache disk for your gateway to function</p>
+<!-- @@@resetCache -->
+<!-- $$$retrieveTapeArchive[overload1]$$$retrieveTapeArchiveconstRetrieveTapeArchiveRequest& -->
+<h3 class="fn" id="retrieveTapeArchive"><a name="retrieveTapeArchive"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-retrievetapearchiveresponse.html">RetrieveTapeArchiveResponse</a></span> *StorageGatewayClient::<span class="name">retrieveTapeArchive</span>(const <span class="type"><a href="qtaws-storagegateway-retrievetapearchiverequest.html">RetrieveTapeArchiveRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-retrievetapearchiveresponse.html">RetrieveTapeArchiveResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves an archived virtual tape from the virtual tape shelf (VTS) to a tape gateway. Virtual tapes archived in the VTS are not associated with any gateway. However after a tape is retrieved, it is associated with a gateway, even though it is also listed in the VTS, that is, archive. This operation is only supported in the tape gateway</p>
+<p>type&gt;</p>
+<p>Once a tape is successfully retrieved to a gateway, it cannot be retrieved again to another gateway. You must archive the tape again before you can retrieve it to another gateway. This operation is only supported in the tape gateway</p>
+<!-- @@@retrieveTapeArchive -->
+<!-- $$$retrieveTapeRecoveryPoint[overload1]$$$retrieveTapeRecoveryPointconstRetrieveTapeRecoveryPointRequest& -->
+<h3 class="fn" id="retrieveTapeRecoveryPoint"><a name="retrieveTapeRecoveryPoint"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-retrievetaperecoverypointresponse.html">RetrieveTapeRecoveryPointResponse</a></span> *StorageGatewayClient::<span class="name">retrieveTapeRecoveryPoint</span>(const <span class="type"><a href="qtaws-storagegateway-retrievetaperecoverypointrequest.html">RetrieveTapeRecoveryPointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-retrievetaperecoverypointresponse.html">RetrieveTapeRecoveryPointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the recovery point for the specified virtual tape. This operation is only supported in the tape gateway</p>
+<p>type&gt;</p>
+<p>A recovery point is a point in time view of a virtual tape at which all the data on the tape is consistent. If your gateway crashes, virtual tapes that have recovery points can be recovered to a new</p>
+<p>gateway&gt; &lt;note&gt;</p>
+<p>The virtual tape can be retrieved to only one gateway. The retrieved tape is read-only. The virtual tape can be retrieved to only a tape gateway. There is no charge for retrieving recovery</p>
+<!-- @@@retrieveTapeRecoveryPoint -->
+<!-- $$$setLocalConsolePassword[overload1]$$$setLocalConsolePasswordconstSetLocalConsolePasswordRequest& -->
+<h3 class="fn" id="setLocalConsolePassword"><a name="setLocalConsolePassword"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-setlocalconsolepasswordresponse.html">SetLocalConsolePasswordResponse</a></span> *StorageGatewayClient::<span class="name">setLocalConsolePassword</span>(const <span class="type"><a href="qtaws-storagegateway-setlocalconsolepasswordrequest.html">SetLocalConsolePasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-setlocalconsolepasswordresponse.html">SetLocalConsolePasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the password for your VM local console. When you log in to the local console for the first time, you log in to the VM with the default credentials. We recommend that you set a new password. You don't need to know the default password to set a new</p>
+<!-- @@@setLocalConsolePassword -->
+<!-- $$$shutdownGateway[overload1]$$$shutdownGatewayconstShutdownGatewayRequest& -->
+<h3 class="fn" id="shutdownGateway"><a name="shutdownGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-shutdowngatewayresponse.html">ShutdownGatewayResponse</a></span> *StorageGatewayClient::<span class="name">shutdownGateway</span>(const <span class="type"><a href="qtaws-storagegateway-shutdowngatewayrequest.html">ShutdownGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-shutdowngatewayresponse.html">ShutdownGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Shuts down a gateway. To specify which gateway to shut down, use the Amazon Resource Name (ARN) of the gateway in the body of your</p>
+<p>request&gt;</p>
+<p>The operation shuts down the gateway service component running in the gateway's virtual machine (VM) and not the host</p>
+<p>VM&gt; &lt;note&gt;</p>
+<p>If you want to shut down the VM, it is recommended that you first shut down the gateway component in the VM to avoid unpredictable</p>
+<p>conditions&gt; &lt;/note&gt;</p>
+<p>After the gateway is shutdown, you cannot call any other API except &lt;a&gt;StartGateway&lt;/a&gt;, &lt;a&gt;DescribeGatewayInformation&lt;/a&gt;, and &lt;a&gt;ListGateways&lt;/a&gt;. For more information, see &lt;a&gt;ActivateGateway&lt;/a&gt;. Your applications cannot read from or write to the gateway's storage volumes, and there are no snapshots</p>
+<p>taken&gt; &lt;note&gt;</p>
+<p>When you make a shutdown request, you will get a &lt;code&gt;200 OK&lt;/code&gt; success response immediately. However, it might take some time for the gateway to shut down. You can call the &lt;a&gt;DescribeGatewayInformation&lt;/a&gt; API to check the status. For more information, see</p>
+<p>&lt;a&gt;ActivateGateway&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>If do not intend to use the gateway again, you must delete the gateway (using &lt;a&gt;DeleteGateway&lt;/a&gt;) to no longer pay software charges associated with the</p>
+<!-- @@@shutdownGateway -->
+<!-- $$$startGateway[overload1]$$$startGatewayconstStartGatewayRequest& -->
+<h3 class="fn" id="startGateway"><a name="startGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-startgatewayresponse.html">StartGatewayResponse</a></span> *StorageGatewayClient::<span class="name">startGateway</span>(const <span class="type"><a href="qtaws-storagegateway-startgatewayrequest.html">StartGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-startgatewayresponse.html">StartGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a gateway that you previously shut down (see &lt;a&gt;ShutdownGateway&lt;/a&gt;). After the gateway starts, you can then make other API calls, your applications can read from or write to the gateway's storage volumes and you will be able to take snapshot</p>
+<p>backups&gt; &lt;note&gt;</p>
+<p>When you make a request, you will get a 200 OK success response immediately. However, it might take some time for the gateway to be ready. You should call &lt;a&gt;DescribeGatewayInformation&lt;/a&gt; and check the status before making any additional API calls. For more information, see</p>
+<p>&lt;a&gt;ActivateGateway&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>To specify which gateway to start, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<!-- @@@startGateway -->
+<!-- $$$updateBandwidthRateLimit[overload1]$$$updateBandwidthRateLimitconstUpdateBandwidthRateLimitRequest& -->
+<h3 class="fn" id="updateBandwidthRateLimit"><a name="updateBandwidthRateLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatebandwidthratelimitresponse.html">UpdateBandwidthRateLimitResponse</a></span> *StorageGatewayClient::<span class="name">updateBandwidthRateLimit</span>(const <span class="type"><a href="qtaws-storagegateway-updatebandwidthratelimitrequest.html">UpdateBandwidthRateLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatebandwidthratelimitresponse.html">UpdateBandwidthRateLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the bandwidth rate limits of a gateway. You can update both the upload and download bandwidth rate limit or specify only one of the two. If you don't set a bandwidth rate limit, the existing rate limit</p>
+<p>remains&gt;</p>
+<p>By default, a gateway's bandwidth rate limits are not set. If you don't set any limit, the gateway does not have any limitations on its bandwidth usage and could potentially use the maximum available</p>
+<p>bandwidth&gt;</p>
+<p>To specify which gateway to update, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<!-- @@@updateBandwidthRateLimit -->
+<!-- $$$updateChapCredentials[overload1]$$$updateChapCredentialsconstUpdateChapCredentialsRequest& -->
+<h3 class="fn" id="updateChapCredentials"><a name="updateChapCredentials"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatechapcredentialsresponse.html">UpdateChapCredentialsResponse</a></span> *StorageGatewayClient::<span class="name">updateChapCredentials</span>(const <span class="type"><a href="qtaws-storagegateway-updatechapcredentialsrequest.html">UpdateChapCredentialsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatechapcredentialsresponse.html">UpdateChapCredentialsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the Challenge-Handshake Authentication Protocol (CHAP) credentials for a specified iSCSI target. By default, a gateway does not have CHAP enabled; however, for added security, you might use</p>
+<p>it&gt; &lt;b&gt;</p>
+<p>When you update CHAP credentials, all existing connections on the target are closed and initiators must reconnect with the new</p>
+<!-- @@@updateChapCredentials -->
+<!-- $$$updateGatewayInformation[overload1]$$$updateGatewayInformationconstUpdateGatewayInformationRequest& -->
+<h3 class="fn" id="updateGatewayInformation"><a name="updateGatewayInformation"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updategatewayinformationresponse.html">UpdateGatewayInformationResponse</a></span> *StorageGatewayClient::<span class="name">updateGatewayInformation</span>(const <span class="type"><a href="qtaws-storagegateway-updategatewayinformationrequest.html">UpdateGatewayInformationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updategatewayinformationresponse.html">UpdateGatewayInformationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a gateway's metadata, which includes the gateway's name and time zone. To specify which gateway to update, use the Amazon Resource Name (ARN) of the gateway in your</p>
+<p>request&gt; &lt;note&gt;</p>
+<p>For Gateways activated after September 2, 2015, the gateway's ARN contains the gateway ID rather than the gateway name. However, changing the name of the gateway has no effect on the gateway's</p>
+<!-- @@@updateGatewayInformation -->
+<!-- $$$updateGatewaySoftwareNow[overload1]$$$updateGatewaySoftwareNowconstUpdateGatewaySoftwareNowRequest& -->
+<h3 class="fn" id="updateGatewaySoftwareNow"><a name="updateGatewaySoftwareNow"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updategatewaysoftwarenowresponse.html">UpdateGatewaySoftwareNowResponse</a></span> *StorageGatewayClient::<span class="name">updateGatewaySoftwareNow</span>(const <span class="type"><a href="qtaws-storagegateway-updategatewaysoftwarenowrequest.html">UpdateGatewaySoftwareNowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updategatewaysoftwarenowresponse.html">UpdateGatewaySoftwareNowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the gateway virtual machine (VM) software. The request immediately triggers the software</p>
+<p>update&gt; &lt;note&gt;</p>
+<p>When you make this request, you get a &lt;code&gt;200 OK&lt;/code&gt; success response immediately. However, it might take some time for the update to complete. You can call &lt;a&gt;DescribeGatewayInformation&lt;/a&gt; to verify the gateway is in the &lt;code&gt;STATE_RUNNING&lt;/code&gt;</p>
+<p>state&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>A software update forces a system restart of your gateway. You can minimize the chance of any disruption to your applications by increasing your iSCSI Initiators' timeouts. For more information about increasing iSCSI Initiator timeouts for Windows and Linux, see &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorWindowsClient.html#CustomizeWindowsiSCSISettings&quot;&gt;Customizing Your Windows iSCSI Settings&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorRedHatClient.html#CustomizeLinuxiSCSISettings&quot;&gt;Customizing Your Linux iSCSI Settings&lt;/a&gt;,</p>
+<!-- @@@updateGatewaySoftwareNow -->
+<!-- $$$updateMaintenanceStartTime[overload1]$$$updateMaintenanceStartTimeconstUpdateMaintenanceStartTimeRequest& -->
+<h3 class="fn" id="updateMaintenanceStartTime"><a name="updateMaintenanceStartTime"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatemaintenancestarttimeresponse.html">UpdateMaintenanceStartTimeResponse</a></span> *StorageGatewayClient::<span class="name">updateMaintenanceStartTime</span>(const <span class="type"><a href="qtaws-storagegateway-updatemaintenancestarttimerequest.html">UpdateMaintenanceStartTimeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatemaintenancestarttimeresponse.html">UpdateMaintenanceStartTimeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a gateway's weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway's time</p>
+<!-- @@@updateMaintenanceStartTime -->
+<!-- $$$updateNFSFileShare[overload1]$$$updateNFSFileShareconstUpdateNFSFileShareRequest& -->
+<h3 class="fn" id="updateNFSFileShare"><a name="updateNFSFileShare"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatenfsfileshareresponse.html">UpdateNFSFileShareResponse</a></span> *StorageGatewayClient::<span class="name">updateNFSFileShare</span>(const <span class="type"><a href="qtaws-storagegateway-updatenfsfilesharerequest.html">UpdateNFSFileShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatenfsfileshareresponse.html">UpdateNFSFileShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a file share. This operation is only supported in the file gateway</p>
+<p>type&gt; &lt;note&gt;</p>
+<p>To leave a file share field unchanged, set the corresponding input field to</p>
+<p>null&gt; &lt;/note&gt;</p>
+<p>Updates the following file share</p>
+<p>setting&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Default storage class for your S3</p>
+<p>bucke&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Metadata defaults for your S3</p>
+<p>bucke&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Allowed NFS clients for your file</p>
+<p>shar&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Squash</p>
+<p>setting&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Write status of your file</p>
+<p>shar&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt;</p>
+<p>To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported in file</p>
+<!-- @@@updateNFSFileShare -->
+<!-- $$$updateSnapshotSchedule[overload1]$$$updateSnapshotScheduleconstUpdateSnapshotScheduleRequest& -->
+<h3 class="fn" id="updateSnapshotSchedule"><a name="updateSnapshotSchedule"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatesnapshotscheduleresponse.html">UpdateSnapshotScheduleResponse</a></span> *StorageGatewayClient::<span class="name">updateSnapshotSchedule</span>(const <span class="type"><a href="qtaws-storagegateway-updatesnapshotschedulerequest.html">UpdateSnapshotScheduleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatesnapshotscheduleresponse.html">UpdateSnapshotScheduleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a snapshot schedule configured for a gateway volume. This operation is only supported in the cached volume and stored volume gateway</p>
+<p>types&gt;</p>
+<p>The default snapshot schedule for volume is once every 24 hours, starting at the creation time of the volume. You can use this API to change the snapshot schedule configured for the</p>
+<p>volume&gt;</p>
+<p>In the request you must identify the gateway volume whose snapshot schedule you want to update, and the schedule information, including when you want the snapshot to begin on a day and the frequency (in hours) of</p>
+<!-- @@@updateSnapshotSchedule -->
+<!-- $$$updateVTLDeviceType[overload1]$$$updateVTLDeviceTypeconstUpdateVTLDeviceTypeRequest& -->
+<h3 class="fn" id="updateVTLDeviceType"><a name="updateVTLDeviceType"></a><code>[slot] </code><span class="type"><a href="qtaws-storagegateway-updatevtldevicetyperesponse.html">UpdateVTLDeviceTypeResponse</a></span> *StorageGatewayClient::<span class="name">updateVTLDeviceType</span>(const <span class="type"><a href="qtaws-storagegateway-updatevtldevicetyperequest.html">UpdateVTLDeviceTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-storagegateway-storagegatewayclient.html">StorageGatewayClient</a> service, and returns a pointer to an <a href="qtaws-storagegateway-updatevtldevicetyperesponse.html">UpdateVTLDeviceTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the type of medium changer in a tape gateway. When you activate a tape gateway, you select a medium changer type for the tape gateway. This operation enables you to select a different type of medium changer after a tape gateway is activated. This operation is only supported in the tape gateway</p>
+<!-- @@@updateVTLDeviceType -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

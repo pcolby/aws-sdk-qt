@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- xrayclient.cpp -->
+  <title>XRayClient Class | XRay</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsxray-index.html">XRay</a></li>
+<li><a href="qtawsxray-module.html">C++ Classes</a></li>
+<li>XRayClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">XRayClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-xray-xrayclient.html">QtAws::XRay::XRayClient</a>)<br/></span>
+<!-- $$$XRayClient-brief -->
+<p>The <a href="qtaws-xray-xrayclient.html">XRayClient</a> class provides access to the AWS X-Ray service. <a href="#details">More...</a></p>
+<!-- @@@XRayClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;XRayClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-xray-xrayclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#XRayClient">XRayClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#XRayClient-1">XRayClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetTracesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#batchGetTraces">batchGetTraces</a></b>(const BatchGetTracesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetServiceGraphResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getServiceGraph">getServiceGraph</a></b>(const GetServiceGraphRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTraceGraphResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getTraceGraph">getTraceGraph</a></b>(const GetTraceGraphRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTraceSummariesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getTraceSummaries">getTraceSummaries</a></b>(const GetTraceSummariesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutTelemetryRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#putTelemetryRecords">putTelemetryRecords</a></b>(const PutTelemetryRecordsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutTraceSegmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#putTraceSegments">putTraceSegments</a></b>(const PutTraceSegmentsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$XRayClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-xray-xrayclient.html">XRayClient</a> class provides access to the AWS X-Ray service.</p>
+<p>AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those</p>
+</div>
+<!-- @@@XRayClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$XRayClient[overload1]$$$XRayClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="XRayClient"><a name="XRayClient"></a>XRayClient::<span class="name">XRayClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-xray-xrayclient.html">XRayClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@XRayClient -->
+<!-- $$$XRayClient$$$XRayClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="XRayClient-1"><a name="XRayClient-1"></a>XRayClient::<span class="name">XRayClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-xray-xrayclient.html#XRayClient">XRayClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@XRayClient -->
+<!-- $$$batchGetTraces[overload1]$$$batchGetTracesconstBatchGetTracesRequest& -->
+<h3 class="fn" id="batchGetTraces"><a name="batchGetTraces"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-batchgettracesresponse.html">BatchGetTracesResponse</a></span> *XRayClient::<span class="name">batchGetTraces</span>(const <span class="type"><a href="qtaws-xray-batchgettracesrequest.html">BatchGetTracesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-batchgettracesresponse.html">BatchGetTracesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a single request. Use &lt;code&gt;GetTraceSummaries&lt;/code&gt; to get a list of trace</p>
+<!-- @@@batchGetTraces -->
+<!-- $$$getServiceGraph[overload1]$$$getServiceGraphconstGetServiceGraphRequest& -->
+<h3 class="fn" id="getServiceGraph"><a name="getServiceGraph"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-getservicegraphresponse.html">GetServiceGraphResponse</a></span> *XRayClient::<span class="name">getServiceGraph</span>(const <span class="type"><a href="qtaws-xray-getservicegraphrequest.html">GetServiceGraphRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-getservicegraphresponse.html">GetServiceGraphResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a document that describes services that process incoming requests, and downstream services that they call as a result. Root services process incoming requests and make calls to downstream services. Root services are applications that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL</p>
+<!-- @@@getServiceGraph -->
+<!-- $$$getTraceGraph[overload1]$$$getTraceGraphconstGetTraceGraphRequest& -->
+<h3 class="fn" id="getTraceGraph"><a name="getTraceGraph"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-gettracegraphresponse.html">GetTraceGraphResponse</a></span> *XRayClient::<span class="name">getTraceGraph</span>(const <span class="type"><a href="qtaws-xray-gettracegraphrequest.html">GetTraceGraphRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-gettracegraphresponse.html">GetTraceGraphResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a service graph for one or more specific trace</p>
+<!-- @@@getTraceGraph -->
+<!-- $$$getTraceSummaries[overload1]$$$getTraceSummariesconstGetTraceSummariesRequest& -->
+<h3 class="fn" id="getTraceSummaries"><a name="getTraceSummaries"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-gettracesummariesresponse.html">GetTraceSummariesResponse</a></span> *XRayClient::<span class="name">getTraceSummaries</span>(const <span class="type"><a href="qtaws-xray-gettracesummariesrequest.html">GetTraceSummariesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-gettracesummariesresponse.html">GetTraceSummariesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves IDs and metadata for traces available for a specified time frame using an optional filter. To get the full traces, pass the trace IDs to</p>
+<p>&lt;code&gt;BatchGetTraces&lt;/code&gt;&gt;</p>
+<p>A filter expression can target traced requests that hit specific service nodes or edges, have errors, or come from a known user. For example, the following filter expression targets traces that pass through</p>
+<p>&lt;code&gt;api.example.com&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;service(&quot;api.example.com&quot;)&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>This filter expression finds traces that have an annotation named &lt;code&gt;account&lt;/code&gt; with the value</p>
+<p>&lt;code&gt;12345&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;annotation.account = &quot;12345&quot;&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>For a full list of indexed fields and keywords that you can use in filter expressions, see &lt;a href=&quot;http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html&quot;&gt;Using Filter Expressions&lt;/a&gt; in the &lt;i&gt;AWS X-Ray Developer</p>
+<!-- @@@getTraceSummaries -->
+<!-- $$$putTelemetryRecords[overload1]$$$putTelemetryRecordsconstPutTelemetryRecordsRequest& -->
+<h3 class="fn" id="putTelemetryRecords"><a name="putTelemetryRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-puttelemetryrecordsresponse.html">PutTelemetryRecordsResponse</a></span> *XRayClient::<span class="name">putTelemetryRecords</span>(const <span class="type"><a href="qtaws-xray-puttelemetryrecordsrequest.html">PutTelemetryRecordsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-puttelemetryrecordsresponse.html">PutTelemetryRecordsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by the AWS X-Ray daemon to upload</p>
+<!-- @@@putTelemetryRecords -->
+<!-- $$$putTraceSegments[overload1]$$$putTraceSegmentsconstPutTraceSegmentsRequest& -->
+<h3 class="fn" id="putTraceSegments"><a name="putTraceSegments"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-puttracesegmentsresponse.html">PutTraceSegmentsResponse</a></span> *XRayClient::<span class="name">putTraceSegments</span>(const <span class="type"><a href="qtaws-xray-puttracesegmentsrequest.html">PutTraceSegmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-puttracesegmentsresponse.html">PutTraceSegmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of</p>
+<p>subsegments&gt;</p>
+<p>Segments must include the following fields. For the full segment document schema, see &lt;a href=&quot;http://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html&quot;&gt;AWS X-Ray Segment Documents&lt;/a&gt; in the &lt;i&gt;AWS X-Ray Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Required Segment Document Fields&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;name&lt;/code&gt; - The name of the service that handled the</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;id&lt;/code&gt; - A 64-bit identifier for the segment, unique among segments in the same trace, in 16 hexadecimal</p>
+<p>digits&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;trace_id&lt;/code&gt; - A unique identifier that connects all segments and subsegments originating from a single client</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;start_time&lt;/code&gt; - Time the segment or subsegment was created, in floating point seconds in epoch time, accurate to milliseconds. For example, &lt;code&gt;1480615200.010&lt;/code&gt; or</p>
+<p>&lt;code&gt;1.480615200010E9&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;end_time&lt;/code&gt; - Time the segment or subsegment was closed. For example, &lt;code&gt;1480615200.090&lt;/code&gt; or &lt;code&gt;1.480615200090E9&lt;/code&gt;. Specify either an &lt;code&gt;end_time&lt;/code&gt; or</p>
+<p>&lt;code&gt;in_progress&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;in_progress&lt;/code&gt; - Set to &lt;code&gt;true&lt;/code&gt; instead of specifying an &lt;code&gt;end_time&lt;/code&gt; to record that a segment has been started, but is not complete. Send an in progress segment when your application receives a request that will take a long time to serve, to trace the fact that the request was received. When the response is sent, send the complete segment to overwrite the in-progress</p>
+<p>segment&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>A &lt;code&gt;trace_id&lt;/code&gt; consists of three numbers separated by hyphens. For example, 1-58406520-a006649127e371903a2de979. This</p>
+<p>includes&gt; &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Trace ID Format&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The version number, i.e&#x2e;</p>
+<p>&lt;code&gt;1&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The time of the original request, in Unix epoch time, in 8 hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in epoch time is &lt;code&gt;1480615200&lt;/code&gt; seconds, or &lt;code&gt;58406520&lt;/code&gt; in</p>
+<p>hexadecimal&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>A 96-bit identifier for the trace, globally unique, in 24 hexadecimal</p>
+<!-- @@@putTraceSegments -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

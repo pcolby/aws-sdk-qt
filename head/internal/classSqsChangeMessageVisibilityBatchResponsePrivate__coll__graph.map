@@ -1,7 +1,0 @@
-<map id="SqsChangeMessageVisibilityBatchResponsePrivate" name="SqsChangeMessageVisibilityBatchResponsePrivate">
-<area shape="rect" id="node2" href="$classSqsResponsePrivate.html" title="Private implementation for SqsResponse. " alt="" coords="185,184,331,211"/>
-<area shape="rect" id="node3" href="$classAwsAbstractResponsePrivate.html" title="Private implementation for AwsAbstractResponse. " alt="" coords="118,95,315,121"/>
-<area shape="rect" id="node6" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="5,184,161,211"/>
-<area shape="rect" id="node4" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="295,5,442,32"/>
-<area shape="rect" id="node5" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="339,95,526,121"/>
-</map>

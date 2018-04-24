@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- snsclient.cpp -->
+  <title>SnsClient Class | SNS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssns-index.html">SNS</a></li>
+<li><a href="qtawssns-module.html">C++ Classes</a></li>
+<li>SnsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SnsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sns-snsclient.html">QtAws::SNS::SnsClient</a>)<br/></span>
+<!-- $$$SnsClient-brief -->
+<p>The <a href="qtaws-sns-snsclient.html">SnsClient</a> class provides access to the Amazon Simple Notification Service ( SNS) service. <a href="#details">More...</a></p>
+<!-- @@@SnsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SnsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-sns-snsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#SnsClient">SnsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#SnsClient-1">SnsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddPermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#addPermission">addPermission</a></b>(const AddPermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CheckIfPhoneNumberIsOptedOutResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#checkIfPhoneNumberIsOptedOut">checkIfPhoneNumberIsOptedOut</a></b>(const CheckIfPhoneNumberIsOptedOutRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#confirmSubscription">confirmSubscription</a></b>(const ConfirmSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePlatformApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#createPlatformApplication">createPlatformApplication</a></b>(const CreatePlatformApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePlatformEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#createPlatformEndpoint">createPlatformEndpoint</a></b>(const CreatePlatformEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#createTopic">createTopic</a></b>(const CreateTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#deleteEndpoint">deleteEndpoint</a></b>(const DeleteEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePlatformApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#deletePlatformApplication">deletePlatformApplication</a></b>(const DeletePlatformApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#deleteTopic">deleteTopic</a></b>(const DeleteTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEndpointAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#getEndpointAttributes">getEndpointAttributes</a></b>(const GetEndpointAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPlatformApplicationAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#getPlatformApplicationAttributes">getPlatformApplicationAttributes</a></b>(const GetPlatformApplicationAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSMSAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#getSMSAttributes">getSMSAttributes</a></b>(const GetSMSAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSubscriptionAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#getSubscriptionAttributes">getSubscriptionAttributes</a></b>(const GetSubscriptionAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTopicAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#getTopicAttributes">getTopicAttributes</a></b>(const GetTopicAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListEndpointsByPlatformApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listEndpointsByPlatformApplication">listEndpointsByPlatformApplication</a></b>(const ListEndpointsByPlatformApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPhoneNumbersOptedOutResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listPhoneNumbersOptedOut">listPhoneNumbersOptedOut</a></b>(const ListPhoneNumbersOptedOutRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPlatformApplicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listPlatformApplications">listPlatformApplications</a></b>(const ListPlatformApplicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSubscriptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listSubscriptions">listSubscriptions</a></b>(const ListSubscriptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSubscriptionsByTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listSubscriptionsByTopic">listSubscriptionsByTopic</a></b>(const ListSubscriptionsByTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTopicsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#listTopics">listTopics</a></b>(const ListTopicsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> OptInPhoneNumberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#optInPhoneNumber">optInPhoneNumber</a></b>(const OptInPhoneNumberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PublishResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#publish">publish</a></b>(const PublishRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemovePermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#removePermission">removePermission</a></b>(const RemovePermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetEndpointAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#setEndpointAttributes">setEndpointAttributes</a></b>(const SetEndpointAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetPlatformApplicationAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#setPlatformApplicationAttributes">setPlatformApplicationAttributes</a></b>(const SetPlatformApplicationAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetSMSAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#setSMSAttributes">setSMSAttributes</a></b>(const SetSMSAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetSubscriptionAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#setSubscriptionAttributes">setSubscriptionAttributes</a></b>(const SetSubscriptionAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetTopicAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#setTopicAttributes">setTopicAttributes</a></b>(const SetTopicAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SubscribeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#subscribe">subscribe</a></b>(const SubscribeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnsubscribeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsclient.html#unsubscribe">unsubscribe</a></b>(const UnsubscribeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SnsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sns-snsclient.html">SnsClient</a> class provides access to the Amazon Simple Notification Service ( SNS) service.</p>
+<p>&lt;fullname&gt;Amazon Simple Notification Service&lt;/fullname&gt;</p>
+<p>Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers over multiple delivery protocols. For more information about this product see &lt;a href=&quot;http://aws.amazon.com/sns/&quot;&gt;http://aws.amazon.com/sns&lt;/a&gt;. For detailed information about Amazon SNS features and their associated API calls, see the &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/&quot;&gt;Amazon SNS Developer Guide&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>We also provide SDKs that enable you to access Amazon SNS from your preferred programming language. The SDKs contain functionality that automatically takes care of tasks such as: cryptographically signing your service requests, retrying requests, and handling error responses. For a list of available SDKs, go to &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;Tools for Amazon Web Services&lt;/a&gt;.</p>
+</div>
+<!-- @@@SnsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SnsClient[overload1]$$$SnsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SnsClient"><a name="SnsClient"></a>SnsClient::<span class="name">SnsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-sns-snsclient.html">SnsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SnsClient -->
+<!-- $$$SnsClient$$$SnsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SnsClient-1"><a name="SnsClient-1"></a>SnsClient::<span class="name">SnsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-sns-snsclient.html#SnsClient">SnsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SnsClient -->
+<!-- $$$addPermission[overload1]$$$addPermissionconstAddPermissionRequest& -->
+<h3 class="fn" id="addPermission"><a name="addPermission"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-addpermissionresponse.html">AddPermissionResponse</a></span> *SnsClient::<span class="name">addPermission</span>(const <span class="type"><a href="qtaws-sns-addpermissionrequest.html">AddPermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-addpermissionresponse.html">AddPermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a statement to a topic's access control policy, granting access for the specified AWS accounts to the specified</p>
+<!-- @@@addPermission -->
+<!-- $$$checkIfPhoneNumberIsOptedOut[overload1]$$$checkIfPhoneNumberIsOptedOutconstCheckIfPhoneNumberIsOptedOutRequest& -->
+<h3 class="fn" id="checkIfPhoneNumberIsOptedOut"><a name="checkIfPhoneNumberIsOptedOut"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-checkifphonenumberisoptedoutresponse.html">CheckIfPhoneNumberIsOptedOutResponse</a></span> *SnsClient::<span class="name">checkIfPhoneNumberIsOptedOut</span>(const <span class="type"><a href="qtaws-sns-checkifphonenumberisoptedoutrequest.html">CheckIfPhoneNumberIsOptedOutRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-checkifphonenumberisoptedoutresponse.html">CheckIfPhoneNumberIsOptedOutResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your account. You cannot send SMS messages to a number that is opted</p>
+<p>out&gt;</p>
+<p>To resume sending messages, you can opt in the number by using the &lt;code&gt;OptInPhoneNumber&lt;/code&gt;</p>
+<!-- @@@checkIfPhoneNumberIsOptedOut -->
+<!-- $$$confirmSubscription[overload1]$$$confirmSubscriptionconstConfirmSubscriptionRequest& -->
+<h3 class="fn" id="confirmSubscription"><a name="confirmSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-confirmsubscriptionresponse.html">ConfirmSubscriptionResponse</a></span> *SnsClient::<span class="name">confirmSubscription</span>(const <span class="type"><a href="qtaws-sns-confirmsubscriptionrequest.html">ConfirmSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-confirmsubscriptionresponse.html">ConfirmSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Verifies an endpoint owner's intent to receive messages by validating the token sent to the endpoint by an earlier &lt;code&gt;Subscribe&lt;/code&gt; action. If the token is valid, the action creates a new subscription and returns its Amazon Resource Name (ARN). This call requires an AWS signature only when the &lt;code&gt;AuthenticateOnUnsubscribe&lt;/code&gt; flag is set to</p>
+<!-- @@@confirmSubscription -->
+<!-- $$$createPlatformApplication[overload1]$$$createPlatformApplicationconstCreatePlatformApplicationRequest& -->
+<h3 class="fn" id="createPlatformApplication"><a name="createPlatformApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-createplatformapplicationresponse.html">CreatePlatformApplicationResponse</a></span> *SnsClient::<span class="name">createPlatformApplication</span>(const <span class="type"><a href="qtaws-sns-createplatformapplicationrequest.html">CreatePlatformApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-createplatformapplicationresponse.html">CreatePlatformApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a platform application object for one of the supported push notification services, such as APNS and GCM, to which devices and mobile apps may register. You must specify PlatformPrincipal and PlatformCredential attributes when using the &lt;code&gt;CreatePlatformApplication&lt;/code&gt; action. The PlatformPrincipal is received from the notification service. For APNS/APNS_SANDBOX, PlatformPrincipal is &quot;SSL certificate&quot;. For GCM, PlatformPrincipal is not applicable. For ADM, PlatformPrincipal is &quot;client id&quot;. The PlatformCredential is also received from the notification service. For WNS, PlatformPrincipal is &quot;Package Security Identifier&quot;. For MPNS, PlatformPrincipal is &quot;TLS certificate&quot;. For Baidu, PlatformPrincipal is &quot;API</p>
+<p>key&quot;&gt;</p>
+<p>For APNS/APNS_SANDBOX, PlatformCredential is &quot;private key&quot;. For GCM, PlatformCredential is &quot;API key&quot;. For ADM, PlatformCredential is &quot;client secret&quot;. For WNS, PlatformCredential is &quot;secret key&quot;. For MPNS, PlatformCredential is &quot;private key&quot;. For Baidu, PlatformCredential is &quot;secret key&quot;. The PlatformApplicationArn that is returned when using &lt;code&gt;CreatePlatformApplication&lt;/code&gt; is then used as an attribute for the &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; action. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;. For more information about obtaining the PlatformPrincipal and PlatformCredential for each of the supported push notification services, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-apns.html&quot;&gt;Getting Started with Apple Push Notification Service&lt;/a&gt;, &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-adm.html&quot;&gt;Getting Started with Amazon Device Messaging&lt;/a&gt;, &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-baidu.html&quot;&gt;Getting Started with Baidu Cloud Push&lt;/a&gt;, &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-gcm.html&quot;&gt;Getting Started with Google Cloud Messaging for Android&lt;/a&gt;, &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-mpns.html&quot;&gt;Getting Started with MPNS&lt;/a&gt;, or &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-wns.html&quot;&gt;Getting Started with WNS&lt;/a&gt;.</p>
+<!-- @@@createPlatformApplication -->
+<!-- $$$createPlatformEndpoint[overload1]$$$createPlatformEndpointconstCreatePlatformEndpointRequest& -->
+<h3 class="fn" id="createPlatformEndpoint"><a name="createPlatformEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-createplatformendpointresponse.html">CreatePlatformEndpointResponse</a></span> *SnsClient::<span class="name">createPlatformEndpoint</span>(const <span class="type"><a href="qtaws-sns-createplatformendpointrequest.html">CreatePlatformEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-createplatformendpointresponse.html">CreatePlatformEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM and APNS. &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; requires the PlatformApplicationArn that is returned from &lt;code&gt;CreatePlatformApplication&lt;/code&gt;. The EndpointArn that is returned when using &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; can then be used by the &lt;code&gt;Publish&lt;/code&gt; action to send a message to a mobile app or by the &lt;code&gt;Subscribe&lt;/code&gt; action for subscription to a topic. The &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; action is idempotent, so if the requester already owns an endpoint with the same device token and attributes, that endpoint's ARN is returned without creating a new endpoint. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>When using &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; with Baidu, two attributes must be provided: ChannelId and UserId. The token field must also contain the ChannelId. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePushBaiduEndpoint.html&quot;&gt;Creating an Amazon SNS Endpoint for Baidu&lt;/a&gt;.</p>
+<!-- @@@createPlatformEndpoint -->
+<!-- $$$createTopic[overload1]$$$createTopicconstCreateTopicRequest& -->
+<h3 class="fn" id="createTopic"><a name="createTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-createtopicresponse.html">CreateTopicResponse</a></span> *SnsClient::<span class="name">createTopic</span>(const <span class="type"><a href="qtaws-sns-createtopicrequest.html">CreateTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-createtopicresponse.html">CreateTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a topic to which notifications can be published. Users can create at most 100,000 topics. For more information, see &lt;a href=&quot;http://aws.amazon.com/sns/&quot;&gt;http://aws.amazon.com/sns&lt;/a&gt;. This action is idempotent, so if the requester already owns a topic with the specified name, that topic's ARN is returned without creating a new</p>
+<!-- @@@createTopic -->
+<!-- $$$deleteEndpoint[overload1]$$$deleteEndpointconstDeleteEndpointRequest& -->
+<h3 class="fn" id="deleteEndpoint"><a name="deleteEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-deleteendpointresponse.html">DeleteEndpointResponse</a></span> *SnsClient::<span class="name">deleteEndpoint</span>(const <span class="type"><a href="qtaws-sns-deleteendpointrequest.html">DeleteEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-deleteendpointresponse.html">DeleteEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the endpoint for a device and mobile app from Amazon SNS. This action is idempotent. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>When you delete an endpoint that is also subscribed to a topic, then you must also unsubscribe the endpoint from the</p>
+<!-- @@@deleteEndpoint -->
+<!-- $$$deletePlatformApplication[overload1]$$$deletePlatformApplicationconstDeletePlatformApplicationRequest& -->
+<h3 class="fn" id="deletePlatformApplication"><a name="deletePlatformApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-deleteplatformapplicationresponse.html">DeletePlatformApplicationResponse</a></span> *SnsClient::<span class="name">deletePlatformApplication</span>(const <span class="type"><a href="qtaws-sns-deleteplatformapplicationrequest.html">DeletePlatformApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-deleteplatformapplicationresponse.html">DeletePlatformApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a platform application object for one of the supported push notification services, such as APNS and GCM. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@deletePlatformApplication -->
+<!-- $$$deleteTopic[overload1]$$$deleteTopicconstDeleteTopicRequest& -->
+<h3 class="fn" id="deleteTopic"><a name="deleteTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-deletetopicresponse.html">DeleteTopicResponse</a></span> *SnsClient::<span class="name">deleteTopic</span>(const <span class="type"><a href="qtaws-sns-deletetopicrequest.html">DeleteTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-deletetopicresponse.html">DeleteTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a topic and all its subscriptions. Deleting a topic might prevent some messages previously sent to the topic from being delivered to subscribers. This action is idempotent, so deleting a topic that does not exist does not result in an</p>
+<!-- @@@deleteTopic -->
+<!-- $$$getEndpointAttributes[overload1]$$$getEndpointAttributesconstGetEndpointAttributesRequest& -->
+<h3 class="fn" id="getEndpointAttributes"><a name="getEndpointAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-getendpointattributesresponse.html">GetEndpointAttributesResponse</a></span> *SnsClient::<span class="name">getEndpointAttributes</span>(const <span class="type"><a href="qtaws-sns-getendpointattributesrequest.html">GetEndpointAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-getendpointattributesresponse.html">GetEndpointAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM and APNS. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@getEndpointAttributes -->
+<!-- $$$getPlatformApplicationAttributes[overload1]$$$getPlatformApplicationAttributesconstGetPlatformApplicationAttributesRequest& -->
+<h3 class="fn" id="getPlatformApplicationAttributes"><a name="getPlatformApplicationAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-getplatformapplicationattributesresponse.html">GetPlatformApplicationAttributesResponse</a></span> *SnsClient::<span class="name">getPlatformApplicationAttributes</span>(const <span class="type"><a href="qtaws-sns-getplatformapplicationattributesrequest.html">GetPlatformApplicationAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-getplatformapplicationattributesresponse.html">GetPlatformApplicationAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the attributes of the platform application object for the supported push notification services, such as APNS and GCM. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@getPlatformApplicationAttributes -->
+<!-- $$$getSMSAttributes[overload1]$$$getSMSAttributesconstGetSMSAttributesRequest& -->
+<h3 class="fn" id="getSMSAttributes"><a name="getSMSAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-getsmsattributesresponse.html">GetSMSAttributesResponse</a></span> *SnsClient::<span class="name">getSMSAttributes</span>(const <span class="type"><a href="qtaws-sns-getsmsattributesrequest.html">GetSMSAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-getsmsattributesresponse.html">GetSMSAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the settings for sending SMS messages from your</p>
+<p>account&gt;</p>
+<p>These settings are set with the &lt;code&gt;SetSMSAttributes&lt;/code&gt;</p>
+<!-- @@@getSMSAttributes -->
+<!-- $$$getSubscriptionAttributes[overload1]$$$getSubscriptionAttributesconstGetSubscriptionAttributesRequest& -->
+<h3 class="fn" id="getSubscriptionAttributes"><a name="getSubscriptionAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-getsubscriptionattributesresponse.html">GetSubscriptionAttributesResponse</a></span> *SnsClient::<span class="name">getSubscriptionAttributes</span>(const <span class="type"><a href="qtaws-sns-getsubscriptionattributesrequest.html">GetSubscriptionAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-getsubscriptionattributesresponse.html">GetSubscriptionAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all of the properties of a</p>
+<!-- @@@getSubscriptionAttributes -->
+<!-- $$$getTopicAttributes[overload1]$$$getTopicAttributesconstGetTopicAttributesRequest& -->
+<h3 class="fn" id="getTopicAttributes"><a name="getTopicAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-gettopicattributesresponse.html">GetTopicAttributesResponse</a></span> *SnsClient::<span class="name">getTopicAttributes</span>(const <span class="type"><a href="qtaws-sns-gettopicattributesrequest.html">GetTopicAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-gettopicattributesresponse.html">GetTopicAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all of the properties of a topic. Topic properties returned might differ based on the authorization of the</p>
+<!-- @@@getTopicAttributes -->
+<!-- $$$listEndpointsByPlatformApplication[overload1]$$$listEndpointsByPlatformApplicationconstListEndpointsByPlatformApplicationRequest& -->
+<h3 class="fn" id="listEndpointsByPlatformApplication"><a name="listEndpointsByPlatformApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listendpointsbyplatformapplicationresponse.html">ListEndpointsByPlatformApplicationResponse</a></span> *SnsClient::<span class="name">listEndpointsByPlatformApplication</span>(const <span class="type"><a href="qtaws-sns-listendpointsbyplatformapplicationrequest.html">ListEndpointsByPlatformApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listendpointsbyplatformapplicationresponse.html">ListEndpointsByPlatformApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM and APNS. The results for &lt;code&gt;ListEndpointsByPlatformApplication&lt;/code&gt; are paginated and return a limited list of endpoints, up to 100. If additional records are available after the first page results, then a NextToken string will be returned. To receive the next page, you call &lt;code&gt;ListEndpointsByPlatformApplication&lt;/code&gt; again using the NextToken string received from the previous call. When there are no more records to return, NextToken will be null. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@listEndpointsByPlatformApplication -->
+<!-- $$$listPhoneNumbersOptedOut[overload1]$$$listPhoneNumbersOptedOutconstListPhoneNumbersOptedOutRequest& -->
+<h3 class="fn" id="listPhoneNumbersOptedOut"><a name="listPhoneNumbersOptedOut"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listphonenumbersoptedoutresponse.html">ListPhoneNumbersOptedOutResponse</a></span> *SnsClient::<span class="name">listPhoneNumbersOptedOut</span>(const <span class="type"><a href="qtaws-sns-listphonenumbersoptedoutrequest.html">ListPhoneNumbersOptedOutRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listphonenumbersoptedoutresponse.html">ListPhoneNumbersOptedOutResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of phone numbers that are opted out, meaning you cannot send SMS messages to</p>
+<p>them&gt;</p>
+<p>The results for &lt;code&gt;ListPhoneNumbersOptedOut&lt;/code&gt; are paginated, and each page returns up to 100 phone numbers. If additional phone numbers are available after the first page of results, then a &lt;code&gt;NextToken&lt;/code&gt; string will be returned. To receive the next page, you call &lt;code&gt;ListPhoneNumbersOptedOut&lt;/code&gt; again using the &lt;code&gt;NextToken&lt;/code&gt; string received from the previous call. When there are no more records to return, &lt;code&gt;NextToken&lt;/code&gt; will be</p>
+<!-- @@@listPhoneNumbersOptedOut -->
+<!-- $$$listPlatformApplications[overload1]$$$listPlatformApplicationsconstListPlatformApplicationsRequest& -->
+<h3 class="fn" id="listPlatformApplications"><a name="listPlatformApplications"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listplatformapplicationsresponse.html">ListPlatformApplicationsResponse</a></span> *SnsClient::<span class="name">listPlatformApplications</span>(const <span class="type"><a href="qtaws-sns-listplatformapplicationsrequest.html">ListPlatformApplicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listplatformapplicationsresponse.html">ListPlatformApplicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the platform application objects for the supported push notification services, such as APNS and GCM. The results for &lt;code&gt;ListPlatformApplications&lt;/code&gt; are paginated and return a limited list of applications, up to 100. If additional records are available after the first page results, then a NextToken string will be returned. To receive the next page, you call &lt;code&gt;ListPlatformApplications&lt;/code&gt; using the NextToken string received from the previous call. When there are no more records to return, NextToken will be null. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@listPlatformApplications -->
+<!-- $$$listSubscriptions[overload1]$$$listSubscriptionsconstListSubscriptionsRequest& -->
+<h3 class="fn" id="listSubscriptions"><a name="listSubscriptions"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listsubscriptionsresponse.html">ListSubscriptionsResponse</a></span> *SnsClient::<span class="name">listSubscriptions</span>(const <span class="type"><a href="qtaws-sns-listsubscriptionsrequest.html">ListSubscriptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listsubscriptionsresponse.html">ListSubscriptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the requester's subscriptions. Each call returns a limited list of subscriptions, up to 100. If there are more subscriptions, a &lt;code&gt;NextToken&lt;/code&gt; is also returned. Use the &lt;code&gt;NextToken&lt;/code&gt; parameter in a new &lt;code&gt;ListSubscriptions&lt;/code&gt; call to get further</p>
+<!-- @@@listSubscriptions -->
+<!-- $$$listSubscriptionsByTopic[overload1]$$$listSubscriptionsByTopicconstListSubscriptionsByTopicRequest& -->
+<h3 class="fn" id="listSubscriptionsByTopic"><a name="listSubscriptionsByTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listsubscriptionsbytopicresponse.html">ListSubscriptionsByTopicResponse</a></span> *SnsClient::<span class="name">listSubscriptionsByTopic</span>(const <span class="type"><a href="qtaws-sns-listsubscriptionsbytopicrequest.html">ListSubscriptionsByTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listsubscriptionsbytopicresponse.html">ListSubscriptionsByTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the subscriptions to a specific topic. Each call returns a limited list of subscriptions, up to 100. If there are more subscriptions, a &lt;code&gt;NextToken&lt;/code&gt; is also returned. Use the &lt;code&gt;NextToken&lt;/code&gt; parameter in a new &lt;code&gt;ListSubscriptionsByTopic&lt;/code&gt; call to get further</p>
+<!-- @@@listSubscriptionsByTopic -->
+<!-- $$$listTopics[overload1]$$$listTopicsconstListTopicsRequest& -->
+<h3 class="fn" id="listTopics"><a name="listTopics"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-listtopicsresponse.html">ListTopicsResponse</a></span> *SnsClient::<span class="name">listTopics</span>(const <span class="type"><a href="qtaws-sns-listtopicsrequest.html">ListTopicsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-listtopicsresponse.html">ListTopicsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the requester's topics. Each call returns a limited list of topics, up to 100. If there are more topics, a &lt;code&gt;NextToken&lt;/code&gt; is also returned. Use the &lt;code&gt;NextToken&lt;/code&gt; parameter in a new &lt;code&gt;ListTopics&lt;/code&gt; call to get further</p>
+<!-- @@@listTopics -->
+<!-- $$$optInPhoneNumber[overload1]$$$optInPhoneNumberconstOptInPhoneNumberRequest& -->
+<h3 class="fn" id="optInPhoneNumber"><a name="optInPhoneNumber"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-optinphonenumberresponse.html">OptInPhoneNumberResponse</a></span> *SnsClient::<span class="name">optInPhoneNumber</span>(const <span class="type"><a href="qtaws-sns-optinphonenumberrequest.html">OptInPhoneNumberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-optinphonenumberresponse.html">OptInPhoneNumberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Use this request to opt in a phone number that is opted out, which enables you to resume sending SMS messages to the</p>
+<p>number&gt;</p>
+<p>You can opt in a phone number only once every 30</p>
+<!-- @@@optInPhoneNumber -->
+<!-- $$$publish[overload1]$$$publishconstPublishRequest& -->
+<h3 class="fn" id="publish"><a name="publish"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-publishresponse.html">PublishResponse</a></span> *SnsClient::<span class="name">publish</span>(const <span class="type"><a href="qtaws-sns-publishrequest.html">PublishRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-publishresponse.html">PublishResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends a message to all of a topic's subscribed endpoints. When a &lt;code&gt;messageId&lt;/code&gt; is returned, the message has been saved and Amazon SNS will attempt to deliver it to the topic's subscribers shortly. The format of the outgoing message to each subscribed endpoint depends on the notification</p>
+<p>protocol&gt;</p>
+<p>To use the &lt;code&gt;Publish&lt;/code&gt; action for sending a message to a mobile endpoint, such as an app on a Kindle device or mobile phone, you must specify the EndpointArn for the TargetArn parameter. The EndpointArn is returned when making a call with the &lt;code&gt;CreatePlatformEndpoint&lt;/code&gt; action.</p>
+<p>&lt;/p</p>
+<p>For more information about formatting messages, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html&quot;&gt;Send Custom Platform-Specific Payloads in Messages to Mobile Devices&lt;/a&gt;.</p>
+<!-- @@@publish -->
+<!-- $$$removePermission[overload1]$$$removePermissionconstRemovePermissionRequest& -->
+<h3 class="fn" id="removePermission"><a name="removePermission"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-removepermissionresponse.html">RemovePermissionResponse</a></span> *SnsClient::<span class="name">removePermission</span>(const <span class="type"><a href="qtaws-sns-removepermissionrequest.html">RemovePermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-removepermissionresponse.html">RemovePermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a statement from a topic's access control</p>
+<!-- @@@removePermission -->
+<!-- $$$setEndpointAttributes[overload1]$$$setEndpointAttributesconstSetEndpointAttributesRequest& -->
+<h3 class="fn" id="setEndpointAttributes"><a name="setEndpointAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-setendpointattributesresponse.html">SetEndpointAttributesResponse</a></span> *SnsClient::<span class="name">setEndpointAttributes</span>(const <span class="type"><a href="qtaws-sns-setendpointattributesrequest.html">SetEndpointAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-setendpointattributesresponse.html">SetEndpointAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM and APNS. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;.</p>
+<!-- @@@setEndpointAttributes -->
+<!-- $$$setPlatformApplicationAttributes[overload1]$$$setPlatformApplicationAttributesconstSetPlatformApplicationAttributesRequest& -->
+<h3 class="fn" id="setPlatformApplicationAttributes"><a name="setPlatformApplicationAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-setplatformapplicationattributesresponse.html">SetPlatformApplicationAttributesResponse</a></span> *SnsClient::<span class="name">setPlatformApplicationAttributes</span>(const <span class="type"><a href="qtaws-sns-setplatformapplicationattributesrequest.html">SetPlatformApplicationAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-setplatformapplicationattributesresponse.html">SetPlatformApplicationAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the attributes of the platform application object for the supported push notification services, such as APNS and GCM. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html&quot;&gt;Using Amazon SNS Mobile Push Notifications&lt;/a&gt;. For information on configuring attributes for message delivery status, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/sns-msg-status.html&quot;&gt;Using Amazon SNS Application Attributes for Message Delivery Status&lt;/a&gt;.</p>
+<!-- @@@setPlatformApplicationAttributes -->
+<!-- $$$setSMSAttributes[overload1]$$$setSMSAttributesconstSetSMSAttributesRequest& -->
+<h3 class="fn" id="setSMSAttributes"><a name="setSMSAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-setsmsattributesresponse.html">SetSMSAttributesResponse</a></span> *SnsClient::<span class="name">setSMSAttributes</span>(const <span class="type"><a href="qtaws-sns-setsmsattributesrequest.html">SetSMSAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-setsmsattributesresponse.html">SetSMSAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Use this request to set the default settings for sending SMS messages and receiving daily SMS usage</p>
+<p>reports&gt;</p>
+<p>You can override some of these settings for a single message when you use the &lt;code&gt;Publish&lt;/code&gt; action with the &lt;code&gt;MessageAttributes.entry.N&lt;/code&gt; parameter. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html&quot;&gt;Sending an SMS Message&lt;/a&gt; in the &lt;i&gt;Amazon SNS Developer</p>
+<!-- @@@setSMSAttributes -->
+<!-- $$$setSubscriptionAttributes[overload1]$$$setSubscriptionAttributesconstSetSubscriptionAttributesRequest& -->
+<h3 class="fn" id="setSubscriptionAttributes"><a name="setSubscriptionAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-setsubscriptionattributesresponse.html">SetSubscriptionAttributesResponse</a></span> *SnsClient::<span class="name">setSubscriptionAttributes</span>(const <span class="type"><a href="qtaws-sns-setsubscriptionattributesrequest.html">SetSubscriptionAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-setsubscriptionattributesresponse.html">SetSubscriptionAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a subscription owner to set an attribute of the topic to a new</p>
+<!-- @@@setSubscriptionAttributes -->
+<!-- $$$setTopicAttributes[overload1]$$$setTopicAttributesconstSetTopicAttributesRequest& -->
+<h3 class="fn" id="setTopicAttributes"><a name="setTopicAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-settopicattributesresponse.html">SetTopicAttributesResponse</a></span> *SnsClient::<span class="name">setTopicAttributes</span>(const <span class="type"><a href="qtaws-sns-settopicattributesrequest.html">SetTopicAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-settopicattributesresponse.html">SetTopicAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a topic owner to set an attribute of the topic to a new</p>
+<!-- @@@setTopicAttributes -->
+<!-- $$$subscribe[overload1]$$$subscribeconstSubscribeRequest& -->
+<h3 class="fn" id="subscribe"><a name="subscribe"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-subscriberesponse.html">SubscribeResponse</a></span> *SnsClient::<span class="name">subscribe</span>(const <span class="type"><a href="qtaws-sns-subscriberequest.html">SubscribeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-subscriberesponse.html">SubscribeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Prepares to subscribe an endpoint by sending the endpoint a confirmation message. To actually create a subscription, the endpoint owner must call the &lt;code&gt;ConfirmSubscription&lt;/code&gt; action with the token from the confirmation message. Confirmation tokens are valid for three</p>
+<!-- @@@subscribe -->
+<!-- $$$unsubscribe[overload1]$$$unsubscribeconstUnsubscribeRequest& -->
+<h3 class="fn" id="unsubscribe"><a name="unsubscribe"></a><code>[slot] </code><span class="type"><a href="qtaws-sns-unsubscriberesponse.html">UnsubscribeResponse</a></span> *SnsClient::<span class="name">unsubscribe</span>(const <span class="type"><a href="qtaws-sns-unsubscriberequest.html">UnsubscribeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sns-snsclient.html">SnsClient</a> service, and returns a pointer to an <a href="qtaws-sns-unsubscriberesponse.html">UnsubscribeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a subscription. If the subscription requires authentication for deletion, only the owner of the subscription or the topic's owner can unsubscribe, and an AWS signature is required. If the &lt;code&gt;Unsubscribe&lt;/code&gt; call does not require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the endpoint, so that the endpoint owner can easily resubscribe to the topic if the &lt;code&gt;Unsubscribe&lt;/code&gt; request was</p>
+<!-- @@@unsubscribe -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

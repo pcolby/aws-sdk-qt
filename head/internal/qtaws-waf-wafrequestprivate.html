@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wafrequest.cpp -->
+  <title>WafRequestPrivate Class | WAF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawswaf-index.html">WAF</a></li>
+<li><a href="qtawswaf-module.html">C++ Classes</a></li>
+<li>WafRequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WafRequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-waf-wafrequestprivate.html">QtAws::WAF::WafRequestPrivate</a>)<br/></span>
+<!-- $$$WafRequestPrivate-brief -->
+<p>The <a href="qtaws-waf-wafrequestprivate.html">WafRequestPrivate</a> class provides private implementation for <a href="qtaws-waf-wafrequest.html">WafRequest</a>. <a href="#details">More...</a></p>
+<!-- @@@WafRequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WafRequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-waf-createbytematchsetrequestprivate.html">QtAws::WAF::CreateByteMatchSetRequestPrivate</a>, <a href="qtaws-waf-creategeomatchsetrequestprivate.html">QtAws::WAF::CreateGeoMatchSetRequestPrivate</a>, <a href="qtaws-waf-createipsetrequestprivate.html">QtAws::WAF::CreateIPSetRequestPrivate</a>, <a href="qtaws-waf-createratebasedrulerequestprivate.html">QtAws::WAF::CreateRateBasedRuleRequestPrivate</a>, <a href="qtaws-waf-createregexmatchsetrequestprivate.html">QtAws::WAF::CreateRegexMatchSetRequestPrivate</a>, <a href="qtaws-waf-createregexpatternsetrequestprivate.html">QtAws::WAF::CreateRegexPatternSetRequestPrivate</a>, <a href="qtaws-waf-createrulegrouprequestprivate.html">QtAws::WAF::CreateRuleGroupRequestPrivate</a>, <a href="qtaws-waf-createrulerequestprivate.html">QtAws::WAF::CreateRuleRequestPrivate</a>, <a href="qtaws-waf-createsizeconstraintsetrequestprivate.html">QtAws::WAF::CreateSizeConstraintSetRequestPrivate</a>, <a href="qtaws-waf-createsqlinjectionmatchsetrequestprivate.html">QtAws::WAF::CreateSqlInjectionMatchSetRequestPrivate</a>, <a href="qtaws-waf-createwebaclrequestprivate.html">QtAws::WAF::CreateWebACLRequestPrivate</a>, <a href="qtaws-waf-createxssmatchsetrequestprivate.html">QtAws::WAF::CreateXssMatchSetRequestPrivate</a>, <a href="qtaws-waf-deletebytematchsetrequestprivate.html">QtAws::WAF::DeleteByteMatchSetRequestPrivate</a>, <a href="qtaws-waf-deletegeomatchsetrequestprivate.html">QtAws::WAF::DeleteGeoMatchSetRequestPrivate</a>, <a href="qtaws-waf-deleteipsetrequestprivate.html">QtAws::WAF::DeleteIPSetRequestPrivate</a>, <a href="qtaws-waf-deletepermissionpolicyrequestprivate.html">QtAws::WAF::DeletePermissionPolicyRequestPrivate</a>, <a href="qtaws-waf-deleteratebasedrulerequestprivate.html">QtAws::WAF::DeleteRateBasedRuleRequestPrivate</a>, <a href="qtaws-waf-deleteregexmatchsetrequestprivate.html">QtAws::WAF::DeleteRegexMatchSetRequestPrivate</a>, <a href="qtaws-waf-deleteregexpatternsetrequestprivate.html">QtAws::WAF::DeleteRegexPatternSetRequestPrivate</a>, <a href="qtaws-waf-deleterulegrouprequestprivate.html">QtAws::WAF::DeleteRuleGroupRequestPrivate</a>, <a href="qtaws-waf-deleterulerequestprivate.html">QtAws::WAF::DeleteRuleRequestPrivate</a>, <a href="qtaws-waf-deletesizeconstraintsetrequestprivate.html">QtAws::WAF::DeleteSizeConstraintSetRequestPrivate</a>, <a href="qtaws-waf-deletesqlinjectionmatchsetrequestprivate.html">QtAws::WAF::DeleteSqlInjectionMatchSetRequestPrivate</a>, <a href="qtaws-waf-deletewebaclrequestprivate.html">QtAws::WAF::DeleteWebACLRequestPrivate</a>, <a href="qtaws-waf-deletexssmatchsetrequestprivate.html">QtAws::WAF::DeleteXssMatchSetRequestPrivate</a>, <a href="qtaws-waf-getbytematchsetrequestprivate.html">QtAws::WAF::GetByteMatchSetRequestPrivate</a>, <a href="qtaws-waf-getchangetokenrequestprivate.html">QtAws::WAF::GetChangeTokenRequestPrivate</a>, <a href="qtaws-waf-getchangetokenstatusrequestprivate.html">QtAws::WAF::GetChangeTokenStatusRequestPrivate</a>, <a href="qtaws-waf-getgeomatchsetrequestprivate.html">QtAws::WAF::GetGeoMatchSetRequestPrivate</a>, <a href="qtaws-waf-getipsetrequestprivate.html">QtAws::WAF::GetIPSetRequestPrivate</a>, <a href="qtaws-waf-getpermissionpolicyrequestprivate.html">QtAws::WAF::GetPermissionPolicyRequestPrivate</a>, <a href="qtaws-waf-getratebasedrulemanagedkeysrequestprivate.html">QtAws::WAF::GetRateBasedRuleManagedKeysRequestPrivate</a>, <a href="qtaws-waf-getratebasedrulerequestprivate.html">QtAws::WAF::GetRateBasedRuleRequestPrivate</a>, <a href="qtaws-waf-getregexmatchsetrequestprivate.html">QtAws::WAF::GetRegexMatchSetRequestPrivate</a>, <a href="qtaws-waf-getregexpatternsetrequestprivate.html">QtAws::WAF::GetRegexPatternSetRequestPrivate</a>, <a href="qtaws-waf-getrulegrouprequestprivate.html">QtAws::WAF::GetRuleGroupRequestPrivate</a>, <a href="qtaws-waf-getrulerequestprivate.html">QtAws::WAF::GetRuleRequestPrivate</a>, <a href="qtaws-waf-getsampledrequestsrequestprivate.html">QtAws::WAF::GetSampledRequestsRequestPrivate</a>, <a href="qtaws-waf-getsizeconstraintsetrequestprivate.html">QtAws::WAF::GetSizeConstraintSetRequestPrivate</a>, <a href="qtaws-waf-getsqlinjectionmatchsetrequestprivate.html">QtAws::WAF::GetSqlInjectionMatchSetRequestPrivate</a>, <a href="qtaws-waf-getwebaclrequestprivate.html">QtAws::WAF::GetWebACLRequestPrivate</a>, <a href="qtaws-waf-getxssmatchsetrequestprivate.html">QtAws::WAF::GetXssMatchSetRequestPrivate</a>, <a href="qtaws-waf-listactivatedrulesinrulegrouprequestprivate.html">QtAws::WAF::ListActivatedRulesInRuleGroupRequestPrivate</a>, <a href="qtaws-waf-listbytematchsetsrequestprivate.html">QtAws::WAF::ListByteMatchSetsRequestPrivate</a>, <a href="qtaws-waf-listgeomatchsetsrequestprivate.html">QtAws::WAF::ListGeoMatchSetsRequestPrivate</a>, <a href="qtaws-waf-listipsetsrequestprivate.html">QtAws::WAF::ListIPSetsRequestPrivate</a>, <a href="qtaws-waf-listratebasedrulesrequestprivate.html">QtAws::WAF::ListRateBasedRulesRequestPrivate</a>, <a href="qtaws-waf-listregexmatchsetsrequestprivate.html">QtAws::WAF::ListRegexMatchSetsRequestPrivate</a>, <a href="qtaws-waf-listregexpatternsetsrequestprivate.html">QtAws::WAF::ListRegexPatternSetsRequestPrivate</a>, <a href="qtaws-waf-listrulegroupsrequestprivate.html">QtAws::WAF::ListRuleGroupsRequestPrivate</a>, <a href="qtaws-waf-listrulesrequestprivate.html">QtAws::WAF::ListRulesRequestPrivate</a>, <a href="qtaws-waf-listsizeconstraintsetsrequestprivate.html">QtAws::WAF::ListSizeConstraintSetsRequestPrivate</a>, <a href="qtaws-waf-listsqlinjectionmatchsetsrequestprivate.html">QtAws::WAF::ListSqlInjectionMatchSetsRequestPrivate</a>, <a href="qtaws-waf-listsubscribedrulegroupsrequestprivate.html">QtAws::WAF::ListSubscribedRuleGroupsRequestPrivate</a>, <a href="qtaws-waf-listwebaclsrequestprivate.html">QtAws::WAF::ListWebACLsRequestPrivate</a>, <a href="qtaws-waf-listxssmatchsetsrequestprivate.html">QtAws::WAF::ListXssMatchSetsRequestPrivate</a>, <a href="qtaws-waf-putpermissionpolicyrequestprivate.html">QtAws::WAF::PutPermissionPolicyRequestPrivate</a>, <a href="qtaws-waf-updatebytematchsetrequestprivate.html">QtAws::WAF::UpdateByteMatchSetRequestPrivate</a>, <a href="qtaws-waf-updategeomatchsetrequestprivate.html">QtAws::WAF::UpdateGeoMatchSetRequestPrivate</a>, <a href="qtaws-waf-updateipsetrequestprivate.html">QtAws::WAF::UpdateIPSetRequestPrivate</a>, <a href="qtaws-waf-updateratebasedrulerequestprivate.html">QtAws::WAF::UpdateRateBasedRuleRequestPrivate</a>, <a href="qtaws-waf-updateregexmatchsetrequestprivate.html">QtAws::WAF::UpdateRegexMatchSetRequestPrivate</a>, <a href="qtaws-waf-updateregexpatternsetrequestprivate.html">QtAws::WAF::UpdateRegexPatternSetRequestPrivate</a>, <a href="qtaws-waf-updaterulegrouprequestprivate.html">QtAws::WAF::UpdateRuleGroupRequestPrivate</a>, <a href="qtaws-waf-updaterulerequestprivate.html">QtAws::WAF::UpdateRuleRequestPrivate</a>, <a href="qtaws-waf-updatesizeconstraintsetrequestprivate.html">QtAws::WAF::UpdateSizeConstraintSetRequestPrivate</a>, <a href="qtaws-waf-updatesqlinjectionmatchsetrequestprivate.html">QtAws::WAF::UpdateSqlInjectionMatchSetRequestPrivate</a>, <a href="qtaws-waf-updatewebaclrequestprivate.html">QtAws::WAF::UpdateWebACLRequestPrivate</a>, and <a href="qtaws-waf-updatexssmatchsetrequestprivate.html">QtAws::WAF::UpdateXssMatchSetRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-waf-wafrequestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequestprivate.html#WafRequestPrivate">WafRequestPrivate</a></b>(const WafRequest::Action <i>action</i>, WafRequest * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequestprivate.html#WafRequestPrivate-1">WafRequestPrivate</a></b>(const WafRequestPrivate &amp;<i>other</i>, WafRequest * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafrequestprivate.html#toString">toString</a></b>(const WafRequest::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$WafRequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-waf-wafrequestprivate.html">WafRequestPrivate</a> class provides private implementation for <a href="qtaws-waf-wafrequest.html">WafRequest</a>.</p>
+</div>
+<!-- @@@WafRequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WafRequestPrivate[overload1]$$$WafRequestPrivateconstWafRequest::ActionWafRequest*const -->
+<h3 class="fn" id="WafRequestPrivate"><a name="WafRequestPrivate"></a>WafRequestPrivate::<span class="name">WafRequestPrivate</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#Action-enum">WafRequest::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-waf-wafrequest.html">WafRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-waf-wafrequestprivate.html">WafRequestPrivate</a> object for WAF <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@WafRequestPrivate -->
+<!-- $$$WafRequestPrivate$$$WafRequestPrivateconstWafRequestPrivate&WafRequest*const -->
+<h3 class="fn" id="WafRequestPrivate-1"><a name="WafRequestPrivate-1"></a>WafRequestPrivate::<span class="name">WafRequestPrivate</span>(const <span class="type"><a href="qtaws-waf-wafrequestprivate.html#WafRequestPrivate">WafRequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-waf-wafrequest.html">WafRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-waf-wafrequest.html">WafRequest</a> class's copy constructor.</p>
+<!-- @@@WafRequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstWafRequest::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> WafRequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-waf-wafrequest.html#Action-enum">WafRequest::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-waf-wafrequest.html#Action-enum">WafRequest::Action</a> enumerator values to their respective string representations, appropriate for use with the WAF service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

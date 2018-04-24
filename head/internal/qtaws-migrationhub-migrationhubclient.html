@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- migrationhubclient.cpp -->
+  <title>MigrationHubClient Class | MigrationHub</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmigrationhub-index.html">MigrationHub</a></li>
+<li><a href="qtawsmigrationhub-module.html">C++ Classes</a></li>
+<li>MigrationHubClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MigrationHubClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-migrationhub-migrationhubclient.html">QtAws::MigrationHub::MigrationHubClient</a>)<br/></span>
+<!-- $$$MigrationHubClient-brief -->
+<p>The <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> class provides access to the AWS Migration Hub service. <a href="#details">More...</a></p>
+<!-- @@@MigrationHubClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MigrationHubClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-migrationhub-migrationhubclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#MigrationHubClient">MigrationHubClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#MigrationHubClient-1">MigrationHubClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateCreatedArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#associateCreatedArtifact">associateCreatedArtifact</a></b>(const AssociateCreatedArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateDiscoveredResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#associateDiscoveredResource">associateDiscoveredResource</a></b>(const AssociateDiscoveredResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProgressUpdateStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#createProgressUpdateStream">createProgressUpdateStream</a></b>(const CreateProgressUpdateStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProgressUpdateStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#deleteProgressUpdateStream">deleteProgressUpdateStream</a></b>(const DeleteProgressUpdateStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeApplicationStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#describeApplicationState">describeApplicationState</a></b>(const DescribeApplicationStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMigrationTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#describeMigrationTask">describeMigrationTask</a></b>(const DescribeMigrationTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateCreatedArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#disassociateCreatedArtifact">disassociateCreatedArtifact</a></b>(const DisassociateCreatedArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateDiscoveredResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#disassociateDiscoveredResource">disassociateDiscoveredResource</a></b>(const DisassociateDiscoveredResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportMigrationTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#importMigrationTask">importMigrationTask</a></b>(const ImportMigrationTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCreatedArtifactsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#listCreatedArtifacts">listCreatedArtifacts</a></b>(const ListCreatedArtifactsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDiscoveredResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#listDiscoveredResources">listDiscoveredResources</a></b>(const ListDiscoveredResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMigrationTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#listMigrationTasks">listMigrationTasks</a></b>(const ListMigrationTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProgressUpdateStreamsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#listProgressUpdateStreams">listProgressUpdateStreams</a></b>(const ListProgressUpdateStreamsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> NotifyApplicationStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#notifyApplicationState">notifyApplicationState</a></b>(const NotifyApplicationStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> NotifyMigrationTaskStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#notifyMigrationTaskState">notifyMigrationTaskState</a></b>(const NotifyMigrationTaskStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutResourceAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-migrationhub-migrationhubclient.html#putResourceAttributes">putResourceAttributes</a></b>(const PutResourceAttributesRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MigrationHubClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> class provides access to the AWS Migration Hub service.</p>
+<p>The AWS Migration Hub API methods help to obtain server and application migration status and integrate your resource-specific migration tool by providing a programmatic interface to Migration Hub.</p>
+</div>
+<!-- @@@MigrationHubClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MigrationHubClient[overload1]$$$MigrationHubClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MigrationHubClient"><a name="MigrationHubClient"></a>MigrationHubClient::<span class="name">MigrationHubClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MigrationHubClient -->
+<!-- $$$MigrationHubClient$$$MigrationHubClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MigrationHubClient-1"><a name="MigrationHubClient-1"></a>MigrationHubClient::<span class="name">MigrationHubClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-migrationhub-migrationhubclient.html#MigrationHubClient">MigrationHubClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MigrationHubClient -->
+<!-- $$$associateCreatedArtifact[overload1]$$$associateCreatedArtifactconstAssociateCreatedArtifactRequest& -->
+<h3 class="fn" id="associateCreatedArtifact"><a name="associateCreatedArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-associatecreatedartifactresponse.html">AssociateCreatedArtifactResponse</a></span> *MigrationHubClient::<span class="name">associateCreatedArtifact</span>(const <span class="type"><a href="qtaws-migrationhub-associatecreatedartifactrequest.html">AssociateCreatedArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-associatecreatedartifactresponse.html">AssociateCreatedArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a created artifact of an AWS cloud resource, the target receiving the migration, with the migration task performed by a migration tool. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Migration tools can call the &lt;code&gt;AssociateCreatedArtifact&lt;/code&gt; operation to indicate which AWS artifact is associated with a migration</p>
+<p>task&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The created artifact name must be provided in ARN (Amazon Resource Name) format which will contain information about type and region; for example:</p>
+<p>&lt;code&gt;arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or DMS endpoint,</p>
+<!-- @@@associateCreatedArtifact -->
+<!-- $$$associateDiscoveredResource[overload1]$$$associateDiscoveredResourceconstAssociateDiscoveredResourceRequest& -->
+<h3 class="fn" id="associateDiscoveredResource"><a name="associateDiscoveredResource"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-associatediscoveredresourceresponse.html">AssociateDiscoveredResourceResponse</a></span> *MigrationHubClient::<span class="name">associateDiscoveredResource</span>(const <span class="type"><a href="qtaws-migrationhub-associatediscoveredresourcerequest.html">AssociateDiscoveredResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-associatediscoveredresourceresponse.html">AssociateDiscoveredResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a discovered resource ID from Application Discovery Service (ADS) with a migration</p>
+<!-- @@@associateDiscoveredResource -->
+<!-- $$$createProgressUpdateStream[overload1]$$$createProgressUpdateStreamconstCreateProgressUpdateStreamRequest& -->
+<h3 class="fn" id="createProgressUpdateStream"><a name="createProgressUpdateStream"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-createprogressupdatestreamresponse.html">CreateProgressUpdateStreamResponse</a></span> *MigrationHubClient::<span class="name">createProgressUpdateStream</span>(const <span class="type"><a href="qtaws-migrationhub-createprogressupdatestreamrequest.html">CreateProgressUpdateStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-createprogressupdatestreamresponse.html">CreateProgressUpdateStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a progress update stream which is an AWS resource used for access control as well as a namespace for migration task names that is implicitly linked to your AWS account. It must uniquely identify the migration tool as it is used for all updates made by the tool; however, it does not need to be unique for each AWS account because it is scoped to the AWS</p>
+<!-- @@@createProgressUpdateStream -->
+<!-- $$$deleteProgressUpdateStream[overload1]$$$deleteProgressUpdateStreamconstDeleteProgressUpdateStreamRequest& -->
+<h3 class="fn" id="deleteProgressUpdateStream"><a name="deleteProgressUpdateStream"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-deleteprogressupdatestreamresponse.html">DeleteProgressUpdateStreamResponse</a></span> *MigrationHubClient::<span class="name">deleteProgressUpdateStream</span>(const <span class="type"><a href="qtaws-migrationhub-deleteprogressupdatestreamrequest.html">DeleteProgressUpdateStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-deleteprogressupdatestreamresponse.html">DeleteProgressUpdateStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a progress update stream, including all of its tasks, which was previously created as an AWS resource used for access control. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The only parameter needed for &lt;code&gt;DeleteProgressUpdateStream&lt;/code&gt; is the stream name (same as a &lt;code&gt;CreateProgressUpdateStream&lt;/code&gt;</p>
+<p>call)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The call will return, and a background process will asynchronously delete the stream and all of its resources (tasks, associated resources, resource attributes, created</p>
+<p>artifacts)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the stream takes time to be deleted, it might still show up on a &lt;code&gt;ListProgressUpdateStreams&lt;/code&gt;</p>
+<p>call&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;CreateProgressUpdateStream&lt;/code&gt;, &lt;code&gt;ImportMigrationTask&lt;/code&gt;, &lt;code&gt;NotifyMigrationTaskState&lt;/code&gt;, and all Associate[*] APIs realted to the tasks belonging to the stream will throw &quot;InvalidInputException&quot; if the stream of the same name is in the process of being</p>
+<p>deleted&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Once the stream and all of its resources are deleted, &lt;code&gt;CreateProgressUpdateStream&lt;/code&gt; for a stream of the same name will succeed, and that stream will be an entirely new logical resource (without any resources associated with the old</p>
+<!-- @@@deleteProgressUpdateStream -->
+<!-- $$$describeApplicationState[overload1]$$$describeApplicationStateconstDescribeApplicationStateRequest& -->
+<h3 class="fn" id="describeApplicationState"><a name="describeApplicationState"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-describeapplicationstateresponse.html">DescribeApplicationStateResponse</a></span> *MigrationHubClient::<span class="name">describeApplicationState</span>(const <span class="type"><a href="qtaws-migrationhub-describeapplicationstaterequest.html">DescribeApplicationStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-describeapplicationstateresponse.html">DescribeApplicationStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the migration status of an</p>
+<!-- @@@describeApplicationState -->
+<!-- $$$describeMigrationTask[overload1]$$$describeMigrationTaskconstDescribeMigrationTaskRequest& -->
+<h3 class="fn" id="describeMigrationTask"><a name="describeMigrationTask"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-describemigrationtaskresponse.html">DescribeMigrationTaskResponse</a></span> *MigrationHubClient::<span class="name">describeMigrationTask</span>(const <span class="type"><a href="qtaws-migrationhub-describemigrationtaskrequest.html">DescribeMigrationTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-describemigrationtaskresponse.html">DescribeMigrationTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of all attributes associated with a specific migration</p>
+<!-- @@@describeMigrationTask -->
+<!-- $$$disassociateCreatedArtifact[overload1]$$$disassociateCreatedArtifactconstDisassociateCreatedArtifactRequest& -->
+<h3 class="fn" id="disassociateCreatedArtifact"><a name="disassociateCreatedArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-disassociatecreatedartifactresponse.html">DisassociateCreatedArtifactResponse</a></span> *MigrationHubClient::<span class="name">disassociateCreatedArtifact</span>(const <span class="type"><a href="qtaws-migrationhub-disassociatecreatedartifactrequest.html">DisassociateCreatedArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-disassociatecreatedartifactresponse.html">DisassociateCreatedArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a created artifact of an AWS resource with a migration task performed by a migration tool that was previously associated. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A migration user can call the &lt;code&gt;DisassociateCreatedArtifacts&lt;/code&gt; operation to disassociate a created AWS Artifact from a migration</p>
+<p>task&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The created artifact name must be provided in ARN (Amazon Resource Name) format which will contain information about type and region; for example:</p>
+<p>&lt;code&gt;arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Examples of the AWS resource behind the created artifact are, AMI's, EC2 instance, or RDS instance,</p>
+<!-- @@@disassociateCreatedArtifact -->
+<!-- $$$disassociateDiscoveredResource[overload1]$$$disassociateDiscoveredResourceconstDisassociateDiscoveredResourceRequest& -->
+<h3 class="fn" id="disassociateDiscoveredResource"><a name="disassociateDiscoveredResource"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-disassociatediscoveredresourceresponse.html">DisassociateDiscoveredResourceResponse</a></span> *MigrationHubClient::<span class="name">disassociateDiscoveredResource</span>(const <span class="type"><a href="qtaws-migrationhub-disassociatediscoveredresourcerequest.html">DisassociateDiscoveredResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-disassociatediscoveredresourceresponse.html">DisassociateDiscoveredResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociate an Application Discovery Service (ADS) discovered resource from a migration</p>
+<!-- @@@disassociateDiscoveredResource -->
+<!-- $$$importMigrationTask[overload1]$$$importMigrationTaskconstImportMigrationTaskRequest& -->
+<h3 class="fn" id="importMigrationTask"><a name="importMigrationTask"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-importmigrationtaskresponse.html">ImportMigrationTaskResponse</a></span> *MigrationHubClient::<span class="name">importMigrationTask</span>(const <span class="type"><a href="qtaws-migrationhub-importmigrationtaskrequest.html">ImportMigrationTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-importmigrationtaskresponse.html">ImportMigrationTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a new migration task which represents a server, database, etc., being migrated to AWS by a migration</p>
+<p>tool&gt;</p>
+<p>This API is a prerequisite to calling the &lt;code&gt;NotifyMigrationTaskState&lt;/code&gt; API as the migration tool must first register the migration task with Migration</p>
+<!-- @@@importMigrationTask -->
+<!-- $$$listCreatedArtifacts[overload1]$$$listCreatedArtifactsconstListCreatedArtifactsRequest& -->
+<h3 class="fn" id="listCreatedArtifacts"><a name="listCreatedArtifacts"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-listcreatedartifactsresponse.html">ListCreatedArtifactsResponse</a></span> *MigrationHubClient::<span class="name">listCreatedArtifacts</span>(const <span class="type"><a href="qtaws-migrationhub-listcreatedartifactsrequest.html">ListCreatedArtifactsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-listcreatedartifactsresponse.html">ListCreatedArtifactsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the created artifacts attached to a given migration task in an update stream. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Gets the list of the created artifacts while migration is taking</p>
+<p>place&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Shows the artifacts created by the migration tool that was associated by the &lt;code&gt;AssociateCreatedArtifact&lt;/code&gt; API.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Lists created artifacts in a paginated interface.</p>
+<!-- @@@listCreatedArtifacts -->
+<!-- $$$listDiscoveredResources[overload1]$$$listDiscoveredResourcesconstListDiscoveredResourcesRequest& -->
+<h3 class="fn" id="listDiscoveredResources"><a name="listDiscoveredResources"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-listdiscoveredresourcesresponse.html">ListDiscoveredResourcesResponse</a></span> *MigrationHubClient::<span class="name">listDiscoveredResources</span>(const <span class="type"><a href="qtaws-migrationhub-listdiscoveredresourcesrequest.html">ListDiscoveredResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-listdiscoveredresourcesresponse.html">ListDiscoveredResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists discovered resources associated with the given</p>
+<!-- @@@listDiscoveredResources -->
+<!-- $$$listMigrationTasks[overload1]$$$listMigrationTasksconstListMigrationTasksRequest& -->
+<h3 class="fn" id="listMigrationTasks"><a name="listMigrationTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-listmigrationtasksresponse.html">ListMigrationTasksResponse</a></span> *MigrationHubClient::<span class="name">listMigrationTasks</span>(const <span class="type"><a href="qtaws-migrationhub-listmigrationtasksrequest.html">ListMigrationTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-listmigrationtasksresponse.html">ListMigrationTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all, or filtered by resource name, migration tasks associated with the user account making this call. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Can show a summary list of the most recent migration</p>
+<p>tasks&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Can show a summary list of migration tasks associated with a given discovered</p>
+<p>resource&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Lists migration tasks in a paginated</p>
+<!-- @@@listMigrationTasks -->
+<!-- $$$listProgressUpdateStreams[overload1]$$$listProgressUpdateStreamsconstListProgressUpdateStreamsRequest& -->
+<h3 class="fn" id="listProgressUpdateStreams"><a name="listProgressUpdateStreams"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-listprogressupdatestreamsresponse.html">ListProgressUpdateStreamsResponse</a></span> *MigrationHubClient::<span class="name">listProgressUpdateStreams</span>(const <span class="type"><a href="qtaws-migrationhub-listprogressupdatestreamsrequest.html">ListProgressUpdateStreamsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-listprogressupdatestreamsresponse.html">ListProgressUpdateStreamsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists progress update streams associated with the user account making this</p>
+<!-- @@@listProgressUpdateStreams -->
+<!-- $$$notifyApplicationState[overload1]$$$notifyApplicationStateconstNotifyApplicationStateRequest& -->
+<h3 class="fn" id="notifyApplicationState"><a name="notifyApplicationState"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-notifyapplicationstateresponse.html">NotifyApplicationStateResponse</a></span> *MigrationHubClient::<span class="name">notifyApplicationState</span>(const <span class="type"><a href="qtaws-migrationhub-notifyapplicationstaterequest.html">NotifyApplicationStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-notifyapplicationstateresponse.html">NotifyApplicationStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the migration state of an application. For a given application identified by the value passed to &lt;code&gt;ApplicationId&lt;/code&gt;, its status is set or updated by passing one of three values to &lt;code&gt;Status&lt;/code&gt;: &lt;code&gt;NOT_STARTED | IN_PROGRESS |</p>
+<!-- @@@notifyApplicationState -->
+<!-- $$$notifyMigrationTaskState[overload1]$$$notifyMigrationTaskStateconstNotifyMigrationTaskStateRequest& -->
+<h3 class="fn" id="notifyMigrationTaskState"><a name="notifyMigrationTaskState"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-notifymigrationtaskstateresponse.html">NotifyMigrationTaskStateResponse</a></span> *MigrationHubClient::<span class="name">notifyMigrationTaskState</span>(const <span class="type"><a href="qtaws-migrationhub-notifymigrationtaskstaterequest.html">NotifyMigrationTaskStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-notifymigrationtaskstateresponse.html">NotifyMigrationTaskStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Notifies Migration Hub of the current status, progress, or other detail regarding a migration task. This API has the following</p>
+<p>traits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Migration tools will call the &lt;code&gt;NotifyMigrationTaskState&lt;/code&gt; API to share the latest progress and</p>
+<p>status&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;MigrationTaskName&lt;/code&gt; is used for addressing updates to the correct</p>
+<p>target&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ProgressUpdateStream&lt;/code&gt; is used for access control and to provide a namespace for each migration</p>
+<!-- @@@notifyMigrationTaskState -->
+<!-- $$$putResourceAttributes[overload1]$$$putResourceAttributesconstPutResourceAttributesRequest& -->
+<h3 class="fn" id="putResourceAttributes"><a name="putResourceAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-migrationhub-putresourceattributesresponse.html">PutResourceAttributesResponse</a></span> *MigrationHubClient::<span class="name">putResourceAttributes</span>(const <span class="type"><a href="qtaws-migrationhub-putresourceattributesrequest.html">PutResourceAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-migrationhub-migrationhubclient.html">MigrationHubClient</a> service, and returns a pointer to an <a href="qtaws-migrationhub-putresourceattributesresponse.html">PutResourceAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery Service (ADS)'s repository. This association occurs asynchronously after &lt;code&gt;PutResourceAttributes&lt;/code&gt;</p>
+<p>returns&gt; &lt;b&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Keep in mind that subsequent calls to PutResourceAttributes will override previously stored attributes. For example, if it is first called with a MAC address, but later, it is desired to &lt;i&gt;add&lt;/i&gt; an IP address, it will then be required to call it with &lt;i&gt;both&lt;/i&gt; the IP and MAC addresses to prevent overiding the MAC</p>
+<p>address&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Note the instructions regarding the special use case of the &lt;code&gt;ResourceAttributeList&lt;/code&gt; parameter when specifying any &quot;VM&quot; related</p>
+<p>value&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/b&gt; &lt;note&gt;</p>
+<p>Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an association was found based on the provided details, call</p>
+<!-- @@@putResourceAttributes -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

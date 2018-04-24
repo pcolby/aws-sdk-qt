@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- healthclient.cpp -->
+  <title>HealthClient Class | Health</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawshealth-index.html">Health</a></li>
+<li><a href="qtawshealth-module.html">C++ Classes</a></li>
+<li>HealthClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">HealthClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-health-healthclient.html">QtAws::Health::HealthClient</a>)<br/></span>
+<!-- $$$HealthClient-brief -->
+<p>The <a href="qtaws-health-healthclient.html">HealthClient</a> class provides access to the AWS Health APIs and Notifications service. <a href="#details">More...</a></p>
+<!-- @@@HealthClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;HealthClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-health-healthclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#HealthClient">HealthClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#HealthClient-1">HealthClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAffectedEntitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeAffectedEntities">describeAffectedEntities</a></b>(const DescribeAffectedEntitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEntityAggregatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeEntityAggregates">describeEntityAggregates</a></b>(const DescribeEntityAggregatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventAggregatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeEventAggregates">describeEventAggregates</a></b>(const DescribeEventAggregatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventDetailsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeEventDetails">describeEventDetails</a></b>(const DescribeEventDetailsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeEventTypes">describeEventTypes</a></b>(const DescribeEventTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-health-healthclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$HealthClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-health-healthclient.html">HealthClient</a> class provides access to the AWS Health APIs and Notifications service.</p>
+<p>&lt;fullname&gt;AWS Health&lt;/fullname&gt;</p>
+<p>The AWS Health API provides programmatic access to the AWS Health information that is presented in the &lt;a href=&quot;https://phd.aws.amazon.com/phd/home#/&quot;&gt;AWS Personal Health Dashboard&lt;/a&gt;. You can get information about events that affect your AWS</p>
+<p>resources&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEvents&lt;/a&gt;: Summary information about</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEventDetails&lt;/a&gt;: Detailed information about one or more</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeAffectedEntities&lt;/a&gt;: Information about AWS resources that are affected by one or more</p>
+<p>events&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>In addition, these operations provide information about event types and summary counts of events or affected</p>
+<p>entities&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEventTypes&lt;/a&gt;: Information about the kinds of events that AWS Health</p>
+<p>tracks&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEventAggregates&lt;/a&gt;: A count of the number of events that meet specified</p>
+<p>criteria&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEntityAggregates&lt;/a&gt;: A count of the number of affected entities that meet specified</p>
+<p>criteria&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>The Health API requires a Business or Enterprise support plan from &lt;a href=&quot;http://aws.amazon.com/premiumsupport/&quot;&gt;AWS Support&lt;/a&gt;. Calling the Health API from an account that does not have a Business or Enterprise support plan causes a &lt;code&gt;SubscriptionRequiredException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>For authentication of requests, AWS Health uses the &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt;Signature Version 4 Signing</p>
+<p>Process&lt;/a&gt;&gt;</p>
+<p>See the &lt;a href=&quot;http://docs.aws.amazon.com/health/latest/ug/what-is-aws-health.html&quot;&gt;AWS Health User Guide&lt;/a&gt; for information about how to use the</p>
+<p>API&gt;</p>
+<p>&lt;b&gt;Service Endpoint&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>The HTTP endpoint for the AWS Health API</p>
+<p>is&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>https://health.us-east-1.amazonaws.com</p>
+</div>
+<!-- @@@HealthClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$HealthClient[overload1]$$$HealthClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="HealthClient"><a name="HealthClient"></a>HealthClient::<span class="name">HealthClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-health-healthclient.html">HealthClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@HealthClient -->
+<!-- $$$HealthClient$$$HealthClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="HealthClient-1"><a name="HealthClient-1"></a>HealthClient::<span class="name">HealthClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-health-healthclient.html#HealthClient">HealthClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@HealthClient -->
+<!-- $$$describeAffectedEntities[overload1]$$$describeAffectedEntitiesconstDescribeAffectedEntitiesRequest& -->
+<h3 class="fn" id="describeAffectedEntities"><a name="describeAffectedEntities"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeaffectedentitiesresponse.html">DescribeAffectedEntitiesResponse</a></span> *HealthClient::<span class="name">describeAffectedEntities</span>(const <span class="type"><a href="qtaws-health-describeaffectedentitiesrequest.html">DescribeAffectedEntitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeaffectedentitiesresponse.html">DescribeAffectedEntitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of entities that have been affected by the specified events, based on the specified filter criteria. Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on the AWS service. Events that have impact beyond that of the affected entities, or where the extent of impact is unknown, include at least one entity indicating</p>
+<p>this&gt;</p>
+<p>At least one event ARN is required. Results are sorted by the &lt;code&gt;lastUpdatedTime&lt;/code&gt; of the entity, starting with the most</p>
+<!-- @@@describeAffectedEntities -->
+<!-- $$$describeEntityAggregates[overload1]$$$describeEntityAggregatesconstDescribeEntityAggregatesRequest& -->
+<h3 class="fn" id="describeEntityAggregates"><a name="describeEntityAggregates"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeentityaggregatesresponse.html">DescribeEntityAggregatesResponse</a></span> *HealthClient::<span class="name">describeEntityAggregates</span>(const <span class="type"><a href="qtaws-health-describeentityaggregatesrequest.html">DescribeEntityAggregatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeentityaggregatesresponse.html">DescribeEntityAggregatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of entities that are affected by each of the specified events. If no events are specified, the counts of all affected entities are</p>
+<!-- @@@describeEntityAggregates -->
+<!-- $$$describeEventAggregates[overload1]$$$describeEventAggregatesconstDescribeEventAggregatesRequest& -->
+<h3 class="fn" id="describeEventAggregates"><a name="describeEventAggregates"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeeventaggregatesresponse.html">DescribeEventAggregatesResponse</a></span> *HealthClient::<span class="name">describeEventAggregates</span>(const <span class="type"><a href="qtaws-health-describeeventaggregatesrequest.html">DescribeEventAggregatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeeventaggregatesresponse.html">DescribeEventAggregatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter is specified, the counts of all events in each category are</p>
+<!-- @@@describeEventAggregates -->
+<!-- $$$describeEventDetails[overload1]$$$describeEventDetailsconstDescribeEventDetailsRequest& -->
+<h3 class="fn" id="describeEventDetails"><a name="describeEventDetails"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeeventdetailsresponse.html">DescribeEventDetailsResponse</a></span> *HealthClient::<span class="name">describeEventDetails</span>(const <span class="type"><a href="qtaws-health-describeeventdetailsrequest.html">DescribeEventDetailsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeeventdetailsresponse.html">DescribeEventDetailsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns detailed information about one or more specified events. Information includes standard event data (region, service, etc., as returned by &lt;a&gt;DescribeEvents&lt;/a&gt;), a detailed event description, and possible additional metadata that depends upon the nature of the event. Affected entities are not included; to retrieve those, use the &lt;a&gt;DescribeAffectedEntities&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>If a specified event cannot be retrieved, an error message is returned for that</p>
+<!-- @@@describeEventDetails -->
+<!-- $$$describeEventTypes[overload1]$$$describeEventTypesconstDescribeEventTypesRequest& -->
+<h3 class="fn" id="describeEventTypes"><a name="describeEventTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeeventtypesresponse.html">DescribeEventTypesResponse</a></span> *HealthClient::<span class="name">describeEventTypes</span>(const <span class="type"><a href="qtaws-health-describeeventtypesrequest.html">DescribeEventTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeeventtypesresponse.html">DescribeEventTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the event types that meet the specified filter criteria. If no filter criteria are specified, all event types are returned, in no particular</p>
+<!-- @@@describeEventTypes -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-health-describeeventsresponse.html">DescribeEventsResponse</a></span> *HealthClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-health-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-health-healthclient.html">HealthClient</a> service, and returns a pointer to an <a href="qtaws-health-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about events that meet the specified filter criteria. Events are returned in a summary form and do not include the detailed description, any additional metadata that depends on the event type, or any affected resources. To retrieve that information, use the &lt;a&gt;DescribeEventDetails&lt;/a&gt; and &lt;a&gt;DescribeAffectedEntities&lt;/a&gt;</p>
+<p>operations&gt;</p>
+<p>If no filter criteria are specified, all events are returned. Results are sorted by &lt;code&gt;lastModifiedTime&lt;/code&gt;, starting with the most</p>
+<!-- @@@describeEvents -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

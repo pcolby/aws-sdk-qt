@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cognitoidentityproviderclient.cpp -->
+  <title>CognitoIdentityProviderClient Class | CognitoIdentityProvider</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscognitoidentityprovider-index.html">CognitoIdentityProvider</a></li>
+<li><a href="qtawscognitoidentityprovider-module.html">C++ Classes</a></li>
+<li>CognitoIdentityProviderClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CognitoIdentityProviderClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">QtAws::CognitoIdentityProvider::CognitoIdentityProviderClient</a>)<br/></span>
+<!-- $$$CognitoIdentityProviderClient-brief -->
+<p>The <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> class provides access to the Amazon Cognito Identity Provider service. <a href="#details">More...</a></p>
+<!-- @@@CognitoIdentityProviderClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CognitoIdentityProviderClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#CognitoIdentityProviderClient">CognitoIdentityProviderClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#CognitoIdentityProviderClient-1">CognitoIdentityProviderClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddCustomAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#addCustomAttributes">addCustomAttributes</a></b>(const AddCustomAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminAddUserToGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminAddUserToGroup">adminAddUserToGroup</a></b>(const AdminAddUserToGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminConfirmSignUpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminConfirmSignUp">adminConfirmSignUp</a></b>(const AdminConfirmSignUpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminCreateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminCreateUser">adminCreateUser</a></b>(const AdminCreateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminDeleteUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminDeleteUser">adminDeleteUser</a></b>(const AdminDeleteUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminDeleteUserAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminDeleteUserAttributes">adminDeleteUserAttributes</a></b>(const AdminDeleteUserAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminDisableProviderForUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminDisableProviderForUser">adminDisableProviderForUser</a></b>(const AdminDisableProviderForUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminDisableUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminDisableUser">adminDisableUser</a></b>(const AdminDisableUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminEnableUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminEnableUser">adminEnableUser</a></b>(const AdminEnableUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminForgetDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminForgetDevice">adminForgetDevice</a></b>(const AdminForgetDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminGetDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminGetDevice">adminGetDevice</a></b>(const AdminGetDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminGetUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminGetUser">adminGetUser</a></b>(const AdminGetUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminInitiateAuthResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminInitiateAuth">adminInitiateAuth</a></b>(const AdminInitiateAuthRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminLinkProviderForUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminLinkProviderForUser">adminLinkProviderForUser</a></b>(const AdminLinkProviderForUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminListDevicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminListDevices">adminListDevices</a></b>(const AdminListDevicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminListGroupsForUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminListGroupsForUser">adminListGroupsForUser</a></b>(const AdminListGroupsForUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminListUserAuthEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminListUserAuthEvents">adminListUserAuthEvents</a></b>(const AdminListUserAuthEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminRemoveUserFromGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminRemoveUserFromGroup">adminRemoveUserFromGroup</a></b>(const AdminRemoveUserFromGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminResetUserPasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminResetUserPassword">adminResetUserPassword</a></b>(const AdminResetUserPasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminRespondToAuthChallengeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminRespondToAuthChallenge">adminRespondToAuthChallenge</a></b>(const AdminRespondToAuthChallengeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminSetUserMFAPreferenceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminSetUserMFAPreference">adminSetUserMFAPreference</a></b>(const AdminSetUserMFAPreferenceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminSetUserSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminSetUserSettings">adminSetUserSettings</a></b>(const AdminSetUserSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminUpdateAuthEventFeedbackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminUpdateAuthEventFeedback">adminUpdateAuthEventFeedback</a></b>(const AdminUpdateAuthEventFeedbackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminUpdateDeviceStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminUpdateDeviceStatus">adminUpdateDeviceStatus</a></b>(const AdminUpdateDeviceStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminUpdateUserAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminUpdateUserAttributes">adminUpdateUserAttributes</a></b>(const AdminUpdateUserAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AdminUserGlobalSignOutResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#adminUserGlobalSignOut">adminUserGlobalSignOut</a></b>(const AdminUserGlobalSignOutRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateSoftwareTokenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#associateSoftwareToken">associateSoftwareToken</a></b>(const AssociateSoftwareTokenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ChangePasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#changePassword">changePassword</a></b>(const ChangePasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#confirmDevice">confirmDevice</a></b>(const ConfirmDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmForgotPasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#confirmForgotPassword">confirmForgotPassword</a></b>(const ConfirmForgotPasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmSignUpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#confirmSignUp">confirmSignUp</a></b>(const ConfirmSignUpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createGroup">createGroup</a></b>(const CreateGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateIdentityProviderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createIdentityProvider">createIdentityProvider</a></b>(const CreateIdentityProviderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResourceServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createResourceServer">createResourceServer</a></b>(const CreateResourceServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createUserImportJob">createUserImportJob</a></b>(const CreateUserImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserPoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createUserPool">createUserPool</a></b>(const CreateUserPoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserPoolClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createUserPoolClient">createUserPoolClient</a></b>(const CreateUserPoolClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserPoolDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#createUserPoolDomain">createUserPoolDomain</a></b>(const CreateUserPoolDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteGroup">deleteGroup</a></b>(const DeleteGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIdentityProviderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteIdentityProvider">deleteIdentityProvider</a></b>(const DeleteIdentityProviderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteResourceServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteResourceServer">deleteResourceServer</a></b>(const DeleteResourceServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteUser">deleteUser</a></b>(const DeleteUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteUserAttributes">deleteUserAttributes</a></b>(const DeleteUserAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserPoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteUserPool">deleteUserPool</a></b>(const DeleteUserPoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserPoolClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteUserPoolClient">deleteUserPoolClient</a></b>(const DeleteUserPoolClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserPoolDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#deleteUserPoolDomain">deleteUserPoolDomain</a></b>(const DeleteUserPoolDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeIdentityProviderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeIdentityProvider">describeIdentityProvider</a></b>(const DescribeIdentityProviderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeResourceServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeResourceServer">describeResourceServer</a></b>(const DescribeResourceServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRiskConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeRiskConfiguration">describeRiskConfiguration</a></b>(const DescribeRiskConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeUserImportJob">describeUserImportJob</a></b>(const DescribeUserImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserPoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeUserPool">describeUserPool</a></b>(const DescribeUserPoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserPoolClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeUserPoolClient">describeUserPoolClient</a></b>(const DescribeUserPoolClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserPoolDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#describeUserPoolDomain">describeUserPoolDomain</a></b>(const DescribeUserPoolDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ForgetDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#forgetDevice">forgetDevice</a></b>(const ForgetDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ForgotPasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#forgotPassword">forgotPassword</a></b>(const ForgotPasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCSVHeaderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getCSVHeader">getCSVHeader</a></b>(const GetCSVHeaderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getDevice">getDevice</a></b>(const GetDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getGroup">getGroup</a></b>(const GetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityProviderByIdentifierResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getIdentityProviderByIdentifier">getIdentityProviderByIdentifier</a></b>(const GetIdentityProviderByIdentifierRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSigningCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getSigningCertificate">getSigningCertificate</a></b>(const GetSigningCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUICustomizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getUICustomization">getUICustomization</a></b>(const GetUICustomizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getUser">getUser</a></b>(const GetUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUserAttributeVerificationCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getUserAttributeVerificationCode">getUserAttributeVerificationCode</a></b>(const GetUserAttributeVerificationCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUserPoolMfaConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#getUserPoolMfaConfig">getUserPoolMfaConfig</a></b>(const GetUserPoolMfaConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GlobalSignOutResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#globalSignOut">globalSignOut</a></b>(const GlobalSignOutRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateAuthResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#initiateAuth">initiateAuth</a></b>(const InitiateAuthRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDevicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listDevices">listDevices</a></b>(const ListDevicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listGroups">listGroups</a></b>(const ListGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIdentityProvidersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listIdentityProviders">listIdentityProviders</a></b>(const ListIdentityProvidersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceServersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listResourceServers">listResourceServers</a></b>(const ListResourceServersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUserImportJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listUserImportJobs">listUserImportJobs</a></b>(const ListUserImportJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUserPoolClientsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listUserPoolClients">listUserPoolClients</a></b>(const ListUserPoolClientsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUserPoolsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listUserPools">listUserPools</a></b>(const ListUserPoolsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUsersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listUsers">listUsers</a></b>(const ListUsersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUsersInGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#listUsersInGroup">listUsersInGroup</a></b>(const ListUsersInGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResendConfirmationCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#resendConfirmationCode">resendConfirmationCode</a></b>(const ResendConfirmationCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RespondToAuthChallengeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#respondToAuthChallenge">respondToAuthChallenge</a></b>(const RespondToAuthChallengeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetRiskConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#setRiskConfiguration">setRiskConfiguration</a></b>(const SetRiskConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetUICustomizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#setUICustomization">setUICustomization</a></b>(const SetUICustomizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetUserMFAPreferenceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#setUserMFAPreference">setUserMFAPreference</a></b>(const SetUserMFAPreferenceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetUserPoolMfaConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#setUserPoolMfaConfig">setUserPoolMfaConfig</a></b>(const SetUserPoolMfaConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetUserSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#setUserSettings">setUserSettings</a></b>(const SetUserSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SignUpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#signUp">signUp</a></b>(const SignUpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartUserImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#startUserImportJob">startUserImportJob</a></b>(const StartUserImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopUserImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#stopUserImportJob">stopUserImportJob</a></b>(const StopUserImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAuthEventFeedbackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateAuthEventFeedback">updateAuthEventFeedback</a></b>(const UpdateAuthEventFeedbackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDeviceStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateDeviceStatus">updateDeviceStatus</a></b>(const UpdateDeviceStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateGroup">updateGroup</a></b>(const UpdateGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIdentityProviderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateIdentityProvider">updateIdentityProvider</a></b>(const UpdateIdentityProviderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateResourceServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateResourceServer">updateResourceServer</a></b>(const UpdateResourceServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateUserAttributes">updateUserAttributes</a></b>(const UpdateUserAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserPoolResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateUserPool">updateUserPool</a></b>(const UpdateUserPoolRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserPoolClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#updateUserPoolClient">updateUserPoolClient</a></b>(const UpdateUserPoolClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifySoftwareTokenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#verifySoftwareToken">verifySoftwareToken</a></b>(const VerifySoftwareTokenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyUserAttributeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#verifyUserAttribute">verifyUserAttribute</a></b>(const VerifyUserAttributeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CognitoIdentityProviderClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> class provides access to the Amazon Cognito Identity Provider service.</p>
+<p>Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can authenticate a user to obtain tokens related to user identity and access</p>
+<p>policies&gt;</p>
+<p>This API reference provides information about user pools in Amazon Cognito User</p>
+<p>Pools&gt;</p>
+<p>For more information, see the Amazon Cognito</p>
+</div>
+<!-- @@@CognitoIdentityProviderClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CognitoIdentityProviderClient[overload1]$$$CognitoIdentityProviderClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CognitoIdentityProviderClient"><a name="CognitoIdentityProviderClient"></a>CognitoIdentityProviderClient::<span class="name">CognitoIdentityProviderClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CognitoIdentityProviderClient -->
+<!-- $$$CognitoIdentityProviderClient$$$CognitoIdentityProviderClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CognitoIdentityProviderClient-1"><a name="CognitoIdentityProviderClient-1"></a>CognitoIdentityProviderClient::<span class="name">CognitoIdentityProviderClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html#CognitoIdentityProviderClient">CognitoIdentityProviderClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CognitoIdentityProviderClient -->
+<!-- $$$addCustomAttributes[overload1]$$$addCustomAttributesconstAddCustomAttributesRequest& -->
+<h3 class="fn" id="addCustomAttributes"><a name="addCustomAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-addcustomattributesresponse.html">AddCustomAttributesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">addCustomAttributes</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-addcustomattributesrequest.html">AddCustomAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-addcustomattributesresponse.html">AddCustomAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds additional user attributes to the user pool</p>
+<!-- @@@addCustomAttributes -->
+<!-- $$$adminAddUserToGroup[overload1]$$$adminAddUserToGroupconstAdminAddUserToGroupRequest& -->
+<h3 class="fn" id="adminAddUserToGroup"><a name="adminAddUserToGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminaddusertogroupresponse.html">AdminAddUserToGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminAddUserToGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminaddusertogrouprequest.html">AdminAddUserToGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminaddusertogroupresponse.html">AdminAddUserToGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds the specified user to the specified</p>
+<p>group&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminAddUserToGroup -->
+<!-- $$$adminConfirmSignUp[overload1]$$$adminConfirmSignUpconstAdminConfirmSignUpRequest& -->
+<h3 class="fn" id="adminConfirmSignUp"><a name="adminConfirmSignUp"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminconfirmsignupresponse.html">AdminConfirmSignUpResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminConfirmSignUp</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminconfirmsignuprequest.html">AdminConfirmSignUpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminconfirmsignupresponse.html">AdminConfirmSignUpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Confirms user registration as an admin without using a confirmation code. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminConfirmSignUp -->
+<!-- $$$adminCreateUser[overload1]$$$adminCreateUserconstAdminCreateUserRequest& -->
+<h3 class="fn" id="adminCreateUser"><a name="adminCreateUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admincreateuserresponse.html">AdminCreateUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminCreateUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admincreateuserrequest.html">AdminCreateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admincreateuserresponse.html">AdminCreateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new user in the specified user</p>
+<p>pool&gt;</p>
+<p>If &lt;code&gt;MessageAction&lt;/code&gt; is not set, the default is to send a welcome message via email or phone</p>
+<p>(SMS)&gt; &lt;note&gt;</p>
+<p>This message is based on a template that you configured in your call to or . This template includes your custom sign-up instructions and placeholders for user name and temporary</p>
+<p>password&gt; &lt;/note&gt;</p>
+<p>Alternatively, you can call AdminCreateUser with “SUPPRESS” for the &lt;code&gt;MessageAction&lt;/code&gt; parameter, and Amazon Cognito will not send any email.</p>
+<p>&lt;/p</p>
+<p>In either case, the user will be in the &lt;code&gt;FORCE_CHANGE_PASSWORD&lt;/code&gt; state until they sign in and change their</p>
+<p>password&gt;</p>
+<p>AdminCreateUser requires developer</p>
+<!-- @@@adminCreateUser -->
+<!-- $$$adminDeleteUser[overload1]$$$adminDeleteUserconstAdminDeleteUserRequest& -->
+<h3 class="fn" id="adminDeleteUser"><a name="adminDeleteUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admindeleteuserresponse.html">AdminDeleteUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminDeleteUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admindeleteuserrequest.html">AdminDeleteUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admindeleteuserresponse.html">AdminDeleteUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a user as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminDeleteUser -->
+<!-- $$$adminDeleteUserAttributes[overload1]$$$adminDeleteUserAttributesconstAdminDeleteUserAttributesRequest& -->
+<h3 class="fn" id="adminDeleteUserAttributes"><a name="adminDeleteUserAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admindeleteuserattributesresponse.html">AdminDeleteUserAttributesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminDeleteUserAttributes</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admindeleteuserattributesrequest.html">AdminDeleteUserAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admindeleteuserattributesresponse.html">AdminDeleteUserAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the user attributes in a user pool as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminDeleteUserAttributes -->
+<!-- $$$adminDisableProviderForUser[overload1]$$$adminDisableProviderForUserconstAdminDisableProviderForUserRequest& -->
+<h3 class="fn" id="adminDisableProviderForUser"><a name="adminDisableProviderForUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admindisableproviderforuserresponse.html">AdminDisableProviderForUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminDisableProviderForUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admindisableproviderforuserrequest.html">AdminDisableProviderForUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admindisableproviderforuserresponse.html">AdminDisableProviderForUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the user from signing in with the specified external (SAML or social) identity provider. If the user to disable is a Cognito User Pools native username + password user, they are not permitted to use their password to sign-in. If the user to disable is a linked external IdP user, any link between that user and an existing user is removed. The next time the external user (no longer attached to the previously linked &lt;code&gt;DestinationUser&lt;/code&gt;) signs in, they must create a new user account. See</p>
+<p>&gt;</p>
+<p>This action is enabled only for admin access and requires developer</p>
+<p>credentials&gt;</p>
+<p>The &lt;code&gt;ProviderName&lt;/code&gt; must match the value specified when creating an IdP for the pool.</p>
+<p>&lt;/p</p>
+<p>To disable a native username + password user, the &lt;code&gt;ProviderName&lt;/code&gt; value must be &lt;code&gt;Cognito&lt;/code&gt; and the &lt;code&gt;ProviderAttributeName&lt;/code&gt; must be &lt;code&gt;Cognito_Subject&lt;/code&gt;, with the &lt;code&gt;ProviderAttributeValue&lt;/code&gt; being the name that is used in the user pool for the</p>
+<p>user&gt;</p>
+<p>The &lt;code&gt;ProviderAttributeName&lt;/code&gt; must always be &lt;code&gt;Cognito_Subject&lt;/code&gt; for social identity providers. The &lt;code&gt;ProviderAttributeValue&lt;/code&gt; must always be the exact subject that was used when the user was originally linked as a source</p>
+<p>user&gt;</p>
+<p>For de-linking a SAML identity, there are two scenarios. If the linked identity has not yet been used to sign-in, the &lt;code&gt;ProviderAttributeName&lt;/code&gt; and &lt;code&gt;ProviderAttributeValue&lt;/code&gt; must be the same values that were used for the &lt;code&gt;SourceUser&lt;/code&gt; when the identities were originally linked in the call. (If the linking was done with &lt;code&gt;ProviderAttributeName&lt;/code&gt; set to &lt;code&gt;Cognito_Subject&lt;/code&gt;, the same applies here). However, if the user has already signed in, the &lt;code&gt;ProviderAttributeName&lt;/code&gt; must be &lt;code&gt;Cognito_Subject&lt;/code&gt; and &lt;code&gt;ProviderAttributeValue&lt;/code&gt; must be the subject of the SAML</p>
+<!-- @@@adminDisableProviderForUser -->
+<!-- $$$adminDisableUser[overload1]$$$adminDisableUserconstAdminDisableUserRequest& -->
+<h3 class="fn" id="adminDisableUser"><a name="adminDisableUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admindisableuserresponse.html">AdminDisableUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminDisableUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admindisableuserrequest.html">AdminDisableUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admindisableuserresponse.html">AdminDisableUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the specified user as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminDisableUser -->
+<!-- $$$adminEnableUser[overload1]$$$adminEnableUserconstAdminEnableUserRequest& -->
+<h3 class="fn" id="adminEnableUser"><a name="adminEnableUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminenableuserresponse.html">AdminEnableUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminEnableUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminenableuserrequest.html">AdminEnableUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminenableuserresponse.html">AdminEnableUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables the specified user as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminEnableUser -->
+<!-- $$$adminForgetDevice[overload1]$$$adminForgetDeviceconstAdminForgetDeviceRequest& -->
+<h3 class="fn" id="adminForgetDevice"><a name="adminForgetDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminforgetdeviceresponse.html">AdminForgetDeviceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminForgetDevice</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminforgetdevicerequest.html">AdminForgetDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminforgetdeviceresponse.html">AdminForgetDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Forgets the device, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminForgetDevice -->
+<!-- $$$adminGetDevice[overload1]$$$adminGetDeviceconstAdminGetDeviceRequest& -->
+<h3 class="fn" id="adminGetDevice"><a name="adminGetDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admingetdeviceresponse.html">AdminGetDeviceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminGetDevice</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admingetdevicerequest.html">AdminGetDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admingetdeviceresponse.html">AdminGetDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the device, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminGetDevice -->
+<!-- $$$adminGetUser[overload1]$$$adminGetUserconstAdminGetUserRequest& -->
+<h3 class="fn" id="adminGetUser"><a name="adminGetUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admingetuserresponse.html">AdminGetUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminGetUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admingetuserrequest.html">AdminGetUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admingetuserresponse.html">AdminGetUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the specified user by user name in a user pool as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminGetUser -->
+<!-- $$$adminInitiateAuth[overload1]$$$adminInitiateAuthconstAdminInitiateAuthRequest& -->
+<h3 class="fn" id="adminInitiateAuth"><a name="adminInitiateAuth"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-admininitiateauthresponse.html">AdminInitiateAuthResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminInitiateAuth</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-admininitiateauthrequest.html">AdminInitiateAuthRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-admininitiateauthresponse.html">AdminInitiateAuthResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates the authentication flow, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminInitiateAuth -->
+<!-- $$$adminLinkProviderForUser[overload1]$$$adminLinkProviderForUserconstAdminLinkProviderForUserRequest& -->
+<h3 class="fn" id="adminLinkProviderForUser"><a name="adminLinkProviderForUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminlinkproviderforuserresponse.html">AdminLinkProviderForUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminLinkProviderForUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminlinkproviderforuserrequest.html">AdminLinkProviderForUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminlinkproviderforuserresponse.html">AdminLinkProviderForUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Links an existing user account in a user pool (&lt;code&gt;DestinationUser&lt;/code&gt;) to an identity from an external identity provider (&lt;code&gt;SourceUser&lt;/code&gt;) based on a specified attribute name and value from the external identity provider. This allows you to create a link from the existing user account to an external federated user identity that has not yet been used to sign in, so that the federated user identity can be used to sign in as the existing user account.</p>
+<p>&lt;/p</p>
+<p>For example, if there is an existing user with a username and password, this API links that user to a federated user identity, so that when the federated user identity is used, the user signs in as the existing user account.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>Because this API allows a user with an external federated identity to sign in as an existing user in the user pool, it is critical that it only be used with external identity providers and provider attributes that have been trusted by the application</p>
+<p>owner&gt; &lt;/b&gt;</p>
+<p>See also</p>
+<p>&gt;</p>
+<p>This action is enabled only for admin access and requires developer</p>
+<!-- @@@adminLinkProviderForUser -->
+<!-- $$$adminListDevices[overload1]$$$adminListDevicesconstAdminListDevicesRequest& -->
+<h3 class="fn" id="adminListDevices"><a name="adminListDevices"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminlistdevicesresponse.html">AdminListDevicesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminListDevices</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminlistdevicesrequest.html">AdminListDevicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminlistdevicesresponse.html">AdminListDevicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists devices, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminListDevices -->
+<!-- $$$adminListGroupsForUser[overload1]$$$adminListGroupsForUserconstAdminListGroupsForUserRequest& -->
+<h3 class="fn" id="adminListGroupsForUser"><a name="adminListGroupsForUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminlistgroupsforuserresponse.html">AdminListGroupsForUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminListGroupsForUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminlistgroupsforuserrequest.html">AdminListGroupsForUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminlistgroupsforuserresponse.html">AdminListGroupsForUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the groups that the user belongs</p>
+<p>to&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminListGroupsForUser -->
+<!-- $$$adminListUserAuthEvents[overload1]$$$adminListUserAuthEventsconstAdminListUserAuthEventsRequest& -->
+<h3 class="fn" id="adminListUserAuthEvents"><a name="adminListUserAuthEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminlistuserautheventsresponse.html">AdminListUserAuthEventsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminListUserAuthEvents</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminlistuserautheventsrequest.html">AdminListUserAuthEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminlistuserautheventsresponse.html">AdminListUserAuthEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists a history of user activity and any risks detected as part of Amazon Cognito advanced</p>
+<!-- @@@adminListUserAuthEvents -->
+<!-- $$$adminRemoveUserFromGroup[overload1]$$$adminRemoveUserFromGroupconstAdminRemoveUserFromGroupRequest& -->
+<h3 class="fn" id="adminRemoveUserFromGroup"><a name="adminRemoveUserFromGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminremoveuserfromgroupresponse.html">AdminRemoveUserFromGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminRemoveUserFromGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminremoveuserfromgrouprequest.html">AdminRemoveUserFromGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminremoveuserfromgroupresponse.html">AdminRemoveUserFromGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified user from the specified</p>
+<p>group&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminRemoveUserFromGroup -->
+<!-- $$$adminResetUserPassword[overload1]$$$adminResetUserPasswordconstAdminResetUserPasswordRequest& -->
+<h3 class="fn" id="adminResetUserPassword"><a name="adminResetUserPassword"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminresetuserpasswordresponse.html">AdminResetUserPasswordResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminResetUserPassword</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminresetuserpasswordrequest.html">AdminResetUserPasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminresetuserpasswordresponse.html">AdminResetUserPasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resets the specified user's password in a user pool as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>When a developer calls this API, the current password is invalidated, so it must be changed. If a user tries to sign in after the API is called, the app will get a PasswordResetRequiredException exception back and should direct the user down the flow to reset the password, which is the same as the forgot password flow. In addition, if the user pool has phone verification selected and a verified phone number exists for the user, or if email verification is selected and a verified email exists for the user, calling this API will also result in sending a message to the end user with the code to change their</p>
+<p>password&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminResetUserPassword -->
+<!-- $$$adminRespondToAuthChallenge[overload1]$$$adminRespondToAuthChallengeconstAdminRespondToAuthChallengeRequest& -->
+<h3 class="fn" id="adminRespondToAuthChallenge"><a name="adminRespondToAuthChallenge"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminrespondtoauthchallengeresponse.html">AdminRespondToAuthChallengeResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminRespondToAuthChallenge</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminrespondtoauthchallengerequest.html">AdminRespondToAuthChallengeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminrespondtoauthchallengeresponse.html">AdminRespondToAuthChallengeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Responds to an authentication challenge, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminRespondToAuthChallenge -->
+<!-- $$$adminSetUserMFAPreference[overload1]$$$adminSetUserMFAPreferenceconstAdminSetUserMFAPreferenceRequest& -->
+<h3 class="fn" id="adminSetUserMFAPreference"><a name="adminSetUserMFAPreference"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminsetusermfapreferenceresponse.html">AdminSetUserMFAPreferenceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminSetUserMFAPreference</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminsetusermfapreferencerequest.html">AdminSetUserMFAPreferenceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminsetusermfapreferenceresponse.html">AdminSetUserMFAPreferenceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the user's multi-factor authentication (MFA)</p>
+<!-- @@@adminSetUserMFAPreference -->
+<!-- $$$adminSetUserSettings[overload1]$$$adminSetUserSettingsconstAdminSetUserSettingsRequest& -->
+<h3 class="fn" id="adminSetUserSettings"><a name="adminSetUserSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminsetusersettingsresponse.html">AdminSetUserSettingsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminSetUserSettings</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminsetusersettingsrequest.html">AdminSetUserSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminsetusersettingsresponse.html">AdminSetUserSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets all the user settings for a specified user name. Works on any</p>
+<p>user&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminSetUserSettings -->
+<!-- $$$adminUpdateAuthEventFeedback[overload1]$$$adminUpdateAuthEventFeedbackconstAdminUpdateAuthEventFeedbackRequest& -->
+<h3 class="fn" id="adminUpdateAuthEventFeedback"><a name="adminUpdateAuthEventFeedback"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminupdateautheventfeedbackresponse.html">AdminUpdateAuthEventFeedbackResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminUpdateAuthEventFeedback</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminupdateautheventfeedbackrequest.html">AdminUpdateAuthEventFeedbackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminupdateautheventfeedbackresponse.html">AdminUpdateAuthEventFeedbackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides feedback for an authentication event as to whether it was from a valid user. This feedback is used for improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced</p>
+<!-- @@@adminUpdateAuthEventFeedback -->
+<!-- $$$adminUpdateDeviceStatus[overload1]$$$adminUpdateDeviceStatusconstAdminUpdateDeviceStatusRequest& -->
+<h3 class="fn" id="adminUpdateDeviceStatus"><a name="adminUpdateDeviceStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminupdatedevicestatusresponse.html">AdminUpdateDeviceStatusResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminUpdateDeviceStatus</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminupdatedevicestatusrequest.html">AdminUpdateDeviceStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminupdatedevicestatusresponse.html">AdminUpdateDeviceStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the device status as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminUpdateDeviceStatus -->
+<!-- $$$adminUpdateUserAttributes[overload1]$$$adminUpdateUserAttributesconstAdminUpdateUserAttributesRequest& -->
+<h3 class="fn" id="adminUpdateUserAttributes"><a name="adminUpdateUserAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminupdateuserattributesresponse.html">AdminUpdateUserAttributesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminUpdateUserAttributes</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminupdateuserattributesrequest.html">AdminUpdateUserAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminupdateuserattributesresponse.html">AdminUpdateUserAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified user's attributes, including developer attributes, as an administrator. Works on any</p>
+<p>user&gt;</p>
+<p>For custom attributes, you must prepend the &lt;code&gt;custom:&lt;/code&gt; prefix to the attribute</p>
+<p>name&gt;</p>
+<p>In addition to updating user attributes, this API can also be used to mark phone and email as</p>
+<p>verified&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminUpdateUserAttributes -->
+<!-- $$$adminUserGlobalSignOut[overload1]$$$adminUserGlobalSignOutconstAdminUserGlobalSignOutRequest& -->
+<h3 class="fn" id="adminUserGlobalSignOut"><a name="adminUserGlobalSignOut"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-adminuserglobalsignoutresponse.html">AdminUserGlobalSignOutResponse</a></span> *CognitoIdentityProviderClient::<span class="name">adminUserGlobalSignOut</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-adminuserglobalsignoutrequest.html">AdminUserGlobalSignOutRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-adminuserglobalsignoutresponse.html">AdminUserGlobalSignOutResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Signs out users from all devices, as an</p>
+<p>administrator&gt;</p>
+<p>Requires developer</p>
+<!-- @@@adminUserGlobalSignOut -->
+<!-- $$$associateSoftwareToken[overload1]$$$associateSoftwareTokenconstAssociateSoftwareTokenRequest& -->
+<h3 class="fn" id="associateSoftwareToken"><a name="associateSoftwareToken"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-associatesoftwaretokenresponse.html">AssociateSoftwareTokenResponse</a></span> *CognitoIdentityProviderClient::<span class="name">associateSoftwareToken</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-associatesoftwaretokenrequest.html">AssociateSoftwareTokenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-associatesoftwaretokenresponse.html">AssociateSoftwareTokenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a unique generated shared secret key code for the user account. The request takes an access token or a session string, but not</p>
+<!-- @@@associateSoftwareToken -->
+<!-- $$$changePassword[overload1]$$$changePasswordconstChangePasswordRequest& -->
+<h3 class="fn" id="changePassword"><a name="changePassword"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-changepasswordresponse.html">ChangePasswordResponse</a></span> *CognitoIdentityProviderClient::<span class="name">changePassword</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-changepasswordrequest.html">ChangePasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-changepasswordresponse.html">ChangePasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes the password for a specified user in a user</p>
+<!-- @@@changePassword -->
+<!-- $$$confirmDevice[overload1]$$$confirmDeviceconstConfirmDeviceRequest& -->
+<h3 class="fn" id="confirmDevice"><a name="confirmDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-confirmdeviceresponse.html">ConfirmDeviceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">confirmDevice</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-confirmdevicerequest.html">ConfirmDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-confirmdeviceresponse.html">ConfirmDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Confirms tracking of the device. This API call is the call that begins device</p>
+<!-- @@@confirmDevice -->
+<!-- $$$confirmForgotPassword[overload1]$$$confirmForgotPasswordconstConfirmForgotPasswordRequest& -->
+<h3 class="fn" id="confirmForgotPassword"><a name="confirmForgotPassword"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-confirmforgotpasswordresponse.html">ConfirmForgotPasswordResponse</a></span> *CognitoIdentityProviderClient::<span class="name">confirmForgotPassword</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-confirmforgotpasswordrequest.html">ConfirmForgotPasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-confirmforgotpasswordresponse.html">ConfirmForgotPasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a user to enter a confirmation code to reset a forgotten</p>
+<!-- @@@confirmForgotPassword -->
+<!-- $$$confirmSignUp[overload1]$$$confirmSignUpconstConfirmSignUpRequest& -->
+<h3 class="fn" id="confirmSignUp"><a name="confirmSignUp"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-confirmsignupresponse.html">ConfirmSignUpResponse</a></span> *CognitoIdentityProviderClient::<span class="name">confirmSignUp</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-confirmsignuprequest.html">ConfirmSignUpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-confirmsignupresponse.html">ConfirmSignUpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Confirms registration of a user and handles the existing alias from a previous</p>
+<!-- @@@confirmSignUp -->
+<!-- $$$createGroup[overload1]$$$createGroupconstCreateGroupRequest& -->
+<h3 class="fn" id="createGroup"><a name="createGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-creategroupresponse.html">CreateGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-creategrouprequest.html">CreateGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-creategroupresponse.html">CreateGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new group in the specified user</p>
+<p>pool&gt;</p>
+<p>Requires developer</p>
+<!-- @@@createGroup -->
+<!-- $$$createIdentityProvider[overload1]$$$createIdentityProviderconstCreateIdentityProviderRequest& -->
+<h3 class="fn" id="createIdentityProvider"><a name="createIdentityProvider"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createidentityproviderresponse.html">CreateIdentityProviderResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createIdentityProvider</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createidentityproviderrequest.html">CreateIdentityProviderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createidentityproviderresponse.html">CreateIdentityProviderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an identity provider for a user</p>
+<!-- @@@createIdentityProvider -->
+<!-- $$$createResourceServer[overload1]$$$createResourceServerconstCreateResourceServerRequest& -->
+<h3 class="fn" id="createResourceServer"><a name="createResourceServer"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createresourceserverresponse.html">CreateResourceServerResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createResourceServer</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createresourceserverrequest.html">CreateResourceServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createresourceserverresponse.html">CreateResourceServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new OAuth2.0 resource server and defines custom scopes in</p>
+<!-- @@@createResourceServer -->
+<!-- $$$createUserImportJob[overload1]$$$createUserImportJobconstCreateUserImportJobRequest& -->
+<h3 class="fn" id="createUserImportJob"><a name="createUserImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createuserimportjobresponse.html">CreateUserImportJobResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createUserImportJob</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createuserimportjobrequest.html">CreateUserImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createuserimportjobresponse.html">CreateUserImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates the user import</p>
+<!-- @@@createUserImportJob -->
+<!-- $$$createUserPool[overload1]$$$createUserPoolconstCreateUserPoolRequest& -->
+<h3 class="fn" id="createUserPool"><a name="createUserPool"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createuserpoolresponse.html">CreateUserPoolResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createUserPool</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createuserpoolrequest.html">CreateUserPoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createuserpoolresponse.html">CreateUserPoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Amazon Cognito user pool and sets the password policy for the</p>
+<!-- @@@createUserPool -->
+<!-- $$$createUserPoolClient[overload1]$$$createUserPoolClientconstCreateUserPoolClientRequest& -->
+<h3 class="fn" id="createUserPoolClient"><a name="createUserPoolClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createuserpoolclientresponse.html">CreateUserPoolClientResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createUserPoolClient</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createuserpoolclientrequest.html">CreateUserPoolClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createuserpoolclientresponse.html">CreateUserPoolClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates the user pool</p>
+<!-- @@@createUserPoolClient -->
+<!-- $$$createUserPoolDomain[overload1]$$$createUserPoolDomainconstCreateUserPoolDomainRequest& -->
+<h3 class="fn" id="createUserPoolDomain"><a name="createUserPoolDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-createuserpooldomainresponse.html">CreateUserPoolDomainResponse</a></span> *CognitoIdentityProviderClient::<span class="name">createUserPoolDomain</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-createuserpooldomainrequest.html">CreateUserPoolDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-createuserpooldomainresponse.html">CreateUserPoolDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new domain for a user</p>
+<!-- @@@createUserPoolDomain -->
+<!-- $$$deleteGroup[overload1]$$$deleteGroupconstDeleteGroupRequest& -->
+<h3 class="fn" id="deleteGroup"><a name="deleteGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deletegroupresponse.html">DeleteGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deletegrouprequest.html">DeleteGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deletegroupresponse.html">DeleteGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a group. Currently only groups with no members can be</p>
+<p>deleted&gt;</p>
+<p>Requires developer</p>
+<!-- @@@deleteGroup -->
+<!-- $$$deleteIdentityProvider[overload1]$$$deleteIdentityProviderconstDeleteIdentityProviderRequest& -->
+<h3 class="fn" id="deleteIdentityProvider"><a name="deleteIdentityProvider"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteidentityproviderresponse.html">DeleteIdentityProviderResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteIdentityProvider</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteidentityproviderrequest.html">DeleteIdentityProviderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteidentityproviderresponse.html">DeleteIdentityProviderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an identity provider for a user</p>
+<!-- @@@deleteIdentityProvider -->
+<!-- $$$deleteResourceServer[overload1]$$$deleteResourceServerconstDeleteResourceServerRequest& -->
+<h3 class="fn" id="deleteResourceServer"><a name="deleteResourceServer"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteresourceserverresponse.html">DeleteResourceServerResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteResourceServer</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteresourceserverrequest.html">DeleteResourceServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteresourceserverresponse.html">DeleteResourceServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a resource</p>
+<!-- @@@deleteResourceServer -->
+<!-- $$$deleteUser[overload1]$$$deleteUserconstDeleteUserRequest& -->
+<h3 class="fn" id="deleteUser"><a name="deleteUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserresponse.html">DeleteUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserrequest.html">DeleteUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteuserresponse.html">DeleteUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a user to delete himself or</p>
+<!-- @@@deleteUser -->
+<!-- $$$deleteUserAttributes[overload1]$$$deleteUserAttributesconstDeleteUserAttributesRequest& -->
+<h3 class="fn" id="deleteUserAttributes"><a name="deleteUserAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserattributesresponse.html">DeleteUserAttributesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteUserAttributes</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserattributesrequest.html">DeleteUserAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteuserattributesresponse.html">DeleteUserAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the attributes for a</p>
+<!-- @@@deleteUserAttributes -->
+<!-- $$$deleteUserPool[overload1]$$$deleteUserPoolconstDeleteUserPoolRequest& -->
+<h3 class="fn" id="deleteUserPool"><a name="deleteUserPool"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpoolresponse.html">DeleteUserPoolResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteUserPool</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpoolrequest.html">DeleteUserPoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteuserpoolresponse.html">DeleteUserPoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Amazon Cognito user</p>
+<!-- @@@deleteUserPool -->
+<!-- $$$deleteUserPoolClient[overload1]$$$deleteUserPoolClientconstDeleteUserPoolClientRequest& -->
+<h3 class="fn" id="deleteUserPoolClient"><a name="deleteUserPoolClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpoolclientresponse.html">DeleteUserPoolClientResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteUserPoolClient</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpoolclientrequest.html">DeleteUserPoolClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteuserpoolclientresponse.html">DeleteUserPoolClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows the developer to delete the user pool</p>
+<!-- @@@deleteUserPoolClient -->
+<!-- $$$deleteUserPoolDomain[overload1]$$$deleteUserPoolDomainconstDeleteUserPoolDomainRequest& -->
+<h3 class="fn" id="deleteUserPoolDomain"><a name="deleteUserPoolDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpooldomainresponse.html">DeleteUserPoolDomainResponse</a></span> *CognitoIdentityProviderClient::<span class="name">deleteUserPoolDomain</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-deleteuserpooldomainrequest.html">DeleteUserPoolDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-deleteuserpooldomainresponse.html">DeleteUserPoolDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a domain for a user</p>
+<!-- @@@deleteUserPoolDomain -->
+<!-- $$$describeIdentityProvider[overload1]$$$describeIdentityProviderconstDescribeIdentityProviderRequest& -->
+<h3 class="fn" id="describeIdentityProvider"><a name="describeIdentityProvider"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeidentityproviderresponse.html">DescribeIdentityProviderResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeIdentityProvider</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeidentityproviderrequest.html">DescribeIdentityProviderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeidentityproviderresponse.html">DescribeIdentityProviderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specific identity</p>
+<!-- @@@describeIdentityProvider -->
+<!-- $$$describeResourceServer[overload1]$$$describeResourceServerconstDescribeResourceServerRequest& -->
+<h3 class="fn" id="describeResourceServer"><a name="describeResourceServer"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeresourceserverresponse.html">DescribeResourceServerResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeResourceServer</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeresourceserverrequest.html">DescribeResourceServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeresourceserverresponse.html">DescribeResourceServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a resource</p>
+<!-- @@@describeResourceServer -->
+<!-- $$$describeRiskConfiguration[overload1]$$$describeRiskConfigurationconstDescribeRiskConfigurationRequest& -->
+<h3 class="fn" id="describeRiskConfiguration"><a name="describeRiskConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeriskconfigurationresponse.html">DescribeRiskConfigurationResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeRiskConfiguration</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeriskconfigurationrequest.html">DescribeRiskConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeriskconfigurationresponse.html">DescribeRiskConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the risk</p>
+<!-- @@@describeRiskConfiguration -->
+<!-- $$$describeUserImportJob[overload1]$$$describeUserImportJobconstDescribeUserImportJobRequest& -->
+<h3 class="fn" id="describeUserImportJob"><a name="describeUserImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeuserimportjobresponse.html">DescribeUserImportJobResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeUserImportJob</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeuserimportjobrequest.html">DescribeUserImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeuserimportjobresponse.html">DescribeUserImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the user import</p>
+<!-- @@@describeUserImportJob -->
+<!-- $$$describeUserPool[overload1]$$$describeUserPoolconstDescribeUserPoolRequest& -->
+<h3 class="fn" id="describeUserPool"><a name="describeUserPool"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpoolresponse.html">DescribeUserPoolResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeUserPool</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpoolrequest.html">DescribeUserPoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeuserpoolresponse.html">DescribeUserPoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the configuration information and metadata of the specified user</p>
+<!-- @@@describeUserPool -->
+<!-- $$$describeUserPoolClient[overload1]$$$describeUserPoolClientconstDescribeUserPoolClientRequest& -->
+<h3 class="fn" id="describeUserPoolClient"><a name="describeUserPoolClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpoolclientresponse.html">DescribeUserPoolClientResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeUserPoolClient</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpoolclientrequest.html">DescribeUserPoolClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeuserpoolclientresponse.html">DescribeUserPoolClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Client method for returning the configuration information and metadata of the specified user pool</p>
+<!-- @@@describeUserPoolClient -->
+<!-- $$$describeUserPoolDomain[overload1]$$$describeUserPoolDomainconstDescribeUserPoolDomainRequest& -->
+<h3 class="fn" id="describeUserPoolDomain"><a name="describeUserPoolDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpooldomainresponse.html">DescribeUserPoolDomainResponse</a></span> *CognitoIdentityProviderClient::<span class="name">describeUserPoolDomain</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-describeuserpooldomainrequest.html">DescribeUserPoolDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-describeuserpooldomainresponse.html">DescribeUserPoolDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@describeUserPoolDomain -->
+<!-- $$$forgetDevice[overload1]$$$forgetDeviceconstForgetDeviceRequest& -->
+<h3 class="fn" id="forgetDevice"><a name="forgetDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-forgetdeviceresponse.html">ForgetDeviceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">forgetDevice</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-forgetdevicerequest.html">ForgetDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-forgetdeviceresponse.html">ForgetDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Forgets the specified</p>
+<!-- @@@forgetDevice -->
+<!-- $$$forgotPassword[overload1]$$$forgotPasswordconstForgotPasswordRequest& -->
+<h3 class="fn" id="forgotPassword"><a name="forgotPassword"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-forgotpasswordresponse.html">ForgotPasswordResponse</a></span> *CognitoIdentityProviderClient::<span class="name">forgotPassword</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-forgotpasswordrequest.html">ForgotPasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-forgotpasswordresponse.html">ForgotPasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Calling this API causes a message to be sent to the end user with a confirmation code that is required to change the user's password. For the &lt;code&gt;Username&lt;/code&gt; parameter, you can use the username or user alias. If a verified phone number exists for the user, the confirmation code is sent to the phone number. Otherwise, if a verified email exists, the confirmation code is sent to the email. If neither a verified phone number nor a verified email exists, &lt;code&gt;InvalidParameterException&lt;/code&gt; is thrown. To use the confirmation code for resetting the password, call</p>
+<!-- @@@forgotPassword -->
+<!-- $$$getCSVHeader[overload1]$$$getCSVHeaderconstGetCSVHeaderRequest& -->
+<h3 class="fn" id="getCSVHeader"><a name="getCSVHeader"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getcsvheaderresponse.html">GetCSVHeaderResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getCSVHeader</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getcsvheaderrequest.html">GetCSVHeaderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getcsvheaderresponse.html">GetCSVHeaderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the header information for the .csv file to be used as input for the user import</p>
+<!-- @@@getCSVHeader -->
+<!-- $$$getDevice[overload1]$$$getDeviceconstGetDeviceRequest& -->
+<h3 class="fn" id="getDevice"><a name="getDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getdeviceresponse.html">GetDeviceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getDevice</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getdevicerequest.html">GetDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getdeviceresponse.html">GetDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the</p>
+<!-- @@@getDevice -->
+<!-- $$$getGroup[overload1]$$$getGroupconstGetGroupRequest& -->
+<h3 class="fn" id="getGroup"><a name="getGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getgroupresponse.html">GetGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getgrouprequest.html">GetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getgroupresponse.html">GetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a</p>
+<p>group&gt;</p>
+<p>Requires developer</p>
+<!-- @@@getGroup -->
+<!-- $$$getIdentityProviderByIdentifier[overload1]$$$getIdentityProviderByIdentifierconstGetIdentityProviderByIdentifierRequest& -->
+<h3 class="fn" id="getIdentityProviderByIdentifier"><a name="getIdentityProviderByIdentifier"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getidentityproviderbyidentifierresponse.html">GetIdentityProviderByIdentifierResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getIdentityProviderByIdentifier</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getidentityproviderbyidentifierrequest.html">GetIdentityProviderByIdentifierRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getidentityproviderbyidentifierresponse.html">GetIdentityProviderByIdentifierResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the specified identity</p>
+<!-- @@@getIdentityProviderByIdentifier -->
+<!-- $$$getSigningCertificate[overload1]$$$getSigningCertificateconstGetSigningCertificateRequest& -->
+<h3 class="fn" id="getSigningCertificate"><a name="getSigningCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getsigningcertificateresponse.html">GetSigningCertificateResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getSigningCertificate</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getsigningcertificaterequest.html">GetSigningCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getsigningcertificateresponse.html">GetSigningCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This method takes a user pool ID, and returns the signing</p>
+<!-- @@@getSigningCertificate -->
+<!-- $$$getUICustomization[overload1]$$$getUICustomizationconstGetUICustomizationRequest& -->
+<h3 class="fn" id="getUICustomization"><a name="getUICustomization"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getuicustomizationresponse.html">GetUICustomizationResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getUICustomization</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getuicustomizationrequest.html">GetUICustomizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getuicustomizationresponse.html">GetUICustomizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the UI Customization information for a particular app client's app UI, if there is something set. If nothing is set for the particular client, but there is an existing pool level customization (app &lt;code&gt;clientId&lt;/code&gt; will be &lt;code&gt;ALL&lt;/code&gt;), then that is returned. If nothing is present, then an empty shape is</p>
+<!-- @@@getUICustomization -->
+<!-- $$$getUser[overload1]$$$getUserconstGetUserRequest& -->
+<h3 class="fn" id="getUser"><a name="getUser"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getuserresponse.html">GetUserResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getUser</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getuserrequest.html">GetUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getuserresponse.html">GetUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the user attributes and metadata for a</p>
+<!-- @@@getUser -->
+<!-- $$$getUserAttributeVerificationCode[overload1]$$$getUserAttributeVerificationCodeconstGetUserAttributeVerificationCodeRequest& -->
+<h3 class="fn" id="getUserAttributeVerificationCode"><a name="getUserAttributeVerificationCode"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getuserattributeverificationcoderesponse.html">GetUserAttributeVerificationCodeResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getUserAttributeVerificationCode</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getuserattributeverificationcoderequest.html">GetUserAttributeVerificationCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getuserattributeverificationcoderesponse.html">GetUserAttributeVerificationCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the user attribute verification code for the specified attribute</p>
+<!-- @@@getUserAttributeVerificationCode -->
+<!-- $$$getUserPoolMfaConfig[overload1]$$$getUserPoolMfaConfigconstGetUserPoolMfaConfigRequest& -->
+<h3 class="fn" id="getUserPoolMfaConfig"><a name="getUserPoolMfaConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-getuserpoolmfaconfigresponse.html">GetUserPoolMfaConfigResponse</a></span> *CognitoIdentityProviderClient::<span class="name">getUserPoolMfaConfig</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-getuserpoolmfaconfigrequest.html">GetUserPoolMfaConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-getuserpoolmfaconfigresponse.html">GetUserPoolMfaConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the user pool multi-factor authentication (MFA)</p>
+<!-- @@@getUserPoolMfaConfig -->
+<!-- $$$globalSignOut[overload1]$$$globalSignOutconstGlobalSignOutRequest& -->
+<h3 class="fn" id="globalSignOut"><a name="globalSignOut"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-globalsignoutresponse.html">GlobalSignOutResponse</a></span> *CognitoIdentityProviderClient::<span class="name">globalSignOut</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-globalsignoutrequest.html">GlobalSignOutRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-globalsignoutresponse.html">GlobalSignOutResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Signs out users from all</p>
+<!-- @@@globalSignOut -->
+<!-- $$$initiateAuth[overload1]$$$initiateAuthconstInitiateAuthRequest& -->
+<h3 class="fn" id="initiateAuth"><a name="initiateAuth"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-initiateauthresponse.html">InitiateAuthResponse</a></span> *CognitoIdentityProviderClient::<span class="name">initiateAuth</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-initiateauthrequest.html">InitiateAuthRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-initiateauthresponse.html">InitiateAuthResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates the authentication</p>
+<!-- @@@initiateAuth -->
+<!-- $$$listDevices[overload1]$$$listDevicesconstListDevicesRequest& -->
+<h3 class="fn" id="listDevices"><a name="listDevices"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listdevicesresponse.html">ListDevicesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listDevices</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listdevicesrequest.html">ListDevicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listdevicesresponse.html">ListDevicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the</p>
+<!-- @@@listDevices -->
+<!-- $$$listGroups[overload1]$$$listGroupsconstListGroupsRequest& -->
+<h3 class="fn" id="listGroups"><a name="listGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listgroupsresponse.html">ListGroupsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listGroups</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listgroupsrequest.html">ListGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listgroupsresponse.html">ListGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the groups associated with a user</p>
+<p>pool&gt;</p>
+<p>Requires developer</p>
+<!-- @@@listGroups -->
+<!-- $$$listIdentityProviders[overload1]$$$listIdentityProvidersconstListIdentityProvidersRequest& -->
+<h3 class="fn" id="listIdentityProviders"><a name="listIdentityProviders"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listidentityprovidersresponse.html">ListIdentityProvidersResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listIdentityProviders</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listidentityprovidersrequest.html">ListIdentityProvidersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listidentityprovidersresponse.html">ListIdentityProvidersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about all identity providers for a user</p>
+<!-- @@@listIdentityProviders -->
+<!-- $$$listResourceServers[overload1]$$$listResourceServersconstListResourceServersRequest& -->
+<h3 class="fn" id="listResourceServers"><a name="listResourceServers"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listresourceserversresponse.html">ListResourceServersResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listResourceServers</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listresourceserversrequest.html">ListResourceServersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listresourceserversresponse.html">ListResourceServersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the resource servers for a user</p>
+<!-- @@@listResourceServers -->
+<!-- $$$listUserImportJobs[overload1]$$$listUserImportJobsconstListUserImportJobsRequest& -->
+<h3 class="fn" id="listUserImportJobs"><a name="listUserImportJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listuserimportjobsresponse.html">ListUserImportJobsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listUserImportJobs</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listuserimportjobsrequest.html">ListUserImportJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listuserimportjobsresponse.html">ListUserImportJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the user import</p>
+<!-- @@@listUserImportJobs -->
+<!-- $$$listUserPoolClients[overload1]$$$listUserPoolClientsconstListUserPoolClientsRequest& -->
+<h3 class="fn" id="listUserPoolClients"><a name="listUserPoolClients"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listuserpoolclientsresponse.html">ListUserPoolClientsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listUserPoolClients</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listuserpoolclientsrequest.html">ListUserPoolClientsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listuserpoolclientsresponse.html">ListUserPoolClientsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the clients that have been created for the specified user</p>
+<!-- @@@listUserPoolClients -->
+<!-- $$$listUserPools[overload1]$$$listUserPoolsconstListUserPoolsRequest& -->
+<h3 class="fn" id="listUserPools"><a name="listUserPools"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listuserpoolsresponse.html">ListUserPoolsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listUserPools</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listuserpoolsrequest.html">ListUserPoolsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listuserpoolsresponse.html">ListUserPoolsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the user pools associated with an AWS</p>
+<!-- @@@listUserPools -->
+<!-- $$$listUsers[overload1]$$$listUsersconstListUsersRequest& -->
+<h3 class="fn" id="listUsers"><a name="listUsers"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listusersresponse.html">ListUsersResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listUsers</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listusersrequest.html">ListUsersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listusersresponse.html">ListUsersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the users in the Amazon Cognito user</p>
+<!-- @@@listUsers -->
+<!-- $$$listUsersInGroup[overload1]$$$listUsersInGroupconstListUsersInGroupRequest& -->
+<h3 class="fn" id="listUsersInGroup"><a name="listUsersInGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-listusersingroupresponse.html">ListUsersInGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">listUsersInGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-listusersingrouprequest.html">ListUsersInGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-listusersingroupresponse.html">ListUsersInGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the users in the specified</p>
+<p>group&gt;</p>
+<p>Requires developer</p>
+<!-- @@@listUsersInGroup -->
+<!-- $$$resendConfirmationCode[overload1]$$$resendConfirmationCodeconstResendConfirmationCodeRequest& -->
+<h3 class="fn" id="resendConfirmationCode"><a name="resendConfirmationCode"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-resendconfirmationcoderesponse.html">ResendConfirmationCodeResponse</a></span> *CognitoIdentityProviderClient::<span class="name">resendConfirmationCode</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-resendconfirmationcoderequest.html">ResendConfirmationCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-resendconfirmationcoderesponse.html">ResendConfirmationCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resends the confirmation (for confirmation of registration) to a specific user in the user</p>
+<!-- @@@resendConfirmationCode -->
+<!-- $$$respondToAuthChallenge[overload1]$$$respondToAuthChallengeconstRespondToAuthChallengeRequest& -->
+<h3 class="fn" id="respondToAuthChallenge"><a name="respondToAuthChallenge"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-respondtoauthchallengeresponse.html">RespondToAuthChallengeResponse</a></span> *CognitoIdentityProviderClient::<span class="name">respondToAuthChallenge</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-respondtoauthchallengerequest.html">RespondToAuthChallengeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-respondtoauthchallengeresponse.html">RespondToAuthChallengeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Responds to the authentication</p>
+<!-- @@@respondToAuthChallenge -->
+<!-- $$$setRiskConfiguration[overload1]$$$setRiskConfigurationconstSetRiskConfigurationRequest& -->
+<h3 class="fn" id="setRiskConfiguration"><a name="setRiskConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-setriskconfigurationresponse.html">SetRiskConfigurationResponse</a></span> *CognitoIdentityProviderClient::<span class="name">setRiskConfiguration</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-setriskconfigurationrequest.html">SetRiskConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-setriskconfigurationresponse.html">SetRiskConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures actions on detected risks. To delete the risk configuration for &lt;code&gt;UserPoolId&lt;/code&gt; or &lt;code&gt;ClientId&lt;/code&gt;, pass null values for all four configuration</p>
+<p>types&gt;</p>
+<p>To enable Amazon Cognito advanced security features, update the user pool to include the &lt;code&gt;UserPoolAddOns&lt;/code&gt;</p>
+<p>key&lt;code&gt;AdvancedSecurityMode&lt;/code&gt;&gt;</p>
+<p>See</p>
+<!-- @@@setRiskConfiguration -->
+<!-- $$$setUICustomization[overload1]$$$setUICustomizationconstSetUICustomizationRequest& -->
+<h3 class="fn" id="setUICustomization"><a name="setUICustomization"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-setuicustomizationresponse.html">SetUICustomizationResponse</a></span> *CognitoIdentityProviderClient::<span class="name">setUICustomization</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-setuicustomizationrequest.html">SetUICustomizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-setuicustomizationresponse.html">SetUICustomizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the UI customization information for a user pool's built-in app</p>
+<p>UI&gt;</p>
+<p>You can specify app UI customization settings for a single client (with a specific &lt;code&gt;clientId&lt;/code&gt;) or for all clients (by setting the &lt;code&gt;clientId&lt;/code&gt; to &lt;code&gt;ALL&lt;/code&gt;). If you specify &lt;code&gt;ALL&lt;/code&gt;, the default configuration will be used for every client that has no UI customization set previously. If you specify UI customization settings for a particular client, it will no longer fall back to the &lt;code&gt;ALL&lt;/code&gt; configuration.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>To use this API, your user pool must have a domain associated with it. Otherwise, there is no place to host the app's pages, and the service will throw an</p>
+<!-- @@@setUICustomization -->
+<!-- $$$setUserMFAPreference[overload1]$$$setUserMFAPreferenceconstSetUserMFAPreferenceRequest& -->
+<h3 class="fn" id="setUserMFAPreference"><a name="setUserMFAPreference"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-setusermfapreferenceresponse.html">SetUserMFAPreferenceResponse</a></span> *CognitoIdentityProviderClient::<span class="name">setUserMFAPreference</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-setusermfapreferencerequest.html">SetUserMFAPreferenceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-setusermfapreferenceresponse.html">SetUserMFAPreferenceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Set the user's multi-factor authentication (MFA) method</p>
+<!-- @@@setUserMFAPreference -->
+<!-- $$$setUserPoolMfaConfig[overload1]$$$setUserPoolMfaConfigconstSetUserPoolMfaConfigRequest& -->
+<h3 class="fn" id="setUserPoolMfaConfig"><a name="setUserPoolMfaConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-setuserpoolmfaconfigresponse.html">SetUserPoolMfaConfigResponse</a></span> *CognitoIdentityProviderClient::<span class="name">setUserPoolMfaConfig</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-setuserpoolmfaconfigrequest.html">SetUserPoolMfaConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-setuserpoolmfaconfigresponse.html">SetUserPoolMfaConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Set the user pool MFA</p>
+<!-- @@@setUserPoolMfaConfig -->
+<!-- $$$setUserSettings[overload1]$$$setUserSettingsconstSetUserSettingsRequest& -->
+<h3 class="fn" id="setUserSettings"><a name="setUserSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-setusersettingsresponse.html">SetUserSettingsResponse</a></span> *CognitoIdentityProviderClient::<span class="name">setUserSettings</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-setusersettingsrequest.html">SetUserSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-setusersettingsresponse.html">SetUserSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the user settings like multi-factor authentication (MFA). If MFA is to be removed for a particular attribute pass the attribute with code delivery as null. If null list is passed, all MFA options are</p>
+<!-- @@@setUserSettings -->
+<!-- $$$signUp[overload1]$$$signUpconstSignUpRequest& -->
+<h3 class="fn" id="signUp"><a name="signUp"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-signupresponse.html">SignUpResponse</a></span> *CognitoIdentityProviderClient::<span class="name">signUp</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-signuprequest.html">SignUpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-signupresponse.html">SignUpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers the user in the specified user pool and creates a user name, password, and user</p>
+<!-- @@@signUp -->
+<!-- $$$startUserImportJob[overload1]$$$startUserImportJobconstStartUserImportJobRequest& -->
+<h3 class="fn" id="startUserImportJob"><a name="startUserImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-startuserimportjobresponse.html">StartUserImportJobResponse</a></span> *CognitoIdentityProviderClient::<span class="name">startUserImportJob</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-startuserimportjobrequest.html">StartUserImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-startuserimportjobresponse.html">StartUserImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the user</p>
+<!-- @@@startUserImportJob -->
+<!-- $$$stopUserImportJob[overload1]$$$stopUserImportJobconstStopUserImportJobRequest& -->
+<h3 class="fn" id="stopUserImportJob"><a name="stopUserImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-stopuserimportjobresponse.html">StopUserImportJobResponse</a></span> *CognitoIdentityProviderClient::<span class="name">stopUserImportJob</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-stopuserimportjobrequest.html">StopUserImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-stopuserimportjobresponse.html">StopUserImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the user import</p>
+<!-- @@@stopUserImportJob -->
+<!-- $$$updateAuthEventFeedback[overload1]$$$updateAuthEventFeedbackconstUpdateAuthEventFeedbackRequest& -->
+<h3 class="fn" id="updateAuthEventFeedback"><a name="updateAuthEventFeedback"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateautheventfeedbackresponse.html">UpdateAuthEventFeedbackResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateAuthEventFeedback</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateautheventfeedbackrequest.html">UpdateAuthEventFeedbackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateautheventfeedbackresponse.html">UpdateAuthEventFeedbackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides the feedback for an authentication event whether it was from a valid user or not. This feedback is used for improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced</p>
+<!-- @@@updateAuthEventFeedback -->
+<!-- $$$updateDeviceStatus[overload1]$$$updateDeviceStatusconstUpdateDeviceStatusRequest& -->
+<h3 class="fn" id="updateDeviceStatus"><a name="updateDeviceStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updatedevicestatusresponse.html">UpdateDeviceStatusResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateDeviceStatus</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updatedevicestatusrequest.html">UpdateDeviceStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updatedevicestatusresponse.html">UpdateDeviceStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the device</p>
+<!-- @@@updateDeviceStatus -->
+<!-- $$$updateGroup[overload1]$$$updateGroupconstUpdateGroupRequest& -->
+<h3 class="fn" id="updateGroup"><a name="updateGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updategroupresponse.html">UpdateGroupResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateGroup</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updategrouprequest.html">UpdateGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updategroupresponse.html">UpdateGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified group with the specified</p>
+<p>attributes&gt;</p>
+<p>Requires developer</p>
+<!-- @@@updateGroup -->
+<!-- $$$updateIdentityProvider[overload1]$$$updateIdentityProviderconstUpdateIdentityProviderRequest& -->
+<h3 class="fn" id="updateIdentityProvider"><a name="updateIdentityProvider"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateidentityproviderresponse.html">UpdateIdentityProviderResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateIdentityProvider</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateidentityproviderrequest.html">UpdateIdentityProviderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateidentityproviderresponse.html">UpdateIdentityProviderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates identity provider information for a user</p>
+<!-- @@@updateIdentityProvider -->
+<!-- $$$updateResourceServer[overload1]$$$updateResourceServerconstUpdateResourceServerRequest& -->
+<h3 class="fn" id="updateResourceServer"><a name="updateResourceServer"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateresourceserverresponse.html">UpdateResourceServerResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateResourceServer</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateresourceserverrequest.html">UpdateResourceServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateresourceserverresponse.html">UpdateResourceServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the name and scopes of resource server. All other fields are</p>
+<!-- @@@updateResourceServer -->
+<!-- $$$updateUserAttributes[overload1]$$$updateUserAttributesconstUpdateUserAttributesRequest& -->
+<h3 class="fn" id="updateUserAttributes"><a name="updateUserAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateuserattributesresponse.html">UpdateUserAttributesResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateUserAttributes</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateuserattributesrequest.html">UpdateUserAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateuserattributesresponse.html">UpdateUserAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a user to update a specific attribute (one at a</p>
+<!-- @@@updateUserAttributes -->
+<!-- $$$updateUserPool[overload1]$$$updateUserPoolconstUpdateUserPoolRequest& -->
+<h3 class="fn" id="updateUserPool"><a name="updateUserPool"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateuserpoolresponse.html">UpdateUserPoolResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateUserPool</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateuserpoolrequest.html">UpdateUserPoolRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateuserpoolresponse.html">UpdateUserPoolResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified user pool with the specified</p>
+<!-- @@@updateUserPool -->
+<!-- $$$updateUserPoolClient[overload1]$$$updateUserPoolClientconstUpdateUserPoolClientRequest& -->
+<h3 class="fn" id="updateUserPoolClient"><a name="updateUserPoolClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-updateuserpoolclientresponse.html">UpdateUserPoolClientResponse</a></span> *CognitoIdentityProviderClient::<span class="name">updateUserPoolClient</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-updateuserpoolclientrequest.html">UpdateUserPoolClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-updateuserpoolclientresponse.html">UpdateUserPoolClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows the developer to update the specified user pool client and password</p>
+<!-- @@@updateUserPoolClient -->
+<!-- $$$verifySoftwareToken[overload1]$$$verifySoftwareTokenconstVerifySoftwareTokenRequest& -->
+<h3 class="fn" id="verifySoftwareToken"><a name="verifySoftwareToken"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-verifysoftwaretokenresponse.html">VerifySoftwareTokenResponse</a></span> *CognitoIdentityProviderClient::<span class="name">verifySoftwareToken</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-verifysoftwaretokenrequest.html">VerifySoftwareTokenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-verifysoftwaretokenresponse.html">VerifySoftwareTokenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Use this API to register a user's entered TOTP code and mark the user's software token MFA status as &quot;verified&quot; if</p>
+<!-- @@@verifySoftwareToken -->
+<!-- $$$verifyUserAttribute[overload1]$$$verifyUserAttributeconstVerifyUserAttributeRequest& -->
+<h3 class="fn" id="verifyUserAttribute"><a name="verifyUserAttribute"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitoidentityprovider-verifyuserattributeresponse.html">VerifyUserAttributeResponse</a></span> *CognitoIdentityProviderClient::<span class="name">verifyUserAttribute</span>(const <span class="type"><a href="qtaws-cognitoidentityprovider-verifyuserattributerequest.html">VerifyUserAttributeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">CognitoIdentityProviderClient</a> service, and returns a pointer to an <a href="qtaws-cognitoidentityprovider-verifyuserattributeresponse.html">VerifyUserAttributeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Verifies the specified user attributes in the user</p>
+<!-- @@@verifyUserAttribute -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

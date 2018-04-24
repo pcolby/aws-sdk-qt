@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mqclient.cpp -->
+  <title>MqClient Class | MQ</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmq-index.html">MQ</a></li>
+<li><a href="qtawsmq-module.html">C++ Classes</a></li>
+<li>MqClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MqClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mq-mqclient.html">QtAws::MQ::MqClient</a>)<br/></span>
+<!-- $$$MqClient-brief -->
+<p>The <a href="qtaws-mq-mqclient.html">MqClient</a> class provides access to the AmazonMQ service. <a href="#details">More...</a></p>
+<!-- @@@MqClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MqClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mq-mqclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#MqClient">MqClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#MqClient-1">MqClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBrokerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#createBroker">createBroker</a></b>(const CreateBrokerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#createConfiguration">createConfiguration</a></b>(const CreateConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#createUser">createUser</a></b>(const CreateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBrokerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#deleteBroker">deleteBroker</a></b>(const DeleteBrokerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#deleteUser">deleteUser</a></b>(const DeleteUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBrokerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#describeBroker">describeBroker</a></b>(const DescribeBrokerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#describeConfiguration">describeConfiguration</a></b>(const DescribeConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationRevisionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#describeConfigurationRevision">describeConfigurationRevision</a></b>(const DescribeConfigurationRevisionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#describeUser">describeUser</a></b>(const DescribeUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBrokersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#listBrokers">listBrokers</a></b>(const ListBrokersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListConfigurationRevisionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#listConfigurationRevisions">listConfigurationRevisions</a></b>(const ListConfigurationRevisionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#listConfigurations">listConfigurations</a></b>(const ListConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUsersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#listUsers">listUsers</a></b>(const ListUsersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootBrokerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#rebootBroker">rebootBroker</a></b>(const RebootBrokerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBrokerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#updateBroker">updateBroker</a></b>(const UpdateBrokerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#updateConfiguration">updateConfiguration</a></b>(const UpdateConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mq-mqclient.html#updateUser">updateUser</a></b>(const UpdateUserRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MqClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mq-mqclient.html">MqClient</a> class provides access to the AmazonMQ service.</p>
+<p>Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message brokers in the cloud. A message broker allows software applications and components to communicate using various</p>
+</div>
+<!-- @@@MqClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MqClient[overload1]$$$MqClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MqClient"><a name="MqClient"></a>MqClient::<span class="name">MqClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mq-mqclient.html">MqClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MqClient -->
+<!-- $$$MqClient$$$MqClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MqClient-1"><a name="MqClient-1"></a>MqClient::<span class="name">MqClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mq-mqclient.html#MqClient">MqClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MqClient -->
+<!-- $$$createBroker[overload1]$$$createBrokerconstCreateBrokerRequest& -->
+<h3 class="fn" id="createBroker"><a name="createBroker"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-createbrokerresponse.html">CreateBrokerResponse</a></span> *MqClient::<span class="name">createBroker</span>(const <span class="type"><a href="qtaws-mq-createbrokerrequest.html">CreateBrokerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-createbrokerresponse.html">CreateBrokerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createBroker -->
+<!-- $$$createConfiguration[overload1]$$$createConfigurationconstCreateConfigurationRequest& -->
+<h3 class="fn" id="createConfiguration"><a name="createConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-createconfigurationresponse.html">CreateConfigurationResponse</a></span> *MqClient::<span class="name">createConfiguration</span>(const <span class="type"><a href="qtaws-mq-createconfigurationrequest.html">CreateConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-createconfigurationresponse.html">CreateConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new configuration for the specified configuration name. Amazon MQ uses the default configuration (the engine</p>
+<!-- @@@createConfiguration -->
+<!-- $$$createUser[overload1]$$$createUserconstCreateUserRequest& -->
+<h3 class="fn" id="createUser"><a name="createUser"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-createuserresponse.html">CreateUserResponse</a></span> *MqClient::<span class="name">createUser</span>(const <span class="type"><a href="qtaws-mq-createuserrequest.html">CreateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-createuserresponse.html">CreateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createUser -->
+<!-- $$$deleteBroker[overload1]$$$deleteBrokerconstDeleteBrokerRequest& -->
+<h3 class="fn" id="deleteBroker"><a name="deleteBroker"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-deletebrokerresponse.html">DeleteBrokerResponse</a></span> *MqClient::<span class="name">deleteBroker</span>(const <span class="type"><a href="qtaws-mq-deletebrokerrequest.html">DeleteBrokerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-deletebrokerresponse.html">DeleteBrokerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBroker -->
+<!-- $$$deleteUser[overload1]$$$deleteUserconstDeleteUserRequest& -->
+<h3 class="fn" id="deleteUser"><a name="deleteUser"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-deleteuserresponse.html">DeleteUserResponse</a></span> *MqClient::<span class="name">deleteUser</span>(const <span class="type"><a href="qtaws-mq-deleteuserrequest.html">DeleteUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-deleteuserresponse.html">DeleteUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteUser -->
+<!-- $$$describeBroker[overload1]$$$describeBrokerconstDescribeBrokerRequest& -->
+<h3 class="fn" id="describeBroker"><a name="describeBroker"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-describebrokerresponse.html">DescribeBrokerResponse</a></span> *MqClient::<span class="name">describeBroker</span>(const <span class="type"><a href="qtaws-mq-describebrokerrequest.html">DescribeBrokerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-describebrokerresponse.html">DescribeBrokerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeBroker -->
+<!-- $$$describeConfiguration[overload1]$$$describeConfigurationconstDescribeConfigurationRequest& -->
+<h3 class="fn" id="describeConfiguration"><a name="describeConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-describeconfigurationresponse.html">DescribeConfigurationResponse</a></span> *MqClient::<span class="name">describeConfiguration</span>(const <span class="type"><a href="qtaws-mq-describeconfigurationrequest.html">DescribeConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-describeconfigurationresponse.html">DescribeConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeConfiguration -->
+<!-- $$$describeConfigurationRevision[overload1]$$$describeConfigurationRevisionconstDescribeConfigurationRevisionRequest& -->
+<h3 class="fn" id="describeConfigurationRevision"><a name="describeConfigurationRevision"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-describeconfigurationrevisionresponse.html">DescribeConfigurationRevisionResponse</a></span> *MqClient::<span class="name">describeConfigurationRevision</span>(const <span class="type"><a href="qtaws-mq-describeconfigurationrevisionrequest.html">DescribeConfigurationRevisionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-describeconfigurationrevisionresponse.html">DescribeConfigurationRevisionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeConfigurationRevision -->
+<!-- $$$describeUser[overload1]$$$describeUserconstDescribeUserRequest& -->
+<h3 class="fn" id="describeUser"><a name="describeUser"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-describeuserresponse.html">DescribeUserResponse</a></span> *MqClient::<span class="name">describeUser</span>(const <span class="type"><a href="qtaws-mq-describeuserrequest.html">DescribeUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-describeuserresponse.html">DescribeUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeUser -->
+<!-- $$$listBrokers[overload1]$$$listBrokersconstListBrokersRequest& -->
+<h3 class="fn" id="listBrokers"><a name="listBrokers"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-listbrokersresponse.html">ListBrokersResponse</a></span> *MqClient::<span class="name">listBrokers</span>(const <span class="type"><a href="qtaws-mq-listbrokersrequest.html">ListBrokersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-listbrokersresponse.html">ListBrokersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listBrokers -->
+<!-- $$$listConfigurationRevisions[overload1]$$$listConfigurationRevisionsconstListConfigurationRevisionsRequest& -->
+<h3 class="fn" id="listConfigurationRevisions"><a name="listConfigurationRevisions"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-listconfigurationrevisionsresponse.html">ListConfigurationRevisionsResponse</a></span> *MqClient::<span class="name">listConfigurationRevisions</span>(const <span class="type"><a href="qtaws-mq-listconfigurationrevisionsrequest.html">ListConfigurationRevisionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-listconfigurationrevisionsresponse.html">ListConfigurationRevisionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listConfigurationRevisions -->
+<!-- $$$listConfigurations[overload1]$$$listConfigurationsconstListConfigurationsRequest& -->
+<h3 class="fn" id="listConfigurations"><a name="listConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-listconfigurationsresponse.html">ListConfigurationsResponse</a></span> *MqClient::<span class="name">listConfigurations</span>(const <span class="type"><a href="qtaws-mq-listconfigurationsrequest.html">ListConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-listconfigurationsresponse.html">ListConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listConfigurations -->
+<!-- $$$listUsers[overload1]$$$listUsersconstListUsersRequest& -->
+<h3 class="fn" id="listUsers"><a name="listUsers"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-listusersresponse.html">ListUsersResponse</a></span> *MqClient::<span class="name">listUsers</span>(const <span class="type"><a href="qtaws-mq-listusersrequest.html">ListUsersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-listusersresponse.html">ListUsersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listUsers -->
+<!-- $$$rebootBroker[overload1]$$$rebootBrokerconstRebootBrokerRequest& -->
+<h3 class="fn" id="rebootBroker"><a name="rebootBroker"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-rebootbrokerresponse.html">RebootBrokerResponse</a></span> *MqClient::<span class="name">rebootBroker</span>(const <span class="type"><a href="qtaws-mq-rebootbrokerrequest.html">RebootBrokerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-rebootbrokerresponse.html">RebootBrokerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@rebootBroker -->
+<!-- $$$updateBroker[overload1]$$$updateBrokerconstUpdateBrokerRequest& -->
+<h3 class="fn" id="updateBroker"><a name="updateBroker"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-updatebrokerresponse.html">UpdateBrokerResponse</a></span> *MqClient::<span class="name">updateBroker</span>(const <span class="type"><a href="qtaws-mq-updatebrokerrequest.html">UpdateBrokerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-updatebrokerresponse.html">UpdateBrokerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateBroker -->
+<!-- $$$updateConfiguration[overload1]$$$updateConfigurationconstUpdateConfigurationRequest& -->
+<h3 class="fn" id="updateConfiguration"><a name="updateConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-updateconfigurationresponse.html">UpdateConfigurationResponse</a></span> *MqClient::<span class="name">updateConfiguration</span>(const <span class="type"><a href="qtaws-mq-updateconfigurationrequest.html">UpdateConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-updateconfigurationresponse.html">UpdateConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateConfiguration -->
+<!-- $$$updateUser[overload1]$$$updateUserconstUpdateUserRequest& -->
+<h3 class="fn" id="updateUser"><a name="updateUser"></a><code>[slot] </code><span class="type"><a href="qtaws-mq-updateuserresponse.html">UpdateUserResponse</a></span> *MqClient::<span class="name">updateUser</span>(const <span class="type"><a href="qtaws-mq-updateuserrequest.html">UpdateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mq-mqclient.html">MqClient</a> service, and returns a pointer to an <a href="qtaws-mq-updateuserresponse.html">UpdateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateUser -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

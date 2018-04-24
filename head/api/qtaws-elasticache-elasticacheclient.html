@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- elasticacheclient.cpp -->
+  <title>ElastiCacheClient Class | ElastiCache</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawselasticache-index.html">ElastiCache</a></li>
+<li><a href="qtawselasticache-module.html">C++ Classes</a></li>
+<li>ElastiCacheClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ElastiCacheClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-elasticache-elasticacheclient.html">QtAws::ElastiCache::ElastiCacheClient</a>)<br/></span>
+<!-- $$$ElastiCacheClient-brief -->
+<p>The <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> class provides access to the Amazon <a href="qtaws-elasticache.html">ElastiCache</a> service. <a href="#details">More...</a></p>
+<!-- @@@ElastiCacheClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ElastiCacheClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-elasticache-elasticacheclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#ElastiCacheClient">ElastiCacheClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#ElastiCacheClient-1">ElastiCacheClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AuthorizeCacheSecurityGroupIngressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#authorizeCacheSecurityGroupIngress">authorizeCacheSecurityGroupIngress</a></b>(const AuthorizeCacheSecurityGroupIngressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopySnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#copySnapshot">copySnapshot</a></b>(const CopySnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCacheClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createCacheCluster">createCacheCluster</a></b>(const CreateCacheClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCacheParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createCacheParameterGroup">createCacheParameterGroup</a></b>(const CreateCacheParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCacheSecurityGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createCacheSecurityGroup">createCacheSecurityGroup</a></b>(const CreateCacheSecurityGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCacheSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createCacheSubnetGroup">createCacheSubnetGroup</a></b>(const CreateCacheSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateReplicationGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createReplicationGroup">createReplicationGroup</a></b>(const CreateReplicationGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#createSnapshot">createSnapshot</a></b>(const CreateSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCacheClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteCacheCluster">deleteCacheCluster</a></b>(const DeleteCacheClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCacheParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteCacheParameterGroup">deleteCacheParameterGroup</a></b>(const DeleteCacheParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCacheSecurityGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteCacheSecurityGroup">deleteCacheSecurityGroup</a></b>(const DeleteCacheSecurityGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCacheSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteCacheSubnetGroup">deleteCacheSubnetGroup</a></b>(const DeleteCacheSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteReplicationGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteReplicationGroup">deleteReplicationGroup</a></b>(const DeleteReplicationGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#deleteSnapshot">deleteSnapshot</a></b>(const DeleteSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheClusters">describeCacheClusters</a></b>(const DescribeCacheClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheEngineVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheEngineVersions">describeCacheEngineVersions</a></b>(const DescribeCacheEngineVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheParameterGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheParameterGroups">describeCacheParameterGroups</a></b>(const DescribeCacheParameterGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheParameters">describeCacheParameters</a></b>(const DescribeCacheParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheSecurityGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheSecurityGroups">describeCacheSecurityGroups</a></b>(const DescribeCacheSecurityGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCacheSubnetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeCacheSubnetGroups">describeCacheSubnetGroups</a></b>(const DescribeCacheSubnetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEngineDefaultParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeEngineDefaultParameters">describeEngineDefaultParameters</a></b>(const DescribeEngineDefaultParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReplicationGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeReplicationGroups">describeReplicationGroups</a></b>(const DescribeReplicationGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReservedCacheNodesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeReservedCacheNodes">describeReservedCacheNodes</a></b>(const DescribeReservedCacheNodesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReservedCacheNodesOfferingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeReservedCacheNodesOfferings">describeReservedCacheNodesOfferings</a></b>(const DescribeReservedCacheNodesOfferingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#describeSnapshots">describeSnapshots</a></b>(const DescribeSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAllowedNodeTypeModificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#listAllowedNodeTypeModifications">listAllowedNodeTypeModifications</a></b>(const ListAllowedNodeTypeModificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyCacheClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#modifyCacheCluster">modifyCacheCluster</a></b>(const ModifyCacheClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyCacheParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#modifyCacheParameterGroup">modifyCacheParameterGroup</a></b>(const ModifyCacheParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyCacheSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#modifyCacheSubnetGroup">modifyCacheSubnetGroup</a></b>(const ModifyCacheSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyReplicationGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#modifyReplicationGroup">modifyReplicationGroup</a></b>(const ModifyReplicationGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyReplicationGroupShardConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#modifyReplicationGroupShardConfiguration">modifyReplicationGroupShardConfiguration</a></b>(const ModifyReplicationGroupShardConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PurchaseReservedCacheNodesOfferingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#purchaseReservedCacheNodesOffering">purchaseReservedCacheNodesOffering</a></b>(const PurchaseReservedCacheNodesOfferingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootCacheClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#rebootCacheCluster">rebootCacheCluster</a></b>(const RebootCacheClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetCacheParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#resetCacheParameterGroup">resetCacheParameterGroup</a></b>(const ResetCacheParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RevokeCacheSecurityGroupIngressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#revokeCacheSecurityGroupIngress">revokeCacheSecurityGroupIngress</a></b>(const RevokeCacheSecurityGroupIngressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestFailoverResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticache-elasticacheclient.html#testFailover">testFailover</a></b>(const TestFailoverRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ElastiCacheClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> class provides access to the Amazon <a href="qtaws-elasticache.html">ElastiCache</a> service.</p>
+<p>&lt;fullname&gt;Amazon <a href="qtaws-elasticache.html">ElastiCache</a>&lt;/fullname&gt;</p>
+<p>Amazon <a href="qtaws-elasticache.html">ElastiCache</a> is a web service that makes it easier to set up, operate, and scale a distributed cache in the</p>
+<p>cloud&gt;</p>
+<p>With <a href="qtaws-elasticache.html">ElastiCache</a>, customers get all of the benefits of a high-performance, in-memory cache with less of the administrative burden involved in launching and managing a distributed cache. The service makes setup, scaling, and cluster failure handling much simpler than in a self-managed cache</p>
+<p>deployment&gt;</p>
+<p>In addition, through integration with Amazon CloudWatch, customers get enhanced visibility into the key performance statistics associated with their cache and can receive alarms if a part of their cache runs</p>
+</div>
+<!-- @@@ElastiCacheClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ElastiCacheClient[overload1]$$$ElastiCacheClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElastiCacheClient"><a name="ElastiCacheClient"></a>ElastiCacheClient::<span class="name">ElastiCacheClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ElastiCacheClient -->
+<!-- $$$ElastiCacheClient$$$ElastiCacheClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElastiCacheClient-1"><a name="ElastiCacheClient-1"></a>ElastiCacheClient::<span class="name">ElastiCacheClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-elasticache-elasticacheclient.html#ElastiCacheClient">ElastiCacheClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ElastiCacheClient -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *ElastiCacheClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-elasticache-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds up to 50 cost allocation tags to the named resource. A cost allocation tag is a key-value pair where the key and value are case-sensitive. You can use cost allocation tags to categorize and track your AWS</p>
+<p>costs&gt;</p>
+<p>When you apply tags to your <a href="qtaws-elasticache.html">ElastiCache</a> resources, AWS generates a cost allocation report as a comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent business categories (such as cost centers, application names, or owners) to organize your costs across multiple services. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Tagging.html&quot;&gt;Using Cost Allocation Tags in Amazon <a href="qtaws-elasticache.html">ElastiCache</a>&lt;/a&gt; in the &lt;i&gt;<a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$authorizeCacheSecurityGroupIngress[overload1]$$$authorizeCacheSecurityGroupIngressconstAuthorizeCacheSecurityGroupIngressRequest& -->
+<h3 class="fn" id="authorizeCacheSecurityGroupIngress"><a name="authorizeCacheSecurityGroupIngress"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-authorizecachesecuritygroupingressresponse.html">AuthorizeCacheSecurityGroupIngressResponse</a></span> *ElastiCacheClient::<span class="name">authorizeCacheSecurityGroupIngress</span>(const <span class="type"><a href="qtaws-elasticache-authorizecachesecuritygroupingressrequest.html">AuthorizeCacheSecurityGroupIngressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-authorizecachesecuritygroupingressresponse.html">AuthorizeCacheSecurityGroupIngressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows network ingress to a cache security group. Applications using <a href="qtaws-elasticache.html">ElastiCache</a> must be running on Amazon EC2, and Amazon EC2 security groups are used as the authorization</p>
+<p>mechanism&gt; &lt;note&gt;</p>
+<p>You cannot authorize ingress from an Amazon EC2 security group in one region to an <a href="qtaws-elasticache.html">ElastiCache</a> cluster in another</p>
+<!-- @@@authorizeCacheSecurityGroupIngress -->
+<!-- $$$copySnapshot[overload1]$$$copySnapshotconstCopySnapshotRequest& -->
+<h3 class="fn" id="copySnapshot"><a name="copySnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-copysnapshotresponse.html">CopySnapshotResponse</a></span> *ElastiCacheClient::<span class="name">copySnapshot</span>(const <span class="type"><a href="qtaws-elasticache-copysnapshotrequest.html">CopySnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-copysnapshotresponse.html">CopySnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Makes a copy of an existing</p>
+<p>snapshot&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<p>only&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>Users or groups that have permissions to use the &lt;code&gt;CopySnapshot&lt;/code&gt; operation can create their own Amazon S3 buckets and copy snapshots to it. To control access to your snapshots, use an IAM policy to control who has the ability to use the &lt;code&gt;CopySnapshot&lt;/code&gt; operation. For more information about using IAM to control the use of <a href="qtaws-elasticache.html">ElastiCache</a> operations, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html&quot;&gt;Exporting Snapshots&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/IAM.html&quot;&gt;Authentication &amp;amp; Access</p>
+<p>Control&lt;/a&gt;&gt; &lt;/b&gt;</p>
+<p>You could receive the following error</p>
+<p>messages&gt; &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Error Messages&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message:&lt;/b&gt; The S3 bucket %s is outside of the</p>
+<p>region&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Create an Amazon S3 bucket in the same region as your snapshot. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket&quot;&gt;Step 1: Create an Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message:&lt;/b&gt; The S3 bucket %s does not</p>
+<p>exist&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Create an Amazon S3 bucket in the same region as your snapshot. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket&quot;&gt;Step 1: Create an Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message:&lt;/b&gt; The S3 bucket %s is not owned by the authenticated</p>
+<p>user&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Create an Amazon S3 bucket in the same region as your snapshot. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket&quot;&gt;Step 1: Create an Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message:&lt;/b&gt; The authenticated user does not have sufficient permissions to perform the desired</p>
+<p>activity&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Contact your system administrator to get the needed</p>
+<p>permissions&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message:&lt;/b&gt; The S3 bucket %s already contains an object with key</p>
+<p>%s&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Give the &lt;code&gt;TargetSnapshotName&lt;/code&gt; a new and unique value. If exporting a snapshot, you could alternatively create a new Amazon S3 bucket and use this same value for</p>
+<p>&lt;code&gt;TargetSnapshotName&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message: &lt;/b&gt; <a href="qtaws-elasticache.html">ElastiCache</a> has not been granted READ permissions %s on the S3</p>
+<p>Bucket&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Add List and Read permissions on the bucket. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess&quot;&gt;Step 2: Grant <a href="qtaws-elasticache.html">ElastiCache</a> Access to Your Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message: &lt;/b&gt; <a href="qtaws-elasticache.html">ElastiCache</a> has not been granted WRITE permissions %s on the S3</p>
+<p>Bucket&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Add Upload/Delete permissions on the bucket. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess&quot;&gt;Step 2: Grant <a href="qtaws-elasticache.html">ElastiCache</a> Access to Your Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Error Message: &lt;/b&gt; <a href="qtaws-elasticache.html">ElastiCache</a> has not been granted READ_ACP permissions %s on the S3</p>
+<p>Bucket&gt;</p>
+<p>&lt;b&gt;Solution:&lt;/b&gt; Add View Permissions on the bucket. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess&quot;&gt;Step 2: Grant <a href="qtaws-elasticache.html">ElastiCache</a> Access to Your Amazon S3 Bucket&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<!-- @@@copySnapshot -->
+<!-- $$$createCacheCluster[overload1]$$$createCacheClusterconstCreateCacheClusterRequest& -->
+<h3 class="fn" id="createCacheCluster"><a name="createCacheCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createcacheclusterresponse.html">CreateCacheClusterResponse</a></span> *ElastiCacheClient::<span class="name">createCacheCluster</span>(const <span class="type"><a href="qtaws-elasticache-createcacheclusterrequest.html">CreateCacheClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createcacheclusterresponse.html">CreateCacheClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a cluster. All nodes in the cluster run the same protocol-compliant cache engine software, either Memcached or</p>
+<p>Redis&gt; &lt;b&gt;</p>
+<p>Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis (cluster mode enabled) replication</p>
+<!-- @@@createCacheCluster -->
+<!-- $$$createCacheParameterGroup[overload1]$$$createCacheParameterGroupconstCreateCacheParameterGroupRequest& -->
+<h3 class="fn" id="createCacheParameterGroup"><a name="createCacheParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createcacheparametergroupresponse.html">CreateCacheParameterGroupResponse</a></span> *ElastiCacheClient::<span class="name">createCacheParameterGroup</span>(const <span class="type"><a href="qtaws-elasticache-createcacheparametergrouprequest.html">CreateCacheParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createcacheparametergroupresponse.html">CreateCacheParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Amazon <a href="qtaws-elasticache.html">ElastiCache</a> cache parameter group. An <a href="qtaws-elasticache.html">ElastiCache</a> cache parameter group is a collection of parameters and their values that are applied to all of the nodes in any cluster or replication group using the</p>
+<p>CacheParameterGroup&gt;</p>
+<p>A newly created CacheParameterGroup is an exact duplicate of the default parameter group for the CacheParameterGroupFamily. To customize the newly created CacheParameterGroup you can change the values of specific parameters. For more information,</p>
+<p>see&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html&quot;&gt;ModifyCacheParameterGroup&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> API</p>
+<p>Reference&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/ParameterGroups.html&quot;&gt;Parameters and Parameter Groups&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<!-- @@@createCacheParameterGroup -->
+<!-- $$$createCacheSecurityGroup[overload1]$$$createCacheSecurityGroupconstCreateCacheSecurityGroupRequest& -->
+<h3 class="fn" id="createCacheSecurityGroup"><a name="createCacheSecurityGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createcachesecuritygroupresponse.html">CreateCacheSecurityGroupResponse</a></span> *ElastiCacheClient::<span class="name">createCacheSecurityGroup</span>(const <span class="type"><a href="qtaws-elasticache-createcachesecuritygrouprequest.html">CreateCacheSecurityGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createcachesecuritygroupresponse.html">CreateCacheSecurityGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new cache security group. Use a cache security group to control access to one or more</p>
+<p>clusters&gt;</p>
+<p>Cache security groups are only used when you are creating a cluster outside of an Amazon Virtual Private Cloud (Amazon VPC). If you are creating a cluster inside of a VPC, use a cache subnet group instead. For more information, see &lt;a</p>
+<!-- @@@createCacheSecurityGroup -->
+<!-- $$$createCacheSubnetGroup[overload1]$$$createCacheSubnetGroupconstCreateCacheSubnetGroupRequest& -->
+<h3 class="fn" id="createCacheSubnetGroup"><a name="createCacheSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createcachesubnetgroupresponse.html">CreateCacheSubnetGroupResponse</a></span> *ElastiCacheClient::<span class="name">createCacheSubnetGroup</span>(const <span class="type"><a href="qtaws-elasticache-createcachesubnetgrouprequest.html">CreateCacheSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createcachesubnetgroupresponse.html">CreateCacheSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new cache subnet</p>
+<p>group&gt;</p>
+<p>Use this parameter only when you are creating a cluster in an Amazon Virtual Private Cloud (Amazon</p>
+<!-- @@@createCacheSubnetGroup -->
+<!-- $$$createReplicationGroup[overload1]$$$createReplicationGroupconstCreateReplicationGroupRequest& -->
+<h3 class="fn" id="createReplicationGroup"><a name="createReplicationGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createreplicationgroupresponse.html">CreateReplicationGroupResponse</a></span> *ElastiCacheClient::<span class="name">createReplicationGroup</span>(const <span class="type"><a href="qtaws-elasticache-createreplicationgrouprequest.html">CreateReplicationGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createreplicationgroupresponse.html">CreateReplicationGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Redis (cluster mode disabled) or a Redis (cluster mode enabled) replication</p>
+<p>group&gt;</p>
+<p>A Redis (cluster mode disabled) replication group is a collection of clusters, where one of the clusters is a read/write primary and the others are read-only replicas. Writes to the primary are asynchronously propagated to the</p>
+<p>replicas&gt;</p>
+<p>A Redis (cluster mode enabled) replication group is a collection of 1 to 15 node groups (shards). Each node group (shard) has one read/write primary node and up to 5 read-only replica nodes. Writes to the primary are asynchronously propagated to the replicas. Redis (cluster mode enabled) replication groups partition the data across node groups</p>
+<p>(shards)&gt;</p>
+<p>When a Redis (cluster mode disabled) replication group has been successfully created, you can add one or more read replicas to it, up to a total of 5 read replicas. You cannot alter a Redis (cluster mode enabled) replication group after it has been created. However, if you need to increase or decrease the number of node groups (console: shards), you can avail yourself of <a href="qtaws-elasticache.html">ElastiCache</a> for Redis' enhanced backup and restore. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/backups-restoring.html&quot;&gt;Restoring From a Backup with Cluster Resizing&lt;/a&gt; in the &lt;i&gt;<a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&lt;/i&gt;&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@createReplicationGroup -->
+<!-- $$$createSnapshot[overload1]$$$createSnapshotconstCreateSnapshotRequest& -->
+<h3 class="fn" id="createSnapshot"><a name="createSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-createsnapshotresponse.html">CreateSnapshotResponse</a></span> *ElastiCacheClient::<span class="name">createSnapshot</span>(const <span class="type"><a href="qtaws-elasticache-createsnapshotrequest.html">CreateSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-createsnapshotresponse.html">CreateSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a copy of an entire cluster or replication group at a specific moment in</p>
+<p>time&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@createSnapshot -->
+<!-- $$$deleteCacheCluster[overload1]$$$deleteCacheClusterconstDeleteCacheClusterRequest& -->
+<h3 class="fn" id="deleteCacheCluster"><a name="deleteCacheCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletecacheclusterresponse.html">DeleteCacheClusterResponse</a></span> *ElastiCacheClient::<span class="name">deleteCacheCluster</span>(const <span class="type"><a href="qtaws-elasticache-deletecacheclusterrequest.html">DeleteCacheClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletecacheclusterresponse.html">DeleteCacheClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a previously provisioned cluster. &lt;code&gt;DeleteCacheCluster&lt;/code&gt; deletes all associated cache nodes, node endpoints and the cluster itself. When you receive a successful response from this operation, Amazon <a href="qtaws-elasticache.html">ElastiCache</a> immediately begins deleting the cluster; you cannot cancel or revert this</p>
+<p>operation&gt;</p>
+<p>This operation cannot be used to delete a cluster that is the last read replica of a replication group or node group (shard) that has Multi-AZ mode enabled or a cluster from a Redis (cluster mode enabled) replication</p>
+<p>group&gt; &lt;b&gt;</p>
+<p>Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis (cluster mode enabled) replication</p>
+<!-- @@@deleteCacheCluster -->
+<!-- $$$deleteCacheParameterGroup[overload1]$$$deleteCacheParameterGroupconstDeleteCacheParameterGroupRequest& -->
+<h3 class="fn" id="deleteCacheParameterGroup"><a name="deleteCacheParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletecacheparametergroupresponse.html">DeleteCacheParameterGroupResponse</a></span> *ElastiCacheClient::<span class="name">deleteCacheParameterGroup</span>(const <span class="type"><a href="qtaws-elasticache-deletecacheparametergrouprequest.html">DeleteCacheParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletecacheparametergroupresponse.html">DeleteCacheParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified cache parameter group. You cannot delete a cache parameter group if it is associated with any cache</p>
+<!-- @@@deleteCacheParameterGroup -->
+<!-- $$$deleteCacheSecurityGroup[overload1]$$$deleteCacheSecurityGroupconstDeleteCacheSecurityGroupRequest& -->
+<h3 class="fn" id="deleteCacheSecurityGroup"><a name="deleteCacheSecurityGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletecachesecuritygroupresponse.html">DeleteCacheSecurityGroupResponse</a></span> *ElastiCacheClient::<span class="name">deleteCacheSecurityGroup</span>(const <span class="type"><a href="qtaws-elasticache-deletecachesecuritygrouprequest.html">DeleteCacheSecurityGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletecachesecuritygroupresponse.html">DeleteCacheSecurityGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a cache security</p>
+<p>group&gt; &lt;note&gt;</p>
+<p>You cannot delete a cache security group if it is associated with any</p>
+<!-- @@@deleteCacheSecurityGroup -->
+<!-- $$$deleteCacheSubnetGroup[overload1]$$$deleteCacheSubnetGroupconstDeleteCacheSubnetGroupRequest& -->
+<h3 class="fn" id="deleteCacheSubnetGroup"><a name="deleteCacheSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletecachesubnetgroupresponse.html">DeleteCacheSubnetGroupResponse</a></span> *ElastiCacheClient::<span class="name">deleteCacheSubnetGroup</span>(const <span class="type"><a href="qtaws-elasticache-deletecachesubnetgrouprequest.html">DeleteCacheSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletecachesubnetgroupresponse.html">DeleteCacheSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a cache subnet</p>
+<p>group&gt; &lt;note&gt;</p>
+<p>You cannot delete a cache subnet group if it is associated with any</p>
+<!-- @@@deleteCacheSubnetGroup -->
+<!-- $$$deleteReplicationGroup[overload1]$$$deleteReplicationGroupconstDeleteReplicationGroupRequest& -->
+<h3 class="fn" id="deleteReplicationGroup"><a name="deleteReplicationGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletereplicationgroupresponse.html">DeleteReplicationGroupResponse</a></span> *ElastiCacheClient::<span class="name">deleteReplicationGroup</span>(const <span class="type"><a href="qtaws-elasticache-deletereplicationgrouprequest.html">DeleteReplicationGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletereplicationgroupresponse.html">DeleteReplicationGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing replication group. By default, this operation deletes the entire replication group, including the primary/primaries and all of the read replicas. If the replication group has only one primary, you can optionally delete only the read replicas, while retaining the primary by setting</p>
+<p>&lt;code&gt;RetainPrimaryCluster=true&lt;/code&gt;&gt;</p>
+<p>When you receive a successful response from this operation, Amazon <a href="qtaws-elasticache.html">ElastiCache</a> immediately begins deleting the selected resources; you cannot cancel or revert this</p>
+<p>operation&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@deleteReplicationGroup -->
+<!-- $$$deleteSnapshot[overload1]$$$deleteSnapshotconstDeleteSnapshotRequest& -->
+<h3 class="fn" id="deleteSnapshot"><a name="deleteSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-deletesnapshotresponse.html">DeleteSnapshotResponse</a></span> *ElastiCacheClient::<span class="name">deleteSnapshot</span>(const <span class="type"><a href="qtaws-elasticache-deletesnapshotrequest.html">DeleteSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-deletesnapshotresponse.html">DeleteSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing snapshot. When you receive a successful response from this operation, <a href="qtaws-elasticache.html">ElastiCache</a> immediately begins deleting the snapshot; you cannot cancel or revert this</p>
+<p>operation&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@deleteSnapshot -->
+<!-- $$$describeCacheClusters[overload1]$$$describeCacheClustersconstDescribeCacheClustersRequest& -->
+<h3 class="fn" id="describeCacheClusters"><a name="describeCacheClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecacheclustersresponse.html">DescribeCacheClustersResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheClusters</span>(const <span class="type"><a href="qtaws-elasticache-describecacheclustersrequest.html">DescribeCacheClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecacheclustersresponse.html">DescribeCacheClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cache cluster if a cluster identifier is</p>
+<p>supplied&gt;</p>
+<p>By default, abbreviated information about the clusters is returned. You can use the optional &lt;i&gt;ShowCacheNodeInfo&lt;/i&gt; flag to retrieve detailed information about the cache nodes associated with the clusters. These details include the DNS address and port for the cache node</p>
+<p>endpoint&gt;</p>
+<p>If the cluster is in the &lt;i&gt;creating&lt;/i&gt; state, only cluster-level information is displayed until all of the nodes are successfully</p>
+<p>provisioned&gt;</p>
+<p>If the cluster is in the &lt;i&gt;deleting&lt;/i&gt; state, only cluster-level information is</p>
+<p>displayed&gt;</p>
+<p>If cache nodes are currently being added to the cluster, node endpoint information and creation time for the additional nodes are not displayed until they are completely provisioned. When the cluster state is &lt;i&gt;available&lt;/i&gt;, the cluster is ready for</p>
+<p>use&gt;</p>
+<p>If cache nodes are currently being removed from the cluster, no endpoint information for the removed nodes is</p>
+<!-- @@@describeCacheClusters -->
+<!-- $$$describeCacheEngineVersions[overload1]$$$describeCacheEngineVersionsconstDescribeCacheEngineVersionsRequest& -->
+<h3 class="fn" id="describeCacheEngineVersions"><a name="describeCacheEngineVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecacheengineversionsresponse.html">DescribeCacheEngineVersionsResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheEngineVersions</span>(const <span class="type"><a href="qtaws-elasticache-describecacheengineversionsrequest.html">DescribeCacheEngineVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecacheengineversionsresponse.html">DescribeCacheEngineVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the available cache engines and their</p>
+<!-- @@@describeCacheEngineVersions -->
+<!-- $$$describeCacheParameterGroups[overload1]$$$describeCacheParameterGroupsconstDescribeCacheParameterGroupsRequest& -->
+<h3 class="fn" id="describeCacheParameterGroups"><a name="describeCacheParameterGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecacheparametergroupsresponse.html">DescribeCacheParameterGroupsResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheParameterGroups</span>(const <span class="type"><a href="qtaws-elasticache-describecacheparametergroupsrequest.html">DescribeCacheParameterGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecacheparametergroupsresponse.html">DescribeCacheParameterGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of cache parameter group descriptions. If a cache parameter group name is specified, the list contains only the descriptions for that</p>
+<!-- @@@describeCacheParameterGroups -->
+<!-- $$$describeCacheParameters[overload1]$$$describeCacheParametersconstDescribeCacheParametersRequest& -->
+<h3 class="fn" id="describeCacheParameters"><a name="describeCacheParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecacheparametersresponse.html">DescribeCacheParametersResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheParameters</span>(const <span class="type"><a href="qtaws-elasticache-describecacheparametersrequest.html">DescribeCacheParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecacheparametersresponse.html">DescribeCacheParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the detailed parameter list for a particular cache parameter</p>
+<!-- @@@describeCacheParameters -->
+<!-- $$$describeCacheSecurityGroups[overload1]$$$describeCacheSecurityGroupsconstDescribeCacheSecurityGroupsRequest& -->
+<h3 class="fn" id="describeCacheSecurityGroups"><a name="describeCacheSecurityGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecachesecuritygroupsresponse.html">DescribeCacheSecurityGroupsResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheSecurityGroups</span>(const <span class="type"><a href="qtaws-elasticache-describecachesecuritygroupsrequest.html">DescribeCacheSecurityGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecachesecuritygroupsresponse.html">DescribeCacheSecurityGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of cache security group descriptions. If a cache security group name is specified, the list contains only the description of that</p>
+<!-- @@@describeCacheSecurityGroups -->
+<!-- $$$describeCacheSubnetGroups[overload1]$$$describeCacheSubnetGroupsconstDescribeCacheSubnetGroupsRequest& -->
+<h3 class="fn" id="describeCacheSubnetGroups"><a name="describeCacheSubnetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describecachesubnetgroupsresponse.html">DescribeCacheSubnetGroupsResponse</a></span> *ElastiCacheClient::<span class="name">describeCacheSubnetGroups</span>(const <span class="type"><a href="qtaws-elasticache-describecachesubnetgroupsrequest.html">DescribeCacheSubnetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describecachesubnetgroupsresponse.html">DescribeCacheSubnetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of cache subnet group descriptions. If a subnet group name is specified, the list contains only the description of that</p>
+<!-- @@@describeCacheSubnetGroups -->
+<!-- $$$describeEngineDefaultParameters[overload1]$$$describeEngineDefaultParametersconstDescribeEngineDefaultParametersRequest& -->
+<h3 class="fn" id="describeEngineDefaultParameters"><a name="describeEngineDefaultParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describeenginedefaultparametersresponse.html">DescribeEngineDefaultParametersResponse</a></span> *ElastiCacheClient::<span class="name">describeEngineDefaultParameters</span>(const <span class="type"><a href="qtaws-elasticache-describeenginedefaultparametersrequest.html">DescribeEngineDefaultParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describeenginedefaultparametersresponse.html">DescribeEngineDefaultParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the default engine and system parameter information for the specified cache</p>
+<!-- @@@describeEngineDefaultParameters -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describeeventsresponse.html">DescribeEventsResponse</a></span> *ElastiCacheClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-elasticache-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns events related to clusters, cache security groups, and cache parameter groups. You can obtain events specific to a particular cluster, cache security group, or cache parameter group by providing the name as a</p>
+<p>parameter&gt;</p>
+<p>By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth of events if</p>
+<!-- @@@describeEvents -->
+<!-- $$$describeReplicationGroups[overload1]$$$describeReplicationGroupsconstDescribeReplicationGroupsRequest& -->
+<h3 class="fn" id="describeReplicationGroups"><a name="describeReplicationGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describereplicationgroupsresponse.html">DescribeReplicationGroupsResponse</a></span> *ElastiCacheClient::<span class="name">describeReplicationGroups</span>(const <span class="type"><a href="qtaws-elasticache-describereplicationgroupsrequest.html">DescribeReplicationGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describereplicationgroupsresponse.html">DescribeReplicationGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a particular replication group. If no identifier is specified, &lt;code&gt;DescribeReplicationGroups&lt;/code&gt; returns information about all replication</p>
+<p>groups&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@describeReplicationGroups -->
+<!-- $$$describeReservedCacheNodes[overload1]$$$describeReservedCacheNodesconstDescribeReservedCacheNodesRequest& -->
+<h3 class="fn" id="describeReservedCacheNodes"><a name="describeReservedCacheNodes"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describereservedcachenodesresponse.html">DescribeReservedCacheNodesResponse</a></span> *ElastiCacheClient::<span class="name">describeReservedCacheNodes</span>(const <span class="type"><a href="qtaws-elasticache-describereservedcachenodesrequest.html">DescribeReservedCacheNodesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describereservedcachenodesresponse.html">DescribeReservedCacheNodesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about reserved cache nodes for this account, or about a specified reserved cache</p>
+<!-- @@@describeReservedCacheNodes -->
+<!-- $$$describeReservedCacheNodesOfferings[overload1]$$$describeReservedCacheNodesOfferingsconstDescribeReservedCacheNodesOfferingsRequest& -->
+<h3 class="fn" id="describeReservedCacheNodesOfferings"><a name="describeReservedCacheNodesOfferings"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describereservedcachenodesofferingsresponse.html">DescribeReservedCacheNodesOfferingsResponse</a></span> *ElastiCacheClient::<span class="name">describeReservedCacheNodesOfferings</span>(const <span class="type"><a href="qtaws-elasticache-describereservedcachenodesofferingsrequest.html">DescribeReservedCacheNodesOfferingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describereservedcachenodesofferingsresponse.html">DescribeReservedCacheNodesOfferingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists available reserved cache node</p>
+<!-- @@@describeReservedCacheNodesOfferings -->
+<!-- $$$describeSnapshots[overload1]$$$describeSnapshotsconstDescribeSnapshotsRequest& -->
+<h3 class="fn" id="describeSnapshots"><a name="describeSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-describesnapshotsresponse.html">DescribeSnapshotsResponse</a></span> *ElastiCacheClient::<span class="name">describeSnapshots</span>(const <span class="type"><a href="qtaws-elasticache-describesnapshotsrequest.html">DescribeSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-describesnapshotsresponse.html">DescribeSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about cluster or replication group snapshots. By default, &lt;code&gt;DescribeSnapshots&lt;/code&gt; lists all of your snapshots; it can optionally describe a single snapshot, or just the snapshots associated with a particular cache</p>
+<p>cluster&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@describeSnapshots -->
+<!-- $$$listAllowedNodeTypeModifications[overload1]$$$listAllowedNodeTypeModificationsconstListAllowedNodeTypeModificationsRequest& -->
+<h3 class="fn" id="listAllowedNodeTypeModifications"><a name="listAllowedNodeTypeModifications"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-listallowednodetypemodificationsresponse.html">ListAllowedNodeTypeModificationsResponse</a></span> *ElastiCacheClient::<span class="name">listAllowedNodeTypeModifications</span>(const <span class="type"><a href="qtaws-elasticache-listallowednodetypemodificationsrequest.html">ListAllowedNodeTypeModificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-listallowednodetypemodificationsresponse.html">ListAllowedNodeTypeModificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all available node types that you can scale your Redis cluster's or replication group's current node type up</p>
+<p>to&gt;</p>
+<p>When you use the &lt;code&gt;ModifyCacheCluster&lt;/code&gt; or &lt;code&gt;ModifyReplicationGroup&lt;/code&gt; operations to scale up your cluster or replication group, the value of the &lt;code&gt;CacheNodeType&lt;/code&gt; parameter must be one of the node types returned by this</p>
+<!-- @@@listAllowedNodeTypeModifications -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *ElastiCacheClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-elasticache-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all cost allocation tags currently on the named resource. A &lt;code&gt;cost allocation tag&lt;/code&gt; is a key-value pair where the key is case-sensitive and the value is optional. You can use cost allocation tags to categorize and track your AWS</p>
+<p>costs&gt;</p>
+<p>You can have a maximum of 50 cost allocation tags on an <a href="qtaws-elasticache.html">ElastiCache</a> resource. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/BestPractices.html&quot;&gt;Using Cost Allocation Tags in Amazon</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$modifyCacheCluster[overload1]$$$modifyCacheClusterconstModifyCacheClusterRequest& -->
+<h3 class="fn" id="modifyCacheCluster"><a name="modifyCacheCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-modifycacheclusterresponse.html">ModifyCacheClusterResponse</a></span> *ElastiCacheClient::<span class="name">modifyCacheCluster</span>(const <span class="type"><a href="qtaws-elasticache-modifycacheclusterrequest.html">ModifyCacheClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-modifycacheclusterresponse.html">ModifyCacheClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the settings for a cluster. You can use this operation to change one or more cluster configuration parameters by specifying the parameters and the new</p>
+<!-- @@@modifyCacheCluster -->
+<!-- $$$modifyCacheParameterGroup[overload1]$$$modifyCacheParameterGroupconstModifyCacheParameterGroupRequest& -->
+<h3 class="fn" id="modifyCacheParameterGroup"><a name="modifyCacheParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-modifycacheparametergroupresponse.html">ModifyCacheParameterGroupResponse</a></span> *ElastiCacheClient::<span class="name">modifyCacheParameterGroup</span>(const <span class="type"><a href="qtaws-elasticache-modifycacheparametergrouprequest.html">ModifyCacheParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-modifycacheparametergroupresponse.html">ModifyCacheParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a cache parameter group. You can modify up to 20 parameters in a single request by submitting a list parameter name and value</p>
+<!-- @@@modifyCacheParameterGroup -->
+<!-- $$$modifyCacheSubnetGroup[overload1]$$$modifyCacheSubnetGroupconstModifyCacheSubnetGroupRequest& -->
+<h3 class="fn" id="modifyCacheSubnetGroup"><a name="modifyCacheSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-modifycachesubnetgroupresponse.html">ModifyCacheSubnetGroupResponse</a></span> *ElastiCacheClient::<span class="name">modifyCacheSubnetGroup</span>(const <span class="type"><a href="qtaws-elasticache-modifycachesubnetgrouprequest.html">ModifyCacheSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-modifycachesubnetgroupresponse.html">ModifyCacheSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing cache subnet</p>
+<!-- @@@modifyCacheSubnetGroup -->
+<!-- $$$modifyReplicationGroup[overload1]$$$modifyReplicationGroupconstModifyReplicationGroupRequest& -->
+<h3 class="fn" id="modifyReplicationGroup"><a name="modifyReplicationGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-modifyreplicationgroupresponse.html">ModifyReplicationGroupResponse</a></span> *ElastiCacheClient::<span class="name">modifyReplicationGroup</span>(const <span class="type"><a href="qtaws-elasticache-modifyreplicationgrouprequest.html">ModifyReplicationGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-modifyreplicationgroupresponse.html">ModifyReplicationGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the settings for a replication</p>
+<p>group&gt; &lt;b&gt;</p>
+<p>Due to current limitations on Redis (cluster mode disabled), this operation or parameter is not supported on Redis (cluster mode enabled) replication</p>
+<p>groups&gt; &lt;/b&gt; &lt;note&gt;</p>
+<p>This operation is valid for Redis</p>
+<!-- @@@modifyReplicationGroup -->
+<!-- $$$modifyReplicationGroupShardConfiguration[overload1]$$$modifyReplicationGroupShardConfigurationconstModifyReplicationGroupShardConfigurationRequest& -->
+<h3 class="fn" id="modifyReplicationGroupShardConfiguration"><a name="modifyReplicationGroupShardConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-modifyreplicationgroupshardconfigurationresponse.html">ModifyReplicationGroupShardConfigurationResponse</a></span> *ElastiCacheClient::<span class="name">modifyReplicationGroupShardConfiguration</span>(const <span class="type"><a href="qtaws-elasticache-modifyreplicationgroupshardconfigurationrequest.html">ModifyReplicationGroupShardConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-modifyreplicationgroupshardconfigurationresponse.html">ModifyReplicationGroupShardConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Performs horizontal scaling on a Redis (cluster mode enabled) cluster with no downtime. Requires Redis engine version 3.2&#x2e;10 or newer. For information on upgrading your engine to a newer version, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/VersionManagement.html&quot;&gt;Upgrading Engine Versions&lt;/a&gt; in the Amazon <a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<p>Guide&gt;</p>
+<p>For more information on <a href="qtaws-elasticache.html">ElastiCache</a> for Redis online horizontal scaling, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/redis-cluster-resharding-online.html&quot;&gt;<a href="qtaws-elasticache.html">ElastiCache</a> for Redis Horizontal Scaling&lt;/a&gt;</p>
+<!-- @@@modifyReplicationGroupShardConfiguration -->
+<!-- $$$purchaseReservedCacheNodesOffering[overload1]$$$purchaseReservedCacheNodesOfferingconstPurchaseReservedCacheNodesOfferingRequest& -->
+<h3 class="fn" id="purchaseReservedCacheNodesOffering"><a name="purchaseReservedCacheNodesOffering"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-purchasereservedcachenodesofferingresponse.html">PurchaseReservedCacheNodesOfferingResponse</a></span> *ElastiCacheClient::<span class="name">purchaseReservedCacheNodesOffering</span>(const <span class="type"><a href="qtaws-elasticache-purchasereservedcachenodesofferingrequest.html">PurchaseReservedCacheNodesOfferingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-purchasereservedcachenodesofferingresponse.html">PurchaseReservedCacheNodesOfferingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows you to purchase a reserved cache node</p>
+<!-- @@@purchaseReservedCacheNodesOffering -->
+<!-- $$$rebootCacheCluster[overload1]$$$rebootCacheClusterconstRebootCacheClusterRequest& -->
+<h3 class="fn" id="rebootCacheCluster"><a name="rebootCacheCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-rebootcacheclusterresponse.html">RebootCacheClusterResponse</a></span> *ElastiCacheClient::<span class="name">rebootCacheCluster</span>(const <span class="type"><a href="qtaws-elasticache-rebootcacheclusterrequest.html">RebootCacheClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-rebootcacheclusterresponse.html">RebootCacheClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reboots some, or all, of the cache nodes within a provisioned cluster. This operation applies any modified cache parameter groups to the cluster. The reboot operation takes place as soon as possible, and results in a momentary outage to the cluster. During the reboot, the cluster status is set to</p>
+<p>REBOOTING&gt;</p>
+<p>The reboot causes the contents of the cache (for each cache node being rebooted) to be</p>
+<p>lost&gt;</p>
+<p>When the reboot is complete, a cluster event is</p>
+<p>created&gt;</p>
+<p>Rebooting a cluster is currently supported on Memcached and Redis (cluster mode disabled) clusters. Rebooting is not supported on Redis (cluster mode enabled)</p>
+<p>clusters&gt;</p>
+<p>If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to be applied, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Clusters.Rebooting.htm&quot;&gt;Rebooting a Cluster&lt;/a&gt; for an alternate</p>
+<!-- @@@rebootCacheCluster -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *ElastiCacheClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-elasticache-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the tags identified by the &lt;code&gt;TagKeys&lt;/code&gt; list from the named</p>
+<!-- @@@removeTagsFromResource -->
+<!-- $$$resetCacheParameterGroup[overload1]$$$resetCacheParameterGroupconstResetCacheParameterGroupRequest& -->
+<h3 class="fn" id="resetCacheParameterGroup"><a name="resetCacheParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-resetcacheparametergroupresponse.html">ResetCacheParameterGroupResponse</a></span> *ElastiCacheClient::<span class="name">resetCacheParameterGroup</span>(const <span class="type"><a href="qtaws-elasticache-resetcacheparametergrouprequest.html">ResetCacheParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-resetcacheparametergroupresponse.html">ResetCacheParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a cache parameter group to the engine or system default value. You can reset specific parameters by submitting a list of parameter names. To reset the entire cache parameter group, specify the &lt;code&gt;ResetAllParameters&lt;/code&gt; and &lt;code&gt;CacheParameterGroupName&lt;/code&gt;</p>
+<!-- @@@resetCacheParameterGroup -->
+<!-- $$$revokeCacheSecurityGroupIngress[overload1]$$$revokeCacheSecurityGroupIngressconstRevokeCacheSecurityGroupIngressRequest& -->
+<h3 class="fn" id="revokeCacheSecurityGroupIngress"><a name="revokeCacheSecurityGroupIngress"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-revokecachesecuritygroupingressresponse.html">RevokeCacheSecurityGroupIngressResponse</a></span> *ElastiCacheClient::<span class="name">revokeCacheSecurityGroupIngress</span>(const <span class="type"><a href="qtaws-elasticache-revokecachesecuritygroupingressrequest.html">RevokeCacheSecurityGroupIngressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-revokecachesecuritygroupingressresponse.html">RevokeCacheSecurityGroupIngressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Revokes ingress from a cache security group. Use this operation to disallow access from an Amazon EC2 security group that had been previously</p>
+<!-- @@@revokeCacheSecurityGroupIngress -->
+<!-- $$$testFailover[overload1]$$$testFailoverconstTestFailoverRequest& -->
+<h3 class="fn" id="testFailover"><a name="testFailover"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticache-testfailoverresponse.html">TestFailoverResponse</a></span> *ElastiCacheClient::<span class="name">testFailover</span>(const <span class="type"><a href="qtaws-elasticache-testfailoverrequest.html">TestFailoverRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticache-elasticacheclient.html">ElastiCacheClient</a> service, and returns a pointer to an <a href="qtaws-elasticache-testfailoverresponse.html">TestFailoverResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents the input of a &lt;code&gt;TestFailover&lt;/code&gt; operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the</p>
+<p>console)&gt; &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Note the following&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the <a href="qtaws-elasticache.html">ElastiCache</a> API and AWS CLI) in any rolling 24-hour</p>
+<p>period&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made</p>
+<p>concurrently&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be</p>
+<p>made&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>To determine whether the node replacement is complete you can check Events using the Amazon <a href="qtaws-elasticache.html">ElastiCache</a> console, the AWS CLI, or the <a href="qtaws-elasticache.html">ElastiCache</a> API. Look for the following automatic failover related events, listed here in order of</p>
+<p>occurrance&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Replication group message: &lt;code&gt;Test Failover API called for node group &amp;lt;node-group-id&amp;gt;&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Cache cluster message: &lt;code&gt;Failover from master node &amp;lt;primary-node-id&amp;gt; to replica node &amp;lt;node-id&amp;gt; completed&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Replication group message: &lt;code&gt;Failover from master node &amp;lt;primary-node-id&amp;gt; to replica node &amp;lt;node-id&amp;gt; completed&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Cache cluster message: &lt;code&gt;Recovering cache nodes &amp;lt;node-id&amp;gt;&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Cache cluster message: &lt;code&gt;Finished recovery for cache nodes &amp;lt;node-id&amp;gt;&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information</p>
+<p>see&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/ECEvents.Viewing.html&quot;&gt;Viewing <a href="qtaws-elasticache.html">ElastiCache</a> Events&lt;/a&gt; in the &lt;i&gt;<a href="qtaws-elasticache.html">ElastiCache</a> User Guide&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeEvents.html&quot;&gt;DescribeEvents&lt;/a&gt; in the <a href="qtaws-elasticache.html">ElastiCache</a> API</p>
+<p>Referenc&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Also see, &lt;a href=&quot;http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/AutoFailover.html#auto-failover-test&quot;&gt;Testing Multi-AZ with Automatic Failover&lt;/a&gt; in the &lt;i&gt;<a href="qtaws-elasticache.html">ElastiCache</a> User</p>
+<!-- @@@testFailover -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- appstreamclient.cpp -->
+  <title>AppStreamClient Class | AppStream</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsappstream-index.html">AppStream</a></li>
+<li><a href="qtawsappstream-module.html">C++ Classes</a></li>
+<li>AppStreamClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AppStreamClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-appstream-appstreamclient.html">QtAws::AppStream::AppStreamClient</a>)<br/></span>
+<!-- $$$AppStreamClient-brief -->
+<p>The <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> class provides access to the Amazon <a href="qtaws-appstream.html">AppStream</a> service. <a href="#details">More...</a></p>
+<!-- @@@AppStreamClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AppStreamClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-appstream-appstreamclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#AppStreamClient">AppStreamClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#AppStreamClient-1">AppStreamClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#associateFleet">associateFleet</a></b>(const AssociateFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#copyImage">copyImage</a></b>(const CopyImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDirectoryConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createDirectoryConfig">createDirectoryConfig</a></b>(const CreateDirectoryConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createFleet">createFleet</a></b>(const CreateFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateImageBuilderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createImageBuilder">createImageBuilder</a></b>(const CreateImageBuilderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateImageBuilderStreamingURLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createImageBuilderStreamingURL">createImageBuilderStreamingURL</a></b>(const CreateImageBuilderStreamingURLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createStack">createStack</a></b>(const CreateStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStreamingURLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#createStreamingURL">createStreamingURL</a></b>(const CreateStreamingURLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDirectoryConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#deleteDirectoryConfig">deleteDirectoryConfig</a></b>(const DeleteDirectoryConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#deleteFleet">deleteFleet</a></b>(const DeleteFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#deleteImage">deleteImage</a></b>(const DeleteImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteImageBuilderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#deleteImageBuilder">deleteImageBuilder</a></b>(const DeleteImageBuilderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#deleteStack">deleteStack</a></b>(const DeleteStackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDirectoryConfigsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeDirectoryConfigs">describeDirectoryConfigs</a></b>(const DescribeDirectoryConfigsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeFleetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeFleets">describeFleets</a></b>(const DescribeFleetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeImageBuildersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeImageBuilders">describeImageBuilders</a></b>(const DescribeImageBuildersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeImagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeImages">describeImages</a></b>(const DescribeImagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSessionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeSessions">describeSessions</a></b>(const DescribeSessionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStacksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#describeStacks">describeStacks</a></b>(const DescribeStacksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#disassociateFleet">disassociateFleet</a></b>(const DisassociateFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExpireSessionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#expireSession">expireSession</a></b>(const ExpireSessionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssociatedFleetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#listAssociatedFleets">listAssociatedFleets</a></b>(const ListAssociatedFleetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssociatedStacksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#listAssociatedStacks">listAssociatedStacks</a></b>(const ListAssociatedStacksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#startFleet">startFleet</a></b>(const StartFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartImageBuilderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#startImageBuilder">startImageBuilder</a></b>(const StartImageBuilderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#stopFleet">stopFleet</a></b>(const StopFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopImageBuilderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#stopImageBuilder">stopImageBuilder</a></b>(const StopImageBuilderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDirectoryConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#updateDirectoryConfig">updateDirectoryConfig</a></b>(const UpdateDirectoryConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFleetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#updateFleet">updateFleet</a></b>(const UpdateFleetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateStackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-appstream-appstreamclient.html#updateStack">updateStack</a></b>(const UpdateStackRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AppStreamClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> class provides access to the Amazon <a href="qtaws-appstream.html">AppStream</a> service.</p>
+<p>&lt;fullname&gt;Amazon <a href="qtaws-appstream.html">AppStream</a> 2.0&lt;/fullname&gt;</p>
+<p>You can use Amazon <a href="qtaws-appstream.html">AppStream</a> 2.0 to stream desktop applications to any device running a web browser, without rewriting</p>
+</div>
+<!-- @@@AppStreamClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AppStreamClient[overload1]$$$AppStreamClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AppStreamClient"><a name="AppStreamClient"></a>AppStreamClient::<span class="name">AppStreamClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AppStreamClient -->
+<!-- $$$AppStreamClient$$$AppStreamClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AppStreamClient-1"><a name="AppStreamClient-1"></a>AppStreamClient::<span class="name">AppStreamClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-appstream-appstreamclient.html#AppStreamClient">AppStreamClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AppStreamClient -->
+<!-- $$$associateFleet[overload1]$$$associateFleetconstAssociateFleetRequest& -->
+<h3 class="fn" id="associateFleet"><a name="associateFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-associatefleetresponse.html">AssociateFleetResponse</a></span> *AppStreamClient::<span class="name">associateFleet</span>(const <span class="type"><a href="qtaws-appstream-associatefleetrequest.html">AssociateFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-associatefleetresponse.html">AssociateFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates the specified fleet with the specified</p>
+<!-- @@@associateFleet -->
+<!-- $$$copyImage[overload1]$$$copyImageconstCopyImageRequest& -->
+<h3 class="fn" id="copyImage"><a name="copyImage"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-copyimageresponse.html">CopyImageResponse</a></span> *AppStreamClient::<span class="name">copyImage</span>(const <span class="type"><a href="qtaws-appstream-copyimagerequest.html">CopyImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-copyimageresponse.html">CopyImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the image within the same region or to a new region within the same AWS account. Note that any tags you added to the image will not be</p>
+<!-- @@@copyImage -->
+<!-- $$$createDirectoryConfig[overload1]$$$createDirectoryConfigconstCreateDirectoryConfigRequest& -->
+<h3 class="fn" id="createDirectoryConfig"><a name="createDirectoryConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createdirectoryconfigresponse.html">CreateDirectoryConfigResponse</a></span> *AppStreamClient::<span class="name">createDirectoryConfig</span>(const <span class="type"><a href="qtaws-appstream-createdirectoryconfigrequest.html">CreateDirectoryConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createdirectoryconfigresponse.html">CreateDirectoryConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a directory</p>
+<!-- @@@createDirectoryConfig -->
+<!-- $$$createFleet[overload1]$$$createFleetconstCreateFleetRequest& -->
+<h3 class="fn" id="createFleet"><a name="createFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createfleetresponse.html">CreateFleetResponse</a></span> *AppStreamClient::<span class="name">createFleet</span>(const <span class="type"><a href="qtaws-appstream-createfleetrequest.html">CreateFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createfleetresponse.html">CreateFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createFleet -->
+<!-- $$$createImageBuilder[overload1]$$$createImageBuilderconstCreateImageBuilderRequest& -->
+<h3 class="fn" id="createImageBuilder"><a name="createImageBuilder"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createimagebuilderresponse.html">CreateImageBuilderResponse</a></span> *AppStreamClient::<span class="name">createImageBuilder</span>(const <span class="type"><a href="qtaws-appstream-createimagebuilderrequest.html">CreateImageBuilderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createimagebuilderresponse.html">CreateImageBuilderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an image</p>
+<p>builder&gt;</p>
+<p>The initial state of the builder is &lt;code&gt;PENDING&lt;/code&gt;. When it is ready, the state is</p>
+<!-- @@@createImageBuilder -->
+<!-- $$$createImageBuilderStreamingURL[overload1]$$$createImageBuilderStreamingURLconstCreateImageBuilderStreamingURLRequest& -->
+<h3 class="fn" id="createImageBuilderStreamingURL"><a name="createImageBuilderStreamingURL"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createimagebuilderstreamingurlresponse.html">CreateImageBuilderStreamingURLResponse</a></span> *AppStreamClient::<span class="name">createImageBuilderStreamingURL</span>(const <span class="type"><a href="qtaws-appstream-createimagebuilderstreamingurlrequest.html">CreateImageBuilderStreamingURLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createimagebuilderstreamingurlresponse.html">CreateImageBuilderStreamingURLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a URL to start an image builder streaming</p>
+<!-- @@@createImageBuilderStreamingURL -->
+<!-- $$$createStack[overload1]$$$createStackconstCreateStackRequest& -->
+<h3 class="fn" id="createStack"><a name="createStack"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createstackresponse.html">CreateStackResponse</a></span> *AppStreamClient::<span class="name">createStack</span>(const <span class="type"><a href="qtaws-appstream-createstackrequest.html">CreateStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createstackresponse.html">CreateStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createStack -->
+<!-- $$$createStreamingURL[overload1]$$$createStreamingURLconstCreateStreamingURLRequest& -->
+<h3 class="fn" id="createStreamingURL"><a name="createStreamingURL"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-createstreamingurlresponse.html">CreateStreamingURLResponse</a></span> *AppStreamClient::<span class="name">createStreamingURL</span>(const <span class="type"><a href="qtaws-appstream-createstreamingurlrequest.html">CreateStreamingURLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-createstreamingurlresponse.html">CreateStreamingURLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a URL to start a streaming session for the specified</p>
+<!-- @@@createStreamingURL -->
+<!-- $$$deleteDirectoryConfig[overload1]$$$deleteDirectoryConfigconstDeleteDirectoryConfigRequest& -->
+<h3 class="fn" id="deleteDirectoryConfig"><a name="deleteDirectoryConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-deletedirectoryconfigresponse.html">DeleteDirectoryConfigResponse</a></span> *AppStreamClient::<span class="name">deleteDirectoryConfig</span>(const <span class="type"><a href="qtaws-appstream-deletedirectoryconfigrequest.html">DeleteDirectoryConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-deletedirectoryconfigresponse.html">DeleteDirectoryConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified directory</p>
+<!-- @@@deleteDirectoryConfig -->
+<!-- $$$deleteFleet[overload1]$$$deleteFleetconstDeleteFleetRequest& -->
+<h3 class="fn" id="deleteFleet"><a name="deleteFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-deletefleetresponse.html">DeleteFleetResponse</a></span> *AppStreamClient::<span class="name">deleteFleet</span>(const <span class="type"><a href="qtaws-appstream-deletefleetrequest.html">DeleteFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-deletefleetresponse.html">DeleteFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteFleet -->
+<!-- $$$deleteImage[overload1]$$$deleteImageconstDeleteImageRequest& -->
+<h3 class="fn" id="deleteImage"><a name="deleteImage"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-deleteimageresponse.html">DeleteImageResponse</a></span> *AppStreamClient::<span class="name">deleteImage</span>(const <span class="type"><a href="qtaws-appstream-deleteimagerequest.html">DeleteImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-deleteimageresponse.html">DeleteImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot provision new capacity using the</p>
+<!-- @@@deleteImage -->
+<!-- $$$deleteImageBuilder[overload1]$$$deleteImageBuilderconstDeleteImageBuilderRequest& -->
+<h3 class="fn" id="deleteImageBuilder"><a name="deleteImageBuilder"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-deleteimagebuilderresponse.html">DeleteImageBuilderResponse</a></span> *AppStreamClient::<span class="name">deleteImageBuilder</span>(const <span class="type"><a href="qtaws-appstream-deleteimagebuilderrequest.html">DeleteImageBuilderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-deleteimagebuilderresponse.html">DeleteImageBuilderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified image builder and releases the</p>
+<!-- @@@deleteImageBuilder -->
+<!-- $$$deleteStack[overload1]$$$deleteStackconstDeleteStackRequest& -->
+<h3 class="fn" id="deleteStack"><a name="deleteStack"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-deletestackresponse.html">DeleteStackResponse</a></span> *AppStreamClient::<span class="name">deleteStack</span>(const <span class="type"><a href="qtaws-appstream-deletestackrequest.html">DeleteStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-deletestackresponse.html">DeleteStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified stack. After this operation completes, the environment can no longer be activated and any reservations made for the stack are</p>
+<!-- @@@deleteStack -->
+<!-- $$$describeDirectoryConfigs[overload1]$$$describeDirectoryConfigsconstDescribeDirectoryConfigsRequest& -->
+<h3 class="fn" id="describeDirectoryConfigs"><a name="describeDirectoryConfigs"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describedirectoryconfigsresponse.html">DescribeDirectoryConfigsResponse</a></span> *AppStreamClient::<span class="name">describeDirectoryConfigs</span>(const <span class="type"><a href="qtaws-appstream-describedirectoryconfigsrequest.html">DescribeDirectoryConfigsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describedirectoryconfigsresponse.html">DescribeDirectoryConfigsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified directory configurations. Note that although the response syntax in this topic includes the account password, this password is not returned in the actual response.</p>
+<!-- @@@describeDirectoryConfigs -->
+<!-- $$$describeFleets[overload1]$$$describeFleetsconstDescribeFleetsRequest& -->
+<h3 class="fn" id="describeFleets"><a name="describeFleets"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describefleetsresponse.html">DescribeFleetsResponse</a></span> *AppStreamClient::<span class="name">describeFleets</span>(const <span class="type"><a href="qtaws-appstream-describefleetsrequest.html">DescribeFleetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describefleetsresponse.html">DescribeFleetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified fleets or all fleets in the</p>
+<!-- @@@describeFleets -->
+<!-- $$$describeImageBuilders[overload1]$$$describeImageBuildersconstDescribeImageBuildersRequest& -->
+<h3 class="fn" id="describeImageBuilders"><a name="describeImageBuilders"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describeimagebuildersresponse.html">DescribeImageBuildersResponse</a></span> *AppStreamClient::<span class="name">describeImageBuilders</span>(const <span class="type"><a href="qtaws-appstream-describeimagebuildersrequest.html">DescribeImageBuildersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describeimagebuildersresponse.html">DescribeImageBuildersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified image builders or all image builders in the</p>
+<!-- @@@describeImageBuilders -->
+<!-- $$$describeImages[overload1]$$$describeImagesconstDescribeImagesRequest& -->
+<h3 class="fn" id="describeImages"><a name="describeImages"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describeimagesresponse.html">DescribeImagesResponse</a></span> *AppStreamClient::<span class="name">describeImages</span>(const <span class="type"><a href="qtaws-appstream-describeimagesrequest.html">DescribeImagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describeimagesresponse.html">DescribeImagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified images or all images in the</p>
+<!-- @@@describeImages -->
+<!-- $$$describeSessions[overload1]$$$describeSessionsconstDescribeSessionsRequest& -->
+<h3 class="fn" id="describeSessions"><a name="describeSessions"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describesessionsresponse.html">DescribeSessionsResponse</a></span> *AppStreamClient::<span class="name">describeSessions</span>(const <span class="type"><a href="qtaws-appstream-describesessionsrequest.html">DescribeSessionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describesessionsresponse.html">DescribeSessionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the streaming sessions for the specified stack and fleet. If a user ID is provided, only the streaming sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate users using a streaming</p>
+<!-- @@@describeSessions -->
+<!-- $$$describeStacks[overload1]$$$describeStacksconstDescribeStacksRequest& -->
+<h3 class="fn" id="describeStacks"><a name="describeStacks"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-describestacksresponse.html">DescribeStacksResponse</a></span> *AppStreamClient::<span class="name">describeStacks</span>(const <span class="type"><a href="qtaws-appstream-describestacksrequest.html">DescribeStacksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-describestacksresponse.html">DescribeStacksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified stacks or all stacks in the</p>
+<!-- @@@describeStacks -->
+<!-- $$$disassociateFleet[overload1]$$$disassociateFleetconstDisassociateFleetRequest& -->
+<h3 class="fn" id="disassociateFleet"><a name="disassociateFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-disassociatefleetresponse.html">DisassociateFleetResponse</a></span> *AppStreamClient::<span class="name">disassociateFleet</span>(const <span class="type"><a href="qtaws-appstream-disassociatefleetrequest.html">DisassociateFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-disassociatefleetresponse.html">DisassociateFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates the specified fleet from the specified</p>
+<!-- @@@disassociateFleet -->
+<!-- $$$expireSession[overload1]$$$expireSessionconstExpireSessionRequest& -->
+<h3 class="fn" id="expireSession"><a name="expireSession"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-expiresessionresponse.html">ExpireSessionResponse</a></span> *AppStreamClient::<span class="name">expireSession</span>(const <span class="type"><a href="qtaws-appstream-expiresessionrequest.html">ExpireSessionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-expiresessionresponse.html">ExpireSessionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the specified streaming</p>
+<!-- @@@expireSession -->
+<!-- $$$listAssociatedFleets[overload1]$$$listAssociatedFleetsconstListAssociatedFleetsRequest& -->
+<h3 class="fn" id="listAssociatedFleets"><a name="listAssociatedFleets"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-listassociatedfleetsresponse.html">ListAssociatedFleetsResponse</a></span> *AppStreamClient::<span class="name">listAssociatedFleets</span>(const <span class="type"><a href="qtaws-appstream-listassociatedfleetsrequest.html">ListAssociatedFleetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-listassociatedfleetsresponse.html">ListAssociatedFleetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the fleets associated with the specified</p>
+<!-- @@@listAssociatedFleets -->
+<!-- $$$listAssociatedStacks[overload1]$$$listAssociatedStacksconstListAssociatedStacksRequest& -->
+<h3 class="fn" id="listAssociatedStacks"><a name="listAssociatedStacks"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-listassociatedstacksresponse.html">ListAssociatedStacksResponse</a></span> *AppStreamClient::<span class="name">listAssociatedStacks</span>(const <span class="type"><a href="qtaws-appstream-listassociatedstacksrequest.html">ListAssociatedStacksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-listassociatedstacksresponse.html">ListAssociatedStacksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the stacks associated with the specified</p>
+<!-- @@@listAssociatedStacks -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *AppStreamClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-appstream-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags for the specified <a href="qtaws-appstream.html">AppStream</a> 2.0 resource. You can tag <a href="qtaws-appstream.html">AppStream</a> 2.0 image builders, images, fleets, and</p>
+<p>stacks&gt;</p>
+<p>For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html&quot;&gt;Tagging Your Resources&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-appstream.html">AppStream</a> 2.0 Developer</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$startFleet[overload1]$$$startFleetconstStartFleetRequest& -->
+<h3 class="fn" id="startFleet"><a name="startFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-startfleetresponse.html">StartFleetResponse</a></span> *AppStreamClient::<span class="name">startFleet</span>(const <span class="type"><a href="qtaws-appstream-startfleetrequest.html">StartFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-startfleetresponse.html">StartFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the specified</p>
+<!-- @@@startFleet -->
+<!-- $$$startImageBuilder[overload1]$$$startImageBuilderconstStartImageBuilderRequest& -->
+<h3 class="fn" id="startImageBuilder"><a name="startImageBuilder"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-startimagebuilderresponse.html">StartImageBuilderResponse</a></span> *AppStreamClient::<span class="name">startImageBuilder</span>(const <span class="type"><a href="qtaws-appstream-startimagebuilderrequest.html">StartImageBuilderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-startimagebuilderresponse.html">StartImageBuilderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the specified image</p>
+<!-- @@@startImageBuilder -->
+<!-- $$$stopFleet[overload1]$$$stopFleetconstStopFleetRequest& -->
+<h3 class="fn" id="stopFleet"><a name="stopFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-stopfleetresponse.html">StopFleetResponse</a></span> *AppStreamClient::<span class="name">stopFleet</span>(const <span class="type"><a href="qtaws-appstream-stopfleetrequest.html">StopFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-stopfleetresponse.html">StopFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the specified</p>
+<!-- @@@stopFleet -->
+<!-- $$$stopImageBuilder[overload1]$$$stopImageBuilderconstStopImageBuilderRequest& -->
+<h3 class="fn" id="stopImageBuilder"><a name="stopImageBuilder"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-stopimagebuilderresponse.html">StopImageBuilderResponse</a></span> *AppStreamClient::<span class="name">stopImageBuilder</span>(const <span class="type"><a href="qtaws-appstream-stopimagebuilderrequest.html">StopImageBuilderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-stopimagebuilderresponse.html">StopImageBuilderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the specified image</p>
+<!-- @@@stopImageBuilder -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-tagresourceresponse.html">TagResourceResponse</a></span> *AppStreamClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-appstream-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or overwrites one or more tags for the specified <a href="qtaws-appstream.html">AppStream</a> 2.0 resource. You can tag <a href="qtaws-appstream.html">AppStream</a> 2.0 image builders, images, fleets, and</p>
+<p>stacks&gt;</p>
+<p>Each tag consists of a key and an optional value. If a resource already has a tag with the same key, this operation updates its</p>
+<p>value&gt;</p>
+<p>To list the current tags for your resources, use &lt;a&gt;ListTagsForResource&lt;/a&gt;. To disassociate tags from your resources, use</p>
+<p>&lt;a&gt;UntagResource&lt;/a&gt;&gt;</p>
+<p>For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html&quot;&gt;Tagging Your Resources&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-appstream.html">AppStream</a> 2.0 Developer</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-untagresourceresponse.html">UntagResourceResponse</a></span> *AppStreamClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-appstream-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates the specified tags from the specified <a href="qtaws-appstream.html">AppStream</a> 2.0</p>
+<p>resource&gt;</p>
+<p>To list the current tags for your resources, use</p>
+<p>&lt;a&gt;ListTagsForResource&lt;/a&gt;&gt;</p>
+<p>For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html&quot;&gt;Tagging Your Resources&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-appstream.html">AppStream</a> 2.0 Developer</p>
+<!-- @@@untagResource -->
+<!-- $$$updateDirectoryConfig[overload1]$$$updateDirectoryConfigconstUpdateDirectoryConfigRequest& -->
+<h3 class="fn" id="updateDirectoryConfig"><a name="updateDirectoryConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-updatedirectoryconfigresponse.html">UpdateDirectoryConfigResponse</a></span> *AppStreamClient::<span class="name">updateDirectoryConfig</span>(const <span class="type"><a href="qtaws-appstream-updatedirectoryconfigrequest.html">UpdateDirectoryConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-updatedirectoryconfigresponse.html">UpdateDirectoryConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified directory</p>
+<!-- @@@updateDirectoryConfig -->
+<!-- $$$updateFleet[overload1]$$$updateFleetconstUpdateFleetRequest& -->
+<h3 class="fn" id="updateFleet"><a name="updateFleet"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-updatefleetresponse.html">UpdateFleetResponse</a></span> *AppStreamClient::<span class="name">updateFleet</span>(const <span class="type"><a href="qtaws-appstream-updatefleetrequest.html">UpdateFleetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-updatefleetresponse.html">UpdateFleetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<p>fleet&gt;</p>
+<p>If the fleet is in the &lt;code&gt;STOPPED&lt;/code&gt; state, you can update any attribute except the fleet name. If the fleet is in the &lt;code&gt;RUNNING&lt;/code&gt; state, you can update the &lt;code&gt;DisplayName&lt;/code&gt; and &lt;code&gt;ComputeCapacity&lt;/code&gt; attributes. If the fleet is in the &lt;code&gt;STARTING&lt;/code&gt; or &lt;code&gt;STOPPING&lt;/code&gt; state, you can't update</p>
+<!-- @@@updateFleet -->
+<!-- $$$updateStack[overload1]$$$updateStackconstUpdateStackRequest& -->
+<h3 class="fn" id="updateStack"><a name="updateStack"></a><code>[slot] </code><span class="type"><a href="qtaws-appstream-updatestackresponse.html">UpdateStackResponse</a></span> *AppStreamClient::<span class="name">updateStack</span>(const <span class="type"><a href="qtaws-appstream-updatestackrequest.html">UpdateStackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-appstream-appstreamclient.html">AppStreamClient</a> service, and returns a pointer to an <a href="qtaws-appstream-updatestackresponse.html">UpdateStackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<!-- @@@updateStack -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sesclient.cpp -->
+  <title>SesClient Class | SES</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsses-index.html">SES</a></li>
+<li><a href="qtawsses-module.html">C++ Classes</a></li>
+<li>SesClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SesClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ses-sesclient.html">QtAws::SES::SesClient</a>)<br/></span>
+<!-- $$$SesClient-brief -->
+<p>The <a href="qtaws-ses-sesclient.html">SesClient</a> class provides access to the Amazon Simple Email Service ( SES) service. <a href="#details">More...</a></p>
+<!-- @@@SesClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SesClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-ses-sesclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#SesClient">SesClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#SesClient-1">SesClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CloneReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#cloneReceiptRuleSet">cloneReceiptRuleSet</a></b>(const CloneReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConfigurationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createConfigurationSet">createConfigurationSet</a></b>(const CreateConfigurationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConfigurationSetEventDestinationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createConfigurationSetEventDestination">createConfigurationSetEventDestination</a></b>(const CreateConfigurationSetEventDestinationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConfigurationSetTrackingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createConfigurationSetTrackingOptions">createConfigurationSetTrackingOptions</a></b>(const CreateConfigurationSetTrackingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCustomVerificationEmailTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createCustomVerificationEmailTemplate">createCustomVerificationEmailTemplate</a></b>(const CreateCustomVerificationEmailTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateReceiptFilterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createReceiptFilter">createReceiptFilter</a></b>(const CreateReceiptFilterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateReceiptRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createReceiptRule">createReceiptRule</a></b>(const CreateReceiptRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createReceiptRuleSet">createReceiptRuleSet</a></b>(const CreateReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#createTemplate">createTemplate</a></b>(const CreateTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteConfigurationSet">deleteConfigurationSet</a></b>(const DeleteConfigurationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationSetEventDestinationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteConfigurationSetEventDestination">deleteConfigurationSetEventDestination</a></b>(const DeleteConfigurationSetEventDestinationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationSetTrackingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteConfigurationSetTrackingOptions">deleteConfigurationSetTrackingOptions</a></b>(const DeleteConfigurationSetTrackingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCustomVerificationEmailTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteCustomVerificationEmailTemplate">deleteCustomVerificationEmailTemplate</a></b>(const DeleteCustomVerificationEmailTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIdentityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteIdentity">deleteIdentity</a></b>(const DeleteIdentityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIdentityPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteIdentityPolicy">deleteIdentityPolicy</a></b>(const DeleteIdentityPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteReceiptFilterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteReceiptFilter">deleteReceiptFilter</a></b>(const DeleteReceiptFilterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteReceiptRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteReceiptRule">deleteReceiptRule</a></b>(const DeleteReceiptRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteReceiptRuleSet">deleteReceiptRuleSet</a></b>(const DeleteReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteTemplate">deleteTemplate</a></b>(const DeleteTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVerifiedEmailAddressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#deleteVerifiedEmailAddress">deleteVerifiedEmailAddress</a></b>(const DeleteVerifiedEmailAddressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeActiveReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#describeActiveReceiptRuleSet">describeActiveReceiptRuleSet</a></b>(const DescribeActiveReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#describeConfigurationSet">describeConfigurationSet</a></b>(const DescribeConfigurationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReceiptRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#describeReceiptRule">describeReceiptRule</a></b>(const DescribeReceiptRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#describeReceiptRuleSet">describeReceiptRuleSet</a></b>(const DescribeReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountSendingEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getAccountSendingEnabled">getAccountSendingEnabled</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCustomVerificationEmailTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getCustomVerificationEmailTemplate">getCustomVerificationEmailTemplate</a></b>(const GetCustomVerificationEmailTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityDkimAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getIdentityDkimAttributes">getIdentityDkimAttributes</a></b>(const GetIdentityDkimAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityMailFromDomainAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getIdentityMailFromDomainAttributes">getIdentityMailFromDomainAttributes</a></b>(const GetIdentityMailFromDomainAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityNotificationAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getIdentityNotificationAttributes">getIdentityNotificationAttributes</a></b>(const GetIdentityNotificationAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getIdentityPolicies">getIdentityPolicies</a></b>(const GetIdentityPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityVerificationAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getIdentityVerificationAttributes">getIdentityVerificationAttributes</a></b>(const GetIdentityVerificationAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSendQuotaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getSendQuota">getSendQuota</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSendStatisticsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getSendStatistics">getSendStatistics</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#getTemplate">getTemplate</a></b>(const GetTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListConfigurationSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listConfigurationSets">listConfigurationSets</a></b>(const ListConfigurationSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCustomVerificationEmailTemplatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listCustomVerificationEmailTemplates">listCustomVerificationEmailTemplates</a></b>(const ListCustomVerificationEmailTemplatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIdentitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listIdentities">listIdentities</a></b>(const ListIdentitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIdentityPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listIdentityPolicies">listIdentityPolicies</a></b>(const ListIdentityPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListReceiptFiltersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listReceiptFilters">listReceiptFilters</a></b>(const ListReceiptFiltersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListReceiptRuleSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listReceiptRuleSets">listReceiptRuleSets</a></b>(const ListReceiptRuleSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTemplatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listTemplates">listTemplates</a></b>(const ListTemplatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVerifiedEmailAddressesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#listVerifiedEmailAddresses">listVerifiedEmailAddresses</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutIdentityPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#putIdentityPolicy">putIdentityPolicy</a></b>(const PutIdentityPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReorderReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#reorderReceiptRuleSet">reorderReceiptRuleSet</a></b>(const ReorderReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendBounceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendBounce">sendBounce</a></b>(const SendBounceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendBulkTemplatedEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendBulkTemplatedEmail">sendBulkTemplatedEmail</a></b>(const SendBulkTemplatedEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendCustomVerificationEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendCustomVerificationEmail">sendCustomVerificationEmail</a></b>(const SendCustomVerificationEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendEmail">sendEmail</a></b>(const SendEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendRawEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendRawEmail">sendRawEmail</a></b>(const SendRawEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendTemplatedEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#sendTemplatedEmail">sendTemplatedEmail</a></b>(const SendTemplatedEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetActiveReceiptRuleSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setActiveReceiptRuleSet">setActiveReceiptRuleSet</a></b>(const SetActiveReceiptRuleSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityDkimEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setIdentityDkimEnabled">setIdentityDkimEnabled</a></b>(const SetIdentityDkimEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityFeedbackForwardingEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setIdentityFeedbackForwardingEnabled">setIdentityFeedbackForwardingEnabled</a></b>(const SetIdentityFeedbackForwardingEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityHeadersInNotificationsEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setIdentityHeadersInNotificationsEnabled">setIdentityHeadersInNotificationsEnabled</a></b>(const SetIdentityHeadersInNotificationsEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityMailFromDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setIdentityMailFromDomain">setIdentityMailFromDomain</a></b>(const SetIdentityMailFromDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityNotificationTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setIdentityNotificationTopic">setIdentityNotificationTopic</a></b>(const SetIdentityNotificationTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetReceiptRulePositionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#setReceiptRulePosition">setReceiptRulePosition</a></b>(const SetReceiptRulePositionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestRenderTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#testRenderTemplate">testRenderTemplate</a></b>(const TestRenderTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAccountSendingEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateAccountSendingEnabled">updateAccountSendingEnabled</a></b>(const UpdateAccountSendingEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationSetEventDestinationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateConfigurationSetEventDestination">updateConfigurationSetEventDestination</a></b>(const UpdateConfigurationSetEventDestinationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationSetReputationMetricsEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateConfigurationSetReputationMetricsEnabled">updateConfigurationSetReputationMetricsEnabled</a></b>(const UpdateConfigurationSetReputationMetricsEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationSetSendingEnabledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateConfigurationSetSendingEnabled">updateConfigurationSetSendingEnabled</a></b>(const UpdateConfigurationSetSendingEnabledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationSetTrackingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateConfigurationSetTrackingOptions">updateConfigurationSetTrackingOptions</a></b>(const UpdateConfigurationSetTrackingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCustomVerificationEmailTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateCustomVerificationEmailTemplate">updateCustomVerificationEmailTemplate</a></b>(const UpdateCustomVerificationEmailTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateReceiptRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateReceiptRule">updateReceiptRule</a></b>(const UpdateReceiptRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#updateTemplate">updateTemplate</a></b>(const UpdateTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyDomainDkimResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#verifyDomainDkim">verifyDomainDkim</a></b>(const VerifyDomainDkimRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyDomainIdentityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#verifyDomainIdentity">verifyDomainIdentity</a></b>(const VerifyDomainIdentityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyEmailAddressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#verifyEmailAddress">verifyEmailAddress</a></b>(const VerifyEmailAddressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyEmailIdentityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ses-sesclient.html#verifyEmailIdentity">verifyEmailIdentity</a></b>(const VerifyEmailIdentityRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SesClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ses-sesclient.html">SesClient</a> class provides access to the Amazon Simple Email Service ( SES) service.</p>
+<p>&lt;fullname&gt;Amazon Simple Email Service&lt;/fullname&gt;</p>
+<p>This is the API Reference for &lt;a href=&quot;https://aws.amazon.com/ses/&quot;&gt;Amazon Simple Email Service&lt;/a&gt; (Amazon SES). This documentation is intended to be used in conjunction with the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&quot;&gt;Amazon SES Developer Guide&lt;/a&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>For a list of Amazon SES endpoints to use in service requests, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html&quot;&gt;Regions and Amazon SES&lt;/a&gt; in the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&quot;&gt;Amazon SES Developer Guide&lt;/a&gt;.</p>
+</div>
+<!-- @@@SesClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SesClient[overload1]$$$SesClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SesClient"><a name="SesClient"></a>SesClient::<span class="name">SesClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ses-sesclient.html">SesClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SesClient -->
+<!-- $$$SesClient$$$SesClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SesClient-1"><a name="SesClient-1"></a>SesClient::<span class="name">SesClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-ses-sesclient.html#SesClient">SesClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SesClient -->
+<!-- $$$cloneReceiptRuleSet[overload1]$$$cloneReceiptRuleSetconstCloneReceiptRuleSetRequest& -->
+<h3 class="fn" id="cloneReceiptRuleSet"><a name="cloneReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-clonereceiptrulesetresponse.html">CloneReceiptRuleSetResponse</a></span> *SesClient::<span class="name">cloneReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-clonereceiptrulesetrequest.html">CloneReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-clonereceiptrulesetresponse.html">CloneReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a receipt rule set by cloning an existing one. All receipt rules and configurations are copied to the new receipt rule set and are completely independent of the source rule</p>
+<p>set&gt;</p>
+<p>For information about setting up rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@cloneReceiptRuleSet -->
+<!-- $$$createConfigurationSet[overload1]$$$createConfigurationSetconstCreateConfigurationSetRequest& -->
+<h3 class="fn" id="createConfigurationSet"><a name="createConfigurationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createconfigurationsetresponse.html">CreateConfigurationSetResponse</a></span> *SesClient::<span class="name">createConfigurationSet</span>(const <span class="type"><a href="qtaws-ses-createconfigurationsetrequest.html">CreateConfigurationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createconfigurationsetresponse.html">CreateConfigurationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a configuration</p>
+<p>set&gt;</p>
+<p>Configuration sets enable you to publish email sending events. For information about using configuration sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createConfigurationSet -->
+<!-- $$$createConfigurationSetEventDestination[overload1]$$$createConfigurationSetEventDestinationconstCreateConfigurationSetEventDestinationRequest& -->
+<h3 class="fn" id="createConfigurationSetEventDestination"><a name="createConfigurationSetEventDestination"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createconfigurationseteventdestinationresponse.html">CreateConfigurationSetEventDestinationResponse</a></span> *SesClient::<span class="name">createConfigurationSetEventDestination</span>(const <span class="type"><a href="qtaws-ses-createconfigurationseteventdestinationrequest.html">CreateConfigurationSetEventDestinationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createconfigurationseteventdestinationresponse.html">CreateConfigurationSetEventDestinationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a configuration set event</p>
+<p>destination&gt; &lt;note&gt;</p>
+<p>When you create or update an event destination, you must provide one, and only one, destination. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon</p>
+<p>SNS)&gt; &lt;/note&gt;</p>
+<p>An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set. For information about using configuration sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createConfigurationSetEventDestination -->
+<!-- $$$createConfigurationSetTrackingOptions[overload1]$$$createConfigurationSetTrackingOptionsconstCreateConfigurationSetTrackingOptionsRequest& -->
+<h3 class="fn" id="createConfigurationSetTrackingOptions"><a name="createConfigurationSetTrackingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createconfigurationsettrackingoptionsresponse.html">CreateConfigurationSetTrackingOptionsResponse</a></span> *SesClient::<span class="name">createConfigurationSetTrackingOptions</span>(const <span class="type"><a href="qtaws-ses-createconfigurationsettrackingoptionsrequest.html">CreateConfigurationSetTrackingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createconfigurationsettrackingoptionsresponse.html">CreateConfigurationSetTrackingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an association between a configuration set and a custom domain for open and click event tracking.</p>
+<p>&lt;/p</p>
+<p>By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You can configure a subdomain of your own to handle these events. For information about using configuration sets, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html&quot;&gt;Configuring Custom Domains to Handle Open and Click Tracking&lt;/a&gt; in the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@createConfigurationSetTrackingOptions -->
+<!-- $$$createCustomVerificationEmailTemplate[overload1]$$$createCustomVerificationEmailTemplateconstCreateCustomVerificationEmailTemplateRequest& -->
+<h3 class="fn" id="createCustomVerificationEmailTemplate"><a name="createCustomVerificationEmailTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createcustomverificationemailtemplateresponse.html">CreateCustomVerificationEmailTemplateResponse</a></span> *SesClient::<span class="name">createCustomVerificationEmailTemplate</span>(const <span class="type"><a href="qtaws-ses-createcustomverificationemailtemplaterequest.html">CreateCustomVerificationEmailTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createcustomverificationemailtemplateresponse.html">CreateCustomVerificationEmailTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new custom verification email</p>
+<p>template&gt;</p>
+<p>For more information about custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createCustomVerificationEmailTemplate -->
+<!-- $$$createReceiptFilter[overload1]$$$createReceiptFilterconstCreateReceiptFilterRequest& -->
+<h3 class="fn" id="createReceiptFilter"><a name="createReceiptFilter"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createreceiptfilterresponse.html">CreateReceiptFilterResponse</a></span> *SesClient::<span class="name">createReceiptFilter</span>(const <span class="type"><a href="qtaws-ses-createreceiptfilterrequest.html">CreateReceiptFilterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createreceiptfilterresponse.html">CreateReceiptFilterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new IP address</p>
+<p>filter&gt;</p>
+<p>For information about setting up IP address filters, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-ip-filters.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createReceiptFilter -->
+<!-- $$$createReceiptRule[overload1]$$$createReceiptRuleconstCreateReceiptRuleRequest& -->
+<h3 class="fn" id="createReceiptRule"><a name="createReceiptRule"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createreceiptruleresponse.html">CreateReceiptRuleResponse</a></span> *SesClient::<span class="name">createReceiptRule</span>(const <span class="type"><a href="qtaws-ses-createreceiptrulerequest.html">CreateReceiptRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createreceiptruleresponse.html">CreateReceiptRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a receipt</p>
+<p>rule&gt;</p>
+<p>For information about setting up receipt rules, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createReceiptRule -->
+<!-- $$$createReceiptRuleSet[overload1]$$$createReceiptRuleSetconstCreateReceiptRuleSetRequest& -->
+<h3 class="fn" id="createReceiptRuleSet"><a name="createReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createreceiptrulesetresponse.html">CreateReceiptRuleSetResponse</a></span> *SesClient::<span class="name">createReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-createreceiptrulesetrequest.html">CreateReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createreceiptrulesetresponse.html">CreateReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an empty receipt rule</p>
+<p>set&gt;</p>
+<p>For information about setting up receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createReceiptRuleSet -->
+<!-- $$$createTemplate[overload1]$$$createTemplateconstCreateTemplateRequest& -->
+<h3 class="fn" id="createTemplate"><a name="createTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-createtemplateresponse.html">CreateTemplateResponse</a></span> *SesClient::<span class="name">createTemplate</span>(const <span class="type"><a href="qtaws-ses-createtemplaterequest.html">CreateTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-createtemplateresponse.html">CreateTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an email template. Email templates enable you to send personalized email to one or more destinations in a single API operation. For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@createTemplate -->
+<!-- $$$deleteConfigurationSet[overload1]$$$deleteConfigurationSetconstDeleteConfigurationSetRequest& -->
+<h3 class="fn" id="deleteConfigurationSet"><a name="deleteConfigurationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteconfigurationsetresponse.html">DeleteConfigurationSetResponse</a></span> *SesClient::<span class="name">deleteConfigurationSet</span>(const <span class="type"><a href="qtaws-ses-deleteconfigurationsetrequest.html">DeleteConfigurationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteconfigurationsetresponse.html">DeleteConfigurationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a configuration set. Configuration sets enable you to publish email sending events. For information about using configuration sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteConfigurationSet -->
+<!-- $$$deleteConfigurationSetEventDestination[overload1]$$$deleteConfigurationSetEventDestinationconstDeleteConfigurationSetEventDestinationRequest& -->
+<h3 class="fn" id="deleteConfigurationSetEventDestination"><a name="deleteConfigurationSetEventDestination"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteconfigurationseteventdestinationresponse.html">DeleteConfigurationSetEventDestinationResponse</a></span> *SesClient::<span class="name">deleteConfigurationSetEventDestination</span>(const <span class="type"><a href="qtaws-ses-deleteconfigurationseteventdestinationrequest.html">DeleteConfigurationSetEventDestinationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteconfigurationseteventdestinationresponse.html">DeleteConfigurationSetEventDestinationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a configuration set event destination. Configuration set event destinations are associated with configuration sets, which enable you to publish email sending events. For information about using configuration sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteConfigurationSetEventDestination -->
+<!-- $$$deleteConfigurationSetTrackingOptions[overload1]$$$deleteConfigurationSetTrackingOptionsconstDeleteConfigurationSetTrackingOptionsRequest& -->
+<h3 class="fn" id="deleteConfigurationSetTrackingOptions"><a name="deleteConfigurationSetTrackingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteconfigurationsettrackingoptionsresponse.html">DeleteConfigurationSetTrackingOptionsResponse</a></span> *SesClient::<span class="name">deleteConfigurationSetTrackingOptions</span>(const <span class="type"><a href="qtaws-ses-deleteconfigurationsettrackingoptionsrequest.html">DeleteConfigurationSetTrackingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteconfigurationsettrackingoptionsresponse.html">DeleteConfigurationSetTrackingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an association between a configuration set and a custom domain for open and click event</p>
+<p>tracking&gt;</p>
+<p>By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You can configure a subdomain of your own to handle these events. For information about using configuration sets, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html&quot;&gt;Configuring Custom Domains to Handle Open and Click Tracking&lt;/a&gt; in the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>Deleting this kind of association will result in emails sent using the specified configuration set to capture open and click events using the standard, Amazon SES-operated</p>
+<!-- @@@deleteConfigurationSetTrackingOptions -->
+<!-- $$$deleteCustomVerificationEmailTemplate[overload1]$$$deleteCustomVerificationEmailTemplateconstDeleteCustomVerificationEmailTemplateRequest& -->
+<h3 class="fn" id="deleteCustomVerificationEmailTemplate"><a name="deleteCustomVerificationEmailTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deletecustomverificationemailtemplateresponse.html">DeleteCustomVerificationEmailTemplateResponse</a></span> *SesClient::<span class="name">deleteCustomVerificationEmailTemplate</span>(const <span class="type"><a href="qtaws-ses-deletecustomverificationemailtemplaterequest.html">DeleteCustomVerificationEmailTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deletecustomverificationemailtemplateresponse.html">DeleteCustomVerificationEmailTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing custom verification email template.</p>
+<p>&lt;/p</p>
+<p>For more information about custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteCustomVerificationEmailTemplate -->
+<!-- $$$deleteIdentity[overload1]$$$deleteIdentityconstDeleteIdentityRequest& -->
+<h3 class="fn" id="deleteIdentity"><a name="deleteIdentity"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteidentityresponse.html">DeleteIdentityResponse</a></span> *SesClient::<span class="name">deleteIdentity</span>(const <span class="type"><a href="qtaws-ses-deleteidentityrequest.html">DeleteIdentityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteidentityresponse.html">DeleteIdentityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified identity (an email address or a domain) from the list of verified</p>
+<p>identities&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteIdentity -->
+<!-- $$$deleteIdentityPolicy[overload1]$$$deleteIdentityPolicyconstDeleteIdentityPolicyRequest& -->
+<h3 class="fn" id="deleteIdentityPolicy"><a name="deleteIdentityPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteidentitypolicyresponse.html">DeleteIdentityPolicyResponse</a></span> *SesClient::<span class="name">deleteIdentityPolicy</span>(const <span class="type"><a href="qtaws-ses-deleteidentitypolicyrequest.html">DeleteIdentityPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteidentitypolicyresponse.html">DeleteIdentityPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified sending authorization policy for the given identity (an email address or a domain). This API returns successfully even if a policy with the specified name does not</p>
+<p>exist&gt; &lt;note&gt;</p>
+<p>This API is for the identity owner only. If you have not verified the identity, this API will return an</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteIdentityPolicy -->
+<!-- $$$deleteReceiptFilter[overload1]$$$deleteReceiptFilterconstDeleteReceiptFilterRequest& -->
+<h3 class="fn" id="deleteReceiptFilter"><a name="deleteReceiptFilter"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deletereceiptfilterresponse.html">DeleteReceiptFilterResponse</a></span> *SesClient::<span class="name">deleteReceiptFilter</span>(const <span class="type"><a href="qtaws-ses-deletereceiptfilterrequest.html">DeleteReceiptFilterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deletereceiptfilterresponse.html">DeleteReceiptFilterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified IP address</p>
+<p>filter&gt;</p>
+<p>For information about managing IP address filters, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-ip-filters.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteReceiptFilter -->
+<!-- $$$deleteReceiptRule[overload1]$$$deleteReceiptRuleconstDeleteReceiptRuleRequest& -->
+<h3 class="fn" id="deleteReceiptRule"><a name="deleteReceiptRule"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deletereceiptruleresponse.html">DeleteReceiptRuleResponse</a></span> *SesClient::<span class="name">deleteReceiptRule</span>(const <span class="type"><a href="qtaws-ses-deletereceiptrulerequest.html">DeleteReceiptRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deletereceiptruleresponse.html">DeleteReceiptRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified receipt</p>
+<p>rule&gt;</p>
+<p>For information about managing receipt rules, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rules.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteReceiptRule -->
+<!-- $$$deleteReceiptRuleSet[overload1]$$$deleteReceiptRuleSetconstDeleteReceiptRuleSetRequest& -->
+<h3 class="fn" id="deleteReceiptRuleSet"><a name="deleteReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deletereceiptrulesetresponse.html">DeleteReceiptRuleSetResponse</a></span> *SesClient::<span class="name">deleteReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-deletereceiptrulesetrequest.html">DeleteReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deletereceiptrulesetresponse.html">DeleteReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified receipt rule set and all of the receipt rules it</p>
+<p>contains&gt; &lt;note&gt;</p>
+<p>The currently active rule set cannot be</p>
+<p>deleted&gt; &lt;/note&gt;</p>
+<p>For information about managing receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rule-sets.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteReceiptRuleSet -->
+<!-- $$$deleteTemplate[overload1]$$$deleteTemplateconstDeleteTemplateRequest& -->
+<h3 class="fn" id="deleteTemplate"><a name="deleteTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deletetemplateresponse.html">DeleteTemplateResponse</a></span> *SesClient::<span class="name">deleteTemplate</span>(const <span class="type"><a href="qtaws-ses-deletetemplaterequest.html">DeleteTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deletetemplateresponse.html">DeleteTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an email</p>
+<p>template&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@deleteTemplate -->
+<!-- $$$deleteVerifiedEmailAddress[overload1]$$$deleteVerifiedEmailAddressconstDeleteVerifiedEmailAddressRequest& -->
+<h3 class="fn" id="deleteVerifiedEmailAddress"><a name="deleteVerifiedEmailAddress"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-deleteverifiedemailaddressresponse.html">DeleteVerifiedEmailAddressResponse</a></span> *SesClient::<span class="name">deleteVerifiedEmailAddress</span>(const <span class="type"><a href="qtaws-ses-deleteverifiedemailaddressrequest.html">DeleteVerifiedEmailAddressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-deleteverifiedemailaddressresponse.html">DeleteVerifiedEmailAddressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated. Use the &lt;code&gt;DeleteIdentity&lt;/code&gt; operation to delete email addresses and</p>
+<!-- @@@deleteVerifiedEmailAddress -->
+<!-- $$$describeActiveReceiptRuleSet[overload1]$$$describeActiveReceiptRuleSetconstDescribeActiveReceiptRuleSetRequest& -->
+<h3 class="fn" id="describeActiveReceiptRuleSet"><a name="describeActiveReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-describeactivereceiptrulesetresponse.html">DescribeActiveReceiptRuleSetResponse</a></span> *SesClient::<span class="name">describeActiveReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-describeactivereceiptrulesetrequest.html">DescribeActiveReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-describeactivereceiptrulesetresponse.html">DescribeActiveReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the metadata and receipt rules for the receipt rule set that is currently</p>
+<p>active&gt;</p>
+<p>For information about setting up receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@describeActiveReceiptRuleSet -->
+<!-- $$$describeConfigurationSet[overload1]$$$describeConfigurationSetconstDescribeConfigurationSetRequest& -->
+<h3 class="fn" id="describeConfigurationSet"><a name="describeConfigurationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-describeconfigurationsetresponse.html">DescribeConfigurationSetResponse</a></span> *SesClient::<span class="name">describeConfigurationSet</span>(const <span class="type"><a href="qtaws-ses-describeconfigurationsetrequest.html">DescribeConfigurationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-describeconfigurationsetresponse.html">DescribeConfigurationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of the specified configuration set. For information about using configuration sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@describeConfigurationSet -->
+<!-- $$$describeReceiptRule[overload1]$$$describeReceiptRuleconstDescribeReceiptRuleRequest& -->
+<h3 class="fn" id="describeReceiptRule"><a name="describeReceiptRule"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-describereceiptruleresponse.html">DescribeReceiptRuleResponse</a></span> *SesClient::<span class="name">describeReceiptRule</span>(const <span class="type"><a href="qtaws-ses-describereceiptrulerequest.html">DescribeReceiptRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-describereceiptruleresponse.html">DescribeReceiptRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of the specified receipt</p>
+<p>rule&gt;</p>
+<p>For information about setting up receipt rules, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@describeReceiptRule -->
+<!-- $$$describeReceiptRuleSet[overload1]$$$describeReceiptRuleSetconstDescribeReceiptRuleSetRequest& -->
+<h3 class="fn" id="describeReceiptRuleSet"><a name="describeReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-describereceiptrulesetresponse.html">DescribeReceiptRuleSetResponse</a></span> *SesClient::<span class="name">describeReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-describereceiptrulesetrequest.html">DescribeReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-describereceiptrulesetresponse.html">DescribeReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of the specified receipt rule</p>
+<p>set&gt;</p>
+<p>For information about managing receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rule-sets.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@describeReceiptRuleSet -->
+<!-- $$$getAccountSendingEnabled[overload1]$$$getAccountSendingEnabled -->
+<h3 class="fn" id="getAccountSendingEnabled"><a name="getAccountSendingEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getaccountsendingenabledresponse.html">GetAccountSendingEnabledResponse</a></span> *SesClient::<span class="name">getAccountSendingEnabled</span>()</h3>
+<p>Sends a GetAccountSendingEnabled request to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getaccountsendingenabledresponse.html">GetAccountSendingEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the email sending status of the Amazon SES</p>
+<p>account&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getAccountSendingEnabled -->
+<!-- $$$getCustomVerificationEmailTemplate[overload1]$$$getCustomVerificationEmailTemplateconstGetCustomVerificationEmailTemplateRequest& -->
+<h3 class="fn" id="getCustomVerificationEmailTemplate"><a name="getCustomVerificationEmailTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getcustomverificationemailtemplateresponse.html">GetCustomVerificationEmailTemplateResponse</a></span> *SesClient::<span class="name">getCustomVerificationEmailTemplate</span>(const <span class="type"><a href="qtaws-ses-getcustomverificationemailtemplaterequest.html">GetCustomVerificationEmailTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getcustomverificationemailtemplateresponse.html">GetCustomVerificationEmailTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the custom email verification template for the template name you</p>
+<p>specify&gt;</p>
+<p>For more information about custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getCustomVerificationEmailTemplate -->
+<!-- $$$getIdentityDkimAttributes[overload1]$$$getIdentityDkimAttributesconstGetIdentityDkimAttributesRequest& -->
+<h3 class="fn" id="getIdentityDkimAttributes"><a name="getIdentityDkimAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getidentitydkimattributesresponse.html">GetIdentityDkimAttributesResponse</a></span> *SesClient::<span class="name">getIdentityDkimAttributes</span>(const <span class="type"><a href="qtaws-ses-getidentitydkimattributesrequest.html">GetIdentityDkimAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getidentitydkimattributesresponse.html">GetIdentityDkimAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current status of Easy DKIM signing for an entity. For domain name identities, this operation also returns the DKIM tokens that are required for Easy DKIM signing, and whether Amazon SES has successfully verified that these tokens have been</p>
+<p>published&gt;</p>
+<p>This operation takes a list of identities as input and returns the following information for</p>
+<p>each&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether Easy DKIM signing is enabled or</p>
+<p>disabled&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>A set of DKIM tokens that represent the identity. If the identity is an email address, the tokens represent the domain of that</p>
+<p>address&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Whether Amazon SES has successfully verified the DKIM tokens published in the domain's DNS. This information is only returned for domain name identities, not for email</p>
+<p>addresses&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation is throttled at one request per second and can only get DKIM attributes for up to 100 identities at a</p>
+<p>time&gt;</p>
+<p>For more information about creating DNS records using DKIM tokens, go to the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@getIdentityDkimAttributes -->
+<!-- $$$getIdentityMailFromDomainAttributes[overload1]$$$getIdentityMailFromDomainAttributesconstGetIdentityMailFromDomainAttributesRequest& -->
+<h3 class="fn" id="getIdentityMailFromDomainAttributes"><a name="getIdentityMailFromDomainAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getidentitymailfromdomainattributesresponse.html">GetIdentityMailFromDomainAttributesResponse</a></span> *SesClient::<span class="name">getIdentityMailFromDomainAttributes</span>(const <span class="type"><a href="qtaws-ses-getidentitymailfromdomainattributesrequest.html">GetIdentityMailFromDomainAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getidentitymailfromdomainattributesresponse.html">GetIdentityMailFromDomainAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the custom MAIL FROM attributes for a list of identities (email addresses :</p>
+<p>domains)&gt;</p>
+<p>This operation is throttled at one request per second and can only get custom MAIL FROM attributes for up to 100 identities at a</p>
+<!-- @@@getIdentityMailFromDomainAttributes -->
+<!-- $$$getIdentityNotificationAttributes[overload1]$$$getIdentityNotificationAttributesconstGetIdentityNotificationAttributesRequest& -->
+<h3 class="fn" id="getIdentityNotificationAttributes"><a name="getIdentityNotificationAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getidentitynotificationattributesresponse.html">GetIdentityNotificationAttributesResponse</a></span> *SesClient::<span class="name">getIdentityNotificationAttributes</span>(const <span class="type"><a href="qtaws-ses-getidentitynotificationattributesrequest.html">GetIdentityNotificationAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getidentitynotificationattributesresponse.html">GetIdentityNotificationAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a list of verified identities (email addresses and/or domains), returns a structure describing identity notification</p>
+<p>attributes&gt;</p>
+<p>This operation is throttled at one request per second and can only get notification attributes for up to 100 identities at a</p>
+<p>time&gt;</p>
+<p>For more information about using notifications with Amazon SES, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@getIdentityNotificationAttributes -->
+<!-- $$$getIdentityPolicies[overload1]$$$getIdentityPoliciesconstGetIdentityPoliciesRequest& -->
+<h3 class="fn" id="getIdentityPolicies"><a name="getIdentityPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getidentitypoliciesresponse.html">GetIdentityPoliciesResponse</a></span> *SesClient::<span class="name">getIdentityPolicies</span>(const <span class="type"><a href="qtaws-ses-getidentitypoliciesrequest.html">GetIdentityPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getidentitypoliciesresponse.html">GetIdentityPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the requested sending authorization policies for the given identity (an email address or a domain). The policies are returned as a map of policy names to policy contents. You can retrieve a maximum of 20 policies at a</p>
+<p>time&gt; &lt;note&gt;</p>
+<p>This API is for the identity owner only. If you have not verified the identity, this API will return an</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getIdentityPolicies -->
+<!-- $$$getIdentityVerificationAttributes[overload1]$$$getIdentityVerificationAttributesconstGetIdentityVerificationAttributesRequest& -->
+<h3 class="fn" id="getIdentityVerificationAttributes"><a name="getIdentityVerificationAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getidentityverificationattributesresponse.html">GetIdentityVerificationAttributesResponse</a></span> *SesClient::<span class="name">getIdentityVerificationAttributes</span>(const <span class="type"><a href="qtaws-ses-getidentityverificationattributesrequest.html">GetIdentityVerificationAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getidentityverificationattributesresponse.html">GetIdentityVerificationAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities) the verification token for each</p>
+<p>identity&gt;</p>
+<p>The verification status of an email address is &quot;Pending&quot; until the email address owner clicks the link within the verification email that Amazon SES sent to that address. If the email address owner clicks the link within 24 hours, the verification status of the email address changes to &quot;Success&quot;. If the link is not clicked within 24 hours, the verification status changes to &quot;Failed.&quot; In that case, if you still want to verify the email address, you must restart the verification process from the</p>
+<p>beginning&gt;</p>
+<p>For domain identities, the domain's verification status is &quot;Pending&quot; as Amazon SES searches for the required TXT record in the DNS settings of the domain. When Amazon SES detects the record, the domain's verification status changes to &quot;Success&quot;. If Amazon SES is unable to detect the record within 72 hours, the domain's verification status changes to &quot;Failed.&quot; In that case, if you still want to verify the domain, you must restart the verification process from the</p>
+<p>beginning&gt;</p>
+<p>This operation is throttled at one request per second and can only get verification attributes for up to 100 identities at a</p>
+<!-- @@@getIdentityVerificationAttributes -->
+<!-- $$$getSendQuota[overload1]$$$getSendQuota -->
+<h3 class="fn" id="getSendQuota"><a name="getSendQuota"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getsendquotaresponse.html">GetSendQuotaResponse</a></span> *SesClient::<span class="name">getSendQuota</span>()</h3>
+<p>Sends a GetSendQuota request to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getsendquotaresponse.html">GetSendQuotaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides the sending limits for the Amazon SES account.</p>
+<p>&lt;/p</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getSendQuota -->
+<!-- $$$getSendStatistics[overload1]$$$getSendStatistics -->
+<h3 class="fn" id="getSendStatistics"><a name="getSendStatistics"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-getsendstatisticsresponse.html">GetSendStatisticsResponse</a></span> *SesClient::<span class="name">getSendStatistics</span>()</h3>
+<p>Sends a GetSendStatistics request to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-getsendstatisticsresponse.html">GetSendStatisticsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides sending statistics for the Amazon SES account. The result is a list of data points, representing the last two weeks of sending activity. Each data point in the list contains statistics for a 15-minute period of</p>
+<p>time&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getSendStatistics -->
+<!-- $$$getTemplate[overload1]$$$getTemplateconstGetTemplateRequest& -->
+<h3 class="fn" id="getTemplate"><a name="getTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-gettemplateresponse.html">GetTemplateResponse</a></span> *SesClient::<span class="name">getTemplate</span>(const <span class="type"><a href="qtaws-ses-gettemplaterequest.html">GetTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-gettemplateresponse.html">GetTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Displays the template object (which includes the Subject line, HTML part and text part) for the template you</p>
+<p>specify&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@getTemplate -->
+<!-- $$$listConfigurationSets[overload1]$$$listConfigurationSetsconstListConfigurationSetsRequest& -->
+<h3 class="fn" id="listConfigurationSets"><a name="listConfigurationSets"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listconfigurationsetsresponse.html">ListConfigurationSetsResponse</a></span> *SesClient::<span class="name">listConfigurationSets</span>(const <span class="type"><a href="qtaws-ses-listconfigurationsetsrequest.html">ListConfigurationSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listconfigurationsetsresponse.html">ListConfigurationSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a list of the configuration sets associated with your Amazon SES account. For information about using configuration sets, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Monitoring Your Amazon SES Sending Activity&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p</p>
+<p>You can execute this operation no more than once per second. This operation will return up to 1,000 configuration sets each time it is run. If your Amazon SES account has more than 1,000 configuration sets, this operation will also return a NextToken element. You can then execute the &lt;code&gt;ListConfigurationSets&lt;/code&gt; operation again, passing the &lt;code&gt;NextToken&lt;/code&gt; parameter and the value of the NextToken element to retrieve additional</p>
+<!-- @@@listConfigurationSets -->
+<!-- $$$listCustomVerificationEmailTemplates[overload1]$$$listCustomVerificationEmailTemplatesconstListCustomVerificationEmailTemplatesRequest& -->
+<h3 class="fn" id="listCustomVerificationEmailTemplates"><a name="listCustomVerificationEmailTemplates"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listcustomverificationemailtemplatesresponse.html">ListCustomVerificationEmailTemplatesResponse</a></span> *SesClient::<span class="name">listCustomVerificationEmailTemplates</span>(const <span class="type"><a href="qtaws-ses-listcustomverificationemailtemplatesrequest.html">ListCustomVerificationEmailTemplatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listcustomverificationemailtemplatesresponse.html">ListCustomVerificationEmailTemplatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the existing custom verification email templates for your</p>
+<p>account&gt;</p>
+<p>For more information about custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listCustomVerificationEmailTemplates -->
+<!-- $$$listIdentities[overload1]$$$listIdentitiesconstListIdentitiesRequest& -->
+<h3 class="fn" id="listIdentities"><a name="listIdentities"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listidentitiesresponse.html">ListIdentitiesResponse</a></span> *SesClient::<span class="name">listIdentities</span>(const <span class="type"><a href="qtaws-ses-listidentitiesrequest.html">ListIdentitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listidentitiesresponse.html">ListIdentitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list containing all of the identities (email addresses and domains) for your AWS account, regardless of verification</p>
+<p>status&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listIdentities -->
+<!-- $$$listIdentityPolicies[overload1]$$$listIdentityPoliciesconstListIdentityPoliciesRequest& -->
+<h3 class="fn" id="listIdentityPolicies"><a name="listIdentityPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listidentitypoliciesresponse.html">ListIdentityPoliciesResponse</a></span> *SesClient::<span class="name">listIdentityPolicies</span>(const <span class="type"><a href="qtaws-ses-listidentitypoliciesrequest.html">ListIdentityPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listidentitypoliciesresponse.html">ListIdentityPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of sending authorization policies that are attached to the given identity (an email address or a domain). This API returns only a list. If you want the actual policy content, you can use</p>
+<p>&lt;code&gt;GetIdentityPolicies&lt;/code&gt;&gt; &lt;note&gt;</p>
+<p>This API is for the identity owner only. If you have not verified the identity, this API will return an</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listIdentityPolicies -->
+<!-- $$$listReceiptFilters[overload1]$$$listReceiptFiltersconstListReceiptFiltersRequest& -->
+<h3 class="fn" id="listReceiptFilters"><a name="listReceiptFilters"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listreceiptfiltersresponse.html">ListReceiptFiltersResponse</a></span> *SesClient::<span class="name">listReceiptFilters</span>(const <span class="type"><a href="qtaws-ses-listreceiptfiltersrequest.html">ListReceiptFiltersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listreceiptfiltersresponse.html">ListReceiptFiltersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the IP address filters associated with your AWS</p>
+<p>account&gt;</p>
+<p>For information about managing IP address filters, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-ip-filters.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listReceiptFilters -->
+<!-- $$$listReceiptRuleSets[overload1]$$$listReceiptRuleSetsconstListReceiptRuleSetsRequest& -->
+<h3 class="fn" id="listReceiptRuleSets"><a name="listReceiptRuleSets"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listreceiptrulesetsresponse.html">ListReceiptRuleSetsResponse</a></span> *SesClient::<span class="name">listReceiptRuleSets</span>(const <span class="type"><a href="qtaws-ses-listreceiptrulesetsrequest.html">ListReceiptRuleSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listreceiptrulesetsresponse.html">ListReceiptRuleSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the receipt rule sets that exist under your AWS account. If there are additional receipt rule sets to be retrieved, you will receive a &lt;code&gt;NextToken&lt;/code&gt; that you can provide to the next call to &lt;code&gt;ListReceiptRuleSets&lt;/code&gt; to retrieve the additional</p>
+<p>entries&gt;</p>
+<p>For information about managing receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rule-sets.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listReceiptRuleSets -->
+<!-- $$$listTemplates[overload1]$$$listTemplatesconstListTemplatesRequest& -->
+<h3 class="fn" id="listTemplates"><a name="listTemplates"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listtemplatesresponse.html">ListTemplatesResponse</a></span> *SesClient::<span class="name">listTemplates</span>(const <span class="type"><a href="qtaws-ses-listtemplatesrequest.html">ListTemplatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listtemplatesresponse.html">ListTemplatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the email templates present in your Amazon SES</p>
+<p>account&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@listTemplates -->
+<!-- $$$listVerifiedEmailAddresses[overload1]$$$listVerifiedEmailAddresses -->
+<h3 class="fn" id="listVerifiedEmailAddresses"><a name="listVerifiedEmailAddresses"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-listverifiedemailaddressesresponse.html">ListVerifiedEmailAddressesResponse</a></span> *SesClient::<span class="name">listVerifiedEmailAddresses</span>()</h3>
+<p>Sends a ListVerifiedEmailAddresses request to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-listverifiedemailaddressesresponse.html">ListVerifiedEmailAddressesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated. Use the &lt;code&gt;ListIdentities&lt;/code&gt; operation to list the email addresses and domains associated with your</p>
+<!-- @@@listVerifiedEmailAddresses -->
+<!-- $$$putIdentityPolicy[overload1]$$$putIdentityPolicyconstPutIdentityPolicyRequest& -->
+<h3 class="fn" id="putIdentityPolicy"><a name="putIdentityPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-putidentitypolicyresponse.html">PutIdentityPolicyResponse</a></span> *SesClient::<span class="name">putIdentityPolicy</span>(const <span class="type"><a href="qtaws-ses-putidentitypolicyrequest.html">PutIdentityPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-putidentitypolicyresponse.html">PutIdentityPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates a sending authorization policy for the specified identity (an email address or a</p>
+<p>domain)&gt; &lt;note&gt;</p>
+<p>This API is for the identity owner only. If you have not verified the identity, this API will return an</p>
+<p>error&gt; &lt;/note&gt;</p>
+<p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@putIdentityPolicy -->
+<!-- $$$reorderReceiptRuleSet[overload1]$$$reorderReceiptRuleSetconstReorderReceiptRuleSetRequest& -->
+<h3 class="fn" id="reorderReceiptRuleSet"><a name="reorderReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-reorderreceiptrulesetresponse.html">ReorderReceiptRuleSetResponse</a></span> *SesClient::<span class="name">reorderReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-reorderreceiptrulesetrequest.html">ReorderReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-reorderreceiptrulesetresponse.html">ReorderReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reorders the receipt rules within a receipt rule</p>
+<p>set&gt; &lt;note&gt;</p>
+<p>All of the rules in the rule set must be represented in this request. That is, this API will return an error if the reorder request doesn't explicitly position all of the</p>
+<p>rules&gt; &lt;/note&gt;</p>
+<p>For information about managing receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rule-sets.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@reorderReceiptRuleSet -->
+<!-- $$$sendBounce[overload1]$$$sendBounceconstSendBounceRequest& -->
+<h3 class="fn" id="sendBounce"><a name="sendBounce"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendbounceresponse.html">SendBounceResponse</a></span> *SesClient::<span class="name">sendBounce</span>(const <span class="type"><a href="qtaws-ses-sendbouncerequest.html">SendBounceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendbounceresponse.html">SendBounceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates and sends a bounce message to the sender of an email you received through Amazon SES. You can only use this API on an email up to 24 hours after you receive</p>
+<p>it&gt; &lt;note&gt;</p>
+<p>You cannot use this API to send generic bounces for mail that was not received by Amazon</p>
+<p>SES&gt; &lt;/note&gt;</p>
+<p>For information about receiving email through Amazon SES, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@sendBounce -->
+<!-- $$$sendBulkTemplatedEmail[overload1]$$$sendBulkTemplatedEmailconstSendBulkTemplatedEmailRequest& -->
+<h3 class="fn" id="sendBulkTemplatedEmail"><a name="sendBulkTemplatedEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendbulktemplatedemailresponse.html">SendBulkTemplatedEmailResponse</a></span> *SesClient::<span class="name">sendBulkTemplatedEmail</span>(const <span class="type"><a href="qtaws-ses-sendbulktemplatedemailrequest.html">SendBulkTemplatedEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendbulktemplatedemailresponse.html">SendBulkTemplatedEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Composes an email message to multiple destinations. The message body is created using an email</p>
+<p>template&gt;</p>
+<p>In order to send email using the &lt;code&gt;SendBulkTemplatedEmail&lt;/code&gt; operation, your call to the API must meet the following</p>
+<p>requirements&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The call must refer to an existing email template. You can create email templates using the &lt;a&gt;CreateTemplate&lt;/a&gt;</p>
+<p>operation&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message must be sent from a verified email address or</p>
+<p>domain&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If your account is still in the Amazon SES sandbox, you may only send to verified addresses or domains, or to email addresses associated with the Amazon SES Mailbox Simulator. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html&quot;&gt;Verifying Email Addresses and Domains&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The total size of the message, including attachments, must be less than 10</p>
+<p>MB&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Each &lt;code&gt;Destination&lt;/code&gt; parameter must include at least one recipient email address. The recipient address can be a To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format &lt;i&gt;UserName@[SubDomain.]Domain.TopLevelDomain&lt;/i&gt;), the entire message will be rejected, even if the message contains other recipients that are</p>
+<!-- @@@sendBulkTemplatedEmail -->
+<!-- $$$sendCustomVerificationEmail[overload1]$$$sendCustomVerificationEmailconstSendCustomVerificationEmailRequest& -->
+<h3 class="fn" id="sendCustomVerificationEmail"><a name="sendCustomVerificationEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendcustomverificationemailresponse.html">SendCustomVerificationEmailResponse</a></span> *SesClient::<span class="name">sendCustomVerificationEmail</span>(const <span class="type"><a href="qtaws-ses-sendcustomverificationemailrequest.html">SendCustomVerificationEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendcustomverificationemailresponse.html">SendCustomVerificationEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of executing this operation, a customized verification email is sent to the specified</p>
+<p>address&gt;</p>
+<p>To use this operation, you must first create a custom verification email template. For more information about creating and using custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@sendCustomVerificationEmail -->
+<!-- $$$sendEmail[overload1]$$$sendEmailconstSendEmailRequest& -->
+<h3 class="fn" id="sendEmail"><a name="sendEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendemailresponse.html">SendEmailResponse</a></span> *SesClient::<span class="name">sendEmail</span>(const <span class="type"><a href="qtaws-ses-sendemailrequest.html">SendEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendemailresponse.html">SendEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Composes an email message and immediately queues it for sending. In order to send email using the &lt;code&gt;SendEmail&lt;/code&gt; operation, your message must meet the following</p>
+<p>requirements&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The message must be sent from a verified email address or domain. If you attempt to send email using a non-verified address or domain, the operation will result in an &quot;Email address not verified&quot; error.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If your account is still in the Amazon SES sandbox, you may only send to verified addresses or domains, or to email addresses associated with the Amazon SES Mailbox Simulator. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html&quot;&gt;Verifying Email Addresses and Domains&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The total size of the message, including attachments, must be smaller than 10</p>
+<p>MB&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message must include at least one recipient email address. The recipient address can be a To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format &lt;i&gt;UserName@[SubDomain.]Domain.TopLevelDomain&lt;/i&gt;), the entire message will be rejected, even if the message contains other recipients that are</p>
+<p>valid&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message may not include more than 50 recipients, across the To:, CC: and BCC: fields. If you need to send an email message to a larger audience, you can divide your recipient list into groups of 50 or fewer, and then call the &lt;code&gt;SendEmail&lt;/code&gt; operation several times to send the message to each</p>
+<p>group&gt; &lt;/li&gt; &lt;/ul&gt; &lt;b&gt;</p>
+<p>For every message that you send, the total number of recipients (including each recipient in the To:, CC: and BCC: fields) is counted against the maximum number of emails you can send in a 24-hour period (your &lt;i&gt;sending quota&lt;/i&gt;). For more information about sending quotas in Amazon SES, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html&quot;&gt;Managing Your Amazon SES Sending Limits&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<!-- @@@sendEmail -->
+<!-- $$$sendRawEmail[overload1]$$$sendRawEmailconstSendRawEmailRequest& -->
+<h3 class="fn" id="sendRawEmail"><a name="sendRawEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendrawemailresponse.html">SendRawEmailResponse</a></span> *SesClient::<span class="name">sendRawEmail</span>(const <span class="type"><a href="qtaws-ses-sendrawemailrequest.html">SendRawEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendrawemailresponse.html">SendRawEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Composes an email message and immediately queues it for sending. When calling this operation, you may specify the message headers as well as the content. The &lt;code&gt;SendRawEmail&lt;/code&gt; operation is particularly useful for sending multipart MIME emails (such as those that contain both a plain-text and an HTML version).</p>
+<p>&lt;/p</p>
+<p>In order to send email using the &lt;code&gt;SendRawEmail&lt;/code&gt; operation, your message must meet the following</p>
+<p>requirements&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The message must be sent from a verified email address or domain. If you attempt to send email using a non-verified address or domain, the operation will result in an &quot;Email address not verified&quot; error.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If your account is still in the Amazon SES sandbox, you may only send to verified addresses or domains, or to email addresses associated with the Amazon SES Mailbox Simulator. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html&quot;&gt;Verifying Email Addresses and Domains&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The total size of the message, including attachments, must be smaller than 10</p>
+<p>MB&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message must include at least one recipient email address. The recipient address can be a To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format &lt;i&gt;UserName@[SubDomain.]Domain.TopLevelDomain&lt;/i&gt;), the entire message will be rejected, even if the message contains other recipients that are</p>
+<p>valid&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message may not include more than 50 recipients, across the To:, CC: and BCC: fields. If you need to send an email message to a larger audience, you can divide your recipient list into groups of 50 or fewer, and then call the &lt;code&gt;SendRawEmail&lt;/code&gt; operation several times to send the message to each</p>
+<p>group&gt; &lt;/li&gt; &lt;/ul&gt; &lt;b&gt;</p>
+<p>For every message that you send, the total number of recipients (including each recipient in the To:, CC: and BCC: fields) is counted against the maximum number of emails you can send in a 24-hour period (your &lt;i&gt;sending quota&lt;/i&gt;). For more information about sending quotas in Amazon SES, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/manage-sending-limits.html&quot;&gt;Managing Your Amazon SES Sending Limits&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/b&gt;</p>
+<p>Additionally, keep the following considerations in mind when using the &lt;code&gt;SendRawEmail&lt;/code&gt;</p>
+<p>operation&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Although you can customize the message headers when using the &lt;code&gt;SendRawEmail&lt;/code&gt; operation, Amazon SES will automatically apply its own &lt;code&gt;Message-ID&lt;/code&gt; and &lt;code&gt;Date&lt;/code&gt; headers; if you passed these headers when creating the message, they will be overwritten by the values that Amazon SES</p>
+<p>provides&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you are using sending authorization to send on behalf of another user, &lt;code&gt;SendRawEmail&lt;/code&gt; enables you to specify the cross-account identity for the email's Source, From, and Return-Path parameters in one of two ways: you can pass optional parameters &lt;code&gt;SourceArn&lt;/code&gt;, &lt;code&gt;FromArn&lt;/code&gt;, and/or &lt;code&gt;ReturnPathArn&lt;/code&gt; to the API, or you can include the following X-headers in the header of your raw</p>
+<p>email&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;X-SES-SOURCE-ARN&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;X-SES-FROM-ARN&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;X-SES-RETURN-PATH-ARN&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;b&gt;</p>
+<p>Do not include these X-headers in the DKIM signature; Amazon SES will remove them before sending the</p>
+<p>email&gt; &lt;/b&gt;</p>
+<p>For most common sending authorization scenarios, we recommend that you specify the &lt;code&gt;SourceIdentityArn&lt;/code&gt; parameter and not the &lt;code&gt;FromIdentityArn&lt;/code&gt; or &lt;code&gt;ReturnPathIdentityArn&lt;/code&gt; parameters. If you only specify the &lt;code&gt;SourceIdentityArn&lt;/code&gt; parameter, Amazon SES will set the From and Return Path addresses to the identity specified in &lt;code&gt;SourceIdentityArn&lt;/code&gt;. For more information about sending authorization, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html&quot;&gt;Using Sending Authorization with Amazon SES&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<!-- @@@sendRawEmail -->
+<!-- $$$sendTemplatedEmail[overload1]$$$sendTemplatedEmailconstSendTemplatedEmailRequest& -->
+<h3 class="fn" id="sendTemplatedEmail"><a name="sendTemplatedEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-sendtemplatedemailresponse.html">SendTemplatedEmailResponse</a></span> *SesClient::<span class="name">sendTemplatedEmail</span>(const <span class="type"><a href="qtaws-ses-sendtemplatedemailrequest.html">SendTemplatedEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-sendtemplatedemailresponse.html">SendTemplatedEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Composes an email message using an email template and immediately queues it for</p>
+<p>sending&gt;</p>
+<p>In order to send email using the &lt;code&gt;SendTemplatedEmail&lt;/code&gt; operation, your call to the API must meet the following</p>
+<p>requirements&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The call must refer to an existing email template. You can create email templates using the &lt;a&gt;CreateTemplate&lt;/a&gt;</p>
+<p>operation&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The message must be sent from a verified email address or</p>
+<p>domain&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If your account is still in the Amazon SES sandbox, you may only send to verified addresses or domains, or to email addresses associated with the Amazon SES Mailbox Simulator. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html&quot;&gt;Verifying Email Addresses and Domains&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The total size of the message, including attachments, must be less than 10</p>
+<p>MB&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Calls to the &lt;code&gt;SendTemplatedEmail&lt;/code&gt; operation may only include one &lt;code&gt;Destination&lt;/code&gt; parameter. A destination is a set of recipients who will receive the same version of the email. The &lt;code&gt;Destination&lt;/code&gt; parameter can include up to 50 recipients, across the To:, CC: and BCC:</p>
+<p>fields&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Destination&lt;/code&gt; parameter must include at least one recipient email address. The recipient address can be a To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format &lt;i&gt;UserName@[SubDomain.]Domain.TopLevelDomain&lt;/i&gt;), the entire message will be rejected, even if the message contains other recipients that are</p>
+<!-- @@@sendTemplatedEmail -->
+<!-- $$$setActiveReceiptRuleSet[overload1]$$$setActiveReceiptRuleSetconstSetActiveReceiptRuleSetRequest& -->
+<h3 class="fn" id="setActiveReceiptRuleSet"><a name="setActiveReceiptRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setactivereceiptrulesetresponse.html">SetActiveReceiptRuleSetResponse</a></span> *SesClient::<span class="name">setActiveReceiptRuleSet</span>(const <span class="type"><a href="qtaws-ses-setactivereceiptrulesetrequest.html">SetActiveReceiptRuleSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setactivereceiptrulesetresponse.html">SetActiveReceiptRuleSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the specified receipt rule set as the active receipt rule</p>
+<p>set&gt; &lt;note&gt;</p>
+<p>To disable your email-receiving through Amazon SES completely, you can call this API with RuleSetName set to</p>
+<p>null&gt; &lt;/note&gt;</p>
+<p>For information about managing receipt rule sets, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rule-sets.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@setActiveReceiptRuleSet -->
+<!-- $$$setIdentityDkimEnabled[overload1]$$$setIdentityDkimEnabledconstSetIdentityDkimEnabledRequest& -->
+<h3 class="fn" id="setIdentityDkimEnabled"><a name="setIdentityDkimEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setidentitydkimenabledresponse.html">SetIdentityDkimEnabledResponse</a></span> *SesClient::<span class="name">setIdentityDkimEnabled</span>(const <span class="type"><a href="qtaws-ses-setidentitydkimenabledrequest.html">SetIdentityDkimEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setidentitydkimenabledresponse.html">SetIdentityDkimEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or disables Easy DKIM signing of email sent from an</p>
+<p>identity&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If Easy DKIM signing is enabled for a domain name identity (such as &lt;code&gt;example.com&lt;/code&gt;), then Amazon SES will DKIM-sign all email sent by addresses under that domain name (for example,</p>
+<p>&lt;code&gt;user@example.com&lt;/code&gt;)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If Easy DKIM signing is enabled for an email address, then Amazon SES will DKIM-sign all email sent by that email</p>
+<p>address&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For email addresses (for example, &lt;code&gt;user@example.com&lt;/code&gt;), you can only enable Easy DKIM signing if the corresponding domain (in this case, &lt;code&gt;example.com&lt;/code&gt;) has been set up for Easy DKIM using the AWS Console or the &lt;code&gt;VerifyDomainDkim&lt;/code&gt;</p>
+<p>operation&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<p>second&gt;</p>
+<p>For more information about Easy DKIM signing, go to the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@setIdentityDkimEnabled -->
+<!-- $$$setIdentityFeedbackForwardingEnabled[overload1]$$$setIdentityFeedbackForwardingEnabledconstSetIdentityFeedbackForwardingEnabledRequest& -->
+<h3 class="fn" id="setIdentityFeedbackForwardingEnabled"><a name="setIdentityFeedbackForwardingEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setidentityfeedbackforwardingenabledresponse.html">SetIdentityFeedbackForwardingEnabledResponse</a></span> *SesClient::<span class="name">setIdentityFeedbackForwardingEnabled</span>(const <span class="type"><a href="qtaws-ses-setidentityfeedbackforwardingenabledrequest.html">SetIdentityFeedbackForwardingEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setidentityfeedbackforwardingenabledresponse.html">SetIdentityFeedbackForwardingEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given an identity (an email address or a domain), enables or disables whether Amazon SES forwards bounce and complaint notifications as email. Feedback forwarding can only be disabled when Amazon Simple Notification Service (Amazon SNS) topics are specified for both bounces and</p>
+<p>complaints&gt; &lt;note&gt;</p>
+<p>Feedback forwarding does not apply to delivery notifications. Delivery notifications are only available through Amazon</p>
+<p>SNS&gt; &lt;/note&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<p>second&gt;</p>
+<p>For more information about using notifications with Amazon SES, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@setIdentityFeedbackForwardingEnabled -->
+<!-- $$$setIdentityHeadersInNotificationsEnabled[overload1]$$$setIdentityHeadersInNotificationsEnabledconstSetIdentityHeadersInNotificationsEnabledRequest& -->
+<h3 class="fn" id="setIdentityHeadersInNotificationsEnabled"><a name="setIdentityHeadersInNotificationsEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setidentityheadersinnotificationsenabledresponse.html">SetIdentityHeadersInNotificationsEnabledResponse</a></span> *SesClient::<span class="name">setIdentityHeadersInNotificationsEnabled</span>(const <span class="type"><a href="qtaws-ses-setidentityheadersinnotificationsenabledrequest.html">SetIdentityHeadersInNotificationsEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setidentityheadersinnotificationsenabledresponse.html">SetIdentityHeadersInNotificationsEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given an identity (an email address or a domain), sets whether Amazon SES includes the original email headers in the Amazon Simple Notification Service (Amazon SNS) notifications of a specified</p>
+<p>type&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<p>second&gt;</p>
+<p>For more information about using notifications with Amazon SES, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@setIdentityHeadersInNotificationsEnabled -->
+<!-- $$$setIdentityMailFromDomain[overload1]$$$setIdentityMailFromDomainconstSetIdentityMailFromDomainRequest& -->
+<h3 class="fn" id="setIdentityMailFromDomain"><a name="setIdentityMailFromDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setidentitymailfromdomainresponse.html">SetIdentityMailFromDomainResponse</a></span> *SesClient::<span class="name">setIdentityMailFromDomain</span>(const <span class="type"><a href="qtaws-ses-setidentitymailfromdomainrequest.html">SetIdentityMailFromDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setidentitymailfromdomainresponse.html">SetIdentityMailFromDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or disables the custom MAIL FROM domain setup for a verified identity (an email address or a</p>
+<p>domain)&gt; &lt;b&gt;</p>
+<p>To send emails using the specified MAIL FROM domain, you must add an MX record to your MAIL FROM domain's DNS settings. If you want your emails to pass Sender Policy Framework (SPF) checks, you must also add or update an SPF record. For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt; &lt;/b&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@setIdentityMailFromDomain -->
+<!-- $$$setIdentityNotificationTopic[overload1]$$$setIdentityNotificationTopicconstSetIdentityNotificationTopicRequest& -->
+<h3 class="fn" id="setIdentityNotificationTopic"><a name="setIdentityNotificationTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setidentitynotificationtopicresponse.html">SetIdentityNotificationTopicResponse</a></span> *SesClient::<span class="name">setIdentityNotificationTopic</span>(const <span class="type"><a href="qtaws-ses-setidentitynotificationtopicrequest.html">SetIdentityNotificationTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setidentitynotificationtopicresponse.html">SetIdentityNotificationTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given an identity (an email address or a domain), sets the Amazon Simple Notification Service (Amazon SNS) topic to which Amazon SES will publish bounce, complaint, and/or delivery notifications for emails sent with that identity as the</p>
+<p>&lt;code&gt;Source&lt;/code&gt;&gt; &lt;note&gt;</p>
+<p>Unless feedback forwarding is enabled, you must specify Amazon SNS topics for bounce and complaint notifications. For more information, see</p>
+<p>&lt;code&gt;SetIdentityFeedbackForwardingEnabled&lt;/code&gt;&gt; &lt;/note&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<p>second&gt;</p>
+<p>For more information about feedback notification, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/notifications.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@setIdentityNotificationTopic -->
+<!-- $$$setReceiptRulePosition[overload1]$$$setReceiptRulePositionconstSetReceiptRulePositionRequest& -->
+<h3 class="fn" id="setReceiptRulePosition"><a name="setReceiptRulePosition"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-setreceiptrulepositionresponse.html">SetReceiptRulePositionResponse</a></span> *SesClient::<span class="name">setReceiptRulePosition</span>(const <span class="type"><a href="qtaws-ses-setreceiptrulepositionrequest.html">SetReceiptRulePositionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-setreceiptrulepositionresponse.html">SetReceiptRulePositionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the position of the specified receipt rule in the receipt rule</p>
+<p>set&gt;</p>
+<p>For information about managing receipt rules, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rules.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@setReceiptRulePosition -->
+<!-- $$$testRenderTemplate[overload1]$$$testRenderTemplateconstTestRenderTemplateRequest& -->
+<h3 class="fn" id="testRenderTemplate"><a name="testRenderTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-testrendertemplateresponse.html">TestRenderTemplateResponse</a></span> *SesClient::<span class="name">testRenderTemplate</span>(const <span class="type"><a href="qtaws-ses-testrendertemplaterequest.html">TestRenderTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-testrendertemplateresponse.html">TestRenderTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a preview of the MIME content of an email when provided with a template and a set of replacement</p>
+<p>data&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@testRenderTemplate -->
+<!-- $$$updateAccountSendingEnabled[overload1]$$$updateAccountSendingEnabledconstUpdateAccountSendingEnabledRequest& -->
+<h3 class="fn" id="updateAccountSendingEnabled"><a name="updateAccountSendingEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updateaccountsendingenabledresponse.html">UpdateAccountSendingEnabledResponse</a></span> *SesClient::<span class="name">updateAccountSendingEnabled</span>(const <span class="type"><a href="qtaws-ses-updateaccountsendingenabledrequest.html">UpdateAccountSendingEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updateaccountsendingenabledresponse.html">UpdateAccountSendingEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or disables email sending across your entire Amazon SES account. You can use this operation in conjunction with Amazon CloudWatch alarms to temporarily pause email sending across your Amazon SES account when reputation metrics (such as your bounce on complaint rate) reach certain</p>
+<p>thresholds&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateAccountSendingEnabled -->
+<!-- $$$updateConfigurationSetEventDestination[overload1]$$$updateConfigurationSetEventDestinationconstUpdateConfigurationSetEventDestinationRequest& -->
+<h3 class="fn" id="updateConfigurationSetEventDestination"><a name="updateConfigurationSetEventDestination"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updateconfigurationseteventdestinationresponse.html">UpdateConfigurationSetEventDestinationResponse</a></span> *SesClient::<span class="name">updateConfigurationSetEventDestination</span>(const <span class="type"><a href="qtaws-ses-updateconfigurationseteventdestinationrequest.html">UpdateConfigurationSetEventDestinationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updateconfigurationseteventdestinationresponse.html">UpdateConfigurationSetEventDestinationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the event destination of a configuration set. Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon SNS). For information about using configuration sets, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html&quot;&gt;Monitoring Your Amazon SES Sending Activity&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>When you create or update an event destination, you must provide one, and only one, destination. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon</p>
+<p>SNS)&gt; &lt;/note&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateConfigurationSetEventDestination -->
+<!-- $$$updateConfigurationSetReputationMetricsEnabled[overload1]$$$updateConfigurationSetReputationMetricsEnabledconstUpdateConfigurationSetReputationMetricsEnabledRequest& -->
+<h3 class="fn" id="updateConfigurationSetReputationMetricsEnabled"><a name="updateConfigurationSetReputationMetricsEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updateconfigurationsetreputationmetricsenabledresponse.html">UpdateConfigurationSetReputationMetricsEnabledResponse</a></span> *SesClient::<span class="name">updateConfigurationSetReputationMetricsEnabled</span>(const <span class="type"><a href="qtaws-ses-updateconfigurationsetreputationmetricsenabledrequest.html">UpdateConfigurationSetReputationMetricsEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updateconfigurationsetreputationmetricsenabledresponse.html">UpdateConfigurationSetReputationMetricsEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or disables the publishing of reputation metrics for emails sent using a specific configuration set. Reputation metrics include bounce and complaint rates. These metrics are published to Amazon CloudWatch. By using Amazon CloudWatch, you can create alarms when bounce or complaint rates exceed a certain</p>
+<p>threshold&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateConfigurationSetReputationMetricsEnabled -->
+<!-- $$$updateConfigurationSetSendingEnabled[overload1]$$$updateConfigurationSetSendingEnabledconstUpdateConfigurationSetSendingEnabledRequest& -->
+<h3 class="fn" id="updateConfigurationSetSendingEnabled"><a name="updateConfigurationSetSendingEnabled"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updateconfigurationsetsendingenabledresponse.html">UpdateConfigurationSetSendingEnabledResponse</a></span> *SesClient::<span class="name">updateConfigurationSetSendingEnabled</span>(const <span class="type"><a href="qtaws-ses-updateconfigurationsetsendingenabledrequest.html">UpdateConfigurationSetSendingEnabledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updateconfigurationsetsendingenabledresponse.html">UpdateConfigurationSetSendingEnabledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or disables email sending for messages sent using a specific configuration set. You can use this operation in conjunction with Amazon CloudWatch alarms to temporarily pause email sending for a configuration set when the reputation metrics for that configuration set (such as your bounce on complaint rate) reach certain</p>
+<p>thresholds&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateConfigurationSetSendingEnabled -->
+<!-- $$$updateConfigurationSetTrackingOptions[overload1]$$$updateConfigurationSetTrackingOptionsconstUpdateConfigurationSetTrackingOptionsRequest& -->
+<h3 class="fn" id="updateConfigurationSetTrackingOptions"><a name="updateConfigurationSetTrackingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updateconfigurationsettrackingoptionsresponse.html">UpdateConfigurationSetTrackingOptionsResponse</a></span> *SesClient::<span class="name">updateConfigurationSetTrackingOptions</span>(const <span class="type"><a href="qtaws-ses-updateconfigurationsettrackingoptionsrequest.html">UpdateConfigurationSetTrackingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updateconfigurationsettrackingoptionsresponse.html">UpdateConfigurationSetTrackingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an association between a configuration set and a custom domain for open and click event tracking.</p>
+<p>&lt;/p</p>
+<p>By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You can configure a subdomain of your own to handle these events. For information about using configuration sets, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html&quot;&gt;Configuring Custom Domains to Handle Open and Click Tracking&lt;/a&gt; in the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@updateConfigurationSetTrackingOptions -->
+<!-- $$$updateCustomVerificationEmailTemplate[overload1]$$$updateCustomVerificationEmailTemplateconstUpdateCustomVerificationEmailTemplateRequest& -->
+<h3 class="fn" id="updateCustomVerificationEmailTemplate"><a name="updateCustomVerificationEmailTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updatecustomverificationemailtemplateresponse.html">UpdateCustomVerificationEmailTemplateResponse</a></span> *SesClient::<span class="name">updateCustomVerificationEmailTemplate</span>(const <span class="type"><a href="qtaws-ses-updatecustomverificationemailtemplaterequest.html">UpdateCustomVerificationEmailTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updatecustomverificationemailtemplateresponse.html">UpdateCustomVerificationEmailTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing custom verification email</p>
+<p>template&gt;</p>
+<p>For more information about custom verification email templates, see &lt;a href=&quot;https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html&quot;&gt;Using Custom Verification Email Templates&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateCustomVerificationEmailTemplate -->
+<!-- $$$updateReceiptRule[overload1]$$$updateReceiptRuleconstUpdateReceiptRuleRequest& -->
+<h3 class="fn" id="updateReceiptRule"><a name="updateReceiptRule"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updatereceiptruleresponse.html">UpdateReceiptRuleResponse</a></span> *SesClient::<span class="name">updateReceiptRule</span>(const <span class="type"><a href="qtaws-ses-updatereceiptrulerequest.html">UpdateReceiptRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updatereceiptruleresponse.html">UpdateReceiptRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a receipt</p>
+<p>rule&gt;</p>
+<p>For information about managing receipt rules, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-receipt-rules.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateReceiptRule -->
+<!-- $$$updateTemplate[overload1]$$$updateTemplateconstUpdateTemplateRequest& -->
+<h3 class="fn" id="updateTemplate"><a name="updateTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-updatetemplateresponse.html">UpdateTemplateResponse</a></span> *SesClient::<span class="name">updateTemplate</span>(const <span class="type"><a href="qtaws-ses-updatetemplaterequest.html">UpdateTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-updatetemplateresponse.html">UpdateTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an email template. Email templates enable you to send personalized email to one or more destinations in a single API operation. For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html&quot;&gt;Amazon SES Developer</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@updateTemplate -->
+<!-- $$$verifyDomainDkim[overload1]$$$verifyDomainDkimconstVerifyDomainDkimRequest& -->
+<h3 class="fn" id="verifyDomainDkim"><a name="verifyDomainDkim"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-verifydomaindkimresponse.html">VerifyDomainDkimResponse</a></span> *SesClient::<span class="name">verifyDomainDkim</span>(const <span class="type"><a href="qtaws-ses-verifydomaindkimrequest.html">VerifyDomainDkimRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-verifydomaindkimresponse.html">VerifyDomainDkimResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a set of DKIM tokens for a domain. DKIM &lt;i&gt;tokens&lt;/i&gt; are character strings that represent your domain's identity. Using these tokens, you will need to create DNS CNAME records that point to DKIM public keys hosted by Amazon SES. Amazon Web Services will eventually detect that you have updated your DNS records; this detection process may take up to 72 hours. Upon successful detection, Amazon SES will be able to DKIM-sign email originating from that</p>
+<p>domain&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<p>second&gt;</p>
+<p>To enable or disable Easy DKIM signing for a domain, use the &lt;code&gt;SetIdentityDkimEnabled&lt;/code&gt;</p>
+<p>operation&gt;</p>
+<p>For more information about creating DNS records using DKIM tokens, go to the &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html&quot;&gt;Amazon SES Developer</p>
+<!-- @@@verifyDomainDkim -->
+<!-- $$$verifyDomainIdentity[overload1]$$$verifyDomainIdentityconstVerifyDomainIdentityRequest& -->
+<h3 class="fn" id="verifyDomainIdentity"><a name="verifyDomainIdentity"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-verifydomainidentityresponse.html">VerifyDomainIdentityResponse</a></span> *SesClient::<span class="name">verifyDomainIdentity</span>(const <span class="type"><a href="qtaws-ses-verifydomainidentityrequest.html">VerifyDomainIdentityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-verifydomainidentityresponse.html">VerifyDomainIdentityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a domain to the list of identities for your Amazon SES account and attempts to verify it. For more information about verifying domains, see &lt;a href=&quot;http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html&quot;&gt;Verifying Email Addresses and Domains&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide.&lt;/i&gt;</p>
+<p>&lt;/p</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@verifyDomainIdentity -->
+<!-- $$$verifyEmailAddress[overload1]$$$verifyEmailAddressconstVerifyEmailAddressRequest& -->
+<h3 class="fn" id="verifyEmailAddress"><a name="verifyEmailAddress"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-verifyemailaddressresponse.html">VerifyEmailAddressResponse</a></span> *SesClient::<span class="name">verifyEmailAddress</span>(const <span class="type"><a href="qtaws-ses-verifyemailaddressrequest.html">VerifyEmailAddressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-verifyemailaddressresponse.html">VerifyEmailAddressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated. Use the &lt;code&gt;VerifyEmailIdentity&lt;/code&gt; operation to verify a new email</p>
+<!-- @@@verifyEmailAddress -->
+<!-- $$$verifyEmailIdentity[overload1]$$$verifyEmailIdentityconstVerifyEmailIdentityRequest& -->
+<h3 class="fn" id="verifyEmailIdentity"><a name="verifyEmailIdentity"></a><code>[slot] </code><span class="type"><a href="qtaws-ses-verifyemailidentityresponse.html">VerifyEmailIdentityResponse</a></span> *SesClient::<span class="name">verifyEmailIdentity</span>(const <span class="type"><a href="qtaws-ses-verifyemailidentityrequest.html">VerifyEmailIdentityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ses-sesclient.html">SesClient</a> service, and returns a pointer to an <a href="qtaws-ses-verifyemailidentityresponse.html">VerifyEmailIdentityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of executing this operation, a verification email is sent to the specified</p>
+<p>address&gt;</p>
+<p>You can execute this operation no more than once per</p>
+<!-- @@@verifyEmailIdentity -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

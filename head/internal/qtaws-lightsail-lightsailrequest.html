@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lightsailrequest.cpp -->
+  <title>LightsailRequest Class | Lightsail</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslightsail-index.html">Lightsail</a></li>
+<li><a href="qtawslightsail-module.html">C++ Classes</a></li>
+<li>LightsailRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LightsailRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lightsail-lightsailrequest.html">QtAws::Lightsail::LightsailRequest</a>)<br/></span>
+<!-- $$$LightsailRequest-brief -->
+<p>The <a href="qtaws-lightsail-lightsailrequest.html">LightsailRequest</a> class provides an interface for Lightsail requests. <a href="#details">More...</a></p>
+<!-- @@@LightsailRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LightsailRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-lightsail-allocatestaticiprequest.html">QtAws::Lightsail::AllocateStaticIpRequest</a>, <a href="qtaws-lightsail-attachdiskrequest.html">QtAws::Lightsail::AttachDiskRequest</a>, <a href="qtaws-lightsail-attachinstancestoloadbalancerrequest.html">QtAws::Lightsail::AttachInstancesToLoadBalancerRequest</a>, <a href="qtaws-lightsail-attachloadbalancertlscertificaterequest.html">QtAws::Lightsail::AttachLoadBalancerTlsCertificateRequest</a>, <a href="qtaws-lightsail-attachstaticiprequest.html">QtAws::Lightsail::AttachStaticIpRequest</a>, <a href="qtaws-lightsail-closeinstancepublicportsrequest.html">QtAws::Lightsail::CloseInstancePublicPortsRequest</a>, <a href="qtaws-lightsail-creatediskfromsnapshotrequest.html">QtAws::Lightsail::CreateDiskFromSnapshotRequest</a>, <a href="qtaws-lightsail-creatediskrequest.html">QtAws::Lightsail::CreateDiskRequest</a>, <a href="qtaws-lightsail-createdisksnapshotrequest.html">QtAws::Lightsail::CreateDiskSnapshotRequest</a>, <a href="qtaws-lightsail-createdomainentryrequest.html">QtAws::Lightsail::CreateDomainEntryRequest</a>, <a href="qtaws-lightsail-createdomainrequest.html">QtAws::Lightsail::CreateDomainRequest</a>, <a href="qtaws-lightsail-createinstancesfromsnapshotrequest.html">QtAws::Lightsail::CreateInstancesFromSnapshotRequest</a>, <a href="qtaws-lightsail-createinstancesnapshotrequest.html">QtAws::Lightsail::CreateInstanceSnapshotRequest</a>, <a href="qtaws-lightsail-createinstancesrequest.html">QtAws::Lightsail::CreateInstancesRequest</a>, <a href="qtaws-lightsail-createkeypairrequest.html">QtAws::Lightsail::CreateKeyPairRequest</a>, <a href="qtaws-lightsail-createloadbalancerrequest.html">QtAws::Lightsail::CreateLoadBalancerRequest</a>, <a href="qtaws-lightsail-createloadbalancertlscertificaterequest.html">QtAws::Lightsail::CreateLoadBalancerTlsCertificateRequest</a>, <a href="qtaws-lightsail-deletediskrequest.html">QtAws::Lightsail::DeleteDiskRequest</a>, <a href="qtaws-lightsail-deletedisksnapshotrequest.html">QtAws::Lightsail::DeleteDiskSnapshotRequest</a>, <a href="qtaws-lightsail-deletedomainentryrequest.html">QtAws::Lightsail::DeleteDomainEntryRequest</a>, <a href="qtaws-lightsail-deletedomainrequest.html">QtAws::Lightsail::DeleteDomainRequest</a>, <a href="qtaws-lightsail-deleteinstancerequest.html">QtAws::Lightsail::DeleteInstanceRequest</a>, <a href="qtaws-lightsail-deleteinstancesnapshotrequest.html">QtAws::Lightsail::DeleteInstanceSnapshotRequest</a>, <a href="qtaws-lightsail-deletekeypairrequest.html">QtAws::Lightsail::DeleteKeyPairRequest</a>, <a href="qtaws-lightsail-deleteloadbalancerrequest.html">QtAws::Lightsail::DeleteLoadBalancerRequest</a>, <a href="qtaws-lightsail-deleteloadbalancertlscertificaterequest.html">QtAws::Lightsail::DeleteLoadBalancerTlsCertificateRequest</a>, <a href="qtaws-lightsail-detachdiskrequest.html">QtAws::Lightsail::DetachDiskRequest</a>, <a href="qtaws-lightsail-detachinstancesfromloadbalancerrequest.html">QtAws::Lightsail::DetachInstancesFromLoadBalancerRequest</a>, <a href="qtaws-lightsail-detachstaticiprequest.html">QtAws::Lightsail::DetachStaticIpRequest</a>, <a href="qtaws-lightsail-downloaddefaultkeypairrequest.html">QtAws::Lightsail::DownloadDefaultKeyPairRequest</a>, <a href="qtaws-lightsail-getactivenamesrequest.html">QtAws::Lightsail::GetActiveNamesRequest</a>, <a href="qtaws-lightsail-getblueprintsrequest.html">QtAws::Lightsail::GetBlueprintsRequest</a>, <a href="qtaws-lightsail-getbundlesrequest.html">QtAws::Lightsail::GetBundlesRequest</a>, <a href="qtaws-lightsail-getdiskrequest.html">QtAws::Lightsail::GetDiskRequest</a>, <a href="qtaws-lightsail-getdisksnapshotrequest.html">QtAws::Lightsail::GetDiskSnapshotRequest</a>, <a href="qtaws-lightsail-getdisksnapshotsrequest.html">QtAws::Lightsail::GetDiskSnapshotsRequest</a>, <a href="qtaws-lightsail-getdisksrequest.html">QtAws::Lightsail::GetDisksRequest</a>, <a href="qtaws-lightsail-getdomainrequest.html">QtAws::Lightsail::GetDomainRequest</a>, <a href="qtaws-lightsail-getdomainsrequest.html">QtAws::Lightsail::GetDomainsRequest</a>, <a href="qtaws-lightsail-getinstanceaccessdetailsrequest.html">QtAws::Lightsail::GetInstanceAccessDetailsRequest</a>, <a href="qtaws-lightsail-getinstancemetricdatarequest.html">QtAws::Lightsail::GetInstanceMetricDataRequest</a>, <a href="qtaws-lightsail-getinstanceportstatesrequest.html">QtAws::Lightsail::GetInstancePortStatesRequest</a>, <a href="qtaws-lightsail-getinstancerequest.html">QtAws::Lightsail::GetInstanceRequest</a>, <a href="qtaws-lightsail-getinstancesnapshotrequest.html">QtAws::Lightsail::GetInstanceSnapshotRequest</a>, <a href="qtaws-lightsail-getinstancesnapshotsrequest.html">QtAws::Lightsail::GetInstanceSnapshotsRequest</a>, <a href="qtaws-lightsail-getinstancesrequest.html">QtAws::Lightsail::GetInstancesRequest</a>, <a href="qtaws-lightsail-getinstancestaterequest.html">QtAws::Lightsail::GetInstanceStateRequest</a>, <a href="qtaws-lightsail-getkeypairrequest.html">QtAws::Lightsail::GetKeyPairRequest</a>, <a href="qtaws-lightsail-getkeypairsrequest.html">QtAws::Lightsail::GetKeyPairsRequest</a>, <a href="qtaws-lightsail-getloadbalancermetricdatarequest.html">QtAws::Lightsail::GetLoadBalancerMetricDataRequest</a>, <a href="qtaws-lightsail-getloadbalancerrequest.html">QtAws::Lightsail::GetLoadBalancerRequest</a>, <a href="qtaws-lightsail-getloadbalancersrequest.html">QtAws::Lightsail::GetLoadBalancersRequest</a>, <a href="qtaws-lightsail-getloadbalancertlscertificatesrequest.html">QtAws::Lightsail::GetLoadBalancerTlsCertificatesRequest</a>, <a href="qtaws-lightsail-getoperationrequest.html">QtAws::Lightsail::GetOperationRequest</a>, <a href="qtaws-lightsail-getoperationsforresourcerequest.html">QtAws::Lightsail::GetOperationsForResourceRequest</a>, <a href="qtaws-lightsail-getoperationsrequest.html">QtAws::Lightsail::GetOperationsRequest</a>, <a href="qtaws-lightsail-getregionsrequest.html">QtAws::Lightsail::GetRegionsRequest</a>, <a href="qtaws-lightsail-getstaticiprequest.html">QtAws::Lightsail::GetStaticIpRequest</a>, <a href="qtaws-lightsail-getstaticipsrequest.html">QtAws::Lightsail::GetStaticIpsRequest</a>, <a href="qtaws-lightsail-importkeypairrequest.html">QtAws::Lightsail::ImportKeyPairRequest</a>, <a href="qtaws-lightsail-isvpcpeeredrequest.html">QtAws::Lightsail::IsVpcPeeredRequest</a>, <a href="qtaws-lightsail-openinstancepublicportsrequest.html">QtAws::Lightsail::OpenInstancePublicPortsRequest</a>, <a href="qtaws-lightsail-peervpcrequest.html">QtAws::Lightsail::PeerVpcRequest</a>, <a href="qtaws-lightsail-putinstancepublicportsrequest.html">QtAws::Lightsail::PutInstancePublicPortsRequest</a>, <a href="qtaws-lightsail-rebootinstancerequest.html">QtAws::Lightsail::RebootInstanceRequest</a>, <a href="qtaws-lightsail-releasestaticiprequest.html">QtAws::Lightsail::ReleaseStaticIpRequest</a>, <a href="qtaws-lightsail-startinstancerequest.html">QtAws::Lightsail::StartInstanceRequest</a>, <a href="qtaws-lightsail-stopinstancerequest.html">QtAws::Lightsail::StopInstanceRequest</a>, <a href="qtaws-lightsail-unpeervpcrequest.html">QtAws::Lightsail::UnpeerVpcRequest</a>, <a href="qtaws-lightsail-updatedomainentryrequest.html">QtAws::Lightsail::UpdateDomainEntryRequest</a>, and <a href="qtaws-lightsail-updateloadbalancerattributerequest.html">QtAws::Lightsail::UpdateLoadBalancerAttributeRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-lightsail-lightsailrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#Action-enum">Action</a></b> { AllocateStaticIpAction, AttachDiskAction, AttachInstancesToLoadBalancerAction, AttachLoadBalancerTlsCertificateAction, ..., UpdateLoadBalancerAttributeAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest">LightsailRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest-1">LightsailRequest</a></b>(const LightsailRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> LightsailRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#operator-eq">operator=</a></b>(const LightsailRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#operator-eq-eq">operator==</a></b>(const LightsailRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest-2">LightsailRequest</a></b>(LightsailRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$LightsailRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lightsail-lightsailrequest.html">LightsailRequest</a> class provides an interface for Lightsail requests.</p>
+</div>
+<!-- @@@LightsailRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AllocateStaticIpAction$$$AttachDiskAction$$$AttachInstancesToLoadBalancerAction$$$AttachLoadBalancerTlsCertificateAction$$$AttachStaticIpAction$$$CloseInstancePublicPortsAction$$$CreateDiskAction$$$CreateDiskFromSnapshotAction$$$CreateDiskSnapshotAction$$$CreateDomainAction$$$CreateDomainEntryAction$$$CreateInstanceSnapshotAction$$$CreateInstancesAction$$$CreateInstancesFromSnapshotAction$$$CreateKeyPairAction$$$CreateLoadBalancerAction$$$CreateLoadBalancerTlsCertificateAction$$$DeleteDiskAction$$$DeleteDiskSnapshotAction$$$DeleteDomainAction$$$DeleteDomainEntryAction$$$DeleteInstanceAction$$$DeleteInstanceSnapshotAction$$$DeleteKeyPairAction$$$DeleteLoadBalancerAction$$$DeleteLoadBalancerTlsCertificateAction$$$DetachDiskAction$$$DetachInstancesFromLoadBalancerAction$$$DetachStaticIpAction$$$DownloadDefaultKeyPairAction$$$GetActiveNamesAction$$$GetBlueprintsAction$$$GetBundlesAction$$$GetDiskAction$$$GetDiskSnapshotAction$$$GetDiskSnapshotsAction$$$GetDisksAction$$$GetDomainAction$$$GetDomainsAction$$$GetInstanceAction$$$GetInstanceAccessDetailsAction$$$GetInstanceMetricDataAction$$$GetInstancePortStatesAction$$$GetInstanceSnapshotAction$$$GetInstanceSnapshotsAction$$$GetInstanceStateAction$$$GetInstancesAction$$$GetKeyPairAction$$$GetKeyPairsAction$$$GetLoadBalancerAction$$$GetLoadBalancerMetricDataAction$$$GetLoadBalancerTlsCertificatesAction$$$GetLoadBalancersAction$$$GetOperationAction$$$GetOperationsAction$$$GetOperationsForResourceAction$$$GetRegionsAction$$$GetStaticIpAction$$$GetStaticIpsAction$$$ImportKeyPairAction$$$IsVpcPeeredAction$$$OpenInstancePublicPortsAction$$$PeerVpcAction$$$PutInstancePublicPortsAction$$$RebootInstanceAction$$$ReleaseStaticIpAction$$$StartInstanceAction$$$StopInstanceAction$$$UnpeerVpcAction$$$UpdateDomainEntryAction$$$UpdateLoadBalancerAttributeAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum LightsailRequest::<span class="name">Action</span><br/>flags LightsailRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Lightsail requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::AllocateStaticIpAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Lightsail AllocateStaticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::AttachDiskAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Lightsail AttachDisk action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::AttachInstancesToLoadBalancerAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Lightsail AttachInstancesToLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::AttachLoadBalancerTlsCertificateAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Lightsail AttachLoadBalancerTlsCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::AttachStaticIpAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Lightsail AttachStaticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CloseInstancePublicPortsAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Lightsail CloseInstancePublicPorts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateDiskAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Lightsail CreateDisk action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateDiskFromSnapshotAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Lightsail CreateDiskFromSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateDiskSnapshotAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Lightsail CreateDiskSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateDomainAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Lightsail CreateDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateDomainEntryAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Lightsail CreateDomainEntry action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateInstanceSnapshotAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Lightsail CreateInstanceSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateInstancesAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Lightsail CreateInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateInstancesFromSnapshotAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Lightsail CreateInstancesFromSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateKeyPairAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Lightsail CreateKeyPair action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateLoadBalancerAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Lightsail CreateLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::CreateLoadBalancerTlsCertificateAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Lightsail CreateLoadBalancerTlsCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteDiskAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Lightsail DeleteDisk action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteDiskSnapshotAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Lightsail DeleteDiskSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteDomainAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Lightsail DeleteDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteDomainEntryAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Lightsail DeleteDomainEntry action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteInstanceAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Lightsail DeleteInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteInstanceSnapshotAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Lightsail DeleteInstanceSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteKeyPairAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Lightsail DeleteKeyPair action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteLoadBalancerAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Lightsail DeleteLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DeleteLoadBalancerTlsCertificateAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Lightsail DeleteLoadBalancerTlsCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DetachDiskAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Lightsail DetachDisk action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DetachInstancesFromLoadBalancerAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Lightsail DetachInstancesFromLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DetachStaticIpAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Lightsail DetachStaticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::DownloadDefaultKeyPairAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Lightsail DownloadDefaultKeyPair action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetActiveNamesAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Lightsail GetActiveNames action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetBlueprintsAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Lightsail GetBlueprints action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetBundlesAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Lightsail GetBundles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDiskAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Lightsail GetDisk action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDiskSnapshotAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Lightsail GetDiskSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDiskSnapshotsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Lightsail GetDiskSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDisksAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Lightsail GetDisks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDomainAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Lightsail GetDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetDomainsAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Lightsail GetDomains action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Lightsail GetInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceAccessDetailsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Lightsail GetInstanceAccessDetails action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceMetricDataAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Lightsail GetInstanceMetricData action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstancePortStatesAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Lightsail GetInstancePortStates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceSnapshotAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Lightsail GetInstanceSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceSnapshotsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Lightsail GetInstanceSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstanceStateAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Lightsail GetInstanceState action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetInstancesAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Lightsail GetInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetKeyPairAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Lightsail GetKeyPair action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetKeyPairsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Lightsail GetKeyPairs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetLoadBalancerAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Lightsail GetLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetLoadBalancerMetricDataAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Lightsail GetLoadBalancerMetricData action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetLoadBalancerTlsCertificatesAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Lightsail GetLoadBalancerTlsCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetLoadBalancersAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Lightsail GetLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetOperationAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Lightsail GetOperation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetOperationsAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Lightsail GetOperations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetOperationsForResourceAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Lightsail GetOperationsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetRegionsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">Lightsail GetRegions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetStaticIpAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">Lightsail GetStaticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::GetStaticIpsAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">Lightsail GetStaticIps action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::ImportKeyPairAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">Lightsail ImportKeyPair action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::IsVpcPeeredAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">Lightsail IsVpcPeered action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::OpenInstancePublicPortsAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">Lightsail OpenInstancePublicPorts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::PeerVpcAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">Lightsail PeerVpc action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::PutInstancePublicPortsAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">Lightsail PutInstancePublicPorts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::RebootInstanceAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">Lightsail RebootInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::ReleaseStaticIpAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">Lightsail ReleaseStaticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::StartInstanceAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">Lightsail StartInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::StopInstanceAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">Lightsail StopInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::UnpeerVpcAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">Lightsail UnpeerVpc action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::UpdateDomainEntryAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">Lightsail UpdateDomainEntry action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Lightsail::LightsailRequest::UpdateLoadBalancerAttributeAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">Lightsail UpdateLoadBalancerAttribute action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LightsailRequest[overload1]$$$LightsailRequestconstAction -->
+<h3 class="fn" id="LightsailRequest"><a name="LightsailRequest"></a>LightsailRequest::<span class="name">LightsailRequest</span>(const <span class="type"><a href="qtaws-lightsail-lightsailrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-lightsail-lightsailrequest.html">LightsailRequest</a> object for Lightsail <i>action</i>.</p>
+<!-- @@@LightsailRequest -->
+<!-- $$$LightsailRequest$$$LightsailRequestconstLightsailRequest& -->
+<h3 class="fn" id="LightsailRequest-1"><a name="LightsailRequest-1"></a>LightsailRequest::<span class="name">LightsailRequest</span>(const <span class="type"><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest">LightsailRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@LightsailRequest -->
+<!-- $$$LightsailRequest$$$LightsailRequestLightsailRequestPrivate*const -->
+<h3 class="fn" id="LightsailRequest-2"><a name="LightsailRequest-2"></a><code>[protected] </code>LightsailRequest::<span class="name">LightsailRequest</span>(<span class="type"><a href="qtaws-lightsail-lightsailrequestprivate.html">LightsailRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-lightsail-lightsailrequest.html">LightsailRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-lightsail-lightsailrequestprivate.html">LightsailRequestPrivate</a>.</p>
+<!-- @@@LightsailRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-lightsail-lightsailrequest.html#Action-enum">Action</a></span> LightsailRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Lightsail action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> LightsailRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Lightsail action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> LightsailRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Lightsail API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> LightsailRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> LightsailRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> LightsailRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;LightsailRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> LightsailRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-lightsail-lightsailrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Lightsail action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> LightsailRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Lightsail API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> LightsailRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> LightsailRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-lightsail-lightsailrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> LightsailRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Lightsail request using the given <i>endpoint</i>.</p>
+<p>This Lightsail implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-lightsail-lightsailrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constLightsailRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest">LightsailRequest</a></span> &amp;LightsailRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest">LightsailRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-lightsail-lightsailrequest.html">LightsailRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constLightsailRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> LightsailRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-lightsail-lightsailrequest.html#LightsailRequest">LightsailRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

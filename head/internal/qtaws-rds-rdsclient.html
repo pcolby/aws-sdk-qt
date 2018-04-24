@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- rdsclient.cpp -->
+  <title>RdsClient Class | RDS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsrds-index.html">RDS</a></li>
+<li><a href="qtawsrds-module.html">C++ Classes</a></li>
+<li>RdsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">RdsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-rds-rdsclient.html">QtAws::RDS::RdsClient</a>)<br/></span>
+<!-- $$$RdsClient-brief -->
+<p>The <a href="qtaws-rds-rdsclient.html">RdsClient</a> class provides access to the Amazon Relational Database Service ( RDS) service. <a href="#details">More...</a></p>
+<!-- @@@RdsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;RdsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-rds-rdsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#RdsClient">RdsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#RdsClient-1">RdsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddRoleToDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#addRoleToDBCluster">addRoleToDBCluster</a></b>(const AddRoleToDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddSourceIdentifierToSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#addSourceIdentifierToSubscription">addSourceIdentifierToSubscription</a></b>(const AddSourceIdentifierToSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ApplyPendingMaintenanceActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#applyPendingMaintenanceAction">applyPendingMaintenanceAction</a></b>(const ApplyPendingMaintenanceActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AuthorizeDBSecurityGroupIngressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#authorizeDBSecurityGroupIngress">authorizeDBSecurityGroupIngress</a></b>(const AuthorizeDBSecurityGroupIngressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyDBClusterParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#copyDBClusterParameterGroup">copyDBClusterParameterGroup</a></b>(const CopyDBClusterParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyDBClusterSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#copyDBClusterSnapshot">copyDBClusterSnapshot</a></b>(const CopyDBClusterSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyDBParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#copyDBParameterGroup">copyDBParameterGroup</a></b>(const CopyDBParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyDBSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#copyDBSnapshot">copyDBSnapshot</a></b>(const CopyDBSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyOptionGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#copyOptionGroup">copyOptionGroup</a></b>(const CopyOptionGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBCluster">createDBCluster</a></b>(const CreateDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBClusterParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBClusterParameterGroup">createDBClusterParameterGroup</a></b>(const CreateDBClusterParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBClusterSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBClusterSnapshot">createDBClusterSnapshot</a></b>(const CreateDBClusterSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBInstance">createDBInstance</a></b>(const CreateDBInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBInstanceReadReplicaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBInstanceReadReplica">createDBInstanceReadReplica</a></b>(const CreateDBInstanceReadReplicaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBParameterGroup">createDBParameterGroup</a></b>(const CreateDBParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBSecurityGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBSecurityGroup">createDBSecurityGroup</a></b>(const CreateDBSecurityGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBSnapshot">createDBSnapshot</a></b>(const CreateDBSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDBSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createDBSubnetGroup">createDBSubnetGroup</a></b>(const CreateDBSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEventSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createEventSubscription">createEventSubscription</a></b>(const CreateEventSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateOptionGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#createOptionGroup">createOptionGroup</a></b>(const CreateOptionGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBCluster">deleteDBCluster</a></b>(const DeleteDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBClusterParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBClusterParameterGroup">deleteDBClusterParameterGroup</a></b>(const DeleteDBClusterParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBClusterSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBClusterSnapshot">deleteDBClusterSnapshot</a></b>(const DeleteDBClusterSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBInstance">deleteDBInstance</a></b>(const DeleteDBInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBParameterGroup">deleteDBParameterGroup</a></b>(const DeleteDBParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBSecurityGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBSecurityGroup">deleteDBSecurityGroup</a></b>(const DeleteDBSecurityGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBSnapshot">deleteDBSnapshot</a></b>(const DeleteDBSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDBSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteDBSubnetGroup">deleteDBSubnetGroup</a></b>(const DeleteDBSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEventSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteEventSubscription">deleteEventSubscription</a></b>(const DeleteEventSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteOptionGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#deleteOptionGroup">deleteOptionGroup</a></b>(const DeleteOptionGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAccountAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeAccountAttributes">describeAccountAttributes</a></b>(const DescribeAccountAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeCertificates">describeCertificates</a></b>(const DescribeCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBClusterParameterGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBClusterParameterGroups">describeDBClusterParameterGroups</a></b>(const DescribeDBClusterParameterGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBClusterParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBClusterParameters">describeDBClusterParameters</a></b>(const DescribeDBClusterParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBClusterSnapshotAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBClusterSnapshotAttributes">describeDBClusterSnapshotAttributes</a></b>(const DescribeDBClusterSnapshotAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBClusterSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBClusterSnapshots">describeDBClusterSnapshots</a></b>(const DescribeDBClusterSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBClusters">describeDBClusters</a></b>(const DescribeDBClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBEngineVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBEngineVersions">describeDBEngineVersions</a></b>(const DescribeDBEngineVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBInstances">describeDBInstances</a></b>(const DescribeDBInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBLogFilesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBLogFiles">describeDBLogFiles</a></b>(const DescribeDBLogFilesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBParameterGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBParameterGroups">describeDBParameterGroups</a></b>(const DescribeDBParameterGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBParameters">describeDBParameters</a></b>(const DescribeDBParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBSecurityGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBSecurityGroups">describeDBSecurityGroups</a></b>(const DescribeDBSecurityGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBSnapshotAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBSnapshotAttributes">describeDBSnapshotAttributes</a></b>(const DescribeDBSnapshotAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBSnapshots">describeDBSnapshots</a></b>(const DescribeDBSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDBSubnetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeDBSubnetGroups">describeDBSubnetGroups</a></b>(const DescribeDBSubnetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEngineDefaultClusterParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeEngineDefaultClusterParameters">describeEngineDefaultClusterParameters</a></b>(const DescribeEngineDefaultClusterParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEngineDefaultParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeEngineDefaultParameters">describeEngineDefaultParameters</a></b>(const DescribeEngineDefaultParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventCategoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeEventCategories">describeEventCategories</a></b>(const DescribeEventCategoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventSubscriptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeEventSubscriptions">describeEventSubscriptions</a></b>(const DescribeEventSubscriptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOptionGroupOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeOptionGroupOptions">describeOptionGroupOptions</a></b>(const DescribeOptionGroupOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOptionGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeOptionGroups">describeOptionGroups</a></b>(const DescribeOptionGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOrderableDBInstanceOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeOrderableDBInstanceOptions">describeOrderableDBInstanceOptions</a></b>(const DescribeOrderableDBInstanceOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePendingMaintenanceActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describePendingMaintenanceActions">describePendingMaintenanceActions</a></b>(const DescribePendingMaintenanceActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReservedDBInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeReservedDBInstances">describeReservedDBInstances</a></b>(const DescribeReservedDBInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeReservedDBInstancesOfferingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeReservedDBInstancesOfferings">describeReservedDBInstancesOfferings</a></b>(const DescribeReservedDBInstancesOfferingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSourceRegionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeSourceRegions">describeSourceRegions</a></b>(const DescribeSourceRegionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeValidDBInstanceModificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#describeValidDBInstanceModifications">describeValidDBInstanceModifications</a></b>(const DescribeValidDBInstanceModificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DownloadDBLogFilePortionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#downloadDBLogFilePortion">downloadDBLogFilePortion</a></b>(const DownloadDBLogFilePortionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> FailoverDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#failoverDBCluster">failoverDBCluster</a></b>(const FailoverDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBCluster">modifyDBCluster</a></b>(const ModifyDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBClusterParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBClusterParameterGroup">modifyDBClusterParameterGroup</a></b>(const ModifyDBClusterParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBClusterSnapshotAttributeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBClusterSnapshotAttribute">modifyDBClusterSnapshotAttribute</a></b>(const ModifyDBClusterSnapshotAttributeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBInstance">modifyDBInstance</a></b>(const ModifyDBInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBParameterGroup">modifyDBParameterGroup</a></b>(const ModifyDBParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBSnapshot">modifyDBSnapshot</a></b>(const ModifyDBSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBSnapshotAttributeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBSnapshotAttribute">modifyDBSnapshotAttribute</a></b>(const ModifyDBSnapshotAttributeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDBSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyDBSubnetGroup">modifyDBSubnetGroup</a></b>(const ModifyDBSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyEventSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyEventSubscription">modifyEventSubscription</a></b>(const ModifyEventSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyOptionGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#modifyOptionGroup">modifyOptionGroup</a></b>(const ModifyOptionGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PromoteReadReplicaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#promoteReadReplica">promoteReadReplica</a></b>(const PromoteReadReplicaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PromoteReadReplicaDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#promoteReadReplicaDBCluster">promoteReadReplicaDBCluster</a></b>(const PromoteReadReplicaDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PurchaseReservedDBInstancesOfferingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#purchaseReservedDBInstancesOffering">purchaseReservedDBInstancesOffering</a></b>(const PurchaseReservedDBInstancesOfferingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#rebootDBInstance">rebootDBInstance</a></b>(const RebootDBInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveRoleFromDBClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#removeRoleFromDBCluster">removeRoleFromDBCluster</a></b>(const RemoveRoleFromDBClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveSourceIdentifierFromSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#removeSourceIdentifierFromSubscription">removeSourceIdentifierFromSubscription</a></b>(const RemoveSourceIdentifierFromSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetDBClusterParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#resetDBClusterParameterGroup">resetDBClusterParameterGroup</a></b>(const ResetDBClusterParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetDBParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#resetDBParameterGroup">resetDBParameterGroup</a></b>(const ResetDBParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBClusterFromS3Response *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBClusterFromS3">restoreDBClusterFromS3</a></b>(const RestoreDBClusterFromS3Request &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBClusterFromSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBClusterFromSnapshot">restoreDBClusterFromSnapshot</a></b>(const RestoreDBClusterFromSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBClusterToPointInTimeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBClusterToPointInTime">restoreDBClusterToPointInTime</a></b>(const RestoreDBClusterToPointInTimeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBInstanceFromS3Response *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBInstanceFromS3">restoreDBInstanceFromS3</a></b>(const RestoreDBInstanceFromS3Request &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBInstanceFromDBSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBInstanceFromDBSnapshot">restoreDBInstanceFromDBSnapshot</a></b>(const RestoreDBInstanceFromDBSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreDBInstanceToPointInTimeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#restoreDBInstanceToPointInTime">restoreDBInstanceToPointInTime</a></b>(const RestoreDBInstanceToPointInTimeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RevokeDBSecurityGroupIngressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#revokeDBSecurityGroupIngress">revokeDBSecurityGroupIngress</a></b>(const RevokeDBSecurityGroupIngressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#startDBInstance">startDBInstance</a></b>(const StartDBInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopDBInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rds-rdsclient.html#stopDBInstance">stopDBInstance</a></b>(const StopDBInstanceRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$RdsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-rds-rdsclient.html">RdsClient</a> class provides access to the Amazon Relational Database Service ( RDS) service.</p>
+<p>&lt;fullname&gt;Amazon Relational Database Service&lt;/fullname&gt;</p>
+<p>&lt;/p</p>
+<p>Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks, freeing up developers to focus on what makes their applications and businesses</p>
+<p>unique&gt;</p>
+<p>Amazon RDS gives you access to the capabilities of a MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, Oracle, or Amazon Aurora database server. These capabilities mean that the code, applications, and tools you already use today with your existing databases work with Amazon RDS without modification. Amazon RDS automatically backs up your database and maintains the database software that powers your DB instance. Amazon RDS is flexible: you can scale your DB instance's compute resources and storage capacity to meet your application's demand. As with all Amazon Web Services, there are no up-front investments, and you pay only for the resources you</p>
+<p>use&gt;</p>
+<p>This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques such as polling or callback functions to determine when a command has been applied. In this reference, the parameter descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance window. The reference structure is as follows, and we list following some related topics from the user</p>
+<p>guide&gt;</p>
+<p>&lt;b&gt;Amazon RDS API Reference&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>For the alphabetical list of API actions, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html&quot;&gt;API</p>
+<p>Actions&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For the alphabetical list of data types, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html&quot;&gt;Data</p>
+<p>Types&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For a list of common query parameters, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html&quot;&gt;Common</p>
+<p>Parameters&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For descriptions of the error codes, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html&quot;&gt;Common</p>
+<p>Errors&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Amazon RDS User Guide&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>For a summary of the Amazon RDS interfaces, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces&quot;&gt;Available RDS</p>
+<p>Interfaces&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For more information about how to use the Query API, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html&quot;&gt;Using the Query</p>
+</div>
+<!-- @@@RdsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RdsClient[overload1]$$$RdsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="RdsClient"><a name="RdsClient"></a>RdsClient::<span class="name">RdsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-rds-rdsclient.html">RdsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@RdsClient -->
+<!-- $$$RdsClient$$$RdsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="RdsClient-1"><a name="RdsClient-1"></a>RdsClient::<span class="name">RdsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-rds-rdsclient.html#RdsClient">RdsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@RdsClient -->
+<!-- $$$addRoleToDBCluster[overload1]$$$addRoleToDBClusterconstAddRoleToDBClusterRequest& -->
+<h3 class="fn" id="addRoleToDBCluster"><a name="addRoleToDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-addroletodbclusterresponse.html">AddRoleToDBClusterResponse</a></span> *RdsClient::<span class="name">addRoleToDBCluster</span>(const <span class="type"><a href="qtaws-rds-addroletodbclusterrequest.html">AddRoleToDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-addroletodbclusterresponse.html">AddRoleToDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html&quot;&gt;Authorizing Amazon Aurora to Access Other AWS Services On Your</p>
+<!-- @@@addRoleToDBCluster -->
+<!-- $$$addSourceIdentifierToSubscription[overload1]$$$addSourceIdentifierToSubscriptionconstAddSourceIdentifierToSubscriptionRequest& -->
+<h3 class="fn" id="addSourceIdentifierToSubscription"><a name="addSourceIdentifierToSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-addsourceidentifiertosubscriptionresponse.html">AddSourceIdentifierToSubscriptionResponse</a></span> *RdsClient::<span class="name">addSourceIdentifierToSubscription</span>(const <span class="type"><a href="qtaws-rds-addsourceidentifiertosubscriptionrequest.html">AddSourceIdentifierToSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-addsourceidentifiertosubscriptionresponse.html">AddSourceIdentifierToSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a source identifier to an existing RDS event notification</p>
+<!-- @@@addSourceIdentifierToSubscription -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *RdsClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-rds-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds metadata tags to an Amazon RDS resource. These tags can also be used with cost allocation reporting to track cost associated with Amazon RDS resources, or used in a Condition statement in an IAM policy for Amazon</p>
+<p>RDS&gt;</p>
+<p>For an overview on tagging Amazon RDS resources, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html&quot;&gt;Tagging Amazon RDS</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$applyPendingMaintenanceAction[overload1]$$$applyPendingMaintenanceActionconstApplyPendingMaintenanceActionRequest& -->
+<h3 class="fn" id="applyPendingMaintenanceAction"><a name="applyPendingMaintenanceAction"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-applypendingmaintenanceactionresponse.html">ApplyPendingMaintenanceActionResponse</a></span> *RdsClient::<span class="name">applyPendingMaintenanceAction</span>(const <span class="type"><a href="qtaws-rds-applypendingmaintenanceactionrequest.html">ApplyPendingMaintenanceActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-applypendingmaintenanceactionresponse.html">ApplyPendingMaintenanceActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Applies a pending maintenance action to a resource (for example, to a DB</p>
+<!-- @@@applyPendingMaintenanceAction -->
+<!-- $$$authorizeDBSecurityGroupIngress[overload1]$$$authorizeDBSecurityGroupIngressconstAuthorizeDBSecurityGroupIngressRequest& -->
+<h3 class="fn" id="authorizeDBSecurityGroupIngress"><a name="authorizeDBSecurityGroupIngress"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-authorizedbsecuritygroupingressresponse.html">AuthorizeDBSecurityGroupIngressResponse</a></span> *RdsClient::<span class="name">authorizeDBSecurityGroupIngress</span>(const <span class="type"><a href="qtaws-rds-authorizedbsecuritygroupingressrequest.html">AuthorizeDBSecurityGroupIngressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-authorizedbsecuritygroupingressresponse.html">AuthorizeDBSecurityGroupIngressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables ingress to a DBSecurityGroup using one of two forms of authorization. First, EC2 or VPC security groups can be added to the DBSecurityGroup if the application using the database is running on EC2 or VPC instances. Second, IP ranges are available if the application accessing your database is running on the Internet. Required parameters for this API are one of CIDR range, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either EC2SecurityGroupName or EC2SecurityGroupId for</p>
+<p>non-VPC)&gt; &lt;note&gt;</p>
+<p>You can't authorize ingress from an EC2 security group in one AWS Region to an Amazon RDS DB instance in another. You can't authorize ingress from a VPC security group in one VPC to an Amazon RDS DB instance in</p>
+<p>another&gt; &lt;/note&gt;</p>
+<p>For an overview of CIDR ranges, go to the &lt;a href=&quot;http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing&quot;&gt;Wikipedia Tutorial&lt;/a&gt;.</p>
+<!-- @@@authorizeDBSecurityGroupIngress -->
+<!-- $$$copyDBClusterParameterGroup[overload1]$$$copyDBClusterParameterGroupconstCopyDBClusterParameterGroupRequest& -->
+<h3 class="fn" id="copyDBClusterParameterGroup"><a name="copyDBClusterParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-copydbclusterparametergroupresponse.html">CopyDBClusterParameterGroupResponse</a></span> *RdsClient::<span class="name">copyDBClusterParameterGroup</span>(const <span class="type"><a href="qtaws-rds-copydbclusterparametergrouprequest.html">CopyDBClusterParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-copydbclusterparametergroupresponse.html">CopyDBClusterParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the specified DB cluster parameter</p>
+<!-- @@@copyDBClusterParameterGroup -->
+<!-- $$$copyDBClusterSnapshot[overload1]$$$copyDBClusterSnapshotconstCopyDBClusterSnapshotRequest& -->
+<h3 class="fn" id="copyDBClusterSnapshot"><a name="copyDBClusterSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-copydbclustersnapshotresponse.html">CopyDBClusterSnapshotResponse</a></span> *RdsClient::<span class="name">copyDBClusterSnapshot</span>(const <span class="type"><a href="qtaws-rds-copydbclustersnapshotrequest.html">CopyDBClusterSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-copydbclustersnapshotresponse.html">CopyDBClusterSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies a snapshot of a DB</p>
+<p>cluster&gt;</p>
+<p>To copy a DB cluster snapshot from a shared manual DB cluster snapshot, &lt;code&gt;SourceDBClusterSnapshotIdentifier&lt;/code&gt; must be the Amazon Resource Name (ARN) of the shared DB cluster</p>
+<p>snapshot&gt;</p>
+<p>You can copy an encrypted DB cluster snapshot from another AWS Region. In that case, the AWS Region where you call the &lt;code&gt;CopyDBClusterSnapshot&lt;/code&gt; action is the destination AWS Region for the encrypted DB cluster snapshot to be copied to. To copy an encrypted DB cluster snapshot from another AWS Region, you must provide the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;KmsKeyId&lt;/code&gt; - The AWS Key Management System (AWS KMS) key identifier for the key to use to encrypt the copy of the DB cluster snapshot in the destination AWS</p>
+<p>Region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;PreSignedUrl&lt;/code&gt; - A URL that contains a Signature Version 4 signed request for the &lt;code&gt;CopyDBClusterSnapshot&lt;/code&gt; action to be called in the source AWS Region where the DB cluster snapshot is copied from. The pre-signed URL must be a valid request for the &lt;code&gt;CopyDBClusterSnapshot&lt;/code&gt; API action that can be executed in the source AWS Region that contains the encrypted DB cluster snapshot to be</p>
+<p>copied&gt;</p>
+<p>The pre-signed URL request must contain the following parameter</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;KmsKeyId&lt;/code&gt; - The KMS key identifier for the key to use to encrypt the copy of the DB cluster snapshot in the destination AWS Region. This is the same identifier for both the &lt;code&gt;CopyDBClusterSnapshot&lt;/code&gt; action that is called in the destination AWS Region, and the action contained in the pre-signed</p>
+<p>URL&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DestinationRegion&lt;/code&gt; - The name of the AWS Region that the DB cluster snapshot will be created</p>
+<p>in&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;SourceDBClusterSnapshotIdentifier&lt;/code&gt; - The DB cluster snapshot identifier for the encrypted DB cluster snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For example, if you are copying an encrypted DB cluster snapshot from the us-west-2 AWS Region, then your &lt;code&gt;SourceDBClusterSnapshotIdentifier&lt;/code&gt; looks like the following example:</p>
+<p>&lt;code&gt;arn:aws:rds:us-west-2:123456789012:cluster-snapshot:aurora-cluster1-snapshot-20161115&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To learn how to generate a Signature Version 4 signed request, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html&quot;&gt; Authenticating Requests: Using Query Parameters (AWS Signature Version 4)&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt; Signature Version 4 Signing</p>
+<p>Process&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;TargetDBClusterSnapshotIdentifier&lt;/code&gt; - The identifier for the new copy of the DB cluster snapshot in the destination AWS</p>
+<p>Region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;SourceDBClusterSnapshotIdentifier&lt;/code&gt; - The DB cluster snapshot identifier for the encrypted DB cluster snapshot to be copied. This identifier must be in the ARN format for the source AWS Region and is the same value as the &lt;code&gt;SourceDBClusterSnapshotIdentifier&lt;/code&gt; in the pre-signed URL.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To cancel the copy operation once it is in progress, delete the target DB cluster snapshot identified by &lt;code&gt;TargetDBClusterSnapshotIdentifier&lt;/code&gt; while that DB cluster snapshot is in &quot;copying&quot;</p>
+<p>status&gt;</p>
+<p>For more information on copying encrypted DB cluster snapshots from one AWS Region to another, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBClusterSnapshot.CrossRegion&quot;&gt; Copying a DB Cluster Snapshot in the Same Account, Either in the Same Region or Across Regions&lt;/a&gt; in the Amazon RDS User</p>
+<p>Guide&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@copyDBClusterSnapshot -->
+<!-- $$$copyDBParameterGroup[overload1]$$$copyDBParameterGroupconstCopyDBParameterGroupRequest& -->
+<h3 class="fn" id="copyDBParameterGroup"><a name="copyDBParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-copydbparametergroupresponse.html">CopyDBParameterGroupResponse</a></span> *RdsClient::<span class="name">copyDBParameterGroup</span>(const <span class="type"><a href="qtaws-rds-copydbparametergrouprequest.html">CopyDBParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-copydbparametergroupresponse.html">CopyDBParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the specified DB parameter</p>
+<!-- @@@copyDBParameterGroup -->
+<!-- $$$copyDBSnapshot[overload1]$$$copyDBSnapshotconstCopyDBSnapshotRequest& -->
+<h3 class="fn" id="copyDBSnapshot"><a name="copyDBSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-copydbsnapshotresponse.html">CopyDBSnapshotResponse</a></span> *RdsClient::<span class="name">copyDBSnapshot</span>(const <span class="type"><a href="qtaws-rds-copydbsnapshotrequest.html">CopyDBSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-copydbsnapshotresponse.html">CopyDBSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the specified DB snapshot. The source DB snapshot must be in the &quot;available&quot;</p>
+<p>state&gt;</p>
+<p>You can copy a snapshot from one AWS Region to another. In that case, the AWS Region where you call the &lt;code&gt;CopyDBSnapshot&lt;/code&gt; action is the destination AWS Region for the DB snapshot copy.</p>
+<p>&lt;/p</p>
+<p>For more information about copying snapshots, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html&quot;&gt;Copying a DB Snapshot&lt;/a&gt; in the Amazon RDS User Guide.</p>
+<!-- @@@copyDBSnapshot -->
+<!-- $$$copyOptionGroup[overload1]$$$copyOptionGroupconstCopyOptionGroupRequest& -->
+<h3 class="fn" id="copyOptionGroup"><a name="copyOptionGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-copyoptiongroupresponse.html">CopyOptionGroupResponse</a></span> *RdsClient::<span class="name">copyOptionGroup</span>(const <span class="type"><a href="qtaws-rds-copyoptiongrouprequest.html">CopyOptionGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-copyoptiongroupresponse.html">CopyOptionGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the specified option</p>
+<!-- @@@copyOptionGroup -->
+<!-- $$$createDBCluster[overload1]$$$createDBClusterconstCreateDBClusterRequest& -->
+<h3 class="fn" id="createDBCluster"><a name="createDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbclusterresponse.html">CreateDBClusterResponse</a></span> *RdsClient::<span class="name">createDBCluster</span>(const <span class="type"><a href="qtaws-rds-createdbclusterrequest.html">CreateDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbclusterresponse.html">CreateDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Amazon Aurora DB</p>
+<p>cluster&gt;</p>
+<p>You can use the &lt;code&gt;ReplicationSourceIdentifier&lt;/code&gt; parameter to create the DB cluster as a Read Replica of another DB cluster or Amazon RDS MySQL DB instance. For cross-region replication where the DB cluster identified by &lt;code&gt;ReplicationSourceIdentifier&lt;/code&gt; is encrypted, you must also specify the &lt;code&gt;PreSignedUrl&lt;/code&gt;</p>
+<p>parameter&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@createDBCluster -->
+<!-- $$$createDBClusterParameterGroup[overload1]$$$createDBClusterParameterGroupconstCreateDBClusterParameterGroupRequest& -->
+<h3 class="fn" id="createDBClusterParameterGroup"><a name="createDBClusterParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbclusterparametergroupresponse.html">CreateDBClusterParameterGroupResponse</a></span> *RdsClient::<span class="name">createDBClusterParameterGroup</span>(const <span class="type"><a href="qtaws-rds-createdbclusterparametergrouprequest.html">CreateDBClusterParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbclusterparametergroupresponse.html">CreateDBClusterParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB cluster parameter</p>
+<p>group&gt;</p>
+<p>Parameters in a DB cluster parameter group apply to all of the instances in a DB</p>
+<p>cluster&gt;</p>
+<p>A DB cluster parameter group is initially created with the default parameters for the database engine used by instances in the DB cluster. To provide custom values for any of the parameters, you must modify the group after creating it using &lt;a&gt;ModifyDBClusterParameterGroup&lt;/a&gt;. Once you've created a DB cluster parameter group, you need to associate it with your DB cluster using &lt;a&gt;ModifyDBCluster&lt;/a&gt;. When you associate a new DB cluster parameter group with a running DB cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster parameter group and associated settings to take effect.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster that uses that DB cluster parameter group as the default parameter group. This allows Amazon RDS to fully complete the create action before the DB cluster parameter group is used as the default for a new DB cluster. This is especially important for parameters that are critical when creating the default database for a DB cluster, such as the character set for the default database defined by the &lt;code&gt;character_set_database&lt;/code&gt; parameter. You can use the &lt;i&gt;Parameter Groups&lt;/i&gt; option of the &lt;a href=&quot;https://console.aws.amazon.com/rds/&quot;&gt;Amazon RDS console&lt;/a&gt; or the &lt;a&gt;DescribeDBClusterParameters&lt;/a&gt; command to verify that your DB cluster parameter group has been created or</p>
+<p>modified&gt; &lt;/b&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@createDBClusterParameterGroup -->
+<!-- $$$createDBClusterSnapshot[overload1]$$$createDBClusterSnapshotconstCreateDBClusterSnapshotRequest& -->
+<h3 class="fn" id="createDBClusterSnapshot"><a name="createDBClusterSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbclustersnapshotresponse.html">CreateDBClusterSnapshotResponse</a></span> *RdsClient::<span class="name">createDBClusterSnapshot</span>(const <span class="type"><a href="qtaws-rds-createdbclustersnapshotrequest.html">CreateDBClusterSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbclustersnapshotresponse.html">CreateDBClusterSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a snapshot of a DB cluster. For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@createDBClusterSnapshot -->
+<!-- $$$createDBInstance[overload1]$$$createDBInstanceconstCreateDBInstanceRequest& -->
+<h3 class="fn" id="createDBInstance"><a name="createDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbinstanceresponse.html">CreateDBInstanceResponse</a></span> *RdsClient::<span class="name">createDBInstance</span>(const <span class="type"><a href="qtaws-rds-createdbinstancerequest.html">CreateDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbinstanceresponse.html">CreateDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB</p>
+<!-- @@@createDBInstance -->
+<!-- $$$createDBInstanceReadReplica[overload1]$$$createDBInstanceReadReplicaconstCreateDBInstanceReadReplicaRequest& -->
+<h3 class="fn" id="createDBInstanceReadReplica"><a name="createDBInstanceReadReplica"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbinstancereadreplicaresponse.html">CreateDBInstanceReadReplicaResponse</a></span> *RdsClient::<span class="name">createDBInstanceReadReplica</span>(const <span class="type"><a href="qtaws-rds-createdbinstancereadreplicarequest.html">CreateDBInstanceReadReplicaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbinstancereadreplicaresponse.html">CreateDBInstanceReadReplicaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB instance that acts as a Read Replica for an existing source DB instance. You can create a Read Replica for a DB instance running MySQL, MariaDB, or PostgreSQL. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html&quot;&gt;Working with PostgreSQL, MySQL, and MariaDB Read Replicas&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>Amazon Aurora doesn't support this action. You must call the &lt;code&gt;CreateDBInstance&lt;/code&gt; action to create a DB instance for an Aurora DB cluster.</p>
+<p>&lt;/p</p>
+<p>All Read Replica DB instances are created with backups disabled. All other DB instance attributes (including DB security groups and DB parameter groups) are inherited from the source DB instance, except as specified following.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>Your source DB instance must have backup retention enabled.</p>
+<!-- @@@createDBInstanceReadReplica -->
+<!-- $$$createDBParameterGroup[overload1]$$$createDBParameterGroupconstCreateDBParameterGroupRequest& -->
+<h3 class="fn" id="createDBParameterGroup"><a name="createDBParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbparametergroupresponse.html">CreateDBParameterGroupResponse</a></span> *RdsClient::<span class="name">createDBParameterGroup</span>(const <span class="type"><a href="qtaws-rds-createdbparametergrouprequest.html">CreateDBParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbparametergroupresponse.html">CreateDBParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB parameter</p>
+<p>group&gt;</p>
+<p>A DB parameter group is initially created with the default parameters for the database engine used by the DB instance. To provide custom values for any of the parameters, you must modify the group after creating it using &lt;i&gt;ModifyDBParameterGroup&lt;/i&gt;. Once you've created a DB parameter group, you need to associate it with your DB instance using &lt;i&gt;ModifyDBInstance&lt;/i&gt;. When you associate a new DB parameter group with a running DB instance, you need to reboot the DB instance without failover for the new DB parameter group and associated settings to take effect.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>After you create a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that uses that DB parameter group as the default parameter group. This allows Amazon RDS to fully complete the create action before the parameter group is used as the default for a new DB instance. This is especially important for parameters that are critical when creating the default database for a DB instance, such as the character set for the default database defined by the &lt;code&gt;character_set_database&lt;/code&gt; parameter. You can use the &lt;i&gt;Parameter Groups&lt;/i&gt; option of the &lt;a href=&quot;https://console.aws.amazon.com/rds/&quot;&gt;Amazon RDS console&lt;/a&gt; or the &lt;i&gt;DescribeDBParameters&lt;/i&gt; command to verify that your DB parameter group has been created or</p>
+<!-- @@@createDBParameterGroup -->
+<!-- $$$createDBSecurityGroup[overload1]$$$createDBSecurityGroupconstCreateDBSecurityGroupRequest& -->
+<h3 class="fn" id="createDBSecurityGroup"><a name="createDBSecurityGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbsecuritygroupresponse.html">CreateDBSecurityGroupResponse</a></span> *RdsClient::<span class="name">createDBSecurityGroup</span>(const <span class="type"><a href="qtaws-rds-createdbsecuritygrouprequest.html">CreateDBSecurityGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbsecuritygroupresponse.html">CreateDBSecurityGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB security group. DB security groups control access to a DB</p>
+<!-- @@@createDBSecurityGroup -->
+<!-- $$$createDBSnapshot[overload1]$$$createDBSnapshotconstCreateDBSnapshotRequest& -->
+<h3 class="fn" id="createDBSnapshot"><a name="createDBSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbsnapshotresponse.html">CreateDBSnapshotResponse</a></span> *RdsClient::<span class="name">createDBSnapshot</span>(const <span class="type"><a href="qtaws-rds-createdbsnapshotrequest.html">CreateDBSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbsnapshotresponse.html">CreateDBSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a DBSnapshot. The source DBInstance must be in &quot;available&quot;</p>
+<!-- @@@createDBSnapshot -->
+<!-- $$$createDBSubnetGroup[overload1]$$$createDBSubnetGroupconstCreateDBSubnetGroupRequest& -->
+<h3 class="fn" id="createDBSubnetGroup"><a name="createDBSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createdbsubnetgroupresponse.html">CreateDBSubnetGroupResponse</a></span> *RdsClient::<span class="name">createDBSubnetGroup</span>(const <span class="type"><a href="qtaws-rds-createdbsubnetgrouprequest.html">CreateDBSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createdbsubnetgroupresponse.html">CreateDBSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS</p>
+<!-- @@@createDBSubnetGroup -->
+<!-- $$$createEventSubscription[overload1]$$$createEventSubscriptionconstCreateEventSubscriptionRequest& -->
+<h3 class="fn" id="createEventSubscription"><a name="createEventSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createeventsubscriptionresponse.html">CreateEventSubscriptionResponse</a></span> *RdsClient::<span class="name">createEventSubscription</span>(const <span class="type"><a href="qtaws-rds-createeventsubscriptionrequest.html">CreateEventSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createeventsubscriptionresponse.html">CreateEventSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an RDS event notification subscription. This action requires a topic ARN (Amazon Resource Name) created by either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a topic in Amazon SNS and subscribe to the topic. The ARN is displayed in the SNS</p>
+<p>console&gt;</p>
+<p>You can specify the type of source (SourceType) you want to be notified of, provide a list of RDS sources (SourceIds) that triggers the events, and provide a list of event categories (EventCategories) for events you want to be notified of. For example, you can specify SourceType = db-instance, SourceIds = mydbinstance1, mydbinstance2 and EventCategories = Availability,</p>
+<p>Backup&gt;</p>
+<p>If you specify both the SourceType and SourceIds, such as SourceType = db-instance and SourceIdentifier = myDBInstance1, you are notified of all the db-instance events for the specified source. If you specify a SourceType but do not specify a SourceIdentifier, you receive notice of the events for that source type for all your RDS sources. If you do not specify either the SourceType nor the SourceIdentifier, you are notified of events generated from all RDS sources belonging to your customer</p>
+<!-- @@@createEventSubscription -->
+<!-- $$$createOptionGroup[overload1]$$$createOptionGroupconstCreateOptionGroupRequest& -->
+<h3 class="fn" id="createOptionGroup"><a name="createOptionGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-createoptiongroupresponse.html">CreateOptionGroupResponse</a></span> *RdsClient::<span class="name">createOptionGroup</span>(const <span class="type"><a href="qtaws-rds-createoptiongrouprequest.html">CreateOptionGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-createoptiongroupresponse.html">CreateOptionGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new option group. You can create up to 20 option</p>
+<!-- @@@createOptionGroup -->
+<!-- $$$deleteDBCluster[overload1]$$$deleteDBClusterconstDeleteDBClusterRequest& -->
+<h3 class="fn" id="deleteDBCluster"><a name="deleteDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbclusterresponse.html">DeleteDBClusterResponse</a></span> *RdsClient::<span class="name">deleteDBCluster</span>(const <span class="type"><a href="qtaws-rds-deletedbclusterrequest.html">DeleteDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbclusterresponse.html">DeleteDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The DeleteDBCluster action deletes a previously provisioned DB cluster. When you delete a DB cluster, all automated backups for that DB cluster are deleted and can't be recovered. Manual DB cluster snapshots of the specified DB cluster are not</p>
+<p>deleted&gt; &lt;p/&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@deleteDBCluster -->
+<!-- $$$deleteDBClusterParameterGroup[overload1]$$$deleteDBClusterParameterGroupconstDeleteDBClusterParameterGroupRequest& -->
+<h3 class="fn" id="deleteDBClusterParameterGroup"><a name="deleteDBClusterParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbclusterparametergroupresponse.html">DeleteDBClusterParameterGroupResponse</a></span> *RdsClient::<span class="name">deleteDBClusterParameterGroup</span>(const <span class="type"><a href="qtaws-rds-deletedbclusterparametergrouprequest.html">DeleteDBClusterParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbclusterparametergroupresponse.html">DeleteDBClusterParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified DB cluster parameter group. The DB cluster parameter group to be deleted can't be associated with any DB</p>
+<p>clusters&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@deleteDBClusterParameterGroup -->
+<!-- $$$deleteDBClusterSnapshot[overload1]$$$deleteDBClusterSnapshotconstDeleteDBClusterSnapshotRequest& -->
+<h3 class="fn" id="deleteDBClusterSnapshot"><a name="deleteDBClusterSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbclustersnapshotresponse.html">DeleteDBClusterSnapshotResponse</a></span> *RdsClient::<span class="name">deleteDBClusterSnapshot</span>(const <span class="type"><a href="qtaws-rds-deletedbclustersnapshotrequest.html">DeleteDBClusterSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbclustersnapshotresponse.html">DeleteDBClusterSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a DB cluster snapshot. If the snapshot is being copied, the copy operation is</p>
+<p>terminated&gt; &lt;note&gt;</p>
+<p>The DB cluster snapshot must be in the &lt;code&gt;available&lt;/code&gt; state to be</p>
+<p>deleted&gt; &lt;/note&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@deleteDBClusterSnapshot -->
+<!-- $$$deleteDBInstance[overload1]$$$deleteDBInstanceconstDeleteDBInstanceRequest& -->
+<h3 class="fn" id="deleteDBInstance"><a name="deleteDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbinstanceresponse.html">DeleteDBInstanceResponse</a></span> *RdsClient::<span class="name">deleteDBInstance</span>(const <span class="type"><a href="qtaws-rds-deletedbinstancerequest.html">DeleteDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbinstanceresponse.html">DeleteDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The DeleteDBInstance action deletes a previously provisioned DB instance. When you delete a DB instance, all automated backups for that instance are deleted and can't be recovered. Manual DB snapshots of the DB instance to be deleted by &lt;code&gt;DeleteDBInstance&lt;/code&gt; are not</p>
+<p>deleted&gt;</p>
+<p>If you request a final DB snapshot the status of the Amazon RDS DB instance is &lt;code&gt;deleting&lt;/code&gt; until the DB snapshot is created. The API action &lt;code&gt;DescribeDBInstance&lt;/code&gt; is used to monitor the status of this operation. The action can't be canceled or reverted once submitted.</p>
+<p>&lt;/p</p>
+<p>Note that when a DB instance is in a failure state and has a status of &lt;code&gt;failed&lt;/code&gt;, &lt;code&gt;incompatible-restore&lt;/code&gt;, or &lt;code&gt;incompatible-network&lt;/code&gt;, you can only delete it when the &lt;code&gt;SkipFinalSnapshot&lt;/code&gt; parameter is set to</p>
+<p>&lt;code&gt;true&lt;/code&gt;&gt;</p>
+<p>If the specified DB instance is part of an Amazon Aurora DB cluster, you can't delete the DB instance if both of the following conditions are</p>
+<p>true&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The DB cluster is a Read Replica of another Amazon Aurora DB</p>
+<p>cluster&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The DB instance is the only instance in the DB</p>
+<p>cluster&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To delete a DB instance in this case, first call the &lt;a&gt;PromoteReadReplicaDBCluster&lt;/a&gt; API action to promote the DB cluster so it's no longer a Read Replica. After the promotion completes, then call the &lt;code&gt;DeleteDBInstance&lt;/code&gt; API action to delete the final instance in the DB</p>
+<!-- @@@deleteDBInstance -->
+<!-- $$$deleteDBParameterGroup[overload1]$$$deleteDBParameterGroupconstDeleteDBParameterGroupRequest& -->
+<h3 class="fn" id="deleteDBParameterGroup"><a name="deleteDBParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbparametergroupresponse.html">DeleteDBParameterGroupResponse</a></span> *RdsClient::<span class="name">deleteDBParameterGroup</span>(const <span class="type"><a href="qtaws-rds-deletedbparametergrouprequest.html">DeleteDBParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbparametergroupresponse.html">DeleteDBParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified DBParameterGroup. The DBParameterGroup to be deleted can't be associated with any DB</p>
+<!-- @@@deleteDBParameterGroup -->
+<!-- $$$deleteDBSecurityGroup[overload1]$$$deleteDBSecurityGroupconstDeleteDBSecurityGroupRequest& -->
+<h3 class="fn" id="deleteDBSecurityGroup"><a name="deleteDBSecurityGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbsecuritygroupresponse.html">DeleteDBSecurityGroupResponse</a></span> *RdsClient::<span class="name">deleteDBSecurityGroup</span>(const <span class="type"><a href="qtaws-rds-deletedbsecuritygrouprequest.html">DeleteDBSecurityGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbsecuritygroupresponse.html">DeleteDBSecurityGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a DB security</p>
+<p>group&gt; &lt;note&gt;</p>
+<p>The specified DB security group must not be associated with any DB</p>
+<!-- @@@deleteDBSecurityGroup -->
+<!-- $$$deleteDBSnapshot[overload1]$$$deleteDBSnapshotconstDeleteDBSnapshotRequest& -->
+<h3 class="fn" id="deleteDBSnapshot"><a name="deleteDBSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbsnapshotresponse.html">DeleteDBSnapshotResponse</a></span> *RdsClient::<span class="name">deleteDBSnapshot</span>(const <span class="type"><a href="qtaws-rds-deletedbsnapshotrequest.html">DeleteDBSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbsnapshotresponse.html">DeleteDBSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a DBSnapshot. If the snapshot is being copied, the copy operation is</p>
+<p>terminated&gt; &lt;note&gt;</p>
+<p>The DBSnapshot must be in the &lt;code&gt;available&lt;/code&gt; state to be</p>
+<!-- @@@deleteDBSnapshot -->
+<!-- $$$deleteDBSubnetGroup[overload1]$$$deleteDBSubnetGroupconstDeleteDBSubnetGroupRequest& -->
+<h3 class="fn" id="deleteDBSubnetGroup"><a name="deleteDBSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deletedbsubnetgroupresponse.html">DeleteDBSubnetGroupResponse</a></span> *RdsClient::<span class="name">deleteDBSubnetGroup</span>(const <span class="type"><a href="qtaws-rds-deletedbsubnetgrouprequest.html">DeleteDBSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deletedbsubnetgroupresponse.html">DeleteDBSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a DB subnet</p>
+<p>group&gt; &lt;note&gt;</p>
+<p>The specified database subnet group must not be associated with any DB</p>
+<!-- @@@deleteDBSubnetGroup -->
+<!-- $$$deleteEventSubscription[overload1]$$$deleteEventSubscriptionconstDeleteEventSubscriptionRequest& -->
+<h3 class="fn" id="deleteEventSubscription"><a name="deleteEventSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deleteeventsubscriptionresponse.html">DeleteEventSubscriptionResponse</a></span> *RdsClient::<span class="name">deleteEventSubscription</span>(const <span class="type"><a href="qtaws-rds-deleteeventsubscriptionrequest.html">DeleteEventSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deleteeventsubscriptionresponse.html">DeleteEventSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an RDS event notification</p>
+<!-- @@@deleteEventSubscription -->
+<!-- $$$deleteOptionGroup[overload1]$$$deleteOptionGroupconstDeleteOptionGroupRequest& -->
+<h3 class="fn" id="deleteOptionGroup"><a name="deleteOptionGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-deleteoptiongroupresponse.html">DeleteOptionGroupResponse</a></span> *RdsClient::<span class="name">deleteOptionGroup</span>(const <span class="type"><a href="qtaws-rds-deleteoptiongrouprequest.html">DeleteOptionGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-deleteoptiongroupresponse.html">DeleteOptionGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing option</p>
+<!-- @@@deleteOptionGroup -->
+<!-- $$$describeAccountAttributes[overload1]$$$describeAccountAttributesconstDescribeAccountAttributesRequest& -->
+<h3 class="fn" id="describeAccountAttributes"><a name="describeAccountAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a></span> *RdsClient::<span class="name">describeAccountAttributes</span>(const <span class="type"><a href="qtaws-rds-describeaccountattributesrequest.html">DescribeAccountAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all of the attributes for a customer account. The attributes include Amazon RDS quotas for the account, such as the number of DB instances allowed. The description for a quota includes the quota name, current usage toward that quota, and the quota's maximum</p>
+<p>value&gt;</p>
+<p>This command doesn't take any</p>
+<!-- @@@describeAccountAttributes -->
+<!-- $$$describeCertificates[overload1]$$$describeCertificatesconstDescribeCertificatesRequest& -->
+<h3 class="fn" id="describeCertificates"><a name="describeCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describecertificatesresponse.html">DescribeCertificatesResponse</a></span> *RdsClient::<span class="name">describeCertificates</span>(const <span class="type"><a href="qtaws-rds-describecertificatesrequest.html">DescribeCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describecertificatesresponse.html">DescribeCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the set of CA certificates provided by Amazon RDS for this AWS</p>
+<!-- @@@describeCertificates -->
+<!-- $$$describeDBClusterParameterGroups[overload1]$$$describeDBClusterParameterGroupsconstDescribeDBClusterParameterGroupsRequest& -->
+<h3 class="fn" id="describeDBClusterParameterGroups"><a name="describeDBClusterParameterGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbclusterparametergroupsresponse.html">DescribeDBClusterParameterGroupsResponse</a></span> *RdsClient::<span class="name">describeDBClusterParameterGroups</span>(const <span class="type"><a href="qtaws-rds-describedbclusterparametergroupsrequest.html">DescribeDBClusterParameterGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbclusterparametergroupsresponse.html">DescribeDBClusterParameterGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;DBClusterParameterGroup&lt;/code&gt; descriptions. If a &lt;code&gt;DBClusterParameterGroupName&lt;/code&gt; parameter is specified, the list will contain only the description of the specified DB cluster parameter group.</p>
+<p>&lt;/p</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeDBClusterParameterGroups -->
+<!-- $$$describeDBClusterParameters[overload1]$$$describeDBClusterParametersconstDescribeDBClusterParametersRequest& -->
+<h3 class="fn" id="describeDBClusterParameters"><a name="describeDBClusterParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbclusterparametersresponse.html">DescribeDBClusterParametersResponse</a></span> *RdsClient::<span class="name">describeDBClusterParameters</span>(const <span class="type"><a href="qtaws-rds-describedbclusterparametersrequest.html">DescribeDBClusterParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbclusterparametersresponse.html">DescribeDBClusterParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the detailed parameter list for a particular DB cluster parameter</p>
+<p>group&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeDBClusterParameters -->
+<!-- $$$describeDBClusterSnapshotAttributes[overload1]$$$describeDBClusterSnapshotAttributesconstDescribeDBClusterSnapshotAttributesRequest& -->
+<h3 class="fn" id="describeDBClusterSnapshotAttributes"><a name="describeDBClusterSnapshotAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbclustersnapshotattributesresponse.html">DescribeDBClusterSnapshotAttributesResponse</a></span> *RdsClient::<span class="name">describeDBClusterSnapshotAttributes</span>(const <span class="type"><a href="qtaws-rds-describedbclustersnapshotattributesrequest.html">DescribeDBClusterSnapshotAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbclustersnapshotattributesresponse.html">DescribeDBClusterSnapshotAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster</p>
+<p>snapshot&gt;</p>
+<p>When sharing snapshots with other AWS accounts, &lt;code&gt;DescribeDBClusterSnapshotAttributes&lt;/code&gt; returns the &lt;code&gt;restore&lt;/code&gt; attribute and a list of IDs for the AWS accounts that are authorized to copy or restore the manual DB cluster snapshot. If &lt;code&gt;all&lt;/code&gt; is included in the list of values for the &lt;code&gt;restore&lt;/code&gt; attribute, then the manual DB cluster snapshot is public and can be copied or restored by all AWS</p>
+<p>accounts&gt;</p>
+<p>To add or remove access for an AWS account to copy or restore a manual DB cluster snapshot, or to make the manual DB cluster snapshot public or private, use the &lt;a&gt;ModifyDBClusterSnapshotAttribute&lt;/a&gt; API</p>
+<!-- @@@describeDBClusterSnapshotAttributes -->
+<!-- $$$describeDBClusterSnapshots[overload1]$$$describeDBClusterSnapshotsconstDescribeDBClusterSnapshotsRequest& -->
+<h3 class="fn" id="describeDBClusterSnapshots"><a name="describeDBClusterSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbclustersnapshotsresponse.html">DescribeDBClusterSnapshotsResponse</a></span> *RdsClient::<span class="name">describeDBClusterSnapshots</span>(const <span class="type"><a href="qtaws-rds-describedbclustersnapshotsrequest.html">DescribeDBClusterSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbclustersnapshotsresponse.html">DescribeDBClusterSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about DB cluster snapshots. This API action supports</p>
+<p>pagination&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeDBClusterSnapshots -->
+<!-- $$$describeDBClusters[overload1]$$$describeDBClustersconstDescribeDBClustersRequest& -->
+<h3 class="fn" id="describeDBClusters"><a name="describeDBClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbclustersresponse.html">DescribeDBClustersResponse</a></span> *RdsClient::<span class="name">describeDBClusters</span>(const <span class="type"><a href="qtaws-rds-describedbclustersrequest.html">DescribeDBClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbclustersresponse.html">DescribeDBClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about provisioned Aurora DB clusters. This API supports</p>
+<p>pagination&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeDBClusters -->
+<!-- $$$describeDBEngineVersions[overload1]$$$describeDBEngineVersionsconstDescribeDBEngineVersionsRequest& -->
+<h3 class="fn" id="describeDBEngineVersions"><a name="describeDBEngineVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbengineversionsresponse.html">DescribeDBEngineVersionsResponse</a></span> *RdsClient::<span class="name">describeDBEngineVersions</span>(const <span class="type"><a href="qtaws-rds-describedbengineversionsrequest.html">DescribeDBEngineVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbengineversionsresponse.html">DescribeDBEngineVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the available DB</p>
+<!-- @@@describeDBEngineVersions -->
+<!-- $$$describeDBInstances[overload1]$$$describeDBInstancesconstDescribeDBInstancesRequest& -->
+<h3 class="fn" id="describeDBInstances"><a name="describeDBInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbinstancesresponse.html">DescribeDBInstancesResponse</a></span> *RdsClient::<span class="name">describeDBInstances</span>(const <span class="type"><a href="qtaws-rds-describedbinstancesrequest.html">DescribeDBInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbinstancesresponse.html">DescribeDBInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about provisioned RDS instances. This API supports</p>
+<!-- @@@describeDBInstances -->
+<!-- $$$describeDBLogFiles[overload1]$$$describeDBLogFilesconstDescribeDBLogFilesRequest& -->
+<h3 class="fn" id="describeDBLogFiles"><a name="describeDBLogFiles"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedblogfilesresponse.html">DescribeDBLogFilesResponse</a></span> *RdsClient::<span class="name">describeDBLogFiles</span>(const <span class="type"><a href="qtaws-rds-describedblogfilesrequest.html">DescribeDBLogFilesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedblogfilesresponse.html">DescribeDBLogFilesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of DB log files for the DB</p>
+<!-- @@@describeDBLogFiles -->
+<!-- $$$describeDBParameterGroups[overload1]$$$describeDBParameterGroupsconstDescribeDBParameterGroupsRequest& -->
+<h3 class="fn" id="describeDBParameterGroups"><a name="describeDBParameterGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbparametergroupsresponse.html">DescribeDBParameterGroupsResponse</a></span> *RdsClient::<span class="name">describeDBParameterGroups</span>(const <span class="type"><a href="qtaws-rds-describedbparametergroupsrequest.html">DescribeDBParameterGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbparametergroupsresponse.html">DescribeDBParameterGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;DBParameterGroup&lt;/code&gt; descriptions. If a &lt;code&gt;DBParameterGroupName&lt;/code&gt; is specified, the list will contain only the description of the specified DB parameter group.</p>
+<!-- @@@describeDBParameterGroups -->
+<!-- $$$describeDBParameters[overload1]$$$describeDBParametersconstDescribeDBParametersRequest& -->
+<h3 class="fn" id="describeDBParameters"><a name="describeDBParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbparametersresponse.html">DescribeDBParametersResponse</a></span> *RdsClient::<span class="name">describeDBParameters</span>(const <span class="type"><a href="qtaws-rds-describedbparametersrequest.html">DescribeDBParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbparametersresponse.html">DescribeDBParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the detailed parameter list for a particular DB parameter</p>
+<!-- @@@describeDBParameters -->
+<!-- $$$describeDBSecurityGroups[overload1]$$$describeDBSecurityGroupsconstDescribeDBSecurityGroupsRequest& -->
+<h3 class="fn" id="describeDBSecurityGroups"><a name="describeDBSecurityGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbsecuritygroupsresponse.html">DescribeDBSecurityGroupsResponse</a></span> *RdsClient::<span class="name">describeDBSecurityGroups</span>(const <span class="type"><a href="qtaws-rds-describedbsecuritygroupsrequest.html">DescribeDBSecurityGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbsecuritygroupsresponse.html">DescribeDBSecurityGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;DBSecurityGroup&lt;/code&gt; descriptions. If a &lt;code&gt;DBSecurityGroupName&lt;/code&gt; is specified, the list will contain only the descriptions of the specified DB security group.</p>
+<!-- @@@describeDBSecurityGroups -->
+<!-- $$$describeDBSnapshotAttributes[overload1]$$$describeDBSnapshotAttributesconstDescribeDBSnapshotAttributesRequest& -->
+<h3 class="fn" id="describeDBSnapshotAttributes"><a name="describeDBSnapshotAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbsnapshotattributesresponse.html">DescribeDBSnapshotAttributesResponse</a></span> *RdsClient::<span class="name">describeDBSnapshotAttributes</span>(const <span class="type"><a href="qtaws-rds-describedbsnapshotattributesrequest.html">DescribeDBSnapshotAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbsnapshotattributesresponse.html">DescribeDBSnapshotAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of DB snapshot attribute names and values for a manual DB</p>
+<p>snapshot&gt;</p>
+<p>When sharing snapshots with other AWS accounts, &lt;code&gt;DescribeDBSnapshotAttributes&lt;/code&gt; returns the &lt;code&gt;restore&lt;/code&gt; attribute and a list of IDs for the AWS accounts that are authorized to copy or restore the manual DB snapshot. If &lt;code&gt;all&lt;/code&gt; is included in the list of values for the &lt;code&gt;restore&lt;/code&gt; attribute, then the manual DB snapshot is public and can be copied or restored by all AWS</p>
+<p>accounts&gt;</p>
+<p>To add or remove access for an AWS account to copy or restore a manual DB snapshot, or to make the manual DB snapshot public or private, use the &lt;a&gt;ModifyDBSnapshotAttribute&lt;/a&gt; API</p>
+<!-- @@@describeDBSnapshotAttributes -->
+<!-- $$$describeDBSnapshots[overload1]$$$describeDBSnapshotsconstDescribeDBSnapshotsRequest& -->
+<h3 class="fn" id="describeDBSnapshots"><a name="describeDBSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbsnapshotsresponse.html">DescribeDBSnapshotsResponse</a></span> *RdsClient::<span class="name">describeDBSnapshots</span>(const <span class="type"><a href="qtaws-rds-describedbsnapshotsrequest.html">DescribeDBSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbsnapshotsresponse.html">DescribeDBSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about DB snapshots. This API action supports</p>
+<!-- @@@describeDBSnapshots -->
+<!-- $$$describeDBSubnetGroups[overload1]$$$describeDBSubnetGroupsconstDescribeDBSubnetGroupsRequest& -->
+<h3 class="fn" id="describeDBSubnetGroups"><a name="describeDBSubnetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describedbsubnetgroupsresponse.html">DescribeDBSubnetGroupsResponse</a></span> *RdsClient::<span class="name">describeDBSubnetGroups</span>(const <span class="type"><a href="qtaws-rds-describedbsubnetgroupsrequest.html">DescribeDBSubnetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describedbsubnetgroupsresponse.html">DescribeDBSubnetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of DBSubnetGroup descriptions. If a DBSubnetGroupName is specified, the list will contain only the descriptions of the specified</p>
+<p>DBSubnetGroup&gt;</p>
+<p>For an overview of CIDR ranges, go to the &lt;a href=&quot;http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing&quot;&gt;Wikipedia Tutorial&lt;/a&gt;.</p>
+<!-- @@@describeDBSubnetGroups -->
+<!-- $$$describeEngineDefaultClusterParameters[overload1]$$$describeEngineDefaultClusterParametersconstDescribeEngineDefaultClusterParametersRequest& -->
+<h3 class="fn" id="describeEngineDefaultClusterParameters"><a name="describeEngineDefaultClusterParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeenginedefaultclusterparametersresponse.html">DescribeEngineDefaultClusterParametersResponse</a></span> *RdsClient::<span class="name">describeEngineDefaultClusterParameters</span>(const <span class="type"><a href="qtaws-rds-describeenginedefaultclusterparametersrequest.html">DescribeEngineDefaultClusterParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeenginedefaultclusterparametersresponse.html">DescribeEngineDefaultClusterParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the default engine and system parameter information for the cluster database</p>
+<p>engine&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeEngineDefaultClusterParameters -->
+<!-- $$$describeEngineDefaultParameters[overload1]$$$describeEngineDefaultParametersconstDescribeEngineDefaultParametersRequest& -->
+<h3 class="fn" id="describeEngineDefaultParameters"><a name="describeEngineDefaultParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeenginedefaultparametersresponse.html">DescribeEngineDefaultParametersResponse</a></span> *RdsClient::<span class="name">describeEngineDefaultParameters</span>(const <span class="type"><a href="qtaws-rds-describeenginedefaultparametersrequest.html">DescribeEngineDefaultParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeenginedefaultparametersresponse.html">DescribeEngineDefaultParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the default engine and system parameter information for the specified database</p>
+<!-- @@@describeEngineDefaultParameters -->
+<!-- $$$describeEventCategories[overload1]$$$describeEventCategoriesconstDescribeEventCategoriesRequest& -->
+<h3 class="fn" id="describeEventCategories"><a name="describeEventCategories"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeeventcategoriesresponse.html">DescribeEventCategoriesResponse</a></span> *RdsClient::<span class="name">describeEventCategories</span>(const <span class="type"><a href="qtaws-rds-describeeventcategoriesrequest.html">DescribeEventCategoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeeventcategoriesresponse.html">DescribeEventCategoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Displays a list of categories for all event source types, or, if specified, for a specified source type. You can see a list of the event categories and source types in the &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html&quot;&gt; Events&lt;/a&gt; topic in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@describeEventCategories -->
+<!-- $$$describeEventSubscriptions[overload1]$$$describeEventSubscriptionsconstDescribeEventSubscriptionsRequest& -->
+<h3 class="fn" id="describeEventSubscriptions"><a name="describeEventSubscriptions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeeventsubscriptionsresponse.html">DescribeEventSubscriptionsResponse</a></span> *RdsClient::<span class="name">describeEventSubscriptions</span>(const <span class="type"><a href="qtaws-rds-describeeventsubscriptionsrequest.html">DescribeEventSubscriptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeeventsubscriptionsresponse.html">DescribeEventSubscriptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the subscription descriptions for a customer account. The description for a subscription includes SubscriptionName, SNSTopicARN, CustomerID, SourceType, SourceID, CreationTime, and</p>
+<p>Status&gt;</p>
+<p>If you specify a SubscriptionName, lists the description for that</p>
+<!-- @@@describeEventSubscriptions -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeeventsresponse.html">DescribeEventsResponse</a></span> *RdsClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-rds-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days. Events specific to a particular DB instance, DB security group, database snapshot, or DB parameter group can be obtained by providing the name as a parameter. By default, the past hour of events are</p>
+<!-- @@@describeEvents -->
+<!-- $$$describeOptionGroupOptions[overload1]$$$describeOptionGroupOptionsconstDescribeOptionGroupOptionsRequest& -->
+<h3 class="fn" id="describeOptionGroupOptions"><a name="describeOptionGroupOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeoptiongroupoptionsresponse.html">DescribeOptionGroupOptionsResponse</a></span> *RdsClient::<span class="name">describeOptionGroupOptions</span>(const <span class="type"><a href="qtaws-rds-describeoptiongroupoptionsrequest.html">DescribeOptionGroupOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeoptiongroupoptionsresponse.html">DescribeOptionGroupOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes all available</p>
+<!-- @@@describeOptionGroupOptions -->
+<!-- $$$describeOptionGroups[overload1]$$$describeOptionGroupsconstDescribeOptionGroupsRequest& -->
+<h3 class="fn" id="describeOptionGroups"><a name="describeOptionGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeoptiongroupsresponse.html">DescribeOptionGroupsResponse</a></span> *RdsClient::<span class="name">describeOptionGroups</span>(const <span class="type"><a href="qtaws-rds-describeoptiongroupsrequest.html">DescribeOptionGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeoptiongroupsresponse.html">DescribeOptionGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available option</p>
+<!-- @@@describeOptionGroups -->
+<!-- $$$describeOrderableDBInstanceOptions[overload1]$$$describeOrderableDBInstanceOptionsconstDescribeOrderableDBInstanceOptionsRequest& -->
+<h3 class="fn" id="describeOrderableDBInstanceOptions"><a name="describeOrderableDBInstanceOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describeorderabledbinstanceoptionsresponse.html">DescribeOrderableDBInstanceOptionsResponse</a></span> *RdsClient::<span class="name">describeOrderableDBInstanceOptions</span>(const <span class="type"><a href="qtaws-rds-describeorderabledbinstanceoptionsrequest.html">DescribeOrderableDBInstanceOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describeorderabledbinstanceoptionsresponse.html">DescribeOrderableDBInstanceOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of orderable DB instance options for the specified</p>
+<!-- @@@describeOrderableDBInstanceOptions -->
+<!-- $$$describePendingMaintenanceActions[overload1]$$$describePendingMaintenanceActionsconstDescribePendingMaintenanceActionsRequest& -->
+<h3 class="fn" id="describePendingMaintenanceActions"><a name="describePendingMaintenanceActions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describependingmaintenanceactionsresponse.html">DescribePendingMaintenanceActionsResponse</a></span> *RdsClient::<span class="name">describePendingMaintenanceActions</span>(const <span class="type"><a href="qtaws-rds-describependingmaintenanceactionsrequest.html">DescribePendingMaintenanceActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describependingmaintenanceactionsresponse.html">DescribePendingMaintenanceActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of resources (for example, DB instances) that have at least one pending maintenance</p>
+<!-- @@@describePendingMaintenanceActions -->
+<!-- $$$describeReservedDBInstances[overload1]$$$describeReservedDBInstancesconstDescribeReservedDBInstancesRequest& -->
+<h3 class="fn" id="describeReservedDBInstances"><a name="describeReservedDBInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describereserveddbinstancesresponse.html">DescribeReservedDBInstancesResponse</a></span> *RdsClient::<span class="name">describeReservedDBInstances</span>(const <span class="type"><a href="qtaws-rds-describereserveddbinstancesrequest.html">DescribeReservedDBInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describereserveddbinstancesresponse.html">DescribeReservedDBInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about reserved DB instances for this account, or about a specified reserved DB</p>
+<!-- @@@describeReservedDBInstances -->
+<!-- $$$describeReservedDBInstancesOfferings[overload1]$$$describeReservedDBInstancesOfferingsconstDescribeReservedDBInstancesOfferingsRequest& -->
+<h3 class="fn" id="describeReservedDBInstancesOfferings"><a name="describeReservedDBInstancesOfferings"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describereserveddbinstancesofferingsresponse.html">DescribeReservedDBInstancesOfferingsResponse</a></span> *RdsClient::<span class="name">describeReservedDBInstancesOfferings</span>(const <span class="type"><a href="qtaws-rds-describereserveddbinstancesofferingsrequest.html">DescribeReservedDBInstancesOfferingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describereserveddbinstancesofferingsresponse.html">DescribeReservedDBInstancesOfferingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists available reserved DB instance</p>
+<!-- @@@describeReservedDBInstancesOfferings -->
+<!-- $$$describeSourceRegions[overload1]$$$describeSourceRegionsconstDescribeSourceRegionsRequest& -->
+<h3 class="fn" id="describeSourceRegions"><a name="describeSourceRegions"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describesourceregionsresponse.html">DescribeSourceRegionsResponse</a></span> *RdsClient::<span class="name">describeSourceRegions</span>(const <span class="type"><a href="qtaws-rds-describesourceregionsrequest.html">DescribeSourceRegionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describesourceregionsresponse.html">DescribeSourceRegionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot from. This API action supports</p>
+<!-- @@@describeSourceRegions -->
+<!-- $$$describeValidDBInstanceModifications[overload1]$$$describeValidDBInstanceModificationsconstDescribeValidDBInstanceModificationsRequest& -->
+<h3 class="fn" id="describeValidDBInstanceModifications"><a name="describeValidDBInstanceModifications"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-describevaliddbinstancemodificationsresponse.html">DescribeValidDBInstanceModificationsResponse</a></span> *RdsClient::<span class="name">describeValidDBInstanceModifications</span>(const <span class="type"><a href="qtaws-rds-describevaliddbinstancemodificationsrequest.html">DescribeValidDBInstanceModificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-describevaliddbinstancemodificationsresponse.html">DescribeValidDBInstanceModificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You can call &lt;a&gt;DescribeValidDBInstanceModifications&lt;/a&gt; to learn what modifications you can make to your DB instance. You can use this information when you call &lt;a&gt;ModifyDBInstance&lt;/a&gt;.</p>
+<!-- @@@describeValidDBInstanceModifications -->
+<!-- $$$downloadDBLogFilePortion[overload1]$$$downloadDBLogFilePortionconstDownloadDBLogFilePortionRequest& -->
+<h3 class="fn" id="downloadDBLogFilePortion"><a name="downloadDBLogFilePortion"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-downloaddblogfileportionresponse.html">DownloadDBLogFilePortionResponse</a></span> *RdsClient::<span class="name">downloadDBLogFilePortion</span>(const <span class="type"><a href="qtaws-rds-downloaddblogfileportionrequest.html">DownloadDBLogFilePortionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-downloaddblogfileportionresponse.html">DownloadDBLogFilePortionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Downloads all or a portion of the specified log file, up to 1 MB in</p>
+<!-- @@@downloadDBLogFilePortion -->
+<!-- $$$failoverDBCluster[overload1]$$$failoverDBClusterconstFailoverDBClusterRequest& -->
+<h3 class="fn" id="failoverDBCluster"><a name="failoverDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-failoverdbclusterresponse.html">FailoverDBClusterResponse</a></span> *RdsClient::<span class="name">failoverDBCluster</span>(const <span class="type"><a href="qtaws-rds-failoverdbclusterrequest.html">FailoverDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-failoverdbclusterresponse.html">FailoverDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Forces a failover for a DB</p>
+<p>cluster&gt;</p>
+<p>A failover for a DB cluster promotes one of the Aurora Replicas (read-only instances) in the DB cluster to be the primary instance (the cluster</p>
+<p>writer)&gt;</p>
+<p>Amazon Aurora will automatically fail over to an Aurora Replica, if one exists, when the primary instance fails. You can force a failover when you want to simulate a failure of a primary instance for testing. Because each instance in a DB cluster has its own endpoint address, you will need to clean up and re-establish any existing connections that use those endpoint addresses when the failover is</p>
+<p>complete&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@failoverDBCluster -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *RdsClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-rds-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all tags on an Amazon RDS</p>
+<p>resource&gt;</p>
+<p>For an overview on tagging an Amazon RDS resource, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html&quot;&gt;Tagging Amazon RDS</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$modifyDBCluster[overload1]$$$modifyDBClusterconstModifyDBClusterRequest& -->
+<h3 class="fn" id="modifyDBCluster"><a name="modifyDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbclusterresponse.html">ModifyDBClusterResponse</a></span> *RdsClient::<span class="name">modifyDBCluster</span>(const <span class="type"><a href="qtaws-rds-modifydbclusterrequest.html">ModifyDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbclusterresponse.html">ModifyDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modify a setting for an Amazon Aurora DB cluster. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@modifyDBCluster -->
+<!-- $$$modifyDBClusterParameterGroup[overload1]$$$modifyDBClusterParameterGroupconstModifyDBClusterParameterGroupRequest& -->
+<h3 class="fn" id="modifyDBClusterParameterGroup"><a name="modifyDBClusterParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbclusterparametergroupresponse.html">ModifyDBClusterParameterGroupResponse</a></span> *RdsClient::<span class="name">modifyDBClusterParameterGroup</span>(const <span class="type"><a href="qtaws-rds-modifydbclusterparametergrouprequest.html">ModifyDBClusterParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbclusterparametergroupresponse.html">ModifyDBClusterParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a DB cluster parameter group. To modify more than one parameter, submit a list of the following: &lt;code&gt;ParameterName&lt;/code&gt;, &lt;code&gt;ParameterValue&lt;/code&gt;, and &lt;code&gt;ApplyMethod&lt;/code&gt;. A maximum of 20 parameters can be modified in a single request.</p>
+<p>&lt;/p</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to the DB cluster associated with the parameter group before the change can take</p>
+<p>effect&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster that uses that DB cluster parameter group as the default parameter group. This allows Amazon RDS to fully complete the create action before the parameter group is used as the default for a new DB cluster. This is especially important for parameters that are critical when creating the default database for a DB cluster, such as the character set for the default database defined by the &lt;code&gt;character_set_database&lt;/code&gt; parameter. You can use the &lt;i&gt;Parameter Groups&lt;/i&gt; option of the &lt;a href=&quot;https://console.aws.amazon.com/rds/&quot;&gt;Amazon RDS console&lt;/a&gt; or the &lt;a&gt;DescribeDBClusterParameters&lt;/a&gt; command to verify that your DB cluster parameter group has been created or</p>
+<!-- @@@modifyDBClusterParameterGroup -->
+<!-- $$$modifyDBClusterSnapshotAttribute[overload1]$$$modifyDBClusterSnapshotAttributeconstModifyDBClusterSnapshotAttributeRequest& -->
+<h3 class="fn" id="modifyDBClusterSnapshotAttribute"><a name="modifyDBClusterSnapshotAttribute"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbclustersnapshotattributeresponse.html">ModifyDBClusterSnapshotAttributeResponse</a></span> *RdsClient::<span class="name">modifyDBClusterSnapshotAttribute</span>(const <span class="type"><a href="qtaws-rds-modifydbclustersnapshotattributerequest.html">ModifyDBClusterSnapshotAttributeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbclustersnapshotattributeresponse.html">ModifyDBClusterSnapshotAttributeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster</p>
+<p>snapshot&gt;</p>
+<p>To share a manual DB cluster snapshot with other AWS accounts, specify &lt;code&gt;restore&lt;/code&gt; as the &lt;code&gt;AttributeName&lt;/code&gt; and use the &lt;code&gt;ValuesToAdd&lt;/code&gt; parameter to add a list of IDs of the AWS accounts that are authorized to restore the manual DB cluster snapshot. Use the value &lt;code&gt;all&lt;/code&gt; to make the manual DB cluster snapshot public, which means that it can be copied or restored by all AWS accounts. Do not add the &lt;code&gt;all&lt;/code&gt; value for any manual DB cluster snapshots that contain private information that you don't want available to all AWS accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized AWS account IDs for the &lt;code&gt;ValuesToAdd&lt;/code&gt; parameter. You can't use &lt;code&gt;all&lt;/code&gt; as a value for that parameter in this</p>
+<p>case&gt;</p>
+<p>To view which AWS accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster snapshot public or private, use the &lt;a&gt;DescribeDBClusterSnapshotAttributes&lt;/a&gt; API</p>
+<!-- @@@modifyDBClusterSnapshotAttribute -->
+<!-- $$$modifyDBInstance[overload1]$$$modifyDBInstanceconstModifyDBInstanceRequest& -->
+<h3 class="fn" id="modifyDBInstance"><a name="modifyDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbinstanceresponse.html">ModifyDBInstanceResponse</a></span> *RdsClient::<span class="name">modifyDBInstance</span>(const <span class="type"><a href="qtaws-rds-modifydbinstancerequest.html">ModifyDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbinstanceresponse.html">ModifyDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these parameters and the new values in the request. To learn what modifications you can make to your DB instance, call &lt;a&gt;DescribeValidDBInstanceModifications&lt;/a&gt; before you call &lt;a&gt;ModifyDBInstance&lt;/a&gt;.</p>
+<!-- @@@modifyDBInstance -->
+<!-- $$$modifyDBParameterGroup[overload1]$$$modifyDBParameterGroupconstModifyDBParameterGroupRequest& -->
+<h3 class="fn" id="modifyDBParameterGroup"><a name="modifyDBParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbparametergroupresponse.html">ModifyDBParameterGroupResponse</a></span> *RdsClient::<span class="name">modifyDBParameterGroup</span>(const <span class="type"><a href="qtaws-rds-modifydbparametergrouprequest.html">ModifyDBParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbparametergroupresponse.html">ModifyDBParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a DB parameter group. To modify more than one parameter, submit a list of the following: &lt;code&gt;ParameterName&lt;/code&gt;, &lt;code&gt;ParameterValue&lt;/code&gt;, and &lt;code&gt;ApplyMethod&lt;/code&gt;. A maximum of 20 parameters can be modified in a single request.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to the DB instance associated with the parameter group before the change can take</p>
+<p>effect&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>After you modify a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that uses that DB parameter group as the default parameter group. This allows Amazon RDS to fully complete the modify action before the parameter group is used as the default for a new DB instance. This is especially important for parameters that are critical when creating the default database for a DB instance, such as the character set for the default database defined by the &lt;code&gt;character_set_database&lt;/code&gt; parameter. You can use the &lt;i&gt;Parameter Groups&lt;/i&gt; option of the &lt;a href=&quot;https://console.aws.amazon.com/rds/&quot;&gt;Amazon RDS console&lt;/a&gt; or the &lt;i&gt;DescribeDBParameters&lt;/i&gt; command to verify that your DB parameter group has been created or</p>
+<!-- @@@modifyDBParameterGroup -->
+<!-- $$$modifyDBSnapshot[overload1]$$$modifyDBSnapshotconstModifyDBSnapshotRequest& -->
+<h3 class="fn" id="modifyDBSnapshot"><a name="modifyDBSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbsnapshotresponse.html">ModifyDBSnapshotResponse</a></span> *RdsClient::<span class="name">modifyDBSnapshot</span>(const <span class="type"><a href="qtaws-rds-modifydbsnapshotrequest.html">ModifyDBSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbsnapshotresponse.html">ModifyDBSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version.</p>
+<p>&lt;/p</p>
+<p>Amazon RDS supports upgrading DB snapshots for MySQL and Oracle.</p>
+<!-- @@@modifyDBSnapshot -->
+<!-- $$$modifyDBSnapshotAttribute[overload1]$$$modifyDBSnapshotAttributeconstModifyDBSnapshotAttributeRequest& -->
+<h3 class="fn" id="modifyDBSnapshotAttribute"><a name="modifyDBSnapshotAttribute"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbsnapshotattributeresponse.html">ModifyDBSnapshotAttributeResponse</a></span> *RdsClient::<span class="name">modifyDBSnapshotAttribute</span>(const <span class="type"><a href="qtaws-rds-modifydbsnapshotattributerequest.html">ModifyDBSnapshotAttributeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbsnapshotattributeresponse.html">ModifyDBSnapshotAttributeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an attribute and values to, or removes an attribute and values from, a manual DB</p>
+<p>snapshot&gt;</p>
+<p>To share a manual DB snapshot with other AWS accounts, specify &lt;code&gt;restore&lt;/code&gt; as the &lt;code&gt;AttributeName&lt;/code&gt; and use the &lt;code&gt;ValuesToAdd&lt;/code&gt; parameter to add a list of IDs of the AWS accounts that are authorized to restore the manual DB snapshot. Uses the value &lt;code&gt;all&lt;/code&gt; to make the manual DB snapshot public, which means it can be copied or restored by all AWS accounts. Do not add the &lt;code&gt;all&lt;/code&gt; value for any manual DB snapshots that contain private information that you don't want available to all AWS accounts. If the manual DB snapshot is encrypted, it can be shared, but only by specifying a list of authorized AWS account IDs for the &lt;code&gt;ValuesToAdd&lt;/code&gt; parameter. You can't use &lt;code&gt;all&lt;/code&gt; as a value for that parameter in this</p>
+<p>case&gt;</p>
+<p>To view which AWS accounts have access to copy or restore a manual DB snapshot, or whether a manual DB snapshot public or private, use the &lt;a&gt;DescribeDBSnapshotAttributes&lt;/a&gt; API</p>
+<!-- @@@modifyDBSnapshotAttribute -->
+<!-- $$$modifyDBSubnetGroup[overload1]$$$modifyDBSubnetGroupconstModifyDBSubnetGroupRequest& -->
+<h3 class="fn" id="modifyDBSubnetGroup"><a name="modifyDBSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifydbsubnetgroupresponse.html">ModifyDBSubnetGroupResponse</a></span> *RdsClient::<span class="name">modifyDBSubnetGroup</span>(const <span class="type"><a href="qtaws-rds-modifydbsubnetgrouprequest.html">ModifyDBSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifydbsubnetgroupresponse.html">ModifyDBSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS</p>
+<!-- @@@modifyDBSubnetGroup -->
+<!-- $$$modifyEventSubscription[overload1]$$$modifyEventSubscriptionconstModifyEventSubscriptionRequest& -->
+<h3 class="fn" id="modifyEventSubscription"><a name="modifyEventSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifyeventsubscriptionresponse.html">ModifyEventSubscriptionResponse</a></span> *RdsClient::<span class="name">modifyEventSubscription</span>(const <span class="type"><a href="qtaws-rds-modifyeventsubscriptionrequest.html">ModifyEventSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifyeventsubscriptionresponse.html">ModifyEventSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing RDS event notification subscription. Note that you can't modify the source identifiers using this call; to change source identifiers for a subscription, use the &lt;a&gt;AddSourceIdentifierToSubscription&lt;/a&gt; and &lt;a&gt;RemoveSourceIdentifierFromSubscription&lt;/a&gt;</p>
+<p>calls&gt;</p>
+<p>You can see a list of the event categories for a given SourceType in the &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html&quot;&gt;Events&lt;/a&gt; topic in the Amazon RDS User Guide or by using the &lt;b&gt;DescribeEventCategories&lt;/b&gt;</p>
+<!-- @@@modifyEventSubscription -->
+<!-- $$$modifyOptionGroup[overload1]$$$modifyOptionGroupconstModifyOptionGroupRequest& -->
+<h3 class="fn" id="modifyOptionGroup"><a name="modifyOptionGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-modifyoptiongroupresponse.html">ModifyOptionGroupResponse</a></span> *RdsClient::<span class="name">modifyOptionGroup</span>(const <span class="type"><a href="qtaws-rds-modifyoptiongrouprequest.html">ModifyOptionGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-modifyoptiongroupresponse.html">ModifyOptionGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing option</p>
+<!-- @@@modifyOptionGroup -->
+<!-- $$$promoteReadReplica[overload1]$$$promoteReadReplicaconstPromoteReadReplicaRequest& -->
+<h3 class="fn" id="promoteReadReplica"><a name="promoteReadReplica"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-promotereadreplicaresponse.html">PromoteReadReplicaResponse</a></span> *RdsClient::<span class="name">promoteReadReplica</span>(const <span class="type"><a href="qtaws-rds-promotereadreplicarequest.html">PromoteReadReplicaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-promotereadreplicaresponse.html">PromoteReadReplicaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Promotes a Read Replica DB instance to a standalone DB</p>
+<p>instance&gt; &lt;note&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Backup duration is a function of the amount of changes to the database since the previous backup. If you plan to promote a Read Replica to a standalone instance, we recommend that you enable backups and complete at least one backup prior to promotion. In addition, a Read Replica cannot be promoted to a standalone instance when it is in the &lt;code&gt;backing-up&lt;/code&gt; status. If you have enabled backups on your Read Replica, configure the automated backup window so that daily backups do not interfere with Read Replica</p>
+<p>promotion&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>This command doesn't apply to Aurora MySQL and Aurora</p>
+<!-- @@@promoteReadReplica -->
+<!-- $$$promoteReadReplicaDBCluster[overload1]$$$promoteReadReplicaDBClusterconstPromoteReadReplicaDBClusterRequest& -->
+<h3 class="fn" id="promoteReadReplicaDBCluster"><a name="promoteReadReplicaDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-promotereadreplicadbclusterresponse.html">PromoteReadReplicaDBClusterResponse</a></span> *RdsClient::<span class="name">promoteReadReplicaDBCluster</span>(const <span class="type"><a href="qtaws-rds-promotereadreplicadbclusterrequest.html">PromoteReadReplicaDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-promotereadreplicadbclusterresponse.html">PromoteReadReplicaDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Promotes a Read Replica DB cluster to a standalone DB</p>
+<!-- @@@promoteReadReplicaDBCluster -->
+<!-- $$$purchaseReservedDBInstancesOffering[overload1]$$$purchaseReservedDBInstancesOfferingconstPurchaseReservedDBInstancesOfferingRequest& -->
+<h3 class="fn" id="purchaseReservedDBInstancesOffering"><a name="purchaseReservedDBInstancesOffering"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-purchasereserveddbinstancesofferingresponse.html">PurchaseReservedDBInstancesOfferingResponse</a></span> *RdsClient::<span class="name">purchaseReservedDBInstancesOffering</span>(const <span class="type"><a href="qtaws-rds-purchasereserveddbinstancesofferingrequest.html">PurchaseReservedDBInstancesOfferingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-purchasereserveddbinstancesofferingresponse.html">PurchaseReservedDBInstancesOfferingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Purchases a reserved DB instance</p>
+<!-- @@@purchaseReservedDBInstancesOffering -->
+<!-- $$$rebootDBInstance[overload1]$$$rebootDBInstanceconstRebootDBInstanceRequest& -->
+<h3 class="fn" id="rebootDBInstance"><a name="rebootDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-rebootdbinstanceresponse.html">RebootDBInstanceResponse</a></span> *RdsClient::<span class="name">rebootDBInstance</span>(const <span class="type"><a href="qtaws-rds-rebootdbinstancerequest.html">RebootDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-rebootdbinstanceresponse.html">RebootDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You might need to reboot your DB instance, usually for maintenance reasons. For example, if you make certain modifications, or if you change the DB parameter group associated with the DB instance, you must reboot the instance for the changes to take effect.</p>
+<p>&lt;/p</p>
+<p>Rebooting a DB instance restarts the database engine service. Rebooting a DB instance results in a momentary outage, during which the DB instance status is set to rebooting.</p>
+<p>&lt;/p</p>
+<p>For more information about rebooting, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html&quot;&gt;Rebooting a DB Instance&lt;/a&gt;.</p>
+<!-- @@@rebootDBInstance -->
+<!-- $$$removeRoleFromDBCluster[overload1]$$$removeRoleFromDBClusterconstRemoveRoleFromDBClusterRequest& -->
+<h3 class="fn" id="removeRoleFromDBCluster"><a name="removeRoleFromDBCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-removerolefromdbclusterresponse.html">RemoveRoleFromDBClusterResponse</a></span> *RdsClient::<span class="name">removeRoleFromDBCluster</span>(const <span class="type"><a href="qtaws-rds-removerolefromdbclusterrequest.html">RemoveRoleFromDBClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-removerolefromdbclusterresponse.html">RemoveRoleFromDBClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html&quot;&gt;Authorizing Amazon Aurora to Access Other AWS Services On Your</p>
+<!-- @@@removeRoleFromDBCluster -->
+<!-- $$$removeSourceIdentifierFromSubscription[overload1]$$$removeSourceIdentifierFromSubscriptionconstRemoveSourceIdentifierFromSubscriptionRequest& -->
+<h3 class="fn" id="removeSourceIdentifierFromSubscription"><a name="removeSourceIdentifierFromSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-removesourceidentifierfromsubscriptionresponse.html">RemoveSourceIdentifierFromSubscriptionResponse</a></span> *RdsClient::<span class="name">removeSourceIdentifierFromSubscription</span>(const <span class="type"><a href="qtaws-rds-removesourceidentifierfromsubscriptionrequest.html">RemoveSourceIdentifierFromSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-removesourceidentifierfromsubscriptionresponse.html">RemoveSourceIdentifierFromSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a source identifier from an existing RDS event notification</p>
+<!-- @@@removeSourceIdentifierFromSubscription -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *RdsClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-rds-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes metadata tags from an Amazon RDS</p>
+<p>resource&gt;</p>
+<p>For an overview on tagging an Amazon RDS resource, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html&quot;&gt;Tagging Amazon RDS</p>
+<!-- @@@removeTagsFromResource -->
+<!-- $$$resetDBClusterParameterGroup[overload1]$$$resetDBClusterParameterGroupconstResetDBClusterParameterGroupRequest& -->
+<h3 class="fn" id="resetDBClusterParameterGroup"><a name="resetDBClusterParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-resetdbclusterparametergroupresponse.html">ResetDBClusterParameterGroupResponse</a></span> *RdsClient::<span class="name">resetDBClusterParameterGroup</span>(const <span class="type"><a href="qtaws-rds-resetdbclusterparametergrouprequest.html">ResetDBClusterParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-resetdbclusterparametergroupresponse.html">ResetDBClusterParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a DB cluster parameter group to the default value. To reset specific parameters submit a list of the following: &lt;code&gt;ParameterName&lt;/code&gt; and &lt;code&gt;ApplyMethod&lt;/code&gt;. To reset the entire DB cluster parameter group, specify the &lt;code&gt;DBClusterParameterGroupName&lt;/code&gt; and &lt;code&gt;ResetAllParameters&lt;/code&gt; parameters.</p>
+<p>&lt;/p</p>
+<p>When resetting the entire group, dynamic parameters are updated immediately and static parameters are set to &lt;code&gt;pending-reboot&lt;/code&gt; to take effect on the next DB instance restart or &lt;a&gt;RebootDBInstance&lt;/a&gt; request. You must call &lt;a&gt;RebootDBInstance&lt;/a&gt; for every DB instance in your DB cluster that you want the updated static parameter to apply</p>
+<p>to&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@resetDBClusterParameterGroup -->
+<!-- $$$resetDBParameterGroup[overload1]$$$resetDBParameterGroupconstResetDBParameterGroupRequest& -->
+<h3 class="fn" id="resetDBParameterGroup"><a name="resetDBParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-resetdbparametergroupresponse.html">ResetDBParameterGroupResponse</a></span> *RdsClient::<span class="name">resetDBParameterGroup</span>(const <span class="type"><a href="qtaws-rds-resetdbparametergrouprequest.html">ResetDBParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-resetdbparametergroupresponse.html">ResetDBParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a DB parameter group to the engine/system default value. To reset specific parameters, provide a list of the following: &lt;code&gt;ParameterName&lt;/code&gt; and &lt;code&gt;ApplyMethod&lt;/code&gt;. To reset the entire DB parameter group, specify the &lt;code&gt;DBParameterGroup&lt;/code&gt; name and &lt;code&gt;ResetAllParameters&lt;/code&gt; parameters. When resetting the entire group, dynamic parameters are updated immediately and static parameters are set to &lt;code&gt;pending-reboot&lt;/code&gt; to take effect on the next DB instance restart or &lt;code&gt;RebootDBInstance&lt;/code&gt; request.</p>
+<!-- @@@resetDBParameterGroup -->
+<!-- $$$restoreDBClusterFromS3[overload1]$$$restoreDBClusterFromS3constRestoreDBClusterFromS3Request& -->
+<h3 class="fn" id="restoreDBClusterFromS3"><a name="restoreDBClusterFromS3"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbclusterfroms3response.html">RestoreDBClusterFromS3Response</a></span> *RdsClient::<span class="name">restoreDBClusterFromS3</span>(const <span class="type"><a href="qtaws-rds-restoredbclusterfroms3request.html">RestoreDBClusterFromS3Request</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbclusterfroms3response.html">RestoreDBClusterFromS3Response</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket. Amazon RDS must be authorized to access the Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Migrate.MySQL.html#Aurora.Migrate.MySQL.S3&quot;&gt;Migrating Data from MySQL by Using an Amazon S3</p>
+<!-- @@@restoreDBClusterFromS3 -->
+<!-- $$$restoreDBClusterFromSnapshot[overload1]$$$restoreDBClusterFromSnapshotconstRestoreDBClusterFromSnapshotRequest& -->
+<h3 class="fn" id="restoreDBClusterFromSnapshot"><a name="restoreDBClusterFromSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbclusterfromsnapshotresponse.html">RestoreDBClusterFromSnapshotResponse</a></span> *RdsClient::<span class="name">restoreDBClusterFromSnapshot</span>(const <span class="type"><a href="qtaws-rds-restoredbclusterfromsnapshotrequest.html">RestoreDBClusterFromSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbclusterfromsnapshotresponse.html">RestoreDBClusterFromSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB cluster from a DB snapshot or DB cluster</p>
+<p>snapshot&gt;</p>
+<p>If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration and default security</p>
+<p>group&gt;</p>
+<p>If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with the same configuration as the original source DB cluster, except that the new DB cluster is created with the default security</p>
+<p>group&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@restoreDBClusterFromSnapshot -->
+<!-- $$$restoreDBClusterToPointInTime[overload1]$$$restoreDBClusterToPointInTimeconstRestoreDBClusterToPointInTimeRequest& -->
+<h3 class="fn" id="restoreDBClusterToPointInTime"><a name="restoreDBClusterToPointInTime"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbclustertopointintimeresponse.html">RestoreDBClusterToPointInTimeResponse</a></span> *RdsClient::<span class="name">restoreDBClusterToPointInTime</span>(const <span class="type"><a href="qtaws-rds-restoredbclustertopointintimerequest.html">RestoreDBClusterToPointInTimeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbclustertopointintimeresponse.html">RestoreDBClusterToPointInTimeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores a DB cluster to an arbitrary point in time. Users can restore to any point in time before &lt;code&gt;LatestRestorableTime&lt;/code&gt; for up to &lt;code&gt;BackupRetentionPeriod&lt;/code&gt; days. The target DB cluster is created from the source DB cluster with the same configuration as the original DB cluster, except that the new DB cluster is created with the default DB security group.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This action only restores the DB cluster, not the DB instances for that DB cluster. You must invoke the &lt;a&gt;CreateDBInstance&lt;/a&gt; action to create DB instances for the restored DB cluster, specifying the identifier of the restored DB cluster in &lt;code&gt;DBClusterIdentifier&lt;/code&gt;. You can create DB instances only after the &lt;code&gt;RestoreDBClusterToPointInTime&lt;/code&gt; action has completed and the DB cluster is</p>
+<p>available&gt; &lt;/note&gt;</p>
+<p>For more information on Amazon Aurora, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html&quot;&gt;Aurora on Amazon RDS&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt;</p>
+<!-- @@@restoreDBClusterToPointInTime -->
+<!-- $$$restoreDBInstanceFromS3[overload1]$$$restoreDBInstanceFromS3constRestoreDBInstanceFromS3Request& -->
+<h3 class="fn" id="restoreDBInstanceFromS3"><a name="restoreDBInstanceFromS3"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbinstancefroms3response.html">RestoreDBInstanceFromS3Response</a></span> *RdsClient::<span class="name">restoreDBInstanceFromS3</span>(const <span class="type"><a href="qtaws-rds-restoredbinstancefroms3request.html">RestoreDBInstanceFromS3Request</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbinstancefroms3response.html">RestoreDBInstanceFromS3Response</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Amazon Relational Database Service (Amazon RDS) supports importing MySQL databases by using backup files. You can create a backup of your on-premises database, store it on Amazon Simple Storage Service (Amazon S3), and then restore the backup file onto a new Amazon RDS DB instance running MySQL. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html&quot;&gt;Importing Data into an Amazon RDS MySQL DB Instance&lt;/a&gt;.</p>
+<!-- @@@restoreDBInstanceFromS3 -->
+<!-- $$$restoreDBInstanceFromDBSnapshot[overload1]$$$restoreDBInstanceFromDBSnapshotconstRestoreDBInstanceFromDBSnapshotRequest& -->
+<h3 class="fn" id="restoreDBInstanceFromDBSnapshot"><a name="restoreDBInstanceFromDBSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbinstancefromdbsnapshotresponse.html">RestoreDBInstanceFromDBSnapshotResponse</a></span> *RdsClient::<span class="name">restoreDBInstanceFromDBSnapshot</span>(const <span class="type"><a href="qtaws-rds-restoredbinstancefromdbsnapshotrequest.html">RestoreDBInstanceFromDBSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbinstancefromdbsnapshotresponse.html">RestoreDBInstanceFromDBSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new DB instance from a DB snapshot. The target database is created from the source database restore point with the most of original configuration with the default security group and the default DB parameter group. By default, the new DB instance is created as a single-AZ deployment except when the instance is a SQL Server instance that has an option group that is associated with mirroring; in this case, the instance becomes a mirrored AZ deployment and not a single-AZ</p>
+<p>deployment&gt;</p>
+<p>If your intent is to replace your original DB instance with the new, restored DB instance, then rename your original DB instance before you call the RestoreDBInstanceFromDBSnapshot action. RDS doesn't allow two DB instances with the same name. Once you have renamed your original DB instance with a different identifier, then you can pass the original name of the DB instance as the DBInstanceIdentifier in the call to the RestoreDBInstanceFromDBSnapshot action. The result is that you will replace the original DB instance with the DB instance created from the</p>
+<p>snapshot&gt;</p>
+<p>If you are restoring from a shared manual DB snapshot, the &lt;code&gt;DBSnapshotIdentifier&lt;/code&gt; must be the ARN of the shared DB</p>
+<p>snapshot&gt; &lt;note&gt;</p>
+<p>This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora, use</p>
+<!-- @@@restoreDBInstanceFromDBSnapshot -->
+<!-- $$$restoreDBInstanceToPointInTime[overload1]$$$restoreDBInstanceToPointInTimeconstRestoreDBInstanceToPointInTimeRequest& -->
+<h3 class="fn" id="restoreDBInstanceToPointInTime"><a name="restoreDBInstanceToPointInTime"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-restoredbinstancetopointintimeresponse.html">RestoreDBInstanceToPointInTimeResponse</a></span> *RdsClient::<span class="name">restoreDBInstanceToPointInTime</span>(const <span class="type"><a href="qtaws-rds-restoredbinstancetopointintimerequest.html">RestoreDBInstanceToPointInTimeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-restoredbinstancetopointintimeresponse.html">RestoreDBInstanceToPointInTimeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores a DB instance to an arbitrary point in time. You can restore to any point in time before the time identified by the LatestRestorableTime property. You can restore to a point up to the number of days specified by the BackupRetentionPeriod</p>
+<p>property&gt;</p>
+<p>The target database is created with most of the original configuration, but in a system-selected availability zone, with the default security group, the default subnet group, and the default DB parameter group. By default, the new DB instance is created as a single-AZ deployment except when the instance is a SQL Server instance that has an option group that is associated with mirroring; in this case, the instance becomes a mirrored deployment and not a single-AZ</p>
+<p>deployment&gt; &lt;note&gt;</p>
+<p>This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora, use</p>
+<!-- @@@restoreDBInstanceToPointInTime -->
+<!-- $$$revokeDBSecurityGroupIngress[overload1]$$$revokeDBSecurityGroupIngressconstRevokeDBSecurityGroupIngressRequest& -->
+<h3 class="fn" id="revokeDBSecurityGroupIngress"><a name="revokeDBSecurityGroupIngress"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-revokedbsecuritygroupingressresponse.html">RevokeDBSecurityGroupIngressResponse</a></span> *RdsClient::<span class="name">revokeDBSecurityGroupIngress</span>(const <span class="type"><a href="qtaws-rds-revokedbsecuritygroupingressrequest.html">RevokeDBSecurityGroupIngressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-revokedbsecuritygroupingressresponse.html">RevokeDBSecurityGroupIngressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups. Required parameters for this API are one of CIDRIP, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either EC2SecurityGroupName or</p>
+<!-- @@@revokeDBSecurityGroupIngress -->
+<!-- $$$startDBInstance[overload1]$$$startDBInstanceconstStartDBInstanceRequest& -->
+<h3 class="fn" id="startDBInstance"><a name="startDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-startdbinstanceresponse.html">StartDBInstanceResponse</a></span> *RdsClient::<span class="name">startDBInstance</span>(const <span class="type"><a href="qtaws-rds-startdbinstancerequest.html">StartDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-startdbinstanceresponse.html">StartDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a DB instance that was stopped using the AWS console, the stop-db-instance AWS CLI command, or the StopDBInstance action. For more information, see Stopping and Starting a DB instance in the AWS RDS user guide.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This command doesn't apply to Aurora MySQL and Aurora</p>
+<!-- @@@startDBInstance -->
+<!-- $$$stopDBInstance[overload1]$$$stopDBInstanceconstStopDBInstanceRequest& -->
+<h3 class="fn" id="stopDBInstance"><a name="stopDBInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-rds-stopdbinstanceresponse.html">StopDBInstanceResponse</a></span> *RdsClient::<span class="name">stopDBInstance</span>(const <span class="type"><a href="qtaws-rds-stopdbinstancerequest.html">StopDBInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rds-rdsclient.html">RdsClient</a> service, and returns a pointer to an <a href="qtaws-rds-stopdbinstanceresponse.html">StopDBInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a DB instance. When you stop a DB instance, Amazon RDS retains the DB instance's metadata, including its endpoint, DB parameter group, and option group membership. Amazon RDS also retains the transaction logs so you can do a point-in-time restore if necessary. For more information, see Stopping and Starting a DB instance in the AWS RDS user guide.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This command doesn't apply to Aurora MySQL and Aurora</p>
+<!-- @@@stopDBInstance -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- rekognitionclient.cpp -->
+  <title>RekognitionClient Class | Rekognition</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsrekognition-index.html">Rekognition</a></li>
+<li><a href="qtawsrekognition-module.html">C++ Classes</a></li>
+<li>RekognitionClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">RekognitionClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-rekognition-rekognitionclient.html">QtAws::Rekognition::RekognitionClient</a>)<br/></span>
+<!-- $$$RekognitionClient-brief -->
+<p>The <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> class provides access to the Amazon Rekognition service. <a href="#details">More...</a></p>
+<!-- @@@RekognitionClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;RekognitionClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-rekognition-rekognitionclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#RekognitionClient">RekognitionClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#RekognitionClient-1">RekognitionClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CompareFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#compareFaces">compareFaces</a></b>(const CompareFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCollectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#createCollection">createCollection</a></b>(const CreateCollectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStreamProcessorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#createStreamProcessor">createStreamProcessor</a></b>(const CreateStreamProcessorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCollectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#deleteCollection">deleteCollection</a></b>(const DeleteCollectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#deleteFaces">deleteFaces</a></b>(const DeleteFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStreamProcessorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#deleteStreamProcessor">deleteStreamProcessor</a></b>(const DeleteStreamProcessorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStreamProcessorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#describeStreamProcessor">describeStreamProcessor</a></b>(const DescribeStreamProcessorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#detectFaces">detectFaces</a></b>(const DetectFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectLabelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#detectLabels">detectLabels</a></b>(const DetectLabelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectModerationLabelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#detectModerationLabels">detectModerationLabels</a></b>(const DetectModerationLabelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectTextResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#detectText">detectText</a></b>(const DetectTextRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCelebrityInfoResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getCelebrityInfo">getCelebrityInfo</a></b>(const GetCelebrityInfoRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCelebrityRecognitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getCelebrityRecognition">getCelebrityRecognition</a></b>(const GetCelebrityRecognitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetContentModerationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getContentModeration">getContentModeration</a></b>(const GetContentModerationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFaceDetectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getFaceDetection">getFaceDetection</a></b>(const GetFaceDetectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFaceSearchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getFaceSearch">getFaceSearch</a></b>(const GetFaceSearchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLabelDetectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getLabelDetection">getLabelDetection</a></b>(const GetLabelDetectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPersonTrackingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#getPersonTracking">getPersonTracking</a></b>(const GetPersonTrackingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IndexFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#indexFaces">indexFaces</a></b>(const IndexFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCollectionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#listCollections">listCollections</a></b>(const ListCollectionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#listFaces">listFaces</a></b>(const ListFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListStreamProcessorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#listStreamProcessors">listStreamProcessors</a></b>(const ListStreamProcessorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RecognizeCelebritiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#recognizeCelebrities">recognizeCelebrities</a></b>(const RecognizeCelebritiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchFacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#searchFaces">searchFaces</a></b>(const SearchFacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchFacesByImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#searchFacesByImage">searchFacesByImage</a></b>(const SearchFacesByImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartCelebrityRecognitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startCelebrityRecognition">startCelebrityRecognition</a></b>(const StartCelebrityRecognitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartContentModerationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startContentModeration">startContentModeration</a></b>(const StartContentModerationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartFaceDetectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startFaceDetection">startFaceDetection</a></b>(const StartFaceDetectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartFaceSearchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startFaceSearch">startFaceSearch</a></b>(const StartFaceSearchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartLabelDetectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startLabelDetection">startLabelDetection</a></b>(const StartLabelDetectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartPersonTrackingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startPersonTracking">startPersonTracking</a></b>(const StartPersonTrackingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartStreamProcessorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#startStreamProcessor">startStreamProcessor</a></b>(const StartStreamProcessorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopStreamProcessorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-rekognition-rekognitionclient.html#stopStreamProcessor">stopStreamProcessor</a></b>(const StopStreamProcessorRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$RekognitionClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> class provides access to the Amazon Rekognition service.</p>
+<p>This is the Amazon Rekognition API</p>
+</div>
+<!-- @@@RekognitionClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RekognitionClient[overload1]$$$RekognitionClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="RekognitionClient"><a name="RekognitionClient"></a>RekognitionClient::<span class="name">RekognitionClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@RekognitionClient -->
+<!-- $$$RekognitionClient$$$RekognitionClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="RekognitionClient-1"><a name="RekognitionClient-1"></a>RekognitionClient::<span class="name">RekognitionClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-rekognition-rekognitionclient.html#RekognitionClient">RekognitionClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@RekognitionClient -->
+<!-- $$$compareFaces[overload1]$$$compareFacesconstCompareFacesRequest& -->
+<h3 class="fn" id="compareFaces"><a name="compareFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-comparefacesresponse.html">CompareFacesResponse</a></span> *RekognitionClient::<span class="name">compareFaces</span>(const <span class="type"><a href="qtaws-rekognition-comparefacesrequest.html">CompareFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-comparefacesresponse.html">CompareFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Compares a face in the &lt;i&gt;source&lt;/i&gt; input image with each of the 100 largest faces detected in the &lt;i&gt;target&lt;/i&gt; input image.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If the source image contains multiple faces, the service detects the largest face and compares it with each face detected in the target image.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>You pass the input and target images either as base64-encoded image bytes or as a references to images in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p</p>
+<p>In response, the operation returns an array of face matches ordered by similarity score in descending order. For each face match, the response provides a bounding box of the face, facial landmarks, pose details (pitch, role, and yaw), quality (brightness and sharpness), and confidence value (indicating the level of confidence that the bounding box contains a face). The response also provides a similarity score, which indicates how closely the faces match.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>By default, only faces with a similarity score of greater than or equal to 80% are returned in the response. You can change this value by specifying the &lt;code&gt;SimilarityThreshold&lt;/code&gt;</p>
+<p>parameter&gt; &lt;/note&gt;</p>
+<p>&lt;code&gt;CompareFaces&lt;/code&gt; also returns an array of faces that don't match the source image. For each face, it returns a bounding box, confidence value, landmarks, pose details, and quality. The response also returns information about the face in the source image, including the bounding box of the face and confidence</p>
+<p>value&gt;</p>
+<p>If the image doesn't contain Exif metadata, &lt;code&gt;CompareFaces&lt;/code&gt; returns orientation information for the source and target images. Use these values to display the images with the correct image</p>
+<p>orientation&gt;</p>
+<p>If no faces are detected in the source or target images, &lt;code&gt;CompareFaces&lt;/code&gt; returns an &lt;code&gt;InvalidParameterException&lt;/code&gt; error.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This is a stateless API operation. That is, data returned by this operation doesn't</p>
+<p>persist&gt; &lt;/note&gt;</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;faces-compare-images&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:CompareFaces&lt;/code&gt;</p>
+<!-- @@@compareFaces -->
+<!-- $$$createCollection[overload1]$$$createCollectionconstCreateCollectionRequest& -->
+<h3 class="fn" id="createCollection"><a name="createCollection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-createcollectionresponse.html">CreateCollectionResponse</a></span> *RekognitionClient::<span class="name">createCollection</span>(const <span class="type"><a href="qtaws-rekognition-createcollectionrequest.html">CreateCollectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-createcollectionresponse.html">CreateCollectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a collection in an AWS Region. You can add faces to the collection using the operation.</p>
+<p>&lt;/p</p>
+<p>For example, you might create collections, one for each of your application users. A user can then index faces using the &lt;code&gt;IndexFaces&lt;/code&gt; operation and persist results in a specific collection. Then, a user can search the collection for faces in the user-specific container.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Collection names are</p>
+<p>case-sensitive&gt; &lt;/note&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:CreateCollection&lt;/code&gt;</p>
+<!-- @@@createCollection -->
+<!-- $$$createStreamProcessor[overload1]$$$createStreamProcessorconstCreateStreamProcessorRequest& -->
+<h3 class="fn" id="createStreamProcessor"><a name="createStreamProcessor"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-createstreamprocessorresponse.html">CreateStreamProcessorResponse</a></span> *RekognitionClient::<span class="name">createStreamProcessor</span>(const <span class="type"><a href="qtaws-rekognition-createstreamprocessorrequest.html">CreateStreamProcessorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-createstreamprocessorresponse.html">CreateStreamProcessorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an Amazon Rekognition stream processor that you can use to detect and recognize faces in a streaming</p>
+<p>video&gt;</p>
+<p>Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. Rekognition Video sends analysis results to Amazon Kinesis Data</p>
+<p>Streams&gt;</p>
+<p>You provide as input a Kinesis video stream (&lt;code&gt;Input&lt;/code&gt;) and a Kinesis data stream (&lt;code&gt;Output&lt;/code&gt;) stream. You also specify the face recognition criteria in &lt;code&gt;Settings&lt;/code&gt;. For example, the collection containing faces that you want to recognize. Use &lt;code&gt;Name&lt;/code&gt; to assign an identifier for the stream processor. You use &lt;code&gt;Name&lt;/code&gt; to manage the stream processor. For example, you can start processing the source video by calling with the &lt;code&gt;Name&lt;/code&gt; field.</p>
+<p>&lt;/p</p>
+<p>After you have finished analyzing a streaming video, use to stop processing. You can delete the stream processor by calling</p>
+<!-- @@@createStreamProcessor -->
+<!-- $$$deleteCollection[overload1]$$$deleteCollectionconstDeleteCollectionRequest& -->
+<h3 class="fn" id="deleteCollection"><a name="deleteCollection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-deletecollectionresponse.html">DeleteCollectionResponse</a></span> *RekognitionClient::<span class="name">deleteCollection</span>(const <span class="type"><a href="qtaws-rekognition-deletecollectionrequest.html">DeleteCollectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-deletecollectionresponse.html">DeleteCollectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified collection. Note that this operation removes all faces in the collection. For an example, see</p>
+<p>&lt;a&gt;delete-collection-procedure&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:DeleteCollection&lt;/code&gt;</p>
+<!-- @@@deleteCollection -->
+<!-- $$$deleteFaces[overload1]$$$deleteFacesconstDeleteFacesRequest& -->
+<h3 class="fn" id="deleteFaces"><a name="deleteFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-deletefacesresponse.html">DeleteFacesResponse</a></span> *RekognitionClient::<span class="name">deleteFaces</span>(const <span class="type"><a href="qtaws-rekognition-deletefacesrequest.html">DeleteFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-deletefacesresponse.html">DeleteFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes faces from a collection. You specify a collection ID and an array of face IDs to remove from the</p>
+<p>collection&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:DeleteFaces&lt;/code&gt;</p>
+<!-- @@@deleteFaces -->
+<!-- $$$deleteStreamProcessor[overload1]$$$deleteStreamProcessorconstDeleteStreamProcessorRequest& -->
+<h3 class="fn" id="deleteStreamProcessor"><a name="deleteStreamProcessor"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-deletestreamprocessorresponse.html">DeleteStreamProcessorResponse</a></span> *RekognitionClient::<span class="name">deleteStreamProcessor</span>(const <span class="type"><a href="qtaws-rekognition-deletestreamprocessorrequest.html">DeleteStreamProcessorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-deletestreamprocessorresponse.html">DeleteStreamProcessorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the stream processor identified by &lt;code&gt;Name&lt;/code&gt;. You assign the value for &lt;code&gt;Name&lt;/code&gt; when you create the stream processor with . You might not be able to use the same name for a stream processor for a few seconds after calling</p>
+<!-- @@@deleteStreamProcessor -->
+<!-- $$$describeStreamProcessor[overload1]$$$describeStreamProcessorconstDescribeStreamProcessorRequest& -->
+<h3 class="fn" id="describeStreamProcessor"><a name="describeStreamProcessor"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-describestreamprocessorresponse.html">DescribeStreamProcessorResponse</a></span> *RekognitionClient::<span class="name">describeStreamProcessor</span>(const <span class="type"><a href="qtaws-rekognition-describestreamprocessorrequest.html">DescribeStreamProcessorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-describestreamprocessorresponse.html">DescribeStreamProcessorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides information about a stream processor created by . You can get information about the input and output streams, the input parameters for the face recognition being performed, and the current status of the stream</p>
+<!-- @@@describeStreamProcessor -->
+<!-- $$$detectFaces[overload1]$$$detectFacesconstDetectFacesRequest& -->
+<h3 class="fn" id="detectFaces"><a name="detectFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-detectfacesresponse.html">DetectFacesResponse</a></span> *RekognitionClient::<span class="name">detectFaces</span>(const <span class="type"><a href="qtaws-rekognition-detectfacesrequest.html">DetectFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-detectfacesresponse.html">DetectFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects faces within an image that is provided as</p>
+<p>input&gt;</p>
+<p>&lt;code&gt;DetectFaces&lt;/code&gt; detects the 100 largest faces in the image. For each face detected, the operation returns face details including a bounding box of the face, a confidence value (that the bounding box contains a face), and a fixed set of attributes such as facial landmarks (for example, coordinates of eye and mouth), gender, presence of beard, sunglasses, etc.</p>
+<p>&lt;/p</p>
+<p>The face-detection algorithm is most effective on frontal faces. For non-frontal or obscured faces, the algorithm may not detect the faces or might detect faces with lower confidence.</p>
+<p>&lt;/p</p>
+<p>You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This is a stateless API operation. That is, the operation does not persist any</p>
+<p>data&gt; &lt;/note&gt;</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;procedure-detecting-faces-in-images&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:DetectFaces&lt;/code&gt; action.</p>
+<!-- @@@detectFaces -->
+<!-- $$$detectLabels[overload1]$$$detectLabelsconstDetectLabelsRequest& -->
+<h3 class="fn" id="detectLabels"><a name="detectLabels"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-detectlabelsresponse.html">DetectLabelsResponse</a></span> *RekognitionClient::<span class="name">detectLabels</span>(const <span class="type"><a href="qtaws-rekognition-detectlabelsrequest.html">DetectLabelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-detectlabelsresponse.html">DetectLabelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects instances of real-world entities within an image (JPEG or PNG) provided as input. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and nature. For an example, see</p>
+<p>&lt;a&gt;images-s3&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>&lt;code&gt;DetectLabels&lt;/code&gt; does not support the detection of activities. However, activity detection is supported for label detection in videos. For more information, see</p>
+<p>&gt; &lt;/note&gt;</p>
+<p>You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p</p>
+<p>For each object, scene, and concept the API returns one or more labels. Each label provides the object name, and the level of confidence that the image contains the object. For example, suppose the input image has a lighthouse, the sea, and a rock. The response will include all three labels, one for each object.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;{Name: lighthouse, Confidence: 98.4629}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;{Name: rock,Confidence: 79.2097}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt; {Name: sea,Confidence: 75.061}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>In the preceding example, the operation returns one label for each of the three objects. The operation can also return multiple labels for the same object in the image. For example, if the input image shows a flower (for example, a tulip), the operation might return the following three labels.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;{Name: flower,Confidence: 99.0562}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;{Name: plant,Confidence: 99.0562}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;{Name: tulip,Confidence: 99.0562}&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>In this example, the detection algorithm more precisely identifies the flower as a</p>
+<p>tulip&gt;</p>
+<p>In response, the API returns an array of labels. In addition, the response also includes the orientation correction. Optionally, you can specify &lt;code&gt;MinConfidence&lt;/code&gt; to control the confidence threshold for the labels returned. The default is 50%. You can also add the &lt;code&gt;MaxLabels&lt;/code&gt; parameter to limit the number of labels returned.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If the object detected is a person, the operation doesn't provide the same facial details that the &lt;a&gt;DetectFaces&lt;/a&gt; operation</p>
+<p>provides&gt; &lt;/note&gt;</p>
+<p>This is a stateless API operation. That is, the operation does not persist any</p>
+<p>data&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:DetectLabels&lt;/code&gt; action.</p>
+<!-- @@@detectLabels -->
+<!-- $$$detectModerationLabels[overload1]$$$detectModerationLabelsconstDetectModerationLabelsRequest& -->
+<h3 class="fn" id="detectModerationLabels"><a name="detectModerationLabels"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-detectmoderationlabelsresponse.html">DetectModerationLabelsResponse</a></span> *RekognitionClient::<span class="name">detectModerationLabels</span>(const <span class="type"><a href="qtaws-rekognition-detectmoderationlabelsrequest.html">DetectModerationLabelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-detectmoderationlabelsresponse.html">DetectModerationLabelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects explicit or suggestive adult content in a specified JPEG or PNG format image. Use &lt;code&gt;DetectModerationLabels&lt;/code&gt; to moderate images depending on your requirements. For example, you might want to filter images that contain nudity, but not images containing suggestive</p>
+<p>content&gt;</p>
+<p>To filter images, use the labels returned by &lt;code&gt;DetectModerationLabels&lt;/code&gt; to determine which types of content are appropriate. For information about moderation labels, see</p>
+<p>&lt;a&gt;moderation&lt;/a&gt;&gt;</p>
+<p>You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<!-- @@@detectModerationLabels -->
+<!-- $$$detectText[overload1]$$$detectTextconstDetectTextRequest& -->
+<h3 class="fn" id="detectText"><a name="detectText"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-detecttextresponse.html">DetectTextResponse</a></span> *RekognitionClient::<span class="name">detectText</span>(const <span class="type"><a href="qtaws-rekognition-detecttextrequest.html">DetectTextRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-detecttextresponse.html">DetectTextResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects text in the input image and converts it into machine-readable</p>
+<p>text&gt;</p>
+<p>Pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the AWS CLI to call Amazon Rekognition operations, you must pass it as a reference to an image in an Amazon S3 bucket. For the AWS CLI, passing image bytes is not supported. The image must be either a .png or .jpeg formatted file.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;DetectText&lt;/code&gt; operation returns text in an array of elements, &lt;code&gt;TextDetections&lt;/code&gt;. Each &lt;code&gt;TextDetection&lt;/code&gt; element provides information about a single word or line of text that was detected in the image.</p>
+<p>&lt;/p</p>
+<p>A word is one or more ISO basic latin script characters that are not separated by spaces. &lt;code&gt;DetectText&lt;/code&gt; can detect up to 50 words in an</p>
+<p>image&gt;</p>
+<p>A line is a string of equally spaced words. A line isn't necessarily a complete sentence. For example, a driver's license number is detected as a line. A line ends when there is no aligned text after it. Also, a line ends when there is a large gap between words, relative to the length of the words. This means, depending on the gap between words, Amazon Rekognition may detect multiple lines in text aligned in the same direction. Periods don't represent the end of a line. If a sentence spans multiple lines, the &lt;code&gt;DetectText&lt;/code&gt; operation returns multiple</p>
+<p>lines&gt;</p>
+<p>To determine whether a &lt;code&gt;TextDetection&lt;/code&gt; element is a line of text or a word, use the &lt;code&gt;TextDetection&lt;/code&gt; object &lt;code&gt;Type&lt;/code&gt; field.</p>
+<p>&lt;/p</p>
+<p>To be detected, text must be within +/- 30 degrees orientation of the horizontal</p>
+<p>axis&gt;</p>
+<p>For more information, see</p>
+<!-- @@@detectText -->
+<!-- $$$getCelebrityInfo[overload1]$$$getCelebrityInfoconstGetCelebrityInfoRequest& -->
+<h3 class="fn" id="getCelebrityInfo"><a name="getCelebrityInfo"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getcelebrityinforesponse.html">GetCelebrityInfoResponse</a></span> *RekognitionClient::<span class="name">getCelebrityInfo</span>(const <span class="type"><a href="qtaws-rekognition-getcelebrityinforequest.html">GetCelebrityInfoRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getcelebrityinforesponse.html">GetCelebrityInfoResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the name and additional information about a celebrity based on his or her Rekognition ID. The additional information is returned as an array of URLs. If there is no additional information about the celebrity, this list is empty. For more information, see</p>
+<p>&lt;a&gt;get-celebrity-info-procedure&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:GetCelebrityInfo&lt;/code&gt; action.</p>
+<!-- @@@getCelebrityInfo -->
+<!-- $$$getCelebrityRecognition[overload1]$$$getCelebrityRecognitionconstGetCelebrityRecognitionRequest& -->
+<h3 class="fn" id="getCelebrityRecognition"><a name="getCelebrityRecognition"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getcelebrityrecognitionresponse.html">GetCelebrityRecognitionResponse</a></span> *RekognitionClient::<span class="name">getCelebrityRecognition</span>(const <span class="type"><a href="qtaws-rekognition-getcelebrityrecognitionrequest.html">GetCelebrityRecognitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getcelebrityrecognitionresponse.html">GetCelebrityRecognitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the celebrity recognition results for a Rekognition Video analysis started by</p>
+<p>&gt;</p>
+<p>Celebrity recognition in a video is an asynchronous operation. Analysis is started by a call to which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the celebrity recognition operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartCelebrityRecognition&lt;/code&gt;. To get the results of the celebrity recognition analysis, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetCelebrityDetection&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartCelebrityDetection&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;video&lt;/a&gt;&gt;</p>
+<p>&lt;code&gt;GetCelebrityRecognition&lt;/code&gt; returns detected celebrities and the time(s) they are detected in an array (&lt;code&gt;Celebrities&lt;/code&gt;) of objects. Each &lt;code&gt;CelebrityRecognition&lt;/code&gt; contains information about the celebrity in a object and the time, &lt;code&gt;Timestamp&lt;/code&gt;, the celebrity was detected.</p>
+<p>&lt;/p</p>
+<p>By default, the &lt;code&gt;Celebrities&lt;/code&gt; array is sorted by time (milliseconds from the start of the video). You can also sort the array by celebrity by specifying the value &lt;code&gt;ID&lt;/code&gt; in the &lt;code&gt;SortBy&lt;/code&gt; input</p>
+<p>parameter&gt;</p>
+<p>The &lt;code&gt;CelebrityDetail&lt;/code&gt; object includes the celebrity identifer and additional information urls. If you don't store the additional information urls, you can get them later by calling with the celebrity</p>
+<p>identifer&gt;</p>
+<p>No information is returned for faces not recognized as</p>
+<p>celebrities&gt;</p>
+<p>Use MaxResults parameter to limit the number of labels returned. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetCelebrityDetection&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the token value returned from the previous call to</p>
+<!-- @@@getCelebrityRecognition -->
+<!-- $$$getContentModeration[overload1]$$$getContentModerationconstGetContentModerationRequest& -->
+<h3 class="fn" id="getContentModeration"><a name="getContentModeration"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getcontentmoderationresponse.html">GetContentModerationResponse</a></span> *RekognitionClient::<span class="name">getContentModeration</span>(const <span class="type"><a href="qtaws-rekognition-getcontentmoderationrequest.html">GetContentModerationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getcontentmoderationresponse.html">GetContentModerationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the content moderation analysis results for a Rekognition Video analysis started by</p>
+<p>&gt;</p>
+<p>Content moderation analysis of a video is an asynchronous operation. You start analysis by calling . which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When analysis finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartContentModeration&lt;/code&gt;. To get the results of the content moderation analysis, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetCelebrityDetection&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartCelebrityDetection&lt;/code&gt;. For more information, see &lt;a&gt;video&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;GetContentModeration&lt;/code&gt; returns detected content moderation labels, and the time they are detected, in an array, &lt;code&gt;ModerationLabels&lt;/code&gt;, of objects.</p>
+<p>&lt;/p</p>
+<p>By default, the moderated labels are returned sorted by time, in milliseconds from the start of the video. You can also sort them by moderated label by specifying &lt;code&gt;NAME&lt;/code&gt; for the &lt;code&gt;SortBy&lt;/code&gt; input parameter.</p>
+<p>&lt;/p</p>
+<p>Since video analysis can return a large number of results, use the &lt;code&gt;MaxResults&lt;/code&gt; parameter to limit the number of labels returned in a single call to &lt;code&gt;GetContentModeration&lt;/code&gt;. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetContentModeration&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the value of &lt;code&gt;NextToken&lt;/code&gt; returned from the previous call to</p>
+<p>&lt;code&gt;GetContentModeration&lt;/code&gt;&gt;</p>
+<p>For more information, see</p>
+<!-- @@@getContentModeration -->
+<!-- $$$getFaceDetection[overload1]$$$getFaceDetectionconstGetFaceDetectionRequest& -->
+<h3 class="fn" id="getFaceDetection"><a name="getFaceDetection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getfacedetectionresponse.html">GetFaceDetectionResponse</a></span> *RekognitionClient::<span class="name">getFaceDetection</span>(const <span class="type"><a href="qtaws-rekognition-getfacedetectionrequest.html">GetFaceDetectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getfacedetectionresponse.html">GetFaceDetectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets face detection results for a Rekognition Video analysis started by</p>
+<p>&gt;</p>
+<p>Face detection with Rekognition Video is an asynchronous operation. You start face detection by calling which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the face detection operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartFaceDetection&lt;/code&gt;. To get the results of the face detection operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
+<p>&lt;code&gt;StartFaceDetection&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;GetFaceDetection&lt;/code&gt; returns an array of detected faces (&lt;code&gt;Faces&lt;/code&gt;) sorted by the time the faces were detected.</p>
+<p>&lt;/p</p>
+<p>Use MaxResults parameter to limit the number of labels returned. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetFaceDetection&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the token value returned from the previous call to</p>
+<!-- @@@getFaceDetection -->
+<!-- $$$getFaceSearch[overload1]$$$getFaceSearchconstGetFaceSearchRequest& -->
+<h3 class="fn" id="getFaceSearch"><a name="getFaceSearch"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getfacesearchresponse.html">GetFaceSearchResponse</a></span> *RekognitionClient::<span class="name">getFaceSearch</span>(const <span class="type"><a href="qtaws-rekognition-getfacesearchrequest.html">GetFaceSearchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getfacesearchresponse.html">GetFaceSearchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the face search results for Rekognition Video face search started by . The search returns faces in a collection that match the faces of persons detected in a video. It also includes the time(s) that faces are matched in the</p>
+<p>video&gt;</p>
+<p>Face search in a video is an asynchronous operation. You start face search by calling to which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the search operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. To get the search results, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetFaceSearch&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;collections&lt;/a&gt;&gt;</p>
+<p>The search results are retured in an array, &lt;code&gt;Persons&lt;/code&gt;, of objects. Each&lt;code&gt;PersonMatch&lt;/code&gt; element contains details about the matching faces in the input collection, person information for the matched person, and the time the person was matched in the</p>
+<p>video&gt;</p>
+<p>By default, the &lt;code&gt;Persons&lt;/code&gt; array is sorted by the time, in milliseconds from the start of the video, persons are matched. You can also sort by persons by specifying &lt;code&gt;INDEX&lt;/code&gt; for the &lt;code&gt;SORTBY&lt;/code&gt; input</p>
+<!-- @@@getFaceSearch -->
+<!-- $$$getLabelDetection[overload1]$$$getLabelDetectionconstGetLabelDetectionRequest& -->
+<h3 class="fn" id="getLabelDetection"><a name="getLabelDetection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getlabeldetectionresponse.html">GetLabelDetectionResponse</a></span> *RekognitionClient::<span class="name">getLabelDetection</span>(const <span class="type"><a href="qtaws-rekognition-getlabeldetectionrequest.html">GetLabelDetectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getlabeldetectionresponse.html">GetLabelDetectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the label detection results of a Rekognition Video analysis started by .</p>
+<p>&lt;/p</p>
+<p>The label detection operation is started by a call to which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the label detection operation finishes, Amazon Rekognition publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartlabelDetection&lt;/code&gt;. To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
+<p>&lt;code&gt;StartLabelDetection&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;GetLabelDetection&lt;/code&gt; returns an array of detected labels (&lt;code&gt;Labels&lt;/code&gt;) sorted by the time the labels were detected. You can also sort by the label name by specifying &lt;code&gt;NAME&lt;/code&gt; for the &lt;code&gt;SortBy&lt;/code&gt; input</p>
+<p>parameter&gt;</p>
+<p>The labels returned include the label name, the percentage confidence in the accuracy of the detected label, and the time the label was detected in the</p>
+<p>video&gt;</p>
+<p>Use MaxResults parameter to limit the number of labels returned. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetlabelDetection&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the token value returned from the previous call to</p>
+<!-- @@@getLabelDetection -->
+<!-- $$$getPersonTracking[overload1]$$$getPersonTrackingconstGetPersonTrackingRequest& -->
+<h3 class="fn" id="getPersonTracking"><a name="getPersonTracking"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-getpersontrackingresponse.html">GetPersonTrackingResponse</a></span> *RekognitionClient::<span class="name">getPersonTracking</span>(const <span class="type"><a href="qtaws-rekognition-getpersontrackingrequest.html">GetPersonTrackingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-getpersontrackingresponse.html">GetPersonTrackingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the person tracking results of a Rekognition Video analysis started by</p>
+<p>&gt;</p>
+<p>The person detection operation is started by a call to &lt;code&gt;StartPersonTracking&lt;/code&gt; which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the person detection operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to</p>
+<p>&lt;code&gt;StartPersonTracking&lt;/code&gt;&gt;</p>
+<p>To get the results of the person tracking operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
+<p>&lt;code&gt;StartPersonTracking&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;GetPersonTracking&lt;/code&gt; returns an array, &lt;code&gt;Persons&lt;/code&gt;, of tracked persons and the time(s) they were tracked in the video.</p>
+<p>&lt;/p</p>
+<p>By default, the array is sorted by the time(s) a person is tracked in the video. You can sort by tracked persons by specifying &lt;code&gt;INDEX&lt;/code&gt; for the &lt;code&gt;SortBy&lt;/code&gt; input</p>
+<p>parameter&gt;</p>
+<p>Use the &lt;code&gt;MaxResults&lt;/code&gt; parameter to limit the number of items returned. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetPersonTracking&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the token value returned from the previous call to</p>
+<!-- @@@getPersonTracking -->
+<!-- $$$indexFaces[overload1]$$$indexFacesconstIndexFacesRequest& -->
+<h3 class="fn" id="indexFaces"><a name="indexFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-indexfacesresponse.html">IndexFacesResponse</a></span> *RekognitionClient::<span class="name">indexFaces</span>(const <span class="type"><a href="qtaws-rekognition-indexfacesrequest.html">IndexFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-indexfacesresponse.html">IndexFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects faces in the input image and adds them to the specified collection.</p>
+<p>&lt;/p</p>
+<p>Amazon Rekognition does not save the actual faces detected. Instead, the underlying detection algorithm first detects the faces in the input image, and for each face extracts facial features into a feature vector, and stores it in the back-end database. Amazon Rekognition uses feature vectors when performing face match and search operations using the and</p>
+<p>operations&gt;</p>
+<p>If you are using version 1.0 of the face detection model, &lt;code&gt;IndexFaces&lt;/code&gt; indexes the 15 largest faces in the input image. Later versions of the face detection model index the 100 largest faces in the input image. To determine which version of the model you are using, check the the value of &lt;code&gt;FaceModelVersion&lt;/code&gt; in the response from &lt;code&gt;IndexFaces&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;face-detection-model&lt;/a&gt;&gt;</p>
+<p>If you provide the optional &lt;code&gt;ExternalImageID&lt;/code&gt; for the input image you provided, Amazon Rekognition associates this ID with all faces that it detects. When you call the operation, the response returns the external ID. You can use this external image ID to create a client-side index to associate the faces with each image. You can then use the index to find all faces in an image.</p>
+<p>&lt;/p</p>
+<p>In response, the operation returns an array of metadata for all detected faces. This includes, the bounding box of the detected face, confidence value (indicating the bounding box contains a face), a face ID assigned by the service for each face that is detected and stored, and an image ID assigned by the service for the input image. If you request all facial attributes (using the &lt;code&gt;detectionAttributes&lt;/code&gt; parameter, Amazon Rekognition returns detailed facial attributes such as facial landmarks (for example, location of eye and mount) and other facial attributes such gender. If you provide the same image, specify the same collection, and use the same external ID in the &lt;code&gt;IndexFaces&lt;/code&gt; operation, Amazon Rekognition doesn't save duplicate face metadata.</p>
+<p>&lt;/p</p>
+<p>The input image is passed either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:IndexFaces&lt;/code&gt;</p>
+<!-- @@@indexFaces -->
+<!-- $$$listCollections[overload1]$$$listCollectionsconstListCollectionsRequest& -->
+<h3 class="fn" id="listCollections"><a name="listCollections"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-listcollectionsresponse.html">ListCollectionsResponse</a></span> *RekognitionClient::<span class="name">listCollections</span>(const <span class="type"><a href="qtaws-rekognition-listcollectionsrequest.html">ListCollectionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-listcollectionsresponse.html">ListCollectionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns list of collection IDs in your account. If the result is truncated, the response also provides a &lt;code&gt;NextToken&lt;/code&gt; that you can use in the subsequent request to fetch the next set of collection</p>
+<p>IDs&gt;</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;list-collection-procedure&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:ListCollections&lt;/code&gt;</p>
+<!-- @@@listCollections -->
+<!-- $$$listFaces[overload1]$$$listFacesconstListFacesRequest& -->
+<h3 class="fn" id="listFaces"><a name="listFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-listfacesresponse.html">ListFacesResponse</a></span> *RekognitionClient::<span class="name">listFaces</span>(const <span class="type"><a href="qtaws-rekognition-listfacesrequest.html">ListFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-listfacesresponse.html">ListFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns metadata for faces in the specified collection. This metadata includes information such as the bounding box coordinates, the confidence (that the bounding box contains a face), and face ID. For an example, see &lt;a&gt;list-faces-in-collection-procedure&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:ListFaces&lt;/code&gt;</p>
+<!-- @@@listFaces -->
+<!-- $$$listStreamProcessors[overload1]$$$listStreamProcessorsconstListStreamProcessorsRequest& -->
+<h3 class="fn" id="listStreamProcessors"><a name="listStreamProcessors"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-liststreamprocessorsresponse.html">ListStreamProcessorsResponse</a></span> *RekognitionClient::<span class="name">listStreamProcessors</span>(const <span class="type"><a href="qtaws-rekognition-liststreamprocessorsrequest.html">ListStreamProcessorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-liststreamprocessorsresponse.html">ListStreamProcessorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of stream processors that you have created with .</p>
+<!-- @@@listStreamProcessors -->
+<!-- $$$recognizeCelebrities[overload1]$$$recognizeCelebritiesconstRecognizeCelebritiesRequest& -->
+<h3 class="fn" id="recognizeCelebrities"><a name="recognizeCelebrities"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-recognizecelebritiesresponse.html">RecognizeCelebritiesResponse</a></span> *RekognitionClient::<span class="name">recognizeCelebrities</span>(const <span class="type"><a href="qtaws-rekognition-recognizecelebritiesrequest.html">RecognizeCelebritiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-recognizecelebritiesresponse.html">RecognizeCelebritiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of celebrities recognized in the input image. For more information, see &lt;a&gt;celebrities&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;RecognizeCelebrities&lt;/code&gt; returns the 100 largest faces in the image. It lists recognized celebrities in the &lt;code&gt;CelebrityFaces&lt;/code&gt; array and unrecognized faces in the &lt;code&gt;UnrecognizedFaces&lt;/code&gt; array. &lt;code&gt;RecognizeCelebrities&lt;/code&gt; doesn't return celebrities whose faces are not amongst the largest 100 faces in the</p>
+<p>image&gt;</p>
+<p>For each celebrity recognized, the &lt;code&gt;RecognizeCelebrities&lt;/code&gt; returns a &lt;code&gt;Celebrity&lt;/code&gt; object. The &lt;code&gt;Celebrity&lt;/code&gt; object contains the celebrity name, ID, URL links to additional information, match confidence, and a &lt;code&gt;ComparedFace&lt;/code&gt; object that you can use to locate the celebrity's face on the</p>
+<p>image&gt;</p>
+<p>Rekognition does not retain information about which images a celebrity has been recognized in. Your application must store this information and use the &lt;code&gt;Celebrity&lt;/code&gt; ID property as a unique identifier for the celebrity. If you don't store the celebrity name or additional information URLs returned by &lt;code&gt;RecognizeCelebrities&lt;/code&gt;, you will need the ID to identify the celebrity in a call to the</p>
+<p>operation&gt;</p>
+<p>You pass the imput image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;celebrities-procedure-image&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:RecognizeCelebrities&lt;/code&gt;</p>
+<!-- @@@recognizeCelebrities -->
+<!-- $$$searchFaces[overload1]$$$searchFacesconstSearchFacesRequest& -->
+<h3 class="fn" id="searchFaces"><a name="searchFaces"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-searchfacesresponse.html">SearchFacesResponse</a></span> *RekognitionClient::<span class="name">searchFaces</span>(const <span class="type"><a href="qtaws-rekognition-searchfacesrequest.html">SearchFacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-searchfacesresponse.html">SearchFacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For a given input face ID, searches for matching faces in the collection the face belongs to. You get a face ID when you add a face to the collection using the &lt;a&gt;IndexFaces&lt;/a&gt; operation. The operation compares the features of the input face with faces in the specified collection.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You can also search faces without indexing faces by using the &lt;code&gt;SearchFacesByImage&lt;/code&gt;</p>
+<p>operation&gt; &lt;/note&gt;</p>
+<p>The operation response returns an array of faces that match, ordered by similarity score with the highest similarity first. More specifically, it is an array of metadata for each face match that is found. Along with the metadata, the response also includes a &lt;code&gt;confidence&lt;/code&gt; value for each face match, indicating the confidence that the specific face matches the input face.</p>
+<p>&lt;/p</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;search-face-with-id-procedure&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:SearchFaces&lt;/code&gt;</p>
+<!-- @@@searchFaces -->
+<!-- $$$searchFacesByImage[overload1]$$$searchFacesByImageconstSearchFacesByImageRequest& -->
+<h3 class="fn" id="searchFacesByImage"><a name="searchFacesByImage"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-searchfacesbyimageresponse.html">SearchFacesByImageResponse</a></span> *RekognitionClient::<span class="name">searchFacesByImage</span>(const <span class="type"><a href="qtaws-rekognition-searchfacesbyimagerequest.html">SearchFacesByImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-searchfacesbyimageresponse.html">SearchFacesByImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For a given input image, first detects the largest face in the image, and then searches the specified collection for matching faces. The operation compares the features of the input face with faces in the specified collection.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>To search for all faces in an input image, you might first call the operation, and then use the face IDs returned in subsequent calls to the operation.</p>
+<p>&lt;/p</p>
+<p>You can also call the &lt;code&gt;DetectFaces&lt;/code&gt; operation and use the bounding boxes in the response to make face crops, which then you can pass in to the &lt;code&gt;SearchFacesByImage&lt;/code&gt; operation.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG or JPEG formatted file.</p>
+<p>&lt;/p</p>
+<p>The response returns an array of faces that match, ordered by similarity score with the highest similarity first. More specifically, it is an array of metadata for each face match found. Along with the metadata, the response also includes a &lt;code&gt;similarity&lt;/code&gt; indicating how similar the face is to the input face. In the response, the operation also returns the bounding box (and a confidence level that the bounding box contains a face) of the face that Amazon Rekognition used for the input image.</p>
+<p>&lt;/p</p>
+<p>For an example, see</p>
+<p>&lt;a&gt;search-face-with-image-procedure&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions to perform the &lt;code&gt;rekognition:SearchFacesByImage&lt;/code&gt;</p>
+<!-- @@@searchFacesByImage -->
+<!-- $$$startCelebrityRecognition[overload1]$$$startCelebrityRecognitionconstStartCelebrityRecognitionRequest& -->
+<h3 class="fn" id="startCelebrityRecognition"><a name="startCelebrityRecognition"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startcelebrityrecognitionresponse.html">StartCelebrityRecognitionResponse</a></span> *RekognitionClient::<span class="name">startCelebrityRecognition</span>(const <span class="type"><a href="qtaws-rekognition-startcelebrityrecognitionrequest.html">StartCelebrityRecognitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startcelebrityrecognitionresponse.html">StartCelebrityRecognitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts asynchronous recognition of celebrities in a stored</p>
+<p>video&gt;</p>
+<p>Rekognition Video can detect celebrities in a video must be stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartCelebrityRecognition&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) which you use to get the results of the analysis. When celebrity recognition analysis is finished, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in &lt;code&gt;NotificationChannel&lt;/code&gt;. To get the results of the celebrity recognition analysis, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartCelebrityRecognition&lt;/code&gt;. For more information, see</p>
+<!-- @@@startCelebrityRecognition -->
+<!-- $$$startContentModeration[overload1]$$$startContentModerationconstStartContentModerationRequest& -->
+<h3 class="fn" id="startContentModeration"><a name="startContentModeration"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startcontentmoderationresponse.html">StartContentModerationResponse</a></span> *RekognitionClient::<span class="name">startContentModeration</span>(const <span class="type"><a href="qtaws-rekognition-startcontentmoderationrequest.html">StartContentModerationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startcontentmoderationresponse.html">StartContentModerationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts asynchronous detection of explicit or suggestive adult content in a stored</p>
+<p>video&gt;</p>
+<p>Rekognition Video can moderate content in a video stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartContentModeration&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) which you use to get the results of the analysis. When content moderation analysis is finished, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in</p>
+<p>&lt;code&gt;NotificationChannel&lt;/code&gt;&gt;</p>
+<p>To get the results of the content moderation analysis, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartContentModeration&lt;/code&gt;. For more information, see</p>
+<!-- @@@startContentModeration -->
+<!-- $$$startFaceDetection[overload1]$$$startFaceDetectionconstStartFaceDetectionRequest& -->
+<h3 class="fn" id="startFaceDetection"><a name="startFaceDetection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startfacedetectionresponse.html">StartFaceDetectionResponse</a></span> *RekognitionClient::<span class="name">startFaceDetection</span>(const <span class="type"><a href="qtaws-rekognition-startfacedetectionrequest.html">StartFaceDetectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startfacedetectionresponse.html">StartFaceDetectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts asynchronous detection of faces in a stored</p>
+<p>video&gt;</p>
+<p>Rekognition Video can detect faces in a video stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartFaceDetection&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) that you use to get the results of the operation. When face detection is finished, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in &lt;code&gt;NotificationChannel&lt;/code&gt;. To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartFaceDetection&lt;/code&gt;. For more information, see</p>
+<!-- @@@startFaceDetection -->
+<!-- $$$startFaceSearch[overload1]$$$startFaceSearchconstStartFaceSearchRequest& -->
+<h3 class="fn" id="startFaceSearch"><a name="startFaceSearch"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startfacesearchresponse.html">StartFaceSearchResponse</a></span> *RekognitionClient::<span class="name">startFaceSearch</span>(const <span class="type"><a href="qtaws-rekognition-startfacesearchrequest.html">StartFaceSearchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startfacesearchresponse.html">StartFaceSearchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the asynchronous search for faces in a collection that match the faces of persons detected in a stored</p>
+<p>video&gt;</p>
+<p>The video must be stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartFaceSearch&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) which you use to get the search results once the search has completed. When searching is finished, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in &lt;code&gt;NotificationChannel&lt;/code&gt;. To get the search results, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. For more information, see</p>
+<!-- @@@startFaceSearch -->
+<!-- $$$startLabelDetection[overload1]$$$startLabelDetectionconstStartLabelDetectionRequest& -->
+<h3 class="fn" id="startLabelDetection"><a name="startLabelDetection"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startlabeldetectionresponse.html">StartLabelDetectionResponse</a></span> *RekognitionClient::<span class="name">startLabelDetection</span>(const <span class="type"><a href="qtaws-rekognition-startlabeldetectionrequest.html">StartLabelDetectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startlabeldetectionresponse.html">StartLabelDetectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts asynchronous detection of labels in a stored</p>
+<p>video&gt;</p>
+<p>Rekognition Video can detect labels in a video. Labels are instances of real-world entities. This includes objects like flower, tree, and table; events like wedding, graduation, and birthday party; concepts like landscape, evening, and nature; and activities like a person getting out of a car or a person</p>
+<p>skiing&gt;</p>
+<p>The video must be stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartLabelDetection&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) which you use to get the results of the operation. When label detection is finished, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in</p>
+<p>&lt;code&gt;NotificationChannel&lt;/code&gt;&gt;</p>
+<p>To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
+<!-- @@@startLabelDetection -->
+<!-- $$$startPersonTracking[overload1]$$$startPersonTrackingconstStartPersonTrackingRequest& -->
+<h3 class="fn" id="startPersonTracking"><a name="startPersonTracking"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startpersontrackingresponse.html">StartPersonTrackingResponse</a></span> *RekognitionClient::<span class="name">startPersonTracking</span>(const <span class="type"><a href="qtaws-rekognition-startpersontrackingrequest.html">StartPersonTrackingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startpersontrackingresponse.html">StartPersonTrackingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the asynchronous tracking of persons in a stored</p>
+<p>video&gt;</p>
+<p>Rekognition Video can track persons in a video stored in an Amazon S3 bucket. Use &lt;a&gt;Video&lt;/a&gt; to specify the bucket name and the filename of the video. &lt;code&gt;StartPersonTracking&lt;/code&gt; returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;) which you use to get the results of the operation. When label detection is finished, Amazon Rekognition publishes a completion status to the Amazon Simple Notification Service topic that you specify in &lt;code&gt;NotificationChannel&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>To get the results of the person detection operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
+<!-- @@@startPersonTracking -->
+<!-- $$$startStreamProcessor[overload1]$$$startStreamProcessorconstStartStreamProcessorRequest& -->
+<h3 class="fn" id="startStreamProcessor"><a name="startStreamProcessor"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-startstreamprocessorresponse.html">StartStreamProcessorResponse</a></span> *RekognitionClient::<span class="name">startStreamProcessor</span>(const <span class="type"><a href="qtaws-rekognition-startstreamprocessorrequest.html">StartStreamProcessorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-startstreamprocessorresponse.html">StartStreamProcessorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts processing a stream processor. You create a stream processor by calling . To tell &lt;code&gt;StartStreamProcessor&lt;/code&gt; which stream processor to start, use the value of the &lt;code&gt;Name&lt;/code&gt; field specified in the call to</p>
+<!-- @@@startStreamProcessor -->
+<!-- $$$stopStreamProcessor[overload1]$$$stopStreamProcessorconstStopStreamProcessorRequest& -->
+<h3 class="fn" id="stopStreamProcessor"><a name="stopStreamProcessor"></a><code>[slot] </code><span class="type"><a href="qtaws-rekognition-stopstreamprocessorresponse.html">StopStreamProcessorResponse</a></span> *RekognitionClient::<span class="name">stopStreamProcessor</span>(const <span class="type"><a href="qtaws-rekognition-stopstreamprocessorrequest.html">StopStreamProcessorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-rekognition-rekognitionclient.html">RekognitionClient</a> service, and returns a pointer to an <a href="qtaws-rekognition-stopstreamprocessorresponse.html">StopStreamProcessorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a running stream processor that was created by</p>
+<!-- @@@stopStreamProcessor -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

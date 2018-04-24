@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mediaconvertclient.cpp -->
+  <title>MediaConvertClient Class | MediaConvert</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmediaconvert-index.html">MediaConvert</a></li>
+<li><a href="qtawsmediaconvert-module.html">C++ Classes</a></li>
+<li>MediaConvertClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MediaConvertClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mediaconvert-mediaconvertclient.html">QtAws::MediaConvert::MediaConvertClient</a>)<br/></span>
+<!-- $$$MediaConvertClient-brief -->
+<p>The <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> class provides access to the AWS Elemental <a href="qtaws-mediaconvert.html">MediaConvert</a> service. <a href="#details">More...</a></p>
+<!-- @@@MediaConvertClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MediaConvertClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mediaconvert-mediaconvertclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#MediaConvertClient">MediaConvertClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#MediaConvertClient-1">MediaConvertClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CancelJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#cancelJob">cancelJob</a></b>(const CancelJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#createJob">createJob</a></b>(const CreateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#createJobTemplate">createJobTemplate</a></b>(const CreateJobTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#createPreset">createPreset</a></b>(const CreatePresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateQueueResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#createQueue">createQueue</a></b>(const CreateQueueRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteJobTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#deleteJobTemplate">deleteJobTemplate</a></b>(const DeleteJobTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#deletePreset">deletePreset</a></b>(const DeletePresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteQueueResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#deleteQueue">deleteQueue</a></b>(const DeleteQueueRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEndpointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#describeEndpoints">describeEndpoints</a></b>(const DescribeEndpointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#getJob">getJob</a></b>(const GetJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#getJobTemplate">getJobTemplate</a></b>(const GetJobTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#getPreset">getPreset</a></b>(const GetPresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQueueResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#getQueue">getQueue</a></b>(const GetQueueRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobTemplatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#listJobTemplates">listJobTemplates</a></b>(const ListJobTemplatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#listJobs">listJobs</a></b>(const ListJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPresetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#listPresets">listPresets</a></b>(const ListPresetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListQueuesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#listQueues">listQueues</a></b>(const ListQueuesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateJobTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#updateJobTemplate">updateJobTemplate</a></b>(const UpdateJobTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#updatePreset">updatePreset</a></b>(const UpdatePresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateQueueResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediaconvert-mediaconvertclient.html#updateQueue">updateQueue</a></b>(const UpdateQueueRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MediaConvertClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> class provides access to the AWS Elemental <a href="qtaws-mediaconvert.html">MediaConvert</a> service.</p>
+</div>
+<!-- @@@MediaConvertClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MediaConvertClient[overload1]$$$MediaConvertClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaConvertClient"><a name="MediaConvertClient"></a>MediaConvertClient::<span class="name">MediaConvertClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MediaConvertClient -->
+<!-- $$$MediaConvertClient$$$MediaConvertClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaConvertClient-1"><a name="MediaConvertClient-1"></a>MediaConvertClient::<span class="name">MediaConvertClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mediaconvert-mediaconvertclient.html#MediaConvertClient">MediaConvertClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MediaConvertClient -->
+<!-- $$$cancelJob[overload1]$$$cancelJobconstCancelJobRequest& -->
+<h3 class="fn" id="cancelJob"><a name="cancelJob"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-canceljobresponse.html">CancelJobResponse</a></span> *MediaConvertClient::<span class="name">cancelJob</span>(const <span class="type"><a href="qtaws-mediaconvert-canceljobrequest.html">CancelJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-canceljobresponse.html">CancelJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a</p>
+<!-- @@@cancelJob -->
+<!-- $$$createJob[overload1]$$$createJobconstCreateJobRequest& -->
+<h3 class="fn" id="createJob"><a name="createJob"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-createjobresponse.html">CreateJobResponse</a></span> *MediaConvertClient::<span class="name">createJob</span>(const <span class="type"><a href="qtaws-mediaconvert-createjobrequest.html">CreateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-createjobresponse.html">CreateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new transcoding job. For information about jobs and job settings, see the User Guide at</p>
+<!-- @@@createJob -->
+<!-- $$$createJobTemplate[overload1]$$$createJobTemplateconstCreateJobTemplateRequest& -->
+<h3 class="fn" id="createJobTemplate"><a name="createJobTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-createjobtemplateresponse.html">CreateJobTemplateResponse</a></span> *MediaConvertClient::<span class="name">createJobTemplate</span>(const <span class="type"><a href="qtaws-mediaconvert-createjobtemplaterequest.html">CreateJobTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-createjobtemplateresponse.html">CreateJobTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new job template. For information about job templates see the User Guide at</p>
+<!-- @@@createJobTemplate -->
+<!-- $$$createPreset[overload1]$$$createPresetconstCreatePresetRequest& -->
+<h3 class="fn" id="createPreset"><a name="createPreset"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-createpresetresponse.html">CreatePresetResponse</a></span> *MediaConvertClient::<span class="name">createPreset</span>(const <span class="type"><a href="qtaws-mediaconvert-createpresetrequest.html">CreatePresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-createpresetresponse.html">CreatePresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new preset. For information about job templates see the User Guide at</p>
+<!-- @@@createPreset -->
+<!-- $$$createQueue[overload1]$$$createQueueconstCreateQueueRequest& -->
+<h3 class="fn" id="createQueue"><a name="createQueue"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-createqueueresponse.html">CreateQueueResponse</a></span> *MediaConvertClient::<span class="name">createQueue</span>(const <span class="type"><a href="qtaws-mediaconvert-createqueuerequest.html">CreateQueueRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-createqueueresponse.html">CreateQueueResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new transcoding queue. For information about job templates see the User Guide at</p>
+<!-- @@@createQueue -->
+<!-- $$$deleteJobTemplate[overload1]$$$deleteJobTemplateconstDeleteJobTemplateRequest& -->
+<h3 class="fn" id="deleteJobTemplate"><a name="deleteJobTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-deletejobtemplateresponse.html">DeleteJobTemplateResponse</a></span> *MediaConvertClient::<span class="name">deleteJobTemplate</span>(const <span class="type"><a href="qtaws-mediaconvert-deletejobtemplaterequest.html">DeleteJobTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-deletejobtemplateresponse.html">DeleteJobTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteJobTemplate -->
+<!-- $$$deletePreset[overload1]$$$deletePresetconstDeletePresetRequest& -->
+<h3 class="fn" id="deletePreset"><a name="deletePreset"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-deletepresetresponse.html">DeletePresetResponse</a></span> *MediaConvertClient::<span class="name">deletePreset</span>(const <span class="type"><a href="qtaws-mediaconvert-deletepresetrequest.html">DeletePresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-deletepresetresponse.html">DeletePresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deletePreset -->
+<!-- $$$deleteQueue[overload1]$$$deleteQueueconstDeleteQueueRequest& -->
+<h3 class="fn" id="deleteQueue"><a name="deleteQueue"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-deletequeueresponse.html">DeleteQueueResponse</a></span> *MediaConvertClient::<span class="name">deleteQueue</span>(const <span class="type"><a href="qtaws-mediaconvert-deletequeuerequest.html">DeleteQueueRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-deletequeueresponse.html">DeleteQueueResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteQueue -->
+<!-- $$$describeEndpoints[overload1]$$$describeEndpointsconstDescribeEndpointsRequest& -->
+<h3 class="fn" id="describeEndpoints"><a name="describeEndpoints"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-describeendpointsresponse.html">DescribeEndpointsResponse</a></span> *MediaConvertClient::<span class="name">describeEndpoints</span>(const <span class="type"><a href="qtaws-mediaconvert-describeendpointsrequest.html">DescribeEndpointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-describeendpointsresponse.html">DescribeEndpointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@describeEndpoints -->
+<!-- $$$getJob[overload1]$$$getJobconstGetJobRequest& -->
+<h3 class="fn" id="getJob"><a name="getJob"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-getjobresponse.html">GetJobResponse</a></span> *MediaConvertClient::<span class="name">getJob</span>(const <span class="type"><a href="qtaws-mediaconvert-getjobrequest.html">GetJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-getjobresponse.html">GetJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getJob -->
+<!-- $$$getJobTemplate[overload1]$$$getJobTemplateconstGetJobTemplateRequest& -->
+<h3 class="fn" id="getJobTemplate"><a name="getJobTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-getjobtemplateresponse.html">GetJobTemplateResponse</a></span> *MediaConvertClient::<span class="name">getJobTemplate</span>(const <span class="type"><a href="qtaws-mediaconvert-getjobtemplaterequest.html">GetJobTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-getjobtemplateresponse.html">GetJobTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getJobTemplate -->
+<!-- $$$getPreset[overload1]$$$getPresetconstGetPresetRequest& -->
+<h3 class="fn" id="getPreset"><a name="getPreset"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-getpresetresponse.html">GetPresetResponse</a></span> *MediaConvertClient::<span class="name">getPreset</span>(const <span class="type"><a href="qtaws-mediaconvert-getpresetrequest.html">GetPresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-getpresetresponse.html">GetPresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getPreset -->
+<!-- $$$getQueue[overload1]$$$getQueueconstGetQueueRequest& -->
+<h3 class="fn" id="getQueue"><a name="getQueue"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-getqueueresponse.html">GetQueueResponse</a></span> *MediaConvertClient::<span class="name">getQueue</span>(const <span class="type"><a href="qtaws-mediaconvert-getqueuerequest.html">GetQueueRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-getqueueresponse.html">GetQueueResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getQueue -->
+<!-- $$$listJobTemplates[overload1]$$$listJobTemplatesconstListJobTemplatesRequest& -->
+<h3 class="fn" id="listJobTemplates"><a name="listJobTemplates"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-listjobtemplatesresponse.html">ListJobTemplatesResponse</a></span> *MediaConvertClient::<span class="name">listJobTemplates</span>(const <span class="type"><a href="qtaws-mediaconvert-listjobtemplatesrequest.html">ListJobTemplatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-listjobtemplatesresponse.html">ListJobTemplatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a JSON array of up to twenty of your job templates. This will return the templates themselves, not just a list</p>
+<!-- @@@listJobTemplates -->
+<!-- $$$listJobs[overload1]$$$listJobsconstListJobsRequest& -->
+<h3 class="fn" id="listJobs"><a name="listJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-listjobsresponse.html">ListJobsResponse</a></span> *MediaConvertClient::<span class="name">listJobs</span>(const <span class="type"><a href="qtaws-mediaconvert-listjobsrequest.html">ListJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-listjobsresponse.html">ListJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a JSON array of up to twenty of your most recently created jobs. This array includes in-process, completed, and errored jobs. This will return the jobs themselves, not just a list of the jobs. To retrieve the twenty next most recent</p>
+<!-- @@@listJobs -->
+<!-- $$$listPresets[overload1]$$$listPresetsconstListPresetsRequest& -->
+<h3 class="fn" id="listPresets"><a name="listPresets"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-listpresetsresponse.html">ListPresetsResponse</a></span> *MediaConvertClient::<span class="name">listPresets</span>(const <span class="type"><a href="qtaws-mediaconvert-listpresetsrequest.html">ListPresetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-listpresetsresponse.html">ListPresetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a JSON array of up to twenty of your presets. This will return the presets themselves, not just a list of them.</p>
+<!-- @@@listPresets -->
+<!-- $$$listQueues[overload1]$$$listQueuesconstListQueuesRequest& -->
+<h3 class="fn" id="listQueues"><a name="listQueues"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-listqueuesresponse.html">ListQueuesResponse</a></span> *MediaConvertClient::<span class="name">listQueues</span>(const <span class="type"><a href="qtaws-mediaconvert-listqueuesrequest.html">ListQueuesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-listqueuesresponse.html">ListQueuesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a JSON array of up to twenty of your queues. This will return the queues themselves, not just a list of them.</p>
+<!-- @@@listQueues -->
+<!-- $$$updateJobTemplate[overload1]$$$updateJobTemplateconstUpdateJobTemplateRequest& -->
+<h3 class="fn" id="updateJobTemplate"><a name="updateJobTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-updatejobtemplateresponse.html">UpdateJobTemplateResponse</a></span> *MediaConvertClient::<span class="name">updateJobTemplate</span>(const <span class="type"><a href="qtaws-mediaconvert-updatejobtemplaterequest.html">UpdateJobTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-updatejobtemplateresponse.html">UpdateJobTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateJobTemplate -->
+<!-- $$$updatePreset[overload1]$$$updatePresetconstUpdatePresetRequest& -->
+<h3 class="fn" id="updatePreset"><a name="updatePreset"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-updatepresetresponse.html">UpdatePresetResponse</a></span> *MediaConvertClient::<span class="name">updatePreset</span>(const <span class="type"><a href="qtaws-mediaconvert-updatepresetrequest.html">UpdatePresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-updatepresetresponse.html">UpdatePresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updatePreset -->
+<!-- $$$updateQueue[overload1]$$$updateQueueconstUpdateQueueRequest& -->
+<h3 class="fn" id="updateQueue"><a name="updateQueue"></a><code>[slot] </code><span class="type"><a href="qtaws-mediaconvert-updatequeueresponse.html">UpdateQueueResponse</a></span> *MediaConvertClient::<span class="name">updateQueue</span>(const <span class="type"><a href="qtaws-mediaconvert-updatequeuerequest.html">UpdateQueueRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediaconvert-mediaconvertclient.html">MediaConvertClient</a> service, and returns a pointer to an <a href="qtaws-mediaconvert-updatequeueresponse.html">UpdateQueueResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateQueue -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

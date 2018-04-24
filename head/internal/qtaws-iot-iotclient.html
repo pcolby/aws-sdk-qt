@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotclient.cpp -->
+  <title>IoTClient Class | IoT</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiot-index.html">IoT</a></li>
+<li><a href="qtawsiot-module.html">C++ Classes</a></li>
+<li>IoTClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iot-iotclient.html">QtAws::IoT::IoTClient</a>)<br/></span>
+<!-- $$$IoTClient-brief -->
+<p>The <a href="qtaws-iot-iotclient.html">IoTClient</a> class provides access to the AWS IoT service. <a href="#details">More...</a></p>
+<!-- @@@IoTClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-iot-iotclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#IoTClient">IoTClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#IoTClient-1">IoTClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AcceptCertificateTransferResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#acceptCertificateTransfer">acceptCertificateTransfer</a></b>(const AcceptCertificateTransferRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddThingToThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#addThingToThingGroup">addThingToThingGroup</a></b>(const AddThingToThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateTargetsWithJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#associateTargetsWithJob">associateTargetsWithJob</a></b>(const AssociateTargetsWithJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#attachPolicy">attachPolicy</a></b>(const AttachPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachPrincipalPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#attachPrincipalPolicy">attachPrincipalPolicy</a></b>(const AttachPrincipalPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachThingPrincipalResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#attachThingPrincipal">attachThingPrincipal</a></b>(const AttachThingPrincipalRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelCertificateTransferResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#cancelCertificateTransfer">cancelCertificateTransfer</a></b>(const CancelCertificateTransferRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#cancelJob">cancelJob</a></b>(const CancelJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ClearDefaultAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#clearDefaultAuthorizer">clearDefaultAuthorizer</a></b>(const ClearDefaultAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createAuthorizer">createAuthorizer</a></b>(const CreateAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCertificateFromCsrResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createCertificateFromCsr">createCertificateFromCsr</a></b>(const CreateCertificateFromCsrRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createJob">createJob</a></b>(const CreateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateKeysAndCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createKeysAndCertificate">createKeysAndCertificate</a></b>(const CreateKeysAndCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateOTAUpdateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createOTAUpdate">createOTAUpdate</a></b>(const CreateOTAUpdateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createPolicy">createPolicy</a></b>(const CreatePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePolicyVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createPolicyVersion">createPolicyVersion</a></b>(const CreatePolicyVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRoleAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createRoleAlias">createRoleAlias</a></b>(const CreateRoleAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createStream">createStream</a></b>(const CreateStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createThing">createThing</a></b>(const CreateThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createThingGroup">createThingGroup</a></b>(const CreateThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateThingTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createThingType">createThingType</a></b>(const CreateThingTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#createTopicRule">createTopicRule</a></b>(const CreateTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteAuthorizer">deleteAuthorizer</a></b>(const DeleteAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCACertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteCACertificate">deleteCACertificate</a></b>(const DeleteCACertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteCertificate">deleteCertificate</a></b>(const DeleteCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteOTAUpdateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteOTAUpdate">deleteOTAUpdate</a></b>(const DeleteOTAUpdateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deletePolicy">deletePolicy</a></b>(const DeletePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePolicyVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deletePolicyVersion">deletePolicyVersion</a></b>(const DeletePolicyVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRegistrationCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteRegistrationCode">deleteRegistrationCode</a></b>(const DeleteRegistrationCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRoleAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteRoleAlias">deleteRoleAlias</a></b>(const DeleteRoleAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteStream">deleteStream</a></b>(const DeleteStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteThing">deleteThing</a></b>(const DeleteThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteThingGroup">deleteThingGroup</a></b>(const DeleteThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteThingTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteThingType">deleteThingType</a></b>(const DeleteThingTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteTopicRule">deleteTopicRule</a></b>(const DeleteTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteV2LoggingLevelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deleteV2LoggingLevel">deleteV2LoggingLevel</a></b>(const DeleteV2LoggingLevelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeprecateThingTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#deprecateThingType">deprecateThingType</a></b>(const DeprecateThingTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeAuthorizer">describeAuthorizer</a></b>(const DescribeAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCACertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeCACertificate">describeCACertificate</a></b>(const DescribeCACertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeCertificate">describeCertificate</a></b>(const DescribeCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDefaultAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeDefaultAuthorizer">describeDefaultAuthorizer</a></b>(const DescribeDefaultAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeEndpoint">describeEndpoint</a></b>(const DescribeEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeEventConfigurations">describeEventConfigurations</a></b>(const DescribeEventConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeIndex">describeIndex</a></b>(const DescribeIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeJob">describeJob</a></b>(const DescribeJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeJobExecution">describeJobExecution</a></b>(const DescribeJobExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRoleAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeRoleAlias">describeRoleAlias</a></b>(const DescribeRoleAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeStream">describeStream</a></b>(const DescribeStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeThing">describeThing</a></b>(const DescribeThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeThingGroup">describeThingGroup</a></b>(const DescribeThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeThingRegistrationTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeThingRegistrationTask">describeThingRegistrationTask</a></b>(const DescribeThingRegistrationTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeThingTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#describeThingType">describeThingType</a></b>(const DescribeThingTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#detachPolicy">detachPolicy</a></b>(const DetachPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachPrincipalPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#detachPrincipalPolicy">detachPrincipalPolicy</a></b>(const DetachPrincipalPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachThingPrincipalResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#detachThingPrincipal">detachThingPrincipal</a></b>(const DetachThingPrincipalRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#disableTopicRule">disableTopicRule</a></b>(const DisableTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#enableTopicRule">enableTopicRule</a></b>(const EnableTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEffectivePoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getEffectivePolicies">getEffectivePolicies</a></b>(const GetEffectivePoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIndexingConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getIndexingConfiguration">getIndexingConfiguration</a></b>(const GetIndexingConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getJobDocument">getJobDocument</a></b>(const GetJobDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getLoggingOptions">getLoggingOptions</a></b>(const GetLoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOTAUpdateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getOTAUpdate">getOTAUpdate</a></b>(const GetOTAUpdateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getPolicy">getPolicy</a></b>(const GetPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPolicyVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getPolicyVersion">getPolicyVersion</a></b>(const GetPolicyVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRegistrationCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getRegistrationCode">getRegistrationCode</a></b>(const GetRegistrationCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getTopicRule">getTopicRule</a></b>(const GetTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetV2LoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#getV2LoggingOptions">getV2LoggingOptions</a></b>(const GetV2LoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAttachedPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listAttachedPolicies">listAttachedPolicies</a></b>(const ListAttachedPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAuthorizersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listAuthorizers">listAuthorizers</a></b>(const ListAuthorizersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCACertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listCACertificates">listCACertificates</a></b>(const ListCACertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listCertificates">listCertificates</a></b>(const ListCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCertificatesByCAResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listCertificatesByCA">listCertificatesByCA</a></b>(const ListCertificatesByCARequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIndicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listIndices">listIndices</a></b>(const ListIndicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobExecutionsForJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listJobExecutionsForJob">listJobExecutionsForJob</a></b>(const ListJobExecutionsForJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobExecutionsForThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listJobExecutionsForThing">listJobExecutionsForThing</a></b>(const ListJobExecutionsForThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listJobs">listJobs</a></b>(const ListJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOTAUpdatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listOTAUpdates">listOTAUpdates</a></b>(const ListOTAUpdatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOutgoingCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listOutgoingCertificates">listOutgoingCertificates</a></b>(const ListOutgoingCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listPolicies">listPolicies</a></b>(const ListPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPolicyPrincipalsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listPolicyPrincipals">listPolicyPrincipals</a></b>(const ListPolicyPrincipalsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPolicyVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listPolicyVersions">listPolicyVersions</a></b>(const ListPolicyVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPrincipalPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listPrincipalPolicies">listPrincipalPolicies</a></b>(const ListPrincipalPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPrincipalThingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listPrincipalThings">listPrincipalThings</a></b>(const ListPrincipalThingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRoleAliasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listRoleAliases">listRoleAliases</a></b>(const ListRoleAliasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListStreamsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listStreams">listStreams</a></b>(const ListStreamsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTargetsForPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listTargetsForPolicy">listTargetsForPolicy</a></b>(const ListTargetsForPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingGroups">listThingGroups</a></b>(const ListThingGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingGroupsForThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingGroupsForThing">listThingGroupsForThing</a></b>(const ListThingGroupsForThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingPrincipalsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingPrincipals">listThingPrincipals</a></b>(const ListThingPrincipalsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingRegistrationTaskReportsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingRegistrationTaskReports">listThingRegistrationTaskReports</a></b>(const ListThingRegistrationTaskReportsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingRegistrationTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingRegistrationTasks">listThingRegistrationTasks</a></b>(const ListThingRegistrationTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingTypes">listThingTypes</a></b>(const ListThingTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThings">listThings</a></b>(const ListThingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThingsInThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listThingsInThingGroup">listThingsInThingGroup</a></b>(const ListThingsInThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTopicRulesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listTopicRules">listTopicRules</a></b>(const ListTopicRulesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListV2LoggingLevelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#listV2LoggingLevels">listV2LoggingLevels</a></b>(const ListV2LoggingLevelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterCACertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#registerCACertificate">registerCACertificate</a></b>(const RegisterCACertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#registerCertificate">registerCertificate</a></b>(const RegisterCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#registerThing">registerThing</a></b>(const RegisterThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RejectCertificateTransferResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#rejectCertificateTransfer">rejectCertificateTransfer</a></b>(const RejectCertificateTransferRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveThingFromThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#removeThingFromThingGroup">removeThingFromThingGroup</a></b>(const RemoveThingFromThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReplaceTopicRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#replaceTopicRule">replaceTopicRule</a></b>(const ReplaceTopicRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#searchIndex">searchIndex</a></b>(const SearchIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetDefaultAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#setDefaultAuthorizer">setDefaultAuthorizer</a></b>(const SetDefaultAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetDefaultPolicyVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#setDefaultPolicyVersion">setDefaultPolicyVersion</a></b>(const SetDefaultPolicyVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetLoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#setLoggingOptions">setLoggingOptions</a></b>(const SetLoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetV2LoggingLevelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#setV2LoggingLevel">setV2LoggingLevel</a></b>(const SetV2LoggingLevelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetV2LoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#setV2LoggingOptions">setV2LoggingOptions</a></b>(const SetV2LoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartThingRegistrationTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#startThingRegistrationTask">startThingRegistrationTask</a></b>(const StartThingRegistrationTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopThingRegistrationTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#stopThingRegistrationTask">stopThingRegistrationTask</a></b>(const StopThingRegistrationTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestAuthorizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#testAuthorization">testAuthorization</a></b>(const TestAuthorizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestInvokeAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#testInvokeAuthorizer">testInvokeAuthorizer</a></b>(const TestInvokeAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TransferCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#transferCertificate">transferCertificate</a></b>(const TransferCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateAuthorizer">updateAuthorizer</a></b>(const UpdateAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCACertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateCACertificate">updateCACertificate</a></b>(const UpdateCACertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateCertificate">updateCertificate</a></b>(const UpdateCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEventConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateEventConfigurations">updateEventConfigurations</a></b>(const UpdateEventConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIndexingConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateIndexingConfiguration">updateIndexingConfiguration</a></b>(const UpdateIndexingConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRoleAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateRoleAlias">updateRoleAlias</a></b>(const UpdateRoleAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateStream">updateStream</a></b>(const UpdateStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateThing">updateThing</a></b>(const UpdateThingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateThingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateThingGroup">updateThingGroup</a></b>(const UpdateThingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateThingGroupsForThingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot-iotclient.html#updateThingGroupsForThing">updateThingGroupsForThing</a></b>(const UpdateThingGroupsForThingRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iot-iotclient.html">IoTClient</a> class provides access to the AWS IoT service.</p>
+<p>&lt;fullname&gt;AWS IoT&lt;/fullname&gt;</p>
+<p>AWS IoT provides secure, bi-directional communication between Internet-connected things (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. You can discover your custom IoT-Data endpoint to communicate with, configure rules for data processing and integration with other services, organize resources associated with each thing (Thing Registry), configure logging, and create and manage policies and credentials to authenticate</p>
+<p>things&gt;</p>
+<p>For more information about how AWS IoT works, see the &lt;a href=&quot;http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html&quot;&gt;Developer</p>
+</div>
+<!-- @@@IoTClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTClient[overload1]$$$IoTClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTClient"><a name="IoTClient"></a>IoTClient::<span class="name">IoTClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iot-iotclient.html">IoTClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@IoTClient -->
+<!-- $$$IoTClient$$$IoTClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTClient-1"><a name="IoTClient-1"></a>IoTClient::<span class="name">IoTClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-iot-iotclient.html#IoTClient">IoTClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@IoTClient -->
+<!-- $$$acceptCertificateTransfer[overload1]$$$acceptCertificateTransferconstAcceptCertificateTransferRequest& -->
+<h3 class="fn" id="acceptCertificateTransfer"><a name="acceptCertificateTransfer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-acceptcertificatetransferresponse.html">AcceptCertificateTransferResponse</a></span> *IoTClient::<span class="name">acceptCertificateTransfer</span>(const <span class="type"><a href="qtaws-iot-acceptcertificatetransferrequest.html">AcceptCertificateTransferRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-acceptcertificatetransferresponse.html">AcceptCertificateTransferResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accepts a pending certificate transfer. The default state of the certificate is</p>
+<p>INACTIVE&gt;</p>
+<p>To check for pending certificate transfers, call &lt;a&gt;ListCertificates&lt;/a&gt; to enumerate your</p>
+<!-- @@@acceptCertificateTransfer -->
+<!-- $$$addThingToThingGroup[overload1]$$$addThingToThingGroupconstAddThingToThingGroupRequest& -->
+<h3 class="fn" id="addThingToThingGroup"><a name="addThingToThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-addthingtothinggroupresponse.html">AddThingToThingGroupResponse</a></span> *IoTClient::<span class="name">addThingToThingGroup</span>(const <span class="type"><a href="qtaws-iot-addthingtothinggrouprequest.html">AddThingToThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-addthingtothinggroupresponse.html">AddThingToThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a thing to a thing</p>
+<!-- @@@addThingToThingGroup -->
+<!-- $$$associateTargetsWithJob[overload1]$$$associateTargetsWithJobconstAssociateTargetsWithJobRequest& -->
+<h3 class="fn" id="associateTargetsWithJob"><a name="associateTargetsWithJob"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-associatetargetswithjobresponse.html">AssociateTargetsWithJobResponse</a></span> *IoTClient::<span class="name">associateTargetsWithJob</span>(const <span class="type"><a href="qtaws-iot-associatetargetswithjobrequest.html">AssociateTargetsWithJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-associatetargetswithjobresponse.html">AssociateTargetsWithJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a group with a continuous job. The following criteria must be met:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The job must have been created with the &lt;code&gt;targetSelection&lt;/code&gt; field set to</p>
+<p>&quot;CONTINUOUS&quot;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The job status must currently be</p>
+<p>&quot;IN_PROGRESS&quot;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The total number of targets associated with a job must not exceed</p>
+<!-- @@@associateTargetsWithJob -->
+<!-- $$$attachPolicy[overload1]$$$attachPolicyconstAttachPolicyRequest& -->
+<h3 class="fn" id="attachPolicy"><a name="attachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-attachpolicyresponse.html">AttachPolicyResponse</a></span> *IoTClient::<span class="name">attachPolicy</span>(const <span class="type"><a href="qtaws-iot-attachpolicyrequest.html">AttachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-attachpolicyresponse.html">AttachPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a policy to the specified</p>
+<!-- @@@attachPolicy -->
+<!-- $$$attachPrincipalPolicy[overload1]$$$attachPrincipalPolicyconstAttachPrincipalPolicyRequest& -->
+<h3 class="fn" id="attachPrincipalPolicy"><a name="attachPrincipalPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-attachprincipalpolicyresponse.html">AttachPrincipalPolicyResponse</a></span> *IoTClient::<span class="name">attachPrincipalPolicy</span>(const <span class="type"><a href="qtaws-iot-attachprincipalpolicyrequest.html">AttachPrincipalPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-attachprincipalpolicyresponse.html">AttachPrincipalPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches the specified policy to the specified principal (certificate or other</p>
+<p>credential)&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; This API is deprecated. Please use &lt;a&gt;AttachPolicy&lt;/a&gt;</p>
+<!-- @@@attachPrincipalPolicy -->
+<!-- $$$attachThingPrincipal[overload1]$$$attachThingPrincipalconstAttachThingPrincipalRequest& -->
+<h3 class="fn" id="attachThingPrincipal"><a name="attachThingPrincipal"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-attachthingprincipalresponse.html">AttachThingPrincipalResponse</a></span> *IoTClient::<span class="name">attachThingPrincipal</span>(const <span class="type"><a href="qtaws-iot-attachthingprincipalrequest.html">AttachThingPrincipalRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-attachthingprincipalresponse.html">AttachThingPrincipalResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches the specified principal to the specified</p>
+<!-- @@@attachThingPrincipal -->
+<!-- $$$cancelCertificateTransfer[overload1]$$$cancelCertificateTransferconstCancelCertificateTransferRequest& -->
+<h3 class="fn" id="cancelCertificateTransfer"><a name="cancelCertificateTransfer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-cancelcertificatetransferresponse.html">CancelCertificateTransferResponse</a></span> *IoTClient::<span class="name">cancelCertificateTransfer</span>(const <span class="type"><a href="qtaws-iot-cancelcertificatetransferrequest.html">CancelCertificateTransferRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-cancelcertificatetransferresponse.html">CancelCertificateTransferResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels a pending transfer for the specified</p>
+<p>certificate&gt;</p>
+<p>&lt;b&gt;Note&lt;/b&gt; Only the transfer source account can use this operation to cancel a transfer. (Transfer destinations can use &lt;a&gt;RejectCertificateTransfer&lt;/a&gt; instead.) After transfer, AWS IoT returns the certificate to the source account in the INACTIVE state. After the destination account has accepted the transfer, the transfer cannot be</p>
+<p>cancelled&gt;</p>
+<p>After a certificate transfer is cancelled, the status of the certificate changes from PENDING_TRANSFER to</p>
+<!-- @@@cancelCertificateTransfer -->
+<!-- $$$cancelJob[overload1]$$$cancelJobconstCancelJobRequest& -->
+<h3 class="fn" id="cancelJob"><a name="cancelJob"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-canceljobresponse.html">CancelJobResponse</a></span> *IoTClient::<span class="name">cancelJob</span>(const <span class="type"><a href="qtaws-iot-canceljobrequest.html">CancelJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-canceljobresponse.html">CancelJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels a</p>
+<!-- @@@cancelJob -->
+<!-- $$$clearDefaultAuthorizer[overload1]$$$clearDefaultAuthorizerconstClearDefaultAuthorizerRequest& -->
+<h3 class="fn" id="clearDefaultAuthorizer"><a name="clearDefaultAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-cleardefaultauthorizerresponse.html">ClearDefaultAuthorizerResponse</a></span> *IoTClient::<span class="name">clearDefaultAuthorizer</span>(const <span class="type"><a href="qtaws-iot-cleardefaultauthorizerrequest.html">ClearDefaultAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-cleardefaultauthorizerresponse.html">ClearDefaultAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Clears the default</p>
+<!-- @@@clearDefaultAuthorizer -->
+<!-- $$$createAuthorizer[overload1]$$$createAuthorizerconstCreateAuthorizerRequest& -->
+<h3 class="fn" id="createAuthorizer"><a name="createAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createauthorizerresponse.html">CreateAuthorizerResponse</a></span> *IoTClient::<span class="name">createAuthorizer</span>(const <span class="type"><a href="qtaws-iot-createauthorizerrequest.html">CreateAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createauthorizerresponse.html">CreateAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an</p>
+<!-- @@@createAuthorizer -->
+<!-- $$$createCertificateFromCsr[overload1]$$$createCertificateFromCsrconstCreateCertificateFromCsrRequest& -->
+<h3 class="fn" id="createCertificateFromCsr"><a name="createCertificateFromCsr"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createcertificatefromcsrresponse.html">CreateCertificateFromCsrResponse</a></span> *IoTClient::<span class="name">createCertificateFromCsr</span>(const <span class="type"><a href="qtaws-iot-createcertificatefromcsrrequest.html">CreateCertificateFromCsrRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createcertificatefromcsrresponse.html">CreateCertificateFromCsrResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an X.509 certificate using the specified certificate signing</p>
+<p>request&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; The CSR must include a public key that is either an RSA key with a length of at least 2048 bits or an ECC key from NIST P-256 or NIST P-384 curves.</p>
+<p>&lt;/p</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; Reusing the same certificate signing request (CSR) results in a distinct</p>
+<p>certificate&gt;</p>
+<p>You can create multiple certificates in a batch by creating a directory, copying multiple .csr files into that directory, and then specifying that directory on the command line. The following commands show how to create a batch of certificates given a batch of</p>
+<p>CSRs&gt;</p>
+<p>Assuming a set of CSRs are located inside of the directory</p>
+<p>my-csr-directory&gt;</p>
+<p>On Linux and OS X, the command</p>
+<p>is&gt;</p>
+<p>$ ls my-csr-directory/ | xargs -I {} aws iot create-certificate-from-csr --certificate-signing-request</p>
+<p>file://my-csr-directory/{&gt;</p>
+<p>This command lists all of the CSRs in my-csr-directory and pipes each CSR file name to the aws iot create-certificate-from-csr AWS CLI command to create a certificate for the corresponding</p>
+<p>CSR&gt;</p>
+<p>The aws iot create-certificate-from-csr part of the command can also be run in parallel to speed up the certificate creation</p>
+<p>process&gt;</p>
+<p>$ ls my-csr-directory/ | xargs -P 10 -I {} aws iot create-certificate-from-csr --certificate-signing-request</p>
+<p>file://my-csr-directory/{&gt;</p>
+<p>On Windows PowerShell, the command to create certificates for all CSRs in my-csr-directory</p>
+<p>is&gt;</p>
+<p>&amp;gt; ls -Name my-csr-directory | %{aws iot create-certificate-from-csr --certificate-signing-request</p>
+<p>file://my-csr-directory/$_&gt;</p>
+<p>On a Windows command prompt, the command to create certificates for all CSRs in my-csr-directory</p>
+<p>is&gt;</p>
+<p>&amp;gt; forfiles /p my-csr-directory /c &quot;cmd /c aws iot create-certificate-from-csr --certificate-signing-request</p>
+<!-- @@@createCertificateFromCsr -->
+<!-- $$$createJob[overload1]$$$createJobconstCreateJobRequest& -->
+<h3 class="fn" id="createJob"><a name="createJob"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createjobresponse.html">CreateJobResponse</a></span> *IoTClient::<span class="name">createJob</span>(const <span class="type"><a href="qtaws-iot-createjobrequest.html">CreateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createjobresponse.html">CreateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createJob -->
+<!-- $$$createKeysAndCertificate[overload1]$$$createKeysAndCertificateconstCreateKeysAndCertificateRequest& -->
+<h3 class="fn" id="createKeysAndCertificate"><a name="createKeysAndCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createkeysandcertificateresponse.html">CreateKeysAndCertificateResponse</a></span> *IoTClient::<span class="name">createKeysAndCertificate</span>(const <span class="type"><a href="qtaws-iot-createkeysandcertificaterequest.html">CreateKeysAndCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createkeysandcertificateresponse.html">CreateKeysAndCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public</p>
+<p>key&gt;</p>
+<p>&lt;b&gt;Note&lt;/b&gt; This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in a secure</p>
+<!-- @@@createKeysAndCertificate -->
+<!-- $$$createOTAUpdate[overload1]$$$createOTAUpdateconstCreateOTAUpdateRequest& -->
+<h3 class="fn" id="createOTAUpdate"><a name="createOTAUpdate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createotaupdateresponse.html">CreateOTAUpdateResponse</a></span> *IoTClient::<span class="name">createOTAUpdate</span>(const <span class="type"><a href="qtaws-iot-createotaupdaterequest.html">CreateOTAUpdateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createotaupdateresponse.html">CreateOTAUpdateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an AWS IoT OTAUpdate on a target group of things or</p>
+<!-- @@@createOTAUpdate -->
+<!-- $$$createPolicy[overload1]$$$createPolicyconstCreatePolicyRequest& -->
+<h3 class="fn" id="createPolicy"><a name="createPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createpolicyresponse.html">CreatePolicyResponse</a></span> *IoTClient::<span class="name">createPolicy</span>(const <span class="type"><a href="qtaws-iot-createpolicyrequest.html">CreatePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createpolicyresponse.html">CreatePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an AWS IoT</p>
+<p>policy&gt;</p>
+<p>The created policy is the default version for the policy. This operation creates a policy version with a version identifier of &lt;b&gt;1&lt;/b&gt; and sets &lt;b&gt;1&lt;/b&gt; as the policy's default</p>
+<!-- @@@createPolicy -->
+<!-- $$$createPolicyVersion[overload1]$$$createPolicyVersionconstCreatePolicyVersionRequest& -->
+<h3 class="fn" id="createPolicyVersion"><a name="createPolicyVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createpolicyversionresponse.html">CreatePolicyVersionResponse</a></span> *IoTClient::<span class="name">createPolicyVersion</span>(const <span class="type"><a href="qtaws-iot-createpolicyversionrequest.html">CreatePolicyVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createpolicyversionresponse.html">CreatePolicyVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new version of the specified AWS IoT policy. To update a policy, create a new policy version. A managed policy can have up to five versions. If the policy has five versions, you must use &lt;a&gt;DeletePolicyVersion&lt;/a&gt; to delete an existing version before you create a new</p>
+<p>one&gt;</p>
+<p>Optionally, you can set the new version as the policy's default version. The default version is the operative version (that is, the version that is in effect for the certificates to which the policy is</p>
+<!-- @@@createPolicyVersion -->
+<!-- $$$createRoleAlias[overload1]$$$createRoleAliasconstCreateRoleAliasRequest& -->
+<h3 class="fn" id="createRoleAlias"><a name="createRoleAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createrolealiasresponse.html">CreateRoleAliasResponse</a></span> *IoTClient::<span class="name">createRoleAlias</span>(const <span class="type"><a href="qtaws-iot-createrolealiasrequest.html">CreateRoleAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createrolealiasresponse.html">CreateRoleAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a role</p>
+<!-- @@@createRoleAlias -->
+<!-- $$$createStream[overload1]$$$createStreamconstCreateStreamRequest& -->
+<h3 class="fn" id="createStream"><a name="createStream"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createstreamresponse.html">CreateStreamResponse</a></span> *IoTClient::<span class="name">createStream</span>(const <span class="type"><a href="qtaws-iot-createstreamrequest.html">CreateStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createstreamresponse.html">CreateStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a stream. The total size of a file associated with the stream cannot exceed more than 2 MB. The stream will be created with version 0. If a stream is created with the same streamID as a stream that existed and was deleted within last 90 days, we will resurrect that old stream by incrementing the version by</p>
+<!-- @@@createStream -->
+<!-- $$$createThing[overload1]$$$createThingconstCreateThingRequest& -->
+<h3 class="fn" id="createThing"><a name="createThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createthingresponse.html">CreateThingResponse</a></span> *IoTClient::<span class="name">createThing</span>(const <span class="type"><a href="qtaws-iot-createthingrequest.html">CreateThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createthingresponse.html">CreateThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a thing record in the thing</p>
+<!-- @@@createThing -->
+<!-- $$$createThingGroup[overload1]$$$createThingGroupconstCreateThingGroupRequest& -->
+<h3 class="fn" id="createThingGroup"><a name="createThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createthinggroupresponse.html">CreateThingGroupResponse</a></span> *IoTClient::<span class="name">createThingGroup</span>(const <span class="type"><a href="qtaws-iot-createthinggrouprequest.html">CreateThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createthinggroupresponse.html">CreateThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a thing</p>
+<!-- @@@createThingGroup -->
+<!-- $$$createThingType[overload1]$$$createThingTypeconstCreateThingTypeRequest& -->
+<h3 class="fn" id="createThingType"><a name="createThingType"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createthingtyperesponse.html">CreateThingTypeResponse</a></span> *IoTClient::<span class="name">createThingType</span>(const <span class="type"><a href="qtaws-iot-createthingtyperequest.html">CreateThingTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createthingtyperesponse.html">CreateThingTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new thing</p>
+<!-- @@@createThingType -->
+<!-- $$$createTopicRule[overload1]$$$createTopicRuleconstCreateTopicRuleRequest& -->
+<h3 class="fn" id="createTopicRule"><a name="createTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-createtopicruleresponse.html">CreateTopicRuleResponse</a></span> *IoTClient::<span class="name">createTopicRule</span>(const <span class="type"><a href="qtaws-iot-createtopicrulerequest.html">CreateTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-createtopicruleresponse.html">CreateTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the</p>
+<!-- @@@createTopicRule -->
+<!-- $$$deleteAuthorizer[overload1]$$$deleteAuthorizerconstDeleteAuthorizerRequest& -->
+<h3 class="fn" id="deleteAuthorizer"><a name="deleteAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deleteauthorizerresponse.html">DeleteAuthorizerResponse</a></span> *IoTClient::<span class="name">deleteAuthorizer</span>(const <span class="type"><a href="qtaws-iot-deleteauthorizerrequest.html">DeleteAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deleteauthorizerresponse.html">DeleteAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an</p>
+<!-- @@@deleteAuthorizer -->
+<!-- $$$deleteCACertificate[overload1]$$$deleteCACertificateconstDeleteCACertificateRequest& -->
+<h3 class="fn" id="deleteCACertificate"><a name="deleteCACertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletecacertificateresponse.html">DeleteCACertificateResponse</a></span> *IoTClient::<span class="name">deleteCACertificate</span>(const <span class="type"><a href="qtaws-iot-deletecacertificaterequest.html">DeleteCACertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletecacertificateresponse.html">DeleteCACertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a registered CA</p>
+<!-- @@@deleteCACertificate -->
+<!-- $$$deleteCertificate[overload1]$$$deleteCertificateconstDeleteCertificateRequest& -->
+<h3 class="fn" id="deleteCertificate"><a name="deleteCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletecertificateresponse.html">DeleteCertificateResponse</a></span> *IoTClient::<span class="name">deleteCertificate</span>(const <span class="type"><a href="qtaws-iot-deletecertificaterequest.html">DeleteCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletecertificateresponse.html">DeleteCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>certificate&gt;</p>
+<p>A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a certificate, first use the &lt;a&gt;DetachPrincipalPolicy&lt;/a&gt; API to detach all policies. Next, use the &lt;a&gt;UpdateCertificate&lt;/a&gt; API to set the certificate to the INACTIVE</p>
+<!-- @@@deleteCertificate -->
+<!-- $$$deleteOTAUpdate[overload1]$$$deleteOTAUpdateconstDeleteOTAUpdateRequest& -->
+<h3 class="fn" id="deleteOTAUpdate"><a name="deleteOTAUpdate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deleteotaupdateresponse.html">DeleteOTAUpdateResponse</a></span> *IoTClient::<span class="name">deleteOTAUpdate</span>(const <span class="type"><a href="qtaws-iot-deleteotaupdaterequest.html">DeleteOTAUpdateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deleteotaupdateresponse.html">DeleteOTAUpdateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Delete an OTA</p>
+<!-- @@@deleteOTAUpdate -->
+<!-- $$$deletePolicy[overload1]$$$deletePolicyconstDeletePolicyRequest& -->
+<h3 class="fn" id="deletePolicy"><a name="deletePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletepolicyresponse.html">DeletePolicyResponse</a></span> *IoTClient::<span class="name">deletePolicy</span>(const <span class="type"><a href="qtaws-iot-deletepolicyrequest.html">DeletePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletepolicyresponse.html">DeletePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>policy&gt;</p>
+<p>A policy cannot be deleted if it has non-default versions or it is attached to any</p>
+<p>certificate&gt;</p>
+<p>To delete a policy, use the DeletePolicyVersion API to delete all non-default versions of the policy; use the DetachPrincipalPolicy API to detach the policy from any certificate; and then use the DeletePolicy API to delete the</p>
+<p>policy&gt;</p>
+<p>When a policy is deleted using DeletePolicy, its default version is deleted with</p>
+<!-- @@@deletePolicy -->
+<!-- $$$deletePolicyVersion[overload1]$$$deletePolicyVersionconstDeletePolicyVersionRequest& -->
+<h3 class="fn" id="deletePolicyVersion"><a name="deletePolicyVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletepolicyversionresponse.html">DeletePolicyVersionResponse</a></span> *IoTClient::<span class="name">deletePolicyVersion</span>(const <span class="type"><a href="qtaws-iot-deletepolicyversionrequest.html">DeletePolicyVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletepolicyversionresponse.html">DeletePolicyVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified version of the specified policy. You cannot delete the default version of a policy using this API. To delete the default version of a policy, use &lt;a&gt;DeletePolicy&lt;/a&gt;. To find out which version of a policy is marked as the default version, use</p>
+<!-- @@@deletePolicyVersion -->
+<!-- $$$deleteRegistrationCode[overload1]$$$deleteRegistrationCodeconstDeleteRegistrationCodeRequest& -->
+<h3 class="fn" id="deleteRegistrationCode"><a name="deleteRegistrationCode"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deleteregistrationcoderesponse.html">DeleteRegistrationCodeResponse</a></span> *IoTClient::<span class="name">deleteRegistrationCode</span>(const <span class="type"><a href="qtaws-iot-deleteregistrationcoderequest.html">DeleteRegistrationCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deleteregistrationcoderesponse.html">DeleteRegistrationCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a CA certificate registration</p>
+<!-- @@@deleteRegistrationCode -->
+<!-- $$$deleteRoleAlias[overload1]$$$deleteRoleAliasconstDeleteRoleAliasRequest& -->
+<h3 class="fn" id="deleteRoleAlias"><a name="deleteRoleAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deleterolealiasresponse.html">DeleteRoleAliasResponse</a></span> *IoTClient::<span class="name">deleteRoleAlias</span>(const <span class="type"><a href="qtaws-iot-deleterolealiasrequest.html">DeleteRoleAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deleterolealiasresponse.html">DeleteRoleAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a role</p>
+<!-- @@@deleteRoleAlias -->
+<!-- $$$deleteStream[overload1]$$$deleteStreamconstDeleteStreamRequest& -->
+<h3 class="fn" id="deleteStream"><a name="deleteStream"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletestreamresponse.html">DeleteStreamResponse</a></span> *IoTClient::<span class="name">deleteStream</span>(const <span class="type"><a href="qtaws-iot-deletestreamrequest.html">DeleteStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletestreamresponse.html">DeleteStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
+<!-- @@@deleteStream -->
+<!-- $$$deleteThing[overload1]$$$deleteThingconstDeleteThingRequest& -->
+<h3 class="fn" id="deleteThing"><a name="deleteThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletethingresponse.html">DeleteThingResponse</a></span> *IoTClient::<span class="name">deleteThing</span>(const <span class="type"><a href="qtaws-iot-deletethingrequest.html">DeleteThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletethingresponse.html">DeleteThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteThing -->
+<!-- $$$deleteThingGroup[overload1]$$$deleteThingGroupconstDeleteThingGroupRequest& -->
+<h3 class="fn" id="deleteThingGroup"><a name="deleteThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletethinggroupresponse.html">DeleteThingGroupResponse</a></span> *IoTClient::<span class="name">deleteThingGroup</span>(const <span class="type"><a href="qtaws-iot-deletethinggrouprequest.html">DeleteThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletethinggroupresponse.html">DeleteThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a thing</p>
+<!-- @@@deleteThingGroup -->
+<!-- $$$deleteThingType[overload1]$$$deleteThingTypeconstDeleteThingTypeRequest& -->
+<h3 class="fn" id="deleteThingType"><a name="deleteThingType"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletethingtyperesponse.html">DeleteThingTypeResponse</a></span> *IoTClient::<span class="name">deleteThingType</span>(const <span class="type"><a href="qtaws-iot-deletethingtyperequest.html">DeleteThingTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletethingtyperesponse.html">DeleteThingTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified thing type . You cannot delete a thing type if it has things associated with it. To delete a thing type, first mark it as deprecated by calling &lt;a&gt;DeprecateThingType&lt;/a&gt;, then remove any associated things by calling &lt;a&gt;UpdateThing&lt;/a&gt; to change the thing type on any associated thing, and finally use &lt;a&gt;DeleteThingType&lt;/a&gt; to delete the thing</p>
+<!-- @@@deleteThingType -->
+<!-- $$$deleteTopicRule[overload1]$$$deleteTopicRuleconstDeleteTopicRuleRequest& -->
+<h3 class="fn" id="deleteTopicRule"><a name="deleteTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletetopicruleresponse.html">DeleteTopicRuleResponse</a></span> *IoTClient::<span class="name">deleteTopicRule</span>(const <span class="type"><a href="qtaws-iot-deletetopicrulerequest.html">DeleteTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletetopicruleresponse.html">DeleteTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the</p>
+<!-- @@@deleteTopicRule -->
+<!-- $$$deleteV2LoggingLevel[overload1]$$$deleteV2LoggingLevelconstDeleteV2LoggingLevelRequest& -->
+<h3 class="fn" id="deleteV2LoggingLevel"><a name="deleteV2LoggingLevel"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deletev2logginglevelresponse.html">DeleteV2LoggingLevelResponse</a></span> *IoTClient::<span class="name">deleteV2LoggingLevel</span>(const <span class="type"><a href="qtaws-iot-deletev2logginglevelrequest.html">DeleteV2LoggingLevelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deletev2logginglevelresponse.html">DeleteV2LoggingLevelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a logging</p>
+<!-- @@@deleteV2LoggingLevel -->
+<!-- $$$deprecateThingType[overload1]$$$deprecateThingTypeconstDeprecateThingTypeRequest& -->
+<h3 class="fn" id="deprecateThingType"><a name="deprecateThingType"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-deprecatethingtyperesponse.html">DeprecateThingTypeResponse</a></span> *IoTClient::<span class="name">deprecateThingType</span>(const <span class="type"><a href="qtaws-iot-deprecatethingtyperequest.html">DeprecateThingTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-deprecatethingtyperesponse.html">DeprecateThingTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecates a thing type. You can not associate new things with deprecated thing</p>
+<!-- @@@deprecateThingType -->
+<!-- $$$describeAuthorizer[overload1]$$$describeAuthorizerconstDescribeAuthorizerRequest& -->
+<h3 class="fn" id="describeAuthorizer"><a name="describeAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describeauthorizerresponse.html">DescribeAuthorizerResponse</a></span> *IoTClient::<span class="name">describeAuthorizer</span>(const <span class="type"><a href="qtaws-iot-describeauthorizerrequest.html">DescribeAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describeauthorizerresponse.html">DescribeAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes an</p>
+<!-- @@@describeAuthorizer -->
+<!-- $$$describeCACertificate[overload1]$$$describeCACertificateconstDescribeCACertificateRequest& -->
+<h3 class="fn" id="describeCACertificate"><a name="describeCACertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describecacertificateresponse.html">DescribeCACertificateResponse</a></span> *IoTClient::<span class="name">describeCACertificate</span>(const <span class="type"><a href="qtaws-iot-describecacertificaterequest.html">DescribeCACertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describecacertificateresponse.html">DescribeCACertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a registered CA</p>
+<!-- @@@describeCACertificate -->
+<!-- $$$describeCertificate[overload1]$$$describeCertificateconstDescribeCertificateRequest& -->
+<h3 class="fn" id="describeCertificate"><a name="describeCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describecertificateresponse.html">DescribeCertificateResponse</a></span> *IoTClient::<span class="name">describeCertificate</span>(const <span class="type"><a href="qtaws-iot-describecertificaterequest.html">DescribeCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describecertificateresponse.html">DescribeCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeCertificate -->
+<!-- $$$describeDefaultAuthorizer[overload1]$$$describeDefaultAuthorizerconstDescribeDefaultAuthorizerRequest& -->
+<h3 class="fn" id="describeDefaultAuthorizer"><a name="describeDefaultAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describedefaultauthorizerresponse.html">DescribeDefaultAuthorizerResponse</a></span> *IoTClient::<span class="name">describeDefaultAuthorizer</span>(const <span class="type"><a href="qtaws-iot-describedefaultauthorizerrequest.html">DescribeDefaultAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describedefaultauthorizerresponse.html">DescribeDefaultAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the default</p>
+<!-- @@@describeDefaultAuthorizer -->
+<!-- $$$describeEndpoint[overload1]$$$describeEndpointconstDescribeEndpointRequest& -->
+<h3 class="fn" id="describeEndpoint"><a name="describeEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describeendpointresponse.html">DescribeEndpointResponse</a></span> *IoTClient::<span class="name">describeEndpoint</span>(const <span class="type"><a href="qtaws-iot-describeendpointrequest.html">DescribeEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describeendpointresponse.html">DescribeEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a unique endpoint specific to the AWS account making the</p>
+<!-- @@@describeEndpoint -->
+<!-- $$$describeEventConfigurations[overload1]$$$describeEventConfigurationsconstDescribeEventConfigurationsRequest& -->
+<h3 class="fn" id="describeEventConfigurations"><a name="describeEventConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describeeventconfigurationsresponse.html">DescribeEventConfigurationsResponse</a></span> *IoTClient::<span class="name">describeEventConfigurations</span>(const <span class="type"><a href="qtaws-iot-describeeventconfigurationsrequest.html">DescribeEventConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describeeventconfigurationsresponse.html">DescribeEventConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes event</p>
+<!-- @@@describeEventConfigurations -->
+<!-- $$$describeIndex[overload1]$$$describeIndexconstDescribeIndexRequest& -->
+<h3 class="fn" id="describeIndex"><a name="describeIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describeindexresponse.html">DescribeIndexResponse</a></span> *IoTClient::<span class="name">describeIndex</span>(const <span class="type"><a href="qtaws-iot-describeindexrequest.html">DescribeIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describeindexresponse.html">DescribeIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a search</p>
+<!-- @@@describeIndex -->
+<!-- $$$describeJob[overload1]$$$describeJobconstDescribeJobRequest& -->
+<h3 class="fn" id="describeJob"><a name="describeJob"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describejobresponse.html">DescribeJobResponse</a></span> *IoTClient::<span class="name">describeJob</span>(const <span class="type"><a href="qtaws-iot-describejobrequest.html">DescribeJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describejobresponse.html">DescribeJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a</p>
+<!-- @@@describeJob -->
+<!-- $$$describeJobExecution[overload1]$$$describeJobExecutionconstDescribeJobExecutionRequest& -->
+<h3 class="fn" id="describeJobExecution"><a name="describeJobExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describejobexecutionresponse.html">DescribeJobExecutionResponse</a></span> *IoTClient::<span class="name">describeJobExecution</span>(const <span class="type"><a href="qtaws-iot-describejobexecutionrequest.html">DescribeJobExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describejobexecutionresponse.html">DescribeJobExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a job</p>
+<!-- @@@describeJobExecution -->
+<!-- $$$describeRoleAlias[overload1]$$$describeRoleAliasconstDescribeRoleAliasRequest& -->
+<h3 class="fn" id="describeRoleAlias"><a name="describeRoleAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describerolealiasresponse.html">DescribeRoleAliasResponse</a></span> *IoTClient::<span class="name">describeRoleAlias</span>(const <span class="type"><a href="qtaws-iot-describerolealiasrequest.html">DescribeRoleAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describerolealiasresponse.html">DescribeRoleAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a role</p>
+<!-- @@@describeRoleAlias -->
+<!-- $$$describeStream[overload1]$$$describeStreamconstDescribeStreamRequest& -->
+<h3 class="fn" id="describeStream"><a name="describeStream"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describestreamresponse.html">DescribeStreamResponse</a></span> *IoTClient::<span class="name">describeStream</span>(const <span class="type"><a href="qtaws-iot-describestreamrequest.html">DescribeStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describestreamresponse.html">DescribeStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@describeStream -->
+<!-- $$$describeThing[overload1]$$$describeThingconstDescribeThingRequest& -->
+<h3 class="fn" id="describeThing"><a name="describeThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describethingresponse.html">DescribeThingResponse</a></span> *IoTClient::<span class="name">describeThing</span>(const <span class="type"><a href="qtaws-iot-describethingrequest.html">DescribeThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describethingresponse.html">DescribeThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeThing -->
+<!-- $$$describeThingGroup[overload1]$$$describeThingGroupconstDescribeThingGroupRequest& -->
+<h3 class="fn" id="describeThingGroup"><a name="describeThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describethinggroupresponse.html">DescribeThingGroupResponse</a></span> *IoTClient::<span class="name">describeThingGroup</span>(const <span class="type"><a href="qtaws-iot-describethinggrouprequest.html">DescribeThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describethinggroupresponse.html">DescribeThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe a thing</p>
+<!-- @@@describeThingGroup -->
+<!-- $$$describeThingRegistrationTask[overload1]$$$describeThingRegistrationTaskconstDescribeThingRegistrationTaskRequest& -->
+<h3 class="fn" id="describeThingRegistrationTask"><a name="describeThingRegistrationTask"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describethingregistrationtaskresponse.html">DescribeThingRegistrationTaskResponse</a></span> *IoTClient::<span class="name">describeThingRegistrationTask</span>(const <span class="type"><a href="qtaws-iot-describethingregistrationtaskrequest.html">DescribeThingRegistrationTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describethingregistrationtaskresponse.html">DescribeThingRegistrationTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a bulk thing provisioning</p>
+<!-- @@@describeThingRegistrationTask -->
+<!-- $$$describeThingType[overload1]$$$describeThingTypeconstDescribeThingTypeRequest& -->
+<h3 class="fn" id="describeThingType"><a name="describeThingType"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-describethingtyperesponse.html">DescribeThingTypeResponse</a></span> *IoTClient::<span class="name">describeThingType</span>(const <span class="type"><a href="qtaws-iot-describethingtyperequest.html">DescribeThingTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-describethingtyperesponse.html">DescribeThingTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified thing</p>
+<!-- @@@describeThingType -->
+<!-- $$$detachPolicy[overload1]$$$detachPolicyconstDetachPolicyRequest& -->
+<h3 class="fn" id="detachPolicy"><a name="detachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-detachpolicyresponse.html">DetachPolicyResponse</a></span> *IoTClient::<span class="name">detachPolicy</span>(const <span class="type"><a href="qtaws-iot-detachpolicyrequest.html">DetachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-detachpolicyresponse.html">DetachPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a policy from the specified</p>
+<!-- @@@detachPolicy -->
+<!-- $$$detachPrincipalPolicy[overload1]$$$detachPrincipalPolicyconstDetachPrincipalPolicyRequest& -->
+<h3 class="fn" id="detachPrincipalPolicy"><a name="detachPrincipalPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-detachprincipalpolicyresponse.html">DetachPrincipalPolicyResponse</a></span> *IoTClient::<span class="name">detachPrincipalPolicy</span>(const <span class="type"><a href="qtaws-iot-detachprincipalpolicyrequest.html">DetachPrincipalPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-detachprincipalpolicyresponse.html">DetachPrincipalPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified policy from the specified</p>
+<p>certificate&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; This API is deprecated. Please use &lt;a&gt;DetachPolicy&lt;/a&gt;</p>
+<!-- @@@detachPrincipalPolicy -->
+<!-- $$$detachThingPrincipal[overload1]$$$detachThingPrincipalconstDetachThingPrincipalRequest& -->
+<h3 class="fn" id="detachThingPrincipal"><a name="detachThingPrincipal"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-detachthingprincipalresponse.html">DetachThingPrincipalResponse</a></span> *IoTClient::<span class="name">detachThingPrincipal</span>(const <span class="type"><a href="qtaws-iot-detachthingprincipalrequest.html">DetachThingPrincipalRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-detachthingprincipalresponse.html">DetachThingPrincipalResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches the specified principal from the specified</p>
+<!-- @@@detachThingPrincipal -->
+<!-- $$$disableTopicRule[overload1]$$$disableTopicRuleconstDisableTopicRuleRequest& -->
+<h3 class="fn" id="disableTopicRule"><a name="disableTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-disabletopicruleresponse.html">DisableTopicRuleResponse</a></span> *IoTClient::<span class="name">disableTopicRule</span>(const <span class="type"><a href="qtaws-iot-disabletopicrulerequest.html">DisableTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-disabletopicruleresponse.html">DisableTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the</p>
+<!-- @@@disableTopicRule -->
+<!-- $$$enableTopicRule[overload1]$$$enableTopicRuleconstEnableTopicRuleRequest& -->
+<h3 class="fn" id="enableTopicRule"><a name="enableTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-enabletopicruleresponse.html">EnableTopicRuleResponse</a></span> *IoTClient::<span class="name">enableTopicRule</span>(const <span class="type"><a href="qtaws-iot-enabletopicrulerequest.html">EnableTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-enabletopicruleresponse.html">EnableTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables the</p>
+<!-- @@@enableTopicRule -->
+<!-- $$$getEffectivePolicies[overload1]$$$getEffectivePoliciesconstGetEffectivePoliciesRequest& -->
+<h3 class="fn" id="getEffectivePolicies"><a name="getEffectivePolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-geteffectivepoliciesresponse.html">GetEffectivePoliciesResponse</a></span> *IoTClient::<span class="name">getEffectivePolicies</span>(const <span class="type"><a href="qtaws-iot-geteffectivepoliciesrequest.html">GetEffectivePoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-geteffectivepoliciesresponse.html">GetEffectivePoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets effective</p>
+<!-- @@@getEffectivePolicies -->
+<!-- $$$getIndexingConfiguration[overload1]$$$getIndexingConfigurationconstGetIndexingConfigurationRequest& -->
+<h3 class="fn" id="getIndexingConfiguration"><a name="getIndexingConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getindexingconfigurationresponse.html">GetIndexingConfigurationResponse</a></span> *IoTClient::<span class="name">getIndexingConfiguration</span>(const <span class="type"><a href="qtaws-iot-getindexingconfigurationrequest.html">GetIndexingConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getindexingconfigurationresponse.html">GetIndexingConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the search</p>
+<!-- @@@getIndexingConfiguration -->
+<!-- $$$getJobDocument[overload1]$$$getJobDocumentconstGetJobDocumentRequest& -->
+<h3 class="fn" id="getJobDocument"><a name="getJobDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getjobdocumentresponse.html">GetJobDocumentResponse</a></span> *IoTClient::<span class="name">getJobDocument</span>(const <span class="type"><a href="qtaws-iot-getjobdocumentrequest.html">GetJobDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getjobdocumentresponse.html">GetJobDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a job</p>
+<!-- @@@getJobDocument -->
+<!-- $$$getLoggingOptions[overload1]$$$getLoggingOptionsconstGetLoggingOptionsRequest& -->
+<h3 class="fn" id="getLoggingOptions"><a name="getLoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getloggingoptionsresponse.html">GetLoggingOptionsResponse</a></span> *IoTClient::<span class="name">getLoggingOptions</span>(const <span class="type"><a href="qtaws-iot-getloggingoptionsrequest.html">GetLoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getloggingoptionsresponse.html">GetLoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the logging</p>
+<!-- @@@getLoggingOptions -->
+<!-- $$$getOTAUpdate[overload1]$$$getOTAUpdateconstGetOTAUpdateRequest& -->
+<h3 class="fn" id="getOTAUpdate"><a name="getOTAUpdate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getotaupdateresponse.html">GetOTAUpdateResponse</a></span> *IoTClient::<span class="name">getOTAUpdate</span>(const <span class="type"><a href="qtaws-iot-getotaupdaterequest.html">GetOTAUpdateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getotaupdateresponse.html">GetOTAUpdateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets an OTA</p>
+<!-- @@@getOTAUpdate -->
+<!-- $$$getPolicy[overload1]$$$getPolicyconstGetPolicyRequest& -->
+<h3 class="fn" id="getPolicy"><a name="getPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getpolicyresponse.html">GetPolicyResponse</a></span> *IoTClient::<span class="name">getPolicy</span>(const <span class="type"><a href="qtaws-iot-getpolicyrequest.html">GetPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getpolicyresponse.html">GetPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified policy with the policy document of the default</p>
+<!-- @@@getPolicy -->
+<!-- $$$getPolicyVersion[overload1]$$$getPolicyVersionconstGetPolicyVersionRequest& -->
+<h3 class="fn" id="getPolicyVersion"><a name="getPolicyVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getpolicyversionresponse.html">GetPolicyVersionResponse</a></span> *IoTClient::<span class="name">getPolicyVersion</span>(const <span class="type"><a href="qtaws-iot-getpolicyversionrequest.html">GetPolicyVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getpolicyversionresponse.html">GetPolicyVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified policy</p>
+<!-- @@@getPolicyVersion -->
+<!-- $$$getRegistrationCode[overload1]$$$getRegistrationCodeconstGetRegistrationCodeRequest& -->
+<h3 class="fn" id="getRegistrationCode"><a name="getRegistrationCode"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getregistrationcoderesponse.html">GetRegistrationCodeResponse</a></span> *IoTClient::<span class="name">getRegistrationCode</span>(const <span class="type"><a href="qtaws-iot-getregistrationcoderequest.html">GetRegistrationCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getregistrationcoderesponse.html">GetRegistrationCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a registration code used to register a CA certificate with AWS</p>
+<!-- @@@getRegistrationCode -->
+<!-- $$$getTopicRule[overload1]$$$getTopicRuleconstGetTopicRuleRequest& -->
+<h3 class="fn" id="getTopicRule"><a name="getTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-gettopicruleresponse.html">GetTopicRuleResponse</a></span> *IoTClient::<span class="name">getTopicRule</span>(const <span class="type"><a href="qtaws-iot-gettopicrulerequest.html">GetTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-gettopicruleresponse.html">GetTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the</p>
+<!-- @@@getTopicRule -->
+<!-- $$$getV2LoggingOptions[overload1]$$$getV2LoggingOptionsconstGetV2LoggingOptionsRequest& -->
+<h3 class="fn" id="getV2LoggingOptions"><a name="getV2LoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-getv2loggingoptionsresponse.html">GetV2LoggingOptionsResponse</a></span> *IoTClient::<span class="name">getV2LoggingOptions</span>(const <span class="type"><a href="qtaws-iot-getv2loggingoptionsrequest.html">GetV2LoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-getv2loggingoptionsresponse.html">GetV2LoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the fine grained logging</p>
+<!-- @@@getV2LoggingOptions -->
+<!-- $$$listAttachedPolicies[overload1]$$$listAttachedPoliciesconstListAttachedPoliciesRequest& -->
+<h3 class="fn" id="listAttachedPolicies"><a name="listAttachedPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listattachedpoliciesresponse.html">ListAttachedPoliciesResponse</a></span> *IoTClient::<span class="name">listAttachedPolicies</span>(const <span class="type"><a href="qtaws-iot-listattachedpoliciesrequest.html">ListAttachedPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listattachedpoliciesresponse.html">ListAttachedPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the policies attached to the specified thing</p>
+<!-- @@@listAttachedPolicies -->
+<!-- $$$listAuthorizers[overload1]$$$listAuthorizersconstListAuthorizersRequest& -->
+<h3 class="fn" id="listAuthorizers"><a name="listAuthorizers"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listauthorizersresponse.html">ListAuthorizersResponse</a></span> *IoTClient::<span class="name">listAuthorizers</span>(const <span class="type"><a href="qtaws-iot-listauthorizersrequest.html">ListAuthorizersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listauthorizersresponse.html">ListAuthorizersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the authorizers registered in your</p>
+<!-- @@@listAuthorizers -->
+<!-- $$$listCACertificates[overload1]$$$listCACertificatesconstListCACertificatesRequest& -->
+<h3 class="fn" id="listCACertificates"><a name="listCACertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listcacertificatesresponse.html">ListCACertificatesResponse</a></span> *IoTClient::<span class="name">listCACertificates</span>(const <span class="type"><a href="qtaws-iot-listcacertificatesrequest.html">ListCACertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listcacertificatesresponse.html">ListCACertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the CA certificates registered for your AWS</p>
+<p>account&gt;</p>
+<p>The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional</p>
+<!-- @@@listCACertificates -->
+<!-- $$$listCertificates[overload1]$$$listCertificatesconstListCertificatesRequest& -->
+<h3 class="fn" id="listCertificates"><a name="listCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listcertificatesresponse.html">ListCertificatesResponse</a></span> *IoTClient::<span class="name">listCertificates</span>(const <span class="type"><a href="qtaws-iot-listcertificatesrequest.html">ListCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listcertificatesresponse.html">ListCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the certificates registered in your AWS</p>
+<p>account&gt;</p>
+<p>The results are paginated with a default page size of 25. You can use the returned marker to retrieve additional</p>
+<!-- @@@listCertificates -->
+<!-- $$$listCertificatesByCA[overload1]$$$listCertificatesByCAconstListCertificatesByCARequest& -->
+<h3 class="fn" id="listCertificatesByCA"><a name="listCertificatesByCA"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listcertificatesbycaresponse.html">ListCertificatesByCAResponse</a></span> *IoTClient::<span class="name">listCertificatesByCA</span>(const <span class="type"><a href="qtaws-iot-listcertificatesbycarequest.html">ListCertificatesByCARequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listcertificatesbycaresponse.html">ListCertificatesByCAResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List the device certificates signed by the specified CA</p>
+<!-- @@@listCertificatesByCA -->
+<!-- $$$listIndices[overload1]$$$listIndicesconstListIndicesRequest& -->
+<h3 class="fn" id="listIndices"><a name="listIndices"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listindicesresponse.html">ListIndicesResponse</a></span> *IoTClient::<span class="name">listIndices</span>(const <span class="type"><a href="qtaws-iot-listindicesrequest.html">ListIndicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listindicesresponse.html">ListIndicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the search</p>
+<!-- @@@listIndices -->
+<!-- $$$listJobExecutionsForJob[overload1]$$$listJobExecutionsForJobconstListJobExecutionsForJobRequest& -->
+<h3 class="fn" id="listJobExecutionsForJob"><a name="listJobExecutionsForJob"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listjobexecutionsforjobresponse.html">ListJobExecutionsForJobResponse</a></span> *IoTClient::<span class="name">listJobExecutionsForJob</span>(const <span class="type"><a href="qtaws-iot-listjobexecutionsforjobrequest.html">ListJobExecutionsForJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listjobexecutionsforjobresponse.html">ListJobExecutionsForJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the job executions for a</p>
+<!-- @@@listJobExecutionsForJob -->
+<!-- $$$listJobExecutionsForThing[overload1]$$$listJobExecutionsForThingconstListJobExecutionsForThingRequest& -->
+<h3 class="fn" id="listJobExecutionsForThing"><a name="listJobExecutionsForThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listjobexecutionsforthingresponse.html">ListJobExecutionsForThingResponse</a></span> *IoTClient::<span class="name">listJobExecutionsForThing</span>(const <span class="type"><a href="qtaws-iot-listjobexecutionsforthingrequest.html">ListJobExecutionsForThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listjobexecutionsforthingresponse.html">ListJobExecutionsForThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the job executions for the specified</p>
+<!-- @@@listJobExecutionsForThing -->
+<!-- $$$listJobs[overload1]$$$listJobsconstListJobsRequest& -->
+<h3 class="fn" id="listJobs"><a name="listJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listjobsresponse.html">ListJobsResponse</a></span> *IoTClient::<span class="name">listJobs</span>(const <span class="type"><a href="qtaws-iot-listjobsrequest.html">ListJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listjobsresponse.html">ListJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists</p>
+<!-- @@@listJobs -->
+<!-- $$$listOTAUpdates[overload1]$$$listOTAUpdatesconstListOTAUpdatesRequest& -->
+<h3 class="fn" id="listOTAUpdates"><a name="listOTAUpdates"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listotaupdatesresponse.html">ListOTAUpdatesResponse</a></span> *IoTClient::<span class="name">listOTAUpdates</span>(const <span class="type"><a href="qtaws-iot-listotaupdatesrequest.html">ListOTAUpdatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listotaupdatesresponse.html">ListOTAUpdatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists OTA</p>
+<!-- @@@listOTAUpdates -->
+<!-- $$$listOutgoingCertificates[overload1]$$$listOutgoingCertificatesconstListOutgoingCertificatesRequest& -->
+<h3 class="fn" id="listOutgoingCertificates"><a name="listOutgoingCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listoutgoingcertificatesresponse.html">ListOutgoingCertificatesResponse</a></span> *IoTClient::<span class="name">listOutgoingCertificates</span>(const <span class="type"><a href="qtaws-iot-listoutgoingcertificatesrequest.html">ListOutgoingCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listoutgoingcertificatesresponse.html">ListOutgoingCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists certificates that are being transferred but not yet</p>
+<!-- @@@listOutgoingCertificates -->
+<!-- $$$listPolicies[overload1]$$$listPoliciesconstListPoliciesRequest& -->
+<h3 class="fn" id="listPolicies"><a name="listPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listpoliciesresponse.html">ListPoliciesResponse</a></span> *IoTClient::<span class="name">listPolicies</span>(const <span class="type"><a href="qtaws-iot-listpoliciesrequest.html">ListPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listpoliciesresponse.html">ListPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your</p>
+<!-- @@@listPolicies -->
+<!-- $$$listPolicyPrincipals[overload1]$$$listPolicyPrincipalsconstListPolicyPrincipalsRequest& -->
+<h3 class="fn" id="listPolicyPrincipals"><a name="listPolicyPrincipals"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listpolicyprincipalsresponse.html">ListPolicyPrincipalsResponse</a></span> *IoTClient::<span class="name">listPolicyPrincipals</span>(const <span class="type"><a href="qtaws-iot-listpolicyprincipalsrequest.html">ListPolicyPrincipalsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listpolicyprincipalsresponse.html">ListPolicyPrincipalsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the principals associated with the specified</p>
+<p>policy&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; This API is deprecated. Please use &lt;a&gt;ListTargetsForPolicy&lt;/a&gt;</p>
+<!-- @@@listPolicyPrincipals -->
+<!-- $$$listPolicyVersions[overload1]$$$listPolicyVersionsconstListPolicyVersionsRequest& -->
+<h3 class="fn" id="listPolicyVersions"><a name="listPolicyVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listpolicyversionsresponse.html">ListPolicyVersionsResponse</a></span> *IoTClient::<span class="name">listPolicyVersions</span>(const <span class="type"><a href="qtaws-iot-listpolicyversionsrequest.html">ListPolicyVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listpolicyversionsresponse.html">ListPolicyVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the versions of the specified policy and identifies the default</p>
+<!-- @@@listPolicyVersions -->
+<!-- $$$listPrincipalPolicies[overload1]$$$listPrincipalPoliciesconstListPrincipalPoliciesRequest& -->
+<h3 class="fn" id="listPrincipalPolicies"><a name="listPrincipalPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listprincipalpoliciesresponse.html">ListPrincipalPoliciesResponse</a></span> *IoTClient::<span class="name">listPrincipalPolicies</span>(const <span class="type"><a href="qtaws-iot-listprincipalpoliciesrequest.html">ListPrincipalPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listprincipalpoliciesresponse.html">ListPrincipalPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the policies attached to the specified principal. If you use an Cognito identity, the ID must be in &lt;a href=&quot;http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_GetCredentialsForIdentity.html#API_GetCredentialsForIdentity_RequestSyntax&quot;&gt;AmazonCognito Identity</p>
+<p>format&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; This API is deprecated. Please use &lt;a&gt;ListAttachedPolicies&lt;/a&gt;</p>
+<!-- @@@listPrincipalPolicies -->
+<!-- $$$listPrincipalThings[overload1]$$$listPrincipalThingsconstListPrincipalThingsRequest& -->
+<h3 class="fn" id="listPrincipalThings"><a name="listPrincipalThings"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listprincipalthingsresponse.html">ListPrincipalThingsResponse</a></span> *IoTClient::<span class="name">listPrincipalThings</span>(const <span class="type"><a href="qtaws-iot-listprincipalthingsrequest.html">ListPrincipalThingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listprincipalthingsresponse.html">ListPrincipalThingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the things associated with the specified</p>
+<!-- @@@listPrincipalThings -->
+<!-- $$$listRoleAliases[overload1]$$$listRoleAliasesconstListRoleAliasesRequest& -->
+<h3 class="fn" id="listRoleAliases"><a name="listRoleAliases"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listrolealiasesresponse.html">ListRoleAliasesResponse</a></span> *IoTClient::<span class="name">listRoleAliases</span>(const <span class="type"><a href="qtaws-iot-listrolealiasesrequest.html">ListRoleAliasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listrolealiasesresponse.html">ListRoleAliasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the role aliases registered in your</p>
+<!-- @@@listRoleAliases -->
+<!-- $$$listStreams[overload1]$$$listStreamsconstListStreamsRequest& -->
+<h3 class="fn" id="listStreams"><a name="listStreams"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-liststreamsresponse.html">ListStreamsResponse</a></span> *IoTClient::<span class="name">listStreams</span>(const <span class="type"><a href="qtaws-iot-liststreamsrequest.html">ListStreamsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-liststreamsresponse.html">ListStreamsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all of the streams in your AWS</p>
+<!-- @@@listStreams -->
+<!-- $$$listTargetsForPolicy[overload1]$$$listTargetsForPolicyconstListTargetsForPolicyRequest& -->
+<h3 class="fn" id="listTargetsForPolicy"><a name="listTargetsForPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listtargetsforpolicyresponse.html">ListTargetsForPolicyResponse</a></span> *IoTClient::<span class="name">listTargetsForPolicy</span>(const <span class="type"><a href="qtaws-iot-listtargetsforpolicyrequest.html">ListTargetsForPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listtargetsforpolicyresponse.html">ListTargetsForPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List targets for the specified</p>
+<!-- @@@listTargetsForPolicy -->
+<!-- $$$listThingGroups[overload1]$$$listThingGroupsconstListThingGroupsRequest& -->
+<h3 class="fn" id="listThingGroups"><a name="listThingGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthinggroupsresponse.html">ListThingGroupsResponse</a></span> *IoTClient::<span class="name">listThingGroups</span>(const <span class="type"><a href="qtaws-iot-listthinggroupsrequest.html">ListThingGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthinggroupsresponse.html">ListThingGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List the thing groups in your</p>
+<!-- @@@listThingGroups -->
+<!-- $$$listThingGroupsForThing[overload1]$$$listThingGroupsForThingconstListThingGroupsForThingRequest& -->
+<h3 class="fn" id="listThingGroupsForThing"><a name="listThingGroupsForThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthinggroupsforthingresponse.html">ListThingGroupsForThingResponse</a></span> *IoTClient::<span class="name">listThingGroupsForThing</span>(const <span class="type"><a href="qtaws-iot-listthinggroupsforthingrequest.html">ListThingGroupsForThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthinggroupsforthingresponse.html">ListThingGroupsForThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List the thing groups to which the specified thing</p>
+<!-- @@@listThingGroupsForThing -->
+<!-- $$$listThingPrincipals[overload1]$$$listThingPrincipalsconstListThingPrincipalsRequest& -->
+<h3 class="fn" id="listThingPrincipals"><a name="listThingPrincipals"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingprincipalsresponse.html">ListThingPrincipalsResponse</a></span> *IoTClient::<span class="name">listThingPrincipals</span>(const <span class="type"><a href="qtaws-iot-listthingprincipalsrequest.html">ListThingPrincipalsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingprincipalsresponse.html">ListThingPrincipalsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the principals associated with the specified</p>
+<!-- @@@listThingPrincipals -->
+<!-- $$$listThingRegistrationTaskReports[overload1]$$$listThingRegistrationTaskReportsconstListThingRegistrationTaskReportsRequest& -->
+<h3 class="fn" id="listThingRegistrationTaskReports"><a name="listThingRegistrationTaskReports"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingregistrationtaskreportsresponse.html">ListThingRegistrationTaskReportsResponse</a></span> *IoTClient::<span class="name">listThingRegistrationTaskReports</span>(const <span class="type"><a href="qtaws-iot-listthingregistrationtaskreportsrequest.html">ListThingRegistrationTaskReportsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingregistrationtaskreportsresponse.html">ListThingRegistrationTaskReportsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Information about the thing registration</p>
+<!-- @@@listThingRegistrationTaskReports -->
+<!-- $$$listThingRegistrationTasks[overload1]$$$listThingRegistrationTasksconstListThingRegistrationTasksRequest& -->
+<h3 class="fn" id="listThingRegistrationTasks"><a name="listThingRegistrationTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingregistrationtasksresponse.html">ListThingRegistrationTasksResponse</a></span> *IoTClient::<span class="name">listThingRegistrationTasks</span>(const <span class="type"><a href="qtaws-iot-listthingregistrationtasksrequest.html">ListThingRegistrationTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingregistrationtasksresponse.html">ListThingRegistrationTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List bulk thing provisioning</p>
+<!-- @@@listThingRegistrationTasks -->
+<!-- $$$listThingTypes[overload1]$$$listThingTypesconstListThingTypesRequest& -->
+<h3 class="fn" id="listThingTypes"><a name="listThingTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingtypesresponse.html">ListThingTypesResponse</a></span> *IoTClient::<span class="name">listThingTypes</span>(const <span class="type"><a href="qtaws-iot-listthingtypesrequest.html">ListThingTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingtypesresponse.html">ListThingTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the existing thing</p>
+<!-- @@@listThingTypes -->
+<!-- $$$listThings[overload1]$$$listThingsconstListThingsRequest& -->
+<h3 class="fn" id="listThings"><a name="listThings"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingsresponse.html">ListThingsResponse</a></span> *IoTClient::<span class="name">listThings</span>(const <span class="type"><a href="qtaws-iot-listthingsrequest.html">ListThingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingsresponse.html">ListThingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your things. Use the &lt;b&gt;attributeName&lt;/b&gt; and &lt;b&gt;attributeValue&lt;/b&gt; parameters to filter your things. For example, calling &lt;code&gt;ListThings&lt;/code&gt; with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute &lt;b&gt;Color&lt;/b&gt; with the value &lt;b&gt;Red&lt;/b&gt;.</p>
+<!-- @@@listThings -->
+<!-- $$$listThingsInThingGroup[overload1]$$$listThingsInThingGroupconstListThingsInThingGroupRequest& -->
+<h3 class="fn" id="listThingsInThingGroup"><a name="listThingsInThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listthingsinthinggroupresponse.html">ListThingsInThingGroupResponse</a></span> *IoTClient::<span class="name">listThingsInThingGroup</span>(const <span class="type"><a href="qtaws-iot-listthingsinthinggrouprequest.html">ListThingsInThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listthingsinthinggroupresponse.html">ListThingsInThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the things in the specified</p>
+<!-- @@@listThingsInThingGroup -->
+<!-- $$$listTopicRules[overload1]$$$listTopicRulesconstListTopicRulesRequest& -->
+<h3 class="fn" id="listTopicRules"><a name="listTopicRules"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listtopicrulesresponse.html">ListTopicRulesResponse</a></span> *IoTClient::<span class="name">listTopicRules</span>(const <span class="type"><a href="qtaws-iot-listtopicrulesrequest.html">ListTopicRulesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listtopicrulesresponse.html">ListTopicRulesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the rules for the specific</p>
+<!-- @@@listTopicRules -->
+<!-- $$$listV2LoggingLevels[overload1]$$$listV2LoggingLevelsconstListV2LoggingLevelsRequest& -->
+<h3 class="fn" id="listV2LoggingLevels"><a name="listV2LoggingLevels"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-listv2logginglevelsresponse.html">ListV2LoggingLevelsResponse</a></span> *IoTClient::<span class="name">listV2LoggingLevels</span>(const <span class="type"><a href="qtaws-iot-listv2logginglevelsrequest.html">ListV2LoggingLevelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-listv2logginglevelsresponse.html">ListV2LoggingLevelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists logging</p>
+<!-- @@@listV2LoggingLevels -->
+<!-- $$$registerCACertificate[overload1]$$$registerCACertificateconstRegisterCACertificateRequest& -->
+<h3 class="fn" id="registerCACertificate"><a name="registerCACertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-registercacertificateresponse.html">RegisterCACertificateResponse</a></span> *IoTClient::<span class="name">registerCACertificate</span>(const <span class="type"><a href="qtaws-iot-registercacertificaterequest.html">RegisterCACertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-registercacertificateresponse.html">RegisterCACertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a CA certificate with AWS IoT. This CA certificate can then be used to sign device certificates, which can be then registered with AWS IoT. You can register up to 10 CA certificates per AWS account that have the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the RegisterCertificate</p>
+<!-- @@@registerCACertificate -->
+<!-- $$$registerCertificate[overload1]$$$registerCertificateconstRegisterCertificateRequest& -->
+<h3 class="fn" id="registerCertificate"><a name="registerCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-registercertificateresponse.html">RegisterCertificateResponse</a></span> *IoTClient::<span class="name">registerCertificate</span>(const <span class="type"><a href="qtaws-iot-registercertificaterequest.html">RegisterCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-registercertificateresponse.html">RegisterCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a device certificate with AWS IoT. If you have more than one CA certificate that has the same subject field, you must specify the CA certificate that was used to sign the device certificate being</p>
+<!-- @@@registerCertificate -->
+<!-- $$$registerThing[overload1]$$$registerThingconstRegisterThingRequest& -->
+<h3 class="fn" id="registerThing"><a name="registerThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-registerthingresponse.html">RegisterThingResponse</a></span> *IoTClient::<span class="name">registerThing</span>(const <span class="type"><a href="qtaws-iot-registerthingrequest.html">RegisterThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-registerthingresponse.html">RegisterThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provisions a</p>
+<!-- @@@registerThing -->
+<!-- $$$rejectCertificateTransfer[overload1]$$$rejectCertificateTransferconstRejectCertificateTransferRequest& -->
+<h3 class="fn" id="rejectCertificateTransfer"><a name="rejectCertificateTransfer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-rejectcertificatetransferresponse.html">RejectCertificateTransferResponse</a></span> *IoTClient::<span class="name">rejectCertificateTransfer</span>(const <span class="type"><a href="qtaws-iot-rejectcertificatetransferrequest.html">RejectCertificateTransferRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-rejectcertificatetransferresponse.html">RejectCertificateTransferResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Rejects a pending certificate transfer. After AWS IoT rejects a certificate transfer, the certificate status changes from &lt;b&gt;PENDING_TRANSFER&lt;/b&gt; to</p>
+<p>&lt;b&gt;INACTIVE&lt;/b&gt;&gt;</p>
+<p>To check for pending certificate transfers, call &lt;a&gt;ListCertificates&lt;/a&gt; to enumerate your</p>
+<p>certificates&gt;</p>
+<p>This operation can only be called by the transfer destination. After it is called, the certificate will be returned to the source's account in the INACTIVE</p>
+<!-- @@@rejectCertificateTransfer -->
+<!-- $$$removeThingFromThingGroup[overload1]$$$removeThingFromThingGroupconstRemoveThingFromThingGroupRequest& -->
+<h3 class="fn" id="removeThingFromThingGroup"><a name="removeThingFromThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-removethingfromthinggroupresponse.html">RemoveThingFromThingGroupResponse</a></span> *IoTClient::<span class="name">removeThingFromThingGroup</span>(const <span class="type"><a href="qtaws-iot-removethingfromthinggrouprequest.html">RemoveThingFromThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-removethingfromthinggroupresponse.html">RemoveThingFromThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Remove the specified thing from the specified</p>
+<!-- @@@removeThingFromThingGroup -->
+<!-- $$$replaceTopicRule[overload1]$$$replaceTopicRuleconstReplaceTopicRuleRequest& -->
+<h3 class="fn" id="replaceTopicRule"><a name="replaceTopicRule"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-replacetopicruleresponse.html">ReplaceTopicRuleResponse</a></span> *IoTClient::<span class="name">replaceTopicRule</span>(const <span class="type"><a href="qtaws-iot-replacetopicrulerequest.html">ReplaceTopicRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-replacetopicruleresponse.html">ReplaceTopicRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Replaces the rule. You must specify all parameters for the new rule. Creating rules is an administrator-level action. Any user who has permission to create rules will be able to access data processed by the</p>
+<!-- @@@replaceTopicRule -->
+<!-- $$$searchIndex[overload1]$$$searchIndexconstSearchIndexRequest& -->
+<h3 class="fn" id="searchIndex"><a name="searchIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-searchindexresponse.html">SearchIndexResponse</a></span> *IoTClient::<span class="name">searchIndex</span>(const <span class="type"><a href="qtaws-iot-searchindexrequest.html">SearchIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-searchindexresponse.html">SearchIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The query search</p>
+<!-- @@@searchIndex -->
+<!-- $$$setDefaultAuthorizer[overload1]$$$setDefaultAuthorizerconstSetDefaultAuthorizerRequest& -->
+<h3 class="fn" id="setDefaultAuthorizer"><a name="setDefaultAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-setdefaultauthorizerresponse.html">SetDefaultAuthorizerResponse</a></span> *IoTClient::<span class="name">setDefaultAuthorizer</span>(const <span class="type"><a href="qtaws-iot-setdefaultauthorizerrequest.html">SetDefaultAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-setdefaultauthorizerresponse.html">SetDefaultAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the default authorizer. This will be used if a websocket connection is made without specifying an</p>
+<!-- @@@setDefaultAuthorizer -->
+<!-- $$$setDefaultPolicyVersion[overload1]$$$setDefaultPolicyVersionconstSetDefaultPolicyVersionRequest& -->
+<h3 class="fn" id="setDefaultPolicyVersion"><a name="setDefaultPolicyVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-setdefaultpolicyversionresponse.html">SetDefaultPolicyVersionResponse</a></span> *IoTClient::<span class="name">setDefaultPolicyVersion</span>(const <span class="type"><a href="qtaws-iot-setdefaultpolicyversionrequest.html">SetDefaultPolicyVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-setdefaultpolicyversionresponse.html">SetDefaultPolicyVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the specified version of the specified policy as the policy's default (operative) version. This action affects all certificates to which the policy is attached. To list the principals the policy is attached to, use the ListPrincipalPolicy</p>
+<!-- @@@setDefaultPolicyVersion -->
+<!-- $$$setLoggingOptions[overload1]$$$setLoggingOptionsconstSetLoggingOptionsRequest& -->
+<h3 class="fn" id="setLoggingOptions"><a name="setLoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-setloggingoptionsresponse.html">SetLoggingOptionsResponse</a></span> *IoTClient::<span class="name">setLoggingOptions</span>(const <span class="type"><a href="qtaws-iot-setloggingoptionsrequest.html">SetLoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-setloggingoptionsresponse.html">SetLoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the logging</p>
+<!-- @@@setLoggingOptions -->
+<!-- $$$setV2LoggingLevel[overload1]$$$setV2LoggingLevelconstSetV2LoggingLevelRequest& -->
+<h3 class="fn" id="setV2LoggingLevel"><a name="setV2LoggingLevel"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-setv2logginglevelresponse.html">SetV2LoggingLevelResponse</a></span> *IoTClient::<span class="name">setV2LoggingLevel</span>(const <span class="type"><a href="qtaws-iot-setv2logginglevelrequest.html">SetV2LoggingLevelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-setv2logginglevelresponse.html">SetV2LoggingLevelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the logging</p>
+<!-- @@@setV2LoggingLevel -->
+<!-- $$$setV2LoggingOptions[overload1]$$$setV2LoggingOptionsconstSetV2LoggingOptionsRequest& -->
+<h3 class="fn" id="setV2LoggingOptions"><a name="setV2LoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-setv2loggingoptionsresponse.html">SetV2LoggingOptionsResponse</a></span> *IoTClient::<span class="name">setV2LoggingOptions</span>(const <span class="type"><a href="qtaws-iot-setv2loggingoptionsrequest.html">SetV2LoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-setv2loggingoptionsresponse.html">SetV2LoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the logging options for the V2 logging</p>
+<!-- @@@setV2LoggingOptions -->
+<!-- $$$startThingRegistrationTask[overload1]$$$startThingRegistrationTaskconstStartThingRegistrationTaskRequest& -->
+<h3 class="fn" id="startThingRegistrationTask"><a name="startThingRegistrationTask"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-startthingregistrationtaskresponse.html">StartThingRegistrationTaskResponse</a></span> *IoTClient::<span class="name">startThingRegistrationTask</span>(const <span class="type"><a href="qtaws-iot-startthingregistrationtaskrequest.html">StartThingRegistrationTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-startthingregistrationtaskresponse.html">StartThingRegistrationTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a bulk thing provisioning</p>
+<!-- @@@startThingRegistrationTask -->
+<!-- $$$stopThingRegistrationTask[overload1]$$$stopThingRegistrationTaskconstStopThingRegistrationTaskRequest& -->
+<h3 class="fn" id="stopThingRegistrationTask"><a name="stopThingRegistrationTask"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-stopthingregistrationtaskresponse.html">StopThingRegistrationTaskResponse</a></span> *IoTClient::<span class="name">stopThingRegistrationTask</span>(const <span class="type"><a href="qtaws-iot-stopthingregistrationtaskrequest.html">StopThingRegistrationTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-stopthingregistrationtaskresponse.html">StopThingRegistrationTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels a bulk thing provisioning</p>
+<!-- @@@stopThingRegistrationTask -->
+<!-- $$$testAuthorization[overload1]$$$testAuthorizationconstTestAuthorizationRequest& -->
+<h3 class="fn" id="testAuthorization"><a name="testAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-testauthorizationresponse.html">TestAuthorizationResponse</a></span> *IoTClient::<span class="name">testAuthorization</span>(const <span class="type"><a href="qtaws-iot-testauthorizationrequest.html">TestAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-testauthorizationresponse.html">TestAuthorizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Test custom</p>
+<!-- @@@testAuthorization -->
+<!-- $$$testInvokeAuthorizer[overload1]$$$testInvokeAuthorizerconstTestInvokeAuthorizerRequest& -->
+<h3 class="fn" id="testInvokeAuthorizer"><a name="testInvokeAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-testinvokeauthorizerresponse.html">TestInvokeAuthorizerResponse</a></span> *IoTClient::<span class="name">testInvokeAuthorizer</span>(const <span class="type"><a href="qtaws-iot-testinvokeauthorizerrequest.html">TestInvokeAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-testinvokeauthorizerresponse.html">TestInvokeAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Invoke the specified custom authorizer for testing</p>
+<!-- @@@testInvokeAuthorizer -->
+<!-- $$$transferCertificate[overload1]$$$transferCertificateconstTransferCertificateRequest& -->
+<h3 class="fn" id="transferCertificate"><a name="transferCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-transfercertificateresponse.html">TransferCertificateResponse</a></span> *IoTClient::<span class="name">transferCertificate</span>(const <span class="type"><a href="qtaws-iot-transfercertificaterequest.html">TransferCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-transfercertificateresponse.html">TransferCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Transfers the specified certificate to the specified AWS</p>
+<p>account&gt;</p>
+<p>You can cancel the transfer until it is acknowledged by the</p>
+<p>recipient&gt;</p>
+<p>No notification is sent to the transfer destination's account. It is up to the caller to notify the transfer</p>
+<p>target&gt;</p>
+<p>The certificate being transferred must not be in the ACTIVE state. You can use the UpdateCertificate API to deactivate</p>
+<p>it&gt;</p>
+<p>The certificate must not have any policies attached to it. You can use the DetachPrincipalPolicy API to detach</p>
+<!-- @@@transferCertificate -->
+<!-- $$$updateAuthorizer[overload1]$$$updateAuthorizerconstUpdateAuthorizerRequest& -->
+<h3 class="fn" id="updateAuthorizer"><a name="updateAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updateauthorizerresponse.html">UpdateAuthorizerResponse</a></span> *IoTClient::<span class="name">updateAuthorizer</span>(const <span class="type"><a href="qtaws-iot-updateauthorizerrequest.html">UpdateAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updateauthorizerresponse.html">UpdateAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an</p>
+<!-- @@@updateAuthorizer -->
+<!-- $$$updateCACertificate[overload1]$$$updateCACertificateconstUpdateCACertificateRequest& -->
+<h3 class="fn" id="updateCACertificate"><a name="updateCACertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatecacertificateresponse.html">UpdateCACertificateResponse</a></span> *IoTClient::<span class="name">updateCACertificate</span>(const <span class="type"><a href="qtaws-iot-updatecacertificaterequest.html">UpdateCACertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatecacertificateresponse.html">UpdateCACertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a registered CA</p>
+<!-- @@@updateCACertificate -->
+<!-- $$$updateCertificate[overload1]$$$updateCertificateconstUpdateCertificateRequest& -->
+<h3 class="fn" id="updateCertificate"><a name="updateCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatecertificateresponse.html">UpdateCertificateResponse</a></span> *IoTClient::<span class="name">updateCertificate</span>(const <span class="type"><a href="qtaws-iot-updatecertificaterequest.html">UpdateCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatecertificateresponse.html">UpdateCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the status of the specified certificate. This operation is</p>
+<p>idempotent&gt;</p>
+<p>Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to</p>
+<p>reconnect&gt;</p>
+<p>The ACTIVE state is required to authenticate devices connecting to AWS IoT using a</p>
+<!-- @@@updateCertificate -->
+<!-- $$$updateEventConfigurations[overload1]$$$updateEventConfigurationsconstUpdateEventConfigurationsRequest& -->
+<h3 class="fn" id="updateEventConfigurations"><a name="updateEventConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updateeventconfigurationsresponse.html">UpdateEventConfigurationsResponse</a></span> *IoTClient::<span class="name">updateEventConfigurations</span>(const <span class="type"><a href="qtaws-iot-updateeventconfigurationsrequest.html">UpdateEventConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updateeventconfigurationsresponse.html">UpdateEventConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the event</p>
+<!-- @@@updateEventConfigurations -->
+<!-- $$$updateIndexingConfiguration[overload1]$$$updateIndexingConfigurationconstUpdateIndexingConfigurationRequest& -->
+<h3 class="fn" id="updateIndexingConfiguration"><a name="updateIndexingConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updateindexingconfigurationresponse.html">UpdateIndexingConfigurationResponse</a></span> *IoTClient::<span class="name">updateIndexingConfiguration</span>(const <span class="type"><a href="qtaws-iot-updateindexingconfigurationrequest.html">UpdateIndexingConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updateindexingconfigurationresponse.html">UpdateIndexingConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the search</p>
+<!-- @@@updateIndexingConfiguration -->
+<!-- $$$updateRoleAlias[overload1]$$$updateRoleAliasconstUpdateRoleAliasRequest& -->
+<h3 class="fn" id="updateRoleAlias"><a name="updateRoleAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updaterolealiasresponse.html">UpdateRoleAliasResponse</a></span> *IoTClient::<span class="name">updateRoleAlias</span>(const <span class="type"><a href="qtaws-iot-updaterolealiasrequest.html">UpdateRoleAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updaterolealiasresponse.html">UpdateRoleAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a role</p>
+<!-- @@@updateRoleAlias -->
+<!-- $$$updateStream[overload1]$$$updateStreamconstUpdateStreamRequest& -->
+<h3 class="fn" id="updateStream"><a name="updateStream"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatestreamresponse.html">UpdateStreamResponse</a></span> *IoTClient::<span class="name">updateStream</span>(const <span class="type"><a href="qtaws-iot-updatestreamrequest.html">UpdateStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatestreamresponse.html">UpdateStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing stream. The stream version will be incremented by</p>
+<!-- @@@updateStream -->
+<!-- $$$updateThing[overload1]$$$updateThingconstUpdateThingRequest& -->
+<h3 class="fn" id="updateThing"><a name="updateThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatethingresponse.html">UpdateThingResponse</a></span> *IoTClient::<span class="name">updateThing</span>(const <span class="type"><a href="qtaws-iot-updatethingrequest.html">UpdateThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatethingresponse.html">UpdateThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the data for a</p>
+<!-- @@@updateThing -->
+<!-- $$$updateThingGroup[overload1]$$$updateThingGroupconstUpdateThingGroupRequest& -->
+<h3 class="fn" id="updateThingGroup"><a name="updateThingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatethinggroupresponse.html">UpdateThingGroupResponse</a></span> *IoTClient::<span class="name">updateThingGroup</span>(const <span class="type"><a href="qtaws-iot-updatethinggrouprequest.html">UpdateThingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatethinggroupresponse.html">UpdateThingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Update a thing</p>
+<!-- @@@updateThingGroup -->
+<!-- $$$updateThingGroupsForThing[overload1]$$$updateThingGroupsForThingconstUpdateThingGroupsForThingRequest& -->
+<h3 class="fn" id="updateThingGroupsForThing"><a name="updateThingGroupsForThing"></a><code>[slot] </code><span class="type"><a href="qtaws-iot-updatethinggroupsforthingresponse.html">UpdateThingGroupsForThingResponse</a></span> *IoTClient::<span class="name">updateThingGroupsForThing</span>(const <span class="type"><a href="qtaws-iot-updatethinggroupsforthingrequest.html">UpdateThingGroupsForThingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot-iotclient.html">IoTClient</a> service, and returns a pointer to an <a href="qtaws-iot-updatethinggroupsforthingresponse.html">UpdateThingGroupsForThingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the groups to which the thing</p>
+<!-- @@@updateThingGroupsForThing -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- elastictranscoderclient.cpp -->
+  <title>ElasticTranscoderClient Class | ElasticTranscoder</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawselastictranscoder-index.html">ElasticTranscoder</a></li>
+<li><a href="qtawselastictranscoder-module.html">C++ Classes</a></li>
+<li>ElasticTranscoderClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ElasticTranscoderClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-elastictranscoder-elastictranscoderclient.html">QtAws::ElasticTranscoder::ElasticTranscoderClient</a>)<br/></span>
+<!-- $$$ElasticTranscoderClient-brief -->
+<p>The <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> class provides access to the Amazon Elastic Transcoder service. <a href="#details">More...</a></p>
+<!-- @@@ElasticTranscoderClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ElasticTranscoderClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-elastictranscoder-elastictranscoderclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#ElasticTranscoderClient">ElasticTranscoderClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#ElasticTranscoderClient-1">ElasticTranscoderClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CancelJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#cancelJob">cancelJob</a></b>(const CancelJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#createJob">createJob</a></b>(const CreateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#createPipeline">createPipeline</a></b>(const CreatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#createPreset">createPreset</a></b>(const CreatePresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#deletePipeline">deletePipeline</a></b>(const DeletePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#deletePreset">deletePreset</a></b>(const DeletePresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsByPipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#listJobsByPipeline">listJobsByPipeline</a></b>(const ListJobsByPipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsByStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#listJobsByStatus">listJobsByStatus</a></b>(const ListJobsByStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPipelinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#listPipelines">listPipelines</a></b>(const ListPipelinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPresetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#listPresets">listPresets</a></b>(const ListPresetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReadJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#readJob">readJob</a></b>(const ReadJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReadPipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#readPipeline">readPipeline</a></b>(const ReadPipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReadPresetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#readPreset">readPreset</a></b>(const ReadPresetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestRoleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#testRole">testRole</a></b>(const TestRoleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#updatePipeline">updatePipeline</a></b>(const UpdatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePipelineNotificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#updatePipelineNotifications">updatePipelineNotifications</a></b>(const UpdatePipelineNotificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePipelineStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elastictranscoder-elastictranscoderclient.html#updatePipelineStatus">updatePipelineStatus</a></b>(const UpdatePipelineStatusRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ElasticTranscoderClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> class provides access to the Amazon Elastic Transcoder service.</p>
+<p>&lt;fullname&gt;AWS Elastic Transcoder Service&lt;/fullname&gt;</p>
+<p>The AWS Elastic Transcoder</p>
+</div>
+<!-- @@@ElasticTranscoderClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ElasticTranscoderClient[overload1]$$$ElasticTranscoderClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElasticTranscoderClient"><a name="ElasticTranscoderClient"></a>ElasticTranscoderClient::<span class="name">ElasticTranscoderClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ElasticTranscoderClient -->
+<!-- $$$ElasticTranscoderClient$$$ElasticTranscoderClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElasticTranscoderClient-1"><a name="ElasticTranscoderClient-1"></a>ElasticTranscoderClient::<span class="name">ElasticTranscoderClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-elastictranscoder-elastictranscoderclient.html#ElasticTranscoderClient">ElasticTranscoderClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ElasticTranscoderClient -->
+<!-- $$$cancelJob[overload1]$$$cancelJobconstCancelJobRequest& -->
+<h3 class="fn" id="cancelJob"><a name="cancelJob"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-canceljobresponse.html">CancelJobResponse</a></span> *ElasticTranscoderClient::<span class="name">cancelJob</span>(const <span class="type"><a href="qtaws-elastictranscoder-canceljobrequest.html">CancelJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-canceljobresponse.html">CancelJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The CancelJob operation cancels an unfinished</p>
+<p>job&gt; &lt;note&gt;</p>
+<p>You can only cancel a job that has a status of &lt;code&gt;Submitted&lt;/code&gt;. To prevent a pipeline from starting to process a job while you're getting the job identifier, use &lt;a&gt;UpdatePipelineStatus&lt;/a&gt; to temporarily pause the</p>
+<!-- @@@cancelJob -->
+<!-- $$$createJob[overload1]$$$createJobconstCreateJobRequest& -->
+<h3 class="fn" id="createJob"><a name="createJob"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-createjobresponse.html">CreateJobResponse</a></span> *ElasticTranscoderClient::<span class="name">createJob</span>(const <span class="type"><a href="qtaws-elastictranscoder-createjobrequest.html">CreateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-createjobresponse.html">CreateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>When you create a job, Elastic Transcoder returns JSON data that includes the values that you specified plus information about the job that is</p>
+<p>created&gt;</p>
+<p>If you have specified more than one output for your jobs (for example, one output for the Kindle Fire and another output for the Apple iPhone 4s), you currently must use the Elastic Transcoder API to list the jobs (as opposed to the AWS</p>
+<!-- @@@createJob -->
+<!-- $$$createPipeline[overload1]$$$createPipelineconstCreatePipelineRequest& -->
+<h3 class="fn" id="createPipeline"><a name="createPipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-createpipelineresponse.html">CreatePipelineResponse</a></span> *ElasticTranscoderClient::<span class="name">createPipeline</span>(const <span class="type"><a href="qtaws-elastictranscoder-createpipelinerequest.html">CreatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-createpipelineresponse.html">CreatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The CreatePipeline operation creates a pipeline with settings that you</p>
+<!-- @@@createPipeline -->
+<!-- $$$createPreset[overload1]$$$createPresetconstCreatePresetRequest& -->
+<h3 class="fn" id="createPreset"><a name="createPreset"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-createpresetresponse.html">CreatePresetResponse</a></span> *ElasticTranscoderClient::<span class="name">createPreset</span>(const <span class="type"><a href="qtaws-elastictranscoder-createpresetrequest.html">CreatePresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-createpresetresponse.html">CreatePresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The CreatePreset operation creates a preset with settings that you</p>
+<p>specify&gt; &lt;b&gt;</p>
+<p>Elastic Transcoder checks the CreatePreset settings to ensure that they meet Elastic Transcoder requirements and to determine whether they comply with H.264 standards. If your settings are not valid for Elastic Transcoder, Elastic Transcoder returns an HTTP 400 response (&lt;code&gt;ValidationException&lt;/code&gt;) and does not create the preset. If the settings are valid for Elastic Transcoder but aren't strictly compliant with the H.264 standard, Elastic Transcoder creates the preset and returns a warning message in the response. This helps you determine whether your settings comply with the H.264 standard while giving you greater flexibility with respect to the video that Elastic Transcoder</p>
+<p>produces&gt; &lt;/b&gt;</p>
+<p>Elastic Transcoder uses the H.264 video-compression format. For more information, see the International Telecommunication Union publication &lt;i&gt;Recommendation ITU-T H.264: Advanced video coding for generic audiovisual</p>
+<!-- @@@createPreset -->
+<!-- $$$deletePipeline[overload1]$$$deletePipelineconstDeletePipelineRequest& -->
+<h3 class="fn" id="deletePipeline"><a name="deletePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-deletepipelineresponse.html">DeletePipelineResponse</a></span> *ElasticTranscoderClient::<span class="name">deletePipeline</span>(const <span class="type"><a href="qtaws-elastictranscoder-deletepipelinerequest.html">DeletePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-deletepipelineresponse.html">DeletePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The DeletePipeline operation removes a</p>
+<p>pipeline&gt;</p>
+<p>You can only delete a pipeline that has never been used or that is not currently in use (doesn't contain any active jobs). If the pipeline is currently in use, &lt;code&gt;DeletePipeline&lt;/code&gt; returns an error.</p>
+<!-- @@@deletePipeline -->
+<!-- $$$deletePreset[overload1]$$$deletePresetconstDeletePresetRequest& -->
+<h3 class="fn" id="deletePreset"><a name="deletePreset"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-deletepresetresponse.html">DeletePresetResponse</a></span> *ElasticTranscoderClient::<span class="name">deletePreset</span>(const <span class="type"><a href="qtaws-elastictranscoder-deletepresetrequest.html">DeletePresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-deletepresetresponse.html">DeletePresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The DeletePreset operation removes a preset that you've added in an AWS</p>
+<p>region&gt; &lt;note&gt;</p>
+<p>You can't delete the default presets that are included with Elastic</p>
+<!-- @@@deletePreset -->
+<!-- $$$listJobsByPipeline[overload1]$$$listJobsByPipelineconstListJobsByPipelineRequest& -->
+<h3 class="fn" id="listJobsByPipeline"><a name="listJobsByPipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-listjobsbypipelineresponse.html">ListJobsByPipelineResponse</a></span> *ElasticTranscoderClient::<span class="name">listJobsByPipeline</span>(const <span class="type"><a href="qtaws-elastictranscoder-listjobsbypipelinerequest.html">ListJobsByPipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-listjobsbypipelineresponse.html">ListJobsByPipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ListJobsByPipeline operation gets a list of the jobs currently in a</p>
+<p>pipeline&gt;</p>
+<p>Elastic Transcoder returns all of the jobs currently in the specified pipeline. The response body contains one element for each job that satisfies the search</p>
+<!-- @@@listJobsByPipeline -->
+<!-- $$$listJobsByStatus[overload1]$$$listJobsByStatusconstListJobsByStatusRequest& -->
+<h3 class="fn" id="listJobsByStatus"><a name="listJobsByStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-listjobsbystatusresponse.html">ListJobsByStatusResponse</a></span> *ElasticTranscoderClient::<span class="name">listJobsByStatus</span>(const <span class="type"><a href="qtaws-elastictranscoder-listjobsbystatusrequest.html">ListJobsByStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-listjobsbystatusresponse.html">ListJobsByStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ListJobsByStatus operation gets a list of jobs that have a specified status. The response body contains one element for each job that satisfies the search</p>
+<!-- @@@listJobsByStatus -->
+<!-- $$$listPipelines[overload1]$$$listPipelinesconstListPipelinesRequest& -->
+<h3 class="fn" id="listPipelines"><a name="listPipelines"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-listpipelinesresponse.html">ListPipelinesResponse</a></span> *ElasticTranscoderClient::<span class="name">listPipelines</span>(const <span class="type"><a href="qtaws-elastictranscoder-listpipelinesrequest.html">ListPipelinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-listpipelinesresponse.html">ListPipelinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ListPipelines operation gets a list of the pipelines associated with the current AWS</p>
+<!-- @@@listPipelines -->
+<!-- $$$listPresets[overload1]$$$listPresetsconstListPresetsRequest& -->
+<h3 class="fn" id="listPresets"><a name="listPresets"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-listpresetsresponse.html">ListPresetsResponse</a></span> *ElasticTranscoderClient::<span class="name">listPresets</span>(const <span class="type"><a href="qtaws-elastictranscoder-listpresetsrequest.html">ListPresetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-listpresetsresponse.html">ListPresetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ListPresets operation gets a list of the default presets included with Elastic Transcoder and the presets that you've added in an AWS</p>
+<!-- @@@listPresets -->
+<!-- $$$readJob[overload1]$$$readJobconstReadJobRequest& -->
+<h3 class="fn" id="readJob"><a name="readJob"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-readjobresponse.html">ReadJobResponse</a></span> *ElasticTranscoderClient::<span class="name">readJob</span>(const <span class="type"><a href="qtaws-elastictranscoder-readjobrequest.html">ReadJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-readjobresponse.html">ReadJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ReadJob operation returns detailed information about a</p>
+<!-- @@@readJob -->
+<!-- $$$readPipeline[overload1]$$$readPipelineconstReadPipelineRequest& -->
+<h3 class="fn" id="readPipeline"><a name="readPipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-readpipelineresponse.html">ReadPipelineResponse</a></span> *ElasticTranscoderClient::<span class="name">readPipeline</span>(const <span class="type"><a href="qtaws-elastictranscoder-readpipelinerequest.html">ReadPipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-readpipelineresponse.html">ReadPipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ReadPipeline operation gets detailed information about a</p>
+<!-- @@@readPipeline -->
+<!-- $$$readPreset[overload1]$$$readPresetconstReadPresetRequest& -->
+<h3 class="fn" id="readPreset"><a name="readPreset"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-readpresetresponse.html">ReadPresetResponse</a></span> *ElasticTranscoderClient::<span class="name">readPreset</span>(const <span class="type"><a href="qtaws-elastictranscoder-readpresetrequest.html">ReadPresetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-readpresetresponse.html">ReadPresetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The ReadPreset operation gets detailed information about a</p>
+<!-- @@@readPreset -->
+<!-- $$$testRole[overload1]$$$testRoleconstTestRoleRequest& -->
+<h3 class="fn" id="testRole"><a name="testRole"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-testroleresponse.html">TestRoleResponse</a></span> *ElasticTranscoderClient::<span class="name">testRole</span>(const <span class="type"><a href="qtaws-elastictranscoder-testrolerequest.html">TestRoleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-testroleresponse.html">TestRoleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The TestRole operation tests the IAM role used to create the</p>
+<p>pipeline&gt;</p>
+<p>The &lt;code&gt;TestRole&lt;/code&gt; action lets you determine whether the IAM role you are using has sufficient permissions to let Elastic Transcoder perform tasks associated with the transcoding process. The action attempts to assume the specified IAM role, checks read access to the input and output buckets, and tries to send a test notification to Amazon SNS topics that you</p>
+<!-- @@@testRole -->
+<!-- $$$updatePipeline[overload1]$$$updatePipelineconstUpdatePipelineRequest& -->
+<h3 class="fn" id="updatePipeline"><a name="updatePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-updatepipelineresponse.html">UpdatePipelineResponse</a></span> *ElasticTranscoderClient::<span class="name">updatePipeline</span>(const <span class="type"><a href="qtaws-elastictranscoder-updatepipelinerequest.html">UpdatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-updatepipelineresponse.html">UpdatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Use the &lt;code&gt;UpdatePipeline&lt;/code&gt; operation to update settings for a</p>
+<p>pipeline&gt; &lt;b&gt;</p>
+<p>When you change pipeline settings, your changes take effect immediately. Jobs that you have already submitted and that Elastic Transcoder has not started to process are affected in addition to jobs that you submit after you change settings.</p>
+<!-- @@@updatePipeline -->
+<!-- $$$updatePipelineNotifications[overload1]$$$updatePipelineNotificationsconstUpdatePipelineNotificationsRequest& -->
+<h3 class="fn" id="updatePipelineNotifications"><a name="updatePipelineNotifications"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-updatepipelinenotificationsresponse.html">UpdatePipelineNotificationsResponse</a></span> *ElasticTranscoderClient::<span class="name">updatePipelineNotifications</span>(const <span class="type"><a href="qtaws-elastictranscoder-updatepipelinenotificationsrequest.html">UpdatePipelineNotificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-updatepipelinenotificationsresponse.html">UpdatePipelineNotificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>With the UpdatePipelineNotifications operation, you can update Amazon Simple Notification Service (Amazon SNS) notifications for a</p>
+<p>pipeline&gt;</p>
+<p>When you update notifications for a pipeline, Elastic Transcoder returns the values that you specified in the</p>
+<!-- @@@updatePipelineNotifications -->
+<!-- $$$updatePipelineStatus[overload1]$$$updatePipelineStatusconstUpdatePipelineStatusRequest& -->
+<h3 class="fn" id="updatePipelineStatus"><a name="updatePipelineStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-elastictranscoder-updatepipelinestatusresponse.html">UpdatePipelineStatusResponse</a></span> *ElasticTranscoderClient::<span class="name">updatePipelineStatus</span>(const <span class="type"><a href="qtaws-elastictranscoder-updatepipelinestatusrequest.html">UpdatePipelineStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elastictranscoder-elastictranscoderclient.html">ElasticTranscoderClient</a> service, and returns a pointer to an <a href="qtaws-elastictranscoder-updatepipelinestatusresponse.html">UpdatePipelineStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The UpdatePipelineStatus operation pauses or reactivates a pipeline, so that the pipeline stops or restarts the processing of</p>
+<p>jobs&gt;</p>
+<p>Changing the pipeline status is useful if you want to cancel one or more jobs. You can't cancel jobs after Elastic Transcoder has started processing them; if you pause the pipeline to which you submitted the jobs, you have more time to get the job IDs for the jobs that you want to cancel, and to send a &lt;a&gt;CancelJob&lt;/a&gt; request.</p>
+<!-- @@@updatePipelineStatus -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

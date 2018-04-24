@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awssignaturev4.cpp -->
+  <title>AwsSignatureV4Private Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsSignatureV4Private</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#static-protected-members">Static Protected Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsSignatureV4Private Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awssignaturev4private.html">QtAws::Core::AwsSignatureV4Private</a>)<br/></span>
+<!-- $$$AwsSignatureV4Private-brief -->
+<p>The <a href="qtaws-core-awssignaturev4private.html">AwsSignatureV4Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev4.html">AwsSignatureV4</a> class. <a href="#details">More...</a></p>
+<!-- @@@AwsSignatureV4Private -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsSignatureV4Private&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractsignatureprivate.html">QtAws::Core::AwsAbstractSignaturePrivate</a></td></tr></table></div><ul>
+<li><a href="qtaws-core-awssignaturev4private-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#AwsSignatureV4Private">AwsSignatureV4Private</a></b>(const QCryptographicHash::Algorithm <i>hashAlgorithm</i>, AwsSignatureV4 * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#setAuthorizationHeader">setAuthorizationHeader</a></b>(const AwsAbstractCredentials &amp;<i>credentials</i>, const QNetworkAccessManager::Operation <i>operation</i>, QNetworkRequest &amp;<i>request</i>, const QByteArray &amp;<i>payload</i>, const QDateTime &amp;<i>timestamp</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QDateTime </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#setDateHeader">setDateHeader</a></b>(QNetworkRequest &amp;<i>request</i>, const QDateTime &amp;<i>dateTime</i> = QDateTime::currentDateTimeUtc()) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 public functions inherited from <a href="qtaws-core-awsabstractsignatureprivate.html#public-functions">QtAws::Core::AwsAbstractSignaturePrivate</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#algorithmDesignation">algorithmDesignation</a></b>(const QCryptographicHash::Algorithm <i>algorithm</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#authorizationHeaderValue">authorizationHeaderValue</a></b>(const AwsAbstractCredentials &amp;<i>credentials</i>, const QNetworkAccessManager::Operation <i>operation</i>, QNetworkRequest &amp;<i>request</i>, const QByteArray &amp;<i>payload</i>, const QDateTime &amp;<i>timestamp</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#canonicalHeader">canonicalHeader</a></b>(const QByteArray &amp;<i>headerName</i>, const QByteArray &amp;<i>headerValue</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#canonicalHeaders">canonicalHeaders</a></b>(const QNetworkRequest &amp;<i>request</i>, QByteArray * const <i>signedHeaders</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#canonicalRequest">canonicalRequest</a></b>(const QNetworkAccessManager::Operation <i>operation</i>, const QNetworkRequest &amp;<i>request</i>, const QByteArray &amp;<i>payload</i>, QByteArray * const <i>signedHeaders</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#credentialScope">credentialScope</a></b>(const QDate &amp;<i>date</i>, const QString &amp;<i>region</i>, const QString &amp;<i>service</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#signingKey">signingKey</a></b>(const AwsAbstractCredentials &amp;<i>credentials</i>, const QDate &amp;<i>date</i>, const QString &amp;<i>region</i>, const QString &amp;<i>service</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#stringToSign">stringToSign</a></b>(const QByteArray &amp;<i>algorithmDesignation</i>, const QDateTime &amp;<i>requestDate</i>, const QByteArray &amp;<i>credentialScope</i>, const QByteArray &amp;<i>canonicalRequest</i>) const</td></tr>
+</table></div>
+<a name="static-protected-members"></a>
+<h2 id="static-protected-members">Static Protected Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> const QLatin1String </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#DateFormat-var">DateFormat</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QLatin1String </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev4private.html#DateTimeFormat-var">DateTimeFormat</a></b></td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsSignatureV4Private-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awssignaturev4private.html">AwsSignatureV4Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev4.html">AwsSignatureV4</a> class.</p>
+</div>
+<!-- @@@AwsSignatureV4Private -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsSignatureV4Private[overload1]$$$AwsSignatureV4PrivateconstQCryptographicHash::AlgorithmAwsSignatureV4*const -->
+<h3 class="fn" id="AwsSignatureV4Private"><a name="AwsSignatureV4Private"></a>AwsSignatureV4Private::<span class="name">AwsSignatureV4Private</span>(const <span class="type">QCryptographicHash::Algorithm</span> <i>hashAlgorithm</i>, <span class="type"><a href="qtaws-core-awssignaturev4.html">AwsSignatureV4</a></span> * const <i>q</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awssignaturev4private.html">AwsSignatureV4Private</a> object with <i>hashAlgorithm</i>, and public implementation <i>q</i>.</p>
+<!-- @@@AwsSignatureV4Private -->
+<!-- $$$algorithmDesignation[overload1]$$$algorithmDesignationconstQCryptographicHash::Algorithm -->
+<h3 class="fn" id="algorithmDesignation"><a name="algorithmDesignation"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">algorithmDesignation</span>(const <span class="type">QCryptographicHash::Algorithm</span> <i>algorithm</i>) const</h3>
+<p>Returns the AWS Signature version 4 algorithm designation for <i>algorithm</i>.</p>
+<p>This function returns an algorithm designation, as defined by Amazon, for use with V4 signatures.</p>
+<p>For example, if the algorith is `QCryptographicHash::Sha256`, this function will return `AWS4-HMAC-SHA256`.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>.</p>
+<!-- @@@algorithmDesignation -->
+<!-- $$$authorizationHeaderValue[overload1]$$$authorizationHeaderValueconstAwsAbstractCredentials&constQNetworkAccessManager::OperationQNetworkRequest&constQByteArray&constQDateTime& -->
+<h3 class="fn" id="authorizationHeaderValue"><a name="authorizationHeaderValue"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">authorizationHeaderValue</span>(const <span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> &amp;<i>credentials</i>, const <span class="type">QNetworkAccessManager::Operation</span> <i>operation</i>, <span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type">QByteArray</span> &amp;<i>payload</i>, const <span class="type">QDateTime</span> &amp;<i>timestamp</i>) const</h3>
+<p>Returns the AWS Signature version 3 authorization header value for <i>operation</i> on <i>request</i>, with optional <code>POST/</code> <code>PUT</code> <i>payload</i> at <i>timestamp</i>, signed by <i>credentials</i>.</p>
+<p>This function builds an V4 signature, and returns it to the caller. The returned header value is then suitable for adding as a `Authorization` header in the HTTP request, to be accepted by Amazon.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html</a> and <a href="qtaws-core-awssignaturev4private.html#setAuthorizationHeader">setAuthorizationHeader</a>.</p>
+<!-- @@@authorizationHeaderValue -->
+<!-- $$$canonicalHeader[overload1]$$$canonicalHeaderconstQByteArray&constQByteArray& -->
+<h3 class="fn" id="canonicalHeader"><a name="canonicalHeader"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">canonicalHeader</span>(const <span class="type">QByteArray</span> &amp;<i>headerName</i>, const <span class="type">QByteArray</span> &amp;<i>headerValue</i>) const</h3>
+<p>Returns the AWS Signature version 4 canonical header string for the header <i>headerName</i> with value <i>headerValue</i>.</p>
+<p>In canonical form, header name and value are combined with a single semi-colon separator, with all whitespace removed from both, <i>except</i> for whitespace within double-quotes.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a> and <a href="qtaws-core-awssignaturev4private.html#canonicalHeaders">canonicalHeaders</a>.</p>
+<!-- @@@canonicalHeader -->
+<!-- $$$canonicalHeaders[overload1]$$$canonicalHeadersconstQNetworkRequest&QByteArray*const -->
+<h3 class="fn" id="canonicalHeaders"><a name="canonicalHeaders"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">canonicalHeaders</span>(const <span class="type">QNetworkRequest</span> &amp;<i>request</i>, <span class="type">QByteArray</span> * const <i>signedHeaders</i>) const</h3>
+<p>Returns the AWS Signature version 4 canonical headers string for <i>request</i>.</p>
+<p>This function constructs a canonical string containing all of the headers in the given request.</p>
+<p><b>Note: </b><i>request</i> will typically not include a <code>Host</code> header at this stage, however Qt will add an appropriate `Host` header when the request is performed. So, if <i>request</i> does not include a <code>Host</code> header yet, this function will include a derived <code>Host</code> header in the canonical headers to allow for it.</p><p>The <i>signedHeaders</i> parameter will be set to be semi-colon separated list of the names of all headers included in the result.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a> and <a href="qtaws-core-awssignaturev4private.html#canonicalHeader">canonicalHeader</a>.</p>
+<!-- @@@canonicalHeaders -->
+<!-- $$$canonicalRequest[overload1]$$$canonicalRequestconstQNetworkAccessManager::OperationconstQNetworkRequest&constQByteArray&QByteArray*const -->
+<h3 class="fn" id="canonicalRequest"><a name="canonicalRequest"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">canonicalRequest</span>(const <span class="type">QNetworkAccessManager::Operation</span> <i>operation</i>, const <span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type">QByteArray</span> &amp;<i>payload</i>, <span class="type">QByteArray</span> * const <i>signedHeaders</i>) const</h3>
+<p>Returns the AWS Signature version 4 canonical request string for <i>operation</i> on <i>request</i>, including optional <code>POST</code> / <code>PUT</code> <i>payload</i>.</p>
+<p>The <i>signedHeaders</i> parameter will be set to be semi-colon separated list of the names of all headers included in the result.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>.</p>
+<!-- @@@canonicalRequest -->
+<!-- $$$credentialScope[overload1]$$$credentialScopeconstQDate&constQString&constQString& -->
+<h3 class="fn" id="credentialScope"><a name="credentialScope"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">credentialScope</span>(const <span class="type">QDate</span> &amp;<i>date</i>, const <span class="type">QString</span> &amp;<i>region</i>, const <span class="type">QString</span> &amp;<i>service</i>) const</h3>
+<p>Returns the AWS Signature version 4 credential scope for the given <i>date</i>, <i>region</i> and <i>service</i> combination.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>.</p>
+<!-- @@@credentialScope -->
+<!-- $$$setAuthorizationHeader[overload1]$$$setAuthorizationHeaderconstAwsAbstractCredentials&constQNetworkAccessManager::OperationQNetworkRequest&constQByteArray&constQDateTime& -->
+<h3 class="fn" id="setAuthorizationHeader"><a name="setAuthorizationHeader"></a><span class="type">void</span> AwsSignatureV4Private::<span class="name">setAuthorizationHeader</span>(const <span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> &amp;<i>credentials</i>, const <span class="type">QNetworkAccessManager::Operation</span> <i>operation</i>, <span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type">QByteArray</span> &amp;<i>payload</i>, const <span class="type">QDateTime</span> &amp;<i>timestamp</i>) const</h3>
+<p>Sets the authorization header on <i>request</i>, for <i>operation</i> on the <i>request</i> with optional <code>PUT</code> / <code>POST</code> <i>payload</i>, at <i>timestamp</i>, signed with <i>credentials</i>.</p>
+<p>This function will calculate the authorization header value and set it as the <code>Authorization</code> HTTP header on <i>request</i>.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html</a> and <a href="qtaws-core-awssignaturev4private.html#authorizationHeaderValue">authorizationHeaderValue</a>.</p>
+<!-- @@@setAuthorizationHeader -->
+<!-- $$$setDateHeader[overload1]$$$setDateHeaderQNetworkRequest&constQDateTime& -->
+<h3 class="fn" id="setDateHeader"><a name="setDateHeader"></a><span class="type">QDateTime</span> AwsSignatureV4Private::<span class="name">setDateHeader</span>(<span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type">QDateTime</span> &amp;<i>dateTime</i> = QDateTime::currentDateTimeUtc()) const</h3>
+<p>Sets the AWS custom date header on <i>request</i> to UTC <i>dateTime</i>.</p>
+<p>This function will set a custom <code>x-amz-date</code> header to the value of <i>dateTime</i>, formatted to <a href="qtaws-core-awssignaturev4private.html#DateTimeFormat-var">DateTimeFormat</a>.</p>
+<p><b>Note: </b>Although Amazon labels this as a <code>&quot;date&quot;</code>, it is in fact a full timestamp.</p><p>Returns <i>dateTime</i> as a convenience to callers.</p>
+<!-- @@@setDateHeader -->
+<!-- $$$signingKey[overload1]$$$signingKeyconstAwsAbstractCredentials&constQDate&constQString&constQString& -->
+<h3 class="fn" id="signingKey"><a name="signingKey"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">signingKey</span>(const <span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> &amp;<i>credentials</i>, const <span class="type">QDate</span> &amp;<i>date</i>, const <span class="type">QString</span> &amp;<i>region</i>, const <span class="type">QString</span> &amp;<i>service</i>) const</h3>
+<p>Returns the AWS Signature versoin 4 signing key for the given <i>credentials</i>, <i>date</i>, <i>region</i> and <i>service</i> combination.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-calculate-signature.html</a>.</p>
+<!-- @@@signingKey -->
+<!-- $$$stringToSign[overload1]$$$stringToSignconstQByteArray&constQDateTime&constQByteArray&constQByteArray& -->
+<h3 class="fn" id="stringToSign"><a name="stringToSign"></a><code>[protected] </code><span class="type">QByteArray</span> AwsSignatureV4Private::<span class="name">stringToSign</span>(const <span class="type">QByteArray</span> &amp;<i>algorithmDesignation</i>, const <span class="type">QDateTime</span> &amp;<i>requestDate</i>, const <span class="type">QByteArray</span> &amp;<i>credentialScope</i>, const <span class="type">QByteArray</span> &amp;<i>canonicalRequest</i>) const</h3>
+<p>Returns the AWS Signature version 4 string to sign for the given <i>algorithmDesignation</i>, <i>requestDate</i>, <i>credentialScope</i> and <i>canonicalRequest</i> combination.</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html</a>, <a href="qtaws-core-awssignaturev4private.html#algorithmDesignation">algorithmDesignation</a>, <a href="qtaws-core-awssignaturev4private.html#canonicalRequest">canonicalRequest</a>, and <a href="qtaws-core-awssignaturev4private.html#credentialScope">credentialScope</a>.</p>
+<!-- @@@stringToSign -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+<!-- $$$DateFormat -->
+<h3 class="fn" id="DateFormat-var"><a name="DateFormat-var"></a>const <span class="type">QLatin1String</span> AwsSignatureV4Private::<span class="name">DateFormat</span></h3>
+<p>This variable holds the format V4 signatures use to represent <i>dates</i> in canonical form.</p>
+<!-- @@@DateFormat -->
+<!-- $$$DateTimeFormat -->
+<h3 class="fn" id="DateTimeFormat-var"><a name="DateTimeFormat-var"></a>const <span class="type">QLatin1String</span> AwsSignatureV4Private::<span class="name">DateTimeFormat</span></h3>
+<p>This variable holds the format V4 signatures use to represent <i>timestamps</i> in canonical form.</p>
+<!-- @@@DateTimeFormat -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

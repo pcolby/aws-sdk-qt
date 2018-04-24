@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- clouddirectoryresponse.cpp -->
+  <title>CloudDirectoryResponse Class | CloudDirectory</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsclouddirectory-index.html">CloudDirectory</a></li>
+<li><a href="qtawsclouddirectory-module.html">C++ Classes</a></li>
+<li>CloudDirectoryResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudDirectoryResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-clouddirectory-clouddirectoryresponse.html">QtAws::CloudDirectory::CloudDirectoryResponse</a>)<br/></span>
+<!-- $$$CloudDirectoryResponse-brief -->
+<p>The <a href="qtaws-clouddirectory-clouddirectoryresponse.html">CloudDirectoryResponse</a> class provides an interface for <a href="qtaws-clouddirectory.html">CloudDirectory</a> responses. <a href="#details">More...</a></p>
+<!-- @@@CloudDirectoryResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudDirectoryResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-clouddirectory-addfacettoobjectresponse.html">QtAws::CloudDirectory::AddFacetToObjectResponse</a>, <a href="qtaws-clouddirectory-applyschemaresponse.html">QtAws::CloudDirectory::ApplySchemaResponse</a>, <a href="qtaws-clouddirectory-attachobjectresponse.html">QtAws::CloudDirectory::AttachObjectResponse</a>, <a href="qtaws-clouddirectory-attachpolicyresponse.html">QtAws::CloudDirectory::AttachPolicyResponse</a>, <a href="qtaws-clouddirectory-attachtoindexresponse.html">QtAws::CloudDirectory::AttachToIndexResponse</a>, <a href="qtaws-clouddirectory-attachtypedlinkresponse.html">QtAws::CloudDirectory::AttachTypedLinkResponse</a>, <a href="qtaws-clouddirectory-batchreadresponse.html">QtAws::CloudDirectory::BatchReadResponse</a>, <a href="qtaws-clouddirectory-batchwriteresponse.html">QtAws::CloudDirectory::BatchWriteResponse</a>, <a href="qtaws-clouddirectory-createdirectoryresponse.html">QtAws::CloudDirectory::CreateDirectoryResponse</a>, <a href="qtaws-clouddirectory-createfacetresponse.html">QtAws::CloudDirectory::CreateFacetResponse</a>, <a href="qtaws-clouddirectory-createindexresponse.html">QtAws::CloudDirectory::CreateIndexResponse</a>, <a href="qtaws-clouddirectory-createobjectresponse.html">QtAws::CloudDirectory::CreateObjectResponse</a>, <a href="qtaws-clouddirectory-createschemaresponse.html">QtAws::CloudDirectory::CreateSchemaResponse</a>, <a href="qtaws-clouddirectory-createtypedlinkfacetresponse.html">QtAws::CloudDirectory::CreateTypedLinkFacetResponse</a>, <a href="qtaws-clouddirectory-deletedirectoryresponse.html">QtAws::CloudDirectory::DeleteDirectoryResponse</a>, <a href="qtaws-clouddirectory-deletefacetresponse.html">QtAws::CloudDirectory::DeleteFacetResponse</a>, <a href="qtaws-clouddirectory-deleteobjectresponse.html">QtAws::CloudDirectory::DeleteObjectResponse</a>, <a href="qtaws-clouddirectory-deleteschemaresponse.html">QtAws::CloudDirectory::DeleteSchemaResponse</a>, <a href="qtaws-clouddirectory-deletetypedlinkfacetresponse.html">QtAws::CloudDirectory::DeleteTypedLinkFacetResponse</a>, <a href="qtaws-clouddirectory-detachfromindexresponse.html">QtAws::CloudDirectory::DetachFromIndexResponse</a>, <a href="qtaws-clouddirectory-detachobjectresponse.html">QtAws::CloudDirectory::DetachObjectResponse</a>, <a href="qtaws-clouddirectory-detachpolicyresponse.html">QtAws::CloudDirectory::DetachPolicyResponse</a>, <a href="qtaws-clouddirectory-detachtypedlinkresponse.html">QtAws::CloudDirectory::DetachTypedLinkResponse</a>, <a href="qtaws-clouddirectory-disabledirectoryresponse.html">QtAws::CloudDirectory::DisableDirectoryResponse</a>, <a href="qtaws-clouddirectory-enabledirectoryresponse.html">QtAws::CloudDirectory::EnableDirectoryResponse</a>, <a href="qtaws-clouddirectory-getappliedschemaversionresponse.html">QtAws::CloudDirectory::GetAppliedSchemaVersionResponse</a>, <a href="qtaws-clouddirectory-getdirectoryresponse.html">QtAws::CloudDirectory::GetDirectoryResponse</a>, <a href="qtaws-clouddirectory-getfacetresponse.html">QtAws::CloudDirectory::GetFacetResponse</a>, <a href="qtaws-clouddirectory-getobjectattributesresponse.html">QtAws::CloudDirectory::GetObjectAttributesResponse</a>, <a href="qtaws-clouddirectory-getobjectinformationresponse.html">QtAws::CloudDirectory::GetObjectInformationResponse</a>, <a href="qtaws-clouddirectory-getschemaasjsonresponse.html">QtAws::CloudDirectory::GetSchemaAsJsonResponse</a>, <a href="qtaws-clouddirectory-gettypedlinkfacetinformationresponse.html">QtAws::CloudDirectory::GetTypedLinkFacetInformationResponse</a>, <a href="qtaws-clouddirectory-listappliedschemaarnsresponse.html">QtAws::CloudDirectory::ListAppliedSchemaArnsResponse</a>, <a href="qtaws-clouddirectory-listattachedindicesresponse.html">QtAws::CloudDirectory::ListAttachedIndicesResponse</a>, <a href="qtaws-clouddirectory-listdevelopmentschemaarnsresponse.html">QtAws::CloudDirectory::ListDevelopmentSchemaArnsResponse</a>, <a href="qtaws-clouddirectory-listdirectoriesresponse.html">QtAws::CloudDirectory::ListDirectoriesResponse</a>, <a href="qtaws-clouddirectory-listfacetattributesresponse.html">QtAws::CloudDirectory::ListFacetAttributesResponse</a>, <a href="qtaws-clouddirectory-listfacetnamesresponse.html">QtAws::CloudDirectory::ListFacetNamesResponse</a>, <a href="qtaws-clouddirectory-listincomingtypedlinksresponse.html">QtAws::CloudDirectory::ListIncomingTypedLinksResponse</a>, <a href="qtaws-clouddirectory-listindexresponse.html">QtAws::CloudDirectory::ListIndexResponse</a>, <a href="qtaws-clouddirectory-listobjectattributesresponse.html">QtAws::CloudDirectory::ListObjectAttributesResponse</a>, <a href="qtaws-clouddirectory-listobjectchildrenresponse.html">QtAws::CloudDirectory::ListObjectChildrenResponse</a>, <a href="qtaws-clouddirectory-listobjectparentpathsresponse.html">QtAws::CloudDirectory::ListObjectParentPathsResponse</a>, <a href="qtaws-clouddirectory-listobjectparentsresponse.html">QtAws::CloudDirectory::ListObjectParentsResponse</a>, <a href="qtaws-clouddirectory-listobjectpoliciesresponse.html">QtAws::CloudDirectory::ListObjectPoliciesResponse</a>, <a href="qtaws-clouddirectory-listoutgoingtypedlinksresponse.html">QtAws::CloudDirectory::ListOutgoingTypedLinksResponse</a>, <a href="qtaws-clouddirectory-listpolicyattachmentsresponse.html">QtAws::CloudDirectory::ListPolicyAttachmentsResponse</a>, <a href="qtaws-clouddirectory-listpublishedschemaarnsresponse.html">QtAws::CloudDirectory::ListPublishedSchemaArnsResponse</a>, <a href="qtaws-clouddirectory-listtagsforresourceresponse.html">QtAws::CloudDirectory::ListTagsForResourceResponse</a>, <a href="qtaws-clouddirectory-listtypedlinkfacetattributesresponse.html">QtAws::CloudDirectory::ListTypedLinkFacetAttributesResponse</a>, <a href="qtaws-clouddirectory-listtypedlinkfacetnamesresponse.html">QtAws::CloudDirectory::ListTypedLinkFacetNamesResponse</a>, <a href="qtaws-clouddirectory-lookuppolicyresponse.html">QtAws::CloudDirectory::LookupPolicyResponse</a>, <a href="qtaws-clouddirectory-publishschemaresponse.html">QtAws::CloudDirectory::PublishSchemaResponse</a>, <a href="qtaws-clouddirectory-putschemafromjsonresponse.html">QtAws::CloudDirectory::PutSchemaFromJsonResponse</a>, <a href="qtaws-clouddirectory-removefacetfromobjectresponse.html">QtAws::CloudDirectory::RemoveFacetFromObjectResponse</a>, <a href="qtaws-clouddirectory-tagresourceresponse.html">QtAws::CloudDirectory::TagResourceResponse</a>, <a href="qtaws-clouddirectory-untagresourceresponse.html">QtAws::CloudDirectory::UntagResourceResponse</a>, <a href="qtaws-clouddirectory-updatefacetresponse.html">QtAws::CloudDirectory::UpdateFacetResponse</a>, <a href="qtaws-clouddirectory-updateobjectattributesresponse.html">QtAws::CloudDirectory::UpdateObjectAttributesResponse</a>, <a href="qtaws-clouddirectory-updateschemaresponse.html">QtAws::CloudDirectory::UpdateSchemaResponse</a>, <a href="qtaws-clouddirectory-updatetypedlinkfacetresponse.html">QtAws::CloudDirectory::UpdateTypedLinkFacetResponse</a>, <a href="qtaws-clouddirectory-upgradeappliedschemaresponse.html">QtAws::CloudDirectory::UpgradeAppliedSchemaResponse</a>, and <a href="qtaws-clouddirectory-upgradepublishedschemaresponse.html">QtAws::CloudDirectory::UpgradePublishedSchemaResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-clouddirectory-clouddirectoryresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryresponse.html#CloudDirectoryResponse">CloudDirectoryResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryresponse.html#CloudDirectoryResponse-1">CloudDirectoryResponse</a></b>(CloudDirectoryResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudDirectoryResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-clouddirectory-clouddirectoryresponse.html">CloudDirectoryResponse</a> class provides an interface for <a href="qtaws-clouddirectory.html">CloudDirectory</a> responses.</p>
+</div>
+<!-- @@@CloudDirectoryResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudDirectoryResponse[overload1]$$$CloudDirectoryResponseQObject*const -->
+<h3 class="fn" id="CloudDirectoryResponse"><a name="CloudDirectoryResponse"></a>CloudDirectoryResponse::<span class="name">CloudDirectoryResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-clouddirectory-clouddirectoryresponse.html">CloudDirectoryResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@CloudDirectoryResponse -->
+<!-- $$$CloudDirectoryResponse$$$CloudDirectoryResponseCloudDirectoryResponsePrivate*constQObject*const -->
+<h3 class="fn" id="CloudDirectoryResponse-1"><a name="CloudDirectoryResponse-1"></a><code>[protected] </code>CloudDirectoryResponse::<span class="name">CloudDirectoryResponse</span>(<span class="type"><a href="qtaws-clouddirectory-clouddirectoryresponseprivate.html">CloudDirectoryResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-clouddirectory-clouddirectoryresponse.html">CloudDirectoryResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-clouddirectory-clouddirectoryresponseprivate.html">CloudDirectoryResponsePrivate</a>.</p>
+<!-- @@@CloudDirectoryResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> CloudDirectoryResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

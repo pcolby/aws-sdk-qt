@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mediastoreclient.cpp -->
+  <title>MediaStoreClient Class | MediaStore</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmediastore-index.html">MediaStore</a></li>
+<li><a href="qtawsmediastore-module.html">C++ Classes</a></li>
+<li>MediaStoreClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MediaStoreClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mediastore-mediastoreclient.html">QtAws::MediaStore::MediaStoreClient</a>)<br/></span>
+<!-- $$$MediaStoreClient-brief -->
+<p>The <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> class provides access to the AWS Elemental <a href="qtaws-mediastore.html">MediaStore</a> service. <a href="#details">More...</a></p>
+<!-- @@@MediaStoreClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MediaStoreClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mediastore-mediastoreclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#MediaStoreClient">MediaStoreClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#MediaStoreClient-1">MediaStoreClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateContainerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#createContainer">createContainer</a></b>(const CreateContainerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteContainerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#deleteContainer">deleteContainer</a></b>(const DeleteContainerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteContainerPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#deleteContainerPolicy">deleteContainerPolicy</a></b>(const DeleteContainerPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCorsPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#deleteCorsPolicy">deleteCorsPolicy</a></b>(const DeleteCorsPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeContainerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#describeContainer">describeContainer</a></b>(const DescribeContainerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetContainerPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#getContainerPolicy">getContainerPolicy</a></b>(const GetContainerPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCorsPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#getCorsPolicy">getCorsPolicy</a></b>(const GetCorsPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListContainersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#listContainers">listContainers</a></b>(const ListContainersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutContainerPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#putContainerPolicy">putContainerPolicy</a></b>(const PutContainerPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutCorsPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastore-mediastoreclient.html#putCorsPolicy">putCorsPolicy</a></b>(const PutCorsPolicyRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MediaStoreClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> class provides access to the AWS Elemental <a href="qtaws-mediastore.html">MediaStore</a> service.</p>
+<p>An AWS Elemental <a href="qtaws-mediastore.html">MediaStore</a> container is a namespace that holds folders and objects. You use a container endpoint to create, read, and delete objects.</p>
+</div>
+<!-- @@@MediaStoreClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MediaStoreClient[overload1]$$$MediaStoreClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaStoreClient"><a name="MediaStoreClient"></a>MediaStoreClient::<span class="name">MediaStoreClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MediaStoreClient -->
+<!-- $$$MediaStoreClient$$$MediaStoreClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaStoreClient-1"><a name="MediaStoreClient-1"></a>MediaStoreClient::<span class="name">MediaStoreClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mediastore-mediastoreclient.html#MediaStoreClient">MediaStoreClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MediaStoreClient -->
+<!-- $$$createContainer[overload1]$$$createContainerconstCreateContainerRequest& -->
+<h3 class="fn" id="createContainer"><a name="createContainer"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-createcontainerresponse.html">CreateContainerResponse</a></span> *MediaStoreClient::<span class="name">createContainer</span>(const <span class="type"><a href="qtaws-mediastore-createcontainerrequest.html">CreateContainerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-createcontainerresponse.html">CreateContainerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a storage container to hold objects. A container is similar to a bucket in the Amazon S3</p>
+<!-- @@@createContainer -->
+<!-- $$$deleteContainer[overload1]$$$deleteContainerconstDeleteContainerRequest& -->
+<h3 class="fn" id="deleteContainer"><a name="deleteContainer"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-deletecontainerresponse.html">DeleteContainerResponse</a></span> *MediaStoreClient::<span class="name">deleteContainer</span>(const <span class="type"><a href="qtaws-mediastore-deletecontainerrequest.html">DeleteContainerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-deletecontainerresponse.html">DeleteContainerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified container. Before you make a &lt;code&gt;DeleteContainer&lt;/code&gt; request, delete any objects in the container or in any folders in the container. You can delete only empty containers.</p>
+<!-- @@@deleteContainer -->
+<!-- $$$deleteContainerPolicy[overload1]$$$deleteContainerPolicyconstDeleteContainerPolicyRequest& -->
+<h3 class="fn" id="deleteContainerPolicy"><a name="deleteContainerPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-deletecontainerpolicyresponse.html">DeleteContainerPolicyResponse</a></span> *MediaStoreClient::<span class="name">deleteContainerPolicy</span>(const <span class="type"><a href="qtaws-mediastore-deletecontainerpolicyrequest.html">DeleteContainerPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-deletecontainerpolicyresponse.html">DeleteContainerPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the access policy that is associated with the specified</p>
+<!-- @@@deleteContainerPolicy -->
+<!-- $$$deleteCorsPolicy[overload1]$$$deleteCorsPolicyconstDeleteCorsPolicyRequest& -->
+<h3 class="fn" id="deleteCorsPolicy"><a name="deleteCorsPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-deletecorspolicyresponse.html">DeleteCorsPolicyResponse</a></span> *MediaStoreClient::<span class="name">deleteCorsPolicy</span>(const <span class="type"><a href="qtaws-mediastore-deletecorspolicyrequest.html">DeleteCorsPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-deletecorspolicyresponse.html">DeleteCorsPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the cross-origin resource sharing (CORS) configuration information that is set for the</p>
+<p>container&gt;</p>
+<p>To use this operation, you must have permission to perform the &lt;code&gt;<a href="qtaws-mediastore.html">MediaStore</a>:DeleteCorsPolicy&lt;/code&gt; action. The container owner has this permission by default and can grant this permission to</p>
+<!-- @@@deleteCorsPolicy -->
+<!-- $$$describeContainer[overload1]$$$describeContainerconstDescribeContainerRequest& -->
+<h3 class="fn" id="describeContainer"><a name="describeContainer"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-describecontainerresponse.html">DescribeContainerResponse</a></span> *MediaStoreClient::<span class="name">describeContainer</span>(const <span class="type"><a href="qtaws-mediastore-describecontainerrequest.html">DescribeContainerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-describecontainerresponse.html">DescribeContainerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the properties of the requested container. This request is commonly used to retrieve the endpoint of a container. An endpoint is a value assigned by the service when a new container is created. A container's endpoint does not change after it has been assigned. The &lt;code&gt;DescribeContainer&lt;/code&gt; request returns a single &lt;code&gt;Container&lt;/code&gt; object based on &lt;code&gt;ContainerName&lt;/code&gt;. To return all &lt;code&gt;Container&lt;/code&gt; objects that are associated with a specified AWS account, use</p>
+<!-- @@@describeContainer -->
+<!-- $$$getContainerPolicy[overload1]$$$getContainerPolicyconstGetContainerPolicyRequest& -->
+<h3 class="fn" id="getContainerPolicy"><a name="getContainerPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-getcontainerpolicyresponse.html">GetContainerPolicyResponse</a></span> *MediaStoreClient::<span class="name">getContainerPolicy</span>(const <span class="type"><a href="qtaws-mediastore-getcontainerpolicyrequest.html">GetContainerPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-getcontainerpolicyresponse.html">GetContainerPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the access policy for the specified container. For information about the data that is included in an access policy, see the &lt;a href=&quot;https://aws.amazon.com/documentation/iam/&quot;&gt;AWS Identity and Access Management User</p>
+<!-- @@@getContainerPolicy -->
+<!-- $$$getCorsPolicy[overload1]$$$getCorsPolicyconstGetCorsPolicyRequest& -->
+<h3 class="fn" id="getCorsPolicy"><a name="getCorsPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-getcorspolicyresponse.html">GetCorsPolicyResponse</a></span> *MediaStoreClient::<span class="name">getCorsPolicy</span>(const <span class="type"><a href="qtaws-mediastore-getcorspolicyrequest.html">GetCorsPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-getcorspolicyresponse.html">GetCorsPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the cross-origin resource sharing (CORS) configuration information that is set for the</p>
+<p>container&gt;</p>
+<p>To use this operation, you must have permission to perform the &lt;code&gt;<a href="qtaws-mediastore.html">MediaStore</a>:GetCorsPolicy&lt;/code&gt; action. By default, the container owner has this permission and can grant it to</p>
+<!-- @@@getCorsPolicy -->
+<!-- $$$listContainers[overload1]$$$listContainersconstListContainersRequest& -->
+<h3 class="fn" id="listContainers"><a name="listContainers"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-listcontainersresponse.html">ListContainersResponse</a></span> *MediaStoreClient::<span class="name">listContainers</span>(const <span class="type"><a href="qtaws-mediastore-listcontainersrequest.html">ListContainersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-listcontainersresponse.html">ListContainersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the properties of all containers in AWS Elemental <a href="qtaws-mediastore.html">MediaStore</a>.</p>
+<p>&lt;/p</p>
+<p>You can query to receive all the containers in one response. Or you can include the &lt;code&gt;MaxResults&lt;/code&gt; parameter to receive a limited number of containers in each response. In this case, the response includes a token. To get the next set of containers, send the command again, this time with the &lt;code&gt;NextToken&lt;/code&gt; parameter (with the returned token as its value). The next set of responses appears, with a token if there are still more containers to receive.</p>
+<p>&lt;/p</p>
+<p>See also &lt;a&gt;DescribeContainer&lt;/a&gt;, which gets the properties of one container.</p>
+<!-- @@@listContainers -->
+<!-- $$$putContainerPolicy[overload1]$$$putContainerPolicyconstPutContainerPolicyRequest& -->
+<h3 class="fn" id="putContainerPolicy"><a name="putContainerPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-putcontainerpolicyresponse.html">PutContainerPolicyResponse</a></span> *MediaStoreClient::<span class="name">putContainerPolicy</span>(const <span class="type"><a href="qtaws-mediastore-putcontainerpolicyrequest.html">PutContainerPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-putcontainerpolicyresponse.html">PutContainerPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an access policy for the specified container to restrict the users and clients that can access it. For information about the data that is included in an access policy, see the &lt;a href=&quot;https://aws.amazon.com/documentation/iam/&quot;&gt;AWS Identity and Access Management User</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>For this release of the REST API, you can create only one policy for a container. If you enter &lt;code&gt;PutContainerPolicy&lt;/code&gt; twice, the second command modifies the existing policy.</p>
+<!-- @@@putContainerPolicy -->
+<!-- $$$putCorsPolicy[overload1]$$$putCorsPolicyconstPutCorsPolicyRequest& -->
+<h3 class="fn" id="putCorsPolicy"><a name="putCorsPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastore-putcorspolicyresponse.html">PutCorsPolicyResponse</a></span> *MediaStoreClient::<span class="name">putCorsPolicy</span>(const <span class="type"><a href="qtaws-mediastore-putcorspolicyrequest.html">PutCorsPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastore-mediastoreclient.html">MediaStoreClient</a> service, and returns a pointer to an <a href="qtaws-mediastore-putcorspolicyresponse.html">PutCorsPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the cross-origin resource sharing (CORS) configuration on a container so that the container can service cross-origin requests. For example, you might want to enable a request whose origin is http://www.example.com to access your AWS Elemental <a href="qtaws-mediastore.html">MediaStore</a> container at my.example.container.com by using the browser's XMLHttpRequest</p>
+<p>capability&gt;</p>
+<p>To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy, you configure rules that identify origins and the HTTP methods that can be executed on your container. The policy can contain up to 398,000 characters. You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses the first applicable rule</p>
+<!-- @@@putCorsPolicy -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

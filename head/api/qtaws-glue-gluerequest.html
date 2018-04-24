@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- gluerequest.cpp -->
+  <title>GlueRequest Class | Glue</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsglue-index.html">Glue</a></li>
+<li><a href="qtawsglue-module.html">C++ Classes</a></li>
+<li>GlueRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GlueRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-glue-gluerequest.html">QtAws::Glue::GlueRequest</a>)<br/></span>
+<!-- $$$GlueRequest-brief -->
+<p>The <a href="qtaws-glue-gluerequest.html">GlueRequest</a> class provides an interface for Glue requests. <a href="#details">More...</a></p>
+<!-- @@@GlueRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GlueRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-glue-batchcreatepartitionrequest.html">QtAws::Glue::BatchCreatePartitionRequest</a>, <a href="qtaws-glue-batchdeleteconnectionrequest.html">QtAws::Glue::BatchDeleteConnectionRequest</a>, <a href="qtaws-glue-batchdeletepartitionrequest.html">QtAws::Glue::BatchDeletePartitionRequest</a>, <a href="qtaws-glue-batchdeletetablerequest.html">QtAws::Glue::BatchDeleteTableRequest</a>, <a href="qtaws-glue-batchdeletetableversionrequest.html">QtAws::Glue::BatchDeleteTableVersionRequest</a>, <a href="qtaws-glue-batchgetpartitionrequest.html">QtAws::Glue::BatchGetPartitionRequest</a>, <a href="qtaws-glue-batchstopjobrunrequest.html">QtAws::Glue::BatchStopJobRunRequest</a>, <a href="qtaws-glue-createclassifierrequest.html">QtAws::Glue::CreateClassifierRequest</a>, <a href="qtaws-glue-createconnectionrequest.html">QtAws::Glue::CreateConnectionRequest</a>, <a href="qtaws-glue-createcrawlerrequest.html">QtAws::Glue::CreateCrawlerRequest</a>, <a href="qtaws-glue-createdatabaserequest.html">QtAws::Glue::CreateDatabaseRequest</a>, <a href="qtaws-glue-createdevendpointrequest.html">QtAws::Glue::CreateDevEndpointRequest</a>, <a href="qtaws-glue-createjobrequest.html">QtAws::Glue::CreateJobRequest</a>, <a href="qtaws-glue-createpartitionrequest.html">QtAws::Glue::CreatePartitionRequest</a>, <a href="qtaws-glue-createscriptrequest.html">QtAws::Glue::CreateScriptRequest</a>, <a href="qtaws-glue-createtablerequest.html">QtAws::Glue::CreateTableRequest</a>, <a href="qtaws-glue-createtriggerrequest.html">QtAws::Glue::CreateTriggerRequest</a>, <a href="qtaws-glue-createuserdefinedfunctionrequest.html">QtAws::Glue::CreateUserDefinedFunctionRequest</a>, <a href="qtaws-glue-deleteclassifierrequest.html">QtAws::Glue::DeleteClassifierRequest</a>, <a href="qtaws-glue-deleteconnectionrequest.html">QtAws::Glue::DeleteConnectionRequest</a>, <a href="qtaws-glue-deletecrawlerrequest.html">QtAws::Glue::DeleteCrawlerRequest</a>, <a href="qtaws-glue-deletedatabaserequest.html">QtAws::Glue::DeleteDatabaseRequest</a>, <a href="qtaws-glue-deletedevendpointrequest.html">QtAws::Glue::DeleteDevEndpointRequest</a>, <a href="qtaws-glue-deletejobrequest.html">QtAws::Glue::DeleteJobRequest</a>, <a href="qtaws-glue-deletepartitionrequest.html">QtAws::Glue::DeletePartitionRequest</a>, <a href="qtaws-glue-deletetablerequest.html">QtAws::Glue::DeleteTableRequest</a>, <a href="qtaws-glue-deletetableversionrequest.html">QtAws::Glue::DeleteTableVersionRequest</a>, <a href="qtaws-glue-deletetriggerrequest.html">QtAws::Glue::DeleteTriggerRequest</a>, <a href="qtaws-glue-deleteuserdefinedfunctionrequest.html">QtAws::Glue::DeleteUserDefinedFunctionRequest</a>, <a href="qtaws-glue-getcatalogimportstatusrequest.html">QtAws::Glue::GetCatalogImportStatusRequest</a>, <a href="qtaws-glue-getclassifierrequest.html">QtAws::Glue::GetClassifierRequest</a>, <a href="qtaws-glue-getclassifiersrequest.html">QtAws::Glue::GetClassifiersRequest</a>, <a href="qtaws-glue-getconnectionrequest.html">QtAws::Glue::GetConnectionRequest</a>, <a href="qtaws-glue-getconnectionsrequest.html">QtAws::Glue::GetConnectionsRequest</a>, <a href="qtaws-glue-getcrawlermetricsrequest.html">QtAws::Glue::GetCrawlerMetricsRequest</a>, <a href="qtaws-glue-getcrawlerrequest.html">QtAws::Glue::GetCrawlerRequest</a>, <a href="qtaws-glue-getcrawlersrequest.html">QtAws::Glue::GetCrawlersRequest</a>, <a href="qtaws-glue-getdatabaserequest.html">QtAws::Glue::GetDatabaseRequest</a>, <a href="qtaws-glue-getdatabasesrequest.html">QtAws::Glue::GetDatabasesRequest</a>, <a href="qtaws-glue-getdataflowgraphrequest.html">QtAws::Glue::GetDataflowGraphRequest</a>, <a href="qtaws-glue-getdevendpointrequest.html">QtAws::Glue::GetDevEndpointRequest</a>, <a href="qtaws-glue-getdevendpointsrequest.html">QtAws::Glue::GetDevEndpointsRequest</a>, <a href="qtaws-glue-getjobrequest.html">QtAws::Glue::GetJobRequest</a>, <a href="qtaws-glue-getjobrunrequest.html">QtAws::Glue::GetJobRunRequest</a>, <a href="qtaws-glue-getjobrunsrequest.html">QtAws::Glue::GetJobRunsRequest</a>, <a href="qtaws-glue-getjobsrequest.html">QtAws::Glue::GetJobsRequest</a>, <a href="qtaws-glue-getmappingrequest.html">QtAws::Glue::GetMappingRequest</a>, <a href="qtaws-glue-getpartitionrequest.html">QtAws::Glue::GetPartitionRequest</a>, <a href="qtaws-glue-getpartitionsrequest.html">QtAws::Glue::GetPartitionsRequest</a>, <a href="qtaws-glue-getplanrequest.html">QtAws::Glue::GetPlanRequest</a>, <a href="qtaws-glue-gettablerequest.html">QtAws::Glue::GetTableRequest</a>, <a href="qtaws-glue-gettablesrequest.html">QtAws::Glue::GetTablesRequest</a>, <a href="qtaws-glue-gettableversionrequest.html">QtAws::Glue::GetTableVersionRequest</a>, <a href="qtaws-glue-gettableversionsrequest.html">QtAws::Glue::GetTableVersionsRequest</a>, <a href="qtaws-glue-gettriggerrequest.html">QtAws::Glue::GetTriggerRequest</a>, <a href="qtaws-glue-gettriggersrequest.html">QtAws::Glue::GetTriggersRequest</a>, <a href="qtaws-glue-getuserdefinedfunctionrequest.html">QtAws::Glue::GetUserDefinedFunctionRequest</a>, <a href="qtaws-glue-getuserdefinedfunctionsrequest.html">QtAws::Glue::GetUserDefinedFunctionsRequest</a>, <a href="qtaws-glue-importcatalogtogluerequest.html">QtAws::Glue::ImportCatalogToGlueRequest</a>, <a href="qtaws-glue-resetjobbookmarkrequest.html">QtAws::Glue::ResetJobBookmarkRequest</a>, <a href="qtaws-glue-startcrawlerrequest.html">QtAws::Glue::StartCrawlerRequest</a>, <a href="qtaws-glue-startcrawlerschedulerequest.html">QtAws::Glue::StartCrawlerScheduleRequest</a>, <a href="qtaws-glue-startjobrunrequest.html">QtAws::Glue::StartJobRunRequest</a>, <a href="qtaws-glue-starttriggerrequest.html">QtAws::Glue::StartTriggerRequest</a>, <a href="qtaws-glue-stopcrawlerrequest.html">QtAws::Glue::StopCrawlerRequest</a>, <a href="qtaws-glue-stopcrawlerschedulerequest.html">QtAws::Glue::StopCrawlerScheduleRequest</a>, <a href="qtaws-glue-stoptriggerrequest.html">QtAws::Glue::StopTriggerRequest</a>, <a href="qtaws-glue-updateclassifierrequest.html">QtAws::Glue::UpdateClassifierRequest</a>, <a href="qtaws-glue-updateconnectionrequest.html">QtAws::Glue::UpdateConnectionRequest</a>, <a href="qtaws-glue-updatecrawlerrequest.html">QtAws::Glue::UpdateCrawlerRequest</a>, <a href="qtaws-glue-updatecrawlerschedulerequest.html">QtAws::Glue::UpdateCrawlerScheduleRequest</a>, <a href="qtaws-glue-updatedatabaserequest.html">QtAws::Glue::UpdateDatabaseRequest</a>, <a href="qtaws-glue-updatedevendpointrequest.html">QtAws::Glue::UpdateDevEndpointRequest</a>, <a href="qtaws-glue-updatejobrequest.html">QtAws::Glue::UpdateJobRequest</a>, <a href="qtaws-glue-updatepartitionrequest.html">QtAws::Glue::UpdatePartitionRequest</a>, <a href="qtaws-glue-updatetablerequest.html">QtAws::Glue::UpdateTableRequest</a>, <a href="qtaws-glue-updatetriggerrequest.html">QtAws::Glue::UpdateTriggerRequest</a>, and <a href="qtaws-glue-updateuserdefinedfunctionrequest.html">QtAws::Glue::UpdateUserDefinedFunctionRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-glue-gluerequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#Action-enum">Action</a></b> { BatchCreatePartitionAction, BatchDeleteConnectionAction, BatchDeletePartitionAction, BatchDeleteTableAction, ..., UpdateUserDefinedFunctionAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#GlueRequest">GlueRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#GlueRequest-1">GlueRequest</a></b>(const GlueRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GlueRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#operator-eq">operator=</a></b>(const GlueRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#operator-eq-eq">operator==</a></b>(const GlueRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#GlueRequest-2">GlueRequest</a></b>(GlueRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-gluerequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GlueRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-glue-gluerequest.html">GlueRequest</a> class provides an interface for Glue requests.</p>
+</div>
+<!-- @@@GlueRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$BatchCreatePartitionAction$$$BatchDeleteConnectionAction$$$BatchDeletePartitionAction$$$BatchDeleteTableAction$$$BatchDeleteTableVersionAction$$$BatchGetPartitionAction$$$BatchStopJobRunAction$$$CreateClassifierAction$$$CreateConnectionAction$$$CreateCrawlerAction$$$CreateDatabaseAction$$$CreateDevEndpointAction$$$CreateJobAction$$$CreatePartitionAction$$$CreateScriptAction$$$CreateTableAction$$$CreateTriggerAction$$$CreateUserDefinedFunctionAction$$$DeleteClassifierAction$$$DeleteConnectionAction$$$DeleteCrawlerAction$$$DeleteDatabaseAction$$$DeleteDevEndpointAction$$$DeleteJobAction$$$DeletePartitionAction$$$DeleteTableAction$$$DeleteTableVersionAction$$$DeleteTriggerAction$$$DeleteUserDefinedFunctionAction$$$GetCatalogImportStatusAction$$$GetClassifierAction$$$GetClassifiersAction$$$GetConnectionAction$$$GetConnectionsAction$$$GetCrawlerAction$$$GetCrawlerMetricsAction$$$GetCrawlersAction$$$GetDatabaseAction$$$GetDatabasesAction$$$GetDataflowGraphAction$$$GetDevEndpointAction$$$GetDevEndpointsAction$$$GetJobAction$$$GetJobRunAction$$$GetJobRunsAction$$$GetJobsAction$$$GetMappingAction$$$GetPartitionAction$$$GetPartitionsAction$$$GetPlanAction$$$GetTableAction$$$GetTableVersionAction$$$GetTableVersionsAction$$$GetTablesAction$$$GetTriggerAction$$$GetTriggersAction$$$GetUserDefinedFunctionAction$$$GetUserDefinedFunctionsAction$$$ImportCatalogToGlueAction$$$ResetJobBookmarkAction$$$StartCrawlerAction$$$StartCrawlerScheduleAction$$$StartJobRunAction$$$StartTriggerAction$$$StopCrawlerAction$$$StopCrawlerScheduleAction$$$StopTriggerAction$$$UpdateClassifierAction$$$UpdateConnectionAction$$$UpdateCrawlerAction$$$UpdateCrawlerScheduleAction$$$UpdateDatabaseAction$$$UpdateDevEndpointAction$$$UpdateJobAction$$$UpdatePartitionAction$$$UpdateTableAction$$$UpdateTriggerAction$$$UpdateUserDefinedFunctionAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum GlueRequest::<span class="name">Action</span><br/>flags GlueRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Glue requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchCreatePartitionAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Glue BatchCreatePartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchDeleteConnectionAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Glue BatchDeleteConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchDeletePartitionAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Glue BatchDeletePartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchDeleteTableAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Glue BatchDeleteTable action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchDeleteTableVersionAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Glue BatchDeleteTableVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchGetPartitionAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Glue BatchGetPartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::BatchStopJobRunAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Glue BatchStopJobRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateClassifierAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Glue CreateClassifier action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateConnectionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Glue CreateConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateCrawlerAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Glue CreateCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateDatabaseAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Glue CreateDatabase action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateDevEndpointAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Glue CreateDevEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateJobAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Glue CreateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreatePartitionAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Glue CreatePartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateScriptAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Glue CreateScript action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateTableAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Glue CreateTable action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateTriggerAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Glue CreateTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::CreateUserDefinedFunctionAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Glue CreateUserDefinedFunction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteClassifierAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Glue DeleteClassifier action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteConnectionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Glue DeleteConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteCrawlerAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Glue DeleteCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteDatabaseAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Glue DeleteDatabase action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteDevEndpointAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Glue DeleteDevEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteJobAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Glue DeleteJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeletePartitionAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Glue DeletePartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteTableAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Glue DeleteTable action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteTableVersionAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Glue DeleteTableVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteTriggerAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Glue DeleteTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::DeleteUserDefinedFunctionAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Glue DeleteUserDefinedFunction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetCatalogImportStatusAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Glue GetCatalogImportStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetClassifierAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Glue GetClassifier action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetClassifiersAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Glue GetClassifiers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetConnectionAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Glue GetConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetConnectionsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Glue GetConnections action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetCrawlerAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Glue GetCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetCrawlerMetricsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Glue GetCrawlerMetrics action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetCrawlersAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Glue GetCrawlers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetDatabaseAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Glue GetDatabase action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetDatabasesAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Glue GetDatabases action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetDataflowGraphAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Glue GetDataflowGraph action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetDevEndpointAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Glue GetDevEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetDevEndpointsAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Glue GetDevEndpoints action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetJobAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Glue GetJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetJobRunAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Glue GetJobRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetJobRunsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Glue GetJobRuns action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetJobsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Glue GetJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetMappingAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Glue GetMapping action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetPartitionAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Glue GetPartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetPartitionsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Glue GetPartitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetPlanAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Glue GetPlan action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTableAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Glue GetTable action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTableVersionAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Glue GetTableVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTableVersionsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Glue GetTableVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTablesAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Glue GetTables action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTriggerAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Glue GetTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetTriggersAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Glue GetTriggers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetUserDefinedFunctionAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">Glue GetUserDefinedFunction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::GetUserDefinedFunctionsAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">Glue GetUserDefinedFunctions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::ImportCatalogToGlueAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">Glue ImportCatalogToGlue action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::ResetJobBookmarkAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">Glue ResetJobBookmark action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StartCrawlerAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">Glue StartCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StartCrawlerScheduleAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">Glue StartCrawlerSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StartJobRunAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">Glue StartJobRun action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StartTriggerAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">Glue StartTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StopCrawlerAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">Glue StopCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StopCrawlerScheduleAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">Glue StopCrawlerSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::StopTriggerAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">Glue StopTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateClassifierAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">Glue UpdateClassifier action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateConnectionAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">Glue UpdateConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateCrawlerAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">Glue UpdateCrawler action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateCrawlerScheduleAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">Glue UpdateCrawlerSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateDatabaseAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">Glue UpdateDatabase action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateDevEndpointAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">Glue UpdateDevEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateJobAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">Glue UpdateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdatePartitionAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">Glue UpdatePartition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateTableAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">Glue UpdateTable action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateTriggerAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">Glue UpdateTrigger action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glue::GlueRequest::UpdateUserDefinedFunctionAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">Glue UpdateUserDefinedFunction action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GlueRequest[overload1]$$$GlueRequestconstAction -->
+<h3 class="fn" id="GlueRequest"><a name="GlueRequest"></a>GlueRequest::<span class="name">GlueRequest</span>(const <span class="type"><a href="qtaws-glue-gluerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-glue-gluerequest.html">GlueRequest</a> object for Glue <i>action</i>.</p>
+<!-- @@@GlueRequest -->
+<!-- $$$GlueRequest$$$GlueRequestconstGlueRequest& -->
+<h3 class="fn" id="GlueRequest-1"><a name="GlueRequest-1"></a>GlueRequest::<span class="name">GlueRequest</span>(const <span class="type"><a href="qtaws-glue-gluerequest.html#GlueRequest">GlueRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@GlueRequest -->
+<!-- $$$GlueRequest$$$GlueRequestGlueRequestPrivate*const -->
+<h3 class="fn" id="GlueRequest-2"><a name="GlueRequest-2"></a><code>[protected] </code>GlueRequest::<span class="name">GlueRequest</span>(<span class="type">GlueRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-glue-gluerequest.html">GlueRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from GlueRequestPrivate.</p>
+<!-- @@@GlueRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-glue-gluerequest.html#Action-enum">Action</a></span> GlueRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Glue action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> GlueRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Glue action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> GlueRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Glue API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> GlueRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> GlueRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> GlueRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;GlueRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> GlueRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-glue-gluerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Glue action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> GlueRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Glue API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> GlueRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> GlueRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-glue-gluerequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> GlueRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Glue request using the given <i>endpoint</i>.</p>
+<p>This Glue implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-glue-gluerequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constGlueRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-glue-gluerequest.html#GlueRequest">GlueRequest</a></span> &amp;GlueRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-glue-gluerequest.html#GlueRequest">GlueRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-glue-gluerequest.html">GlueRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constGlueRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> GlueRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-glue-gluerequest.html#GlueRequest">GlueRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

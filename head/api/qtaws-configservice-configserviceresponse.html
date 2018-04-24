@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- configserviceresponse.cpp -->
+  <title>ConfigServiceResponse Class | ConfigService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsconfigservice-index.html">ConfigService</a></li>
+<li><a href="qtawsconfigservice-module.html">C++ Classes</a></li>
+<li>ConfigServiceResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ConfigServiceResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-configservice-configserviceresponse.html">QtAws::ConfigService::ConfigServiceResponse</a>)<br/></span>
+<!-- $$$ConfigServiceResponse-brief -->
+<p>The <a href="qtaws-configservice-configserviceresponse.html">ConfigServiceResponse</a> class provides an interface for <a href="qtaws-configservice.html">ConfigService</a> responses. <a href="#details">More...</a></p>
+<!-- @@@ConfigServiceResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ConfigServiceResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-configservice-batchgetresourceconfigresponse.html">QtAws::ConfigService::BatchGetResourceConfigResponse</a>, <a href="qtaws-configservice-deleteaggregationauthorizationresponse.html">QtAws::ConfigService::DeleteAggregationAuthorizationResponse</a>, <a href="qtaws-configservice-deleteconfigruleresponse.html">QtAws::ConfigService::DeleteConfigRuleResponse</a>, <a href="qtaws-configservice-deleteconfigurationaggregatorresponse.html">QtAws::ConfigService::DeleteConfigurationAggregatorResponse</a>, <a href="qtaws-configservice-deleteconfigurationrecorderresponse.html">QtAws::ConfigService::DeleteConfigurationRecorderResponse</a>, <a href="qtaws-configservice-deletedeliverychannelresponse.html">QtAws::ConfigService::DeleteDeliveryChannelResponse</a>, <a href="qtaws-configservice-deleteevaluationresultsresponse.html">QtAws::ConfigService::DeleteEvaluationResultsResponse</a>, <a href="qtaws-configservice-deletependingaggregationrequestresponse.html">QtAws::ConfigService::DeletePendingAggregationRequestResponse</a>, <a href="qtaws-configservice-deliverconfigsnapshotresponse.html">QtAws::ConfigService::DeliverConfigSnapshotResponse</a>, <a href="qtaws-configservice-describeaggregatecompliancebyconfigrulesresponse.html">QtAws::ConfigService::DescribeAggregateComplianceByConfigRulesResponse</a>, <a href="qtaws-configservice-describeaggregationauthorizationsresponse.html">QtAws::ConfigService::DescribeAggregationAuthorizationsResponse</a>, <a href="qtaws-configservice-describecompliancebyconfigruleresponse.html">QtAws::ConfigService::DescribeComplianceByConfigRuleResponse</a>, <a href="qtaws-configservice-describecompliancebyresourceresponse.html">QtAws::ConfigService::DescribeComplianceByResourceResponse</a>, <a href="qtaws-configservice-describeconfigruleevaluationstatusresponse.html">QtAws::ConfigService::DescribeConfigRuleEvaluationStatusResponse</a>, <a href="qtaws-configservice-describeconfigrulesresponse.html">QtAws::ConfigService::DescribeConfigRulesResponse</a>, <a href="qtaws-configservice-describeconfigurationaggregatorsourcesstatusresponse.html">QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusResponse</a>, <a href="qtaws-configservice-describeconfigurationaggregatorsresponse.html">QtAws::ConfigService::DescribeConfigurationAggregatorsResponse</a>, <a href="qtaws-configservice-describeconfigurationrecordersresponse.html">QtAws::ConfigService::DescribeConfigurationRecordersResponse</a>, <a href="qtaws-configservice-describeconfigurationrecorderstatusresponse.html">QtAws::ConfigService::DescribeConfigurationRecorderStatusResponse</a>, <a href="qtaws-configservice-describedeliverychannelsresponse.html">QtAws::ConfigService::DescribeDeliveryChannelsResponse</a>, <a href="qtaws-configservice-describedeliverychannelstatusresponse.html">QtAws::ConfigService::DescribeDeliveryChannelStatusResponse</a>, <a href="qtaws-configservice-describependingaggregationrequestsresponse.html">QtAws::ConfigService::DescribePendingAggregationRequestsResponse</a>, <a href="qtaws-configservice-getaggregatecompliancedetailsbyconfigruleresponse.html">QtAws::ConfigService::GetAggregateComplianceDetailsByConfigRuleResponse</a>, <a href="qtaws-configservice-getaggregateconfigrulecompliancesummaryresponse.html">QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryResponse</a>, <a href="qtaws-configservice-getcompliancedetailsbyconfigruleresponse.html">QtAws::ConfigService::GetComplianceDetailsByConfigRuleResponse</a>, <a href="qtaws-configservice-getcompliancedetailsbyresourceresponse.html">QtAws::ConfigService::GetComplianceDetailsByResourceResponse</a>, <a href="qtaws-configservice-getcompliancesummarybyconfigruleresponse.html">QtAws::ConfigService::GetComplianceSummaryByConfigRuleResponse</a>, <a href="qtaws-configservice-getcompliancesummarybyresourcetyperesponse.html">QtAws::ConfigService::GetComplianceSummaryByResourceTypeResponse</a>, <a href="qtaws-configservice-getdiscoveredresourcecountsresponse.html">QtAws::ConfigService::GetDiscoveredResourceCountsResponse</a>, <a href="qtaws-configservice-getresourceconfighistoryresponse.html">QtAws::ConfigService::GetResourceConfigHistoryResponse</a>, <a href="qtaws-configservice-listdiscoveredresourcesresponse.html">QtAws::ConfigService::ListDiscoveredResourcesResponse</a>, <a href="qtaws-configservice-putaggregationauthorizationresponse.html">QtAws::ConfigService::PutAggregationAuthorizationResponse</a>, <a href="qtaws-configservice-putconfigruleresponse.html">QtAws::ConfigService::PutConfigRuleResponse</a>, <a href="qtaws-configservice-putconfigurationaggregatorresponse.html">QtAws::ConfigService::PutConfigurationAggregatorResponse</a>, <a href="qtaws-configservice-putconfigurationrecorderresponse.html">QtAws::ConfigService::PutConfigurationRecorderResponse</a>, <a href="qtaws-configservice-putdeliverychannelresponse.html">QtAws::ConfigService::PutDeliveryChannelResponse</a>, <a href="qtaws-configservice-putevaluationsresponse.html">QtAws::ConfigService::PutEvaluationsResponse</a>, <a href="qtaws-configservice-startconfigrulesevaluationresponse.html">QtAws::ConfigService::StartConfigRulesEvaluationResponse</a>, <a href="qtaws-configservice-startconfigurationrecorderresponse.html">QtAws::ConfigService::StartConfigurationRecorderResponse</a>, and <a href="qtaws-configservice-stopconfigurationrecorderresponse.html">QtAws::ConfigService::StopConfigurationRecorderResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-configservice-configserviceresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceresponse.html#ConfigServiceResponse">ConfigServiceResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ConfigServiceResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-configservice-configserviceresponse.html">ConfigServiceResponse</a> class provides an interface for <a href="qtaws-configservice.html">ConfigService</a> responses.</p>
+</div>
+<!-- @@@ConfigServiceResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ConfigServiceResponse[overload1]$$$ConfigServiceResponseQObject*const -->
+<h3 class="fn" id="ConfigServiceResponse"><a name="ConfigServiceResponse"></a>ConfigServiceResponse::<span class="name">ConfigServiceResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-configservice-configserviceresponse.html">ConfigServiceResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@ConfigServiceResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> ConfigServiceResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

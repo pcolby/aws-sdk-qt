@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- opsworkscmclient.cpp -->
+  <title>OpsWorksCMClient Class | OpsWorksCM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsopsworkscm-index.html">OpsWorksCM</a></li>
+<li><a href="qtawsopsworkscm-module.html">C++ Classes</a></li>
+<li>OpsWorksCMClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">OpsWorksCMClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-opsworkscm-opsworkscmclient.html">QtAws::OpsWorksCM::OpsWorksCMClient</a>)<br/></span>
+<!-- $$$OpsWorksCMClient-brief -->
+<p>The <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> class provides access to the AWS OpsWorks for Chef Automate (<a href="qtaws-opsworkscm.html">OpsWorksCM</a>) service. <a href="#details">More...</a></p>
+<!-- @@@OpsWorksCMClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;OpsWorksCMClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-opsworkscm-opsworkscmclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#OpsWorksCMClient">OpsWorksCMClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#OpsWorksCMClient-1">OpsWorksCMClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateNodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#associateNode">associateNode</a></b>(const AssociateNodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBackupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#createBackup">createBackup</a></b>(const CreateBackupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#createServer">createServer</a></b>(const CreateServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBackupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#deleteBackup">deleteBackup</a></b>(const DeleteBackupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#deleteServer">deleteServer</a></b>(const DeleteServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAccountAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#describeAccountAttributes">describeAccountAttributes</a></b>(const DescribeAccountAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBackupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#describeBackups">describeBackups</a></b>(const DescribeBackupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNodeAssociationStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#describeNodeAssociationStatus">describeNodeAssociationStatus</a></b>(const DescribeNodeAssociationStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeServersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#describeServers">describeServers</a></b>(const DescribeServersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateNodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#disassociateNode">disassociateNode</a></b>(const DisassociateNodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#restoreServer">restoreServer</a></b>(const RestoreServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartMaintenanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#startMaintenance">startMaintenance</a></b>(const StartMaintenanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#updateServer">updateServer</a></b>(const UpdateServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateServerEngineAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworkscm-opsworkscmclient.html#updateServerEngineAttributes">updateServerEngineAttributes</a></b>(const UpdateServerEngineAttributesRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$OpsWorksCMClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> class provides access to the AWS OpsWorks for Chef Automate (<a href="qtaws-opsworkscm.html">OpsWorksCM</a>) service.</p>
+<p>&lt;fullname&gt;AWS OpsWorks CM&lt;/fullname&gt;</p>
+<p>AWS OpsWorks for configuration management (CM) is a service that runs and manages configuration management servers.</p>
+<p>&lt;/p</p>
+<p>&lt;b&gt;Glossary of terms&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Server&lt;/b&gt;: A configuration management server that can be highly-available. The configuration management server runs on an Amazon Elastic Compute Cloud (EC2) instance, and may use various other AWS services, such as Amazon Relational Database Service (RDS) and Elastic Load Balancing. A server is a generic abstraction over the configuration manager that you want to use, much like Amazon RDS. In AWS OpsWorks CM, you do not start or stop servers. After you create servers, they continue to run until they are</p>
+<p>deleted&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Engine&lt;/b&gt;: The engine is the specific configuration manager that you want to use. Valid values in this release include &lt;code&gt;Chef&lt;/code&gt; and</p>
+<p>&lt;code&gt;Puppet&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Backup&lt;/b&gt;: This is an application-level backup of the data that the configuration manager stores. AWS OpsWorks CM creates an S3 bucket for backups when you launch the first server. A backup maintains a snapshot of a server's configuration-related attributes at the time the backup</p>
+<p>starts&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Events&lt;/b&gt;: Events are always related to a server. Events are written during server creation, when health checks run, when backups are created, when system maintenance is performed, etc. When you delete a server, the server's events are also</p>
+<p>deleted&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Account attributes&lt;/b&gt;: Every account has attributes that are assigned in the AWS OpsWorks CM database. These attributes store information about configuration limits (servers, backups, etc.) and your customer account.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Endpoints&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>AWS OpsWorks CM supports the following endpoints, all HTTPS. You must connect to one of the following endpoints. Your servers can only be accessed or managed within the endpoint in which they are</p>
+<p>created&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>opsworks-cm.us-east-1.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks-cm.us-west-2.amazonaws.co&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>opsworks-cm.eu-west-1.amazonaws.co&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Throttling limits&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>All API operations allow for five requests per second with a burst of 10 requests per</p>
+</div>
+<!-- @@@OpsWorksCMClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$OpsWorksCMClient[overload1]$$$OpsWorksCMClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="OpsWorksCMClient"><a name="OpsWorksCMClient"></a>OpsWorksCMClient::<span class="name">OpsWorksCMClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@OpsWorksCMClient -->
+<!-- $$$OpsWorksCMClient$$$OpsWorksCMClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="OpsWorksCMClient-1"><a name="OpsWorksCMClient-1"></a>OpsWorksCMClient::<span class="name">OpsWorksCMClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-opsworkscm-opsworkscmclient.html#OpsWorksCMClient">OpsWorksCMClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@OpsWorksCMClient -->
+<!-- $$$associateNode[overload1]$$$associateNodeconstAssociateNodeRequest& -->
+<h3 class="fn" id="associateNode"><a name="associateNode"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-associatenoderesponse.html">AssociateNodeResponse</a></span> *OpsWorksCMClient::<span class="name">associateNode</span>(const <span class="type"><a href="qtaws-opsworkscm-associatenoderequest.html">AssociateNodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-associatenoderesponse.html">AssociateNodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a new node with the server. For more information about how to disassociate a node, see</p>
+<p>&lt;a&gt;DisassociateNode&lt;/a&gt;&gt;</p>
+<p>On a Chef server: This command is an alternative to &lt;code&gt;knife</p>
+<p>bootstrap&lt;/code&gt;&gt;</p>
+<p>Example (Chef): &lt;code&gt;aws opsworks-cm associate-node --server-name &lt;i&gt;MyServer&lt;/i&gt; --node-name &lt;i&gt;MyManagedNode&lt;/i&gt; --engine-attributes &quot;Name=&lt;i&gt;CHEF_ORGANIZATION&lt;/i&gt;,Value=default&quot; &quot;Name=&lt;i&gt;CHEF_NODE_PUBLIC_KEY&lt;/i&gt;,Value=&lt;i&gt;public-key-pem&lt;/i&gt;&quot;&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>On a Puppet server, this command is an alternative to the &lt;code&gt;puppet cert sign&lt;/code&gt; command that signs a Puppet node CSR.</p>
+<p>&lt;/p</p>
+<p>Example (Chef): &lt;code&gt;aws opsworks-cm associate-node --server-name &lt;i&gt;MyServer&lt;/i&gt; --node-name &lt;i&gt;MyManagedNode&lt;/i&gt; --engine-attributes &quot;Name=&lt;i&gt;PUPPET_NODE_CSR&lt;/i&gt;,Value=&lt;i&gt;csr-pem&lt;/i&gt;&quot;&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>A node can can only be associated with servers that are in a &lt;code&gt;HEALTHY&lt;/code&gt; state. Otherwise, an &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid. The AssociateNode API call can be integrated into Auto Scaling configurations, AWS Cloudformation templates, or the user data of a server's instance.</p>
+<!-- @@@associateNode -->
+<!-- $$$createBackup[overload1]$$$createBackupconstCreateBackupRequest& -->
+<h3 class="fn" id="createBackup"><a name="createBackup"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-createbackupresponse.html">CreateBackupResponse</a></span> *OpsWorksCMClient::<span class="name">createBackup</span>(const <span class="type"><a href="qtaws-opsworkscm-createbackuprequest.html">CreateBackupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-createbackupresponse.html">CreateBackupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an application-level backup of a server. While the server is in the &lt;code&gt;BACKING_UP&lt;/code&gt; state, the server cannot be changed, and no additional backup can be created.</p>
+<p>&lt;/p</p>
+<p>Backups can be created for servers in &lt;code&gt;RUNNING&lt;/code&gt;, &lt;code&gt;HEALTHY&lt;/code&gt;, and &lt;code&gt;UNHEALTHY&lt;/code&gt; states. By default, you can create a maximum of 50 manual backups.</p>
+<p>&lt;/p</p>
+<p>This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;LimitExceededException&lt;/code&gt; is thrown when the maximum number of manual backups is reached. An &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown when the server is not in any of the following states: RUNNING, HEALTHY, or UNHEALTHY. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server is not found. A &lt;code&gt;ValidationException&lt;/code&gt; is thrown when parameters of the request are not valid.</p>
+<!-- @@@createBackup -->
+<!-- $$$createServer[overload1]$$$createServerconstCreateServerRequest& -->
+<h3 class="fn" id="createServer"><a name="createServer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-createserverresponse.html">CreateServerResponse</a></span> *OpsWorksCMClient::<span class="name">createServer</span>(const <span class="type"><a href="qtaws-opsworkscm-createserverrequest.html">CreateServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-createserverresponse.html">CreateServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates and immedately starts a new server. The server is ready to use when it is in the &lt;code&gt;HEALTHY&lt;/code&gt; state. By default, you can create a maximum of 10 servers.</p>
+<p>&lt;/p</p>
+<p>This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;LimitExceededException&lt;/code&gt; is thrown when you have created the maximum number of servers (10). A &lt;code&gt;ResourceAlreadyExistsException&lt;/code&gt; is thrown when a server with the same name already exists in the account. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when you specify a backup ID that is not valid or is for a backup that does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is thrown when parameters of the request are not valid.</p>
+<p>&lt;/p</p>
+<p>If you do not specify a security group by adding the &lt;code&gt;SecurityGroupIds&lt;/code&gt; parameter, AWS OpsWorks creates a new security group.</p>
+<p>&lt;/p</p>
+<p>&lt;i&gt;Chef Automate:&lt;/i&gt; The default security group opens the Chef server to the world on TCP port 443. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.</p>
+<p>&lt;/p</p>
+<p>&lt;i&gt;Puppet Enterprise:&lt;/i&gt; The default security group opens TCP ports 22, 443, 4433, 8140, 8142, 8143, and 8170. If a KeyName is present, AWS OpsWorks enables SSH access. SSH is also open to the world on TCP port 22.</p>
+<p>&lt;/p</p>
+<p>By default, your server is accessible from any IP address. We recommend that you update your security group rules to allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the navigation pane of the EC2 management console.</p>
+<!-- @@@createServer -->
+<!-- $$$deleteBackup[overload1]$$$deleteBackupconstDeleteBackupRequest& -->
+<h3 class="fn" id="deleteBackup"><a name="deleteBackup"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-deletebackupresponse.html">DeleteBackupResponse</a></span> *OpsWorksCMClient::<span class="name">deleteBackup</span>(const <span class="type"><a href="qtaws-opsworkscm-deletebackuprequest.html">DeleteBackupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-deletebackupresponse.html">DeleteBackupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a backup. You can delete both manual and automated backups. This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>An &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown when a backup deletion is already in progress. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the backup does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is thrown when parameters of the request are not valid.</p>
+<!-- @@@deleteBackup -->
+<!-- $$$deleteServer[overload1]$$$deleteServerconstDeleteServerRequest& -->
+<h3 class="fn" id="deleteServer"><a name="deleteServer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-deleteserverresponse.html">DeleteServerResponse</a></span> *OpsWorksCMClient::<span class="name">deleteServer</span>(const <span class="type"><a href="qtaws-opsworkscm-deleteserverrequest.html">DeleteServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-deleteserverresponse.html">DeleteServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the server and the underlying AWS CloudFormation stacks (including the server's EC2 instance). When you run this command, the server state is updated to &lt;code&gt;DELETING&lt;/code&gt;. After the server is deleted, it is no longer returned by &lt;code&gt;DescribeServer&lt;/code&gt; requests. If the AWS CloudFormation stack cannot be deleted, the server cannot be deleted.</p>
+<p>&lt;/p</p>
+<p>This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>An &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown when a server deletion is already in progress. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<p>&lt;/p</p>
+<!-- @@@deleteServer -->
+<!-- $$$describeAccountAttributes[overload1]$$$describeAccountAttributesconstDescribeAccountAttributesRequest& -->
+<h3 class="fn" id="describeAccountAttributes"><a name="describeAccountAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a></span> *OpsWorksCMClient::<span class="name">describeAccountAttributes</span>(const <span class="type"><a href="qtaws-opsworkscm-describeaccountattributesrequest.html">DescribeAccountAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes your account attributes, and creates requests to increase limits before they are reached or exceeded.</p>
+<p>&lt;/p</p>
+<p>This operation is synchronous.</p>
+<!-- @@@describeAccountAttributes -->
+<!-- $$$describeBackups[overload1]$$$describeBackupsconstDescribeBackupsRequest& -->
+<h3 class="fn" id="describeBackups"><a name="describeBackups"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-describebackupsresponse.html">DescribeBackupsResponse</a></span> *OpsWorksCMClient::<span class="name">describeBackups</span>(const <span class="type"><a href="qtaws-opsworkscm-describebackupsrequest.html">DescribeBackupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-describebackupsresponse.html">DescribeBackupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes backups. The results are ordered by time, with newest backups first. If you do not specify a BackupId or ServerName, the command returns all backups.</p>
+<p>&lt;/p</p>
+<p>This operation is synchronous.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the backup does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@describeBackups -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-describeeventsresponse.html">DescribeEventsResponse</a></span> *OpsWorksCMClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-opsworkscm-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes events for a specified server. Results are ordered by time, with newest events first.</p>
+<p>&lt;/p</p>
+<p>This operation is synchronous.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@describeEvents -->
+<!-- $$$describeNodeAssociationStatus[overload1]$$$describeNodeAssociationStatusconstDescribeNodeAssociationStatusRequest& -->
+<h3 class="fn" id="describeNodeAssociationStatus"><a name="describeNodeAssociationStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-describenodeassociationstatusresponse.html">DescribeNodeAssociationStatusResponse</a></span> *OpsWorksCMClient::<span class="name">describeNodeAssociationStatus</span>(const <span class="type"><a href="qtaws-opsworkscm-describenodeassociationstatusrequest.html">DescribeNodeAssociationStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-describenodeassociationstatusresponse.html">DescribeNodeAssociationStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current status of an existing association or disassociation request.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when no recent association or disassociation request with the specified token is found, or when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@describeNodeAssociationStatus -->
+<!-- $$$describeServers[overload1]$$$describeServersconstDescribeServersRequest& -->
+<h3 class="fn" id="describeServers"><a name="describeServers"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-describeserversresponse.html">DescribeServersResponse</a></span> *OpsWorksCMClient::<span class="name">describeServers</span>(const <span class="type"><a href="qtaws-opsworkscm-describeserversrequest.html">DescribeServersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-describeserversresponse.html">DescribeServersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all configuration management servers that are identified with your account. Only the stored results from Amazon DynamoDB are returned. AWS OpsWorks CM does not query other services.</p>
+<p>&lt;/p</p>
+<p>This operation is synchronous.</p>
+<p>&lt;/p</p>
+<p>A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@describeServers -->
+<!-- $$$disassociateNode[overload1]$$$disassociateNodeconstDisassociateNodeRequest& -->
+<h3 class="fn" id="disassociateNode"><a name="disassociateNode"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-disassociatenoderesponse.html">DisassociateNodeResponse</a></span> *OpsWorksCMClient::<span class="name">disassociateNode</span>(const <span class="type"><a href="qtaws-opsworkscm-disassociatenoderequest.html">DisassociateNodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-disassociatenoderesponse.html">DisassociateNodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a node from an AWS OpsWorks CM server, and removes the node from the server's managed nodes. After a node is disassociated, the node key pair is no longer valid for accessing the configuration manager's API. For more information about how to associate a node, see &lt;a&gt;AssociateNode&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>A node can can only be disassociated from a server that is in a &lt;code&gt;HEALTHY&lt;/code&gt; state. Otherwise, an &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@disassociateNode -->
+<!-- $$$restoreServer[overload1]$$$restoreServerconstRestoreServerRequest& -->
+<h3 class="fn" id="restoreServer"><a name="restoreServer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-restoreserverresponse.html">RestoreServerResponse</a></span> *OpsWorksCMClient::<span class="name">restoreServer</span>(const <span class="type"><a href="qtaws-opsworkscm-restoreserverrequest.html">RestoreServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-restoreserverresponse.html">RestoreServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores a backup to a server that is in a &lt;code&gt;CONNECTION_LOST&lt;/code&gt;, &lt;code&gt;HEALTHY&lt;/code&gt;, &lt;code&gt;RUNNING&lt;/code&gt;, &lt;code&gt;UNHEALTHY&lt;/code&gt;, or &lt;code&gt;TERMINATED&lt;/code&gt; state. When you run RestoreServer, the server's EC2 instance is deleted, and a new EC2 instance is configured. RestoreServer maintains the existing server endpoint, so configuration management of the server's client devices (nodes) should continue to work.</p>
+<p>&lt;/p</p>
+<p>This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>An &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown when the server is not in a valid state. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@restoreServer -->
+<!-- $$$startMaintenance[overload1]$$$startMaintenanceconstStartMaintenanceRequest& -->
+<h3 class="fn" id="startMaintenance"><a name="startMaintenance"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-startmaintenanceresponse.html">StartMaintenanceResponse</a></span> *OpsWorksCMClient::<span class="name">startMaintenance</span>(const <span class="type"><a href="qtaws-opsworkscm-startmaintenancerequest.html">StartMaintenanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-startmaintenanceresponse.html">StartMaintenanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Manually starts server maintenance. This command can be useful if an earlier maintenance attempt failed, and the underlying cause of maintenance failure has been resolved. The server is in an &lt;code&gt;UNDER_MAINTENANCE&lt;/code&gt; state while maintenance is in progress.</p>
+<p>&lt;/p</p>
+<p>Maintenance can only be started on servers in &lt;code&gt;HEALTHY&lt;/code&gt; and &lt;code&gt;UNHEALTHY&lt;/code&gt; states. Otherwise, an &lt;code&gt;InvalidStateException&lt;/code&gt; is thrown. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@startMaintenance -->
+<!-- $$$updateServer[overload1]$$$updateServerconstUpdateServerRequest& -->
+<h3 class="fn" id="updateServer"><a name="updateServer"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-updateserverresponse.html">UpdateServerResponse</a></span> *OpsWorksCMClient::<span class="name">updateServer</span>(const <span class="type"><a href="qtaws-opsworkscm-updateserverrequest.html">UpdateServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-updateserverresponse.html">UpdateServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates settings for a server.</p>
+<p>&lt;/p</p>
+<p>This operation is synchronous.</p>
+<!-- @@@updateServer -->
+<!-- $$$updateServerEngineAttributes[overload1]$$$updateServerEngineAttributesconstUpdateServerEngineAttributesRequest& -->
+<h3 class="fn" id="updateServerEngineAttributes"><a name="updateServerEngineAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-opsworkscm-updateserverengineattributesresponse.html">UpdateServerEngineAttributesResponse</a></span> *OpsWorksCMClient::<span class="name">updateServerEngineAttributes</span>(const <span class="type"><a href="qtaws-opsworkscm-updateserverengineattributesrequest.html">UpdateServerEngineAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-opsworkscm-opsworkscmclient.html">OpsWorksCMClient</a> service, and returns a pointer to an <a href="qtaws-opsworkscm-updateserverengineattributesresponse.html">UpdateServerEngineAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates engine-specific attributes on a specified server. The server enters the &lt;code&gt;MODIFYING&lt;/code&gt; state when this operation is in progress. Only one update can occur at a time. You can use this command to reset a Chef server's private key (&lt;code&gt;CHEF_PIVOTAL_KEY&lt;/code&gt;), a Chef server's admin password (&lt;code&gt;CHEF_DELIVERY_ADMIN_PASSWORD&lt;/code&gt;), or a Puppet server's admin password (&lt;code&gt;PUPPET_ADMIN_PASSWORD&lt;/code&gt;).</p>
+<p>&lt;/p</p>
+<p>This operation is asynchronous.</p>
+<p>&lt;/p</p>
+<p>This operation can only be called for servers in &lt;code&gt;HEALTHY&lt;/code&gt; or &lt;code&gt;UNHEALTHY&lt;/code&gt; states. Otherwise, an &lt;code&gt;InvalidStateException&lt;/code&gt; is raised. A &lt;code&gt;ResourceNotFoundException&lt;/code&gt; is thrown when the server does not exist. A &lt;code&gt;ValidationException&lt;/code&gt; is raised when parameters of the request are not valid.</p>
+<!-- @@@updateServerEngineAttributes -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

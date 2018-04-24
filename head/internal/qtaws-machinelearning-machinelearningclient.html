@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- machinelearningclient.cpp -->
+  <title>MachineLearningClient Class | MachineLearning</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmachinelearning-index.html">MachineLearning</a></li>
+<li><a href="qtawsmachinelearning-module.html">C++ Classes</a></li>
+<li>MachineLearningClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MachineLearningClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-machinelearning-machinelearningclient.html">QtAws::MachineLearning::MachineLearningClient</a>)<br/></span>
+<!-- $$$MachineLearningClient-brief -->
+<p>The <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> class provides access to the Amazon Machine Learning service. <a href="#details">More...</a></p>
+<!-- @@@MachineLearningClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MachineLearningClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-machinelearning-machinelearningclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#MachineLearningClient">MachineLearningClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#MachineLearningClient-1">MachineLearningClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#addTags">addTags</a></b>(const AddTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBatchPredictionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createBatchPrediction">createBatchPrediction</a></b>(const CreateBatchPredictionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDataSourceFromS3Response *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createDataSourceFromS3">createDataSourceFromS3</a></b>(const CreateDataSourceFromS3Request &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDataSourceFromRDSResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createDataSourceFromRDS">createDataSourceFromRDS</a></b>(const CreateDataSourceFromRDSRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDataSourceFromRedshiftResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createDataSourceFromRedshift">createDataSourceFromRedshift</a></b>(const CreateDataSourceFromRedshiftRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEvaluationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createEvaluation">createEvaluation</a></b>(const CreateEvaluationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMLModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createMLModel">createMLModel</a></b>(const CreateMLModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRealtimeEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#createRealtimeEndpoint">createRealtimeEndpoint</a></b>(const CreateRealtimeEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBatchPredictionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteBatchPrediction">deleteBatchPrediction</a></b>(const DeleteBatchPredictionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteDataSource">deleteDataSource</a></b>(const DeleteDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEvaluationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteEvaluation">deleteEvaluation</a></b>(const DeleteEvaluationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMLModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteMLModel">deleteMLModel</a></b>(const DeleteMLModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRealtimeEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteRealtimeEndpoint">deleteRealtimeEndpoint</a></b>(const DeleteRealtimeEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBatchPredictionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#describeBatchPredictions">describeBatchPredictions</a></b>(const DescribeBatchPredictionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDataSourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#describeDataSources">describeDataSources</a></b>(const DescribeDataSourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEvaluationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#describeEvaluations">describeEvaluations</a></b>(const DescribeEvaluationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMLModelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#describeMLModels">describeMLModels</a></b>(const DescribeMLModelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBatchPredictionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#getBatchPrediction">getBatchPrediction</a></b>(const GetBatchPredictionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#getDataSource">getDataSource</a></b>(const GetDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEvaluationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#getEvaluation">getEvaluation</a></b>(const GetEvaluationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMLModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#getMLModel">getMLModel</a></b>(const GetMLModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PredictResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#predict">predict</a></b>(const PredictRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBatchPredictionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#updateBatchPrediction">updateBatchPrediction</a></b>(const UpdateBatchPredictionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDataSourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#updateDataSource">updateDataSource</a></b>(const UpdateDataSourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEvaluationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#updateEvaluation">updateEvaluation</a></b>(const UpdateEvaluationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMLModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-machinelearning-machinelearningclient.html#updateMLModel">updateMLModel</a></b>(const UpdateMLModelRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MachineLearningClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> class provides access to the Amazon Machine Learning service.</p>
+</div>
+<!-- @@@MachineLearningClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MachineLearningClient[overload1]$$$MachineLearningClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MachineLearningClient"><a name="MachineLearningClient"></a>MachineLearningClient::<span class="name">MachineLearningClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MachineLearningClient -->
+<!-- $$$MachineLearningClient$$$MachineLearningClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MachineLearningClient-1"><a name="MachineLearningClient-1"></a>MachineLearningClient::<span class="name">MachineLearningClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-machinelearning-machinelearningclient.html#MachineLearningClient">MachineLearningClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MachineLearningClient -->
+<!-- $$$addTags[overload1]$$$addTagsconstAddTagsRequest& -->
+<h3 class="fn" id="addTags"><a name="addTags"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-addtagsresponse.html">AddTagsResponse</a></span> *MachineLearningClient::<span class="name">addTags</span>(const <span class="type"><a href="qtaws-machinelearning-addtagsrequest.html">AddTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-addtagsresponse.html">AddTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value. If you add a tag using a key that is already associated with the ML object, &lt;code&gt;AddTags&lt;/code&gt; updates the tag's</p>
+<!-- @@@addTags -->
+<!-- $$$createBatchPrediction[overload1]$$$createBatchPredictionconstCreateBatchPredictionRequest& -->
+<h3 class="fn" id="createBatchPrediction"><a name="createBatchPrediction"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createbatchpredictionresponse.html">CreateBatchPredictionResponse</a></span> *MachineLearningClient::<span class="name">createBatchPrediction</span>(const <span class="type"><a href="qtaws-machinelearning-createbatchpredictionrequest.html">CreateBatchPredictionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createbatchpredictionresponse.html">CreateBatchPredictionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates predictions for a group of observations. The observations to process exist in one or more data files referenced by a &lt;code&gt;DataSource&lt;/code&gt;. This operation creates a new &lt;code&gt;BatchPrediction&lt;/code&gt;, and uses an &lt;code&gt;MLModel&lt;/code&gt; and the data files referenced by the &lt;code&gt;DataSource&lt;/code&gt; as information sources.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;CreateBatchPrediction&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateBatchPrediction&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the &lt;code&gt;BatchPrediction&lt;/code&gt; status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;BatchPrediction&lt;/code&gt; completes, Amazon ML sets the status to &lt;code&gt;COMPLETED&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>You can poll for status updates by using the &lt;a&gt;GetBatchPrediction&lt;/a&gt; operation and checking the &lt;code&gt;Status&lt;/code&gt; parameter of the result. After the &lt;code&gt;COMPLETED&lt;/code&gt; status appears, the results are available in the location specified by the &lt;code&gt;OutputUri&lt;/code&gt;</p>
+<!-- @@@createBatchPrediction -->
+<!-- $$$createDataSourceFromS3[overload1]$$$createDataSourceFromS3constCreateDataSourceFromS3Request& -->
+<h3 class="fn" id="createDataSourceFromS3"><a name="createDataSourceFromS3"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createdatasourcefroms3response.html">CreateDataSourceFromS3Response</a></span> *MachineLearningClient::<span class="name">createDataSourceFromS3</span>(const <span class="type"><a href="qtaws-machinelearning-createdatasourcefroms3request.html">CreateDataSourceFromS3Request</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createdatasourcefroms3response.html">CreateDataSourceFromS3Response</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;DataSource&lt;/code&gt; object. A &lt;code&gt;DataSource&lt;/code&gt; references data that can be used to perform &lt;code&gt;CreateMLModel&lt;/code&gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt;, or &lt;code&gt;CreateBatchPrediction&lt;/code&gt;</p>
+<p>operations&gt;</p>
+<p>&lt;code&gt;CreateDataSourceFromS3&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateDataSourceFromS3&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the &lt;code&gt;DataSource&lt;/code&gt; status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;DataSource&lt;/code&gt; has been created and is ready for use, Amazon ML sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;COMPLETED&lt;/code&gt;. &lt;code&gt;DataSource&lt;/code&gt; in the &lt;code&gt;COMPLETED&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; state can be used to perform only &lt;code&gt;CreateMLModel&lt;/code&gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt; or &lt;code&gt;CreateBatchPrediction&lt;/code&gt; operations.</p>
+<p>&lt;/p</p>
+<p>If Amazon ML can't accept the input source, it sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;FAILED&lt;/code&gt; and includes an error message in the &lt;code&gt;Message&lt;/code&gt; attribute of the &lt;code&gt;GetDataSource&lt;/code&gt; operation response.</p>
+<p>&lt;/p</p>
+<p>The observation data used in a &lt;code&gt;DataSource&lt;/code&gt; should be ready to use; that is, it should have a consistent structure, and missing data values should be kept to a minimum. The observation data must reside in one or more .csv files in an Amazon Simple Storage Service (Amazon S3) location, along with a schema that describes the data items by name and type. The same schema must be used for all of the data files referenced by the &lt;code&gt;DataSource&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>After the &lt;code&gt;DataSource&lt;/code&gt; has been created, it's ready to use in evaluations and batch predictions. If you plan to use the &lt;code&gt;DataSource&lt;/code&gt; to train an &lt;code&gt;MLModel&lt;/code&gt;, the &lt;code&gt;DataSource&lt;/code&gt; also needs a recipe. A recipe describes how each input variable will be used in training an &lt;code&gt;MLModel&lt;/code&gt;. Will the variable be included or excluded from training? Will the variable be manipulated; for example, will it be combined with another variable or will it be split apart into word combinations? The recipe provides answers to these</p>
+<!-- @@@createDataSourceFromS3 -->
+<!-- $$$createDataSourceFromRDS[overload1]$$$createDataSourceFromRDSconstCreateDataSourceFromRDSRequest& -->
+<h3 class="fn" id="createDataSourceFromRDS"><a name="createDataSourceFromRDS"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createdatasourcefromrdsresponse.html">CreateDataSourceFromRDSResponse</a></span> *MachineLearningClient::<span class="name">createDataSourceFromRDS</span>(const <span class="type"><a href="qtaws-machinelearning-createdatasourcefromrdsrequest.html">CreateDataSourceFromRDSRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createdatasourcefromrdsresponse.html">CreateDataSourceFromRDSResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;DataSource&lt;/code&gt; object from an &lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt; Amazon Relational Database Service&lt;/a&gt; (Amazon RDS). A &lt;code&gt;DataSource&lt;/code&gt; references data that can be used to perform &lt;code&gt;CreateMLModel&lt;/code&gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt;, or &lt;code&gt;CreateBatchPrediction&lt;/code&gt;</p>
+<p>operations&gt;</p>
+<p>&lt;code&gt;CreateDataSourceFromRDS&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateDataSourceFromRDS&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the &lt;code&gt;DataSource&lt;/code&gt; status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;DataSource&lt;/code&gt; is created and ready for use, Amazon ML sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;COMPLETED&lt;/code&gt;. &lt;code&gt;DataSource&lt;/code&gt; in the &lt;code&gt;COMPLETED&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; state can be used only to perform &lt;code&gt;&amp;gt;CreateMLModel&lt;/code&gt;&amp;gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt;, or &lt;code&gt;CreateBatchPrediction&lt;/code&gt; operations.</p>
+<p>&lt;/p</p>
+<p>If Amazon ML cannot accept the input source, it sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;FAILED&lt;/code&gt; and includes an error message in the &lt;code&gt;Message&lt;/code&gt; attribute of the &lt;code&gt;GetDataSource&lt;/code&gt; operation response.</p>
+<!-- @@@createDataSourceFromRDS -->
+<!-- $$$createDataSourceFromRedshift[overload1]$$$createDataSourceFromRedshiftconstCreateDataSourceFromRedshiftRequest& -->
+<h3 class="fn" id="createDataSourceFromRedshift"><a name="createDataSourceFromRedshift"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createdatasourcefromredshiftresponse.html">CreateDataSourceFromRedshiftResponse</a></span> *MachineLearningClient::<span class="name">createDataSourceFromRedshift</span>(const <span class="type"><a href="qtaws-machinelearning-createdatasourcefromredshiftrequest.html">CreateDataSourceFromRedshiftRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createdatasourcefromredshiftresponse.html">CreateDataSourceFromRedshiftResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;DataSource&lt;/code&gt; from a database hosted on an Amazon Redshift cluster. A &lt;code&gt;DataSource&lt;/code&gt; references data that can be used to perform either &lt;code&gt;CreateMLModel&lt;/code&gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt;, or &lt;code&gt;CreateBatchPrediction&lt;/code&gt;</p>
+<p>operations&gt;</p>
+<p>&lt;code&gt;CreateDataSourceFromRedshift&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateDataSourceFromRedshift&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the &lt;code&gt;DataSource&lt;/code&gt; status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;DataSource&lt;/code&gt; is created and ready for use, Amazon ML sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;COMPLETED&lt;/code&gt;. &lt;code&gt;DataSource&lt;/code&gt; in &lt;code&gt;COMPLETED&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; states can be used to perform only &lt;code&gt;CreateMLModel&lt;/code&gt;, &lt;code&gt;CreateEvaluation&lt;/code&gt;, or &lt;code&gt;CreateBatchPrediction&lt;/code&gt; operations.</p>
+<p>&lt;/p</p>
+<p>If Amazon ML can't accept the input source, it sets the &lt;code&gt;Status&lt;/code&gt; parameter to &lt;code&gt;FAILED&lt;/code&gt; and includes an error message in the &lt;code&gt;Message&lt;/code&gt; attribute of the &lt;code&gt;GetDataSource&lt;/code&gt; operation response.</p>
+<p>&lt;/p</p>
+<p>The observations should be contained in the database hosted on an Amazon Redshift cluster and should be specified by a &lt;code&gt;SelectSqlQuery&lt;/code&gt; query. Amazon ML executes an &lt;code&gt;Unload&lt;/code&gt; command in Amazon Redshift to transfer the result set of the &lt;code&gt;SelectSqlQuery&lt;/code&gt; query to</p>
+<p>&lt;code&gt;S3StagingLocation&lt;/code&gt;&gt;</p>
+<p>After the &lt;code&gt;DataSource&lt;/code&gt; has been created, it's ready for use in evaluations and batch predictions. If you plan to use the &lt;code&gt;DataSource&lt;/code&gt; to train an &lt;code&gt;MLModel&lt;/code&gt;, the &lt;code&gt;DataSource&lt;/code&gt; also requires a recipe. A recipe describes how each input variable will be used in training an &lt;code&gt;MLModel&lt;/code&gt;. Will the variable be included or excluded from training? Will the variable be manipulated; for example, will it be combined with another variable or will it be split apart into word combinations? The recipe provides answers to these</p>
+<p>questions&gt; &lt;?oxy_insert_start author=&quot;laurama&quot; timestamp=&quot;20160406T153842-0700&quot;&gt;&lt;p&gt;You can't change an existing datasource, but you can copy and modify the settings from an existing Amazon Redshift datasource to create a new datasource. To do so, call &lt;code&gt;GetDataSource&lt;/code&gt; for an existing datasource and copy the values to a &lt;code&gt;CreateDataSource&lt;/code&gt; call. Change the settings that you want to change and make sure that all required fields have the appropriate</p>
+<!-- @@@createDataSourceFromRedshift -->
+<!-- $$$createEvaluation[overload1]$$$createEvaluationconstCreateEvaluationRequest& -->
+<h3 class="fn" id="createEvaluation"><a name="createEvaluation"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createevaluationresponse.html">CreateEvaluationResponse</a></span> *MachineLearningClient::<span class="name">createEvaluation</span>(const <span class="type"><a href="qtaws-machinelearning-createevaluationrequest.html">CreateEvaluationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createevaluationresponse.html">CreateEvaluationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;code&gt;Evaluation&lt;/code&gt; of an &lt;code&gt;MLModel&lt;/code&gt;. An &lt;code&gt;MLModel&lt;/code&gt; is evaluated on a set of observations associated to a &lt;code&gt;DataSource&lt;/code&gt;. Like a &lt;code&gt;DataSource&lt;/code&gt; for an &lt;code&gt;MLModel&lt;/code&gt;, the &lt;code&gt;DataSource&lt;/code&gt; for an &lt;code&gt;Evaluation&lt;/code&gt; contains values for the &lt;code&gt;Target Variable&lt;/code&gt;. The &lt;code&gt;Evaluation&lt;/code&gt; compares the predicted result for each observation to the actual outcome and provides a summary so that you know how effective the &lt;code&gt;MLModel&lt;/code&gt; functions on the test data. Evaluation generates a relevant performance metric, such as BinaryAUC, RegressionRMSE or MulticlassAvgFScore based on the corresponding &lt;code&gt;MLModelType&lt;/code&gt;: &lt;code&gt;BINARY&lt;/code&gt;, &lt;code&gt;REGRESSION&lt;/code&gt; or &lt;code&gt;MULTICLASS&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;CreateEvaluation&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateEvaluation&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the evaluation status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;Evaluation&lt;/code&gt; is created and ready for use, Amazon ML sets the status to &lt;code&gt;COMPLETED&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>You can use the &lt;code&gt;GetEvaluation&lt;/code&gt; operation to check progress of the evaluation during the creation</p>
+<!-- @@@createEvaluation -->
+<!-- $$$createMLModel[overload1]$$$createMLModelconstCreateMLModelRequest& -->
+<h3 class="fn" id="createMLModel"><a name="createMLModel"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createmlmodelresponse.html">CreateMLModelResponse</a></span> *MachineLearningClient::<span class="name">createMLModel</span>(const <span class="type"><a href="qtaws-machinelearning-createmlmodelrequest.html">CreateMLModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createmlmodelresponse.html">CreateMLModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;code&gt;MLModel&lt;/code&gt; using the &lt;code&gt;DataSource&lt;/code&gt; and the recipe as information sources.</p>
+<p>&lt;/p</p>
+<p>An &lt;code&gt;MLModel&lt;/code&gt; is nearly immutable. Users can update only the &lt;code&gt;MLModelName&lt;/code&gt; and the &lt;code&gt;ScoreThreshold&lt;/code&gt; in an &lt;code&gt;MLModel&lt;/code&gt; without creating a new &lt;code&gt;MLModel&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;CreateMLModel&lt;/code&gt; is an asynchronous operation. In response to &lt;code&gt;CreateMLModel&lt;/code&gt;, Amazon Machine Learning (Amazon ML) immediately returns and sets the &lt;code&gt;MLModel&lt;/code&gt; status to &lt;code&gt;PENDING&lt;/code&gt;. After the &lt;code&gt;MLModel&lt;/code&gt; has been created and ready is for use, Amazon ML sets the status to &lt;code&gt;COMPLETED&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>You can use the &lt;code&gt;GetMLModel&lt;/code&gt; operation to check the progress of the &lt;code&gt;MLModel&lt;/code&gt; during the creation</p>
+<p>operation&gt;</p>
+<p>&lt;code&gt;CreateMLModel&lt;/code&gt; requires a &lt;code&gt;DataSource&lt;/code&gt; with computed statistics, which can be created by setting &lt;code&gt;ComputeStatistics&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in &lt;code&gt;CreateDataSourceFromRDS&lt;/code&gt;, &lt;code&gt;CreateDataSourceFromS3&lt;/code&gt;, or &lt;code&gt;CreateDataSourceFromRedshift&lt;/code&gt; operations.</p>
+<!-- @@@createMLModel -->
+<!-- $$$createRealtimeEndpoint[overload1]$$$createRealtimeEndpointconstCreateRealtimeEndpointRequest& -->
+<h3 class="fn" id="createRealtimeEndpoint"><a name="createRealtimeEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-createrealtimeendpointresponse.html">CreateRealtimeEndpointResponse</a></span> *MachineLearningClient::<span class="name">createRealtimeEndpoint</span>(const <span class="type"><a href="qtaws-machinelearning-createrealtimeendpointrequest.html">CreateRealtimeEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-createrealtimeendpointresponse.html">CreateRealtimeEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a real-time endpoint for the &lt;code&gt;MLModel&lt;/code&gt;. The endpoint contains the URI of the &lt;code&gt;MLModel&lt;/code&gt;; that is, the location to send real-time prediction requests for the specified</p>
+<!-- @@@createRealtimeEndpoint -->
+<!-- $$$deleteBatchPrediction[overload1]$$$deleteBatchPredictionconstDeleteBatchPredictionRequest& -->
+<h3 class="fn" id="deleteBatchPrediction"><a name="deleteBatchPrediction"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deletebatchpredictionresponse.html">DeleteBatchPredictionResponse</a></span> *MachineLearningClient::<span class="name">deleteBatchPrediction</span>(const <span class="type"><a href="qtaws-machinelearning-deletebatchpredictionrequest.html">DeleteBatchPredictionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deletebatchpredictionresponse.html">DeleteBatchPredictionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns the DELETED status to a &lt;code&gt;BatchPrediction&lt;/code&gt;, rendering it</p>
+<p>unusable&gt;</p>
+<p>After using the &lt;code&gt;DeleteBatchPrediction&lt;/code&gt; operation, you can use the &lt;a&gt;GetBatchPrediction&lt;/a&gt; operation to verify that the status of the &lt;code&gt;BatchPrediction&lt;/code&gt; changed to</p>
+<p>DELETED&gt;</p>
+<p>&lt;b&gt;Caution:&lt;/b&gt; The result of the &lt;code&gt;DeleteBatchPrediction&lt;/code&gt; operation is</p>
+<!-- @@@deleteBatchPrediction -->
+<!-- $$$deleteDataSource[overload1]$$$deleteDataSourceconstDeleteDataSourceRequest& -->
+<h3 class="fn" id="deleteDataSource"><a name="deleteDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deletedatasourceresponse.html">DeleteDataSourceResponse</a></span> *MachineLearningClient::<span class="name">deleteDataSource</span>(const <span class="type"><a href="qtaws-machinelearning-deletedatasourcerequest.html">DeleteDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deletedatasourceresponse.html">DeleteDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns the DELETED status to a &lt;code&gt;DataSource&lt;/code&gt;, rendering it</p>
+<p>unusable&gt;</p>
+<p>After using the &lt;code&gt;DeleteDataSource&lt;/code&gt; operation, you can use the &lt;a&gt;GetDataSource&lt;/a&gt; operation to verify that the status of the &lt;code&gt;DataSource&lt;/code&gt; changed to</p>
+<p>DELETED&gt;</p>
+<p>&lt;b&gt;Caution:&lt;/b&gt; The results of the &lt;code&gt;DeleteDataSource&lt;/code&gt; operation are</p>
+<!-- @@@deleteDataSource -->
+<!-- $$$deleteEvaluation[overload1]$$$deleteEvaluationconstDeleteEvaluationRequest& -->
+<h3 class="fn" id="deleteEvaluation"><a name="deleteEvaluation"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deleteevaluationresponse.html">DeleteEvaluationResponse</a></span> *MachineLearningClient::<span class="name">deleteEvaluation</span>(const <span class="type"><a href="qtaws-machinelearning-deleteevaluationrequest.html">DeleteEvaluationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deleteevaluationresponse.html">DeleteEvaluationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns the &lt;code&gt;DELETED&lt;/code&gt; status to an &lt;code&gt;Evaluation&lt;/code&gt;, rendering it</p>
+<p>unusable&gt;</p>
+<p>After invoking the &lt;code&gt;DeleteEvaluation&lt;/code&gt; operation, you can use the &lt;code&gt;GetEvaluation&lt;/code&gt; operation to verify that the status of the &lt;code&gt;Evaluation&lt;/code&gt; changed to</p>
+<p>&lt;code&gt;DELETED&lt;/code&gt;&gt; &lt;caution&gt;&lt;title&gt;Caution&lt;/title&gt;</p>
+<!-- @@@deleteEvaluation -->
+<!-- $$$deleteMLModel[overload1]$$$deleteMLModelconstDeleteMLModelRequest& -->
+<h3 class="fn" id="deleteMLModel"><a name="deleteMLModel"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deletemlmodelresponse.html">DeleteMLModelResponse</a></span> *MachineLearningClient::<span class="name">deleteMLModel</span>(const <span class="type"><a href="qtaws-machinelearning-deletemlmodelrequest.html">DeleteMLModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deletemlmodelresponse.html">DeleteMLModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns the &lt;code&gt;DELETED&lt;/code&gt; status to an &lt;code&gt;MLModel&lt;/code&gt;, rendering it</p>
+<p>unusable&gt;</p>
+<p>After using the &lt;code&gt;DeleteMLModel&lt;/code&gt; operation, you can use the &lt;code&gt;GetMLModel&lt;/code&gt; operation to verify that the status of the &lt;code&gt;MLModel&lt;/code&gt; changed to</p>
+<p>DELETED&gt;</p>
+<p>&lt;b&gt;Caution:&lt;/b&gt; The result of the &lt;code&gt;DeleteMLModel&lt;/code&gt; operation is</p>
+<!-- @@@deleteMLModel -->
+<!-- $$$deleteRealtimeEndpoint[overload1]$$$deleteRealtimeEndpointconstDeleteRealtimeEndpointRequest& -->
+<h3 class="fn" id="deleteRealtimeEndpoint"><a name="deleteRealtimeEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deleterealtimeendpointresponse.html">DeleteRealtimeEndpointResponse</a></span> *MachineLearningClient::<span class="name">deleteRealtimeEndpoint</span>(const <span class="type"><a href="qtaws-machinelearning-deleterealtimeendpointrequest.html">DeleteRealtimeEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deleterealtimeendpointresponse.html">DeleteRealtimeEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a real time endpoint of an</p>
+<!-- @@@deleteRealtimeEndpoint -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-deletetagsresponse.html">DeleteTagsResponse</a></span> *MachineLearningClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-machinelearning-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified tags associated with an ML object. After this operation is complete, you can't recover deleted</p>
+<p>tags&gt;</p>
+<p>If you specify a tag that doesn't exist, Amazon ML ignores</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeBatchPredictions[overload1]$$$describeBatchPredictionsconstDescribeBatchPredictionsRequest& -->
+<h3 class="fn" id="describeBatchPredictions"><a name="describeBatchPredictions"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-describebatchpredictionsresponse.html">DescribeBatchPredictionsResponse</a></span> *MachineLearningClient::<span class="name">describeBatchPredictions</span>(const <span class="type"><a href="qtaws-machinelearning-describebatchpredictionsrequest.html">DescribeBatchPredictionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-describebatchpredictionsresponse.html">DescribeBatchPredictionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;BatchPrediction&lt;/code&gt; operations that match the search criteria in the</p>
+<!-- @@@describeBatchPredictions -->
+<!-- $$$describeDataSources[overload1]$$$describeDataSourcesconstDescribeDataSourcesRequest& -->
+<h3 class="fn" id="describeDataSources"><a name="describeDataSources"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-describedatasourcesresponse.html">DescribeDataSourcesResponse</a></span> *MachineLearningClient::<span class="name">describeDataSources</span>(const <span class="type"><a href="qtaws-machinelearning-describedatasourcesrequest.html">DescribeDataSourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-describedatasourcesresponse.html">DescribeDataSourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;DataSource&lt;/code&gt; that match the search criteria in the</p>
+<!-- @@@describeDataSources -->
+<!-- $$$describeEvaluations[overload1]$$$describeEvaluationsconstDescribeEvaluationsRequest& -->
+<h3 class="fn" id="describeEvaluations"><a name="describeEvaluations"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-describeevaluationsresponse.html">DescribeEvaluationsResponse</a></span> *MachineLearningClient::<span class="name">describeEvaluations</span>(const <span class="type"><a href="qtaws-machinelearning-describeevaluationsrequest.html">DescribeEvaluationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-describeevaluationsresponse.html">DescribeEvaluationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;DescribeEvaluations&lt;/code&gt; that match the search criteria in the</p>
+<!-- @@@describeEvaluations -->
+<!-- $$$describeMLModels[overload1]$$$describeMLModelsconstDescribeMLModelsRequest& -->
+<h3 class="fn" id="describeMLModels"><a name="describeMLModels"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-describemlmodelsresponse.html">DescribeMLModelsResponse</a></span> *MachineLearningClient::<span class="name">describeMLModels</span>(const <span class="type"><a href="qtaws-machinelearning-describemlmodelsrequest.html">DescribeMLModelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-describemlmodelsresponse.html">DescribeMLModelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of &lt;code&gt;MLModel&lt;/code&gt; that match the search criteria in the</p>
+<!-- @@@describeMLModels -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-describetagsresponse.html">DescribeTagsResponse</a></span> *MachineLearningClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-machinelearning-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more of the tags for your Amazon ML</p>
+<!-- @@@describeTags -->
+<!-- $$$getBatchPrediction[overload1]$$$getBatchPredictionconstGetBatchPredictionRequest& -->
+<h3 class="fn" id="getBatchPrediction"><a name="getBatchPrediction"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-getbatchpredictionresponse.html">GetBatchPredictionResponse</a></span> *MachineLearningClient::<span class="name">getBatchPrediction</span>(const <span class="type"><a href="qtaws-machinelearning-getbatchpredictionrequest.html">GetBatchPredictionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-getbatchpredictionresponse.html">GetBatchPredictionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a &lt;code&gt;BatchPrediction&lt;/code&gt; that includes detailed metadata, status, and data file information for a &lt;code&gt;Batch Prediction&lt;/code&gt;</p>
+<!-- @@@getBatchPrediction -->
+<!-- $$$getDataSource[overload1]$$$getDataSourceconstGetDataSourceRequest& -->
+<h3 class="fn" id="getDataSource"><a name="getDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-getdatasourceresponse.html">GetDataSourceResponse</a></span> *MachineLearningClient::<span class="name">getDataSource</span>(const <span class="type"><a href="qtaws-machinelearning-getdatasourcerequest.html">GetDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-getdatasourceresponse.html">GetDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a &lt;code&gt;DataSource&lt;/code&gt; that includes metadata and data file information, as well as the current status of the</p>
+<p>&lt;code&gt;DataSource&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;GetDataSource&lt;/code&gt; provides results in normal or verbose format. The verbose format adds the schema description and the list of files pointed to by the DataSource to the normal</p>
+<!-- @@@getDataSource -->
+<!-- $$$getEvaluation[overload1]$$$getEvaluationconstGetEvaluationRequest& -->
+<h3 class="fn" id="getEvaluation"><a name="getEvaluation"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-getevaluationresponse.html">GetEvaluationResponse</a></span> *MachineLearningClient::<span class="name">getEvaluation</span>(const <span class="type"><a href="qtaws-machinelearning-getevaluationrequest.html">GetEvaluationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-getevaluationresponse.html">GetEvaluationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an &lt;code&gt;Evaluation&lt;/code&gt; that includes metadata as well as the current status of the</p>
+<!-- @@@getEvaluation -->
+<!-- $$$getMLModel[overload1]$$$getMLModelconstGetMLModelRequest& -->
+<h3 class="fn" id="getMLModel"><a name="getMLModel"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-getmlmodelresponse.html">GetMLModelResponse</a></span> *MachineLearningClient::<span class="name">getMLModel</span>(const <span class="type"><a href="qtaws-machinelearning-getmlmodelrequest.html">GetMLModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-getmlmodelresponse.html">GetMLModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an &lt;code&gt;MLModel&lt;/code&gt; that includes detailed metadata, data source information, and the current status of the</p>
+<p>&lt;code&gt;MLModel&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;GetMLModel&lt;/code&gt; provides results in normal or verbose format.</p>
+<!-- @@@getMLModel -->
+<!-- $$$predict[overload1]$$$predictconstPredictRequest& -->
+<h3 class="fn" id="predict"><a name="predict"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-predictresponse.html">PredictResponse</a></span> *MachineLearningClient::<span class="name">predict</span>(const <span class="type"><a href="qtaws-machinelearning-predictrequest.html">PredictRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-predictresponse.html">PredictResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates a prediction for the observation using the specified &lt;code&gt;ML</p>
+<p>Model&lt;/code&gt;&gt; &lt;note&gt;&lt;title&gt;Note&lt;/title&gt;</p>
+<p>Not all response parameters will be populated. Whether a response parameter is populated depends on the type of model</p>
+<!-- @@@predict -->
+<!-- $$$updateBatchPrediction[overload1]$$$updateBatchPredictionconstUpdateBatchPredictionRequest& -->
+<h3 class="fn" id="updateBatchPrediction"><a name="updateBatchPrediction"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-updatebatchpredictionresponse.html">UpdateBatchPredictionResponse</a></span> *MachineLearningClient::<span class="name">updateBatchPrediction</span>(const <span class="type"><a href="qtaws-machinelearning-updatebatchpredictionrequest.html">UpdateBatchPredictionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-updatebatchpredictionresponse.html">UpdateBatchPredictionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the &lt;code&gt;BatchPredictionName&lt;/code&gt; of a</p>
+<p>&lt;code&gt;BatchPrediction&lt;/code&gt;&gt;</p>
+<p>You can use the &lt;code&gt;GetBatchPrediction&lt;/code&gt; operation to view the contents of the updated data</p>
+<!-- @@@updateBatchPrediction -->
+<!-- $$$updateDataSource[overload1]$$$updateDataSourceconstUpdateDataSourceRequest& -->
+<h3 class="fn" id="updateDataSource"><a name="updateDataSource"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-updatedatasourceresponse.html">UpdateDataSourceResponse</a></span> *MachineLearningClient::<span class="name">updateDataSource</span>(const <span class="type"><a href="qtaws-machinelearning-updatedatasourcerequest.html">UpdateDataSourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-updatedatasourceresponse.html">UpdateDataSourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the &lt;code&gt;DataSourceName&lt;/code&gt; of a</p>
+<p>&lt;code&gt;DataSource&lt;/code&gt;&gt;</p>
+<p>You can use the &lt;code&gt;GetDataSource&lt;/code&gt; operation to view the contents of the updated data</p>
+<!-- @@@updateDataSource -->
+<!-- $$$updateEvaluation[overload1]$$$updateEvaluationconstUpdateEvaluationRequest& -->
+<h3 class="fn" id="updateEvaluation"><a name="updateEvaluation"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-updateevaluationresponse.html">UpdateEvaluationResponse</a></span> *MachineLearningClient::<span class="name">updateEvaluation</span>(const <span class="type"><a href="qtaws-machinelearning-updateevaluationrequest.html">UpdateEvaluationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-updateevaluationresponse.html">UpdateEvaluationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the &lt;code&gt;EvaluationName&lt;/code&gt; of an</p>
+<p>&lt;code&gt;Evaluation&lt;/code&gt;&gt;</p>
+<p>You can use the &lt;code&gt;GetEvaluation&lt;/code&gt; operation to view the contents of the updated data</p>
+<!-- @@@updateEvaluation -->
+<!-- $$$updateMLModel[overload1]$$$updateMLModelconstUpdateMLModelRequest& -->
+<h3 class="fn" id="updateMLModel"><a name="updateMLModel"></a><code>[slot] </code><span class="type"><a href="qtaws-machinelearning-updatemlmodelresponse.html">UpdateMLModelResponse</a></span> *MachineLearningClient::<span class="name">updateMLModel</span>(const <span class="type"><a href="qtaws-machinelearning-updatemlmodelrequest.html">UpdateMLModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-machinelearning-machinelearningclient.html">MachineLearningClient</a> service, and returns a pointer to an <a href="qtaws-machinelearning-updatemlmodelresponse.html">UpdateMLModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the &lt;code&gt;MLModelName&lt;/code&gt; and the &lt;code&gt;ScoreThreshold&lt;/code&gt; of an</p>
+<p>&lt;code&gt;MLModel&lt;/code&gt;&gt;</p>
+<p>You can use the &lt;code&gt;GetMLModel&lt;/code&gt; operation to view the contents of the updated data</p>
+<!-- @@@updateMLModel -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

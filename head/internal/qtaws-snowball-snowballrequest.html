@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- snowballrequest.cpp -->
+  <title>SnowballRequest Class | Snowball</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssnowball-index.html">Snowball</a></li>
+<li><a href="qtawssnowball-module.html">C++ Classes</a></li>
+<li>SnowballRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SnowballRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-snowball-snowballrequest.html">QtAws::Snowball::SnowballRequest</a>)<br/></span>
+<!-- $$$SnowballRequest-brief -->
+<p>The <a href="qtaws-snowball-snowballrequest.html">SnowballRequest</a> class provides an interface for Snowball requests. <a href="#details">More...</a></p>
+<!-- @@@SnowballRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SnowballRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-snowball-cancelclusterrequest.html">QtAws::Snowball::CancelClusterRequest</a>, <a href="qtaws-snowball-canceljobrequest.html">QtAws::Snowball::CancelJobRequest</a>, <a href="qtaws-snowball-createaddressrequest.html">QtAws::Snowball::CreateAddressRequest</a>, <a href="qtaws-snowball-createclusterrequest.html">QtAws::Snowball::CreateClusterRequest</a>, <a href="qtaws-snowball-createjobrequest.html">QtAws::Snowball::CreateJobRequest</a>, <a href="qtaws-snowball-describeaddressesrequest.html">QtAws::Snowball::DescribeAddressesRequest</a>, <a href="qtaws-snowball-describeaddressrequest.html">QtAws::Snowball::DescribeAddressRequest</a>, <a href="qtaws-snowball-describeclusterrequest.html">QtAws::Snowball::DescribeClusterRequest</a>, <a href="qtaws-snowball-describejobrequest.html">QtAws::Snowball::DescribeJobRequest</a>, <a href="qtaws-snowball-getjobmanifestrequest.html">QtAws::Snowball::GetJobManifestRequest</a>, <a href="qtaws-snowball-getjobunlockcoderequest.html">QtAws::Snowball::GetJobUnlockCodeRequest</a>, <a href="qtaws-snowball-getsnowballusagerequest.html">QtAws::Snowball::GetSnowballUsageRequest</a>, <a href="qtaws-snowball-listclusterjobsrequest.html">QtAws::Snowball::ListClusterJobsRequest</a>, <a href="qtaws-snowball-listclustersrequest.html">QtAws::Snowball::ListClustersRequest</a>, <a href="qtaws-snowball-listjobsrequest.html">QtAws::Snowball::ListJobsRequest</a>, <a href="qtaws-snowball-updateclusterrequest.html">QtAws::Snowball::UpdateClusterRequest</a>, and <a href="qtaws-snowball-updatejobrequest.html">QtAws::Snowball::UpdateJobRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-snowball-snowballrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#Action-enum">Action</a></b> { CancelClusterAction, CancelJobAction, CreateAddressAction, CreateClusterAction, ..., UpdateJobAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#SnowballRequest">SnowballRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#SnowballRequest-1">SnowballRequest</a></b>(const SnowballRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SnowballRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#operator-eq">operator=</a></b>(const SnowballRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#operator-eq-eq">operator==</a></b>(const SnowballRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#SnowballRequest-2">SnowballRequest</a></b>(SnowballRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SnowballRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-snowball-snowballrequest.html">SnowballRequest</a> class provides an interface for Snowball requests.</p>
+</div>
+<!-- @@@SnowballRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CancelClusterAction$$$CancelJobAction$$$CreateAddressAction$$$CreateClusterAction$$$CreateJobAction$$$DescribeAddressAction$$$DescribeAddressesAction$$$DescribeClusterAction$$$DescribeJobAction$$$GetJobManifestAction$$$GetJobUnlockCodeAction$$$GetSnowballUsageAction$$$ListClusterJobsAction$$$ListClustersAction$$$ListJobsAction$$$UpdateClusterAction$$$UpdateJobAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SnowballRequest::<span class="name">Action</span><br/>flags SnowballRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Snowball requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::CancelClusterAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Snowball CancelCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::CancelJobAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Snowball CancelJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::CreateAddressAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Snowball CreateAddress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::CreateClusterAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Snowball CreateCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::CreateJobAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Snowball CreateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::DescribeAddressAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Snowball DescribeAddress action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::DescribeAddressesAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Snowball DescribeAddresses action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::DescribeClusterAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Snowball DescribeCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::DescribeJobAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Snowball DescribeJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::GetJobManifestAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Snowball GetJobManifest action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::GetJobUnlockCodeAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Snowball GetJobUnlockCode action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::GetSnowballUsageAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Snowball GetSnowballUsage action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::ListClusterJobsAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Snowball ListClusterJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::ListClustersAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Snowball ListClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::ListJobsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Snowball ListJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::UpdateClusterAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Snowball UpdateCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Snowball::SnowballRequest::UpdateJobAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Snowball UpdateJob action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SnowballRequest[overload1]$$$SnowballRequestconstAction -->
+<h3 class="fn" id="SnowballRequest"><a name="SnowballRequest"></a>SnowballRequest::<span class="name">SnowballRequest</span>(const <span class="type"><a href="qtaws-snowball-snowballrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-snowball-snowballrequest.html">SnowballRequest</a> object for Snowball <i>action</i>.</p>
+<!-- @@@SnowballRequest -->
+<!-- $$$SnowballRequest$$$SnowballRequestconstSnowballRequest& -->
+<h3 class="fn" id="SnowballRequest-1"><a name="SnowballRequest-1"></a>SnowballRequest::<span class="name">SnowballRequest</span>(const <span class="type"><a href="qtaws-snowball-snowballrequest.html#SnowballRequest">SnowballRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SnowballRequest -->
+<!-- $$$SnowballRequest$$$SnowballRequestSnowballRequestPrivate*const -->
+<h3 class="fn" id="SnowballRequest-2"><a name="SnowballRequest-2"></a><code>[protected] </code>SnowballRequest::<span class="name">SnowballRequest</span>(<span class="type"><a href="qtaws-snowball-snowballrequestprivate.html">SnowballRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-snowball-snowballrequest.html">SnowballRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-snowball-snowballrequestprivate.html">SnowballRequestPrivate</a>.</p>
+<!-- @@@SnowballRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-snowball-snowballrequest.html#Action-enum">Action</a></span> SnowballRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Snowball action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SnowballRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Snowball action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SnowballRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Snowball API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SnowballRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SnowballRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SnowballRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SnowballRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SnowballRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-snowball-snowballrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Snowball action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SnowballRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Snowball API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SnowballRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SnowballRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-snowball-snowballrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SnowballRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Snowball request using the given <i>endpoint</i>.</p>
+<p>This Snowball implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-snowball-snowballrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSnowballRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-snowball-snowballrequest.html#SnowballRequest">SnowballRequest</a></span> &amp;SnowballRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-snowball-snowballrequest.html#SnowballRequest">SnowballRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-snowball-snowballrequest.html">SnowballRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSnowballRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SnowballRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-snowball-snowballrequest.html#SnowballRequest">SnowballRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

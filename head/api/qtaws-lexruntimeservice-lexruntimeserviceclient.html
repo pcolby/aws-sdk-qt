@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lexruntimeserviceclient.cpp -->
+  <title>LexRuntimeServiceClient Class | LexRuntimeService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslexruntimeservice-index.html">LexRuntimeService</a></li>
+<li><a href="qtawslexruntimeservice-module.html">C++ Classes</a></li>
+<li>LexRuntimeServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LexRuntimeServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">QtAws::LexRuntimeService::LexRuntimeServiceClient</a>)<br/></span>
+<!-- $$$LexRuntimeServiceClient-brief -->
+<p>The <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">LexRuntimeServiceClient</a> class provides access to the Amazon Lex Runtime Service service. <a href="#details">More...</a></p>
+<!-- @@@LexRuntimeServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LexRuntimeServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-lexruntimeservice-lexruntimeserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html#LexRuntimeServiceClient">LexRuntimeServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html#LexRuntimeServiceClient-1">LexRuntimeServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> PostContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html#postContent">postContent</a></b>(const PostContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PostTextResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html#postText">postText</a></b>(const PostTextRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$LexRuntimeServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">LexRuntimeServiceClient</a> class provides access to the Amazon Lex Runtime Service service.</p>
+<p>Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a user says &quot;I want pizza&quot;, your bot sends this input to Amazon Lex using the runtime API. Amazon Lex recognizes that the user request is for the OrderPizza intent (one of the intents defined in the bot). Then Amazon Lex engages in user conversation on behalf of the bot to elicit required information (slot values, such as pizza size and crust type), and then performs fulfillment activity (that you configured when you created the bot). You use the build-time API to create and manage your Amazon Lex bot. For a list of build-time operations, see the build-time API, .</p>
+</div>
+<!-- @@@LexRuntimeServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LexRuntimeServiceClient[overload1]$$$LexRuntimeServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LexRuntimeServiceClient"><a name="LexRuntimeServiceClient"></a>LexRuntimeServiceClient::<span class="name">LexRuntimeServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">LexRuntimeServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@LexRuntimeServiceClient -->
+<!-- $$$LexRuntimeServiceClient$$$LexRuntimeServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LexRuntimeServiceClient-1"><a name="LexRuntimeServiceClient-1"></a>LexRuntimeServiceClient::<span class="name">LexRuntimeServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html#LexRuntimeServiceClient">LexRuntimeServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@LexRuntimeServiceClient -->
+<!-- $$$postContent[overload1]$$$postContentconstPostContentRequest& -->
+<h3 class="fn" id="postContent"><a name="postContent"></a><code>[slot] </code><span class="type"><a href="qtaws-lexruntimeservice-postcontentresponse.html">PostContentResponse</a></span> *LexRuntimeServiceClient::<span class="name">postContent</span>(const <span class="type"><a href="qtaws-lexruntimeservice-postcontentrequest.html">PostContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">LexRuntimeServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexruntimeservice-postcontentresponse.html">PostContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends user input (text or speech) to Amazon Lex. Clients use this API to send text and audio requests to Amazon Lex at runtime. Amazon Lex interprets the user input using the machine learning model that it built for the bot.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;PostContent&lt;/code&gt; operation supports audio input at 8kHz and 16kHz. You can use 8kHz audio to achieve higher speech recognition accuracy in telephone audio applications.</p>
+<p>&lt;/p</p>
+<p>In response, Amazon Lex returns the next message to convey to the user. Consider the following example messages:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>For a user input &quot;I would like a pizza,&quot; Amazon Lex might return a response with a message eliciting slot data (for example, &lt;code&gt;PizzaSize&lt;/code&gt;): &quot;What size pizza would you like?&quot;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>After the user provides all of the pizza order information, Amazon Lex might return a response with a message to get user confirmation: &quot;Order the pizza?&quot;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>After the user replies &quot;Yes&quot; to the confirmation prompt, Amazon Lex might return a conclusion statement: &quot;Thank you, your cheese pizza has been ordered.&quot;&#x2e;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Not all Amazon Lex messages require a response from the user. For example, conclusion statements do not require a response. Some messages require only a yes or no response. In addition to the &lt;code&gt;message&lt;/code&gt;, Amazon Lex provides additional context about the message in the response that you can use to enhance client behavior, such as displaying the appropriate client user interface. Consider the following examples:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>If the message is to elicit slot data, Amazon Lex returns the following context information:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;x-amz-lex-dialog-state&lt;/code&gt; header set to &lt;code&gt;ElicitSlot&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;x-amz-lex-intent-name&lt;/code&gt; header set to the intent name in the current context</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;x-amz-lex-slot-to-elicit&lt;/code&gt; header set to the slot name for which the &lt;code&gt;message&lt;/code&gt; is eliciting information</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;x-amz-lex-slots&lt;/code&gt; header set to a map of slots configured for the intent with their current values</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the message is a confirmation prompt, the &lt;code&gt;x-amz-lex-dialog-state&lt;/code&gt; header is set to &lt;code&gt;Confirmation&lt;/code&gt; and the &lt;code&gt;x-amz-lex-slot-to-elicit&lt;/code&gt; header is omitted.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If the message is a clarification prompt configured for the intent, indicating that the user intent is not understood, the &lt;code&gt;x-amz-dialog-state&lt;/code&gt; header is set to &lt;code&gt;ElicitIntent&lt;/code&gt; and the &lt;code&gt;x-amz-slot-to-elicit&lt;/code&gt; header is omitted.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>In addition, Amazon Lex also returns your application-specific &lt;code&gt;sessionAttributes&lt;/code&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html&quot;&gt;Managing Conversation Context&lt;/a&gt;.</p>
+<!-- @@@postContent -->
+<!-- $$$postText[overload1]$$$postTextconstPostTextRequest& -->
+<h3 class="fn" id="postText"><a name="postText"></a><code>[slot] </code><span class="type"><a href="qtaws-lexruntimeservice-posttextresponse.html">PostTextResponse</a></span> *LexRuntimeServiceClient::<span class="name">postText</span>(const <span class="type"><a href="qtaws-lexruntimeservice-posttextrequest.html">PostTextRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">LexRuntimeServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexruntimeservice-posttextresponse.html">PostTextResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends user input (text-only) to Amazon Lex. Client applications can use this API to send requests to Amazon Lex at runtime. Amazon Lex then interprets the user input using the machine learning model it built for the bot.</p>
+<p>&lt;/p</p>
+<p>In response, Amazon Lex returns the next &lt;code&gt;message&lt;/code&gt; to convey to the user an optional &lt;code&gt;responseCard&lt;/code&gt; to display. Consider the following example messages:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>For a user input &quot;I would like a pizza&quot;, Amazon Lex might return a response with a message eliciting slot data (for example, PizzaSize): &quot;What size pizza would you like?&quot;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>After the user provides all of the pizza order information, Amazon Lex might return a response with a message to obtain user confirmation &quot;Proceed with the pizza order?&quot;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>After the user replies to a confirmation prompt with a &quot;yes&quot;, Amazon Lex might return a conclusion statement: &quot;Thank you, your cheese pizza has been ordered.&quot;&#x2e;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Not all Amazon Lex messages require a user response. For example, a conclusion statement does not require a response. Some messages require only a &quot;yes&quot; or &quot;no&quot; user response. In addition to the &lt;code&gt;message&lt;/code&gt;, Amazon Lex provides additional context about the message in the response that you might use to enhance client behavior, for example, to display the appropriate client user interface. These are the &lt;code&gt;slotToElicit&lt;/code&gt;, &lt;code&gt;dialogState&lt;/code&gt;, &lt;code&gt;intentName&lt;/code&gt;, and &lt;code&gt;slots&lt;/code&gt; fields in the response. Consider the following examples:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>If the message is to elicit slot data, Amazon Lex returns the following context</p>
+<p>information&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;dialogState&lt;/code&gt; set to ElicitSlot</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;intentName&lt;/code&gt; set to the intent name in the current context</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;slotToElicit&lt;/code&gt; set to the slot name for which the &lt;code&gt;message&lt;/code&gt; is eliciting information</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;slots&lt;/code&gt; set to a map of slots, configured for the intent, with currently known values</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the message is a confirmation prompt, the &lt;code&gt;dialogState&lt;/code&gt; is set to ConfirmIntent and &lt;code&gt;SlotToElicit&lt;/code&gt; is set to null.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If the message is a clarification prompt (configured for the intent) that indicates that user intent is not understood, the &lt;code&gt;dialogState&lt;/code&gt; is set to ElicitIntent and &lt;code&gt;slotToElicit&lt;/code&gt; is set to null.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>In addition, Amazon Lex also returns your application-specific &lt;code&gt;sessionAttributes&lt;/code&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html&quot;&gt;Managing Conversation Context&lt;/a&gt;.</p>
+<!-- @@@postText -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

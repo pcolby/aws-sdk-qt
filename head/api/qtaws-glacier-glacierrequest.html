@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- glacierrequest.cpp -->
+  <title>GlacierRequest Class | Glacier</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsglacier-index.html">Glacier</a></li>
+<li><a href="qtawsglacier-module.html">C++ Classes</a></li>
+<li>GlacierRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GlacierRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-glacier-glacierrequest.html">QtAws::Glacier::GlacierRequest</a>)<br/></span>
+<!-- $$$GlacierRequest-brief -->
+<p>The <a href="qtaws-glacier-glacierrequest.html">GlacierRequest</a> class provides an interface for Glacier requests. <a href="#details">More...</a></p>
+<!-- @@@GlacierRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GlacierRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-glacier-abortmultipartuploadrequest.html">QtAws::Glacier::AbortMultipartUploadRequest</a>, <a href="qtaws-glacier-abortvaultlockrequest.html">QtAws::Glacier::AbortVaultLockRequest</a>, <a href="qtaws-glacier-addtagstovaultrequest.html">QtAws::Glacier::AddTagsToVaultRequest</a>, <a href="qtaws-glacier-completemultipartuploadrequest.html">QtAws::Glacier::CompleteMultipartUploadRequest</a>, <a href="qtaws-glacier-completevaultlockrequest.html">QtAws::Glacier::CompleteVaultLockRequest</a>, <a href="qtaws-glacier-createvaultrequest.html">QtAws::Glacier::CreateVaultRequest</a>, <a href="qtaws-glacier-deletearchiverequest.html">QtAws::Glacier::DeleteArchiveRequest</a>, <a href="qtaws-glacier-deletevaultaccesspolicyrequest.html">QtAws::Glacier::DeleteVaultAccessPolicyRequest</a>, <a href="qtaws-glacier-deletevaultnotificationsrequest.html">QtAws::Glacier::DeleteVaultNotificationsRequest</a>, <a href="qtaws-glacier-deletevaultrequest.html">QtAws::Glacier::DeleteVaultRequest</a>, <a href="qtaws-glacier-describejobrequest.html">QtAws::Glacier::DescribeJobRequest</a>, <a href="qtaws-glacier-describevaultrequest.html">QtAws::Glacier::DescribeVaultRequest</a>, <a href="qtaws-glacier-getdataretrievalpolicyrequest.html">QtAws::Glacier::GetDataRetrievalPolicyRequest</a>, <a href="qtaws-glacier-getjoboutputrequest.html">QtAws::Glacier::GetJobOutputRequest</a>, <a href="qtaws-glacier-getvaultaccesspolicyrequest.html">QtAws::Glacier::GetVaultAccessPolicyRequest</a>, <a href="qtaws-glacier-getvaultlockrequest.html">QtAws::Glacier::GetVaultLockRequest</a>, <a href="qtaws-glacier-getvaultnotificationsrequest.html">QtAws::Glacier::GetVaultNotificationsRequest</a>, <a href="qtaws-glacier-initiatejobrequest.html">QtAws::Glacier::InitiateJobRequest</a>, <a href="qtaws-glacier-initiatemultipartuploadrequest.html">QtAws::Glacier::InitiateMultipartUploadRequest</a>, <a href="qtaws-glacier-initiatevaultlockrequest.html">QtAws::Glacier::InitiateVaultLockRequest</a>, <a href="qtaws-glacier-listjobsrequest.html">QtAws::Glacier::ListJobsRequest</a>, <a href="qtaws-glacier-listmultipartuploadsrequest.html">QtAws::Glacier::ListMultipartUploadsRequest</a>, <a href="qtaws-glacier-listpartsrequest.html">QtAws::Glacier::ListPartsRequest</a>, <a href="qtaws-glacier-listprovisionedcapacityrequest.html">QtAws::Glacier::ListProvisionedCapacityRequest</a>, <a href="qtaws-glacier-listtagsforvaultrequest.html">QtAws::Glacier::ListTagsForVaultRequest</a>, <a href="qtaws-glacier-listvaultsrequest.html">QtAws::Glacier::ListVaultsRequest</a>, <a href="qtaws-glacier-purchaseprovisionedcapacityrequest.html">QtAws::Glacier::PurchaseProvisionedCapacityRequest</a>, <a href="qtaws-glacier-removetagsfromvaultrequest.html">QtAws::Glacier::RemoveTagsFromVaultRequest</a>, <a href="qtaws-glacier-setdataretrievalpolicyrequest.html">QtAws::Glacier::SetDataRetrievalPolicyRequest</a>, <a href="qtaws-glacier-setvaultaccesspolicyrequest.html">QtAws::Glacier::SetVaultAccessPolicyRequest</a>, <a href="qtaws-glacier-setvaultnotificationsrequest.html">QtAws::Glacier::SetVaultNotificationsRequest</a>, <a href="qtaws-glacier-uploadarchiverequest.html">QtAws::Glacier::UploadArchiveRequest</a>, and <a href="qtaws-glacier-uploadmultipartpartrequest.html">QtAws::Glacier::UploadMultipartPartRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-glacier-glacierrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#Action-enum">Action</a></b> { AbortMultipartUploadAction, AbortVaultLockAction, AddTagsToVaultAction, CompleteMultipartUploadAction, ..., UploadMultipartPartAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#GlacierRequest">GlacierRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#GlacierRequest-1">GlacierRequest</a></b>(const GlacierRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GlacierRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#operator-eq">operator=</a></b>(const GlacierRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#operator-eq-eq">operator==</a></b>(const GlacierRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#GlacierRequest-2">GlacierRequest</a></b>(GlacierRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GlacierRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-glacier-glacierrequest.html">GlacierRequest</a> class provides an interface for Glacier requests.</p>
+</div>
+<!-- @@@GlacierRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AbortMultipartUploadAction$$$AbortVaultLockAction$$$AddTagsToVaultAction$$$CompleteMultipartUploadAction$$$CompleteVaultLockAction$$$CreateVaultAction$$$DeleteArchiveAction$$$DeleteVaultAction$$$DeleteVaultAccessPolicyAction$$$DeleteVaultNotificationsAction$$$DescribeJobAction$$$DescribeVaultAction$$$GetDataRetrievalPolicyAction$$$GetJobOutputAction$$$GetVaultAccessPolicyAction$$$GetVaultLockAction$$$GetVaultNotificationsAction$$$InitiateJobAction$$$InitiateMultipartUploadAction$$$InitiateVaultLockAction$$$ListJobsAction$$$ListMultipartUploadsAction$$$ListPartsAction$$$ListProvisionedCapacityAction$$$ListTagsForVaultAction$$$ListVaultsAction$$$PurchaseProvisionedCapacityAction$$$RemoveTagsFromVaultAction$$$SetDataRetrievalPolicyAction$$$SetVaultAccessPolicyAction$$$SetVaultNotificationsAction$$$UploadArchiveAction$$$UploadMultipartPartAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum GlacierRequest::<span class="name">Action</span><br/>flags GlacierRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Glacier requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::AbortMultipartUploadAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Glacier AbortMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::AbortVaultLockAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Glacier AbortVaultLock action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::AddTagsToVaultAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Glacier AddTagsToVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::CompleteMultipartUploadAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Glacier CompleteMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::CompleteVaultLockAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Glacier CompleteVaultLock action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::CreateVaultAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Glacier CreateVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DeleteArchiveAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Glacier DeleteArchive action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DeleteVaultAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Glacier DeleteVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DeleteVaultAccessPolicyAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Glacier DeleteVaultAccessPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DeleteVaultNotificationsAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Glacier DeleteVaultNotifications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DescribeJobAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Glacier DescribeJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::DescribeVaultAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Glacier DescribeVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::GetDataRetrievalPolicyAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Glacier GetDataRetrievalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::GetJobOutputAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Glacier GetJobOutput action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::GetVaultAccessPolicyAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Glacier GetVaultAccessPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::GetVaultLockAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Glacier GetVaultLock action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::GetVaultNotificationsAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Glacier GetVaultNotifications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::InitiateJobAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Glacier InitiateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::InitiateMultipartUploadAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Glacier InitiateMultipartUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::InitiateVaultLockAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Glacier InitiateVaultLock action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListJobsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Glacier ListJobs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListMultipartUploadsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Glacier ListMultipartUploads action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListPartsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Glacier ListParts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListProvisionedCapacityAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Glacier ListProvisionedCapacity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListTagsForVaultAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Glacier ListTagsForVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::ListVaultsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Glacier ListVaults action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::PurchaseProvisionedCapacityAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Glacier PurchaseProvisionedCapacity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::RemoveTagsFromVaultAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Glacier RemoveTagsFromVault action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::SetDataRetrievalPolicyAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Glacier SetDataRetrievalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::SetVaultAccessPolicyAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Glacier SetVaultAccessPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::SetVaultNotificationsAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Glacier SetVaultNotifications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::UploadArchiveAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Glacier UploadArchive action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Glacier::GlacierRequest::UploadMultipartPartAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Glacier UploadMultipartPart action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GlacierRequest[overload1]$$$GlacierRequestconstAction -->
+<h3 class="fn" id="GlacierRequest"><a name="GlacierRequest"></a>GlacierRequest::<span class="name">GlacierRequest</span>(const <span class="type"><a href="qtaws-glacier-glacierrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-glacier-glacierrequest.html">GlacierRequest</a> object for Glacier <i>action</i>.</p>
+<!-- @@@GlacierRequest -->
+<!-- $$$GlacierRequest$$$GlacierRequestconstGlacierRequest& -->
+<h3 class="fn" id="GlacierRequest-1"><a name="GlacierRequest-1"></a>GlacierRequest::<span class="name">GlacierRequest</span>(const <span class="type"><a href="qtaws-glacier-glacierrequest.html#GlacierRequest">GlacierRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@GlacierRequest -->
+<!-- $$$GlacierRequest$$$GlacierRequestGlacierRequestPrivate*const -->
+<h3 class="fn" id="GlacierRequest-2"><a name="GlacierRequest-2"></a><code>[protected] </code>GlacierRequest::<span class="name">GlacierRequest</span>(<span class="type">GlacierRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-glacier-glacierrequest.html">GlacierRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from GlacierRequestPrivate.</p>
+<!-- @@@GlacierRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-glacier-glacierrequest.html#Action-enum">Action</a></span> GlacierRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Glacier action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> GlacierRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Glacier action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> GlacierRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Glacier API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> GlacierRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> GlacierRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> GlacierRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;GlacierRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> GlacierRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-glacier-glacierrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Glacier action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> GlacierRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Glacier API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> GlacierRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> GlacierRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-glacier-glacierrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> GlacierRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Glacier request using the given <i>endpoint</i>.</p>
+<p>This Glacier implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-glacier-glacierrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constGlacierRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-glacier-glacierrequest.html#GlacierRequest">GlacierRequest</a></span> &amp;GlacierRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-glacier-glacierrequest.html#GlacierRequest">GlacierRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-glacier-glacierrequest.html">GlacierRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constGlacierRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> GlacierRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-glacier-glacierrequest.html#GlacierRequest">GlacierRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

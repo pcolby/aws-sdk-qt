@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lambdarequest.cpp -->
+  <title>LambdaRequestPrivate Class | Lambda</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslambda-index.html">Lambda</a></li>
+<li><a href="qtawslambda-module.html">C++ Classes</a></li>
+<li>LambdaRequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LambdaRequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lambda-lambdarequestprivate.html">QtAws::Lambda::LambdaRequestPrivate</a>)<br/></span>
+<!-- $$$LambdaRequestPrivate-brief -->
+<p>The <a href="qtaws-lambda-lambdarequestprivate.html">LambdaRequestPrivate</a> class provides private implementation for <a href="qtaws-lambda-lambdarequest.html">LambdaRequest</a>. <a href="#details">More...</a></p>
+<!-- @@@LambdaRequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LambdaRequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-lambda-addpermissionrequestprivate.html">QtAws::Lambda::AddPermissionRequestPrivate</a>, <a href="qtaws-lambda-createaliasrequestprivate.html">QtAws::Lambda::CreateAliasRequestPrivate</a>, <a href="qtaws-lambda-createeventsourcemappingrequestprivate.html">QtAws::Lambda::CreateEventSourceMappingRequestPrivate</a>, <a href="qtaws-lambda-createfunctionrequestprivate.html">QtAws::Lambda::CreateFunctionRequestPrivate</a>, <a href="qtaws-lambda-deletealiasrequestprivate.html">QtAws::Lambda::DeleteAliasRequestPrivate</a>, <a href="qtaws-lambda-deleteeventsourcemappingrequestprivate.html">QtAws::Lambda::DeleteEventSourceMappingRequestPrivate</a>, <a href="qtaws-lambda-deletefunctionconcurrencyrequestprivate.html">QtAws::Lambda::DeleteFunctionConcurrencyRequestPrivate</a>, <a href="qtaws-lambda-deletefunctionrequestprivate.html">QtAws::Lambda::DeleteFunctionRequestPrivate</a>, <a href="qtaws-lambda-getaccountsettingsrequestprivate.html">QtAws::Lambda::GetAccountSettingsRequestPrivate</a>, <a href="qtaws-lambda-getaliasrequestprivate.html">QtAws::Lambda::GetAliasRequestPrivate</a>, <a href="qtaws-lambda-geteventsourcemappingrequestprivate.html">QtAws::Lambda::GetEventSourceMappingRequestPrivate</a>, <a href="qtaws-lambda-getfunctionconfigurationrequestprivate.html">QtAws::Lambda::GetFunctionConfigurationRequestPrivate</a>, <a href="qtaws-lambda-getfunctionrequestprivate.html">QtAws::Lambda::GetFunctionRequestPrivate</a>, <a href="qtaws-lambda-getpolicyrequestprivate.html">QtAws::Lambda::GetPolicyRequestPrivate</a>, <a href="qtaws-lambda-invokeasyncrequestprivate.html">QtAws::Lambda::InvokeAsyncRequestPrivate</a>, <a href="qtaws-lambda-invokerequestprivate.html">QtAws::Lambda::InvokeRequestPrivate</a>, <a href="qtaws-lambda-listaliasesrequestprivate.html">QtAws::Lambda::ListAliasesRequestPrivate</a>, <a href="qtaws-lambda-listeventsourcemappingsrequestprivate.html">QtAws::Lambda::ListEventSourceMappingsRequestPrivate</a>, <a href="qtaws-lambda-listfunctionsrequestprivate.html">QtAws::Lambda::ListFunctionsRequestPrivate</a>, <a href="qtaws-lambda-listtagsrequestprivate.html">QtAws::Lambda::ListTagsRequestPrivate</a>, <a href="qtaws-lambda-listversionsbyfunctionrequestprivate.html">QtAws::Lambda::ListVersionsByFunctionRequestPrivate</a>, <a href="qtaws-lambda-publishversionrequestprivate.html">QtAws::Lambda::PublishVersionRequestPrivate</a>, <a href="qtaws-lambda-putfunctionconcurrencyrequestprivate.html">QtAws::Lambda::PutFunctionConcurrencyRequestPrivate</a>, <a href="qtaws-lambda-removepermissionrequestprivate.html">QtAws::Lambda::RemovePermissionRequestPrivate</a>, <a href="qtaws-lambda-tagresourcerequestprivate.html">QtAws::Lambda::TagResourceRequestPrivate</a>, <a href="qtaws-lambda-untagresourcerequestprivate.html">QtAws::Lambda::UntagResourceRequestPrivate</a>, <a href="qtaws-lambda-updatealiasrequestprivate.html">QtAws::Lambda::UpdateAliasRequestPrivate</a>, <a href="qtaws-lambda-updateeventsourcemappingrequestprivate.html">QtAws::Lambda::UpdateEventSourceMappingRequestPrivate</a>, <a href="qtaws-lambda-updatefunctioncoderequestprivate.html">QtAws::Lambda::UpdateFunctionCodeRequestPrivate</a>, and <a href="qtaws-lambda-updatefunctionconfigurationrequestprivate.html">QtAws::Lambda::UpdateFunctionConfigurationRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-lambda-lambdarequestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdarequestprivate.html#LambdaRequestPrivate">LambdaRequestPrivate</a></b>(const LambdaRequest::Action <i>action</i>, LambdaRequest * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdarequestprivate.html#LambdaRequestPrivate-1">LambdaRequestPrivate</a></b>(const LambdaRequestPrivate &amp;<i>other</i>, LambdaRequest * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdarequestprivate.html#toString">toString</a></b>(const LambdaRequest::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$LambdaRequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lambda-lambdarequestprivate.html">LambdaRequestPrivate</a> class provides private implementation for <a href="qtaws-lambda-lambdarequest.html">LambdaRequest</a>.</p>
+</div>
+<!-- @@@LambdaRequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LambdaRequestPrivate[overload1]$$$LambdaRequestPrivateconstLambdaRequest::ActionLambdaRequest*const -->
+<h3 class="fn" id="LambdaRequestPrivate"><a name="LambdaRequestPrivate"></a>LambdaRequestPrivate::<span class="name">LambdaRequestPrivate</span>(const <span class="type"><a href="qtaws-lambda-lambdarequest.html#Action-enum">LambdaRequest::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-lambda-lambdarequest.html">LambdaRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-lambda-lambdarequestprivate.html">LambdaRequestPrivate</a> object for Lambda <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@LambdaRequestPrivate -->
+<!-- $$$LambdaRequestPrivate$$$LambdaRequestPrivateconstLambdaRequestPrivate&LambdaRequest*const -->
+<h3 class="fn" id="LambdaRequestPrivate-1"><a name="LambdaRequestPrivate-1"></a>LambdaRequestPrivate::<span class="name">LambdaRequestPrivate</span>(const <span class="type"><a href="qtaws-lambda-lambdarequestprivate.html#LambdaRequestPrivate">LambdaRequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-lambda-lambdarequest.html">LambdaRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-lambda-lambdarequest.html">LambdaRequest</a> class's copy constructor.</p>
+<!-- @@@LambdaRequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstLambdaRequest::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> LambdaRequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-lambda-lambdarequest.html#Action-enum">LambdaRequest::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-lambda-lambdarequest.html#Action-enum">LambdaRequest::Action</a> enumerator values to their respective string representations, appropriate for use with the Lambda service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

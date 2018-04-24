@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- alexaforbusinessrequest.cpp -->
+  <title>AlexaForBusinessRequest Class | AlexaForBusiness</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsalexaforbusiness-index.html">AlexaForBusiness</a></li>
+<li><a href="qtawsalexaforbusiness-module.html">C++ Classes</a></li>
+<li>AlexaForBusinessRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AlexaForBusinessRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">QtAws::AlexaForBusiness::AlexaForBusinessRequest</a>)<br/></span>
+<!-- $$$AlexaForBusinessRequest-brief -->
+<p>The <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">AlexaForBusinessRequest</a> class provides an interface for <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> requests. <a href="#details">More...</a></p>
+<!-- @@@AlexaForBusinessRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AlexaForBusinessRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-alexaforbusiness-associatecontactwithaddressbookrequest.html">QtAws::AlexaForBusiness::AssociateContactWithAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-associatedevicewithroomrequest.html">QtAws::AlexaForBusiness::AssociateDeviceWithRoomRequest</a>, <a href="qtaws-alexaforbusiness-associateskillgroupwithroomrequest.html">QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomRequest</a>, <a href="qtaws-alexaforbusiness-createaddressbookrequest.html">QtAws::AlexaForBusiness::CreateAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-createcontactrequest.html">QtAws::AlexaForBusiness::CreateContactRequest</a>, <a href="qtaws-alexaforbusiness-createprofilerequest.html">QtAws::AlexaForBusiness::CreateProfileRequest</a>, <a href="qtaws-alexaforbusiness-createroomrequest.html">QtAws::AlexaForBusiness::CreateRoomRequest</a>, <a href="qtaws-alexaforbusiness-createskillgrouprequest.html">QtAws::AlexaForBusiness::CreateSkillGroupRequest</a>, <a href="qtaws-alexaforbusiness-createuserrequest.html">QtAws::AlexaForBusiness::CreateUserRequest</a>, <a href="qtaws-alexaforbusiness-deleteaddressbookrequest.html">QtAws::AlexaForBusiness::DeleteAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-deletecontactrequest.html">QtAws::AlexaForBusiness::DeleteContactRequest</a>, <a href="qtaws-alexaforbusiness-deleteprofilerequest.html">QtAws::AlexaForBusiness::DeleteProfileRequest</a>, <a href="qtaws-alexaforbusiness-deleteroomrequest.html">QtAws::AlexaForBusiness::DeleteRoomRequest</a>, <a href="qtaws-alexaforbusiness-deleteroomskillparameterrequest.html">QtAws::AlexaForBusiness::DeleteRoomSkillParameterRequest</a>, <a href="qtaws-alexaforbusiness-deleteskillgrouprequest.html">QtAws::AlexaForBusiness::DeleteSkillGroupRequest</a>, <a href="qtaws-alexaforbusiness-deleteuserrequest.html">QtAws::AlexaForBusiness::DeleteUserRequest</a>, <a href="qtaws-alexaforbusiness-disassociatecontactfromaddressbookrequest.html">QtAws::AlexaForBusiness::DisassociateContactFromAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-disassociatedevicefromroomrequest.html">QtAws::AlexaForBusiness::DisassociateDeviceFromRoomRequest</a>, <a href="qtaws-alexaforbusiness-disassociateskillgroupfromroomrequest.html">QtAws::AlexaForBusiness::DisassociateSkillGroupFromRoomRequest</a>, <a href="qtaws-alexaforbusiness-getaddressbookrequest.html">QtAws::AlexaForBusiness::GetAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-getcontactrequest.html">QtAws::AlexaForBusiness::GetContactRequest</a>, <a href="qtaws-alexaforbusiness-getdevicerequest.html">QtAws::AlexaForBusiness::GetDeviceRequest</a>, <a href="qtaws-alexaforbusiness-getprofilerequest.html">QtAws::AlexaForBusiness::GetProfileRequest</a>, <a href="qtaws-alexaforbusiness-getroomrequest.html">QtAws::AlexaForBusiness::GetRoomRequest</a>, <a href="qtaws-alexaforbusiness-getroomskillparameterrequest.html">QtAws::AlexaForBusiness::GetRoomSkillParameterRequest</a>, <a href="qtaws-alexaforbusiness-getskillgrouprequest.html">QtAws::AlexaForBusiness::GetSkillGroupRequest</a>, <a href="qtaws-alexaforbusiness-listskillsrequest.html">QtAws::AlexaForBusiness::ListSkillsRequest</a>, <a href="qtaws-alexaforbusiness-listtagsrequest.html">QtAws::AlexaForBusiness::ListTagsRequest</a>, <a href="qtaws-alexaforbusiness-putroomskillparameterrequest.html">QtAws::AlexaForBusiness::PutRoomSkillParameterRequest</a>, <a href="qtaws-alexaforbusiness-resolveroomrequest.html">QtAws::AlexaForBusiness::ResolveRoomRequest</a>, <a href="qtaws-alexaforbusiness-revokeinvitationrequest.html">QtAws::AlexaForBusiness::RevokeInvitationRequest</a>, <a href="qtaws-alexaforbusiness-searchaddressbooksrequest.html">QtAws::AlexaForBusiness::SearchAddressBooksRequest</a>, <a href="qtaws-alexaforbusiness-searchcontactsrequest.html">QtAws::AlexaForBusiness::SearchContactsRequest</a>, <a href="qtaws-alexaforbusiness-searchdevicesrequest.html">QtAws::AlexaForBusiness::SearchDevicesRequest</a>, <a href="qtaws-alexaforbusiness-searchprofilesrequest.html">QtAws::AlexaForBusiness::SearchProfilesRequest</a>, <a href="qtaws-alexaforbusiness-searchroomsrequest.html">QtAws::AlexaForBusiness::SearchRoomsRequest</a>, <a href="qtaws-alexaforbusiness-searchskillgroupsrequest.html">QtAws::AlexaForBusiness::SearchSkillGroupsRequest</a>, <a href="qtaws-alexaforbusiness-searchusersrequest.html">QtAws::AlexaForBusiness::SearchUsersRequest</a>, <a href="qtaws-alexaforbusiness-sendinvitationrequest.html">QtAws::AlexaForBusiness::SendInvitationRequest</a>, <a href="qtaws-alexaforbusiness-startdevicesyncrequest.html">QtAws::AlexaForBusiness::StartDeviceSyncRequest</a>, <a href="qtaws-alexaforbusiness-tagresourcerequest.html">QtAws::AlexaForBusiness::TagResourceRequest</a>, <a href="qtaws-alexaforbusiness-untagresourcerequest.html">QtAws::AlexaForBusiness::UntagResourceRequest</a>, <a href="qtaws-alexaforbusiness-updateaddressbookrequest.html">QtAws::AlexaForBusiness::UpdateAddressBookRequest</a>, <a href="qtaws-alexaforbusiness-updatecontactrequest.html">QtAws::AlexaForBusiness::UpdateContactRequest</a>, <a href="qtaws-alexaforbusiness-updatedevicerequest.html">QtAws::AlexaForBusiness::UpdateDeviceRequest</a>, <a href="qtaws-alexaforbusiness-updateprofilerequest.html">QtAws::AlexaForBusiness::UpdateProfileRequest</a>, <a href="qtaws-alexaforbusiness-updateroomrequest.html">QtAws::AlexaForBusiness::UpdateRoomRequest</a>, and <a href="qtaws-alexaforbusiness-updateskillgrouprequest.html">QtAws::AlexaForBusiness::UpdateSkillGroupRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-alexaforbusiness-alexaforbusinessrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#Action-enum">Action</a></b> { AssociateContactWithAddressBookAction, AssociateDeviceWithRoomAction, AssociateSkillGroupWithRoomAction, CreateAddressBookAction, ..., UpdateSkillGroupAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest">AlexaForBusinessRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest-1">AlexaForBusinessRequest</a></b>(const AlexaForBusinessRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AlexaForBusinessRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#operator-eq">operator=</a></b>(const AlexaForBusinessRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#operator-eq-eq">operator==</a></b>(const AlexaForBusinessRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest-2">AlexaForBusinessRequest</a></b>(AlexaForBusinessRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AlexaForBusinessRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">AlexaForBusinessRequest</a> class provides an interface for <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> requests.</p>
+</div>
+<!-- @@@AlexaForBusinessRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AssociateContactWithAddressBookAction$$$AssociateDeviceWithRoomAction$$$AssociateSkillGroupWithRoomAction$$$CreateAddressBookAction$$$CreateContactAction$$$CreateProfileAction$$$CreateRoomAction$$$CreateSkillGroupAction$$$CreateUserAction$$$DeleteAddressBookAction$$$DeleteContactAction$$$DeleteProfileAction$$$DeleteRoomAction$$$DeleteRoomSkillParameterAction$$$DeleteSkillGroupAction$$$DeleteUserAction$$$DisassociateContactFromAddressBookAction$$$DisassociateDeviceFromRoomAction$$$DisassociateSkillGroupFromRoomAction$$$GetAddressBookAction$$$GetContactAction$$$GetDeviceAction$$$GetProfileAction$$$GetRoomAction$$$GetRoomSkillParameterAction$$$GetSkillGroupAction$$$ListSkillsAction$$$ListTagsAction$$$PutRoomSkillParameterAction$$$ResolveRoomAction$$$RevokeInvitationAction$$$SearchAddressBooksAction$$$SearchContactsAction$$$SearchDevicesAction$$$SearchProfilesAction$$$SearchRoomsAction$$$SearchSkillGroupsAction$$$SearchUsersAction$$$SendInvitationAction$$$StartDeviceSyncAction$$$TagResourceAction$$$UntagResourceAction$$$UpdateAddressBookAction$$$UpdateContactAction$$$UpdateDeviceAction$$$UpdateProfileAction$$$UpdateRoomAction$$$UpdateSkillGroupAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum AlexaForBusinessRequest::<span class="name">Action</span><br/>flags AlexaForBusinessRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::AssociateContactWithAddressBookAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> AssociateContactWithAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::AssociateDeviceWithRoomAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> AssociateDeviceWithRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::AssociateSkillGroupWithRoomAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> AssociateSkillGroupWithRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateAddressBookAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateContactAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateContact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateProfileAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateRoomAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateSkillGroupAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateSkillGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::CreateUserAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> CreateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteAddressBookAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteContactAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteContact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteProfileAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteRoomAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteRoomSkillParameterAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteRoomSkillParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteSkillGroupAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteSkillGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DeleteUserAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DeleteUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DisassociateContactFromAddressBookAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DisassociateContactFromAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DisassociateDeviceFromRoomAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DisassociateDeviceFromRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::DisassociateSkillGroupFromRoomAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> DisassociateSkillGroupFromRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetAddressBookAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetContactAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetContact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetDeviceAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetDevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetProfileAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetRoomAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetRoomSkillParameterAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetRoomSkillParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::GetSkillGroupAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> GetSkillGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::ListSkillsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> ListSkills action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::ListTagsAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> ListTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::PutRoomSkillParameterAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> PutRoomSkillParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::ResolveRoomAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> ResolveRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::RevokeInvitationAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> RevokeInvitation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchAddressBooksAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchAddressBooks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchContactsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchContacts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchDevicesAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchDevices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchProfilesAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchProfiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchRoomsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchRooms action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchSkillGroupsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchSkillGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SearchUsersAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SearchUsers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::SendInvitationAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> SendInvitation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::StartDeviceSyncAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> StartDeviceSync action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::TagResourceAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> TagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UntagResourceAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UntagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateAddressBookAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateAddressBook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateContactAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateContact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateDeviceAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateDevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateProfileAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateRoomAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateRoom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AlexaForBusiness::AlexaForBusinessRequest::UpdateSkillGroupAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> UpdateSkillGroup action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AlexaForBusinessRequest[overload1]$$$AlexaForBusinessRequestconstAction -->
+<h3 class="fn" id="AlexaForBusinessRequest"><a name="AlexaForBusinessRequest"></a>AlexaForBusinessRequest::<span class="name">AlexaForBusinessRequest</span>(const <span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">AlexaForBusinessRequest</a> object for <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> <i>action</i>.</p>
+<!-- @@@AlexaForBusinessRequest -->
+<!-- $$$AlexaForBusinessRequest$$$AlexaForBusinessRequestconstAlexaForBusinessRequest& -->
+<h3 class="fn" id="AlexaForBusinessRequest-1"><a name="AlexaForBusinessRequest-1"></a>AlexaForBusinessRequest::<span class="name">AlexaForBusinessRequest</span>(const <span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest">AlexaForBusinessRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@AlexaForBusinessRequest -->
+<!-- $$$AlexaForBusinessRequest$$$AlexaForBusinessRequestAlexaForBusinessRequestPrivate*const -->
+<h3 class="fn" id="AlexaForBusinessRequest-2"><a name="AlexaForBusinessRequest-2"></a><code>[protected] </code>AlexaForBusinessRequest::<span class="name">AlexaForBusinessRequest</span>(<span class="type">AlexaForBusinessRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">AlexaForBusinessRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from AlexaForBusinessRequestPrivate.</p>
+<!-- @@@AlexaForBusinessRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#Action-enum">Action</a></span> AlexaForBusinessRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> AlexaForBusinessRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> AlexaForBusinessRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> AlexaForBusinessRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> AlexaForBusinessRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> AlexaForBusinessRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;AlexaForBusinessRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> AlexaForBusinessRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> AlexaForBusinessRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> AlexaForBusinessRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> AlexaForBusinessRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> AlexaForBusinessRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-alexaforbusiness.html">AlexaForBusiness</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constAlexaForBusinessRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest">AlexaForBusinessRequest</a></span> &amp;AlexaForBusinessRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest">AlexaForBusinessRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html">AlexaForBusinessRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constAlexaForBusinessRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> AlexaForBusinessRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-alexaforbusiness-alexaforbusinessrequest.html#AlexaForBusinessRequest">AlexaForBusinessRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

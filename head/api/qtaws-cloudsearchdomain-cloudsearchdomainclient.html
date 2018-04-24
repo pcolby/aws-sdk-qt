@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudsearchdomainclient.cpp -->
+  <title>CloudSearchDomainClient Class | CloudSearchDomain</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudsearchdomain-index.html">CloudSearchDomain</a></li>
+<li><a href="qtawscloudsearchdomain-module.html">C++ Classes</a></li>
+<li>CloudSearchDomainClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudSearchDomainClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">QtAws::CloudSearchDomain::CloudSearchDomainClient</a>)<br/></span>
+<!-- $$$CloudSearchDomainClient-brief -->
+<p>The <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> class provides access to the Amazon CloudSearch Domain service. <a href="#details">More...</a></p>
+<!-- @@@CloudSearchDomainClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudSearchDomainClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#CloudSearchDomainClient">CloudSearchDomainClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#CloudSearchDomainClient-1">CloudSearchDomainClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> SearchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#search">search</a></b>(const SearchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SuggestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#suggest">suggest</a></b>(const SuggestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadDocumentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#uploadDocuments">uploadDocuments</a></b>(const UploadDocumentsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudSearchDomainClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> class provides access to the Amazon CloudSearch Domain service.</p>
+<p>You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.</p>
+<p>&lt;/p</p>
+<p>The endpoints for submitting &lt;code&gt;UploadDocuments&lt;/code&gt;, &lt;code&gt;Search&lt;/code&gt;, and &lt;code&gt;Suggest&lt;/code&gt; requests are domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service &lt;code&gt;DescribeDomains&lt;/code&gt; action. The domain endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. You submit suggest requests to the search endpoint.</p>
+<p>&lt;/p</p>
+<p>For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide&quot;&gt;Amazon CloudSearch Developer</p>
+</div>
+<!-- @@@CloudSearchDomainClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudSearchDomainClient[overload1]$$$CloudSearchDomainClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudSearchDomainClient"><a name="CloudSearchDomainClient"></a>CloudSearchDomainClient::<span class="name">CloudSearchDomainClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudSearchDomainClient -->
+<!-- $$$CloudSearchDomainClient$$$CloudSearchDomainClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudSearchDomainClient-1"><a name="CloudSearchDomainClient-1"></a>CloudSearchDomainClient::<span class="name">CloudSearchDomainClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html#CloudSearchDomainClient">CloudSearchDomainClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudSearchDomainClient -->
+<!-- $$$search[overload1]$$$searchconstSearchRequest& -->
+<h3 class="fn" id="search"><a name="search"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearchdomain-searchresponse.html">SearchResponse</a></span> *CloudSearchDomainClient::<span class="name">search</span>(const <span class="type"><a href="qtaws-cloudsearchdomain-searchrequest.html">SearchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearchdomain-searchresponse.html">SearchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on which query parser you use. Amazon CloudSearch supports four query</p>
+<p>parsers&gt; &lt;ul&gt; &lt;li&gt;&lt;code&gt;simple&lt;/code&gt;: search all &lt;code&gt;text&lt;/code&gt; and &lt;code&gt;text-array&lt;/code&gt; fields for the specified string. Search for phrases, individual terms, and prefixes. &lt;/li&gt; &lt;li&gt;&lt;code&gt;structured&lt;/code&gt;: search specific fields, construct compound queries using Boolean operators, and use advanced features such as term boosting and proximity searching.&lt;/li&gt; &lt;li&gt;&lt;code&gt;lucene&lt;/code&gt;: specify search criteria using the Apache Lucene query parser syntax.&lt;/li&gt; &lt;li&gt;&lt;code&gt;dismax&lt;/code&gt;: specify search criteria using the simplified subset of the Apache Lucene query parser syntax defined by the DisMax query parser.&lt;/li&gt; &lt;/ul&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html&quot;&gt;Searching Your Data&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>The endpoint for submitting &lt;code&gt;Search&lt;/code&gt; requests is domain-specific. You submit search requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service &lt;code&gt;DescribeDomains&lt;/code&gt; action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console.</p>
+<!-- @@@search -->
+<!-- $$$suggest[overload1]$$$suggestconstSuggestRequest& -->
+<h3 class="fn" id="suggest"><a name="suggest"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearchdomain-suggestresponse.html">SuggestResponse</a></span> *CloudSearchDomainClient::<span class="name">suggest</span>(const <span class="type"><a href="qtaws-cloudsearchdomain-suggestrequest.html">SuggestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearchdomain-suggestresponse.html">SuggestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves autocomplete suggestions for a partial query string. You can use suggestions enable you to display likely matches before users finish typing. In Amazon CloudSearch, suggestions are based on the contents of a particular text field. When you request suggestions, Amazon CloudSearch finds all of the documents whose values in the suggester field start with the specified query string. The beginning of the field must match the query string to be considered a match.</p>
+<p>&lt;/p</p>
+<p>For more information about configuring suggesters and retrieving suggestions, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html&quot;&gt;Getting Suggestions&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.</p>
+<p>&lt;/p</p>
+<p>The endpoint for submitting &lt;code&gt;Suggest&lt;/code&gt; requests is domain-specific. You submit suggest requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service &lt;code&gt;DescribeDomains&lt;/code&gt; action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console.</p>
+<!-- @@@suggest -->
+<!-- $$$uploadDocuments[overload1]$$$uploadDocumentsconstUploadDocumentsRequest& -->
+<h3 class="fn" id="uploadDocuments"><a name="uploadDocuments"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearchdomain-uploaddocumentsresponse.html">UploadDocumentsResponse</a></span> *CloudSearchDomainClient::<span class="name">uploadDocuments</span>(const <span class="type"><a href="qtaws-cloudsearchdomain-uploaddocumentsrequest.html">UploadDocumentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">CloudSearchDomainClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearchdomain-uploaddocumentsresponse.html">UploadDocumentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Posts a batch of documents to a search domain for indexing. A document batch is a collection of add and delete operations that represent the documents you want to add, update, or delete from your domain. Batches can be described in either JSON or XML. Each item that you want Amazon CloudSearch to return as a search result (such as a product) is represented as a document. Every document has a unique ID and one or more fields that contain the data that you want to search and return in results. Individual documents cannot contain more than 1 MB of data. The entire batch cannot exceed 5 MB. To get the best possible upload performance, group add and delete operations in batches that are close the 5 MB limit. Submitting a large volume of single-document batches can overload a domain's document service.</p>
+<p>&lt;/p</p>
+<p>The endpoint for submitting &lt;code&gt;UploadDocuments&lt;/code&gt; requests is domain-specific. To get the document endpoint for your domain, use the Amazon CloudSearch configuration service &lt;code&gt;DescribeDomains&lt;/code&gt; action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console.</p>
+<p>&lt;/p</p>
+<p>For more information about formatting your data for Amazon CloudSearch, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/preparing-data.html&quot;&gt;Preparing Your Data&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;. For more information about uploading data for indexing, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html&quot;&gt;Uploading Data&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.</p>
+<!-- @@@uploadDocuments -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

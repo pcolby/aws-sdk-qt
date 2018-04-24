@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- storagegatewayrequest.cpp -->
+  <title>StorageGatewayRequest Class | StorageGateway</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsstoragegateway-index.html">StorageGateway</a></li>
+<li><a href="qtawsstoragegateway-module.html">C++ Classes</a></li>
+<li>StorageGatewayRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">StorageGatewayRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-storagegateway-storagegatewayrequest.html">QtAws::StorageGateway::StorageGatewayRequest</a>)<br/></span>
+<!-- $$$StorageGatewayRequest-brief -->
+<p>The <a href="qtaws-storagegateway-storagegatewayrequest.html">StorageGatewayRequest</a> class provides an interface for <a href="qtaws-storagegateway.html">StorageGateway</a> requests. <a href="#details">More...</a></p>
+<!-- @@@StorageGatewayRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;StorageGatewayRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-storagegateway-activategatewayrequest.html">QtAws::StorageGateway::ActivateGatewayRequest</a>, <a href="qtaws-storagegateway-addcacherequest.html">QtAws::StorageGateway::AddCacheRequest</a>, <a href="qtaws-storagegateway-addtagstoresourcerequest.html">QtAws::StorageGateway::AddTagsToResourceRequest</a>, <a href="qtaws-storagegateway-adduploadbufferrequest.html">QtAws::StorageGateway::AddUploadBufferRequest</a>, <a href="qtaws-storagegateway-addworkingstoragerequest.html">QtAws::StorageGateway::AddWorkingStorageRequest</a>, <a href="qtaws-storagegateway-cancelarchivalrequest.html">QtAws::StorageGateway::CancelArchivalRequest</a>, <a href="qtaws-storagegateway-cancelretrievalrequest.html">QtAws::StorageGateway::CancelRetrievalRequest</a>, <a href="qtaws-storagegateway-createcachediscsivolumerequest.html">QtAws::StorageGateway::CreateCachediSCSIVolumeRequest</a>, <a href="qtaws-storagegateway-createnfsfilesharerequest.html">QtAws::StorageGateway::CreateNFSFileShareRequest</a>, <a href="qtaws-storagegateway-createsnapshotfromvolumerecoverypointrequest.html">QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointRequest</a>, <a href="qtaws-storagegateway-createsnapshotrequest.html">QtAws::StorageGateway::CreateSnapshotRequest</a>, <a href="qtaws-storagegateway-createstorediscsivolumerequest.html">QtAws::StorageGateway::CreateStorediSCSIVolumeRequest</a>, <a href="qtaws-storagegateway-createtapesrequest.html">QtAws::StorageGateway::CreateTapesRequest</a>, <a href="qtaws-storagegateway-createtapewithbarcoderequest.html">QtAws::StorageGateway::CreateTapeWithBarcodeRequest</a>, <a href="qtaws-storagegateway-deletebandwidthratelimitrequest.html">QtAws::StorageGateway::DeleteBandwidthRateLimitRequest</a>, <a href="qtaws-storagegateway-deletechapcredentialsrequest.html">QtAws::StorageGateway::DeleteChapCredentialsRequest</a>, <a href="qtaws-storagegateway-deletefilesharerequest.html">QtAws::StorageGateway::DeleteFileShareRequest</a>, <a href="qtaws-storagegateway-deletegatewayrequest.html">QtAws::StorageGateway::DeleteGatewayRequest</a>, <a href="qtaws-storagegateway-deletesnapshotschedulerequest.html">QtAws::StorageGateway::DeleteSnapshotScheduleRequest</a>, <a href="qtaws-storagegateway-deletetapearchiverequest.html">QtAws::StorageGateway::DeleteTapeArchiveRequest</a>, <a href="qtaws-storagegateway-deletetaperequest.html">QtAws::StorageGateway::DeleteTapeRequest</a>, <a href="qtaws-storagegateway-deletevolumerequest.html">QtAws::StorageGateway::DeleteVolumeRequest</a>, <a href="qtaws-storagegateway-describebandwidthratelimitrequest.html">QtAws::StorageGateway::DescribeBandwidthRateLimitRequest</a>, <a href="qtaws-storagegateway-describecachediscsivolumesrequest.html">QtAws::StorageGateway::DescribeCachediSCSIVolumesRequest</a>, <a href="qtaws-storagegateway-describecacherequest.html">QtAws::StorageGateway::DescribeCacheRequest</a>, <a href="qtaws-storagegateway-describechapcredentialsrequest.html">QtAws::StorageGateway::DescribeChapCredentialsRequest</a>, <a href="qtaws-storagegateway-describegatewayinformationrequest.html">QtAws::StorageGateway::DescribeGatewayInformationRequest</a>, <a href="qtaws-storagegateway-describemaintenancestarttimerequest.html">QtAws::StorageGateway::DescribeMaintenanceStartTimeRequest</a>, <a href="qtaws-storagegateway-describenfsfilesharesrequest.html">QtAws::StorageGateway::DescribeNFSFileSharesRequest</a>, <a href="qtaws-storagegateway-describesnapshotschedulerequest.html">QtAws::StorageGateway::DescribeSnapshotScheduleRequest</a>, <a href="qtaws-storagegateway-describestorediscsivolumesrequest.html">QtAws::StorageGateway::DescribeStorediSCSIVolumesRequest</a>, <a href="qtaws-storagegateway-describetapearchivesrequest.html">QtAws::StorageGateway::DescribeTapeArchivesRequest</a>, <a href="qtaws-storagegateway-describetaperecoverypointsrequest.html">QtAws::StorageGateway::DescribeTapeRecoveryPointsRequest</a>, <a href="qtaws-storagegateway-describetapesrequest.html">QtAws::StorageGateway::DescribeTapesRequest</a>, <a href="qtaws-storagegateway-describeuploadbufferrequest.html">QtAws::StorageGateway::DescribeUploadBufferRequest</a>, <a href="qtaws-storagegateway-describevtldevicesrequest.html">QtAws::StorageGateway::DescribeVTLDevicesRequest</a>, <a href="qtaws-storagegateway-describeworkingstoragerequest.html">QtAws::StorageGateway::DescribeWorkingStorageRequest</a>, <a href="qtaws-storagegateway-disablegatewayrequest.html">QtAws::StorageGateway::DisableGatewayRequest</a>, <a href="qtaws-storagegateway-listfilesharesrequest.html">QtAws::StorageGateway::ListFileSharesRequest</a>, <a href="qtaws-storagegateway-listgatewaysrequest.html">QtAws::StorageGateway::ListGatewaysRequest</a>, <a href="qtaws-storagegateway-listlocaldisksrequest.html">QtAws::StorageGateway::ListLocalDisksRequest</a>, <a href="qtaws-storagegateway-listtagsforresourcerequest.html">QtAws::StorageGateway::ListTagsForResourceRequest</a>, <a href="qtaws-storagegateway-listtapesrequest.html">QtAws::StorageGateway::ListTapesRequest</a>, <a href="qtaws-storagegateway-listvolumeinitiatorsrequest.html">QtAws::StorageGateway::ListVolumeInitiatorsRequest</a>, <a href="qtaws-storagegateway-listvolumerecoverypointsrequest.html">QtAws::StorageGateway::ListVolumeRecoveryPointsRequest</a>, <a href="qtaws-storagegateway-listvolumesrequest.html">QtAws::StorageGateway::ListVolumesRequest</a>, <a href="qtaws-storagegateway-notifywhenuploadedrequest.html">QtAws::StorageGateway::NotifyWhenUploadedRequest</a>, <a href="qtaws-storagegateway-refreshcacherequest.html">QtAws::StorageGateway::RefreshCacheRequest</a>, <a href="qtaws-storagegateway-removetagsfromresourcerequest.html">QtAws::StorageGateway::RemoveTagsFromResourceRequest</a>, <a href="qtaws-storagegateway-resetcacherequest.html">QtAws::StorageGateway::ResetCacheRequest</a>, <a href="qtaws-storagegateway-retrievetapearchiverequest.html">QtAws::StorageGateway::RetrieveTapeArchiveRequest</a>, <a href="qtaws-storagegateway-retrievetaperecoverypointrequest.html">QtAws::StorageGateway::RetrieveTapeRecoveryPointRequest</a>, <a href="qtaws-storagegateway-setlocalconsolepasswordrequest.html">QtAws::StorageGateway::SetLocalConsolePasswordRequest</a>, <a href="qtaws-storagegateway-shutdowngatewayrequest.html">QtAws::StorageGateway::ShutdownGatewayRequest</a>, <a href="qtaws-storagegateway-startgatewayrequest.html">QtAws::StorageGateway::StartGatewayRequest</a>, <a href="qtaws-storagegateway-updatebandwidthratelimitrequest.html">QtAws::StorageGateway::UpdateBandwidthRateLimitRequest</a>, <a href="qtaws-storagegateway-updatechapcredentialsrequest.html">QtAws::StorageGateway::UpdateChapCredentialsRequest</a>, <a href="qtaws-storagegateway-updategatewayinformationrequest.html">QtAws::StorageGateway::UpdateGatewayInformationRequest</a>, <a href="qtaws-storagegateway-updategatewaysoftwarenowrequest.html">QtAws::StorageGateway::UpdateGatewaySoftwareNowRequest</a>, <a href="qtaws-storagegateway-updatemaintenancestarttimerequest.html">QtAws::StorageGateway::UpdateMaintenanceStartTimeRequest</a>, <a href="qtaws-storagegateway-updatenfsfilesharerequest.html">QtAws::StorageGateway::UpdateNFSFileShareRequest</a>, <a href="qtaws-storagegateway-updatesnapshotschedulerequest.html">QtAws::StorageGateway::UpdateSnapshotScheduleRequest</a>, and <a href="qtaws-storagegateway-updatevtldevicetyperequest.html">QtAws::StorageGateway::UpdateVTLDeviceTypeRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-storagegateway-storagegatewayrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#Action-enum">Action</a></b> { ActivateGatewayAction, AddCacheAction, AddTagsToResourceAction, AddUploadBufferAction, ..., UpdateVTLDeviceTypeAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest">StorageGatewayRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest-1">StorageGatewayRequest</a></b>(const StorageGatewayRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StorageGatewayRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#operator-eq">operator=</a></b>(const StorageGatewayRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#operator-eq-eq">operator==</a></b>(const StorageGatewayRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest-2">StorageGatewayRequest</a></b>(StorageGatewayRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$StorageGatewayRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-storagegateway-storagegatewayrequest.html">StorageGatewayRequest</a> class provides an interface for <a href="qtaws-storagegateway.html">StorageGateway</a> requests.</p>
+</div>
+<!-- @@@StorageGatewayRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$ActivateGatewayAction$$$AddCacheAction$$$AddTagsToResourceAction$$$AddUploadBufferAction$$$AddWorkingStorageAction$$$CancelArchivalAction$$$CancelRetrievalAction$$$CreateCachediSCSIVolumeAction$$$CreateNFSFileShareAction$$$CreateSnapshotAction$$$CreateSnapshotFromVolumeRecoveryPointAction$$$CreateStorediSCSIVolumeAction$$$CreateTapeWithBarcodeAction$$$CreateTapesAction$$$DeleteBandwidthRateLimitAction$$$DeleteChapCredentialsAction$$$DeleteFileShareAction$$$DeleteGatewayAction$$$DeleteSnapshotScheduleAction$$$DeleteTapeAction$$$DeleteTapeArchiveAction$$$DeleteVolumeAction$$$DescribeBandwidthRateLimitAction$$$DescribeCacheAction$$$DescribeCachediSCSIVolumesAction$$$DescribeChapCredentialsAction$$$DescribeGatewayInformationAction$$$DescribeMaintenanceStartTimeAction$$$DescribeNFSFileSharesAction$$$DescribeSnapshotScheduleAction$$$DescribeStorediSCSIVolumesAction$$$DescribeTapeArchivesAction$$$DescribeTapeRecoveryPointsAction$$$DescribeTapesAction$$$DescribeUploadBufferAction$$$DescribeVTLDevicesAction$$$DescribeWorkingStorageAction$$$DisableGatewayAction$$$ListFileSharesAction$$$ListGatewaysAction$$$ListLocalDisksAction$$$ListTagsForResourceAction$$$ListTapesAction$$$ListVolumeInitiatorsAction$$$ListVolumeRecoveryPointsAction$$$ListVolumesAction$$$NotifyWhenUploadedAction$$$RefreshCacheAction$$$RemoveTagsFromResourceAction$$$ResetCacheAction$$$RetrieveTapeArchiveAction$$$RetrieveTapeRecoveryPointAction$$$SetLocalConsolePasswordAction$$$ShutdownGatewayAction$$$StartGatewayAction$$$UpdateBandwidthRateLimitAction$$$UpdateChapCredentialsAction$$$UpdateGatewayInformationAction$$$UpdateGatewaySoftwareNowAction$$$UpdateMaintenanceStartTimeAction$$$UpdateNFSFileShareAction$$$UpdateSnapshotScheduleAction$$$UpdateVTLDeviceTypeAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum StorageGatewayRequest::<span class="name">Action</span><br/>flags StorageGatewayRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-storagegateway.html">StorageGateway</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ActivateGatewayAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ActivateGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::AddCacheAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> AddCache action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::AddTagsToResourceAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> AddTagsToResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::AddUploadBufferAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> AddUploadBuffer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::AddWorkingStorageAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> AddWorkingStorage action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CancelArchivalAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CancelArchival action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CancelRetrievalAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CancelRetrieval action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateCachediSCSIVolumeAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateCachediSCSIVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateNFSFileShareAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateNFSFileShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateSnapshotAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateSnapshotFromVolumeRecoveryPointAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateSnapshotFromVolumeRecoveryPoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateStorediSCSIVolumeAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateStorediSCSIVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateTapeWithBarcodeAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateTapeWithBarcode action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::CreateTapesAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> CreateTapes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteBandwidthRateLimitAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteBandwidthRateLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteChapCredentialsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteChapCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteFileShareAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteFileShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteGatewayAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteSnapshotScheduleAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteSnapshotSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteTapeAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteTape action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteTapeArchiveAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteTapeArchive action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DeleteVolumeAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DeleteVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeBandwidthRateLimitAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeBandwidthRateLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeCacheAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeCache action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeCachediSCSIVolumesAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeCachediSCSIVolumes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeChapCredentialsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeChapCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeGatewayInformationAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeGatewayInformation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeMaintenanceStartTimeAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeMaintenanceStartTime action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeNFSFileSharesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeNFSFileShares action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeSnapshotScheduleAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeSnapshotSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeStorediSCSIVolumesAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeStorediSCSIVolumes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeTapeArchivesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeTapeArchives action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeTapeRecoveryPointsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeTapeRecoveryPoints action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeTapesAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeTapes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeUploadBufferAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeUploadBuffer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeVTLDevicesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeVTLDevices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DescribeWorkingStorageAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DescribeWorkingStorage action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::DisableGatewayAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> DisableGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListFileSharesAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListFileShares action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListGatewaysAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListGateways action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListLocalDisksAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListLocalDisks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListTapesAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListTapes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListVolumeInitiatorsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListVolumeInitiators action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListVolumeRecoveryPointsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListVolumeRecoveryPoints action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ListVolumesAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ListVolumes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::NotifyWhenUploadedAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> NotifyWhenUploaded action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::RefreshCacheAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> RefreshCache action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::RemoveTagsFromResourceAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> RemoveTagsFromResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ResetCacheAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ResetCache action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::RetrieveTapeArchiveAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> RetrieveTapeArchive action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::RetrieveTapeRecoveryPointAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> RetrieveTapeRecoveryPoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::SetLocalConsolePasswordAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> SetLocalConsolePassword action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::ShutdownGatewayAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> ShutdownGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::StartGatewayAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> StartGateway action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateBandwidthRateLimitAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateBandwidthRateLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateChapCredentialsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateChapCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateGatewayInformationAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateGatewayInformation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateGatewaySoftwareNowAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateGatewaySoftwareNow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateMaintenanceStartTimeAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateMaintenanceStartTime action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateNFSFileShareAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateNFSFileShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateSnapshotScheduleAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateSnapshotSchedule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::StorageGateway::StorageGatewayRequest::UpdateVTLDeviceTypeAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign"><a href="qtaws-storagegateway.html">StorageGateway</a> UpdateVTLDeviceType action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$StorageGatewayRequest[overload1]$$$StorageGatewayRequestconstAction -->
+<h3 class="fn" id="StorageGatewayRequest"><a name="StorageGatewayRequest"></a>StorageGatewayRequest::<span class="name">StorageGatewayRequest</span>(const <span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-storagegateway-storagegatewayrequest.html">StorageGatewayRequest</a> object for <a href="qtaws-storagegateway.html">StorageGateway</a> <i>action</i>.</p>
+<!-- @@@StorageGatewayRequest -->
+<!-- $$$StorageGatewayRequest$$$StorageGatewayRequestconstStorageGatewayRequest& -->
+<h3 class="fn" id="StorageGatewayRequest-1"><a name="StorageGatewayRequest-1"></a>StorageGatewayRequest::<span class="name">StorageGatewayRequest</span>(const <span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest">StorageGatewayRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@StorageGatewayRequest -->
+<!-- $$$StorageGatewayRequest$$$StorageGatewayRequestStorageGatewayRequestPrivate*const -->
+<h3 class="fn" id="StorageGatewayRequest-2"><a name="StorageGatewayRequest-2"></a><code>[protected] </code>StorageGatewayRequest::<span class="name">StorageGatewayRequest</span>(<span class="type"><a href="qtaws-storagegateway-storagegatewayrequestprivate.html">StorageGatewayRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-storagegateway-storagegatewayrequest.html">StorageGatewayRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-storagegateway-storagegatewayrequestprivate.html">StorageGatewayRequestPrivate</a>.</p>
+<!-- @@@StorageGatewayRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#Action-enum">Action</a></span> StorageGatewayRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-storagegateway.html">StorageGateway</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> StorageGatewayRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-storagegateway.html">StorageGateway</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> StorageGatewayRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-storagegateway.html">StorageGateway</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> StorageGatewayRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> StorageGatewayRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> StorageGatewayRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;StorageGatewayRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> StorageGatewayRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-storagegateway.html">StorageGateway</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> StorageGatewayRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-storagegateway.html">StorageGateway</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> StorageGatewayRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> StorageGatewayRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-storagegateway-storagegatewayrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> StorageGatewayRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-storagegateway.html">StorageGateway</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-storagegateway.html">StorageGateway</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-storagegateway-storagegatewayrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constStorageGatewayRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest">StorageGatewayRequest</a></span> &amp;StorageGatewayRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest">StorageGatewayRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-storagegateway-storagegatewayrequest.html">StorageGatewayRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constStorageGatewayRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> StorageGatewayRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-storagegateway-storagegatewayrequest.html#StorageGatewayRequest">StorageGatewayRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

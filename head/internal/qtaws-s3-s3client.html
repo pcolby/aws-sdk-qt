@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- s3client.cpp -->
+  <title>S3Client Class | S3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawss3-index.html">S3</a></li>
+<li><a href="qtawss3-module.html">C++ Classes</a></li>
+<li>S3Client</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">S3Client Class</h1>
+<span class="small-subtitle">(<a href="qtaws-s3-s3client.html">QtAws::S3::S3Client</a>)<br/></span>
+<!-- $$$S3Client-brief -->
+<p>The <a href="qtaws-s3-s3client.html">S3Client</a> class provides access to the Amazon Simple Storage Service ( S3) service. <a href="#details">More...</a></p>
+<!-- @@@S3Client -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;S3Client&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-s3-s3client-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#S3Client">S3Client</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#S3Client-1">S3Client</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AbortMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#abortMultipartUpload">abortMultipartUpload</a></b>(const AbortMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CompleteMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#completeMultipartUpload">completeMultipartUpload</a></b>(const CompleteMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#copyObject">copyObject</a></b>(const CopyObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBucketResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#createBucket">createBucket</a></b>(const CreateBucketRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#createMultipartUpload">createMultipartUpload</a></b>(const CreateMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucket">deleteBucket</a></b>(const DeleteBucketRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketAnalyticsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketAnalyticsConfiguration">deleteBucketAnalyticsConfiguration</a></b>(const DeleteBucketAnalyticsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketCorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketCors">deleteBucketCors</a></b>(const DeleteBucketCorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketEncryptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketEncryption">deleteBucketEncryption</a></b>(const DeleteBucketEncryptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketInventoryConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketInventoryConfiguration">deleteBucketInventoryConfiguration</a></b>(const DeleteBucketInventoryConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketLifecycleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketLifecycle">deleteBucketLifecycle</a></b>(const DeleteBucketLifecycleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketMetricsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketMetricsConfiguration">deleteBucketMetricsConfiguration</a></b>(const DeleteBucketMetricsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketPolicy">deleteBucketPolicy</a></b>(const DeleteBucketPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketReplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketReplication">deleteBucketReplication</a></b>(const DeleteBucketReplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketTagging">deleteBucketTagging</a></b>(const DeleteBucketTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBucketWebsiteResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteBucketWebsite">deleteBucketWebsite</a></b>(const DeleteBucketWebsiteRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteObject">deleteObject</a></b>(const DeleteObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteObjectTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteObjectTagging">deleteObjectTagging</a></b>(const DeleteObjectTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteObjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#deleteObjects">deleteObjects</a></b>(const DeleteObjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketAccelerateConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketAccelerateConfiguration">getBucketAccelerateConfiguration</a></b>(const GetBucketAccelerateConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketAclResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketAcl">getBucketAcl</a></b>(const GetBucketAclRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketAnalyticsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketAnalyticsConfiguration">getBucketAnalyticsConfiguration</a></b>(const GetBucketAnalyticsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketCorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketCors">getBucketCors</a></b>(const GetBucketCorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketEncryptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketEncryption">getBucketEncryption</a></b>(const GetBucketEncryptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketInventoryConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketInventoryConfiguration">getBucketInventoryConfiguration</a></b>(const GetBucketInventoryConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketLifecycleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketLifecycle">getBucketLifecycle</a></b>(const GetBucketLifecycleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketLifecycleConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketLifecycleConfiguration">getBucketLifecycleConfiguration</a></b>(const GetBucketLifecycleConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketLocationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketLocation">getBucketLocation</a></b>(const GetBucketLocationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketLoggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketLogging">getBucketLogging</a></b>(const GetBucketLoggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketMetricsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketMetricsConfiguration">getBucketMetricsConfiguration</a></b>(const GetBucketMetricsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketNotification">getBucketNotification</a></b>(const GetBucketNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketNotificationConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketNotificationConfiguration">getBucketNotificationConfiguration</a></b>(const GetBucketNotificationConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketPolicy">getBucketPolicy</a></b>(const GetBucketPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketReplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketReplication">getBucketReplication</a></b>(const GetBucketReplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketRequestPaymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketRequestPayment">getBucketRequestPayment</a></b>(const GetBucketRequestPaymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketTagging">getBucketTagging</a></b>(const GetBucketTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketVersioningResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketVersioning">getBucketVersioning</a></b>(const GetBucketVersioningRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBucketWebsiteResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getBucketWebsite">getBucketWebsite</a></b>(const GetBucketWebsiteRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getObject">getObject</a></b>(const GetObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectAclResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getObjectAcl">getObjectAcl</a></b>(const GetObjectAclRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getObjectTagging">getObjectTagging</a></b>(const GetObjectTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectTorrentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#getObjectTorrent">getObjectTorrent</a></b>(const GetObjectTorrentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> HeadBucketResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#headBucket">headBucket</a></b>(const HeadBucketRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> HeadObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#headObject">headObject</a></b>(const HeadObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBucketAnalyticsConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listBucketAnalyticsConfigurations">listBucketAnalyticsConfigurations</a></b>(const ListBucketAnalyticsConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBucketInventoryConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listBucketInventoryConfigurations">listBucketInventoryConfigurations</a></b>(const ListBucketInventoryConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBucketMetricsConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listBucketMetricsConfigurations">listBucketMetricsConfigurations</a></b>(const ListBucketMetricsConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBucketsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listBuckets">listBuckets</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMultipartUploadsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listMultipartUploads">listMultipartUploads</a></b>(const ListMultipartUploadsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listObjectVersions">listObjectVersions</a></b>(const ListObjectVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listObjects">listObjects</a></b>(const ListObjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectsV2Response *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listObjectsV2">listObjectsV2</a></b>(const ListObjectsV2Request &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPartsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#listParts">listParts</a></b>(const ListPartsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketAccelerateConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketAccelerateConfiguration">putBucketAccelerateConfiguration</a></b>(const PutBucketAccelerateConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketAclResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketAcl">putBucketAcl</a></b>(const PutBucketAclRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketAnalyticsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketAnalyticsConfiguration">putBucketAnalyticsConfiguration</a></b>(const PutBucketAnalyticsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketCorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketCors">putBucketCors</a></b>(const PutBucketCorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketEncryptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketEncryption">putBucketEncryption</a></b>(const PutBucketEncryptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketInventoryConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketInventoryConfiguration">putBucketInventoryConfiguration</a></b>(const PutBucketInventoryConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketLifecycleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketLifecycle">putBucketLifecycle</a></b>(const PutBucketLifecycleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketLifecycleConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketLifecycleConfiguration">putBucketLifecycleConfiguration</a></b>(const PutBucketLifecycleConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketLoggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketLogging">putBucketLogging</a></b>(const PutBucketLoggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketMetricsConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketMetricsConfiguration">putBucketMetricsConfiguration</a></b>(const PutBucketMetricsConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketNotification">putBucketNotification</a></b>(const PutBucketNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketNotificationConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketNotificationConfiguration">putBucketNotificationConfiguration</a></b>(const PutBucketNotificationConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketPolicy">putBucketPolicy</a></b>(const PutBucketPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketReplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketReplication">putBucketReplication</a></b>(const PutBucketReplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketRequestPaymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketRequestPayment">putBucketRequestPayment</a></b>(const PutBucketRequestPaymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketTagging">putBucketTagging</a></b>(const PutBucketTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketVersioningResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketVersioning">putBucketVersioning</a></b>(const PutBucketVersioningRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBucketWebsiteResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putBucketWebsite">putBucketWebsite</a></b>(const PutBucketWebsiteRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putObject">putObject</a></b>(const PutObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutObjectAclResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putObjectAcl">putObjectAcl</a></b>(const PutObjectAclRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutObjectTaggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#putObjectTagging">putObjectTagging</a></b>(const PutObjectTaggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#restoreObject">restoreObject</a></b>(const RestoreObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SelectObjectContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#selectObjectContent">selectObjectContent</a></b>(const SelectObjectContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#uploadPart">uploadPart</a></b>(const UploadPartRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadPartCopyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3client.html#uploadPartCopy">uploadPartCopy</a></b>(const UploadPartCopyRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$S3Client-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-s3-s3client.html">S3Client</a> class provides access to the Amazon Simple Storage Service ( S3) service.</p>
+</div>
+<!-- @@@S3Client -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$S3Client[overload1]$$$S3ClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="S3Client"><a name="S3Client"></a>S3Client::<span class="name">S3Client</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-s3-s3client.html">S3Client</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@S3Client -->
+<!-- $$$S3Client$$$S3ClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="S3Client-1"><a name="S3Client-1"></a>S3Client::<span class="name">S3Client</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-s3-s3client.html#S3Client">S3Client</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@S3Client -->
+<!-- $$$abortMultipartUpload[overload1]$$$abortMultipartUploadconstAbortMultipartUploadRequest& -->
+<h3 class="fn" id="abortMultipartUpload"><a name="abortMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-abortmultipartuploadresponse.html">AbortMultipartUploadResponse</a></span> *S3Client::<span class="name">abortMultipartUpload</span>(const <span class="type"><a href="qtaws-s3-abortmultipartuploadrequest.html">AbortMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-abortmultipartuploadresponse.html">AbortMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Aborts a multipart upload.&lt;/p&gt;&lt;p&gt;To verify that all parts have been removed, so you don't get charged for the part storage, you should call the List Parts operation and ensure the parts list is</p>
+<!-- @@@abortMultipartUpload -->
+<!-- $$$completeMultipartUpload[overload1]$$$completeMultipartUploadconstCompleteMultipartUploadRequest& -->
+<h3 class="fn" id="completeMultipartUpload"><a name="completeMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-completemultipartuploadresponse.html">CompleteMultipartUploadResponse</a></span> *S3Client::<span class="name">completeMultipartUpload</span>(const <span class="type"><a href="qtaws-s3-completemultipartuploadrequest.html">CompleteMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-completemultipartuploadresponse.html">CompleteMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@completeMultipartUpload -->
+<!-- $$$copyObject[overload1]$$$copyObjectconstCopyObjectRequest& -->
+<h3 class="fn" id="copyObject"><a name="copyObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-copyobjectresponse.html">CopyObjectResponse</a></span> *S3Client::<span class="name">copyObject</span>(const <span class="type"><a href="qtaws-s3-copyobjectrequest.html">CopyObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-copyobjectresponse.html">CopyObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@copyObject -->
+<!-- $$$createBucket[overload1]$$$createBucketconstCreateBucketRequest& -->
+<h3 class="fn" id="createBucket"><a name="createBucket"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-createbucketresponse.html">CreateBucketResponse</a></span> *S3Client::<span class="name">createBucket</span>(const <span class="type"><a href="qtaws-s3-createbucketrequest.html">CreateBucketRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-createbucketresponse.html">CreateBucketResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createBucket -->
+<!-- $$$createMultipartUpload[overload1]$$$createMultipartUploadconstCreateMultipartUploadRequest& -->
+<h3 class="fn" id="createMultipartUpload"><a name="createMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-createmultipartuploadresponse.html">CreateMultipartUploadResponse</a></span> *S3Client::<span class="name">createMultipartUpload</span>(const <span class="type"><a href="qtaws-s3-createmultipartuploadrequest.html">CreateMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-createmultipartuploadresponse.html">CreateMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a multipart upload and returns an upload ID.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; After you initiate multipart upload and upload one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts</p>
+<!-- @@@createMultipartUpload -->
+<!-- $$$deleteBucket[overload1]$$$deleteBucketconstDeleteBucketRequest& -->
+<h3 class="fn" id="deleteBucket"><a name="deleteBucket"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketresponse.html">DeleteBucketResponse</a></span> *S3Client::<span class="name">deleteBucket</span>(const <span class="type"><a href="qtaws-s3-deletebucketrequest.html">DeleteBucketRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketresponse.html">DeleteBucketResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before</p>
+<!-- @@@deleteBucket -->
+<!-- $$$deleteBucketAnalyticsConfiguration[overload1]$$$deleteBucketAnalyticsConfigurationconstDeleteBucketAnalyticsConfigurationRequest& -->
+<h3 class="fn" id="deleteBucketAnalyticsConfiguration"><a name="deleteBucketAnalyticsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketanalyticsconfigurationresponse.html">DeleteBucketAnalyticsConfigurationResponse</a></span> *S3Client::<span class="name">deleteBucketAnalyticsConfiguration</span>(const <span class="type"><a href="qtaws-s3-deletebucketanalyticsconfigurationrequest.html">DeleteBucketAnalyticsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketanalyticsconfigurationresponse.html">DeleteBucketAnalyticsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketAnalyticsConfiguration -->
+<!-- $$$deleteBucketCors[overload1]$$$deleteBucketCorsconstDeleteBucketCorsRequest& -->
+<h3 class="fn" id="deleteBucketCors"><a name="deleteBucketCors"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketcorsresponse.html">DeleteBucketCorsResponse</a></span> *S3Client::<span class="name">deleteBucketCors</span>(const <span class="type"><a href="qtaws-s3-deletebucketcorsrequest.html">DeleteBucketCorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketcorsresponse.html">DeleteBucketCorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketCors -->
+<!-- $$$deleteBucketEncryption[overload1]$$$deleteBucketEncryptionconstDeleteBucketEncryptionRequest& -->
+<h3 class="fn" id="deleteBucketEncryption"><a name="deleteBucketEncryption"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketencryptionresponse.html">DeleteBucketEncryptionResponse</a></span> *S3Client::<span class="name">deleteBucketEncryption</span>(const <span class="type"><a href="qtaws-s3-deletebucketencryptionrequest.html">DeleteBucketEncryptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketencryptionresponse.html">DeleteBucketEncryptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketEncryption -->
+<!-- $$$deleteBucketInventoryConfiguration[overload1]$$$deleteBucketInventoryConfigurationconstDeleteBucketInventoryConfigurationRequest& -->
+<h3 class="fn" id="deleteBucketInventoryConfiguration"><a name="deleteBucketInventoryConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketinventoryconfigurationresponse.html">DeleteBucketInventoryConfigurationResponse</a></span> *S3Client::<span class="name">deleteBucketInventoryConfiguration</span>(const <span class="type"><a href="qtaws-s3-deletebucketinventoryconfigurationrequest.html">DeleteBucketInventoryConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketinventoryconfigurationresponse.html">DeleteBucketInventoryConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketInventoryConfiguration -->
+<!-- $$$deleteBucketLifecycle[overload1]$$$deleteBucketLifecycleconstDeleteBucketLifecycleRequest& -->
+<h3 class="fn" id="deleteBucketLifecycle"><a name="deleteBucketLifecycle"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketlifecycleresponse.html">DeleteBucketLifecycleResponse</a></span> *S3Client::<span class="name">deleteBucketLifecycle</span>(const <span class="type"><a href="qtaws-s3-deletebucketlifecyclerequest.html">DeleteBucketLifecycleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketlifecycleresponse.html">DeleteBucketLifecycleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketLifecycle -->
+<!-- $$$deleteBucketMetricsConfiguration[overload1]$$$deleteBucketMetricsConfigurationconstDeleteBucketMetricsConfigurationRequest& -->
+<h3 class="fn" id="deleteBucketMetricsConfiguration"><a name="deleteBucketMetricsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketmetricsconfigurationresponse.html">DeleteBucketMetricsConfigurationResponse</a></span> *S3Client::<span class="name">deleteBucketMetricsConfiguration</span>(const <span class="type"><a href="qtaws-s3-deletebucketmetricsconfigurationrequest.html">DeleteBucketMetricsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketmetricsconfigurationresponse.html">DeleteBucketMetricsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketMetricsConfiguration -->
+<!-- $$$deleteBucketPolicy[overload1]$$$deleteBucketPolicyconstDeleteBucketPolicyRequest& -->
+<h3 class="fn" id="deleteBucketPolicy"><a name="deleteBucketPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketpolicyresponse.html">DeleteBucketPolicyResponse</a></span> *S3Client::<span class="name">deleteBucketPolicy</span>(const <span class="type"><a href="qtaws-s3-deletebucketpolicyrequest.html">DeleteBucketPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketpolicyresponse.html">DeleteBucketPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketPolicy -->
+<!-- $$$deleteBucketReplication[overload1]$$$deleteBucketReplicationconstDeleteBucketReplicationRequest& -->
+<h3 class="fn" id="deleteBucketReplication"><a name="deleteBucketReplication"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketreplicationresponse.html">DeleteBucketReplicationResponse</a></span> *S3Client::<span class="name">deleteBucketReplication</span>(const <span class="type"><a href="qtaws-s3-deletebucketreplicationrequest.html">DeleteBucketReplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketreplicationresponse.html">DeleteBucketReplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketReplication -->
+<!-- $$$deleteBucketTagging[overload1]$$$deleteBucketTaggingconstDeleteBucketTaggingRequest& -->
+<h3 class="fn" id="deleteBucketTagging"><a name="deleteBucketTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebuckettaggingresponse.html">DeleteBucketTaggingResponse</a></span> *S3Client::<span class="name">deleteBucketTagging</span>(const <span class="type"><a href="qtaws-s3-deletebuckettaggingrequest.html">DeleteBucketTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebuckettaggingresponse.html">DeleteBucketTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketTagging -->
+<!-- $$$deleteBucketWebsite[overload1]$$$deleteBucketWebsiteconstDeleteBucketWebsiteRequest& -->
+<h3 class="fn" id="deleteBucketWebsite"><a name="deleteBucketWebsite"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deletebucketwebsiteresponse.html">DeleteBucketWebsiteResponse</a></span> *S3Client::<span class="name">deleteBucketWebsite</span>(const <span class="type"><a href="qtaws-s3-deletebucketwebsiterequest.html">DeleteBucketWebsiteRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deletebucketwebsiteresponse.html">DeleteBucketWebsiteResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBucketWebsite -->
+<!-- $$$deleteObject[overload1]$$$deleteObjectconstDeleteObjectRequest& -->
+<h3 class="fn" id="deleteObject"><a name="deleteObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deleteobjectresponse.html">DeleteObjectResponse</a></span> *S3Client::<span class="name">deleteObject</span>(const <span class="type"><a href="qtaws-s3-deleteobjectrequest.html">DeleteObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deleteobjectresponse.html">DeleteObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of</p>
+<!-- @@@deleteObject -->
+<!-- $$$deleteObjectTagging[overload1]$$$deleteObjectTaggingconstDeleteObjectTaggingRequest& -->
+<h3 class="fn" id="deleteObjectTagging"><a name="deleteObjectTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deleteobjecttaggingresponse.html">DeleteObjectTaggingResponse</a></span> *S3Client::<span class="name">deleteObjectTagging</span>(const <span class="type"><a href="qtaws-s3-deleteobjecttaggingrequest.html">DeleteObjectTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deleteobjecttaggingresponse.html">DeleteObjectTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteObjectTagging -->
+<!-- $$$deleteObjects[overload1]$$$deleteObjectsconstDeleteObjectsRequest& -->
+<h3 class="fn" id="deleteObjects"><a name="deleteObjects"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-deleteobjectsresponse.html">DeleteObjectsResponse</a></span> *S3Client::<span class="name">deleteObjects</span>(const <span class="type"><a href="qtaws-s3-deleteobjectsrequest.html">DeleteObjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-deleteobjectsresponse.html">DeleteObjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to</p>
+<!-- @@@deleteObjects -->
+<!-- $$$getBucketAccelerateConfiguration[overload1]$$$getBucketAccelerateConfigurationconstGetBucketAccelerateConfigurationRequest& -->
+<h3 class="fn" id="getBucketAccelerateConfiguration"><a name="getBucketAccelerateConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketaccelerateconfigurationresponse.html">GetBucketAccelerateConfigurationResponse</a></span> *S3Client::<span class="name">getBucketAccelerateConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketaccelerateconfigurationrequest.html">GetBucketAccelerateConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketaccelerateconfigurationresponse.html">GetBucketAccelerateConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketAccelerateConfiguration -->
+<!-- $$$getBucketAcl[overload1]$$$getBucketAclconstGetBucketAclRequest& -->
+<h3 class="fn" id="getBucketAcl"><a name="getBucketAcl"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketaclresponse.html">GetBucketAclResponse</a></span> *S3Client::<span class="name">getBucketAcl</span>(const <span class="type"><a href="qtaws-s3-getbucketaclrequest.html">GetBucketAclRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketaclresponse.html">GetBucketAclResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketAcl -->
+<!-- $$$getBucketAnalyticsConfiguration[overload1]$$$getBucketAnalyticsConfigurationconstGetBucketAnalyticsConfigurationRequest& -->
+<h3 class="fn" id="getBucketAnalyticsConfiguration"><a name="getBucketAnalyticsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketanalyticsconfigurationresponse.html">GetBucketAnalyticsConfigurationResponse</a></span> *S3Client::<span class="name">getBucketAnalyticsConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketanalyticsconfigurationrequest.html">GetBucketAnalyticsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketanalyticsconfigurationresponse.html">GetBucketAnalyticsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketAnalyticsConfiguration -->
+<!-- $$$getBucketCors[overload1]$$$getBucketCorsconstGetBucketCorsRequest& -->
+<h3 class="fn" id="getBucketCors"><a name="getBucketCors"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketcorsresponse.html">GetBucketCorsResponse</a></span> *S3Client::<span class="name">getBucketCors</span>(const <span class="type"><a href="qtaws-s3-getbucketcorsrequest.html">GetBucketCorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketcorsresponse.html">GetBucketCorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketCors -->
+<!-- $$$getBucketEncryption[overload1]$$$getBucketEncryptionconstGetBucketEncryptionRequest& -->
+<h3 class="fn" id="getBucketEncryption"><a name="getBucketEncryption"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketencryptionresponse.html">GetBucketEncryptionResponse</a></span> *S3Client::<span class="name">getBucketEncryption</span>(const <span class="type"><a href="qtaws-s3-getbucketencryptionrequest.html">GetBucketEncryptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketencryptionresponse.html">GetBucketEncryptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketEncryption -->
+<!-- $$$getBucketInventoryConfiguration[overload1]$$$getBucketInventoryConfigurationconstGetBucketInventoryConfigurationRequest& -->
+<h3 class="fn" id="getBucketInventoryConfiguration"><a name="getBucketInventoryConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketinventoryconfigurationresponse.html">GetBucketInventoryConfigurationResponse</a></span> *S3Client::<span class="name">getBucketInventoryConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketinventoryconfigurationrequest.html">GetBucketInventoryConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketinventoryconfigurationresponse.html">GetBucketInventoryConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketInventoryConfiguration -->
+<!-- $$$getBucketLifecycle[overload1]$$$getBucketLifecycleconstGetBucketLifecycleRequest& -->
+<h3 class="fn" id="getBucketLifecycle"><a name="getBucketLifecycle"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketlifecycleresponse.html">GetBucketLifecycleResponse</a></span> *S3Client::<span class="name">getBucketLifecycle</span>(const <span class="type"><a href="qtaws-s3-getbucketlifecyclerequest.html">GetBucketLifecycleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketlifecycleresponse.html">GetBucketLifecycleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketLifecycle -->
+<!-- $$$getBucketLifecycleConfiguration[overload1]$$$getBucketLifecycleConfigurationconstGetBucketLifecycleConfigurationRequest& -->
+<h3 class="fn" id="getBucketLifecycleConfiguration"><a name="getBucketLifecycleConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketlifecycleconfigurationresponse.html">GetBucketLifecycleConfigurationResponse</a></span> *S3Client::<span class="name">getBucketLifecycleConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketlifecycleconfigurationrequest.html">GetBucketLifecycleConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketlifecycleconfigurationresponse.html">GetBucketLifecycleConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketLifecycleConfiguration -->
+<!-- $$$getBucketLocation[overload1]$$$getBucketLocationconstGetBucketLocationRequest& -->
+<h3 class="fn" id="getBucketLocation"><a name="getBucketLocation"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketlocationresponse.html">GetBucketLocationResponse</a></span> *S3Client::<span class="name">getBucketLocation</span>(const <span class="type"><a href="qtaws-s3-getbucketlocationrequest.html">GetBucketLocationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketlocationresponse.html">GetBucketLocationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketLocation -->
+<!-- $$$getBucketLogging[overload1]$$$getBucketLoggingconstGetBucketLoggingRequest& -->
+<h3 class="fn" id="getBucketLogging"><a name="getBucketLogging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketloggingresponse.html">GetBucketLoggingResponse</a></span> *S3Client::<span class="name">getBucketLogging</span>(const <span class="type"><a href="qtaws-s3-getbucketloggingrequest.html">GetBucketLoggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketloggingresponse.html">GetBucketLoggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you</p>
+<!-- @@@getBucketLogging -->
+<!-- $$$getBucketMetricsConfiguration[overload1]$$$getBucketMetricsConfigurationconstGetBucketMetricsConfigurationRequest& -->
+<h3 class="fn" id="getBucketMetricsConfiguration"><a name="getBucketMetricsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketmetricsconfigurationresponse.html">GetBucketMetricsConfigurationResponse</a></span> *S3Client::<span class="name">getBucketMetricsConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketmetricsconfigurationrequest.html">GetBucketMetricsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketmetricsconfigurationresponse.html">GetBucketMetricsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketMetricsConfiguration -->
+<!-- $$$getBucketNotification[overload1]$$$getBucketNotificationconstGetBucketNotificationRequest& -->
+<h3 class="fn" id="getBucketNotification"><a name="getBucketNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketnotificationresponse.html">GetBucketNotificationResponse</a></span> *S3Client::<span class="name">getBucketNotification</span>(const <span class="type"><a href="qtaws-s3-getbucketnotificationrequest.html">GetBucketNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketnotificationresponse.html">GetBucketNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketNotification -->
+<!-- $$$getBucketNotificationConfiguration[overload1]$$$getBucketNotificationConfigurationconstGetBucketNotificationConfigurationRequest& -->
+<h3 class="fn" id="getBucketNotificationConfiguration"><a name="getBucketNotificationConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketnotificationconfigurationresponse.html">GetBucketNotificationConfigurationResponse</a></span> *S3Client::<span class="name">getBucketNotificationConfiguration</span>(const <span class="type"><a href="qtaws-s3-getbucketnotificationconfigurationrequest.html">GetBucketNotificationConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketnotificationconfigurationresponse.html">GetBucketNotificationConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketNotificationConfiguration -->
+<!-- $$$getBucketPolicy[overload1]$$$getBucketPolicyconstGetBucketPolicyRequest& -->
+<h3 class="fn" id="getBucketPolicy"><a name="getBucketPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketpolicyresponse.html">GetBucketPolicyResponse</a></span> *S3Client::<span class="name">getBucketPolicy</span>(const <span class="type"><a href="qtaws-s3-getbucketpolicyrequest.html">GetBucketPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketpolicyresponse.html">GetBucketPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketPolicy -->
+<!-- $$$getBucketReplication[overload1]$$$getBucketReplicationconstGetBucketReplicationRequest& -->
+<h3 class="fn" id="getBucketReplication"><a name="getBucketReplication"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketreplicationresponse.html">GetBucketReplicationResponse</a></span> *S3Client::<span class="name">getBucketReplication</span>(const <span class="type"><a href="qtaws-s3-getbucketreplicationrequest.html">GetBucketReplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketreplicationresponse.html">GetBucketReplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketReplication -->
+<!-- $$$getBucketRequestPayment[overload1]$$$getBucketRequestPaymentconstGetBucketRequestPaymentRequest& -->
+<h3 class="fn" id="getBucketRequestPayment"><a name="getBucketRequestPayment"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketrequestpaymentresponse.html">GetBucketRequestPaymentResponse</a></span> *S3Client::<span class="name">getBucketRequestPayment</span>(const <span class="type"><a href="qtaws-s3-getbucketrequestpaymentrequest.html">GetBucketRequestPaymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketrequestpaymentresponse.html">GetBucketRequestPaymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketRequestPayment -->
+<!-- $$$getBucketTagging[overload1]$$$getBucketTaggingconstGetBucketTaggingRequest& -->
+<h3 class="fn" id="getBucketTagging"><a name="getBucketTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbuckettaggingresponse.html">GetBucketTaggingResponse</a></span> *S3Client::<span class="name">getBucketTagging</span>(const <span class="type"><a href="qtaws-s3-getbuckettaggingrequest.html">GetBucketTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbuckettaggingresponse.html">GetBucketTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketTagging -->
+<!-- $$$getBucketVersioning[overload1]$$$getBucketVersioningconstGetBucketVersioningRequest& -->
+<h3 class="fn" id="getBucketVersioning"><a name="getBucketVersioning"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketversioningresponse.html">GetBucketVersioningResponse</a></span> *S3Client::<span class="name">getBucketVersioning</span>(const <span class="type"><a href="qtaws-s3-getbucketversioningrequest.html">GetBucketVersioningRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketversioningresponse.html">GetBucketVersioningResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketVersioning -->
+<!-- $$$getBucketWebsite[overload1]$$$getBucketWebsiteconstGetBucketWebsiteRequest& -->
+<h3 class="fn" id="getBucketWebsite"><a name="getBucketWebsite"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getbucketwebsiteresponse.html">GetBucketWebsiteResponse</a></span> *S3Client::<span class="name">getBucketWebsite</span>(const <span class="type"><a href="qtaws-s3-getbucketwebsiterequest.html">GetBucketWebsiteRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getbucketwebsiteresponse.html">GetBucketWebsiteResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBucketWebsite -->
+<!-- $$$getObject[overload1]$$$getObjectconstGetObjectRequest& -->
+<h3 class="fn" id="getObject"><a name="getObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getobjectresponse.html">GetObjectResponse</a></span> *S3Client::<span class="name">getObject</span>(const <span class="type"><a href="qtaws-s3-getobjectrequest.html">GetObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getobjectresponse.html">GetObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getObject -->
+<!-- $$$getObjectAcl[overload1]$$$getObjectAclconstGetObjectAclRequest& -->
+<h3 class="fn" id="getObjectAcl"><a name="getObjectAcl"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getobjectaclresponse.html">GetObjectAclResponse</a></span> *S3Client::<span class="name">getObjectAcl</span>(const <span class="type"><a href="qtaws-s3-getobjectaclrequest.html">GetObjectAclRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getobjectaclresponse.html">GetObjectAclResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getObjectAcl -->
+<!-- $$$getObjectTagging[overload1]$$$getObjectTaggingconstGetObjectTaggingRequest& -->
+<h3 class="fn" id="getObjectTagging"><a name="getObjectTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getobjecttaggingresponse.html">GetObjectTaggingResponse</a></span> *S3Client::<span class="name">getObjectTagging</span>(const <span class="type"><a href="qtaws-s3-getobjecttaggingrequest.html">GetObjectTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getobjecttaggingresponse.html">GetObjectTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getObjectTagging -->
+<!-- $$$getObjectTorrent[overload1]$$$getObjectTorrentconstGetObjectTorrentRequest& -->
+<h3 class="fn" id="getObjectTorrent"><a name="getObjectTorrent"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-getobjecttorrentresponse.html">GetObjectTorrentResponse</a></span> *S3Client::<span class="name">getObjectTorrent</span>(const <span class="type"><a href="qtaws-s3-getobjecttorrentrequest.html">GetObjectTorrentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-getobjecttorrentresponse.html">GetObjectTorrentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getObjectTorrent -->
+<!-- $$$headBucket[overload1]$$$headBucketconstHeadBucketRequest& -->
+<h3 class="fn" id="headBucket"><a name="headBucket"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-headbucketresponse.html">HeadBucketResponse</a></span> *S3Client::<span class="name">headBucket</span>(const <span class="type"><a href="qtaws-s3-headbucketrequest.html">HeadBucketRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-headbucketresponse.html">HeadBucketResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@headBucket -->
+<!-- $$$headObject[overload1]$$$headObjectconstHeadObjectRequest& -->
+<h3 class="fn" id="headObject"><a name="headObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-headobjectresponse.html">HeadObjectResponse</a></span> *S3Client::<span class="name">headObject</span>(const <span class="type"><a href="qtaws-s3-headobjectrequest.html">HeadObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-headobjectresponse.html">HeadObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if</p>
+<!-- @@@headObject -->
+<!-- $$$listBucketAnalyticsConfigurations[overload1]$$$listBucketAnalyticsConfigurationsconstListBucketAnalyticsConfigurationsRequest& -->
+<h3 class="fn" id="listBucketAnalyticsConfigurations"><a name="listBucketAnalyticsConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listbucketanalyticsconfigurationsresponse.html">ListBucketAnalyticsConfigurationsResponse</a></span> *S3Client::<span class="name">listBucketAnalyticsConfigurations</span>(const <span class="type"><a href="qtaws-s3-listbucketanalyticsconfigurationsrequest.html">ListBucketAnalyticsConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listbucketanalyticsconfigurationsresponse.html">ListBucketAnalyticsConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listBucketAnalyticsConfigurations -->
+<!-- $$$listBucketInventoryConfigurations[overload1]$$$listBucketInventoryConfigurationsconstListBucketInventoryConfigurationsRequest& -->
+<h3 class="fn" id="listBucketInventoryConfigurations"><a name="listBucketInventoryConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listbucketinventoryconfigurationsresponse.html">ListBucketInventoryConfigurationsResponse</a></span> *S3Client::<span class="name">listBucketInventoryConfigurations</span>(const <span class="type"><a href="qtaws-s3-listbucketinventoryconfigurationsrequest.html">ListBucketInventoryConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listbucketinventoryconfigurationsresponse.html">ListBucketInventoryConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listBucketInventoryConfigurations -->
+<!-- $$$listBucketMetricsConfigurations[overload1]$$$listBucketMetricsConfigurationsconstListBucketMetricsConfigurationsRequest& -->
+<h3 class="fn" id="listBucketMetricsConfigurations"><a name="listBucketMetricsConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listbucketmetricsconfigurationsresponse.html">ListBucketMetricsConfigurationsResponse</a></span> *S3Client::<span class="name">listBucketMetricsConfigurations</span>(const <span class="type"><a href="qtaws-s3-listbucketmetricsconfigurationsrequest.html">ListBucketMetricsConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listbucketmetricsconfigurationsresponse.html">ListBucketMetricsConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listBucketMetricsConfigurations -->
+<!-- $$$listBuckets[overload1]$$$listBuckets -->
+<h3 class="fn" id="listBuckets"><a name="listBuckets"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listbucketsresponse.html">ListBucketsResponse</a></span> *S3Client::<span class="name">listBuckets</span>()</h3>
+<p>Sends a ListBuckets request to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listbucketsresponse.html">ListBucketsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listBuckets -->
+<!-- $$$listMultipartUploads[overload1]$$$listMultipartUploadsconstListMultipartUploadsRequest& -->
+<h3 class="fn" id="listMultipartUploads"><a name="listMultipartUploads"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listmultipartuploadsresponse.html">ListMultipartUploadsResponse</a></span> *S3Client::<span class="name">listMultipartUploads</span>(const <span class="type"><a href="qtaws-s3-listmultipartuploadsrequest.html">ListMultipartUploadsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listmultipartuploadsresponse.html">ListMultipartUploadsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listMultipartUploads -->
+<!-- $$$listObjectVersions[overload1]$$$listObjectVersionsconstListObjectVersionsRequest& -->
+<h3 class="fn" id="listObjectVersions"><a name="listObjectVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listobjectversionsresponse.html">ListObjectVersionsResponse</a></span> *S3Client::<span class="name">listObjectVersions</span>(const <span class="type"><a href="qtaws-s3-listobjectversionsrequest.html">ListObjectVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listobjectversionsresponse.html">ListObjectVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listObjectVersions -->
+<!-- $$$listObjects[overload1]$$$listObjectsconstListObjectsRequest& -->
+<h3 class="fn" id="listObjects"><a name="listObjects"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listobjectsresponse.html">ListObjectsResponse</a></span> *S3Client::<span class="name">listObjects</span>(const <span class="type"><a href="qtaws-s3-listobjectsrequest.html">ListObjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listobjectsresponse.html">ListObjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to</p>
+<!-- @@@listObjects -->
+<!-- $$$listObjectsV2[overload1]$$$listObjectsV2constListObjectsV2Request& -->
+<h3 class="fn" id="listObjectsV2"><a name="listObjectsV2"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listobjectsv2response.html">ListObjectsV2Response</a></span> *S3Client::<span class="name">listObjectsV2</span>(const <span class="type"><a href="qtaws-s3-listobjectsv2request.html">ListObjectsV2Request</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listobjectsv2response.html">ListObjectsV2Response</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use</p>
+<!-- @@@listObjectsV2 -->
+<!-- $$$listParts[overload1]$$$listPartsconstListPartsRequest& -->
+<h3 class="fn" id="listParts"><a name="listParts"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-listpartsresponse.html">ListPartsResponse</a></span> *S3Client::<span class="name">listParts</span>(const <span class="type"><a href="qtaws-s3-listpartsrequest.html">ListPartsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-listpartsresponse.html">ListPartsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listParts -->
+<!-- $$$putBucketAccelerateConfiguration[overload1]$$$putBucketAccelerateConfigurationconstPutBucketAccelerateConfigurationRequest& -->
+<h3 class="fn" id="putBucketAccelerateConfiguration"><a name="putBucketAccelerateConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketaccelerateconfigurationresponse.html">PutBucketAccelerateConfigurationResponse</a></span> *S3Client::<span class="name">putBucketAccelerateConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketaccelerateconfigurationrequest.html">PutBucketAccelerateConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketaccelerateconfigurationresponse.html">PutBucketAccelerateConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketAccelerateConfiguration -->
+<!-- $$$putBucketAcl[overload1]$$$putBucketAclconstPutBucketAclRequest& -->
+<h3 class="fn" id="putBucketAcl"><a name="putBucketAcl"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketaclresponse.html">PutBucketAclResponse</a></span> *S3Client::<span class="name">putBucketAcl</span>(const <span class="type"><a href="qtaws-s3-putbucketaclrequest.html">PutBucketAclRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketaclresponse.html">PutBucketAclResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketAcl -->
+<!-- $$$putBucketAnalyticsConfiguration[overload1]$$$putBucketAnalyticsConfigurationconstPutBucketAnalyticsConfigurationRequest& -->
+<h3 class="fn" id="putBucketAnalyticsConfiguration"><a name="putBucketAnalyticsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketanalyticsconfigurationresponse.html">PutBucketAnalyticsConfigurationResponse</a></span> *S3Client::<span class="name">putBucketAnalyticsConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketanalyticsconfigurationrequest.html">PutBucketAnalyticsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketanalyticsconfigurationresponse.html">PutBucketAnalyticsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketAnalyticsConfiguration -->
+<!-- $$$putBucketCors[overload1]$$$putBucketCorsconstPutBucketCorsRequest& -->
+<h3 class="fn" id="putBucketCors"><a name="putBucketCors"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketcorsresponse.html">PutBucketCorsResponse</a></span> *S3Client::<span class="name">putBucketCors</span>(const <span class="type"><a href="qtaws-s3-putbucketcorsrequest.html">PutBucketCorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketcorsresponse.html">PutBucketCorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketCors -->
+<!-- $$$putBucketEncryption[overload1]$$$putBucketEncryptionconstPutBucketEncryptionRequest& -->
+<h3 class="fn" id="putBucketEncryption"><a name="putBucketEncryption"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketencryptionresponse.html">PutBucketEncryptionResponse</a></span> *S3Client::<span class="name">putBucketEncryption</span>(const <span class="type"><a href="qtaws-s3-putbucketencryptionrequest.html">PutBucketEncryptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketencryptionresponse.html">PutBucketEncryptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketEncryption -->
+<!-- $$$putBucketInventoryConfiguration[overload1]$$$putBucketInventoryConfigurationconstPutBucketInventoryConfigurationRequest& -->
+<h3 class="fn" id="putBucketInventoryConfiguration"><a name="putBucketInventoryConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketinventoryconfigurationresponse.html">PutBucketInventoryConfigurationResponse</a></span> *S3Client::<span class="name">putBucketInventoryConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketinventoryconfigurationrequest.html">PutBucketInventoryConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketinventoryconfigurationresponse.html">PutBucketInventoryConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketInventoryConfiguration -->
+<!-- $$$putBucketLifecycle[overload1]$$$putBucketLifecycleconstPutBucketLifecycleRequest& -->
+<h3 class="fn" id="putBucketLifecycle"><a name="putBucketLifecycle"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketlifecycleresponse.html">PutBucketLifecycleResponse</a></span> *S3Client::<span class="name">putBucketLifecycle</span>(const <span class="type"><a href="qtaws-s3-putbucketlifecyclerequest.html">PutBucketLifecycleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketlifecycleresponse.html">PutBucketLifecycleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketLifecycle -->
+<!-- $$$putBucketLifecycleConfiguration[overload1]$$$putBucketLifecycleConfigurationconstPutBucketLifecycleConfigurationRequest& -->
+<h3 class="fn" id="putBucketLifecycleConfiguration"><a name="putBucketLifecycleConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketlifecycleconfigurationresponse.html">PutBucketLifecycleConfigurationResponse</a></span> *S3Client::<span class="name">putBucketLifecycleConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketlifecycleconfigurationrequest.html">PutBucketLifecycleConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketlifecycleconfigurationresponse.html">PutBucketLifecycleConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketLifecycleConfiguration -->
+<!-- $$$putBucketLogging[overload1]$$$putBucketLoggingconstPutBucketLoggingRequest& -->
+<h3 class="fn" id="putBucketLogging"><a name="putBucketLogging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketloggingresponse.html">PutBucketLoggingResponse</a></span> *S3Client::<span class="name">putBucketLogging</span>(const <span class="type"><a href="qtaws-s3-putbucketloggingrequest.html">PutBucketLoggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketloggingresponse.html">PutBucketLoggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.</p>
+<!-- @@@putBucketLogging -->
+<!-- $$$putBucketMetricsConfiguration[overload1]$$$putBucketMetricsConfigurationconstPutBucketMetricsConfigurationRequest& -->
+<h3 class="fn" id="putBucketMetricsConfiguration"><a name="putBucketMetricsConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketmetricsconfigurationresponse.html">PutBucketMetricsConfigurationResponse</a></span> *S3Client::<span class="name">putBucketMetricsConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketmetricsconfigurationrequest.html">PutBucketMetricsConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketmetricsconfigurationresponse.html">PutBucketMetricsConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketMetricsConfiguration -->
+<!-- $$$putBucketNotification[overload1]$$$putBucketNotificationconstPutBucketNotificationRequest& -->
+<h3 class="fn" id="putBucketNotification"><a name="putBucketNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketnotificationresponse.html">PutBucketNotificationResponse</a></span> *S3Client::<span class="name">putBucketNotification</span>(const <span class="type"><a href="qtaws-s3-putbucketnotificationrequest.html">PutBucketNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketnotificationresponse.html">PutBucketNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketNotification -->
+<!-- $$$putBucketNotificationConfiguration[overload1]$$$putBucketNotificationConfigurationconstPutBucketNotificationConfigurationRequest& -->
+<h3 class="fn" id="putBucketNotificationConfiguration"><a name="putBucketNotificationConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketnotificationconfigurationresponse.html">PutBucketNotificationConfigurationResponse</a></span> *S3Client::<span class="name">putBucketNotificationConfiguration</span>(const <span class="type"><a href="qtaws-s3-putbucketnotificationconfigurationrequest.html">PutBucketNotificationConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketnotificationconfigurationresponse.html">PutBucketNotificationConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketNotificationConfiguration -->
+<!-- $$$putBucketPolicy[overload1]$$$putBucketPolicyconstPutBucketPolicyRequest& -->
+<h3 class="fn" id="putBucketPolicy"><a name="putBucketPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketpolicyresponse.html">PutBucketPolicyResponse</a></span> *S3Client::<span class="name">putBucketPolicy</span>(const <span class="type"><a href="qtaws-s3-putbucketpolicyrequest.html">PutBucketPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketpolicyresponse.html">PutBucketPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketPolicy -->
+<!-- $$$putBucketReplication[overload1]$$$putBucketReplicationconstPutBucketReplicationRequest& -->
+<h3 class="fn" id="putBucketReplication"><a name="putBucketReplication"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketreplicationresponse.html">PutBucketReplicationResponse</a></span> *S3Client::<span class="name">putBucketReplication</span>(const <span class="type"><a href="qtaws-s3-putbucketreplicationrequest.html">PutBucketReplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketreplicationresponse.html">PutBucketReplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketReplication -->
+<!-- $$$putBucketRequestPayment[overload1]$$$putBucketRequestPaymentconstPutBucketRequestPaymentRequest& -->
+<h3 class="fn" id="putBucketRequestPayment"><a name="putBucketRequestPayment"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketrequestpaymentresponse.html">PutBucketRequestPaymentResponse</a></span> *S3Client::<span class="name">putBucketRequestPayment</span>(const <span class="type"><a href="qtaws-s3-putbucketrequestpaymentrequest.html">PutBucketRequestPaymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketrequestpaymentresponse.html">PutBucketRequestPaymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the request payment configuration for a bucket. By default, the bucket owner pays for downloads from the bucket. This configuration parameter enables the bucket owner (only) to specify that the person requesting the download will be charged for the download. Documentation on requester pays buckets can be found at</p>
+<!-- @@@putBucketRequestPayment -->
+<!-- $$$putBucketTagging[overload1]$$$putBucketTaggingconstPutBucketTaggingRequest& -->
+<h3 class="fn" id="putBucketTagging"><a name="putBucketTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbuckettaggingresponse.html">PutBucketTaggingResponse</a></span> *S3Client::<span class="name">putBucketTagging</span>(const <span class="type"><a href="qtaws-s3-putbuckettaggingrequest.html">PutBucketTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbuckettaggingresponse.html">PutBucketTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketTagging -->
+<!-- $$$putBucketVersioning[overload1]$$$putBucketVersioningconstPutBucketVersioningRequest& -->
+<h3 class="fn" id="putBucketVersioning"><a name="putBucketVersioning"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketversioningresponse.html">PutBucketVersioningResponse</a></span> *S3Client::<span class="name">putBucketVersioning</span>(const <span class="type"><a href="qtaws-s3-putbucketversioningrequest.html">PutBucketVersioningRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketversioningresponse.html">PutBucketVersioningResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketVersioning -->
+<!-- $$$putBucketWebsite[overload1]$$$putBucketWebsiteconstPutBucketWebsiteRequest& -->
+<h3 class="fn" id="putBucketWebsite"><a name="putBucketWebsite"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putbucketwebsiteresponse.html">PutBucketWebsiteResponse</a></span> *S3Client::<span class="name">putBucketWebsite</span>(const <span class="type"><a href="qtaws-s3-putbucketwebsiterequest.html">PutBucketWebsiteRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putbucketwebsiteresponse.html">PutBucketWebsiteResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putBucketWebsite -->
+<!-- $$$putObject[overload1]$$$putObjectconstPutObjectRequest& -->
+<h3 class="fn" id="putObject"><a name="putObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putobjectresponse.html">PutObjectResponse</a></span> *S3Client::<span class="name">putObject</span>(const <span class="type"><a href="qtaws-s3-putobjectrequest.html">PutObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putobjectresponse.html">PutObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putObject -->
+<!-- $$$putObjectAcl[overload1]$$$putObjectAclconstPutObjectAclRequest& -->
+<h3 class="fn" id="putObjectAcl"><a name="putObjectAcl"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putobjectaclresponse.html">PutObjectAclResponse</a></span> *S3Client::<span class="name">putObjectAcl</span>(const <span class="type"><a href="qtaws-s3-putobjectaclrequest.html">PutObjectAclRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putobjectaclresponse.html">PutObjectAclResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putObjectAcl -->
+<!-- $$$putObjectTagging[overload1]$$$putObjectTaggingconstPutObjectTaggingRequest& -->
+<h3 class="fn" id="putObjectTagging"><a name="putObjectTagging"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-putobjecttaggingresponse.html">PutObjectTaggingResponse</a></span> *S3Client::<span class="name">putObjectTagging</span>(const <span class="type"><a href="qtaws-s3-putobjecttaggingrequest.html">PutObjectTaggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-putobjecttaggingresponse.html">PutObjectTaggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putObjectTagging -->
+<!-- $$$restoreObject[overload1]$$$restoreObjectconstRestoreObjectRequest& -->
+<h3 class="fn" id="restoreObject"><a name="restoreObject"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-restoreobjectresponse.html">RestoreObjectResponse</a></span> *S3Client::<span class="name">restoreObject</span>(const <span class="type"><a href="qtaws-s3-restoreobjectrequest.html">RestoreObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-restoreobjectresponse.html">RestoreObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@restoreObject -->
+<!-- $$$selectObjectContent[overload1]$$$selectObjectContentconstSelectObjectContentRequest& -->
+<h3 class="fn" id="selectObjectContent"><a name="selectObjectContent"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-selectobjectcontentresponse.html">SelectObjectContentResponse</a></span> *S3Client::<span class="name">selectObjectContent</span>(const <span class="type"><a href="qtaws-s3-selectobjectcontentrequest.html">SelectObjectContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-selectobjectcontentresponse.html">SelectObjectContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation filters the contents of an Amazon S3 object based on a simple Structured Query Language (SQL) statement. In the request, along with the SQL expression, you must also specify a data serialization format (JSON or CSV) of the object. Amazon S3 uses this to parse object data into records, and returns only records that match the specified SQL</p>
+<!-- @@@selectObjectContent -->
+<!-- $$$uploadPart[overload1]$$$uploadPartconstUploadPartRequest& -->
+<h3 class="fn" id="uploadPart"><a name="uploadPart"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-uploadpartresponse.html">UploadPartResponse</a></span> *S3Client::<span class="name">uploadPart</span>(const <span class="type"><a href="qtaws-s3-uploadpartrequest.html">UploadPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-uploadpartresponse.html">UploadPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads a part in a multipart upload.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; After you initiate multipart upload and upload one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts</p>
+<!-- @@@uploadPart -->
+<!-- $$$uploadPartCopy[overload1]$$$uploadPartCopyconstUploadPartCopyRequest& -->
+<h3 class="fn" id="uploadPartCopy"><a name="uploadPartCopy"></a><code>[slot] </code><span class="type"><a href="qtaws-s3-uploadpartcopyresponse.html">UploadPartCopyResponse</a></span> *S3Client::<span class="name">uploadPartCopy</span>(const <span class="type"><a href="qtaws-s3-uploadpartcopyrequest.html">UploadPartCopyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-s3-s3client.html">S3Client</a> service, and returns a pointer to an <a href="qtaws-s3-uploadpartcopyresponse.html">UploadPartCopyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@uploadPartCopy -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,8 +1,0 @@
-<map id="AWS::CloudHSMV2::CloudHSMV2Client" name="AWS::CloudHSMV2::CloudHSMV2Client">
-<area shape="rect" id="node2" href="$classAwsAbstractClient.html" title="Interface class for providing access to individual AWS services. " alt="" coords="216,81,347,108"/>
-<area shape="rect" id="node4" href="$classAwsAbstractClientPrivate.html" title="Private implementation for AwsAbstractClient. " alt="" coords="259,178,431,205"/>
-<area shape="rect" id="node5" href="$classAwsAbstractCredentials.html" title="Interface class for providing AWS credentials. " alt="" coords="385,81,548,108"/>
-<area shape="rect" id="node6" href="$classAwsAbstractCredentialsPrivate.html" title="Private implementation for AwsAbstractCredentials. " alt="" coords="455,178,659,205"/>
-<area shape="rect" id="node7" href="$classAwsAbstractSignature.html" title="Interface class for providing AWS signatures. " alt="" coords="640,81,792,108"/>
-<area shape="rect" id="node8" href="$classAwsAbstractSignaturePrivate.html" title="Private implementation for AwsAbstractSignature. " alt="" coords="683,178,877,205"/>
-</map>

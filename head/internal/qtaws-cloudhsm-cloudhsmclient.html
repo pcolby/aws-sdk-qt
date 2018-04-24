@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudhsmclient.cpp -->
+  <title>CloudHSMClient Class | CloudHSM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudhsm-index.html">CloudHSM</a></li>
+<li><a href="qtawscloudhsm-module.html">C++ Classes</a></li>
+<li>CloudHSMClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudHSMClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudhsm-cloudhsmclient.html">QtAws::CloudHSM::CloudHSMClient</a>)<br/></span>
+<!-- $$$CloudHSMClient-brief -->
+<p>The <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> class provides access to the Amazon <a href="qtaws-cloudhsm.html">CloudHSM</a> service. <a href="#details">More...</a></p>
+<!-- @@@CloudHSMClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudHSMClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cloudhsm-cloudhsmclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#CloudHSMClient">CloudHSMClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#CloudHSMClient-1">CloudHSMClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHapgResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#createHapg">createHapg</a></b>(const CreateHapgRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHsmResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#createHsm">createHsm</a></b>(const CreateHsmRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLunaClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#createLunaClient">createLunaClient</a></b>(const CreateLunaClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteHapgResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#deleteHapg">deleteHapg</a></b>(const DeleteHapgRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteHsmResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#deleteHsm">deleteHsm</a></b>(const DeleteHsmRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLunaClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#deleteLunaClient">deleteLunaClient</a></b>(const DeleteLunaClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeHapgResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#describeHapg">describeHapg</a></b>(const DescribeHapgRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeHsmResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#describeHsm">describeHsm</a></b>(const DescribeHsmRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLunaClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#describeLunaClient">describeLunaClient</a></b>(const DescribeLunaClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#getConfig">getConfig</a></b>(const GetConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAvailableZonesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#listAvailableZones">listAvailableZones</a></b>(const ListAvailableZonesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHapgsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#listHapgs">listHapgs</a></b>(const ListHapgsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHsmsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#listHsms">listHsms</a></b>(const ListHsmsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListLunaClientsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#listLunaClients">listLunaClients</a></b>(const ListLunaClientsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyHapgResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#modifyHapg">modifyHapg</a></b>(const ModifyHapgRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyHsmResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#modifyHsm">modifyHsm</a></b>(const ModifyHsmRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyLunaClientResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#modifyLunaClient">modifyLunaClient</a></b>(const ModifyLunaClientRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudHSMClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> class provides access to the Amazon <a href="qtaws-cloudhsm.html">CloudHSM</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Service&lt;/fullname&gt;</p>
+<p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+</div>
+<!-- @@@CloudHSMClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudHSMClient[overload1]$$$CloudHSMClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudHSMClient"><a name="CloudHSMClient"></a>CloudHSMClient::<span class="name">CloudHSMClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudHSMClient -->
+<!-- $$$CloudHSMClient$$$CloudHSMClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudHSMClient-1"><a name="CloudHSMClient-1"></a>CloudHSMClient::<span class="name">CloudHSMClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cloudhsm-cloudhsmclient.html#CloudHSMClient">CloudHSMClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudHSMClient -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *CloudHSMClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-cloudhsm-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Adds or overwrites one or more tags for the specified AWS <a href="qtaws-cloudhsm.html">CloudHSM</a></p>
+<p>resource&gt;</p>
+<p>Each tag consists of a key and a value. Tag keys must be unique to each</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$createHapg[overload1]$$$createHapgconstCreateHapgRequest& -->
+<h3 class="fn" id="createHapg"><a name="createHapg"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-createhapgresponse.html">CreateHapgResponse</a></span> *CloudHSMClient::<span class="name">createHapg</span>(const <span class="type"><a href="qtaws-cloudhsm-createhapgrequest.html">CreateHapgRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-createhapgresponse.html">CreateHapgResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Creates a high-availability partition group. A high-availability partition group is a group of partitions that spans multiple physical</p>
+<!-- @@@createHapg -->
+<!-- $$$createHsm[overload1]$$$createHsmconstCreateHsmRequest& -->
+<h3 class="fn" id="createHsm"><a name="createHsm"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-createhsmresponse.html">CreateHsmResponse</a></span> *CloudHSMClient::<span class="name">createHsm</span>(const <span class="type"><a href="qtaws-cloudhsm-createhsmrequest.html">CreateHsmRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-createhsmresponse.html">CreateHsmResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Creates an uninitialized HSM</p>
+<p>instance&gt;</p>
+<p>There is an upfront fee charged for each HSM instance that you create with the &lt;code&gt;CreateHsm&lt;/code&gt; operation. If you accidentally provision an HSM and want to request a refund, delete the instance using the &lt;a&gt;DeleteHsm&lt;/a&gt; operation, go to the &lt;a href=&quot;https://console.aws.amazon.com/support/home&quot;&gt;AWS Support Center&lt;/a&gt;, create a new case, and select &lt;b&gt;Account and Billing</p>
+<p>Support&lt;/b&gt;&gt; &lt;b&gt;</p>
+<p>It can take up to 20 minutes to create and provision an HSM. You can monitor the status of the HSM with the &lt;a&gt;DescribeHsm&lt;/a&gt; operation. The HSM is ready to be initialized when the status changes to</p>
+<!-- @@@createHsm -->
+<!-- $$$createLunaClient[overload1]$$$createLunaClientconstCreateLunaClientRequest& -->
+<h3 class="fn" id="createLunaClient"><a name="createLunaClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-createlunaclientresponse.html">CreateLunaClientResponse</a></span> *CloudHSMClient::<span class="name">createLunaClient</span>(const <span class="type"><a href="qtaws-cloudhsm-createlunaclientrequest.html">CreateLunaClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-createlunaclientresponse.html">CreateLunaClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Creates an HSM</p>
+<!-- @@@createLunaClient -->
+<!-- $$$deleteHapg[overload1]$$$deleteHapgconstDeleteHapgRequest& -->
+<h3 class="fn" id="deleteHapg"><a name="deleteHapg"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-deletehapgresponse.html">DeleteHapgResponse</a></span> *CloudHSMClient::<span class="name">deleteHapg</span>(const <span class="type"><a href="qtaws-cloudhsm-deletehapgrequest.html">DeleteHapgRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-deletehapgresponse.html">DeleteHapgResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Deletes a high-availability partition</p>
+<!-- @@@deleteHapg -->
+<!-- $$$deleteHsm[overload1]$$$deleteHsmconstDeleteHsmRequest& -->
+<h3 class="fn" id="deleteHsm"><a name="deleteHsm"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-deletehsmresponse.html">DeleteHsmResponse</a></span> *CloudHSMClient::<span class="name">deleteHsm</span>(const <span class="type"><a href="qtaws-cloudhsm-deletehsmrequest.html">DeleteHsmRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-deletehsmresponse.html">DeleteHsmResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Deletes an HSM. After completion, this operation cannot be undone and your key material cannot be</p>
+<!-- @@@deleteHsm -->
+<!-- $$$deleteLunaClient[overload1]$$$deleteLunaClientconstDeleteLunaClientRequest& -->
+<h3 class="fn" id="deleteLunaClient"><a name="deleteLunaClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-deletelunaclientresponse.html">DeleteLunaClientResponse</a></span> *CloudHSMClient::<span class="name">deleteLunaClient</span>(const <span class="type"><a href="qtaws-cloudhsm-deletelunaclientrequest.html">DeleteLunaClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-deletelunaclientresponse.html">DeleteLunaClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Deletes a</p>
+<!-- @@@deleteLunaClient -->
+<!-- $$$describeHapg[overload1]$$$describeHapgconstDescribeHapgRequest& -->
+<h3 class="fn" id="describeHapg"><a name="describeHapg"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-describehapgresponse.html">DescribeHapgResponse</a></span> *CloudHSMClient::<span class="name">describeHapg</span>(const <span class="type"><a href="qtaws-cloudhsm-describehapgrequest.html">DescribeHapgRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-describehapgresponse.html">DescribeHapgResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Retrieves information about a high-availability partition</p>
+<!-- @@@describeHapg -->
+<!-- $$$describeHsm[overload1]$$$describeHsmconstDescribeHsmRequest& -->
+<h3 class="fn" id="describeHsm"><a name="describeHsm"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-describehsmresponse.html">DescribeHsmResponse</a></span> *CloudHSMClient::<span class="name">describeHsm</span>(const <span class="type"><a href="qtaws-cloudhsm-describehsmrequest.html">DescribeHsmRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-describehsmresponse.html">DescribeHsmResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Retrieves information about an HSM. You can identify the HSM by its ARN or its serial</p>
+<!-- @@@describeHsm -->
+<!-- $$$describeLunaClient[overload1]$$$describeLunaClientconstDescribeLunaClientRequest& -->
+<h3 class="fn" id="describeLunaClient"><a name="describeLunaClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-describelunaclientresponse.html">DescribeLunaClientResponse</a></span> *CloudHSMClient::<span class="name">describeLunaClient</span>(const <span class="type"><a href="qtaws-cloudhsm-describelunaclientrequest.html">DescribeLunaClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-describelunaclientresponse.html">DescribeLunaClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Retrieves information about an HSM</p>
+<!-- @@@describeLunaClient -->
+<!-- $$$getConfig[overload1]$$$getConfigconstGetConfigRequest& -->
+<h3 class="fn" id="getConfig"><a name="getConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-getconfigresponse.html">GetConfigResponse</a></span> *CloudHSMClient::<span class="name">getConfig</span>(const <span class="type"><a href="qtaws-cloudhsm-getconfigrequest.html">GetConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-getconfigresponse.html">GetConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Gets the configuration files necessary to connect to all high availability partition groups the client is associated</p>
+<!-- @@@getConfig -->
+<!-- $$$listAvailableZones[overload1]$$$listAvailableZonesconstListAvailableZonesRequest& -->
+<h3 class="fn" id="listAvailableZones"><a name="listAvailableZones"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-listavailablezonesresponse.html">ListAvailableZonesResponse</a></span> *CloudHSMClient::<span class="name">listAvailableZones</span>(const <span class="type"><a href="qtaws-cloudhsm-listavailablezonesrequest.html">ListAvailableZonesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-listavailablezonesresponse.html">ListAvailableZonesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Lists the Availability Zones that have available AWS <a href="qtaws-cloudhsm.html">CloudHSM</a></p>
+<!-- @@@listAvailableZones -->
+<!-- $$$listHapgs[overload1]$$$listHapgsconstListHapgsRequest& -->
+<h3 class="fn" id="listHapgs"><a name="listHapgs"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-listhapgsresponse.html">ListHapgsResponse</a></span> *CloudHSMClient::<span class="name">listHapgs</span>(const <span class="type"><a href="qtaws-cloudhsm-listhapgsrequest.html">ListHapgsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-listhapgsresponse.html">ListHapgsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Lists the high-availability partition groups for the</p>
+<p>account&gt;</p>
+<p>This operation supports pagination with the use of the &lt;code&gt;NextToken&lt;/code&gt; member. If more results are available, the &lt;code&gt;NextToken&lt;/code&gt; member of the response contains a token that you pass in the next call to &lt;code&gt;ListHapgs&lt;/code&gt; to retrieve the next set of</p>
+<!-- @@@listHapgs -->
+<!-- $$$listHsms[overload1]$$$listHsmsconstListHsmsRequest& -->
+<h3 class="fn" id="listHsms"><a name="listHsms"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-listhsmsresponse.html">ListHsmsResponse</a></span> *CloudHSMClient::<span class="name">listHsms</span>(const <span class="type"><a href="qtaws-cloudhsm-listhsmsrequest.html">ListHsmsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-listhsmsresponse.html">ListHsmsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Retrieves the identifiers of all of the HSMs provisioned for the current</p>
+<p>customer&gt;</p>
+<p>This operation supports pagination with the use of the &lt;code&gt;NextToken&lt;/code&gt; member. If more results are available, the &lt;code&gt;NextToken&lt;/code&gt; member of the response contains a token that you pass in the next call to &lt;code&gt;ListHsms&lt;/code&gt; to retrieve the next set of</p>
+<!-- @@@listHsms -->
+<!-- $$$listLunaClients[overload1]$$$listLunaClientsconstListLunaClientsRequest& -->
+<h3 class="fn" id="listLunaClients"><a name="listLunaClients"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-listlunaclientsresponse.html">ListLunaClientsResponse</a></span> *CloudHSMClient::<span class="name">listLunaClients</span>(const <span class="type"><a href="qtaws-cloudhsm-listlunaclientsrequest.html">ListLunaClientsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-listlunaclientsresponse.html">ListLunaClientsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Lists all of the</p>
+<p>clients&gt;</p>
+<p>This operation supports pagination with the use of the &lt;code&gt;NextToken&lt;/code&gt; member. If more results are available, the &lt;code&gt;NextToken&lt;/code&gt; member of the response contains a token that you pass in the next call to &lt;code&gt;ListLunaClients&lt;/code&gt; to retrieve the next set of</p>
+<!-- @@@listLunaClients -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *CloudHSMClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-cloudhsm-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Returns a list of all tags for the specified AWS <a href="qtaws-cloudhsm.html">CloudHSM</a></p>
+<!-- @@@listTagsForResource -->
+<!-- $$$modifyHapg[overload1]$$$modifyHapgconstModifyHapgRequest& -->
+<h3 class="fn" id="modifyHapg"><a name="modifyHapg"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-modifyhapgresponse.html">ModifyHapgResponse</a></span> *CloudHSMClient::<span class="name">modifyHapg</span>(const <span class="type"><a href="qtaws-cloudhsm-modifyhapgrequest.html">ModifyHapgRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-modifyhapgresponse.html">ModifyHapgResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Modifies an existing high-availability partition</p>
+<!-- @@@modifyHapg -->
+<!-- $$$modifyHsm[overload1]$$$modifyHsmconstModifyHsmRequest& -->
+<h3 class="fn" id="modifyHsm"><a name="modifyHsm"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-modifyhsmresponse.html">ModifyHsmResponse</a></span> *CloudHSMClient::<span class="name">modifyHsm</span>(const <span class="type"><a href="qtaws-cloudhsm-modifyhsmrequest.html">ModifyHsmRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-modifyhsmresponse.html">ModifyHsmResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Modifies an</p>
+<p>HSM&gt; &lt;b&gt;</p>
+<p>This operation can result in the HSM being offline for up to 15 minutes while the AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> service is reconfigured. If you are modifying a production HSM, you should ensure that your AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> service is configured for high availability, and consider executing this operation during a maintenance</p>
+<!-- @@@modifyHsm -->
+<!-- $$$modifyLunaClient[overload1]$$$modifyLunaClientconstModifyLunaClientRequest& -->
+<h3 class="fn" id="modifyLunaClient"><a name="modifyLunaClient"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-modifylunaclientresponse.html">ModifyLunaClientResponse</a></span> *CloudHSMClient::<span class="name">modifyLunaClient</span>(const <span class="type"><a href="qtaws-cloudhsm-modifylunaclientrequest.html">ModifyLunaClientRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-modifylunaclientresponse.html">ModifyLunaClientResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Modifies the certificate used by the</p>
+<p>client&gt;</p>
+<p>This action can potentially start a workflow to install the new certificate on the client's</p>
+<!-- @@@modifyLunaClient -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudhsm-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *CloudHSMClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-cloudhsm-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudhsm-cloudhsmclient.html">CloudHSMClient</a> service, and returns a pointer to an <a href="qtaws-cloudhsm-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This is documentation for &lt;b&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic&lt;/b&gt;. For more information, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/faqs-classic/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic FAQs&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/classic/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> Classic API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;For information about the current version of AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/b&gt;, see &lt;a href=&quot;http://aws.amazon.com/cloudhsm/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a>&lt;/a&gt;, the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/userguide/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> User Guide&lt;/a&gt;, and the &lt;a href=&quot;http://docs.aws.amazon.com/cloudhsm/latest/APIReference/&quot;&gt;AWS <a href="qtaws-cloudhsm.html">CloudHSM</a> API</p>
+<p>Reference&lt;/a&gt;&gt;</p>
+<p>Removes one or more tags from the specified AWS <a href="qtaws-cloudhsm.html">CloudHSM</a></p>
+<p>resource&gt;</p>
+<p>To remove a tag, specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use</p>
+<!-- @@@removeTagsFromResource -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

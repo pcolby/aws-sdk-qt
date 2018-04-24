@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lexmodelbuildingserviceclient.cpp -->
+  <title>LexModelBuildingServiceClient Class | LexModelBuildingService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslexmodelbuildingservice-index.html">LexModelBuildingService</a></li>
+<li><a href="qtawslexmodelbuildingservice-module.html">C++ Classes</a></li>
+<li>LexModelBuildingServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LexModelBuildingServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">QtAws::LexModelBuildingService::LexModelBuildingServiceClient</a>)<br/></span>
+<!-- $$$LexModelBuildingServiceClient-brief -->
+<p>The <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> class provides access to the Amazon Lex Model Building Service service. <a href="#details">More...</a></p>
+<!-- @@@LexModelBuildingServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LexModelBuildingServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#LexModelBuildingServiceClient">LexModelBuildingServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#LexModelBuildingServiceClient-1">LexModelBuildingServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBotVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#createBotVersion">createBotVersion</a></b>(const CreateBotVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateIntentVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#createIntentVersion">createIntentVersion</a></b>(const CreateIntentVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSlotTypeVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#createSlotTypeVersion">createSlotTypeVersion</a></b>(const CreateSlotTypeVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteBot">deleteBot</a></b>(const DeleteBotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBotAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteBotAlias">deleteBotAlias</a></b>(const DeleteBotAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBotChannelAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteBotChannelAssociation">deleteBotChannelAssociation</a></b>(const DeleteBotChannelAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBotVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteBotVersion">deleteBotVersion</a></b>(const DeleteBotVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIntentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteIntent">deleteIntent</a></b>(const DeleteIntentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIntentVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteIntentVersion">deleteIntentVersion</a></b>(const DeleteIntentVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSlotTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteSlotType">deleteSlotType</a></b>(const DeleteSlotTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSlotTypeVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteSlotTypeVersion">deleteSlotTypeVersion</a></b>(const DeleteSlotTypeVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUtterancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#deleteUtterances">deleteUtterances</a></b>(const DeleteUtterancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBot">getBot</a></b>(const GetBotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBotAlias">getBotAlias</a></b>(const GetBotAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotAliasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBotAliases">getBotAliases</a></b>(const GetBotAliasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotChannelAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBotChannelAssociation">getBotChannelAssociation</a></b>(const GetBotChannelAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotChannelAssociationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBotChannelAssociations">getBotChannelAssociations</a></b>(const GetBotChannelAssociationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBotVersions">getBotVersions</a></b>(const GetBotVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBots">getBots</a></b>(const GetBotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBuiltinIntentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBuiltinIntent">getBuiltinIntent</a></b>(const GetBuiltinIntentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBuiltinIntentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBuiltinIntents">getBuiltinIntents</a></b>(const GetBuiltinIntentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBuiltinSlotTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getBuiltinSlotTypes">getBuiltinSlotTypes</a></b>(const GetBuiltinSlotTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetExportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getExport">getExport</a></b>(const GetExportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetImportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getImport">getImport</a></b>(const GetImportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getIntent">getIntent</a></b>(const GetIntentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntentVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getIntentVersions">getIntentVersions</a></b>(const GetIntentVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getIntents">getIntents</a></b>(const GetIntentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSlotTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getSlotType">getSlotType</a></b>(const GetSlotTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSlotTypeVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getSlotTypeVersions">getSlotTypeVersions</a></b>(const GetSlotTypeVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSlotTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getSlotTypes">getSlotTypes</a></b>(const GetSlotTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUtterancesViewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#getUtterancesView">getUtterancesView</a></b>(const GetUtterancesViewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#putBot">putBot</a></b>(const PutBotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutBotAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#putBotAlias">putBotAlias</a></b>(const PutBotAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutIntentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#putIntent">putIntent</a></b>(const PutIntentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutSlotTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#putSlotType">putSlotType</a></b>(const PutSlotTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartImportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#startImport">startImport</a></b>(const StartImportRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$LexModelBuildingServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> class provides access to the Amazon Lex Model Building Service service.</p>
+<p>&lt;fullname&gt;Amazon Lex Build-Time Actions&lt;/fullname&gt;</p>
+<p>Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update, and delete conversational bots for new and existing client applications.</p>
+</div>
+<!-- @@@LexModelBuildingServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LexModelBuildingServiceClient[overload1]$$$LexModelBuildingServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LexModelBuildingServiceClient"><a name="LexModelBuildingServiceClient"></a>LexModelBuildingServiceClient::<span class="name">LexModelBuildingServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@LexModelBuildingServiceClient -->
+<!-- $$$LexModelBuildingServiceClient$$$LexModelBuildingServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LexModelBuildingServiceClient-1"><a name="LexModelBuildingServiceClient-1"></a>LexModelBuildingServiceClient::<span class="name">LexModelBuildingServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html#LexModelBuildingServiceClient">LexModelBuildingServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@LexModelBuildingServiceClient -->
+<!-- $$$createBotVersion[overload1]$$$createBotVersionconstCreateBotVersionRequest& -->
+<h3 class="fn" id="createBotVersion"><a name="createBotVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-createbotversionresponse.html">CreateBotVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">createBotVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-createbotversionrequest.html">CreateBotVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-createbotversionresponse.html">CreateBotVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new version of the bot based on the &lt;code&gt;$LATEST&lt;/code&gt; version. If the &lt;code&gt;$LATEST&lt;/code&gt; version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last created</p>
+<p>version&gt; &lt;note&gt;</p>
+<p>You can update only the &lt;code&gt;$LATEST&lt;/code&gt; version of the bot. You can't update the numbered versions that you create with the &lt;code&gt;CreateBotVersion&lt;/code&gt;</p>
+<p>operation&gt; &lt;/note&gt;</p>
+<p>When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see &lt;a&gt;versioning-intro&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lex:CreateBotVersion&lt;/code&gt; action.</p>
+<!-- @@@createBotVersion -->
+<!-- $$$createIntentVersion[overload1]$$$createIntentVersionconstCreateIntentVersionRequest& -->
+<h3 class="fn" id="createIntentVersion"><a name="createIntentVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-createintentversionresponse.html">CreateIntentVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">createIntentVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-createintentversionrequest.html">CreateIntentVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-createintentversionresponse.html">CreateIntentVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new version of an intent based on the &lt;code&gt;$LATEST&lt;/code&gt; version of the intent. If the &lt;code&gt;$LATEST&lt;/code&gt; version of this intent hasn't changed since you last updated it, Amazon Lex doesn't create a new version. It returns the last version you</p>
+<p>created&gt; &lt;note&gt;</p>
+<p>You can update only the &lt;code&gt;$LATEST&lt;/code&gt; version of the intent. You can't update the numbered versions that you create with the &lt;code&gt;CreateIntentVersion&lt;/code&gt;</p>
+<p>operation&gt; &lt;/note&gt;</p>
+<p>When you create a version of an intent, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see &lt;a&gt;versioning-intro&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions to perform the &lt;code&gt;lex:CreateIntentVersion&lt;/code&gt; action.</p>
+<!-- @@@createIntentVersion -->
+<!-- $$$createSlotTypeVersion[overload1]$$$createSlotTypeVersionconstCreateSlotTypeVersionRequest& -->
+<h3 class="fn" id="createSlotTypeVersion"><a name="createSlotTypeVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-createslottypeversionresponse.html">CreateSlotTypeVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">createSlotTypeVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-createslottypeversionrequest.html">CreateSlotTypeVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-createslottypeversionresponse.html">CreateSlotTypeVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new version of a slot type based on the &lt;code&gt;$LATEST&lt;/code&gt; version of the specified slot type. If the &lt;code&gt;$LATEST&lt;/code&gt; version of this resource has not changed since the last version that you created, Amazon Lex doesn't create a new version. It returns the last version that you created.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You can update only the &lt;code&gt;$LATEST&lt;/code&gt; version of a slot type. You can't update the numbered versions that you create with the &lt;code&gt;CreateSlotTypeVersion&lt;/code&gt;</p>
+<p>operation&gt; &lt;/note&gt;</p>
+<p>When you create a version of a slot type, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see &lt;a&gt;versioning-intro&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:CreateSlotTypeVersion&lt;/code&gt;</p>
+<!-- @@@createSlotTypeVersion -->
+<!-- $$$deleteBot[overload1]$$$deleteBotconstDeleteBotRequest& -->
+<h3 class="fn" id="deleteBot"><a name="deleteBot"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotresponse.html">DeleteBotResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteBot</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotrequest.html">DeleteBotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deletebotresponse.html">DeleteBotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes all versions of the bot, including the &lt;code&gt;$LATEST&lt;/code&gt; version. To delete a specific version of the bot, use the &lt;a&gt;DeleteBotVersion&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>If a bot has an alias, you can't delete it. Instead, the &lt;code&gt;DeleteBot&lt;/code&gt; operation returns a &lt;code&gt;ResourceInUseException&lt;/code&gt; exception that includes a reference to the alias that refers to the bot. To remove the reference to the bot, delete the alias. If you get the same exception again, delete the referring alias until the &lt;code&gt;DeleteBot&lt;/code&gt; operation is</p>
+<p>successful&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:DeleteBot&lt;/code&gt;</p>
+<!-- @@@deleteBot -->
+<!-- $$$deleteBotAlias[overload1]$$$deleteBotAliasconstDeleteBotAliasRequest& -->
+<h3 class="fn" id="deleteBotAlias"><a name="deleteBotAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotaliasresponse.html">DeleteBotAliasResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteBotAlias</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotaliasrequest.html">DeleteBotAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deletebotaliasresponse.html">DeleteBotAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an alias for the specified bot.</p>
+<p>&lt;/p</p>
+<p>You can't delete an alias that is used in the association between a bot and a messaging channel. If an alias is used in a channel association, the &lt;code&gt;DeleteBot&lt;/code&gt; operation returns a &lt;code&gt;ResourceInUseException&lt;/code&gt; exception that includes a reference to the channel association that refers to the bot. You can remove the reference to the alias by deleting the channel association. If you get the same exception again, delete the referring association until the &lt;code&gt;DeleteBotAlias&lt;/code&gt; operation is</p>
+<!-- @@@deleteBotAlias -->
+<!-- $$$deleteBotChannelAssociation[overload1]$$$deleteBotChannelAssociationconstDeleteBotChannelAssociationRequest& -->
+<h3 class="fn" id="deleteBotChannelAssociation"><a name="deleteBotChannelAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotchannelassociationresponse.html">DeleteBotChannelAssociationResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteBotChannelAssociation</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotchannelassociationrequest.html">DeleteBotChannelAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deletebotchannelassociationresponse.html">DeleteBotChannelAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the association between an Amazon Lex bot and a messaging</p>
+<p>platform&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:DeleteBotChannelAssociation&lt;/code&gt;</p>
+<!-- @@@deleteBotChannelAssociation -->
+<!-- $$$deleteBotVersion[overload1]$$$deleteBotVersionconstDeleteBotVersionRequest& -->
+<h3 class="fn" id="deleteBotVersion"><a name="deleteBotVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotversionresponse.html">DeleteBotVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteBotVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deletebotversionrequest.html">DeleteBotVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deletebotversionresponse.html">DeleteBotVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific version of a bot. To delete all versions of a bot, use the &lt;a&gt;DeleteBot&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:DeleteBotVersion&lt;/code&gt;</p>
+<!-- @@@deleteBotVersion -->
+<!-- $$$deleteIntent[overload1]$$$deleteIntentconstDeleteIntentRequest& -->
+<h3 class="fn" id="deleteIntent"><a name="deleteIntent"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deleteintentresponse.html">DeleteIntentResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteIntent</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deleteintentrequest.html">DeleteIntentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deleteintentresponse.html">DeleteIntentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes all versions of the intent, including the &lt;code&gt;$LATEST&lt;/code&gt; version. To delete a specific version of the intent, use the &lt;a&gt;DeleteIntentVersion&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>You can delete a version of an intent only if it is not referenced. To delete an intent that is referred to in one or more bots (see &lt;a&gt;how-it-works&lt;/a&gt;), you must remove those references first.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If you get the &lt;code&gt;ResourceInUseException&lt;/code&gt; exception, it provides an example reference that shows where the intent is referenced. To remove the reference to the intent, either update the bot or delete it. If you get the same exception when you attempt to delete the intent again, repeat until the intent has no references and the call to &lt;code&gt;DeleteIntent&lt;/code&gt; is successful.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:DeleteIntent&lt;/code&gt; action.</p>
+<!-- @@@deleteIntent -->
+<!-- $$$deleteIntentVersion[overload1]$$$deleteIntentVersionconstDeleteIntentVersionRequest& -->
+<h3 class="fn" id="deleteIntentVersion"><a name="deleteIntentVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deleteintentversionresponse.html">DeleteIntentVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteIntentVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deleteintentversionrequest.html">DeleteIntentVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deleteintentversionresponse.html">DeleteIntentVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific version of an intent. To delete all versions of a intent, use the &lt;a&gt;DeleteIntent&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:DeleteIntentVersion&lt;/code&gt;</p>
+<!-- @@@deleteIntentVersion -->
+<!-- $$$deleteSlotType[overload1]$$$deleteSlotTypeconstDeleteSlotTypeRequest& -->
+<h3 class="fn" id="deleteSlotType"><a name="deleteSlotType"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deleteslottyperesponse.html">DeleteSlotTypeResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteSlotType</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deleteslottyperequest.html">DeleteSlotTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deleteslottyperesponse.html">DeleteSlotTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes all versions of the slot type, including the &lt;code&gt;$LATEST&lt;/code&gt; version. To delete a specific version of the slot type, use the &lt;a&gt;DeleteSlotTypeVersion&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>You can delete a version of a slot type only if it is not referenced. To delete a slot type that is referred to in one or more intents, you must remove those references first.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If you get the &lt;code&gt;ResourceInUseException&lt;/code&gt; exception, the exception provides an example reference that shows the intent where the slot type is referenced. To remove the reference to the slot type, either update the intent or delete it. If you get the same exception when you attempt to delete the slot type again, repeat until the slot type has no references and the &lt;code&gt;DeleteSlotType&lt;/code&gt; call is successful.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:DeleteSlotType&lt;/code&gt;</p>
+<!-- @@@deleteSlotType -->
+<!-- $$$deleteSlotTypeVersion[overload1]$$$deleteSlotTypeVersionconstDeleteSlotTypeVersionRequest& -->
+<h3 class="fn" id="deleteSlotTypeVersion"><a name="deleteSlotTypeVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deleteslottypeversionresponse.html">DeleteSlotTypeVersionResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteSlotTypeVersion</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deleteslottypeversionrequest.html">DeleteSlotTypeVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deleteslottypeversionresponse.html">DeleteSlotTypeVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific version of a slot type. To delete all versions of a slot type, use the &lt;a&gt;DeleteSlotType&lt;/a&gt; operation.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:DeleteSlotTypeVersion&lt;/code&gt;</p>
+<!-- @@@deleteSlotTypeVersion -->
+<!-- $$$deleteUtterances[overload1]$$$deleteUtterancesconstDeleteUtterancesRequest& -->
+<h3 class="fn" id="deleteUtterances"><a name="deleteUtterances"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-deleteutterancesresponse.html">DeleteUtterancesResponse</a></span> *LexModelBuildingServiceClient::<span class="name">deleteUtterances</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-deleteutterancesrequest.html">DeleteUtterancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-deleteutterancesresponse.html">DeleteUtterancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes stored</p>
+<p>utterances&gt;</p>
+<p>Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the &lt;a&gt;GetUtterancesView&lt;/a&gt; operation, and then stored indefinitely for use in improving the ability of your bot to respond to user</p>
+<p>input&gt;</p>
+<p>Use the &lt;code&gt;DeleteStoredUtterances&lt;/code&gt; operation to manually delete stored utterances for a specific</p>
+<p>user&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:DeleteUtterances&lt;/code&gt;</p>
+<!-- @@@deleteUtterances -->
+<!-- $$$getBot[overload1]$$$getBotconstGetBotRequest& -->
+<h3 class="fn" id="getBot"><a name="getBot"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotresponse.html">GetBotResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBot</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotrequest.html">GetBotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotresponse.html">GetBotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetBot&lt;/code&gt; action.</p>
+<!-- @@@getBot -->
+<!-- $$$getBotAlias[overload1]$$$getBotAliasconstGetBotAliasRequest& -->
+<h3 class="fn" id="getBotAlias"><a name="getBotAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotaliasresponse.html">GetBotAliasResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBotAlias</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotaliasrequest.html">GetBotAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotaliasresponse.html">GetBotAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about an Amazon Lex bot alias. For more information about aliases, see</p>
+<p>&lt;a&gt;versioning-aliases&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetBotAlias&lt;/code&gt;</p>
+<!-- @@@getBotAlias -->
+<!-- $$$getBotAliases[overload1]$$$getBotAliasesconstGetBotAliasesRequest& -->
+<h3 class="fn" id="getBotAliases"><a name="getBotAliases"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotaliasesresponse.html">GetBotAliasesResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBotAliases</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotaliasesrequest.html">GetBotAliasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotaliasesresponse.html">GetBotAliasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of aliases for a specified Amazon Lex</p>
+<p>bot&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetBotAliases&lt;/code&gt;</p>
+<!-- @@@getBotAliases -->
+<!-- $$$getBotChannelAssociation[overload1]$$$getBotChannelAssociationconstGetBotChannelAssociationRequest& -->
+<h3 class="fn" id="getBotChannelAssociation"><a name="getBotChannelAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotchannelassociationresponse.html">GetBotChannelAssociationResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBotChannelAssociation</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotchannelassociationrequest.html">GetBotChannelAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotchannelassociationresponse.html">GetBotChannelAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the association between an Amazon Lex bot and a messaging</p>
+<p>platform&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetBotChannelAssociation&lt;/code&gt;</p>
+<!-- @@@getBotChannelAssociation -->
+<!-- $$$getBotChannelAssociations[overload1]$$$getBotChannelAssociationsconstGetBotChannelAssociationsRequest& -->
+<h3 class="fn" id="getBotChannelAssociations"><a name="getBotChannelAssociations"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotchannelassociationsresponse.html">GetBotChannelAssociationsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBotChannelAssociations</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotchannelassociationsrequest.html">GetBotChannelAssociationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotchannelassociationsresponse.html">GetBotChannelAssociationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all of the channels associated with the specified bot.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;GetBotChannelAssociations&lt;/code&gt; operation requires permissions for the &lt;code&gt;lex:GetBotChannelAssociations&lt;/code&gt;</p>
+<!-- @@@getBotChannelAssociations -->
+<!-- $$$getBotVersions[overload1]$$$getBotVersionsconstGetBotVersionsRequest& -->
+<h3 class="fn" id="getBotVersions"><a name="getBotVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotversionsresponse.html">GetBotVersionsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBotVersions</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotversionsrequest.html">GetBotVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotversionsresponse.html">GetBotVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about all of the versions of a</p>
+<p>bot&gt;</p>
+<p>The &lt;code&gt;GetBotVersions&lt;/code&gt; operation returns a &lt;code&gt;BotMetadata&lt;/code&gt; object for each version of a bot. For example, if a bot has three numbered versions, the &lt;code&gt;GetBotVersions&lt;/code&gt; operation returns four &lt;code&gt;BotMetadata&lt;/code&gt; objects in the response, one for each numbered version and one for the &lt;code&gt;$LATEST&lt;/code&gt; version.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;GetBotVersions&lt;/code&gt; operation always returns at least one version, the &lt;code&gt;$LATEST&lt;/code&gt;</p>
+<p>version&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetBotVersions&lt;/code&gt;</p>
+<!-- @@@getBotVersions -->
+<!-- $$$getBots[overload1]$$$getBotsconstGetBotsRequest& -->
+<h3 class="fn" id="getBots"><a name="getBots"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbotsresponse.html">GetBotsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBots</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbotsrequest.html">GetBotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbotsresponse.html">GetBotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns bot information as follows:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>If you provide the &lt;code&gt;nameContains&lt;/code&gt; field, the response includes information for the &lt;code&gt;$LATEST&lt;/code&gt; version of all bots whose name contains the specified</p>
+<p>string&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you don't specify the &lt;code&gt;nameContains&lt;/code&gt; field, the operation returns information about the &lt;code&gt;$LATEST&lt;/code&gt; version of all of your</p>
+<p>bots&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:GetBots&lt;/code&gt;</p>
+<!-- @@@getBots -->
+<!-- $$$getBuiltinIntent[overload1]$$$getBuiltinIntentconstGetBuiltinIntentRequest& -->
+<h3 class="fn" id="getBuiltinIntent"><a name="getBuiltinIntent"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinintentresponse.html">GetBuiltinIntentResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBuiltinIntent</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinintentrequest.html">GetBuiltinIntentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbuiltinintentresponse.html">GetBuiltinIntentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a built-in</p>
+<p>intent&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:GetBuiltinIntent&lt;/code&gt;</p>
+<!-- @@@getBuiltinIntent -->
+<!-- $$$getBuiltinIntents[overload1]$$$getBuiltinIntentsconstGetBuiltinIntentsRequest& -->
+<h3 class="fn" id="getBuiltinIntents"><a name="getBuiltinIntents"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinintentsresponse.html">GetBuiltinIntentsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBuiltinIntents</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinintentsrequest.html">GetBuiltinIntentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbuiltinintentsresponse.html">GetBuiltinIntentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of built-in intents that meet the specified</p>
+<p>criteria&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:GetBuiltinIntents&lt;/code&gt;</p>
+<!-- @@@getBuiltinIntents -->
+<!-- $$$getBuiltinSlotTypes[overload1]$$$getBuiltinSlotTypesconstGetBuiltinSlotTypesRequest& -->
+<h3 class="fn" id="getBuiltinSlotTypes"><a name="getBuiltinSlotTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinslottypesresponse.html">GetBuiltinSlotTypesResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getBuiltinSlotTypes</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getbuiltinslottypesrequest.html">GetBuiltinSlotTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getbuiltinslottypesresponse.html">GetBuiltinSlotTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of built-in slot types that meet the specified</p>
+<p>criteria&gt;</p>
+<p>For a list of built-in slot types, see &lt;a href=&quot;https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference&quot;&gt;Slot Type Reference&lt;/a&gt; in the &lt;i&gt;Alexa Skills</p>
+<p>Kit&lt;/i&gt;&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lex:GetBuiltInSlotTypes&lt;/code&gt;</p>
+<!-- @@@getBuiltinSlotTypes -->
+<!-- $$$getExport[overload1]$$$getExportconstGetExportRequest& -->
+<h3 class="fn" id="getExport"><a name="getExport"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getexportresponse.html">GetExportResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getExport</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getexportrequest.html">GetExportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getexportresponse.html">GetExportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Exports the contents of a Amazon Lex resource in a specified format.</p>
+<!-- @@@getExport -->
+<!-- $$$getImport[overload1]$$$getImportconstGetImportRequest& -->
+<h3 class="fn" id="getImport"><a name="getImport"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getimportresponse.html">GetImportResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getImport</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getimportrequest.html">GetImportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getimportresponse.html">GetImportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an import job started with the &lt;code&gt;StartImport&lt;/code&gt;</p>
+<!-- @@@getImport -->
+<!-- $$$getIntent[overload1]$$$getIntentconstGetIntentRequest& -->
+<h3 class="fn" id="getIntent"><a name="getIntent"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getintentresponse.html">GetIntentResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getIntent</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getintentrequest.html">GetIntentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getintentresponse.html">GetIntentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about an intent. In addition to the intent name, you must specify the intent version.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions to perform the &lt;code&gt;lex:GetIntent&lt;/code&gt; action.</p>
+<!-- @@@getIntent -->
+<!-- $$$getIntentVersions[overload1]$$$getIntentVersionsconstGetIntentVersionsRequest& -->
+<h3 class="fn" id="getIntentVersions"><a name="getIntentVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getintentversionsresponse.html">GetIntentVersionsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getIntentVersions</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getintentversionsrequest.html">GetIntentVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getintentversionsresponse.html">GetIntentVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about all of the versions of an</p>
+<p>intent&gt;</p>
+<p>The &lt;code&gt;GetIntentVersions&lt;/code&gt; operation returns an &lt;code&gt;IntentMetadata&lt;/code&gt; object for each version of an intent. For example, if an intent has three numbered versions, the &lt;code&gt;GetIntentVersions&lt;/code&gt; operation returns four &lt;code&gt;IntentMetadata&lt;/code&gt; objects in the response, one for each numbered version and one for the &lt;code&gt;$LATEST&lt;/code&gt; version.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;GetIntentVersions&lt;/code&gt; operation always returns at least one version, the &lt;code&gt;$LATEST&lt;/code&gt;</p>
+<p>version&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetIntentVersions&lt;/code&gt;</p>
+<!-- @@@getIntentVersions -->
+<!-- $$$getIntents[overload1]$$$getIntentsconstGetIntentsRequest& -->
+<h3 class="fn" id="getIntents"><a name="getIntents"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getintentsresponse.html">GetIntentsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getIntents</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getintentsrequest.html">GetIntentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getintentsresponse.html">GetIntentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns intent information as follows:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>If you specify the &lt;code&gt;nameContains&lt;/code&gt; field, returns the &lt;code&gt;$LATEST&lt;/code&gt; version of all intents that contain the specified</p>
+<p>string&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you don't specify the &lt;code&gt;nameContains&lt;/code&gt; field, returns information about the &lt;code&gt;$LATEST&lt;/code&gt; version of all intents.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>The operation requires permission for the &lt;code&gt;lex:GetIntents&lt;/code&gt; action.</p>
+<!-- @@@getIntents -->
+<!-- $$$getSlotType[overload1]$$$getSlotTypeconstGetSlotTypeRequest& -->
+<h3 class="fn" id="getSlotType"><a name="getSlotType"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getslottyperesponse.html">GetSlotTypeResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getSlotType</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getslottyperequest.html">GetSlotTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getslottyperesponse.html">GetSlotTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must specify the slot type</p>
+<p>version&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetSlotType&lt;/code&gt;</p>
+<!-- @@@getSlotType -->
+<!-- $$$getSlotTypeVersions[overload1]$$$getSlotTypeVersionsconstGetSlotTypeVersionsRequest& -->
+<h3 class="fn" id="getSlotTypeVersions"><a name="getSlotTypeVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getslottypeversionsresponse.html">GetSlotTypeVersionsResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getSlotTypeVersions</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getslottypeversionsrequest.html">GetSlotTypeVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getslottypeversionsresponse.html">GetSlotTypeVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about all versions of a slot</p>
+<p>type&gt;</p>
+<p>The &lt;code&gt;GetSlotTypeVersions&lt;/code&gt; operation returns a &lt;code&gt;SlotTypeMetadata&lt;/code&gt; object for each version of a slot type. For example, if a slot type has three numbered versions, the &lt;code&gt;GetSlotTypeVersions&lt;/code&gt; operation returns four &lt;code&gt;SlotTypeMetadata&lt;/code&gt; objects in the response, one for each numbered version and one for the &lt;code&gt;$LATEST&lt;/code&gt; version.</p>
+<p>&lt;/p</p>
+<p>The &lt;code&gt;GetSlotTypeVersions&lt;/code&gt; operation always returns at least one version, the &lt;code&gt;$LATEST&lt;/code&gt;</p>
+<p>version&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetSlotTypeVersions&lt;/code&gt;</p>
+<!-- @@@getSlotTypeVersions -->
+<!-- $$$getSlotTypes[overload1]$$$getSlotTypesconstGetSlotTypesRequest& -->
+<h3 class="fn" id="getSlotTypes"><a name="getSlotTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getslottypesresponse.html">GetSlotTypesResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getSlotTypes</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getslottypesrequest.html">GetSlotTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getslottypesresponse.html">GetSlotTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns slot type information as follows:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>If you specify the &lt;code&gt;nameContains&lt;/code&gt; field, returns the &lt;code&gt;$LATEST&lt;/code&gt; version of all slot types that contain the specified</p>
+<p>string&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you don't specify the &lt;code&gt;nameContains&lt;/code&gt; field, returns information about the &lt;code&gt;$LATEST&lt;/code&gt; version of all slot types.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>The operation requires permission for the &lt;code&gt;lex:GetSlotTypes&lt;/code&gt; action.</p>
+<!-- @@@getSlotTypes -->
+<!-- $$$getUtterancesView[overload1]$$$getUtterancesViewconstGetUtterancesViewRequest& -->
+<h3 class="fn" id="getUtterancesView"><a name="getUtterancesView"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-getutterancesviewresponse.html">GetUtterancesViewResponse</a></span> *LexModelBuildingServiceClient::<span class="name">getUtterancesView</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-getutterancesviewrequest.html">GetUtterancesViewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-getutterancesviewresponse.html">GetUtterancesViewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Use the &lt;code&gt;GetUtterancesView&lt;/code&gt; operation to get information about the utterances that your users have made to your bot. You can use this list to tune the utterances that your bot responds</p>
+<p>to&gt;</p>
+<p>For example, say that you have created a bot to order flowers. After your users have used your bot for a while, use the &lt;code&gt;GetUtterancesView&lt;/code&gt; operation to see the requests that they have made and whether they have been successful. You might find that the utterance &quot;I want flowers&quot; is not being recognized. You could add this utterance to the &lt;code&gt;OrderFlowers&lt;/code&gt; intent so that your bot recognizes that</p>
+<p>utterance&gt;</p>
+<p>After you publish a new version of a bot, you can get information about the old version and the new so that you can compare the performance across the two versions.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Utterance statistics are generated once a day. Data is available for the last 15 days. You can request information for up to 5 versions in each request. The response contains information about a maximum of 100 utterances for each</p>
+<p>version&gt; &lt;/note&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:GetUtterancesView&lt;/code&gt;</p>
+<!-- @@@getUtterancesView -->
+<!-- $$$putBot[overload1]$$$putBotconstPutBotRequest& -->
+<h3 class="fn" id="putBot"><a name="putBot"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-putbotresponse.html">PutBotResponse</a></span> *LexModelBuildingServiceClient::<span class="name">putBot</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-putbotrequest.html">PutBotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-putbotresponse.html">PutBotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the bot is created or updated but Amazon Lex returns the &lt;code/&gt; response &lt;code&gt;FAILED&lt;/code&gt;. You can build the bot after you add one or more intents. For more information about Amazon Lex bots, see &lt;a&gt;how-it-works&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>If you specify the name of an existing bot, the fields in the request replace the existing values in the &lt;code&gt;$LATEST&lt;/code&gt; version of the bot. Amazon Lex removes any fields that you don't provide values for in the request, except for the &lt;code&gt;idleTTLInSeconds&lt;/code&gt; and &lt;code&gt;privacySettings&lt;/code&gt; fields, which are set to their default values. If you don't specify values for required fields, Amazon Lex throws an</p>
+<p>exception&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:PutBot&lt;/code&gt; action. For more information, see</p>
+<!-- @@@putBot -->
+<!-- $$$putBotAlias[overload1]$$$putBotAliasconstPutBotAliasRequest& -->
+<h3 class="fn" id="putBotAlias"><a name="putBotAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-putbotaliasresponse.html">PutBotAliasResponse</a></span> *LexModelBuildingServiceClient::<span class="name">putBotAlias</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-putbotaliasrequest.html">PutBotAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-putbotaliasresponse.html">PutBotAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an alias for the specified version of the bot or replaces an alias for the specified bot. To change the version of the bot that the alias points to, replace the alias. For more information about aliases, see</p>
+<p>&lt;a&gt;versioning-aliases&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:PutBotAlias&lt;/code&gt; action.</p>
+<!-- @@@putBotAlias -->
+<!-- $$$putIntent[overload1]$$$putIntentconstPutIntentRequest& -->
+<h3 class="fn" id="putIntent"><a name="putIntent"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-putintentresponse.html">PutIntentResponse</a></span> *LexModelBuildingServiceClient::<span class="name">putIntent</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-putintentrequest.html">PutIntentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-putintentresponse.html">PutIntentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an intent or replaces an existing</p>
+<p>intent&gt;</p>
+<p>To define the interaction between the user and your bot, you use one or more intents. For a pizza ordering bot, for example, you would create an &lt;code&gt;OrderPizza&lt;/code&gt; intent.</p>
+<p>&lt;/p</p>
+<p>To create an intent or replace an existing intent, you must provide the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Intent name. For example,</p>
+<p>&lt;code&gt;OrderPizza&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Sample utterances. For example, &quot;Can I order a pizza, please.&quot; and &quot;I want to order a</p>
+<p>pizza.&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Information to be gathered. You specify slot types for the information that your bot will request from the user. You can specify standard slot types, such as a date or a time, or custom slot types such as the size and crust of a</p>
+<p>pizza&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>How the intent will be fulfilled. You can provide a Lambda function or configure the intent to return the intent information to the client application. If you use a Lambda function, when all of the intent information is available, Amazon Lex invokes your Lambda function. If you configure your intent to return the intent information to the client application.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You can specify other optional information in the request, such</p>
+<p>as&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A confirmation prompt to ask the user to confirm an intent. For example, &quot;Shall I order your</p>
+<p>pizza?&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>A conclusion statement to send to the user after the intent has been fulfilled. For example, &quot;I placed your pizza</p>
+<p>order.&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>A follow-up prompt that asks the user for additional activity. For example, asking &quot;Do you want to order a drink with your</p>
+<p>pizza?&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If you specify an existing intent name to update the intent, Amazon Lex replaces the values in the &lt;code&gt;$LATEST&lt;/code&gt; version of the intent with the values in the request. Amazon Lex removes fields that you don't provide in the request. If you don't specify the required fields, Amazon Lex throws an exception. When you update the &lt;code&gt;$LATEST&lt;/code&gt; version of an intent, the &lt;code&gt;status&lt;/code&gt; field of any bot that uses the &lt;code&gt;$LATEST&lt;/code&gt; version of the intent is set to</p>
+<p>&lt;code&gt;NOT_BUILT&lt;/code&gt;&gt;</p>
+<p>For more information, see</p>
+<p>&lt;a&gt;how-it-works&lt;/a&gt;&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:PutIntent&lt;/code&gt;</p>
+<!-- @@@putIntent -->
+<!-- $$$putSlotType[overload1]$$$putSlotTypeconstPutSlotTypeRequest& -->
+<h3 class="fn" id="putSlotType"><a name="putSlotType"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-putslottyperesponse.html">PutSlotTypeResponse</a></span> *LexModelBuildingServiceClient::<span class="name">putSlotType</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-putslottyperequest.html">PutSlotTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-putslottyperesponse.html">PutSlotTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a custom slot type or replaces an existing custom slot</p>
+<p>type&gt;</p>
+<p>To create a custom slot type, specify a name for the slot type and a set of enumeration values, which are the values that a slot of this type can assume. For more information, see</p>
+<p>&lt;a&gt;how-it-works&lt;/a&gt;&gt;</p>
+<p>If you specify the name of an existing slot type, the fields in the request replace the existing values in the &lt;code&gt;$LATEST&lt;/code&gt; version of the slot type. Amazon Lex removes the fields that you don't provide in the request. If you don't specify required fields, Amazon Lex throws an exception. When you update the &lt;code&gt;$LATEST&lt;/code&gt; version of a slot type, if a bot uses the &lt;code&gt;$LATEST&lt;/code&gt; version of an intent that contains the slot type, the bot's &lt;code&gt;status&lt;/code&gt; field is set to</p>
+<p>&lt;code&gt;NOT_BUILT&lt;/code&gt;&gt;</p>
+<p>This operation requires permissions for the &lt;code&gt;lex:PutSlotType&lt;/code&gt;</p>
+<!-- @@@putSlotType -->
+<!-- $$$startImport[overload1]$$$startImportconstStartImportRequest& -->
+<h3 class="fn" id="startImport"><a name="startImport"></a><code>[slot] </code><span class="type"><a href="qtaws-lexmodelbuildingservice-startimportresponse.html">StartImportResponse</a></span> *LexModelBuildingServiceClient::<span class="name">startImport</span>(const <span class="type"><a href="qtaws-lexmodelbuildingservice-startimportrequest.html">StartImportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">LexModelBuildingServiceClient</a> service, and returns a pointer to an <a href="qtaws-lexmodelbuildingservice-startimportresponse.html">StartImportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a job to import a resource to Amazon</p>
+<!-- @@@startImport -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

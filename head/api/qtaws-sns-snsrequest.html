@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- snsrequest.cpp -->
+  <title>SnsRequest Class | SNS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssns-index.html">SNS</a></li>
+<li><a href="qtawssns-module.html">C++ Classes</a></li>
+<li>SnsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SnsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sns-snsrequest.html">QtAws::SNS::SnsRequest</a>)<br/></span>
+<!-- $$$SnsRequest-brief -->
+<p>The <a href="qtaws-sns-snsrequest.html">SnsRequest</a> class provides an interface for SNS requests. <a href="#details">More...</a></p>
+<!-- @@@SnsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SnsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-sns-addpermissionrequest.html">QtAws::SNS::AddPermissionRequest</a>, <a href="qtaws-sns-checkifphonenumberisoptedoutrequest.html">QtAws::SNS::CheckIfPhoneNumberIsOptedOutRequest</a>, <a href="qtaws-sns-confirmsubscriptionrequest.html">QtAws::SNS::ConfirmSubscriptionRequest</a>, <a href="qtaws-sns-createplatformapplicationrequest.html">QtAws::SNS::CreatePlatformApplicationRequest</a>, <a href="qtaws-sns-createplatformendpointrequest.html">QtAws::SNS::CreatePlatformEndpointRequest</a>, <a href="qtaws-sns-createtopicrequest.html">QtAws::SNS::CreateTopicRequest</a>, <a href="qtaws-sns-deleteendpointrequest.html">QtAws::SNS::DeleteEndpointRequest</a>, <a href="qtaws-sns-deleteplatformapplicationrequest.html">QtAws::SNS::DeletePlatformApplicationRequest</a>, <a href="qtaws-sns-deletetopicrequest.html">QtAws::SNS::DeleteTopicRequest</a>, <a href="qtaws-sns-getendpointattributesrequest.html">QtAws::SNS::GetEndpointAttributesRequest</a>, <a href="qtaws-sns-getplatformapplicationattributesrequest.html">QtAws::SNS::GetPlatformApplicationAttributesRequest</a>, <a href="qtaws-sns-getsmsattributesrequest.html">QtAws::SNS::GetSMSAttributesRequest</a>, <a href="qtaws-sns-getsubscriptionattributesrequest.html">QtAws::SNS::GetSubscriptionAttributesRequest</a>, <a href="qtaws-sns-gettopicattributesrequest.html">QtAws::SNS::GetTopicAttributesRequest</a>, <a href="qtaws-sns-listendpointsbyplatformapplicationrequest.html">QtAws::SNS::ListEndpointsByPlatformApplicationRequest</a>, <a href="qtaws-sns-listphonenumbersoptedoutrequest.html">QtAws::SNS::ListPhoneNumbersOptedOutRequest</a>, <a href="qtaws-sns-listplatformapplicationsrequest.html">QtAws::SNS::ListPlatformApplicationsRequest</a>, <a href="qtaws-sns-listsubscriptionsbytopicrequest.html">QtAws::SNS::ListSubscriptionsByTopicRequest</a>, <a href="qtaws-sns-listsubscriptionsrequest.html">QtAws::SNS::ListSubscriptionsRequest</a>, <a href="qtaws-sns-listtopicsrequest.html">QtAws::SNS::ListTopicsRequest</a>, <a href="qtaws-sns-optinphonenumberrequest.html">QtAws::SNS::OptInPhoneNumberRequest</a>, <a href="qtaws-sns-publishrequest.html">QtAws::SNS::PublishRequest</a>, <a href="qtaws-sns-removepermissionrequest.html">QtAws::SNS::RemovePermissionRequest</a>, <a href="qtaws-sns-setendpointattributesrequest.html">QtAws::SNS::SetEndpointAttributesRequest</a>, <a href="qtaws-sns-setplatformapplicationattributesrequest.html">QtAws::SNS::SetPlatformApplicationAttributesRequest</a>, <a href="qtaws-sns-setsmsattributesrequest.html">QtAws::SNS::SetSMSAttributesRequest</a>, <a href="qtaws-sns-setsubscriptionattributesrequest.html">QtAws::SNS::SetSubscriptionAttributesRequest</a>, <a href="qtaws-sns-settopicattributesrequest.html">QtAws::SNS::SetTopicAttributesRequest</a>, <a href="qtaws-sns-subscriberequest.html">QtAws::SNS::SubscribeRequest</a>, and <a href="qtaws-sns-unsubscriberequest.html">QtAws::SNS::UnsubscribeRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-sns-snsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#Action-enum">Action</a></b> { AddPermissionAction, CheckIfPhoneNumberIsOptedOutAction, ConfirmSubscriptionAction, CreatePlatformApplicationAction, ..., UnsubscribeAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#SnsRequest">SnsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#SnsRequest-1">SnsRequest</a></b>(const SnsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SnsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#operator-eq">operator=</a></b>(const SnsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#operator-eq-eq">operator==</a></b>(const SnsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#SnsRequest-2">SnsRequest</a></b>(SnsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sns-snsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SnsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sns-snsrequest.html">SnsRequest</a> class provides an interface for SNS requests.</p>
+</div>
+<!-- @@@SnsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddPermissionAction$$$CheckIfPhoneNumberIsOptedOutAction$$$ConfirmSubscriptionAction$$$CreatePlatformApplicationAction$$$CreatePlatformEndpointAction$$$CreateTopicAction$$$DeleteEndpointAction$$$DeletePlatformApplicationAction$$$DeleteTopicAction$$$GetEndpointAttributesAction$$$GetPlatformApplicationAttributesAction$$$GetSMSAttributesAction$$$GetSubscriptionAttributesAction$$$GetTopicAttributesAction$$$ListEndpointsByPlatformApplicationAction$$$ListPhoneNumbersOptedOutAction$$$ListPlatformApplicationsAction$$$ListSubscriptionsAction$$$ListSubscriptionsByTopicAction$$$ListTopicsAction$$$OptInPhoneNumberAction$$$PublishAction$$$RemovePermissionAction$$$SetEndpointAttributesAction$$$SetPlatformApplicationAttributesAction$$$SetSMSAttributesAction$$$SetSubscriptionAttributesAction$$$SetTopicAttributesAction$$$SubscribeAction$$$UnsubscribeAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SnsRequest::<span class="name">Action</span><br/>flags SnsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as SNS requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::AddPermissionAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">SNS AddPermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::CheckIfPhoneNumberIsOptedOutAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">SNS CheckIfPhoneNumberIsOptedOut action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ConfirmSubscriptionAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">SNS ConfirmSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::CreatePlatformApplicationAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">SNS CreatePlatformApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::CreatePlatformEndpointAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">SNS CreatePlatformEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::CreateTopicAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">SNS CreateTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::DeleteEndpointAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">SNS DeleteEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::DeletePlatformApplicationAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">SNS DeletePlatformApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::DeleteTopicAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">SNS DeleteTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::GetEndpointAttributesAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">SNS GetEndpointAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::GetPlatformApplicationAttributesAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">SNS GetPlatformApplicationAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::GetSMSAttributesAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">SNS GetSMSAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::GetSubscriptionAttributesAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">SNS GetSubscriptionAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::GetTopicAttributesAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">SNS GetTopicAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListEndpointsByPlatformApplicationAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">SNS ListEndpointsByPlatformApplication action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListPhoneNumbersOptedOutAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">SNS ListPhoneNumbersOptedOut action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListPlatformApplicationsAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">SNS ListPlatformApplications action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListSubscriptionsAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">SNS ListSubscriptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListSubscriptionsByTopicAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">SNS ListSubscriptionsByTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::ListTopicsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">SNS ListTopics action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::OptInPhoneNumberAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">SNS OptInPhoneNumber action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::PublishAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">SNS Publish action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::RemovePermissionAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">SNS RemovePermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SetEndpointAttributesAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">SNS SetEndpointAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SetPlatformApplicationAttributesAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">SNS SetPlatformApplicationAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SetSMSAttributesAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">SNS SetSMSAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SetSubscriptionAttributesAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">SNS SetSubscriptionAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SetTopicAttributesAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">SNS SetTopicAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::SubscribeAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">SNS Subscribe action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SNS::SnsRequest::UnsubscribeAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">SNS Unsubscribe action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SnsRequest[overload1]$$$SnsRequestconstAction -->
+<h3 class="fn" id="SnsRequest"><a name="SnsRequest"></a>SnsRequest::<span class="name">SnsRequest</span>(const <span class="type"><a href="qtaws-sns-snsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-sns-snsrequest.html">SnsRequest</a> object for SNS <i>action</i>.</p>
+<!-- @@@SnsRequest -->
+<!-- $$$SnsRequest$$$SnsRequestconstSnsRequest& -->
+<h3 class="fn" id="SnsRequest-1"><a name="SnsRequest-1"></a>SnsRequest::<span class="name">SnsRequest</span>(const <span class="type"><a href="qtaws-sns-snsrequest.html#SnsRequest">SnsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SnsRequest -->
+<!-- $$$SnsRequest$$$SnsRequestSnsRequestPrivate*const -->
+<h3 class="fn" id="SnsRequest-2"><a name="SnsRequest-2"></a><code>[protected] </code>SnsRequest::<span class="name">SnsRequest</span>(<span class="type">SnsRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-sns-snsrequest.html">SnsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from SnsRequestPrivate.</p>
+<!-- @@@SnsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-sns-snsrequest.html#Action-enum">Action</a></span> SnsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the SNS action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SnsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the SNS action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SnsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the SNS API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SnsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SnsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SnsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SnsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SnsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-sns-snsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the SNS action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SnsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the SNS API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SnsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SnsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-sns-snsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SnsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the SNS request using the given <i>endpoint</i>.</p>
+<p>This SNS implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-sns-snsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSnsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-sns-snsrequest.html#SnsRequest">SnsRequest</a></span> &amp;SnsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-sns-snsrequest.html#SnsRequest">SnsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-sns-snsrequest.html">SnsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSnsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SnsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-sns-snsrequest.html#SnsRequest">SnsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

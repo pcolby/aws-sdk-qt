@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- redshiftresponse.cpp -->
+  <title>RedshiftResponse Class | Redshift</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsredshift-index.html">Redshift</a></li>
+<li><a href="qtawsredshift-module.html">C++ Classes</a></li>
+<li>RedshiftResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">RedshiftResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-redshift-redshiftresponse.html">QtAws::Redshift::RedshiftResponse</a>)<br/></span>
+<!-- $$$RedshiftResponse-brief -->
+<p>The <a href="qtaws-redshift-redshiftresponse.html">RedshiftResponse</a> class provides an interface for Redshift responses. <a href="#details">More...</a></p>
+<!-- @@@RedshiftResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;RedshiftResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-redshift-authorizeclustersecuritygroupingressresponse.html">QtAws::Redshift::AuthorizeClusterSecurityGroupIngressResponse</a>, <a href="qtaws-redshift-authorizesnapshotaccessresponse.html">QtAws::Redshift::AuthorizeSnapshotAccessResponse</a>, <a href="qtaws-redshift-copyclustersnapshotresponse.html">QtAws::Redshift::CopyClusterSnapshotResponse</a>, <a href="qtaws-redshift-createclusterparametergroupresponse.html">QtAws::Redshift::CreateClusterParameterGroupResponse</a>, <a href="qtaws-redshift-createclusterresponse.html">QtAws::Redshift::CreateClusterResponse</a>, <a href="qtaws-redshift-createclustersecuritygroupresponse.html">QtAws::Redshift::CreateClusterSecurityGroupResponse</a>, <a href="qtaws-redshift-createclustersnapshotresponse.html">QtAws::Redshift::CreateClusterSnapshotResponse</a>, <a href="qtaws-redshift-createclustersubnetgroupresponse.html">QtAws::Redshift::CreateClusterSubnetGroupResponse</a>, <a href="qtaws-redshift-createeventsubscriptionresponse.html">QtAws::Redshift::CreateEventSubscriptionResponse</a>, <a href="qtaws-redshift-createhsmclientcertificateresponse.html">QtAws::Redshift::CreateHsmClientCertificateResponse</a>, <a href="qtaws-redshift-createhsmconfigurationresponse.html">QtAws::Redshift::CreateHsmConfigurationResponse</a>, <a href="qtaws-redshift-createsnapshotcopygrantresponse.html">QtAws::Redshift::CreateSnapshotCopyGrantResponse</a>, <a href="qtaws-redshift-createtagsresponse.html">QtAws::Redshift::CreateTagsResponse</a>, <a href="qtaws-redshift-deleteclusterparametergroupresponse.html">QtAws::Redshift::DeleteClusterParameterGroupResponse</a>, <a href="qtaws-redshift-deleteclusterresponse.html">QtAws::Redshift::DeleteClusterResponse</a>, <a href="qtaws-redshift-deleteclustersecuritygroupresponse.html">QtAws::Redshift::DeleteClusterSecurityGroupResponse</a>, <a href="qtaws-redshift-deleteclustersnapshotresponse.html">QtAws::Redshift::DeleteClusterSnapshotResponse</a>, <a href="qtaws-redshift-deleteclustersubnetgroupresponse.html">QtAws::Redshift::DeleteClusterSubnetGroupResponse</a>, <a href="qtaws-redshift-deleteeventsubscriptionresponse.html">QtAws::Redshift::DeleteEventSubscriptionResponse</a>, <a href="qtaws-redshift-deletehsmclientcertificateresponse.html">QtAws::Redshift::DeleteHsmClientCertificateResponse</a>, <a href="qtaws-redshift-deletehsmconfigurationresponse.html">QtAws::Redshift::DeleteHsmConfigurationResponse</a>, <a href="qtaws-redshift-deletesnapshotcopygrantresponse.html">QtAws::Redshift::DeleteSnapshotCopyGrantResponse</a>, <a href="qtaws-redshift-deletetagsresponse.html">QtAws::Redshift::DeleteTagsResponse</a>, <a href="qtaws-redshift-describeclusterparametergroupsresponse.html">QtAws::Redshift::DescribeClusterParameterGroupsResponse</a>, <a href="qtaws-redshift-describeclusterparametersresponse.html">QtAws::Redshift::DescribeClusterParametersResponse</a>, <a href="qtaws-redshift-describeclustersecuritygroupsresponse.html">QtAws::Redshift::DescribeClusterSecurityGroupsResponse</a>, <a href="qtaws-redshift-describeclustersnapshotsresponse.html">QtAws::Redshift::DescribeClusterSnapshotsResponse</a>, <a href="qtaws-redshift-describeclustersresponse.html">QtAws::Redshift::DescribeClustersResponse</a>, <a href="qtaws-redshift-describeclustersubnetgroupsresponse.html">QtAws::Redshift::DescribeClusterSubnetGroupsResponse</a>, <a href="qtaws-redshift-describeclusterversionsresponse.html">QtAws::Redshift::DescribeClusterVersionsResponse</a>, <a href="qtaws-redshift-describedefaultclusterparametersresponse.html">QtAws::Redshift::DescribeDefaultClusterParametersResponse</a>, <a href="qtaws-redshift-describeeventcategoriesresponse.html">QtAws::Redshift::DescribeEventCategoriesResponse</a>, <a href="qtaws-redshift-describeeventsresponse.html">QtAws::Redshift::DescribeEventsResponse</a>, <a href="qtaws-redshift-describeeventsubscriptionsresponse.html">QtAws::Redshift::DescribeEventSubscriptionsResponse</a>, <a href="qtaws-redshift-describehsmclientcertificatesresponse.html">QtAws::Redshift::DescribeHsmClientCertificatesResponse</a>, <a href="qtaws-redshift-describehsmconfigurationsresponse.html">QtAws::Redshift::DescribeHsmConfigurationsResponse</a>, <a href="qtaws-redshift-describeloggingstatusresponse.html">QtAws::Redshift::DescribeLoggingStatusResponse</a>, <a href="qtaws-redshift-describeorderableclusteroptionsresponse.html">QtAws::Redshift::DescribeOrderableClusterOptionsResponse</a>, <a href="qtaws-redshift-describereservednodeofferingsresponse.html">QtAws::Redshift::DescribeReservedNodeOfferingsResponse</a>, <a href="qtaws-redshift-describereservednodesresponse.html">QtAws::Redshift::DescribeReservedNodesResponse</a>, <a href="qtaws-redshift-describeresizeresponse.html">QtAws::Redshift::DescribeResizeResponse</a>, <a href="qtaws-redshift-describesnapshotcopygrantsresponse.html">QtAws::Redshift::DescribeSnapshotCopyGrantsResponse</a>, <a href="qtaws-redshift-describetablerestorestatusresponse.html">QtAws::Redshift::DescribeTableRestoreStatusResponse</a>, <a href="qtaws-redshift-describetagsresponse.html">QtAws::Redshift::DescribeTagsResponse</a>, <a href="qtaws-redshift-disableloggingresponse.html">QtAws::Redshift::DisableLoggingResponse</a>, <a href="qtaws-redshift-disablesnapshotcopyresponse.html">QtAws::Redshift::DisableSnapshotCopyResponse</a>, <a href="qtaws-redshift-enableloggingresponse.html">QtAws::Redshift::EnableLoggingResponse</a>, <a href="qtaws-redshift-enablesnapshotcopyresponse.html">QtAws::Redshift::EnableSnapshotCopyResponse</a>, <a href="qtaws-redshift-getclustercredentialsresponse.html">QtAws::Redshift::GetClusterCredentialsResponse</a>, <a href="qtaws-redshift-modifyclusteriamrolesresponse.html">QtAws::Redshift::ModifyClusterIamRolesResponse</a>, <a href="qtaws-redshift-modifyclusterparametergroupresponse.html">QtAws::Redshift::ModifyClusterParameterGroupResponse</a>, <a href="qtaws-redshift-modifyclusterresponse.html">QtAws::Redshift::ModifyClusterResponse</a>, <a href="qtaws-redshift-modifyclustersubnetgroupresponse.html">QtAws::Redshift::ModifyClusterSubnetGroupResponse</a>, <a href="qtaws-redshift-modifyeventsubscriptionresponse.html">QtAws::Redshift::ModifyEventSubscriptionResponse</a>, <a href="qtaws-redshift-modifysnapshotcopyretentionperiodresponse.html">QtAws::Redshift::ModifySnapshotCopyRetentionPeriodResponse</a>, <a href="qtaws-redshift-purchasereservednodeofferingresponse.html">QtAws::Redshift::PurchaseReservedNodeOfferingResponse</a>, <a href="qtaws-redshift-rebootclusterresponse.html">QtAws::Redshift::RebootClusterResponse</a>, <a href="qtaws-redshift-resetclusterparametergroupresponse.html">QtAws::Redshift::ResetClusterParameterGroupResponse</a>, <a href="qtaws-redshift-restorefromclustersnapshotresponse.html">QtAws::Redshift::RestoreFromClusterSnapshotResponse</a>, <a href="qtaws-redshift-restoretablefromclustersnapshotresponse.html">QtAws::Redshift::RestoreTableFromClusterSnapshotResponse</a>, <a href="qtaws-redshift-revokeclustersecuritygroupingressresponse.html">QtAws::Redshift::RevokeClusterSecurityGroupIngressResponse</a>, <a href="qtaws-redshift-revokesnapshotaccessresponse.html">QtAws::Redshift::RevokeSnapshotAccessResponse</a>, and <a href="qtaws-redshift-rotateencryptionkeyresponse.html">QtAws::Redshift::RotateEncryptionKeyResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-redshift-redshiftresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftresponse.html#RedshiftResponse">RedshiftResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-redshift-redshiftresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$RedshiftResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-redshift-redshiftresponse.html">RedshiftResponse</a> class provides an interface for Redshift responses.</p>
+</div>
+<!-- @@@RedshiftResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RedshiftResponse[overload1]$$$RedshiftResponseQObject*const -->
+<h3 class="fn" id="RedshiftResponse"><a name="RedshiftResponse"></a>RedshiftResponse::<span class="name">RedshiftResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-redshift-redshiftresponse.html">RedshiftResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@RedshiftResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> RedshiftResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

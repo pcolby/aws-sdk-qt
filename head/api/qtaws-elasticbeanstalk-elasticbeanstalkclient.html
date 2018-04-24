@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- elasticbeanstalkclient.cpp -->
+  <title>ElasticBeanstalkClient Class | ElasticBeanstalk</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawselasticbeanstalk-index.html">ElasticBeanstalk</a></li>
+<li><a href="qtawselasticbeanstalk-module.html">C++ Classes</a></li>
+<li>ElasticBeanstalkClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ElasticBeanstalkClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">QtAws::ElasticBeanstalk::ElasticBeanstalkClient</a>)<br/></span>
+<!-- $$$ElasticBeanstalkClient-brief -->
+<p>The <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> class provides access to the AWS Elastic Beanstalk service. <a href="#details">More...</a></p>
+<!-- @@@ElasticBeanstalkClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ElasticBeanstalkClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#ElasticBeanstalkClient">ElasticBeanstalkClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#ElasticBeanstalkClient-1">ElasticBeanstalkClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AbortEnvironmentUpdateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#abortEnvironmentUpdate">abortEnvironmentUpdate</a></b>(const AbortEnvironmentUpdateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ApplyEnvironmentManagedActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#applyEnvironmentManagedAction">applyEnvironmentManagedAction</a></b>(const ApplyEnvironmentManagedActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CheckDNSAvailabilityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#checkDNSAvailability">checkDNSAvailability</a></b>(const CheckDNSAvailabilityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ComposeEnvironmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#composeEnvironments">composeEnvironments</a></b>(const ComposeEnvironmentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createApplication">createApplication</a></b>(const CreateApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApplicationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createApplicationVersion">createApplicationVersion</a></b>(const CreateApplicationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConfigurationTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createConfigurationTemplate">createConfigurationTemplate</a></b>(const CreateConfigurationTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEnvironmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createEnvironment">createEnvironment</a></b>(const CreateEnvironmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePlatformVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createPlatformVersion">createPlatformVersion</a></b>(const CreatePlatformVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStorageLocationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#createStorageLocation">createStorageLocation</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#deleteApplication">deleteApplication</a></b>(const DeleteApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApplicationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#deleteApplicationVersion">deleteApplicationVersion</a></b>(const DeleteApplicationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#deleteConfigurationTemplate">deleteConfigurationTemplate</a></b>(const DeleteConfigurationTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEnvironmentConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#deleteEnvironmentConfiguration">deleteEnvironmentConfiguration</a></b>(const DeleteEnvironmentConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePlatformVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#deletePlatformVersion">deletePlatformVersion</a></b>(const DeletePlatformVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAccountAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeAccountAttributes">describeAccountAttributes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeApplicationVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeApplicationVersions">describeApplicationVersions</a></b>(const DescribeApplicationVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeApplicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeApplications">describeApplications</a></b>(const DescribeApplicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeConfigurationOptions">describeConfigurationOptions</a></b>(const DescribeConfigurationOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeConfigurationSettings">describeConfigurationSettings</a></b>(const DescribeConfigurationSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEnvironmentHealthResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEnvironmentHealth">describeEnvironmentHealth</a></b>(const DescribeEnvironmentHealthRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEnvironmentManagedActionHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEnvironmentManagedActionHistory">describeEnvironmentManagedActionHistory</a></b>(const DescribeEnvironmentManagedActionHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEnvironmentManagedActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEnvironmentManagedActions">describeEnvironmentManagedActions</a></b>(const DescribeEnvironmentManagedActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEnvironmentResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEnvironmentResources">describeEnvironmentResources</a></b>(const DescribeEnvironmentResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEnvironmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEnvironments">describeEnvironments</a></b>(const DescribeEnvironmentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstancesHealthResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describeInstancesHealth">describeInstancesHealth</a></b>(const DescribeInstancesHealthRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePlatformVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#describePlatformVersion">describePlatformVersion</a></b>(const DescribePlatformVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAvailableSolutionStacksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#listAvailableSolutionStacks">listAvailableSolutionStacks</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPlatformVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#listPlatformVersions">listPlatformVersions</a></b>(const ListPlatformVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebuildEnvironmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#rebuildEnvironment">rebuildEnvironment</a></b>(const RebuildEnvironmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RequestEnvironmentInfoResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#requestEnvironmentInfo">requestEnvironmentInfo</a></b>(const RequestEnvironmentInfoRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestartAppServerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#restartAppServer">restartAppServer</a></b>(const RestartAppServerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RetrieveEnvironmentInfoResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#retrieveEnvironmentInfo">retrieveEnvironmentInfo</a></b>(const RetrieveEnvironmentInfoRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SwapEnvironmentCNAMEsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#swapEnvironmentCNAMEs">swapEnvironmentCNAMEs</a></b>(const SwapEnvironmentCNAMEsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateEnvironmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#terminateEnvironment">terminateEnvironment</a></b>(const TerminateEnvironmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateApplication">updateApplication</a></b>(const UpdateApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationResourceLifecycleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateApplicationResourceLifecycle">updateApplicationResourceLifecycle</a></b>(const UpdateApplicationResourceLifecycleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateApplicationVersion">updateApplicationVersion</a></b>(const UpdateApplicationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConfigurationTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateConfigurationTemplate">updateConfigurationTemplate</a></b>(const UpdateConfigurationTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEnvironmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateEnvironment">updateEnvironment</a></b>(const UpdateEnvironmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#updateTagsForResource">updateTagsForResource</a></b>(const UpdateTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ValidateConfigurationSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#validateConfigurationSettings">validateConfigurationSettings</a></b>(const ValidateConfigurationSettingsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ElasticBeanstalkClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> class provides access to the AWS Elastic Beanstalk service.</p>
+<p>&lt;fullname&gt;AWS Elastic Beanstalk&lt;/fullname&gt;</p>
+<p>AWS Elastic Beanstalk makes it easy for you to create, deploy, and manage scalable, fault-tolerant applications running on the Amazon Web Services</p>
+<p>cloud&gt;</p>
+<p>For more information about this product, go to the &lt;a href=&quot;http://aws.amazon.com/elasticbeanstalk/&quot;&gt;AWS Elastic Beanstalk&lt;/a&gt; details page. The location of the latest AWS Elastic Beanstalk WSDL is &lt;a href=&quot;http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl&quot;&gt;http://elasticbeanstalk.s3.amazonaws.com/doc/2010-12-01/AWSElasticBeanstalk.wsdl&lt;/a&gt;. To install the Software Development Kits (SDKs), Integrated Development Environment (IDE) Toolkits, and command line tools that enable you to access the API, go to &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;Tools for Amazon Web</p>
+<p>Services&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Endpoints&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region&quot;&gt;Regions and Endpoints&lt;/a&gt; in the &lt;i&gt;Amazon Web Services</p>
+</div>
+<!-- @@@ElasticBeanstalkClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ElasticBeanstalkClient[overload1]$$$ElasticBeanstalkClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElasticBeanstalkClient"><a name="ElasticBeanstalkClient"></a>ElasticBeanstalkClient::<span class="name">ElasticBeanstalkClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ElasticBeanstalkClient -->
+<!-- $$$ElasticBeanstalkClient$$$ElasticBeanstalkClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ElasticBeanstalkClient-1"><a name="ElasticBeanstalkClient-1"></a>ElasticBeanstalkClient::<span class="name">ElasticBeanstalkClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html#ElasticBeanstalkClient">ElasticBeanstalkClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ElasticBeanstalkClient -->
+<!-- $$$abortEnvironmentUpdate[overload1]$$$abortEnvironmentUpdateconstAbortEnvironmentUpdateRequest& -->
+<h3 class="fn" id="abortEnvironmentUpdate"><a name="abortEnvironmentUpdate"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-abortenvironmentupdateresponse.html">AbortEnvironmentUpdateResponse</a></span> *ElasticBeanstalkClient::<span class="name">abortEnvironmentUpdate</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-abortenvironmentupdaterequest.html">AbortEnvironmentUpdateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-abortenvironmentupdateresponse.html">AbortEnvironmentUpdateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels in-progress environment configuration update or application version</p>
+<!-- @@@abortEnvironmentUpdate -->
+<!-- $$$applyEnvironmentManagedAction[overload1]$$$applyEnvironmentManagedActionconstApplyEnvironmentManagedActionRequest& -->
+<h3 class="fn" id="applyEnvironmentManagedAction"><a name="applyEnvironmentManagedAction"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-applyenvironmentmanagedactionresponse.html">ApplyEnvironmentManagedActionResponse</a></span> *ElasticBeanstalkClient::<span class="name">applyEnvironmentManagedAction</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-applyenvironmentmanagedactionrequest.html">ApplyEnvironmentManagedActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-applyenvironmentmanagedactionresponse.html">ApplyEnvironmentManagedActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Applies a scheduled managed action immediately. A managed action can be applied only if its status is &lt;code&gt;Scheduled&lt;/code&gt;. Get the status and action ID of a managed action with</p>
+<!-- @@@applyEnvironmentManagedAction -->
+<!-- $$$checkDNSAvailability[overload1]$$$checkDNSAvailabilityconstCheckDNSAvailabilityRequest& -->
+<h3 class="fn" id="checkDNSAvailability"><a name="checkDNSAvailability"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-checkdnsavailabilityresponse.html">CheckDNSAvailabilityResponse</a></span> *ElasticBeanstalkClient::<span class="name">checkDNSAvailability</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-checkdnsavailabilityrequest.html">CheckDNSAvailabilityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-checkdnsavailabilityresponse.html">CheckDNSAvailabilityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Checks if the specified CNAME is</p>
+<!-- @@@checkDNSAvailability -->
+<!-- $$$composeEnvironments[overload1]$$$composeEnvironmentsconstComposeEnvironmentsRequest& -->
+<h3 class="fn" id="composeEnvironments"><a name="composeEnvironments"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-composeenvironmentsresponse.html">ComposeEnvironmentsResponse</a></span> *ElasticBeanstalkClient::<span class="name">composeEnvironments</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-composeenvironmentsrequest.html">ComposeEnvironmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-composeenvironmentsresponse.html">ComposeEnvironmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create or update a group of environments that each run a separate component of a single application. Takes a list of version labels that specify application source bundles for each of the environments to create or update. The name of each environment and other required information must be included in the source bundles in an environment manifest named &lt;code&gt;env.yaml&lt;/code&gt;. See &lt;a href=&quot;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-mgmt-compose.html&quot;&gt;Compose Environments&lt;/a&gt; for</p>
+<!-- @@@composeEnvironments -->
+<!-- $$$createApplication[overload1]$$$createApplicationconstCreateApplicationRequest& -->
+<h3 class="fn" id="createApplication"><a name="createApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createapplicationresponse.html">CreateApplicationResponse</a></span> *ElasticBeanstalkClient::<span class="name">createApplication</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-createapplicationrequest.html">CreateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createapplicationresponse.html">CreateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an application that has one configuration template named &lt;code&gt;default&lt;/code&gt; and no application versions.</p>
+<!-- @@@createApplication -->
+<!-- $$$createApplicationVersion[overload1]$$$createApplicationVersionconstCreateApplicationVersionRequest& -->
+<h3 class="fn" id="createApplicationVersion"><a name="createApplicationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createapplicationversionresponse.html">CreateApplicationVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">createApplicationVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-createapplicationversionrequest.html">CreateApplicationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createapplicationversionresponse.html">CreateApplicationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an application version for the specified application. You can create an application version from a source bundle in Amazon S3, a commit in AWS CodeCommit, or the output of an AWS CodeBuild build as</p>
+<p>follows&gt;</p>
+<p>Specify a commit in an AWS CodeCommit repository with</p>
+<p>&lt;code&gt;SourceBuildInformation&lt;/code&gt;&gt;</p>
+<p>Specify a build in an AWS CodeBuild with &lt;code&gt;SourceBuildInformation&lt;/code&gt; and</p>
+<p>&lt;code&gt;BuildConfiguration&lt;/code&gt;&gt;</p>
+<p>Specify a source bundle in S3 with &lt;code&gt;SourceBundle&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>Omit both &lt;code&gt;SourceBuildInformation&lt;/code&gt; and &lt;code&gt;SourceBundle&lt;/code&gt; to use the default sample</p>
+<p>application&gt; &lt;note&gt;</p>
+<p>Once you create an application version with a specified Amazon S3 bucket and key location, you cannot change that Amazon S3 location. If you change the Amazon S3 location, you receive an exception when you attempt to launch an environment from the application</p>
+<!-- @@@createApplicationVersion -->
+<!-- $$$createConfigurationTemplate[overload1]$$$createConfigurationTemplateconstCreateConfigurationTemplateRequest& -->
+<h3 class="fn" id="createConfigurationTemplate"><a name="createConfigurationTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createconfigurationtemplateresponse.html">CreateConfigurationTemplateResponse</a></span> *ElasticBeanstalkClient::<span class="name">createConfigurationTemplate</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-createconfigurationtemplaterequest.html">CreateConfigurationTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createconfigurationtemplateresponse.html">CreateConfigurationTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a configuration template. Templates are associated with a specific application and are used to deploy different versions of the application with the same configuration</p>
+<p>settings&gt;</p>
+<p>Related</p>
+<p>Topic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeConfigurationOptions&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeConfigurationSettings&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;ListAvailableSolutionStacks&lt;/a&gt;</p>
+<!-- @@@createConfigurationTemplate -->
+<!-- $$$createEnvironment[overload1]$$$createEnvironmentconstCreateEnvironmentRequest& -->
+<h3 class="fn" id="createEnvironment"><a name="createEnvironment"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createenvironmentresponse.html">CreateEnvironmentResponse</a></span> *ElasticBeanstalkClient::<span class="name">createEnvironment</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-createenvironmentrequest.html">CreateEnvironmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createenvironmentresponse.html">CreateEnvironmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Launches an environment for the specified application using the specified</p>
+<!-- @@@createEnvironment -->
+<!-- $$$createPlatformVersion[overload1]$$$createPlatformVersionconstCreatePlatformVersionRequest& -->
+<h3 class="fn" id="createPlatformVersion"><a name="createPlatformVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createplatformversionresponse.html">CreatePlatformVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">createPlatformVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-createplatformversionrequest.html">CreatePlatformVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createplatformversionresponse.html">CreatePlatformVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new version of your custom</p>
+<!-- @@@createPlatformVersion -->
+<!-- $$$createStorageLocation[overload1]$$$createStorageLocation -->
+<h3 class="fn" id="createStorageLocation"><a name="createStorageLocation"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-createstoragelocationresponse.html">CreateStorageLocationResponse</a></span> *ElasticBeanstalkClient::<span class="name">createStorageLocation</span>()</h3>
+<p>Sends a CreateStorageLocation request to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-createstoragelocationresponse.html">CreateStorageLocationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk environments. The Elastic Beanstalk console and EB CLI call this API the first time you create an environment in a region. If the storage location already exists, &lt;code&gt;CreateStorageLocation&lt;/code&gt; still returns the bucket name but does not create a new</p>
+<!-- @@@createStorageLocation -->
+<!-- $$$deleteApplication[overload1]$$$deleteApplicationconstDeleteApplicationRequest& -->
+<h3 class="fn" id="deleteApplication"><a name="deleteApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-deleteapplicationresponse.html">DeleteApplicationResponse</a></span> *ElasticBeanstalkClient::<span class="name">deleteApplication</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-deleteapplicationrequest.html">DeleteApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-deleteapplicationresponse.html">DeleteApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified application along with all associated versions and configurations. The application versions will not be deleted from your Amazon S3</p>
+<p>bucket&gt; &lt;note&gt;</p>
+<p>You cannot delete an application that has a running</p>
+<!-- @@@deleteApplication -->
+<!-- $$$deleteApplicationVersion[overload1]$$$deleteApplicationVersionconstDeleteApplicationVersionRequest& -->
+<h3 class="fn" id="deleteApplicationVersion"><a name="deleteApplicationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-deleteapplicationversionresponse.html">DeleteApplicationVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">deleteApplicationVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-deleteapplicationversionrequest.html">DeleteApplicationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-deleteapplicationversionresponse.html">DeleteApplicationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified version from the specified</p>
+<p>application&gt; &lt;note&gt;</p>
+<p>You cannot delete an application version that is associated with a running</p>
+<!-- @@@deleteApplicationVersion -->
+<!-- $$$deleteConfigurationTemplate[overload1]$$$deleteConfigurationTemplateconstDeleteConfigurationTemplateRequest& -->
+<h3 class="fn" id="deleteConfigurationTemplate"><a name="deleteConfigurationTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-deleteconfigurationtemplateresponse.html">DeleteConfigurationTemplateResponse</a></span> *ElasticBeanstalkClient::<span class="name">deleteConfigurationTemplate</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-deleteconfigurationtemplaterequest.html">DeleteConfigurationTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-deleteconfigurationtemplateresponse.html">DeleteConfigurationTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified configuration</p>
+<p>template&gt; &lt;note&gt;</p>
+<p>When you launch an environment using a configuration template, the environment gets a copy of the template. You can delete or modify the environment's copy of the template without affecting the running</p>
+<!-- @@@deleteConfigurationTemplate -->
+<!-- $$$deleteEnvironmentConfiguration[overload1]$$$deleteEnvironmentConfigurationconstDeleteEnvironmentConfigurationRequest& -->
+<h3 class="fn" id="deleteEnvironmentConfiguration"><a name="deleteEnvironmentConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-deleteenvironmentconfigurationresponse.html">DeleteEnvironmentConfigurationResponse</a></span> *ElasticBeanstalkClient::<span class="name">deleteEnvironmentConfiguration</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-deleteenvironmentconfigurationrequest.html">DeleteEnvironmentConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-deleteenvironmentconfigurationresponse.html">DeleteEnvironmentConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the draft configuration associated with the running</p>
+<p>environment&gt;</p>
+<p>Updating a running environment with any configuration changes creates a draft configuration set. You can get the draft configuration using &lt;a&gt;DescribeConfigurationSettings&lt;/a&gt; while the update is in progress or if the update fails. The &lt;code&gt;DeploymentStatus&lt;/code&gt; for the draft configuration indicates whether the deployment is in process or has failed. The draft configuration remains in existence until it is deleted with this</p>
+<!-- @@@deleteEnvironmentConfiguration -->
+<!-- $$$deletePlatformVersion[overload1]$$$deletePlatformVersionconstDeletePlatformVersionRequest& -->
+<h3 class="fn" id="deletePlatformVersion"><a name="deletePlatformVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-deleteplatformversionresponse.html">DeletePlatformVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">deletePlatformVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-deleteplatformversionrequest.html">DeletePlatformVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-deleteplatformversionresponse.html">DeletePlatformVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified version of a custom</p>
+<!-- @@@deletePlatformVersion -->
+<!-- $$$describeAccountAttributes[overload1]$$$describeAccountAttributes -->
+<h3 class="fn" id="describeAccountAttributes"><a name="describeAccountAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeAccountAttributes</span>()</h3>
+<p>Sends a DescribeAccountAttributes request to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeaccountattributesresponse.html">DescribeAccountAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS</p>
+<p>account&gt;</p>
+<p>The result currently has one set of attributes—resource</p>
+<!-- @@@describeAccountAttributes -->
+<!-- $$$describeApplicationVersions[overload1]$$$describeApplicationVersionsconstDescribeApplicationVersionsRequest& -->
+<h3 class="fn" id="describeApplicationVersions"><a name="describeApplicationVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeapplicationversionsresponse.html">DescribeApplicationVersionsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeApplicationVersions</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeapplicationversionsrequest.html">DescribeApplicationVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeapplicationversionsresponse.html">DescribeApplicationVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a list of application</p>
+<!-- @@@describeApplicationVersions -->
+<!-- $$$describeApplications[overload1]$$$describeApplicationsconstDescribeApplicationsRequest& -->
+<h3 class="fn" id="describeApplications"><a name="describeApplications"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeapplicationsresponse.html">DescribeApplicationsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeApplications</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeapplicationsrequest.html">DescribeApplicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeapplicationsresponse.html">DescribeApplicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the descriptions of existing</p>
+<!-- @@@describeApplications -->
+<!-- $$$describeConfigurationOptions[overload1]$$$describeConfigurationOptionsconstDescribeConfigurationOptionsRequest& -->
+<h3 class="fn" id="describeConfigurationOptions"><a name="describeConfigurationOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeconfigurationoptionsresponse.html">DescribeConfigurationOptionsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeConfigurationOptions</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeconfigurationoptionsrequest.html">DescribeConfigurationOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeconfigurationoptionsresponse.html">DescribeConfigurationOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the configuration options that are used in a particular configuration template or environment, or that a specified solution stack defines. The description includes the values the options, their default values, and an indication of the required action on a running environment if an option value is</p>
+<!-- @@@describeConfigurationOptions -->
+<!-- $$$describeConfigurationSettings[overload1]$$$describeConfigurationSettingsconstDescribeConfigurationSettingsRequest& -->
+<h3 class="fn" id="describeConfigurationSettings"><a name="describeConfigurationSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeconfigurationsettingsresponse.html">DescribeConfigurationSettingsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeConfigurationSettings</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeconfigurationsettingsrequest.html">DescribeConfigurationSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeconfigurationsettingsresponse.html">DescribeConfigurationSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of the settings for the specified configuration set, that is, either a configuration template or the configuration set associated with a running</p>
+<p>environment&gt;</p>
+<p>When describing the settings for the configuration set associated with a running environment, it is possible to receive two sets of setting descriptions. One is the deployed configuration set, and the other is a draft configuration of an environment that is either in the process of deployment or that failed to</p>
+<p>deploy&gt;</p>
+<p>Related</p>
+<p>Topic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteEnvironmentConfiguration&lt;/a&gt;</p>
+<!-- @@@describeConfigurationSettings -->
+<!-- $$$describeEnvironmentHealth[overload1]$$$describeEnvironmentHealthconstDescribeEnvironmentHealthRequest& -->
+<h3 class="fn" id="describeEnvironmentHealth"><a name="describeEnvironmentHealth"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmenthealthresponse.html">DescribeEnvironmentHealthResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEnvironmentHealth</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmenthealthrequest.html">DescribeEnvironmentHealthRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeenvironmenthealthresponse.html">DescribeEnvironmentHealthResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the overall health of the specified environment. The &lt;b&gt;DescribeEnvironmentHealth&lt;/b&gt; operation is only available with AWS Elastic Beanstalk Enhanced</p>
+<!-- @@@describeEnvironmentHealth -->
+<!-- $$$describeEnvironmentManagedActionHistory[overload1]$$$describeEnvironmentManagedActionHistoryconstDescribeEnvironmentManagedActionHistoryRequest& -->
+<h3 class="fn" id="describeEnvironmentManagedActionHistory"><a name="describeEnvironmentManagedActionHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionhistoryresponse.html">DescribeEnvironmentManagedActionHistoryResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEnvironmentManagedActionHistory</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionhistoryrequest.html">DescribeEnvironmentManagedActionHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionhistoryresponse.html">DescribeEnvironmentManagedActionHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists an environment's completed and failed managed</p>
+<!-- @@@describeEnvironmentManagedActionHistory -->
+<!-- $$$describeEnvironmentManagedActions[overload1]$$$describeEnvironmentManagedActionsconstDescribeEnvironmentManagedActionsRequest& -->
+<h3 class="fn" id="describeEnvironmentManagedActions"><a name="describeEnvironmentManagedActions"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionsresponse.html">DescribeEnvironmentManagedActionsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEnvironmentManagedActions</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionsrequest.html">DescribeEnvironmentManagedActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeenvironmentmanagedactionsresponse.html">DescribeEnvironmentManagedActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists an environment's upcoming and in-progress managed</p>
+<!-- @@@describeEnvironmentManagedActions -->
+<!-- $$$describeEnvironmentResources[overload1]$$$describeEnvironmentResourcesconstDescribeEnvironmentResourcesRequest& -->
+<h3 class="fn" id="describeEnvironmentResources"><a name="describeEnvironmentResources"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentresourcesresponse.html">DescribeEnvironmentResourcesResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEnvironmentResources</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentresourcesrequest.html">DescribeEnvironmentResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeenvironmentresourcesresponse.html">DescribeEnvironmentResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns AWS resources for this</p>
+<!-- @@@describeEnvironmentResources -->
+<!-- $$$describeEnvironments[overload1]$$$describeEnvironmentsconstDescribeEnvironmentsRequest& -->
+<h3 class="fn" id="describeEnvironments"><a name="describeEnvironments"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentsresponse.html">DescribeEnvironmentsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEnvironments</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeenvironmentsrequest.html">DescribeEnvironmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeenvironmentsresponse.html">DescribeEnvironmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns descriptions for existing</p>
+<!-- @@@describeEnvironments -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeeventsresponse.html">DescribeEventsResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns list of event descriptions matching criteria up to the last 6</p>
+<p>weeks&gt; &lt;note&gt;</p>
+<p>This action returns the most recent 1,000 events from the specified</p>
+<!-- @@@describeEvents -->
+<!-- $$$describeInstancesHealth[overload1]$$$describeInstancesHealthconstDescribeInstancesHealthRequest& -->
+<h3 class="fn" id="describeInstancesHealth"><a name="describeInstancesHealth"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeinstanceshealthresponse.html">DescribeInstancesHealthResponse</a></span> *ElasticBeanstalkClient::<span class="name">describeInstancesHealth</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeinstanceshealthrequest.html">DescribeInstancesHealthRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeinstanceshealthresponse.html">DescribeInstancesHealthResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrives detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires &lt;a href=&quot;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html&quot;&gt;enhanced health</p>
+<!-- @@@describeInstancesHealth -->
+<!-- $$$describePlatformVersion[overload1]$$$describePlatformVersionconstDescribePlatformVersionRequest& -->
+<h3 class="fn" id="describePlatformVersion"><a name="describePlatformVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-describeplatformversionresponse.html">DescribePlatformVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">describePlatformVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-describeplatformversionrequest.html">DescribePlatformVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-describeplatformversionresponse.html">DescribePlatformVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the version of the</p>
+<!-- @@@describePlatformVersion -->
+<!-- $$$listAvailableSolutionStacks[overload1]$$$listAvailableSolutionStacks -->
+<h3 class="fn" id="listAvailableSolutionStacks"><a name="listAvailableSolutionStacks"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-listavailablesolutionstacksresponse.html">ListAvailableSolutionStacksResponse</a></span> *ElasticBeanstalkClient::<span class="name">listAvailableSolutionStacks</span>()</h3>
+<p>Sends a ListAvailableSolutionStacks request to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-listavailablesolutionstacksresponse.html">ListAvailableSolutionStacksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the available solution stack names, with the public version first and then in reverse chronological</p>
+<!-- @@@listAvailableSolutionStacks -->
+<!-- $$$listPlatformVersions[overload1]$$$listPlatformVersionsconstListPlatformVersionsRequest& -->
+<h3 class="fn" id="listPlatformVersions"><a name="listPlatformVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-listplatformversionsresponse.html">ListPlatformVersionsResponse</a></span> *ElasticBeanstalkClient::<span class="name">listPlatformVersions</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-listplatformversionsrequest.html">ListPlatformVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-listplatformversionsresponse.html">ListPlatformVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the available</p>
+<!-- @@@listPlatformVersions -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *ElasticBeanstalkClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the tags applied to an AWS Elastic Beanstalk resource. The response contains a list of tag key-value</p>
+<p>pairs&gt;</p>
+<p>Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment tagging, see &lt;a href=&quot;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html&quot;&gt;Tagging Resources in Your Elastic Beanstalk</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$rebuildEnvironment[overload1]$$$rebuildEnvironmentconstRebuildEnvironmentRequest& -->
+<h3 class="fn" id="rebuildEnvironment"><a name="rebuildEnvironment"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-rebuildenvironmentresponse.html">RebuildEnvironmentResponse</a></span> *ElasticBeanstalkClient::<span class="name">rebuildEnvironment</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-rebuildenvironmentrequest.html">RebuildEnvironmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-rebuildenvironmentresponse.html">RebuildEnvironmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes and recreates all of the AWS resources (for example: the Auto Scaling group, load balancer, etc.) for a specified environment and forces a</p>
+<!-- @@@rebuildEnvironment -->
+<!-- $$$requestEnvironmentInfo[overload1]$$$requestEnvironmentInfoconstRequestEnvironmentInfoRequest& -->
+<h3 class="fn" id="requestEnvironmentInfo"><a name="requestEnvironmentInfo"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-requestenvironmentinforesponse.html">RequestEnvironmentInfoResponse</a></span> *ElasticBeanstalkClient::<span class="name">requestEnvironmentInfo</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-requestenvironmentinforequest.html">RequestEnvironmentInfoRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-requestenvironmentinforesponse.html">RequestEnvironmentInfoResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a request to compile the specified type of information of the deployed</p>
+<p>environment&gt;</p>
+<p>Setting the &lt;code&gt;InfoType&lt;/code&gt; to &lt;code&gt;tail&lt;/code&gt; compiles the last lines from the application server log files of every Amazon EC2 instance in your environment.</p>
+<p>&lt;/p</p>
+<p>Setting the &lt;code&gt;InfoType&lt;/code&gt; to &lt;code&gt;bundle&lt;/code&gt; compresses the application server log files for every Amazon EC2 instance into a &lt;code&gt;.zip&lt;/code&gt; file. Legacy and .NET containers do not support bundle logs.</p>
+<p>&lt;/p</p>
+<p>Use &lt;a&gt;RetrieveEnvironmentInfo&lt;/a&gt; to obtain the set of logs.</p>
+<p>&lt;/p</p>
+<p>Related</p>
+<p>Topic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;RetrieveEnvironmentInfo&lt;/a&gt;</p>
+<!-- @@@requestEnvironmentInfo -->
+<!-- $$$restartAppServer[overload1]$$$restartAppServerconstRestartAppServerRequest& -->
+<h3 class="fn" id="restartAppServer"><a name="restartAppServer"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-restartappserverresponse.html">RestartAppServerResponse</a></span> *ElasticBeanstalkClient::<span class="name">restartAppServer</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-restartappserverrequest.html">RestartAppServerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-restartappserverresponse.html">RestartAppServerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Causes the environment to restart the application container server running on each Amazon EC2</p>
+<!-- @@@restartAppServer -->
+<!-- $$$retrieveEnvironmentInfo[overload1]$$$retrieveEnvironmentInfoconstRetrieveEnvironmentInfoRequest& -->
+<h3 class="fn" id="retrieveEnvironmentInfo"><a name="retrieveEnvironmentInfo"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-retrieveenvironmentinforesponse.html">RetrieveEnvironmentInfoResponse</a></span> *ElasticBeanstalkClient::<span class="name">retrieveEnvironmentInfo</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-retrieveenvironmentinforequest.html">RetrieveEnvironmentInfoRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-retrieveenvironmentinforesponse.html">RetrieveEnvironmentInfoResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the compiled information from a &lt;a&gt;RequestEnvironmentInfo&lt;/a&gt;</p>
+<p>request&gt;</p>
+<p>Related</p>
+<p>Topic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;RequestEnvironmentInfo&lt;/a&gt;</p>
+<!-- @@@retrieveEnvironmentInfo -->
+<!-- $$$swapEnvironmentCNAMEs[overload1]$$$swapEnvironmentCNAMEsconstSwapEnvironmentCNAMEsRequest& -->
+<h3 class="fn" id="swapEnvironmentCNAMEs"><a name="swapEnvironmentCNAMEs"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-swapenvironmentcnamesresponse.html">SwapEnvironmentCNAMEsResponse</a></span> *ElasticBeanstalkClient::<span class="name">swapEnvironmentCNAMEs</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-swapenvironmentcnamesrequest.html">SwapEnvironmentCNAMEsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-swapenvironmentcnamesresponse.html">SwapEnvironmentCNAMEsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Swaps the CNAMEs of two</p>
+<!-- @@@swapEnvironmentCNAMEs -->
+<!-- $$$terminateEnvironment[overload1]$$$terminateEnvironmentconstTerminateEnvironmentRequest& -->
+<h3 class="fn" id="terminateEnvironment"><a name="terminateEnvironment"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-terminateenvironmentresponse.html">TerminateEnvironmentResponse</a></span> *ElasticBeanstalkClient::<span class="name">terminateEnvironment</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-terminateenvironmentrequest.html">TerminateEnvironmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-terminateenvironmentresponse.html">TerminateEnvironmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Terminates the specified</p>
+<!-- @@@terminateEnvironment -->
+<!-- $$$updateApplication[overload1]$$$updateApplicationconstUpdateApplicationRequest& -->
+<h3 class="fn" id="updateApplication"><a name="updateApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationresponse.html">UpdateApplicationResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateApplication</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationrequest.html">UpdateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updateapplicationresponse.html">UpdateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified application to have the specified</p>
+<p>properties&gt; &lt;note&gt;</p>
+<p>If a property (for example, &lt;code&gt;description&lt;/code&gt;) is not provided, the value remains unchanged. To clear these properties, specify an empty</p>
+<!-- @@@updateApplication -->
+<!-- $$$updateApplicationResourceLifecycle[overload1]$$$updateApplicationResourceLifecycleconstUpdateApplicationResourceLifecycleRequest& -->
+<h3 class="fn" id="updateApplicationResourceLifecycle"><a name="updateApplicationResourceLifecycle"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationresourcelifecycleresponse.html">UpdateApplicationResourceLifecycleResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateApplicationResourceLifecycle</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationresourcelifecyclerequest.html">UpdateApplicationResourceLifecycleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updateapplicationresourcelifecycleresponse.html">UpdateApplicationResourceLifecycleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies lifecycle settings for an</p>
+<!-- @@@updateApplicationResourceLifecycle -->
+<!-- $$$updateApplicationVersion[overload1]$$$updateApplicationVersionconstUpdateApplicationVersionRequest& -->
+<h3 class="fn" id="updateApplicationVersion"><a name="updateApplicationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationversionresponse.html">UpdateApplicationVersionResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateApplicationVersion</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updateapplicationversionrequest.html">UpdateApplicationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updateapplicationversionresponse.html">UpdateApplicationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified application version to have the specified</p>
+<p>properties&gt; &lt;note&gt;</p>
+<p>If a property (for example, &lt;code&gt;description&lt;/code&gt;) is not provided, the value remains unchanged. To clear properties, specify an empty</p>
+<!-- @@@updateApplicationVersion -->
+<!-- $$$updateConfigurationTemplate[overload1]$$$updateConfigurationTemplateconstUpdateConfigurationTemplateRequest& -->
+<h3 class="fn" id="updateConfigurationTemplate"><a name="updateConfigurationTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updateconfigurationtemplateresponse.html">UpdateConfigurationTemplateResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateConfigurationTemplate</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updateconfigurationtemplaterequest.html">UpdateConfigurationTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updateconfigurationtemplateresponse.html">UpdateConfigurationTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified configuration template to have the specified properties or configuration option</p>
+<p>values&gt; &lt;note&gt;</p>
+<p>If a property (for example, &lt;code&gt;ApplicationName&lt;/code&gt;) is not provided, its value remains unchanged. To clear such properties, specify an empty</p>
+<p>string&gt; &lt;/note&gt;</p>
+<p>Related</p>
+<p>Topic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeConfigurationOptions&lt;/a&gt;</p>
+<!-- @@@updateConfigurationTemplate -->
+<!-- $$$updateEnvironment[overload1]$$$updateEnvironmentconstUpdateEnvironmentRequest& -->
+<h3 class="fn" id="updateEnvironment"><a name="updateEnvironment"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updateenvironmentresponse.html">UpdateEnvironmentResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateEnvironment</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updateenvironmentrequest.html">UpdateEnvironmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updateenvironmentresponse.html">UpdateEnvironmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the environment description, deploys a new application version, updates the configuration settings to an entirely new configuration template, or updates select configuration option values in the running</p>
+<p>environment&gt;</p>
+<p>Attempting to update both the release and configuration is not allowed and AWS Elastic Beanstalk returns an &lt;code&gt;InvalidParameterCombination&lt;/code&gt; error.</p>
+<p>&lt;/p</p>
+<p>When updating the configuration settings to a new template or individual settings, a draft configuration is created and &lt;a&gt;DescribeConfigurationSettings&lt;/a&gt; for this environment returns two setting descriptions with different &lt;code&gt;DeploymentStatus&lt;/code&gt; values.</p>
+<!-- @@@updateEnvironment -->
+<!-- $$$updateTagsForResource[overload1]$$$updateTagsForResourceconstUpdateTagsForResourceRequest& -->
+<h3 class="fn" id="updateTagsForResource"><a name="updateTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-updatetagsforresourceresponse.html">UpdateTagsForResourceResponse</a></span> *ElasticBeanstalkClient::<span class="name">updateTagsForResource</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-updatetagsforresourcerequest.html">UpdateTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-updatetagsforresourceresponse.html">UpdateTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Update the list of tags applied to an AWS Elastic Beanstalk resource. Two lists can be passed: &lt;code&gt;TagsToAdd&lt;/code&gt; for tags to add or update, and</p>
+<p>&lt;code&gt;TagsToRemove&lt;/code&gt;&gt;</p>
+<p>Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment tagging, see &lt;a href=&quot;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html&quot;&gt;Tagging Resources in Your Elastic Beanstalk</p>
+<p>Environment&lt;/a&gt;&gt;</p>
+<p>If you create a custom IAM user policy to control permission to this operation, specify one of the following two virtual actions (or both) instead of the API operation</p>
+<p>name&gt; &lt;dl&gt; &lt;dt&gt;elasticbeanstalk:AddTags&lt;/dt&gt; &lt;dd&gt;</p>
+<p>Controls permission to call &lt;code&gt;UpdateTagsForResource&lt;/code&gt; and pass a list of tags to add in the &lt;code&gt;TagsToAdd&lt;/code&gt;</p>
+<p>parameter&gt; &lt;/dd&gt; &lt;dt&gt;elasticbeanstalk:RemoveTags&lt;/dt&gt; &lt;dd&gt;</p>
+<p>Controls permission to call &lt;code&gt;UpdateTagsForResource&lt;/code&gt; and pass a list of tag keys to remove in the &lt;code&gt;TagsToRemove&lt;/code&gt;</p>
+<p>parameter&gt; &lt;/dd&gt; &lt;/dl&gt;</p>
+<p>For details about creating a custom user policy, see &lt;a href=&quot;http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies&quot;&gt;Creating a Custom User</p>
+<!-- @@@updateTagsForResource -->
+<!-- $$$validateConfigurationSettings[overload1]$$$validateConfigurationSettingsconstValidateConfigurationSettingsRequest& -->
+<h3 class="fn" id="validateConfigurationSettings"><a name="validateConfigurationSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-elasticbeanstalk-validateconfigurationsettingsresponse.html">ValidateConfigurationSettingsResponse</a></span> *ElasticBeanstalkClient::<span class="name">validateConfigurationSettings</span>(const <span class="type"><a href="qtaws-elasticbeanstalk-validateconfigurationsettingsrequest.html">ValidateConfigurationSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">ElasticBeanstalkClient</a> service, and returns a pointer to an <a href="qtaws-elasticbeanstalk-validateconfigurationsettingsresponse.html">ValidateConfigurationSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Takes a set of configuration settings and either a configuration template or environment, and determines whether those values are</p>
+<p>valid&gt;</p>
+<p>This action returns a list of messages indicating any errors or warnings associated with the selection of option</p>
+<!-- @@@validateConfigurationSettings -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

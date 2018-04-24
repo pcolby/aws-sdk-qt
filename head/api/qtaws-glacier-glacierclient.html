@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- glacierclient.cpp -->
+  <title>GlacierClient Class | Glacier</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsglacier-index.html">Glacier</a></li>
+<li><a href="qtawsglacier-module.html">C++ Classes</a></li>
+<li>GlacierClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GlacierClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-glacier-glacierclient.html">QtAws::Glacier::GlacierClient</a>)<br/></span>
+<!-- $$$GlacierClient-brief -->
+<p>The <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> class provides access to the Amazon Glacier service. <a href="#details">More...</a></p>
+<!-- @@@GlacierClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GlacierClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-glacier-glacierclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#GlacierClient">GlacierClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#GlacierClient-1">GlacierClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AbortMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#abortMultipartUpload">abortMultipartUpload</a></b>(const AbortMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AbortVaultLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#abortVaultLock">abortVaultLock</a></b>(const AbortVaultLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#addTagsToVault">addTagsToVault</a></b>(const AddTagsToVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CompleteMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#completeMultipartUpload">completeMultipartUpload</a></b>(const CompleteMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CompleteVaultLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#completeVaultLock">completeVaultLock</a></b>(const CompleteVaultLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#createVault">createVault</a></b>(const CreateVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteArchiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#deleteArchive">deleteArchive</a></b>(const DeleteArchiveRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#deleteVault">deleteVault</a></b>(const DeleteVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVaultAccessPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#deleteVaultAccessPolicy">deleteVaultAccessPolicy</a></b>(const DeleteVaultAccessPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVaultNotificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#deleteVaultNotifications">deleteVaultNotifications</a></b>(const DeleteVaultNotificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#describeJob">describeJob</a></b>(const DescribeJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#describeVault">describeVault</a></b>(const DescribeVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDataRetrievalPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#getDataRetrievalPolicy">getDataRetrievalPolicy</a></b>(const GetDataRetrievalPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobOutputResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#getJobOutput">getJobOutput</a></b>(const GetJobOutputRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVaultAccessPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#getVaultAccessPolicy">getVaultAccessPolicy</a></b>(const GetVaultAccessPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVaultLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#getVaultLock">getVaultLock</a></b>(const GetVaultLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVaultNotificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#getVaultNotifications">getVaultNotifications</a></b>(const GetVaultNotificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#initiateJob">initiateJob</a></b>(const InitiateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateMultipartUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#initiateMultipartUpload">initiateMultipartUpload</a></b>(const InitiateMultipartUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateVaultLockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#initiateVaultLock">initiateVaultLock</a></b>(const InitiateVaultLockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listJobs">listJobs</a></b>(const ListJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMultipartUploadsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listMultipartUploads">listMultipartUploads</a></b>(const ListMultipartUploadsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPartsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listParts">listParts</a></b>(const ListPartsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProvisionedCapacityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listProvisionedCapacity">listProvisionedCapacity</a></b>(const ListProvisionedCapacityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listTagsForVault">listTagsForVault</a></b>(const ListTagsForVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVaultsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#listVaults">listVaults</a></b>(const ListVaultsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PurchaseProvisionedCapacityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#purchaseProvisionedCapacity">purchaseProvisionedCapacity</a></b>(const PurchaseProvisionedCapacityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromVaultResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#removeTagsFromVault">removeTagsFromVault</a></b>(const RemoveTagsFromVaultRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetDataRetrievalPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#setDataRetrievalPolicy">setDataRetrievalPolicy</a></b>(const SetDataRetrievalPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetVaultAccessPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#setVaultAccessPolicy">setVaultAccessPolicy</a></b>(const SetVaultAccessPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetVaultNotificationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#setVaultNotifications">setVaultNotifications</a></b>(const SetVaultNotificationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadArchiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#uploadArchive">uploadArchive</a></b>(const UploadArchiveRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadMultipartPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-glacier-glacierclient.html#uploadMultipartPart">uploadMultipartPart</a></b>(const UploadMultipartPartRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GlacierClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> class provides access to the Amazon Glacier service.</p>
+<p>Amazon Glacier is a storage solution for &quot;cold</p>
+<p>data.&gt;</p>
+<p>Amazon Glacier is an extremely low-cost storage service that provides secure, durable, and easy-to-use storage for data backup and archival. With Amazon Glacier, customers can store their data cost effectively for months, years, or decades. Amazon Glacier also enables customers to offload the administrative burdens of operating and scaling storage to AWS, so they don't have to worry about capacity planning, hardware provisioning, data replication, hardware failure and recovery, or time-consuming hardware</p>
+<p>migrations&gt;</p>
+<p>Amazon Glacier is a great storage choice when low storage cost is paramount, your data is rarely retrieved, and retrieval latency of several hours is acceptable. If your application requires fast or frequent access to your data, consider using Amazon S3. For more information, see &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon Simple Storage Service (Amazon</p>
+<p>S3)&lt;/a&gt;&gt;</p>
+<p>You can store any kind of data in any format. There is no maximum limit on the total amount of data you can store in Amazon</p>
+<p>Glacier&gt;</p>
+<p>If you are a first-time user of Amazon Glacier, we recommend that you begin by reading the following sections in the &lt;i&gt;Amazon Glacier Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html&quot;&gt;What is Amazon Glacier&lt;/a&gt; - This section of the Developer Guide describes the underlying data model, the operations it supports, and the AWS SDKs that you can use to interact with the</p>
+<p>service&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html&quot;&gt;Getting Started with Amazon Glacier&lt;/a&gt; - The Getting Started section walks you through the process of creating a vault, uploading archives, creating jobs to download archives, retrieving the job output, and deleting</p>
+</div>
+<!-- @@@GlacierClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GlacierClient[overload1]$$$GlacierClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GlacierClient"><a name="GlacierClient"></a>GlacierClient::<span class="name">GlacierClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@GlacierClient -->
+<!-- $$$GlacierClient$$$GlacierClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GlacierClient-1"><a name="GlacierClient-1"></a>GlacierClient::<span class="name">GlacierClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-glacier-glacierclient.html#GlacierClient">GlacierClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@GlacierClient -->
+<!-- $$$abortMultipartUpload[overload1]$$$abortMultipartUploadconstAbortMultipartUploadRequest& -->
+<h3 class="fn" id="abortMultipartUpload"><a name="abortMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-abortmultipartuploadresponse.html">AbortMultipartUploadResponse</a></span> *GlacierClient::<span class="name">abortMultipartUpload</span>(const <span class="type"><a href="qtaws-glacier-abortmultipartuploadrequest.html">AbortMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-abortmultipartuploadresponse.html">AbortMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation aborts a multipart upload identified by the upload</p>
+<p>ID&gt;</p>
+<p>After the Abort Multipart Upload request succeeds, you cannot upload any more parts to the multipart upload or complete the multipart upload. Aborting a completed upload fails. However, aborting an already-aborted upload will succeed, for a short time. For more information about uploading a part and completing a multipart upload, see &lt;a&gt;UploadMultipartPart&lt;/a&gt; and</p>
+<p>&lt;a&gt;CompleteMultipartUpload&lt;/a&gt;&gt;</p>
+<p>This operation is</p>
+<p>idempotent&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html&quot;&gt;Working with Archives in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-abort-upload.html&quot;&gt;Abort Multipart Upload&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@abortMultipartUpload -->
+<!-- $$$abortVaultLock[overload1]$$$abortVaultLockconstAbortVaultLockRequest& -->
+<h3 class="fn" id="abortVaultLock"><a name="abortVaultLock"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-abortvaultlockresponse.html">AbortVaultLockResponse</a></span> *GlacierClient::<span class="name">abortVaultLock</span>(const <span class="type"><a href="qtaws-glacier-abortvaultlockrequest.html">AbortVaultLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-abortvaultlockresponse.html">AbortVaultLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation aborts the vault locking process if the vault lock is not in the &lt;code&gt;Locked&lt;/code&gt; state. If the vault lock is in the &lt;code&gt;Locked&lt;/code&gt; state when this operation is requested, the operation returns an &lt;code&gt;AccessDeniedException&lt;/code&gt; error. Aborting the vault locking process removes the vault lock policy from the specified vault.</p>
+<p>&lt;/p</p>
+<p>A vault lock is put into the &lt;code&gt;InProgress&lt;/code&gt; state by calling &lt;a&gt;InitiateVaultLock&lt;/a&gt;. A vault lock is put into the &lt;code&gt;Locked&lt;/code&gt; state by calling &lt;a&gt;CompleteVaultLock&lt;/a&gt;. You can get the state of a vault lock by calling &lt;a&gt;GetVaultLock&lt;/a&gt;. For more information about the vault locking process, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html&quot;&gt;Amazon Glacier Vault Lock&lt;/a&gt;. For more information about vault lock policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Lock Policies&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation is idempotent. You can successfully invoke this operation multiple times, if the vault lock is in the &lt;code&gt;InProgress&lt;/code&gt; state or if there is no policy associated with the</p>
+<!-- @@@abortVaultLock -->
+<!-- $$$addTagsToVault[overload1]$$$addTagsToVaultconstAddTagsToVaultRequest& -->
+<h3 class="fn" id="addTagsToVault"><a name="addTagsToVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-addtagstovaultresponse.html">AddTagsToVaultResponse</a></span> *GlacierClient::<span class="name">addTagsToVault</span>(const <span class="type"><a href="qtaws-glacier-addtagstovaultrequest.html">AddTagsToVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-addtagstovaultresponse.html">AddTagsToVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation adds the specified tags to a vault. Each tag is composed of a key and a value. Each vault can have up to 10 tags. If your request would cause the tag limit for the vault to be exceeded, the operation throws the &lt;code&gt;LimitExceededException&lt;/code&gt; error. If a tag already exists on the vault under a specified key, the existing key value will be overwritten. For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html&quot;&gt;Tagging Amazon Glacier Resources&lt;/a&gt;.</p>
+<!-- @@@addTagsToVault -->
+<!-- $$$completeMultipartUpload[overload1]$$$completeMultipartUploadconstCompleteMultipartUploadRequest& -->
+<h3 class="fn" id="completeMultipartUpload"><a name="completeMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-completemultipartuploadresponse.html">CompleteMultipartUploadResponse</a></span> *GlacierClient::<span class="name">completeMultipartUpload</span>(const <span class="type"><a href="qtaws-glacier-completemultipartuploadrequest.html">CompleteMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-completemultipartuploadresponse.html">CompleteMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You call this operation to inform Amazon Glacier that all the archive parts have been uploaded and that Amazon Glacier can now assemble the archive from the uploaded parts. After assembling and saving the archive to the vault, Amazon Glacier returns the URI path of the newly created archive resource. Using the URI path, you can then access the archive. After you upload an archive, you should save the archive ID returned to retrieve the archive at a later point. You can also get the vault inventory to obtain a list of archive IDs in a vault. For more information, see</p>
+<p>&lt;a&gt;InitiateJob&lt;/a&gt;&gt;</p>
+<p>In the request, you must include the computed SHA256 tree hash of the entire archive you have uploaded. For information about computing a SHA256 tree hash, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/checksum-calculations.html&quot;&gt;Computing Checksums&lt;/a&gt;. On the server side, Amazon Glacier also constructs the SHA256 tree hash of the assembled archive. If the values match, Amazon Glacier saves the archive to the vault; otherwise, it returns an error, and the operation fails. The &lt;a&gt;ListParts&lt;/a&gt; operation returns a list of parts uploaded for a specific multipart upload. It includes checksum information for each uploaded part that can be used to debug a bad checksum</p>
+<p>issue&gt;</p>
+<p>Additionally, Amazon Glacier also checks for any missing content ranges when assembling the archive, if missing content ranges are found, Amazon Glacier returns an error and the operation</p>
+<p>fails&gt;</p>
+<p>Complete Multipart Upload is an idempotent operation. After your first successful complete multipart upload, if you call the operation again within a short period, the operation will succeed and return the same archive ID. This is useful in the event you experience a network issue that causes an aborted connection or receive a 500 server error, in which case you can repeat your Complete Multipart Upload request and get the same archive ID without creating duplicate archives. Note, however, that after the multipart upload completes, you cannot call the List Parts operation and the multipart upload will not appear in List Multipart Uploads response, even if idempotent complete is</p>
+<p>possible&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-archive-mpu.html&quot;&gt;Uploading Large Archives in Parts (Multipart Upload)&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-complete-upload.html&quot;&gt;Complete Multipart Upload&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@completeMultipartUpload -->
+<!-- $$$completeVaultLock[overload1]$$$completeVaultLockconstCompleteVaultLockRequest& -->
+<h3 class="fn" id="completeVaultLock"><a name="completeVaultLock"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-completevaultlockresponse.html">CompleteVaultLockResponse</a></span> *GlacierClient::<span class="name">completeVaultLock</span>(const <span class="type"><a href="qtaws-glacier-completevaultlockrequest.html">CompleteVaultLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-completevaultlockresponse.html">CompleteVaultLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation completes the vault locking process by transitioning the vault lock from the &lt;code&gt;InProgress&lt;/code&gt; state to the &lt;code&gt;Locked&lt;/code&gt; state, which causes the vault lock policy to become unchangeable. A vault lock is put into the &lt;code&gt;InProgress&lt;/code&gt; state by calling &lt;a&gt;InitiateVaultLock&lt;/a&gt;. You can obtain the state of the vault lock by calling &lt;a&gt;GetVaultLock&lt;/a&gt;. For more information about the vault locking process, &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html&quot;&gt;Amazon Glacier Vault Lock&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation is idempotent. This request is always successful if the vault lock is in the &lt;code&gt;Locked&lt;/code&gt; state and the provided lock ID matches the lock ID originally used to lock the</p>
+<p>vault&gt;</p>
+<p>If an invalid lock ID is passed in the request when the vault lock is in the &lt;code&gt;Locked&lt;/code&gt; state, the operation returns an &lt;code&gt;AccessDeniedException&lt;/code&gt; error. If an invalid lock ID is passed in the request when the vault lock is in the &lt;code&gt;InProgress&lt;/code&gt; state, the operation throws an &lt;code&gt;InvalidParameter&lt;/code&gt;</p>
+<!-- @@@completeVaultLock -->
+<!-- $$$createVault[overload1]$$$createVaultconstCreateVaultRequest& -->
+<h3 class="fn" id="createVault"><a name="createVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-createvaultresponse.html">CreateVaultResponse</a></span> *GlacierClient::<span class="name">createVault</span>(const <span class="type"><a href="qtaws-glacier-createvaultrequest.html">CreateVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-createvaultresponse.html">CreateVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation creates a new vault with the specified name. The name of the vault must be unique within a region for an AWS account. You can create up to 1,000 vaults per account. If you need to create more vaults, contact Amazon</p>
+<p>Glacier&gt;</p>
+<p>You must use the following guidelines when naming a</p>
+<p>vault&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Names can be between 1 and 255 characters</p>
+<p>long&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.'</p>
+<p>(period)&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation is</p>
+<p>idempotent&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/creating-vaults.html&quot;&gt;Creating a Vault in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-put.html&quot;&gt;Create Vault &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@createVault -->
+<!-- $$$deleteArchive[overload1]$$$deleteArchiveconstDeleteArchiveRequest& -->
+<h3 class="fn" id="deleteArchive"><a name="deleteArchive"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-deletearchiveresponse.html">DeleteArchiveResponse</a></span> *GlacierClient::<span class="name">deleteArchive</span>(const <span class="type"><a href="qtaws-glacier-deletearchiverequest.html">DeleteArchiveRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-deletearchiveresponse.html">DeleteArchiveResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation deletes an archive from a vault. Subsequent requests to initiate a retrieval of this archive will fail. Archive retrievals that are in progress for this archive ID may or may not succeed according to the following</p>
+<p>scenarios&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If the archive retrieval job is actively preparing the data for download when Amazon Glacier receives the delete archive request, the archival retrieval operation might</p>
+<p>fail&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the archive retrieval job has successfully prepared the archive for download when Amazon Glacier receives the delete archive request, you will be able to download the</p>
+<p>output&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation is idempotent. Attempting to delete an already-deleted archive does not result in an</p>
+<p>error&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/deleting-an-archive.html&quot;&gt;Deleting an Archive in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-delete.html&quot;&gt;Delete Archive&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@deleteArchive -->
+<!-- $$$deleteVault[overload1]$$$deleteVaultconstDeleteVaultRequest& -->
+<h3 class="fn" id="deleteVault"><a name="deleteVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-deletevaultresponse.html">DeleteVaultResponse</a></span> *GlacierClient::<span class="name">deleteVault</span>(const <span class="type"><a href="qtaws-glacier-deletevaultrequest.html">DeleteVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-deletevaultresponse.html">DeleteVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation deletes a vault. Amazon Glacier will delete a vault only if there are no archives in the vault as of the last inventory and there have been no writes to the vault since the last inventory. If either of these conditions is not satisfied, the vault deletion fails (that is, the vault is not removed) and Amazon Glacier returns an error. You can use &lt;a&gt;DescribeVault&lt;/a&gt; to return the number of archives in a vault, and you can use &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html&quot;&gt;Initiate a Job (POST jobs)&lt;/a&gt; to initiate a new inventory retrieval for a vault. The inventory contains the archive IDs you use to delete archives using &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-delete.html&quot;&gt;Delete Archive (DELETE</p>
+<p>archive)&lt;/a&gt;&gt;</p>
+<p>This operation is</p>
+<p>idempotent&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/deleting-vaults.html&quot;&gt;Deleting a Vault in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-delete.html&quot;&gt;Delete Vault &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@deleteVault -->
+<!-- $$$deleteVaultAccessPolicy[overload1]$$$deleteVaultAccessPolicyconstDeleteVaultAccessPolicyRequest& -->
+<h3 class="fn" id="deleteVaultAccessPolicy"><a name="deleteVaultAccessPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-deletevaultaccesspolicyresponse.html">DeleteVaultAccessPolicyResponse</a></span> *GlacierClient::<span class="name">deleteVaultAccessPolicy</span>(const <span class="type"><a href="qtaws-glacier-deletevaultaccesspolicyrequest.html">DeleteVaultAccessPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-deletevaultaccesspolicyresponse.html">DeleteVaultAccessPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation deletes the access policy associated with the specified vault. The operation is eventually consistent; that is, it might take some time for Amazon Glacier to completely remove the access policy, and you might still see the effect of the policy for a short time after you send the delete</p>
+<p>request&gt;</p>
+<p>This operation is idempotent. You can invoke delete multiple times, even if there is no policy associated with the vault. For more information about vault access policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Access Policies&lt;/a&gt;.</p>
+<!-- @@@deleteVaultAccessPolicy -->
+<!-- $$$deleteVaultNotifications[overload1]$$$deleteVaultNotificationsconstDeleteVaultNotificationsRequest& -->
+<h3 class="fn" id="deleteVaultNotifications"><a name="deleteVaultNotifications"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-deletevaultnotificationsresponse.html">DeleteVaultNotificationsResponse</a></span> *GlacierClient::<span class="name">deleteVaultNotifications</span>(const <span class="type"><a href="qtaws-glacier-deletevaultnotificationsrequest.html">DeleteVaultNotificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-deletevaultnotificationsresponse.html">DeleteVaultNotificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation deletes the notification configuration set for a vault. The operation is eventually consistent; that is, it might take some time for Amazon Glacier to completely disable the notifications and you might still receive some notifications for a short time after you send the delete</p>
+<p>request&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/configuring-notifications.html&quot;&gt;Configuring Vault Notifications in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-delete.html&quot;&gt;Delete Vault Notification Configuration &lt;/a&gt; in the Amazon Glacier Developer Guide.</p>
+<!-- @@@deleteVaultNotifications -->
+<!-- $$$describeJob[overload1]$$$describeJobconstDescribeJobRequest& -->
+<h3 class="fn" id="describeJob"><a name="describeJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-describejobresponse.html">DescribeJobResponse</a></span> *GlacierClient::<span class="name">describeJob</span>(const <span class="type"><a href="qtaws-glacier-describejobrequest.html">DescribeJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-describejobresponse.html">DescribeJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns information about a job you previously initiated, including the job initiation date, the user who initiated the job, the job status code/message and the Amazon SNS topic to notify after Amazon Glacier completes the job. For more information about initiating a job, see &lt;a&gt;InitiateJob&lt;/a&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>This operation enables you to check the status of your job. However, it is strongly recommended that you set up an Amazon SNS topic and specify it in your initiate job request so that Amazon Glacier can notify the topic after it completes the</p>
+<p>job&gt; &lt;/note&gt;</p>
+<p>A job ID will not expire for at least 24 hours after Amazon Glacier completes the</p>
+<p>job&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For more information about using this operation, see the documentation for the underlying REST API &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-describe-job-get.html&quot;&gt;Describe Job&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@describeJob -->
+<!-- $$$describeVault[overload1]$$$describeVaultconstDescribeVaultRequest& -->
+<h3 class="fn" id="describeVault"><a name="describeVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-describevaultresponse.html">DescribeVaultResponse</a></span> *GlacierClient::<span class="name">describeVault</span>(const <span class="type"><a href="qtaws-glacier-describevaultrequest.html">DescribeVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-describevaultresponse.html">DescribeVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns information about a vault, including the vault's Amazon Resource Name (ARN), the date the vault was created, the number of archives it contains, and the total size of all the archives in the vault. The number of archives and their total size are as of the last inventory generation. This means that if you add or remove an archive from a vault, and then immediately use Describe Vault, the change in contents will not be immediately reflected. If you want to retrieve the latest inventory of the vault, use &lt;a&gt;InitiateJob&lt;/a&gt;. Amazon Glacier generates vault inventories approximately daily. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-inventory.html&quot;&gt;Downloading a Vault Inventory in Amazon Glacier&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/retrieving-vault-info.html&quot;&gt;Retrieving Vault Metadata in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-get.html&quot;&gt;Describe Vault &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@describeVault -->
+<!-- $$$getDataRetrievalPolicy[overload1]$$$getDataRetrievalPolicyconstGetDataRetrievalPolicyRequest& -->
+<h3 class="fn" id="getDataRetrievalPolicy"><a name="getDataRetrievalPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-getdataretrievalpolicyresponse.html">GetDataRetrievalPolicyResponse</a></span> *GlacierClient::<span class="name">getDataRetrievalPolicy</span>(const <span class="type"><a href="qtaws-glacier-getdataretrievalpolicyrequest.html">GetDataRetrievalPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-getdataretrievalpolicyresponse.html">GetDataRetrievalPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation returns the current data retrieval policy for the account and region specified in the GET request. For more information about data retrieval policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html&quot;&gt;Amazon Glacier Data Retrieval</p>
+<!-- @@@getDataRetrievalPolicy -->
+<!-- $$$getJobOutput[overload1]$$$getJobOutputconstGetJobOutputRequest& -->
+<h3 class="fn" id="getJobOutput"><a name="getJobOutput"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-getjoboutputresponse.html">GetJobOutputResponse</a></span> *GlacierClient::<span class="name">getJobOutput</span>(const <span class="type"><a href="qtaws-glacier-getjoboutputrequest.html">GetJobOutputRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-getjoboutputresponse.html">GetJobOutputResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation downloads the output of the job you initiated using &lt;a&gt;InitiateJob&lt;/a&gt;. Depending on the job type you specified when you initiated the job, the output will be either the content of an archive or a vault</p>
+<p>inventory&gt;</p>
+<p>You can download all the job output or download a portion of the output by specifying a byte range. In the case of an archive retrieval job, depending on the byte range you specify, Amazon Glacier returns the checksum for the portion of the data. You can compute the checksum on the client and verify that the values match to ensure the portion you downloaded is the correct</p>
+<p>data&gt;</p>
+<p>A job ID will not expire for at least 24 hours after Amazon Glacier completes the job. That a byte range. For both archive and inventory retrieval jobs, you should verify the downloaded size against the size returned in the headers from the &lt;b&gt;Get Job Output&lt;/b&gt;</p>
+<p>response&gt;</p>
+<p>For archive retrieval jobs, you should also verify that the size is what you expected. If you download a portion of the output, the expected size is based on the range of bytes you specified. For example, if you specify a range of &lt;code&gt;bytes=0-1048575&lt;/code&gt;, you should verify your download size is 1,048,576 bytes. If you download an entire archive, the expected size is the size of the archive when you uploaded it to Amazon Glacier The expected size is also returned in the headers from the &lt;b&gt;Get Job Output&lt;/b&gt;</p>
+<p>response&gt;</p>
+<p>In the case of an archive retrieval job, depending on the byte range you specify, Amazon Glacier returns the checksum for the portion of the data. To ensure the portion you downloaded is the correct data, compute the checksum on the client, verify that the values match, and verify that the size is what you</p>
+<p>expected&gt;</p>
+<p>A job ID does not expire for at least 24 hours after Amazon Glacier completes the job. That is, you can download the job output within the 24 hours period after Amazon Glacier completes the</p>
+<p>job&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and the underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-inventory.html&quot;&gt;Downloading a Vault Inventory&lt;/a&gt;, &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/downloading-an-archive.html&quot;&gt;Downloading an Archive&lt;/a&gt;, and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-job-output-get.html&quot;&gt;Get Job Output &lt;/a&gt;</p>
+<!-- @@@getJobOutput -->
+<!-- $$$getVaultAccessPolicy[overload1]$$$getVaultAccessPolicyconstGetVaultAccessPolicyRequest& -->
+<h3 class="fn" id="getVaultAccessPolicy"><a name="getVaultAccessPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-getvaultaccesspolicyresponse.html">GetVaultAccessPolicyResponse</a></span> *GlacierClient::<span class="name">getVaultAccessPolicy</span>(const <span class="type"><a href="qtaws-glacier-getvaultaccesspolicyrequest.html">GetVaultAccessPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-getvaultaccesspolicyresponse.html">GetVaultAccessPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation retrieves the &lt;code&gt;access-policy&lt;/code&gt; subresource set on the vault; for more information on setting this subresource, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-SetVaultAccessPolicy.html&quot;&gt;Set Vault Access Policy (PUT access-policy)&lt;/a&gt;. If there is no access policy set on the vault, the operation returns a &lt;code&gt;404 Not found&lt;/code&gt; error. For more information about vault access policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Access</p>
+<!-- @@@getVaultAccessPolicy -->
+<!-- $$$getVaultLock[overload1]$$$getVaultLockconstGetVaultLockRequest& -->
+<h3 class="fn" id="getVaultLock"><a name="getVaultLock"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-getvaultlockresponse.html">GetVaultLockResponse</a></span> *GlacierClient::<span class="name">getVaultLock</span>(const <span class="type"><a href="qtaws-glacier-getvaultlockrequest.html">GetVaultLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-getvaultlockresponse.html">GetVaultLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation retrieves the following attributes from the &lt;code&gt;lock-policy&lt;/code&gt; subresource set on the specified vault:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The vault lock policy set on the</p>
+<p>vault&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The state of the vault lock, which is either &lt;code&gt;InProgess&lt;/code&gt; or</p>
+<p>&lt;code&gt;Locked&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>When the lock ID expires. The lock ID is used to complete the vault locking</p>
+<p>process&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>When the vault lock was initiated and put into the &lt;code&gt;InProgress&lt;/code&gt;</p>
+<p>state&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>A vault lock is put into the &lt;code&gt;InProgress&lt;/code&gt; state by calling &lt;a&gt;InitiateVaultLock&lt;/a&gt;. A vault lock is put into the &lt;code&gt;Locked&lt;/code&gt; state by calling &lt;a&gt;CompleteVaultLock&lt;/a&gt;. You can abort the vault locking process by calling &lt;a&gt;AbortVaultLock&lt;/a&gt;. For more information about the vault locking process, &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html&quot;&gt;Amazon Glacier Vault Lock&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>If there is no vault lock policy set on the vault, the operation returns a &lt;code&gt;404 Not found&lt;/code&gt; error. For more information about vault lock policies, &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Lock Policies&lt;/a&gt;.</p>
+<!-- @@@getVaultLock -->
+<!-- $$$getVaultNotifications[overload1]$$$getVaultNotificationsconstGetVaultNotificationsRequest& -->
+<h3 class="fn" id="getVaultNotifications"><a name="getVaultNotifications"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-getvaultnotificationsresponse.html">GetVaultNotificationsResponse</a></span> *GlacierClient::<span class="name">getVaultNotifications</span>(const <span class="type"><a href="qtaws-glacier-getvaultnotificationsrequest.html">GetVaultNotificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-getvaultnotificationsresponse.html">GetVaultNotificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation retrieves the &lt;code&gt;notification-configuration&lt;/code&gt; subresource of the specified</p>
+<p>vault&gt;</p>
+<p>For information about setting a notification configuration on a vault, see &lt;a&gt;SetVaultNotifications&lt;/a&gt;. If a notification configuration for a vault is not set, the operation returns a &lt;code&gt;404 Not Found&lt;/code&gt; error. For more information about vault notifications, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/configuring-notifications.html&quot;&gt;Configuring Vault Notifications in Amazon Glacier&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/configuring-notifications.html&quot;&gt;Configuring Vault Notifications in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-get.html&quot;&gt;Get Vault Notification Configuration &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@getVaultNotifications -->
+<!-- $$$initiateJob[overload1]$$$initiateJobconstInitiateJobRequest& -->
+<h3 class="fn" id="initiateJob"><a name="initiateJob"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-initiatejobresponse.html">InitiateJobResponse</a></span> *GlacierClient::<span class="name">initiateJob</span>(const <span class="type"><a href="qtaws-glacier-initiatejobrequest.html">InitiateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-initiatejobresponse.html">InitiateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation initiates a job of the specified type, which can be a select, an archival retrieval, or a vault retrieval. For more information about using this operation, see the documentation for the underlying REST API &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-initiate-job-post.html&quot;&gt;Initiate a Job&lt;/a&gt;.</p>
+<!-- @@@initiateJob -->
+<!-- $$$initiateMultipartUpload[overload1]$$$initiateMultipartUploadconstInitiateMultipartUploadRequest& -->
+<h3 class="fn" id="initiateMultipartUpload"><a name="initiateMultipartUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-initiatemultipartuploadresponse.html">InitiateMultipartUploadResponse</a></span> *GlacierClient::<span class="name">initiateMultipartUpload</span>(const <span class="type"><a href="qtaws-glacier-initiatemultipartuploadrequest.html">InitiateMultipartUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-initiatemultipartuploadresponse.html">InitiateMultipartUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation initiates a multipart upload. Amazon Glacier creates a multipart upload resource and returns its ID in the response. The multipart upload ID is used in subsequent requests to upload parts of an archive (see</p>
+<p>&lt;a&gt;UploadMultipartPart&lt;/a&gt;)&gt;</p>
+<p>When you initiate a multipart upload, you specify the part size in number of bytes. The part size must be a megabyte (1024 KB) multiplied by a power of 2-for example, 1048576 (1 MB), 2097152 (2 MB), 4194304 (4 MB), 8388608 (8 MB), and so on. The minimum allowable part size is 1 MB, and the maximum is 4</p>
+<p>GB&gt;</p>
+<p>Every part you upload to this resource (see &lt;a&gt;UploadMultipartPart&lt;/a&gt;), except the last one, must have the same size. The last one can be the same size or smaller. For example, suppose you want to upload a 16.2 MB file. If you initiate the multipart upload with a part size of 4 MB, you will upload four parts of 4 MB each and one part of 0.2 MB.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You don't need to know the size of the archive when you start a multipart upload because Amazon Glacier does not require you to specify the overall archive</p>
+<p>size&gt; &lt;/note&gt;</p>
+<p>After you complete the multipart upload, Amazon Glacier removes the multipart upload resource referenced by the ID. Amazon Glacier also removes the multipart upload resource if you cancel the multipart upload or it may be removed if there is no activity for a period of 24</p>
+<p>hours&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-archive-mpu.html&quot;&gt;Uploading Large Archives in Parts (Multipart Upload)&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-initiate-upload.html&quot;&gt;Initiate Multipart Upload&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer</p>
+<!-- @@@initiateMultipartUpload -->
+<!-- $$$initiateVaultLock[overload1]$$$initiateVaultLockconstInitiateVaultLockRequest& -->
+<h3 class="fn" id="initiateVaultLock"><a name="initiateVaultLock"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-initiatevaultlockresponse.html">InitiateVaultLockResponse</a></span> *GlacierClient::<span class="name">initiateVaultLock</span>(const <span class="type"><a href="qtaws-glacier-initiatevaultlockrequest.html">InitiateVaultLockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-initiatevaultlockresponse.html">InitiateVaultLockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation initiates the vault locking process by doing the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Installing a vault lock policy on the specified</p>
+<p>vault&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Setting the lock state of vault lock to</p>
+<p>&lt;code&gt;InProgress&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Returning a lock ID, which is used to complete the vault locking</p>
+<p>process&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You can set one vault lock policy for each vault and this policy can be up to 20 KB in size. For more information about vault lock policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Lock Policies&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You must complete the vault locking process within 24 hours after the vault lock enters the &lt;code&gt;InProgress&lt;/code&gt; state. After the 24 hour window ends, the lock ID expires, the vault automatically exits the &lt;code&gt;InProgress&lt;/code&gt; state, and the vault lock policy is removed from the vault. You call &lt;a&gt;CompleteVaultLock&lt;/a&gt; to complete the vault locking process by setting the state of the vault lock to &lt;code&gt;Locked&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>After a vault lock is in the &lt;code&gt;Locked&lt;/code&gt; state, you cannot initiate a new vault lock for the</p>
+<p>vault&gt;</p>
+<p>You can abort the vault locking process by calling &lt;a&gt;AbortVaultLock&lt;/a&gt;. You can get the state of the vault lock by calling &lt;a&gt;GetVaultLock&lt;/a&gt;. For more information about the vault locking process, &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-lock.html&quot;&gt;Amazon Glacier Vault</p>
+<p>Lock&lt;/a&gt;&gt;</p>
+<p>If this operation is called when the vault lock is in the &lt;code&gt;InProgress&lt;/code&gt; state, the operation returns an &lt;code&gt;AccessDeniedException&lt;/code&gt; error. When the vault lock is in the &lt;code&gt;InProgress&lt;/code&gt; state you must call &lt;a&gt;AbortVaultLock&lt;/a&gt; before you can initiate a new vault lock policy.</p>
+<!-- @@@initiateVaultLock -->
+<!-- $$$listJobs[overload1]$$$listJobsconstListJobsRequest& -->
+<h3 class="fn" id="listJobs"><a name="listJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listjobsresponse.html">ListJobsResponse</a></span> *GlacierClient::<span class="name">listJobs</span>(const <span class="type"><a href="qtaws-glacier-listjobsrequest.html">ListJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listjobsresponse.html">ListJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists jobs for a vault, including jobs that are in-progress and jobs that have recently finished. The List Job operation returns a list of these jobs sorted by job initiation</p>
+<p>time&gt; &lt;note&gt;</p>
+<p>Amazon Glacier retains recently completed jobs for a period before deleting them; however, it eventually removes completed jobs. The output of completed jobs can be retrieved. Retaining completed jobs for a period of time after they have completed enables you to get a job output in the event you miss the job completion notification or your first attempt to download it fails. For example, suppose you start an archive retrieval job to download an archive. After the job completes, you start to download the archive but encounter a network error. In this scenario, you can retry and download the archive while the job</p>
+<p>exists&gt; &lt;/note&gt;</p>
+<p>The List Jobs operation supports pagination. You should always check the response &lt;code&gt;Marker&lt;/code&gt; field. If there are no more jobs to list, the &lt;code&gt;Marker&lt;/code&gt; field is set to &lt;code&gt;null&lt;/code&gt;. If there are more jobs to list, the &lt;code&gt;Marker&lt;/code&gt; field is set to a non-null value, which you can use to continue the pagination of the list. To return a list of jobs that begins at a specific job, set the marker request parameter to the &lt;code&gt;Marker&lt;/code&gt; value for that job that you obtained from a previous List Jobs</p>
+<p>request&gt;</p>
+<p>You can set a maximum limit for the number of jobs returned in the response by specifying the &lt;code&gt;limit&lt;/code&gt; parameter in the request. The default limit is 1000. The number of jobs returned might be fewer than the limit, but the number of returned jobs never exceeds the</p>
+<p>limit&gt;</p>
+<p>Additionally, you can filter the jobs list returned by specifying the optional &lt;code&gt;statuscode&lt;/code&gt; parameter or &lt;code&gt;completed&lt;/code&gt; parameter, or both. Using the &lt;code&gt;statuscode&lt;/code&gt; parameter, you can specify to return only jobs that match either the &lt;code&gt;InProgress&lt;/code&gt;, &lt;code&gt;Succeeded&lt;/code&gt;, or &lt;code&gt;Failed&lt;/code&gt; status. Using the &lt;code&gt;completed&lt;/code&gt; parameter, you can specify to return only jobs that were completed (&lt;code&gt;true&lt;/code&gt;) or jobs that were not completed</p>
+<p>(&lt;code&gt;false&lt;/code&gt;)&gt;</p>
+<p>For more information about using this operation, see the documentation for the underlying REST API &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-jobs-get.html&quot;&gt;List Jobs&lt;/a&gt;.</p>
+<!-- @@@listJobs -->
+<!-- $$$listMultipartUploads[overload1]$$$listMultipartUploadsconstListMultipartUploadsRequest& -->
+<h3 class="fn" id="listMultipartUploads"><a name="listMultipartUploads"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listmultipartuploadsresponse.html">ListMultipartUploadsResponse</a></span> *GlacierClient::<span class="name">listMultipartUploads</span>(const <span class="type"><a href="qtaws-glacier-listmultipartuploadsrequest.html">ListMultipartUploadsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listmultipartuploadsresponse.html">ListMultipartUploadsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists in-progress multipart uploads for the specified vault. An in-progress multipart upload is a multipart upload that has been initiated by an &lt;a&gt;InitiateMultipartUpload&lt;/a&gt; request, but has not yet been completed or aborted. The list returned in the List Multipart Upload response has no guaranteed order.</p>
+<p>&lt;/p</p>
+<p>The List Multipart Uploads operation supports pagination. By default, this operation returns up to 1,000 multipart uploads in the response. You should always check the response for a &lt;code&gt;marker&lt;/code&gt; at which to continue the list; if there are no more items the &lt;code&gt;marker&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;. To return a list of multipart uploads that begins at a specific upload, set the &lt;code&gt;marker&lt;/code&gt; request parameter to the value you obtained from a previous List Multipart Upload request. You can also limit the number of uploads returned in the response by specifying the &lt;code&gt;limit&lt;/code&gt; parameter in the</p>
+<p>request&gt;</p>
+<p>Note the difference between this operation and listing parts (&lt;a&gt;ListParts&lt;/a&gt;). The List Multipart Uploads operation lists all multipart uploads for a vault and does not require a multipart upload ID. The List Parts operation requires a multipart upload ID since parts are associated with a single</p>
+<p>upload&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and the underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html&quot;&gt;Working with Archives in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-list-uploads.html&quot;&gt;List Multipart Uploads &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer</p>
+<!-- @@@listMultipartUploads -->
+<!-- $$$listParts[overload1]$$$listPartsconstListPartsRequest& -->
+<h3 class="fn" id="listParts"><a name="listParts"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listpartsresponse.html">ListPartsResponse</a></span> *GlacierClient::<span class="name">listParts</span>(const <span class="type"><a href="qtaws-glacier-listpartsrequest.html">ListPartsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listpartsresponse.html">ListPartsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists the parts of an archive that have been uploaded in a specific multipart upload. You can make this request at any time during an in-progress multipart upload before you complete the upload (see &lt;a&gt;CompleteMultipartUpload&lt;/a&gt;. List Parts returns an error for completed uploads. The list returned in the List Parts response is sorted by part range.</p>
+<p>&lt;/p</p>
+<p>The List Parts operation supports pagination. By default, this operation returns up to 1,000 uploaded parts in the response. You should always check the response for a &lt;code&gt;marker&lt;/code&gt; at which to continue the list; if there are no more items the &lt;code&gt;marker&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;. To return a list of parts that begins at a specific part, set the &lt;code&gt;marker&lt;/code&gt; request parameter to the value you obtained from a previous List Parts request. You can also limit the number of parts returned in the response by specifying the &lt;code&gt;limit&lt;/code&gt; parameter in the request.</p>
+<p>&lt;/p</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and the underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-archives.html&quot;&gt;Working with Archives in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-multipart-list-parts.html&quot;&gt;List Parts&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer</p>
+<!-- @@@listParts -->
+<!-- $$$listProvisionedCapacity[overload1]$$$listProvisionedCapacityconstListProvisionedCapacityRequest& -->
+<h3 class="fn" id="listProvisionedCapacity"><a name="listProvisionedCapacity"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listprovisionedcapacityresponse.html">ListProvisionedCapacityResponse</a></span> *GlacierClient::<span class="name">listProvisionedCapacity</span>(const <span class="type"><a href="qtaws-glacier-listprovisionedcapacityrequest.html">ListProvisionedCapacityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listprovisionedcapacityresponse.html">ListProvisionedCapacityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists the provisioned capacity units for the specified AWS</p>
+<!-- @@@listProvisionedCapacity -->
+<!-- $$$listTagsForVault[overload1]$$$listTagsForVaultconstListTagsForVaultRequest& -->
+<h3 class="fn" id="listTagsForVault"><a name="listTagsForVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listtagsforvaultresponse.html">ListTagsForVaultResponse</a></span> *GlacierClient::<span class="name">listTagsForVault</span>(const <span class="type"><a href="qtaws-glacier-listtagsforvaultrequest.html">ListTagsForVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listtagsforvaultresponse.html">ListTagsForVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists all the tags attached to a vault. The operation returns an empty map if there are no tags. For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html&quot;&gt;Tagging Amazon Glacier</p>
+<!-- @@@listTagsForVault -->
+<!-- $$$listVaults[overload1]$$$listVaultsconstListVaultsRequest& -->
+<h3 class="fn" id="listVaults"><a name="listVaults"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-listvaultsresponse.html">ListVaultsResponse</a></span> *GlacierClient::<span class="name">listVaults</span>(const <span class="type"><a href="qtaws-glacier-listvaultsrequest.html">ListVaultsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-listvaultsresponse.html">ListVaultsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation lists all vaults owned by the calling user's account. The list returned in the response is ASCII-sorted by vault</p>
+<p>name&gt;</p>
+<p>By default, this operation returns up to 1,000 items. If there are more vaults to list, the response &lt;code&gt;marker&lt;/code&gt; field contains the vault Amazon Resource Name (ARN) at which to continue the list with a new List Vaults request; otherwise, the &lt;code&gt;marker&lt;/code&gt; field is &lt;code&gt;null&lt;/code&gt;. To return a list of vaults that begins at a specific vault, set the &lt;code&gt;marker&lt;/code&gt; request parameter to the vault ARN you obtained from a previous List Vaults request. You can also limit the number of vaults returned in the response by specifying the &lt;code&gt;limit&lt;/code&gt; parameter in the request.</p>
+<p>&lt;/p</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/retrieving-vault-info.html&quot;&gt;Retrieving Vault Metadata in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vaults-get.html&quot;&gt;List Vaults &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@listVaults -->
+<!-- $$$purchaseProvisionedCapacity[overload1]$$$purchaseProvisionedCapacityconstPurchaseProvisionedCapacityRequest& -->
+<h3 class="fn" id="purchaseProvisionedCapacity"><a name="purchaseProvisionedCapacity"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-purchaseprovisionedcapacityresponse.html">PurchaseProvisionedCapacityResponse</a></span> *GlacierClient::<span class="name">purchaseProvisionedCapacity</span>(const <span class="type"><a href="qtaws-glacier-purchaseprovisionedcapacityrequest.html">PurchaseProvisionedCapacityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-purchaseprovisionedcapacityresponse.html">PurchaseProvisionedCapacityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation purchases a provisioned capacity unit for an AWS account.</p>
+<!-- @@@purchaseProvisionedCapacity -->
+<!-- $$$removeTagsFromVault[overload1]$$$removeTagsFromVaultconstRemoveTagsFromVaultRequest& -->
+<h3 class="fn" id="removeTagsFromVault"><a name="removeTagsFromVault"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-removetagsfromvaultresponse.html">RemoveTagsFromVaultResponse</a></span> *GlacierClient::<span class="name">removeTagsFromVault</span>(const <span class="type"><a href="qtaws-glacier-removetagsfromvaultrequest.html">RemoveTagsFromVaultRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-removetagsfromvaultresponse.html">RemoveTagsFromVaultResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation removes one or more tags from the set of tags attached to a vault. For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/tagging.html&quot;&gt;Tagging Amazon Glacier Resources&lt;/a&gt;. This operation is idempotent. The operation will be successful, even if there are no tags attached to the vault.</p>
+<!-- @@@removeTagsFromVault -->
+<!-- $$$setDataRetrievalPolicy[overload1]$$$setDataRetrievalPolicyconstSetDataRetrievalPolicyRequest& -->
+<h3 class="fn" id="setDataRetrievalPolicy"><a name="setDataRetrievalPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-setdataretrievalpolicyresponse.html">SetDataRetrievalPolicyResponse</a></span> *GlacierClient::<span class="name">setDataRetrievalPolicy</span>(const <span class="type"><a href="qtaws-glacier-setdataretrievalpolicyrequest.html">SetDataRetrievalPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-setdataretrievalpolicyresponse.html">SetDataRetrievalPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation sets and then enacts a data retrieval policy in the region specified in the PUT request. You can set one policy per region for an AWS account. The policy is enacted within a few minutes of a successful PUT</p>
+<p>operation&gt;</p>
+<p>The set policy operation does not affect retrieval jobs that were in progress before the policy was enacted. For more information about data retrieval policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/data-retrieval-policy.html&quot;&gt;Amazon Glacier Data Retrieval Policies&lt;/a&gt;.</p>
+<!-- @@@setDataRetrievalPolicy -->
+<!-- $$$setVaultAccessPolicy[overload1]$$$setVaultAccessPolicyconstSetVaultAccessPolicyRequest& -->
+<h3 class="fn" id="setVaultAccessPolicy"><a name="setVaultAccessPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-setvaultaccesspolicyresponse.html">SetVaultAccessPolicyResponse</a></span> *GlacierClient::<span class="name">setVaultAccessPolicy</span>(const <span class="type"><a href="qtaws-glacier-setvaultaccesspolicyrequest.html">SetVaultAccessPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-setvaultaccesspolicyresponse.html">SetVaultAccessPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation configures an access policy for a vault and will overwrite an existing policy. To configure a vault access policy, send a PUT request to the &lt;code&gt;access-policy&lt;/code&gt; subresource of the vault. An access policy is specific to a vault and is also called a vault subresource. You can set one access policy per vault and the policy can be up to 20 KB in size. For more information about vault access policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html&quot;&gt;Amazon Glacier Access Control with Vault Access Policies&lt;/a&gt;.</p>
+<!-- @@@setVaultAccessPolicy -->
+<!-- $$$setVaultNotifications[overload1]$$$setVaultNotificationsconstSetVaultNotificationsRequest& -->
+<h3 class="fn" id="setVaultNotifications"><a name="setVaultNotifications"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-setvaultnotificationsresponse.html">SetVaultNotificationsResponse</a></span> *GlacierClient::<span class="name">setVaultNotifications</span>(const <span class="type"><a href="qtaws-glacier-setvaultnotificationsrequest.html">SetVaultNotificationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-setvaultnotificationsresponse.html">SetVaultNotificationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation configures notifications that will be sent when specific events happen to a vault. By default, you don't get any</p>
+<p>notifications&gt;</p>
+<p>To configure vault notifications, send a PUT request to the &lt;code&gt;notification-configuration&lt;/code&gt; subresource of the vault. The request should include a JSON document that provides an Amazon SNS topic and specific events for which you want Amazon Glacier to send notifications to the</p>
+<p>topic&gt;</p>
+<p>Amazon SNS topics must grant permission to the vault to be allowed to publish notifications to the topic. You can configure a vault to publish a notification for the following vault</p>
+<p>events&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;ArchiveRetrievalCompleted&lt;/b&gt; This event occurs when a job that was initiated for an archive retrieval is completed (&lt;a&gt;InitiateJob&lt;/a&gt;). The status of the completed job can be &quot;Succeeded&quot; or &quot;Failed&quot;. The notification sent to the SNS topic is the same output as returned from &lt;a&gt;DescribeJob&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;InventoryRetrievalCompleted&lt;/b&gt; This event occurs when a job that was initiated for an inventory retrieval is completed (&lt;a&gt;InitiateJob&lt;/a&gt;). The status of the completed job can be &quot;Succeeded&quot; or &quot;Failed&quot;. The notification sent to the SNS topic is the same output as returned from &lt;a&gt;DescribeJob&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/configuring-notifications.html&quot;&gt;Configuring Vault Notifications in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-vault-notifications-put.html&quot;&gt;Set Vault Notification Configuration &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@setVaultNotifications -->
+<!-- $$$uploadArchive[overload1]$$$uploadArchiveconstUploadArchiveRequest& -->
+<h3 class="fn" id="uploadArchive"><a name="uploadArchive"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-uploadarchiveresponse.html">UploadArchiveResponse</a></span> *GlacierClient::<span class="name">uploadArchive</span>(const <span class="type"><a href="qtaws-glacier-uploadarchiverequest.html">UploadArchiveRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-uploadarchiveresponse.html">UploadArchiveResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation adds an archive to a vault. This is a synchronous operation, and for a successful upload, your data is durably persisted. Amazon Glacier returns the archive ID in the &lt;code&gt;x-amz-archive-id&lt;/code&gt; header of the response.</p>
+<p>&lt;/p</p>
+<p>You must use the archive ID to access your data in Amazon Glacier. After you upload an archive, you should save the archive ID returned so that you can retrieve or delete the archive later. Besides saving the archive ID, you can also index it and give it a friendly name to allow for better searching. You can also use the optional archive description field to specify how the archive is referred to in an external index of archives, such as you might create in Amazon DynamoDB. You can also get the vault inventory to obtain a list of archive IDs in a vault. For more information, see &lt;a&gt;InitiateJob&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You must provide a SHA256 tree hash of the data you are uploading. For information about computing a SHA256 tree hash, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/checksum-calculations.html&quot;&gt;Computing Checksums&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You can optionally specify an archive description of up to 1,024 printable ASCII characters. You can get the archive description when you either retrieve the archive or get the vault inventory. For more information, see &lt;a&gt;InitiateJob&lt;/a&gt;. Amazon Glacier does not interpret the description in any way. An archive description does not need to be unique. You cannot use the description to retrieve or sort the archive list.</p>
+<p>&lt;/p</p>
+<p>Archives are immutable. After you upload an archive, you cannot edit the archive or its</p>
+<p>description&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-an-archive.html&quot;&gt;Uploading an Archive in Amazon Glacier&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-post.html&quot;&gt;Upload Archive&lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer Guide&lt;/i&gt;.</p>
+<!-- @@@uploadArchive -->
+<!-- $$$uploadMultipartPart[overload1]$$$uploadMultipartPartconstUploadMultipartPartRequest& -->
+<h3 class="fn" id="uploadMultipartPart"><a name="uploadMultipartPart"></a><code>[slot] </code><span class="type"><a href="qtaws-glacier-uploadmultipartpartresponse.html">UploadMultipartPartResponse</a></span> *GlacierClient::<span class="name">uploadMultipartPart</span>(const <span class="type"><a href="qtaws-glacier-uploadmultipartpartrequest.html">UploadMultipartPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-glacier-glacierclient.html">GlacierClient</a> service, and returns a pointer to an <a href="qtaws-glacier-uploadmultipartpartresponse.html">UploadMultipartPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation uploads a part of an archive. You can upload archive parts in any order. You can also upload them in parallel. You can upload up to 10,000 parts for a multipart</p>
+<p>upload&gt;</p>
+<p>Amazon Glacier rejects your upload part request if any of the following conditions is</p>
+<p>true&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;SHA256 tree hash does not match&lt;/b&gt;To ensure that part data is not corrupted in transmission, you compute a SHA256 tree hash of the part and include it in your request. Upon receiving the part data, Amazon Glacier also computes a SHA256 tree hash. If these hash values don't match, the operation fails. For information about computing a SHA256 tree hash, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/checksum-calculations.html&quot;&gt;Computing</p>
+<p>Checksums&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Part size does not match&lt;/b&gt;The size of each part except the last must match the size specified in the corresponding &lt;a&gt;InitiateMultipartUpload&lt;/a&gt; request. The size of the last part must be the same size as, or smaller than, the specified</p>
+<p>size&gt; &lt;note&gt;</p>
+<p>If you upload a part whose size is smaller than the part size you specified in your initiate multipart upload request and that part is not the last part, then the upload part request will succeed. However, the subsequent Complete Multipart Upload request will</p>
+<p>fail&gt; &lt;/note&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Range does not align&lt;/b&gt;The byte range value in the request does not align with the part size specified in the corresponding initiate request. For example, if you specify a part size of 4194304 bytes (4 MB), then 0 to 4194303 bytes (4 MB - 1) and 4194304 (4 MB) to 8388607 (8 MB - 1) are valid part ranges. However, if you set a range value of 2 MB to 6 MB, the range does not align with the part size and the upload will fail.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation is idempotent. If you upload the same part multiple times, the data included in the most recent request overwrites the previously uploaded</p>
+<p>data&gt;</p>
+<p>An AWS account has full permission to perform all operations (actions). However, AWS Identity and Access Management (IAM) users don't have any permissions by default. You must grant them explicit permission to perform specific actions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/using-iam-with-amazon-glacier.html&quot;&gt;Access Control Using AWS Identity and Access Management</p>
+<p>(IAM)&lt;/a&gt;&gt;</p>
+<p>For conceptual information and underlying REST API, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/uploading-archive-mpu.html&quot;&gt;Uploading Large Archives in Parts (Multipart Upload)&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/amazonglacier/latest/dev/api-upload-part.html&quot;&gt;Upload Part &lt;/a&gt; in the &lt;i&gt;Amazon Glacier Developer</p>
+<!-- @@@uploadMultipartPart -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

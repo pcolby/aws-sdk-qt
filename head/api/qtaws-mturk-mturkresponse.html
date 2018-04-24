@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mturkresponse.cpp -->
+  <title>MTurkResponse Class | MTurk</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmturk-index.html">MTurk</a></li>
+<li><a href="qtawsmturk-module.html">C++ Classes</a></li>
+<li>MTurkResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MTurkResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mturk-mturkresponse.html">QtAws::MTurk::MTurkResponse</a>)<br/></span>
+<!-- $$$MTurkResponse-brief -->
+<p>The <a href="qtaws-mturk-mturkresponse.html">MTurkResponse</a> class provides an interface for <a href="qtaws-mturk.html">MTurk</a> responses. <a href="#details">More...</a></p>
+<!-- @@@MTurkResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MTurkResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-mturk-acceptqualificationrequestresponse.html">QtAws::MTurk::AcceptQualificationRequestResponse</a>, <a href="qtaws-mturk-approveassignmentresponse.html">QtAws::MTurk::ApproveAssignmentResponse</a>, <a href="qtaws-mturk-associatequalificationwithworkerresponse.html">QtAws::MTurk::AssociateQualificationWithWorkerResponse</a>, <a href="qtaws-mturk-createadditionalassignmentsforhitresponse.html">QtAws::MTurk::CreateAdditionalAssignmentsForHITResponse</a>, <a href="qtaws-mturk-createhitresponse.html">QtAws::MTurk::CreateHITResponse</a>, <a href="qtaws-mturk-createhittyperesponse.html">QtAws::MTurk::CreateHITTypeResponse</a>, <a href="qtaws-mturk-createhitwithhittyperesponse.html">QtAws::MTurk::CreateHITWithHITTypeResponse</a>, <a href="qtaws-mturk-createqualificationtyperesponse.html">QtAws::MTurk::CreateQualificationTypeResponse</a>, <a href="qtaws-mturk-createworkerblockresponse.html">QtAws::MTurk::CreateWorkerBlockResponse</a>, <a href="qtaws-mturk-deletehitresponse.html">QtAws::MTurk::DeleteHITResponse</a>, <a href="qtaws-mturk-deletequalificationtyperesponse.html">QtAws::MTurk::DeleteQualificationTypeResponse</a>, <a href="qtaws-mturk-deleteworkerblockresponse.html">QtAws::MTurk::DeleteWorkerBlockResponse</a>, <a href="qtaws-mturk-disassociatequalificationfromworkerresponse.html">QtAws::MTurk::DisassociateQualificationFromWorkerResponse</a>, <a href="qtaws-mturk-getaccountbalanceresponse.html">QtAws::MTurk::GetAccountBalanceResponse</a>, <a href="qtaws-mturk-getassignmentresponse.html">QtAws::MTurk::GetAssignmentResponse</a>, <a href="qtaws-mturk-getfileuploadurlresponse.html">QtAws::MTurk::GetFileUploadURLResponse</a>, <a href="qtaws-mturk-gethitresponse.html">QtAws::MTurk::GetHITResponse</a>, <a href="qtaws-mturk-getqualificationscoreresponse.html">QtAws::MTurk::GetQualificationScoreResponse</a>, <a href="qtaws-mturk-getqualificationtyperesponse.html">QtAws::MTurk::GetQualificationTypeResponse</a>, <a href="qtaws-mturk-listassignmentsforhitresponse.html">QtAws::MTurk::ListAssignmentsForHITResponse</a>, <a href="qtaws-mturk-listbonuspaymentsresponse.html">QtAws::MTurk::ListBonusPaymentsResponse</a>, <a href="qtaws-mturk-listhitsforqualificationtyperesponse.html">QtAws::MTurk::ListHITsForQualificationTypeResponse</a>, <a href="qtaws-mturk-listhitsresponse.html">QtAws::MTurk::ListHITsResponse</a>, <a href="qtaws-mturk-listqualificationrequestsresponse.html">QtAws::MTurk::ListQualificationRequestsResponse</a>, <a href="qtaws-mturk-listqualificationtypesresponse.html">QtAws::MTurk::ListQualificationTypesResponse</a>, <a href="qtaws-mturk-listreviewablehitsresponse.html">QtAws::MTurk::ListReviewableHITsResponse</a>, <a href="qtaws-mturk-listreviewpolicyresultsforhitresponse.html">QtAws::MTurk::ListReviewPolicyResultsForHITResponse</a>, <a href="qtaws-mturk-listworkerblocksresponse.html">QtAws::MTurk::ListWorkerBlocksResponse</a>, <a href="qtaws-mturk-listworkerswithqualificationtyperesponse.html">QtAws::MTurk::ListWorkersWithQualificationTypeResponse</a>, <a href="qtaws-mturk-notifyworkersresponse.html">QtAws::MTurk::NotifyWorkersResponse</a>, <a href="qtaws-mturk-rejectassignmentresponse.html">QtAws::MTurk::RejectAssignmentResponse</a>, <a href="qtaws-mturk-rejectqualificationrequestresponse.html">QtAws::MTurk::RejectQualificationRequestResponse</a>, <a href="qtaws-mturk-sendbonusresponse.html">QtAws::MTurk::SendBonusResponse</a>, <a href="qtaws-mturk-sendtesteventnotificationresponse.html">QtAws::MTurk::SendTestEventNotificationResponse</a>, <a href="qtaws-mturk-updateexpirationforhitresponse.html">QtAws::MTurk::UpdateExpirationForHITResponse</a>, <a href="qtaws-mturk-updatehitreviewstatusresponse.html">QtAws::MTurk::UpdateHITReviewStatusResponse</a>, <a href="qtaws-mturk-updatehittypeofhitresponse.html">QtAws::MTurk::UpdateHITTypeOfHITResponse</a>, <a href="qtaws-mturk-updatenotificationsettingsresponse.html">QtAws::MTurk::UpdateNotificationSettingsResponse</a>, and <a href="qtaws-mturk-updatequalificationtyperesponse.html">QtAws::MTurk::UpdateQualificationTypeResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-mturk-mturkresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkresponse.html#MTurkResponse">MTurkResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MTurkResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mturk-mturkresponse.html">MTurkResponse</a> class provides an interface for <a href="qtaws-mturk.html">MTurk</a> responses.</p>
+</div>
+<!-- @@@MTurkResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MTurkResponse[overload1]$$$MTurkResponseQObject*const -->
+<h3 class="fn" id="MTurkResponse"><a name="MTurkResponse"></a>MTurkResponse::<span class="name">MTurkResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mturk-mturkresponse.html">MTurkResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@MTurkResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> MTurkResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

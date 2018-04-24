@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- directoryserviceclient.cpp -->
+  <title>DirectoryServiceClient Class | DirectoryService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdirectoryservice-index.html">DirectoryService</a></li>
+<li><a href="qtawsdirectoryservice-module.html">C++ Classes</a></li>
+<li>DirectoryServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DirectoryServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-directoryservice-directoryserviceclient.html">QtAws::DirectoryService::DirectoryServiceClient</a>)<br/></span>
+<!-- $$$DirectoryServiceClient-brief -->
+<p>The <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> class provides access to the AWS Directory Service service. <a href="#details">More...</a></p>
+<!-- @@@DirectoryServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DirectoryServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-directoryservice-directoryserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#DirectoryServiceClient">DirectoryServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#DirectoryServiceClient-1">DirectoryServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddIpRoutesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#addIpRoutes">addIpRoutes</a></b>(const AddIpRoutesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelSchemaExtensionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#cancelSchemaExtension">cancelSchemaExtension</a></b>(const CancelSchemaExtensionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConnectDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#connectDirectory">connectDirectory</a></b>(const ConnectDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createAlias">createAlias</a></b>(const CreateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateComputerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createComputer">createComputer</a></b>(const CreateComputerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConditionalForwarderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createConditionalForwarder">createConditionalForwarder</a></b>(const CreateConditionalForwarderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createDirectory">createDirectory</a></b>(const CreateDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMicrosoftADResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createMicrosoftAD">createMicrosoftAD</a></b>(const CreateMicrosoftADRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createSnapshot">createSnapshot</a></b>(const CreateSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrustResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#createTrust">createTrust</a></b>(const CreateTrustRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConditionalForwarderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#deleteConditionalForwarder">deleteConditionalForwarder</a></b>(const DeleteConditionalForwarderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#deleteDirectory">deleteDirectory</a></b>(const DeleteDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#deleteSnapshot">deleteSnapshot</a></b>(const DeleteSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTrustResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#deleteTrust">deleteTrust</a></b>(const DeleteTrustRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterEventTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#deregisterEventTopic">deregisterEventTopic</a></b>(const DeregisterEventTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConditionalForwardersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeConditionalForwarders">describeConditionalForwarders</a></b>(const DescribeConditionalForwardersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDirectoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeDirectories">describeDirectories</a></b>(const DescribeDirectoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDomainControllersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeDomainControllers">describeDomainControllers</a></b>(const DescribeDomainControllersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventTopicsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeEventTopics">describeEventTopics</a></b>(const DescribeEventTopicsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeSnapshots">describeSnapshots</a></b>(const DescribeSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrustsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#describeTrusts">describeTrusts</a></b>(const DescribeTrustsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableRadiusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#disableRadius">disableRadius</a></b>(const DisableRadiusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableSsoResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#disableSso">disableSso</a></b>(const DisableSsoRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableRadiusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#enableRadius">enableRadius</a></b>(const EnableRadiusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableSsoResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#enableSso">enableSso</a></b>(const EnableSsoRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDirectoryLimitsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#getDirectoryLimits">getDirectoryLimits</a></b>(const GetDirectoryLimitsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSnapshotLimitsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#getSnapshotLimits">getSnapshotLimits</a></b>(const GetSnapshotLimitsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIpRoutesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#listIpRoutes">listIpRoutes</a></b>(const ListIpRoutesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSchemaExtensionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#listSchemaExtensions">listSchemaExtensions</a></b>(const ListSchemaExtensionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterEventTopicResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#registerEventTopic">registerEventTopic</a></b>(const RegisterEventTopicRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveIpRoutesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#removeIpRoutes">removeIpRoutes</a></b>(const RemoveIpRoutesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RestoreFromSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#restoreFromSnapshot">restoreFromSnapshot</a></b>(const RestoreFromSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartSchemaExtensionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#startSchemaExtension">startSchemaExtension</a></b>(const StartSchemaExtensionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConditionalForwarderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#updateConditionalForwarder">updateConditionalForwarder</a></b>(const UpdateConditionalForwarderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNumberOfDomainControllersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#updateNumberOfDomainControllers">updateNumberOfDomainControllers</a></b>(const UpdateNumberOfDomainControllersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRadiusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#updateRadius">updateRadius</a></b>(const UpdateRadiusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> VerifyTrustResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryserviceclient.html#verifyTrust">verifyTrust</a></b>(const VerifyTrustRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DirectoryServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> class provides access to the AWS Directory Service service.</p>
+<p>&lt;fullname&gt;AWS Directory Service&lt;/fullname&gt;</p>
+<p>AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS Directory Services features, see &lt;a href=&quot;https://aws.amazon.com/directoryservice/&quot;&gt;AWS Directory Service&lt;/a&gt; and the &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html&quot;&gt;AWS Directory Service Administration</p>
+<p>Guide&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .Net, iOS, Android, etc.)&#x2e; The SDKs provide a convenient way to create programmatic access to AWS Directory Service and other AWS services. For more information about the AWS SDKs, including how to download and install them, see &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;Tools for Amazon Web</p>
+</div>
+<!-- @@@DirectoryServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DirectoryServiceClient[overload1]$$$DirectoryServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DirectoryServiceClient"><a name="DirectoryServiceClient"></a>DirectoryServiceClient::<span class="name">DirectoryServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@DirectoryServiceClient -->
+<!-- $$$DirectoryServiceClient$$$DirectoryServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DirectoryServiceClient-1"><a name="DirectoryServiceClient-1"></a>DirectoryServiceClient::<span class="name">DirectoryServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-directoryservice-directoryserviceclient.html#DirectoryServiceClient">DirectoryServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@DirectoryServiceClient -->
+<!-- $$$addIpRoutes[overload1]$$$addIpRoutesconstAddIpRoutesRequest& -->
+<h3 class="fn" id="addIpRoutes"><a name="addIpRoutes"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-addiproutesresponse.html">AddIpRoutesResponse</a></span> *DirectoryServiceClient::<span class="name">addIpRoutes</span>(const <span class="type"><a href="qtaws-directoryservice-addiproutesrequest.html">AddIpRoutesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-addiproutesresponse.html">AddIpRoutesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address block to correctly route traffic to and from your Microsoft AD on Amazon Web Services. &lt;i&gt;AddIpRoutes&lt;/i&gt; adds this address block. You can also use &lt;i&gt;AddIpRoutes&lt;/i&gt; to facilitate routing traffic that uses public IP ranges from your Microsoft AD on AWS to a peer VPC.</p>
+<p>&lt;/p</p>
+<p>Before you call &lt;i&gt;AddIpRoutes&lt;/i&gt;, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the &lt;i&gt;AddIpRoutes&lt;/i&gt; operation, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html&quot;&gt;AWS Directory Service API Permissions: Actions, Resources, and Conditions</p>
+<!-- @@@addIpRoutes -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *DirectoryServiceClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-directoryservice-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or overwrites one or more tags for the specified directory. Each directory can have a maximum of 50 tags. Each tag consists of a key and optional value. Tag keys must be unique to each</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$cancelSchemaExtension[overload1]$$$cancelSchemaExtensionconstCancelSchemaExtensionRequest& -->
+<h3 class="fn" id="cancelSchemaExtension"><a name="cancelSchemaExtension"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-cancelschemaextensionresponse.html">CancelSchemaExtensionResponse</a></span> *DirectoryServiceClient::<span class="name">cancelSchemaExtension</span>(const <span class="type"><a href="qtaws-directoryservice-cancelschemaextensionrequest.html">CancelSchemaExtensionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-cancelschemaextensionresponse.html">CancelSchemaExtensionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels an in-progress schema extension to a Microsoft AD directory. Once a schema extension has started replicating to all domain controllers, the task can no longer be canceled. A schema extension can be canceled during any of the following states; &lt;code&gt;Initializing&lt;/code&gt;, &lt;code&gt;CreatingSnapshot&lt;/code&gt;, and</p>
+<!-- @@@cancelSchemaExtension -->
+<!-- $$$connectDirectory[overload1]$$$connectDirectoryconstConnectDirectoryRequest& -->
+<h3 class="fn" id="connectDirectory"><a name="connectDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-connectdirectoryresponse.html">ConnectDirectoryResponse</a></span> *DirectoryServiceClient::<span class="name">connectDirectory</span>(const <span class="type"><a href="qtaws-directoryservice-connectdirectoryrequest.html">ConnectDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-connectdirectoryresponse.html">ConnectDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an AD Connector to connect to an on-premises</p>
+<p>directory&gt;</p>
+<p>Before you call &lt;i&gt;ConnectDirectory&lt;/i&gt;, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the &lt;i&gt;ConnectDirectory&lt;/i&gt; operation, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html&quot;&gt;AWS Directory Service API Permissions: Actions, Resources, and Conditions</p>
+<!-- @@@connectDirectory -->
+<!-- $$$createAlias[overload1]$$$createAliasconstCreateAliasRequest& -->
+<h3 class="fn" id="createAlias"><a name="createAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createaliasresponse.html">CreateAliasResponse</a></span> *DirectoryServiceClient::<span class="name">createAlias</span>(const <span class="type"><a href="qtaws-directoryservice-createaliasrequest.html">CreateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createaliasresponse.html">CreateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an alias for a directory and assigns the alias to the directory. The alias is used to construct the access URL for the directory, such as</p>
+<p>&lt;code&gt;http://&amp;lt;alias&amp;gt;.awsapps.com&lt;/code&gt;&gt; &lt;b&gt;</p>
+<p>After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely</p>
+<!-- @@@createAlias -->
+<!-- $$$createComputer[overload1]$$$createComputerconstCreateComputerRequest& -->
+<h3 class="fn" id="createComputer"><a name="createComputer"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createcomputerresponse.html">CreateComputerResponse</a></span> *DirectoryServiceClient::<span class="name">createComputer</span>(const <span class="type"><a href="qtaws-directoryservice-createcomputerrequest.html">CreateComputerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createcomputerresponse.html">CreateComputerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a computer account in the specified directory, and joins the computer to the</p>
+<!-- @@@createComputer -->
+<!-- $$$createConditionalForwarder[overload1]$$$createConditionalForwarderconstCreateConditionalForwarderRequest& -->
+<h3 class="fn" id="createConditionalForwarder"><a name="createConditionalForwarder"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createconditionalforwarderresponse.html">CreateConditionalForwarderResponse</a></span> *DirectoryServiceClient::<span class="name">createConditionalForwarder</span>(const <span class="type"><a href="qtaws-directoryservice-createconditionalforwarderrequest.html">CreateConditionalForwarderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createconditionalforwarderresponse.html">CreateConditionalForwarderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order to set up a trust relationship with another domain. The conditional forwarder points to the trusted</p>
+<!-- @@@createConditionalForwarder -->
+<!-- $$$createDirectory[overload1]$$$createDirectoryconstCreateDirectoryRequest& -->
+<h3 class="fn" id="createDirectory"><a name="createDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createdirectoryresponse.html">CreateDirectoryResponse</a></span> *DirectoryServiceClient::<span class="name">createDirectory</span>(const <span class="type"><a href="qtaws-directoryservice-createdirectoryrequest.html">CreateDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createdirectoryresponse.html">CreateDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Simple AD</p>
+<p>directory&gt;</p>
+<p>Before you call &lt;i&gt;CreateDirectory&lt;/i&gt;, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the &lt;i&gt;CreateDirectory&lt;/i&gt; operation, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html&quot;&gt;AWS Directory Service API Permissions: Actions, Resources, and Conditions</p>
+<!-- @@@createDirectory -->
+<!-- $$$createMicrosoftAD[overload1]$$$createMicrosoftADconstCreateMicrosoftADRequest& -->
+<h3 class="fn" id="createMicrosoftAD"><a name="createMicrosoftAD"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createmicrosoftadresponse.html">CreateMicrosoftADResponse</a></span> *DirectoryServiceClient::<span class="name">createMicrosoftAD</span>(const <span class="type"><a href="qtaws-directoryservice-createmicrosoftadrequest.html">CreateMicrosoftADRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createmicrosoftadresponse.html">CreateMicrosoftADResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Microsoft AD in the AWS</p>
+<p>cloud&gt;</p>
+<p>Before you call &lt;i&gt;CreateMicrosoftAD&lt;/i&gt;, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the &lt;i&gt;CreateMicrosoftAD&lt;/i&gt; operation, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html&quot;&gt;AWS Directory Service API Permissions: Actions, Resources, and Conditions</p>
+<!-- @@@createMicrosoftAD -->
+<!-- $$$createSnapshot[overload1]$$$createSnapshotconstCreateSnapshotRequest& -->
+<h3 class="fn" id="createSnapshot"><a name="createSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createsnapshotresponse.html">CreateSnapshotResponse</a></span> *DirectoryServiceClient::<span class="name">createSnapshot</span>(const <span class="type"><a href="qtaws-directoryservice-createsnapshotrequest.html">CreateSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createsnapshotresponse.html">CreateSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a snapshot of a Simple AD or Microsoft AD directory in the AWS</p>
+<p>cloud&gt; &lt;note&gt;</p>
+<p>You cannot take snapshots of AD Connector</p>
+<!-- @@@createSnapshot -->
+<!-- $$$createTrust[overload1]$$$createTrustconstCreateTrustRequest& -->
+<h3 class="fn" id="createTrust"><a name="createTrust"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-createtrustresponse.html">CreateTrustResponse</a></span> *DirectoryServiceClient::<span class="name">createTrust</span>(const <span class="type"><a href="qtaws-directoryservice-createtrustrequest.html">CreateTrustRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-createtrustresponse.html">CreateTrustResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can establish a trust between your Microsoft AD in the AWS cloud, and your existing on-premises Microsoft Active Directory. This would allow you to provide users and groups access to resources in either domain, with a single set of</p>
+<p>credentials&gt;</p>
+<p>This action initiates the creation of the AWS side of a trust relationship between a Microsoft AD in the AWS cloud and an external</p>
+<!-- @@@createTrust -->
+<!-- $$$deleteConditionalForwarder[overload1]$$$deleteConditionalForwarderconstDeleteConditionalForwarderRequest& -->
+<h3 class="fn" id="deleteConditionalForwarder"><a name="deleteConditionalForwarder"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-deleteconditionalforwarderresponse.html">DeleteConditionalForwarderResponse</a></span> *DirectoryServiceClient::<span class="name">deleteConditionalForwarder</span>(const <span class="type"><a href="qtaws-directoryservice-deleteconditionalforwarderrequest.html">DeleteConditionalForwarderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-deleteconditionalforwarderresponse.html">DeleteConditionalForwarderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a conditional forwarder that has been set up for your AWS</p>
+<!-- @@@deleteConditionalForwarder -->
+<!-- $$$deleteDirectory[overload1]$$$deleteDirectoryconstDeleteDirectoryRequest& -->
+<h3 class="fn" id="deleteDirectory"><a name="deleteDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-deletedirectoryresponse.html">DeleteDirectoryResponse</a></span> *DirectoryServiceClient::<span class="name">deleteDirectory</span>(const <span class="type"><a href="qtaws-directoryservice-deletedirectoryrequest.html">DeleteDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-deletedirectoryresponse.html">DeleteDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an AWS Directory Service</p>
+<p>directory&gt;</p>
+<p>Before you call &lt;i&gt;DeleteDirectory&lt;/i&gt;, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the &lt;i&gt;DeleteDirectory&lt;/i&gt; operation, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html&quot;&gt;AWS Directory Service API Permissions: Actions, Resources, and Conditions</p>
+<!-- @@@deleteDirectory -->
+<!-- $$$deleteSnapshot[overload1]$$$deleteSnapshotconstDeleteSnapshotRequest& -->
+<h3 class="fn" id="deleteSnapshot"><a name="deleteSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-deletesnapshotresponse.html">DeleteSnapshotResponse</a></span> *DirectoryServiceClient::<span class="name">deleteSnapshot</span>(const <span class="type"><a href="qtaws-directoryservice-deletesnapshotrequest.html">DeleteSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-deletesnapshotresponse.html">DeleteSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a directory</p>
+<!-- @@@deleteSnapshot -->
+<!-- $$$deleteTrust[overload1]$$$deleteTrustconstDeleteTrustRequest& -->
+<h3 class="fn" id="deleteTrust"><a name="deleteTrust"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-deletetrustresponse.html">DeleteTrustResponse</a></span> *DirectoryServiceClient::<span class="name">deleteTrust</span>(const <span class="type"><a href="qtaws-directoryservice-deletetrustrequest.html">DeleteTrustRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-deletetrustresponse.html">DeleteTrustResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing trust relationship between your Microsoft AD in the AWS cloud and an external</p>
+<!-- @@@deleteTrust -->
+<!-- $$$deregisterEventTopic[overload1]$$$deregisterEventTopicconstDeregisterEventTopicRequest& -->
+<h3 class="fn" id="deregisterEventTopic"><a name="deregisterEventTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-deregistereventtopicresponse.html">DeregisterEventTopicResponse</a></span> *DirectoryServiceClient::<span class="name">deregisterEventTopic</span>(const <span class="type"><a href="qtaws-directoryservice-deregistereventtopicrequest.html">DeregisterEventTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-deregistereventtopicresponse.html">DeregisterEventTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified directory as a publisher to the specified SNS</p>
+<!-- @@@deregisterEventTopic -->
+<!-- $$$describeConditionalForwarders[overload1]$$$describeConditionalForwardersconstDescribeConditionalForwardersRequest& -->
+<h3 class="fn" id="describeConditionalForwarders"><a name="describeConditionalForwarders"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describeconditionalforwardersresponse.html">DescribeConditionalForwardersResponse</a></span> *DirectoryServiceClient::<span class="name">describeConditionalForwarders</span>(const <span class="type"><a href="qtaws-directoryservice-describeconditionalforwardersrequest.html">DescribeConditionalForwardersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describeconditionalforwardersresponse.html">DescribeConditionalForwardersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains information about the conditional forwarders for this</p>
+<p>account&gt;</p>
+<p>If no input parameters are provided for RemoteDomainNames, this request describes all conditional forwarders for the specified directory</p>
+<!-- @@@describeConditionalForwarders -->
+<!-- $$$describeDirectories[overload1]$$$describeDirectoriesconstDescribeDirectoriesRequest& -->
+<h3 class="fn" id="describeDirectories"><a name="describeDirectories"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describedirectoriesresponse.html">DescribeDirectoriesResponse</a></span> *DirectoryServiceClient::<span class="name">describeDirectories</span>(const <span class="type"><a href="qtaws-directoryservice-describedirectoriesrequest.html">DescribeDirectoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describedirectoriesresponse.html">DescribeDirectoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains information about the directories that belong to this</p>
+<p>account&gt;</p>
+<p>You can retrieve information about specific directories by passing the directory identifiers in the &lt;i&gt;DirectoryIds&lt;/i&gt; parameter. Otherwise, all directories that belong to the current account are</p>
+<p>returned&gt;</p>
+<p>This operation supports pagination with the use of the &lt;i&gt;NextToken&lt;/i&gt; request and response parameters. If more results are available, the &lt;i&gt;DescribeDirectoriesResult.NextToken&lt;/i&gt; member contains a token that you pass in the next call to &lt;a&gt;DescribeDirectories&lt;/a&gt; to retrieve the next set of</p>
+<p>items&gt;</p>
+<p>You can also specify a maximum number of return results with the &lt;i&gt;Limit&lt;/i&gt;</p>
+<!-- @@@describeDirectories -->
+<!-- $$$describeDomainControllers[overload1]$$$describeDomainControllersconstDescribeDomainControllersRequest& -->
+<h3 class="fn" id="describeDomainControllers"><a name="describeDomainControllers"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describedomaincontrollersresponse.html">DescribeDomainControllersResponse</a></span> *DirectoryServiceClient::<span class="name">describeDomainControllers</span>(const <span class="type"><a href="qtaws-directoryservice-describedomaincontrollersrequest.html">DescribeDomainControllersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describedomaincontrollersresponse.html">DescribeDomainControllersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides information about any domain controllers in your</p>
+<!-- @@@describeDomainControllers -->
+<!-- $$$describeEventTopics[overload1]$$$describeEventTopicsconstDescribeEventTopicsRequest& -->
+<h3 class="fn" id="describeEventTopics"><a name="describeEventTopics"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describeeventtopicsresponse.html">DescribeEventTopicsResponse</a></span> *DirectoryServiceClient::<span class="name">describeEventTopics</span>(const <span class="type"><a href="qtaws-directoryservice-describeeventtopicsrequest.html">DescribeEventTopicsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describeeventtopicsresponse.html">DescribeEventTopicsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains information about which SNS topics receive status messages from the specified</p>
+<p>directory&gt;</p>
+<p>If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the associations in the</p>
+<!-- @@@describeEventTopics -->
+<!-- $$$describeSnapshots[overload1]$$$describeSnapshotsconstDescribeSnapshotsRequest& -->
+<h3 class="fn" id="describeSnapshots"><a name="describeSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describesnapshotsresponse.html">DescribeSnapshotsResponse</a></span> *DirectoryServiceClient::<span class="name">describeSnapshots</span>(const <span class="type"><a href="qtaws-directoryservice-describesnapshotsrequest.html">DescribeSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describesnapshotsresponse.html">DescribeSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains information about the directory snapshots that belong to this</p>
+<p>account&gt;</p>
+<p>This operation supports pagination with the use of the &lt;i&gt;NextToken&lt;/i&gt; request and response parameters. If more results are available, the &lt;i&gt;DescribeSnapshots.NextToken&lt;/i&gt; member contains a token that you pass in the next call to &lt;a&gt;DescribeSnapshots&lt;/a&gt; to retrieve the next set of</p>
+<p>items&gt;</p>
+<p>You can also specify a maximum number of return results with the &lt;i&gt;Limit&lt;/i&gt;</p>
+<!-- @@@describeSnapshots -->
+<!-- $$$describeTrusts[overload1]$$$describeTrustsconstDescribeTrustsRequest& -->
+<h3 class="fn" id="describeTrusts"><a name="describeTrusts"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-describetrustsresponse.html">DescribeTrustsResponse</a></span> *DirectoryServiceClient::<span class="name">describeTrusts</span>(const <span class="type"><a href="qtaws-directoryservice-describetrustsrequest.html">DescribeTrustsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-describetrustsresponse.html">DescribeTrustsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains information about the trust relationships for this</p>
+<p>account&gt;</p>
+<p>If no input parameters are provided, such as DirectoryId or TrustIds, this request describes all the trust relationships belonging to the</p>
+<!-- @@@describeTrusts -->
+<!-- $$$disableRadius[overload1]$$$disableRadiusconstDisableRadiusRequest& -->
+<h3 class="fn" id="disableRadius"><a name="disableRadius"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-disableradiusresponse.html">DisableRadiusResponse</a></span> *DirectoryServiceClient::<span class="name">disableRadius</span>(const <span class="type"><a href="qtaws-directoryservice-disableradiusrequest.html">DisableRadiusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-disableradiusresponse.html">DisableRadiusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector</p>
+<!-- @@@disableRadius -->
+<!-- $$$disableSso[overload1]$$$disableSsoconstDisableSsoRequest& -->
+<h3 class="fn" id="disableSso"><a name="disableSso"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-disablessoresponse.html">DisableSsoResponse</a></span> *DirectoryServiceClient::<span class="name">disableSso</span>(const <span class="type"><a href="qtaws-directoryservice-disablessorequest.html">DisableSsoRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-disablessoresponse.html">DisableSsoResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables single-sign on for a</p>
+<!-- @@@disableSso -->
+<!-- $$$enableRadius[overload1]$$$enableRadiusconstEnableRadiusRequest& -->
+<h3 class="fn" id="enableRadius"><a name="enableRadius"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-enableradiusresponse.html">EnableRadiusResponse</a></span> *DirectoryServiceClient::<span class="name">enableRadius</span>(const <span class="type"><a href="qtaws-directoryservice-enableradiusrequest.html">EnableRadiusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-enableradiusresponse.html">EnableRadiusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector</p>
+<!-- @@@enableRadius -->
+<!-- $$$enableSso[overload1]$$$enableSsoconstEnableSsoRequest& -->
+<h3 class="fn" id="enableSso"><a name="enableSso"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-enablessoresponse.html">EnableSsoResponse</a></span> *DirectoryServiceClient::<span class="name">enableSso</span>(const <span class="type"><a href="qtaws-directoryservice-enablessorequest.html">EnableSsoRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-enablessoresponse.html">EnableSsoResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables single sign-on for a</p>
+<!-- @@@enableSso -->
+<!-- $$$getDirectoryLimits[overload1]$$$getDirectoryLimitsconstGetDirectoryLimitsRequest& -->
+<h3 class="fn" id="getDirectoryLimits"><a name="getDirectoryLimits"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-getdirectorylimitsresponse.html">GetDirectoryLimitsResponse</a></span> *DirectoryServiceClient::<span class="name">getDirectoryLimits</span>(const <span class="type"><a href="qtaws-directoryservice-getdirectorylimitsrequest.html">GetDirectoryLimitsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-getdirectorylimitsresponse.html">GetDirectoryLimitsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains directory limit information for the current</p>
+<!-- @@@getDirectoryLimits -->
+<!-- $$$getSnapshotLimits[overload1]$$$getSnapshotLimitsconstGetSnapshotLimitsRequest& -->
+<h3 class="fn" id="getSnapshotLimits"><a name="getSnapshotLimits"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-getsnapshotlimitsresponse.html">GetSnapshotLimitsResponse</a></span> *DirectoryServiceClient::<span class="name">getSnapshotLimits</span>(const <span class="type"><a href="qtaws-directoryservice-getsnapshotlimitsrequest.html">GetSnapshotLimitsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-getsnapshotlimitsresponse.html">GetSnapshotLimitsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Obtains the manual snapshot limits for a</p>
+<!-- @@@getSnapshotLimits -->
+<!-- $$$listIpRoutes[overload1]$$$listIpRoutesconstListIpRoutesRequest& -->
+<h3 class="fn" id="listIpRoutes"><a name="listIpRoutes"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-listiproutesresponse.html">ListIpRoutesResponse</a></span> *DirectoryServiceClient::<span class="name">listIpRoutes</span>(const <span class="type"><a href="qtaws-directoryservice-listiproutesrequest.html">ListIpRoutesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-listiproutesresponse.html">ListIpRoutesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the address blocks that you have added to a</p>
+<!-- @@@listIpRoutes -->
+<!-- $$$listSchemaExtensions[overload1]$$$listSchemaExtensionsconstListSchemaExtensionsRequest& -->
+<h3 class="fn" id="listSchemaExtensions"><a name="listSchemaExtensions"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-listschemaextensionsresponse.html">ListSchemaExtensionsResponse</a></span> *DirectoryServiceClient::<span class="name">listSchemaExtensions</span>(const <span class="type"><a href="qtaws-directoryservice-listschemaextensionsrequest.html">ListSchemaExtensionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-listschemaextensionsresponse.html">ListSchemaExtensionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all schema extensions applied to a Microsoft AD</p>
+<!-- @@@listSchemaExtensions -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *DirectoryServiceClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-directoryservice-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all tags on a</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$registerEventTopic[overload1]$$$registerEventTopicconstRegisterEventTopicRequest& -->
+<h3 class="fn" id="registerEventTopic"><a name="registerEventTopic"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-registereventtopicresponse.html">RegisterEventTopicResponse</a></span> *DirectoryServiceClient::<span class="name">registerEventTopic</span>(const <span class="type"><a href="qtaws-directoryservice-registereventtopicrequest.html">RegisterEventTopicRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-registereventtopicresponse.html">RegisterEventTopicResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a directory with an SNS topic. This establishes the directory as a publisher to the specified SNS topic. You can then receive email or text (SMS) messages when the status of your directory changes. You get notified if your directory goes from an Active status to an Impaired or Inoperable status. You also receive a notification when the directory returns to an Active</p>
+<!-- @@@registerEventTopic -->
+<!-- $$$removeIpRoutes[overload1]$$$removeIpRoutesconstRemoveIpRoutesRequest& -->
+<h3 class="fn" id="removeIpRoutes"><a name="removeIpRoutes"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-removeiproutesresponse.html">RemoveIpRoutesResponse</a></span> *DirectoryServiceClient::<span class="name">removeIpRoutes</span>(const <span class="type"><a href="qtaws-directoryservice-removeiproutesrequest.html">RemoveIpRoutesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-removeiproutesresponse.html">RemoveIpRoutesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes IP address blocks from a</p>
+<!-- @@@removeIpRoutes -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *DirectoryServiceClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-directoryservice-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from a</p>
+<!-- @@@removeTagsFromResource -->
+<!-- $$$restoreFromSnapshot[overload1]$$$restoreFromSnapshotconstRestoreFromSnapshotRequest& -->
+<h3 class="fn" id="restoreFromSnapshot"><a name="restoreFromSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-restorefromsnapshotresponse.html">RestoreFromSnapshotResponse</a></span> *DirectoryServiceClient::<span class="name">restoreFromSnapshot</span>(const <span class="type"><a href="qtaws-directoryservice-restorefromsnapshotrequest.html">RestoreFromSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-restorefromsnapshotresponse.html">RestoreFromSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores a directory using an existing directory</p>
+<p>snapshot&gt;</p>
+<p>When you restore a directory from a snapshot, any changes made to the directory after the snapshot date are</p>
+<p>overwritten&gt;</p>
+<p>This action returns as soon as the restore operation is initiated. You can monitor the progress of the restore operation by calling the &lt;a&gt;DescribeDirectories&lt;/a&gt; operation with the directory identifier. When the &lt;b&gt;DirectoryDescription.Stage&lt;/b&gt; value changes to &lt;code&gt;Active&lt;/code&gt;, the restore operation is</p>
+<!-- @@@restoreFromSnapshot -->
+<!-- $$$startSchemaExtension[overload1]$$$startSchemaExtensionconstStartSchemaExtensionRequest& -->
+<h3 class="fn" id="startSchemaExtension"><a name="startSchemaExtension"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-startschemaextensionresponse.html">StartSchemaExtensionResponse</a></span> *DirectoryServiceClient::<span class="name">startSchemaExtension</span>(const <span class="type"><a href="qtaws-directoryservice-startschemaextensionrequest.html">StartSchemaExtensionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-startschemaextensionresponse.html">StartSchemaExtensionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Applies a schema extension to a Microsoft AD</p>
+<!-- @@@startSchemaExtension -->
+<!-- $$$updateConditionalForwarder[overload1]$$$updateConditionalForwarderconstUpdateConditionalForwarderRequest& -->
+<h3 class="fn" id="updateConditionalForwarder"><a name="updateConditionalForwarder"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-updateconditionalforwarderresponse.html">UpdateConditionalForwarderResponse</a></span> *DirectoryServiceClient::<span class="name">updateConditionalForwarder</span>(const <span class="type"><a href="qtaws-directoryservice-updateconditionalforwarderrequest.html">UpdateConditionalForwarderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-updateconditionalforwarderresponse.html">UpdateConditionalForwarderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a conditional forwarder that has been set up for your AWS</p>
+<!-- @@@updateConditionalForwarder -->
+<!-- $$$updateNumberOfDomainControllers[overload1]$$$updateNumberOfDomainControllersconstUpdateNumberOfDomainControllersRequest& -->
+<h3 class="fn" id="updateNumberOfDomainControllers"><a name="updateNumberOfDomainControllers"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-updatenumberofdomaincontrollersresponse.html">UpdateNumberOfDomainControllersResponse</a></span> *DirectoryServiceClient::<span class="name">updateNumberOfDomainControllers</span>(const <span class="type"><a href="qtaws-directoryservice-updatenumberofdomaincontrollersrequest.html">UpdateNumberOfDomainControllersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-updatenumberofdomaincontrollersresponse.html">UpdateNumberOfDomainControllersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or removes domain controllers to or from the directory. Based on the difference between current value and new value (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new domain controllers to become fully active once the requested number of domain controllers is updated. During this time, you cannot make another update</p>
+<!-- @@@updateNumberOfDomainControllers -->
+<!-- $$$updateRadius[overload1]$$$updateRadiusconstUpdateRadiusRequest& -->
+<h3 class="fn" id="updateRadius"><a name="updateRadius"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-updateradiusresponse.html">UpdateRadiusResponse</a></span> *DirectoryServiceClient::<span class="name">updateRadius</span>(const <span class="type"><a href="qtaws-directoryservice-updateradiusrequest.html">UpdateRadiusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-updateradiusresponse.html">UpdateRadiusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector</p>
+<!-- @@@updateRadius -->
+<!-- $$$verifyTrust[overload1]$$$verifyTrustconstVerifyTrustRequest& -->
+<h3 class="fn" id="verifyTrust"><a name="verifyTrust"></a><code>[slot] </code><span class="type"><a href="qtaws-directoryservice-verifytrustresponse.html">VerifyTrustResponse</a></span> *DirectoryServiceClient::<span class="name">verifyTrust</span>(const <span class="type"><a href="qtaws-directoryservice-verifytrustrequest.html">VerifyTrustRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directoryservice-directoryserviceclient.html">DirectoryServiceClient</a> service, and returns a pointer to an <a href="qtaws-directoryservice-verifytrustresponse.html">VerifyTrustResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust</p>
+<p>relationships&gt;</p>
+<p>This action verifies a trust relationship between your Microsoft AD in the AWS cloud and an external</p>
+<!-- @@@verifyTrust -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

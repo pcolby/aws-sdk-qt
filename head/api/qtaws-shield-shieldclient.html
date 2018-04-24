@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- shieldclient.cpp -->
+  <title>ShieldClient Class | Shield</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsshield-index.html">Shield</a></li>
+<li><a href="qtawsshield-module.html">C++ Classes</a></li>
+<li>ShieldClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ShieldClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-shield-shieldclient.html">QtAws::Shield::ShieldClient</a>)<br/></span>
+<!-- $$$ShieldClient-brief -->
+<p>The <a href="qtaws-shield-shieldclient.html">ShieldClient</a> class provides access to the AWS Shield service. <a href="#details">More...</a></p>
+<!-- @@@ShieldClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ShieldClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-shield-shieldclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#ShieldClient">ShieldClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#ShieldClient-1">ShieldClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProtectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#createProtection">createProtection</a></b>(const CreateProtectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#createSubscription">createSubscription</a></b>(const CreateSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProtectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#deleteProtection">deleteProtection</a></b>(const DeleteProtectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#deleteSubscription">deleteSubscription</a></b>(const DeleteSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAttackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#describeAttack">describeAttack</a></b>(const DescribeAttackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProtectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#describeProtection">describeProtection</a></b>(const DescribeProtectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#describeSubscription">describeSubscription</a></b>(const DescribeSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSubscriptionStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#getSubscriptionState">getSubscriptionState</a></b>(const GetSubscriptionStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAttacksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#listAttacks">listAttacks</a></b>(const ListAttacksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProtectionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-shield-shieldclient.html#listProtections">listProtections</a></b>(const ListProtectionsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ShieldClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-shield-shieldclient.html">ShieldClient</a> class provides access to the AWS Shield service.</p>
+<p>&lt;fullname&gt;AWS Shield Advanced&lt;/fullname&gt;</p>
+<p>This is the &lt;i&gt;AWS Shield Advanced API Reference&lt;/i&gt;. This guide is for developers who need detailed information about the AWS Shield Advanced API actions, data types, and errors. For detailed information about AWS WAF and AWS Shield Advanced features and an overview of how to use the AWS WAF and AWS Shield Advanced APIs, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF and AWS Shield Developer</p>
+</div>
+<!-- @@@ShieldClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ShieldClient[overload1]$$$ShieldClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ShieldClient"><a name="ShieldClient"></a>ShieldClient::<span class="name">ShieldClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-shield-shieldclient.html">ShieldClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ShieldClient -->
+<!-- $$$ShieldClient$$$ShieldClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ShieldClient-1"><a name="ShieldClient-1"></a>ShieldClient::<span class="name">ShieldClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-shield-shieldclient.html#ShieldClient">ShieldClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ShieldClient -->
+<!-- $$$createProtection[overload1]$$$createProtectionconstCreateProtectionRequest& -->
+<h3 class="fn" id="createProtection"><a name="createProtection"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-createprotectionresponse.html">CreateProtectionResponse</a></span> *ShieldClient::<span class="name">createProtection</span>(const <span class="type"><a href="qtaws-shield-createprotectionrequest.html">CreateProtectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-createprotectionresponse.html">CreateProtectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables AWS Shield Advanced for a specific AWS resource. The resource can be an Amazon CloudFront distribution, Elastic Load Balancing load balancer, Elastic IP Address, or an Amazon Route 53 hosted</p>
+<!-- @@@createProtection -->
+<!-- $$$createSubscription[overload1]$$$createSubscriptionconstCreateSubscriptionRequest& -->
+<h3 class="fn" id="createSubscription"><a name="createSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-createsubscriptionresponse.html">CreateSubscriptionResponse</a></span> *ShieldClient::<span class="name">createSubscription</span>(const <span class="type"><a href="qtaws-shield-createsubscriptionrequest.html">CreateSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-createsubscriptionresponse.html">CreateSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Activates AWS Shield Advanced for an</p>
+<!-- @@@createSubscription -->
+<!-- $$$deleteProtection[overload1]$$$deleteProtectionconstDeleteProtectionRequest& -->
+<h3 class="fn" id="deleteProtection"><a name="deleteProtection"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-deleteprotectionresponse.html">DeleteProtectionResponse</a></span> *ShieldClient::<span class="name">deleteProtection</span>(const <span class="type"><a href="qtaws-shield-deleteprotectionrequest.html">DeleteProtectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-deleteprotectionresponse.html">DeleteProtectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an AWS Shield Advanced</p>
+<!-- @@@deleteProtection -->
+<!-- $$$deleteSubscription[overload1]$$$deleteSubscriptionconstDeleteSubscriptionRequest& -->
+<h3 class="fn" id="deleteSubscription"><a name="deleteSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-deletesubscriptionresponse.html">DeleteSubscriptionResponse</a></span> *ShieldClient::<span class="name">deleteSubscription</span>(const <span class="type"><a href="qtaws-shield-deletesubscriptionrequest.html">DeleteSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-deletesubscriptionresponse.html">DeleteSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot delete a subscription prior to the completion of that commitment.</p>
+<!-- @@@deleteSubscription -->
+<!-- $$$describeAttack[overload1]$$$describeAttackconstDescribeAttackRequest& -->
+<h3 class="fn" id="describeAttack"><a name="describeAttack"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-describeattackresponse.html">DescribeAttackResponse</a></span> *ShieldClient::<span class="name">describeAttack</span>(const <span class="type"><a href="qtaws-shield-describeattackrequest.html">DescribeAttackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-describeattackresponse.html">DescribeAttackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the details of a DDoS attack.</p>
+<!-- @@@describeAttack -->
+<!-- $$$describeProtection[overload1]$$$describeProtectionconstDescribeProtectionRequest& -->
+<h3 class="fn" id="describeProtection"><a name="describeProtection"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-describeprotectionresponse.html">DescribeProtectionResponse</a></span> *ShieldClient::<span class="name">describeProtection</span>(const <span class="type"><a href="qtaws-shield-describeprotectionrequest.html">DescribeProtectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-describeprotectionresponse.html">DescribeProtectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the details of a &lt;a&gt;Protection&lt;/a&gt;</p>
+<!-- @@@describeProtection -->
+<!-- $$$describeSubscription[overload1]$$$describeSubscriptionconstDescribeSubscriptionRequest& -->
+<h3 class="fn" id="describeSubscription"><a name="describeSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-describesubscriptionresponse.html">DescribeSubscriptionResponse</a></span> *ShieldClient::<span class="name">describeSubscription</span>(const <span class="type"><a href="qtaws-shield-describesubscriptionrequest.html">DescribeSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-describesubscriptionresponse.html">DescribeSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides details about the AWS Shield Advanced subscription for an</p>
+<!-- @@@describeSubscription -->
+<!-- $$$getSubscriptionState[overload1]$$$getSubscriptionStateconstGetSubscriptionStateRequest& -->
+<h3 class="fn" id="getSubscriptionState"><a name="getSubscriptionState"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-getsubscriptionstateresponse.html">GetSubscriptionStateResponse</a></span> *ShieldClient::<span class="name">getSubscriptionState</span>(const <span class="type"><a href="qtaws-shield-getsubscriptionstaterequest.html">GetSubscriptionStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-getsubscriptionstateresponse.html">GetSubscriptionStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;code&gt;SubscriptionState&lt;/code&gt;, either &lt;code&gt;Active&lt;/code&gt; or</p>
+<!-- @@@getSubscriptionState -->
+<!-- $$$listAttacks[overload1]$$$listAttacksconstListAttacksRequest& -->
+<h3 class="fn" id="listAttacks"><a name="listAttacks"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-listattacksresponse.html">ListAttacksResponse</a></span> *ShieldClient::<span class="name">listAttacks</span>(const <span class="type"><a href="qtaws-shield-listattacksrequest.html">ListAttacksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-listattacksresponse.html">ListAttacksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all ongoing DDoS attacks or all DDoS attacks during a specified time</p>
+<!-- @@@listAttacks -->
+<!-- $$$listProtections[overload1]$$$listProtectionsconstListProtectionsRequest& -->
+<h3 class="fn" id="listProtections"><a name="listProtections"></a><code>[slot] </code><span class="type"><a href="qtaws-shield-listprotectionsresponse.html">ListProtectionsResponse</a></span> *ShieldClient::<span class="name">listProtections</span>(const <span class="type"><a href="qtaws-shield-listprotectionsrequest.html">ListProtectionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-shield-shieldclient.html">ShieldClient</a> service, and returns a pointer to an <a href="qtaws-shield-listprotectionsresponse.html">ListProtectionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all &lt;a&gt;Protection&lt;/a&gt; objects for the</p>
+<!-- @@@listProtections -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

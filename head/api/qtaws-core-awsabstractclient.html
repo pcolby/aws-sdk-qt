@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsabstractclient.cpp -->
+  <title>AwsAbstractClient Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsAbstractClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsAbstractClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a>)<br/></span>
+<!-- $$$AwsAbstractClient-brief -->
+<p>The <a href="qtaws-core-awsabstractclient.html">AwsAbstractClient</a> class provides an interface for accessing AWS services. <a href="#details">More...</a></p>
+<!-- @@@AwsAbstractClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsAbstractClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-acm-acmclient.html">QtAws::ACM::AcmClient</a>, <a href="qtaws-acmpca-acmpcaclient.html">QtAws::ACMPCA::AcmpcaClient</a>, <a href="qtaws-alexaforbusiness-alexaforbusinessclient.html">QtAws::AlexaForBusiness::AlexaForBusinessClient</a>, <a href="qtaws-apigateway-apigatewayclient.html">QtAws::APIGateway::APIGatewayClient</a>, <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">QtAws::ApplicationAutoScaling::ApplicationAutoScalingClient</a>, <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceclient.html">QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient</a>, <a href="qtaws-appstream-appstreamclient.html">QtAws::AppStream::AppStreamClient</a>, <a href="qtaws-appsync-appsyncclient.html">QtAws::AppSync::AppSyncClient</a>, <a href="qtaws-athena-athenaclient.html">QtAws::Athena::AthenaClient</a>, <a href="qtaws-autoscaling-autoscalingclient.html">QtAws::AutoScaling::AutoScalingClient</a>, <a href="qtaws-autoscalingplans-autoscalingplansclient.html">QtAws::AutoScalingPlans::AutoScalingPlansClient</a>, <a href="qtaws-batch-batchclient.html">QtAws::Batch::BatchClient</a>, <a href="qtaws-budgets-budgetsclient.html">QtAws::Budgets::BudgetsClient</a>, <a href="qtaws-cloud9-cloud9client.html">QtAws::Cloud9::Cloud9Client</a>, <a href="qtaws-clouddirectory-clouddirectoryclient.html">QtAws::CloudDirectory::CloudDirectoryClient</a>, <a href="qtaws-cloudformation-cloudformationclient.html">QtAws::CloudFormation::CloudFormationClient</a>, <a href="qtaws-cloudfront-cloudfrontclient.html">QtAws::CloudFront::CloudFrontClient</a>, <a href="qtaws-cloudhsm-cloudhsmclient.html">QtAws::CloudHSM::CloudHSMClient</a>, <a href="qtaws-cloudhsmv2-cloudhsmv2client.html">QtAws::CloudHSMV2::CloudHSMV2Client</a>, <a href="qtaws-cloudsearch-cloudsearchclient.html">QtAws::CloudSearch::CloudSearchClient</a>, <a href="qtaws-cloudsearchdomain-cloudsearchdomainclient.html">QtAws::CloudSearchDomain::CloudSearchDomainClient</a>, <a href="qtaws-cloudtrail-cloudtrailclient.html">QtAws::CloudTrail::CloudTrailClient</a>, <a href="qtaws-cloudwatch-cloudwatchclient.html">QtAws::CloudWatch::CloudWatchClient</a>, <a href="qtaws-cloudwatchevents-cloudwatcheventsclient.html">QtAws::CloudWatchEvents::CloudWatchEventsClient</a>, <a href="qtaws-cloudwatchlogs-cloudwatchlogsclient.html">QtAws::CloudWatchLogs::CloudWatchLogsClient</a>, <a href="qtaws-codebuild-codebuildclient.html">QtAws::CodeBuild::CodeBuildClient</a>, <a href="qtaws-codecommit-codecommitclient.html">QtAws::CodeCommit::CodeCommitClient</a>, <a href="qtaws-codedeploy-codedeployclient.html">QtAws::CodeDeploy::CodeDeployClient</a>, <a href="qtaws-codepipeline-codepipelineclient.html">QtAws::CodePipeline::CodePipelineClient</a>, <a href="qtaws-codestar-codestarclient.html">QtAws::CodeStar::CodeStarClient</a>, <a href="qtaws-cognitoidentity-cognitoidentityclient.html">QtAws::CognitoIdentity::CognitoIdentityClient</a>, <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderclient.html">QtAws::CognitoIdentityProvider::CognitoIdentityProviderClient</a>, <a href="qtaws-cognitosync-cognitosyncclient.html">QtAws::CognitoSync::CognitoSyncClient</a>, <a href="qtaws-comprehend-comprehendclient.html">QtAws::Comprehend::ComprehendClient</a>, <a href="qtaws-configservice-configserviceclient.html">QtAws::ConfigService::ConfigServiceClient</a>, <a href="qtaws-connect-connectclient.html">QtAws::Connect::ConnectClient</a>, <a href="qtaws-costandusagereportservice-costandusagereportserviceclient.html">QtAws::CostandUsageReportService::CostandUsageReportServiceClient</a>, <a href="qtaws-costexplorer-costexplorerclient.html">QtAws::CostExplorer::CostExplorerClient</a>, <a href="qtaws-databasemigrationservice-databasemigrationserviceclient.html">QtAws::DatabaseMigrationService::DatabaseMigrationServiceClient</a>, <a href="qtaws-datapipeline-datapipelineclient.html">QtAws::DataPipeline::DataPipelineClient</a>, <a href="qtaws-dax-daxclient.html">QtAws::DAX::DaxClient</a>, <a href="qtaws-devicefarm-devicefarmclient.html">QtAws::DeviceFarm::DeviceFarmClient</a>, <a href="qtaws-directconnect-directconnectclient.html">QtAws::DirectConnect::DirectConnectClient</a>, <a href="qtaws-directoryservice-directoryserviceclient.html">QtAws::DirectoryService::DirectoryServiceClient</a>, <a href="qtaws-dynamodb-dynamodbclient.html">QtAws::DynamoDB::DynamoDBClient</a>, <a href="qtaws-dynamodbstreams-dynamodbstreamsclient.html">QtAws::DynamoDBStreams::DynamoDBStreamsClient</a>, <a href="qtaws-ec2-ec2client.html">QtAws::EC2::Ec2Client</a>, <a href="qtaws-ecr-ecrclient.html">QtAws::ECR::EcrClient</a>, <a href="qtaws-ecs-ecsclient.html">QtAws::ECS::EcsClient</a>, <a href="qtaws-efs-efsclient.html">QtAws::EFS::EfsClient</a>, <a href="qtaws-elasticache-elasticacheclient.html">QtAws::ElastiCache::ElastiCacheClient</a>, <a href="qtaws-elasticbeanstalk-elasticbeanstalkclient.html">QtAws::ElasticBeanstalk::ElasticBeanstalkClient</a>, <a href="qtaws-elasticloadbalancing-elasticloadbalancingclient.html">QtAws::ElasticLoadBalancing::ElasticLoadBalancingClient</a>, <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2client.html">QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Client</a>, <a href="qtaws-elasticsearchservice-elasticsearchserviceclient.html">QtAws::ElasticsearchService::ElasticsearchServiceClient</a>, <a href="qtaws-elastictranscoder-elastictranscoderclient.html">QtAws::ElasticTranscoder::ElasticTranscoderClient</a>, <a href="qtaws-emr-emrclient.html">QtAws::EMR::EmrClient</a>, <a href="qtaws-firehose-firehoseclient.html">QtAws::Firehose::FirehoseClient</a>, <a href="qtaws-fms-fmsclient.html">QtAws::FMS::FmsClient</a>, <a href="qtaws-gamelift-gameliftclient.html">QtAws::GameLift::GameLiftClient</a>, <a href="qtaws-glacier-glacierclient.html">QtAws::Glacier::GlacierClient</a>, <a href="qtaws-glue-glueclient.html">QtAws::Glue::GlueClient</a>, <a href="qtaws-greengrass-greengrassclient.html">QtAws::Greengrass::GreengrassClient</a>, <a href="qtaws-guardduty-guarddutyclient.html">QtAws::GuardDuty::GuardDutyClient</a>, <a href="qtaws-health-healthclient.html">QtAws::Health::HealthClient</a>, <a href="qtaws-iam-iamclient.html">QtAws::IAM::IamClient</a>, <a href="qtaws-importexport-importexportclient.html">QtAws::ImportExport::ImportExportClient</a>, <a href="qtaws-inspector-inspectorclient.html">QtAws::Inspector::InspectorClient</a>, <a href="qtaws-iot-iotclient.html">QtAws::IoT::IoTClient</a>, <a href="qtaws-iotdataplane-iotdataplaneclient.html">QtAws::IoTDataPlane::IoTDataPlaneClient</a>, <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">QtAws::IoTJobsDataPlane::IoTJobsDataPlaneClient</a>, <a href="qtaws-kinesis-kinesisclient.html">QtAws::Kinesis::KinesisClient</a>, <a href="qtaws-kinesisanalytics-kinesisanalyticsclient.html">QtAws::KinesisAnalytics::KinesisAnalyticsClient</a>, <a href="qtaws-kinesisvideo-kinesisvideoclient.html">QtAws::KinesisVideo::KinesisVideoClient</a>, <a href="qtaws-kinesisvideoarchivedmedia-kinesisvideoarchivedmediaclient.html">QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClient</a>, <a href="qtaws-kinesisvideomedia-kinesisvideomediaclient.html">QtAws::KinesisVideoMedia::KinesisVideoMediaClient</a>, <a href="qtaws-kms-kmsclient.html">QtAws::KMS::KmsClient</a>, <a href="qtaws-lambda-lambdaclient.html">QtAws::Lambda::LambdaClient</a>, <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceclient.html">QtAws::LexModelBuildingService::LexModelBuildingServiceClient</a>, <a href="qtaws-lexruntimeservice-lexruntimeserviceclient.html">QtAws::LexRuntimeService::LexRuntimeServiceClient</a>, <a href="qtaws-lightsail-lightsailclient.html">QtAws::Lightsail::LightsailClient</a>, <a href="qtaws-machinelearning-machinelearningclient.html">QtAws::MachineLearning::MachineLearningClient</a>, <a href="qtaws-marketplacecommerceanalytics-marketplacecommerceanalyticsclient.html">QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsClient</a>, <a href="qtaws-marketplaceentitlementservice-marketplaceentitlementserviceclient.html">QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClient</a>, <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">QtAws::MarketplaceMetering::MarketplaceMeteringClient</a>, <a href="qtaws-mediaconvert-mediaconvertclient.html">QtAws::MediaConvert::MediaConvertClient</a>, <a href="qtaws-medialive-medialiveclient.html">QtAws::MediaLive::MediaLiveClient</a>, <a href="qtaws-mediapackage-mediapackageclient.html">QtAws::MediaPackage::MediaPackageClient</a>, <a href="qtaws-mediastore-mediastoreclient.html">QtAws::MediaStore::MediaStoreClient</a>, <a href="qtaws-mediastoredata-mediastoredataclient.html">QtAws::MediaStoreData::MediaStoreDataClient</a>, <a href="qtaws-migrationhub-migrationhubclient.html">QtAws::MigrationHub::MigrationHubClient</a>, <a href="qtaws-mobile-mobileclient.html">QtAws::Mobile::MobileClient</a>, <a href="qtaws-mobileanalytics-mobileanalyticsclient.html">QtAws::MobileAnalytics::MobileAnalyticsClient</a>, <a href="qtaws-mq-mqclient.html">QtAws::MQ::MqClient</a>, <a href="qtaws-mturk-mturkclient.html">QtAws::MTurk::MTurkClient</a>, <a href="qtaws-opsworks-opsworksclient.html">QtAws::OpsWorks::OpsWorksClient</a>, <a href="qtaws-opsworkscm-opsworkscmclient.html">QtAws::OpsWorksCM::OpsWorksCMClient</a>, <a href="qtaws-organizations-organizationsclient.html">QtAws::Organizations::OrganizationsClient</a>, <a href="qtaws-pinpoint-pinpointclient.html">QtAws::Pinpoint::PinpointClient</a>, <a href="qtaws-polly-pollyclient.html">QtAws::Polly::PollyClient</a>, <a href="qtaws-pricing-pricingclient.html">QtAws::Pricing::PricingClient</a>, <a href="qtaws-rds-rdsclient.html">QtAws::RDS::RdsClient</a>, <a href="qtaws-redshift-redshiftclient.html">QtAws::Redshift::RedshiftClient</a>, <a href="qtaws-rekognition-rekognitionclient.html">QtAws::Rekognition::RekognitionClient</a>, <a href="qtaws-resourcegroups-resourcegroupsclient.html">QtAws::ResourceGroups::ResourceGroupsClient</a>, <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient</a>, <a href="qtaws-route53-route53client.html">QtAws::Route53::Route53Client</a>, <a href="qtaws-route53domains-route53domainsclient.html">QtAws::Route53Domains::Route53DomainsClient</a>, <a href="qtaws-s3-s3client.html">QtAws::S3::S3Client</a>, <a href="qtaws-sagemaker-sagemakerclient.html">QtAws::SageMaker::SageMakerClient</a>, <a href="qtaws-sagemakerruntime-sagemakerruntimeclient.html">QtAws::SageMakerRuntime::SageMakerRuntimeClient</a>, <a href="qtaws-secretsmanager-secretsmanagerclient.html">QtAws::SecretsManager::SecretsManagerClient</a>, <a href="qtaws-serverlessapplicationrepository-serverlessapplicationrepositoryclient.html">QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryClient</a>, <a href="qtaws-servicecatalog-servicecatalogclient.html">QtAws::ServiceCatalog::ServiceCatalogClient</a>, <a href="qtaws-servicediscovery-servicediscoveryclient.html">QtAws::ServiceDiscovery::ServiceDiscoveryClient</a>, <a href="qtaws-ses-sesclient.html">QtAws::SES::SesClient</a>, <a href="qtaws-sfn-sfnclient.html">QtAws::SFN::SfnClient</a>, <a href="qtaws-shield-shieldclient.html">QtAws::Shield::ShieldClient</a>, <a href="qtaws-simpledb-simpledbclient.html">QtAws::SimpleDB::SimpleDBClient</a>, <a href="qtaws-sms-smsclient.html">QtAws::SMS::SmsClient</a>, <a href="qtaws-snowball-snowballclient.html">QtAws::Snowball::SnowballClient</a>, <a href="qtaws-sns-snsclient.html">QtAws::SNS::SnsClient</a>, <a href="qtaws-sqs-sqsclient.html">QtAws::SQS::SqsClient</a>, <a href="qtaws-ssm-ssmclient.html">QtAws::SSM::SsmClient</a>, <a href="qtaws-storagegateway-storagegatewayclient.html">QtAws::StorageGateway::StorageGatewayClient</a>, <a href="qtaws-sts-stsclient.html">QtAws::STS::StsClient</a>, <a href="qtaws-support-supportclient.html">QtAws::Support::SupportClient</a>, <a href="qtaws-swf-swfclient.html">QtAws::SWF::SwfClient</a>, <a href="qtaws-transcribeservice-transcribeserviceclient.html">QtAws::TranscribeService::TranscribeServiceClient</a>, <a href="qtaws-translate-translateclient.html">QtAws::Translate::TranslateClient</a>, <a href="qtaws-waf-wafclient.html">QtAws::WAF::WafClient</a>, <a href="qtaws-wafregional-wafregionalclient.html">QtAws::WAFRegional::WAFRegionalClient</a>, <a href="qtaws-workdocs-workdocsclient.html">QtAws::WorkDocs::WorkDocsClient</a>, <a href="qtaws-workmail-workmailclient.html">QtAws::WorkMail::WorkMailClient</a>, <a href="qtaws-workspaces-workspacesclient.html">QtAws::WorkSpaces::WorkSpacesClient</a>, and <a href="qtaws-xray-xrayclient.html">QtAws::XRay::XRayClient</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsabstractclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#AwsAbstractClient">AwsAbstractClient</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#dtor.AwsAbstractClient">~AwsAbstractClient</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#endpoint">endpoint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#endpointPrefix">endpointPrefix</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QNetworkAccessManager *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#networkAccessManager">networkAccessManager</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AwsRegion::Region </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#region">region</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual AwsAbstractResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#send">send</a></b>(const AwsAbstractRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#serviceFullName">serviceFullName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#serviceName">serviceName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#setCredentials">setCredentials</a></b>(AwsAbstractCredentials * const <i>credentials</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#setEndpoint">setEndpoint</a></b>(const QUrl &amp;<i>endpoint</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#setNetworkAccessManager">setNetworkAccessManager</a></b>(QNetworkAccessManager * const <i>manager</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#setRegion">setRegion</a></b>(const AwsRegion::Region <i>region</i>)</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual AwsAbstractCredentials *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#credentials">credentials</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual AwsAbstractSignature *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractclient.html#signature">signature</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsAbstractClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsabstractclient.html">AwsAbstractClient</a> class provides an interface for accessing AWS services.</p>
+</div>
+<!-- @@@AwsAbstractClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsAbstractClient[overload1]$$$AwsAbstractClientQObject*const -->
+<h3 class="fn" id="AwsAbstractClient"><a name="AwsAbstractClient"></a>AwsAbstractClient::<span class="name">AwsAbstractClient</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs an <a href="qtaws-core-awsabstractclient.html">AwsAbstractClient</a> object with parent <i>parent</i>.</p>
+<!-- @@@AwsAbstractClient -->
+<!-- $$$~AwsAbstractClient[overload1]$$$~AwsAbstractClient -->
+<h3 class="fn" id="dtor.AwsAbstractClient"><a name="dtor.AwsAbstractClient"></a><code>[virtual] </code>AwsAbstractClient::<span class="name">~AwsAbstractClient</span>()</h3>
+<p>Destroys the AWS client.</p>
+<!-- @@@~AwsAbstractClient -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> AwsAbstractClient::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the AWS service API version, such as &quot;2017-01-02&quot;.</p>
+<!-- @@@apiVersion -->
+<!-- $$$credentials[overload1]$$$credentials -->
+<h3 class="fn" id="credentials"><a name="credentials"></a><code>[virtual protected] </code><span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> *AwsAbstractClient::<span class="name">credentials</span>() const</h3>
+<p>Returns credentials for signing requests.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#setCredentials">setCredentials</a>().</p>
+<!-- @@@credentials -->
+<!-- $$$endpoint[overload1]$$$endpoint -->
+<h3 class="fn" id="endpoint"><a name="endpoint"></a><span class="type">QUrl</span> AwsAbstractClient::<span class="name">endpoint</span>() const</h3>
+<p>Returns the AWS endpoint URL.</p>
+<p>If a valid QUrl has been set (usually via <a href="qtaws-core-awsabstractclient.html#setEndpoint">setEndpoint</a>), then this base implementation will return that QUrl. Otherwise, this base implementation will use the <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> class to determine the endpoint to use based on this object's region and <a href="qtaws-core-awsabstractclient.html#serviceName">serviceName</a>.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#setEndpoint">setEndpoint</a>().</p>
+<!-- @@@endpoint -->
+<!-- $$$endpointPrefix[overload1]$$$endpointPrefix -->
+<h3 class="fn" id="endpointPrefix"><a name="endpointPrefix"></a><span class="type">QString</span> AwsAbstractClient::<span class="name">endpointPrefix</span>() const</h3>
+<p>Returns the AWS endpoint prefix, such as &quot;sqs&quot; or &quot;sns&quot;.</p>
+<p>This is the standard endpoint prefix associated with this AWS service, is not affected by any explicit endpoint URL that may have beem set via <a href="qtaws-core-awsabstractclient.html#setEndpoint">setEndpoint</a>.</p>
+<!-- @@@endpointPrefix -->
+<!-- $$$networkAccessManager[overload1]$$$networkAccessManager -->
+<h3 class="fn" id="networkAccessManager"><a name="networkAccessManager"></a><span class="type">QNetworkAccessManager</span> *AwsAbstractClient::<span class="name">networkAccessManager</span>() const</h3>
+<p>Returns the network access manager.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#setNetworkAccessManager">setNetworkAccessManager</a>().</p>
+<!-- @@@networkAccessManager -->
+<!-- $$$region[overload1]$$$region -->
+<h3 class="fn" id="region"><a name="region"></a><span class="type"><a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a></span> AwsAbstractClient::<span class="name">region</span>() const</h3>
+<p>Returns the AWS region, or <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::InvalidRegion</a> if none has been set.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#setRegion">setRegion</a>().</p>
+<!-- @@@region -->
+<!-- $$$send[overload1]$$$sendconstAwsAbstractRequest& -->
+<h3 class="fn" id="send"><a name="send"></a><code>[virtual] </code><span class="type"><a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a></span> *AwsAbstractClient::<span class="name">send</span>(const <span class="type"><a href="qtaws-core-awsabstractrequest.html">AwsAbstractRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends an AWS request.</p>
+<p>This base implementation simply uses the <i>request</i>'s <code>send</code> method, supplying the necessary resources (ie the credentials, network access manager, and signature object) from this object as required.</p>
+<p>Derived classes would not normally need to override this method.</p>
+<p>Returns an object representing the AWS service's response.</p>
+<!-- @@@send -->
+<!-- $$$serviceFullName[overload1]$$$serviceFullName -->
+<h3 class="fn" id="serviceFullName"><a name="serviceFullName"></a><span class="type">QString</span> AwsAbstractClient::<span class="name">serviceFullName</span>() const</h3>
+<p>Return the Amazon full sercvice name, such as &quot;Amazon Simple Queue Service&quot;.</p>
+<!-- @@@serviceFullName -->
+<!-- $$$serviceName[overload1]$$$serviceName -->
+<h3 class="fn" id="serviceName"><a name="serviceName"></a><span class="type">QString</span> AwsAbstractClient::<span class="name">serviceName</span>() const</h3>
+<p>Returns the Amazon service name, such as &quot;sqs&quot; or &quot;sns&quot;.</p>
+<p>This is name is suitable for generating V4 signatures.</p>
+<!-- @@@serviceName -->
+<!-- $$$setCredentials[overload1]$$$setCredentialsAwsAbstractCredentials*const -->
+<h3 class="fn" id="setCredentials"><a name="setCredentials"></a><span class="type">void</span> AwsAbstractClient::<span class="name">setCredentials</span>(<span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> * const <i>credentials</i>)</h3>
+<p>Sets the <i>credentials</i> for signing AWS requests.</p>
+<p>This object will not take ownership of the supplied <i>credentials</i> pointer. It is the caller's responsibility to ensure that the pointer remains valid for the life of this object, or until setCredentials is used to set a new pointer.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#credentials">credentials</a>().</p>
+<!-- @@@setCredentials -->
+<!-- $$$setEndpoint[overload1]$$$setEndpointconstQUrl& -->
+<h3 class="fn" id="setEndpoint"><a name="setEndpoint"></a><span class="type">void</span> AwsAbstractClient::<span class="name">setEndpoint</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>)</h3>
+<p>Sets the AWS <i>endpoint</i> to send AWS requests.</p>
+<p>Typically, it is simpler for the user to set this client's region instead (via <a href="qtaws-core-awsabstractclient.html#setRegion">setRegion</a>), and allow this object to then determine the endpoint based on the <a href="qtaws-core-awsabstractclient.html#serviceName">serviceName</a> and region. However, this method may be used to set an explicit endpoint URL if desired.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#endpoint">endpoint</a>().</p>
+<!-- @@@setEndpoint -->
+<!-- $$$setNetworkAccessManager[overload1]$$$setNetworkAccessManagerQNetworkAccessManager*const -->
+<h3 class="fn" id="setNetworkAccessManager"><a name="setNetworkAccessManager"></a><span class="type">void</span> AwsAbstractClient::<span class="name">setNetworkAccessManager</span>(<span class="type">QNetworkAccessManager</span> * const <i>manager</i>)</h3>
+<p>Sets the network access <i>manager</i> for this AWS service object.</p>
+<p>This object will not take ownership of the supplied <i>manager</i> pointer. It is the caller's responsibility to ensure that the pointer remains valid for the life of this object, or until setNetworkAccessManager is used to set a new pointer.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#networkAccessManager">networkAccessManager</a>().</p>
+<!-- @@@setNetworkAccessManager -->
+<!-- $$$setRegion[overload1]$$$setRegionconstAwsRegion::Region -->
+<h3 class="fn" id="setRegion"><a name="setRegion"></a><span class="type">void</span> AwsAbstractClient::<span class="name">setRegion</span>(const <span class="type"><a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a></span> <i>region</i>)</h3>
+<p>Sets the AWS <i>region</i>.</p>
+<p>If an endpoint is not explicitly set (eg via <a href="qtaws-core-awsabstractclient.html#setEndpoint">setEndpoint</a>), then the supplied value may be used (in conjuction with <a href="qtaws-core-awsabstractclient.html#serviceName">serviceName</a>) to determine the endpoint URL when sending requests to the AWS service.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#region">region</a>().</p>
+<!-- @@@setRegion -->
+<!-- $$$signature[overload1]$$$signature -->
+<h3 class="fn" id="signature"><a name="signature"></a><code>[virtual protected] </code><span class="type"><a href="qtaws-core-awsabstractsignature.html">AwsAbstractSignature</a></span> *AwsAbstractClient::<span class="name">signature</span>() const</h3>
+<p>Returns signature object for signing requests.</p>
+<!-- @@@signature -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

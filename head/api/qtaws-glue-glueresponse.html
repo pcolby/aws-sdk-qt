@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- glueresponse.cpp -->
+  <title>GlueResponse Class | Glue</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsglue-index.html">Glue</a></li>
+<li><a href="qtawsglue-module.html">C++ Classes</a></li>
+<li>GlueResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GlueResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-glue-glueresponse.html">QtAws::Glue::GlueResponse</a>)<br/></span>
+<!-- $$$GlueResponse-brief -->
+<p>The <a href="qtaws-glue-glueresponse.html">GlueResponse</a> class provides an interface for Glue responses. <a href="#details">More...</a></p>
+<!-- @@@GlueResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GlueResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-glue-batchcreatepartitionresponse.html">QtAws::Glue::BatchCreatePartitionResponse</a>, <a href="qtaws-glue-batchdeleteconnectionresponse.html">QtAws::Glue::BatchDeleteConnectionResponse</a>, <a href="qtaws-glue-batchdeletepartitionresponse.html">QtAws::Glue::BatchDeletePartitionResponse</a>, <a href="qtaws-glue-batchdeletetableresponse.html">QtAws::Glue::BatchDeleteTableResponse</a>, <a href="qtaws-glue-batchdeletetableversionresponse.html">QtAws::Glue::BatchDeleteTableVersionResponse</a>, <a href="qtaws-glue-batchgetpartitionresponse.html">QtAws::Glue::BatchGetPartitionResponse</a>, <a href="qtaws-glue-batchstopjobrunresponse.html">QtAws::Glue::BatchStopJobRunResponse</a>, <a href="qtaws-glue-createclassifierresponse.html">QtAws::Glue::CreateClassifierResponse</a>, <a href="qtaws-glue-createconnectionresponse.html">QtAws::Glue::CreateConnectionResponse</a>, <a href="qtaws-glue-createcrawlerresponse.html">QtAws::Glue::CreateCrawlerResponse</a>, <a href="qtaws-glue-createdatabaseresponse.html">QtAws::Glue::CreateDatabaseResponse</a>, <a href="qtaws-glue-createdevendpointresponse.html">QtAws::Glue::CreateDevEndpointResponse</a>, <a href="qtaws-glue-createjobresponse.html">QtAws::Glue::CreateJobResponse</a>, <a href="qtaws-glue-createpartitionresponse.html">QtAws::Glue::CreatePartitionResponse</a>, <a href="qtaws-glue-createscriptresponse.html">QtAws::Glue::CreateScriptResponse</a>, <a href="qtaws-glue-createtableresponse.html">QtAws::Glue::CreateTableResponse</a>, <a href="qtaws-glue-createtriggerresponse.html">QtAws::Glue::CreateTriggerResponse</a>, <a href="qtaws-glue-createuserdefinedfunctionresponse.html">QtAws::Glue::CreateUserDefinedFunctionResponse</a>, <a href="qtaws-glue-deleteclassifierresponse.html">QtAws::Glue::DeleteClassifierResponse</a>, <a href="qtaws-glue-deleteconnectionresponse.html">QtAws::Glue::DeleteConnectionResponse</a>, <a href="qtaws-glue-deletecrawlerresponse.html">QtAws::Glue::DeleteCrawlerResponse</a>, <a href="qtaws-glue-deletedatabaseresponse.html">QtAws::Glue::DeleteDatabaseResponse</a>, <a href="qtaws-glue-deletedevendpointresponse.html">QtAws::Glue::DeleteDevEndpointResponse</a>, <a href="qtaws-glue-deletejobresponse.html">QtAws::Glue::DeleteJobResponse</a>, <a href="qtaws-glue-deletepartitionresponse.html">QtAws::Glue::DeletePartitionResponse</a>, <a href="qtaws-glue-deletetableresponse.html">QtAws::Glue::DeleteTableResponse</a>, <a href="qtaws-glue-deletetableversionresponse.html">QtAws::Glue::DeleteTableVersionResponse</a>, <a href="qtaws-glue-deletetriggerresponse.html">QtAws::Glue::DeleteTriggerResponse</a>, <a href="qtaws-glue-deleteuserdefinedfunctionresponse.html">QtAws::Glue::DeleteUserDefinedFunctionResponse</a>, <a href="qtaws-glue-getcatalogimportstatusresponse.html">QtAws::Glue::GetCatalogImportStatusResponse</a>, <a href="qtaws-glue-getclassifierresponse.html">QtAws::Glue::GetClassifierResponse</a>, <a href="qtaws-glue-getclassifiersresponse.html">QtAws::Glue::GetClassifiersResponse</a>, <a href="qtaws-glue-getconnectionresponse.html">QtAws::Glue::GetConnectionResponse</a>, <a href="qtaws-glue-getconnectionsresponse.html">QtAws::Glue::GetConnectionsResponse</a>, <a href="qtaws-glue-getcrawlermetricsresponse.html">QtAws::Glue::GetCrawlerMetricsResponse</a>, <a href="qtaws-glue-getcrawlerresponse.html">QtAws::Glue::GetCrawlerResponse</a>, <a href="qtaws-glue-getcrawlersresponse.html">QtAws::Glue::GetCrawlersResponse</a>, <a href="qtaws-glue-getdatabaseresponse.html">QtAws::Glue::GetDatabaseResponse</a>, <a href="qtaws-glue-getdatabasesresponse.html">QtAws::Glue::GetDatabasesResponse</a>, <a href="qtaws-glue-getdataflowgraphresponse.html">QtAws::Glue::GetDataflowGraphResponse</a>, <a href="qtaws-glue-getdevendpointresponse.html">QtAws::Glue::GetDevEndpointResponse</a>, <a href="qtaws-glue-getdevendpointsresponse.html">QtAws::Glue::GetDevEndpointsResponse</a>, <a href="qtaws-glue-getjobresponse.html">QtAws::Glue::GetJobResponse</a>, <a href="qtaws-glue-getjobrunresponse.html">QtAws::Glue::GetJobRunResponse</a>, <a href="qtaws-glue-getjobrunsresponse.html">QtAws::Glue::GetJobRunsResponse</a>, <a href="qtaws-glue-getjobsresponse.html">QtAws::Glue::GetJobsResponse</a>, <a href="qtaws-glue-getmappingresponse.html">QtAws::Glue::GetMappingResponse</a>, <a href="qtaws-glue-getpartitionresponse.html">QtAws::Glue::GetPartitionResponse</a>, <a href="qtaws-glue-getpartitionsresponse.html">QtAws::Glue::GetPartitionsResponse</a>, <a href="qtaws-glue-getplanresponse.html">QtAws::Glue::GetPlanResponse</a>, <a href="qtaws-glue-gettableresponse.html">QtAws::Glue::GetTableResponse</a>, <a href="qtaws-glue-gettablesresponse.html">QtAws::Glue::GetTablesResponse</a>, <a href="qtaws-glue-gettableversionresponse.html">QtAws::Glue::GetTableVersionResponse</a>, <a href="qtaws-glue-gettableversionsresponse.html">QtAws::Glue::GetTableVersionsResponse</a>, <a href="qtaws-glue-gettriggerresponse.html">QtAws::Glue::GetTriggerResponse</a>, <a href="qtaws-glue-gettriggersresponse.html">QtAws::Glue::GetTriggersResponse</a>, <a href="qtaws-glue-getuserdefinedfunctionresponse.html">QtAws::Glue::GetUserDefinedFunctionResponse</a>, <a href="qtaws-glue-getuserdefinedfunctionsresponse.html">QtAws::Glue::GetUserDefinedFunctionsResponse</a>, <a href="qtaws-glue-importcatalogtoglueresponse.html">QtAws::Glue::ImportCatalogToGlueResponse</a>, <a href="qtaws-glue-resetjobbookmarkresponse.html">QtAws::Glue::ResetJobBookmarkResponse</a>, <a href="qtaws-glue-startcrawlerresponse.html">QtAws::Glue::StartCrawlerResponse</a>, <a href="qtaws-glue-startcrawlerscheduleresponse.html">QtAws::Glue::StartCrawlerScheduleResponse</a>, <a href="qtaws-glue-startjobrunresponse.html">QtAws::Glue::StartJobRunResponse</a>, <a href="qtaws-glue-starttriggerresponse.html">QtAws::Glue::StartTriggerResponse</a>, <a href="qtaws-glue-stopcrawlerresponse.html">QtAws::Glue::StopCrawlerResponse</a>, <a href="qtaws-glue-stopcrawlerscheduleresponse.html">QtAws::Glue::StopCrawlerScheduleResponse</a>, <a href="qtaws-glue-stoptriggerresponse.html">QtAws::Glue::StopTriggerResponse</a>, <a href="qtaws-glue-updateclassifierresponse.html">QtAws::Glue::UpdateClassifierResponse</a>, <a href="qtaws-glue-updateconnectionresponse.html">QtAws::Glue::UpdateConnectionResponse</a>, <a href="qtaws-glue-updatecrawlerresponse.html">QtAws::Glue::UpdateCrawlerResponse</a>, <a href="qtaws-glue-updatecrawlerscheduleresponse.html">QtAws::Glue::UpdateCrawlerScheduleResponse</a>, <a href="qtaws-glue-updatedatabaseresponse.html">QtAws::Glue::UpdateDatabaseResponse</a>, <a href="qtaws-glue-updatedevendpointresponse.html">QtAws::Glue::UpdateDevEndpointResponse</a>, <a href="qtaws-glue-updatejobresponse.html">QtAws::Glue::UpdateJobResponse</a>, <a href="qtaws-glue-updatepartitionresponse.html">QtAws::Glue::UpdatePartitionResponse</a>, <a href="qtaws-glue-updatetableresponse.html">QtAws::Glue::UpdateTableResponse</a>, <a href="qtaws-glue-updatetriggerresponse.html">QtAws::Glue::UpdateTriggerResponse</a>, and <a href="qtaws-glue-updateuserdefinedfunctionresponse.html">QtAws::Glue::UpdateUserDefinedFunctionResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-glue-glueresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueresponse.html#GlueResponse">GlueResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-glue-glueresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GlueResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-glue-glueresponse.html">GlueResponse</a> class provides an interface for Glue responses.</p>
+</div>
+<!-- @@@GlueResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GlueResponse[overload1]$$$GlueResponseQObject*const -->
+<h3 class="fn" id="GlueResponse"><a name="GlueResponse"></a>GlueResponse::<span class="name">GlueResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-glue-glueresponse.html">GlueResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@GlueResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> GlueResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- simpledbclient.cpp -->
+  <title>SimpleDBClient Class | SimpleDB</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssimpledb-index.html">SimpleDB</a></li>
+<li><a href="qtawssimpledb-module.html">C++ Classes</a></li>
+<li>SimpleDBClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SimpleDBClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-simpledb-simpledbclient.html">QtAws::SimpleDB::SimpleDBClient</a>)<br/></span>
+<!-- $$$SimpleDBClient-brief -->
+<p>The <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> class provides access to the Amazon <a href="qtaws-simpledb.html">SimpleDB</a> service. <a href="#details">More...</a></p>
+<!-- @@@SimpleDBClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SimpleDBClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-simpledb-simpledbclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#SimpleDBClient">SimpleDBClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#SimpleDBClient-1">SimpleDBClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#batchDeleteAttributes">batchDeleteAttributes</a></b>(const BatchDeleteAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchPutAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#batchPutAttributes">batchPutAttributes</a></b>(const BatchPutAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#createDomain">createDomain</a></b>(const CreateDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#deleteAttributes">deleteAttributes</a></b>(const DeleteAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#deleteDomain">deleteDomain</a></b>(const DeleteDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DomainMetadataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#domainMetadata">domainMetadata</a></b>(const DomainMetadataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#getAttributes">getAttributes</a></b>(const GetAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDomainsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#listDomains">listDomains</a></b>(const ListDomainsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#putAttributes">putAttributes</a></b>(const PutAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SelectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-simpledb-simpledbclient.html#select">select</a></b>(const SelectRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SimpleDBClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> class provides access to the Amazon <a href="qtaws-simpledb.html">SimpleDB</a> service.</p>
+<p>Amazon <a href="qtaws-simpledb.html">SimpleDB</a> is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, <a href="qtaws-simpledb.html">SimpleDB</a> provides developers the freedom to focus on application development.</p>
+<p>A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon <a href="qtaws-simpledb.html">SimpleDB</a> is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use.</p>
+<p>&lt;/p</p>
+<p>Visit &lt;a href=&quot;http://aws.amazon.com/simpledb/&quot;&gt;http://aws.amazon.com/simpledb/&lt;/a&gt; for more information.</p>
+</div>
+<!-- @@@SimpleDBClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SimpleDBClient[overload1]$$$SimpleDBClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SimpleDBClient"><a name="SimpleDBClient"></a>SimpleDBClient::<span class="name">SimpleDBClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SimpleDBClient -->
+<!-- $$$SimpleDBClient$$$SimpleDBClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SimpleDBClient-1"><a name="SimpleDBClient-1"></a>SimpleDBClient::<span class="name">SimpleDBClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-simpledb-simpledbclient.html#SimpleDBClient">SimpleDBClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SimpleDBClient -->
+<!-- $$$batchDeleteAttributes[overload1]$$$batchDeleteAttributesconstBatchDeleteAttributesRequest& -->
+<h3 class="fn" id="batchDeleteAttributes"><a name="batchDeleteAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-batchdeleteattributesresponse.html">BatchDeleteAttributesResponse</a></span> *SimpleDBClient::<span class="name">batchDeleteAttributes</span>(const <span class="type"><a href="qtaws-simpledb-batchdeleteattributesrequest.html">BatchDeleteAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-batchdeleteattributesresponse.html">BatchDeleteAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon <a href="qtaws-simpledb.html">SimpleDB</a> to optimize requests, which generally yields better throughput.</p>
+<p>&lt;/p</p>
+<p>The following limitations are enforced for this operation: &lt;ul&gt; &lt;li&gt;1 MB request size&lt;/li&gt; &lt;li&gt;25 item limit per BatchDeleteAttributes operation&lt;/li&gt; &lt;/ul&gt;</p>
+<!-- @@@batchDeleteAttributes -->
+<!-- $$$batchPutAttributes[overload1]$$$batchPutAttributesconstBatchPutAttributesRequest& -->
+<h3 class="fn" id="batchPutAttributes"><a name="batchPutAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-batchputattributesresponse.html">BatchPutAttributesResponse</a></span> *SimpleDBClient::<span class="name">batchPutAttributes</span>(const <span class="type"><a href="qtaws-simpledb-batchputattributesrequest.html">BatchPutAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-batchputattributesresponse.html">BatchPutAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;BatchPutAttributes&lt;/code&gt; operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple &lt;a&gt;PutAttribute&lt;/a&gt; operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon <a href="qtaws-simpledb.html">SimpleDB</a> to optimize requests and generally produce better throughput.</p>
+<p>&lt;/p</p>
+<p>The client may specify the item name with the &lt;code&gt;Item.X&#x2e;ItemName&lt;/code&gt; parameter. The client may specify new attributes using a combination of the &lt;code&gt;Item.X&#x2e;Attribute.Y&#x2e;Name&lt;/code&gt; and &lt;code&gt;Item.X&#x2e;Attribute.Y&#x2e;Value&lt;/code&gt; parameters. The client may specify the first attribute for the first item using the parameters &lt;code&gt;Item.0&#x2e;Attribute.0&#x2e;Name&lt;/code&gt; and &lt;code&gt;Item.0&#x2e;Attribute.0&#x2e;Value&lt;/code&gt;, and for the second attribute for the first item by the parameters &lt;code&gt;Item.0&#x2e;Attribute.1&#x2e;Name&lt;/code&gt; and &lt;code&gt;Item.0&#x2e;Attribute.1&#x2e;Value&lt;/code&gt;, and so on.</p>
+<p>&lt;/p</p>
+<p>Attributes are uniquely identified within an item by their name/value combination. For example, a single item can have the attributes &lt;code&gt;{ &quot;first_name&quot;, &quot;first_value&quot; }&lt;/code&gt; and &lt;code&gt;{ &quot;first_name&quot;, &quot;second_value&quot; }&lt;/code&gt;. However, it cannot have two attribute instances where both the &lt;code&gt;Item.X&#x2e;Attribute.Y&#x2e;Name&lt;/code&gt; and &lt;code&gt;Item.X&#x2e;Attribute.Y&#x2e;Value&lt;/code&gt; are the same.</p>
+<p>&lt;/p</p>
+<p>Optionally, the requester can supply the &lt;code&gt;Replace&lt;/code&gt; parameter for each individual value. Setting this value to &lt;code&gt;true&lt;/code&gt; will cause the new attribute values to replace the existing attribute values. For example, if an item &lt;code&gt;I&lt;/code&gt; has the attributes &lt;code&gt;{ 'a', '1' }, { 'b', '2'}&lt;/code&gt; and &lt;code&gt;{ 'b', '3' }&lt;/code&gt; and the requester does a BatchPutAttributes of &lt;code&gt;{'I', 'b', '4' }&lt;/code&gt; with the Replace parameter set to true, the final attributes of the item will be &lt;code&gt;{ 'a', '1' }&lt;/code&gt; and &lt;code&gt;{ 'b', '4' }&lt;/code&gt;, replacing the previous values of the 'b' attribute with the new value.</p>
+<p>&lt;/p &lt;b&gt; This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. This operation does not support conditions using &lt;code&gt;Expected.X&#x2e;Name&lt;/code&gt;, &lt;code&gt;Expected.X&#x2e;Value&lt;/code&gt;, or &lt;code&gt;Expected.X&#x2e;Exists&lt;/code&gt;. &lt;/b&gt;</p>
+<p>You can execute multiple &lt;code&gt;BatchPutAttributes&lt;/code&gt; operations and other operations in parallel. However, large numbers of concurrent &lt;code&gt;BatchPutAttributes&lt;/code&gt; calls can result in Service Unavailable (503) responses.</p>
+<p>&lt;/p</p>
+<p>The following limitations are enforced for this operation: &lt;ul&gt; &lt;li&gt;256 attribute name-value pairs per item&lt;/li&gt; &lt;li&gt;1 MB request size&lt;/li&gt; &lt;li&gt;1 billion attributes per domain&lt;/li&gt; &lt;li&gt;10 GB of total user data storage per domain&lt;/li&gt; &lt;li&gt;25 item limit per &lt;code&gt;BatchPutAttributes&lt;/code&gt; operation&lt;/li&gt; &lt;/ul&gt;</p>
+<!-- @@@batchPutAttributes -->
+<!-- $$$createDomain[overload1]$$$createDomainconstCreateDomainRequest& -->
+<h3 class="fn" id="createDomain"><a name="createDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-createdomainresponse.html">CreateDomainResponse</a></span> *SimpleDBClient::<span class="name">createDomain</span>(const <span class="type"><a href="qtaws-simpledb-createdomainrequest.html">CreateDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-createdomainresponse.html">CreateDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateDomain&lt;/code&gt; operation creates a new domain. The domain name should be unique among the domains associated with the Access Key ID provided in the request. The &lt;code&gt;CreateDomain&lt;/code&gt; operation may take 10 or more seconds to complete.</p>
+<p>&lt;/p</p>
+<p>The client can create up to 100 domains per account.</p>
+<p>&lt;/p</p>
+<p>If the client requires additional domains, go to &lt;a href=&quot;http://aws.amazon.com/contact-us/simpledb-limit-request/&quot;&gt; http://aws.amazon.com/contact-us/simpledb-limit-request/&lt;/a&gt;.</p>
+<!-- @@@createDomain -->
+<!-- $$$deleteAttributes[overload1]$$$deleteAttributesconstDeleteAttributesRequest& -->
+<h3 class="fn" id="deleteAttributes"><a name="deleteAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-deleteattributesresponse.html">DeleteAttributesResponse</a></span> *SimpleDBClient::<span class="name">deleteAttributes</span>(const <span class="type"><a href="qtaws-simpledb-deleteattributesrequest.html">DeleteAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-deleteattributesresponse.html">DeleteAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;DeleteAttributes&lt;/code&gt; is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response.</p>
+<p>&lt;/p</p>
+<p>Because Amazon <a href="qtaws-simpledb.html">SimpleDB</a> makes multiple copies of item data and uses an eventual consistency update model, performing a &lt;a&gt;GetAttributes&lt;/a&gt; or &lt;a&gt;Select&lt;/a&gt; operation (read) immediately after a &lt;code&gt;DeleteAttributes&lt;/code&gt; or &lt;a&gt;PutAttributes&lt;/a&gt; operation (write) might not return updated item data.</p>
+<!-- @@@deleteAttributes -->
+<!-- $$$deleteDomain[overload1]$$$deleteDomainconstDeleteDomainRequest& -->
+<h3 class="fn" id="deleteDomain"><a name="deleteDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-deletedomainresponse.html">DeleteDomainResponse</a></span> *SimpleDBClient::<span class="name">deleteDomain</span>(const <span class="type"><a href="qtaws-simpledb-deletedomainrequest.html">DeleteDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-deletedomainresponse.html">DeleteDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;DeleteDomain&lt;/code&gt; operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The &lt;code&gt;DeleteDomain&lt;/code&gt; operation might take 10 or more seconds to complete.</p>
+<!-- @@@deleteDomain -->
+<!-- $$$domainMetadata[overload1]$$$domainMetadataconstDomainMetadataRequest& -->
+<h3 class="fn" id="domainMetadata"><a name="domainMetadata"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-domainmetadataresponse.html">DomainMetadataResponse</a></span> *SimpleDBClient::<span class="name">domainMetadata</span>(const <span class="type"><a href="qtaws-simpledb-domainmetadatarequest.html">DomainMetadataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-domainmetadataresponse.html">DomainMetadataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values.</p>
+<!-- @@@domainMetadata -->
+<!-- $$$getAttributes[overload1]$$$getAttributesconstGetAttributesRequest& -->
+<h3 class="fn" id="getAttributes"><a name="getAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-getattributesresponse.html">GetAttributesResponse</a></span> *SimpleDBClient::<span class="name">getAttributes</span>(const <span class="type"><a href="qtaws-simpledb-getattributesrequest.html">GetAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-getattributesresponse.html">GetAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter.</p>
+<p>&lt;/p</p>
+<p>If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas.</p>
+<!-- @@@getAttributes -->
+<!-- $$$listDomains[overload1]$$$listDomainsconstListDomainsRequest& -->
+<h3 class="fn" id="listDomains"><a name="listDomains"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-listdomainsresponse.html">ListDomainsResponse</a></span> *SimpleDBClient::<span class="name">listDomains</span>(const <span class="type"><a href="qtaws-simpledb-listdomainsrequest.html">ListDomainsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-listdomainsresponse.html">ListDomainsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListDomains&lt;/code&gt; operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by &lt;a href=&quot;#MaxNumberOfDomains&quot;&gt;MaxNumberOfDomains&lt;/a&gt;. A &lt;a href=&quot;#NextToken&quot;&gt;NextToken&lt;/a&gt; is returned if there are more than &lt;code&gt;MaxNumberOfDomains&lt;/code&gt; domains. Calling &lt;code&gt;ListDomains&lt;/code&gt; successive times with the &lt;code&gt;NextToken&lt;/code&gt; provided by the operation returns up to &lt;code&gt;MaxNumberOfDomains&lt;/code&gt; more domain names with each successive operation call.</p>
+<!-- @@@listDomains -->
+<!-- $$$putAttributes[overload1]$$$putAttributesconstPutAttributesRequest& -->
+<h3 class="fn" id="putAttributes"><a name="putAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-putattributesresponse.html">PutAttributesResponse</a></span> *SimpleDBClient::<span class="name">putAttributes</span>(const <span class="type"><a href="qtaws-simpledb-putattributesrequest.html">PutAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-putattributesresponse.html">PutAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The PutAttributes operation creates or replaces attributes in an item. The client may specify new attributes using a combination of the &lt;code&gt;Attribute.X&#x2e;Name&lt;/code&gt; and &lt;code&gt;Attribute.X&#x2e;Value&lt;/code&gt; parameters. The client specifies the first attribute by the parameters &lt;code&gt;Attribute.0&#x2e;Name&lt;/code&gt; and &lt;code&gt;Attribute.0&#x2e;Value&lt;/code&gt;, the second attribute by the parameters &lt;code&gt;Attribute.1&#x2e;Name&lt;/code&gt; and &lt;code&gt;Attribute.1&#x2e;Value&lt;/code&gt;, and so on.</p>
+<p>&lt;/p</p>
+<p>Attributes are uniquely identified in an item by their name/value combination. For example, a single item can have the attributes &lt;code&gt;{ &quot;first_name&quot;, &quot;first_value&quot; }&lt;/code&gt; and &lt;code&gt;{ &quot;first_name&quot;, second_value&quot; }&lt;/code&gt;. However, it cannot have two attribute instances where both the &lt;code&gt;Attribute.X&#x2e;Name&lt;/code&gt; and &lt;code&gt;Attribute.X&#x2e;Value&lt;/code&gt; are the same.</p>
+<p>&lt;/p</p>
+<p>Optionally, the requestor can supply the &lt;code&gt;Replace&lt;/code&gt; parameter for each individual attribute. Setting this value to &lt;code&gt;true&lt;/code&gt; causes the new attribute value to replace the existing attribute value(s). For example, if an item has the attributes &lt;code&gt;{ 'a', '1' }&lt;/code&gt;, &lt;code&gt;{ 'b', '2'}&lt;/code&gt; and &lt;code&gt;{ 'b', '3' }&lt;/code&gt; and the requestor calls &lt;code&gt;PutAttributes&lt;/code&gt; using the attributes &lt;code&gt;{ 'b', '4' }&lt;/code&gt; with the &lt;code&gt;Replace&lt;/code&gt; parameter set to true, the final attributes of the item are changed to &lt;code&gt;{ 'a', '1' }&lt;/code&gt; and &lt;code&gt;{ 'b', '4' }&lt;/code&gt;, which replaces the previous values of the 'b' attribute with the new value.</p>
+<p>&lt;/p</p>
+<p>You cannot specify an empty string as an attribute name.</p>
+<p>&lt;/p</p>
+<p>Because Amazon <a href="qtaws-simpledb.html">SimpleDB</a> makes multiple copies of client data and uses an eventual consistency update model, an immediate &lt;a&gt;GetAttributes&lt;/a&gt; or &lt;a&gt;Select&lt;/a&gt; operation (read) immediately after a &lt;a&gt;PutAttributes&lt;/a&gt; or &lt;a&gt;DeleteAttributes&lt;/a&gt; operation (write) might not return the updated data.</p>
+<p>&lt;/p</p>
+<p>The following limitations are enforced for this operation: &lt;ul&gt; &lt;li&gt;256 total attribute name-value pairs per item&lt;/li&gt; &lt;li&gt;One billion attributes per domain&lt;/li&gt; &lt;li&gt;10 GB of total user data storage per domain&lt;/li&gt; &lt;/ul&gt;</p>
+<!-- @@@putAttributes -->
+<!-- $$$select[overload1]$$$selectconstSelectRequest& -->
+<h3 class="fn" id="select"><a name="select"></a><code>[slot] </code><span class="type"><a href="qtaws-simpledb-selectresponse.html">SelectResponse</a></span> *SimpleDBClient::<span class="name">select</span>(const <span class="type"><a href="qtaws-simpledb-selectrequest.html">SelectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-simpledb-simpledbclient.html">SimpleDBClient</a> service, and returns a pointer to an <a href="qtaws-simpledb-selectresponse.html">SelectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;Select&lt;/code&gt; operation returns a set of attributes for &lt;code&gt;ItemNames&lt;/code&gt; that match the select expression. &lt;code&gt;Select&lt;/code&gt; is similar to the standard SQL SELECT statement.</p>
+<p>&lt;/p</p>
+<p>The total size of the response cannot exceed 1 MB in total size. Amazon <a href="qtaws-simpledb.html">SimpleDB</a> automatically adjusts the number of items returned per page to enforce this limit. For example, if the client asks to retrieve 2500 items, but each individual item is 10 kB in size, the system returns 100 items and an appropriate &lt;code&gt;NextToken&lt;/code&gt; so the client can access the next page of results.</p>
+<p>&lt;/p</p>
+<p>For information on how to construct select expressions, see Using Select to Create Amazon <a href="qtaws-simpledb.html">SimpleDB</a> Queries in the Developer Guide.</p>
+<!-- @@@select -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

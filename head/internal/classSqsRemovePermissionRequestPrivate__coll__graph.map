@@ -1,5 +1,0 @@
-<map id="SqsRemovePermissionRequestPrivate" name="SqsRemovePermissionRequestPrivate">
-<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="42,95,177,121"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="117,5,304,32"/>
-<area shape="rect" id="node4" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="201,95,348,121"/>
-</map>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- servicecatalogresponse.cpp -->
+  <title>ServiceCatalogResponse Class | ServiceCatalog</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsservicecatalog-index.html">ServiceCatalog</a></li>
+<li><a href="qtawsservicecatalog-module.html">C++ Classes</a></li>
+<li>ServiceCatalogResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ServiceCatalogResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-servicecatalog-servicecatalogresponse.html">QtAws::ServiceCatalog::ServiceCatalogResponse</a>)<br/></span>
+<!-- $$$ServiceCatalogResponse-brief -->
+<p>The <a href="qtaws-servicecatalog-servicecatalogresponse.html">ServiceCatalogResponse</a> class provides an interface for <a href="qtaws-servicecatalog.html">ServiceCatalog</a> responses. <a href="#details">More...</a></p>
+<!-- @@@ServiceCatalogResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ServiceCatalogResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-servicecatalog-acceptportfolioshareresponse.html">QtAws::ServiceCatalog::AcceptPortfolioShareResponse</a>, <a href="qtaws-servicecatalog-associateprincipalwithportfolioresponse.html">QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioResponse</a>, <a href="qtaws-servicecatalog-associateproductwithportfolioresponse.html">QtAws::ServiceCatalog::AssociateProductWithPortfolioResponse</a>, <a href="qtaws-servicecatalog-associatetagoptionwithresourceresponse.html">QtAws::ServiceCatalog::AssociateTagOptionWithResourceResponse</a>, <a href="qtaws-servicecatalog-copyproductresponse.html">QtAws::ServiceCatalog::CopyProductResponse</a>, <a href="qtaws-servicecatalog-createconstraintresponse.html">QtAws::ServiceCatalog::CreateConstraintResponse</a>, <a href="qtaws-servicecatalog-createportfolioresponse.html">QtAws::ServiceCatalog::CreatePortfolioResponse</a>, <a href="qtaws-servicecatalog-createportfolioshareresponse.html">QtAws::ServiceCatalog::CreatePortfolioShareResponse</a>, <a href="qtaws-servicecatalog-createproductresponse.html">QtAws::ServiceCatalog::CreateProductResponse</a>, <a href="qtaws-servicecatalog-createprovisionedproductplanresponse.html">QtAws::ServiceCatalog::CreateProvisionedProductPlanResponse</a>, <a href="qtaws-servicecatalog-createprovisioningartifactresponse.html">QtAws::ServiceCatalog::CreateProvisioningArtifactResponse</a>, <a href="qtaws-servicecatalog-createtagoptionresponse.html">QtAws::ServiceCatalog::CreateTagOptionResponse</a>, <a href="qtaws-servicecatalog-deleteconstraintresponse.html">QtAws::ServiceCatalog::DeleteConstraintResponse</a>, <a href="qtaws-servicecatalog-deleteportfolioresponse.html">QtAws::ServiceCatalog::DeletePortfolioResponse</a>, <a href="qtaws-servicecatalog-deleteportfolioshareresponse.html">QtAws::ServiceCatalog::DeletePortfolioShareResponse</a>, <a href="qtaws-servicecatalog-deleteproductresponse.html">QtAws::ServiceCatalog::DeleteProductResponse</a>, <a href="qtaws-servicecatalog-deleteprovisionedproductplanresponse.html">QtAws::ServiceCatalog::DeleteProvisionedProductPlanResponse</a>, <a href="qtaws-servicecatalog-deleteprovisioningartifactresponse.html">QtAws::ServiceCatalog::DeleteProvisioningArtifactResponse</a>, <a href="qtaws-servicecatalog-deletetagoptionresponse.html">QtAws::ServiceCatalog::DeleteTagOptionResponse</a>, <a href="qtaws-servicecatalog-describeconstraintresponse.html">QtAws::ServiceCatalog::DescribeConstraintResponse</a>, <a href="qtaws-servicecatalog-describecopyproductstatusresponse.html">QtAws::ServiceCatalog::DescribeCopyProductStatusResponse</a>, <a href="qtaws-servicecatalog-describeportfolioresponse.html">QtAws::ServiceCatalog::DescribePortfolioResponse</a>, <a href="qtaws-servicecatalog-describeproductasadminresponse.html">QtAws::ServiceCatalog::DescribeProductAsAdminResponse</a>, <a href="qtaws-servicecatalog-describeproductresponse.html">QtAws::ServiceCatalog::DescribeProductResponse</a>, <a href="qtaws-servicecatalog-describeproductviewresponse.html">QtAws::ServiceCatalog::DescribeProductViewResponse</a>, <a href="qtaws-servicecatalog-describeprovisionedproductplanresponse.html">QtAws::ServiceCatalog::DescribeProvisionedProductPlanResponse</a>, <a href="qtaws-servicecatalog-describeprovisionedproductresponse.html">QtAws::ServiceCatalog::DescribeProvisionedProductResponse</a>, <a href="qtaws-servicecatalog-describeprovisioningartifactresponse.html">QtAws::ServiceCatalog::DescribeProvisioningArtifactResponse</a>, <a href="qtaws-servicecatalog-describeprovisioningparametersresponse.html">QtAws::ServiceCatalog::DescribeProvisioningParametersResponse</a>, <a href="qtaws-servicecatalog-describerecordresponse.html">QtAws::ServiceCatalog::DescribeRecordResponse</a>, <a href="qtaws-servicecatalog-describetagoptionresponse.html">QtAws::ServiceCatalog::DescribeTagOptionResponse</a>, <a href="qtaws-servicecatalog-disassociateprincipalfromportfolioresponse.html">QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioResponse</a>, <a href="qtaws-servicecatalog-disassociateproductfromportfolioresponse.html">QtAws::ServiceCatalog::DisassociateProductFromPortfolioResponse</a>, <a href="qtaws-servicecatalog-disassociatetagoptionfromresourceresponse.html">QtAws::ServiceCatalog::DisassociateTagOptionFromResourceResponse</a>, <a href="qtaws-servicecatalog-executeprovisionedproductplanresponse.html">QtAws::ServiceCatalog::ExecuteProvisionedProductPlanResponse</a>, <a href="qtaws-servicecatalog-listacceptedportfoliosharesresponse.html">QtAws::ServiceCatalog::ListAcceptedPortfolioSharesResponse</a>, <a href="qtaws-servicecatalog-listconstraintsforportfolioresponse.html">QtAws::ServiceCatalog::ListConstraintsForPortfolioResponse</a>, <a href="qtaws-servicecatalog-listlaunchpathsresponse.html">QtAws::ServiceCatalog::ListLaunchPathsResponse</a>, <a href="qtaws-servicecatalog-listportfolioaccessresponse.html">QtAws::ServiceCatalog::ListPortfolioAccessResponse</a>, <a href="qtaws-servicecatalog-listportfoliosforproductresponse.html">QtAws::ServiceCatalog::ListPortfoliosForProductResponse</a>, <a href="qtaws-servicecatalog-listportfoliosresponse.html">QtAws::ServiceCatalog::ListPortfoliosResponse</a>, <a href="qtaws-servicecatalog-listprincipalsforportfolioresponse.html">QtAws::ServiceCatalog::ListPrincipalsForPortfolioResponse</a>, <a href="qtaws-servicecatalog-listprovisionedproductplansresponse.html">QtAws::ServiceCatalog::ListProvisionedProductPlansResponse</a>, <a href="qtaws-servicecatalog-listprovisioningartifactsresponse.html">QtAws::ServiceCatalog::ListProvisioningArtifactsResponse</a>, <a href="qtaws-servicecatalog-listrecordhistoryresponse.html">QtAws::ServiceCatalog::ListRecordHistoryResponse</a>, <a href="qtaws-servicecatalog-listresourcesfortagoptionresponse.html">QtAws::ServiceCatalog::ListResourcesForTagOptionResponse</a>, <a href="qtaws-servicecatalog-listtagoptionsresponse.html">QtAws::ServiceCatalog::ListTagOptionsResponse</a>, <a href="qtaws-servicecatalog-provisionproductresponse.html">QtAws::ServiceCatalog::ProvisionProductResponse</a>, <a href="qtaws-servicecatalog-rejectportfolioshareresponse.html">QtAws::ServiceCatalog::RejectPortfolioShareResponse</a>, <a href="qtaws-servicecatalog-scanprovisionedproductsresponse.html">QtAws::ServiceCatalog::ScanProvisionedProductsResponse</a>, <a href="qtaws-servicecatalog-searchproductsasadminresponse.html">QtAws::ServiceCatalog::SearchProductsAsAdminResponse</a>, <a href="qtaws-servicecatalog-searchproductsresponse.html">QtAws::ServiceCatalog::SearchProductsResponse</a>, <a href="qtaws-servicecatalog-searchprovisionedproductsresponse.html">QtAws::ServiceCatalog::SearchProvisionedProductsResponse</a>, <a href="qtaws-servicecatalog-terminateprovisionedproductresponse.html">QtAws::ServiceCatalog::TerminateProvisionedProductResponse</a>, <a href="qtaws-servicecatalog-updateconstraintresponse.html">QtAws::ServiceCatalog::UpdateConstraintResponse</a>, <a href="qtaws-servicecatalog-updateportfolioresponse.html">QtAws::ServiceCatalog::UpdatePortfolioResponse</a>, <a href="qtaws-servicecatalog-updateproductresponse.html">QtAws::ServiceCatalog::UpdateProductResponse</a>, <a href="qtaws-servicecatalog-updateprovisionedproductresponse.html">QtAws::ServiceCatalog::UpdateProvisionedProductResponse</a>, <a href="qtaws-servicecatalog-updateprovisioningartifactresponse.html">QtAws::ServiceCatalog::UpdateProvisioningArtifactResponse</a>, and <a href="qtaws-servicecatalog-updatetagoptionresponse.html">QtAws::ServiceCatalog::UpdateTagOptionResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-servicecatalog-servicecatalogresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogresponse.html#ServiceCatalogResponse">ServiceCatalogResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogresponse.html#ServiceCatalogResponse-1">ServiceCatalogResponse</a></b>(ServiceCatalogResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ServiceCatalogResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-servicecatalog-servicecatalogresponse.html">ServiceCatalogResponse</a> class provides an interface for <a href="qtaws-servicecatalog.html">ServiceCatalog</a> responses.</p>
+</div>
+<!-- @@@ServiceCatalogResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ServiceCatalogResponse[overload1]$$$ServiceCatalogResponseQObject*const -->
+<h3 class="fn" id="ServiceCatalogResponse"><a name="ServiceCatalogResponse"></a>ServiceCatalogResponse::<span class="name">ServiceCatalogResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-servicecatalog-servicecatalogresponse.html">ServiceCatalogResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@ServiceCatalogResponse -->
+<!-- $$$ServiceCatalogResponse$$$ServiceCatalogResponseServiceCatalogResponsePrivate*constQObject*const -->
+<h3 class="fn" id="ServiceCatalogResponse-1"><a name="ServiceCatalogResponse-1"></a><code>[protected] </code>ServiceCatalogResponse::<span class="name">ServiceCatalogResponse</span>(<span class="type"><a href="qtaws-servicecatalog-servicecatalogresponseprivate.html">ServiceCatalogResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-servicecatalog-servicecatalogresponse.html">ServiceCatalogResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-servicecatalog-servicecatalogresponseprivate.html">ServiceCatalogResponsePrivate</a>.</p>
+<!-- @@@ServiceCatalogResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> ServiceCatalogResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

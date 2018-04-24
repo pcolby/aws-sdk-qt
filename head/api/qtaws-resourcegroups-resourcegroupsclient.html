@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- resourcegroupsclient.cpp -->
+  <title>ResourceGroupsClient Class | ResourceGroups</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsresourcegroups-index.html">ResourceGroups</a></li>
+<li><a href="qtawsresourcegroups-module.html">C++ Classes</a></li>
+<li>ResourceGroupsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ResourceGroupsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-resourcegroups-resourcegroupsclient.html">QtAws::ResourceGroups::ResourceGroupsClient</a>)<br/></span>
+<!-- $$$ResourceGroupsClient-brief -->
+<p>The <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> class provides access to the AWS Resource Groups service. <a href="#details">More...</a></p>
+<!-- @@@ResourceGroupsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ResourceGroupsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-resourcegroups-resourcegroupsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#ResourceGroupsClient">ResourceGroupsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#ResourceGroupsClient-1">ResourceGroupsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#createGroup">createGroup</a></b>(const CreateGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#deleteGroup">deleteGroup</a></b>(const DeleteGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#getGroup">getGroup</a></b>(const GetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGroupQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#getGroupQuery">getGroupQuery</a></b>(const GetGroupQueryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#getTags">getTags</a></b>(const GetTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGroupResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#listGroupResources">listGroupResources</a></b>(const ListGroupResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#listGroups">listGroups</a></b>(const ListGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#searchResources">searchResources</a></b>(const SearchResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#tag">tag</a></b>(const TagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#untag">untag</a></b>(const UntagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#updateGroup">updateGroup</a></b>(const UpdateGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGroupQueryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroups-resourcegroupsclient.html#updateGroupQuery">updateGroupQuery</a></b>(const UpdateGroupQueryRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ResourceGroupsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> class provides access to the AWS Resource Groups service.</p>
+<p>&lt;fullname&gt;AWS Resource Groups&lt;/fullname&gt;</p>
+<p>AWS Resource Groups lets you organize AWS resources such as Amazon EC2 instances, Amazon Relational Database Service databases, and Amazon S3 buckets into groups using criteria that you define as tags. A resource group is a collection of resources that match the resource types specified in a query, and share one or more tags or portions of tags. You can create a group of resources based on their roles in your cloud infrastructure, lifecycle stages, regions, application layers, or virtually any criteria. Resource groups enable you to automate management tasks, such as those in AWS Systems Manager Automation documents, on tag-related resources in AWS Systems Manager. Groups of tagged resources also let you quickly view a custom console in AWS Systems Manager that shows AWS Config compliance and other monitoring data about member</p>
+<p>resources&gt;</p>
+<p>To create a resource group, build a resource query, and specify tags that identify the criteria that members of the group have in common. Tags are key-value</p>
+<p>pairs&gt;</p>
+<p>For more information about Resource Groups, see the &lt;a href=&quot;https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html&quot;&gt;AWS Resource Groups User</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>AWS Resource Groups uses a REST-compliant API that you can use to perform the following types of</p>
+<p>operations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Create, Read, Update, and Delete (CRUD) operations on resource groups and resource query</p>
+<p>entitie&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Applying, editing, and removing tags from resource</p>
+<p>group&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Resolving resource group member ARNs so they can be returned as search</p>
+<p>result&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Getting data about resources that are members of a</p>
+<p>grou&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Searching AWS resources based on a resource</p>
+</div>
+<!-- @@@ResourceGroupsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ResourceGroupsClient[overload1]$$$ResourceGroupsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ResourceGroupsClient"><a name="ResourceGroupsClient"></a>ResourceGroupsClient::<span class="name">ResourceGroupsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ResourceGroupsClient -->
+<!-- $$$ResourceGroupsClient$$$ResourceGroupsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ResourceGroupsClient-1"><a name="ResourceGroupsClient-1"></a>ResourceGroupsClient::<span class="name">ResourceGroupsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-resourcegroups-resourcegroupsclient.html#ResourceGroupsClient">ResourceGroupsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ResourceGroupsClient -->
+<!-- $$$createGroup[overload1]$$$createGroupconstCreateGroupRequest& -->
+<h3 class="fn" id="createGroup"><a name="createGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-creategroupresponse.html">CreateGroupResponse</a></span> *ResourceGroupsClient::<span class="name">createGroup</span>(const <span class="type"><a href="qtaws-resourcegroups-creategrouprequest.html">CreateGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-creategroupresponse.html">CreateGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a group with a specified name, description, and resource</p>
+<!-- @@@createGroup -->
+<!-- $$$deleteGroup[overload1]$$$deleteGroupconstDeleteGroupRequest& -->
+<h3 class="fn" id="deleteGroup"><a name="deleteGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-deletegroupresponse.html">DeleteGroupResponse</a></span> *ResourceGroupsClient::<span class="name">deleteGroup</span>(const <span class="type"><a href="qtaws-resourcegroups-deletegrouprequest.html">DeleteGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-deletegroupresponse.html">DeleteGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified resource group. Deleting a resource group does not delete resources that are members of the group; it only deletes the group</p>
+<!-- @@@deleteGroup -->
+<!-- $$$getGroup[overload1]$$$getGroupconstGetGroupRequest& -->
+<h3 class="fn" id="getGroup"><a name="getGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-getgroupresponse.html">GetGroupResponse</a></span> *ResourceGroupsClient::<span class="name">getGroup</span>(const <span class="type"><a href="qtaws-resourcegroups-getgrouprequest.html">GetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-getgroupresponse.html">GetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specified resource</p>
+<!-- @@@getGroup -->
+<!-- $$$getGroupQuery[overload1]$$$getGroupQueryconstGetGroupQueryRequest& -->
+<h3 class="fn" id="getGroupQuery"><a name="getGroupQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-getgroupqueryresponse.html">GetGroupQueryResponse</a></span> *ResourceGroupsClient::<span class="name">getGroupQuery</span>(const <span class="type"><a href="qtaws-resourcegroups-getgroupqueryrequest.html">GetGroupQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-getgroupqueryresponse.html">GetGroupQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the resource query associated with the specified resource</p>
+<!-- @@@getGroupQuery -->
+<!-- $$$getTags[overload1]$$$getTagsconstGetTagsRequest& -->
+<h3 class="fn" id="getTags"><a name="getTags"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-gettagsresponse.html">GetTagsResponse</a></span> *ResourceGroupsClient::<span class="name">getTags</span>(const <span class="type"><a href="qtaws-resourcegroups-gettagsrequest.html">GetTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-gettagsresponse.html">GetTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of tags that are associated with a resource, specified by an</p>
+<!-- @@@getTags -->
+<!-- $$$listGroupResources[overload1]$$$listGroupResourcesconstListGroupResourcesRequest& -->
+<h3 class="fn" id="listGroupResources"><a name="listGroupResources"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-listgroupresourcesresponse.html">ListGroupResourcesResponse</a></span> *ResourceGroupsClient::<span class="name">listGroupResources</span>(const <span class="type"><a href="qtaws-resourcegroups-listgroupresourcesrequest.html">ListGroupResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-listgroupresourcesresponse.html">ListGroupResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of ARNs of resources that are members of a specified resource</p>
+<!-- @@@listGroupResources -->
+<!-- $$$listGroups[overload1]$$$listGroupsconstListGroupsRequest& -->
+<h3 class="fn" id="listGroups"><a name="listGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-listgroupsresponse.html">ListGroupsResponse</a></span> *ResourceGroupsClient::<span class="name">listGroups</span>(const <span class="type"><a href="qtaws-resourcegroups-listgroupsrequest.html">ListGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-listgroupsresponse.html">ListGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of existing resource groups in your</p>
+<!-- @@@listGroups -->
+<!-- $$$searchResources[overload1]$$$searchResourcesconstSearchResourcesRequest& -->
+<h3 class="fn" id="searchResources"><a name="searchResources"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-searchresourcesresponse.html">SearchResourcesResponse</a></span> *ResourceGroupsClient::<span class="name">searchResources</span>(const <span class="type"><a href="qtaws-resourcegroups-searchresourcesrequest.html">SearchResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-searchresourcesresponse.html">SearchResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of AWS resource identifiers that matches a specified query. The query uses the same format as a resource query in a CreateGroup or UpdateGroupQuery</p>
+<!-- @@@searchResources -->
+<!-- $$$tag[overload1]$$$tagconstTagRequest& -->
+<h3 class="fn" id="tag"><a name="tag"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-tagresponse.html">TagResponse</a></span> *ResourceGroupsClient::<span class="name">tag</span>(const <span class="type"><a href="qtaws-resourcegroups-tagrequest.html">TagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-tagresponse.html">TagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds specified tags to a resource with the specified ARN. Existing tags on a resource are not changed if they are not specified in the request</p>
+<!-- @@@tag -->
+<!-- $$$untag[overload1]$$$untagconstUntagRequest& -->
+<h3 class="fn" id="untag"><a name="untag"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-untagresponse.html">UntagResponse</a></span> *ResourceGroupsClient::<span class="name">untag</span>(const <span class="type"><a href="qtaws-resourcegroups-untagrequest.html">UntagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-untagresponse.html">UntagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes specified tags from a specified</p>
+<!-- @@@untag -->
+<!-- $$$updateGroup[overload1]$$$updateGroupconstUpdateGroupRequest& -->
+<h3 class="fn" id="updateGroup"><a name="updateGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-updategroupresponse.html">UpdateGroupResponse</a></span> *ResourceGroupsClient::<span class="name">updateGroup</span>(const <span class="type"><a href="qtaws-resourcegroups-updategrouprequest.html">UpdateGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-updategroupresponse.html">UpdateGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing group with a new or changed description. You cannot update the name of a resource</p>
+<!-- @@@updateGroup -->
+<!-- $$$updateGroupQuery[overload1]$$$updateGroupQueryconstUpdateGroupQueryRequest& -->
+<h3 class="fn" id="updateGroupQuery"><a name="updateGroupQuery"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroups-updategroupqueryresponse.html">UpdateGroupQueryResponse</a></span> *ResourceGroupsClient::<span class="name">updateGroupQuery</span>(const <span class="type"><a href="qtaws-resourcegroups-updategroupqueryrequest.html">UpdateGroupQueryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroups-resourcegroupsclient.html">ResourceGroupsClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroups-updategroupqueryresponse.html">UpdateGroupQueryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the resource query of a</p>
+<!-- @@@updateGroupQuery -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

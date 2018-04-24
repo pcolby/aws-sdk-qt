@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- kmsrequest.cpp -->
+  <title>KmsRequest Class | KMS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawskms-index.html">KMS</a></li>
+<li><a href="qtawskms-module.html">C++ Classes</a></li>
+<li>KmsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">KmsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-kms-kmsrequest.html">QtAws::KMS::KmsRequest</a>)<br/></span>
+<!-- $$$KmsRequest-brief -->
+<p>The <a href="qtaws-kms-kmsrequest.html">KmsRequest</a> class provides an interface for KMS requests. <a href="#details">More...</a></p>
+<!-- @@@KmsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;KmsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-kms-cancelkeydeletionrequest.html">QtAws::KMS::CancelKeyDeletionRequest</a>, <a href="qtaws-kms-createaliasrequest.html">QtAws::KMS::CreateAliasRequest</a>, <a href="qtaws-kms-creategrantrequest.html">QtAws::KMS::CreateGrantRequest</a>, <a href="qtaws-kms-createkeyrequest.html">QtAws::KMS::CreateKeyRequest</a>, <a href="qtaws-kms-decryptrequest.html">QtAws::KMS::DecryptRequest</a>, <a href="qtaws-kms-deletealiasrequest.html">QtAws::KMS::DeleteAliasRequest</a>, <a href="qtaws-kms-deleteimportedkeymaterialrequest.html">QtAws::KMS::DeleteImportedKeyMaterialRequest</a>, <a href="qtaws-kms-describekeyrequest.html">QtAws::KMS::DescribeKeyRequest</a>, <a href="qtaws-kms-disablekeyrequest.html">QtAws::KMS::DisableKeyRequest</a>, <a href="qtaws-kms-disablekeyrotationrequest.html">QtAws::KMS::DisableKeyRotationRequest</a>, <a href="qtaws-kms-enablekeyrequest.html">QtAws::KMS::EnableKeyRequest</a>, <a href="qtaws-kms-enablekeyrotationrequest.html">QtAws::KMS::EnableKeyRotationRequest</a>, <a href="qtaws-kms-encryptrequest.html">QtAws::KMS::EncryptRequest</a>, <a href="qtaws-kms-generatedatakeyrequest.html">QtAws::KMS::GenerateDataKeyRequest</a>, <a href="qtaws-kms-generatedatakeywithoutplaintextrequest.html">QtAws::KMS::GenerateDataKeyWithoutPlaintextRequest</a>, <a href="qtaws-kms-generaterandomrequest.html">QtAws::KMS::GenerateRandomRequest</a>, <a href="qtaws-kms-getkeypolicyrequest.html">QtAws::KMS::GetKeyPolicyRequest</a>, <a href="qtaws-kms-getkeyrotationstatusrequest.html">QtAws::KMS::GetKeyRotationStatusRequest</a>, <a href="qtaws-kms-getparametersforimportrequest.html">QtAws::KMS::GetParametersForImportRequest</a>, <a href="qtaws-kms-importkeymaterialrequest.html">QtAws::KMS::ImportKeyMaterialRequest</a>, <a href="qtaws-kms-listaliasesrequest.html">QtAws::KMS::ListAliasesRequest</a>, <a href="qtaws-kms-listgrantsrequest.html">QtAws::KMS::ListGrantsRequest</a>, <a href="qtaws-kms-listkeypoliciesrequest.html">QtAws::KMS::ListKeyPoliciesRequest</a>, <a href="qtaws-kms-listkeysrequest.html">QtAws::KMS::ListKeysRequest</a>, <a href="qtaws-kms-listresourcetagsrequest.html">QtAws::KMS::ListResourceTagsRequest</a>, <a href="qtaws-kms-listretirablegrantsrequest.html">QtAws::KMS::ListRetirableGrantsRequest</a>, <a href="qtaws-kms-putkeypolicyrequest.html">QtAws::KMS::PutKeyPolicyRequest</a>, <a href="qtaws-kms-reencryptrequest.html">QtAws::KMS::ReEncryptRequest</a>, <a href="qtaws-kms-retiregrantrequest.html">QtAws::KMS::RetireGrantRequest</a>, <a href="qtaws-kms-revokegrantrequest.html">QtAws::KMS::RevokeGrantRequest</a>, <a href="qtaws-kms-schedulekeydeletionrequest.html">QtAws::KMS::ScheduleKeyDeletionRequest</a>, <a href="qtaws-kms-tagresourcerequest.html">QtAws::KMS::TagResourceRequest</a>, <a href="qtaws-kms-untagresourcerequest.html">QtAws::KMS::UntagResourceRequest</a>, <a href="qtaws-kms-updatealiasrequest.html">QtAws::KMS::UpdateAliasRequest</a>, and <a href="qtaws-kms-updatekeydescriptionrequest.html">QtAws::KMS::UpdateKeyDescriptionRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-kms-kmsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#Action-enum">Action</a></b> { CancelKeyDeletionAction, CreateAliasAction, CreateGrantAction, CreateKeyAction, ..., UpdateKeyDescriptionAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#KmsRequest">KmsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#KmsRequest-1">KmsRequest</a></b>(const KmsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> KmsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#operator-eq">operator=</a></b>(const KmsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#operator-eq-eq">operator==</a></b>(const KmsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#KmsRequest-2">KmsRequest</a></b>(KmsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kms-kmsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$KmsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-kms-kmsrequest.html">KmsRequest</a> class provides an interface for KMS requests.</p>
+</div>
+<!-- @@@KmsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CancelKeyDeletionAction$$$CreateAliasAction$$$CreateGrantAction$$$CreateKeyAction$$$DecryptAction$$$DeleteAliasAction$$$DeleteImportedKeyMaterialAction$$$DescribeKeyAction$$$DisableKeyAction$$$DisableKeyRotationAction$$$EnableKeyAction$$$EnableKeyRotationAction$$$EncryptAction$$$GenerateDataKeyAction$$$GenerateDataKeyWithoutPlaintextAction$$$GenerateRandomAction$$$GetKeyPolicyAction$$$GetKeyRotationStatusAction$$$GetParametersForImportAction$$$ImportKeyMaterialAction$$$ListAliasesAction$$$ListGrantsAction$$$ListKeyPoliciesAction$$$ListKeysAction$$$ListResourceTagsAction$$$ListRetirableGrantsAction$$$PutKeyPolicyAction$$$ReEncryptAction$$$RetireGrantAction$$$RevokeGrantAction$$$ScheduleKeyDeletionAction$$$TagResourceAction$$$UntagResourceAction$$$UpdateAliasAction$$$UpdateKeyDescriptionAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum KmsRequest::<span class="name">Action</span><br/>flags KmsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as KMS requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::CancelKeyDeletionAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">KMS CancelKeyDeletion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::CreateAliasAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">KMS CreateAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::CreateGrantAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">KMS CreateGrant action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::CreateKeyAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">KMS CreateKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DecryptAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">KMS Decrypt action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DeleteAliasAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">KMS DeleteAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DeleteImportedKeyMaterialAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">KMS DeleteImportedKeyMaterial action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DescribeKeyAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">KMS DescribeKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DisableKeyAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">KMS DisableKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::DisableKeyRotationAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">KMS DisableKeyRotation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::EnableKeyAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">KMS EnableKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::EnableKeyRotationAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">KMS EnableKeyRotation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::EncryptAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">KMS Encrypt action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GenerateDataKeyAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">KMS GenerateDataKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GenerateDataKeyWithoutPlaintextAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">KMS GenerateDataKeyWithoutPlaintext action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GenerateRandomAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">KMS GenerateRandom action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GetKeyPolicyAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">KMS GetKeyPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GetKeyRotationStatusAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">KMS GetKeyRotationStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::GetParametersForImportAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">KMS GetParametersForImport action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ImportKeyMaterialAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">KMS ImportKeyMaterial action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListAliasesAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">KMS ListAliases action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListGrantsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">KMS ListGrants action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListKeyPoliciesAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">KMS ListKeyPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListKeysAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">KMS ListKeys action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListResourceTagsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">KMS ListResourceTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ListRetirableGrantsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">KMS ListRetirableGrants action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::PutKeyPolicyAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">KMS PutKeyPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ReEncryptAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">KMS ReEncrypt action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::RetireGrantAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">KMS RetireGrant action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::RevokeGrantAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">KMS RevokeGrant action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::ScheduleKeyDeletionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">KMS ScheduleKeyDeletion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::TagResourceAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">KMS TagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::UntagResourceAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">KMS UntagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::UpdateAliasAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">KMS UpdateAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::KMS::KmsRequest::UpdateKeyDescriptionAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">KMS UpdateKeyDescription action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$KmsRequest[overload1]$$$KmsRequestconstAction -->
+<h3 class="fn" id="KmsRequest"><a name="KmsRequest"></a>KmsRequest::<span class="name">KmsRequest</span>(const <span class="type"><a href="qtaws-kms-kmsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-kms-kmsrequest.html">KmsRequest</a> object for KMS <i>action</i>.</p>
+<!-- @@@KmsRequest -->
+<!-- $$$KmsRequest$$$KmsRequestconstKmsRequest& -->
+<h3 class="fn" id="KmsRequest-1"><a name="KmsRequest-1"></a>KmsRequest::<span class="name">KmsRequest</span>(const <span class="type"><a href="qtaws-kms-kmsrequest.html#KmsRequest">KmsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@KmsRequest -->
+<!-- $$$KmsRequest$$$KmsRequestKmsRequestPrivate*const -->
+<h3 class="fn" id="KmsRequest-2"><a name="KmsRequest-2"></a><code>[protected] </code>KmsRequest::<span class="name">KmsRequest</span>(<span class="type">KmsRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-kms-kmsrequest.html">KmsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from KmsRequestPrivate.</p>
+<!-- @@@KmsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-kms-kmsrequest.html#Action-enum">Action</a></span> KmsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the KMS action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> KmsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the KMS action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> KmsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the KMS API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> KmsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> KmsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> KmsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;KmsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> KmsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-kms-kmsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the KMS action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> KmsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the KMS API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> KmsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> KmsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-kms-kmsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> KmsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the KMS request using the given <i>endpoint</i>.</p>
+<p>This KMS implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-kms-kmsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constKmsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-kms-kmsrequest.html#KmsRequest">KmsRequest</a></span> &amp;KmsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-kms-kmsrequest.html#KmsRequest">KmsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-kms-kmsrequest.html">KmsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constKmsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> KmsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-kms-kmsrequest.html#KmsRequest">KmsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

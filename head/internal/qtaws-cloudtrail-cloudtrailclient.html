@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudtrailclient.cpp -->
+  <title>CloudTrailClient Class | CloudTrail</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudtrail-index.html">CloudTrail</a></li>
+<li><a href="qtawscloudtrail-module.html">C++ Classes</a></li>
+<li>CloudTrailClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudTrailClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudtrail-cloudtrailclient.html">QtAws::CloudTrail::CloudTrailClient</a>)<br/></span>
+<!-- $$$CloudTrailClient-brief -->
+<p>The <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> class provides access to the AWS <a href="qtaws-cloudtrail.html">CloudTrail</a> service. <a href="#details">More...</a></p>
+<!-- @@@CloudTrailClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudTrailClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cloudtrail-cloudtrailclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#CloudTrailClient">CloudTrailClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#CloudTrailClient-1">CloudTrailClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#addTags">addTags</a></b>(const AddTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#createTrail">createTrail</a></b>(const CreateTrailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTrailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#deleteTrail">deleteTrail</a></b>(const DeleteTrailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrailsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#describeTrails">describeTrails</a></b>(const DescribeTrailsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEventSelectorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#getEventSelectors">getEventSelectors</a></b>(const GetEventSelectorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTrailStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#getTrailStatus">getTrailStatus</a></b>(const GetTrailStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPublicKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#listPublicKeys">listPublicKeys</a></b>(const ListPublicKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> LookupEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#lookupEvents">lookupEvents</a></b>(const LookupEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutEventSelectorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#putEventSelectors">putEventSelectors</a></b>(const PutEventSelectorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#removeTags">removeTags</a></b>(const RemoveTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartLoggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#startLogging">startLogging</a></b>(const StartLoggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopLoggingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#stopLogging">stopLogging</a></b>(const StopLoggingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTrailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudtrail-cloudtrailclient.html#updateTrail">updateTrail</a></b>(const UpdateTrailRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudTrailClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> class provides access to the AWS <a href="qtaws-cloudtrail.html">CloudTrail</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-cloudtrail.html">CloudTrail</a>&lt;/fullname&gt;</p>
+<p>This is the <a href="qtaws-cloudtrail.html">CloudTrail</a> API Reference. It provides descriptions of actions, data types, common parameters, and common errors for</p>
+<p><a href="qtaws-cloudtrail.html">CloudTrail</a>&gt;</p>
+<p><a href="qtaws-cloudtrail.html">CloudTrail</a> is a web service that records AWS API calls for your AWS account and delivers log files to an Amazon S3 bucket. The recorded information includes the identity of the user, the start time of the AWS API call, the source IP address, the request parameters, and the response elements returned by the</p>
+<p>service&gt; &lt;note&gt;</p>
+<p>As an alternative to the API, you can use one of the AWS SDKs, which consist of libraries and sample code for various programming languages and platforms (Java, Ruby, .NET, iOS, Android, etc.)&#x2e; The SDKs provide a convenient way to create programmatic access to AWSCloudTrail. For example, the SDKs take care of cryptographically signing requests, managing errors, and retrying requests automatically. For information about the AWS SDKs, including how to download and install them, see the &lt;a href=&quot;http://aws.amazon.com/tools/&quot;&gt;Tools for Amazon Web Services</p>
+<p>page&lt;/a&gt;&gt; &lt;/note&gt;</p>
+<p>See the &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html&quot;&gt;AWS <a href="qtaws-cloudtrail.html">CloudTrail</a> User Guide&lt;/a&gt; for information about the data that is included with each AWS API call listed in the log</p>
+</div>
+<!-- @@@CloudTrailClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudTrailClient[overload1]$$$CloudTrailClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudTrailClient"><a name="CloudTrailClient"></a>CloudTrailClient::<span class="name">CloudTrailClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudTrailClient -->
+<!-- $$$CloudTrailClient$$$CloudTrailClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudTrailClient-1"><a name="CloudTrailClient-1"></a>CloudTrailClient::<span class="name">CloudTrailClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cloudtrail-cloudtrailclient.html#CloudTrailClient">CloudTrailClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudTrailClient -->
+<!-- $$$addTags[overload1]$$$addTagsconstAddTagsRequest& -->
+<h3 class="fn" id="addTags"><a name="addTags"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-addtagsresponse.html">AddTagsResponse</a></span> *CloudTrailClient::<span class="name">addTags</span>(const <span class="type"><a href="qtaws-cloudtrail-addtagsrequest.html">AddTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-addtagsresponse.html">AddTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more tags to a trail, up to a limit of 50. Tags must be unique per trail. Overwrites an existing tag's value when a new value is specified for an existing tag key. If you specify a key without a value, the tag will be created with the specified key and a value of null. You can tag a trail that applies to all regions only from the region in which the trail was created (that is, from its home</p>
+<!-- @@@addTags -->
+<!-- $$$createTrail[overload1]$$$createTrailconstCreateTrailRequest& -->
+<h3 class="fn" id="createTrail"><a name="createTrail"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-createtrailresponse.html">CreateTrailResponse</a></span> *CloudTrailClient::<span class="name">createTrail</span>(const <span class="type"><a href="qtaws-cloudtrail-createtrailrequest.html">CreateTrailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-createtrailresponse.html">CreateTrailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails can exist in a region, irrespective of the region in which they were</p>
+<!-- @@@createTrail -->
+<!-- $$$deleteTrail[overload1]$$$deleteTrailconstDeleteTrailRequest& -->
+<h3 class="fn" id="deleteTrail"><a name="deleteTrail"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-deletetrailresponse.html">DeleteTrailResponse</a></span> *CloudTrailClient::<span class="name">deleteTrail</span>(const <span class="type"><a href="qtaws-cloudtrail-deletetrailrequest.html">DeleteTrailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-deletetrailresponse.html">DeleteTrailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a trail. This operation must be called from the region in which the trail was created. &lt;code&gt;DeleteTrail&lt;/code&gt; cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled in all</p>
+<!-- @@@deleteTrail -->
+<!-- $$$describeTrails[overload1]$$$describeTrailsconstDescribeTrailsRequest& -->
+<h3 class="fn" id="describeTrails"><a name="describeTrails"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-describetrailsresponse.html">DescribeTrailsResponse</a></span> *CloudTrailClient::<span class="name">describeTrails</span>(const <span class="type"><a href="qtaws-cloudtrail-describetrailsrequest.html">DescribeTrailsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-describetrailsresponse.html">DescribeTrailsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves settings for the trail associated with the current region for your</p>
+<!-- @@@describeTrails -->
+<!-- $$$getEventSelectors[overload1]$$$getEventSelectorsconstGetEventSelectorsRequest& -->
+<h3 class="fn" id="getEventSelectors"><a name="getEventSelectors"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-geteventselectorsresponse.html">GetEventSelectorsResponse</a></span> *CloudTrailClient::<span class="name">getEventSelectors</span>(const <span class="type"><a href="qtaws-cloudtrail-geteventselectorsrequest.html">GetEventSelectorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-geteventselectorsresponse.html">GetEventSelectorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the settings for the event selectors that you configured for your trail. The information returned for your event selectors includes the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The S3 objects that you are logging for data</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If your event selector includes management</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If your event selector includes read-only events, write-only events, or all.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html&quot;&gt;Logging Data and Management Events for Trails &lt;/a&gt; in the &lt;i&gt;AWS <a href="qtaws-cloudtrail.html">CloudTrail</a> User</p>
+<!-- @@@getEventSelectors -->
+<!-- $$$getTrailStatus[overload1]$$$getTrailStatusconstGetTrailStatusRequest& -->
+<h3 class="fn" id="getTrailStatus"><a name="getTrailStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-gettrailstatusresponse.html">GetTrailStatusResponse</a></span> *CloudTrailClient::<span class="name">getTrailStatus</span>(const <span class="type"><a href="qtaws-cloudtrail-gettrailstatusrequest.html">GetTrailStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-gettrailstatusresponse.html">GetTrailStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a JSON-formatted list of information about the specified trail. Fields include information on delivery errors, Amazon SNS and Amazon S3 errors, and start and stop logging times for each trail. This operation returns trail status from a single region. To return trail status from all regions, you must call the operation on each</p>
+<!-- @@@getTrailStatus -->
+<!-- $$$listPublicKeys[overload1]$$$listPublicKeysconstListPublicKeysRequest& -->
+<h3 class="fn" id="listPublicKeys"><a name="listPublicKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-listpublickeysresponse.html">ListPublicKeysResponse</a></span> *CloudTrailClient::<span class="name">listPublicKeys</span>(const <span class="type"><a href="qtaws-cloudtrail-listpublickeysrequest.html">ListPublicKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-listpublickeysresponse.html">ListPublicKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all public keys whose private keys were used to sign the digest files within the specified time range. The public key is needed to validate digest files that were signed with its corresponding private</p>
+<p>key&gt; &lt;note&gt;</p>
+<p><a href="qtaws-cloudtrail.html">CloudTrail</a> uses different private/public key pairs per region. Each digest file is signed with a private key unique to its region. Therefore, when you validate a digest file from a particular region, you must look in the same region for its corresponding public</p>
+<!-- @@@listPublicKeys -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-listtagsresponse.html">ListTagsResponse</a></span> *CloudTrailClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-cloudtrail-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags for the trail in the current</p>
+<!-- @@@listTags -->
+<!-- $$$lookupEvents[overload1]$$$lookupEventsconstLookupEventsRequest& -->
+<h3 class="fn" id="lookupEvents"><a name="lookupEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-lookupeventsresponse.html">LookupEventsResponse</a></span> *CloudTrailClient::<span class="name">lookupEvents</span>(const <span class="type"><a href="qtaws-cloudtrail-lookupeventsrequest.html">LookupEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-lookupeventsresponse.html">LookupEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Looks up API activity events captured by <a href="qtaws-cloudtrail.html">CloudTrail</a> that create, update, or delete resources in your account. Events for a region can be looked up for the times in which you had <a href="qtaws-cloudtrail.html">CloudTrail</a> turned on in that region during the last seven days. Lookup supports the following</p>
+<p>attributes&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Event</p>
+<p>I&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Event</p>
+<p>nam&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Event</p>
+<p>sourc&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Resource</p>
+<p>nam&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Resource</p>
+<p>typ&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>User</p>
+<p>nam&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>All attributes are optional. The default number of results returned is 10, with a maximum of 50 possible. The response includes a token that you can use to get the next page of</p>
+<p>results&gt; &lt;b&gt;</p>
+<p>The rate of lookup requests is limited to one per second per account. If this limit is exceeded, a throttling error</p>
+<p>occurs&gt; &lt;/b&gt; &lt;b&gt;</p>
+<p>Events that occurred during the selected time range will not be available for lookup if <a href="qtaws-cloudtrail.html">CloudTrail</a> logging was not enabled when the events</p>
+<!-- @@@lookupEvents -->
+<!-- $$$putEventSelectors[overload1]$$$putEventSelectorsconstPutEventSelectorsRequest& -->
+<h3 class="fn" id="putEventSelectors"><a name="putEventSelectors"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-puteventselectorsresponse.html">PutEventSelectorsResponse</a></span> *CloudTrailClient::<span class="name">putEventSelectors</span>(const <span class="type"><a href="qtaws-cloudtrail-puteventselectorsrequest.html">PutEventSelectorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-puteventselectorsresponse.html">PutEventSelectorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures an event selector for your trail. Use event selectors to specify whether you want your trail to log management and/or data events. When an event occurs in your account, <a href="qtaws-cloudtrail.html">CloudTrail</a> evaluates the event selectors in all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event.</p>
+<p>&lt;/p</p>
+<p>Exampl&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>You create an event selector for a trail and specify that you want write-only</p>
+<p>events&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The EC2 &lt;code&gt;GetConsoleOutput&lt;/code&gt; and &lt;code&gt;RunInstances&lt;/code&gt; API operations occur in your</p>
+<p>account&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p><a href="qtaws-cloudtrail.html">CloudTrail</a> evaluates whether the events match your event</p>
+<p>selectors&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;RunInstances&lt;/code&gt; is a write-only event and it matches your event selector. The trail logs the</p>
+<p>event&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;GetConsoleOutput&lt;/code&gt; is a read-only event but it doesn't match your event selector. The trail doesn't log the event.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ol&gt;</p>
+<p>The &lt;code&gt;PutEventSelectors&lt;/code&gt; operation must be called from the region in which the trail was created; otherwise, an &lt;code&gt;InvalidHomeRegionException&lt;/code&gt; is</p>
+<p>thrown&gt;</p>
+<p>You can configure up to five event selectors for each trail. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html&quot;&gt;Logging Data and Management Events for Trails &lt;/a&gt; in the &lt;i&gt;AWS <a href="qtaws-cloudtrail.html">CloudTrail</a> User</p>
+<!-- @@@putEventSelectors -->
+<!-- $$$removeTags[overload1]$$$removeTagsconstRemoveTagsRequest& -->
+<h3 class="fn" id="removeTags"><a name="removeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-removetagsresponse.html">RemoveTagsResponse</a></span> *CloudTrailClient::<span class="name">removeTags</span>(const <span class="type"><a href="qtaws-cloudtrail-removetagsrequest.html">RemoveTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-removetagsresponse.html">RemoveTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified tags from a</p>
+<!-- @@@removeTags -->
+<!-- $$$startLogging[overload1]$$$startLoggingconstStartLoggingRequest& -->
+<h3 class="fn" id="startLogging"><a name="startLogging"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-startloggingresponse.html">StartLoggingResponse</a></span> *CloudTrailClient::<span class="name">startLogging</span>(const <span class="type"><a href="qtaws-cloudtrail-startloggingrequest.html">StartLoggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-startloggingresponse.html">StartLoggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the recording of AWS API calls and log file delivery for a trail. For a trail that is enabled in all regions, this operation must be called from the region in which the trail was created. This operation cannot be called on the shadow trails (replicated trails in other regions) of a trail that is enabled in all</p>
+<!-- @@@startLogging -->
+<!-- $$$stopLogging[overload1]$$$stopLoggingconstStopLoggingRequest& -->
+<h3 class="fn" id="stopLogging"><a name="stopLogging"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-stoploggingresponse.html">StopLoggingResponse</a></span> *CloudTrailClient::<span class="name">stopLogging</span>(const <span class="type"><a href="qtaws-cloudtrail-stoploggingrequest.html">StopLoggingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-stoploggingresponse.html">StopLoggingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Suspends the recording of AWS API calls and log file delivery for the specified trail. Under most circumstances, there is no need to use this action. You can update a trail without stopping it first. This action is the only way to stop recording. For a trail enabled in all regions, this operation must be called from the region in which the trail was created, or an &lt;code&gt;InvalidHomeRegionException&lt;/code&gt; will occur. This operation cannot be called on the shadow trails (replicated trails in other regions) of a trail enabled in all</p>
+<!-- @@@stopLogging -->
+<!-- $$$updateTrail[overload1]$$$updateTrailconstUpdateTrailRequest& -->
+<h3 class="fn" id="updateTrail"><a name="updateTrail"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudtrail-updatetrailresponse.html">UpdateTrailResponse</a></span> *CloudTrailClient::<span class="name">updateTrail</span>(const <span class="type"><a href="qtaws-cloudtrail-updatetrailrequest.html">UpdateTrailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudtrail-cloudtrailclient.html">CloudTrailClient</a> service, and returns a pointer to an <a href="qtaws-cloudtrail-updatetrailresponse.html">UpdateTrailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the settings that specify delivery of log files. Changes to a trail do not require stopping the <a href="qtaws-cloudtrail.html">CloudTrail</a> service. Use this action to designate an existing bucket for log delivery. If the existing bucket has previously been a target for <a href="qtaws-cloudtrail.html">CloudTrail</a> log files, an IAM policy exists for the bucket. &lt;code&gt;UpdateTrail&lt;/code&gt; must be called from the region in which the trail was created; otherwise, an &lt;code&gt;InvalidHomeRegionException&lt;/code&gt; is</p>
+<!-- @@@updateTrail -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

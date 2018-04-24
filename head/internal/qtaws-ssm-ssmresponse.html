@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ssmresponse.cpp -->
+  <title>SsmResponse Class | SSM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsssm-index.html">SSM</a></li>
+<li><a href="qtawsssm-module.html">C++ Classes</a></li>
+<li>SsmResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SsmResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ssm-ssmresponse.html">QtAws::SSM::SsmResponse</a>)<br/></span>
+<!-- $$$SsmResponse-brief -->
+<p>The <a href="qtaws-ssm-ssmresponse.html">SsmResponse</a> class provides an interface for SSM responses. <a href="#details">More...</a></p>
+<!-- @@@SsmResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SsmResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-ssm-addtagstoresourceresponse.html">QtAws::SSM::AddTagsToResourceResponse</a>, <a href="qtaws-ssm-cancelcommandresponse.html">QtAws::SSM::CancelCommandResponse</a>, <a href="qtaws-ssm-createactivationresponse.html">QtAws::SSM::CreateActivationResponse</a>, <a href="qtaws-ssm-createassociationbatchresponse.html">QtAws::SSM::CreateAssociationBatchResponse</a>, <a href="qtaws-ssm-createassociationresponse.html">QtAws::SSM::CreateAssociationResponse</a>, <a href="qtaws-ssm-createdocumentresponse.html">QtAws::SSM::CreateDocumentResponse</a>, <a href="qtaws-ssm-createmaintenancewindowresponse.html">QtAws::SSM::CreateMaintenanceWindowResponse</a>, <a href="qtaws-ssm-createpatchbaselineresponse.html">QtAws::SSM::CreatePatchBaselineResponse</a>, <a href="qtaws-ssm-createresourcedatasyncresponse.html">QtAws::SSM::CreateResourceDataSyncResponse</a>, <a href="qtaws-ssm-deleteactivationresponse.html">QtAws::SSM::DeleteActivationResponse</a>, <a href="qtaws-ssm-deleteassociationresponse.html">QtAws::SSM::DeleteAssociationResponse</a>, <a href="qtaws-ssm-deletedocumentresponse.html">QtAws::SSM::DeleteDocumentResponse</a>, <a href="qtaws-ssm-deleteinventoryresponse.html">QtAws::SSM::DeleteInventoryResponse</a>, <a href="qtaws-ssm-deletemaintenancewindowresponse.html">QtAws::SSM::DeleteMaintenanceWindowResponse</a>, <a href="qtaws-ssm-deleteparameterresponse.html">QtAws::SSM::DeleteParameterResponse</a>, <a href="qtaws-ssm-deleteparametersresponse.html">QtAws::SSM::DeleteParametersResponse</a>, <a href="qtaws-ssm-deletepatchbaselineresponse.html">QtAws::SSM::DeletePatchBaselineResponse</a>, <a href="qtaws-ssm-deleteresourcedatasyncresponse.html">QtAws::SSM::DeleteResourceDataSyncResponse</a>, <a href="qtaws-ssm-deregistermanagedinstanceresponse.html">QtAws::SSM::DeregisterManagedInstanceResponse</a>, <a href="qtaws-ssm-deregisterpatchbaselineforpatchgroupresponse.html">QtAws::SSM::DeregisterPatchBaselineForPatchGroupResponse</a>, <a href="qtaws-ssm-deregistertargetfrommaintenancewindowresponse.html">QtAws::SSM::DeregisterTargetFromMaintenanceWindowResponse</a>, <a href="qtaws-ssm-deregistertaskfrommaintenancewindowresponse.html">QtAws::SSM::DeregisterTaskFromMaintenanceWindowResponse</a>, <a href="qtaws-ssm-describeactivationsresponse.html">QtAws::SSM::DescribeActivationsResponse</a>, <a href="qtaws-ssm-describeassociationresponse.html">QtAws::SSM::DescribeAssociationResponse</a>, <a href="qtaws-ssm-describeautomationexecutionsresponse.html">QtAws::SSM::DescribeAutomationExecutionsResponse</a>, <a href="qtaws-ssm-describeautomationstepexecutionsresponse.html">QtAws::SSM::DescribeAutomationStepExecutionsResponse</a>, <a href="qtaws-ssm-describeavailablepatchesresponse.html">QtAws::SSM::DescribeAvailablePatchesResponse</a>, <a href="qtaws-ssm-describedocumentpermissionresponse.html">QtAws::SSM::DescribeDocumentPermissionResponse</a>, <a href="qtaws-ssm-describedocumentresponse.html">QtAws::SSM::DescribeDocumentResponse</a>, <a href="qtaws-ssm-describeeffectiveinstanceassociationsresponse.html">QtAws::SSM::DescribeEffectiveInstanceAssociationsResponse</a>, <a href="qtaws-ssm-describeeffectivepatchesforpatchbaselineresponse.html">QtAws::SSM::DescribeEffectivePatchesForPatchBaselineResponse</a>, <a href="qtaws-ssm-describeinstanceassociationsstatusresponse.html">QtAws::SSM::DescribeInstanceAssociationsStatusResponse</a>, <a href="qtaws-ssm-describeinstanceinformationresponse.html">QtAws::SSM::DescribeInstanceInformationResponse</a>, <a href="qtaws-ssm-describeinstancepatchesresponse.html">QtAws::SSM::DescribeInstancePatchesResponse</a>, <a href="qtaws-ssm-describeinstancepatchstatesforpatchgroupresponse.html">QtAws::SSM::DescribeInstancePatchStatesForPatchGroupResponse</a>, <a href="qtaws-ssm-describeinstancepatchstatesresponse.html">QtAws::SSM::DescribeInstancePatchStatesResponse</a>, <a href="qtaws-ssm-describeinventorydeletionsresponse.html">QtAws::SSM::DescribeInventoryDeletionsResponse</a>, <a href="qtaws-ssm-describemaintenancewindowexecutionsresponse.html">QtAws::SSM::DescribeMaintenanceWindowExecutionsResponse</a>, <a href="qtaws-ssm-describemaintenancewindowexecutiontaskinvocationsresponse.html">QtAws::SSM::DescribeMaintenanceWindowExecutionTaskInvocationsResponse</a>, <a href="qtaws-ssm-describemaintenancewindowexecutiontasksresponse.html">QtAws::SSM::DescribeMaintenanceWindowExecutionTasksResponse</a>, <a href="qtaws-ssm-describemaintenancewindowsresponse.html">QtAws::SSM::DescribeMaintenanceWindowsResponse</a>, <a href="qtaws-ssm-describemaintenancewindowtargetsresponse.html">QtAws::SSM::DescribeMaintenanceWindowTargetsResponse</a>, <a href="qtaws-ssm-describemaintenancewindowtasksresponse.html">QtAws::SSM::DescribeMaintenanceWindowTasksResponse</a>, <a href="qtaws-ssm-describeparametersresponse.html">QtAws::SSM::DescribeParametersResponse</a>, <a href="qtaws-ssm-describepatchbaselinesresponse.html">QtAws::SSM::DescribePatchBaselinesResponse</a>, <a href="qtaws-ssm-describepatchgroupsresponse.html">QtAws::SSM::DescribePatchGroupsResponse</a>, <a href="qtaws-ssm-describepatchgroupstateresponse.html">QtAws::SSM::DescribePatchGroupStateResponse</a>, <a href="qtaws-ssm-getautomationexecutionresponse.html">QtAws::SSM::GetAutomationExecutionResponse</a>, <a href="qtaws-ssm-getcommandinvocationresponse.html">QtAws::SSM::GetCommandInvocationResponse</a>, <a href="qtaws-ssm-getdefaultpatchbaselineresponse.html">QtAws::SSM::GetDefaultPatchBaselineResponse</a>, <a href="qtaws-ssm-getdeployablepatchsnapshotforinstanceresponse.html">QtAws::SSM::GetDeployablePatchSnapshotForInstanceResponse</a>, <a href="qtaws-ssm-getdocumentresponse.html">QtAws::SSM::GetDocumentResponse</a>, <a href="qtaws-ssm-getinventoryresponse.html">QtAws::SSM::GetInventoryResponse</a>, <a href="qtaws-ssm-getinventoryschemaresponse.html">QtAws::SSM::GetInventorySchemaResponse</a>, <a href="qtaws-ssm-getmaintenancewindowexecutionresponse.html">QtAws::SSM::GetMaintenanceWindowExecutionResponse</a>, <a href="qtaws-ssm-getmaintenancewindowexecutiontaskinvocationresponse.html">QtAws::SSM::GetMaintenanceWindowExecutionTaskInvocationResponse</a>, <a href="qtaws-ssm-getmaintenancewindowexecutiontaskresponse.html">QtAws::SSM::GetMaintenanceWindowExecutionTaskResponse</a>, <a href="qtaws-ssm-getmaintenancewindowresponse.html">QtAws::SSM::GetMaintenanceWindowResponse</a>, <a href="qtaws-ssm-getmaintenancewindowtaskresponse.html">QtAws::SSM::GetMaintenanceWindowTaskResponse</a>, <a href="qtaws-ssm-getparameterhistoryresponse.html">QtAws::SSM::GetParameterHistoryResponse</a>, <a href="qtaws-ssm-getparameterresponse.html">QtAws::SSM::GetParameterResponse</a>, <a href="qtaws-ssm-getparametersbypathresponse.html">QtAws::SSM::GetParametersByPathResponse</a>, <a href="qtaws-ssm-getparametersresponse.html">QtAws::SSM::GetParametersResponse</a>, <a href="qtaws-ssm-getpatchbaselineforpatchgroupresponse.html">QtAws::SSM::GetPatchBaselineForPatchGroupResponse</a>, <a href="qtaws-ssm-getpatchbaselineresponse.html">QtAws::SSM::GetPatchBaselineResponse</a>, <a href="qtaws-ssm-listassociationsresponse.html">QtAws::SSM::ListAssociationsResponse</a>, <a href="qtaws-ssm-listassociationversionsresponse.html">QtAws::SSM::ListAssociationVersionsResponse</a>, <a href="qtaws-ssm-listcommandinvocationsresponse.html">QtAws::SSM::ListCommandInvocationsResponse</a>, <a href="qtaws-ssm-listcommandsresponse.html">QtAws::SSM::ListCommandsResponse</a>, <a href="qtaws-ssm-listcomplianceitemsresponse.html">QtAws::SSM::ListComplianceItemsResponse</a>, <a href="qtaws-ssm-listcompliancesummariesresponse.html">QtAws::SSM::ListComplianceSummariesResponse</a>, <a href="qtaws-ssm-listdocumentsresponse.html">QtAws::SSM::ListDocumentsResponse</a>, <a href="qtaws-ssm-listdocumentversionsresponse.html">QtAws::SSM::ListDocumentVersionsResponse</a>, <a href="qtaws-ssm-listinventoryentriesresponse.html">QtAws::SSM::ListInventoryEntriesResponse</a>, <a href="qtaws-ssm-listresourcecompliancesummariesresponse.html">QtAws::SSM::ListResourceComplianceSummariesResponse</a>, <a href="qtaws-ssm-listresourcedatasyncresponse.html">QtAws::SSM::ListResourceDataSyncResponse</a>, <a href="qtaws-ssm-listtagsforresourceresponse.html">QtAws::SSM::ListTagsForResourceResponse</a>, <a href="qtaws-ssm-modifydocumentpermissionresponse.html">QtAws::SSM::ModifyDocumentPermissionResponse</a>, <a href="qtaws-ssm-putcomplianceitemsresponse.html">QtAws::SSM::PutComplianceItemsResponse</a>, <a href="qtaws-ssm-putinventoryresponse.html">QtAws::SSM::PutInventoryResponse</a>, <a href="qtaws-ssm-putparameterresponse.html">QtAws::SSM::PutParameterResponse</a>, <a href="qtaws-ssm-registerdefaultpatchbaselineresponse.html">QtAws::SSM::RegisterDefaultPatchBaselineResponse</a>, <a href="qtaws-ssm-registerpatchbaselineforpatchgroupresponse.html">QtAws::SSM::RegisterPatchBaselineForPatchGroupResponse</a>, <a href="qtaws-ssm-registertargetwithmaintenancewindowresponse.html">QtAws::SSM::RegisterTargetWithMaintenanceWindowResponse</a>, <a href="qtaws-ssm-registertaskwithmaintenancewindowresponse.html">QtAws::SSM::RegisterTaskWithMaintenanceWindowResponse</a>, <a href="qtaws-ssm-removetagsfromresourceresponse.html">QtAws::SSM::RemoveTagsFromResourceResponse</a>, <a href="qtaws-ssm-sendautomationsignalresponse.html">QtAws::SSM::SendAutomationSignalResponse</a>, <a href="qtaws-ssm-sendcommandresponse.html">QtAws::SSM::SendCommandResponse</a>, <a href="qtaws-ssm-startautomationexecutionresponse.html">QtAws::SSM::StartAutomationExecutionResponse</a>, <a href="qtaws-ssm-stopautomationexecutionresponse.html">QtAws::SSM::StopAutomationExecutionResponse</a>, <a href="qtaws-ssm-updateassociationresponse.html">QtAws::SSM::UpdateAssociationResponse</a>, <a href="qtaws-ssm-updateassociationstatusresponse.html">QtAws::SSM::UpdateAssociationStatusResponse</a>, <a href="qtaws-ssm-updatedocumentdefaultversionresponse.html">QtAws::SSM::UpdateDocumentDefaultVersionResponse</a>, <a href="qtaws-ssm-updatedocumentresponse.html">QtAws::SSM::UpdateDocumentResponse</a>, <a href="qtaws-ssm-updatemaintenancewindowresponse.html">QtAws::SSM::UpdateMaintenanceWindowResponse</a>, <a href="qtaws-ssm-updatemaintenancewindowtargetresponse.html">QtAws::SSM::UpdateMaintenanceWindowTargetResponse</a>, <a href="qtaws-ssm-updatemaintenancewindowtaskresponse.html">QtAws::SSM::UpdateMaintenanceWindowTaskResponse</a>, <a href="qtaws-ssm-updatemanagedinstanceroleresponse.html">QtAws::SSM::UpdateManagedInstanceRoleResponse</a>, and <a href="qtaws-ssm-updatepatchbaselineresponse.html">QtAws::SSM::UpdatePatchBaselineResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-ssm-ssmresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmresponse.html#SsmResponse">SsmResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmresponse.html#SsmResponse-1">SsmResponse</a></b>(SsmResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SsmResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ssm-ssmresponse.html">SsmResponse</a> class provides an interface for SSM responses.</p>
+</div>
+<!-- @@@SsmResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SsmResponse[overload1]$$$SsmResponseQObject*const -->
+<h3 class="fn" id="SsmResponse"><a name="SsmResponse"></a>SsmResponse::<span class="name">SsmResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ssm-ssmresponse.html">SsmResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@SsmResponse -->
+<!-- $$$SsmResponse$$$SsmResponseSsmResponsePrivate*constQObject*const -->
+<h3 class="fn" id="SsmResponse-1"><a name="SsmResponse-1"></a><code>[protected] </code>SsmResponse::<span class="name">SsmResponse</span>(<span class="type"><a href="qtaws-ssm-ssmresponseprivate.html">SsmResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs a <a href="qtaws-ssm-ssmresponse.html">SsmResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-ssm-ssmresponseprivate.html">SsmResponsePrivate</a>.</p>
+<!-- @@@SsmResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> SsmResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

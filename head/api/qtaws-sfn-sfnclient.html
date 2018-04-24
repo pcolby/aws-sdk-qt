@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sfnclient.cpp -->
+  <title>SfnClient Class | SFN</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssfn-index.html">SFN</a></li>
+<li><a href="qtawssfn-module.html">C++ Classes</a></li>
+<li>SfnClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SfnClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sfn-sfnclient.html">QtAws::SFN::SfnClient</a>)<br/></span>
+<!-- $$$SfnClient-brief -->
+<p>The <a href="qtaws-sfn-sfnclient.html">SfnClient</a> class provides access to the AWS Step Functions ( SFN) service. <a href="#details">More...</a></p>
+<!-- @@@SfnClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SfnClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-sfn-sfnclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#SfnClient">SfnClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#SfnClient-1">SfnClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateActivityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#createActivity">createActivity</a></b>(const CreateActivityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStateMachineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#createStateMachine">createStateMachine</a></b>(const CreateStateMachineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteActivityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#deleteActivity">deleteActivity</a></b>(const DeleteActivityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStateMachineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#deleteStateMachine">deleteStateMachine</a></b>(const DeleteStateMachineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeActivityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#describeActivity">describeActivity</a></b>(const DescribeActivityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#describeExecution">describeExecution</a></b>(const DescribeExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStateMachineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#describeStateMachine">describeStateMachine</a></b>(const DescribeStateMachineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStateMachineForExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#describeStateMachineForExecution">describeStateMachineForExecution</a></b>(const DescribeStateMachineForExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetActivityTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#getActivityTask">getActivityTask</a></b>(const GetActivityTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetExecutionHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#getExecutionHistory">getExecutionHistory</a></b>(const GetExecutionHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListActivitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#listActivities">listActivities</a></b>(const ListActivitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#listExecutions">listExecutions</a></b>(const ListExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListStateMachinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#listStateMachines">listStateMachines</a></b>(const ListStateMachinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendTaskFailureResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#sendTaskFailure">sendTaskFailure</a></b>(const SendTaskFailureRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendTaskHeartbeatResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#sendTaskHeartbeat">sendTaskHeartbeat</a></b>(const SendTaskHeartbeatRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendTaskSuccessResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#sendTaskSuccess">sendTaskSuccess</a></b>(const SendTaskSuccessRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#startExecution">startExecution</a></b>(const StartExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#stopExecution">stopExecution</a></b>(const StopExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateStateMachineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sfn-sfnclient.html#updateStateMachine">updateStateMachine</a></b>(const UpdateStateMachineRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SfnClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sfn-sfnclient.html">SfnClient</a> class provides access to the AWS Step Functions ( SFN) service.</p>
+<p>&lt;fullname&gt;AWS Step Functions&lt;/fullname&gt;</p>
+<p>AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices using visual</p>
+<p>workflows&gt;</p>
+<p>You can use Step Functions to build applications from individual components, each of which performs a discrete function, or &lt;i&gt;task&lt;/i&gt;, allowing you to scale and change applications quickly. Step Functions provides a console that helps visualize the components of your application as a series of steps. Step Functions automatically triggers and tracks each step, and retries steps when there are errors, so your application executes predictably and in the right order every time. Step Functions logs the state of each step, so you can quickly diagnose and debug any</p>
+<p>issues&gt;</p>
+<p>Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale. You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the &lt;i&gt; &lt;a href=&quot;http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html&quot;&gt;AWS Step Functions Developer Guide&lt;/a&gt;</p>
+</div>
+<!-- @@@SfnClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SfnClient[overload1]$$$SfnClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SfnClient"><a name="SfnClient"></a>SfnClient::<span class="name">SfnClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-sfn-sfnclient.html">SfnClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SfnClient -->
+<!-- $$$SfnClient$$$SfnClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SfnClient-1"><a name="SfnClient-1"></a>SfnClient::<span class="name">SfnClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-sfn-sfnclient.html#SfnClient">SfnClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SfnClient -->
+<!-- $$$createActivity[overload1]$$$createActivityconstCreateActivityRequest& -->
+<h3 class="fn" id="createActivity"><a name="createActivity"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-createactivityresponse.html">CreateActivityResponse</a></span> *SfnClient::<span class="name">createActivity</span>(const <span class="type"><a href="qtaws-sfn-createactivityrequest.html">CreateActivityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-createactivityresponse.html">CreateActivityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an activity. An activity is a task which you write in any programming language and host on any machine which has access to AWS Step Functions. Activities must poll Step Functions using the &lt;code&gt;GetActivityTask&lt;/code&gt; API action and respond using &lt;code&gt;SendTask*&lt;/code&gt; API actions. This function lets Step Functions know the existence of your activity and returns an identifier for use in a state machine and when polling from the</p>
+<!-- @@@createActivity -->
+<!-- $$$createStateMachine[overload1]$$$createStateMachineconstCreateStateMachineRequest& -->
+<h3 class="fn" id="createStateMachine"><a name="createStateMachine"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-createstatemachineresponse.html">CreateStateMachineResponse</a></span> *SfnClient::<span class="name">createStateMachine</span>(const <span class="type"><a href="qtaws-sfn-createstatemachinerequest.html">CreateStateMachineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-createstatemachineresponse.html">CreateStateMachineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a state machine. A state machine consists of a collection of states that can do work (&lt;code&gt;Task&lt;/code&gt; states), determine to which states to transition next (&lt;code&gt;Choice&lt;/code&gt; states), stop an execution with an error (&lt;code&gt;Fail&lt;/code&gt; states), and so on. State machines are specified using a JSON-based, structured</p>
+<!-- @@@createStateMachine -->
+<!-- $$$deleteActivity[overload1]$$$deleteActivityconstDeleteActivityRequest& -->
+<h3 class="fn" id="deleteActivity"><a name="deleteActivity"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-deleteactivityresponse.html">DeleteActivityResponse</a></span> *SfnClient::<span class="name">deleteActivity</span>(const <span class="type"><a href="qtaws-sfn-deleteactivityrequest.html">DeleteActivityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-deleteactivityresponse.html">DeleteActivityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an</p>
+<!-- @@@deleteActivity -->
+<!-- $$$deleteStateMachine[overload1]$$$deleteStateMachineconstDeleteStateMachineRequest& -->
+<h3 class="fn" id="deleteStateMachine"><a name="deleteStateMachine"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-deletestatemachineresponse.html">DeleteStateMachineResponse</a></span> *SfnClient::<span class="name">deleteStateMachine</span>(const <span class="type"><a href="qtaws-sfn-deletestatemachinerequest.html">DeleteStateMachineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-deletestatemachineresponse.html">DeleteStateMachineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to &lt;code&gt;DELETING&lt;/code&gt; and begins the deletion process. Each state machine execution is deleted the next time it makes a state</p>
+<p>transition&gt; &lt;note&gt;</p>
+<p>The state machine itself is deleted after all executions are completed or</p>
+<!-- @@@deleteStateMachine -->
+<!-- $$$describeActivity[overload1]$$$describeActivityconstDescribeActivityRequest& -->
+<h3 class="fn" id="describeActivity"><a name="describeActivity"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-describeactivityresponse.html">DescribeActivityResponse</a></span> *SfnClient::<span class="name">describeActivity</span>(const <span class="type"><a href="qtaws-sfn-describeactivityrequest.html">DescribeActivityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-describeactivityresponse.html">DescribeActivityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes an</p>
+<!-- @@@describeActivity -->
+<!-- $$$describeExecution[overload1]$$$describeExecutionconstDescribeExecutionRequest& -->
+<h3 class="fn" id="describeExecution"><a name="describeExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-describeexecutionresponse.html">DescribeExecutionResponse</a></span> *SfnClient::<span class="name">describeExecution</span>(const <span class="type"><a href="qtaws-sfn-describeexecutionrequest.html">DescribeExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-describeexecutionresponse.html">DescribeExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes an</p>
+<!-- @@@describeExecution -->
+<!-- $$$describeStateMachine[overload1]$$$describeStateMachineconstDescribeStateMachineRequest& -->
+<h3 class="fn" id="describeStateMachine"><a name="describeStateMachine"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-describestatemachineresponse.html">DescribeStateMachineResponse</a></span> *SfnClient::<span class="name">describeStateMachine</span>(const <span class="type"><a href="qtaws-sfn-describestatemachinerequest.html">DescribeStateMachineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-describestatemachineresponse.html">DescribeStateMachineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a state</p>
+<!-- @@@describeStateMachine -->
+<!-- $$$describeStateMachineForExecution[overload1]$$$describeStateMachineForExecutionconstDescribeStateMachineForExecutionRequest& -->
+<h3 class="fn" id="describeStateMachineForExecution"><a name="describeStateMachineForExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-describestatemachineforexecutionresponse.html">DescribeStateMachineForExecutionResponse</a></span> *SfnClient::<span class="name">describeStateMachineForExecution</span>(const <span class="type"><a href="qtaws-sfn-describestatemachineforexecutionrequest.html">DescribeStateMachineForExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-describestatemachineforexecutionresponse.html">DescribeStateMachineForExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the state machine associated with a specific</p>
+<!-- @@@describeStateMachineForExecution -->
+<!-- $$$getActivityTask[overload1]$$$getActivityTaskconstGetActivityTaskRequest& -->
+<h3 class="fn" id="getActivityTask"><a name="getActivityTask"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-getactivitytaskresponse.html">GetActivityTaskResponse</a></span> *SfnClient::<span class="name">getActivityTask</span>(const <span class="type"><a href="qtaws-sfn-getactivitytaskrequest.html">GetActivityTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-getactivitytaskresponse.html">GetActivityTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to retrieve a task (with the specified activity ARN) which has been scheduled for execution by a running state machine. This initiates a long poll, where the service holds the HTTP connection open and responds as soon as a task becomes available (i.e&#x2e; an execution of a task of this type is needed.) The maximum time the service holds on to the request before responding is 60 seconds. If no task is available within 60 seconds, the poll returns a &lt;code&gt;taskToken&lt;/code&gt; with a null</p>
+<p>string&gt; &lt;b&gt;</p>
+<p>Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum time the service may hold the poll</p>
+<!-- @@@getActivityTask -->
+<!-- $$$getExecutionHistory[overload1]$$$getExecutionHistoryconstGetExecutionHistoryRequest& -->
+<h3 class="fn" id="getExecutionHistory"><a name="getExecutionHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-getexecutionhistoryresponse.html">GetExecutionHistoryResponse</a></span> *SfnClient::<span class="name">getExecutionHistory</span>(const <span class="type"><a href="qtaws-sfn-getexecutionhistoryrequest.html">GetExecutionHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-getexecutionhistoryresponse.html">GetExecutionHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the history of the specified execution as a list of events. By default, the results are returned in ascending order of the &lt;code&gt;timeStamp&lt;/code&gt; of the events. Use the &lt;code&gt;reverseOrder&lt;/code&gt; parameter to get the latest events</p>
+<p>first&gt;</p>
+<p>If a &lt;code&gt;nextToken&lt;/code&gt; is returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in &lt;code&gt;nextToken&lt;/code&gt;. Keep all other arguments</p>
+<!-- @@@getExecutionHistory -->
+<!-- $$$listActivities[overload1]$$$listActivitiesconstListActivitiesRequest& -->
+<h3 class="fn" id="listActivities"><a name="listActivities"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-listactivitiesresponse.html">ListActivitiesResponse</a></span> *SfnClient::<span class="name">listActivities</span>(const <span class="type"><a href="qtaws-sfn-listactivitiesrequest.html">ListActivitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-listactivitiesresponse.html">ListActivitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the existing</p>
+<p>activities&gt;</p>
+<p>If a &lt;code&gt;nextToken&lt;/code&gt; is returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in &lt;code&gt;nextToken&lt;/code&gt;. Keep all other arguments</p>
+<!-- @@@listActivities -->
+<!-- $$$listExecutions[overload1]$$$listExecutionsconstListExecutionsRequest& -->
+<h3 class="fn" id="listExecutions"><a name="listExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-listexecutionsresponse.html">ListExecutionsResponse</a></span> *SfnClient::<span class="name">listExecutions</span>(const <span class="type"><a href="qtaws-sfn-listexecutionsrequest.html">ListExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-listexecutionsresponse.html">ListExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the executions of a state machine that meet the filtering</p>
+<p>criteria&gt;</p>
+<p>If a &lt;code&gt;nextToken&lt;/code&gt; is returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in &lt;code&gt;nextToken&lt;/code&gt;. Keep all other arguments</p>
+<!-- @@@listExecutions -->
+<!-- $$$listStateMachines[overload1]$$$listStateMachinesconstListStateMachinesRequest& -->
+<h3 class="fn" id="listStateMachines"><a name="listStateMachines"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-liststatemachinesresponse.html">ListStateMachinesResponse</a></span> *SfnClient::<span class="name">listStateMachines</span>(const <span class="type"><a href="qtaws-sfn-liststatemachinesrequest.html">ListStateMachinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-liststatemachinesresponse.html">ListStateMachinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the existing state</p>
+<p>machines&gt;</p>
+<p>If a &lt;code&gt;nextToken&lt;/code&gt; is returned by a previous call, there are more results available. To retrieve the next page of results, make the call again using the returned token in &lt;code&gt;nextToken&lt;/code&gt;. Keep all other arguments</p>
+<!-- @@@listStateMachines -->
+<!-- $$$sendTaskFailure[overload1]$$$sendTaskFailureconstSendTaskFailureRequest& -->
+<h3 class="fn" id="sendTaskFailure"><a name="sendTaskFailure"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-sendtaskfailureresponse.html">SendTaskFailureResponse</a></span> *SfnClient::<span class="name">sendTaskFailure</span>(const <span class="type"><a href="qtaws-sfn-sendtaskfailurerequest.html">SendTaskFailureRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-sendtaskfailureresponse.html">SendTaskFailureResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to report that the task identified by the &lt;code&gt;taskToken&lt;/code&gt;</p>
+<!-- @@@sendTaskFailure -->
+<!-- $$$sendTaskHeartbeat[overload1]$$$sendTaskHeartbeatconstSendTaskHeartbeatRequest& -->
+<h3 class="fn" id="sendTaskHeartbeat"><a name="sendTaskHeartbeat"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-sendtaskheartbeatresponse.html">SendTaskHeartbeatResponse</a></span> *SfnClient::<span class="name">sendTaskHeartbeat</span>(const <span class="type"><a href="qtaws-sfn-sendtaskheartbeatrequest.html">SendTaskHeartbeatRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-sendtaskheartbeatresponse.html">SendTaskHeartbeatResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to report to the service that the task represented by the specified &lt;code&gt;taskToken&lt;/code&gt; is still making progress. This action resets the &lt;code&gt;Heartbeat&lt;/code&gt; clock. The &lt;code&gt;Heartbeat&lt;/code&gt; threshold is specified in the state machine's Amazon States Language definition. This action does not in itself create an event in the execution history. However, if the task times out, the execution history contains an &lt;code&gt;ActivityTimedOut&lt;/code&gt;</p>
+<p>event&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;Timeout&lt;/code&gt; of a task, defined in the state machine's Amazon States Language definition, is its maximum allowed duration, regardless of the number of &lt;a&gt;SendTaskHeartbeat&lt;/a&gt; requests</p>
+<p>received&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>This operation is only useful for long-lived tasks to report the liveliness of the</p>
+<!-- @@@sendTaskHeartbeat -->
+<!-- $$$sendTaskSuccess[overload1]$$$sendTaskSuccessconstSendTaskSuccessRequest& -->
+<h3 class="fn" id="sendTaskSuccess"><a name="sendTaskSuccess"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-sendtasksuccessresponse.html">SendTaskSuccessResponse</a></span> *SfnClient::<span class="name">sendTaskSuccess</span>(const <span class="type"><a href="qtaws-sfn-sendtasksuccessrequest.html">SendTaskSuccessRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-sendtasksuccessresponse.html">SendTaskSuccessResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to report that the task identified by the &lt;code&gt;taskToken&lt;/code&gt; completed</p>
+<!-- @@@sendTaskSuccess -->
+<!-- $$$startExecution[overload1]$$$startExecutionconstStartExecutionRequest& -->
+<h3 class="fn" id="startExecution"><a name="startExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-startexecutionresponse.html">StartExecutionResponse</a></span> *SfnClient::<span class="name">startExecution</span>(const <span class="type"><a href="qtaws-sfn-startexecutionrequest.html">StartExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-startexecutionresponse.html">StartExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a state machine</p>
+<!-- @@@startExecution -->
+<!-- $$$stopExecution[overload1]$$$stopExecutionconstStopExecutionRequest& -->
+<h3 class="fn" id="stopExecution"><a name="stopExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-stopexecutionresponse.html">StopExecutionResponse</a></span> *SfnClient::<span class="name">stopExecution</span>(const <span class="type"><a href="qtaws-sfn-stopexecutionrequest.html">StopExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-stopexecutionresponse.html">StopExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops an</p>
+<!-- @@@stopExecution -->
+<!-- $$$updateStateMachine[overload1]$$$updateStateMachineconstUpdateStateMachineRequest& -->
+<h3 class="fn" id="updateStateMachine"><a name="updateStateMachine"></a><code>[slot] </code><span class="type"><a href="qtaws-sfn-updatestatemachineresponse.html">UpdateStateMachineResponse</a></span> *SfnClient::<span class="name">updateStateMachine</span>(const <span class="type"><a href="qtaws-sfn-updatestatemachinerequest.html">UpdateStateMachineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sfn-sfnclient.html">SfnClient</a> service, and returns a pointer to an <a href="qtaws-sfn-updatestatemachineresponse.html">UpdateStateMachineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing state machine by modifying its &lt;code&gt;definition&lt;/code&gt; and/or &lt;code&gt;roleArn&lt;/code&gt;. Running executions will continue to use the previous &lt;code&gt;definition&lt;/code&gt; and</p>
+<p>&lt;code&gt;roleArn&lt;/code&gt;&gt; &lt;note&gt;</p>
+<p>All &lt;code&gt;StartExecution&lt;/code&gt; calls within a few seconds will use the updated &lt;code&gt;definition&lt;/code&gt; and &lt;code&gt;roleArn&lt;/code&gt;. Executions started immediately after calling &lt;code&gt;UpdateStateMachine&lt;/code&gt; may use the previous state machine &lt;code&gt;definition&lt;/code&gt; and &lt;code&gt;roleArn&lt;/code&gt;. You must include at least one of &lt;code&gt;definition&lt;/code&gt; or &lt;code&gt;roleArn&lt;/code&gt; or you will receive a &lt;code&gt;MissingRequiredParameter&lt;/code&gt;</p>
+<!-- @@@updateStateMachine -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

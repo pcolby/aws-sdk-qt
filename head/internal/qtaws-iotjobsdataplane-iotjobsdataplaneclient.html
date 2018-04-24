@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotjobsdataplaneclient.cpp -->
+  <title>IoTJobsDataPlaneClient Class | IoTJobsDataPlane</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiotjobsdataplane-index.html">IoTJobsDataPlane</a></li>
+<li><a href="qtawsiotjobsdataplane-module.html">C++ Classes</a></li>
+<li>IoTJobsDataPlaneClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTJobsDataPlaneClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">QtAws::IoTJobsDataPlane::IoTJobsDataPlaneClient</a>)<br/></span>
+<!-- $$$IoTJobsDataPlaneClient-brief -->
+<p>The <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> class provides access to the AWS IoT Jobs Data Plane service. <a href="#details">More...</a></p>
+<!-- @@@IoTJobsDataPlaneClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTJobsDataPlaneClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#IoTJobsDataPlaneClient">IoTJobsDataPlaneClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#IoTJobsDataPlaneClient-1">IoTJobsDataPlaneClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#describeJobExecution">describeJobExecution</a></b>(const DescribeJobExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPendingJobExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#getPendingJobExecutions">getPendingJobExecutions</a></b>(const GetPendingJobExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartNextPendingJobExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#startNextPendingJobExecution">startNextPendingJobExecution</a></b>(const StartNextPendingJobExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateJobExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#updateJobExecution">updateJobExecution</a></b>(const UpdateJobExecutionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTJobsDataPlaneClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> class provides access to the AWS IoT Jobs Data Plane service.</p>
+<p>AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting</p>
+<p>operations&gt;</p>
+<p>To create a job, you make a job document which is a description of the remote operations to be performed, and you specify a list of targets that should perform the operations. The targets can be individual things, thing groups or</p>
+<p>both&gt;</p>
+<p>AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs service provides commands to track the progress of a job on a specific target and for all the targets of the</p>
+</div>
+<!-- @@@IoTJobsDataPlaneClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTJobsDataPlaneClient[overload1]$$$IoTJobsDataPlaneClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTJobsDataPlaneClient"><a name="IoTJobsDataPlaneClient"></a>IoTJobsDataPlaneClient::<span class="name">IoTJobsDataPlaneClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@IoTJobsDataPlaneClient -->
+<!-- $$$IoTJobsDataPlaneClient$$$IoTJobsDataPlaneClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTJobsDataPlaneClient-1"><a name="IoTJobsDataPlaneClient-1"></a>IoTJobsDataPlaneClient::<span class="name">IoTJobsDataPlaneClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html#IoTJobsDataPlaneClient">IoTJobsDataPlaneClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@IoTJobsDataPlaneClient -->
+<!-- $$$describeJobExecution[overload1]$$$describeJobExecutionconstDescribeJobExecutionRequest& -->
+<h3 class="fn" id="describeJobExecution"><a name="describeJobExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-iotjobsdataplane-describejobexecutionresponse.html">DescribeJobExecutionResponse</a></span> *IoTJobsDataPlaneClient::<span class="name">describeJobExecution</span>(const <span class="type"><a href="qtaws-iotjobsdataplane-describejobexecutionrequest.html">DescribeJobExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotjobsdataplane-describejobexecutionresponse.html">DescribeJobExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets details of a job</p>
+<!-- @@@describeJobExecution -->
+<!-- $$$getPendingJobExecutions[overload1]$$$getPendingJobExecutionsconstGetPendingJobExecutionsRequest& -->
+<h3 class="fn" id="getPendingJobExecutions"><a name="getPendingJobExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-iotjobsdataplane-getpendingjobexecutionsresponse.html">GetPendingJobExecutionsResponse</a></span> *IoTJobsDataPlaneClient::<span class="name">getPendingJobExecutions</span>(const <span class="type"><a href="qtaws-iotjobsdataplane-getpendingjobexecutionsrequest.html">GetPendingJobExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotjobsdataplane-getpendingjobexecutionsresponse.html">GetPendingJobExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the list of all jobs for a thing that are not in a terminal</p>
+<!-- @@@getPendingJobExecutions -->
+<!-- $$$startNextPendingJobExecution[overload1]$$$startNextPendingJobExecutionconstStartNextPendingJobExecutionRequest& -->
+<h3 class="fn" id="startNextPendingJobExecution"><a name="startNextPendingJobExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-iotjobsdataplane-startnextpendingjobexecutionresponse.html">StartNextPendingJobExecutionResponse</a></span> *IoTJobsDataPlaneClient::<span class="name">startNextPendingJobExecution</span>(const <span class="type"><a href="qtaws-iotjobsdataplane-startnextpendingjobexecutionrequest.html">StartNextPendingJobExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotjobsdataplane-startnextpendingjobexecutionresponse.html">StartNextPendingJobExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a</p>
+<!-- @@@startNextPendingJobExecution -->
+<!-- $$$updateJobExecution[overload1]$$$updateJobExecutionconstUpdateJobExecutionRequest& -->
+<h3 class="fn" id="updateJobExecution"><a name="updateJobExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-iotjobsdataplane-updatejobexecutionresponse.html">UpdateJobExecutionResponse</a></span> *IoTJobsDataPlaneClient::<span class="name">updateJobExecution</span>(const <span class="type"><a href="qtaws-iotjobsdataplane-updatejobexecutionrequest.html">UpdateJobExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotjobsdataplane-iotjobsdataplaneclient.html">IoTJobsDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotjobsdataplane-updatejobexecutionresponse.html">UpdateJobExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the status of a job</p>
+<!-- @@@updateJobExecution -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

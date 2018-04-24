@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudhsmrequest.cpp -->
+  <title>CloudHSMRequest Class | CloudHSM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudhsm-index.html">CloudHSM</a></li>
+<li><a href="qtawscloudhsm-module.html">C++ Classes</a></li>
+<li>CloudHSMRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudHSMRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudhsm-cloudhsmrequest.html">QtAws::CloudHSM::CloudHSMRequest</a>)<br/></span>
+<!-- $$$CloudHSMRequest-brief -->
+<p>The <a href="qtaws-cloudhsm-cloudhsmrequest.html">CloudHSMRequest</a> class provides an interface for <a href="qtaws-cloudhsm.html">CloudHSM</a> requests. <a href="#details">More...</a></p>
+<!-- @@@CloudHSMRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudHSMRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-cloudhsm-addtagstoresourcerequest.html">QtAws::CloudHSM::AddTagsToResourceRequest</a>, <a href="qtaws-cloudhsm-createhapgrequest.html">QtAws::CloudHSM::CreateHapgRequest</a>, <a href="qtaws-cloudhsm-createhsmrequest.html">QtAws::CloudHSM::CreateHsmRequest</a>, <a href="qtaws-cloudhsm-createlunaclientrequest.html">QtAws::CloudHSM::CreateLunaClientRequest</a>, <a href="qtaws-cloudhsm-deletehapgrequest.html">QtAws::CloudHSM::DeleteHapgRequest</a>, <a href="qtaws-cloudhsm-deletehsmrequest.html">QtAws::CloudHSM::DeleteHsmRequest</a>, <a href="qtaws-cloudhsm-deletelunaclientrequest.html">QtAws::CloudHSM::DeleteLunaClientRequest</a>, <a href="qtaws-cloudhsm-describehapgrequest.html">QtAws::CloudHSM::DescribeHapgRequest</a>, <a href="qtaws-cloudhsm-describehsmrequest.html">QtAws::CloudHSM::DescribeHsmRequest</a>, <a href="qtaws-cloudhsm-describelunaclientrequest.html">QtAws::CloudHSM::DescribeLunaClientRequest</a>, <a href="qtaws-cloudhsm-getconfigrequest.html">QtAws::CloudHSM::GetConfigRequest</a>, <a href="qtaws-cloudhsm-listavailablezonesrequest.html">QtAws::CloudHSM::ListAvailableZonesRequest</a>, <a href="qtaws-cloudhsm-listhapgsrequest.html">QtAws::CloudHSM::ListHapgsRequest</a>, <a href="qtaws-cloudhsm-listhsmsrequest.html">QtAws::CloudHSM::ListHsmsRequest</a>, <a href="qtaws-cloudhsm-listlunaclientsrequest.html">QtAws::CloudHSM::ListLunaClientsRequest</a>, <a href="qtaws-cloudhsm-listtagsforresourcerequest.html">QtAws::CloudHSM::ListTagsForResourceRequest</a>, <a href="qtaws-cloudhsm-modifyhapgrequest.html">QtAws::CloudHSM::ModifyHapgRequest</a>, <a href="qtaws-cloudhsm-modifyhsmrequest.html">QtAws::CloudHSM::ModifyHsmRequest</a>, <a href="qtaws-cloudhsm-modifylunaclientrequest.html">QtAws::CloudHSM::ModifyLunaClientRequest</a>, and <a href="qtaws-cloudhsm-removetagsfromresourcerequest.html">QtAws::CloudHSM::RemoveTagsFromResourceRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-cloudhsm-cloudhsmrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#Action-enum">Action</a></b> { AddTagsToResourceAction, CreateHapgAction, CreateHsmAction, CreateLunaClientAction, ..., RemoveTagsFromResourceAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest">CloudHSMRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest-1">CloudHSMRequest</a></b>(const CloudHSMRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CloudHSMRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#operator-eq">operator=</a></b>(const CloudHSMRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#operator-eq-eq">operator==</a></b>(const CloudHSMRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest-2">CloudHSMRequest</a></b>(CloudHSMRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudhsm-cloudhsmrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudHSMRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudhsm-cloudhsmrequest.html">CloudHSMRequest</a> class provides an interface for <a href="qtaws-cloudhsm.html">CloudHSM</a> requests.</p>
+</div>
+<!-- @@@CloudHSMRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddTagsToResourceAction$$$CreateHapgAction$$$CreateHsmAction$$$CreateLunaClientAction$$$DeleteHapgAction$$$DeleteHsmAction$$$DeleteLunaClientAction$$$DescribeHapgAction$$$DescribeHsmAction$$$DescribeLunaClientAction$$$GetConfigAction$$$ListAvailableZonesAction$$$ListHapgsAction$$$ListHsmsAction$$$ListLunaClientsAction$$$ListTagsForResourceAction$$$ModifyHapgAction$$$ModifyHsmAction$$$ModifyLunaClientAction$$$RemoveTagsFromResourceAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum CloudHSMRequest::<span class="name">Action</span><br/>flags CloudHSMRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-cloudhsm.html">CloudHSM</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::AddTagsToResourceAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> AddTagsToResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::CreateHapgAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> CreateHapg action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::CreateHsmAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> CreateHsm action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::CreateLunaClientAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> CreateLunaClient action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DeleteHapgAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DeleteHapg action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DeleteHsmAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DeleteHsm action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DeleteLunaClientAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DeleteLunaClient action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DescribeHapgAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DescribeHapg action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DescribeHsmAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DescribeHsm action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::DescribeLunaClientAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> DescribeLunaClient action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::GetConfigAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> GetConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ListAvailableZonesAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ListAvailableZones action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ListHapgsAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ListHapgs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ListHsmsAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ListHsms action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ListLunaClientsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ListLunaClients action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ModifyHapgAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ModifyHapg action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ModifyHsmAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ModifyHsm action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::ModifyLunaClientAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> ModifyLunaClient action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::CloudHSM::CloudHSMRequest::RemoveTagsFromResourceAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-cloudhsm.html">CloudHSM</a> RemoveTagsFromResource action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudHSMRequest[overload1]$$$CloudHSMRequestconstAction -->
+<h3 class="fn" id="CloudHSMRequest"><a name="CloudHSMRequest"></a>CloudHSMRequest::<span class="name">CloudHSMRequest</span>(const <span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-cloudhsm-cloudhsmrequest.html">CloudHSMRequest</a> object for <a href="qtaws-cloudhsm.html">CloudHSM</a> <i>action</i>.</p>
+<!-- @@@CloudHSMRequest -->
+<!-- $$$CloudHSMRequest$$$CloudHSMRequestconstCloudHSMRequest& -->
+<h3 class="fn" id="CloudHSMRequest-1"><a name="CloudHSMRequest-1"></a>CloudHSMRequest::<span class="name">CloudHSMRequest</span>(const <span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest">CloudHSMRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@CloudHSMRequest -->
+<!-- $$$CloudHSMRequest$$$CloudHSMRequestCloudHSMRequestPrivate*const -->
+<h3 class="fn" id="CloudHSMRequest-2"><a name="CloudHSMRequest-2"></a><code>[protected] </code>CloudHSMRequest::<span class="name">CloudHSMRequest</span>(<span class="type">CloudHSMRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-cloudhsm-cloudhsmrequest.html">CloudHSMRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from CloudHSMRequestPrivate.</p>
+<!-- @@@CloudHSMRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#Action-enum">Action</a></span> CloudHSMRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-cloudhsm.html">CloudHSM</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> CloudHSMRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-cloudhsm.html">CloudHSM</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> CloudHSMRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-cloudhsm.html">CloudHSM</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> CloudHSMRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> CloudHSMRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> CloudHSMRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;CloudHSMRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> CloudHSMRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-cloudhsm.html">CloudHSM</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> CloudHSMRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-cloudhsm.html">CloudHSM</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> CloudHSMRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> CloudHSMRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-cloudhsm-cloudhsmrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> CloudHSMRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-cloudhsm.html">CloudHSM</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-cloudhsm.html">CloudHSM</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-cloudhsm-cloudhsmrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constCloudHSMRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest">CloudHSMRequest</a></span> &amp;CloudHSMRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest">CloudHSMRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-cloudhsm-cloudhsmrequest.html">CloudHSMRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constCloudHSMRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> CloudHSMRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-cloudhsm-cloudhsmrequest.html#CloudHSMRequest">CloudHSMRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

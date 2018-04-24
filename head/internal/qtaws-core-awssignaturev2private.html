@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awssignaturev2.cpp -->
+  <title>AwsSignatureV2Private Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsSignatureV2Private</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsSignatureV2Private Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awssignaturev2private.html">QtAws::Core::AwsSignatureV2Private</a>)<br/></span>
+<!-- $$$AwsSignatureV2Private-brief -->
+<p>The <a href="qtaws-core-awssignaturev2private.html">AwsSignatureV2Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev2.html">AwsSignatureV2</a> class. <a href="#details">More...</a></p>
+<!-- @@@AwsSignatureV2Private -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsSignatureV2Private&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractsignatureprivate.html">QtAws::Core::AwsAbstractSignaturePrivate</a></td></tr></table></div><ul>
+<li><a href="qtaws-core-awssignaturev2private-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev2private.html#AwsSignatureV2Private">AwsSignatureV2Private</a></b>(const QCryptographicHash::Algorithm <i>algorithm</i>, AwsSignatureV2 * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev2private.html#adornRequest">adornRequest</a></b>(QNetworkRequest &amp;<i>request</i>, const AwsAbstractCredentials &amp;<i>credentials</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev2private.html#canonicalRequest">canonicalRequest</a></b>(const QNetworkAccessManager::Operation <i>operation</i>, const QUrl &amp;<i>url</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev2private.html#signatureMethod">signatureMethod</a></b>(const QCryptographicHash::Algorithm <i>algorithm</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 public functions inherited from <a href="qtaws-core-awsabstractsignatureprivate.html#public-functions">QtAws::Core::AwsAbstractSignaturePrivate</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AwsSignatureV2Private-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awssignaturev2private.html">AwsSignatureV2Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev2.html">AwsSignatureV2</a> class.</p>
+</div>
+<!-- @@@AwsSignatureV2Private -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsSignatureV2Private[overload1]$$$AwsSignatureV2PrivateconstQCryptographicHash::AlgorithmAwsSignatureV2*const -->
+<h3 class="fn" id="AwsSignatureV2Private"><a name="AwsSignatureV2Private"></a>AwsSignatureV2Private::<span class="name">AwsSignatureV2Private</span>(const <span class="type">QCryptographicHash::Algorithm</span> <i>algorithm</i>, <span class="type"><a href="qtaws-core-awssignaturev2.html">AwsSignatureV2</a></span> * const <i>q</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awssignaturev2private.html">AwsSignatureV2Private</a> object with hash <i>algorithm</i>, and public implementation <i>q</i>.</p>
+<!-- @@@AwsSignatureV2Private -->
+<!-- $$$adornRequest[overload1]$$$adornRequestQNetworkRequest&constAwsAbstractCredentials& -->
+<h3 class="fn" id="adornRequest"><a name="adornRequest"></a><span class="type">void</span> AwsSignatureV2Private::<span class="name">adornRequest</span>(<span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> &amp;<i>credentials</i>) const</h3>
+<p>Adds AWS Signature Version 2 adornments to a AWS <i>request</i>.</p>
+<p>In addition to service-specific request parameters, Amazon requires that version 2 signatures contain a number of common query parameters. This functions adds those query parameters to <i>request</i> if they're not already present.</p>
+<p>The query parameters added by this function, as required by Amazon, are:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Parameter Name</th><th >Parameter Value</th></tr></thead>
+<tr valign="top" class="odd"><td ><code>AWSAccessKeyId</code></td><td >The AWS Access Key ID from <i>credentials</i>.</td></tr>
+<tr valign="top" class="even"><td ><code>SignatureMethod</code></td><td >The value returned by <a href="qtaws-core-awssignaturev2private.html#signatureMethod">signatureMethod</a>(); ie <code>&quot;HMAC-SHA1&quot;</code> or <code>&quot;HMAC-SHA256&quot;</code></td></tr>
+<tr valign="top" class="odd"><td ><code>SignatureVersion</code></td><td ><code>&quot;2&quot;</code>.</td></tr>
+<tr valign="top" class="even"><td ><code>Timestamp</code></td><td >Current UTC timestamp in ISO 8601 format, eg <code>2013-10-30T12:34:56Z</code>.</td></tr>
+</table></div>
+<!-- @@@adornRequest -->
+<!-- $$$canonicalRequest[overload1]$$$canonicalRequestconstQNetworkAccessManager::OperationconstQUrl& -->
+<h3 class="fn" id="canonicalRequest"><a name="canonicalRequest"></a><span class="type">QByteArray</span> AwsSignatureV2Private::<span class="name">canonicalRequest</span>(const <span class="type">QNetworkAccessManager::Operation</span> <i>operation</i>, const <span class="type">QUrl</span> &amp;<i>url</i>) const</h3>
+<p>Returns the AWS Signature version 2 canonical query string for <i>operation</i> on <i>url</i>.</p>
+<p>This function creates a canonical representation of an AWS request as defined by Amazon's V2 signature specification.</p>
+<p>For example, for the following HTTP `GET` request:</p>
+<pre class="cpp">https:<span class="comment">//elasticmapreduce.amazonaws.com?Action=DescribeJobFlows&amp;Version=2009-03-31&amp;AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&amp;SignatureVersion=2SignatureMethod=HmacSHA256Timestamp=2011-10-03T15%3A19%3A30</span></pre>
+<p>this function will return the following canonical form:</p>
+<pre class="cpp">GET
+elasticmapreduce<span class="operator">.</span>amazonaws<span class="operator">.</span>com
+<span class="operator">/</span>
+AWSAccessKeyId<span class="operator">=</span>AKIAIOSFODNN7EXAMPLE<span class="operator">&amp;</span>Action<span class="operator">=</span>DescribeJobFlows<span class="operator">&amp;</span>SignatureMethod<span class="operator">=</span>HmacSHA256<span class="operator">&amp;</span>SignatureVersion<span class="operator">=</span><span class="number">2</span><span class="operator">&amp;</span>Timestamp<span class="operator">=</span><span class="number">2011</span><span class="operator">-</span><span class="number">10</span><span class="operator">-</span><span class="number">03T15</span><span class="operator">%</span><span class="number">3A19</span><span class="operator">%</span><span class="number">3A30</span><span class="operator">&amp;</span>Version<span class="operator">=</span><span class="number">2009</span><span class="operator">-</span><span class="number">03</span><span class="operator">-</span><span class="number">31</span></pre>
+<p><b>Note: </b>All URL components are encoded to UTF-8, as required by Amazon.</p><p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>.</p>
+<!-- @@@canonicalRequest -->
+<!-- $$$signatureMethod[overload1]$$$signatureMethodconstQCryptographicHash::Algorithm -->
+<h3 class="fn" id="signatureMethod"><a name="signatureMethod"></a><span class="type">QByteArray</span> AwsSignatureV2Private::<span class="name">signatureMethod</span>(const <span class="type">QCryptographicHash::Algorithm</span> <i>algorithm</i>) const</h3>
+<p>Returns an AWS V2 Signature method designation for <i>algorithm</i>.</p>
+<p>This function returns a signature method designation, as defined by Amazon, for use with V2 signatures.</p>
+<p>For example, if the algorith is `QCryptographicHash::Sha256`, this function will return `HmacSHA256`.</p>
+<p><b>Note: </b>Amazon only supports two algorithms for V2 signatures - SHA1 and SHA256.</p><p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a>.</p>
+<!-- @@@signatureMethod -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

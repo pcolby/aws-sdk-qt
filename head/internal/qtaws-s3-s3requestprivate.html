@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- s3request.cpp -->
+  <title>S3RequestPrivate Class | S3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawss3-index.html">S3</a></li>
+<li><a href="qtawss3-module.html">C++ Classes</a></li>
+<li>S3RequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">S3RequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-s3-s3requestprivate.html">QtAws::S3::S3RequestPrivate</a>)<br/></span>
+<!-- $$$S3RequestPrivate-brief -->
+<p>The <a href="qtaws-s3-s3requestprivate.html">S3RequestPrivate</a> class provides private implementation for <a href="qtaws-s3-s3request.html">S3Request</a>. <a href="#details">More...</a></p>
+<!-- @@@S3RequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;S3RequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-s3-abortmultipartuploadrequestprivate.html">QtAws::S3::AbortMultipartUploadRequestPrivate</a>, <a href="qtaws-s3-completemultipartuploadrequestprivate.html">QtAws::S3::CompleteMultipartUploadRequestPrivate</a>, <a href="qtaws-s3-copyobjectrequestprivate.html">QtAws::S3::CopyObjectRequestPrivate</a>, <a href="qtaws-s3-createbucketrequestprivate.html">QtAws::S3::CreateBucketRequestPrivate</a>, <a href="qtaws-s3-createmultipartuploadrequestprivate.html">QtAws::S3::CreateMultipartUploadRequestPrivate</a>, <a href="qtaws-s3-deletebucketanalyticsconfigurationrequestprivate.html">QtAws::S3::DeleteBucketAnalyticsConfigurationRequestPrivate</a>, <a href="qtaws-s3-deletebucketcorsrequestprivate.html">QtAws::S3::DeleteBucketCorsRequestPrivate</a>, <a href="qtaws-s3-deletebucketencryptionrequestprivate.html">QtAws::S3::DeleteBucketEncryptionRequestPrivate</a>, <a href="qtaws-s3-deletebucketinventoryconfigurationrequestprivate.html">QtAws::S3::DeleteBucketInventoryConfigurationRequestPrivate</a>, <a href="qtaws-s3-deletebucketlifecyclerequestprivate.html">QtAws::S3::DeleteBucketLifecycleRequestPrivate</a>, <a href="qtaws-s3-deletebucketmetricsconfigurationrequestprivate.html">QtAws::S3::DeleteBucketMetricsConfigurationRequestPrivate</a>, <a href="qtaws-s3-deletebucketpolicyrequestprivate.html">QtAws::S3::DeleteBucketPolicyRequestPrivate</a>, <a href="qtaws-s3-deletebucketreplicationrequestprivate.html">QtAws::S3::DeleteBucketReplicationRequestPrivate</a>, <a href="qtaws-s3-deletebucketrequestprivate.html">QtAws::S3::DeleteBucketRequestPrivate</a>, <a href="qtaws-s3-deletebuckettaggingrequestprivate.html">QtAws::S3::DeleteBucketTaggingRequestPrivate</a>, <a href="qtaws-s3-deletebucketwebsiterequestprivate.html">QtAws::S3::DeleteBucketWebsiteRequestPrivate</a>, <a href="qtaws-s3-deleteobjectrequestprivate.html">QtAws::S3::DeleteObjectRequestPrivate</a>, <a href="qtaws-s3-deleteobjectsrequestprivate.html">QtAws::S3::DeleteObjectsRequestPrivate</a>, <a href="qtaws-s3-deleteobjecttaggingrequestprivate.html">QtAws::S3::DeleteObjectTaggingRequestPrivate</a>, <a href="qtaws-s3-getbucketaccelerateconfigurationrequestprivate.html">QtAws::S3::GetBucketAccelerateConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketaclrequestprivate.html">QtAws::S3::GetBucketAclRequestPrivate</a>, <a href="qtaws-s3-getbucketanalyticsconfigurationrequestprivate.html">QtAws::S3::GetBucketAnalyticsConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketcorsrequestprivate.html">QtAws::S3::GetBucketCorsRequestPrivate</a>, <a href="qtaws-s3-getbucketencryptionrequestprivate.html">QtAws::S3::GetBucketEncryptionRequestPrivate</a>, <a href="qtaws-s3-getbucketinventoryconfigurationrequestprivate.html">QtAws::S3::GetBucketInventoryConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketlifecycleconfigurationrequestprivate.html">QtAws::S3::GetBucketLifecycleConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketlifecyclerequestprivate.html">QtAws::S3::GetBucketLifecycleRequestPrivate</a>, <a href="qtaws-s3-getbucketlocationrequestprivate.html">QtAws::S3::GetBucketLocationRequestPrivate</a>, <a href="qtaws-s3-getbucketloggingrequestprivate.html">QtAws::S3::GetBucketLoggingRequestPrivate</a>, <a href="qtaws-s3-getbucketmetricsconfigurationrequestprivate.html">QtAws::S3::GetBucketMetricsConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketnotificationconfigurationrequestprivate.html">QtAws::S3::GetBucketNotificationConfigurationRequestPrivate</a>, <a href="qtaws-s3-getbucketnotificationrequestprivate.html">QtAws::S3::GetBucketNotificationRequestPrivate</a>, <a href="qtaws-s3-getbucketpolicyrequestprivate.html">QtAws::S3::GetBucketPolicyRequestPrivate</a>, <a href="qtaws-s3-getbucketreplicationrequestprivate.html">QtAws::S3::GetBucketReplicationRequestPrivate</a>, <a href="qtaws-s3-getbucketrequestpaymentrequestprivate.html">QtAws::S3::GetBucketRequestPaymentRequestPrivate</a>, <a href="qtaws-s3-getbuckettaggingrequestprivate.html">QtAws::S3::GetBucketTaggingRequestPrivate</a>, <a href="qtaws-s3-getbucketversioningrequestprivate.html">QtAws::S3::GetBucketVersioningRequestPrivate</a>, <a href="qtaws-s3-getbucketwebsiterequestprivate.html">QtAws::S3::GetBucketWebsiteRequestPrivate</a>, <a href="qtaws-s3-getobjectaclrequestprivate.html">QtAws::S3::GetObjectAclRequestPrivate</a>, <a href="qtaws-s3-getobjectrequestprivate.html">QtAws::S3::GetObjectRequestPrivate</a>, <a href="qtaws-s3-getobjecttaggingrequestprivate.html">QtAws::S3::GetObjectTaggingRequestPrivate</a>, <a href="qtaws-s3-getobjecttorrentrequestprivate.html">QtAws::S3::GetObjectTorrentRequestPrivate</a>, <a href="qtaws-s3-headbucketrequestprivate.html">QtAws::S3::HeadBucketRequestPrivate</a>, <a href="qtaws-s3-headobjectrequestprivate.html">QtAws::S3::HeadObjectRequestPrivate</a>, <a href="qtaws-s3-listbucketanalyticsconfigurationsrequestprivate.html">QtAws::S3::ListBucketAnalyticsConfigurationsRequestPrivate</a>, <a href="qtaws-s3-listbucketinventoryconfigurationsrequestprivate.html">QtAws::S3::ListBucketInventoryConfigurationsRequestPrivate</a>, <a href="qtaws-s3-listbucketmetricsconfigurationsrequestprivate.html">QtAws::S3::ListBucketMetricsConfigurationsRequestPrivate</a>, <a href="qtaws-s3-listmultipartuploadsrequestprivate.html">QtAws::S3::ListMultipartUploadsRequestPrivate</a>, <a href="qtaws-s3-listobjectsrequestprivate.html">QtAws::S3::ListObjectsRequestPrivate</a>, <a href="qtaws-s3-listobjectsv2requestprivate.html">QtAws::S3::ListObjectsV2RequestPrivate</a>, <a href="qtaws-s3-listobjectversionsrequestprivate.html">QtAws::S3::ListObjectVersionsRequestPrivate</a>, <a href="qtaws-s3-listpartsrequestprivate.html">QtAws::S3::ListPartsRequestPrivate</a>, <a href="qtaws-s3-putbucketaccelerateconfigurationrequestprivate.html">QtAws::S3::PutBucketAccelerateConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketaclrequestprivate.html">QtAws::S3::PutBucketAclRequestPrivate</a>, <a href="qtaws-s3-putbucketanalyticsconfigurationrequestprivate.html">QtAws::S3::PutBucketAnalyticsConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketcorsrequestprivate.html">QtAws::S3::PutBucketCorsRequestPrivate</a>, <a href="qtaws-s3-putbucketencryptionrequestprivate.html">QtAws::S3::PutBucketEncryptionRequestPrivate</a>, <a href="qtaws-s3-putbucketinventoryconfigurationrequestprivate.html">QtAws::S3::PutBucketInventoryConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketlifecycleconfigurationrequestprivate.html">QtAws::S3::PutBucketLifecycleConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketlifecyclerequestprivate.html">QtAws::S3::PutBucketLifecycleRequestPrivate</a>, <a href="qtaws-s3-putbucketloggingrequestprivate.html">QtAws::S3::PutBucketLoggingRequestPrivate</a>, <a href="qtaws-s3-putbucketmetricsconfigurationrequestprivate.html">QtAws::S3::PutBucketMetricsConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketnotificationconfigurationrequestprivate.html">QtAws::S3::PutBucketNotificationConfigurationRequestPrivate</a>, <a href="qtaws-s3-putbucketnotificationrequestprivate.html">QtAws::S3::PutBucketNotificationRequestPrivate</a>, <a href="qtaws-s3-putbucketpolicyrequestprivate.html">QtAws::S3::PutBucketPolicyRequestPrivate</a>, <a href="qtaws-s3-putbucketreplicationrequestprivate.html">QtAws::S3::PutBucketReplicationRequestPrivate</a>, <a href="qtaws-s3-putbucketrequestpaymentrequestprivate.html">QtAws::S3::PutBucketRequestPaymentRequestPrivate</a>, <a href="qtaws-s3-putbuckettaggingrequestprivate.html">QtAws::S3::PutBucketTaggingRequestPrivate</a>, <a href="qtaws-s3-putbucketversioningrequestprivate.html">QtAws::S3::PutBucketVersioningRequestPrivate</a>, <a href="qtaws-s3-putbucketwebsiterequestprivate.html">QtAws::S3::PutBucketWebsiteRequestPrivate</a>, <a href="qtaws-s3-putobjectaclrequestprivate.html">QtAws::S3::PutObjectAclRequestPrivate</a>, <a href="qtaws-s3-putobjectrequestprivate.html">QtAws::S3::PutObjectRequestPrivate</a>, <a href="qtaws-s3-putobjecttaggingrequestprivate.html">QtAws::S3::PutObjectTaggingRequestPrivate</a>, <a href="qtaws-s3-restoreobjectrequestprivate.html">QtAws::S3::RestoreObjectRequestPrivate</a>, <a href="qtaws-s3-selectobjectcontentrequestprivate.html">QtAws::S3::SelectObjectContentRequestPrivate</a>, <a href="qtaws-s3-uploadpartcopyrequestprivate.html">QtAws::S3::UploadPartCopyRequestPrivate</a>, and <a href="qtaws-s3-uploadpartrequestprivate.html">QtAws::S3::UploadPartRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-s3-s3requestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3requestprivate.html#S3RequestPrivate">S3RequestPrivate</a></b>(const S3Request::Action <i>action</i>, S3Request * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3requestprivate.html#S3RequestPrivate-1">S3RequestPrivate</a></b>(const S3RequestPrivate &amp;<i>other</i>, S3Request * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3requestprivate.html#toString">toString</a></b>(const S3Request::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$S3RequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-s3-s3requestprivate.html">S3RequestPrivate</a> class provides private implementation for <a href="qtaws-s3-s3request.html">S3Request</a>.</p>
+</div>
+<!-- @@@S3RequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$S3RequestPrivate[overload1]$$$S3RequestPrivateconstS3Request::ActionS3Request*const -->
+<h3 class="fn" id="S3RequestPrivate"><a name="S3RequestPrivate"></a>S3RequestPrivate::<span class="name">S3RequestPrivate</span>(const <span class="type"><a href="qtaws-s3-s3request.html#Action-enum">S3Request::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-s3-s3request.html">S3Request</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-s3-s3requestprivate.html">S3RequestPrivate</a> object for S3 <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@S3RequestPrivate -->
+<!-- $$$S3RequestPrivate$$$S3RequestPrivateconstS3RequestPrivate&S3Request*const -->
+<h3 class="fn" id="S3RequestPrivate-1"><a name="S3RequestPrivate-1"></a>S3RequestPrivate::<span class="name">S3RequestPrivate</span>(const <span class="type"><a href="qtaws-s3-s3requestprivate.html#S3RequestPrivate">S3RequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-s3-s3request.html">S3Request</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-s3-s3request.html">S3Request</a> class's copy constructor.</p>
+<!-- @@@S3RequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstS3Request::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> S3RequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-s3-s3request.html#Action-enum">S3Request::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-s3-s3request.html#Action-enum">S3Request::Action</a> enumerator values to their respective string representations, appropriate for use with the S3 service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

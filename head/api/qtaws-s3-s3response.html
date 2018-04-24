@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- s3response.cpp -->
+  <title>S3Response Class | S3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawss3-index.html">S3</a></li>
+<li><a href="qtawss3-module.html">C++ Classes</a></li>
+<li>S3Response</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">S3Response Class</h1>
+<span class="small-subtitle">(<a href="qtaws-s3-s3response.html">QtAws::S3::S3Response</a>)<br/></span>
+<!-- $$$S3Response-brief -->
+<p>The <a href="qtaws-s3-s3response.html">S3Response</a> class provides an interface for S3 responses. <a href="#details">More...</a></p>
+<!-- @@@S3Response -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;S3Response&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-s3-abortmultipartuploadresponse.html">QtAws::S3::AbortMultipartUploadResponse</a>, <a href="qtaws-s3-completemultipartuploadresponse.html">QtAws::S3::CompleteMultipartUploadResponse</a>, <a href="qtaws-s3-copyobjectresponse.html">QtAws::S3::CopyObjectResponse</a>, <a href="qtaws-s3-createbucketresponse.html">QtAws::S3::CreateBucketResponse</a>, <a href="qtaws-s3-createmultipartuploadresponse.html">QtAws::S3::CreateMultipartUploadResponse</a>, <a href="qtaws-s3-deletebucketanalyticsconfigurationresponse.html">QtAws::S3::DeleteBucketAnalyticsConfigurationResponse</a>, <a href="qtaws-s3-deletebucketcorsresponse.html">QtAws::S3::DeleteBucketCorsResponse</a>, <a href="qtaws-s3-deletebucketencryptionresponse.html">QtAws::S3::DeleteBucketEncryptionResponse</a>, <a href="qtaws-s3-deletebucketinventoryconfigurationresponse.html">QtAws::S3::DeleteBucketInventoryConfigurationResponse</a>, <a href="qtaws-s3-deletebucketlifecycleresponse.html">QtAws::S3::DeleteBucketLifecycleResponse</a>, <a href="qtaws-s3-deletebucketmetricsconfigurationresponse.html">QtAws::S3::DeleteBucketMetricsConfigurationResponse</a>, <a href="qtaws-s3-deletebucketpolicyresponse.html">QtAws::S3::DeleteBucketPolicyResponse</a>, <a href="qtaws-s3-deletebucketreplicationresponse.html">QtAws::S3::DeleteBucketReplicationResponse</a>, <a href="qtaws-s3-deletebucketresponse.html">QtAws::S3::DeleteBucketResponse</a>, <a href="qtaws-s3-deletebuckettaggingresponse.html">QtAws::S3::DeleteBucketTaggingResponse</a>, <a href="qtaws-s3-deletebucketwebsiteresponse.html">QtAws::S3::DeleteBucketWebsiteResponse</a>, <a href="qtaws-s3-deleteobjectresponse.html">QtAws::S3::DeleteObjectResponse</a>, <a href="qtaws-s3-deleteobjectsresponse.html">QtAws::S3::DeleteObjectsResponse</a>, <a href="qtaws-s3-deleteobjecttaggingresponse.html">QtAws::S3::DeleteObjectTaggingResponse</a>, <a href="qtaws-s3-getbucketaccelerateconfigurationresponse.html">QtAws::S3::GetBucketAccelerateConfigurationResponse</a>, <a href="qtaws-s3-getbucketaclresponse.html">QtAws::S3::GetBucketAclResponse</a>, <a href="qtaws-s3-getbucketanalyticsconfigurationresponse.html">QtAws::S3::GetBucketAnalyticsConfigurationResponse</a>, <a href="qtaws-s3-getbucketcorsresponse.html">QtAws::S3::GetBucketCorsResponse</a>, <a href="qtaws-s3-getbucketencryptionresponse.html">QtAws::S3::GetBucketEncryptionResponse</a>, <a href="qtaws-s3-getbucketinventoryconfigurationresponse.html">QtAws::S3::GetBucketInventoryConfigurationResponse</a>, <a href="qtaws-s3-getbucketlifecycleconfigurationresponse.html">QtAws::S3::GetBucketLifecycleConfigurationResponse</a>, <a href="qtaws-s3-getbucketlifecycleresponse.html">QtAws::S3::GetBucketLifecycleResponse</a>, <a href="qtaws-s3-getbucketlocationresponse.html">QtAws::S3::GetBucketLocationResponse</a>, <a href="qtaws-s3-getbucketloggingresponse.html">QtAws::S3::GetBucketLoggingResponse</a>, <a href="qtaws-s3-getbucketmetricsconfigurationresponse.html">QtAws::S3::GetBucketMetricsConfigurationResponse</a>, <a href="qtaws-s3-getbucketnotificationconfigurationresponse.html">QtAws::S3::GetBucketNotificationConfigurationResponse</a>, <a href="qtaws-s3-getbucketnotificationresponse.html">QtAws::S3::GetBucketNotificationResponse</a>, <a href="qtaws-s3-getbucketpolicyresponse.html">QtAws::S3::GetBucketPolicyResponse</a>, <a href="qtaws-s3-getbucketreplicationresponse.html">QtAws::S3::GetBucketReplicationResponse</a>, <a href="qtaws-s3-getbucketrequestpaymentresponse.html">QtAws::S3::GetBucketRequestPaymentResponse</a>, <a href="qtaws-s3-getbuckettaggingresponse.html">QtAws::S3::GetBucketTaggingResponse</a>, <a href="qtaws-s3-getbucketversioningresponse.html">QtAws::S3::GetBucketVersioningResponse</a>, <a href="qtaws-s3-getbucketwebsiteresponse.html">QtAws::S3::GetBucketWebsiteResponse</a>, <a href="qtaws-s3-getobjectaclresponse.html">QtAws::S3::GetObjectAclResponse</a>, <a href="qtaws-s3-getobjectresponse.html">QtAws::S3::GetObjectResponse</a>, <a href="qtaws-s3-getobjecttaggingresponse.html">QtAws::S3::GetObjectTaggingResponse</a>, <a href="qtaws-s3-getobjecttorrentresponse.html">QtAws::S3::GetObjectTorrentResponse</a>, <a href="qtaws-s3-headbucketresponse.html">QtAws::S3::HeadBucketResponse</a>, <a href="qtaws-s3-headobjectresponse.html">QtAws::S3::HeadObjectResponse</a>, <a href="qtaws-s3-listbucketanalyticsconfigurationsresponse.html">QtAws::S3::ListBucketAnalyticsConfigurationsResponse</a>, <a href="qtaws-s3-listbucketinventoryconfigurationsresponse.html">QtAws::S3::ListBucketInventoryConfigurationsResponse</a>, <a href="qtaws-s3-listbucketmetricsconfigurationsresponse.html">QtAws::S3::ListBucketMetricsConfigurationsResponse</a>, <a href="qtaws-s3-listbucketsresponse.html">QtAws::S3::ListBucketsResponse</a>, <a href="qtaws-s3-listmultipartuploadsresponse.html">QtAws::S3::ListMultipartUploadsResponse</a>, <a href="qtaws-s3-listobjectsresponse.html">QtAws::S3::ListObjectsResponse</a>, <a href="qtaws-s3-listobjectsv2response.html">QtAws::S3::ListObjectsV2Response</a>, <a href="qtaws-s3-listobjectversionsresponse.html">QtAws::S3::ListObjectVersionsResponse</a>, <a href="qtaws-s3-listpartsresponse.html">QtAws::S3::ListPartsResponse</a>, <a href="qtaws-s3-putbucketaccelerateconfigurationresponse.html">QtAws::S3::PutBucketAccelerateConfigurationResponse</a>, <a href="qtaws-s3-putbucketaclresponse.html">QtAws::S3::PutBucketAclResponse</a>, <a href="qtaws-s3-putbucketanalyticsconfigurationresponse.html">QtAws::S3::PutBucketAnalyticsConfigurationResponse</a>, <a href="qtaws-s3-putbucketcorsresponse.html">QtAws::S3::PutBucketCorsResponse</a>, <a href="qtaws-s3-putbucketencryptionresponse.html">QtAws::S3::PutBucketEncryptionResponse</a>, <a href="qtaws-s3-putbucketinventoryconfigurationresponse.html">QtAws::S3::PutBucketInventoryConfigurationResponse</a>, <a href="qtaws-s3-putbucketlifecycleconfigurationresponse.html">QtAws::S3::PutBucketLifecycleConfigurationResponse</a>, <a href="qtaws-s3-putbucketlifecycleresponse.html">QtAws::S3::PutBucketLifecycleResponse</a>, <a href="qtaws-s3-putbucketloggingresponse.html">QtAws::S3::PutBucketLoggingResponse</a>, <a href="qtaws-s3-putbucketmetricsconfigurationresponse.html">QtAws::S3::PutBucketMetricsConfigurationResponse</a>, <a href="qtaws-s3-putbucketnotificationconfigurationresponse.html">QtAws::S3::PutBucketNotificationConfigurationResponse</a>, <a href="qtaws-s3-putbucketnotificationresponse.html">QtAws::S3::PutBucketNotificationResponse</a>, <a href="qtaws-s3-putbucketpolicyresponse.html">QtAws::S3::PutBucketPolicyResponse</a>, <a href="qtaws-s3-putbucketreplicationresponse.html">QtAws::S3::PutBucketReplicationResponse</a>, <a href="qtaws-s3-putbucketrequestpaymentresponse.html">QtAws::S3::PutBucketRequestPaymentResponse</a>, <a href="qtaws-s3-putbuckettaggingresponse.html">QtAws::S3::PutBucketTaggingResponse</a>, <a href="qtaws-s3-putbucketversioningresponse.html">QtAws::S3::PutBucketVersioningResponse</a>, <a href="qtaws-s3-putbucketwebsiteresponse.html">QtAws::S3::PutBucketWebsiteResponse</a>, <a href="qtaws-s3-putobjectaclresponse.html">QtAws::S3::PutObjectAclResponse</a>, <a href="qtaws-s3-putobjectresponse.html">QtAws::S3::PutObjectResponse</a>, <a href="qtaws-s3-putobjecttaggingresponse.html">QtAws::S3::PutObjectTaggingResponse</a>, <a href="qtaws-s3-restoreobjectresponse.html">QtAws::S3::RestoreObjectResponse</a>, <a href="qtaws-s3-selectobjectcontentresponse.html">QtAws::S3::SelectObjectContentResponse</a>, <a href="qtaws-s3-uploadpartcopyresponse.html">QtAws::S3::UploadPartCopyResponse</a>, and <a href="qtaws-s3-uploadpartresponse.html">QtAws::S3::UploadPartResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-s3-s3response-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3response.html#S3Response">S3Response</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-s3-s3response.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$S3Response-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-s3-s3response.html">S3Response</a> class provides an interface for S3 responses.</p>
+</div>
+<!-- @@@S3Response -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$S3Response[overload1]$$$S3ResponseQObject*const -->
+<h3 class="fn" id="S3Response"><a name="S3Response"></a>S3Response::<span class="name">S3Response</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-s3-s3response.html">S3Response</a> object with parent <i>parent</i>.</p>
+<!-- @@@S3Response -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> S3Response::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

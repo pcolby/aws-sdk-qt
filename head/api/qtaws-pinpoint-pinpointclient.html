@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- pinpointclient.cpp -->
+  <title>PinpointClient Class | Pinpoint</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawspinpoint-index.html">Pinpoint</a></li>
+<li><a href="qtawspinpoint-module.html">C++ Classes</a></li>
+<li>PinpointClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">PinpointClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-pinpoint-pinpointclient.html">QtAws::Pinpoint::PinpointClient</a>)<br/></span>
+<!-- $$$PinpointClient-brief -->
+<p>The <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> class provides access to the Amazon Pinpoint service. <a href="#details">More...</a></p>
+<!-- @@@PinpointClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;PinpointClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-pinpoint-pinpointclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#PinpointClient">PinpointClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#PinpointClient-1">PinpointClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#createApp">createApp</a></b>(const CreateAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCampaignResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#createCampaign">createCampaign</a></b>(const CreateCampaignRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateExportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#createExportJob">createExportJob</a></b>(const CreateExportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#createImportJob">createImportJob</a></b>(const CreateImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSegmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#createSegment">createSegment</a></b>(const CreateSegmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAdmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteAdmChannel">deleteAdmChannel</a></b>(const DeleteAdmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApnsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteApnsChannel">deleteApnsChannel</a></b>(const DeleteApnsChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApnsSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteApnsSandboxChannel">deleteApnsSandboxChannel</a></b>(const DeleteApnsSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApnsVoipChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteApnsVoipChannel">deleteApnsVoipChannel</a></b>(const DeleteApnsVoipChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApnsVoipSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteApnsVoipSandboxChannel">deleteApnsVoipSandboxChannel</a></b>(const DeleteApnsVoipSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteApp">deleteApp</a></b>(const DeleteAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBaiduChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteBaiduChannel">deleteBaiduChannel</a></b>(const DeleteBaiduChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCampaignResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteCampaign">deleteCampaign</a></b>(const DeleteCampaignRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEmailChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteEmailChannel">deleteEmailChannel</a></b>(const DeleteEmailChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteEndpoint">deleteEndpoint</a></b>(const DeleteEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEventStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteEventStream">deleteEventStream</a></b>(const DeleteEventStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGcmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteGcmChannel">deleteGcmChannel</a></b>(const DeleteGcmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSegmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteSegment">deleteSegment</a></b>(const DeleteSegmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSmsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#deleteSmsChannel">deleteSmsChannel</a></b>(const DeleteSmsChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAdmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getAdmChannel">getAdmChannel</a></b>(const GetAdmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApnsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApnsChannel">getApnsChannel</a></b>(const GetApnsChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApnsSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApnsSandboxChannel">getApnsSandboxChannel</a></b>(const GetApnsSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApnsVoipChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApnsVoipChannel">getApnsVoipChannel</a></b>(const GetApnsVoipChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApnsVoipSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApnsVoipSandboxChannel">getApnsVoipSandboxChannel</a></b>(const GetApnsVoipSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAppResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApp">getApp</a></b>(const GetAppRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApplicationSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApplicationSettings">getApplicationSettings</a></b>(const GetApplicationSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAppsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getApps">getApps</a></b>(const GetAppsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBaiduChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getBaiduChannel">getBaiduChannel</a></b>(const GetBaiduChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCampaignResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getCampaign">getCampaign</a></b>(const GetCampaignRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCampaignActivitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getCampaignActivities">getCampaignActivities</a></b>(const GetCampaignActivitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCampaignVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getCampaignVersion">getCampaignVersion</a></b>(const GetCampaignVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCampaignVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getCampaignVersions">getCampaignVersions</a></b>(const GetCampaignVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCampaignsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getCampaigns">getCampaigns</a></b>(const GetCampaignsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEmailChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getEmailChannel">getEmailChannel</a></b>(const GetEmailChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getEndpoint">getEndpoint</a></b>(const GetEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEventStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getEventStream">getEventStream</a></b>(const GetEventStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetExportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getExportJob">getExportJob</a></b>(const GetExportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetExportJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getExportJobs">getExportJobs</a></b>(const GetExportJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGcmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getGcmChannel">getGcmChannel</a></b>(const GetGcmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetImportJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getImportJob">getImportJob</a></b>(const GetImportJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetImportJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getImportJobs">getImportJobs</a></b>(const GetImportJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegment">getSegment</a></b>(const GetSegmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentExportJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegmentExportJobs">getSegmentExportJobs</a></b>(const GetSegmentExportJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentImportJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegmentImportJobs">getSegmentImportJobs</a></b>(const GetSegmentImportJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegmentVersion">getSegmentVersion</a></b>(const GetSegmentVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegmentVersions">getSegmentVersions</a></b>(const GetSegmentVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSegmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSegments">getSegments</a></b>(const GetSegmentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSmsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#getSmsChannel">getSmsChannel</a></b>(const GetSmsChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutEventStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#putEventStream">putEventStream</a></b>(const PutEventStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendMessagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#sendMessages">sendMessages</a></b>(const SendMessagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendUsersMessagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#sendUsersMessages">sendUsersMessages</a></b>(const SendUsersMessagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAdmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateAdmChannel">updateAdmChannel</a></b>(const UpdateAdmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApnsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateApnsChannel">updateApnsChannel</a></b>(const UpdateApnsChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApnsSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateApnsSandboxChannel">updateApnsSandboxChannel</a></b>(const UpdateApnsSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApnsVoipChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateApnsVoipChannel">updateApnsVoipChannel</a></b>(const UpdateApnsVoipChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApnsVoipSandboxChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateApnsVoipSandboxChannel">updateApnsVoipSandboxChannel</a></b>(const UpdateApnsVoipSandboxChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateApplicationSettings">updateApplicationSettings</a></b>(const UpdateApplicationSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBaiduChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateBaiduChannel">updateBaiduChannel</a></b>(const UpdateBaiduChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCampaignResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateCampaign">updateCampaign</a></b>(const UpdateCampaignRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEmailChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateEmailChannel">updateEmailChannel</a></b>(const UpdateEmailChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateEndpoint">updateEndpoint</a></b>(const UpdateEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEndpointsBatchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateEndpointsBatch">updateEndpointsBatch</a></b>(const UpdateEndpointsBatchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGcmChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateGcmChannel">updateGcmChannel</a></b>(const UpdateGcmChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSegmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateSegment">updateSegment</a></b>(const UpdateSegmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSmsChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-pinpoint-pinpointclient.html#updateSmsChannel">updateSmsChannel</a></b>(const UpdateSmsChannelRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$PinpointClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> class provides access to the Amazon Pinpoint service.</p>
+</div>
+<!-- @@@PinpointClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$PinpointClient[overload1]$$$PinpointClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="PinpointClient"><a name="PinpointClient"></a>PinpointClient::<span class="name">PinpointClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@PinpointClient -->
+<!-- $$$PinpointClient$$$PinpointClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="PinpointClient-1"><a name="PinpointClient-1"></a>PinpointClient::<span class="name">PinpointClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-pinpoint-pinpointclient.html#PinpointClient">PinpointClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@PinpointClient -->
+<!-- $$$createApp[overload1]$$$createAppconstCreateAppRequest& -->
+<h3 class="fn" id="createApp"><a name="createApp"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-createappresponse.html">CreateAppResponse</a></span> *PinpointClient::<span class="name">createApp</span>(const <span class="type"><a href="qtaws-pinpoint-createapprequest.html">CreateAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-createappresponse.html">CreateAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createApp -->
+<!-- $$$createCampaign[overload1]$$$createCampaignconstCreateCampaignRequest& -->
+<h3 class="fn" id="createCampaign"><a name="createCampaign"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-createcampaignresponse.html">CreateCampaignResponse</a></span> *PinpointClient::<span class="name">createCampaign</span>(const <span class="type"><a href="qtaws-pinpoint-createcampaignrequest.html">CreateCampaignRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-createcampaignresponse.html">CreateCampaignResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createCampaign -->
+<!-- $$$createExportJob[overload1]$$$createExportJobconstCreateExportJobRequest& -->
+<h3 class="fn" id="createExportJob"><a name="createExportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-createexportjobresponse.html">CreateExportJobResponse</a></span> *PinpointClient::<span class="name">createExportJob</span>(const <span class="type"><a href="qtaws-pinpoint-createexportjobrequest.html">CreateExportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-createexportjobresponse.html">CreateExportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createExportJob -->
+<!-- $$$createImportJob[overload1]$$$createImportJobconstCreateImportJobRequest& -->
+<h3 class="fn" id="createImportJob"><a name="createImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-createimportjobresponse.html">CreateImportJobResponse</a></span> *PinpointClient::<span class="name">createImportJob</span>(const <span class="type"><a href="qtaws-pinpoint-createimportjobrequest.html">CreateImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-createimportjobresponse.html">CreateImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createImportJob -->
+<!-- $$$createSegment[overload1]$$$createSegmentconstCreateSegmentRequest& -->
+<h3 class="fn" id="createSegment"><a name="createSegment"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-createsegmentresponse.html">CreateSegmentResponse</a></span> *PinpointClient::<span class="name">createSegment</span>(const <span class="type"><a href="qtaws-pinpoint-createsegmentrequest.html">CreateSegmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-createsegmentresponse.html">CreateSegmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createSegment -->
+<!-- $$$deleteAdmChannel[overload1]$$$deleteAdmChannelconstDeleteAdmChannelRequest& -->
+<h3 class="fn" id="deleteAdmChannel"><a name="deleteAdmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteadmchannelresponse.html">DeleteAdmChannelResponse</a></span> *PinpointClient::<span class="name">deleteAdmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteadmchannelrequest.html">DeleteAdmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteadmchannelresponse.html">DeleteAdmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteAdmChannel -->
+<!-- $$$deleteApnsChannel[overload1]$$$deleteApnsChannelconstDeleteApnsChannelRequest& -->
+<h3 class="fn" id="deleteApnsChannel"><a name="deleteApnsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteapnschannelresponse.html">DeleteApnsChannelResponse</a></span> *PinpointClient::<span class="name">deleteApnsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteapnschannelrequest.html">DeleteApnsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteapnschannelresponse.html">DeleteApnsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteApnsChannel -->
+<!-- $$$deleteApnsSandboxChannel[overload1]$$$deleteApnsSandboxChannelconstDeleteApnsSandboxChannelRequest& -->
+<h3 class="fn" id="deleteApnsSandboxChannel"><a name="deleteApnsSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteapnssandboxchannelresponse.html">DeleteApnsSandboxChannelResponse</a></span> *PinpointClient::<span class="name">deleteApnsSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteapnssandboxchannelrequest.html">DeleteApnsSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteapnssandboxchannelresponse.html">DeleteApnsSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteApnsSandboxChannel -->
+<!-- $$$deleteApnsVoipChannel[overload1]$$$deleteApnsVoipChannelconstDeleteApnsVoipChannelRequest& -->
+<h3 class="fn" id="deleteApnsVoipChannel"><a name="deleteApnsVoipChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteapnsvoipchannelresponse.html">DeleteApnsVoipChannelResponse</a></span> *PinpointClient::<span class="name">deleteApnsVoipChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteapnsvoipchannelrequest.html">DeleteApnsVoipChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteapnsvoipchannelresponse.html">DeleteApnsVoipChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteApnsVoipChannel -->
+<!-- $$$deleteApnsVoipSandboxChannel[overload1]$$$deleteApnsVoipSandboxChannelconstDeleteApnsVoipSandboxChannelRequest& -->
+<h3 class="fn" id="deleteApnsVoipSandboxChannel"><a name="deleteApnsVoipSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteapnsvoipsandboxchannelresponse.html">DeleteApnsVoipSandboxChannelResponse</a></span> *PinpointClient::<span class="name">deleteApnsVoipSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteapnsvoipsandboxchannelrequest.html">DeleteApnsVoipSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteapnsvoipsandboxchannelresponse.html">DeleteApnsVoipSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteApnsVoipSandboxChannel -->
+<!-- $$$deleteApp[overload1]$$$deleteAppconstDeleteAppRequest& -->
+<h3 class="fn" id="deleteApp"><a name="deleteApp"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteappresponse.html">DeleteAppResponse</a></span> *PinpointClient::<span class="name">deleteApp</span>(const <span class="type"><a href="qtaws-pinpoint-deleteapprequest.html">DeleteAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteappresponse.html">DeleteAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteApp -->
+<!-- $$$deleteBaiduChannel[overload1]$$$deleteBaiduChannelconstDeleteBaiduChannelRequest& -->
+<h3 class="fn" id="deleteBaiduChannel"><a name="deleteBaiduChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deletebaiduchannelresponse.html">DeleteBaiduChannelResponse</a></span> *PinpointClient::<span class="name">deleteBaiduChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deletebaiduchannelrequest.html">DeleteBaiduChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deletebaiduchannelresponse.html">DeleteBaiduChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteBaiduChannel -->
+<!-- $$$deleteCampaign[overload1]$$$deleteCampaignconstDeleteCampaignRequest& -->
+<h3 class="fn" id="deleteCampaign"><a name="deleteCampaign"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deletecampaignresponse.html">DeleteCampaignResponse</a></span> *PinpointClient::<span class="name">deleteCampaign</span>(const <span class="type"><a href="qtaws-pinpoint-deletecampaignrequest.html">DeleteCampaignRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deletecampaignresponse.html">DeleteCampaignResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteCampaign -->
+<!-- $$$deleteEmailChannel[overload1]$$$deleteEmailChannelconstDeleteEmailChannelRequest& -->
+<h3 class="fn" id="deleteEmailChannel"><a name="deleteEmailChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteemailchannelresponse.html">DeleteEmailChannelResponse</a></span> *PinpointClient::<span class="name">deleteEmailChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deleteemailchannelrequest.html">DeleteEmailChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteemailchannelresponse.html">DeleteEmailChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteEmailChannel -->
+<!-- $$$deleteEndpoint[overload1]$$$deleteEndpointconstDeleteEndpointRequest& -->
+<h3 class="fn" id="deleteEndpoint"><a name="deleteEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteendpointresponse.html">DeleteEndpointResponse</a></span> *PinpointClient::<span class="name">deleteEndpoint</span>(const <span class="type"><a href="qtaws-pinpoint-deleteendpointrequest.html">DeleteEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteendpointresponse.html">DeleteEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteEndpoint -->
+<!-- $$$deleteEventStream[overload1]$$$deleteEventStreamconstDeleteEventStreamRequest& -->
+<h3 class="fn" id="deleteEventStream"><a name="deleteEventStream"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deleteeventstreamresponse.html">DeleteEventStreamResponse</a></span> *PinpointClient::<span class="name">deleteEventStream</span>(const <span class="type"><a href="qtaws-pinpoint-deleteeventstreamrequest.html">DeleteEventStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deleteeventstreamresponse.html">DeleteEventStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteEventStream -->
+<!-- $$$deleteGcmChannel[overload1]$$$deleteGcmChannelconstDeleteGcmChannelRequest& -->
+<h3 class="fn" id="deleteGcmChannel"><a name="deleteGcmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deletegcmchannelresponse.html">DeleteGcmChannelResponse</a></span> *PinpointClient::<span class="name">deleteGcmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deletegcmchannelrequest.html">DeleteGcmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deletegcmchannelresponse.html">DeleteGcmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteGcmChannel -->
+<!-- $$$deleteSegment[overload1]$$$deleteSegmentconstDeleteSegmentRequest& -->
+<h3 class="fn" id="deleteSegment"><a name="deleteSegment"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deletesegmentresponse.html">DeleteSegmentResponse</a></span> *PinpointClient::<span class="name">deleteSegment</span>(const <span class="type"><a href="qtaws-pinpoint-deletesegmentrequest.html">DeleteSegmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deletesegmentresponse.html">DeleteSegmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteSegment -->
+<!-- $$$deleteSmsChannel[overload1]$$$deleteSmsChannelconstDeleteSmsChannelRequest& -->
+<h3 class="fn" id="deleteSmsChannel"><a name="deleteSmsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-deletesmschannelresponse.html">DeleteSmsChannelResponse</a></span> *PinpointClient::<span class="name">deleteSmsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-deletesmschannelrequest.html">DeleteSmsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-deletesmschannelresponse.html">DeleteSmsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteSmsChannel -->
+<!-- $$$getAdmChannel[overload1]$$$getAdmChannelconstGetAdmChannelRequest& -->
+<h3 class="fn" id="getAdmChannel"><a name="getAdmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getadmchannelresponse.html">GetAdmChannelResponse</a></span> *PinpointClient::<span class="name">getAdmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getadmchannelrequest.html">GetAdmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getadmchannelresponse.html">GetAdmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getAdmChannel -->
+<!-- $$$getApnsChannel[overload1]$$$getApnsChannelconstGetApnsChannelRequest& -->
+<h3 class="fn" id="getApnsChannel"><a name="getApnsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getapnschannelresponse.html">GetApnsChannelResponse</a></span> *PinpointClient::<span class="name">getApnsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getapnschannelrequest.html">GetApnsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getapnschannelresponse.html">GetApnsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApnsChannel -->
+<!-- $$$getApnsSandboxChannel[overload1]$$$getApnsSandboxChannelconstGetApnsSandboxChannelRequest& -->
+<h3 class="fn" id="getApnsSandboxChannel"><a name="getApnsSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getapnssandboxchannelresponse.html">GetApnsSandboxChannelResponse</a></span> *PinpointClient::<span class="name">getApnsSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getapnssandboxchannelrequest.html">GetApnsSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getapnssandboxchannelresponse.html">GetApnsSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApnsSandboxChannel -->
+<!-- $$$getApnsVoipChannel[overload1]$$$getApnsVoipChannelconstGetApnsVoipChannelRequest& -->
+<h3 class="fn" id="getApnsVoipChannel"><a name="getApnsVoipChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getapnsvoipchannelresponse.html">GetApnsVoipChannelResponse</a></span> *PinpointClient::<span class="name">getApnsVoipChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getapnsvoipchannelrequest.html">GetApnsVoipChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getapnsvoipchannelresponse.html">GetApnsVoipChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApnsVoipChannel -->
+<!-- $$$getApnsVoipSandboxChannel[overload1]$$$getApnsVoipSandboxChannelconstGetApnsVoipSandboxChannelRequest& -->
+<h3 class="fn" id="getApnsVoipSandboxChannel"><a name="getApnsVoipSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getapnsvoipsandboxchannelresponse.html">GetApnsVoipSandboxChannelResponse</a></span> *PinpointClient::<span class="name">getApnsVoipSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getapnsvoipsandboxchannelrequest.html">GetApnsVoipSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getapnsvoipsandboxchannelresponse.html">GetApnsVoipSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApnsVoipSandboxChannel -->
+<!-- $$$getApp[overload1]$$$getAppconstGetAppRequest& -->
+<h3 class="fn" id="getApp"><a name="getApp"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getappresponse.html">GetAppResponse</a></span> *PinpointClient::<span class="name">getApp</span>(const <span class="type"><a href="qtaws-pinpoint-getapprequest.html">GetAppRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getappresponse.html">GetAppResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApp -->
+<!-- $$$getApplicationSettings[overload1]$$$getApplicationSettingsconstGetApplicationSettingsRequest& -->
+<h3 class="fn" id="getApplicationSettings"><a name="getApplicationSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getapplicationsettingsresponse.html">GetApplicationSettingsResponse</a></span> *PinpointClient::<span class="name">getApplicationSettings</span>(const <span class="type"><a href="qtaws-pinpoint-getapplicationsettingsrequest.html">GetApplicationSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getapplicationsettingsresponse.html">GetApplicationSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApplicationSettings -->
+<!-- $$$getApps[overload1]$$$getAppsconstGetAppsRequest& -->
+<h3 class="fn" id="getApps"><a name="getApps"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getappsresponse.html">GetAppsResponse</a></span> *PinpointClient::<span class="name">getApps</span>(const <span class="type"><a href="qtaws-pinpoint-getappsrequest.html">GetAppsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getappsresponse.html">GetAppsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getApps -->
+<!-- $$$getBaiduChannel[overload1]$$$getBaiduChannelconstGetBaiduChannelRequest& -->
+<h3 class="fn" id="getBaiduChannel"><a name="getBaiduChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getbaiduchannelresponse.html">GetBaiduChannelResponse</a></span> *PinpointClient::<span class="name">getBaiduChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getbaiduchannelrequest.html">GetBaiduChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getbaiduchannelresponse.html">GetBaiduChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getBaiduChannel -->
+<!-- $$$getCampaign[overload1]$$$getCampaignconstGetCampaignRequest& -->
+<h3 class="fn" id="getCampaign"><a name="getCampaign"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getcampaignresponse.html">GetCampaignResponse</a></span> *PinpointClient::<span class="name">getCampaign</span>(const <span class="type"><a href="qtaws-pinpoint-getcampaignrequest.html">GetCampaignRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getcampaignresponse.html">GetCampaignResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getCampaign -->
+<!-- $$$getCampaignActivities[overload1]$$$getCampaignActivitiesconstGetCampaignActivitiesRequest& -->
+<h3 class="fn" id="getCampaignActivities"><a name="getCampaignActivities"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getcampaignactivitiesresponse.html">GetCampaignActivitiesResponse</a></span> *PinpointClient::<span class="name">getCampaignActivities</span>(const <span class="type"><a href="qtaws-pinpoint-getcampaignactivitiesrequest.html">GetCampaignActivitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getcampaignactivitiesresponse.html">GetCampaignActivitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getCampaignActivities -->
+<!-- $$$getCampaignVersion[overload1]$$$getCampaignVersionconstGetCampaignVersionRequest& -->
+<h3 class="fn" id="getCampaignVersion"><a name="getCampaignVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getcampaignversionresponse.html">GetCampaignVersionResponse</a></span> *PinpointClient::<span class="name">getCampaignVersion</span>(const <span class="type"><a href="qtaws-pinpoint-getcampaignversionrequest.html">GetCampaignVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getcampaignversionresponse.html">GetCampaignVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getCampaignVersion -->
+<!-- $$$getCampaignVersions[overload1]$$$getCampaignVersionsconstGetCampaignVersionsRequest& -->
+<h3 class="fn" id="getCampaignVersions"><a name="getCampaignVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getcampaignversionsresponse.html">GetCampaignVersionsResponse</a></span> *PinpointClient::<span class="name">getCampaignVersions</span>(const <span class="type"><a href="qtaws-pinpoint-getcampaignversionsrequest.html">GetCampaignVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getcampaignversionsresponse.html">GetCampaignVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getCampaignVersions -->
+<!-- $$$getCampaigns[overload1]$$$getCampaignsconstGetCampaignsRequest& -->
+<h3 class="fn" id="getCampaigns"><a name="getCampaigns"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getcampaignsresponse.html">GetCampaignsResponse</a></span> *PinpointClient::<span class="name">getCampaigns</span>(const <span class="type"><a href="qtaws-pinpoint-getcampaignsrequest.html">GetCampaignsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getcampaignsresponse.html">GetCampaignsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getCampaigns -->
+<!-- $$$getEmailChannel[overload1]$$$getEmailChannelconstGetEmailChannelRequest& -->
+<h3 class="fn" id="getEmailChannel"><a name="getEmailChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getemailchannelresponse.html">GetEmailChannelResponse</a></span> *PinpointClient::<span class="name">getEmailChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getemailchannelrequest.html">GetEmailChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getemailchannelresponse.html">GetEmailChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getEmailChannel -->
+<!-- $$$getEndpoint[overload1]$$$getEndpointconstGetEndpointRequest& -->
+<h3 class="fn" id="getEndpoint"><a name="getEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getendpointresponse.html">GetEndpointResponse</a></span> *PinpointClient::<span class="name">getEndpoint</span>(const <span class="type"><a href="qtaws-pinpoint-getendpointrequest.html">GetEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getendpointresponse.html">GetEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getEndpoint -->
+<!-- $$$getEventStream[overload1]$$$getEventStreamconstGetEventStreamRequest& -->
+<h3 class="fn" id="getEventStream"><a name="getEventStream"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-geteventstreamresponse.html">GetEventStreamResponse</a></span> *PinpointClient::<span class="name">getEventStream</span>(const <span class="type"><a href="qtaws-pinpoint-geteventstreamrequest.html">GetEventStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-geteventstreamresponse.html">GetEventStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getEventStream -->
+<!-- $$$getExportJob[overload1]$$$getExportJobconstGetExportJobRequest& -->
+<h3 class="fn" id="getExportJob"><a name="getExportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getexportjobresponse.html">GetExportJobResponse</a></span> *PinpointClient::<span class="name">getExportJob</span>(const <span class="type"><a href="qtaws-pinpoint-getexportjobrequest.html">GetExportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getexportjobresponse.html">GetExportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getExportJob -->
+<!-- $$$getExportJobs[overload1]$$$getExportJobsconstGetExportJobsRequest& -->
+<h3 class="fn" id="getExportJobs"><a name="getExportJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getexportjobsresponse.html">GetExportJobsResponse</a></span> *PinpointClient::<span class="name">getExportJobs</span>(const <span class="type"><a href="qtaws-pinpoint-getexportjobsrequest.html">GetExportJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getexportjobsresponse.html">GetExportJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getExportJobs -->
+<!-- $$$getGcmChannel[overload1]$$$getGcmChannelconstGetGcmChannelRequest& -->
+<h3 class="fn" id="getGcmChannel"><a name="getGcmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getgcmchannelresponse.html">GetGcmChannelResponse</a></span> *PinpointClient::<span class="name">getGcmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getgcmchannelrequest.html">GetGcmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getgcmchannelresponse.html">GetGcmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getGcmChannel -->
+<!-- $$$getImportJob[overload1]$$$getImportJobconstGetImportJobRequest& -->
+<h3 class="fn" id="getImportJob"><a name="getImportJob"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getimportjobresponse.html">GetImportJobResponse</a></span> *PinpointClient::<span class="name">getImportJob</span>(const <span class="type"><a href="qtaws-pinpoint-getimportjobrequest.html">GetImportJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getimportjobresponse.html">GetImportJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getImportJob -->
+<!-- $$$getImportJobs[overload1]$$$getImportJobsconstGetImportJobsRequest& -->
+<h3 class="fn" id="getImportJobs"><a name="getImportJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getimportjobsresponse.html">GetImportJobsResponse</a></span> *PinpointClient::<span class="name">getImportJobs</span>(const <span class="type"><a href="qtaws-pinpoint-getimportjobsrequest.html">GetImportJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getimportjobsresponse.html">GetImportJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getImportJobs -->
+<!-- $$$getSegment[overload1]$$$getSegmentconstGetSegmentRequest& -->
+<h3 class="fn" id="getSegment"><a name="getSegment"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentresponse.html">GetSegmentResponse</a></span> *PinpointClient::<span class="name">getSegment</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentrequest.html">GetSegmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentresponse.html">GetSegmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegment -->
+<!-- $$$getSegmentExportJobs[overload1]$$$getSegmentExportJobsconstGetSegmentExportJobsRequest& -->
+<h3 class="fn" id="getSegmentExportJobs"><a name="getSegmentExportJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentexportjobsresponse.html">GetSegmentExportJobsResponse</a></span> *PinpointClient::<span class="name">getSegmentExportJobs</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentexportjobsrequest.html">GetSegmentExportJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentexportjobsresponse.html">GetSegmentExportJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegmentExportJobs -->
+<!-- $$$getSegmentImportJobs[overload1]$$$getSegmentImportJobsconstGetSegmentImportJobsRequest& -->
+<h3 class="fn" id="getSegmentImportJobs"><a name="getSegmentImportJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentimportjobsresponse.html">GetSegmentImportJobsResponse</a></span> *PinpointClient::<span class="name">getSegmentImportJobs</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentimportjobsrequest.html">GetSegmentImportJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentimportjobsresponse.html">GetSegmentImportJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegmentImportJobs -->
+<!-- $$$getSegmentVersion[overload1]$$$getSegmentVersionconstGetSegmentVersionRequest& -->
+<h3 class="fn" id="getSegmentVersion"><a name="getSegmentVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentversionresponse.html">GetSegmentVersionResponse</a></span> *PinpointClient::<span class="name">getSegmentVersion</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentversionrequest.html">GetSegmentVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentversionresponse.html">GetSegmentVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegmentVersion -->
+<!-- $$$getSegmentVersions[overload1]$$$getSegmentVersionsconstGetSegmentVersionsRequest& -->
+<h3 class="fn" id="getSegmentVersions"><a name="getSegmentVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentversionsresponse.html">GetSegmentVersionsResponse</a></span> *PinpointClient::<span class="name">getSegmentVersions</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentversionsrequest.html">GetSegmentVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentversionsresponse.html">GetSegmentVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegmentVersions -->
+<!-- $$$getSegments[overload1]$$$getSegmentsconstGetSegmentsRequest& -->
+<h3 class="fn" id="getSegments"><a name="getSegments"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsegmentsresponse.html">GetSegmentsResponse</a></span> *PinpointClient::<span class="name">getSegments</span>(const <span class="type"><a href="qtaws-pinpoint-getsegmentsrequest.html">GetSegmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsegmentsresponse.html">GetSegmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSegments -->
+<!-- $$$getSmsChannel[overload1]$$$getSmsChannelconstGetSmsChannelRequest& -->
+<h3 class="fn" id="getSmsChannel"><a name="getSmsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-getsmschannelresponse.html">GetSmsChannelResponse</a></span> *PinpointClient::<span class="name">getSmsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-getsmschannelrequest.html">GetSmsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-getsmschannelresponse.html">GetSmsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSmsChannel -->
+<!-- $$$putEventStream[overload1]$$$putEventStreamconstPutEventStreamRequest& -->
+<h3 class="fn" id="putEventStream"><a name="putEventStream"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-puteventstreamresponse.html">PutEventStreamResponse</a></span> *PinpointClient::<span class="name">putEventStream</span>(const <span class="type"><a href="qtaws-pinpoint-puteventstreamrequest.html">PutEventStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-puteventstreamresponse.html">PutEventStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@putEventStream -->
+<!-- $$$sendMessages[overload1]$$$sendMessagesconstSendMessagesRequest& -->
+<h3 class="fn" id="sendMessages"><a name="sendMessages"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-sendmessagesresponse.html">SendMessagesResponse</a></span> *PinpointClient::<span class="name">sendMessages</span>(const <span class="type"><a href="qtaws-pinpoint-sendmessagesrequest.html">SendMessagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-sendmessagesresponse.html">SendMessagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@sendMessages -->
+<!-- $$$sendUsersMessages[overload1]$$$sendUsersMessagesconstSendUsersMessagesRequest& -->
+<h3 class="fn" id="sendUsersMessages"><a name="sendUsersMessages"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-sendusersmessagesresponse.html">SendUsersMessagesResponse</a></span> *PinpointClient::<span class="name">sendUsersMessages</span>(const <span class="type"><a href="qtaws-pinpoint-sendusersmessagesrequest.html">SendUsersMessagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-sendusersmessagesresponse.html">SendUsersMessagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@sendUsersMessages -->
+<!-- $$$updateAdmChannel[overload1]$$$updateAdmChannelconstUpdateAdmChannelRequest& -->
+<h3 class="fn" id="updateAdmChannel"><a name="updateAdmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateadmchannelresponse.html">UpdateAdmChannelResponse</a></span> *PinpointClient::<span class="name">updateAdmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateadmchannelrequest.html">UpdateAdmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateadmchannelresponse.html">UpdateAdmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateAdmChannel -->
+<!-- $$$updateApnsChannel[overload1]$$$updateApnsChannelconstUpdateApnsChannelRequest& -->
+<h3 class="fn" id="updateApnsChannel"><a name="updateApnsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateapnschannelresponse.html">UpdateApnsChannelResponse</a></span> *PinpointClient::<span class="name">updateApnsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateapnschannelrequest.html">UpdateApnsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateapnschannelresponse.html">UpdateApnsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateApnsChannel -->
+<!-- $$$updateApnsSandboxChannel[overload1]$$$updateApnsSandboxChannelconstUpdateApnsSandboxChannelRequest& -->
+<h3 class="fn" id="updateApnsSandboxChannel"><a name="updateApnsSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateapnssandboxchannelresponse.html">UpdateApnsSandboxChannelResponse</a></span> *PinpointClient::<span class="name">updateApnsSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateapnssandboxchannelrequest.html">UpdateApnsSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateapnssandboxchannelresponse.html">UpdateApnsSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateApnsSandboxChannel -->
+<!-- $$$updateApnsVoipChannel[overload1]$$$updateApnsVoipChannelconstUpdateApnsVoipChannelRequest& -->
+<h3 class="fn" id="updateApnsVoipChannel"><a name="updateApnsVoipChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateapnsvoipchannelresponse.html">UpdateApnsVoipChannelResponse</a></span> *PinpointClient::<span class="name">updateApnsVoipChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateapnsvoipchannelrequest.html">UpdateApnsVoipChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateapnsvoipchannelresponse.html">UpdateApnsVoipChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateApnsVoipChannel -->
+<!-- $$$updateApnsVoipSandboxChannel[overload1]$$$updateApnsVoipSandboxChannelconstUpdateApnsVoipSandboxChannelRequest& -->
+<h3 class="fn" id="updateApnsVoipSandboxChannel"><a name="updateApnsVoipSandboxChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateapnsvoipsandboxchannelresponse.html">UpdateApnsVoipSandboxChannelResponse</a></span> *PinpointClient::<span class="name">updateApnsVoipSandboxChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateapnsvoipsandboxchannelrequest.html">UpdateApnsVoipSandboxChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateapnsvoipsandboxchannelresponse.html">UpdateApnsVoipSandboxChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateApnsVoipSandboxChannel -->
+<!-- $$$updateApplicationSettings[overload1]$$$updateApplicationSettingsconstUpdateApplicationSettingsRequest& -->
+<h3 class="fn" id="updateApplicationSettings"><a name="updateApplicationSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateapplicationsettingsresponse.html">UpdateApplicationSettingsResponse</a></span> *PinpointClient::<span class="name">updateApplicationSettings</span>(const <span class="type"><a href="qtaws-pinpoint-updateapplicationsettingsrequest.html">UpdateApplicationSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateapplicationsettingsresponse.html">UpdateApplicationSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateApplicationSettings -->
+<!-- $$$updateBaiduChannel[overload1]$$$updateBaiduChannelconstUpdateBaiduChannelRequest& -->
+<h3 class="fn" id="updateBaiduChannel"><a name="updateBaiduChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updatebaiduchannelresponse.html">UpdateBaiduChannelResponse</a></span> *PinpointClient::<span class="name">updateBaiduChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updatebaiduchannelrequest.html">UpdateBaiduChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updatebaiduchannelresponse.html">UpdateBaiduChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateBaiduChannel -->
+<!-- $$$updateCampaign[overload1]$$$updateCampaignconstUpdateCampaignRequest& -->
+<h3 class="fn" id="updateCampaign"><a name="updateCampaign"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updatecampaignresponse.html">UpdateCampaignResponse</a></span> *PinpointClient::<span class="name">updateCampaign</span>(const <span class="type"><a href="qtaws-pinpoint-updatecampaignrequest.html">UpdateCampaignRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updatecampaignresponse.html">UpdateCampaignResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateCampaign -->
+<!-- $$$updateEmailChannel[overload1]$$$updateEmailChannelconstUpdateEmailChannelRequest& -->
+<h3 class="fn" id="updateEmailChannel"><a name="updateEmailChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateemailchannelresponse.html">UpdateEmailChannelResponse</a></span> *PinpointClient::<span class="name">updateEmailChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updateemailchannelrequest.html">UpdateEmailChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateemailchannelresponse.html">UpdateEmailChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateEmailChannel -->
+<!-- $$$updateEndpoint[overload1]$$$updateEndpointconstUpdateEndpointRequest& -->
+<h3 class="fn" id="updateEndpoint"><a name="updateEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateendpointresponse.html">UpdateEndpointResponse</a></span> *PinpointClient::<span class="name">updateEndpoint</span>(const <span class="type"><a href="qtaws-pinpoint-updateendpointrequest.html">UpdateEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateendpointresponse.html">UpdateEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateEndpoint -->
+<!-- $$$updateEndpointsBatch[overload1]$$$updateEndpointsBatchconstUpdateEndpointsBatchRequest& -->
+<h3 class="fn" id="updateEndpointsBatch"><a name="updateEndpointsBatch"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updateendpointsbatchresponse.html">UpdateEndpointsBatchResponse</a></span> *PinpointClient::<span class="name">updateEndpointsBatch</span>(const <span class="type"><a href="qtaws-pinpoint-updateendpointsbatchrequest.html">UpdateEndpointsBatchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updateendpointsbatchresponse.html">UpdateEndpointsBatchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateEndpointsBatch -->
+<!-- $$$updateGcmChannel[overload1]$$$updateGcmChannelconstUpdateGcmChannelRequest& -->
+<h3 class="fn" id="updateGcmChannel"><a name="updateGcmChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updategcmchannelresponse.html">UpdateGcmChannelResponse</a></span> *PinpointClient::<span class="name">updateGcmChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updategcmchannelrequest.html">UpdateGcmChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updategcmchannelresponse.html">UpdateGcmChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateGcmChannel -->
+<!-- $$$updateSegment[overload1]$$$updateSegmentconstUpdateSegmentRequest& -->
+<h3 class="fn" id="updateSegment"><a name="updateSegment"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updatesegmentresponse.html">UpdateSegmentResponse</a></span> *PinpointClient::<span class="name">updateSegment</span>(const <span class="type"><a href="qtaws-pinpoint-updatesegmentrequest.html">UpdateSegmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updatesegmentresponse.html">UpdateSegmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateSegment -->
+<!-- $$$updateSmsChannel[overload1]$$$updateSmsChannelconstUpdateSmsChannelRequest& -->
+<h3 class="fn" id="updateSmsChannel"><a name="updateSmsChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-pinpoint-updatesmschannelresponse.html">UpdateSmsChannelResponse</a></span> *PinpointClient::<span class="name">updateSmsChannel</span>(const <span class="type"><a href="qtaws-pinpoint-updatesmschannelrequest.html">UpdateSmsChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-pinpoint-pinpointclient.html">PinpointClient</a> service, and returns a pointer to an <a href="qtaws-pinpoint-updatesmschannelresponse.html">UpdateSmsChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateSmsChannel -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

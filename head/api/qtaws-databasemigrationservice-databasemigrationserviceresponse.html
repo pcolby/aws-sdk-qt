@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- databasemigrationserviceresponse.cpp -->
+  <title>DatabaseMigrationServiceResponse Class | DatabaseMigrationService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdatabasemigrationservice-index.html">DatabaseMigrationService</a></li>
+<li><a href="qtawsdatabasemigrationservice-module.html">C++ Classes</a></li>
+<li>DatabaseMigrationServiceResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DatabaseMigrationServiceResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html">QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse</a>)<br/></span>
+<!-- $$$DatabaseMigrationServiceResponse-brief -->
+<p>The <a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html">DatabaseMigrationServiceResponse</a> class provides an interface for <a href="qtaws-databasemigrationservice.html">DatabaseMigrationService</a> responses. <a href="#details">More...</a></p>
+<!-- @@@DatabaseMigrationServiceResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DatabaseMigrationServiceResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-databasemigrationservice-addtagstoresourceresponse.html">QtAws::DatabaseMigrationService::AddTagsToResourceResponse</a>, <a href="qtaws-databasemigrationservice-createendpointresponse.html">QtAws::DatabaseMigrationService::CreateEndpointResponse</a>, <a href="qtaws-databasemigrationservice-createeventsubscriptionresponse.html">QtAws::DatabaseMigrationService::CreateEventSubscriptionResponse</a>, <a href="qtaws-databasemigrationservice-createreplicationinstanceresponse.html">QtAws::DatabaseMigrationService::CreateReplicationInstanceResponse</a>, <a href="qtaws-databasemigrationservice-createreplicationsubnetgroupresponse.html">QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupResponse</a>, <a href="qtaws-databasemigrationservice-createreplicationtaskresponse.html">QtAws::DatabaseMigrationService::CreateReplicationTaskResponse</a>, <a href="qtaws-databasemigrationservice-deletecertificateresponse.html">QtAws::DatabaseMigrationService::DeleteCertificateResponse</a>, <a href="qtaws-databasemigrationservice-deleteendpointresponse.html">QtAws::DatabaseMigrationService::DeleteEndpointResponse</a>, <a href="qtaws-databasemigrationservice-deleteeventsubscriptionresponse.html">QtAws::DatabaseMigrationService::DeleteEventSubscriptionResponse</a>, <a href="qtaws-databasemigrationservice-deletereplicationinstanceresponse.html">QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponse</a>, <a href="qtaws-databasemigrationservice-deletereplicationsubnetgroupresponse.html">QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupResponse</a>, <a href="qtaws-databasemigrationservice-deletereplicationtaskresponse.html">QtAws::DatabaseMigrationService::DeleteReplicationTaskResponse</a>, <a href="qtaws-databasemigrationservice-describeaccountattributesresponse.html">QtAws::DatabaseMigrationService::DescribeAccountAttributesResponse</a>, <a href="qtaws-databasemigrationservice-describecertificatesresponse.html">QtAws::DatabaseMigrationService::DescribeCertificatesResponse</a>, <a href="qtaws-databasemigrationservice-describeconnectionsresponse.html">QtAws::DatabaseMigrationService::DescribeConnectionsResponse</a>, <a href="qtaws-databasemigrationservice-describeendpointsresponse.html">QtAws::DatabaseMigrationService::DescribeEndpointsResponse</a>, <a href="qtaws-databasemigrationservice-describeendpointtypesresponse.html">QtAws::DatabaseMigrationService::DescribeEndpointTypesResponse</a>, <a href="qtaws-databasemigrationservice-describeeventcategoriesresponse.html">QtAws::DatabaseMigrationService::DescribeEventCategoriesResponse</a>, <a href="qtaws-databasemigrationservice-describeeventsresponse.html">QtAws::DatabaseMigrationService::DescribeEventsResponse</a>, <a href="qtaws-databasemigrationservice-describeeventsubscriptionsresponse.html">QtAws::DatabaseMigrationService::DescribeEventSubscriptionsResponse</a>, <a href="qtaws-databasemigrationservice-describeorderablereplicationinstancesresponse.html">QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesResponse</a>, <a href="qtaws-databasemigrationservice-describerefreshschemasstatusresponse.html">QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusResponse</a>, <a href="qtaws-databasemigrationservice-describereplicationinstancesresponse.html">QtAws::DatabaseMigrationService::DescribeReplicationInstancesResponse</a>, <a href="qtaws-databasemigrationservice-describereplicationinstancetasklogsresponse.html">QtAws::DatabaseMigrationService::DescribeReplicationInstanceTaskLogsResponse</a>, <a href="qtaws-databasemigrationservice-describereplicationsubnetgroupsresponse.html">QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponse</a>, <a href="qtaws-databasemigrationservice-describereplicationtaskassessmentresultsresponse.html">QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsResponse</a>, <a href="qtaws-databasemigrationservice-describereplicationtasksresponse.html">QtAws::DatabaseMigrationService::DescribeReplicationTasksResponse</a>, <a href="qtaws-databasemigrationservice-describeschemasresponse.html">QtAws::DatabaseMigrationService::DescribeSchemasResponse</a>, <a href="qtaws-databasemigrationservice-describetablestatisticsresponse.html">QtAws::DatabaseMigrationService::DescribeTableStatisticsResponse</a>, <a href="qtaws-databasemigrationservice-importcertificateresponse.html">QtAws::DatabaseMigrationService::ImportCertificateResponse</a>, <a href="qtaws-databasemigrationservice-listtagsforresourceresponse.html">QtAws::DatabaseMigrationService::ListTagsForResourceResponse</a>, <a href="qtaws-databasemigrationservice-modifyendpointresponse.html">QtAws::DatabaseMigrationService::ModifyEndpointResponse</a>, <a href="qtaws-databasemigrationservice-modifyeventsubscriptionresponse.html">QtAws::DatabaseMigrationService::ModifyEventSubscriptionResponse</a>, <a href="qtaws-databasemigrationservice-modifyreplicationinstanceresponse.html">QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponse</a>, <a href="qtaws-databasemigrationservice-modifyreplicationsubnetgroupresponse.html">QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupResponse</a>, <a href="qtaws-databasemigrationservice-modifyreplicationtaskresponse.html">QtAws::DatabaseMigrationService::ModifyReplicationTaskResponse</a>, <a href="qtaws-databasemigrationservice-rebootreplicationinstanceresponse.html">QtAws::DatabaseMigrationService::RebootReplicationInstanceResponse</a>, <a href="qtaws-databasemigrationservice-refreshschemasresponse.html">QtAws::DatabaseMigrationService::RefreshSchemasResponse</a>, <a href="qtaws-databasemigrationservice-reloadtablesresponse.html">QtAws::DatabaseMigrationService::ReloadTablesResponse</a>, <a href="qtaws-databasemigrationservice-removetagsfromresourceresponse.html">QtAws::DatabaseMigrationService::RemoveTagsFromResourceResponse</a>, <a href="qtaws-databasemigrationservice-startreplicationtaskassessmentresponse.html">QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentResponse</a>, <a href="qtaws-databasemigrationservice-startreplicationtaskresponse.html">QtAws::DatabaseMigrationService::StartReplicationTaskResponse</a>, <a href="qtaws-databasemigrationservice-stopreplicationtaskresponse.html">QtAws::DatabaseMigrationService::StopReplicationTaskResponse</a>, and <a href="qtaws-databasemigrationservice-testconnectionresponse.html">QtAws::DatabaseMigrationService::TestConnectionResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-databasemigrationservice-databasemigrationserviceresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html#DatabaseMigrationServiceResponse">DatabaseMigrationServiceResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DatabaseMigrationServiceResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html">DatabaseMigrationServiceResponse</a> class provides an interface for <a href="qtaws-databasemigrationservice.html">DatabaseMigrationService</a> responses.</p>
+</div>
+<!-- @@@DatabaseMigrationServiceResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DatabaseMigrationServiceResponse[overload1]$$$DatabaseMigrationServiceResponseQObject*const -->
+<h3 class="fn" id="DatabaseMigrationServiceResponse"><a name="DatabaseMigrationServiceResponse"></a>DatabaseMigrationServiceResponse::<span class="name">DatabaseMigrationServiceResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html">DatabaseMigrationServiceResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@DatabaseMigrationServiceResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> DatabaseMigrationServiceResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

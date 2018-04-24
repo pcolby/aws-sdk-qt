@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mturkclient.cpp -->
+  <title>MTurkClient Class | MTurk</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmturk-index.html">MTurk</a></li>
+<li><a href="qtawsmturk-module.html">C++ Classes</a></li>
+<li>MTurkClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MTurkClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mturk-mturkclient.html">QtAws::MTurk::MTurkClient</a>)<br/></span>
+<!-- $$$MTurkClient-brief -->
+<p>The <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> class provides access to the Amazon Mechanical Turk ( <a href="qtaws-mturk.html">MTurk</a>) service. <a href="#details">More...</a></p>
+<!-- @@@MTurkClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MTurkClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mturk-mturkclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#MTurkClient">MTurkClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#MTurkClient-1">MTurkClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AcceptQualificationRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#acceptQualificationRequest">acceptQualificationRequest</a></b>(const AcceptQualificationRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ApproveAssignmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#approveAssignment">approveAssignment</a></b>(const ApproveAssignmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateQualificationWithWorkerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#associateQualificationWithWorker">associateQualificationWithWorker</a></b>(const AssociateQualificationWithWorkerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAdditionalAssignmentsForHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createAdditionalAssignmentsForHIT">createAdditionalAssignmentsForHIT</a></b>(const CreateAdditionalAssignmentsForHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createHIT">createHIT</a></b>(const CreateHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHITTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createHITType">createHITType</a></b>(const CreateHITTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHITWithHITTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createHITWithHITType">createHITWithHITType</a></b>(const CreateHITWithHITTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createQualificationType">createQualificationType</a></b>(const CreateQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateWorkerBlockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#createWorkerBlock">createWorkerBlock</a></b>(const CreateWorkerBlockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#deleteHIT">deleteHIT</a></b>(const DeleteHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#deleteQualificationType">deleteQualificationType</a></b>(const DeleteQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteWorkerBlockResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#deleteWorkerBlock">deleteWorkerBlock</a></b>(const DeleteWorkerBlockRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateQualificationFromWorkerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#disassociateQualificationFromWorker">disassociateQualificationFromWorker</a></b>(const DisassociateQualificationFromWorkerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountBalanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getAccountBalance">getAccountBalance</a></b>(const GetAccountBalanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAssignmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getAssignment">getAssignment</a></b>(const GetAssignmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFileUploadURLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getFileUploadURL">getFileUploadURL</a></b>(const GetFileUploadURLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getHIT">getHIT</a></b>(const GetHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQualificationScoreResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getQualificationScore">getQualificationScore</a></b>(const GetQualificationScoreRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#getQualificationType">getQualificationType</a></b>(const GetQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssignmentsForHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listAssignmentsForHIT">listAssignmentsForHIT</a></b>(const ListAssignmentsForHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBonusPaymentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listBonusPayments">listBonusPayments</a></b>(const ListBonusPaymentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHITsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listHITs">listHITs</a></b>(const ListHITsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHITsForQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listHITsForQualificationType">listHITsForQualificationType</a></b>(const ListHITsForQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListQualificationRequestsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listQualificationRequests">listQualificationRequests</a></b>(const ListQualificationRequestsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListQualificationTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listQualificationTypes">listQualificationTypes</a></b>(const ListQualificationTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListReviewPolicyResultsForHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listReviewPolicyResultsForHIT">listReviewPolicyResultsForHIT</a></b>(const ListReviewPolicyResultsForHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListReviewableHITsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listReviewableHITs">listReviewableHITs</a></b>(const ListReviewableHITsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListWorkerBlocksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listWorkerBlocks">listWorkerBlocks</a></b>(const ListWorkerBlocksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListWorkersWithQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#listWorkersWithQualificationType">listWorkersWithQualificationType</a></b>(const ListWorkersWithQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> NotifyWorkersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#notifyWorkers">notifyWorkers</a></b>(const NotifyWorkersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RejectAssignmentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#rejectAssignment">rejectAssignment</a></b>(const RejectAssignmentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RejectQualificationRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#rejectQualificationRequest">rejectQualificationRequest</a></b>(const RejectQualificationRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendBonusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#sendBonus">sendBonus</a></b>(const SendBonusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendTestEventNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#sendTestEventNotification">sendTestEventNotification</a></b>(const SendTestEventNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateExpirationForHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#updateExpirationForHIT">updateExpirationForHIT</a></b>(const UpdateExpirationForHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateHITReviewStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#updateHITReviewStatus">updateHITReviewStatus</a></b>(const UpdateHITReviewStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateHITTypeOfHITResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#updateHITTypeOfHIT">updateHITTypeOfHIT</a></b>(const UpdateHITTypeOfHITRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNotificationSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#updateNotificationSettings">updateNotificationSettings</a></b>(const UpdateNotificationSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateQualificationTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkclient.html#updateQualificationType">updateQualificationType</a></b>(const UpdateQualificationTypeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MTurkClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> class provides access to the Amazon Mechanical Turk ( <a href="qtaws-mturk.html">MTurk</a>) service.</p>
+</div>
+<!-- @@@MTurkClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MTurkClient[overload1]$$$MTurkClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MTurkClient"><a name="MTurkClient"></a>MTurkClient::<span class="name">MTurkClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MTurkClient -->
+<!-- $$$MTurkClient$$$MTurkClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MTurkClient-1"><a name="MTurkClient-1"></a>MTurkClient::<span class="name">MTurkClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mturk-mturkclient.html#MTurkClient">MTurkClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MTurkClient -->
+<!-- $$$acceptQualificationRequest[overload1]$$$acceptQualificationRequestconstAcceptQualificationRequestRequest& -->
+<h3 class="fn" id="acceptQualificationRequest"><a name="acceptQualificationRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-acceptqualificationrequestresponse.html">AcceptQualificationRequestResponse</a></span> *MTurkClient::<span class="name">acceptQualificationRequest</span>(const <span class="type"><a href="qtaws-mturk-acceptqualificationrequestrequest.html">AcceptQualificationRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-acceptqualificationrequestresponse.html">AcceptQualificationRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;AcceptQualificationRequest&lt;/code&gt; operation approves a Worker's request for a Qualification.</p>
+<p>&lt;/p</p>
+<p>Only the owner of the Qualification type can grant a Qualification request for that type.</p>
+<p>&lt;/p</p>
+<p>A successful request for the &lt;code&gt;AcceptQualificationRequest&lt;/code&gt; operation returns with no errors and an empty body.</p>
+<!-- @@@acceptQualificationRequest -->
+<!-- $$$approveAssignment[overload1]$$$approveAssignmentconstApproveAssignmentRequest& -->
+<h3 class="fn" id="approveAssignment"><a name="approveAssignment"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-approveassignmentresponse.html">ApproveAssignmentResponse</a></span> *MTurkClient::<span class="name">approveAssignment</span>(const <span class="type"><a href="qtaws-mturk-approveassignmentrequest.html">ApproveAssignmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-approveassignmentresponse.html">ApproveAssignmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ApproveAssignment&lt;/code&gt; operation approves the results of a completed assignment.</p>
+<p>&lt;/p</p>
+<p>Approving an assignment initiates two payments from the Requester's Amazon.com account</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The Worker who submitted the results is paid the reward specified in the HIT.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon Mechanical Turk fees are debited.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the Requester's account does not have adequate funds for these payments, the call to ApproveAssignment returns an exception, and the approval is not processed. You can include an optional feedback message with the approval, which the Worker can see in the Status section of the web site.</p>
+<p>&lt;/p</p>
+<p>You can also call this operation for assignments that were previous rejected and approve them by explicitly overriding the previous rejection. This only works on rejected assignments that were submitted within the previous 30 days and only if the assignment's related HIT has not been deleted.</p>
+<!-- @@@approveAssignment -->
+<!-- $$$associateQualificationWithWorker[overload1]$$$associateQualificationWithWorkerconstAssociateQualificationWithWorkerRequest& -->
+<h3 class="fn" id="associateQualificationWithWorker"><a name="associateQualificationWithWorker"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-associatequalificationwithworkerresponse.html">AssociateQualificationWithWorkerResponse</a></span> *MTurkClient::<span class="name">associateQualificationWithWorker</span>(const <span class="type"><a href="qtaws-mturk-associatequalificationwithworkerrequest.html">AssociateQualificationWithWorkerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-associatequalificationwithworkerresponse.html">AssociateQualificationWithWorkerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;AssociateQualificationWithWorker&lt;/code&gt; operation gives a Worker a Qualification. &lt;code&gt;AssociateQualificationWithWorker&lt;/code&gt; does not require that the Worker submit a Qualification request. It gives the Qualification directly to the Worker.</p>
+<p>&lt;/p</p>
+<p>You can only assign a Qualification of a Qualification type that you created (using the &lt;code&gt;CreateQualificationType&lt;/code&gt; operation).</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Note: &lt;code&gt;AssociateQualificationWithWorker&lt;/code&gt; does not affect any pending Qualification requests for the Qualification by the Worker. If you assign a Qualification to a Worker, then later grant a Qualification request made by the Worker, the granting of the request may modify the Qualification score. To resolve a pending Qualification request without affecting the Qualification the Worker already has, reject the request with the &lt;code&gt;RejectQualificationRequest&lt;/code&gt; operation.</p>
+<!-- @@@associateQualificationWithWorker -->
+<!-- $$$createAdditionalAssignmentsForHIT[overload1]$$$createAdditionalAssignmentsForHITconstCreateAdditionalAssignmentsForHITRequest& -->
+<h3 class="fn" id="createAdditionalAssignmentsForHIT"><a name="createAdditionalAssignmentsForHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createadditionalassignmentsforhitresponse.html">CreateAdditionalAssignmentsForHITResponse</a></span> *MTurkClient::<span class="name">createAdditionalAssignmentsForHIT</span>(const <span class="type"><a href="qtaws-mturk-createadditionalassignmentsforhitrequest.html">CreateAdditionalAssignmentsForHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createadditionalassignmentsforhitresponse.html">CreateAdditionalAssignmentsForHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateAdditionalAssignmentsForHIT&lt;/code&gt; operation increases the maximum number of assignments of an existing HIT.</p>
+<p>&lt;/p</p>
+<p>To extend the maximum number of assignments, specify the number of additional</p>
+<p>assignments&gt; &lt;note&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>HITs created with fewer than 10 assignments cannot be extended to have 10 or more assignments. Attempting to add assignments in a way that brings the total number of assignments for a HIT from fewer than 10 assignments to 10 or more assignments will result in an &lt;code&gt;AWS.MechanicalTurk.InvalidMaximumAssignmentsIncrease&lt;/code&gt;</p>
+<p>exception&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>HITs that were created before July 22, 2015 cannot be extended. Attempting to extend HITs that were created before July 22, 2015 will result in an &lt;code&gt;AWS.MechanicalTurk.HITTooOldForExtension&lt;/code&gt; exception.</p>
+<!-- @@@createAdditionalAssignmentsForHIT -->
+<!-- $$$createHIT[overload1]$$$createHITconstCreateHITRequest& -->
+<h3 class="fn" id="createHIT"><a name="createHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createhitresponse.html">CreateHITResponse</a></span> *MTurkClient::<span class="name">createHIT</span>(const <span class="type"><a href="qtaws-mturk-createhitrequest.html">CreateHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createhitresponse.html">CreateHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateHIT&lt;/code&gt; operation creates a new Human Intelligence Task (HIT). The new HIT is made available for Workers to find and accept on the Amazon Mechanical Turk website.</p>
+<p>&lt;/p</p>
+<p>This operation allows you to specify a new HIT by passing in values for the properties of the HIT, such as its title, reward amount and number of assignments. When you pass these values to &lt;code&gt;CreateHIT&lt;/code&gt;, a new HIT is created for you, with a new &lt;code&gt;HITTypeID&lt;/code&gt;. The HITTypeID can be used to create additional HITs in the future without needing to specify common parameters such as the title, description and reward amount each</p>
+<p>time&gt;</p>
+<p>An alternative way to create HITs is to first generate a HITTypeID using the &lt;code&gt;CreateHITType&lt;/code&gt; operation and then call the &lt;code&gt;CreateHITWithHITType&lt;/code&gt; operation. This is the recommended best practice for Requesters who are creating large numbers of HITs.</p>
+<p>&lt;/p</p>
+<p>CreateHIT also supports several ways to provide question data: by providing a value for the &lt;code&gt;Question&lt;/code&gt; parameter that fully specifies the contents of the HIT, or by providing a &lt;code&gt;HitLayoutId&lt;/code&gt; and associated &lt;code&gt;HitLayoutParameters&lt;/code&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see &lt;a href=&quot;https://requester.mturk.com/pricing&quot;&gt;Amazon Mechanical Turk</p>
+<!-- @@@createHIT -->
+<!-- $$$createHITType[overload1]$$$createHITTypeconstCreateHITTypeRequest& -->
+<h3 class="fn" id="createHITType"><a name="createHITType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createhittyperesponse.html">CreateHITTypeResponse</a></span> *MTurkClient::<span class="name">createHITType</span>(const <span class="type"><a href="qtaws-mturk-createhittyperequest.html">CreateHITTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createhittyperesponse.html">CreateHITTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateHITType&lt;/code&gt; operation creates a new HIT type. This operation allows you to define a standard set of HIT properties to use when creating HITs. If you register a HIT type with values that match an existing HIT type, the HIT type ID of the existing type will be returned.</p>
+<!-- @@@createHITType -->
+<!-- $$$createHITWithHITType[overload1]$$$createHITWithHITTypeconstCreateHITWithHITTypeRequest& -->
+<h3 class="fn" id="createHITWithHITType"><a name="createHITWithHITType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createhitwithhittyperesponse.html">CreateHITWithHITTypeResponse</a></span> *MTurkClient::<span class="name">createHITWithHITType</span>(const <span class="type"><a href="qtaws-mturk-createhitwithhittyperequest.html">CreateHITWithHITTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createhitwithhittyperesponse.html">CreateHITWithHITTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateHITWithHITType&lt;/code&gt; operation creates a new Human Intelligence Task (HIT) using an existing HITTypeID generated by the &lt;code&gt;CreateHITType&lt;/code&gt; operation.</p>
+<p>&lt;/p</p>
+<p>This is an alternative way to create HITs from the &lt;code&gt;CreateHIT&lt;/code&gt; operation. This is the recommended best practice for Requesters who are creating large numbers of HITs.</p>
+<p>&lt;/p</p>
+<p>CreateHITWithHITType also supports several ways to provide question data: by providing a value for the &lt;code&gt;Question&lt;/code&gt; parameter that fully specifies the contents of the HIT, or by providing a &lt;code&gt;HitLayoutId&lt;/code&gt; and associated &lt;code&gt;HitLayoutParameters&lt;/code&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>If a HIT is created with 10 or more maximum assignments, there is an additional fee. For more information, see &lt;a href=&quot;https://requester.mturk.com/pricing&quot;&gt;Amazon Mechanical Turk Pricing&lt;/a&gt;.</p>
+<!-- @@@createHITWithHITType -->
+<!-- $$$createQualificationType[overload1]$$$createQualificationTypeconstCreateQualificationTypeRequest& -->
+<h3 class="fn" id="createQualificationType"><a name="createQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createqualificationtyperesponse.html">CreateQualificationTypeResponse</a></span> *MTurkClient::<span class="name">createQualificationType</span>(const <span class="type"><a href="qtaws-mturk-createqualificationtyperequest.html">CreateQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createqualificationtyperesponse.html">CreateQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateQualificationType&lt;/code&gt; operation creates a new Qualification type, which is represented by a &lt;code&gt;QualificationType&lt;/code&gt; data structure.</p>
+<!-- @@@createQualificationType -->
+<!-- $$$createWorkerBlock[overload1]$$$createWorkerBlockconstCreateWorkerBlockRequest& -->
+<h3 class="fn" id="createWorkerBlock"><a name="createWorkerBlock"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-createworkerblockresponse.html">CreateWorkerBlockResponse</a></span> *MTurkClient::<span class="name">createWorkerBlock</span>(const <span class="type"><a href="qtaws-mturk-createworkerblockrequest.html">CreateWorkerBlockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-createworkerblockresponse.html">CreateWorkerBlockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;CreateWorkerBlock&lt;/code&gt; operation allows you to prevent a Worker from working on your HITs. For example, you can block a Worker who is producing poor quality work. You can block up to 100,000</p>
+<!-- @@@createWorkerBlock -->
+<!-- $$$deleteHIT[overload1]$$$deleteHITconstDeleteHITRequest& -->
+<h3 class="fn" id="deleteHIT"><a name="deleteHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-deletehitresponse.html">DeleteHITResponse</a></span> *MTurkClient::<span class="name">deleteHIT</span>(const <span class="type"><a href="qtaws-mturk-deletehitrequest.html">DeleteHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-deletehitresponse.html">DeleteHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;DeleteHIT&lt;/code&gt; operation is used to delete HIT that is no longer needed. Only the Requester who created the HIT can delete it.</p>
+<p>&lt;/p</p>
+<p>You can only dispose of HITs that are in the &lt;code&gt;Reviewable&lt;/code&gt; state, with all of their submitted assignments already either approved or rejected. If you call the DeleteHIT operation on a HIT that is not in the &lt;code&gt;Reviewable&lt;/code&gt; state (for example, that has not expired, or still has active assignments), or on a HIT that is Reviewable but without all of its submitted assignments already approved or rejected, the service will return an error.</p>
+<p>&lt;/p &lt;note&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>HITs are automatically disposed of after 120 days.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>After you dispose of a HIT, you can no longer approve the HIT's rejected assignments.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Disposed HITs are not returned in results for the ListHITs operation.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Disposing HITs can improve the performance of operations such as ListReviewableHITs and ListHITs.</p>
+<!-- @@@deleteHIT -->
+<!-- $$$deleteQualificationType[overload1]$$$deleteQualificationTypeconstDeleteQualificationTypeRequest& -->
+<h3 class="fn" id="deleteQualificationType"><a name="deleteQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-deletequalificationtyperesponse.html">DeleteQualificationTypeResponse</a></span> *MTurkClient::<span class="name">deleteQualificationType</span>(const <span class="type"><a href="qtaws-mturk-deletequalificationtyperequest.html">DeleteQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-deletequalificationtyperesponse.html">DeleteQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;DeleteQualificationType&lt;/code&gt; deletes a Qualification type and deletes any HIT types that are associated with the Qualification type.</p>
+<p>&lt;/p</p>
+<p>This operation does not revoke Qualifications already assigned to Workers because the Qualifications might be needed for active HITs. If there are any pending requests for the Qualification type, Amazon Mechanical Turk rejects those requests. After you delete a Qualification type, you can no longer use it to create HITs or HIT</p>
+<p>types&gt; &lt;note&gt;</p>
+<p>DeleteQualificationType must wait for all the HITs that use the deleted Qualification type to be deleted before completing. It may take up to 48 hours before DeleteQualificationType completes and the unique name of the Qualification type is available for reuse with</p>
+<!-- @@@deleteQualificationType -->
+<!-- $$$deleteWorkerBlock[overload1]$$$deleteWorkerBlockconstDeleteWorkerBlockRequest& -->
+<h3 class="fn" id="deleteWorkerBlock"><a name="deleteWorkerBlock"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-deleteworkerblockresponse.html">DeleteWorkerBlockResponse</a></span> *MTurkClient::<span class="name">deleteWorkerBlock</span>(const <span class="type"><a href="qtaws-mturk-deleteworkerblockrequest.html">DeleteWorkerBlockRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-deleteworkerblockresponse.html">DeleteWorkerBlockResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;DeleteWorkerBlock&lt;/code&gt; operation allows you to reinstate a blocked Worker to work on your HITs. This operation reverses the effects of the CreateWorkerBlock operation. You need the Worker ID to use this operation. If the Worker ID is missing or invalid, this operation fails and returns the message “WorkerId is invalid.” If the specified Worker is not blocked, this operation returns</p>
+<!-- @@@deleteWorkerBlock -->
+<!-- $$$disassociateQualificationFromWorker[overload1]$$$disassociateQualificationFromWorkerconstDisassociateQualificationFromWorkerRequest& -->
+<h3 class="fn" id="disassociateQualificationFromWorker"><a name="disassociateQualificationFromWorker"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-disassociatequalificationfromworkerresponse.html">DisassociateQualificationFromWorkerResponse</a></span> *MTurkClient::<span class="name">disassociateQualificationFromWorker</span>(const <span class="type"><a href="qtaws-mturk-disassociatequalificationfromworkerrequest.html">DisassociateQualificationFromWorkerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-disassociatequalificationfromworkerresponse.html">DisassociateQualificationFromWorkerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;DisassociateQualificationFromWorker&lt;/code&gt; revokes a previously granted Qualification from a user.</p>
+<p>&lt;/p</p>
+<p>You can provide a text message explaining why the Qualification was revoked. The user who had the Qualification can see this message.</p>
+<!-- @@@disassociateQualificationFromWorker -->
+<!-- $$$getAccountBalance[overload1]$$$getAccountBalanceconstGetAccountBalanceRequest& -->
+<h3 class="fn" id="getAccountBalance"><a name="getAccountBalance"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-getaccountbalanceresponse.html">GetAccountBalanceResponse</a></span> *MTurkClient::<span class="name">getAccountBalance</span>(const <span class="type"><a href="qtaws-mturk-getaccountbalancerequest.html">GetAccountBalanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-getaccountbalanceresponse.html">GetAccountBalanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetAccountBalance&lt;/code&gt; operation retrieves the amount of money in your Amazon Mechanical Turk</p>
+<!-- @@@getAccountBalance -->
+<!-- $$$getAssignment[overload1]$$$getAssignmentconstGetAssignmentRequest& -->
+<h3 class="fn" id="getAssignment"><a name="getAssignment"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-getassignmentresponse.html">GetAssignmentResponse</a></span> *MTurkClient::<span class="name">getAssignment</span>(const <span class="type"><a href="qtaws-mturk-getassignmentrequest.html">GetAssignmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-getassignmentresponse.html">GetAssignmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetAssignment&lt;/code&gt; operation retrieves the details of the specified Assignment.</p>
+<!-- @@@getAssignment -->
+<!-- $$$getFileUploadURL[overload1]$$$getFileUploadURLconstGetFileUploadURLRequest& -->
+<h3 class="fn" id="getFileUploadURL"><a name="getFileUploadURL"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-getfileuploadurlresponse.html">GetFileUploadURLResponse</a></span> *MTurkClient::<span class="name">getFileUploadURL</span>(const <span class="type"><a href="qtaws-mturk-getfileuploadurlrequest.html">GetFileUploadURLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-getfileuploadurlresponse.html">GetFileUploadURLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetFileUploadURL&lt;/code&gt; operation generates and returns a temporary URL. You use the temporary URL to retrieve a file uploaded by a Worker as an answer to a FileUploadAnswer question for a HIT. The temporary URL is generated the instant the GetFileUploadURL operation is called, and is valid for 60 seconds. You can get a temporary file upload URL any time until the HIT is disposed. After the HIT is disposed, any uploaded files are deleted, and cannot be retrieved. Pending Deprecation on December 12, 2017. The Answer Specification structure will no longer support the &lt;code&gt;FileUploadAnswer&lt;/code&gt; element to be used for the QuestionForm data structure. Instead, we recommend that Requesters who want to create HITs asking Workers to upload files to use Amazon S3.</p>
+<!-- @@@getFileUploadURL -->
+<!-- $$$getHIT[overload1]$$$getHITconstGetHITRequest& -->
+<h3 class="fn" id="getHIT"><a name="getHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-gethitresponse.html">GetHITResponse</a></span> *MTurkClient::<span class="name">getHIT</span>(const <span class="type"><a href="qtaws-mturk-gethitrequest.html">GetHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-gethitresponse.html">GetHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetHIT&lt;/code&gt; operation retrieves the details of the specified HIT.</p>
+<!-- @@@getHIT -->
+<!-- $$$getQualificationScore[overload1]$$$getQualificationScoreconstGetQualificationScoreRequest& -->
+<h3 class="fn" id="getQualificationScore"><a name="getQualificationScore"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-getqualificationscoreresponse.html">GetQualificationScoreResponse</a></span> *MTurkClient::<span class="name">getQualificationScore</span>(const <span class="type"><a href="qtaws-mturk-getqualificationscorerequest.html">GetQualificationScoreRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-getqualificationscoreresponse.html">GetQualificationScoreResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetQualificationScore&lt;/code&gt; operation returns the value of a Worker's Qualification for a given Qualification type.</p>
+<p>&lt;/p</p>
+<p>To get a Worker's Qualification, you must know the Worker's ID. The Worker's ID is included in the assignment data returned by the &lt;code&gt;ListAssignmentsForHIT&lt;/code&gt; operation.</p>
+<p>&lt;/p</p>
+<p>Only the owner of a Qualification type can query the value of a Worker's Qualification of that</p>
+<!-- @@@getQualificationScore -->
+<!-- $$$getQualificationType[overload1]$$$getQualificationTypeconstGetQualificationTypeRequest& -->
+<h3 class="fn" id="getQualificationType"><a name="getQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-getqualificationtyperesponse.html">GetQualificationTypeResponse</a></span> *MTurkClient::<span class="name">getQualificationType</span>(const <span class="type"><a href="qtaws-mturk-getqualificationtyperequest.html">GetQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-getqualificationtyperesponse.html">GetQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;GetQualificationType&lt;/code&gt;operation retrieves information about a Qualification type using its ID.</p>
+<!-- @@@getQualificationType -->
+<!-- $$$listAssignmentsForHIT[overload1]$$$listAssignmentsForHITconstListAssignmentsForHITRequest& -->
+<h3 class="fn" id="listAssignmentsForHIT"><a name="listAssignmentsForHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listassignmentsforhitresponse.html">ListAssignmentsForHITResponse</a></span> *MTurkClient::<span class="name">listAssignmentsForHIT</span>(const <span class="type"><a href="qtaws-mturk-listassignmentsforhitrequest.html">ListAssignmentsForHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listassignmentsforhitresponse.html">ListAssignmentsForHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListAssignmentsForHIT&lt;/code&gt; operation retrieves completed assignments for a HIT. You can use this operation to retrieve the results for a HIT.</p>
+<p>&lt;/p</p>
+<p>You can get assignments for a HIT at any time, even if the HIT is not yet Reviewable. If a HIT requested multiple assignments, and has received some results but has not yet become Reviewable, you can still retrieve the partial results with this operation.</p>
+<p>&lt;/p</p>
+<p>Use the AssignmentStatus parameter to control which set of assignments for a HIT are returned. The ListAssignmentsForHIT operation can return submitted assignments awaiting approval, or it can return assignments that have already been approved or rejected. You can set AssignmentStatus=Approved,Rejected to get assignments that have already been approved and rejected together in one result set.</p>
+<p>&lt;/p</p>
+<p>Only the Requester who created the HIT can retrieve the assignments for that HIT.</p>
+<p>&lt;/p</p>
+<p>Results are sorted and divided into numbered pages and the operation returns a single page of results. You can use the parameters of the operation to control sorting and pagination.</p>
+<!-- @@@listAssignmentsForHIT -->
+<!-- $$$listBonusPayments[overload1]$$$listBonusPaymentsconstListBonusPaymentsRequest& -->
+<h3 class="fn" id="listBonusPayments"><a name="listBonusPayments"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listbonuspaymentsresponse.html">ListBonusPaymentsResponse</a></span> *MTurkClient::<span class="name">listBonusPayments</span>(const <span class="type"><a href="qtaws-mturk-listbonuspaymentsrequest.html">ListBonusPaymentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listbonuspaymentsresponse.html">ListBonusPaymentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListBonusPayments&lt;/code&gt; operation retrieves the amounts of bonuses you have paid to Workers for a given HIT or assignment.</p>
+<!-- @@@listBonusPayments -->
+<!-- $$$listHITs[overload1]$$$listHITsconstListHITsRequest& -->
+<h3 class="fn" id="listHITs"><a name="listHITs"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listhitsresponse.html">ListHITsResponse</a></span> *MTurkClient::<span class="name">listHITs</span>(const <span class="type"><a href="qtaws-mturk-listhitsrequest.html">ListHITsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listhitsresponse.html">ListHITsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListHITs&lt;/code&gt; operation returns all of a Requester's HITs. The operation returns HITs of any status, except for HITs that have been deleted of with the DeleteHIT operation or that have been auto-deleted.</p>
+<!-- @@@listHITs -->
+<!-- $$$listHITsForQualificationType[overload1]$$$listHITsForQualificationTypeconstListHITsForQualificationTypeRequest& -->
+<h3 class="fn" id="listHITsForQualificationType"><a name="listHITsForQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listhitsforqualificationtyperesponse.html">ListHITsForQualificationTypeResponse</a></span> *MTurkClient::<span class="name">listHITsForQualificationType</span>(const <span class="type"><a href="qtaws-mturk-listhitsforqualificationtyperequest.html">ListHITsForQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listhitsforqualificationtyperesponse.html">ListHITsForQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListHITsForQualificationType&lt;/code&gt; operation returns the HITs that use the given Qualification type for a Qualification requirement. The operation returns HITs of any status, except for HITs that have been deleted with the &lt;code&gt;DeleteHIT&lt;/code&gt; operation or that have been auto-deleted.</p>
+<!-- @@@listHITsForQualificationType -->
+<!-- $$$listQualificationRequests[overload1]$$$listQualificationRequestsconstListQualificationRequestsRequest& -->
+<h3 class="fn" id="listQualificationRequests"><a name="listQualificationRequests"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listqualificationrequestsresponse.html">ListQualificationRequestsResponse</a></span> *MTurkClient::<span class="name">listQualificationRequests</span>(const <span class="type"><a href="qtaws-mturk-listqualificationrequestsrequest.html">ListQualificationRequestsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listqualificationrequestsresponse.html">ListQualificationRequestsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListQualificationRequests&lt;/code&gt; operation retrieves requests for Qualifications of a particular Qualification type. The owner of the Qualification type calls this operation to poll for pending requests, and accepts them using the AcceptQualification operation.</p>
+<!-- @@@listQualificationRequests -->
+<!-- $$$listQualificationTypes[overload1]$$$listQualificationTypesconstListQualificationTypesRequest& -->
+<h3 class="fn" id="listQualificationTypes"><a name="listQualificationTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listqualificationtypesresponse.html">ListQualificationTypesResponse</a></span> *MTurkClient::<span class="name">listQualificationTypes</span>(const <span class="type"><a href="qtaws-mturk-listqualificationtypesrequest.html">ListQualificationTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listqualificationtypesresponse.html">ListQualificationTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListQualificationTypes&lt;/code&gt; operation returns a list of Qualification types, filtered by an optional search term.</p>
+<!-- @@@listQualificationTypes -->
+<!-- $$$listReviewPolicyResultsForHIT[overload1]$$$listReviewPolicyResultsForHITconstListReviewPolicyResultsForHITRequest& -->
+<h3 class="fn" id="listReviewPolicyResultsForHIT"><a name="listReviewPolicyResultsForHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listreviewpolicyresultsforhitresponse.html">ListReviewPolicyResultsForHITResponse</a></span> *MTurkClient::<span class="name">listReviewPolicyResultsForHIT</span>(const <span class="type"><a href="qtaws-mturk-listreviewpolicyresultsforhitrequest.html">ListReviewPolicyResultsForHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listreviewpolicyresultsforhitresponse.html">ListReviewPolicyResultsForHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListReviewPolicyResultsForHIT&lt;/code&gt; operation retrieves the computed results and the actions taken in the course of executing your Review Policies for a given HIT. For information about how to specify Review Policies when you call CreateHIT, see Review Policies. The ListReviewPolicyResultsForHIT operation can return results for both Assignment-level and HIT-level review results.</p>
+<!-- @@@listReviewPolicyResultsForHIT -->
+<!-- $$$listReviewableHITs[overload1]$$$listReviewableHITsconstListReviewableHITsRequest& -->
+<h3 class="fn" id="listReviewableHITs"><a name="listReviewableHITs"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listreviewablehitsresponse.html">ListReviewableHITsResponse</a></span> *MTurkClient::<span class="name">listReviewableHITs</span>(const <span class="type"><a href="qtaws-mturk-listreviewablehitsrequest.html">ListReviewableHITsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listreviewablehitsresponse.html">ListReviewableHITsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListReviewableHITs&lt;/code&gt; operation retrieves the HITs with Status equal to Reviewable or Status equal to Reviewing that belong to the Requester calling the operation.</p>
+<!-- @@@listReviewableHITs -->
+<!-- $$$listWorkerBlocks[overload1]$$$listWorkerBlocksconstListWorkerBlocksRequest& -->
+<h3 class="fn" id="listWorkerBlocks"><a name="listWorkerBlocks"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listworkerblocksresponse.html">ListWorkerBlocksResponse</a></span> *MTurkClient::<span class="name">listWorkerBlocks</span>(const <span class="type"><a href="qtaws-mturk-listworkerblocksrequest.html">ListWorkerBlocksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listworkerblocksresponse.html">ListWorkerBlocksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListWorkersBlocks&lt;/code&gt; operation retrieves a list of Workers who are blocked from working on your</p>
+<!-- @@@listWorkerBlocks -->
+<!-- $$$listWorkersWithQualificationType[overload1]$$$listWorkersWithQualificationTypeconstListWorkersWithQualificationTypeRequest& -->
+<h3 class="fn" id="listWorkersWithQualificationType"><a name="listWorkersWithQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-listworkerswithqualificationtyperesponse.html">ListWorkersWithQualificationTypeResponse</a></span> *MTurkClient::<span class="name">listWorkersWithQualificationType</span>(const <span class="type"><a href="qtaws-mturk-listworkerswithqualificationtyperequest.html">ListWorkersWithQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-listworkerswithqualificationtyperesponse.html">ListWorkersWithQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;ListWorkersWithQualificationType&lt;/code&gt; operation returns all of the Workers that have been associated with a given Qualification type.</p>
+<!-- @@@listWorkersWithQualificationType -->
+<!-- $$$notifyWorkers[overload1]$$$notifyWorkersconstNotifyWorkersRequest& -->
+<h3 class="fn" id="notifyWorkers"><a name="notifyWorkers"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-notifyworkersresponse.html">NotifyWorkersResponse</a></span> *MTurkClient::<span class="name">notifyWorkers</span>(const <span class="type"><a href="qtaws-mturk-notifyworkersrequest.html">NotifyWorkersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-notifyworkersresponse.html">NotifyWorkersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;NotifyWorkers&lt;/code&gt; operation sends an email to one or more Workers that you specify with the Worker ID. You can specify up to 100 Worker IDs to send the same message with a single call to the NotifyWorkers operation. The NotifyWorkers operation will send a notification email to a Worker only if you have previously approved or rejected work from the Worker.</p>
+<!-- @@@notifyWorkers -->
+<!-- $$$rejectAssignment[overload1]$$$rejectAssignmentconstRejectAssignmentRequest& -->
+<h3 class="fn" id="rejectAssignment"><a name="rejectAssignment"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-rejectassignmentresponse.html">RejectAssignmentResponse</a></span> *MTurkClient::<span class="name">rejectAssignment</span>(const <span class="type"><a href="qtaws-mturk-rejectassignmentrequest.html">RejectAssignmentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-rejectassignmentresponse.html">RejectAssignmentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;RejectAssignment&lt;/code&gt; operation rejects the results of a completed assignment.</p>
+<p>&lt;/p</p>
+<p>You can include an optional feedback message with the rejection, which the Worker can see in the Status section of the web site. When you include a feedback message with the rejection, it helps the Worker understand why the assignment was rejected, and can improve the quality of the results the Worker submits in the future.</p>
+<p>&lt;/p</p>
+<p>Only the Requester who created the HIT can reject an assignment for the HIT.</p>
+<!-- @@@rejectAssignment -->
+<!-- $$$rejectQualificationRequest[overload1]$$$rejectQualificationRequestconstRejectQualificationRequestRequest& -->
+<h3 class="fn" id="rejectQualificationRequest"><a name="rejectQualificationRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-rejectqualificationrequestresponse.html">RejectQualificationRequestResponse</a></span> *MTurkClient::<span class="name">rejectQualificationRequest</span>(const <span class="type"><a href="qtaws-mturk-rejectqualificationrequestrequest.html">RejectQualificationRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-rejectqualificationrequestresponse.html">RejectQualificationRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;RejectQualificationRequest&lt;/code&gt; operation rejects a user's request for a Qualification.</p>
+<p>&lt;/p</p>
+<p>You can provide a text message explaining why the request was rejected. The Worker who made the request can see this</p>
+<!-- @@@rejectQualificationRequest -->
+<!-- $$$sendBonus[overload1]$$$sendBonusconstSendBonusRequest& -->
+<h3 class="fn" id="sendBonus"><a name="sendBonus"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-sendbonusresponse.html">SendBonusResponse</a></span> *MTurkClient::<span class="name">sendBonus</span>(const <span class="type"><a href="qtaws-mturk-sendbonusrequest.html">SendBonusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-sendbonusresponse.html">SendBonusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;SendBonus&lt;/code&gt; operation issues a payment of money from your account to a Worker. This payment happens separately from the reward you pay to the Worker when you approve the Worker's assignment. The SendBonus operation requires the Worker's ID and the assignment ID as parameters to initiate payment of the bonus. You must include a message that explains the reason for the bonus payment, as the Worker may not be expecting the payment. Amazon Mechanical Turk collects a fee for bonus payments, similar to the HIT listing fee. This operation fails if your account does not have enough funds to pay for both the bonus and the fees.</p>
+<!-- @@@sendBonus -->
+<!-- $$$sendTestEventNotification[overload1]$$$sendTestEventNotificationconstSendTestEventNotificationRequest& -->
+<h3 class="fn" id="sendTestEventNotification"><a name="sendTestEventNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-sendtesteventnotificationresponse.html">SendTestEventNotificationResponse</a></span> *MTurkClient::<span class="name">sendTestEventNotification</span>(const <span class="type"><a href="qtaws-mturk-sendtesteventnotificationrequest.html">SendTestEventNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-sendtesteventnotificationresponse.html">SendTestEventNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;SendTestEventNotification&lt;/code&gt; operation causes Amazon Mechanical Turk to send a notification message as if a HIT event occurred, according to the provided notification specification. This allows you to test notifications without setting up notifications for a real HIT type and trying to trigger them using the website. When you call this operation, the service attempts to send the test notification immediately.</p>
+<!-- @@@sendTestEventNotification -->
+<!-- $$$updateExpirationForHIT[overload1]$$$updateExpirationForHITconstUpdateExpirationForHITRequest& -->
+<h3 class="fn" id="updateExpirationForHIT"><a name="updateExpirationForHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-updateexpirationforhitresponse.html">UpdateExpirationForHITResponse</a></span> *MTurkClient::<span class="name">updateExpirationForHIT</span>(const <span class="type"><a href="qtaws-mturk-updateexpirationforhitrequest.html">UpdateExpirationForHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-updateexpirationforhitresponse.html">UpdateExpirationForHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;UpdateExpirationForHIT&lt;/code&gt; operation allows you update the expiration time of a HIT. If you update it to a time in the past, the HIT will be immediately expired.</p>
+<!-- @@@updateExpirationForHIT -->
+<!-- $$$updateHITReviewStatus[overload1]$$$updateHITReviewStatusconstUpdateHITReviewStatusRequest& -->
+<h3 class="fn" id="updateHITReviewStatus"><a name="updateHITReviewStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-updatehitreviewstatusresponse.html">UpdateHITReviewStatusResponse</a></span> *MTurkClient::<span class="name">updateHITReviewStatus</span>(const <span class="type"><a href="qtaws-mturk-updatehitreviewstatusrequest.html">UpdateHITReviewStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-updatehitreviewstatusresponse.html">UpdateHITReviewStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;UpdateHITReviewStatus&lt;/code&gt; operation updates the status of a HIT. If the status is Reviewable, this operation can update the status to Reviewing, or it can revert a Reviewing HIT back to the Reviewable status.</p>
+<!-- @@@updateHITReviewStatus -->
+<!-- $$$updateHITTypeOfHIT[overload1]$$$updateHITTypeOfHITconstUpdateHITTypeOfHITRequest& -->
+<h3 class="fn" id="updateHITTypeOfHIT"><a name="updateHITTypeOfHIT"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-updatehittypeofhitresponse.html">UpdateHITTypeOfHITResponse</a></span> *MTurkClient::<span class="name">updateHITTypeOfHIT</span>(const <span class="type"><a href="qtaws-mturk-updatehittypeofhitrequest.html">UpdateHITTypeOfHITRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-updatehittypeofhitresponse.html">UpdateHITTypeOfHITResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;UpdateHITTypeOfHIT&lt;/code&gt; operation allows you to change the HITType properties of a HIT. This operation disassociates the HIT from its old HITType properties and associates it with the new HITType properties. The HIT takes on the properties of the new HITType in place of the old ones.</p>
+<!-- @@@updateHITTypeOfHIT -->
+<!-- $$$updateNotificationSettings[overload1]$$$updateNotificationSettingsconstUpdateNotificationSettingsRequest& -->
+<h3 class="fn" id="updateNotificationSettings"><a name="updateNotificationSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-updatenotificationsettingsresponse.html">UpdateNotificationSettingsResponse</a></span> *MTurkClient::<span class="name">updateNotificationSettings</span>(const <span class="type"><a href="qtaws-mturk-updatenotificationsettingsrequest.html">UpdateNotificationSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-updatenotificationsettingsresponse.html">UpdateNotificationSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;UpdateNotificationSettings&lt;/code&gt; operation creates, updates, disables or re-enables notifications for a HIT type. If you call the UpdateNotificationSettings operation for a HIT type that already has a notification specification, the operation replaces the old specification with a new one. You can call the UpdateNotificationSettings operation to enable or disable notifications for the HIT type, without having to modify the notification specification itself by providing updates to the Active status without specifying a new notification specification. To change the Active status of a HIT type's notifications, the HIT type must already have a notification specification, or one must be provided in the same call to &lt;code&gt;UpdateNotificationSettings&lt;/code&gt;.</p>
+<!-- @@@updateNotificationSettings -->
+<!-- $$$updateQualificationType[overload1]$$$updateQualificationTypeconstUpdateQualificationTypeRequest& -->
+<h3 class="fn" id="updateQualificationType"><a name="updateQualificationType"></a><code>[slot] </code><span class="type"><a href="qtaws-mturk-updatequalificationtyperesponse.html">UpdateQualificationTypeResponse</a></span> *MTurkClient::<span class="name">updateQualificationType</span>(const <span class="type"><a href="qtaws-mturk-updatequalificationtyperequest.html">UpdateQualificationTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mturk-mturkclient.html">MTurkClient</a> service, and returns a pointer to an <a href="qtaws-mturk-updatequalificationtyperesponse.html">UpdateQualificationTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;UpdateQualificationType&lt;/code&gt; operation modifies the attributes of an existing Qualification type, which is represented by a QualificationType data structure. Only the owner of a Qualification type can modify its attributes.</p>
+<p>&lt;/p</p>
+<p>Most attributes of a Qualification type can be changed after the type has been created. However, the Name and Keywords fields cannot be modified. The RetryDelayInSeconds parameter can be modified or added to change the delay or to enable retries, but RetryDelayInSeconds cannot be used to disable retries.</p>
+<p>&lt;/p</p>
+<p>You can use this operation to update the test for a Qualification type. The test is updated based on the values specified for the Test, TestDurationInSeconds and AnswerKey parameters. All three parameters specify the updated test. If you are updating the test for a type, you must specify the Test and TestDurationInSeconds parameters. The AnswerKey parameter is optional; omitting it specifies that the updated test does not have an answer key.</p>
+<p>&lt;/p</p>
+<p>If you omit the Test parameter, the test for the Qualification type is unchanged. There is no way to remove a test from a Qualification type that has one. If the type already has a test, you cannot update it to be AutoGranted. If the Qualification type does not have a test and one is provided by an update, the type will henceforth have a test.</p>
+<p>&lt;/p</p>
+<p>If you want to update the test duration or answer key for an existing test without changing the questions, you must specify a Test parameter with the original questions, along with the updated values.</p>
+<p>&lt;/p</p>
+<p>If you provide an updated Test but no AnswerKey, the new test will not have an answer key. Requests for such Qualifications must be granted manually.</p>
+<p>&lt;/p</p>
+<p>You can also update the AutoGranted and AutoGrantedValue attributes of the Qualification</p>
+<!-- @@@updateQualificationType -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

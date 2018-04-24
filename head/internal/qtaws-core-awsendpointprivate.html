@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsendpoint.cpp -->
+  <title>AwsEndpointPrivate Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsEndpointPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-types">Protected Types</a></li>
+<li class="level1"><a href="#static-protected-members">Static Protected Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsEndpointPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsendpointprivate.html">QtAws::Core::AwsEndpointPrivate</a>)<br/></span>
+<!-- $$$AwsEndpointPrivate-brief -->
+<p>The <a href="qtaws-core-awsendpointprivate.html">AwsEndpointPrivate</a> class provides private implementation for <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a>. <a href="#details">More...</a></p>
+<!-- @@@AwsEndpointPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsEndpointPrivate&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsendpointprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#AwsEndpointPrivate">AwsEndpointPrivate</a></b>(AwsEndpoint * const <i>q</i>)</td></tr>
+</table></div>
+<a name="protected-types"></a>
+<h2 id="protected-types">Protected Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate-hostinfo.html">HostInfo</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate-regionendpointinfo.html">RegionEndpointInfo</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate-regioninfo.html">RegionInfo</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate-serviceinfo.html">ServiceInfo</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#RegionServices-typedef">RegionServices</a></b></td></tr>
+</table></div>
+<a name="static-protected-members"></a>
+<h2 id="static-protected-members">Static Protected Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#loadEndpointData">loadEndpointData</a></b>(const QString &amp;<i>fileName</i> = QLatin1String( &quot;:/aws/endpoints.xml&quot; ))</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#loadEndpointData-1">loadEndpointData</a></b>(QIODevice &amp;<i>device</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#loadEndpointData-2">loadEndpointData</a></b>(QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#parseRegion">parseRegion</a></b>(QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#parseRegions">parseRegions</a></b>(QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#parseService">parseService</a></b>(QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpointprivate.html#parseServices">parseServices</a></b>(QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsEndpointPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsendpointprivate.html">AwsEndpointPrivate</a> class provides private implementation for <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a>.</p>
+</div>
+<!-- @@@AwsEndpointPrivate -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$RegionServices -->
+<h3 class="fn" id="RegionServices-typedef"><a name="RegionServices-typedef"></a>typedef AwsEndpointPrivate::<span class="name">RegionServices</span></h3>
+<p>Synonym for QHash&lt;QString, <a href="qtaws-core-awsendpointprivate-regionendpointinfo.html">RegionEndpointInfo</a>&gt;.</p>
+<!-- @@@RegionServices -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsEndpointPrivate[overload1]$$$AwsEndpointPrivateAwsEndpoint*const -->
+<h3 class="fn" id="AwsEndpointPrivate"><a name="AwsEndpointPrivate"></a>AwsEndpointPrivate::<span class="name">AwsEndpointPrivate</span>(<span class="type"><a href="qtaws-core-awsendpoint.html">AwsEndpoint</a></span> * const <i>q</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsendpointprivate.html">AwsEndpointPrivate</a> object with public implementation <i>q</i>.</p>
+<!-- @@@AwsEndpointPrivate -->
+<!-- $$$loadEndpointData[overload1]$$$loadEndpointDataconstQString& -->
+<h3 class="fn" id="loadEndpointData"><a name="loadEndpointData"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">loadEndpointData</span>(const <span class="type">QString</span> &amp;<i>fileName</i> = QLatin1String( &quot;:/aws/endpoints.xml&quot; ))</h3>
+<p>Loads AWS endpoint data from <i>fileName</i>.</p>
+<p>This function parses AWS endpoint data in XML format. The XML data is expected to match the same format as the file provided by Amazon at http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</p>
+<p>If <i>any</i> data has been loaded previously, this function will return immediately with no parsing performed.</p>
+<!-- @@@loadEndpointData -->
+<!-- $$$loadEndpointData$$$loadEndpointDataQIODevice& -->
+<h3 class="fn" id="loadEndpointData-1"><a name="loadEndpointData-1"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">loadEndpointData</span>(<span class="type">QIODevice</span> &amp;<i>device</i>)</h3>
+<p>Loads AWS endpoint data from <i>device</i>.</p>
+<p>This function parses AWS endpoint data in XML format. The XML data is expected to match the same format as the file provided by Amazon at http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</p>
+<p>If <i>any</i> data has been loaded previously, this function will return immediately with no parsing performed.</p>
+<!-- @@@loadEndpointData -->
+<!-- $$$loadEndpointData$$$loadEndpointDataQXmlStreamReader& -->
+<h3 class="fn" id="loadEndpointData-2"><a name="loadEndpointData-2"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">loadEndpointData</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Loads AWS endpoint data from <i>xml</i>.</p>
+<p>This function parses AWS endpoint data in XML format. The XML data is expected to match the same format as the file provided by Amazon at http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</p>
+<p>If <i>any</i> data has been loaded previously, this function will return immediately with no parsing performed.</p>
+<!-- @@@loadEndpointData -->
+<!-- $$$parseRegion[overload1]$$$parseRegionQXmlStreamReader& -->
+<h3 class="fn" id="parseRegion"><a name="parseRegion"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">parseRegion</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Parses a <code>Region</code> element from the Amazon endpoint XML data <i>xml</i>.</p>
+<p>This function parses XML elements like:</p>
+<pre class="cpp">{xml}
+   <span class="operator">&lt;</span>Region<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>Name<span class="operator">&gt;</span>us<span class="operator">-</span>east<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>Name<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>Endpoint<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>ServiceName<span class="operator">&gt;</span>cloudformation<span class="operator">&lt;</span><span class="operator">/</span>ServiceName<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Http<span class="operator">&gt;</span><span class="keyword">false</span><span class="operator">&lt;</span><span class="operator">/</span>Http<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Https<span class="operator">&gt;</span><span class="keyword">true</span><span class="operator">&lt;</span><span class="operator">/</span>Https<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Hostname<span class="operator">&gt;</span>cloudformation<span class="operator">.</span>us<span class="operator">-</span>east<span class="operator">-</span><span class="number">1.amazonaws.com</span><span class="operator">&lt;</span><span class="operator">/</span>Hostname<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span><span class="operator">/</span>Endpoint<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>Endpoint<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>ServiceName<span class="operator">&gt;</span>cloudfront<span class="operator">&lt;</span><span class="operator">/</span>ServiceName<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Http<span class="operator">&gt;</span><span class="keyword">true</span><span class="operator">&lt;</span><span class="operator">/</span>Http<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Https<span class="operator">&gt;</span><span class="keyword">true</span><span class="operator">&lt;</span><span class="operator">/</span>Https<span class="operator">&gt;</span>
+       <span class="operator">&lt;</span>Hostname<span class="operator">&gt;</span>cloudfront<span class="operator">.</span>amazonaws<span class="operator">.</span>com<span class="operator">&lt;</span><span class="operator">/</span>Hostname<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span><span class="operator">/</span>Endpoint<span class="operator">&gt;</span>
+   <span class="operator">&lt;</span><span class="operator">/</span>Region<span class="operator">&gt;</span></pre>
+<p>The parsed entries are automatically added to <a href="qtaws-core-awsendpointprivate.html#hosts-var">AwsEndpointPrivate::hosts</a> and <a href="qtaws-core-awsendpointprivate.html#regions-var">AwsEndpointPrivate::regions</a>.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpointprivate.html#parseRegions">parseRegions</a>.</p>
+<!-- @@@parseRegion -->
+<!-- $$$parseRegions[overload1]$$$parseRegionsQXmlStreamReader& -->
+<h3 class="fn" id="parseRegions"><a name="parseRegions"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">parseRegions</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Parses a <code>Regions</code> element from the Amazon endpoint XML data <i>xml</i>.</p>
+<p>This function parse an XML element containing a list of <code>Region</code> elements. See <a href="qtaws-core-awsendpointprivate.html#parseRegion">AwsEndpointPrivate::parseRegion</a> for the <code>Region</code> element format.</p>
+<p>The parsed entries are automatically added to <a href="qtaws-core-awsendpointprivate.html#hosts-var">AwsEndpointPrivate::hosts</a> and <a href="qtaws-core-awsendpointprivate.html#regions-var">AwsEndpointPrivate::regions</a>.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpointprivate.html#parseRegion">parseRegion</a>.</p>
+<!-- @@@parseRegions -->
+<!-- $$$parseService[overload1]$$$parseServiceQXmlStreamReader& -->
+<h3 class="fn" id="parseService"><a name="parseService"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">parseService</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Parses a <code>Service</code> element the Amazon endpoint XML data <i>xml</i>.</p>
+<p>This function parses XML elements like:</p>
+<pre class="cpp">{xml}
+   <span class="operator">&lt;</span>Service<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>Name<span class="operator">&gt;</span>cloudformation<span class="operator">&lt;</span><span class="operator">/</span>Name<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>FullName<span class="operator">&gt;</span>Amazon CloudFormation<span class="operator">&lt;</span><span class="operator">/</span>FullName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>us<span class="operator">-</span>east<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>us<span class="operator">-</span>west<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>us<span class="operator">-</span>west<span class="operator">-</span><span class="number">2</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>eu<span class="operator">-</span>west<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>ap<span class="operator">-</span>northeast<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>ap<span class="operator">-</span>southeast<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>ap<span class="operator">-</span>southeast<span class="operator">-</span><span class="number">2</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+     <span class="operator">&lt;</span>RegionName<span class="operator">&gt;</span>sa<span class="operator">-</span>east<span class="operator">-</span><span class="number">1</span><span class="operator">&lt;</span><span class="operator">/</span>RegionName<span class="operator">&gt;</span>
+   <span class="operator">&lt;</span><span class="operator">/</span>Service<span class="operator">&gt;</span></pre>
+<p>The parsed entries are automatically added to <a href="qtaws-core-awsendpointprivate.html#services-var">AwsEndpointPrivate::services</a>.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpointprivate.html#parseServices">parseServices</a>.</p>
+<!-- @@@parseService -->
+<!-- $$$parseServices[overload1]$$$parseServicesQXmlStreamReader& -->
+<h3 class="fn" id="parseServices"><a name="parseServices"></a><code>[static protected] </code><span class="type">void</span> AwsEndpointPrivate::<span class="name">parseServices</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Parses a <code>Services</code> element the Amazon endpoint XML data <i>xml</i>.</p>
+<p>This function parses an XML element containing a list of <code>Service</code> elements. See AwsEndpointPrivate::parseServices for the <code>Service</code> element format.</p>
+<p>The parsed entries are automatically added to <a href="qtaws-core-awsendpointprivate.html#services-var">AwsEndpointPrivate::services</a>.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpointprivate.html#parseService">parseService</a>.</p>
+<!-- @@@parseServices -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

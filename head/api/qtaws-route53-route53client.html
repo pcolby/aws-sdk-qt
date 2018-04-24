@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- route53client.cpp -->
+  <title>Route53Client Class | Route53</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsroute53-index.html">Route53</a></li>
+<li><a href="qtawsroute53-module.html">C++ Classes</a></li>
+<li>Route53Client</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Route53Client Class</h1>
+<span class="small-subtitle">(<a href="qtaws-route53-route53client.html">QtAws::Route53::Route53Client</a>)<br/></span>
+<!-- $$$Route53Client-brief -->
+<p>The <a href="qtaws-route53-route53client.html">Route53Client</a> class provides access to the Amazon Route 53 service. <a href="#details">More...</a></p>
+<!-- @@@Route53Client -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Route53Client&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-route53-route53client-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#Route53Client">Route53Client</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#Route53Client-1">Route53Client</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateVPCWithHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#associateVPCWithHostedZone">associateVPCWithHostedZone</a></b>(const AssociateVPCWithHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ChangeResourceRecordSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#changeResourceRecordSets">changeResourceRecordSets</a></b>(const ChangeResourceRecordSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ChangeTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#changeTagsForResource">changeTagsForResource</a></b>(const ChangeTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHealthCheckResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createHealthCheck">createHealthCheck</a></b>(const CreateHealthCheckRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createHostedZone">createHostedZone</a></b>(const CreateHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateQueryLoggingConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createQueryLoggingConfig">createQueryLoggingConfig</a></b>(const CreateQueryLoggingConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateReusableDelegationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createReusableDelegationSet">createReusableDelegationSet</a></b>(const CreateReusableDelegationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrafficPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createTrafficPolicy">createTrafficPolicy</a></b>(const CreateTrafficPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrafficPolicyInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createTrafficPolicyInstance">createTrafficPolicyInstance</a></b>(const CreateTrafficPolicyInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrafficPolicyVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createTrafficPolicyVersion">createTrafficPolicyVersion</a></b>(const CreateTrafficPolicyVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateVPCAssociationAuthorizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#createVPCAssociationAuthorization">createVPCAssociationAuthorization</a></b>(const CreateVPCAssociationAuthorizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteHealthCheckResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteHealthCheck">deleteHealthCheck</a></b>(const DeleteHealthCheckRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteHostedZone">deleteHostedZone</a></b>(const DeleteHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteQueryLoggingConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteQueryLoggingConfig">deleteQueryLoggingConfig</a></b>(const DeleteQueryLoggingConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteReusableDelegationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteReusableDelegationSet">deleteReusableDelegationSet</a></b>(const DeleteReusableDelegationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTrafficPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteTrafficPolicy">deleteTrafficPolicy</a></b>(const DeleteTrafficPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTrafficPolicyInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteTrafficPolicyInstance">deleteTrafficPolicyInstance</a></b>(const DeleteTrafficPolicyInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVPCAssociationAuthorizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#deleteVPCAssociationAuthorization">deleteVPCAssociationAuthorization</a></b>(const DeleteVPCAssociationAuthorizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateVPCFromHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#disassociateVPCFromHostedZone">disassociateVPCFromHostedZone</a></b>(const DisassociateVPCFromHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getAccountLimit">getAccountLimit</a></b>(const GetAccountLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetChangeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getChange">getChange</a></b>(const GetChangeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCheckerIpRangesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getCheckerIpRanges">getCheckerIpRanges</a></b>(const GetCheckerIpRangesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGeoLocationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getGeoLocation">getGeoLocation</a></b>(const GetGeoLocationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHealthCheckResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHealthCheck">getHealthCheck</a></b>(const GetHealthCheckRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHealthCheckCountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHealthCheckCount">getHealthCheckCount</a></b>(const GetHealthCheckCountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHealthCheckLastFailureReasonResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHealthCheckLastFailureReason">getHealthCheckLastFailureReason</a></b>(const GetHealthCheckLastFailureReasonRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHealthCheckStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHealthCheckStatus">getHealthCheckStatus</a></b>(const GetHealthCheckStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHostedZone">getHostedZone</a></b>(const GetHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHostedZoneCountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHostedZoneCount">getHostedZoneCount</a></b>(const GetHostedZoneCountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetHostedZoneLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getHostedZoneLimit">getHostedZoneLimit</a></b>(const GetHostedZoneLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetQueryLoggingConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getQueryLoggingConfig">getQueryLoggingConfig</a></b>(const GetQueryLoggingConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetReusableDelegationSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getReusableDelegationSet">getReusableDelegationSet</a></b>(const GetReusableDelegationSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetReusableDelegationSetLimitResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getReusableDelegationSetLimit">getReusableDelegationSetLimit</a></b>(const GetReusableDelegationSetLimitRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTrafficPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getTrafficPolicy">getTrafficPolicy</a></b>(const GetTrafficPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTrafficPolicyInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getTrafficPolicyInstance">getTrafficPolicyInstance</a></b>(const GetTrafficPolicyInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTrafficPolicyInstanceCountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#getTrafficPolicyInstanceCount">getTrafficPolicyInstanceCount</a></b>(const GetTrafficPolicyInstanceCountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGeoLocationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listGeoLocations">listGeoLocations</a></b>(const ListGeoLocationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHealthChecksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listHealthChecks">listHealthChecks</a></b>(const ListHealthChecksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHostedZonesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listHostedZones">listHostedZones</a></b>(const ListHostedZonesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListHostedZonesByNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listHostedZonesByName">listHostedZonesByName</a></b>(const ListHostedZonesByNameRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListQueryLoggingConfigsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listQueryLoggingConfigs">listQueryLoggingConfigs</a></b>(const ListQueryLoggingConfigsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceRecordSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listResourceRecordSets">listResourceRecordSets</a></b>(const ListResourceRecordSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListReusableDelegationSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listReusableDelegationSets">listReusableDelegationSets</a></b>(const ListReusableDelegationSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTagsForResources">listTagsForResources</a></b>(const ListTagsForResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrafficPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTrafficPolicies">listTrafficPolicies</a></b>(const ListTrafficPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrafficPolicyInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTrafficPolicyInstances">listTrafficPolicyInstances</a></b>(const ListTrafficPolicyInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrafficPolicyInstancesByHostedZoneResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTrafficPolicyInstancesByHostedZone">listTrafficPolicyInstancesByHostedZone</a></b>(const ListTrafficPolicyInstancesByHostedZoneRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrafficPolicyInstancesByPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTrafficPolicyInstancesByPolicy">listTrafficPolicyInstancesByPolicy</a></b>(const ListTrafficPolicyInstancesByPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrafficPolicyVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listTrafficPolicyVersions">listTrafficPolicyVersions</a></b>(const ListTrafficPolicyVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVPCAssociationAuthorizationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#listVPCAssociationAuthorizations">listVPCAssociationAuthorizations</a></b>(const ListVPCAssociationAuthorizationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestDNSAnswerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#testDNSAnswer">testDNSAnswer</a></b>(const TestDNSAnswerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateHealthCheckResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#updateHealthCheck">updateHealthCheck</a></b>(const UpdateHealthCheckRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateHostedZoneCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#updateHostedZoneComment">updateHostedZoneComment</a></b>(const UpdateHostedZoneCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTrafficPolicyCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#updateTrafficPolicyComment">updateTrafficPolicyComment</a></b>(const UpdateTrafficPolicyCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTrafficPolicyInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53client.html#updateTrafficPolicyInstance">updateTrafficPolicyInstance</a></b>(const UpdateTrafficPolicyInstanceRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Route53Client-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-route53-route53client.html">Route53Client</a> class provides access to the Amazon Route 53 service.</p>
+</div>
+<!-- @@@Route53Client -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Route53Client[overload1]$$$Route53ClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="Route53Client"><a name="Route53Client"></a>Route53Client::<span class="name">Route53Client</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-route53-route53client.html">Route53Client</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@Route53Client -->
+<!-- $$$Route53Client$$$Route53ClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="Route53Client-1"><a name="Route53Client-1"></a>Route53Client::<span class="name">Route53Client</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-route53-route53client.html#Route53Client">Route53Client</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@Route53Client -->
+<!-- $$$associateVPCWithHostedZone[overload1]$$$associateVPCWithHostedZoneconstAssociateVPCWithHostedZoneRequest& -->
+<h3 class="fn" id="associateVPCWithHostedZone"><a name="associateVPCWithHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-associatevpcwithhostedzoneresponse.html">AssociateVPCWithHostedZoneResponse</a></span> *Route53Client::<span class="name">associateVPCWithHostedZone</span>(const <span class="type"><a href="qtaws-route53-associatevpcwithhostedzonerequest.html">AssociateVPCWithHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-associatevpcwithhostedzoneresponse.html">AssociateVPCWithHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates an Amazon VPC with a private hosted zone.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>To perform the association, the VPC and the private hosted zone must already exist. You can't convert a public hosted zone into a private hosted</p>
+<p>zone&gt; &lt;/b&gt; &lt;note&gt;</p>
+<p>If you want to associate a VPC that was created by using one AWS account with a private hosted zone that was created by using a different account, the AWS account that created the private hosted zone must first submit a &lt;code&gt;CreateVPCAssociationAuthorization&lt;/code&gt; request. Then the account that created the VPC must submit an &lt;code&gt;AssociateVPCWithHostedZone&lt;/code&gt;</p>
+<!-- @@@associateVPCWithHostedZone -->
+<!-- $$$changeResourceRecordSets[overload1]$$$changeResourceRecordSetsconstChangeResourceRecordSetsRequest& -->
+<h3 class="fn" id="changeResourceRecordSets"><a name="changeResourceRecordSets"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-changeresourcerecordsetsresponse.html">ChangeResourceRecordSetsResponse</a></span> *Route53Client::<span class="name">changeResourceRecordSets</span>(const <span class="type"><a href="qtaws-route53-changeresourcerecordsetsrequest.html">ChangeResourceRecordSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-changeresourcerecordsetsresponse.html">ChangeResourceRecordSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates, changes, or deletes a resource record set, which contains authoritative DNS information for a specified domain name or subdomain name. For example, you can use &lt;code&gt;ChangeResourceRecordSets&lt;/code&gt; to create a resource record set that routes traffic for test.example.com to a web server that has an IP address of</p>
+<p>192.0&#x2e;2&#x2e;44&gt;</p>
+<p>&lt;b&gt;Change Batches and Transactional Changes&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>The request body must include a document with a &lt;code&gt;<a href="qtaws-route53-changeresourcerecordsetsrequest.html">ChangeResourceRecordSetsRequest</a>&lt;/code&gt; element. The request body contains a list of change items, known as a change batch. Change batches are considered transactional changes. When using the Amazon Route 53 API to change resource record sets, Amazon Route 53 either makes all or none of the changes in a change batch request. This ensures that Amazon Route 53 never partially implements the intended changes to the resource record sets in a hosted zone.</p>
+<p>&lt;/p</p>
+<p>For example, a change batch request that deletes the &lt;code&gt;CNAME&lt;/code&gt; record for www.example.com and creates an alias resource record set for www.example.com. Amazon Route 53 deletes the first resource record set and creates the second resource record set in a single operation. If either the &lt;code&gt;DELETE&lt;/code&gt; or the &lt;code&gt;CREATE&lt;/code&gt; action fails, then both changes (plus any other changes in the batch) fail, and the original &lt;code&gt;CNAME&lt;/code&gt; record continues to</p>
+<p>exist&gt; &lt;b&gt;</p>
+<p>Due to the nature of transactional changes, you can't delete the same resource record set more than once in a single change batch. If you attempt to delete the same change batch more than once, Amazon Route 53 returns an &lt;code&gt;InvalidChangeBatch&lt;/code&gt;</p>
+<p>error&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Traffic Flow&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>To create resource record sets for complex routing configurations, use either the traffic flow visual editor in the Amazon Route 53 console or the API actions for traffic policies and traffic policy instances. Save the configuration as a traffic policy, then associate the traffic policy with one or more domain names (such as example.com) or subdomain names (such as www.example.com), in the same hosted zone or in multiple hosted zones. You can roll back the updates if the new configuration isn't performing as expected. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html&quot;&gt;Using Traffic Flow to Route DNS Traffic&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>&lt;b&gt;Create, Delete, and Upsert&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>Use &lt;code&gt;ChangeResourceRecordsSetsRequest&lt;/code&gt; to perform the following</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;CREATE&lt;/code&gt;: Creates a resource record set that has the specified</p>
+<p>values&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DELETE&lt;/code&gt;: Deletes an existing resource record set that has the specified</p>
+<p>values&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UPSERT&lt;/code&gt;: If a resource record set does not already exist, AWS creates it. If a resource set does exist, Amazon Route 53 updates it with the values in the request.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Syntaxes for Creating, Updating, and Deleting Resource Record Sets&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>The syntax for a request depends on the type of resource record set that you want to create, delete, or update, such as weighted, alias, or failover. The XML elements in your request must appear in the order listed in the syntax.</p>
+<p>&lt;/p</p>
+<p>For an example for each type of resource record set, see</p>
+<p>&quot;Examples.&gt;</p>
+<p>Don't refer to the syntax in the &quot;Parameter Syntax&quot; section, which includes all of the elements for every kind of resource record set that you can create, delete, or update by using &lt;code&gt;ChangeResourceRecordSets&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;b&gt;Change Propagation to Amazon Route 53 DNS Servers&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>When you submit a &lt;code&gt;ChangeResourceRecordSets&lt;/code&gt; request, Amazon Route 53 propagates your changes to all of the Amazon Route 53 authoritative DNS servers. While your changes are propagating, &lt;code&gt;GetChange&lt;/code&gt; returns a status of &lt;code&gt;PENDING&lt;/code&gt;. When propagation is complete, &lt;code&gt;GetChange&lt;/code&gt; returns a status of &lt;code&gt;INSYNC&lt;/code&gt;. Changes generally propagate to all Amazon Route 53 name servers within 60 seconds. For more information, see</p>
+<p>&lt;a&gt;GetChange&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Limits on ChangeResourceRecordSets Requests&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>For information about the limits on a &lt;code&gt;ChangeResourceRecordSets&lt;/code&gt; request, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html&quot;&gt;Limits&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<!-- @@@changeResourceRecordSets -->
+<!-- $$$changeTagsForResource[overload1]$$$changeTagsForResourceconstChangeTagsForResourceRequest& -->
+<h3 class="fn" id="changeTagsForResource"><a name="changeTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-changetagsforresourceresponse.html">ChangeTagsForResourceResponse</a></span> *Route53Client::<span class="name">changeTagsForResource</span>(const <span class="type"><a href="qtaws-route53-changetagsforresourcerequest.html">ChangeTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-changetagsforresourceresponse.html">ChangeTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds, edits, or deletes tags for a health check or a hosted</p>
+<p>zone&gt;</p>
+<p>For information about using tags for cost allocation, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&quot;&gt;Using Cost Allocation Tags&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
+<!-- @@@changeTagsForResource -->
+<!-- $$$createHealthCheck[overload1]$$$createHealthCheckconstCreateHealthCheckRequest& -->
+<h3 class="fn" id="createHealthCheck"><a name="createHealthCheck"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createhealthcheckresponse.html">CreateHealthCheckResponse</a></span> *Route53Client::<span class="name">createHealthCheck</span>(const <span class="type"><a href="qtaws-route53-createhealthcheckrequest.html">CreateHealthCheckRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createhealthcheckresponse.html">CreateHealthCheckResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new health</p>
+<p>check&gt;</p>
+<p>For information about adding health checks to resource record sets, see &lt;a&gt;ResourceRecordSet$HealthCheckId&lt;/a&gt; in &lt;a&gt;ChangeResourceRecordSets&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;b&gt;ELB Load Balancers&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>If you're registering EC2 instances with an Elastic Load Balancing (ELB) load balancer, do not create Amazon Route 53 health checks for the EC2 instances. When you register an EC2 instance with a load balancer, you configure settings for an ELB health check, which performs a similar function to an Amazon Route 53 health</p>
+<p>check&gt;</p>
+<p>&lt;b&gt;Private Hosted Zones&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can associate health checks with failover resource record sets in a private hosted zone. Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Amazon Route 53 health checkers are outside the VPC. To check the health of an endpoint within a VPC by IP address, you must assign a public IP address to the instance in the</p>
+<p>VPC&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You can configure a health checker to check the health of an external resource that the instance relies on, such as a database</p>
+<p>server&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You can create a CloudWatch metric, associate an alarm with the metric, and then create a health check that is based on the state of the alarm. For example, you might create a CloudWatch metric that checks the status of the Amazon EC2 &lt;code&gt;StatusCheckFailed&lt;/code&gt; metric, add an alarm to the metric, and then create a health check that is based on the state of the alarm. For information about creating CloudWatch metrics and alarms by using the CloudWatch console, see the &lt;a href=&quot;http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html&quot;&gt;Amazon CloudWatch User</p>
+<!-- @@@createHealthCheck -->
+<!-- $$$createHostedZone[overload1]$$$createHostedZoneconstCreateHostedZoneRequest& -->
+<h3 class="fn" id="createHostedZone"><a name="createHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createhostedzoneresponse.html">CreateHostedZoneResponse</a></span> *Route53Client::<span class="name">createHostedZone</span>(const <span class="type"><a href="qtaws-route53-createhostedzonerequest.html">CreateHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createhostedzoneresponse.html">CreateHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new public hosted zone, which you use to specify how the Domain Name System (DNS) routes traffic on the Internet for a domain, such as example.com, and its subdomains.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>You can't convert a public hosted zones to a private hosted zone or vice versa. Instead, you must create a new hosted zone with the same name and create new resource record</p>
+<p>sets&gt; &lt;/b&gt;</p>
+<p>For more information about charges for hosted zones, see &lt;a href=&quot;http://aws.amazon.com/route53/pricing/&quot;&gt;Amazon Route 53</p>
+<p>Pricing&lt;/a&gt;&gt;</p>
+<p>Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You can't create a hosted zone for a top-level domain</p>
+<p>(TLD)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon Route 53 automatically creates a default SOA record and four NS records for the zone. For more information about SOA and NS records, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html&quot;&gt;NS and SOA Records that Amazon Route 53 Creates for a Hosted Zone&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If you want to use the same name servers for multiple hosted zones, you can optionally associate a reusable delegation set with the hosted zone. See the &lt;code&gt;DelegationSetId&lt;/code&gt;</p>
+<p>element&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If your domain is registered with a registrar other than Amazon Route 53, you must update the name servers with your registrar to make Amazon Route 53 your DNS service. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/creating-migrating.html&quot;&gt;Configuring Amazon Route 53 as your DNS Service&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer Guide&lt;/i&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>When you submit a &lt;code&gt;CreateHostedZone&lt;/code&gt; request, the initial status of the hosted zone is &lt;code&gt;PENDING&lt;/code&gt;. This means that the NS and SOA records are not yet available on all Amazon Route 53 DNS servers. When the NS and SOA records are available, the status of the zone changes to</p>
+<!-- @@@createHostedZone -->
+<!-- $$$createQueryLoggingConfig[overload1]$$$createQueryLoggingConfigconstCreateQueryLoggingConfigRequest& -->
+<h3 class="fn" id="createQueryLoggingConfig"><a name="createQueryLoggingConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createqueryloggingconfigresponse.html">CreateQueryLoggingConfigResponse</a></span> *Route53Client::<span class="name">createQueryLoggingConfig</span>(const <span class="type"><a href="qtaws-route53-createqueryloggingconfigrequest.html">CreateQueryLoggingConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createqueryloggingconfigresponse.html">CreateQueryLoggingConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a configuration for DNS query logging. After you create a query logging configuration, Amazon Route 53 begins to publish log data to an Amazon CloudWatch Logs log</p>
+<p>group&gt;</p>
+<p>DNS query logs contain information about the queries that Amazon Route 53 receives for a specified public hosted zone, such as the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Amazon Route 53 edge location that responded to the DNS</p>
+<p>quer&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Domain or subdomain that was</p>
+<p>requeste&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DNS record type, such as A or</p>
+<p>AAA&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DNS response code, such as &lt;code&gt;NoError&lt;/code&gt; or &lt;code&gt;ServFail&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;dl&gt; &lt;dt&gt;Log Group and Resource Policy&lt;/dt&gt; &lt;dd&gt;</p>
+<p>Before you create a query logging configuration, perform the following</p>
+<p>operations&gt; &lt;note&gt;</p>
+<p>If you create a query logging configuration using the Amazon Route 53 console, Amazon Route 53 performs these operations</p>
+<p>automatically&gt; &lt;/note&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a CloudWatch Logs log group, and make note of the ARN, which you specify when you create a query logging configuration. Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You must create the log group in the us-east-1</p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You must use the same AWS account to create the log group and the hosted zone that you want to configure query logging</p>
+<p>for&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>When you create log groups for query logging, we recommend that you use a consistent prefix, for</p>
+<p>example&gt;</p>
+<p>&lt;code&gt;/aws/route53/&lt;i&gt;hosted zone name&lt;/i&gt; &lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>In the next step, you'll create a resource policy, which controls access to one or more log groups and the associated AWS resources, such as Amazon Route 53 hosted zones. There's a limit on the number of resource policies that you can create, so we recommend that you use a consistent prefix so you can use the same resource policy for all the log groups that you create for query</p>
+<p>logging&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create a CloudWatch Logs resource policy, and give it the permissions that Amazon Route 53 needs to create log streams and to send query logs to log streams. For the value of &lt;code&gt;Resource&lt;/code&gt;, specify the ARN for the log group that you created in the previous step. To use the same resource policy for all the CloudWatch Logs log groups that you created for query logging configurations, replace the hosted zone name with &lt;code&gt;*&lt;/code&gt;, for</p>
+<p>example&gt;</p>
+<p>&lt;code&gt;arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/*&lt;/code&gt;</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You can't use the CloudWatch console to create or edit a resource policy. You must use the CloudWatch API, one of the AWS SDKs, or the AWS</p>
+<p>CLI&gt; &lt;/note&gt; &lt;/li&gt; &lt;/ol&gt; &lt;/dd&gt; &lt;dt&gt;Log Streams and Edge Locations&lt;/dt&gt; &lt;dd&gt;</p>
+<p>When Amazon Route 53 finishes creating the configuration for DNS query logging, it does the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Creates a log stream for an edge location the first time that the edge location responds to DNS queries for the specified hosted zone. That log stream is used to log all queries that Amazon Route 53 responds to for that edge</p>
+<p>location&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Begins to send query logs to the applicable log</p>
+<p>stream&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>The name of each log stream is in the following</p>
+<p>format&gt;</p>
+<p>&lt;code&gt; &lt;i&gt;hosted zone ID&lt;/i&gt;/&lt;i&gt;edge location code&lt;/i&gt; &lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>The edge location code is a three-letter code and an arbitrarily assigned number, for example, DFW3. The three-letter code typically corresponds with the International Air Transport Association airport code for an airport near the edge location. (These abbreviations might change in the future.) For a list of edge locations, see &quot;The Amazon Route 53 Global Network&quot; on the &lt;a href=&quot;http://aws.amazon.com/route53/details/&quot;&gt;Amazon Route 53 Product Details&lt;/a&gt;</p>
+<p>page&gt; &lt;/dd&gt; &lt;dt&gt;Queries That Are Logged&lt;/dt&gt; &lt;dd&gt;</p>
+<p>Query logs contain only the queries that DNS resolvers forward to Amazon Route 53. If a DNS resolver has already cached the response to a query (such as the IP address for a load balancer for example.com), the resolver will continue to return the cached response. It doesn't forward another query to Amazon Route 53 until the TTL for the corresponding resource record set expires. Depending on how many DNS queries are submitted for a resource record set, and depending on the TTL for that resource record set, query logs might contain information about only one query out of every several thousand queries that are submitted to DNS. For more information about how DNS works, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html&quot;&gt;Routing Internet Traffic to Your Website or Web Application&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/dd&gt; &lt;dt&gt;Log File Format&lt;/dt&gt; &lt;dd&gt;</p>
+<p>For a list of the values in each query log and the format of each value, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html&quot;&gt;Logging DNS Queries&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/dd&gt; &lt;dt&gt;Pricing&lt;/dt&gt; &lt;dd&gt;</p>
+<p>For information about charges for query logs, see &lt;a href=&quot;http://aws.amazon.com/cloudwatch/pricing/&quot;&gt;Amazon CloudWatch</p>
+<p>Pricing&lt;/a&gt;&gt; &lt;/dd&gt; &lt;dt&gt;How to Stop Logging&lt;/dt&gt; &lt;dd&gt;</p>
+<p>If you want Amazon Route 53 to stop sending query logs to CloudWatch Logs, delete the query logging configuration. For more information, see</p>
+<!-- @@@createQueryLoggingConfig -->
+<!-- $$$createReusableDelegationSet[overload1]$$$createReusableDelegationSetconstCreateReusableDelegationSetRequest& -->
+<h3 class="fn" id="createReusableDelegationSet"><a name="createReusableDelegationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createreusabledelegationsetresponse.html">CreateReusableDelegationSetResponse</a></span> *Route53Client::<span class="name">createReusableDelegationSet</span>(const <span class="type"><a href="qtaws-route53-createreusabledelegationsetrequest.html">CreateReusableDelegationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createreusabledelegationsetresponse.html">CreateReusableDelegationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones. If a hosted zoned ID is specified, &lt;code&gt;CreateReusableDelegationSet&lt;/code&gt; marks the delegation set associated with that zone as</p>
+<p>reusable&gt; &lt;note&gt;</p>
+<p>You can't associate a reusable delegation set with a private hosted</p>
+<p>zone&gt; &lt;/note&gt;</p>
+<p>For information about using a reusable delegation set to configure white label name servers, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html&quot;&gt;Configuring White Label Name</p>
+<p>Servers&lt;/a&gt;&gt;</p>
+<p>The process for migrating existing hosted zones to use a reusable delegation set is comparable to the process for configuring white label name servers. You need to perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a reusable delegation</p>
+<p>set&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Recreate hosted zones, and reduce the TTL to 60 seconds or</p>
+<p>less&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Recreate resource record sets in the new hosted</p>
+<p>zones&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Change the registrar's name servers to use the name servers for the new hosted</p>
+<p>zones&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Monitor traffic for the website or</p>
+<p>application&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Change TTLs back to their original</p>
+<p>values&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>If you want to migrate existing hosted zones to use a reusable delegation set, the existing hosted zones can't use any of the name servers that are assigned to the reusable delegation set. If one or more hosted zones do use one or more name servers that are assigned to the reusable delegation set, you can do one of the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>For small numbers of hosted zones—up to a few hundred—it's relatively easy to create reusable delegation sets until you get one that has four name servers that don't overlap with any of the name servers in your hosted</p>
+<p>zones&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For larger numbers of hosted zones, the easiest solution is to use more than one reusable delegation</p>
+<p>set&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For larger numbers of hosted zones, you can also migrate hosted zones that have overlapping name servers to hosted zones that don't have overlapping name servers, then migrate the hosted zones again to use the reusable delegation</p>
+<!-- @@@createReusableDelegationSet -->
+<!-- $$$createTrafficPolicy[overload1]$$$createTrafficPolicyconstCreateTrafficPolicyRequest& -->
+<h3 class="fn" id="createTrafficPolicy"><a name="createTrafficPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createtrafficpolicyresponse.html">CreateTrafficPolicyResponse</a></span> *Route53Client::<span class="name">createTrafficPolicy</span>(const <span class="type"><a href="qtaws-route53-createtrafficpolicyrequest.html">CreateTrafficPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createtrafficpolicyresponse.html">CreateTrafficPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a traffic policy, which you use to create multiple DNS resource record sets for one domain name (such as example.com) or one subdomain name (such as</p>
+<!-- @@@createTrafficPolicy -->
+<!-- $$$createTrafficPolicyInstance[overload1]$$$createTrafficPolicyInstanceconstCreateTrafficPolicyInstanceRequest& -->
+<h3 class="fn" id="createTrafficPolicyInstance"><a name="createTrafficPolicyInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createtrafficpolicyinstanceresponse.html">CreateTrafficPolicyInstanceResponse</a></span> *Route53Client::<span class="name">createTrafficPolicyInstance</span>(const <span class="type"><a href="qtaws-route53-createtrafficpolicyinstancerequest.html">CreateTrafficPolicyInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createtrafficpolicyinstanceresponse.html">CreateTrafficPolicyInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates resource record sets in a specified hosted zone based on the settings in a specified traffic policy version. In addition, &lt;code&gt;CreateTrafficPolicyInstance&lt;/code&gt; associates the resource record sets with a specified domain name (such as example.com) or subdomain name (such as www.example.com). Amazon Route 53 responds to DNS queries for the domain or subdomain name by using the resource record sets that &lt;code&gt;CreateTrafficPolicyInstance&lt;/code&gt;</p>
+<!-- @@@createTrafficPolicyInstance -->
+<!-- $$$createTrafficPolicyVersion[overload1]$$$createTrafficPolicyVersionconstCreateTrafficPolicyVersionRequest& -->
+<h3 class="fn" id="createTrafficPolicyVersion"><a name="createTrafficPolicyVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createtrafficpolicyversionresponse.html">CreateTrafficPolicyVersionResponse</a></span> *Route53Client::<span class="name">createTrafficPolicyVersion</span>(const <span class="type"><a href="qtaws-route53-createtrafficpolicyversionrequest.html">CreateTrafficPolicyVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createtrafficpolicyversionresponse.html">CreateTrafficPolicyVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new version of an existing traffic policy. When you create a new version of a traffic policy, you specify the ID of the traffic policy that you want to update and a JSON-formatted document that describes the new version. You use traffic policies to create multiple DNS resource record sets for one domain name (such as example.com) or one subdomain name (such as www.example.com). You can create a maximum of 1000 versions of a traffic policy. If you reach the limit and need to create another version, you'll need to start a new traffic</p>
+<!-- @@@createTrafficPolicyVersion -->
+<!-- $$$createVPCAssociationAuthorization[overload1]$$$createVPCAssociationAuthorizationconstCreateVPCAssociationAuthorizationRequest& -->
+<h3 class="fn" id="createVPCAssociationAuthorization"><a name="createVPCAssociationAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-createvpcassociationauthorizationresponse.html">CreateVPCAssociationAuthorizationResponse</a></span> *Route53Client::<span class="name">createVPCAssociationAuthorization</span>(const <span class="type"><a href="qtaws-route53-createvpcassociationauthorizationrequest.html">CreateVPCAssociationAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-createvpcassociationauthorizationresponse.html">CreateVPCAssociationAuthorizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Authorizes the AWS account that created a specified VPC to submit an &lt;code&gt;AssociateVPCWithHostedZone&lt;/code&gt; request to associate the VPC with a specified hosted zone that was created by a different account. To submit a &lt;code&gt;CreateVPCAssociationAuthorization&lt;/code&gt; request, you must use the account that created the hosted zone. After you authorize the association, use the account that created the VPC to submit an &lt;code&gt;AssociateVPCWithHostedZone&lt;/code&gt;</p>
+<p>request&gt; &lt;note&gt;</p>
+<p>If you want to associate multiple VPCs that you created by using one account with a hosted zone that you created by using a different account, you must submit one authorization request for each</p>
+<!-- @@@createVPCAssociationAuthorization -->
+<!-- $$$deleteHealthCheck[overload1]$$$deleteHealthCheckconstDeleteHealthCheckRequest& -->
+<h3 class="fn" id="deleteHealthCheck"><a name="deleteHealthCheck"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletehealthcheckresponse.html">DeleteHealthCheckResponse</a></span> *Route53Client::<span class="name">deleteHealthCheck</span>(const <span class="type"><a href="qtaws-route53-deletehealthcheckrequest.html">DeleteHealthCheckRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletehealthcheckresponse.html">DeleteHealthCheckResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a health</p>
+<p>check&gt; &lt;b&gt;</p>
+<p>Amazon Route 53 does not prevent you from deleting a health check even if the health check is associated with one or more resource record sets. If you delete a health check and you don't update the associated resource record sets, the future status of the health check can't be predicted and may change. This will affect the routing of DNS queries for your DNS failover configuration. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html&quot;&gt;Replacing and Deleting Health Checks&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<!-- @@@deleteHealthCheck -->
+<!-- $$$deleteHostedZone[overload1]$$$deleteHostedZoneconstDeleteHostedZoneRequest& -->
+<h3 class="fn" id="deleteHostedZone"><a name="deleteHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletehostedzoneresponse.html">DeleteHostedZoneResponse</a></span> *Route53Client::<span class="name">deleteHostedZone</span>(const <span class="type"><a href="qtaws-route53-deletehostedzonerequest.html">DeleteHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletehostedzoneresponse.html">DeleteHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a hosted</p>
+<p>zone&gt; &lt;b&gt;</p>
+<p>If the name servers for the hosted zone are associated with a domain and if you want to make the domain unavailable on the Internet, we recommend that you delete the name servers from the domain to prevent future DNS queries from possibly being misrouted. If the domain is registered with Amazon Route 53, see &lt;code&gt;UpdateDomainNameservers&lt;/code&gt;. If the domain is registered with another registrar, use the method provided by the registrar to delete name servers for the</p>
+<p>domain&gt;</p>
+<p>Some domain registries don't allow you to remove all of the name servers for a domain. If the registry for your domain requires one or more name servers, we recommend that you delete the hosted zone only if you transfer DNS service to another service provider, and you replace the name servers for the domain with name servers from the new</p>
+<p>provider&gt; &lt;/b&gt;</p>
+<p>You can delete a hosted zone only if it contains only the default SOA record and NS resource record sets. If the hosted zone contains other resource record sets, you must delete them before you can delete the hosted zone. If you try to delete a hosted zone that contains other resource record sets, the request fails, and Amazon Route 53 returns a &lt;code&gt;HostedZoneNotEmpty&lt;/code&gt; error. For information about deleting records from your hosted zone, see</p>
+<p>&lt;a&gt;ChangeResourceRecordSets&lt;/a&gt;&gt;</p>
+<p>To verify that the hosted zone has been deleted, do one of the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use the &lt;code&gt;GetHostedZone&lt;/code&gt; action to request information about the hosted</p>
+<p>zone&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use the &lt;code&gt;ListHostedZones&lt;/code&gt; action to get a list of the hosted zones associated with the current AWS</p>
+<!-- @@@deleteHostedZone -->
+<!-- $$$deleteQueryLoggingConfig[overload1]$$$deleteQueryLoggingConfigconstDeleteQueryLoggingConfigRequest& -->
+<h3 class="fn" id="deleteQueryLoggingConfig"><a name="deleteQueryLoggingConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletequeryloggingconfigresponse.html">DeleteQueryLoggingConfigResponse</a></span> *Route53Client::<span class="name">deleteQueryLoggingConfig</span>(const <span class="type"><a href="qtaws-route53-deletequeryloggingconfigrequest.html">DeleteQueryLoggingConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletequeryloggingconfigresponse.html">DeleteQueryLoggingConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a configuration for DNS query logging. If you delete a configuration, Amazon Route 53 stops sending query logs to CloudWatch Logs. Amazon Route 53 doesn't delete any logs that are already in CloudWatch</p>
+<p>Logs&gt;</p>
+<p>For more information about DNS query logs, see</p>
+<!-- @@@deleteQueryLoggingConfig -->
+<!-- $$$deleteReusableDelegationSet[overload1]$$$deleteReusableDelegationSetconstDeleteReusableDelegationSetRequest& -->
+<h3 class="fn" id="deleteReusableDelegationSet"><a name="deleteReusableDelegationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletereusabledelegationsetresponse.html">DeleteReusableDelegationSetResponse</a></span> *Route53Client::<span class="name">deleteReusableDelegationSet</span>(const <span class="type"><a href="qtaws-route53-deletereusabledelegationsetrequest.html">DeleteReusableDelegationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletereusabledelegationsetresponse.html">DeleteReusableDelegationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a reusable delegation</p>
+<p>set&gt; &lt;b&gt;</p>
+<p>You can delete a reusable delegation set only if it isn't associated with any hosted</p>
+<p>zones&gt; &lt;/b&gt;</p>
+<p>To verify that the reusable delegation set is not associated with any hosted zones, submit a &lt;a&gt;GetReusableDelegationSet&lt;/a&gt; request and specify the ID of the reusable delegation set that you want to</p>
+<!-- @@@deleteReusableDelegationSet -->
+<!-- $$$deleteTrafficPolicy[overload1]$$$deleteTrafficPolicyconstDeleteTrafficPolicyRequest& -->
+<h3 class="fn" id="deleteTrafficPolicy"><a name="deleteTrafficPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletetrafficpolicyresponse.html">DeleteTrafficPolicyResponse</a></span> *Route53Client::<span class="name">deleteTrafficPolicy</span>(const <span class="type"><a href="qtaws-route53-deletetrafficpolicyrequest.html">DeleteTrafficPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletetrafficpolicyresponse.html">DeleteTrafficPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a traffic</p>
+<!-- @@@deleteTrafficPolicy -->
+<!-- $$$deleteTrafficPolicyInstance[overload1]$$$deleteTrafficPolicyInstanceconstDeleteTrafficPolicyInstanceRequest& -->
+<h3 class="fn" id="deleteTrafficPolicyInstance"><a name="deleteTrafficPolicyInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletetrafficpolicyinstanceresponse.html">DeleteTrafficPolicyInstanceResponse</a></span> *Route53Client::<span class="name">deleteTrafficPolicyInstance</span>(const <span class="type"><a href="qtaws-route53-deletetrafficpolicyinstancerequest.html">DeleteTrafficPolicyInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletetrafficpolicyinstanceresponse.html">DeleteTrafficPolicyInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a traffic policy instance and all of the resource record sets that Amazon Route 53 created when you created the</p>
+<p>instance&gt; &lt;note&gt;</p>
+<p>In the Amazon Route 53 console, traffic policy instances are known as policy</p>
+<!-- @@@deleteTrafficPolicyInstance -->
+<!-- $$$deleteVPCAssociationAuthorization[overload1]$$$deleteVPCAssociationAuthorizationconstDeleteVPCAssociationAuthorizationRequest& -->
+<h3 class="fn" id="deleteVPCAssociationAuthorization"><a name="deleteVPCAssociationAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-deletevpcassociationauthorizationresponse.html">DeleteVPCAssociationAuthorizationResponse</a></span> *Route53Client::<span class="name">deleteVPCAssociationAuthorization</span>(const <span class="type"><a href="qtaws-route53-deletevpcassociationauthorizationrequest.html">DeleteVPCAssociationAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-deletevpcassociationauthorizationresponse.html">DeleteVPCAssociationAuthorizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes authorization to submit an &lt;code&gt;AssociateVPCWithHostedZone&lt;/code&gt; request to associate a specified VPC with a hosted zone that was created by a different account. You must use the account that created the hosted zone to submit a &lt;code&gt;DeleteVPCAssociationAuthorization&lt;/code&gt;</p>
+<p>request&gt; &lt;b&gt;</p>
+<p>Sending this request only prevents the AWS account that created the VPC from associating the VPC with the Amazon Route 53 hosted zone in the future. If the VPC is already associated with the hosted zone, &lt;code&gt;DeleteVPCAssociationAuthorization&lt;/code&gt; won't disassociate the VPC from the hosted zone. If you want to delete an existing association, use</p>
+<!-- @@@deleteVPCAssociationAuthorization -->
+<!-- $$$disassociateVPCFromHostedZone[overload1]$$$disassociateVPCFromHostedZoneconstDisassociateVPCFromHostedZoneRequest& -->
+<h3 class="fn" id="disassociateVPCFromHostedZone"><a name="disassociateVPCFromHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-disassociatevpcfromhostedzoneresponse.html">DisassociateVPCFromHostedZoneResponse</a></span> *Route53Client::<span class="name">disassociateVPCFromHostedZone</span>(const <span class="type"><a href="qtaws-route53-disassociatevpcfromhostedzonerequest.html">DisassociateVPCFromHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-disassociatevpcfromhostedzoneresponse.html">DisassociateVPCFromHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a VPC from a Amazon Route 53 private hosted zone.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You can't disassociate the last VPC from a private hosted</p>
+<p>zone&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>You can't disassociate a VPC from a private hosted zone when only one VPC is associated with the hosted zone. You also can't convert a private hosted zone into a public hosted</p>
+<!-- @@@disassociateVPCFromHostedZone -->
+<!-- $$$getAccountLimit[overload1]$$$getAccountLimitconstGetAccountLimitRequest& -->
+<h3 class="fn" id="getAccountLimit"><a name="getAccountLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getaccountlimitresponse.html">GetAccountLimitResponse</a></span> *Route53Client::<span class="name">getAccountLimit</span>(const <span class="type"><a href="qtaws-route53-getaccountlimitrequest.html">GetAccountLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getaccountlimitresponse.html">GetAccountLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the specified limit for the current account, for example, the maximum number of health checks that you can create using the</p>
+<p>account&gt;</p>
+<p>For the default limit, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html&quot;&gt;Limits&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer Guide&lt;/i&gt;. To request a higher limit, &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;amp;limitType=service-code-route53&quot;&gt;open a</p>
+<!-- @@@getAccountLimit -->
+<!-- $$$getChange[overload1]$$$getChangeconstGetChangeRequest& -->
+<h3 class="fn" id="getChange"><a name="getChange"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getchangeresponse.html">GetChangeResponse</a></span> *Route53Client::<span class="name">getChange</span>(const <span class="type"><a href="qtaws-route53-getchangerequest.html">GetChangeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getchangeresponse.html">GetChangeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current status of a change batch request. The status is one of the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;PENDING&lt;/code&gt; indicates that the changes in this request have not propagated to all Amazon Route 53 DNS servers. This is the initial status of all change batch</p>
+<p>requests&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;INSYNC&lt;/code&gt; indicates that the changes have propagated to all Amazon Route 53 DNS servers.</p>
+<!-- @@@getChange -->
+<!-- $$$getCheckerIpRanges[overload1]$$$getCheckerIpRangesconstGetCheckerIpRangesRequest& -->
+<h3 class="fn" id="getCheckerIpRanges"><a name="getCheckerIpRanges"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getcheckeriprangesresponse.html">GetCheckerIpRangesResponse</a></span> *Route53Client::<span class="name">getCheckerIpRanges</span>(const <span class="type"><a href="qtaws-route53-getcheckeriprangesrequest.html">GetCheckerIpRangesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getcheckeriprangesresponse.html">GetCheckerIpRangesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;code&gt;GetCheckerIpRanges&lt;/code&gt; still works, but we recommend that you download ip-ranges.json, which includes IP address ranges for all AWS services. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html&quot;&gt;IP Address Ranges of Amazon Route 53 Servers&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<!-- @@@getCheckerIpRanges -->
+<!-- $$$getGeoLocation[overload1]$$$getGeoLocationconstGetGeoLocationRequest& -->
+<h3 class="fn" id="getGeoLocation"><a name="getGeoLocation"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getgeolocationresponse.html">GetGeoLocationResponse</a></span> *Route53Client::<span class="name">getGeoLocation</span>(const <span class="type"><a href="qtaws-route53-getgeolocationrequest.html">GetGeoLocationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getgeolocationresponse.html">GetGeoLocationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about whether a specified geographic location is supported for Amazon Route 53 geolocation resource record</p>
+<p>sets&gt;</p>
+<p>Use the following syntax to determine whether a continent is supported for</p>
+<p>geolocation&gt;</p>
+<p>&lt;code&gt;GET /2013-04-01/geolocation?ContinentCode=&lt;i&gt;two-letter abbreviation for a continent&lt;/i&gt; &lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>Use the following syntax to determine whether a country is supported for</p>
+<p>geolocation&gt;</p>
+<p>&lt;code&gt;GET /2013-04-01/geolocation?CountryCode=&lt;i&gt;two-character country code&lt;/i&gt; &lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>Use the following syntax to determine whether a subdivision of a country is supported for</p>
+<p>geolocation&gt;</p>
+<p>&lt;code&gt;GET /2013-04-01/geolocation?CountryCode=&lt;i&gt;two-character country code&lt;/i&gt;&amp;amp;SubdivisionCode=&lt;i&gt;subdivision code&lt;/i&gt; &lt;/code&gt;</p>
+<!-- @@@getGeoLocation -->
+<!-- $$$getHealthCheck[overload1]$$$getHealthCheckconstGetHealthCheckRequest& -->
+<h3 class="fn" id="getHealthCheck"><a name="getHealthCheck"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethealthcheckresponse.html">GetHealthCheckResponse</a></span> *Route53Client::<span class="name">getHealthCheck</span>(const <span class="type"><a href="qtaws-route53-gethealthcheckrequest.html">GetHealthCheckRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethealthcheckresponse.html">GetHealthCheckResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specified health</p>
+<!-- @@@getHealthCheck -->
+<!-- $$$getHealthCheckCount[overload1]$$$getHealthCheckCountconstGetHealthCheckCountRequest& -->
+<h3 class="fn" id="getHealthCheckCount"><a name="getHealthCheckCount"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethealthcheckcountresponse.html">GetHealthCheckCountResponse</a></span> *Route53Client::<span class="name">getHealthCheckCount</span>(const <span class="type"><a href="qtaws-route53-gethealthcheckcountrequest.html">GetHealthCheckCountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethealthcheckcountresponse.html">GetHealthCheckCountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the number of health checks that are associated with the current AWS</p>
+<!-- @@@getHealthCheckCount -->
+<!-- $$$getHealthCheckLastFailureReason[overload1]$$$getHealthCheckLastFailureReasonconstGetHealthCheckLastFailureReasonRequest& -->
+<h3 class="fn" id="getHealthCheckLastFailureReason"><a name="getHealthCheckLastFailureReason"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethealthchecklastfailurereasonresponse.html">GetHealthCheckLastFailureReasonResponse</a></span> *Route53Client::<span class="name">getHealthCheckLastFailureReason</span>(const <span class="type"><a href="qtaws-route53-gethealthchecklastfailurereasonrequest.html">GetHealthCheckLastFailureReasonRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethealthchecklastfailurereasonresponse.html">GetHealthCheckLastFailureReasonResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the reason that a specified health check failed most</p>
+<!-- @@@getHealthCheckLastFailureReason -->
+<!-- $$$getHealthCheckStatus[overload1]$$$getHealthCheckStatusconstGetHealthCheckStatusRequest& -->
+<h3 class="fn" id="getHealthCheckStatus"><a name="getHealthCheckStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethealthcheckstatusresponse.html">GetHealthCheckStatusResponse</a></span> *Route53Client::<span class="name">getHealthCheckStatus</span>(const <span class="type"><a href="qtaws-route53-gethealthcheckstatusrequest.html">GetHealthCheckStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethealthcheckstatusresponse.html">GetHealthCheckStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets status of a specified health check.</p>
+<!-- @@@getHealthCheckStatus -->
+<!-- $$$getHostedZone[overload1]$$$getHostedZoneconstGetHostedZoneRequest& -->
+<h3 class="fn" id="getHostedZone"><a name="getHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethostedzoneresponse.html">GetHostedZoneResponse</a></span> *Route53Client::<span class="name">getHostedZone</span>(const <span class="type"><a href="qtaws-route53-gethostedzonerequest.html">GetHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethostedzoneresponse.html">GetHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specified hosted zone including the four name servers assigned to the hosted</p>
+<!-- @@@getHostedZone -->
+<!-- $$$getHostedZoneCount[overload1]$$$getHostedZoneCountconstGetHostedZoneCountRequest& -->
+<h3 class="fn" id="getHostedZoneCount"><a name="getHostedZoneCount"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethostedzonecountresponse.html">GetHostedZoneCountResponse</a></span> *Route53Client::<span class="name">getHostedZoneCount</span>(const <span class="type"><a href="qtaws-route53-gethostedzonecountrequest.html">GetHostedZoneCountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethostedzonecountresponse.html">GetHostedZoneCountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the number of hosted zones that are associated with the current AWS</p>
+<!-- @@@getHostedZoneCount -->
+<!-- $$$getHostedZoneLimit[overload1]$$$getHostedZoneLimitconstGetHostedZoneLimitRequest& -->
+<h3 class="fn" id="getHostedZoneLimit"><a name="getHostedZoneLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gethostedzonelimitresponse.html">GetHostedZoneLimitResponse</a></span> *Route53Client::<span class="name">getHostedZoneLimit</span>(const <span class="type"><a href="qtaws-route53-gethostedzonelimitrequest.html">GetHostedZoneLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gethostedzonelimitresponse.html">GetHostedZoneLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the specified limit for a specified hosted zone, for example, the maximum number of records that you can create in the hosted zone.</p>
+<p>&lt;/p</p>
+<p>For the default limit, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html&quot;&gt;Limits&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer Guide&lt;/i&gt;. To request a higher limit, &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;amp;limitType=service-code-route53&quot;&gt;open a</p>
+<!-- @@@getHostedZoneLimit -->
+<!-- $$$getQueryLoggingConfig[overload1]$$$getQueryLoggingConfigconstGetQueryLoggingConfigRequest& -->
+<h3 class="fn" id="getQueryLoggingConfig"><a name="getQueryLoggingConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getqueryloggingconfigresponse.html">GetQueryLoggingConfigResponse</a></span> *Route53Client::<span class="name">getQueryLoggingConfig</span>(const <span class="type"><a href="qtaws-route53-getqueryloggingconfigrequest.html">GetQueryLoggingConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getqueryloggingconfigresponse.html">GetQueryLoggingConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specified configuration for DNS query</p>
+<p>logging&gt;</p>
+<p>For more information about DNS query logs, see &lt;a&gt;CreateQueryLoggingConfig&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html&quot;&gt;Logging DNS</p>
+<!-- @@@getQueryLoggingConfig -->
+<!-- $$$getReusableDelegationSet[overload1]$$$getReusableDelegationSetconstGetReusableDelegationSetRequest& -->
+<h3 class="fn" id="getReusableDelegationSet"><a name="getReusableDelegationSet"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getreusabledelegationsetresponse.html">GetReusableDelegationSetResponse</a></span> *Route53Client::<span class="name">getReusableDelegationSet</span>(const <span class="type"><a href="qtaws-route53-getreusabledelegationsetrequest.html">GetReusableDelegationSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getreusabledelegationsetresponse.html">GetReusableDelegationSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a specified reusable delegation set, including the four name servers that are assigned to the delegation</p>
+<!-- @@@getReusableDelegationSet -->
+<!-- $$$getReusableDelegationSetLimit[overload1]$$$getReusableDelegationSetLimitconstGetReusableDelegationSetLimitRequest& -->
+<h3 class="fn" id="getReusableDelegationSetLimit"><a name="getReusableDelegationSetLimit"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-getreusabledelegationsetlimitresponse.html">GetReusableDelegationSetLimitResponse</a></span> *Route53Client::<span class="name">getReusableDelegationSetLimit</span>(const <span class="type"><a href="qtaws-route53-getreusabledelegationsetlimitrequest.html">GetReusableDelegationSetLimitRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-getreusabledelegationsetlimitresponse.html">GetReusableDelegationSetLimitResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the maximum number of hosted zones that you can associate with the specified reusable delegation</p>
+<p>set&gt;</p>
+<p>For the default limit, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html&quot;&gt;Limits&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer Guide&lt;/i&gt;. To request a higher limit, &lt;a href=&quot;https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&amp;amp;limitType=service-code-route53&quot;&gt;open a</p>
+<!-- @@@getReusableDelegationSetLimit -->
+<!-- $$$getTrafficPolicy[overload1]$$$getTrafficPolicyconstGetTrafficPolicyRequest& -->
+<h3 class="fn" id="getTrafficPolicy"><a name="getTrafficPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gettrafficpolicyresponse.html">GetTrafficPolicyResponse</a></span> *Route53Client::<span class="name">getTrafficPolicy</span>(const <span class="type"><a href="qtaws-route53-gettrafficpolicyrequest.html">GetTrafficPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gettrafficpolicyresponse.html">GetTrafficPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specific traffic policy</p>
+<!-- @@@getTrafficPolicy -->
+<!-- $$$getTrafficPolicyInstance[overload1]$$$getTrafficPolicyInstanceconstGetTrafficPolicyInstanceRequest& -->
+<h3 class="fn" id="getTrafficPolicyInstance"><a name="getTrafficPolicyInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gettrafficpolicyinstanceresponse.html">GetTrafficPolicyInstanceResponse</a></span> *Route53Client::<span class="name">getTrafficPolicyInstance</span>(const <span class="type"><a href="qtaws-route53-gettrafficpolicyinstancerequest.html">GetTrafficPolicyInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gettrafficpolicyinstanceresponse.html">GetTrafficPolicyInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a specified traffic policy</p>
+<p>instance&gt; &lt;note&gt;</p>
+<p>After you submit a &lt;code&gt;CreateTrafficPolicyInstance&lt;/code&gt; or an &lt;code&gt;UpdateTrafficPolicyInstance&lt;/code&gt; request, there's a brief delay while Amazon Route 53 creates the resource record sets that are specified in the traffic policy definition. For more information, see the &lt;code&gt;State&lt;/code&gt; response</p>
+<p>element&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>In the Amazon Route 53 console, traffic policy instances are known as policy</p>
+<!-- @@@getTrafficPolicyInstance -->
+<!-- $$$getTrafficPolicyInstanceCount[overload1]$$$getTrafficPolicyInstanceCountconstGetTrafficPolicyInstanceCountRequest& -->
+<h3 class="fn" id="getTrafficPolicyInstanceCount"><a name="getTrafficPolicyInstanceCount"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-gettrafficpolicyinstancecountresponse.html">GetTrafficPolicyInstanceCountResponse</a></span> *Route53Client::<span class="name">getTrafficPolicyInstanceCount</span>(const <span class="type"><a href="qtaws-route53-gettrafficpolicyinstancecountrequest.html">GetTrafficPolicyInstanceCountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-gettrafficpolicyinstancecountresponse.html">GetTrafficPolicyInstanceCountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the number of traffic policy instances that are associated with the current AWS</p>
+<!-- @@@getTrafficPolicyInstanceCount -->
+<!-- $$$listGeoLocations[overload1]$$$listGeoLocationsconstListGeoLocationsRequest& -->
+<h3 class="fn" id="listGeoLocations"><a name="listGeoLocations"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listgeolocationsresponse.html">ListGeoLocationsResponse</a></span> *Route53Client::<span class="name">listGeoLocations</span>(const <span class="type"><a href="qtaws-route53-listgeolocationsrequest.html">ListGeoLocationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listgeolocationsresponse.html">ListGeoLocationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of supported geo</p>
+<p>locations&gt;</p>
+<p>Countries are listed first, and continents are listed last. If Amazon Route 53 supports subdivisions for a country (for example, states or provinces), the subdivisions for that country are listed in alphabetical order immediately after the corresponding</p>
+<!-- @@@listGeoLocations -->
+<!-- $$$listHealthChecks[overload1]$$$listHealthChecksconstListHealthChecksRequest& -->
+<h3 class="fn" id="listHealthChecks"><a name="listHealthChecks"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listhealthchecksresponse.html">ListHealthChecksResponse</a></span> *Route53Client::<span class="name">listHealthChecks</span>(const <span class="type"><a href="qtaws-route53-listhealthchecksrequest.html">ListHealthChecksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listhealthchecksresponse.html">ListHealthChecksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve a list of the health checks that are associated with the current AWS account.</p>
+<!-- @@@listHealthChecks -->
+<!-- $$$listHostedZones[overload1]$$$listHostedZonesconstListHostedZonesRequest& -->
+<h3 class="fn" id="listHostedZones"><a name="listHostedZones"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listhostedzonesresponse.html">ListHostedZonesResponse</a></span> *Route53Client::<span class="name">listHostedZones</span>(const <span class="type"><a href="qtaws-route53-listhostedzonesrequest.html">ListHostedZonesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listhostedzonesresponse.html">ListHostedZonesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of the public and private hosted zones that are associated with the current AWS account. The response includes a &lt;code&gt;HostedZones&lt;/code&gt; child element for each hosted</p>
+<p>zone&gt;</p>
+<p>Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of hosted zones, you can use the &lt;code&gt;maxitems&lt;/code&gt; parameter to list them in groups of up to</p>
+<!-- @@@listHostedZones -->
+<!-- $$$listHostedZonesByName[overload1]$$$listHostedZonesByNameconstListHostedZonesByNameRequest& -->
+<h3 class="fn" id="listHostedZonesByName"><a name="listHostedZonesByName"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listhostedzonesbynameresponse.html">ListHostedZonesByNameResponse</a></span> *Route53Client::<span class="name">listHostedZonesByName</span>(const <span class="type"><a href="qtaws-route53-listhostedzonesbynamerequest.html">ListHostedZonesByNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listhostedzonesbynameresponse.html">ListHostedZonesByNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of your hosted zones in lexicographic order. The response includes a &lt;code&gt;HostedZones&lt;/code&gt; child element for each hosted zone created by the current AWS account.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;ListHostedZonesByName&lt;/code&gt; sorts hosted zones by name with the labels reversed. For</p>
+<p>example&gt;</p>
+<p>&lt;code&gt;com.example.www.&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>Note the trailing dot, which can change the sort order in some</p>
+<p>circumstances&gt;</p>
+<p>If the domain name includes escape characters or Punycode, &lt;code&gt;ListHostedZonesByName&lt;/code&gt; alphabetizes the domain name using the escaped or Punycoded value, which is the format that Amazon Route 53 saves in its database. For example, to create a hosted zone for exämple.com, you specify ex<b class="redFont"><code>\344mple</code></b>.com for the domain name. &lt;code&gt;ListHostedZonesByName&lt;/code&gt; alphabetizes it</p>
+<p>as&gt;</p>
+<p>&lt;code&gt;com.ex<b class="redFont"><code>\344mple</code></b>.&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>The labels are reversed and alphabetized using the escaped value. For more information about valid domain name formats, including internationalized domain names, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html&quot;&gt;DNS Domain Name Format&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Amazon Route 53 returns up to 100 items in each response. If you have a lot of hosted zones, use the &lt;code&gt;MaxItems&lt;/code&gt; parameter to list them in groups of up to 100. The response includes values that help navigate from one group of &lt;code&gt;MaxItems&lt;/code&gt; hosted zones to the</p>
+<p>next&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;DNSName&lt;/code&gt; and &lt;code&gt;HostedZoneId&lt;/code&gt; elements in the response contain the values, if any, specified for the &lt;code&gt;dnsname&lt;/code&gt; and &lt;code&gt;hostedzoneid&lt;/code&gt; parameters in the request that produced the current</p>
+<p>response&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;MaxItems&lt;/code&gt; element in the response contains the value, if any, that you specified for the &lt;code&gt;maxitems&lt;/code&gt; parameter in the request that produced the current</p>
+<p>response&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the value of &lt;code&gt;IsTruncated&lt;/code&gt; in the response is true, there are more hosted zones associated with the current AWS account.</p>
+<p>&lt;/p</p>
+<p>If &lt;code&gt;IsTruncated&lt;/code&gt; is false, this response includes the last hosted zone that is associated with the current account. The &lt;code&gt;NextDNSName&lt;/code&gt; element and &lt;code&gt;NextHostedZoneId&lt;/code&gt; elements are omitted from the</p>
+<p>response&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;NextDNSName&lt;/code&gt; and &lt;code&gt;NextHostedZoneId&lt;/code&gt; elements in the response contain the domain name and the hosted zone ID of the next hosted zone that is associated with the current AWS account. If you want to list more hosted zones, make another call to &lt;code&gt;ListHostedZonesByName&lt;/code&gt;, and specify the value of &lt;code&gt;NextDNSName&lt;/code&gt; and &lt;code&gt;NextHostedZoneId&lt;/code&gt; in the &lt;code&gt;dnsname&lt;/code&gt; and &lt;code&gt;hostedzoneid&lt;/code&gt; parameters,</p>
+<!-- @@@listHostedZonesByName -->
+<!-- $$$listQueryLoggingConfigs[overload1]$$$listQueryLoggingConfigsconstListQueryLoggingConfigsRequest& -->
+<h3 class="fn" id="listQueryLoggingConfigs"><a name="listQueryLoggingConfigs"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listqueryloggingconfigsresponse.html">ListQueryLoggingConfigsResponse</a></span> *Route53Client::<span class="name">listQueryLoggingConfigs</span>(const <span class="type"><a href="qtaws-route53-listqueryloggingconfigsrequest.html">ListQueryLoggingConfigsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listqueryloggingconfigsresponse.html">ListQueryLoggingConfigsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the configurations for DNS query logging that are associated with the current AWS account or the configuration that is associated with a specified hosted</p>
+<p>zone&gt;</p>
+<p>For more information about DNS query logs, see &lt;a&gt;CreateQueryLoggingConfig&lt;/a&gt;. Additional information, including the format of DNS query logs, appears in &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html&quot;&gt;Logging DNS Queries&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<!-- @@@listQueryLoggingConfigs -->
+<!-- $$$listResourceRecordSets[overload1]$$$listResourceRecordSetsconstListResourceRecordSetsRequest& -->
+<h3 class="fn" id="listResourceRecordSets"><a name="listResourceRecordSets"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listresourcerecordsetsresponse.html">ListResourceRecordSetsResponse</a></span> *Route53Client::<span class="name">listResourceRecordSets</span>(const <span class="type"><a href="qtaws-route53-listresourcerecordsetsrequest.html">ListResourceRecordSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listresourcerecordsetsresponse.html">ListResourceRecordSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the resource record sets in a specified hosted</p>
+<p>zone&gt;</p>
+<p>&lt;code&gt;ListResourceRecordSets&lt;/code&gt; returns up to 100 resource record sets at a time in ASCII order, beginning at a position specified by the &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;type&lt;/code&gt; elements. The action sorts results first by DNS name with the labels reversed, for</p>
+<p>example&gt;</p>
+<p>&lt;code&gt;com.example.www.&lt;/code&gt;</p>
+<p>&lt;/p</p>
+<p>Note the trailing dot, which can change the sort order in some</p>
+<p>circumstances&gt;</p>
+<p>When multiple records have the same DNS name, the action sorts results by the record</p>
+<p>type&gt;</p>
+<p>You can use the name and type elements to adjust the beginning position of the list of resource record sets</p>
+<p>returned&gt; &lt;dl&gt; &lt;dt&gt;If you do not specify Name or Type&lt;/dt&gt; &lt;dd&gt;</p>
+<p>The results begin with the first resource record set that the hosted zone</p>
+<p>contains&gt; &lt;/dd&gt; &lt;dt&gt;If you specify Name but not Type&lt;/dt&gt; &lt;dd&gt;</p>
+<p>The results begin with the first resource record set in the list whose name is greater than or equal to</p>
+<p>&lt;code&gt;Name&lt;/code&gt;&gt; &lt;/dd&gt; &lt;dt&gt;If you specify Type but not Name&lt;/dt&gt; &lt;dd&gt;</p>
+<p>Amazon Route 53 returns the &lt;code&gt;InvalidInput&lt;/code&gt;</p>
+<p>error&gt; &lt;/dd&gt; &lt;dt&gt;If you specify both Name and Type&lt;/dt&gt; &lt;dd&gt;</p>
+<p>The results begin with the first resource record set in the list whose name is greater than or equal to &lt;code&gt;Name&lt;/code&gt;, and whose type is greater than or equal to</p>
+<p>&lt;code&gt;Type&lt;/code&gt;&gt; &lt;/dd&gt; &lt;/dl&gt;</p>
+<p>This action returns the most current version of the records. This includes records that are &lt;code&gt;PENDING&lt;/code&gt;, and that are not yet available on all Amazon Route 53 DNS</p>
+<p>servers&gt;</p>
+<p>To ensure that you get an accurate listing of the resource record sets for a hosted zone at a point in time, do not submit a &lt;code&gt;ChangeResourceRecordSets&lt;/code&gt; request while you're paging through the results of a &lt;code&gt;ListResourceRecordSets&lt;/code&gt; request. If you do, some pages may display results without the latest changes while other pages display results with the latest</p>
+<!-- @@@listResourceRecordSets -->
+<!-- $$$listReusableDelegationSets[overload1]$$$listReusableDelegationSetsconstListReusableDelegationSetsRequest& -->
+<h3 class="fn" id="listReusableDelegationSets"><a name="listReusableDelegationSets"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listreusabledelegationsetsresponse.html">ListReusableDelegationSetsResponse</a></span> *Route53Client::<span class="name">listReusableDelegationSets</span>(const <span class="type"><a href="qtaws-route53-listreusabledelegationsetsrequest.html">ListReusableDelegationSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listreusabledelegationsetsresponse.html">ListReusableDelegationSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of the reusable delegation sets that are associated with the current AWS</p>
+<!-- @@@listReusableDelegationSets -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *Route53Client::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-route53-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists tags for one health check or hosted zone.</p>
+<p>&lt;/p</p>
+<p>For information about using tags for cost allocation, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&quot;&gt;Using Cost Allocation Tags&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$listTagsForResources[overload1]$$$listTagsForResourcesconstListTagsForResourcesRequest& -->
+<h3 class="fn" id="listTagsForResources"><a name="listTagsForResources"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtagsforresourcesresponse.html">ListTagsForResourcesResponse</a></span> *Route53Client::<span class="name">listTagsForResources</span>(const <span class="type"><a href="qtaws-route53-listtagsforresourcesrequest.html">ListTagsForResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtagsforresourcesresponse.html">ListTagsForResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists tags for up to 10 health checks or hosted</p>
+<p>zones&gt;</p>
+<p>For information about using tags for cost allocation, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&quot;&gt;Using Cost Allocation Tags&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
+<!-- @@@listTagsForResources -->
+<!-- $$$listTrafficPolicies[overload1]$$$listTrafficPoliciesconstListTrafficPoliciesRequest& -->
+<h3 class="fn" id="listTrafficPolicies"><a name="listTrafficPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtrafficpoliciesresponse.html">ListTrafficPoliciesResponse</a></span> *Route53Client::<span class="name">listTrafficPolicies</span>(const <span class="type"><a href="qtaws-route53-listtrafficpoliciesrequest.html">ListTrafficPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtrafficpoliciesresponse.html">ListTrafficPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order in which they were created.</p>
+<!-- @@@listTrafficPolicies -->
+<!-- $$$listTrafficPolicyInstances[overload1]$$$listTrafficPolicyInstancesconstListTrafficPolicyInstancesRequest& -->
+<h3 class="fn" id="listTrafficPolicyInstances"><a name="listTrafficPolicyInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesresponse.html">ListTrafficPolicyInstancesResponse</a></span> *Route53Client::<span class="name">listTrafficPolicyInstances</span>(const <span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesrequest.html">ListTrafficPolicyInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtrafficpolicyinstancesresponse.html">ListTrafficPolicyInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the traffic policy instances that you created by using the current AWS</p>
+<p>account&gt; &lt;note&gt;</p>
+<p>After you submit an &lt;code&gt;UpdateTrafficPolicyInstance&lt;/code&gt; request, there's a brief delay while Amazon Route 53 creates the resource record sets that are specified in the traffic policy definition. For more information, see the &lt;code&gt;State&lt;/code&gt; response</p>
+<p>element&gt; &lt;/note&gt;</p>
+<p>Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the &lt;code&gt;MaxItems&lt;/code&gt; parameter to list them in groups of up to</p>
+<!-- @@@listTrafficPolicyInstances -->
+<!-- $$$listTrafficPolicyInstancesByHostedZone[overload1]$$$listTrafficPolicyInstancesByHostedZoneconstListTrafficPolicyInstancesByHostedZoneRequest& -->
+<h3 class="fn" id="listTrafficPolicyInstancesByHostedZone"><a name="listTrafficPolicyInstancesByHostedZone"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesbyhostedzoneresponse.html">ListTrafficPolicyInstancesByHostedZoneResponse</a></span> *Route53Client::<span class="name">listTrafficPolicyInstancesByHostedZone</span>(const <span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesbyhostedzonerequest.html">ListTrafficPolicyInstancesByHostedZoneRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtrafficpolicyinstancesbyhostedzoneresponse.html">ListTrafficPolicyInstancesByHostedZoneResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the traffic policy instances that you created in a specified hosted</p>
+<p>zone&gt; &lt;note&gt;</p>
+<p>After you submit a &lt;code&gt;CreateTrafficPolicyInstance&lt;/code&gt; or an &lt;code&gt;UpdateTrafficPolicyInstance&lt;/code&gt; request, there's a brief delay while Amazon Route 53 creates the resource record sets that are specified in the traffic policy definition. For more information, see the &lt;code&gt;State&lt;/code&gt; response</p>
+<p>element&gt; &lt;/note&gt;</p>
+<p>Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the &lt;code&gt;MaxItems&lt;/code&gt; parameter to list them in groups of up to</p>
+<!-- @@@listTrafficPolicyInstancesByHostedZone -->
+<!-- $$$listTrafficPolicyInstancesByPolicy[overload1]$$$listTrafficPolicyInstancesByPolicyconstListTrafficPolicyInstancesByPolicyRequest& -->
+<h3 class="fn" id="listTrafficPolicyInstancesByPolicy"><a name="listTrafficPolicyInstancesByPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesbypolicyresponse.html">ListTrafficPolicyInstancesByPolicyResponse</a></span> *Route53Client::<span class="name">listTrafficPolicyInstancesByPolicy</span>(const <span class="type"><a href="qtaws-route53-listtrafficpolicyinstancesbypolicyrequest.html">ListTrafficPolicyInstancesByPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtrafficpolicyinstancesbypolicyresponse.html">ListTrafficPolicyInstancesByPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the traffic policy instances that you created by using a specify traffic policy</p>
+<p>version&gt; &lt;note&gt;</p>
+<p>After you submit a &lt;code&gt;CreateTrafficPolicyInstance&lt;/code&gt; or an &lt;code&gt;UpdateTrafficPolicyInstance&lt;/code&gt; request, there's a brief delay while Amazon Route 53 creates the resource record sets that are specified in the traffic policy definition. For more information, see the &lt;code&gt;State&lt;/code&gt; response</p>
+<p>element&gt; &lt;/note&gt;</p>
+<p>Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the &lt;code&gt;MaxItems&lt;/code&gt; parameter to list them in groups of up to</p>
+<!-- @@@listTrafficPolicyInstancesByPolicy -->
+<!-- $$$listTrafficPolicyVersions[overload1]$$$listTrafficPolicyVersionsconstListTrafficPolicyVersionsRequest& -->
+<h3 class="fn" id="listTrafficPolicyVersions"><a name="listTrafficPolicyVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listtrafficpolicyversionsresponse.html">ListTrafficPolicyVersionsResponse</a></span> *Route53Client::<span class="name">listTrafficPolicyVersions</span>(const <span class="type"><a href="qtaws-route53-listtrafficpolicyversionsrequest.html">ListTrafficPolicyVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listtrafficpolicyversionsresponse.html">ListTrafficPolicyVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about all of the versions for a specified traffic</p>
+<p>policy&gt;</p>
+<p>Traffic policy versions are listed in numerical order by</p>
+<!-- @@@listTrafficPolicyVersions -->
+<!-- $$$listVPCAssociationAuthorizations[overload1]$$$listVPCAssociationAuthorizationsconstListVPCAssociationAuthorizationsRequest& -->
+<h3 class="fn" id="listVPCAssociationAuthorizations"><a name="listVPCAssociationAuthorizations"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-listvpcassociationauthorizationsresponse.html">ListVPCAssociationAuthorizationsResponse</a></span> *Route53Client::<span class="name">listVPCAssociationAuthorizations</span>(const <span class="type"><a href="qtaws-route53-listvpcassociationauthorizationsrequest.html">ListVPCAssociationAuthorizationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-listvpcassociationauthorizationsresponse.html">ListVPCAssociationAuthorizationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of the VPCs that were created by other accounts and that can be associated with a specified hosted zone because you've submitted one or more &lt;code&gt;CreateVPCAssociationAuthorization&lt;/code&gt; requests.</p>
+<p>&lt;/p</p>
+<p>The response includes a &lt;code&gt;VPCs&lt;/code&gt; element with a &lt;code&gt;VPC&lt;/code&gt; child element for each VPC that can be associated with the hosted</p>
+<!-- @@@listVPCAssociationAuthorizations -->
+<!-- $$$testDNSAnswer[overload1]$$$testDNSAnswerconstTestDNSAnswerRequest& -->
+<h3 class="fn" id="testDNSAnswer"><a name="testDNSAnswer"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-testdnsanswerresponse.html">TestDNSAnswerResponse</a></span> *Route53Client::<span class="name">testDNSAnswer</span>(const <span class="type"><a href="qtaws-route53-testdnsanswerrequest.html">TestDNSAnswerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-testdnsanswerresponse.html">TestDNSAnswerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type. You can optionally specify the IP address of a DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.</p>
+<!-- @@@testDNSAnswer -->
+<!-- $$$updateHealthCheck[overload1]$$$updateHealthCheckconstUpdateHealthCheckRequest& -->
+<h3 class="fn" id="updateHealthCheck"><a name="updateHealthCheck"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-updatehealthcheckresponse.html">UpdateHealthCheckResponse</a></span> *Route53Client::<span class="name">updateHealthCheck</span>(const <span class="type"><a href="qtaws-route53-updatehealthcheckrequest.html">UpdateHealthCheckRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-updatehealthcheckresponse.html">UpdateHealthCheckResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing health check. Note that some values can't be updated.</p>
+<p>&lt;/p</p>
+<p>For more information about updating health checks, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html&quot;&gt;Creating, Updating, and Deleting Health Checks&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
+<!-- @@@updateHealthCheck -->
+<!-- $$$updateHostedZoneComment[overload1]$$$updateHostedZoneCommentconstUpdateHostedZoneCommentRequest& -->
+<h3 class="fn" id="updateHostedZoneComment"><a name="updateHostedZoneComment"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-updatehostedzonecommentresponse.html">UpdateHostedZoneCommentResponse</a></span> *Route53Client::<span class="name">updateHostedZoneComment</span>(const <span class="type"><a href="qtaws-route53-updatehostedzonecommentrequest.html">UpdateHostedZoneCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-updatehostedzonecommentresponse.html">UpdateHostedZoneCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the comment for a specified hosted</p>
+<!-- @@@updateHostedZoneComment -->
+<!-- $$$updateTrafficPolicyComment[overload1]$$$updateTrafficPolicyCommentconstUpdateTrafficPolicyCommentRequest& -->
+<h3 class="fn" id="updateTrafficPolicyComment"><a name="updateTrafficPolicyComment"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-updatetrafficpolicycommentresponse.html">UpdateTrafficPolicyCommentResponse</a></span> *Route53Client::<span class="name">updateTrafficPolicyComment</span>(const <span class="type"><a href="qtaws-route53-updatetrafficpolicycommentrequest.html">UpdateTrafficPolicyCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-updatetrafficpolicycommentresponse.html">UpdateTrafficPolicyCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the comment for a specified traffic policy</p>
+<!-- @@@updateTrafficPolicyComment -->
+<!-- $$$updateTrafficPolicyInstance[overload1]$$$updateTrafficPolicyInstanceconstUpdateTrafficPolicyInstanceRequest& -->
+<h3 class="fn" id="updateTrafficPolicyInstance"><a name="updateTrafficPolicyInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-route53-updatetrafficpolicyinstanceresponse.html">UpdateTrafficPolicyInstanceResponse</a></span> *Route53Client::<span class="name">updateTrafficPolicyInstance</span>(const <span class="type"><a href="qtaws-route53-updatetrafficpolicyinstancerequest.html">UpdateTrafficPolicyInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-route53-route53client.html">Route53Client</a> service, and returns a pointer to an <a href="qtaws-route53-updatetrafficpolicyinstanceresponse.html">UpdateTrafficPolicyInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the resource record sets in a specified hosted zone that were created based on the settings in a specified traffic policy</p>
+<p>version&gt;</p>
+<p>When you update a traffic policy instance, Amazon Route 53 continues to respond to DNS queries for the root resource record set name (such as example.com) while it replaces one group of resource record sets with another. Amazon Route 53 performs the following</p>
+<p>operations&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Amazon Route 53 creates a new group of resource record sets based on the specified traffic policy. This is true regardless of how significant the differences are between the existing resource record sets and the new resource record sets.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>When all of the new resource record sets have been created, Amazon Route 53 starts to respond to DNS queries for the root resource record set name (such as example.com) by using the new resource record</p>
+<p>sets&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon Route 53 deletes the old group of resource record sets that are associated with the root resource record set</p>
+<!-- @@@updateTrafficPolicyInstance -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

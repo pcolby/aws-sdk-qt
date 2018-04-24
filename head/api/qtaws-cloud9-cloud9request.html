@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloud9request.cpp -->
+  <title>Cloud9Request Class | Cloud9</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloud9-index.html">Cloud9</a></li>
+<li><a href="qtawscloud9-module.html">C++ Classes</a></li>
+<li>Cloud9Request</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Cloud9Request Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloud9-cloud9request.html">QtAws::Cloud9::Cloud9Request</a>)<br/></span>
+<!-- $$$Cloud9Request-brief -->
+<p>The <a href="qtaws-cloud9-cloud9request.html">Cloud9Request</a> class provides an interface for Cloud9 requests. <a href="#details">More...</a></p>
+<!-- @@@Cloud9Request -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Cloud9Request&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-cloud9-createenvironmentec2request.html">QtAws::Cloud9::CreateEnvironmentEC2Request</a>, <a href="qtaws-cloud9-createenvironmentmembershiprequest.html">QtAws::Cloud9::CreateEnvironmentMembershipRequest</a>, <a href="qtaws-cloud9-deleteenvironmentmembershiprequest.html">QtAws::Cloud9::DeleteEnvironmentMembershipRequest</a>, <a href="qtaws-cloud9-deleteenvironmentrequest.html">QtAws::Cloud9::DeleteEnvironmentRequest</a>, <a href="qtaws-cloud9-describeenvironmentmembershipsrequest.html">QtAws::Cloud9::DescribeEnvironmentMembershipsRequest</a>, <a href="qtaws-cloud9-describeenvironmentsrequest.html">QtAws::Cloud9::DescribeEnvironmentsRequest</a>, <a href="qtaws-cloud9-describeenvironmentstatusrequest.html">QtAws::Cloud9::DescribeEnvironmentStatusRequest</a>, <a href="qtaws-cloud9-listenvironmentsrequest.html">QtAws::Cloud9::ListEnvironmentsRequest</a>, <a href="qtaws-cloud9-updateenvironmentmembershiprequest.html">QtAws::Cloud9::UpdateEnvironmentMembershipRequest</a>, and <a href="qtaws-cloud9-updateenvironmentrequest.html">QtAws::Cloud9::UpdateEnvironmentRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-cloud9-cloud9request-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#Action-enum">Action</a></b> { CreateEnvironmentEC2Action, CreateEnvironmentMembershipAction, DeleteEnvironmentAction, DeleteEnvironmentMembershipAction, ..., UpdateEnvironmentMembershipAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#Cloud9Request">Cloud9Request</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#Cloud9Request-1">Cloud9Request</a></b>(const Cloud9Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Cloud9Request &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#operator-eq">operator=</a></b>(const Cloud9Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#operator-eq-eq">operator==</a></b>(const Cloud9Request &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#Cloud9Request-2">Cloud9Request</a></b>(Cloud9RequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloud9-cloud9request.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Cloud9Request-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloud9-cloud9request.html">Cloud9Request</a> class provides an interface for Cloud9 requests.</p>
+</div>
+<!-- @@@Cloud9Request -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateEnvironmentEC2Action$$$CreateEnvironmentMembershipAction$$$DeleteEnvironmentAction$$$DeleteEnvironmentMembershipAction$$$DescribeEnvironmentMembershipsAction$$$DescribeEnvironmentStatusAction$$$DescribeEnvironmentsAction$$$ListEnvironmentsAction$$$UpdateEnvironmentAction$$$UpdateEnvironmentMembershipAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum Cloud9Request::<span class="name">Action</span><br/>flags Cloud9Request::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Cloud9 requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::CreateEnvironmentEC2Action</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Cloud9 CreateEnvironmentEC2 action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::CreateEnvironmentMembershipAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Cloud9 CreateEnvironmentMembership action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::DeleteEnvironmentAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Cloud9 DeleteEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::DeleteEnvironmentMembershipAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Cloud9 DeleteEnvironmentMembership action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::DescribeEnvironmentMembershipsAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Cloud9 DescribeEnvironmentMemberships action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::DescribeEnvironmentStatusAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Cloud9 DescribeEnvironmentStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::DescribeEnvironmentsAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Cloud9 DescribeEnvironments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::ListEnvironmentsAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Cloud9 ListEnvironments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::UpdateEnvironmentAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Cloud9 UpdateEnvironment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Cloud9::Cloud9Request::UpdateEnvironmentMembershipAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Cloud9 UpdateEnvironmentMembership action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Cloud9Request[overload1]$$$Cloud9RequestconstAction -->
+<h3 class="fn" id="Cloud9Request"><a name="Cloud9Request"></a>Cloud9Request::<span class="name">Cloud9Request</span>(const <span class="type"><a href="qtaws-cloud9-cloud9request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-cloud9-cloud9request.html">Cloud9Request</a> object for Cloud9 <i>action</i>.</p>
+<!-- @@@Cloud9Request -->
+<!-- $$$Cloud9Request$$$Cloud9RequestconstCloud9Request& -->
+<h3 class="fn" id="Cloud9Request-1"><a name="Cloud9Request-1"></a>Cloud9Request::<span class="name">Cloud9Request</span>(const <span class="type"><a href="qtaws-cloud9-cloud9request.html#Cloud9Request">Cloud9Request</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@Cloud9Request -->
+<!-- $$$Cloud9Request$$$Cloud9RequestCloud9RequestPrivate*const -->
+<h3 class="fn" id="Cloud9Request-2"><a name="Cloud9Request-2"></a><code>[protected] </code>Cloud9Request::<span class="name">Cloud9Request</span>(<span class="type">Cloud9RequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-cloud9-cloud9request.html">Cloud9Request</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from Cloud9RequestPrivate.</p>
+<!-- @@@Cloud9Request -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-cloud9-cloud9request.html#Action-enum">Action</a></span> Cloud9Request::<span class="name">action</span>() const</h3>
+<p>Returns the Cloud9 action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> Cloud9Request::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Cloud9 action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> Cloud9Request::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Cloud9 API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> Cloud9Request::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> Cloud9Request::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> Cloud9Request::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;Cloud9Request::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> Cloud9Request::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-cloud9-cloud9request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Cloud9 action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> Cloud9Request::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Cloud9 API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> Cloud9Request::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> Cloud9Request::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-cloud9-cloud9request.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> Cloud9Request::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Cloud9 request using the given <i>endpoint</i>.</p>
+<p>This Cloud9 implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-cloud9-cloud9request.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constCloud9Request& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-cloud9-cloud9request.html#Cloud9Request">Cloud9Request</a></span> &amp;Cloud9Request::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-cloud9-cloud9request.html#Cloud9Request">Cloud9Request</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-cloud9-cloud9request.html">Cloud9Request</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constCloud9Request& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> Cloud9Request::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-cloud9-cloud9request.html#Cloud9Request">Cloud9Request</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

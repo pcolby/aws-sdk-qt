@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- opsworksrequest.cpp -->
+  <title>OpsWorksRequest Class | OpsWorks</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsopsworks-index.html">OpsWorks</a></li>
+<li><a href="qtawsopsworks-module.html">C++ Classes</a></li>
+<li>OpsWorksRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">OpsWorksRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-opsworks-opsworksrequest.html">QtAws::OpsWorks::OpsWorksRequest</a>)<br/></span>
+<!-- $$$OpsWorksRequest-brief -->
+<p>The <a href="qtaws-opsworks-opsworksrequest.html">OpsWorksRequest</a> class provides an interface for <a href="qtaws-opsworks.html">OpsWorks</a> requests. <a href="#details">More...</a></p>
+<!-- @@@OpsWorksRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;OpsWorksRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-opsworks-assigninstancerequest.html">QtAws::OpsWorks::AssignInstanceRequest</a>, <a href="qtaws-opsworks-assignvolumerequest.html">QtAws::OpsWorks::AssignVolumeRequest</a>, <a href="qtaws-opsworks-associateelasticiprequest.html">QtAws::OpsWorks::AssociateElasticIpRequest</a>, <a href="qtaws-opsworks-attachelasticloadbalancerrequest.html">QtAws::OpsWorks::AttachElasticLoadBalancerRequest</a>, <a href="qtaws-opsworks-clonestackrequest.html">QtAws::OpsWorks::CloneStackRequest</a>, <a href="qtaws-opsworks-createapprequest.html">QtAws::OpsWorks::CreateAppRequest</a>, <a href="qtaws-opsworks-createdeploymentrequest.html">QtAws::OpsWorks::CreateDeploymentRequest</a>, <a href="qtaws-opsworks-createinstancerequest.html">QtAws::OpsWorks::CreateInstanceRequest</a>, <a href="qtaws-opsworks-createlayerrequest.html">QtAws::OpsWorks::CreateLayerRequest</a>, <a href="qtaws-opsworks-createstackrequest.html">QtAws::OpsWorks::CreateStackRequest</a>, <a href="qtaws-opsworks-createuserprofilerequest.html">QtAws::OpsWorks::CreateUserProfileRequest</a>, <a href="qtaws-opsworks-deleteapprequest.html">QtAws::OpsWorks::DeleteAppRequest</a>, <a href="qtaws-opsworks-deleteinstancerequest.html">QtAws::OpsWorks::DeleteInstanceRequest</a>, <a href="qtaws-opsworks-deletelayerrequest.html">QtAws::OpsWorks::DeleteLayerRequest</a>, <a href="qtaws-opsworks-deletestackrequest.html">QtAws::OpsWorks::DeleteStackRequest</a>, <a href="qtaws-opsworks-deleteuserprofilerequest.html">QtAws::OpsWorks::DeleteUserProfileRequest</a>, <a href="qtaws-opsworks-deregisterecsclusterrequest.html">QtAws::OpsWorks::DeregisterEcsClusterRequest</a>, <a href="qtaws-opsworks-deregisterelasticiprequest.html">QtAws::OpsWorks::DeregisterElasticIpRequest</a>, <a href="qtaws-opsworks-deregisterinstancerequest.html">QtAws::OpsWorks::DeregisterInstanceRequest</a>, <a href="qtaws-opsworks-deregisterrdsdbinstancerequest.html">QtAws::OpsWorks::DeregisterRdsDbInstanceRequest</a>, <a href="qtaws-opsworks-deregistervolumerequest.html">QtAws::OpsWorks::DeregisterVolumeRequest</a>, <a href="qtaws-opsworks-describeagentversionsrequest.html">QtAws::OpsWorks::DescribeAgentVersionsRequest</a>, <a href="qtaws-opsworks-describeappsrequest.html">QtAws::OpsWorks::DescribeAppsRequest</a>, <a href="qtaws-opsworks-describecommandsrequest.html">QtAws::OpsWorks::DescribeCommandsRequest</a>, <a href="qtaws-opsworks-describedeploymentsrequest.html">QtAws::OpsWorks::DescribeDeploymentsRequest</a>, <a href="qtaws-opsworks-describeecsclustersrequest.html">QtAws::OpsWorks::DescribeEcsClustersRequest</a>, <a href="qtaws-opsworks-describeelasticipsrequest.html">QtAws::OpsWorks::DescribeElasticIpsRequest</a>, <a href="qtaws-opsworks-describeelasticloadbalancersrequest.html">QtAws::OpsWorks::DescribeElasticLoadBalancersRequest</a>, <a href="qtaws-opsworks-describeinstancesrequest.html">QtAws::OpsWorks::DescribeInstancesRequest</a>, <a href="qtaws-opsworks-describelayersrequest.html">QtAws::OpsWorks::DescribeLayersRequest</a>, <a href="qtaws-opsworks-describeloadbasedautoscalingrequest.html">QtAws::OpsWorks::DescribeLoadBasedAutoScalingRequest</a>, <a href="qtaws-opsworks-describepermissionsrequest.html">QtAws::OpsWorks::DescribePermissionsRequest</a>, <a href="qtaws-opsworks-describeraidarraysrequest.html">QtAws::OpsWorks::DescribeRaidArraysRequest</a>, <a href="qtaws-opsworks-describerdsdbinstancesrequest.html">QtAws::OpsWorks::DescribeRdsDbInstancesRequest</a>, <a href="qtaws-opsworks-describeserviceerrorsrequest.html">QtAws::OpsWorks::DescribeServiceErrorsRequest</a>, <a href="qtaws-opsworks-describestackprovisioningparametersrequest.html">QtAws::OpsWorks::DescribeStackProvisioningParametersRequest</a>, <a href="qtaws-opsworks-describestacksrequest.html">QtAws::OpsWorks::DescribeStacksRequest</a>, <a href="qtaws-opsworks-describestacksummaryrequest.html">QtAws::OpsWorks::DescribeStackSummaryRequest</a>, <a href="qtaws-opsworks-describetimebasedautoscalingrequest.html">QtAws::OpsWorks::DescribeTimeBasedAutoScalingRequest</a>, <a href="qtaws-opsworks-describeuserprofilesrequest.html">QtAws::OpsWorks::DescribeUserProfilesRequest</a>, <a href="qtaws-opsworks-describevolumesrequest.html">QtAws::OpsWorks::DescribeVolumesRequest</a>, <a href="qtaws-opsworks-detachelasticloadbalancerrequest.html">QtAws::OpsWorks::DetachElasticLoadBalancerRequest</a>, <a href="qtaws-opsworks-disassociateelasticiprequest.html">QtAws::OpsWorks::DisassociateElasticIpRequest</a>, <a href="qtaws-opsworks-gethostnamesuggestionrequest.html">QtAws::OpsWorks::GetHostnameSuggestionRequest</a>, <a href="qtaws-opsworks-grantaccessrequest.html">QtAws::OpsWorks::GrantAccessRequest</a>, <a href="qtaws-opsworks-listtagsrequest.html">QtAws::OpsWorks::ListTagsRequest</a>, <a href="qtaws-opsworks-rebootinstancerequest.html">QtAws::OpsWorks::RebootInstanceRequest</a>, <a href="qtaws-opsworks-registerecsclusterrequest.html">QtAws::OpsWorks::RegisterEcsClusterRequest</a>, <a href="qtaws-opsworks-registerelasticiprequest.html">QtAws::OpsWorks::RegisterElasticIpRequest</a>, <a href="qtaws-opsworks-registerinstancerequest.html">QtAws::OpsWorks::RegisterInstanceRequest</a>, <a href="qtaws-opsworks-registerrdsdbinstancerequest.html">QtAws::OpsWorks::RegisterRdsDbInstanceRequest</a>, <a href="qtaws-opsworks-registervolumerequest.html">QtAws::OpsWorks::RegisterVolumeRequest</a>, <a href="qtaws-opsworks-setloadbasedautoscalingrequest.html">QtAws::OpsWorks::SetLoadBasedAutoScalingRequest</a>, <a href="qtaws-opsworks-setpermissionrequest.html">QtAws::OpsWorks::SetPermissionRequest</a>, <a href="qtaws-opsworks-settimebasedautoscalingrequest.html">QtAws::OpsWorks::SetTimeBasedAutoScalingRequest</a>, <a href="qtaws-opsworks-startinstancerequest.html">QtAws::OpsWorks::StartInstanceRequest</a>, <a href="qtaws-opsworks-startstackrequest.html">QtAws::OpsWorks::StartStackRequest</a>, <a href="qtaws-opsworks-stopinstancerequest.html">QtAws::OpsWorks::StopInstanceRequest</a>, <a href="qtaws-opsworks-stopstackrequest.html">QtAws::OpsWorks::StopStackRequest</a>, <a href="qtaws-opsworks-tagresourcerequest.html">QtAws::OpsWorks::TagResourceRequest</a>, <a href="qtaws-opsworks-unassigninstancerequest.html">QtAws::OpsWorks::UnassignInstanceRequest</a>, <a href="qtaws-opsworks-unassignvolumerequest.html">QtAws::OpsWorks::UnassignVolumeRequest</a>, <a href="qtaws-opsworks-untagresourcerequest.html">QtAws::OpsWorks::UntagResourceRequest</a>, <a href="qtaws-opsworks-updateapprequest.html">QtAws::OpsWorks::UpdateAppRequest</a>, <a href="qtaws-opsworks-updateelasticiprequest.html">QtAws::OpsWorks::UpdateElasticIpRequest</a>, <a href="qtaws-opsworks-updateinstancerequest.html">QtAws::OpsWorks::UpdateInstanceRequest</a>, <a href="qtaws-opsworks-updatelayerrequest.html">QtAws::OpsWorks::UpdateLayerRequest</a>, <a href="qtaws-opsworks-updatemyuserprofilerequest.html">QtAws::OpsWorks::UpdateMyUserProfileRequest</a>, <a href="qtaws-opsworks-updaterdsdbinstancerequest.html">QtAws::OpsWorks::UpdateRdsDbInstanceRequest</a>, <a href="qtaws-opsworks-updatestackrequest.html">QtAws::OpsWorks::UpdateStackRequest</a>, <a href="qtaws-opsworks-updateuserprofilerequest.html">QtAws::OpsWorks::UpdateUserProfileRequest</a>, and <a href="qtaws-opsworks-updatevolumerequest.html">QtAws::OpsWorks::UpdateVolumeRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-opsworks-opsworksrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#Action-enum">Action</a></b> { AssignInstanceAction, AssignVolumeAction, AssociateElasticIpAction, AttachElasticLoadBalancerAction, ..., UpdateVolumeAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest">OpsWorksRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest-1">OpsWorksRequest</a></b>(const OpsWorksRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> OpsWorksRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#operator-eq">operator=</a></b>(const OpsWorksRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#operator-eq-eq">operator==</a></b>(const OpsWorksRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest-2">OpsWorksRequest</a></b>(OpsWorksRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-opsworks-opsworksrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$OpsWorksRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-opsworks-opsworksrequest.html">OpsWorksRequest</a> class provides an interface for <a href="qtaws-opsworks.html">OpsWorks</a> requests.</p>
+</div>
+<!-- @@@OpsWorksRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AssignInstanceAction$$$AssignVolumeAction$$$AssociateElasticIpAction$$$AttachElasticLoadBalancerAction$$$CloneStackAction$$$CreateAppAction$$$CreateDeploymentAction$$$CreateInstanceAction$$$CreateLayerAction$$$CreateStackAction$$$CreateUserProfileAction$$$DeleteAppAction$$$DeleteInstanceAction$$$DeleteLayerAction$$$DeleteStackAction$$$DeleteUserProfileAction$$$DeregisterEcsClusterAction$$$DeregisterElasticIpAction$$$DeregisterInstanceAction$$$DeregisterRdsDbInstanceAction$$$DeregisterVolumeAction$$$DescribeAgentVersionsAction$$$DescribeAppsAction$$$DescribeCommandsAction$$$DescribeDeploymentsAction$$$DescribeEcsClustersAction$$$DescribeElasticIpsAction$$$DescribeElasticLoadBalancersAction$$$DescribeInstancesAction$$$DescribeLayersAction$$$DescribeLoadBasedAutoScalingAction$$$DescribeMyUserProfileAction$$$DescribeOperatingSystemsAction$$$DescribePermissionsAction$$$DescribeRaidArraysAction$$$DescribeRdsDbInstancesAction$$$DescribeServiceErrorsAction$$$DescribeStackProvisioningParametersAction$$$DescribeStackSummaryAction$$$DescribeStacksAction$$$DescribeTimeBasedAutoScalingAction$$$DescribeUserProfilesAction$$$DescribeVolumesAction$$$DetachElasticLoadBalancerAction$$$DisassociateElasticIpAction$$$GetHostnameSuggestionAction$$$GrantAccessAction$$$ListTagsAction$$$RebootInstanceAction$$$RegisterEcsClusterAction$$$RegisterElasticIpAction$$$RegisterInstanceAction$$$RegisterRdsDbInstanceAction$$$RegisterVolumeAction$$$SetLoadBasedAutoScalingAction$$$SetPermissionAction$$$SetTimeBasedAutoScalingAction$$$StartInstanceAction$$$StartStackAction$$$StopInstanceAction$$$StopStackAction$$$TagResourceAction$$$UnassignInstanceAction$$$UnassignVolumeAction$$$UntagResourceAction$$$UpdateAppAction$$$UpdateElasticIpAction$$$UpdateInstanceAction$$$UpdateLayerAction$$$UpdateMyUserProfileAction$$$UpdateRdsDbInstanceAction$$$UpdateStackAction$$$UpdateUserProfileAction$$$UpdateVolumeAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum OpsWorksRequest::<span class="name">Action</span><br/>flags OpsWorksRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-opsworks.html">OpsWorks</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::AssignInstanceAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> AssignInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::AssignVolumeAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> AssignVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::AssociateElasticIpAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> AssociateElasticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::AttachElasticLoadBalancerAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> AttachElasticLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CloneStackAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CloneStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateAppAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateDeploymentAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateDeployment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateInstanceAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateLayerAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateLayer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateStackAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::CreateUserProfileAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> CreateUserProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeleteAppAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeleteApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeleteInstanceAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeleteInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeleteLayerAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeleteLayer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeleteStackAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeleteStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeleteUserProfileAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeleteUserProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeregisterEcsClusterAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeregisterEcsCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeregisterElasticIpAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeregisterElasticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeregisterInstanceAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeregisterInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeregisterRdsDbInstanceAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeregisterRdsDbInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DeregisterVolumeAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DeregisterVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeAgentVersionsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeAgentVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeAppsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeApps action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeCommandsAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeCommands action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeDeploymentsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeDeployments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeEcsClustersAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeEcsClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeElasticIpsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeElasticIps action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeElasticLoadBalancersAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeElasticLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeInstancesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeLayersAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeLayers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeLoadBasedAutoScalingAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeLoadBasedAutoScaling action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeMyUserProfileAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeMyUserProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeOperatingSystemsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeOperatingSystems action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribePermissionsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribePermissions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeRaidArraysAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeRaidArrays action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeRdsDbInstancesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeRdsDbInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeServiceErrorsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeServiceErrors action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeStackProvisioningParametersAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeStackProvisioningParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeStackSummaryAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeStackSummary action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeStacksAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeStacks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeTimeBasedAutoScalingAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeTimeBasedAutoScaling action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeUserProfilesAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeUserProfiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DescribeVolumesAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DescribeVolumes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DetachElasticLoadBalancerAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DetachElasticLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::DisassociateElasticIpAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> DisassociateElasticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::GetHostnameSuggestionAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> GetHostnameSuggestion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::GrantAccessAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> GrantAccess action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::ListTagsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> ListTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RebootInstanceAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RebootInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RegisterEcsClusterAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RegisterEcsCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RegisterElasticIpAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RegisterElasticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RegisterInstanceAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RegisterInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RegisterRdsDbInstanceAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RegisterRdsDbInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::RegisterVolumeAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> RegisterVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::SetLoadBasedAutoScalingAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> SetLoadBasedAutoScaling action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::SetPermissionAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> SetPermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::SetTimeBasedAutoScalingAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> SetTimeBasedAutoScaling action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::StartInstanceAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> StartInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::StartStackAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> StartStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::StopInstanceAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> StopInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::StopStackAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> StopStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::TagResourceAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> TagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UnassignInstanceAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UnassignInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UnassignVolumeAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UnassignVolume action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UntagResourceAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UntagResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateAppAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateApp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateElasticIpAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateElasticIp action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateInstanceAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateLayerAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateLayer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateMyUserProfileAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateMyUserProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateRdsDbInstanceAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateRdsDbInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateStackAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateStack action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateUserProfileAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateUserProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::OpsWorks::OpsWorksRequest::UpdateVolumeAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign"><a href="qtaws-opsworks.html">OpsWorks</a> UpdateVolume action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$OpsWorksRequest[overload1]$$$OpsWorksRequestconstAction -->
+<h3 class="fn" id="OpsWorksRequest"><a name="OpsWorksRequest"></a>OpsWorksRequest::<span class="name">OpsWorksRequest</span>(const <span class="type"><a href="qtaws-opsworks-opsworksrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-opsworks-opsworksrequest.html">OpsWorksRequest</a> object for <a href="qtaws-opsworks.html">OpsWorks</a> <i>action</i>.</p>
+<!-- @@@OpsWorksRequest -->
+<!-- $$$OpsWorksRequest$$$OpsWorksRequestconstOpsWorksRequest& -->
+<h3 class="fn" id="OpsWorksRequest-1"><a name="OpsWorksRequest-1"></a>OpsWorksRequest::<span class="name">OpsWorksRequest</span>(const <span class="type"><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest">OpsWorksRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@OpsWorksRequest -->
+<!-- $$$OpsWorksRequest$$$OpsWorksRequestOpsWorksRequestPrivate*const -->
+<h3 class="fn" id="OpsWorksRequest-2"><a name="OpsWorksRequest-2"></a><code>[protected] </code>OpsWorksRequest::<span class="name">OpsWorksRequest</span>(<span class="type"><a href="qtaws-opsworks-opsworksrequestprivate.html">OpsWorksRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-opsworks-opsworksrequest.html">OpsWorksRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-opsworks-opsworksrequestprivate.html">OpsWorksRequestPrivate</a>.</p>
+<!-- @@@OpsWorksRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-opsworks-opsworksrequest.html#Action-enum">Action</a></span> OpsWorksRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-opsworks.html">OpsWorks</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> OpsWorksRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-opsworks.html">OpsWorks</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> OpsWorksRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-opsworks.html">OpsWorks</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> OpsWorksRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> OpsWorksRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> OpsWorksRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;OpsWorksRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> OpsWorksRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-opsworks-opsworksrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-opsworks.html">OpsWorks</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> OpsWorksRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-opsworks.html">OpsWorks</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> OpsWorksRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> OpsWorksRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-opsworks-opsworksrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> OpsWorksRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-opsworks.html">OpsWorks</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-opsworks.html">OpsWorks</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-opsworks-opsworksrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constOpsWorksRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest">OpsWorksRequest</a></span> &amp;OpsWorksRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest">OpsWorksRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-opsworks-opsworksrequest.html">OpsWorksRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constOpsWorksRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> OpsWorksRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-opsworks-opsworksrequest.html#OpsWorksRequest">OpsWorksRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

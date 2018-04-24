@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- gameliftrequest.cpp -->
+  <title>GameLiftRequest Class | GameLift</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsgamelift-index.html">GameLift</a></li>
+<li><a href="qtawsgamelift-module.html">C++ Classes</a></li>
+<li>GameLiftRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GameLiftRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-gamelift-gameliftrequest.html">QtAws::GameLift::GameLiftRequest</a>)<br/></span>
+<!-- $$$GameLiftRequest-brief -->
+<p>The <a href="qtaws-gamelift-gameliftrequest.html">GameLiftRequest</a> class provides an interface for <a href="qtaws-gamelift.html">GameLift</a> requests. <a href="#details">More...</a></p>
+<!-- @@@GameLiftRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GameLiftRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-gamelift-acceptmatchrequest.html">QtAws::GameLift::AcceptMatchRequest</a>, <a href="qtaws-gamelift-createaliasrequest.html">QtAws::GameLift::CreateAliasRequest</a>, <a href="qtaws-gamelift-createbuildrequest.html">QtAws::GameLift::CreateBuildRequest</a>, <a href="qtaws-gamelift-createfleetrequest.html">QtAws::GameLift::CreateFleetRequest</a>, <a href="qtaws-gamelift-creategamesessionqueuerequest.html">QtAws::GameLift::CreateGameSessionQueueRequest</a>, <a href="qtaws-gamelift-creategamesessionrequest.html">QtAws::GameLift::CreateGameSessionRequest</a>, <a href="qtaws-gamelift-creatematchmakingconfigurationrequest.html">QtAws::GameLift::CreateMatchmakingConfigurationRequest</a>, <a href="qtaws-gamelift-creatematchmakingrulesetrequest.html">QtAws::GameLift::CreateMatchmakingRuleSetRequest</a>, <a href="qtaws-gamelift-createplayersessionrequest.html">QtAws::GameLift::CreatePlayerSessionRequest</a>, <a href="qtaws-gamelift-createplayersessionsrequest.html">QtAws::GameLift::CreatePlayerSessionsRequest</a>, <a href="qtaws-gamelift-createvpcpeeringauthorizationrequest.html">QtAws::GameLift::CreateVpcPeeringAuthorizationRequest</a>, <a href="qtaws-gamelift-createvpcpeeringconnectionrequest.html">QtAws::GameLift::CreateVpcPeeringConnectionRequest</a>, <a href="qtaws-gamelift-deletealiasrequest.html">QtAws::GameLift::DeleteAliasRequest</a>, <a href="qtaws-gamelift-deletebuildrequest.html">QtAws::GameLift::DeleteBuildRequest</a>, <a href="qtaws-gamelift-deletefleetrequest.html">QtAws::GameLift::DeleteFleetRequest</a>, <a href="qtaws-gamelift-deletegamesessionqueuerequest.html">QtAws::GameLift::DeleteGameSessionQueueRequest</a>, <a href="qtaws-gamelift-deletematchmakingconfigurationrequest.html">QtAws::GameLift::DeleteMatchmakingConfigurationRequest</a>, <a href="qtaws-gamelift-deletescalingpolicyrequest.html">QtAws::GameLift::DeleteScalingPolicyRequest</a>, <a href="qtaws-gamelift-deletevpcpeeringauthorizationrequest.html">QtAws::GameLift::DeleteVpcPeeringAuthorizationRequest</a>, <a href="qtaws-gamelift-deletevpcpeeringconnectionrequest.html">QtAws::GameLift::DeleteVpcPeeringConnectionRequest</a>, <a href="qtaws-gamelift-describealiasrequest.html">QtAws::GameLift::DescribeAliasRequest</a>, <a href="qtaws-gamelift-describebuildrequest.html">QtAws::GameLift::DescribeBuildRequest</a>, <a href="qtaws-gamelift-describeec2instancelimitsrequest.html">QtAws::GameLift::DescribeEC2InstanceLimitsRequest</a>, <a href="qtaws-gamelift-describefleetattributesrequest.html">QtAws::GameLift::DescribeFleetAttributesRequest</a>, <a href="qtaws-gamelift-describefleetcapacityrequest.html">QtAws::GameLift::DescribeFleetCapacityRequest</a>, <a href="qtaws-gamelift-describefleeteventsrequest.html">QtAws::GameLift::DescribeFleetEventsRequest</a>, <a href="qtaws-gamelift-describefleetportsettingsrequest.html">QtAws::GameLift::DescribeFleetPortSettingsRequest</a>, <a href="qtaws-gamelift-describefleetutilizationrequest.html">QtAws::GameLift::DescribeFleetUtilizationRequest</a>, <a href="qtaws-gamelift-describegamesessiondetailsrequest.html">QtAws::GameLift::DescribeGameSessionDetailsRequest</a>, <a href="qtaws-gamelift-describegamesessionplacementrequest.html">QtAws::GameLift::DescribeGameSessionPlacementRequest</a>, <a href="qtaws-gamelift-describegamesessionqueuesrequest.html">QtAws::GameLift::DescribeGameSessionQueuesRequest</a>, <a href="qtaws-gamelift-describegamesessionsrequest.html">QtAws::GameLift::DescribeGameSessionsRequest</a>, <a href="qtaws-gamelift-describeinstancesrequest.html">QtAws::GameLift::DescribeInstancesRequest</a>, <a href="qtaws-gamelift-describematchmakingconfigurationsrequest.html">QtAws::GameLift::DescribeMatchmakingConfigurationsRequest</a>, <a href="qtaws-gamelift-describematchmakingrequest.html">QtAws::GameLift::DescribeMatchmakingRequest</a>, <a href="qtaws-gamelift-describematchmakingrulesetsrequest.html">QtAws::GameLift::DescribeMatchmakingRuleSetsRequest</a>, <a href="qtaws-gamelift-describeplayersessionsrequest.html">QtAws::GameLift::DescribePlayerSessionsRequest</a>, <a href="qtaws-gamelift-describeruntimeconfigurationrequest.html">QtAws::GameLift::DescribeRuntimeConfigurationRequest</a>, <a href="qtaws-gamelift-describescalingpoliciesrequest.html">QtAws::GameLift::DescribeScalingPoliciesRequest</a>, <a href="qtaws-gamelift-describevpcpeeringauthorizationsrequest.html">QtAws::GameLift::DescribeVpcPeeringAuthorizationsRequest</a>, <a href="qtaws-gamelift-describevpcpeeringconnectionsrequest.html">QtAws::GameLift::DescribeVpcPeeringConnectionsRequest</a>, <a href="qtaws-gamelift-getgamesessionlogurlrequest.html">QtAws::GameLift::GetGameSessionLogUrlRequest</a>, <a href="qtaws-gamelift-getinstanceaccessrequest.html">QtAws::GameLift::GetInstanceAccessRequest</a>, <a href="qtaws-gamelift-listaliasesrequest.html">QtAws::GameLift::ListAliasesRequest</a>, <a href="qtaws-gamelift-listbuildsrequest.html">QtAws::GameLift::ListBuildsRequest</a>, <a href="qtaws-gamelift-listfleetsrequest.html">QtAws::GameLift::ListFleetsRequest</a>, <a href="qtaws-gamelift-putscalingpolicyrequest.html">QtAws::GameLift::PutScalingPolicyRequest</a>, <a href="qtaws-gamelift-requestuploadcredentialsrequest.html">QtAws::GameLift::RequestUploadCredentialsRequest</a>, <a href="qtaws-gamelift-resolvealiasrequest.html">QtAws::GameLift::ResolveAliasRequest</a>, <a href="qtaws-gamelift-searchgamesessionsrequest.html">QtAws::GameLift::SearchGameSessionsRequest</a>, <a href="qtaws-gamelift-startgamesessionplacementrequest.html">QtAws::GameLift::StartGameSessionPlacementRequest</a>, <a href="qtaws-gamelift-startmatchbackfillrequest.html">QtAws::GameLift::StartMatchBackfillRequest</a>, <a href="qtaws-gamelift-startmatchmakingrequest.html">QtAws::GameLift::StartMatchmakingRequest</a>, <a href="qtaws-gamelift-stopgamesessionplacementrequest.html">QtAws::GameLift::StopGameSessionPlacementRequest</a>, <a href="qtaws-gamelift-stopmatchmakingrequest.html">QtAws::GameLift::StopMatchmakingRequest</a>, <a href="qtaws-gamelift-updatealiasrequest.html">QtAws::GameLift::UpdateAliasRequest</a>, <a href="qtaws-gamelift-updatebuildrequest.html">QtAws::GameLift::UpdateBuildRequest</a>, <a href="qtaws-gamelift-updatefleetattributesrequest.html">QtAws::GameLift::UpdateFleetAttributesRequest</a>, <a href="qtaws-gamelift-updatefleetcapacityrequest.html">QtAws::GameLift::UpdateFleetCapacityRequest</a>, <a href="qtaws-gamelift-updatefleetportsettingsrequest.html">QtAws::GameLift::UpdateFleetPortSettingsRequest</a>, <a href="qtaws-gamelift-updategamesessionqueuerequest.html">QtAws::GameLift::UpdateGameSessionQueueRequest</a>, <a href="qtaws-gamelift-updategamesessionrequest.html">QtAws::GameLift::UpdateGameSessionRequest</a>, <a href="qtaws-gamelift-updatematchmakingconfigurationrequest.html">QtAws::GameLift::UpdateMatchmakingConfigurationRequest</a>, <a href="qtaws-gamelift-updateruntimeconfigurationrequest.html">QtAws::GameLift::UpdateRuntimeConfigurationRequest</a>, and <a href="qtaws-gamelift-validatematchmakingrulesetrequest.html">QtAws::GameLift::ValidateMatchmakingRuleSetRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-gamelift-gameliftrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#Action-enum">Action</a></b> { AcceptMatchAction, CreateAliasAction, CreateBuildAction, CreateFleetAction, ..., ValidateMatchmakingRuleSetAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest">GameLiftRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest-1">GameLiftRequest</a></b>(const GameLiftRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GameLiftRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#operator-eq">operator=</a></b>(const GameLiftRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#operator-eq-eq">operator==</a></b>(const GameLiftRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest-2">GameLiftRequest</a></b>(GameLiftRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GameLiftRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-gamelift-gameliftrequest.html">GameLiftRequest</a> class provides an interface for <a href="qtaws-gamelift.html">GameLift</a> requests.</p>
+</div>
+<!-- @@@GameLiftRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AcceptMatchAction$$$CreateAliasAction$$$CreateBuildAction$$$CreateFleetAction$$$CreateGameSessionAction$$$CreateGameSessionQueueAction$$$CreateMatchmakingConfigurationAction$$$CreateMatchmakingRuleSetAction$$$CreatePlayerSessionAction$$$CreatePlayerSessionsAction$$$CreateVpcPeeringAuthorizationAction$$$CreateVpcPeeringConnectionAction$$$DeleteAliasAction$$$DeleteBuildAction$$$DeleteFleetAction$$$DeleteGameSessionQueueAction$$$DeleteMatchmakingConfigurationAction$$$DeleteScalingPolicyAction$$$DeleteVpcPeeringAuthorizationAction$$$DeleteVpcPeeringConnectionAction$$$DescribeAliasAction$$$DescribeBuildAction$$$DescribeEC2InstanceLimitsAction$$$DescribeFleetAttributesAction$$$DescribeFleetCapacityAction$$$DescribeFleetEventsAction$$$DescribeFleetPortSettingsAction$$$DescribeFleetUtilizationAction$$$DescribeGameSessionDetailsAction$$$DescribeGameSessionPlacementAction$$$DescribeGameSessionQueuesAction$$$DescribeGameSessionsAction$$$DescribeInstancesAction$$$DescribeMatchmakingAction$$$DescribeMatchmakingConfigurationsAction$$$DescribeMatchmakingRuleSetsAction$$$DescribePlayerSessionsAction$$$DescribeRuntimeConfigurationAction$$$DescribeScalingPoliciesAction$$$DescribeVpcPeeringAuthorizationsAction$$$DescribeVpcPeeringConnectionsAction$$$GetGameSessionLogUrlAction$$$GetInstanceAccessAction$$$ListAliasesAction$$$ListBuildsAction$$$ListFleetsAction$$$PutScalingPolicyAction$$$RequestUploadCredentialsAction$$$ResolveAliasAction$$$SearchGameSessionsAction$$$StartGameSessionPlacementAction$$$StartMatchBackfillAction$$$StartMatchmakingAction$$$StopGameSessionPlacementAction$$$StopMatchmakingAction$$$UpdateAliasAction$$$UpdateBuildAction$$$UpdateFleetAttributesAction$$$UpdateFleetCapacityAction$$$UpdateFleetPortSettingsAction$$$UpdateGameSessionAction$$$UpdateGameSessionQueueAction$$$UpdateMatchmakingConfigurationAction$$$UpdateRuntimeConfigurationAction$$$ValidateMatchmakingRuleSetAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum GameLiftRequest::<span class="name">Action</span><br/>flags GameLiftRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-gamelift.html">GameLift</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::AcceptMatchAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> AcceptMatch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateAliasAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateBuildAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateBuild action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateFleetAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateFleet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateGameSessionAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateGameSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateGameSessionQueueAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateGameSessionQueue action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateMatchmakingConfigurationAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateMatchmakingConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateMatchmakingRuleSetAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateMatchmakingRuleSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreatePlayerSessionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreatePlayerSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreatePlayerSessionsAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreatePlayerSessions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateVpcPeeringAuthorizationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateVpcPeeringAuthorization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::CreateVpcPeeringConnectionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> CreateVpcPeeringConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteAliasAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteBuildAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteBuild action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteFleetAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteFleet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteGameSessionQueueAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteGameSessionQueue action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteMatchmakingConfigurationAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteMatchmakingConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteScalingPolicyAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteScalingPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteVpcPeeringAuthorizationAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteVpcPeeringAuthorization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DeleteVpcPeeringConnectionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DeleteVpcPeeringConnection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeAliasAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeBuildAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeBuild action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeEC2InstanceLimitsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeEC2InstanceLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeFleetAttributesAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeFleetAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeFleetCapacityAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeFleetCapacity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeFleetEventsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeFleetEvents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeFleetPortSettingsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeFleetPortSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeFleetUtilizationAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeFleetUtilization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeGameSessionDetailsAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessionDetails action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeGameSessionPlacementAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessionPlacement action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeGameSessionQueuesAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessionQueues action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeGameSessionsAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeGameSessions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeInstancesAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeMatchmakingAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeMatchmaking action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeMatchmakingConfigurationsAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeMatchmakingConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeMatchmakingRuleSetsAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeMatchmakingRuleSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribePlayerSessionsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribePlayerSessions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeRuntimeConfigurationAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeRuntimeConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeScalingPoliciesAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeScalingPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeVpcPeeringAuthorizationsAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeVpcPeeringAuthorizations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::DescribeVpcPeeringConnectionsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> DescribeVpcPeeringConnections action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::GetGameSessionLogUrlAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> GetGameSessionLogUrl action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::GetInstanceAccessAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> GetInstanceAccess action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::ListAliasesAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> ListAliases action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::ListBuildsAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> ListBuilds action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::ListFleetsAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> ListFleets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::PutScalingPolicyAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> PutScalingPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::RequestUploadCredentialsAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> RequestUploadCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::ResolveAliasAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> ResolveAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::SearchGameSessionsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> SearchGameSessions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::StartGameSessionPlacementAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> StartGameSessionPlacement action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::StartMatchBackfillAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> StartMatchBackfill action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::StartMatchmakingAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> StartMatchmaking action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::StopGameSessionPlacementAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> StopGameSessionPlacement action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::StopMatchmakingAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> StopMatchmaking action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateAliasAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateBuildAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateBuild action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateFleetAttributesAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateFleetAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateFleetCapacityAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateFleetCapacity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateFleetPortSettingsAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateFleetPortSettings action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateGameSessionAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateGameSession action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateGameSessionQueueAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateGameSessionQueue action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateMatchmakingConfigurationAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateMatchmakingConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::UpdateRuntimeConfigurationAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> UpdateRuntimeConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::GameLift::GameLiftRequest::ValidateMatchmakingRuleSetAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign"><a href="qtaws-gamelift.html">GameLift</a> ValidateMatchmakingRuleSet action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GameLiftRequest[overload1]$$$GameLiftRequestconstAction -->
+<h3 class="fn" id="GameLiftRequest"><a name="GameLiftRequest"></a>GameLiftRequest::<span class="name">GameLiftRequest</span>(const <span class="type"><a href="qtaws-gamelift-gameliftrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-gamelift-gameliftrequest.html">GameLiftRequest</a> object for <a href="qtaws-gamelift.html">GameLift</a> <i>action</i>.</p>
+<!-- @@@GameLiftRequest -->
+<!-- $$$GameLiftRequest$$$GameLiftRequestconstGameLiftRequest& -->
+<h3 class="fn" id="GameLiftRequest-1"><a name="GameLiftRequest-1"></a>GameLiftRequest::<span class="name">GameLiftRequest</span>(const <span class="type"><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest">GameLiftRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@GameLiftRequest -->
+<!-- $$$GameLiftRequest$$$GameLiftRequestGameLiftRequestPrivate*const -->
+<h3 class="fn" id="GameLiftRequest-2"><a name="GameLiftRequest-2"></a><code>[protected] </code>GameLiftRequest::<span class="name">GameLiftRequest</span>(<span class="type">GameLiftRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-gamelift-gameliftrequest.html">GameLiftRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from GameLiftRequestPrivate.</p>
+<!-- @@@GameLiftRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-gamelift-gameliftrequest.html#Action-enum">Action</a></span> GameLiftRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-gamelift.html">GameLift</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> GameLiftRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-gamelift.html">GameLift</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> GameLiftRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-gamelift.html">GameLift</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> GameLiftRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> GameLiftRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> GameLiftRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;GameLiftRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> GameLiftRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-gamelift-gameliftrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-gamelift.html">GameLift</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> GameLiftRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-gamelift.html">GameLift</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> GameLiftRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> GameLiftRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-gamelift-gameliftrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> GameLiftRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-gamelift.html">GameLift</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-gamelift.html">GameLift</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-gamelift-gameliftrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constGameLiftRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest">GameLiftRequest</a></span> &amp;GameLiftRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest">GameLiftRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-gamelift-gameliftrequest.html">GameLiftRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constGameLiftRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> GameLiftRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-gamelift-gameliftrequest.html#GameLiftRequest">GameLiftRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

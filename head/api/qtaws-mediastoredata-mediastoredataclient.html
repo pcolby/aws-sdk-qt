@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mediastoredataclient.cpp -->
+  <title>MediaStoreDataClient Class | MediaStoreData</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmediastoredata-index.html">MediaStoreData</a></li>
+<li><a href="qtawsmediastoredata-module.html">C++ Classes</a></li>
+<li>MediaStoreDataClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MediaStoreDataClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mediastoredata-mediastoredataclient.html">QtAws::MediaStoreData::MediaStoreDataClient</a>)<br/></span>
+<!-- $$$MediaStoreDataClient-brief -->
+<p>The <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> class provides access to the AWS Elemental MediaStore Data Plane service. <a href="#details">More...</a></p>
+<!-- @@@MediaStoreDataClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MediaStoreDataClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-mediastoredata-mediastoredataclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#MediaStoreDataClient">MediaStoreDataClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#MediaStoreDataClient-1">MediaStoreDataClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#deleteObject">deleteObject</a></b>(const DeleteObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#describeObject">describeObject</a></b>(const DescribeObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#getObject">getObject</a></b>(const GetObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListItemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#listItems">listItems</a></b>(const ListItemsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-mediastoredata-mediastoredataclient.html#putObject">putObject</a></b>(const PutObjectRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MediaStoreDataClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> class provides access to the AWS Elemental MediaStore Data Plane service.</p>
+<p>An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the fundamental entities that are stored in AWS Elemental</p>
+</div>
+<!-- @@@MediaStoreDataClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MediaStoreDataClient[overload1]$$$MediaStoreDataClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaStoreDataClient"><a name="MediaStoreDataClient"></a>MediaStoreDataClient::<span class="name">MediaStoreDataClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MediaStoreDataClient -->
+<!-- $$$MediaStoreDataClient$$$MediaStoreDataClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MediaStoreDataClient-1"><a name="MediaStoreDataClient-1"></a>MediaStoreDataClient::<span class="name">MediaStoreDataClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-mediastoredata-mediastoredataclient.html#MediaStoreDataClient">MediaStoreDataClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MediaStoreDataClient -->
+<!-- $$$deleteObject[overload1]$$$deleteObjectconstDeleteObjectRequest& -->
+<h3 class="fn" id="deleteObject"><a name="deleteObject"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastoredata-deleteobjectresponse.html">DeleteObjectResponse</a></span> *MediaStoreDataClient::<span class="name">deleteObject</span>(const <span class="type"><a href="qtaws-mediastoredata-deleteobjectrequest.html">DeleteObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> service, and returns a pointer to an <a href="qtaws-mediastoredata-deleteobjectresponse.html">DeleteObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an object at the specified</p>
+<!-- @@@deleteObject -->
+<!-- $$$describeObject[overload1]$$$describeObjectconstDescribeObjectRequest& -->
+<h3 class="fn" id="describeObject"><a name="describeObject"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastoredata-describeobjectresponse.html">DescribeObjectResponse</a></span> *MediaStoreDataClient::<span class="name">describeObject</span>(const <span class="type"><a href="qtaws-mediastoredata-describeobjectrequest.html">DescribeObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> service, and returns a pointer to an <a href="qtaws-mediastoredata-describeobjectresponse.html">DescribeObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the headers for an object at the specified</p>
+<!-- @@@describeObject -->
+<!-- $$$getObject[overload1]$$$getObjectconstGetObjectRequest& -->
+<h3 class="fn" id="getObject"><a name="getObject"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastoredata-getobjectresponse.html">GetObjectResponse</a></span> *MediaStoreDataClient::<span class="name">getObject</span>(const <span class="type"><a href="qtaws-mediastoredata-getobjectrequest.html">GetObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> service, and returns a pointer to an <a href="qtaws-mediastoredata-getobjectresponse.html">GetObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Downloads the object at the specified</p>
+<!-- @@@getObject -->
+<!-- $$$listItems[overload1]$$$listItemsconstListItemsRequest& -->
+<h3 class="fn" id="listItems"><a name="listItems"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastoredata-listitemsresponse.html">ListItemsResponse</a></span> *MediaStoreDataClient::<span class="name">listItems</span>(const <span class="type"><a href="qtaws-mediastoredata-listitemsrequest.html">ListItemsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> service, and returns a pointer to an <a href="qtaws-mediastoredata-listitemsresponse.html">ListItemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a list of metadata entries about folders and objects in the specified</p>
+<!-- @@@listItems -->
+<!-- $$$putObject[overload1]$$$putObjectconstPutObjectRequest& -->
+<h3 class="fn" id="putObject"><a name="putObject"></a><code>[slot] </code><span class="type"><a href="qtaws-mediastoredata-putobjectresponse.html">PutObjectResponse</a></span> *MediaStoreDataClient::<span class="name">putObject</span>(const <span class="type"><a href="qtaws-mediastoredata-putobjectrequest.html">PutObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-mediastoredata-mediastoredataclient.html">MediaStoreDataClient</a> service, and returns a pointer to an <a href="qtaws-mediastoredata-putobjectresponse.html">PutObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads an object to the specified path. Object sizes are limited to 10</p>
+<!-- @@@putObject -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

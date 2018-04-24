@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iamrequest.cpp -->
+  <title>IamRequest Class | IAM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiam-index.html">IAM</a></li>
+<li><a href="qtawsiam-module.html">C++ Classes</a></li>
+<li>IamRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IamRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iam-iamrequest.html">QtAws::IAM::IamRequest</a>)<br/></span>
+<!-- $$$IamRequest-brief -->
+<p>The <a href="qtaws-iam-iamrequest.html">IamRequest</a> class provides an interface for IAM requests. <a href="#details">More...</a></p>
+<!-- @@@IamRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IamRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-iam-addclientidtoopenidconnectproviderrequest.html">QtAws::IAM::AddClientIDToOpenIDConnectProviderRequest</a>, <a href="qtaws-iam-addroletoinstanceprofilerequest.html">QtAws::IAM::AddRoleToInstanceProfileRequest</a>, <a href="qtaws-iam-addusertogrouprequest.html">QtAws::IAM::AddUserToGroupRequest</a>, <a href="qtaws-iam-attachgrouppolicyrequest.html">QtAws::IAM::AttachGroupPolicyRequest</a>, <a href="qtaws-iam-attachrolepolicyrequest.html">QtAws::IAM::AttachRolePolicyRequest</a>, <a href="qtaws-iam-attachuserpolicyrequest.html">QtAws::IAM::AttachUserPolicyRequest</a>, <a href="qtaws-iam-changepasswordrequest.html">QtAws::IAM::ChangePasswordRequest</a>, <a href="qtaws-iam-createaccesskeyrequest.html">QtAws::IAM::CreateAccessKeyRequest</a>, <a href="qtaws-iam-createaccountaliasrequest.html">QtAws::IAM::CreateAccountAliasRequest</a>, <a href="qtaws-iam-creategrouprequest.html">QtAws::IAM::CreateGroupRequest</a>, <a href="qtaws-iam-createinstanceprofilerequest.html">QtAws::IAM::CreateInstanceProfileRequest</a>, <a href="qtaws-iam-createloginprofilerequest.html">QtAws::IAM::CreateLoginProfileRequest</a>, <a href="qtaws-iam-createopenidconnectproviderrequest.html">QtAws::IAM::CreateOpenIDConnectProviderRequest</a>, <a href="qtaws-iam-createpolicyrequest.html">QtAws::IAM::CreatePolicyRequest</a>, <a href="qtaws-iam-createpolicyversionrequest.html">QtAws::IAM::CreatePolicyVersionRequest</a>, <a href="qtaws-iam-createrolerequest.html">QtAws::IAM::CreateRoleRequest</a>, <a href="qtaws-iam-createsamlproviderrequest.html">QtAws::IAM::CreateSAMLProviderRequest</a>, <a href="qtaws-iam-createservicelinkedrolerequest.html">QtAws::IAM::CreateServiceLinkedRoleRequest</a>, <a href="qtaws-iam-createservicespecificcredentialrequest.html">QtAws::IAM::CreateServiceSpecificCredentialRequest</a>, <a href="qtaws-iam-createuserrequest.html">QtAws::IAM::CreateUserRequest</a>, <a href="qtaws-iam-createvirtualmfadevicerequest.html">QtAws::IAM::CreateVirtualMFADeviceRequest</a>, <a href="qtaws-iam-deactivatemfadevicerequest.html">QtAws::IAM::DeactivateMFADeviceRequest</a>, <a href="qtaws-iam-deleteaccesskeyrequest.html">QtAws::IAM::DeleteAccessKeyRequest</a>, <a href="qtaws-iam-deleteaccountaliasrequest.html">QtAws::IAM::DeleteAccountAliasRequest</a>, <a href="qtaws-iam-deletegrouppolicyrequest.html">QtAws::IAM::DeleteGroupPolicyRequest</a>, <a href="qtaws-iam-deletegrouprequest.html">QtAws::IAM::DeleteGroupRequest</a>, <a href="qtaws-iam-deleteinstanceprofilerequest.html">QtAws::IAM::DeleteInstanceProfileRequest</a>, <a href="qtaws-iam-deleteloginprofilerequest.html">QtAws::IAM::DeleteLoginProfileRequest</a>, <a href="qtaws-iam-deleteopenidconnectproviderrequest.html">QtAws::IAM::DeleteOpenIDConnectProviderRequest</a>, <a href="qtaws-iam-deletepolicyrequest.html">QtAws::IAM::DeletePolicyRequest</a>, <a href="qtaws-iam-deletepolicyversionrequest.html">QtAws::IAM::DeletePolicyVersionRequest</a>, <a href="qtaws-iam-deleterolepolicyrequest.html">QtAws::IAM::DeleteRolePolicyRequest</a>, <a href="qtaws-iam-deleterolerequest.html">QtAws::IAM::DeleteRoleRequest</a>, <a href="qtaws-iam-deletesamlproviderrequest.html">QtAws::IAM::DeleteSAMLProviderRequest</a>, <a href="qtaws-iam-deleteservercertificaterequest.html">QtAws::IAM::DeleteServerCertificateRequest</a>, <a href="qtaws-iam-deleteservicelinkedrolerequest.html">QtAws::IAM::DeleteServiceLinkedRoleRequest</a>, <a href="qtaws-iam-deleteservicespecificcredentialrequest.html">QtAws::IAM::DeleteServiceSpecificCredentialRequest</a>, <a href="qtaws-iam-deletesigningcertificaterequest.html">QtAws::IAM::DeleteSigningCertificateRequest</a>, <a href="qtaws-iam-deletesshpublickeyrequest.html">QtAws::IAM::DeleteSSHPublicKeyRequest</a>, <a href="qtaws-iam-deleteuserpolicyrequest.html">QtAws::IAM::DeleteUserPolicyRequest</a>, <a href="qtaws-iam-deleteuserrequest.html">QtAws::IAM::DeleteUserRequest</a>, <a href="qtaws-iam-deletevirtualmfadevicerequest.html">QtAws::IAM::DeleteVirtualMFADeviceRequest</a>, <a href="qtaws-iam-detachgrouppolicyrequest.html">QtAws::IAM::DetachGroupPolicyRequest</a>, <a href="qtaws-iam-detachrolepolicyrequest.html">QtAws::IAM::DetachRolePolicyRequest</a>, <a href="qtaws-iam-detachuserpolicyrequest.html">QtAws::IAM::DetachUserPolicyRequest</a>, <a href="qtaws-iam-enablemfadevicerequest.html">QtAws::IAM::EnableMFADeviceRequest</a>, <a href="qtaws-iam-getaccesskeylastusedrequest.html">QtAws::IAM::GetAccessKeyLastUsedRequest</a>, <a href="qtaws-iam-getaccountauthorizationdetailsrequest.html">QtAws::IAM::GetAccountAuthorizationDetailsRequest</a>, <a href="qtaws-iam-getcontextkeysforcustompolicyrequest.html">QtAws::IAM::GetContextKeysForCustomPolicyRequest</a>, <a href="qtaws-iam-getcontextkeysforprincipalpolicyrequest.html">QtAws::IAM::GetContextKeysForPrincipalPolicyRequest</a>, <a href="qtaws-iam-getgrouppolicyrequest.html">QtAws::IAM::GetGroupPolicyRequest</a>, <a href="qtaws-iam-getgrouprequest.html">QtAws::IAM::GetGroupRequest</a>, <a href="qtaws-iam-getinstanceprofilerequest.html">QtAws::IAM::GetInstanceProfileRequest</a>, <a href="qtaws-iam-getloginprofilerequest.html">QtAws::IAM::GetLoginProfileRequest</a>, <a href="qtaws-iam-getopenidconnectproviderrequest.html">QtAws::IAM::GetOpenIDConnectProviderRequest</a>, <a href="qtaws-iam-getpolicyrequest.html">QtAws::IAM::GetPolicyRequest</a>, <a href="qtaws-iam-getpolicyversionrequest.html">QtAws::IAM::GetPolicyVersionRequest</a>, <a href="qtaws-iam-getrolepolicyrequest.html">QtAws::IAM::GetRolePolicyRequest</a>, <a href="qtaws-iam-getrolerequest.html">QtAws::IAM::GetRoleRequest</a>, <a href="qtaws-iam-getsamlproviderrequest.html">QtAws::IAM::GetSAMLProviderRequest</a>, <a href="qtaws-iam-getservercertificaterequest.html">QtAws::IAM::GetServerCertificateRequest</a>, <a href="qtaws-iam-getservicelinkedroledeletionstatusrequest.html">QtAws::IAM::GetServiceLinkedRoleDeletionStatusRequest</a>, <a href="qtaws-iam-getsshpublickeyrequest.html">QtAws::IAM::GetSSHPublicKeyRequest</a>, <a href="qtaws-iam-getuserpolicyrequest.html">QtAws::IAM::GetUserPolicyRequest</a>, <a href="qtaws-iam-getuserrequest.html">QtAws::IAM::GetUserRequest</a>, <a href="qtaws-iam-listaccesskeysrequest.html">QtAws::IAM::ListAccessKeysRequest</a>, <a href="qtaws-iam-listaccountaliasesrequest.html">QtAws::IAM::ListAccountAliasesRequest</a>, <a href="qtaws-iam-listattachedgrouppoliciesrequest.html">QtAws::IAM::ListAttachedGroupPoliciesRequest</a>, <a href="qtaws-iam-listattachedrolepoliciesrequest.html">QtAws::IAM::ListAttachedRolePoliciesRequest</a>, <a href="qtaws-iam-listattacheduserpoliciesrequest.html">QtAws::IAM::ListAttachedUserPoliciesRequest</a>, <a href="qtaws-iam-listentitiesforpolicyrequest.html">QtAws::IAM::ListEntitiesForPolicyRequest</a>, <a href="qtaws-iam-listgrouppoliciesrequest.html">QtAws::IAM::ListGroupPoliciesRequest</a>, <a href="qtaws-iam-listgroupsforuserrequest.html">QtAws::IAM::ListGroupsForUserRequest</a>, <a href="qtaws-iam-listgroupsrequest.html">QtAws::IAM::ListGroupsRequest</a>, <a href="qtaws-iam-listinstanceprofilesforrolerequest.html">QtAws::IAM::ListInstanceProfilesForRoleRequest</a>, <a href="qtaws-iam-listinstanceprofilesrequest.html">QtAws::IAM::ListInstanceProfilesRequest</a>, <a href="qtaws-iam-listmfadevicesrequest.html">QtAws::IAM::ListMFADevicesRequest</a>, <a href="qtaws-iam-listopenidconnectprovidersrequest.html">QtAws::IAM::ListOpenIDConnectProvidersRequest</a>, <a href="qtaws-iam-listpoliciesrequest.html">QtAws::IAM::ListPoliciesRequest</a>, <a href="qtaws-iam-listpolicyversionsrequest.html">QtAws::IAM::ListPolicyVersionsRequest</a>, <a href="qtaws-iam-listrolepoliciesrequest.html">QtAws::IAM::ListRolePoliciesRequest</a>, <a href="qtaws-iam-listrolesrequest.html">QtAws::IAM::ListRolesRequest</a>, <a href="qtaws-iam-listsamlprovidersrequest.html">QtAws::IAM::ListSAMLProvidersRequest</a>, <a href="qtaws-iam-listservercertificatesrequest.html">QtAws::IAM::ListServerCertificatesRequest</a>, <a href="qtaws-iam-listservicespecificcredentialsrequest.html">QtAws::IAM::ListServiceSpecificCredentialsRequest</a>, <a href="qtaws-iam-listsigningcertificatesrequest.html">QtAws::IAM::ListSigningCertificatesRequest</a>, <a href="qtaws-iam-listsshpublickeysrequest.html">QtAws::IAM::ListSSHPublicKeysRequest</a>, <a href="qtaws-iam-listuserpoliciesrequest.html">QtAws::IAM::ListUserPoliciesRequest</a>, <a href="qtaws-iam-listusersrequest.html">QtAws::IAM::ListUsersRequest</a>, <a href="qtaws-iam-listvirtualmfadevicesrequest.html">QtAws::IAM::ListVirtualMFADevicesRequest</a>, <a href="qtaws-iam-putgrouppolicyrequest.html">QtAws::IAM::PutGroupPolicyRequest</a>, <a href="qtaws-iam-putrolepolicyrequest.html">QtAws::IAM::PutRolePolicyRequest</a>, <a href="qtaws-iam-putuserpolicyrequest.html">QtAws::IAM::PutUserPolicyRequest</a>, <a href="qtaws-iam-removeclientidfromopenidconnectproviderrequest.html">QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderRequest</a>, <a href="qtaws-iam-removerolefrominstanceprofilerequest.html">QtAws::IAM::RemoveRoleFromInstanceProfileRequest</a>, <a href="qtaws-iam-removeuserfromgrouprequest.html">QtAws::IAM::RemoveUserFromGroupRequest</a>, <a href="qtaws-iam-resetservicespecificcredentialrequest.html">QtAws::IAM::ResetServiceSpecificCredentialRequest</a>, <a href="qtaws-iam-resyncmfadevicerequest.html">QtAws::IAM::ResyncMFADeviceRequest</a>, <a href="qtaws-iam-setdefaultpolicyversionrequest.html">QtAws::IAM::SetDefaultPolicyVersionRequest</a>, <a href="qtaws-iam-simulatecustompolicyrequest.html">QtAws::IAM::SimulateCustomPolicyRequest</a>, <a href="qtaws-iam-simulateprincipalpolicyrequest.html">QtAws::IAM::SimulatePrincipalPolicyRequest</a>, <a href="qtaws-iam-updateaccesskeyrequest.html">QtAws::IAM::UpdateAccessKeyRequest</a>, <a href="qtaws-iam-updateaccountpasswordpolicyrequest.html">QtAws::IAM::UpdateAccountPasswordPolicyRequest</a>, <a href="qtaws-iam-updateassumerolepolicyrequest.html">QtAws::IAM::UpdateAssumeRolePolicyRequest</a>, <a href="qtaws-iam-updategrouprequest.html">QtAws::IAM::UpdateGroupRequest</a>, <a href="qtaws-iam-updateloginprofilerequest.html">QtAws::IAM::UpdateLoginProfileRequest</a>, <a href="qtaws-iam-updateopenidconnectproviderthumbprintrequest.html">QtAws::IAM::UpdateOpenIDConnectProviderThumbprintRequest</a>, <a href="qtaws-iam-updateroledescriptionrequest.html">QtAws::IAM::UpdateRoleDescriptionRequest</a>, <a href="qtaws-iam-updaterolerequest.html">QtAws::IAM::UpdateRoleRequest</a>, <a href="qtaws-iam-updatesamlproviderrequest.html">QtAws::IAM::UpdateSAMLProviderRequest</a>, <a href="qtaws-iam-updateservercertificaterequest.html">QtAws::IAM::UpdateServerCertificateRequest</a>, <a href="qtaws-iam-updateservicespecificcredentialrequest.html">QtAws::IAM::UpdateServiceSpecificCredentialRequest</a>, <a href="qtaws-iam-updatesigningcertificaterequest.html">QtAws::IAM::UpdateSigningCertificateRequest</a>, <a href="qtaws-iam-updatesshpublickeyrequest.html">QtAws::IAM::UpdateSSHPublicKeyRequest</a>, <a href="qtaws-iam-updateuserrequest.html">QtAws::IAM::UpdateUserRequest</a>, <a href="qtaws-iam-uploadservercertificaterequest.html">QtAws::IAM::UploadServerCertificateRequest</a>, <a href="qtaws-iam-uploadsigningcertificaterequest.html">QtAws::IAM::UploadSigningCertificateRequest</a>, and <a href="qtaws-iam-uploadsshpublickeyrequest.html">QtAws::IAM::UploadSSHPublicKeyRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-iam-iamrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#Action-enum">Action</a></b> { AddClientIDToOpenIDConnectProviderAction, AddRoleToInstanceProfileAction, AddUserToGroupAction, AttachGroupPolicyAction, ..., UploadSigningCertificateAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#IamRequest">IamRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#IamRequest-1">IamRequest</a></b>(const IamRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IamRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#operator-eq">operator=</a></b>(const IamRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#operator-eq-eq">operator==</a></b>(const IamRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#IamRequest-2">IamRequest</a></b>(IamRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iam-iamrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IamRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iam-iamrequest.html">IamRequest</a> class provides an interface for IAM requests.</p>
+</div>
+<!-- @@@IamRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddClientIDToOpenIDConnectProviderAction$$$AddRoleToInstanceProfileAction$$$AddUserToGroupAction$$$AttachGroupPolicyAction$$$AttachRolePolicyAction$$$AttachUserPolicyAction$$$ChangePasswordAction$$$CreateAccessKeyAction$$$CreateAccountAliasAction$$$CreateGroupAction$$$CreateInstanceProfileAction$$$CreateLoginProfileAction$$$CreateOpenIDConnectProviderAction$$$CreatePolicyAction$$$CreatePolicyVersionAction$$$CreateRoleAction$$$CreateSAMLProviderAction$$$CreateServiceLinkedRoleAction$$$CreateServiceSpecificCredentialAction$$$CreateUserAction$$$CreateVirtualMFADeviceAction$$$DeactivateMFADeviceAction$$$DeleteAccessKeyAction$$$DeleteAccountAliasAction$$$DeleteAccountPasswordPolicyAction$$$DeleteGroupAction$$$DeleteGroupPolicyAction$$$DeleteInstanceProfileAction$$$DeleteLoginProfileAction$$$DeleteOpenIDConnectProviderAction$$$DeletePolicyAction$$$DeletePolicyVersionAction$$$DeleteRoleAction$$$DeleteRolePolicyAction$$$DeleteSAMLProviderAction$$$DeleteSSHPublicKeyAction$$$DeleteServerCertificateAction$$$DeleteServiceLinkedRoleAction$$$DeleteServiceSpecificCredentialAction$$$DeleteSigningCertificateAction$$$DeleteUserAction$$$DeleteUserPolicyAction$$$DeleteVirtualMFADeviceAction$$$DetachGroupPolicyAction$$$DetachRolePolicyAction$$$DetachUserPolicyAction$$$EnableMFADeviceAction$$$GenerateCredentialReportAction$$$GetAccessKeyLastUsedAction$$$GetAccountAuthorizationDetailsAction$$$GetAccountPasswordPolicyAction$$$GetAccountSummaryAction$$$GetContextKeysForCustomPolicyAction$$$GetContextKeysForPrincipalPolicyAction$$$GetCredentialReportAction$$$GetGroupAction$$$GetGroupPolicyAction$$$GetInstanceProfileAction$$$GetLoginProfileAction$$$GetOpenIDConnectProviderAction$$$GetPolicyAction$$$GetPolicyVersionAction$$$GetRoleAction$$$GetRolePolicyAction$$$GetSAMLProviderAction$$$GetSSHPublicKeyAction$$$GetServerCertificateAction$$$GetServiceLinkedRoleDeletionStatusAction$$$GetUserAction$$$GetUserPolicyAction$$$ListAccessKeysAction$$$ListAccountAliasesAction$$$ListAttachedGroupPoliciesAction$$$ListAttachedRolePoliciesAction$$$ListAttachedUserPoliciesAction$$$ListEntitiesForPolicyAction$$$ListGroupPoliciesAction$$$ListGroupsAction$$$ListGroupsForUserAction$$$ListInstanceProfilesAction$$$ListInstanceProfilesForRoleAction$$$ListMFADevicesAction$$$ListOpenIDConnectProvidersAction$$$ListPoliciesAction$$$ListPolicyVersionsAction$$$ListRolePoliciesAction$$$ListRolesAction$$$ListSAMLProvidersAction$$$ListSSHPublicKeysAction$$$ListServerCertificatesAction$$$ListServiceSpecificCredentialsAction$$$ListSigningCertificatesAction$$$ListUserPoliciesAction$$$ListUsersAction$$$ListVirtualMFADevicesAction$$$PutGroupPolicyAction$$$PutRolePolicyAction$$$PutUserPolicyAction$$$RemoveClientIDFromOpenIDConnectProviderAction$$$RemoveRoleFromInstanceProfileAction$$$RemoveUserFromGroupAction$$$ResetServiceSpecificCredentialAction$$$ResyncMFADeviceAction$$$SetDefaultPolicyVersionAction$$$SimulateCustomPolicyAction$$$SimulatePrincipalPolicyAction$$$UpdateAccessKeyAction$$$UpdateAccountPasswordPolicyAction$$$UpdateAssumeRolePolicyAction$$$UpdateGroupAction$$$UpdateLoginProfileAction$$$UpdateOpenIDConnectProviderThumbprintAction$$$UpdateRoleAction$$$UpdateRoleDescriptionAction$$$UpdateSAMLProviderAction$$$UpdateSSHPublicKeyAction$$$UpdateServerCertificateAction$$$UpdateServiceSpecificCredentialAction$$$UpdateSigningCertificateAction$$$UpdateUserAction$$$UploadSSHPublicKeyAction$$$UploadServerCertificateAction$$$UploadSigningCertificateAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum IamRequest::<span class="name">Action</span><br/>flags IamRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as IAM requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AddClientIDToOpenIDConnectProviderAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">IAM AddClientIDToOpenIDConnectProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AddRoleToInstanceProfileAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">IAM AddRoleToInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AddUserToGroupAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">IAM AddUserToGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AttachGroupPolicyAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">IAM AttachGroupPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AttachRolePolicyAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">IAM AttachRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::AttachUserPolicyAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">IAM AttachUserPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ChangePasswordAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">IAM ChangePassword action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateAccessKeyAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">IAM CreateAccessKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateAccountAliasAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">IAM CreateAccountAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateGroupAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">IAM CreateGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateInstanceProfileAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">IAM CreateInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateLoginProfileAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">IAM CreateLoginProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateOpenIDConnectProviderAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">IAM CreateOpenIDConnectProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreatePolicyAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">IAM CreatePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreatePolicyVersionAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">IAM CreatePolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateRoleAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">IAM CreateRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateSAMLProviderAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">IAM CreateSAMLProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateServiceLinkedRoleAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">IAM CreateServiceLinkedRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateServiceSpecificCredentialAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">IAM CreateServiceSpecificCredential action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateUserAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">IAM CreateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::CreateVirtualMFADeviceAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">IAM CreateVirtualMFADevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeactivateMFADeviceAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">IAM DeactivateMFADevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteAccessKeyAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">IAM DeleteAccessKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteAccountAliasAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">IAM DeleteAccountAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteAccountPasswordPolicyAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">IAM DeleteAccountPasswordPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteGroupAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">IAM DeleteGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteGroupPolicyAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">IAM DeleteGroupPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteInstanceProfileAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">IAM DeleteInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteLoginProfileAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">IAM DeleteLoginProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteOpenIDConnectProviderAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">IAM DeleteOpenIDConnectProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeletePolicyAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">IAM DeletePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeletePolicyVersionAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">IAM DeletePolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteRoleAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">IAM DeleteRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteRolePolicyAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">IAM DeleteRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteSAMLProviderAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">IAM DeleteSAMLProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteSSHPublicKeyAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">IAM DeleteSSHPublicKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteServerCertificateAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">IAM DeleteServerCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteServiceLinkedRoleAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">IAM DeleteServiceLinkedRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteServiceSpecificCredentialAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">IAM DeleteServiceSpecificCredential action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteSigningCertificateAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">IAM DeleteSigningCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteUserAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">IAM DeleteUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteUserPolicyAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">IAM DeleteUserPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DeleteVirtualMFADeviceAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">IAM DeleteVirtualMFADevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DetachGroupPolicyAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">IAM DetachGroupPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DetachRolePolicyAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">IAM DetachRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::DetachUserPolicyAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">IAM DetachUserPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::EnableMFADeviceAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">IAM EnableMFADevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GenerateCredentialReportAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">IAM GenerateCredentialReport action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetAccessKeyLastUsedAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">IAM GetAccessKeyLastUsed action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetAccountAuthorizationDetailsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">IAM GetAccountAuthorizationDetails action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetAccountPasswordPolicyAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">IAM GetAccountPasswordPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetAccountSummaryAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">IAM GetAccountSummary action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetContextKeysForCustomPolicyAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">IAM GetContextKeysForCustomPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetContextKeysForPrincipalPolicyAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">IAM GetContextKeysForPrincipalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetCredentialReportAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">IAM GetCredentialReport action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetGroupAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">IAM GetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetGroupPolicyAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">IAM GetGroupPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetInstanceProfileAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">IAM GetInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetLoginProfileAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">IAM GetLoginProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetOpenIDConnectProviderAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">IAM GetOpenIDConnectProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetPolicyAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">IAM GetPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetPolicyVersionAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">IAM GetPolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetRoleAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">IAM GetRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetRolePolicyAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">IAM GetRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetSAMLProviderAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">IAM GetSAMLProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetSSHPublicKeyAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">IAM GetSSHPublicKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetServerCertificateAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">IAM GetServerCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetServiceLinkedRoleDeletionStatusAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">IAM GetServiceLinkedRoleDeletionStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetUserAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">IAM GetUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::GetUserPolicyAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">IAM GetUserPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListAccessKeysAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">IAM ListAccessKeys action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListAccountAliasesAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">IAM ListAccountAliases action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListAttachedGroupPoliciesAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">IAM ListAttachedGroupPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListAttachedRolePoliciesAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">IAM ListAttachedRolePolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListAttachedUserPoliciesAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">IAM ListAttachedUserPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListEntitiesForPolicyAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">IAM ListEntitiesForPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListGroupPoliciesAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">IAM ListGroupPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListGroupsAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">IAM ListGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListGroupsForUserAction</code></td><td class="topAlign tblval"><code>78</code></td><td class="topAlign">IAM ListGroupsForUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListInstanceProfilesAction</code></td><td class="topAlign tblval"><code>79</code></td><td class="topAlign">IAM ListInstanceProfiles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListInstanceProfilesForRoleAction</code></td><td class="topAlign tblval"><code>80</code></td><td class="topAlign">IAM ListInstanceProfilesForRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListMFADevicesAction</code></td><td class="topAlign tblval"><code>81</code></td><td class="topAlign">IAM ListMFADevices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListOpenIDConnectProvidersAction</code></td><td class="topAlign tblval"><code>82</code></td><td class="topAlign">IAM ListOpenIDConnectProviders action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListPoliciesAction</code></td><td class="topAlign tblval"><code>83</code></td><td class="topAlign">IAM ListPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListPolicyVersionsAction</code></td><td class="topAlign tblval"><code>84</code></td><td class="topAlign">IAM ListPolicyVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListRolePoliciesAction</code></td><td class="topAlign tblval"><code>85</code></td><td class="topAlign">IAM ListRolePolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListRolesAction</code></td><td class="topAlign tblval"><code>86</code></td><td class="topAlign">IAM ListRoles action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListSAMLProvidersAction</code></td><td class="topAlign tblval"><code>87</code></td><td class="topAlign">IAM ListSAMLProviders action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListSSHPublicKeysAction</code></td><td class="topAlign tblval"><code>88</code></td><td class="topAlign">IAM ListSSHPublicKeys action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListServerCertificatesAction</code></td><td class="topAlign tblval"><code>89</code></td><td class="topAlign">IAM ListServerCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListServiceSpecificCredentialsAction</code></td><td class="topAlign tblval"><code>90</code></td><td class="topAlign">IAM ListServiceSpecificCredentials action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListSigningCertificatesAction</code></td><td class="topAlign tblval"><code>91</code></td><td class="topAlign">IAM ListSigningCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListUserPoliciesAction</code></td><td class="topAlign tblval"><code>92</code></td><td class="topAlign">IAM ListUserPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListUsersAction</code></td><td class="topAlign tblval"><code>93</code></td><td class="topAlign">IAM ListUsers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ListVirtualMFADevicesAction</code></td><td class="topAlign tblval"><code>94</code></td><td class="topAlign">IAM ListVirtualMFADevices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::PutGroupPolicyAction</code></td><td class="topAlign tblval"><code>95</code></td><td class="topAlign">IAM PutGroupPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::PutRolePolicyAction</code></td><td class="topAlign tblval"><code>96</code></td><td class="topAlign">IAM PutRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::PutUserPolicyAction</code></td><td class="topAlign tblval"><code>97</code></td><td class="topAlign">IAM PutUserPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::RemoveClientIDFromOpenIDConnectProviderAction</code></td><td class="topAlign tblval"><code>98</code></td><td class="topAlign">IAM RemoveClientIDFromOpenIDConnectProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::RemoveRoleFromInstanceProfileAction</code></td><td class="topAlign tblval"><code>99</code></td><td class="topAlign">IAM RemoveRoleFromInstanceProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::RemoveUserFromGroupAction</code></td><td class="topAlign tblval"><code>100</code></td><td class="topAlign">IAM RemoveUserFromGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ResetServiceSpecificCredentialAction</code></td><td class="topAlign tblval"><code>101</code></td><td class="topAlign">IAM ResetServiceSpecificCredential action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::ResyncMFADeviceAction</code></td><td class="topAlign tblval"><code>102</code></td><td class="topAlign">IAM ResyncMFADevice action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::SetDefaultPolicyVersionAction</code></td><td class="topAlign tblval"><code>103</code></td><td class="topAlign">IAM SetDefaultPolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::SimulateCustomPolicyAction</code></td><td class="topAlign tblval"><code>104</code></td><td class="topAlign">IAM SimulateCustomPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::SimulatePrincipalPolicyAction</code></td><td class="topAlign tblval"><code>105</code></td><td class="topAlign">IAM SimulatePrincipalPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateAccessKeyAction</code></td><td class="topAlign tblval"><code>106</code></td><td class="topAlign">IAM UpdateAccessKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateAccountPasswordPolicyAction</code></td><td class="topAlign tblval"><code>107</code></td><td class="topAlign">IAM UpdateAccountPasswordPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateAssumeRolePolicyAction</code></td><td class="topAlign tblval"><code>108</code></td><td class="topAlign">IAM UpdateAssumeRolePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateGroupAction</code></td><td class="topAlign tblval"><code>109</code></td><td class="topAlign">IAM UpdateGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateLoginProfileAction</code></td><td class="topAlign tblval"><code>110</code></td><td class="topAlign">IAM UpdateLoginProfile action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateOpenIDConnectProviderThumbprintAction</code></td><td class="topAlign tblval"><code>111</code></td><td class="topAlign">IAM UpdateOpenIDConnectProviderThumbprint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateRoleAction</code></td><td class="topAlign tblval"><code>112</code></td><td class="topAlign">IAM UpdateRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateRoleDescriptionAction</code></td><td class="topAlign tblval"><code>113</code></td><td class="topAlign">IAM UpdateRoleDescription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateSAMLProviderAction</code></td><td class="topAlign tblval"><code>114</code></td><td class="topAlign">IAM UpdateSAMLProvider action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateSSHPublicKeyAction</code></td><td class="topAlign tblval"><code>115</code></td><td class="topAlign">IAM UpdateSSHPublicKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateServerCertificateAction</code></td><td class="topAlign tblval"><code>116</code></td><td class="topAlign">IAM UpdateServerCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateServiceSpecificCredentialAction</code></td><td class="topAlign tblval"><code>117</code></td><td class="topAlign">IAM UpdateServiceSpecificCredential action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateSigningCertificateAction</code></td><td class="topAlign tblval"><code>118</code></td><td class="topAlign">IAM UpdateSigningCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UpdateUserAction</code></td><td class="topAlign tblval"><code>119</code></td><td class="topAlign">IAM UpdateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UploadSSHPublicKeyAction</code></td><td class="topAlign tblval"><code>120</code></td><td class="topAlign">IAM UploadSSHPublicKey action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UploadServerCertificateAction</code></td><td class="topAlign tblval"><code>121</code></td><td class="topAlign">IAM UploadServerCertificate action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IAM::IamRequest::UploadSigningCertificateAction</code></td><td class="topAlign tblval"><code>122</code></td><td class="topAlign">IAM UploadSigningCertificate action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IamRequest[overload1]$$$IamRequestconstAction -->
+<h3 class="fn" id="IamRequest"><a name="IamRequest"></a>IamRequest::<span class="name">IamRequest</span>(const <span class="type"><a href="qtaws-iam-iamrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-iam-iamrequest.html">IamRequest</a> object for IAM <i>action</i>.</p>
+<!-- @@@IamRequest -->
+<!-- $$$IamRequest$$$IamRequestconstIamRequest& -->
+<h3 class="fn" id="IamRequest-1"><a name="IamRequest-1"></a>IamRequest::<span class="name">IamRequest</span>(const <span class="type"><a href="qtaws-iam-iamrequest.html#IamRequest">IamRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@IamRequest -->
+<!-- $$$IamRequest$$$IamRequestIamRequestPrivate*const -->
+<h3 class="fn" id="IamRequest-2"><a name="IamRequest-2"></a><code>[protected] </code>IamRequest::<span class="name">IamRequest</span>(<span class="type"><a href="qtaws-iam-iamrequestprivate.html">IamRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-iam-iamrequest.html">IamRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-iam-iamrequestprivate.html">IamRequestPrivate</a>.</p>
+<!-- @@@IamRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-iam-iamrequest.html#Action-enum">Action</a></span> IamRequest::<span class="name">action</span>() const</h3>
+<p>Returns the IAM action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> IamRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the IAM action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> IamRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the IAM API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> IamRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> IamRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> IamRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;IamRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> IamRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-iam-iamrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the IAM action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> IamRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the IAM API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> IamRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> IamRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-iam-iamrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> IamRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the IAM request using the given <i>endpoint</i>.</p>
+<p>This IAM implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-iam-iamrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constIamRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-iam-iamrequest.html#IamRequest">IamRequest</a></span> &amp;IamRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-iam-iamrequest.html#IamRequest">IamRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-iam-iamrequest.html">IamRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constIamRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> IamRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-iam-iamrequest.html#IamRequest">IamRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

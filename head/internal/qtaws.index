@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="" title="AWS SDK for Qt" version="" project="QtAws">
+    <namespace threadsafety="unspecified" name="" status="active" access="public" module="qtaws">
+        <page name="classes.html" href="classes.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="1" subtype="page" title="C++ Classes" fulltitle="C++ Classes" subtitle="" module="QtAws">
+            <contents name="annotated-lists" title="Annotated Lists" level="1"/>
+            <contents name="clients" title="Clients" level="2"/>
+            <contents name="authentication" title="Authentication" level="2"/>
+            <contents name="generatelist" title="generatelist" level="1"/>
+            <contents name="core" title="Core" level="2"/>
+            <contents name="rds" title="RDS" level="2"/>
+            <contents name="xray" title="XRay" level="2"/>
+            <contents name="generatelist-annotatedclasses" title="generatelist annotatedclasses" level="2"/>
+        </page>
+        <page name="qtaws-index.html" href="qtaws-index.html" status="active" location="qtaws-index.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/qtaws-index.qdoc" lineno="1" subtype="page" title="AWS SDK for Qt 0.3" fulltitle="AWS SDK for Qt 0.3" subtitle="" module="QtAws">
+            <contents name="annotated-lists" title="Annotated Lists" level="1"/>
+            <contents name="generatelist" title="generatelist" level="1"/>
+        </page>
+        <group name="aws-authentication" href="aws-authentication.html" status="active" location="auth.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/auth.qdoc" lineno="1" seen="true" title="AWS Authentication" module="QtAws"/>
+        <group name="aws-clients" href="aws-clients.html" status="active" location="core.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/core.qdoc" lineno="1" seen="true" title="AWS Clients" module="QtAws"/>
+    </namespace>
+</INDEX>

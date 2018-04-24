@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- daxclient.cpp -->
+  <title>DaxClient Class | DAX</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdax-index.html">DAX</a></li>
+<li><a href="qtawsdax-module.html">C++ Classes</a></li>
+<li>DaxClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DaxClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-dax-daxclient.html">QtAws::DAX::DaxClient</a>)<br/></span>
+<!-- $$$DaxClient-brief -->
+<p>The <a href="qtaws-dax-daxclient.html">DaxClient</a> class provides access to the Amazon DynamoDB Accelerator (DAX) ( DAX) service. <a href="#details">More...</a></p>
+<!-- @@@DaxClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DaxClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-dax-daxclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#DaxClient">DaxClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#DaxClient-1">DaxClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#createCluster">createCluster</a></b>(const CreateClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#createParameterGroup">createParameterGroup</a></b>(const CreateParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#createSubnetGroup">createSubnetGroup</a></b>(const CreateSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DecreaseReplicationFactorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#decreaseReplicationFactor">decreaseReplicationFactor</a></b>(const DecreaseReplicationFactorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#deleteCluster">deleteCluster</a></b>(const DeleteClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#deleteParameterGroup">deleteParameterGroup</a></b>(const DeleteParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#deleteSubnetGroup">deleteSubnetGroup</a></b>(const DeleteSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeClusters">describeClusters</a></b>(const DescribeClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDefaultParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeDefaultParameters">describeDefaultParameters</a></b>(const DescribeDefaultParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeEvents">describeEvents</a></b>(const DescribeEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeParameterGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeParameterGroups">describeParameterGroups</a></b>(const DescribeParameterGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeParameters">describeParameters</a></b>(const DescribeParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSubnetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#describeSubnetGroups">describeSubnetGroups</a></b>(const DescribeSubnetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IncreaseReplicationFactorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#increaseReplicationFactor">increaseReplicationFactor</a></b>(const IncreaseReplicationFactorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootNodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#rebootNode">rebootNode</a></b>(const RebootNodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#updateCluster">updateCluster</a></b>(const UpdateClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateParameterGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#updateParameterGroup">updateParameterGroup</a></b>(const UpdateParameterGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSubnetGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dax-daxclient.html#updateSubnetGroup">updateSubnetGroup</a></b>(const UpdateSubnetGroupRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DaxClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-dax-daxclient.html">DaxClient</a> class provides access to the Amazon DynamoDB Accelerator (DAX) ( DAX) service.</p>
+<p>DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can create a DAX cluster easily, using the AWS Management Console. With a few simple modifications to your code, your application can begin taking advantage of the DAX cluster and realize significant improvements in read</p>
+</div>
+<!-- @@@DaxClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DaxClient[overload1]$$$DaxClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DaxClient"><a name="DaxClient"></a>DaxClient::<span class="name">DaxClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-dax-daxclient.html">DaxClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@DaxClient -->
+<!-- $$$DaxClient$$$DaxClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DaxClient-1"><a name="DaxClient-1"></a>DaxClient::<span class="name">DaxClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-dax-daxclient.html#DaxClient">DaxClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@DaxClient -->
+<!-- $$$createCluster[overload1]$$$createClusterconstCreateClusterRequest& -->
+<h3 class="fn" id="createCluster"><a name="createCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-createclusterresponse.html">CreateClusterResponse</a></span> *DaxClient::<span class="name">createCluster</span>(const <span class="type"><a href="qtaws-dax-createclusterrequest.html">CreateClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-createclusterresponse.html">CreateClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a DAX cluster. All nodes in the cluster run the same DAX caching</p>
+<!-- @@@createCluster -->
+<!-- $$$createParameterGroup[overload1]$$$createParameterGroupconstCreateParameterGroupRequest& -->
+<h3 class="fn" id="createParameterGroup"><a name="createParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-createparametergroupresponse.html">CreateParameterGroupResponse</a></span> *DaxClient::<span class="name">createParameterGroup</span>(const <span class="type"><a href="qtaws-dax-createparametergrouprequest.html">CreateParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-createparametergroupresponse.html">CreateParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new parameter group. A parameter group is a collection of parameters that you apply to all of the nodes in a DAX</p>
+<!-- @@@createParameterGroup -->
+<!-- $$$createSubnetGroup[overload1]$$$createSubnetGroupconstCreateSubnetGroupRequest& -->
+<h3 class="fn" id="createSubnetGroup"><a name="createSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-createsubnetgroupresponse.html">CreateSubnetGroupResponse</a></span> *DaxClient::<span class="name">createSubnetGroup</span>(const <span class="type"><a href="qtaws-dax-createsubnetgrouprequest.html">CreateSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-createsubnetgroupresponse.html">CreateSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new subnet</p>
+<!-- @@@createSubnetGroup -->
+<!-- $$$decreaseReplicationFactor[overload1]$$$decreaseReplicationFactorconstDecreaseReplicationFactorRequest& -->
+<h3 class="fn" id="decreaseReplicationFactor"><a name="decreaseReplicationFactor"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-decreasereplicationfactorresponse.html">DecreaseReplicationFactorResponse</a></span> *DaxClient::<span class="name">decreaseReplicationFactor</span>(const <span class="type"><a href="qtaws-dax-decreasereplicationfactorrequest.html">DecreaseReplicationFactorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-decreasereplicationfactorresponse.html">DecreaseReplicationFactorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes one or more nodes from a DAX</p>
+<p>cluster&gt; &lt;note&gt;</p>
+<p>You cannot use &lt;code&gt;DecreaseReplicationFactor&lt;/code&gt; to remove the last node in a DAX cluster. If you need to do this, use &lt;code&gt;DeleteCluster&lt;/code&gt;</p>
+<!-- @@@decreaseReplicationFactor -->
+<!-- $$$deleteCluster[overload1]$$$deleteClusterconstDeleteClusterRequest& -->
+<h3 class="fn" id="deleteCluster"><a name="deleteCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-deleteclusterresponse.html">DeleteClusterResponse</a></span> *DaxClient::<span class="name">deleteCluster</span>(const <span class="type"><a href="qtaws-dax-deleteclusterrequest.html">DeleteClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-deleteclusterresponse.html">DeleteClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a previously provisioned DAX cluster. &lt;i&gt;DeleteCluster&lt;/i&gt; deletes all associated nodes, node endpoints and the DAX cluster itself. When you receive a successful response from this action, DAX immediately begins deleting the cluster; you cannot cancel or revert this</p>
+<!-- @@@deleteCluster -->
+<!-- $$$deleteParameterGroup[overload1]$$$deleteParameterGroupconstDeleteParameterGroupRequest& -->
+<h3 class="fn" id="deleteParameterGroup"><a name="deleteParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-deleteparametergroupresponse.html">DeleteParameterGroupResponse</a></span> *DaxClient::<span class="name">deleteParameterGroup</span>(const <span class="type"><a href="qtaws-dax-deleteparametergrouprequest.html">DeleteParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-deleteparametergroupresponse.html">DeleteParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified parameter group. You cannot delete a parameter group if it is associated with any DAX</p>
+<!-- @@@deleteParameterGroup -->
+<!-- $$$deleteSubnetGroup[overload1]$$$deleteSubnetGroupconstDeleteSubnetGroupRequest& -->
+<h3 class="fn" id="deleteSubnetGroup"><a name="deleteSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-deletesubnetgroupresponse.html">DeleteSubnetGroupResponse</a></span> *DaxClient::<span class="name">deleteSubnetGroup</span>(const <span class="type"><a href="qtaws-dax-deletesubnetgrouprequest.html">DeleteSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-deletesubnetgroupresponse.html">DeleteSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a subnet</p>
+<p>group&gt; &lt;note&gt;</p>
+<p>You cannot delete a subnet group if it is associated with any DAX</p>
+<!-- @@@deleteSubnetGroup -->
+<!-- $$$describeClusters[overload1]$$$describeClustersconstDescribeClustersRequest& -->
+<h3 class="fn" id="describeClusters"><a name="describeClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describeclustersresponse.html">DescribeClustersResponse</a></span> *DaxClient::<span class="name">describeClusters</span>(const <span class="type"><a href="qtaws-dax-describeclustersrequest.html">DescribeClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describeclustersresponse.html">DescribeClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all provisioned DAX clusters if no cluster identifier is specified, or about a specific DAX cluster if a cluster identifier is</p>
+<p>supplied&gt;</p>
+<p>If the cluster is in the CREATING state, only cluster level information will be displayed until all of the nodes are successfully</p>
+<p>provisioned&gt;</p>
+<p>If the cluster is in the DELETING state, only cluster level information will be</p>
+<p>displayed&gt;</p>
+<p>If nodes are currently being added to the DAX cluster, node endpoint information and creation time for the additional nodes will not be displayed until they are completely provisioned. When the DAX cluster state is &lt;i&gt;available&lt;/i&gt;, the cluster is ready for</p>
+<p>use&gt;</p>
+<p>If nodes are currently being removed from the DAX cluster, no endpoint information for the removed nodes is</p>
+<!-- @@@describeClusters -->
+<!-- $$$describeDefaultParameters[overload1]$$$describeDefaultParametersconstDescribeDefaultParametersRequest& -->
+<h3 class="fn" id="describeDefaultParameters"><a name="describeDefaultParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describedefaultparametersresponse.html">DescribeDefaultParametersResponse</a></span> *DaxClient::<span class="name">describeDefaultParameters</span>(const <span class="type"><a href="qtaws-dax-describedefaultparametersrequest.html">DescribeDefaultParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describedefaultparametersresponse.html">DescribeDefaultParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the default system parameter information for the DAX caching</p>
+<!-- @@@describeDefaultParameters -->
+<!-- $$$describeEvents[overload1]$$$describeEventsconstDescribeEventsRequest& -->
+<h3 class="fn" id="describeEvents"><a name="describeEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describeeventsresponse.html">DescribeEventsResponse</a></span> *DaxClient::<span class="name">describeEvents</span>(const <span class="type"><a href="qtaws-dax-describeeventsrequest.html">DescribeEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describeeventsresponse.html">DescribeEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns events related to DAX clusters and parameter groups. You can obtain events specific to a particular DAX cluster or parameter group by providing the name as a</p>
+<p>parameter&gt;</p>
+<p>By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth of events if</p>
+<!-- @@@describeEvents -->
+<!-- $$$describeParameterGroups[overload1]$$$describeParameterGroupsconstDescribeParameterGroupsRequest& -->
+<h3 class="fn" id="describeParameterGroups"><a name="describeParameterGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describeparametergroupsresponse.html">DescribeParameterGroupsResponse</a></span> *DaxClient::<span class="name">describeParameterGroups</span>(const <span class="type"><a href="qtaws-dax-describeparametergroupsrequest.html">DescribeParameterGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describeparametergroupsresponse.html">DescribeParameterGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of parameter group descriptions. If a parameter group name is specified, the list will contain only the descriptions for that</p>
+<!-- @@@describeParameterGroups -->
+<!-- $$$describeParameters[overload1]$$$describeParametersconstDescribeParametersRequest& -->
+<h3 class="fn" id="describeParameters"><a name="describeParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describeparametersresponse.html">DescribeParametersResponse</a></span> *DaxClient::<span class="name">describeParameters</span>(const <span class="type"><a href="qtaws-dax-describeparametersrequest.html">DescribeParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describeparametersresponse.html">DescribeParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the detailed parameter list for a particular parameter</p>
+<!-- @@@describeParameters -->
+<!-- $$$describeSubnetGroups[overload1]$$$describeSubnetGroupsconstDescribeSubnetGroupsRequest& -->
+<h3 class="fn" id="describeSubnetGroups"><a name="describeSubnetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-describesubnetgroupsresponse.html">DescribeSubnetGroupsResponse</a></span> *DaxClient::<span class="name">describeSubnetGroups</span>(const <span class="type"><a href="qtaws-dax-describesubnetgroupsrequest.html">DescribeSubnetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-describesubnetgroupsresponse.html">DescribeSubnetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of subnet group descriptions. If a subnet group name is specified, the list will contain only the description of that</p>
+<!-- @@@describeSubnetGroups -->
+<!-- $$$increaseReplicationFactor[overload1]$$$increaseReplicationFactorconstIncreaseReplicationFactorRequest& -->
+<h3 class="fn" id="increaseReplicationFactor"><a name="increaseReplicationFactor"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-increasereplicationfactorresponse.html">IncreaseReplicationFactorResponse</a></span> *DaxClient::<span class="name">increaseReplicationFactor</span>(const <span class="type"><a href="qtaws-dax-increasereplicationfactorrequest.html">IncreaseReplicationFactorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-increasereplicationfactorresponse.html">IncreaseReplicationFactorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more nodes to a DAX</p>
+<!-- @@@increaseReplicationFactor -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-listtagsresponse.html">ListTagsResponse</a></span> *DaxClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-dax-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List all of the tags for a DAX cluster. You can call &lt;code&gt;ListTags&lt;/code&gt; up to 10 times per second, per</p>
+<!-- @@@listTags -->
+<!-- $$$rebootNode[overload1]$$$rebootNodeconstRebootNodeRequest& -->
+<h3 class="fn" id="rebootNode"><a name="rebootNode"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-rebootnoderesponse.html">RebootNodeResponse</a></span> *DaxClient::<span class="name">rebootNode</span>(const <span class="type"><a href="qtaws-dax-rebootnoderequest.html">RebootNodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-rebootnoderesponse.html">RebootNodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node status is set to</p>
+<!-- @@@rebootNode -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-tagresourceresponse.html">TagResourceResponse</a></span> *DaxClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-dax-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a set of tags with a DAX resource. You can call &lt;code&gt;TagResource&lt;/code&gt; up to 5 times per second, per account.</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-untagresourceresponse.html">UntagResourceResponse</a></span> *DaxClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-dax-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the association of tags from a DAX resource. You can call &lt;code&gt;UntagResource&lt;/code&gt; up to 5 times per second, per account.</p>
+<!-- @@@untagResource -->
+<!-- $$$updateCluster[overload1]$$$updateClusterconstUpdateClusterRequest& -->
+<h3 class="fn" id="updateCluster"><a name="updateCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-updateclusterresponse.html">UpdateClusterResponse</a></span> *DaxClient::<span class="name">updateCluster</span>(const <span class="type"><a href="qtaws-dax-updateclusterrequest.html">UpdateClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-updateclusterresponse.html">UpdateClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters by specifying the parameters and the new</p>
+<!-- @@@updateCluster -->
+<!-- $$$updateParameterGroup[overload1]$$$updateParameterGroupconstUpdateParameterGroupRequest& -->
+<h3 class="fn" id="updateParameterGroup"><a name="updateParameterGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-updateparametergroupresponse.html">UpdateParameterGroupResponse</a></span> *DaxClient::<span class="name">updateParameterGroup</span>(const <span class="type"><a href="qtaws-dax-updateparametergrouprequest.html">UpdateParameterGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-updateparametergroupresponse.html">UpdateParameterGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a list parameter name and value</p>
+<!-- @@@updateParameterGroup -->
+<!-- $$$updateSubnetGroup[overload1]$$$updateSubnetGroupconstUpdateSubnetGroupRequest& -->
+<h3 class="fn" id="updateSubnetGroup"><a name="updateSubnetGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-dax-updatesubnetgroupresponse.html">UpdateSubnetGroupResponse</a></span> *DaxClient::<span class="name">updateSubnetGroup</span>(const <span class="type"><a href="qtaws-dax-updatesubnetgrouprequest.html">UpdateSubnetGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dax-daxclient.html">DaxClient</a> service, and returns a pointer to an <a href="qtaws-dax-updatesubnetgroupresponse.html">UpdateSubnetGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing subnet</p>
+<!-- @@@updateSubnetGroup -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

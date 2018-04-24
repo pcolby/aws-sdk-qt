@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- translateclient.cpp -->
+  <title>TranslateClient Class | Translate</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawstranslate-index.html">Translate</a></li>
+<li><a href="qtawstranslate-module.html">C++ Classes</a></li>
+<li>TranslateClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">TranslateClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-translate-translateclient.html">QtAws::Translate::TranslateClient</a>)<br/></span>
+<!-- $$$TranslateClient-brief -->
+<p>The <a href="qtaws-translate-translateclient.html">TranslateClient</a> class provides access to the Amazon Translate service. <a href="#details">More...</a></p>
+<!-- @@@TranslateClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;TranslateClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-translate-translateclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-translate-translateclient.html#TranslateClient">TranslateClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-translate-translateclient.html#TranslateClient-1">TranslateClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> TranslateTextResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-translate-translateclient.html#translateText">translateText</a></b>(const TranslateTextRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$TranslateClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-translate-translateclient.html">TranslateClient</a> class provides access to the Amazon Translate service.</p>
+<p>Provides translation between English and one of six languages, or between one of the six languages and</p>
+</div>
+<!-- @@@TranslateClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$TranslateClient[overload1]$$$TranslateClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="TranslateClient"><a name="TranslateClient"></a>TranslateClient::<span class="name">TranslateClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-translate-translateclient.html">TranslateClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@TranslateClient -->
+<!-- $$$TranslateClient$$$TranslateClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="TranslateClient-1"><a name="TranslateClient-1"></a>TranslateClient::<span class="name">TranslateClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-translate-translateclient.html#TranslateClient">TranslateClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@TranslateClient -->
+<!-- $$$translateText[overload1]$$$translateTextconstTranslateTextRequest& -->
+<h3 class="fn" id="translateText"><a name="translateText"></a><code>[slot] </code><span class="type"><a href="qtaws-translate-translatetextresponse.html">TranslateTextResponse</a></span> *TranslateClient::<span class="name">translateText</span>(const <span class="type"><a href="qtaws-translate-translatetextrequest.html">TranslateTextRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-translate-translateclient.html">TranslateClient</a> service, and returns a pointer to an <a href="qtaws-translate-translatetextresponse.html">TranslateTextResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Translates input text from the source language to the target language. You can translate between English (en) and one of the following languages, or between one of the following languages and</p>
+<p>English&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Arabic</p>
+<p>(ar&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Chinese (Simplified)</p>
+<p>(zh&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>French</p>
+<p>(fr&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>German</p>
+<p>(de&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Portuguese</p>
+<p>(pt&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Spanish</p>
+<p>(es&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To have Amazon Translate determine the source language of your text, you can specify &lt;code&gt;auto&lt;/code&gt; in the &lt;code&gt;SourceLanguageCode&lt;/code&gt; field. If you specify &lt;code&gt;auto&lt;/code&gt;, Amazon Translate will call Amazon Comprehend to determine the source</p>
+<!-- @@@translateText -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

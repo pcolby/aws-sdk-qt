@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- workmailclient.cpp -->
+  <title>WorkMailClient Class | WorkMail</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsworkmail-index.html">WorkMail</a></li>
+<li><a href="qtawsworkmail-module.html">C++ Classes</a></li>
+<li>WorkMailClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WorkMailClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-workmail-workmailclient.html">QtAws::WorkMail::WorkMailClient</a>)<br/></span>
+<!-- $$$WorkMailClient-brief -->
+<p>The <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> class provides access to the Amazon <a href="qtaws-workmail.html">WorkMail</a> service. <a href="#details">More...</a></p>
+<!-- @@@WorkMailClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WorkMailClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-workmail-workmailclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#WorkMailClient">WorkMailClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#WorkMailClient-1">WorkMailClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateDelegateToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#associateDelegateToResource">associateDelegateToResource</a></b>(const AssociateDelegateToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateMemberToGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#associateMemberToGroup">associateMemberToGroup</a></b>(const AssociateMemberToGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#createAlias">createAlias</a></b>(const CreateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#createGroup">createGroup</a></b>(const CreateGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#createResource">createResource</a></b>(const CreateResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#createUser">createUser</a></b>(const CreateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deleteAlias">deleteAlias</a></b>(const DeleteAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deleteGroup">deleteGroup</a></b>(const DeleteGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMailboxPermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deleteMailboxPermissions">deleteMailboxPermissions</a></b>(const DeleteMailboxPermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deleteResource">deleteResource</a></b>(const DeleteResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deleteUser">deleteUser</a></b>(const DeleteUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterFromWorkMailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#deregisterFromWorkMail">deregisterFromWorkMail</a></b>(const DeregisterFromWorkMailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#describeGroup">describeGroup</a></b>(const DescribeGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeOrganizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#describeOrganization">describeOrganization</a></b>(const DescribeOrganizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#describeResource">describeResource</a></b>(const DescribeResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#describeUser">describeUser</a></b>(const DescribeUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateDelegateFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#disassociateDelegateFromResource">disassociateDelegateFromResource</a></b>(const DisassociateDelegateFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateMemberFromGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#disassociateMemberFromGroup">disassociateMemberFromGroup</a></b>(const DisassociateMemberFromGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAliasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listAliases">listAliases</a></b>(const ListAliasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGroupMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listGroupMembers">listGroupMembers</a></b>(const ListGroupMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listGroups">listGroups</a></b>(const ListGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMailboxPermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listMailboxPermissions">listMailboxPermissions</a></b>(const ListMailboxPermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOrganizationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listOrganizations">listOrganizations</a></b>(const ListOrganizationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceDelegatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listResourceDelegates">listResourceDelegates</a></b>(const ListResourceDelegatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listResources">listResources</a></b>(const ListResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListUsersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#listUsers">listUsers</a></b>(const ListUsersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutMailboxPermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#putMailboxPermissions">putMailboxPermissions</a></b>(const PutMailboxPermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterToWorkMailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#registerToWorkMail">registerToWorkMail</a></b>(const RegisterToWorkMailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResetPasswordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#resetPassword">resetPassword</a></b>(const ResetPasswordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePrimaryEmailAddressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#updatePrimaryEmailAddress">updatePrimaryEmailAddress</a></b>(const UpdatePrimaryEmailAddressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workmail-workmailclient.html#updateResource">updateResource</a></b>(const UpdateResourceRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WorkMailClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> class provides access to the Amazon <a href="qtaws-workmail.html">WorkMail</a> service.</p>
+<p>Amazon <a href="qtaws-workmail.html">WorkMail</a> is a secure, managed business email and calendaring service with support for existing desktop and mobile email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native iOS and Android email applications. You can integrate Amazon <a href="qtaws-workmail.html">WorkMail</a> with your existing corporate directory and control both the keys that encrypt your data and the location in which your data is</p>
+<p>stored&gt;</p>
+<p>The Amazon <a href="qtaws-workmail.html">WorkMail</a> API is designed for the following</p>
+<p>scenarios&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Listing and describing</p>
+<p>organization&gt; &lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Managing</p>
+<p>user&gt; &lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Managing</p>
+<p>group&gt; &lt;/li&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Managing</p>
+<p>resource&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>All Amazon <a href="qtaws-workmail.html">WorkMail</a> API actions are Amazon-authenticated and certificate-signed. They not only require the use of the AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission policies. By creating a role and allowing an IAM user to access the Amazon <a href="qtaws-workmail.html">WorkMail</a> site, the IAM user gains full administrative visibility into the entire Amazon <a href="qtaws-workmail.html">WorkMail</a> organization (or as set in the IAM policy). This includes, but is not limited to, the ability to create, update, and delete users, groups, and resources. This allows developers to perform the scenarios listed above, as well as give users the ability to grant access on a selective basis using the IAM</p>
+</div>
+<!-- @@@WorkMailClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WorkMailClient[overload1]$$$WorkMailClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkMailClient"><a name="WorkMailClient"></a>WorkMailClient::<span class="name">WorkMailClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@WorkMailClient -->
+<!-- $$$WorkMailClient$$$WorkMailClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkMailClient-1"><a name="WorkMailClient-1"></a>WorkMailClient::<span class="name">WorkMailClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-workmail-workmailclient.html#WorkMailClient">WorkMailClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@WorkMailClient -->
+<!-- $$$associateDelegateToResource[overload1]$$$associateDelegateToResourceconstAssociateDelegateToResourceRequest& -->
+<h3 class="fn" id="associateDelegateToResource"><a name="associateDelegateToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-associatedelegatetoresourceresponse.html">AssociateDelegateToResourceResponse</a></span> *WorkMailClient::<span class="name">associateDelegateToResource</span>(const <span class="type"><a href="qtaws-workmail-associatedelegatetoresourcerequest.html">AssociateDelegateToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-associatedelegatetoresourceresponse.html">AssociateDelegateToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a member to the resource's set of</p>
+<!-- @@@associateDelegateToResource -->
+<!-- $$$associateMemberToGroup[overload1]$$$associateMemberToGroupconstAssociateMemberToGroupRequest& -->
+<h3 class="fn" id="associateMemberToGroup"><a name="associateMemberToGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-associatemembertogroupresponse.html">AssociateMemberToGroupResponse</a></span> *WorkMailClient::<span class="name">associateMemberToGroup</span>(const <span class="type"><a href="qtaws-workmail-associatemembertogrouprequest.html">AssociateMemberToGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-associatemembertogroupresponse.html">AssociateMemberToGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a member to the group's</p>
+<!-- @@@associateMemberToGroup -->
+<!-- $$$createAlias[overload1]$$$createAliasconstCreateAliasRequest& -->
+<h3 class="fn" id="createAlias"><a name="createAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-createaliasresponse.html">CreateAliasResponse</a></span> *WorkMailClient::<span class="name">createAlias</span>(const <span class="type"><a href="qtaws-workmail-createaliasrequest.html">CreateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-createaliasresponse.html">CreateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds an alias to the set of a given member of Amazon</p>
+<!-- @@@createAlias -->
+<!-- $$$createGroup[overload1]$$$createGroupconstCreateGroupRequest& -->
+<h3 class="fn" id="createGroup"><a name="createGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-creategroupresponse.html">CreateGroupResponse</a></span> *WorkMailClient::<span class="name">createGroup</span>(const <span class="type"><a href="qtaws-workmail-creategrouprequest.html">CreateGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-creategroupresponse.html">CreateGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a group that can be used in Amazon <a href="qtaws-workmail.html">WorkMail</a> by calling the RegisterToWorkMail</p>
+<!-- @@@createGroup -->
+<!-- $$$createResource[overload1]$$$createResourceconstCreateResourceRequest& -->
+<h3 class="fn" id="createResource"><a name="createResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-createresourceresponse.html">CreateResourceResponse</a></span> *WorkMailClient::<span class="name">createResource</span>(const <span class="type"><a href="qtaws-workmail-createresourcerequest.html">CreateResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-createresourceresponse.html">CreateResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Amazon <a href="qtaws-workmail.html">WorkMail</a> resource. The available types are equipment and</p>
+<!-- @@@createResource -->
+<!-- $$$createUser[overload1]$$$createUserconstCreateUserRequest& -->
+<h3 class="fn" id="createUser"><a name="createUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-createuserresponse.html">CreateUserResponse</a></span> *WorkMailClient::<span class="name">createUser</span>(const <span class="type"><a href="qtaws-workmail-createuserrequest.html">CreateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-createuserresponse.html">CreateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a user who can be used in Amazon <a href="qtaws-workmail.html">WorkMail</a> by calling the RegisterToWorkMail</p>
+<!-- @@@createUser -->
+<!-- $$$deleteAlias[overload1]$$$deleteAliasconstDeleteAliasRequest& -->
+<h3 class="fn" id="deleteAlias"><a name="deleteAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deletealiasresponse.html">DeleteAliasResponse</a></span> *WorkMailClient::<span class="name">deleteAlias</span>(const <span class="type"><a href="qtaws-workmail-deletealiasrequest.html">DeleteAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deletealiasresponse.html">DeleteAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Remove the alias from a set of aliases for a given</p>
+<!-- @@@deleteAlias -->
+<!-- $$$deleteGroup[overload1]$$$deleteGroupconstDeleteGroupRequest& -->
+<h3 class="fn" id="deleteGroup"><a name="deleteGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deletegroupresponse.html">DeleteGroupResponse</a></span> *WorkMailClient::<span class="name">deleteGroup</span>(const <span class="type"><a href="qtaws-workmail-deletegrouprequest.html">DeleteGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deletegroupresponse.html">DeleteGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a group from Amazon</p>
+<!-- @@@deleteGroup -->
+<!-- $$$deleteMailboxPermissions[overload1]$$$deleteMailboxPermissionsconstDeleteMailboxPermissionsRequest& -->
+<h3 class="fn" id="deleteMailboxPermissions"><a name="deleteMailboxPermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deletemailboxpermissionsresponse.html">DeleteMailboxPermissionsResponse</a></span> *WorkMailClient::<span class="name">deleteMailboxPermissions</span>(const <span class="type"><a href="qtaws-workmail-deletemailboxpermissionsrequest.html">DeleteMailboxPermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deletemailboxpermissionsresponse.html">DeleteMailboxPermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes permissions granted to a user or</p>
+<!-- @@@deleteMailboxPermissions -->
+<!-- $$$deleteResource[overload1]$$$deleteResourceconstDeleteResourceRequest& -->
+<h3 class="fn" id="deleteResource"><a name="deleteResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deleteresourceresponse.html">DeleteResourceResponse</a></span> *WorkMailClient::<span class="name">deleteResource</span>(const <span class="type"><a href="qtaws-workmail-deleteresourcerequest.html">DeleteResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deleteresourceresponse.html">DeleteResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified resource.</p>
+<!-- @@@deleteResource -->
+<!-- $$$deleteUser[overload1]$$$deleteUserconstDeleteUserRequest& -->
+<h3 class="fn" id="deleteUser"><a name="deleteUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deleteuserresponse.html">DeleteUserResponse</a></span> *WorkMailClient::<span class="name">deleteUser</span>(const <span class="type"><a href="qtaws-workmail-deleteuserrequest.html">DeleteUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deleteuserresponse.html">DeleteUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a user from Amazon <a href="qtaws-workmail.html">WorkMail</a> and all subsequent systems. The action can't be undone. The mailbox is kept as-is for a minimum of 30 days, without any means to restore it.</p>
+<!-- @@@deleteUser -->
+<!-- $$$deregisterFromWorkMail[overload1]$$$deregisterFromWorkMailconstDeregisterFromWorkMailRequest& -->
+<h3 class="fn" id="deregisterFromWorkMail"><a name="deregisterFromWorkMail"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-deregisterfromworkmailresponse.html">DeregisterFromWorkMailResponse</a></span> *WorkMailClient::<span class="name">deregisterFromWorkMail</span>(const <span class="type"><a href="qtaws-workmail-deregisterfromworkmailrequest.html">DeregisterFromWorkMailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-deregisterfromworkmailresponse.html">DeregisterFromWorkMailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Mark a user, group, or resource as no longer used in Amazon <a href="qtaws-workmail.html">WorkMail</a>. This action disassociates the mailbox and schedules it for clean-up. Amazon <a href="qtaws-workmail.html">WorkMail</a> keeps mailboxes for 30 days before they are permanently removed. The functionality in the console is</p>
+<!-- @@@deregisterFromWorkMail -->
+<!-- $$$describeGroup[overload1]$$$describeGroupconstDescribeGroupRequest& -->
+<h3 class="fn" id="describeGroup"><a name="describeGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-describegroupresponse.html">DescribeGroupResponse</a></span> *WorkMailClient::<span class="name">describeGroup</span>(const <span class="type"><a href="qtaws-workmail-describegrouprequest.html">DescribeGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-describegroupresponse.html">DescribeGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the data available for the</p>
+<!-- @@@describeGroup -->
+<!-- $$$describeOrganization[overload1]$$$describeOrganizationconstDescribeOrganizationRequest& -->
+<h3 class="fn" id="describeOrganization"><a name="describeOrganization"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-describeorganizationresponse.html">DescribeOrganizationResponse</a></span> *WorkMailClient::<span class="name">describeOrganization</span>(const <span class="type"><a href="qtaws-workmail-describeorganizationrequest.html">DescribeOrganizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-describeorganizationresponse.html">DescribeOrganizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides more information regarding a given organization based on its</p>
+<!-- @@@describeOrganization -->
+<!-- $$$describeResource[overload1]$$$describeResourceconstDescribeResourceRequest& -->
+<h3 class="fn" id="describeResource"><a name="describeResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-describeresourceresponse.html">DescribeResourceResponse</a></span> *WorkMailClient::<span class="name">describeResource</span>(const <span class="type"><a href="qtaws-workmail-describeresourcerequest.html">DescribeResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-describeresourceresponse.html">DescribeResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the data available for the</p>
+<!-- @@@describeResource -->
+<!-- $$$describeUser[overload1]$$$describeUserconstDescribeUserRequest& -->
+<h3 class="fn" id="describeUser"><a name="describeUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-describeuserresponse.html">DescribeUserResponse</a></span> *WorkMailClient::<span class="name">describeUser</span>(const <span class="type"><a href="qtaws-workmail-describeuserrequest.html">DescribeUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-describeuserresponse.html">DescribeUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides information regarding the</p>
+<!-- @@@describeUser -->
+<!-- $$$disassociateDelegateFromResource[overload1]$$$disassociateDelegateFromResourceconstDisassociateDelegateFromResourceRequest& -->
+<h3 class="fn" id="disassociateDelegateFromResource"><a name="disassociateDelegateFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-disassociatedelegatefromresourceresponse.html">DisassociateDelegateFromResourceResponse</a></span> *WorkMailClient::<span class="name">disassociateDelegateFromResource</span>(const <span class="type"><a href="qtaws-workmail-disassociatedelegatefromresourcerequest.html">DisassociateDelegateFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-disassociatedelegatefromresourceresponse.html">DisassociateDelegateFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a member from the resource's set of</p>
+<!-- @@@disassociateDelegateFromResource -->
+<!-- $$$disassociateMemberFromGroup[overload1]$$$disassociateMemberFromGroupconstDisassociateMemberFromGroupRequest& -->
+<h3 class="fn" id="disassociateMemberFromGroup"><a name="disassociateMemberFromGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-disassociatememberfromgroupresponse.html">DisassociateMemberFromGroupResponse</a></span> *WorkMailClient::<span class="name">disassociateMemberFromGroup</span>(const <span class="type"><a href="qtaws-workmail-disassociatememberfromgrouprequest.html">DisassociateMemberFromGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-disassociatememberfromgroupresponse.html">DisassociateMemberFromGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a member from a</p>
+<!-- @@@disassociateMemberFromGroup -->
+<!-- $$$listAliases[overload1]$$$listAliasesconstListAliasesRequest& -->
+<h3 class="fn" id="listAliases"><a name="listAliases"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listaliasesresponse.html">ListAliasesResponse</a></span> *WorkMailClient::<span class="name">listAliases</span>(const <span class="type"><a href="qtaws-workmail-listaliasesrequest.html">ListAliasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listaliasesresponse.html">ListAliasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a paginated call to list the aliases associated with a given</p>
+<!-- @@@listAliases -->
+<!-- $$$listGroupMembers[overload1]$$$listGroupMembersconstListGroupMembersRequest& -->
+<h3 class="fn" id="listGroupMembers"><a name="listGroupMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listgroupmembersresponse.html">ListGroupMembersResponse</a></span> *WorkMailClient::<span class="name">listGroupMembers</span>(const <span class="type"><a href="qtaws-workmail-listgroupmembersrequest.html">ListGroupMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listgroupmembersresponse.html">ListGroupMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an overview of the members of a</p>
+<!-- @@@listGroupMembers -->
+<!-- $$$listGroups[overload1]$$$listGroupsconstListGroupsRequest& -->
+<h3 class="fn" id="listGroups"><a name="listGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listgroupsresponse.html">ListGroupsResponse</a></span> *WorkMailClient::<span class="name">listGroups</span>(const <span class="type"><a href="qtaws-workmail-listgroupsrequest.html">ListGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listgroupsresponse.html">ListGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns summaries of the organization's</p>
+<!-- @@@listGroups -->
+<!-- $$$listMailboxPermissions[overload1]$$$listMailboxPermissionsconstListMailboxPermissionsRequest& -->
+<h3 class="fn" id="listMailboxPermissions"><a name="listMailboxPermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listmailboxpermissionsresponse.html">ListMailboxPermissionsResponse</a></span> *WorkMailClient::<span class="name">listMailboxPermissions</span>(const <span class="type"><a href="qtaws-workmail-listmailboxpermissionsrequest.html">ListMailboxPermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listmailboxpermissionsresponse.html">ListMailboxPermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the mailbox permissions associated with a</p>
+<!-- @@@listMailboxPermissions -->
+<!-- $$$listOrganizations[overload1]$$$listOrganizationsconstListOrganizationsRequest& -->
+<h3 class="fn" id="listOrganizations"><a name="listOrganizations"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listorganizationsresponse.html">ListOrganizationsResponse</a></span> *WorkMailClient::<span class="name">listOrganizations</span>(const <span class="type"><a href="qtaws-workmail-listorganizationsrequest.html">ListOrganizationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listorganizationsresponse.html">ListOrganizationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns summaries of the customer's non-deleted</p>
+<!-- @@@listOrganizations -->
+<!-- $$$listResourceDelegates[overload1]$$$listResourceDelegatesconstListResourceDelegatesRequest& -->
+<h3 class="fn" id="listResourceDelegates"><a name="listResourceDelegates"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listresourcedelegatesresponse.html">ListResourceDelegatesResponse</a></span> *WorkMailClient::<span class="name">listResourceDelegates</span>(const <span class="type"><a href="qtaws-workmail-listresourcedelegatesrequest.html">ListResourceDelegatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listresourcedelegatesresponse.html">ListResourceDelegatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the delegates associated with a resource. Users and groups can be resource delegates and answer requests on behalf of the</p>
+<!-- @@@listResourceDelegates -->
+<!-- $$$listResources[overload1]$$$listResourcesconstListResourcesRequest& -->
+<h3 class="fn" id="listResources"><a name="listResources"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listresourcesresponse.html">ListResourcesResponse</a></span> *WorkMailClient::<span class="name">listResources</span>(const <span class="type"><a href="qtaws-workmail-listresourcesrequest.html">ListResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listresourcesresponse.html">ListResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns summaries of the organization's</p>
+<!-- @@@listResources -->
+<!-- $$$listUsers[overload1]$$$listUsersconstListUsersRequest& -->
+<h3 class="fn" id="listUsers"><a name="listUsers"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-listusersresponse.html">ListUsersResponse</a></span> *WorkMailClient::<span class="name">listUsers</span>(const <span class="type"><a href="qtaws-workmail-listusersrequest.html">ListUsersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-listusersresponse.html">ListUsersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns summaries of the organization's</p>
+<!-- @@@listUsers -->
+<!-- $$$putMailboxPermissions[overload1]$$$putMailboxPermissionsconstPutMailboxPermissionsRequest& -->
+<h3 class="fn" id="putMailboxPermissions"><a name="putMailboxPermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-putmailboxpermissionsresponse.html">PutMailboxPermissionsResponse</a></span> *WorkMailClient::<span class="name">putMailboxPermissions</span>(const <span class="type"><a href="qtaws-workmail-putmailboxpermissionsrequest.html">PutMailboxPermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-putmailboxpermissionsresponse.html">PutMailboxPermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets permissions for a user or group. This replaces any pre-existing permissions set for the</p>
+<!-- @@@putMailboxPermissions -->
+<!-- $$$registerToWorkMail[overload1]$$$registerToWorkMailconstRegisterToWorkMailRequest& -->
+<h3 class="fn" id="registerToWorkMail"><a name="registerToWorkMail"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-registertoworkmailresponse.html">RegisterToWorkMailResponse</a></span> *WorkMailClient::<span class="name">registerToWorkMail</span>(const <span class="type"><a href="qtaws-workmail-registertoworkmailrequest.html">RegisterToWorkMailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-registertoworkmailresponse.html">RegisterToWorkMailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers an existing and disabled user, group, or resource/entity for Amazon <a href="qtaws-workmail.html">WorkMail</a> use by associating a mailbox and calendaring capabilities. It performs no change if the entity is enabled and fails if the entity is deleted. This operation results in the accumulation of costs. For more information, see &lt;a href=&quot;http://aws.amazon.com/workmail/pricing&quot;&gt;Pricing&lt;/a&gt;. The equivalent console functionality for this operation is &lt;i&gt;Enable&lt;/i&gt;. Users can either be created by calling the CreateUser API or they can be synchronized from your directory. For more information, see</p>
+<!-- @@@registerToWorkMail -->
+<!-- $$$resetPassword[overload1]$$$resetPasswordconstResetPasswordRequest& -->
+<h3 class="fn" id="resetPassword"><a name="resetPassword"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-resetpasswordresponse.html">ResetPasswordResponse</a></span> *WorkMailClient::<span class="name">resetPassword</span>(const <span class="type"><a href="qtaws-workmail-resetpasswordrequest.html">ResetPasswordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-resetpasswordresponse.html">ResetPasswordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows the administrator to reset the password for a</p>
+<!-- @@@resetPassword -->
+<!-- $$$updatePrimaryEmailAddress[overload1]$$$updatePrimaryEmailAddressconstUpdatePrimaryEmailAddressRequest& -->
+<h3 class="fn" id="updatePrimaryEmailAddress"><a name="updatePrimaryEmailAddress"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-updateprimaryemailaddressresponse.html">UpdatePrimaryEmailAddressResponse</a></span> *WorkMailClient::<span class="name">updatePrimaryEmailAddress</span>(const <span class="type"><a href="qtaws-workmail-updateprimaryemailaddressrequest.html">UpdatePrimaryEmailAddressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-updateprimaryemailaddressresponse.html">UpdatePrimaryEmailAddressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the primary email for an entity. The current email is moved into the list of aliases (or swapped between an existing alias and the current primary email) and the email provided in the input is promoted as the</p>
+<!-- @@@updatePrimaryEmailAddress -->
+<!-- $$$updateResource[overload1]$$$updateResourceconstUpdateResourceRequest& -->
+<h3 class="fn" id="updateResource"><a name="updateResource"></a><code>[slot] </code><span class="type"><a href="qtaws-workmail-updateresourceresponse.html">UpdateResourceResponse</a></span> *WorkMailClient::<span class="name">updateResource</span>(const <span class="type"><a href="qtaws-workmail-updateresourcerequest.html">UpdateResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workmail-workmailclient.html">WorkMailClient</a> service, and returns a pointer to an <a href="qtaws-workmail-updateresourceresponse.html">UpdateResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates data for the resource. It must be preceded by a describe call in order to have the latest information. The dataset in the request should be the one expected when performing another describe</p>
+<!-- @@@updateResource -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

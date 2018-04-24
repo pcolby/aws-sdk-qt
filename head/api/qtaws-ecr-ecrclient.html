@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ecrclient.cpp -->
+  <title>EcrClient Class | ECR</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsecr-index.html">ECR</a></li>
+<li><a href="qtawsecr-module.html">C++ Classes</a></li>
+<li>EcrClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">EcrClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ecr-ecrclient.html">QtAws::ECR::EcrClient</a>)<br/></span>
+<!-- $$$EcrClient-brief -->
+<p>The <a href="qtaws-ecr-ecrclient.html">EcrClient</a> class provides access to the Amazon EC2 Container Registry ( ECR) service. <a href="#details">More...</a></p>
+<!-- @@@EcrClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;EcrClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-ecr-ecrclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#EcrClient">EcrClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#EcrClient-1">EcrClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchCheckLayerAvailabilityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#batchCheckLayerAvailability">batchCheckLayerAvailability</a></b>(const BatchCheckLayerAvailabilityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#batchDeleteImage">batchDeleteImage</a></b>(const BatchDeleteImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#batchGetImage">batchGetImage</a></b>(const BatchGetImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CompleteLayerUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#completeLayerUpload">completeLayerUpload</a></b>(const CompleteLayerUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRepositoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#createRepository">createRepository</a></b>(const CreateRepositoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLifecyclePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#deleteLifecyclePolicy">deleteLifecyclePolicy</a></b>(const DeleteLifecyclePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRepositoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#deleteRepository">deleteRepository</a></b>(const DeleteRepositoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRepositoryPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#deleteRepositoryPolicy">deleteRepositoryPolicy</a></b>(const DeleteRepositoryPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeImagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#describeImages">describeImages</a></b>(const DescribeImagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRepositoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#describeRepositories">describeRepositories</a></b>(const DescribeRepositoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAuthorizationTokenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#getAuthorizationToken">getAuthorizationToken</a></b>(const GetAuthorizationTokenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDownloadUrlForLayerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#getDownloadUrlForLayer">getDownloadUrlForLayer</a></b>(const GetDownloadUrlForLayerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLifecyclePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#getLifecyclePolicy">getLifecyclePolicy</a></b>(const GetLifecyclePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLifecyclePolicyPreviewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#getLifecyclePolicyPreview">getLifecyclePolicyPreview</a></b>(const GetLifecyclePolicyPreviewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRepositoryPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#getRepositoryPolicy">getRepositoryPolicy</a></b>(const GetRepositoryPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateLayerUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#initiateLayerUpload">initiateLayerUpload</a></b>(const InitiateLayerUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListImagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#listImages">listImages</a></b>(const ListImagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutImageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#putImage">putImage</a></b>(const PutImageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutLifecyclePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#putLifecyclePolicy">putLifecyclePolicy</a></b>(const PutLifecyclePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetRepositoryPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#setRepositoryPolicy">setRepositoryPolicy</a></b>(const SetRepositoryPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartLifecyclePolicyPreviewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#startLifecyclePolicyPreview">startLifecyclePolicyPreview</a></b>(const StartLifecyclePolicyPreviewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UploadLayerPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecr-ecrclient.html#uploadLayerPart">uploadLayerPart</a></b>(const UploadLayerPartRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$EcrClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ecr-ecrclient.html">EcrClient</a> class provides access to the Amazon EC2 Container Registry ( ECR) service.</p>
+<p>Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR supports private Docker repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can access repositories and images. Developers can use the Docker CLI to author and manage</p>
+</div>
+<!-- @@@EcrClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$EcrClient[overload1]$$$EcrClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EcrClient"><a name="EcrClient"></a>EcrClient::<span class="name">EcrClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ecr-ecrclient.html">EcrClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@EcrClient -->
+<!-- $$$EcrClient$$$EcrClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EcrClient-1"><a name="EcrClient-1"></a>EcrClient::<span class="name">EcrClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-ecr-ecrclient.html#EcrClient">EcrClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@EcrClient -->
+<!-- $$$batchCheckLayerAvailability[overload1]$$$batchCheckLayerAvailabilityconstBatchCheckLayerAvailabilityRequest& -->
+<h3 class="fn" id="batchCheckLayerAvailability"><a name="batchCheckLayerAvailability"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-batchchecklayeravailabilityresponse.html">BatchCheckLayerAvailabilityResponse</a></span> *EcrClient::<span class="name">batchCheckLayerAvailability</span>(const <span class="type"><a href="qtaws-ecr-batchchecklayeravailabilityrequest.html">BatchCheckLayerAvailabilityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-batchchecklayeravailabilityresponse.html">BatchCheckLayerAvailabilityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Check the availability of multiple image layers in a specified registry and</p>
+<p>repository&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@batchCheckLayerAvailability -->
+<!-- $$$batchDeleteImage[overload1]$$$batchDeleteImageconstBatchDeleteImageRequest& -->
+<h3 class="fn" id="batchDeleteImage"><a name="batchDeleteImage"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-batchdeleteimageresponse.html">BatchDeleteImageResponse</a></span> *EcrClient::<span class="name">batchDeleteImage</span>(const <span class="type"><a href="qtaws-ecr-batchdeleteimagerequest.html">BatchDeleteImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-batchdeleteimageresponse.html">BatchDeleteImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a list of specified images within a specified repository. Images are specified with either &lt;code&gt;imageTag&lt;/code&gt; or</p>
+<p>&lt;code&gt;imageDigest&lt;/code&gt;&gt;</p>
+<p>You can remove a tag from an image by specifying the image's tag in your request. When you remove the last tag from an image, the image is deleted from your</p>
+<p>repository&gt;</p>
+<p>You can completely delete an image (and all of its tags) by specifying the image's digest in your</p>
+<!-- @@@batchDeleteImage -->
+<!-- $$$batchGetImage[overload1]$$$batchGetImageconstBatchGetImageRequest& -->
+<h3 class="fn" id="batchGetImage"><a name="batchGetImage"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-batchgetimageresponse.html">BatchGetImageResponse</a></span> *EcrClient::<span class="name">batchGetImage</span>(const <span class="type"><a href="qtaws-ecr-batchgetimagerequest.html">BatchGetImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-batchgetimageresponse.html">BatchGetImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets detailed information for specified images within a specified repository. Images are specified with either &lt;code&gt;imageTag&lt;/code&gt; or</p>
+<!-- @@@batchGetImage -->
+<!-- $$$completeLayerUpload[overload1]$$$completeLayerUploadconstCompleteLayerUploadRequest& -->
+<h3 class="fn" id="completeLayerUpload"><a name="completeLayerUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-completelayeruploadresponse.html">CompleteLayerUploadResponse</a></span> *EcrClient::<span class="name">completeLayerUpload</span>(const <span class="type"><a href="qtaws-ecr-completelayeruploadrequest.html">CompleteLayerUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-completelayeruploadresponse.html">CompleteLayerUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Informs Amazon ECR that the image layer upload has completed for a specified registry, repository name, and upload ID. You can optionally provide a &lt;code&gt;sha256&lt;/code&gt; digest of the image layer for data validation</p>
+<p>purposes&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@completeLayerUpload -->
+<!-- $$$createRepository[overload1]$$$createRepositoryconstCreateRepositoryRequest& -->
+<h3 class="fn" id="createRepository"><a name="createRepository"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-createrepositoryresponse.html">CreateRepositoryResponse</a></span> *EcrClient::<span class="name">createRepository</span>(const <span class="type"><a href="qtaws-ecr-createrepositoryrequest.html">CreateRepositoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-createrepositoryresponse.html">CreateRepositoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an image</p>
+<!-- @@@createRepository -->
+<!-- $$$deleteLifecyclePolicy[overload1]$$$deleteLifecyclePolicyconstDeleteLifecyclePolicyRequest& -->
+<h3 class="fn" id="deleteLifecyclePolicy"><a name="deleteLifecyclePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-deletelifecyclepolicyresponse.html">DeleteLifecyclePolicyResponse</a></span> *EcrClient::<span class="name">deleteLifecyclePolicy</span>(const <span class="type"><a href="qtaws-ecr-deletelifecyclepolicyrequest.html">DeleteLifecyclePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-deletelifecyclepolicyresponse.html">DeleteLifecyclePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified lifecycle</p>
+<!-- @@@deleteLifecyclePolicy -->
+<!-- $$$deleteRepository[overload1]$$$deleteRepositoryconstDeleteRepositoryRequest& -->
+<h3 class="fn" id="deleteRepository"><a name="deleteRepository"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-deleterepositoryresponse.html">DeleteRepositoryResponse</a></span> *EcrClient::<span class="name">deleteRepository</span>(const <span class="type"><a href="qtaws-ecr-deleterepositoryrequest.html">DeleteRepositoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-deleterepositoryresponse.html">DeleteRepositoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing image repository. If a repository contains images, you must use the &lt;code&gt;force&lt;/code&gt; option to delete</p>
+<!-- @@@deleteRepository -->
+<!-- $$$deleteRepositoryPolicy[overload1]$$$deleteRepositoryPolicyconstDeleteRepositoryPolicyRequest& -->
+<h3 class="fn" id="deleteRepositoryPolicy"><a name="deleteRepositoryPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-deleterepositorypolicyresponse.html">DeleteRepositoryPolicyResponse</a></span> *EcrClient::<span class="name">deleteRepositoryPolicy</span>(const <span class="type"><a href="qtaws-ecr-deleterepositorypolicyrequest.html">DeleteRepositoryPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-deleterepositorypolicyresponse.html">DeleteRepositoryPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the repository policy from a specified</p>
+<!-- @@@deleteRepositoryPolicy -->
+<!-- $$$describeImages[overload1]$$$describeImagesconstDescribeImagesRequest& -->
+<h3 class="fn" id="describeImages"><a name="describeImages"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-describeimagesresponse.html">DescribeImagesResponse</a></span> *EcrClient::<span class="name">describeImages</span>(const <span class="type"><a href="qtaws-ecr-describeimagesrequest.html">DescribeImagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-describeimagesresponse.html">DescribeImagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns metadata about the images in a repository, including image size, image tags, and creation</p>
+<p>date&gt; &lt;note&gt;</p>
+<p>Beginning with Docker version 1.9, the Docker client compresses image layers before pushing them to a V2 Docker registry. The output of the &lt;code&gt;docker images&lt;/code&gt; command shows the uncompressed image size, so it may return a larger image size than the image sizes returned by</p>
+<!-- @@@describeImages -->
+<!-- $$$describeRepositories[overload1]$$$describeRepositoriesconstDescribeRepositoriesRequest& -->
+<h3 class="fn" id="describeRepositories"><a name="describeRepositories"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-describerepositoriesresponse.html">DescribeRepositoriesResponse</a></span> *EcrClient::<span class="name">describeRepositories</span>(const <span class="type"><a href="qtaws-ecr-describerepositoriesrequest.html">DescribeRepositoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-describerepositoriesresponse.html">DescribeRepositoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes image repositories in a</p>
+<!-- @@@describeRepositories -->
+<!-- $$$getAuthorizationToken[overload1]$$$getAuthorizationTokenconstGetAuthorizationTokenRequest& -->
+<h3 class="fn" id="getAuthorizationToken"><a name="getAuthorizationToken"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-getauthorizationtokenresponse.html">GetAuthorizationTokenResponse</a></span> *EcrClient::<span class="name">getAuthorizationToken</span>(const <span class="type"><a href="qtaws-ecr-getauthorizationtokenrequest.html">GetAuthorizationTokenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-getauthorizationtokenresponse.html">GetAuthorizationTokenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a token that is valid for a specified registry for 12 hours. This command allows you to use the &lt;code&gt;docker&lt;/code&gt; CLI to push and pull images with Amazon ECR. If you do not specify a registry, the default registry is</p>
+<p>assumed&gt;</p>
+<p>The &lt;code&gt;authorizationToken&lt;/code&gt; returned for each registry specified is a base64 encoded string that can be decoded and used in a &lt;code&gt;docker login&lt;/code&gt; command to authenticate to a registry. The AWS CLI offers an &lt;code&gt;aws ecr get-login&lt;/code&gt; command that simplifies the login</p>
+<!-- @@@getAuthorizationToken -->
+<!-- $$$getDownloadUrlForLayer[overload1]$$$getDownloadUrlForLayerconstGetDownloadUrlForLayerRequest& -->
+<h3 class="fn" id="getDownloadUrlForLayer"><a name="getDownloadUrlForLayer"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-getdownloadurlforlayerresponse.html">GetDownloadUrlForLayerResponse</a></span> *EcrClient::<span class="name">getDownloadUrlForLayer</span>(const <span class="type"><a href="qtaws-ecr-getdownloadurlforlayerrequest.html">GetDownloadUrlForLayerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-getdownloadurlforlayerresponse.html">GetDownloadUrlForLayerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer. You can only get URLs for image layers that are referenced in an</p>
+<p>image&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@getDownloadUrlForLayer -->
+<!-- $$$getLifecyclePolicy[overload1]$$$getLifecyclePolicyconstGetLifecyclePolicyRequest& -->
+<h3 class="fn" id="getLifecyclePolicy"><a name="getLifecyclePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-getlifecyclepolicyresponse.html">GetLifecyclePolicyResponse</a></span> *EcrClient::<span class="name">getLifecyclePolicy</span>(const <span class="type"><a href="qtaws-ecr-getlifecyclepolicyrequest.html">GetLifecyclePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-getlifecyclepolicyresponse.html">GetLifecyclePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the specified lifecycle</p>
+<!-- @@@getLifecyclePolicy -->
+<!-- $$$getLifecyclePolicyPreview[overload1]$$$getLifecyclePolicyPreviewconstGetLifecyclePolicyPreviewRequest& -->
+<h3 class="fn" id="getLifecyclePolicyPreview"><a name="getLifecyclePolicyPreview"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-getlifecyclepolicypreviewresponse.html">GetLifecyclePolicyPreviewResponse</a></span> *EcrClient::<span class="name">getLifecyclePolicyPreview</span>(const <span class="type"><a href="qtaws-ecr-getlifecyclepolicypreviewrequest.html">GetLifecyclePolicyPreviewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-getlifecyclepolicypreviewresponse.html">GetLifecyclePolicyPreviewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the results of the specified lifecycle policy preview</p>
+<!-- @@@getLifecyclePolicyPreview -->
+<!-- $$$getRepositoryPolicy[overload1]$$$getRepositoryPolicyconstGetRepositoryPolicyRequest& -->
+<h3 class="fn" id="getRepositoryPolicy"><a name="getRepositoryPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-getrepositorypolicyresponse.html">GetRepositoryPolicyResponse</a></span> *EcrClient::<span class="name">getRepositoryPolicy</span>(const <span class="type"><a href="qtaws-ecr-getrepositorypolicyrequest.html">GetRepositoryPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-getrepositorypolicyresponse.html">GetRepositoryPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the repository policy for a specified</p>
+<!-- @@@getRepositoryPolicy -->
+<!-- $$$initiateLayerUpload[overload1]$$$initiateLayerUploadconstInitiateLayerUploadRequest& -->
+<h3 class="fn" id="initiateLayerUpload"><a name="initiateLayerUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-initiatelayeruploadresponse.html">InitiateLayerUploadResponse</a></span> *EcrClient::<span class="name">initiateLayerUpload</span>(const <span class="type"><a href="qtaws-ecr-initiatelayeruploadrequest.html">InitiateLayerUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-initiatelayeruploadresponse.html">InitiateLayerUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Notify Amazon ECR that you intend to upload an image</p>
+<p>layer&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@initiateLayerUpload -->
+<!-- $$$listImages[overload1]$$$listImagesconstListImagesRequest& -->
+<h3 class="fn" id="listImages"><a name="listImages"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-listimagesresponse.html">ListImagesResponse</a></span> *EcrClient::<span class="name">listImages</span>(const <span class="type"><a href="qtaws-ecr-listimagesrequest.html">ListImagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-listimagesresponse.html">ListImagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the image IDs for a given</p>
+<p>repository&gt;</p>
+<p>You can filter images based on whether or not they are tagged by setting the &lt;code&gt;tagStatus&lt;/code&gt; parameter to &lt;code&gt;TAGGED&lt;/code&gt; or &lt;code&gt;UNTAGGED&lt;/code&gt;. For example, you can filter your results to return only &lt;code&gt;UNTAGGED&lt;/code&gt; images and then pipe that result to a &lt;a&gt;BatchDeleteImage&lt;/a&gt; operation to delete them. Or, you can filter your results to return only &lt;code&gt;TAGGED&lt;/code&gt; images to list all of the tags in your</p>
+<!-- @@@listImages -->
+<!-- $$$putImage[overload1]$$$putImageconstPutImageRequest& -->
+<h3 class="fn" id="putImage"><a name="putImage"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-putimageresponse.html">PutImageResponse</a></span> *EcrClient::<span class="name">putImage</span>(const <span class="type"><a href="qtaws-ecr-putimagerequest.html">PutImageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-putimageresponse.html">PutImageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates the image manifest and tags associated with an</p>
+<p>image&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@putImage -->
+<!-- $$$putLifecyclePolicy[overload1]$$$putLifecyclePolicyconstPutLifecyclePolicyRequest& -->
+<h3 class="fn" id="putLifecyclePolicy"><a name="putLifecyclePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-putlifecyclepolicyresponse.html">PutLifecyclePolicyResponse</a></span> *EcrClient::<span class="name">putLifecyclePolicy</span>(const <span class="type"><a href="qtaws-ecr-putlifecyclepolicyrequest.html">PutLifecyclePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-putlifecyclepolicyresponse.html">PutLifecyclePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a lifecycle policy. For information about lifecycle policy syntax, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html&quot;&gt;Lifecycle Policy</p>
+<!-- @@@putLifecyclePolicy -->
+<!-- $$$setRepositoryPolicy[overload1]$$$setRepositoryPolicyconstSetRepositoryPolicyRequest& -->
+<h3 class="fn" id="setRepositoryPolicy"><a name="setRepositoryPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-setrepositorypolicyresponse.html">SetRepositoryPolicyResponse</a></span> *EcrClient::<span class="name">setRepositoryPolicy</span>(const <span class="type"><a href="qtaws-ecr-setrepositorypolicyrequest.html">SetRepositoryPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-setrepositorypolicyresponse.html">SetRepositoryPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Applies a repository policy on a specified repository to control access</p>
+<!-- @@@setRepositoryPolicy -->
+<!-- $$$startLifecyclePolicyPreview[overload1]$$$startLifecyclePolicyPreviewconstStartLifecyclePolicyPreviewRequest& -->
+<h3 class="fn" id="startLifecyclePolicyPreview"><a name="startLifecyclePolicyPreview"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-startlifecyclepolicypreviewresponse.html">StartLifecyclePolicyPreviewResponse</a></span> *EcrClient::<span class="name">startLifecyclePolicyPreview</span>(const <span class="type"><a href="qtaws-ecr-startlifecyclepolicypreviewrequest.html">StartLifecyclePolicyPreviewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-startlifecyclepolicypreviewresponse.html">StartLifecyclePolicyPreviewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a preview of the specified lifecycle policy. This allows you to see the results before creating the lifecycle</p>
+<!-- @@@startLifecyclePolicyPreview -->
+<!-- $$$uploadLayerPart[overload1]$$$uploadLayerPartconstUploadLayerPartRequest& -->
+<h3 class="fn" id="uploadLayerPart"><a name="uploadLayerPart"></a><code>[slot] </code><span class="type"><a href="qtaws-ecr-uploadlayerpartresponse.html">UploadLayerPartResponse</a></span> *EcrClient::<span class="name">uploadLayerPart</span>(const <span class="type"><a href="qtaws-ecr-uploadlayerpartrequest.html">UploadLayerPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecr-ecrclient.html">EcrClient</a> service, and returns a pointer to an <a href="qtaws-ecr-uploadlayerpartresponse.html">UploadLayerPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads an image layer part to Amazon</p>
+<p>ECR&gt; &lt;note&gt;</p>
+<p>This operation is used by the Amazon ECR proxy, and it is not intended for general use by customers for pulling and pushing images. In most cases, you should use the &lt;code&gt;docker&lt;/code&gt; CLI to pull, tag, and push</p>
+<!-- @@@uploadLayerPart -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

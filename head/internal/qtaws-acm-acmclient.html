@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- acmclient.cpp -->
+  <title>AcmClient Class | ACM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsacm-index.html">ACM</a></li>
+<li><a href="qtawsacm-module.html">C++ Classes</a></li>
+<li>AcmClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AcmClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-acm-acmclient.html">QtAws::ACM::AcmClient</a>)<br/></span>
+<!-- $$$AcmClient-brief -->
+<p>The <a href="qtaws-acm-acmclient.html">AcmClient</a> class provides access to the AWS Certificate Manager (ACM) service. <a href="#details">More...</a></p>
+<!-- @@@AcmClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AcmClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-acm-acmclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#AcmClient">AcmClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#AcmClient-1">AcmClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#addTagsToCertificate">addTagsToCertificate</a></b>(const AddTagsToCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#deleteCertificate">deleteCertificate</a></b>(const DeleteCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#describeCertificate">describeCertificate</a></b>(const DescribeCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExportCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#exportCertificate">exportCertificate</a></b>(const ExportCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#getCertificate">getCertificate</a></b>(const GetCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#importCertificate">importCertificate</a></b>(const ImportCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#listCertificates">listCertificates</a></b>(const ListCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#listTagsForCertificate">listTagsForCertificate</a></b>(const ListTagsForCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#removeTagsFromCertificate">removeTagsFromCertificate</a></b>(const RemoveTagsFromCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RequestCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#requestCertificate">requestCertificate</a></b>(const RequestCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResendValidationEmailResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#resendValidationEmail">resendValidationEmail</a></b>(const ResendValidationEmailRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateCertificateOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-acm-acmclient.html#updateCertificateOptions">updateCertificateOptions</a></b>(const UpdateCertificateOptionsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AcmClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-acm-acmclient.html">AcmClient</a> class provides access to the AWS Certificate Manager (ACM) service.</p>
+<p>&lt;fullname&gt;AWS Certificate Manager&lt;/fullname&gt;</p>
+<p>Welcome to the AWS Certificate Manager (ACM) API</p>
+<p>documentation&gt;</p>
+<p>You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information about using ACM, see the &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/&quot;&gt; &lt;i&gt;AWS Certificate Manager User Guide&lt;/i&gt;</p>
+</div>
+<!-- @@@AcmClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AcmClient[overload1]$$$AcmClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AcmClient"><a name="AcmClient"></a>AcmClient::<span class="name">AcmClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-acm-acmclient.html">AcmClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AcmClient -->
+<!-- $$$AcmClient$$$AcmClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AcmClient-1"><a name="AcmClient-1"></a>AcmClient::<span class="name">AcmClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-acm-acmclient.html#AcmClient">AcmClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AcmClient -->
+<!-- $$$addTagsToCertificate[overload1]$$$addTagsToCertificateconstAddTagsToCertificateRequest& -->
+<h3 class="fn" id="addTagsToCertificate"><a name="addTagsToCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-addtagstocertificateresponse.html">AddTagsToCertificateResponse</a></span> *AcmClient::<span class="name">addTagsToCertificate</span>(const <span class="type"><a href="qtaws-acm-addtagstocertificaterequest.html">AddTagsToCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-addtagstocertificateresponse.html">AddTagsToCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more tags to an ACM certificate. Tags are labels that you can use to identify and organize your AWS resources. Each tag consists of a &lt;code&gt;key&lt;/code&gt; and an optional &lt;code&gt;value&lt;/code&gt;. You specify the certificate on input by its Amazon Resource Name (ARN). You specify the tag by using a key-value pair.</p>
+<p>&lt;/p</p>
+<p>You can apply a tag to just one certificate if you want to identify a specific characteristic of that certificate, or you can apply the same tag to multiple certificates if you want to filter for a common relationship among those certificates. Similarly, you can apply the same tag to multiple resources if you want to specify a relationship among those resources. For example, you can add the same tag to an ACM certificate and an Elastic Load Balancing load balancer to indicate that they are both used by the same website. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/tags.html&quot;&gt;Tagging ACM certificates&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>To remove one or more tags, use the &lt;a&gt;RemoveTagsFromCertificate&lt;/a&gt; action. To view all of the tags that have been applied to the certificate, use the &lt;a&gt;ListTagsForCertificate&lt;/a&gt; action.</p>
+<!-- @@@addTagsToCertificate -->
+<!-- $$$deleteCertificate[overload1]$$$deleteCertificateconstDeleteCertificateRequest& -->
+<h3 class="fn" id="deleteCertificate"><a name="deleteCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-deletecertificateresponse.html">DeleteCertificateResponse</a></span> *AcmClient::<span class="name">deleteCertificate</span>(const <span class="type"><a href="qtaws-acm-deletecertificaterequest.html">DeleteCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-deletecertificateresponse.html">DeleteCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a certificate and its associated private key. If this action succeeds, the certificate no longer appears in the list that can be displayed by calling the &lt;a&gt;ListCertificates&lt;/a&gt; action or be retrieved by calling the &lt;a&gt;GetCertificate&lt;/a&gt; action. The certificate will not be available for use by AWS services integrated with ACM.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>You cannot delete an ACM certificate that is being used by another AWS service. To delete a certificate that is in use, the certificate association must first be</p>
+<!-- @@@deleteCertificate -->
+<!-- $$$describeCertificate[overload1]$$$describeCertificateconstDescribeCertificateRequest& -->
+<h3 class="fn" id="describeCertificate"><a name="describeCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-describecertificateresponse.html">DescribeCertificateResponse</a></span> *AcmClient::<span class="name">describeCertificate</span>(const <span class="type"><a href="qtaws-acm-describecertificaterequest.html">DescribeCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-describecertificateresponse.html">DescribeCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns detailed metadata about the specified ACM</p>
+<!-- @@@describeCertificate -->
+<!-- $$$exportCertificate[overload1]$$$exportCertificateconstExportCertificateRequest& -->
+<h3 class="fn" id="exportCertificate"><a name="exportCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-exportcertificateresponse.html">ExportCertificateResponse</a></span> *AcmClient::<span class="name">exportCertificate</span>(const <span class="type"><a href="qtaws-acm-exportcertificaterequest.html">ExportCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-exportcertificateresponse.html">ExportCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Exports a certificate for use anywhere. You can export the certificate, the certificate chain, and the encrypted private key associated with the public key embedded in the certificate. You must store the private key securely. The private key is a 2048 bit RSA key. You must provide a passphrase for the private key when exporting it. You can use the following OpenSSL command to decrypt it later. Provide the passphrase when prompted.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;openssl rsa -in encrypted_key.pem -out decrypted_key.pem&lt;/code&gt;</p>
+<!-- @@@exportCertificate -->
+<!-- $$$getCertificate[overload1]$$$getCertificateconstGetCertificateRequest& -->
+<h3 class="fn" id="getCertificate"><a name="getCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-getcertificateresponse.html">GetCertificateResponse</a></span> *AcmClient::<span class="name">getCertificate</span>(const <span class="type"><a href="qtaws-acm-getcertificaterequest.html">GetCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-getcertificateresponse.html">GetCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the individual fields, you can use</p>
+<!-- @@@getCertificate -->
+<!-- $$$importCertificate[overload1]$$$importCertificateconstImportCertificateRequest& -->
+<h3 class="fn" id="importCertificate"><a name="importCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-importcertificateresponse.html">ImportCertificateResponse</a></span> *AcmClient::<span class="name">importCertificate</span>(const <span class="type"><a href="qtaws-acm-importcertificaterequest.html">ImportCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-importcertificateresponse.html">ImportCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-services.html&quot;&gt;integrated services&lt;/a&gt; allow only certificate types and keys they support to be associated with their resources. Further, their support differs depending on whether the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more information about importing certificates into ACM, see &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/import-certificate.html&quot;&gt;Importing Certificates&lt;/a&gt; in the &lt;i&gt;AWS Certificate Manager User Guide&lt;/i&gt;.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>ACM does not provide &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-renewal.html&quot;&gt;managed renewal&lt;/a&gt; for certificates that you</p>
+<p>import&gt; &lt;/note&gt;</p>
+<p>Note the following guidelines when importing third party</p>
+<p>certificates&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You must enter the private key that matches the certificate you are</p>
+<p>importing&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The private key must be unencrypted. You cannot import a private key that is protected by a password or a</p>
+<p>passphrase&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If the certificate you are importing is not self-signed, you must enter its certificate</p>
+<p>chain&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If a certificate chain is included, the issuer must be the subject of one of the certificates in the</p>
+<p>chain&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The certificate, private key, and certificate chain must be</p>
+<p>PEM-encoded&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The current time must be between the &lt;code&gt;Not Before&lt;/code&gt; and &lt;code&gt;Not After&lt;/code&gt; certificate</p>
+<p>fields&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Issuer&lt;/code&gt; field must not be</p>
+<p>empty&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The OCSP authority URL, if present, must not exceed 1000</p>
+<p>characters&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>To import a new certificate, omit the &lt;code&gt;CertificateArn&lt;/code&gt; argument. Include this argument only when you want to replace a previously imported</p>
+<p>certificate&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>When you import a certificate by using the CLI or one of the SDKs, you must specify the certificate, the certificate chain, and the private key by their file names preceded by &lt;code&gt;file://&lt;/code&gt;. For example, you can specify a certificate saved in the &lt;code&gt;C:<b class="redFont"><code>\temp</code></b>&lt;/code&gt; folder as &lt;code&gt;file://C:<b class="redFont"><code>\temp</code></b><b class="redFont"><code>\certificate</code></b>_to_import.pem&lt;/code&gt;. If you are making an HTTP or HTTPS Query request, include these arguments as BLOBs.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This operation returns the &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html&quot;&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the imported</p>
+<!-- @@@importCertificate -->
+<!-- $$$listCertificates[overload1]$$$listCertificatesconstListCertificatesRequest& -->
+<h3 class="fn" id="listCertificates"><a name="listCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-listcertificatesresponse.html">ListCertificatesResponse</a></span> *AcmClient::<span class="name">listCertificates</span>(const <span class="type"><a href="qtaws-acm-listcertificatesrequest.html">ListCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-listcertificatesresponse.html">ListCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific status be listed. You can also filter by specific attributes of the certificate.</p>
+<!-- @@@listCertificates -->
+<!-- $$$listTagsForCertificate[overload1]$$$listTagsForCertificateconstListTagsForCertificateRequest& -->
+<h3 class="fn" id="listTagsForCertificate"><a name="listTagsForCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-listtagsforcertificateresponse.html">ListTagsForCertificateResponse</a></span> *AcmClient::<span class="name">listTagsForCertificate</span>(const <span class="type"><a href="qtaws-acm-listtagsforcertificaterequest.html">ListTagsForCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-listtagsforcertificateresponse.html">ListTagsForCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags that have been applied to the ACM certificate. Use the certificate's Amazon Resource Name (ARN) to specify the certificate. To add a tag to an ACM certificate, use the &lt;a&gt;AddTagsToCertificate&lt;/a&gt; action. To delete a tag, use the &lt;a&gt;RemoveTagsFromCertificate&lt;/a&gt; action.</p>
+<!-- @@@listTagsForCertificate -->
+<!-- $$$removeTagsFromCertificate[overload1]$$$removeTagsFromCertificateconstRemoveTagsFromCertificateRequest& -->
+<h3 class="fn" id="removeTagsFromCertificate"><a name="removeTagsFromCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-removetagsfromcertificateresponse.html">RemoveTagsFromCertificateResponse</a></span> *AcmClient::<span class="name">removeTagsFromCertificate</span>(const <span class="type"><a href="qtaws-acm-removetagsfromcertificaterequest.html">RemoveTagsFromCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-removetagsfromcertificateresponse.html">RemoveTagsFromCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Remove one or more tags from an ACM certificate. A tag consists of a key-value pair. If you do not specify the value portion of the tag when calling this function, the tag will be removed regardless of value. If you specify a value, the tag is removed only if it is associated with the specified value.</p>
+<p>&lt;/p</p>
+<p>To add tags to a certificate, use the &lt;a&gt;AddTagsToCertificate&lt;/a&gt; action. To view all of the tags that have been applied to a specific ACM certificate, use the &lt;a&gt;ListTagsForCertificate&lt;/a&gt; action.</p>
+<!-- @@@removeTagsFromCertificate -->
+<!-- $$$requestCertificate[overload1]$$$requestCertificateconstRequestCertificateRequest& -->
+<h3 class="fn" id="requestCertificate"><a name="requestCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-requestcertificateresponse.html">RequestCertificateResponse</a></span> *AcmClient::<span class="name">requestCertificate</span>(const <span class="type"><a href="qtaws-acm-requestcertificaterequest.html">RequestCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-requestcertificateresponse.html">RequestCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests an ACM certificate for use with other AWS services. To request an ACM certificate, you must specify the fully qualified domain name (FQDN) for your site in the &lt;code&gt;DomainName&lt;/code&gt; parameter. You can also specify additional FQDNs in the &lt;code&gt;SubjectAlternativeNames&lt;/code&gt; parameter.</p>
+<p>&lt;/p</p>
+<p>Each domain name that you specify must be validated to verify that you own or control the domain. You can use &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-dns.html&quot;&gt;DNS validation&lt;/a&gt; or &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-email.html&quot;&gt;email validation&lt;/a&gt;. We recommend that you use DNS validation.</p>
+<p>&lt;/p</p>
+<p>If you choose email validation, email is sent to the domain owner to request approval to issue the certificate. Email is sent to three registered contact addresses in the WHOIS database and to five common system administration addresses formed from the &lt;code&gt;DomainName&lt;/code&gt; you enter or the optional &lt;code&gt;ValidationDomain&lt;/code&gt; parameter. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-email.html&quot;&gt;Validate with Email&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>After receiving approval from the domain owner, the ACM certificate is</p>
+<!-- @@@requestCertificate -->
+<!-- $$$resendValidationEmail[overload1]$$$resendValidationEmailconstResendValidationEmailRequest& -->
+<h3 class="fn" id="resendValidationEmail"><a name="resendValidationEmail"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-resendvalidationemailresponse.html">ResendValidationEmailResponse</a></span> *AcmClient::<span class="name">resendValidationEmail</span>(const <span class="type"><a href="qtaws-acm-resendvalidationemailrequest.html">ResendValidationEmailRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-resendvalidationemailresponse.html">ResendValidationEmailResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resends the email that requests domain ownership validation. The domain owner or an authorized representative must approve the ACM certificate before it can be issued. The certificate can be approved by clicking a link in the mail to navigate to the Amazon certificate approval website and then clicking &lt;b&gt;I Approve&lt;/b&gt;. However, the validation email can be blocked by spam filters. Therefore, if you do not receive the original mail, you can request that the mail be resent within 72 hours of requesting the ACM certificate. If more than 72 hours have elapsed since your original request or since your last attempt to resend validation mail, you must request a new certificate. For more information about setting up your contact email addresses, see &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/setup-email.html&quot;&gt;Configure Email for your Domain&lt;/a&gt;.</p>
+<!-- @@@resendValidationEmail -->
+<!-- $$$updateCertificateOptions[overload1]$$$updateCertificateOptionsconstUpdateCertificateOptionsRequest& -->
+<h3 class="fn" id="updateCertificateOptions"><a name="updateCertificateOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-acm-updatecertificateoptionsresponse.html">UpdateCertificateOptionsResponse</a></span> *AcmClient::<span class="name">updateCertificateOptions</span>(const <span class="type"><a href="qtaws-acm-updatecertificateoptionsrequest.html">UpdateCertificateOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-acm-acmclient.html">AcmClient</a> service, and returns a pointer to an <a href="qtaws-acm-updatecertificateoptionsresponse.html">UpdateCertificateOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your certificate in a certificate transparency log. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-bestpractices.html#best-practices-transparency&quot;&gt; Opting Out of Certificate Transparency Logging&lt;/a&gt;.</p>
+<!-- @@@updateCertificateOptions -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

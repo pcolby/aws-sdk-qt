@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- autoscalingclient.cpp -->
+  <title>AutoScalingClient Class | AutoScaling</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsautoscaling-index.html">AutoScaling</a></li>
+<li><a href="qtawsautoscaling-module.html">C++ Classes</a></li>
+<li>AutoScalingClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AutoScalingClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-autoscaling-autoscalingclient.html">QtAws::AutoScaling::AutoScalingClient</a>)<br/></span>
+<!-- $$$AutoScalingClient-brief -->
+<p>The <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> class provides access to the Auto Scaling service. <a href="#details">More...</a></p>
+<!-- @@@AutoScalingClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AutoScalingClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-autoscaling-autoscalingclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#AutoScalingClient">AutoScalingClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#AutoScalingClient-1">AutoScalingClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AttachInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#attachInstances">attachInstances</a></b>(const AttachInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachLoadBalancerTargetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#attachLoadBalancerTargetGroups">attachLoadBalancerTargetGroups</a></b>(const AttachLoadBalancerTargetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachLoadBalancersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#attachLoadBalancers">attachLoadBalancers</a></b>(const AttachLoadBalancersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CompleteLifecycleActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#completeLifecycleAction">completeLifecycleAction</a></b>(const CompleteLifecycleActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAutoScalingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#createAutoScalingGroup">createAutoScalingGroup</a></b>(const CreateAutoScalingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLaunchConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#createLaunchConfiguration">createLaunchConfiguration</a></b>(const CreateLaunchConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateOrUpdateTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#createOrUpdateTags">createOrUpdateTags</a></b>(const CreateOrUpdateTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAutoScalingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteAutoScalingGroup">deleteAutoScalingGroup</a></b>(const DeleteAutoScalingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLaunchConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteLaunchConfiguration">deleteLaunchConfiguration</a></b>(const DeleteLaunchConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLifecycleHookResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteLifecycleHook">deleteLifecycleHook</a></b>(const DeleteLifecycleHookRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNotificationConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteNotificationConfiguration">deleteNotificationConfiguration</a></b>(const DeleteNotificationConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deletePolicy">deletePolicy</a></b>(const DeletePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteScheduledActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteScheduledAction">deleteScheduledAction</a></b>(const DeleteScheduledActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAccountLimitsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeAccountLimits">describeAccountLimits</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAdjustmentTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeAdjustmentTypes">describeAdjustmentTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAutoScalingGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeAutoScalingGroups">describeAutoScalingGroups</a></b>(const DescribeAutoScalingGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAutoScalingInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeAutoScalingInstances">describeAutoScalingInstances</a></b>(const DescribeAutoScalingInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAutoScalingNotificationTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeAutoScalingNotificationTypes">describeAutoScalingNotificationTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLaunchConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeLaunchConfigurations">describeLaunchConfigurations</a></b>(const DescribeLaunchConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLifecycleHookTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeLifecycleHookTypes">describeLifecycleHookTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLifecycleHooksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeLifecycleHooks">describeLifecycleHooks</a></b>(const DescribeLifecycleHooksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLoadBalancerTargetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeLoadBalancerTargetGroups">describeLoadBalancerTargetGroups</a></b>(const DescribeLoadBalancerTargetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLoadBalancersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeLoadBalancers">describeLoadBalancers</a></b>(const DescribeLoadBalancersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMetricCollectionTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeMetricCollectionTypes">describeMetricCollectionTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNotificationConfigurationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeNotificationConfigurations">describeNotificationConfigurations</a></b>(const DescribeNotificationConfigurationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describePolicies">describePolicies</a></b>(const DescribePoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalingActivitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeScalingActivities">describeScalingActivities</a></b>(const DescribeScalingActivitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalingProcessTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeScalingProcessTypes">describeScalingProcessTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScheduledActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeScheduledActions">describeScheduledActions</a></b>(const DescribeScheduledActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTerminationPolicyTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#describeTerminationPolicyTypes">describeTerminationPolicyTypes</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#detachInstances">detachInstances</a></b>(const DetachInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachLoadBalancerTargetGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#detachLoadBalancerTargetGroups">detachLoadBalancerTargetGroups</a></b>(const DetachLoadBalancerTargetGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachLoadBalancersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#detachLoadBalancers">detachLoadBalancers</a></b>(const DetachLoadBalancersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableMetricsCollectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#disableMetricsCollection">disableMetricsCollection</a></b>(const DisableMetricsCollectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableMetricsCollectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#enableMetricsCollection">enableMetricsCollection</a></b>(const EnableMetricsCollectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnterStandbyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#enterStandby">enterStandby</a></b>(const EnterStandbyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExecutePolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#executePolicy">executePolicy</a></b>(const ExecutePolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExitStandbyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#exitStandby">exitStandby</a></b>(const ExitStandbyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutLifecycleHookResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#putLifecycleHook">putLifecycleHook</a></b>(const PutLifecycleHookRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutNotificationConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#putNotificationConfiguration">putNotificationConfiguration</a></b>(const PutNotificationConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutScalingPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#putScalingPolicy">putScalingPolicy</a></b>(const PutScalingPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutScheduledUpdateGroupActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#putScheduledUpdateGroupAction">putScheduledUpdateGroupAction</a></b>(const PutScheduledUpdateGroupActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RecordLifecycleActionHeartbeatResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#recordLifecycleActionHeartbeat">recordLifecycleActionHeartbeat</a></b>(const RecordLifecycleActionHeartbeatRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResumeProcessesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#resumeProcesses">resumeProcesses</a></b>(const ResumeProcessesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetDesiredCapacityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#setDesiredCapacity">setDesiredCapacity</a></b>(const SetDesiredCapacityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetInstanceHealthResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#setInstanceHealth">setInstanceHealth</a></b>(const SetInstanceHealthRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetInstanceProtectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#setInstanceProtection">setInstanceProtection</a></b>(const SetInstanceProtectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SuspendProcessesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#suspendProcesses">suspendProcesses</a></b>(const SuspendProcessesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateInstanceInAutoScalingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#terminateInstanceInAutoScalingGroup">terminateInstanceInAutoScalingGroup</a></b>(const TerminateInstanceInAutoScalingGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAutoScalingGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingclient.html#updateAutoScalingGroup">updateAutoScalingGroup</a></b>(const UpdateAutoScalingGroupRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AutoScalingClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> class provides access to the Auto Scaling service.</p>
+<p>&lt;fullname&gt;Amazon EC2 Auto Scaling&lt;/fullname&gt;</p>
+<p>Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies, schedules, and health checks. Use this service in conjunction with the AWS Auto Scaling, Amazon CloudWatch, and Elastic Load Balancing</p>
+</div>
+<!-- @@@AutoScalingClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AutoScalingClient[overload1]$$$AutoScalingClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AutoScalingClient"><a name="AutoScalingClient"></a>AutoScalingClient::<span class="name">AutoScalingClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@AutoScalingClient -->
+<!-- $$$AutoScalingClient$$$AutoScalingClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="AutoScalingClient-1"><a name="AutoScalingClient-1"></a>AutoScalingClient::<span class="name">AutoScalingClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-autoscaling-autoscalingclient.html#AutoScalingClient">AutoScalingClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@AutoScalingClient -->
+<!-- $$$attachInstances[overload1]$$$attachInstancesconstAttachInstancesRequest& -->
+<h3 class="fn" id="attachInstances"><a name="attachInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-attachinstancesresponse.html">AttachInstancesResponse</a></span> *AutoScalingClient::<span class="name">attachInstances</span>(const <span class="type"><a href="qtaws-autoscaling-attachinstancesrequest.html">AttachInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-attachinstancesresponse.html">AttachInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches one or more EC2 instances to the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>When you attach instances, Auto Scaling increases the desired capacity of the group by the number of instances being attached. If the number of instances being attached plus the desired capacity of the group exceeds the maximum size of the group, the operation</p>
+<p>fails&gt;</p>
+<p>If there is a Classic Load Balancer attached to your Auto Scaling group, the instances are also registered with the load balancer. If there are target groups attached to your Auto Scaling group, the instances are also registered with the target</p>
+<p>groups&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-instance-asg.html&quot;&gt;Attach EC2 Instances to Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@attachInstances -->
+<!-- $$$attachLoadBalancerTargetGroups[overload1]$$$attachLoadBalancerTargetGroupsconstAttachLoadBalancerTargetGroupsRequest& -->
+<h3 class="fn" id="attachLoadBalancerTargetGroups"><a name="attachLoadBalancerTargetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-attachloadbalancertargetgroupsresponse.html">AttachLoadBalancerTargetGroupsResponse</a></span> *AutoScalingClient::<span class="name">attachLoadBalancerTargetGroups</span>(const <span class="type"><a href="qtaws-autoscaling-attachloadbalancertargetgroupsrequest.html">AttachLoadBalancerTargetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-attachloadbalancertargetgroupsresponse.html">AttachLoadBalancerTargetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches one or more target groups to the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>To describe the target groups for an Auto Scaling group, use &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt;. To detach the target group from the Auto Scaling group, use</p>
+<p>&lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-load-balancer-asg.html&quot;&gt;Attach a Load Balancer to Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@attachLoadBalancerTargetGroups -->
+<!-- $$$attachLoadBalancers[overload1]$$$attachLoadBalancersconstAttachLoadBalancersRequest& -->
+<h3 class="fn" id="attachLoadBalancers"><a name="attachLoadBalancers"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-attachloadbalancersresponse.html">AttachLoadBalancersResponse</a></span> *AutoScalingClient::<span class="name">attachLoadBalancers</span>(const <span class="type"><a href="qtaws-autoscaling-attachloadbalancersrequest.html">AttachLoadBalancersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-attachloadbalancersresponse.html">AttachLoadBalancersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches one or more Classic Load Balancers to the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>To attach an Application Load Balancer instead, see</p>
+<p>&lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;&gt;</p>
+<p>To describe the load balancers for an Auto Scaling group, use &lt;a&gt;DescribeLoadBalancers&lt;/a&gt;. To detach the load balancer from the Auto Scaling group, use</p>
+<p>&lt;a&gt;DetachLoadBalancers&lt;/a&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/attach-load-balancer-asg.html&quot;&gt;Attach a Load Balancer to Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@attachLoadBalancers -->
+<!-- $$$completeLifecycleAction[overload1]$$$completeLifecycleActionconstCompleteLifecycleActionRequest& -->
+<h3 class="fn" id="completeLifecycleAction"><a name="completeLifecycleAction"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-completelifecycleactionresponse.html">CompleteLifecycleActionResponse</a></span> *AutoScalingClient::<span class="name">completeLifecycleAction</span>(const <span class="type"><a href="qtaws-autoscaling-completelifecycleactionrequest.html">CompleteLifecycleActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-completelifecycleactionresponse.html">CompleteLifecycleActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Completes the lifecycle action for the specified token or instance with the specified</p>
+<p>result&gt;</p>
+<p>This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling</p>
+<p>group&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when Auto Scaling launches or terminates</p>
+<p>instances&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>(Optional) Create a notification target and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows Auto Scaling to publish lifecycle notifications to the</p>
+<p>target&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create the lifecycle hook. Specify whether the hook is used when the instances launch or</p>
+<p>terminate&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you need more time, record the lifecycle action heartbeat to keep the instance in a pending</p>
+<p>state&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;If you finish before the timeout period ends, complete the lifecycle action.&lt;/b&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroupLifecycle.html&quot;&gt;Auto Scaling Lifecycle&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@completeLifecycleAction -->
+<!-- $$$createAutoScalingGroup[overload1]$$$createAutoScalingGroupconstCreateAutoScalingGroupRequest& -->
+<h3 class="fn" id="createAutoScalingGroup"><a name="createAutoScalingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-createautoscalinggroupresponse.html">CreateAutoScalingGroupResponse</a></span> *AutoScalingClient::<span class="name">createAutoScalingGroup</span>(const <span class="type"><a href="qtaws-autoscaling-createautoscalinggrouprequest.html">CreateAutoScalingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-createautoscalinggroupresponse.html">CreateAutoScalingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an Auto Scaling group with the specified name and</p>
+<p>attributes&gt;</p>
+<p>If you exceed your maximum limit of Auto Scaling groups, the call fails. For information about viewing this limit, see &lt;a&gt;DescribeAccountLimits&lt;/a&gt;. For information about updating this limit, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html&quot;&gt;Auto Scaling Limits&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html&quot;&gt;Auto Scaling Groups&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@createAutoScalingGroup -->
+<!-- $$$createLaunchConfiguration[overload1]$$$createLaunchConfigurationconstCreateLaunchConfigurationRequest& -->
+<h3 class="fn" id="createLaunchConfiguration"><a name="createLaunchConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-createlaunchconfigurationresponse.html">CreateLaunchConfigurationResponse</a></span> *AutoScalingClient::<span class="name">createLaunchConfiguration</span>(const <span class="type"><a href="qtaws-autoscaling-createlaunchconfigurationrequest.html">CreateLaunchConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-createlaunchconfigurationresponse.html">CreateLaunchConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a launch</p>
+<p>configuration&gt;</p>
+<p>If you exceed your maximum limit of launch configurations, the call fails. For information about viewing this limit, see &lt;a&gt;DescribeAccountLimits&lt;/a&gt;. For information about updating this limit, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html&quot;&gt;Auto Scaling Limits&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/LaunchConfiguration.html&quot;&gt;Launch Configurations&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@createLaunchConfiguration -->
+<!-- $$$createOrUpdateTags[overload1]$$$createOrUpdateTagsconstCreateOrUpdateTagsRequest& -->
+<h3 class="fn" id="createOrUpdateTags"><a name="createOrUpdateTags"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-createorupdatetagsresponse.html">CreateOrUpdateTagsResponse</a></span> *AutoScalingClient::<span class="name">createOrUpdateTags</span>(const <span class="type"><a href="qtaws-autoscaling-createorupdatetagsrequest.html">CreateOrUpdateTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-createorupdatetagsresponse.html">CreateOrUpdateTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates tags for the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>When you specify a tag with a key that already exists, the operation overwrites the previous tag definition, and you do not get an error</p>
+<p>message&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/autoscaling-tagging.html&quot;&gt;Tagging Auto Scaling Groups and Instances&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@createOrUpdateTags -->
+<!-- $$$deleteAutoScalingGroup[overload1]$$$deleteAutoScalingGroupconstDeleteAutoScalingGroupRequest& -->
+<h3 class="fn" id="deleteAutoScalingGroup"><a name="deleteAutoScalingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deleteautoscalinggroupresponse.html">DeleteAutoScalingGroupResponse</a></span> *AutoScalingClient::<span class="name">deleteAutoScalingGroup</span>(const <span class="type"><a href="qtaws-autoscaling-deleteautoscalinggrouprequest.html">DeleteAutoScalingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deleteautoscalinggroupresponse.html">DeleteAutoScalingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>If the group has instances or scaling activities in progress, you must specify the option to force the deletion in order for it to</p>
+<p>succeed&gt;</p>
+<p>If the group has policies, deleting the group deletes the policies, the underlying alarm actions, and any alarm that no longer has an associated</p>
+<p>action&gt;</p>
+<p>To remove instances from the Auto Scaling group before deleting it, call &lt;a&gt;DetachInstances&lt;/a&gt; with the list of instances and the option to decrement the desired capacity so that Auto Scaling does not launch replacement</p>
+<p>instances&gt;</p>
+<p>To terminate all instances before deleting the Auto Scaling group, call &lt;a&gt;UpdateAutoScalingGroup&lt;/a&gt; and set the minimum size and desired capacity of the Auto Scaling group to</p>
+<!-- @@@deleteAutoScalingGroup -->
+<!-- $$$deleteLaunchConfiguration[overload1]$$$deleteLaunchConfigurationconstDeleteLaunchConfigurationRequest& -->
+<h3 class="fn" id="deleteLaunchConfiguration"><a name="deleteLaunchConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletelaunchconfigurationresponse.html">DeleteLaunchConfigurationResponse</a></span> *AutoScalingClient::<span class="name">deleteLaunchConfiguration</span>(const <span class="type"><a href="qtaws-autoscaling-deletelaunchconfigurationrequest.html">DeleteLaunchConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletelaunchconfigurationresponse.html">DeleteLaunchConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified launch</p>
+<p>configuration&gt;</p>
+<p>The launch configuration must not be attached to an Auto Scaling group. When this call completes, the launch configuration is no longer available for</p>
+<!-- @@@deleteLaunchConfiguration -->
+<!-- $$$deleteLifecycleHook[overload1]$$$deleteLifecycleHookconstDeleteLifecycleHookRequest& -->
+<h3 class="fn" id="deleteLifecycleHook"><a name="deleteLifecycleHook"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletelifecyclehookresponse.html">DeleteLifecycleHookResponse</a></span> *AutoScalingClient::<span class="name">deleteLifecycleHook</span>(const <span class="type"><a href="qtaws-autoscaling-deletelifecyclehookrequest.html">DeleteLifecycleHookRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletelifecyclehookresponse.html">DeleteLifecycleHookResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified lifecycle</p>
+<p>hook&gt;</p>
+<p>If there are any outstanding lifecycle actions, they are completed first (&lt;code&gt;ABANDON&lt;/code&gt; for launching instances, &lt;code&gt;CONTINUE&lt;/code&gt; for terminating</p>
+<!-- @@@deleteLifecycleHook -->
+<!-- $$$deleteNotificationConfiguration[overload1]$$$deleteNotificationConfigurationconstDeleteNotificationConfigurationRequest& -->
+<h3 class="fn" id="deleteNotificationConfiguration"><a name="deleteNotificationConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletenotificationconfigurationresponse.html">DeleteNotificationConfigurationResponse</a></span> *AutoScalingClient::<span class="name">deleteNotificationConfiguration</span>(const <span class="type"><a href="qtaws-autoscaling-deletenotificationconfigurationrequest.html">DeleteNotificationConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletenotificationconfigurationresponse.html">DeleteNotificationConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteNotificationConfiguration -->
+<!-- $$$deletePolicy[overload1]$$$deletePolicyconstDeletePolicyRequest& -->
+<h3 class="fn" id="deletePolicy"><a name="deletePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletepolicyresponse.html">DeletePolicyResponse</a></span> *AutoScalingClient::<span class="name">deletePolicy</span>(const <span class="type"><a href="qtaws-autoscaling-deletepolicyrequest.html">DeletePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletepolicyresponse.html">DeletePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Auto Scaling</p>
+<p>policy&gt;</p>
+<p>Deleting a policy deletes the underlying alarm action, but does not delete the alarm, even if it no longer has an associated</p>
+<!-- @@@deletePolicy -->
+<!-- $$$deleteScheduledAction[overload1]$$$deleteScheduledActionconstDeleteScheduledActionRequest& -->
+<h3 class="fn" id="deleteScheduledAction"><a name="deleteScheduledAction"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletescheduledactionresponse.html">DeleteScheduledActionResponse</a></span> *AutoScalingClient::<span class="name">deleteScheduledAction</span>(const <span class="type"><a href="qtaws-autoscaling-deletescheduledactionrequest.html">DeleteScheduledActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletescheduledactionresponse.html">DeleteScheduledActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified scheduled</p>
+<!-- @@@deleteScheduledAction -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-deletetagsresponse.html">DeleteTagsResponse</a></span> *AutoScalingClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-autoscaling-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeAccountLimits[overload1]$$$describeAccountLimits -->
+<h3 class="fn" id="describeAccountLimits"><a name="describeAccountLimits"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeaccountlimitsresponse.html">DescribeAccountLimitsResponse</a></span> *AutoScalingClient::<span class="name">describeAccountLimits</span>()</h3>
+<p>Sends a DescribeAccountLimits request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeaccountlimitsresponse.html">DescribeAccountLimitsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the current Auto Scaling resource limits for your AWS</p>
+<p>account&gt;</p>
+<p>For information about requesting an increase in these limits, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html&quot;&gt;Auto Scaling Limits&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@describeAccountLimits -->
+<!-- $$$describeAdjustmentTypes[overload1]$$$describeAdjustmentTypes -->
+<h3 class="fn" id="describeAdjustmentTypes"><a name="describeAdjustmentTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeadjustmenttypesresponse.html">DescribeAdjustmentTypesResponse</a></span> *AutoScalingClient::<span class="name">describeAdjustmentTypes</span>()</h3>
+<p>Sends a DescribeAdjustmentTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeadjustmenttypesresponse.html">DescribeAdjustmentTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the policy adjustment types for use with</p>
+<!-- @@@describeAdjustmentTypes -->
+<!-- $$$describeAutoScalingGroups[overload1]$$$describeAutoScalingGroupsconstDescribeAutoScalingGroupsRequest& -->
+<h3 class="fn" id="describeAutoScalingGroups"><a name="describeAutoScalingGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeautoscalinggroupsresponse.html">DescribeAutoScalingGroupsResponse</a></span> *AutoScalingClient::<span class="name">describeAutoScalingGroups</span>(const <span class="type"><a href="qtaws-autoscaling-describeautoscalinggroupsrequest.html">DescribeAutoScalingGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeautoscalinggroupsresponse.html">DescribeAutoScalingGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more Auto Scaling</p>
+<!-- @@@describeAutoScalingGroups -->
+<!-- $$$describeAutoScalingInstances[overload1]$$$describeAutoScalingInstancesconstDescribeAutoScalingInstancesRequest& -->
+<h3 class="fn" id="describeAutoScalingInstances"><a name="describeAutoScalingInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeautoscalinginstancesresponse.html">DescribeAutoScalingInstancesResponse</a></span> *AutoScalingClient::<span class="name">describeAutoScalingInstances</span>(const <span class="type"><a href="qtaws-autoscaling-describeautoscalinginstancesrequest.html">DescribeAutoScalingInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeautoscalinginstancesresponse.html">DescribeAutoScalingInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more Auto Scaling</p>
+<!-- @@@describeAutoScalingInstances -->
+<!-- $$$describeAutoScalingNotificationTypes[overload1]$$$describeAutoScalingNotificationTypes -->
+<h3 class="fn" id="describeAutoScalingNotificationTypes"><a name="describeAutoScalingNotificationTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeautoscalingnotificationtypesresponse.html">DescribeAutoScalingNotificationTypesResponse</a></span> *AutoScalingClient::<span class="name">describeAutoScalingNotificationTypes</span>()</h3>
+<p>Sends a DescribeAutoScalingNotificationTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeautoscalingnotificationtypesresponse.html">DescribeAutoScalingNotificationTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the notification types that are supported by Auto</p>
+<!-- @@@describeAutoScalingNotificationTypes -->
+<!-- $$$describeLaunchConfigurations[overload1]$$$describeLaunchConfigurationsconstDescribeLaunchConfigurationsRequest& -->
+<h3 class="fn" id="describeLaunchConfigurations"><a name="describeLaunchConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describelaunchconfigurationsresponse.html">DescribeLaunchConfigurationsResponse</a></span> *AutoScalingClient::<span class="name">describeLaunchConfigurations</span>(const <span class="type"><a href="qtaws-autoscaling-describelaunchconfigurationsrequest.html">DescribeLaunchConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describelaunchconfigurationsresponse.html">DescribeLaunchConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more launch</p>
+<!-- @@@describeLaunchConfigurations -->
+<!-- $$$describeLifecycleHookTypes[overload1]$$$describeLifecycleHookTypes -->
+<h3 class="fn" id="describeLifecycleHookTypes"><a name="describeLifecycleHookTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describelifecyclehooktypesresponse.html">DescribeLifecycleHookTypesResponse</a></span> *AutoScalingClient::<span class="name">describeLifecycleHookTypes</span>()</h3>
+<p>Sends a DescribeLifecycleHookTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describelifecyclehooktypesresponse.html">DescribeLifecycleHookTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available types of lifecycle</p>
+<!-- @@@describeLifecycleHookTypes -->
+<!-- $$$describeLifecycleHooks[overload1]$$$describeLifecycleHooksconstDescribeLifecycleHooksRequest& -->
+<h3 class="fn" id="describeLifecycleHooks"><a name="describeLifecycleHooks"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describelifecyclehooksresponse.html">DescribeLifecycleHooksResponse</a></span> *AutoScalingClient::<span class="name">describeLifecycleHooks</span>(const <span class="type"><a href="qtaws-autoscaling-describelifecyclehooksrequest.html">DescribeLifecycleHooksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describelifecyclehooksresponse.html">DescribeLifecycleHooksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the lifecycle hooks for the specified Auto Scaling</p>
+<!-- @@@describeLifecycleHooks -->
+<!-- $$$describeLoadBalancerTargetGroups[overload1]$$$describeLoadBalancerTargetGroupsconstDescribeLoadBalancerTargetGroupsRequest& -->
+<h3 class="fn" id="describeLoadBalancerTargetGroups"><a name="describeLoadBalancerTargetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeloadbalancertargetgroupsresponse.html">DescribeLoadBalancerTargetGroupsResponse</a></span> *AutoScalingClient::<span class="name">describeLoadBalancerTargetGroups</span>(const <span class="type"><a href="qtaws-autoscaling-describeloadbalancertargetgroupsrequest.html">DescribeLoadBalancerTargetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeloadbalancertargetgroupsresponse.html">DescribeLoadBalancerTargetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the target groups for the specified Auto Scaling</p>
+<!-- @@@describeLoadBalancerTargetGroups -->
+<!-- $$$describeLoadBalancers[overload1]$$$describeLoadBalancersconstDescribeLoadBalancersRequest& -->
+<h3 class="fn" id="describeLoadBalancers"><a name="describeLoadBalancers"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeloadbalancersresponse.html">DescribeLoadBalancersResponse</a></span> *AutoScalingClient::<span class="name">describeLoadBalancers</span>(const <span class="type"><a href="qtaws-autoscaling-describeloadbalancersrequest.html">DescribeLoadBalancersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeloadbalancersresponse.html">DescribeLoadBalancersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the load balancers for the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>Note that this operation describes only Classic Load Balancers. If you have Application Load Balancers, use &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt;</p>
+<!-- @@@describeLoadBalancers -->
+<!-- $$$describeMetricCollectionTypes[overload1]$$$describeMetricCollectionTypes -->
+<h3 class="fn" id="describeMetricCollectionTypes"><a name="describeMetricCollectionTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describemetriccollectiontypesresponse.html">DescribeMetricCollectionTypesResponse</a></span> *AutoScalingClient::<span class="name">describeMetricCollectionTypes</span>()</h3>
+<p>Sends a DescribeMetricCollectionTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describemetriccollectiontypesresponse.html">DescribeMetricCollectionTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the available CloudWatch metrics for Auto</p>
+<p>Scaling&gt;</p>
+<p>Note that the &lt;code&gt;GroupStandbyInstances&lt;/code&gt; metric is not returned by default. You must explicitly request this metric when calling</p>
+<!-- @@@describeMetricCollectionTypes -->
+<!-- $$$describeNotificationConfigurations[overload1]$$$describeNotificationConfigurationsconstDescribeNotificationConfigurationsRequest& -->
+<h3 class="fn" id="describeNotificationConfigurations"><a name="describeNotificationConfigurations"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describenotificationconfigurationsresponse.html">DescribeNotificationConfigurationsResponse</a></span> *AutoScalingClient::<span class="name">describeNotificationConfigurations</span>(const <span class="type"><a href="qtaws-autoscaling-describenotificationconfigurationsrequest.html">DescribeNotificationConfigurationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describenotificationconfigurationsresponse.html">DescribeNotificationConfigurationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the notification actions associated with the specified Auto Scaling</p>
+<!-- @@@describeNotificationConfigurations -->
+<!-- $$$describePolicies[overload1]$$$describePoliciesconstDescribePoliciesRequest& -->
+<h3 class="fn" id="describePolicies"><a name="describePolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describepoliciesresponse.html">DescribePoliciesResponse</a></span> *AutoScalingClient::<span class="name">describePolicies</span>(const <span class="type"><a href="qtaws-autoscaling-describepoliciesrequest.html">DescribePoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describepoliciesresponse.html">DescribePoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the policies for the specified Auto Scaling</p>
+<!-- @@@describePolicies -->
+<!-- $$$describeScalingActivities[overload1]$$$describeScalingActivitiesconstDescribeScalingActivitiesRequest& -->
+<h3 class="fn" id="describeScalingActivities"><a name="describeScalingActivities"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describescalingactivitiesresponse.html">DescribeScalingActivitiesResponse</a></span> *AutoScalingClient::<span class="name">describeScalingActivities</span>(const <span class="type"><a href="qtaws-autoscaling-describescalingactivitiesrequest.html">DescribeScalingActivitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describescalingactivitiesresponse.html">DescribeScalingActivitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more scaling activities for the specified Auto Scaling</p>
+<!-- @@@describeScalingActivities -->
+<!-- $$$describeScalingProcessTypes[overload1]$$$describeScalingProcessTypes -->
+<h3 class="fn" id="describeScalingProcessTypes"><a name="describeScalingProcessTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describescalingprocesstypesresponse.html">DescribeScalingProcessTypesResponse</a></span> *AutoScalingClient::<span class="name">describeScalingProcessTypes</span>()</h3>
+<p>Sends a DescribeScalingProcessTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describescalingprocesstypesresponse.html">DescribeScalingProcessTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the scaling process types for use with &lt;a&gt;ResumeProcesses&lt;/a&gt; and</p>
+<!-- @@@describeScalingProcessTypes -->
+<!-- $$$describeScheduledActions[overload1]$$$describeScheduledActionsconstDescribeScheduledActionsRequest& -->
+<h3 class="fn" id="describeScheduledActions"><a name="describeScheduledActions"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describescheduledactionsresponse.html">DescribeScheduledActionsResponse</a></span> *AutoScalingClient::<span class="name">describeScheduledActions</span>(const <span class="type"><a href="qtaws-autoscaling-describescheduledactionsrequest.html">DescribeScheduledActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describescheduledactionsresponse.html">DescribeScheduledActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the actions scheduled for your Auto Scaling group that haven't run. To describe the actions that have already run, use</p>
+<!-- @@@describeScheduledActions -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describetagsresponse.html">DescribeTagsResponse</a></span> *AutoScalingClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-autoscaling-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified</p>
+<p>tags&gt;</p>
+<p>You can use filters to limit the results. For example, you can query for the tags for a specific Auto Scaling group. You can specify multiple values for a filter. A tag must match at least one of the specified values for it to be included in the</p>
+<p>results&gt;</p>
+<p>You can also specify multiple filters. The result includes information for a particular tag only if it matches all the filters. If there's no match, no special message is</p>
+<!-- @@@describeTags -->
+<!-- $$$describeTerminationPolicyTypes[overload1]$$$describeTerminationPolicyTypes -->
+<h3 class="fn" id="describeTerminationPolicyTypes"><a name="describeTerminationPolicyTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-describeterminationpolicytypesresponse.html">DescribeTerminationPolicyTypesResponse</a></span> *AutoScalingClient::<span class="name">describeTerminationPolicyTypes</span>()</h3>
+<p>Sends a DescribeTerminationPolicyTypes request to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-describeterminationpolicytypesresponse.html">DescribeTerminationPolicyTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the termination policies supported by Auto</p>
+<!-- @@@describeTerminationPolicyTypes -->
+<!-- $$$detachInstances[overload1]$$$detachInstancesconstDetachInstancesRequest& -->
+<h3 class="fn" id="detachInstances"><a name="detachInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-detachinstancesresponse.html">DetachInstancesResponse</a></span> *AutoScalingClient::<span class="name">detachInstances</span>(const <span class="type"><a href="qtaws-autoscaling-detachinstancesrequest.html">DetachInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-detachinstancesresponse.html">DetachInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes one or more instances from the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>After the instances are detached, you can manage them independent of the Auto Scaling</p>
+<p>group&gt;</p>
+<p>If you do not specify the option to decrement the desired capacity, Auto Scaling launches instances to replace the ones that are</p>
+<p>detached&gt;</p>
+<p>If there is a Classic Load Balancer attached to the Auto Scaling group, the instances are deregistered from the load balancer. If there are target groups attached to the Auto Scaling group, the instances are deregistered from the target</p>
+<p>groups&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/detach-instance-asg.html&quot;&gt;Detach EC2 Instances from Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@detachInstances -->
+<!-- $$$detachLoadBalancerTargetGroups[overload1]$$$detachLoadBalancerTargetGroupsconstDetachLoadBalancerTargetGroupsRequest& -->
+<h3 class="fn" id="detachLoadBalancerTargetGroups"><a name="detachLoadBalancerTargetGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-detachloadbalancertargetgroupsresponse.html">DetachLoadBalancerTargetGroupsResponse</a></span> *AutoScalingClient::<span class="name">detachLoadBalancerTargetGroups</span>(const <span class="type"><a href="qtaws-autoscaling-detachloadbalancertargetgroupsrequest.html">DetachLoadBalancerTargetGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-detachloadbalancertargetgroupsresponse.html">DetachLoadBalancerTargetGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches one or more target groups from the specified Auto Scaling</p>
+<!-- @@@detachLoadBalancerTargetGroups -->
+<!-- $$$detachLoadBalancers[overload1]$$$detachLoadBalancersconstDetachLoadBalancersRequest& -->
+<h3 class="fn" id="detachLoadBalancers"><a name="detachLoadBalancers"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-detachloadbalancersresponse.html">DetachLoadBalancersResponse</a></span> *AutoScalingClient::<span class="name">detachLoadBalancers</span>(const <span class="type"><a href="qtaws-autoscaling-detachloadbalancersrequest.html">DetachLoadBalancersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-detachloadbalancersresponse.html">DetachLoadBalancersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches one or more Classic Load Balancers from the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>Note that this operation detaches only Classic Load Balancers. If you have Application Load Balancers, use &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt;</p>
+<p>instead&gt;</p>
+<p>When you detach a load balancer, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the load balancer using &lt;a&gt;DescribeLoadBalancers&lt;/a&gt;. Note that the instances remain</p>
+<!-- @@@detachLoadBalancers -->
+<!-- $$$disableMetricsCollection[overload1]$$$disableMetricsCollectionconstDisableMetricsCollectionRequest& -->
+<h3 class="fn" id="disableMetricsCollection"><a name="disableMetricsCollection"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-disablemetricscollectionresponse.html">DisableMetricsCollectionResponse</a></span> *AutoScalingClient::<span class="name">disableMetricsCollection</span>(const <span class="type"><a href="qtaws-autoscaling-disablemetricscollectionrequest.html">DisableMetricsCollectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-disablemetricscollectionresponse.html">DisableMetricsCollectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables group metrics for the specified Auto Scaling</p>
+<!-- @@@disableMetricsCollection -->
+<!-- $$$enableMetricsCollection[overload1]$$$enableMetricsCollectionconstEnableMetricsCollectionRequest& -->
+<h3 class="fn" id="enableMetricsCollection"><a name="enableMetricsCollection"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-enablemetricscollectionresponse.html">EnableMetricsCollectionResponse</a></span> *AutoScalingClient::<span class="name">enableMetricsCollection</span>(const <span class="type"><a href="qtaws-autoscaling-enablemetricscollectionrequest.html">EnableMetricsCollectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-enablemetricscollectionresponse.html">EnableMetricsCollectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables group metrics for the specified Auto Scaling group. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html&quot;&gt;Monitoring Your Auto Scaling Groups and Instances&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@enableMetricsCollection -->
+<!-- $$$enterStandby[overload1]$$$enterStandbyconstEnterStandbyRequest& -->
+<h3 class="fn" id="enterStandby"><a name="enterStandby"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-enterstandbyresponse.html">EnterStandbyResponse</a></span> *AutoScalingClient::<span class="name">enterStandby</span>(const <span class="type"><a href="qtaws-autoscaling-enterstandbyrequest.html">EnterStandbyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-enterstandbyresponse.html">EnterStandbyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Moves the specified instances into the standby</p>
+<p>state&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-enter-exit-standby.html&quot;&gt;Temporarily Removing Instances from Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@enterStandby -->
+<!-- $$$executePolicy[overload1]$$$executePolicyconstExecutePolicyRequest& -->
+<h3 class="fn" id="executePolicy"><a name="executePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-executepolicyresponse.html">ExecutePolicyResponse</a></span> *AutoScalingClient::<span class="name">executePolicy</span>(const <span class="type"><a href="qtaws-autoscaling-executepolicyrequest.html">ExecutePolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-executepolicyresponse.html">ExecutePolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Executes the specified</p>
+<!-- @@@executePolicy -->
+<!-- $$$exitStandby[overload1]$$$exitStandbyconstExitStandbyRequest& -->
+<h3 class="fn" id="exitStandby"><a name="exitStandby"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-exitstandbyresponse.html">ExitStandbyResponse</a></span> *AutoScalingClient::<span class="name">exitStandby</span>(const <span class="type"><a href="qtaws-autoscaling-exitstandbyrequest.html">ExitStandbyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-exitstandbyresponse.html">ExitStandbyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Moves the specified instances out of the standby</p>
+<p>state&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-enter-exit-standby.html&quot;&gt;Temporarily Removing Instances from Your Auto Scaling Group&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@exitStandby -->
+<!-- $$$putLifecycleHook[overload1]$$$putLifecycleHookconstPutLifecycleHookRequest& -->
+<h3 class="fn" id="putLifecycleHook"><a name="putLifecycleHook"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-putlifecyclehookresponse.html">PutLifecycleHookResponse</a></span> *AutoScalingClient::<span class="name">putLifecycleHook</span>(const <span class="type"><a href="qtaws-autoscaling-putlifecyclehookrequest.html">PutLifecycleHookRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-putlifecyclehookresponse.html">PutLifecycleHookResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a lifecycle hook for the specified Auto Scaling</p>
+<p>Group&gt;</p>
+<p>A lifecycle hook tells Auto Scaling that you want to perform an action on an instance that is not actively in service; for example, either when the instance launches or before the instance</p>
+<p>terminates&gt;</p>
+<p>This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling</p>
+<p>group&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when Auto Scaling launches or terminates</p>
+<p>instances&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>(Optional) Create a notification target and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows Auto Scaling to publish lifecycle notifications to the</p>
+<p>target&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Create the lifecycle hook. Specify whether the hook is used when the instances launch or terminate.&lt;/b&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If you need more time, record the lifecycle action heartbeat to keep the instance in a pending</p>
+<p>state&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you finish before the timeout period ends, complete the lifecycle</p>
+<p>action&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html&quot;&gt;Auto Scaling Lifecycle Hooks&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If you exceed your maximum limit of lifecycle hooks, which by default is 50 per Auto Scaling group, the call fails. For information about updating this limit, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html&quot;&gt;AWS Service Limits&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General</p>
+<!-- @@@putLifecycleHook -->
+<!-- $$$putNotificationConfiguration[overload1]$$$putNotificationConfigurationconstPutNotificationConfigurationRequest& -->
+<h3 class="fn" id="putNotificationConfiguration"><a name="putNotificationConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-putnotificationconfigurationresponse.html">PutNotificationConfigurationResponse</a></span> *AutoScalingClient::<span class="name">putNotificationConfiguration</span>(const <span class="type"><a href="qtaws-autoscaling-putnotificationconfigurationrequest.html">PutNotificationConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-putnotificationconfigurationresponse.html">PutNotificationConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures an Auto Scaling group to send notifications when specified events take place. Subscribers to the specified topic can have messages delivered to an endpoint such as a web server or an email</p>
+<p>address&gt;</p>
+<p>This configuration overwrites any existing</p>
+<p>configuration&gt;</p>
+<p>For more information see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/ASGettingNotifications.html&quot;&gt;Getting SNS Notifications When Your Auto Scaling Group Scales&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@putNotificationConfiguration -->
+<!-- $$$putScalingPolicy[overload1]$$$putScalingPolicyconstPutScalingPolicyRequest& -->
+<h3 class="fn" id="putScalingPolicy"><a name="putScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-putscalingpolicyresponse.html">PutScalingPolicyResponse</a></span> *AutoScalingClient::<span class="name">putScalingPolicy</span>(const <span class="type"><a href="qtaws-autoscaling-putscalingpolicyrequest.html">PutScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-putscalingpolicyresponse.html">PutScalingPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a policy for an Auto Scaling group. To update an existing policy, use the existing policy name and set the parameters you want to change. Any existing parameter not changed in an update to an existing policy is not changed in this update</p>
+<p>request&gt;</p>
+<p>If you exceed your maximum limit of step adjustments, which by default is 20 per region, the call fails. For information about updating this limit, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html&quot;&gt;AWS Service Limits&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General</p>
+<!-- @@@putScalingPolicy -->
+<!-- $$$putScheduledUpdateGroupAction[overload1]$$$putScheduledUpdateGroupActionconstPutScheduledUpdateGroupActionRequest& -->
+<h3 class="fn" id="putScheduledUpdateGroupAction"><a name="putScheduledUpdateGroupAction"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-putscheduledupdategroupactionresponse.html">PutScheduledUpdateGroupActionResponse</a></span> *AutoScalingClient::<span class="name">putScheduledUpdateGroupAction</span>(const <span class="type"><a href="qtaws-autoscaling-putscheduledupdategroupactionrequest.html">PutScheduledUpdateGroupActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-putscheduledupdategroupactionresponse.html">PutScheduledUpdateGroupActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a scheduled scaling action for an Auto Scaling group. When updating a scheduled scaling action, if you leave a parameter unspecified, the corresponding value remains</p>
+<p>unchanged&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/schedule_time.html&quot;&gt;Scheduled Scaling&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@putScheduledUpdateGroupAction -->
+<!-- $$$recordLifecycleActionHeartbeat[overload1]$$$recordLifecycleActionHeartbeatconstRecordLifecycleActionHeartbeatRequest& -->
+<h3 class="fn" id="recordLifecycleActionHeartbeat"><a name="recordLifecycleActionHeartbeat"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-recordlifecycleactionheartbeatresponse.html">RecordLifecycleActionHeartbeatResponse</a></span> *AutoScalingClient::<span class="name">recordLifecycleActionHeartbeat</span>(const <span class="type"><a href="qtaws-autoscaling-recordlifecycleactionheartbeatrequest.html">RecordLifecycleActionHeartbeatRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-recordlifecycleactionheartbeatresponse.html">RecordLifecycleActionHeartbeatResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Records a heartbeat for the lifecycle action associated with the specified token or instance. This extends the timeout by the length of time defined using</p>
+<p>&lt;a&gt;PutLifecycleHook&lt;/a&gt;&gt;</p>
+<p>This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling</p>
+<p>group&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>(Optional) Create a Lambda function and a rule that allows CloudWatch Events to invoke your Lambda function when Auto Scaling launches or terminates</p>
+<p>instances&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>(Optional) Create a notification target and an IAM role. The target can be either an Amazon SQS queue or an Amazon SNS topic. The role allows Auto Scaling to publish lifecycle notifications to the</p>
+<p>target&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create the lifecycle hook. Specify whether the hook is used when the instances launch or</p>
+<p>terminate&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;If you need more time, record the lifecycle action heartbeat to keep the instance in a pending state.&lt;/b&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>If you finish before the timeout period ends, complete the lifecycle</p>
+<p>action&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroupLifecycle.html&quot;&gt;Auto Scaling Lifecycle&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@recordLifecycleActionHeartbeat -->
+<!-- $$$resumeProcesses[overload1]$$$resumeProcessesconstResumeProcessesRequest& -->
+<h3 class="fn" id="resumeProcesses"><a name="resumeProcesses"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-resumeprocessesresponse.html">ResumeProcessesResponse</a></span> *AutoScalingClient::<span class="name">resumeProcesses</span>(const <span class="type"><a href="qtaws-autoscaling-resumeprocessesrequest.html">ResumeProcessesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-resumeprocessesresponse.html">ResumeProcessesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resumes the specified suspended Auto Scaling processes, or all suspended process, for the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html&quot;&gt;Suspending and Resuming Auto Scaling Processes&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@resumeProcesses -->
+<!-- $$$setDesiredCapacity[overload1]$$$setDesiredCapacityconstSetDesiredCapacityRequest& -->
+<h3 class="fn" id="setDesiredCapacity"><a name="setDesiredCapacity"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-setdesiredcapacityresponse.html">SetDesiredCapacityResponse</a></span> *AutoScalingClient::<span class="name">setDesiredCapacity</span>(const <span class="type"><a href="qtaws-autoscaling-setdesiredcapacityrequest.html">SetDesiredCapacityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-setdesiredcapacityresponse.html">SetDesiredCapacityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the size of the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>For more information about desired capacity, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/WhatIsAutoScaling.html&quot;&gt;What Is Auto Scaling?&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@setDesiredCapacity -->
+<!-- $$$setInstanceHealth[overload1]$$$setInstanceHealthconstSetInstanceHealthRequest& -->
+<h3 class="fn" id="setInstanceHealth"><a name="setInstanceHealth"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-setinstancehealthresponse.html">SetInstanceHealthResponse</a></span> *AutoScalingClient::<span class="name">setInstanceHealth</span>(const <span class="type"><a href="qtaws-autoscaling-setinstancehealthrequest.html">SetInstanceHealthRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-setinstancehealthresponse.html">SetInstanceHealthResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the health status of the specified</p>
+<p>instance&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/healthcheck.html&quot;&gt;Health Checks&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@setInstanceHealth -->
+<!-- $$$setInstanceProtection[overload1]$$$setInstanceProtectionconstSetInstanceProtectionRequest& -->
+<h3 class="fn" id="setInstanceProtection"><a name="setInstanceProtection"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-setinstanceprotectionresponse.html">SetInstanceProtectionResponse</a></span> *AutoScalingClient::<span class="name">setInstanceProtection</span>(const <span class="type"><a href="qtaws-autoscaling-setinstanceprotectionrequest.html">SetInstanceProtectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-setinstanceprotectionresponse.html">SetInstanceProtectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the instance protection settings of the specified</p>
+<p>instances&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-termination.html#instance-protection&quot;&gt;Instance Protection&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@setInstanceProtection -->
+<!-- $$$suspendProcesses[overload1]$$$suspendProcessesconstSuspendProcessesRequest& -->
+<h3 class="fn" id="suspendProcesses"><a name="suspendProcesses"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-suspendprocessesresponse.html">SuspendProcessesResponse</a></span> *AutoScalingClient::<span class="name">suspendProcesses</span>(const <span class="type"><a href="qtaws-autoscaling-suspendprocessesrequest.html">SuspendProcessesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-suspendprocessesresponse.html">SuspendProcessesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Suspends the specified Auto Scaling processes, or all processes, for the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>Note that if you suspend either the &lt;code&gt;Launch&lt;/code&gt; or &lt;code&gt;Terminate&lt;/code&gt; process types, it can prevent other process types from functioning</p>
+<p>properly&gt;</p>
+<p>To resume processes that have been suspended, use</p>
+<p>&lt;a&gt;ResumeProcesses&lt;/a&gt;&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/autoscaling/latest/userguide/as-suspend-resume-processes.html&quot;&gt;Suspending and Resuming Auto Scaling Processes&lt;/a&gt; in the &lt;i&gt;Auto Scaling User</p>
+<!-- @@@suspendProcesses -->
+<!-- $$$terminateInstanceInAutoScalingGroup[overload1]$$$terminateInstanceInAutoScalingGroupconstTerminateInstanceInAutoScalingGroupRequest& -->
+<h3 class="fn" id="terminateInstanceInAutoScalingGroup"><a name="terminateInstanceInAutoScalingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-terminateinstanceinautoscalinggroupresponse.html">TerminateInstanceInAutoScalingGroupResponse</a></span> *AutoScalingClient::<span class="name">terminateInstanceInAutoScalingGroup</span>(const <span class="type"><a href="qtaws-autoscaling-terminateinstanceinautoscalinggrouprequest.html">TerminateInstanceInAutoScalingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-terminateinstanceinautoscalinggroupresponse.html">TerminateInstanceInAutoScalingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Terminates the specified instance and optionally adjusts the desired group</p>
+<p>size&gt;</p>
+<p>This call simply makes a termination request. The instance is not terminated</p>
+<!-- @@@terminateInstanceInAutoScalingGroup -->
+<!-- $$$updateAutoScalingGroup[overload1]$$$updateAutoScalingGroupconstUpdateAutoScalingGroupRequest& -->
+<h3 class="fn" id="updateAutoScalingGroup"><a name="updateAutoScalingGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-autoscaling-updateautoscalinggroupresponse.html">UpdateAutoScalingGroupResponse</a></span> *AutoScalingClient::<span class="name">updateAutoScalingGroup</span>(const <span class="type"><a href="qtaws-autoscaling-updateautoscalinggrouprequest.html">UpdateAutoScalingGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-autoscaling-autoscalingclient.html">AutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-autoscaling-updateautoscalinggroupresponse.html">UpdateAutoScalingGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the configuration for the specified Auto Scaling</p>
+<p>group&gt;</p>
+<p>The new settings take effect on any scaling activities after this call returns. Scaling activities that are currently in progress aren't</p>
+<p>affected&gt;</p>
+<p>To update an Auto Scaling group with a launch configuration with &lt;code&gt;InstanceMonitoring&lt;/code&gt; set to &lt;code&gt;false&lt;/code&gt;, you must first disable the collection of group metrics. Otherwise, you will get an error. If you have previously enabled the collection of group metrics, you can disable it using</p>
+<p>&lt;a&gt;DisableMetricsCollection&lt;/a&gt;&gt;</p>
+<p>Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If you specify a new value for &lt;code&gt;MinSize&lt;/code&gt; without specifying a value for &lt;code&gt;DesiredCapacity&lt;/code&gt;, and the new &lt;code&gt;MinSize&lt;/code&gt; is larger than the current size of the group, we implicitly call &lt;a&gt;SetDesiredCapacity&lt;/a&gt; to set the size of the group to the new value of</p>
+<p>&lt;code&gt;MinSize&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you specify a new value for &lt;code&gt;MaxSize&lt;/code&gt; without specifying a value for &lt;code&gt;DesiredCapacity&lt;/code&gt;, and the new &lt;code&gt;MaxSize&lt;/code&gt; is smaller than the current size of the group, we implicitly call &lt;a&gt;SetDesiredCapacity&lt;/a&gt; to set the size of the group to the new value of</p>
+<p>&lt;code&gt;MaxSize&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>All other optional parameters are left unchanged if not</p>
+<!-- @@@updateAutoScalingGroup -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

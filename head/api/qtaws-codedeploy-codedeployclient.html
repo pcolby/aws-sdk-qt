@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- codedeployclient.cpp -->
+  <title>CodeDeployClient Class | CodeDeploy</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscodedeploy-index.html">CodeDeploy</a></li>
+<li><a href="qtawscodedeploy-module.html">C++ Classes</a></li>
+<li>CodeDeployClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CodeDeployClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-codedeploy-codedeployclient.html">QtAws::CodeDeploy::CodeDeployClient</a>)<br/></span>
+<!-- $$$CodeDeployClient-brief -->
+<p>The <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> class provides access to the AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> service. <a href="#details">More...</a></p>
+<!-- @@@CodeDeployClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CodeDeployClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-codedeploy-codedeployclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#CodeDeployClient">CodeDeployClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#CodeDeployClient-1">CodeDeployClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToOnPremisesInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#addTagsToOnPremisesInstances">addTagsToOnPremisesInstances</a></b>(const AddTagsToOnPremisesInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetApplicationRevisionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetApplicationRevisions">batchGetApplicationRevisions</a></b>(const BatchGetApplicationRevisionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetApplicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetApplications">batchGetApplications</a></b>(const BatchGetApplicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetDeploymentGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetDeploymentGroups">batchGetDeploymentGroups</a></b>(const BatchGetDeploymentGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetDeploymentInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetDeploymentInstances">batchGetDeploymentInstances</a></b>(const BatchGetDeploymentInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetDeploymentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetDeployments">batchGetDeployments</a></b>(const BatchGetDeploymentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetOnPremisesInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#batchGetOnPremisesInstances">batchGetOnPremisesInstances</a></b>(const BatchGetOnPremisesInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ContinueDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#continueDeployment">continueDeployment</a></b>(const ContinueDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#createApplication">createApplication</a></b>(const CreateApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#createDeployment">createDeployment</a></b>(const CreateDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeploymentConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#createDeploymentConfig">createDeploymentConfig</a></b>(const CreateDeploymentConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeploymentGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#createDeploymentGroup">createDeploymentGroup</a></b>(const CreateDeploymentGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#deleteApplication">deleteApplication</a></b>(const DeleteApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDeploymentConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#deleteDeploymentConfig">deleteDeploymentConfig</a></b>(const DeleteDeploymentConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDeploymentGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#deleteDeploymentGroup">deleteDeploymentGroup</a></b>(const DeleteDeploymentGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGitHubAccountTokenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#deleteGitHubAccountToken">deleteGitHubAccountToken</a></b>(const DeleteGitHubAccountTokenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterOnPremisesInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#deregisterOnPremisesInstance">deregisterOnPremisesInstance</a></b>(const DeregisterOnPremisesInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getApplication">getApplication</a></b>(const GetApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApplicationRevisionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getApplicationRevision">getApplicationRevision</a></b>(const GetApplicationRevisionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getDeployment">getDeployment</a></b>(const GetDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getDeploymentConfig">getDeploymentConfig</a></b>(const GetDeploymentConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getDeploymentGroup">getDeploymentGroup</a></b>(const GetDeploymentGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getDeploymentInstance">getDeploymentInstance</a></b>(const GetDeploymentInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOnPremisesInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#getOnPremisesInstance">getOnPremisesInstance</a></b>(const GetOnPremisesInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListApplicationRevisionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listApplicationRevisions">listApplicationRevisions</a></b>(const ListApplicationRevisionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListApplicationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listApplications">listApplications</a></b>(const ListApplicationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeploymentConfigsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listDeploymentConfigs">listDeploymentConfigs</a></b>(const ListDeploymentConfigsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeploymentGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listDeploymentGroups">listDeploymentGroups</a></b>(const ListDeploymentGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeploymentInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listDeploymentInstances">listDeploymentInstances</a></b>(const ListDeploymentInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeploymentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listDeployments">listDeployments</a></b>(const ListDeploymentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGitHubAccountTokenNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listGitHubAccountTokenNames">listGitHubAccountTokenNames</a></b>(const ListGitHubAccountTokenNamesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOnPremisesInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#listOnPremisesInstances">listOnPremisesInstances</a></b>(const ListOnPremisesInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutLifecycleEventHookExecutionStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#putLifecycleEventHookExecutionStatus">putLifecycleEventHookExecutionStatus</a></b>(const PutLifecycleEventHookExecutionStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterApplicationRevisionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#registerApplicationRevision">registerApplicationRevision</a></b>(const RegisterApplicationRevisionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterOnPremisesInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#registerOnPremisesInstance">registerOnPremisesInstance</a></b>(const RegisterOnPremisesInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromOnPremisesInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#removeTagsFromOnPremisesInstances">removeTagsFromOnPremisesInstances</a></b>(const RemoveTagsFromOnPremisesInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SkipWaitTimeForInstanceTerminationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#skipWaitTimeForInstanceTermination">skipWaitTimeForInstanceTermination</a></b>(const SkipWaitTimeForInstanceTerminationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#stopDeployment">stopDeployment</a></b>(const StopDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApplicationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#updateApplication">updateApplication</a></b>(const UpdateApplicationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDeploymentGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codedeploy-codedeployclient.html#updateDeploymentGroup">updateDeploymentGroup</a></b>(const UpdateDeploymentGroupRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CodeDeployClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> class provides access to the AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a>&lt;/fullname&gt;</p>
+<p>AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances running in your own facility, or serverless AWS Lambda</p>
+<p>functions&gt;</p>
+<p>You can deploy a nearly unlimited variety of application content, such as an updated Lambda function, code, web and configuration files, executables, packages, scripts, multimedia files, and so on. AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> can deploy application content stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. You do not need to make changes to your existing code before you can use AWS</p>
+<p><a href="qtaws-codedeploy.html">CodeDeploy</a>&gt;</p>
+<p>AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> makes it easier for you to rapidly release new features, helps you avoid downtime during application deployment, and handles the complexity of updating your applications, without many of the risks associated with error-prone manual</p>
+<p>deployments&gt;</p>
+<p>&lt;b&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> Components&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>Use the information in this guide to help you work with the following AWS <a href="qtaws-codedeploy.html">CodeDeploy</a></p>
+<p>components&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Application&lt;/b&gt;: A name that uniquely identifies the application you want to deploy. AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> uses this name, which functions as a container, to ensure the correct combination of revision, deployment configuration, and deployment group are referenced during a</p>
+<p>deployment&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Deployment group&lt;/b&gt;: A set of individual instances or <a href="qtaws-codedeploy.html">CodeDeploy</a> Lambda applications. A Lambda deployment group contains a group of applications. An EC2/On-premises deployment group contains individually tagged instances, Amazon EC2 instances in Auto Scaling groups, or both.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Deployment configuration&lt;/b&gt;: A set of deployment rules and deployment success and failure conditions used by AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> during a</p>
+<p>deployment&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Deployment&lt;/b&gt;: The process and the components used in the process of updating a Lambda function or of installing content on one or more instances.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;b&gt;Application revisions&lt;/b&gt;: For an AWS Lambda deployment, this is an AppSpec file that specifies the Lambda function to update and one or more functions to validate deployment lifecycle events. For an EC2/On-premises deployment, this is an archive file containing source content—source code, web pages, executable files, and deployment scripts—along with an AppSpec file. Revisions are stored in Amazon S3 buckets or GitHub repositories. For Amazon S3, a revision is uniquely identified by its Amazon S3 object key and its ETag, version, or both. For GitHub, a revision is uniquely identified by its commit</p>
+<p>ID&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>This guide also contains information to help you get details about the instances in your deployments, to make on-premises instances available for AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> deployments, and to get details about a Lambda function</p>
+<p>deployment&gt;</p>
+<p>&lt;b&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> Information Resources&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/codedeploy/latest/userguide&quot;&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> User Guide&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/codedeploy/latest/APIReference/&quot;&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> API Reference Guide&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/reference/deploy/index.html&quot;&gt;AWS CLI Reference for AWS <a href="qtaws-codedeploy.html">CodeDeploy</a>&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;https://forums.aws.amazon.com/forum.jspa?forumID=179&quot;&gt;AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> Developer Forum&lt;/a&gt;</p>
+</div>
+<!-- @@@CodeDeployClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CodeDeployClient[overload1]$$$CodeDeployClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeDeployClient"><a name="CodeDeployClient"></a>CodeDeployClient::<span class="name">CodeDeployClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CodeDeployClient -->
+<!-- $$$CodeDeployClient$$$CodeDeployClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeDeployClient-1"><a name="CodeDeployClient-1"></a>CodeDeployClient::<span class="name">CodeDeployClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-codedeploy-codedeployclient.html#CodeDeployClient">CodeDeployClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CodeDeployClient -->
+<!-- $$$addTagsToOnPremisesInstances[overload1]$$$addTagsToOnPremisesInstancesconstAddTagsToOnPremisesInstancesRequest& -->
+<h3 class="fn" id="addTagsToOnPremisesInstances"><a name="addTagsToOnPremisesInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-addtagstoonpremisesinstancesresponse.html">AddTagsToOnPremisesInstancesResponse</a></span> *CodeDeployClient::<span class="name">addTagsToOnPremisesInstances</span>(const <span class="type"><a href="qtaws-codedeploy-addtagstoonpremisesinstancesrequest.html">AddTagsToOnPremisesInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-addtagstoonpremisesinstancesresponse.html">AddTagsToOnPremisesInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds tags to on-premises</p>
+<!-- @@@addTagsToOnPremisesInstances -->
+<!-- $$$batchGetApplicationRevisions[overload1]$$$batchGetApplicationRevisionsconstBatchGetApplicationRevisionsRequest& -->
+<h3 class="fn" id="batchGetApplicationRevisions"><a name="batchGetApplicationRevisions"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetapplicationrevisionsresponse.html">BatchGetApplicationRevisionsResponse</a></span> *CodeDeployClient::<span class="name">batchGetApplicationRevisions</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetapplicationrevisionsrequest.html">BatchGetApplicationRevisionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetapplicationrevisionsresponse.html">BatchGetApplicationRevisionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more application</p>
+<!-- @@@batchGetApplicationRevisions -->
+<!-- $$$batchGetApplications[overload1]$$$batchGetApplicationsconstBatchGetApplicationsRequest& -->
+<h3 class="fn" id="batchGetApplications"><a name="batchGetApplications"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetapplicationsresponse.html">BatchGetApplicationsResponse</a></span> *CodeDeployClient::<span class="name">batchGetApplications</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetapplicationsrequest.html">BatchGetApplicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetapplicationsresponse.html">BatchGetApplicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more</p>
+<!-- @@@batchGetApplications -->
+<!-- $$$batchGetDeploymentGroups[overload1]$$$batchGetDeploymentGroupsconstBatchGetDeploymentGroupsRequest& -->
+<h3 class="fn" id="batchGetDeploymentGroups"><a name="batchGetDeploymentGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetdeploymentgroupsresponse.html">BatchGetDeploymentGroupsResponse</a></span> *CodeDeployClient::<span class="name">batchGetDeploymentGroups</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetdeploymentgroupsrequest.html">BatchGetDeploymentGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetdeploymentgroupsresponse.html">BatchGetDeploymentGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more deployment</p>
+<!-- @@@batchGetDeploymentGroups -->
+<!-- $$$batchGetDeploymentInstances[overload1]$$$batchGetDeploymentInstancesconstBatchGetDeploymentInstancesRequest& -->
+<h3 class="fn" id="batchGetDeploymentInstances"><a name="batchGetDeploymentInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetdeploymentinstancesresponse.html">BatchGetDeploymentInstancesResponse</a></span> *CodeDeployClient::<span class="name">batchGetDeploymentInstances</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetdeploymentinstancesrequest.html">BatchGetDeploymentInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetdeploymentinstancesresponse.html">BatchGetDeploymentInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more instance that are part of a deployment</p>
+<!-- @@@batchGetDeploymentInstances -->
+<!-- $$$batchGetDeployments[overload1]$$$batchGetDeploymentsconstBatchGetDeploymentsRequest& -->
+<h3 class="fn" id="batchGetDeployments"><a name="batchGetDeployments"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetdeploymentsresponse.html">BatchGetDeploymentsResponse</a></span> *CodeDeployClient::<span class="name">batchGetDeployments</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetdeploymentsrequest.html">BatchGetDeploymentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetdeploymentsresponse.html">BatchGetDeploymentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more</p>
+<!-- @@@batchGetDeployments -->
+<!-- $$$batchGetOnPremisesInstances[overload1]$$$batchGetOnPremisesInstancesconstBatchGetOnPremisesInstancesRequest& -->
+<h3 class="fn" id="batchGetOnPremisesInstances"><a name="batchGetOnPremisesInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-batchgetonpremisesinstancesresponse.html">BatchGetOnPremisesInstancesResponse</a></span> *CodeDeployClient::<span class="name">batchGetOnPremisesInstances</span>(const <span class="type"><a href="qtaws-codedeploy-batchgetonpremisesinstancesrequest.html">BatchGetOnPremisesInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-batchgetonpremisesinstancesresponse.html">BatchGetOnPremisesInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more on-premises</p>
+<!-- @@@batchGetOnPremisesInstances -->
+<!-- $$$continueDeployment[overload1]$$$continueDeploymentconstContinueDeploymentRequest& -->
+<h3 class="fn" id="continueDeployment"><a name="continueDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-continuedeploymentresponse.html">ContinueDeploymentResponse</a></span> *CodeDeployClient::<span class="name">continueDeployment</span>(const <span class="type"><a href="qtaws-codedeploy-continuedeploymentrequest.html">ContinueDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-continuedeploymentresponse.html">ContinueDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.)</p>
+<!-- @@@continueDeployment -->
+<!-- $$$createApplication[overload1]$$$createApplicationconstCreateApplicationRequest& -->
+<h3 class="fn" id="createApplication"><a name="createApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-createapplicationresponse.html">CreateApplicationResponse</a></span> *CodeDeployClient::<span class="name">createApplication</span>(const <span class="type"><a href="qtaws-codedeploy-createapplicationrequest.html">CreateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-createapplicationresponse.html">CreateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an</p>
+<!-- @@@createApplication -->
+<!-- $$$createDeployment[overload1]$$$createDeploymentconstCreateDeploymentRequest& -->
+<h3 class="fn" id="createDeployment"><a name="createDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-createdeploymentresponse.html">CreateDeploymentResponse</a></span> *CodeDeployClient::<span class="name">createDeployment</span>(const <span class="type"><a href="qtaws-codedeploy-createdeploymentrequest.html">CreateDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-createdeploymentresponse.html">CreateDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deploys an application revision through the specified deployment</p>
+<!-- @@@createDeployment -->
+<!-- $$$createDeploymentConfig[overload1]$$$createDeploymentConfigconstCreateDeploymentConfigRequest& -->
+<h3 class="fn" id="createDeploymentConfig"><a name="createDeploymentConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-createdeploymentconfigresponse.html">CreateDeploymentConfigResponse</a></span> *CodeDeployClient::<span class="name">createDeploymentConfig</span>(const <span class="type"><a href="qtaws-codedeploy-createdeploymentconfigrequest.html">CreateDeploymentConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-createdeploymentconfigresponse.html">CreateDeploymentConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a deployment</p>
+<!-- @@@createDeploymentConfig -->
+<!-- $$$createDeploymentGroup[overload1]$$$createDeploymentGroupconstCreateDeploymentGroupRequest& -->
+<h3 class="fn" id="createDeploymentGroup"><a name="createDeploymentGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-createdeploymentgroupresponse.html">CreateDeploymentGroupResponse</a></span> *CodeDeployClient::<span class="name">createDeploymentGroup</span>(const <span class="type"><a href="qtaws-codedeploy-createdeploymentgrouprequest.html">CreateDeploymentGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-createdeploymentgroupresponse.html">CreateDeploymentGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a deployment group to which application revisions will be</p>
+<!-- @@@createDeploymentGroup -->
+<!-- $$$deleteApplication[overload1]$$$deleteApplicationconstDeleteApplicationRequest& -->
+<h3 class="fn" id="deleteApplication"><a name="deleteApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-deleteapplicationresponse.html">DeleteApplicationResponse</a></span> *CodeDeployClient::<span class="name">deleteApplication</span>(const <span class="type"><a href="qtaws-codedeploy-deleteapplicationrequest.html">DeleteApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-deleteapplicationresponse.html">DeleteApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an</p>
+<!-- @@@deleteApplication -->
+<!-- $$$deleteDeploymentConfig[overload1]$$$deleteDeploymentConfigconstDeleteDeploymentConfigRequest& -->
+<h3 class="fn" id="deleteDeploymentConfig"><a name="deleteDeploymentConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-deletedeploymentconfigresponse.html">DeleteDeploymentConfigResponse</a></span> *CodeDeployClient::<span class="name">deleteDeploymentConfig</span>(const <span class="type"><a href="qtaws-codedeploy-deletedeploymentconfigrequest.html">DeleteDeploymentConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-deletedeploymentconfigresponse.html">DeleteDeploymentConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a deployment</p>
+<p>configuration&gt; &lt;note&gt;</p>
+<p>A deployment configuration cannot be deleted if it is currently in use. Predefined configurations cannot be</p>
+<!-- @@@deleteDeploymentConfig -->
+<!-- $$$deleteDeploymentGroup[overload1]$$$deleteDeploymentGroupconstDeleteDeploymentGroupRequest& -->
+<h3 class="fn" id="deleteDeploymentGroup"><a name="deleteDeploymentGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-deletedeploymentgroupresponse.html">DeleteDeploymentGroupResponse</a></span> *CodeDeployClient::<span class="name">deleteDeploymentGroup</span>(const <span class="type"><a href="qtaws-codedeploy-deletedeploymentgrouprequest.html">DeleteDeploymentGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-deletedeploymentgroupresponse.html">DeleteDeploymentGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a deployment</p>
+<!-- @@@deleteDeploymentGroup -->
+<!-- $$$deleteGitHubAccountToken[overload1]$$$deleteGitHubAccountTokenconstDeleteGitHubAccountTokenRequest& -->
+<h3 class="fn" id="deleteGitHubAccountToken"><a name="deleteGitHubAccountToken"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-deletegithubaccounttokenresponse.html">DeleteGitHubAccountTokenResponse</a></span> *CodeDeployClient::<span class="name">deleteGitHubAccountToken</span>(const <span class="type"><a href="qtaws-codedeploy-deletegithubaccounttokenrequest.html">DeleteGitHubAccountTokenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-deletegithubaccounttokenresponse.html">DeleteGitHubAccountTokenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a GitHub account</p>
+<!-- @@@deleteGitHubAccountToken -->
+<!-- $$$deregisterOnPremisesInstance[overload1]$$$deregisterOnPremisesInstanceconstDeregisterOnPremisesInstanceRequest& -->
+<h3 class="fn" id="deregisterOnPremisesInstance"><a name="deregisterOnPremisesInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-deregisteronpremisesinstanceresponse.html">DeregisterOnPremisesInstanceResponse</a></span> *CodeDeployClient::<span class="name">deregisterOnPremisesInstance</span>(const <span class="type"><a href="qtaws-codedeploy-deregisteronpremisesinstancerequest.html">DeregisterOnPremisesInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-deregisteronpremisesinstanceresponse.html">DeregisterOnPremisesInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters an on-premises</p>
+<!-- @@@deregisterOnPremisesInstance -->
+<!-- $$$getApplication[overload1]$$$getApplicationconstGetApplicationRequest& -->
+<h3 class="fn" id="getApplication"><a name="getApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getapplicationresponse.html">GetApplicationResponse</a></span> *CodeDeployClient::<span class="name">getApplication</span>(const <span class="type"><a href="qtaws-codedeploy-getapplicationrequest.html">GetApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getapplicationresponse.html">GetApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an</p>
+<!-- @@@getApplication -->
+<!-- $$$getApplicationRevision[overload1]$$$getApplicationRevisionconstGetApplicationRevisionRequest& -->
+<h3 class="fn" id="getApplicationRevision"><a name="getApplicationRevision"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getapplicationrevisionresponse.html">GetApplicationRevisionResponse</a></span> *CodeDeployClient::<span class="name">getApplicationRevision</span>(const <span class="type"><a href="qtaws-codedeploy-getapplicationrevisionrequest.html">GetApplicationRevisionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getapplicationrevisionresponse.html">GetApplicationRevisionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an application</p>
+<!-- @@@getApplicationRevision -->
+<!-- $$$getDeployment[overload1]$$$getDeploymentconstGetDeploymentRequest& -->
+<h3 class="fn" id="getDeployment"><a name="getDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getdeploymentresponse.html">GetDeploymentResponse</a></span> *CodeDeployClient::<span class="name">getDeployment</span>(const <span class="type"><a href="qtaws-codedeploy-getdeploymentrequest.html">GetDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getdeploymentresponse.html">GetDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a</p>
+<!-- @@@getDeployment -->
+<!-- $$$getDeploymentConfig[overload1]$$$getDeploymentConfigconstGetDeploymentConfigRequest& -->
+<h3 class="fn" id="getDeploymentConfig"><a name="getDeploymentConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getdeploymentconfigresponse.html">GetDeploymentConfigResponse</a></span> *CodeDeployClient::<span class="name">getDeploymentConfig</span>(const <span class="type"><a href="qtaws-codedeploy-getdeploymentconfigrequest.html">GetDeploymentConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getdeploymentconfigresponse.html">GetDeploymentConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a deployment</p>
+<!-- @@@getDeploymentConfig -->
+<!-- $$$getDeploymentGroup[overload1]$$$getDeploymentGroupconstGetDeploymentGroupRequest& -->
+<h3 class="fn" id="getDeploymentGroup"><a name="getDeploymentGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getdeploymentgroupresponse.html">GetDeploymentGroupResponse</a></span> *CodeDeployClient::<span class="name">getDeploymentGroup</span>(const <span class="type"><a href="qtaws-codedeploy-getdeploymentgrouprequest.html">GetDeploymentGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getdeploymentgroupresponse.html">GetDeploymentGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a deployment</p>
+<!-- @@@getDeploymentGroup -->
+<!-- $$$getDeploymentInstance[overload1]$$$getDeploymentInstanceconstGetDeploymentInstanceRequest& -->
+<h3 class="fn" id="getDeploymentInstance"><a name="getDeploymentInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getdeploymentinstanceresponse.html">GetDeploymentInstanceResponse</a></span> *CodeDeployClient::<span class="name">getDeploymentInstance</span>(const <span class="type"><a href="qtaws-codedeploy-getdeploymentinstancerequest.html">GetDeploymentInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getdeploymentinstanceresponse.html">GetDeploymentInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an instance as part of a</p>
+<!-- @@@getDeploymentInstance -->
+<!-- $$$getOnPremisesInstance[overload1]$$$getOnPremisesInstanceconstGetOnPremisesInstanceRequest& -->
+<h3 class="fn" id="getOnPremisesInstance"><a name="getOnPremisesInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-getonpremisesinstanceresponse.html">GetOnPremisesInstanceResponse</a></span> *CodeDeployClient::<span class="name">getOnPremisesInstance</span>(const <span class="type"><a href="qtaws-codedeploy-getonpremisesinstancerequest.html">GetOnPremisesInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-getonpremisesinstanceresponse.html">GetOnPremisesInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about an on-premises</p>
+<!-- @@@getOnPremisesInstance -->
+<!-- $$$listApplicationRevisions[overload1]$$$listApplicationRevisionsconstListApplicationRevisionsRequest& -->
+<h3 class="fn" id="listApplicationRevisions"><a name="listApplicationRevisions"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listapplicationrevisionsresponse.html">ListApplicationRevisionsResponse</a></span> *CodeDeployClient::<span class="name">listApplicationRevisions</span>(const <span class="type"><a href="qtaws-codedeploy-listapplicationrevisionsrequest.html">ListApplicationRevisionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listapplicationrevisionsresponse.html">ListApplicationRevisionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about revisions for an</p>
+<!-- @@@listApplicationRevisions -->
+<!-- $$$listApplications[overload1]$$$listApplicationsconstListApplicationsRequest& -->
+<h3 class="fn" id="listApplications"><a name="listApplications"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listapplicationsresponse.html">ListApplicationsResponse</a></span> *CodeDeployClient::<span class="name">listApplications</span>(const <span class="type"><a href="qtaws-codedeploy-listapplicationsrequest.html">ListApplicationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listapplicationsresponse.html">ListApplicationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the applications registered with the applicable IAM user or AWS</p>
+<!-- @@@listApplications -->
+<!-- $$$listDeploymentConfigs[overload1]$$$listDeploymentConfigsconstListDeploymentConfigsRequest& -->
+<h3 class="fn" id="listDeploymentConfigs"><a name="listDeploymentConfigs"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listdeploymentconfigsresponse.html">ListDeploymentConfigsResponse</a></span> *CodeDeployClient::<span class="name">listDeploymentConfigs</span>(const <span class="type"><a href="qtaws-codedeploy-listdeploymentconfigsrequest.html">ListDeploymentConfigsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listdeploymentconfigsresponse.html">ListDeploymentConfigsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the deployment configurations with the applicable IAM user or AWS</p>
+<!-- @@@listDeploymentConfigs -->
+<!-- $$$listDeploymentGroups[overload1]$$$listDeploymentGroupsconstListDeploymentGroupsRequest& -->
+<h3 class="fn" id="listDeploymentGroups"><a name="listDeploymentGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listdeploymentgroupsresponse.html">ListDeploymentGroupsResponse</a></span> *CodeDeployClient::<span class="name">listDeploymentGroups</span>(const <span class="type"><a href="qtaws-codedeploy-listdeploymentgroupsrequest.html">ListDeploymentGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listdeploymentgroupsresponse.html">ListDeploymentGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the deployment groups for an application registered with the applicable IAM user or AWS</p>
+<!-- @@@listDeploymentGroups -->
+<!-- $$$listDeploymentInstances[overload1]$$$listDeploymentInstancesconstListDeploymentInstancesRequest& -->
+<h3 class="fn" id="listDeploymentInstances"><a name="listDeploymentInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listdeploymentinstancesresponse.html">ListDeploymentInstancesResponse</a></span> *CodeDeployClient::<span class="name">listDeploymentInstances</span>(const <span class="type"><a href="qtaws-codedeploy-listdeploymentinstancesrequest.html">ListDeploymentInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listdeploymentinstancesresponse.html">ListDeploymentInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the instance for a deployment associated with the applicable IAM user or AWS</p>
+<!-- @@@listDeploymentInstances -->
+<!-- $$$listDeployments[overload1]$$$listDeploymentsconstListDeploymentsRequest& -->
+<h3 class="fn" id="listDeployments"><a name="listDeployments"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listdeploymentsresponse.html">ListDeploymentsResponse</a></span> *CodeDeployClient::<span class="name">listDeployments</span>(const <span class="type"><a href="qtaws-codedeploy-listdeploymentsrequest.html">ListDeploymentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listdeploymentsresponse.html">ListDeploymentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS</p>
+<!-- @@@listDeployments -->
+<!-- $$$listGitHubAccountTokenNames[overload1]$$$listGitHubAccountTokenNamesconstListGitHubAccountTokenNamesRequest& -->
+<h3 class="fn" id="listGitHubAccountTokenNames"><a name="listGitHubAccountTokenNames"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listgithubaccounttokennamesresponse.html">ListGitHubAccountTokenNamesResponse</a></span> *CodeDeployClient::<span class="name">listGitHubAccountTokenNames</span>(const <span class="type"><a href="qtaws-codedeploy-listgithubaccounttokennamesrequest.html">ListGitHubAccountTokenNamesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listgithubaccounttokennamesresponse.html">ListGitHubAccountTokenNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the names of stored connections to GitHub</p>
+<!-- @@@listGitHubAccountTokenNames -->
+<!-- $$$listOnPremisesInstances[overload1]$$$listOnPremisesInstancesconstListOnPremisesInstancesRequest& -->
+<h3 class="fn" id="listOnPremisesInstances"><a name="listOnPremisesInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-listonpremisesinstancesresponse.html">ListOnPremisesInstancesResponse</a></span> *CodeDeployClient::<span class="name">listOnPremisesInstances</span>(const <span class="type"><a href="qtaws-codedeploy-listonpremisesinstancesrequest.html">ListOnPremisesInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-listonpremisesinstancesresponse.html">ListOnPremisesInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of names for one or more on-premises</p>
+<p>instances&gt;</p>
+<p>Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only registered or deregistered on-premises instance names, use the registration status</p>
+<!-- @@@listOnPremisesInstances -->
+<!-- $$$putLifecycleEventHookExecutionStatus[overload1]$$$putLifecycleEventHookExecutionStatusconstPutLifecycleEventHookExecutionStatusRequest& -->
+<h3 class="fn" id="putLifecycleEventHookExecutionStatus"><a name="putLifecycleEventHookExecutionStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-putlifecycleeventhookexecutionstatusresponse.html">PutLifecycleEventHookExecutionStatusResponse</a></span> *CodeDeployClient::<span class="name">putLifecycleEventHookExecutionStatus</span>(const <span class="type"><a href="qtaws-codedeploy-putlifecycleeventhookexecutionstatusrequest.html">PutLifecycleEventHookExecutionStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-putlifecycleeventhookexecutionstatusresponse.html">PutLifecycleEventHookExecutionStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the result of a Lambda validation function. The function validates one or both lifecycle events (&lt;code&gt;BeforeAllowTraffic&lt;/code&gt; and &lt;code&gt;AfterAllowTraffic&lt;/code&gt;) and returns &lt;code&gt;Succeeded&lt;/code&gt; or</p>
+<!-- @@@putLifecycleEventHookExecutionStatus -->
+<!-- $$$registerApplicationRevision[overload1]$$$registerApplicationRevisionconstRegisterApplicationRevisionRequest& -->
+<h3 class="fn" id="registerApplicationRevision"><a name="registerApplicationRevision"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-registerapplicationrevisionresponse.html">RegisterApplicationRevisionResponse</a></span> *CodeDeployClient::<span class="name">registerApplicationRevision</span>(const <span class="type"><a href="qtaws-codedeploy-registerapplicationrevisionrequest.html">RegisterApplicationRevisionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-registerapplicationrevisionresponse.html">RegisterApplicationRevisionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers with AWS <a href="qtaws-codedeploy.html">CodeDeploy</a> a revision for the specified</p>
+<!-- @@@registerApplicationRevision -->
+<!-- $$$registerOnPremisesInstance[overload1]$$$registerOnPremisesInstanceconstRegisterOnPremisesInstanceRequest& -->
+<h3 class="fn" id="registerOnPremisesInstance"><a name="registerOnPremisesInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-registeronpremisesinstanceresponse.html">RegisterOnPremisesInstanceResponse</a></span> *CodeDeployClient::<span class="name">registerOnPremisesInstance</span>(const <span class="type"><a href="qtaws-codedeploy-registeronpremisesinstancerequest.html">RegisterOnPremisesInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-registeronpremisesinstanceresponse.html">RegisterOnPremisesInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers an on-premises</p>
+<p>instance&gt; &lt;note&gt;</p>
+<p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use</p>
+<!-- @@@registerOnPremisesInstance -->
+<!-- $$$removeTagsFromOnPremisesInstances[overload1]$$$removeTagsFromOnPremisesInstancesconstRemoveTagsFromOnPremisesInstancesRequest& -->
+<h3 class="fn" id="removeTagsFromOnPremisesInstances"><a name="removeTagsFromOnPremisesInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-removetagsfromonpremisesinstancesresponse.html">RemoveTagsFromOnPremisesInstancesResponse</a></span> *CodeDeployClient::<span class="name">removeTagsFromOnPremisesInstances</span>(const <span class="type"><a href="qtaws-codedeploy-removetagsfromonpremisesinstancesrequest.html">RemoveTagsFromOnPremisesInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-removetagsfromonpremisesinstancesresponse.html">RemoveTagsFromOnPremisesInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes one or more tags from one or more on-premises</p>
+<!-- @@@removeTagsFromOnPremisesInstances -->
+<!-- $$$skipWaitTimeForInstanceTermination[overload1]$$$skipWaitTimeForInstanceTerminationconstSkipWaitTimeForInstanceTerminationRequest& -->
+<h3 class="fn" id="skipWaitTimeForInstanceTermination"><a name="skipWaitTimeForInstanceTermination"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-skipwaittimeforinstanceterminationresponse.html">SkipWaitTimeForInstanceTerminationResponse</a></span> *CodeDeployClient::<span class="name">skipWaitTimeForInstanceTermination</span>(const <span class="type"><a href="qtaws-codedeploy-skipwaittimeforinstanceterminationrequest.html">SkipWaitTimeForInstanceTerminationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-skipwaittimeforinstanceterminationresponse.html">SkipWaitTimeForInstanceTerminationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is</p>
+<!-- @@@skipWaitTimeForInstanceTermination -->
+<!-- $$$stopDeployment[overload1]$$$stopDeploymentconstStopDeploymentRequest& -->
+<h3 class="fn" id="stopDeployment"><a name="stopDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-stopdeploymentresponse.html">StopDeploymentResponse</a></span> *CodeDeployClient::<span class="name">stopDeployment</span>(const <span class="type"><a href="qtaws-codedeploy-stopdeploymentrequest.html">StopDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-stopdeploymentresponse.html">StopDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attempts to stop an ongoing</p>
+<!-- @@@stopDeployment -->
+<!-- $$$updateApplication[overload1]$$$updateApplicationconstUpdateApplicationRequest& -->
+<h3 class="fn" id="updateApplication"><a name="updateApplication"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-updateapplicationresponse.html">UpdateApplicationResponse</a></span> *CodeDeployClient::<span class="name">updateApplication</span>(const <span class="type"><a href="qtaws-codedeploy-updateapplicationrequest.html">UpdateApplicationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-updateapplicationresponse.html">UpdateApplicationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes the name of an</p>
+<!-- @@@updateApplication -->
+<!-- $$$updateDeploymentGroup[overload1]$$$updateDeploymentGroupconstUpdateDeploymentGroupRequest& -->
+<h3 class="fn" id="updateDeploymentGroup"><a name="updateDeploymentGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-codedeploy-updatedeploymentgroupresponse.html">UpdateDeploymentGroupResponse</a></span> *CodeDeployClient::<span class="name">updateDeploymentGroup</span>(const <span class="type"><a href="qtaws-codedeploy-updatedeploymentgrouprequest.html">UpdateDeploymentGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codedeploy-codedeployclient.html">CodeDeployClient</a> service, and returns a pointer to an <a href="qtaws-codedeploy-updatedeploymentgroupresponse.html">UpdateDeploymentGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about a deployment</p>
+<!-- @@@updateDeploymentGroup -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

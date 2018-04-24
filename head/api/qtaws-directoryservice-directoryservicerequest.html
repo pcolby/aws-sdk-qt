@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- directoryservicerequest.cpp -->
+  <title>DirectoryServiceRequest Class | DirectoryService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdirectoryservice-index.html">DirectoryService</a></li>
+<li><a href="qtawsdirectoryservice-module.html">C++ Classes</a></li>
+<li>DirectoryServiceRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DirectoryServiceRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-directoryservice-directoryservicerequest.html">QtAws::DirectoryService::DirectoryServiceRequest</a>)<br/></span>
+<!-- $$$DirectoryServiceRequest-brief -->
+<p>The <a href="qtaws-directoryservice-directoryservicerequest.html">DirectoryServiceRequest</a> class provides an interface for <a href="qtaws-directoryservice.html">DirectoryService</a> requests. <a href="#details">More...</a></p>
+<!-- @@@DirectoryServiceRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DirectoryServiceRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-directoryservice-addiproutesrequest.html">QtAws::DirectoryService::AddIpRoutesRequest</a>, <a href="qtaws-directoryservice-addtagstoresourcerequest.html">QtAws::DirectoryService::AddTagsToResourceRequest</a>, <a href="qtaws-directoryservice-cancelschemaextensionrequest.html">QtAws::DirectoryService::CancelSchemaExtensionRequest</a>, <a href="qtaws-directoryservice-connectdirectoryrequest.html">QtAws::DirectoryService::ConnectDirectoryRequest</a>, <a href="qtaws-directoryservice-createaliasrequest.html">QtAws::DirectoryService::CreateAliasRequest</a>, <a href="qtaws-directoryservice-createcomputerrequest.html">QtAws::DirectoryService::CreateComputerRequest</a>, <a href="qtaws-directoryservice-createconditionalforwarderrequest.html">QtAws::DirectoryService::CreateConditionalForwarderRequest</a>, <a href="qtaws-directoryservice-createdirectoryrequest.html">QtAws::DirectoryService::CreateDirectoryRequest</a>, <a href="qtaws-directoryservice-createmicrosoftadrequest.html">QtAws::DirectoryService::CreateMicrosoftADRequest</a>, <a href="qtaws-directoryservice-createsnapshotrequest.html">QtAws::DirectoryService::CreateSnapshotRequest</a>, <a href="qtaws-directoryservice-createtrustrequest.html">QtAws::DirectoryService::CreateTrustRequest</a>, <a href="qtaws-directoryservice-deleteconditionalforwarderrequest.html">QtAws::DirectoryService::DeleteConditionalForwarderRequest</a>, <a href="qtaws-directoryservice-deletedirectoryrequest.html">QtAws::DirectoryService::DeleteDirectoryRequest</a>, <a href="qtaws-directoryservice-deletesnapshotrequest.html">QtAws::DirectoryService::DeleteSnapshotRequest</a>, <a href="qtaws-directoryservice-deletetrustrequest.html">QtAws::DirectoryService::DeleteTrustRequest</a>, <a href="qtaws-directoryservice-deregistereventtopicrequest.html">QtAws::DirectoryService::DeregisterEventTopicRequest</a>, <a href="qtaws-directoryservice-describeconditionalforwardersrequest.html">QtAws::DirectoryService::DescribeConditionalForwardersRequest</a>, <a href="qtaws-directoryservice-describedirectoriesrequest.html">QtAws::DirectoryService::DescribeDirectoriesRequest</a>, <a href="qtaws-directoryservice-describedomaincontrollersrequest.html">QtAws::DirectoryService::DescribeDomainControllersRequest</a>, <a href="qtaws-directoryservice-describeeventtopicsrequest.html">QtAws::DirectoryService::DescribeEventTopicsRequest</a>, <a href="qtaws-directoryservice-describesnapshotsrequest.html">QtAws::DirectoryService::DescribeSnapshotsRequest</a>, <a href="qtaws-directoryservice-describetrustsrequest.html">QtAws::DirectoryService::DescribeTrustsRequest</a>, <a href="qtaws-directoryservice-disableradiusrequest.html">QtAws::DirectoryService::DisableRadiusRequest</a>, <a href="qtaws-directoryservice-disablessorequest.html">QtAws::DirectoryService::DisableSsoRequest</a>, <a href="qtaws-directoryservice-enableradiusrequest.html">QtAws::DirectoryService::EnableRadiusRequest</a>, <a href="qtaws-directoryservice-enablessorequest.html">QtAws::DirectoryService::EnableSsoRequest</a>, <a href="qtaws-directoryservice-getdirectorylimitsrequest.html">QtAws::DirectoryService::GetDirectoryLimitsRequest</a>, <a href="qtaws-directoryservice-getsnapshotlimitsrequest.html">QtAws::DirectoryService::GetSnapshotLimitsRequest</a>, <a href="qtaws-directoryservice-listiproutesrequest.html">QtAws::DirectoryService::ListIpRoutesRequest</a>, <a href="qtaws-directoryservice-listschemaextensionsrequest.html">QtAws::DirectoryService::ListSchemaExtensionsRequest</a>, <a href="qtaws-directoryservice-listtagsforresourcerequest.html">QtAws::DirectoryService::ListTagsForResourceRequest</a>, <a href="qtaws-directoryservice-registereventtopicrequest.html">QtAws::DirectoryService::RegisterEventTopicRequest</a>, <a href="qtaws-directoryservice-removeiproutesrequest.html">QtAws::DirectoryService::RemoveIpRoutesRequest</a>, <a href="qtaws-directoryservice-removetagsfromresourcerequest.html">QtAws::DirectoryService::RemoveTagsFromResourceRequest</a>, <a href="qtaws-directoryservice-restorefromsnapshotrequest.html">QtAws::DirectoryService::RestoreFromSnapshotRequest</a>, <a href="qtaws-directoryservice-startschemaextensionrequest.html">QtAws::DirectoryService::StartSchemaExtensionRequest</a>, <a href="qtaws-directoryservice-updateconditionalforwarderrequest.html">QtAws::DirectoryService::UpdateConditionalForwarderRequest</a>, <a href="qtaws-directoryservice-updatenumberofdomaincontrollersrequest.html">QtAws::DirectoryService::UpdateNumberOfDomainControllersRequest</a>, <a href="qtaws-directoryservice-updateradiusrequest.html">QtAws::DirectoryService::UpdateRadiusRequest</a>, and <a href="qtaws-directoryservice-verifytrustrequest.html">QtAws::DirectoryService::VerifyTrustRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-directoryservice-directoryservicerequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#Action-enum">Action</a></b> { AddIpRoutesAction, AddTagsToResourceAction, CancelSchemaExtensionAction, ConnectDirectoryAction, ..., VerifyTrustAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest">DirectoryServiceRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest-1">DirectoryServiceRequest</a></b>(const DirectoryServiceRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DirectoryServiceRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#operator-eq">operator=</a></b>(const DirectoryServiceRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#operator-eq-eq">operator==</a></b>(const DirectoryServiceRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest-2">DirectoryServiceRequest</a></b>(DirectoryServiceRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directoryservice-directoryservicerequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DirectoryServiceRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-directoryservice-directoryservicerequest.html">DirectoryServiceRequest</a> class provides an interface for <a href="qtaws-directoryservice.html">DirectoryService</a> requests.</p>
+</div>
+<!-- @@@DirectoryServiceRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddIpRoutesAction$$$AddTagsToResourceAction$$$CancelSchemaExtensionAction$$$ConnectDirectoryAction$$$CreateAliasAction$$$CreateComputerAction$$$CreateConditionalForwarderAction$$$CreateDirectoryAction$$$CreateMicrosoftADAction$$$CreateSnapshotAction$$$CreateTrustAction$$$DeleteConditionalForwarderAction$$$DeleteDirectoryAction$$$DeleteSnapshotAction$$$DeleteTrustAction$$$DeregisterEventTopicAction$$$DescribeConditionalForwardersAction$$$DescribeDirectoriesAction$$$DescribeDomainControllersAction$$$DescribeEventTopicsAction$$$DescribeSnapshotsAction$$$DescribeTrustsAction$$$DisableRadiusAction$$$DisableSsoAction$$$EnableRadiusAction$$$EnableSsoAction$$$GetDirectoryLimitsAction$$$GetSnapshotLimitsAction$$$ListIpRoutesAction$$$ListSchemaExtensionsAction$$$ListTagsForResourceAction$$$RegisterEventTopicAction$$$RemoveIpRoutesAction$$$RemoveTagsFromResourceAction$$$RestoreFromSnapshotAction$$$StartSchemaExtensionAction$$$UpdateConditionalForwarderAction$$$UpdateNumberOfDomainControllersAction$$$UpdateRadiusAction$$$VerifyTrustAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum DirectoryServiceRequest::<span class="name">Action</span><br/>flags DirectoryServiceRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-directoryservice.html">DirectoryService</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::AddIpRoutesAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> AddIpRoutes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::AddTagsToResourceAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> AddTagsToResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CancelSchemaExtensionAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CancelSchemaExtension action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::ConnectDirectoryAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> ConnectDirectory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateAliasAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateAlias action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateComputerAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateComputer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateConditionalForwarderAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateConditionalForwarder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateDirectoryAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateDirectory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateMicrosoftADAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateMicrosoftAD action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateSnapshotAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::CreateTrustAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> CreateTrust action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DeleteConditionalForwarderAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DeleteConditionalForwarder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DeleteDirectoryAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DeleteDirectory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DeleteSnapshotAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DeleteSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DeleteTrustAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DeleteTrust action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DeregisterEventTopicAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DeregisterEventTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeConditionalForwardersAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeConditionalForwarders action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeDirectoriesAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeDirectories action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeDomainControllersAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeDomainControllers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeEventTopicsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeEventTopics action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeSnapshotsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeSnapshots action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DescribeTrustsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DescribeTrusts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DisableRadiusAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DisableRadius action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::DisableSsoAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> DisableSso action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::EnableRadiusAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> EnableRadius action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::EnableSsoAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> EnableSso action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::GetDirectoryLimitsAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> GetDirectoryLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::GetSnapshotLimitsAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> GetSnapshotLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::ListIpRoutesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> ListIpRoutes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::ListSchemaExtensionsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> ListSchemaExtensions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::RegisterEventTopicAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> RegisterEventTopic action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::RemoveIpRoutesAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> RemoveIpRoutes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::RemoveTagsFromResourceAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> RemoveTagsFromResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::RestoreFromSnapshotAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> RestoreFromSnapshot action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::StartSchemaExtensionAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> StartSchemaExtension action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::UpdateConditionalForwarderAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> UpdateConditionalForwarder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::UpdateNumberOfDomainControllersAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> UpdateNumberOfDomainControllers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::UpdateRadiusAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> UpdateRadius action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::DirectoryService::DirectoryServiceRequest::VerifyTrustAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-directoryservice.html">DirectoryService</a> VerifyTrust action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DirectoryServiceRequest[overload1]$$$DirectoryServiceRequestconstAction -->
+<h3 class="fn" id="DirectoryServiceRequest"><a name="DirectoryServiceRequest"></a>DirectoryServiceRequest::<span class="name">DirectoryServiceRequest</span>(const <span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-directoryservice-directoryservicerequest.html">DirectoryServiceRequest</a> object for <a href="qtaws-directoryservice.html">DirectoryService</a> <i>action</i>.</p>
+<!-- @@@DirectoryServiceRequest -->
+<!-- $$$DirectoryServiceRequest$$$DirectoryServiceRequestconstDirectoryServiceRequest& -->
+<h3 class="fn" id="DirectoryServiceRequest-1"><a name="DirectoryServiceRequest-1"></a>DirectoryServiceRequest::<span class="name">DirectoryServiceRequest</span>(const <span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest">DirectoryServiceRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@DirectoryServiceRequest -->
+<!-- $$$DirectoryServiceRequest$$$DirectoryServiceRequestDirectoryServiceRequestPrivate*const -->
+<h3 class="fn" id="DirectoryServiceRequest-2"><a name="DirectoryServiceRequest-2"></a><code>[protected] </code>DirectoryServiceRequest::<span class="name">DirectoryServiceRequest</span>(<span class="type">DirectoryServiceRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-directoryservice-directoryservicerequest.html">DirectoryServiceRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from DirectoryServiceRequestPrivate.</p>
+<!-- @@@DirectoryServiceRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#Action-enum">Action</a></span> DirectoryServiceRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-directoryservice.html">DirectoryService</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> DirectoryServiceRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-directoryservice.html">DirectoryService</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> DirectoryServiceRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-directoryservice.html">DirectoryService</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> DirectoryServiceRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> DirectoryServiceRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> DirectoryServiceRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;DirectoryServiceRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> DirectoryServiceRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-directoryservice.html">DirectoryService</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> DirectoryServiceRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-directoryservice.html">DirectoryService</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> DirectoryServiceRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> DirectoryServiceRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-directoryservice-directoryservicerequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> DirectoryServiceRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-directoryservice.html">DirectoryService</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-directoryservice.html">DirectoryService</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-directoryservice-directoryservicerequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constDirectoryServiceRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest">DirectoryServiceRequest</a></span> &amp;DirectoryServiceRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest">DirectoryServiceRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-directoryservice-directoryservicerequest.html">DirectoryServiceRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constDirectoryServiceRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> DirectoryServiceRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-directoryservice-directoryservicerequest.html#DirectoryServiceRequest">DirectoryServiceRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

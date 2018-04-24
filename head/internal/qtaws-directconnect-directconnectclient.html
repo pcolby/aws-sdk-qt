@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- directconnectclient.cpp -->
+  <title>DirectConnectClient Class | DirectConnect</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdirectconnect-index.html">DirectConnect</a></li>
+<li><a href="qtawsdirectconnect-module.html">C++ Classes</a></li>
+<li>DirectConnectClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DirectConnectClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-directconnect-directconnectclient.html">QtAws::DirectConnect::DirectConnectClient</a>)<br/></span>
+<!-- $$$DirectConnectClient-brief -->
+<p>The <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> class provides access to the AWS Direct Connect service. <a href="#details">More...</a></p>
+<!-- @@@DirectConnectClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DirectConnectClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-directconnect-directconnectclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#DirectConnectClient">DirectConnectClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#DirectConnectClient-1">DirectConnectClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AllocateConnectionOnInterconnectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#allocateConnectionOnInterconnect">allocateConnectionOnInterconnect</a></b>(const AllocateConnectionOnInterconnectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AllocateHostedConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#allocateHostedConnection">allocateHostedConnection</a></b>(const AllocateHostedConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AllocatePrivateVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#allocatePrivateVirtualInterface">allocatePrivateVirtualInterface</a></b>(const AllocatePrivateVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AllocatePublicVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#allocatePublicVirtualInterface">allocatePublicVirtualInterface</a></b>(const AllocatePublicVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateConnectionWithLagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#associateConnectionWithLag">associateConnectionWithLag</a></b>(const AssociateConnectionWithLagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateHostedConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#associateHostedConnection">associateHostedConnection</a></b>(const AssociateHostedConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#associateVirtualInterface">associateVirtualInterface</a></b>(const AssociateVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#confirmConnection">confirmConnection</a></b>(const ConfirmConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmPrivateVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#confirmPrivateVirtualInterface">confirmPrivateVirtualInterface</a></b>(const ConfirmPrivateVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ConfirmPublicVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#confirmPublicVirtualInterface">confirmPublicVirtualInterface</a></b>(const ConfirmPublicVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBGPPeerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createBGPPeer">createBGPPeer</a></b>(const CreateBGPPeerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createConnection">createConnection</a></b>(const CreateConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDirectConnectGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createDirectConnectGateway">createDirectConnectGateway</a></b>(const CreateDirectConnectGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDirectConnectGatewayAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createDirectConnectGatewayAssociation">createDirectConnectGatewayAssociation</a></b>(const CreateDirectConnectGatewayAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInterconnectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createInterconnect">createInterconnect</a></b>(const CreateInterconnectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createLag">createLag</a></b>(const CreateLagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePrivateVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createPrivateVirtualInterface">createPrivateVirtualInterface</a></b>(const CreatePrivateVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePublicVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#createPublicVirtualInterface">createPublicVirtualInterface</a></b>(const CreatePublicVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBGPPeerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteBGPPeer">deleteBGPPeer</a></b>(const DeleteBGPPeerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConnectionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteConnection">deleteConnection</a></b>(const DeleteConnectionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDirectConnectGatewayResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteDirectConnectGateway">deleteDirectConnectGateway</a></b>(const DeleteDirectConnectGatewayRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDirectConnectGatewayAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteDirectConnectGatewayAssociation">deleteDirectConnectGatewayAssociation</a></b>(const DeleteDirectConnectGatewayAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInterconnectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteInterconnect">deleteInterconnect</a></b>(const DeleteInterconnectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteLag">deleteLag</a></b>(const DeleteLagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVirtualInterfaceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#deleteVirtualInterface">deleteVirtualInterface</a></b>(const DeleteVirtualInterfaceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConnectionLoaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeConnectionLoa">describeConnectionLoa</a></b>(const DescribeConnectionLoaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConnectionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeConnections">describeConnections</a></b>(const DescribeConnectionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConnectionsOnInterconnectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeConnectionsOnInterconnect">describeConnectionsOnInterconnect</a></b>(const DescribeConnectionsOnInterconnectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDirectConnectGatewayAssociationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeDirectConnectGatewayAssociations">describeDirectConnectGatewayAssociations</a></b>(const DescribeDirectConnectGatewayAssociationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDirectConnectGatewayAttachmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeDirectConnectGatewayAttachments">describeDirectConnectGatewayAttachments</a></b>(const DescribeDirectConnectGatewayAttachmentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDirectConnectGatewaysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeDirectConnectGateways">describeDirectConnectGateways</a></b>(const DescribeDirectConnectGatewaysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeHostedConnectionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeHostedConnections">describeHostedConnections</a></b>(const DescribeHostedConnectionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInterconnectLoaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeInterconnectLoa">describeInterconnectLoa</a></b>(const DescribeInterconnectLoaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInterconnectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeInterconnects">describeInterconnects</a></b>(const DescribeInterconnectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeLags">describeLags</a></b>(const DescribeLagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLoaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeLoa">describeLoa</a></b>(const DescribeLoaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLocationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeLocations">describeLocations</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeTags">describeTags</a></b>(const DescribeTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVirtualGatewaysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeVirtualGateways">describeVirtualGateways</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVirtualInterfacesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#describeVirtualInterfaces">describeVirtualInterfaces</a></b>(const DescribeVirtualInterfacesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateConnectionFromLagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#disassociateConnectionFromLag">disassociateConnectionFromLag</a></b>(const DisassociateConnectionFromLagRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateLagResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-directconnect-directconnectclient.html#updateLag">updateLag</a></b>(const UpdateLagRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DirectConnectClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> class provides access to the AWS Direct Connect service.</p>
+<p>AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection in place, you can create virtual interfaces directly to the AWS cloud (for example, to Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Simple Storage Service (Amazon S3)) and to Amazon Virtual Private Cloud (Amazon VPC), bypassing Internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the region it is associated with, as well as access to other US regions. For example, you can provision a single connection to any AWS Direct Connect location in the US and use it to access public AWS services in all US Regions and AWS GovCloud</p>
+</div>
+<!-- @@@DirectConnectClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DirectConnectClient[overload1]$$$DirectConnectClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DirectConnectClient"><a name="DirectConnectClient"></a>DirectConnectClient::<span class="name">DirectConnectClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@DirectConnectClient -->
+<!-- $$$DirectConnectClient$$$DirectConnectClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DirectConnectClient-1"><a name="DirectConnectClient-1"></a>DirectConnectClient::<span class="name">DirectConnectClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-directconnect-directconnectclient.html#DirectConnectClient">DirectConnectClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@DirectConnectClient -->
+<!-- $$$allocateConnectionOnInterconnect[overload1]$$$allocateConnectionOnInterconnectconstAllocateConnectionOnInterconnectRequest& -->
+<h3 class="fn" id="allocateConnectionOnInterconnect"><a name="allocateConnectionOnInterconnect"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-allocateconnectiononinterconnectresponse.html">AllocateConnectionOnInterconnectResponse</a></span> *DirectConnectClient::<span class="name">allocateConnectionOnInterconnect</span>(const <span class="type"><a href="qtaws-directconnect-allocateconnectiononinterconnectrequest.html">AllocateConnectionOnInterconnectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-allocateconnectiononinterconnectresponse.html">AllocateConnectionOnInterconnectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated in favor of</p>
+<p>&lt;a&gt;AllocateHostedConnection&lt;/a&gt;&gt;</p>
+<p>Creates a hosted connection on an</p>
+<p>interconnect&gt;</p>
+<p>Allocates a VLAN number and a specified amount of bandwidth for use by a hosted connection on the given</p>
+<p>interconnect&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@allocateConnectionOnInterconnect -->
+<!-- $$$allocateHostedConnection[overload1]$$$allocateHostedConnectionconstAllocateHostedConnectionRequest& -->
+<h3 class="fn" id="allocateHostedConnection"><a name="allocateHostedConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-allocatehostedconnectionresponse.html">AllocateHostedConnectionResponse</a></span> *DirectConnectClient::<span class="name">allocateHostedConnection</span>(const <span class="type"><a href="qtaws-directconnect-allocatehostedconnectionrequest.html">AllocateHostedConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-allocatehostedconnectionresponse.html">AllocateHostedConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a hosted connection on an interconnect or a link aggregation group</p>
+<p>(LAG)&gt;</p>
+<p>Allocates a VLAN number and a specified amount of bandwidth for use by a hosted connection on the given interconnect or</p>
+<p>LAG&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@allocateHostedConnection -->
+<!-- $$$allocatePrivateVirtualInterface[overload1]$$$allocatePrivateVirtualInterfaceconstAllocatePrivateVirtualInterfaceRequest& -->
+<h3 class="fn" id="allocatePrivateVirtualInterface"><a name="allocatePrivateVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-allocateprivatevirtualinterfaceresponse.html">AllocatePrivateVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">allocatePrivateVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-allocateprivatevirtualinterfacerequest.html">AllocatePrivateVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-allocateprivatevirtualinterfaceresponse.html">AllocatePrivateVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provisions a private virtual interface to be owned by another AWS</p>
+<p>customer&gt;</p>
+<p>Virtual interfaces created using this action must be confirmed by the virtual interface owner by using the &lt;a&gt;ConfirmPrivateVirtualInterface&lt;/a&gt; action. Until then, the virtual interface will be in 'Confirming' state, and will not be available for handling</p>
+<!-- @@@allocatePrivateVirtualInterface -->
+<!-- $$$allocatePublicVirtualInterface[overload1]$$$allocatePublicVirtualInterfaceconstAllocatePublicVirtualInterfaceRequest& -->
+<h3 class="fn" id="allocatePublicVirtualInterface"><a name="allocatePublicVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-allocatepublicvirtualinterfaceresponse.html">AllocatePublicVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">allocatePublicVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-allocatepublicvirtualinterfacerequest.html">AllocatePublicVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-allocatepublicvirtualinterfaceresponse.html">AllocatePublicVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provisions a public virtual interface to be owned by a different</p>
+<p>customer&gt;</p>
+<p>The owner of a connection calls this function to provision a public virtual interface which will be owned by another AWS</p>
+<p>customer&gt;</p>
+<p>Virtual interfaces created using this function must be confirmed by the virtual interface owner by calling ConfirmPublicVirtualInterface. Until this step has been completed, the virtual interface will be in 'Confirming' state, and will not be available for handling</p>
+<p>traffic&gt;</p>
+<p>When creating an IPv6 public virtual interface (addressFamily is 'ipv6'), the customer and amazon address fields should be left blank to use auto-assigned IPv6 space. Custom IPv6 Addresses are currently not</p>
+<!-- @@@allocatePublicVirtualInterface -->
+<!-- $$$associateConnectionWithLag[overload1]$$$associateConnectionWithLagconstAssociateConnectionWithLagRequest& -->
+<h3 class="fn" id="associateConnectionWithLag"><a name="associateConnectionWithLag"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-associateconnectionwithlagresponse.html">AssociateConnectionWithLagResponse</a></span> *DirectConnectClient::<span class="name">associateConnectionWithLag</span>(const <span class="type"><a href="qtaws-directconnect-associateconnectionwithlagrequest.html">AssociateConnectionWithLagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-associateconnectionwithlagresponse.html">AssociateConnectionWithLagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates an existing connection with a link aggregation group (LAG). The connection is interrupted and re-established as a member of the LAG (connectivity to AWS will be interrupted). The connection must be hosted on the same AWS Direct Connect endpoint as the LAG, and its bandwidth must match the bandwidth for the LAG. You can reassociate a connection that's currently associated with a different LAG; however, if removing the connection will cause the original LAG to fall below its setting for minimum number of operational connections, the request</p>
+<p>fails&gt;</p>
+<p>Any virtual interfaces that are directly associated with the connection are automatically re-associated with the LAG. If the connection was originally associated with a different LAG, the virtual interfaces remain associated with the original</p>
+<p>LAG&gt;</p>
+<p>For interconnects, any hosted connections are automatically re-associated with the LAG. If the interconnect was originally associated with a different LAG, the hosted connections remain associated with the original</p>
+<!-- @@@associateConnectionWithLag -->
+<!-- $$$associateHostedConnection[overload1]$$$associateHostedConnectionconstAssociateHostedConnectionRequest& -->
+<h3 class="fn" id="associateHostedConnection"><a name="associateHostedConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-associatehostedconnectionresponse.html">AssociateHostedConnectionResponse</a></span> *DirectConnectClient::<span class="name">associateHostedConnection</span>(const <span class="type"><a href="qtaws-directconnect-associatehostedconnectionrequest.html">AssociateHostedConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-associatehostedconnectionresponse.html">AssociateHostedConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect. If the target interconnect or LAG has an existing hosted connection with a conflicting VLAN number or IP address, the operation fails. This action temporarily interrupts the hosted connection's connectivity to AWS as it is being</p>
+<p>migrated&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@associateHostedConnection -->
+<!-- $$$associateVirtualInterface[overload1]$$$associateVirtualInterfaceconstAssociateVirtualInterfaceRequest& -->
+<h3 class="fn" id="associateVirtualInterface"><a name="associateVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-associatevirtualinterfaceresponse.html">AssociateVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">associateVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-associatevirtualinterfacerequest.html">AssociateVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-associatevirtualinterfaceresponse.html">AssociateVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates a virtual interface with a specified link aggregation group (LAG) or connection. Connectivity to AWS is temporarily interrupted as the virtual interface is being migrated. If the target connection or LAG has an associated virtual interface with a conflicting VLAN number or a conflicting IP address, the operation fails.</p>
+<p>&lt;/p</p>
+<p>Virtual interfaces associated with a hosted connection cannot be associated with a LAG; hosted connections must be migrated along with their virtual interfaces using</p>
+<p>&lt;a&gt;AssociateHostedConnection&lt;/a&gt;&gt;</p>
+<p>In order to reassociate a virtual interface to a new connection or LAG, the requester must own either the virtual interface itself or the connection to which the virtual interface is currently associated. Additionally, the requester must own the connection or LAG to which the virtual interface will be newly</p>
+<!-- @@@associateVirtualInterface -->
+<!-- $$$confirmConnection[overload1]$$$confirmConnectionconstConfirmConnectionRequest& -->
+<h3 class="fn" id="confirmConnection"><a name="confirmConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-confirmconnectionresponse.html">ConfirmConnectionResponse</a></span> *DirectConnectClient::<span class="name">confirmConnection</span>(const <span class="type"><a href="qtaws-directconnect-confirmconnectionrequest.html">ConfirmConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-confirmconnectionresponse.html">ConfirmConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Confirm the creation of a hosted connection on an</p>
+<p>interconnect&gt;</p>
+<p>Upon creation, the hosted connection is initially in the 'Ordering' state, and will remain in this state until the owner calls ConfirmConnection to confirm creation of the hosted</p>
+<!-- @@@confirmConnection -->
+<!-- $$$confirmPrivateVirtualInterface[overload1]$$$confirmPrivateVirtualInterfaceconstConfirmPrivateVirtualInterfaceRequest& -->
+<h3 class="fn" id="confirmPrivateVirtualInterface"><a name="confirmPrivateVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-confirmprivatevirtualinterfaceresponse.html">ConfirmPrivateVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">confirmPrivateVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-confirmprivatevirtualinterfacerequest.html">ConfirmPrivateVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-confirmprivatevirtualinterfaceresponse.html">ConfirmPrivateVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accept ownership of a private virtual interface created by another</p>
+<p>customer&gt;</p>
+<p>After the virtual interface owner calls this function, the virtual interface will be created and attached to the given virtual private gateway or direct connect gateway, and will be available for handling</p>
+<!-- @@@confirmPrivateVirtualInterface -->
+<!-- $$$confirmPublicVirtualInterface[overload1]$$$confirmPublicVirtualInterfaceconstConfirmPublicVirtualInterfaceRequest& -->
+<h3 class="fn" id="confirmPublicVirtualInterface"><a name="confirmPublicVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-confirmpublicvirtualinterfaceresponse.html">ConfirmPublicVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">confirmPublicVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-confirmpublicvirtualinterfacerequest.html">ConfirmPublicVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-confirmpublicvirtualinterfaceresponse.html">ConfirmPublicVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accept ownership of a public virtual interface created by another</p>
+<p>customer&gt;</p>
+<p>After the virtual interface owner calls this function, the specified virtual interface will be created and made available for handling</p>
+<!-- @@@confirmPublicVirtualInterface -->
+<!-- $$$createBGPPeer[overload1]$$$createBGPPeerconstCreateBGPPeerRequest& -->
+<h3 class="fn" id="createBGPPeer"><a name="createBGPPeer"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createbgppeerresponse.html">CreateBGPPeerResponse</a></span> *DirectConnectClient::<span class="name">createBGPPeer</span>(const <span class="type"><a href="qtaws-directconnect-createbgppeerrequest.html">CreateBGPPeerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createbgppeerresponse.html">CreateBGPPeerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new BGP peer on a specified virtual interface. The BGP peer cannot be in the same address family (IPv4/IPv6) of an existing BGP peer on the virtual</p>
+<p>interface&gt;</p>
+<p>You must create a BGP peer for the corresponding address family in order to access AWS resources that also use that address</p>
+<p>family&gt;</p>
+<p>When creating a IPv6 BGP peer, the Amazon address and customer address fields must be left blank. IPv6 addresses are automatically assigned from Amazon's pool of IPv6 addresses; you cannot specify custom IPv6</p>
+<p>addresses&gt;</p>
+<p>For a public virtual interface, the Autonomous System Number (ASN) must be private or already whitelisted for the virtual</p>
+<!-- @@@createBGPPeer -->
+<!-- $$$createConnection[overload1]$$$createConnectionconstCreateConnectionRequest& -->
+<h3 class="fn" id="createConnection"><a name="createConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createconnectionresponse.html">CreateConnectionResponse</a></span> *DirectConnectClient::<span class="name">createConnection</span>(const <span class="type"><a href="qtaws-directconnect-createconnectionrequest.html">CreateConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createconnectionresponse.html">CreateConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new connection between the customer network and a specific AWS Direct Connect</p>
+<p>location&gt;</p>
+<p>A connection links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. An AWS Direct Connect location provides access to Amazon Web Services in the region it is associated with. You can establish connections with AWS Direct Connect locations in multiple regions, but a connection in one region does not provide connectivity to other</p>
+<p>regions&gt;</p>
+<p>To find the locations for your region, use</p>
+<p>&lt;a&gt;DescribeLocations&lt;/a&gt;&gt;</p>
+<p>You can automatically add the new connection to a link aggregation group (LAG) by specifying a LAG ID in the request. This ensures that the new connection is allocated on the same AWS Direct Connect endpoint that hosts the specified LAG. If there are no available ports on the endpoint, the request fails and no connection will be</p>
+<!-- @@@createConnection -->
+<!-- $$$createDirectConnectGateway[overload1]$$$createDirectConnectGatewayconstCreateDirectConnectGatewayRequest& -->
+<h3 class="fn" id="createDirectConnectGateway"><a name="createDirectConnectGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createdirectconnectgatewayresponse.html">CreateDirectConnectGatewayResponse</a></span> *DirectConnectClient::<span class="name">createDirectConnectGateway</span>(const <span class="type"><a href="qtaws-directconnect-createdirectconnectgatewayrequest.html">CreateDirectConnectGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createdirectconnectgatewayresponse.html">CreateDirectConnectGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new direct connect gateway. A direct connect gateway is an intermediate object that enables you to connect a set of virtual interfaces and virtual private gateways. direct connect gateways are global and visible in any AWS region after they are created. The virtual interfaces and virtual private gateways that are connected through a direct connect gateway can be in different regions. This enables you to connect to a VPC in any region, regardless of the region in which the virtual interfaces are located, and pass traffic between</p>
+<!-- @@@createDirectConnectGateway -->
+<!-- $$$createDirectConnectGatewayAssociation[overload1]$$$createDirectConnectGatewayAssociationconstCreateDirectConnectGatewayAssociationRequest& -->
+<h3 class="fn" id="createDirectConnectGatewayAssociation"><a name="createDirectConnectGatewayAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createdirectconnectgatewayassociationresponse.html">CreateDirectConnectGatewayAssociationResponse</a></span> *DirectConnectClient::<span class="name">createDirectConnectGatewayAssociation</span>(const <span class="type"><a href="qtaws-directconnect-createdirectconnectgatewayassociationrequest.html">CreateDirectConnectGatewayAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createdirectconnectgatewayassociationresponse.html">CreateDirectConnectGatewayAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an association between a direct connect gateway and a virtual private gateway (VGW). The VGW must be attached to a VPC and must not be associated with another direct connect</p>
+<!-- @@@createDirectConnectGatewayAssociation -->
+<!-- $$$createInterconnect[overload1]$$$createInterconnectconstCreateInterconnectRequest& -->
+<h3 class="fn" id="createInterconnect"><a name="createInterconnect"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createinterconnectresponse.html">CreateInterconnectResponse</a></span> *DirectConnectClient::<span class="name">createInterconnect</span>(const <span class="type"><a href="qtaws-directconnect-createinterconnectrequest.html">CreateInterconnectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createinterconnectresponse.html">CreateInterconnectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new interconnect between a AWS Direct Connect partner's network and a specific AWS Direct Connect</p>
+<p>location&gt;</p>
+<p>An interconnect is a connection which is capable of hosting other connections. The AWS Direct Connect partner can use an interconnect to provide sub-1Gbps AWS Direct Connect service to tier 2 customers who do not have their own connections. Like a standard connection, an interconnect links the AWS Direct Connect partner's network to an AWS Direct Connect location over a standard 1 Gbps or 10 Gbps Ethernet fiber-optic cable. One end is connected to the partner's router, the other to an AWS Direct Connect</p>
+<p>router&gt;</p>
+<p>You can automatically add the new interconnect to a link aggregation group (LAG) by specifying a LAG ID in the request. This ensures that the new interconnect is allocated on the same AWS Direct Connect endpoint that hosts the specified LAG. If there are no available ports on the endpoint, the request fails and no interconnect will be</p>
+<p>created&gt;</p>
+<p>For each end customer, the AWS Direct Connect partner provisions a connection on their interconnect by calling AllocateConnectionOnInterconnect. The end customer can then connect to AWS resources by creating a virtual interface on their connection, using the VLAN assigned to them by the AWS Direct Connect</p>
+<p>partner&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@createInterconnect -->
+<!-- $$$createLag[overload1]$$$createLagconstCreateLagRequest& -->
+<h3 class="fn" id="createLag"><a name="createLag"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createlagresponse.html">CreateLagResponse</a></span> *DirectConnectClient::<span class="name">createLag</span>(const <span class="type"><a href="qtaws-directconnect-createlagrequest.html">CreateLagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createlagresponse.html">CreateLagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new link aggregation group (LAG) with the specified number of bundled physical connections between the customer network and a specific AWS Direct Connect location. A LAG is a logical interface that uses the Link Aggregation Control Protocol (LACP) to aggregate multiple 1 gigabit or 10 gigabit interfaces, allowing you to treat them as a single</p>
+<p>interface&gt;</p>
+<p>All connections in a LAG must use the same bandwidth (for example, 10 Gbps), and must terminate at the same AWS Direct Connect</p>
+<p>endpoint&gt;</p>
+<p>You can have up to 10 connections per LAG. Regardless of this limit, if you request more connections for the LAG than AWS Direct Connect can allocate on a single endpoint, no LAG is</p>
+<p>created&gt;</p>
+<p>You can specify an existing physical connection or interconnect to include in the LAG (which counts towards the total number of connections). Doing so interrupts the current physical connection or hosted connections, and re-establishes them as a member of the LAG. The LAG will be created on the same AWS Direct Connect endpoint to which the connection terminates. Any virtual interfaces associated with the connection are automatically disassociated and re-associated with the LAG. The connection ID does not</p>
+<p>change&gt;</p>
+<p>If the AWS account used to create a LAG is a registered AWS Direct Connect partner, the LAG is automatically enabled to host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly</p>
+<!-- @@@createLag -->
+<!-- $$$createPrivateVirtualInterface[overload1]$$$createPrivateVirtualInterfaceconstCreatePrivateVirtualInterfaceRequest& -->
+<h3 class="fn" id="createPrivateVirtualInterface"><a name="createPrivateVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createprivatevirtualinterfaceresponse.html">CreatePrivateVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">createPrivateVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-createprivatevirtualinterfacerequest.html">CreatePrivateVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createprivatevirtualinterfaceresponse.html">CreatePrivateVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new private virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A private virtual interface supports sending traffic to a single virtual private cloud</p>
+<!-- @@@createPrivateVirtualInterface -->
+<!-- $$$createPublicVirtualInterface[overload1]$$$createPublicVirtualInterfaceconstCreatePublicVirtualInterfaceRequest& -->
+<h3 class="fn" id="createPublicVirtualInterface"><a name="createPublicVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-createpublicvirtualinterfaceresponse.html">CreatePublicVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">createPublicVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-createpublicvirtualinterfacerequest.html">CreatePublicVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-createpublicvirtualinterfaceresponse.html">CreatePublicVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new public virtual interface. A virtual interface is the VLAN that transports AWS Direct Connect traffic. A public virtual interface supports sending traffic to public services of AWS such as Amazon Simple Storage Service (Amazon</p>
+<p>S3)&gt;</p>
+<p>When creating an IPv6 public virtual interface (addressFamily is 'ipv6'), the customer and amazon address fields should be left blank to use auto-assigned IPv6 space. Custom IPv6 Addresses are currently not</p>
+<!-- @@@createPublicVirtualInterface -->
+<!-- $$$deleteBGPPeer[overload1]$$$deleteBGPPeerconstDeleteBGPPeerRequest& -->
+<h3 class="fn" id="deleteBGPPeer"><a name="deleteBGPPeer"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deletebgppeerresponse.html">DeleteBGPPeerResponse</a></span> *DirectConnectClient::<span class="name">deleteBGPPeer</span>(const <span class="type"><a href="qtaws-directconnect-deletebgppeerrequest.html">DeleteBGPPeerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deletebgppeerresponse.html">DeleteBGPPeerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a BGP peer on the specified virtual interface that matches the specified customer address and ASN. You cannot delete the last BGP peer from a virtual</p>
+<!-- @@@deleteBGPPeer -->
+<!-- $$$deleteConnection[overload1]$$$deleteConnectionconstDeleteConnectionRequest& -->
+<h3 class="fn" id="deleteConnection"><a name="deleteConnection"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deleteconnectionresponse.html">DeleteConnectionResponse</a></span> *DirectConnectClient::<span class="name">deleteConnection</span>(const <span class="type"><a href="qtaws-directconnect-deleteconnectionrequest.html">DeleteConnectionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deleteconnectionresponse.html">DeleteConnectionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the</p>
+<p>connection&gt;</p>
+<p>Deleting a connection only stops the AWS Direct Connect port hour and data transfer charges. You need to cancel separately with the providers any services or charges for cross-connects or network circuits that connect you to the AWS Direct Connect</p>
+<!-- @@@deleteConnection -->
+<!-- $$$deleteDirectConnectGateway[overload1]$$$deleteDirectConnectGatewayconstDeleteDirectConnectGatewayRequest& -->
+<h3 class="fn" id="deleteDirectConnectGateway"><a name="deleteDirectConnectGateway"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deletedirectconnectgatewayresponse.html">DeleteDirectConnectGatewayResponse</a></span> *DirectConnectClient::<span class="name">deleteDirectConnectGateway</span>(const <span class="type"><a href="qtaws-directconnect-deletedirectconnectgatewayrequest.html">DeleteDirectConnectGatewayRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deletedirectconnectgatewayresponse.html">DeleteDirectConnectGatewayResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a direct connect gateway. You must first delete all virtual interfaces that are attached to the direct connect gateway and disassociate all virtual private gateways that are associated with the direct connect</p>
+<!-- @@@deleteDirectConnectGateway -->
+<!-- $$$deleteDirectConnectGatewayAssociation[overload1]$$$deleteDirectConnectGatewayAssociationconstDeleteDirectConnectGatewayAssociationRequest& -->
+<h3 class="fn" id="deleteDirectConnectGatewayAssociation"><a name="deleteDirectConnectGatewayAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deletedirectconnectgatewayassociationresponse.html">DeleteDirectConnectGatewayAssociationResponse</a></span> *DirectConnectClient::<span class="name">deleteDirectConnectGatewayAssociation</span>(const <span class="type"><a href="qtaws-directconnect-deletedirectconnectgatewayassociationrequest.html">DeleteDirectConnectGatewayAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deletedirectconnectgatewayassociationresponse.html">DeleteDirectConnectGatewayAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the association between a direct connect gateway and a virtual private</p>
+<!-- @@@deleteDirectConnectGatewayAssociation -->
+<!-- $$$deleteInterconnect[overload1]$$$deleteInterconnectconstDeleteInterconnectRequest& -->
+<h3 class="fn" id="deleteInterconnect"><a name="deleteInterconnect"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deleteinterconnectresponse.html">DeleteInterconnectResponse</a></span> *DirectConnectClient::<span class="name">deleteInterconnect</span>(const <span class="type"><a href="qtaws-directconnect-deleteinterconnectrequest.html">DeleteInterconnectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deleteinterconnectresponse.html">DeleteInterconnectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>interconnect&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@deleteInterconnect -->
+<!-- $$$deleteLag[overload1]$$$deleteLagconstDeleteLagRequest& -->
+<h3 class="fn" id="deleteLag"><a name="deleteLag"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deletelagresponse.html">DeleteLagResponse</a></span> *DirectConnectClient::<span class="name">deleteLag</span>(const <span class="type"><a href="qtaws-directconnect-deletelagrequest.html">DeleteLagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deletelagresponse.html">DeleteLagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a link aggregation group (LAG). You cannot delete a LAG if it has active virtual interfaces or hosted</p>
+<!-- @@@deleteLag -->
+<!-- $$$deleteVirtualInterface[overload1]$$$deleteVirtualInterfaceconstDeleteVirtualInterfaceRequest& -->
+<h3 class="fn" id="deleteVirtualInterface"><a name="deleteVirtualInterface"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-deletevirtualinterfaceresponse.html">DeleteVirtualInterfaceResponse</a></span> *DirectConnectClient::<span class="name">deleteVirtualInterface</span>(const <span class="type"><a href="qtaws-directconnect-deletevirtualinterfacerequest.html">DeleteVirtualInterfaceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-deletevirtualinterfaceresponse.html">DeleteVirtualInterfaceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a virtual</p>
+<!-- @@@deleteVirtualInterface -->
+<!-- $$$describeConnectionLoa[overload1]$$$describeConnectionLoaconstDescribeConnectionLoaRequest& -->
+<h3 class="fn" id="describeConnectionLoa"><a name="describeConnectionLoa"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeconnectionloaresponse.html">DescribeConnectionLoaResponse</a></span> *DirectConnectClient::<span class="name">describeConnectionLoa</span>(const <span class="type"><a href="qtaws-directconnect-describeconnectionloarequest.html">DescribeConnectionLoaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeconnectionloaresponse.html">DescribeConnectionLoaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated in favor of</p>
+<p>&lt;a&gt;DescribeLoa&lt;/a&gt;&gt;</p>
+<p>Returns the LOA-CFA for a</p>
+<p>Connection&gt;</p>
+<p>The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that your APN partner or service provider uses when establishing your cross connect to AWS at the colocation facility. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html&quot;&gt;Requesting Cross Connects at AWS Direct Connect Locations&lt;/a&gt; in the AWS Direct Connect user</p>
+<!-- @@@describeConnectionLoa -->
+<!-- $$$describeConnections[overload1]$$$describeConnectionsconstDescribeConnectionsRequest& -->
+<h3 class="fn" id="describeConnections"><a name="describeConnections"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeconnectionsresponse.html">DescribeConnectionsResponse</a></span> *DirectConnectClient::<span class="name">describeConnections</span>(const <span class="type"><a href="qtaws-directconnect-describeconnectionsrequest.html">DescribeConnectionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeconnectionsresponse.html">DescribeConnectionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Displays all connections in this</p>
+<p>region&gt;</p>
+<p>If a connection ID is provided, the call returns only that particular</p>
+<!-- @@@describeConnections -->
+<!-- $$$describeConnectionsOnInterconnect[overload1]$$$describeConnectionsOnInterconnectconstDescribeConnectionsOnInterconnectRequest& -->
+<h3 class="fn" id="describeConnectionsOnInterconnect"><a name="describeConnectionsOnInterconnect"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeconnectionsoninterconnectresponse.html">DescribeConnectionsOnInterconnectResponse</a></span> *DirectConnectClient::<span class="name">describeConnectionsOnInterconnect</span>(const <span class="type"><a href="qtaws-directconnect-describeconnectionsoninterconnectrequest.html">DescribeConnectionsOnInterconnectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeconnectionsoninterconnectresponse.html">DescribeConnectionsOnInterconnectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated in favor of</p>
+<p>&lt;a&gt;DescribeHostedConnections&lt;/a&gt;&gt;</p>
+<p>Returns a list of connections that have been provisioned on the given</p>
+<p>interconnect&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@describeConnectionsOnInterconnect -->
+<!-- $$$describeDirectConnectGatewayAssociations[overload1]$$$describeDirectConnectGatewayAssociationsconstDescribeDirectConnectGatewayAssociationsRequest& -->
+<h3 class="fn" id="describeDirectConnectGatewayAssociations"><a name="describeDirectConnectGatewayAssociations"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describedirectconnectgatewayassociationsresponse.html">DescribeDirectConnectGatewayAssociationsResponse</a></span> *DirectConnectClient::<span class="name">describeDirectConnectGatewayAssociations</span>(const <span class="type"><a href="qtaws-directconnect-describedirectconnectgatewayassociationsrequest.html">DescribeDirectConnectGatewayAssociationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describedirectconnectgatewayassociationsresponse.html">DescribeDirectConnectGatewayAssociationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all direct connect gateway and virtual private gateway (VGW) associations. Either a direct connect gateway ID or a VGW ID must be provided in the request. If a direct connect gateway ID is provided, the response returns all VGWs associated with the direct connect gateway. If a VGW ID is provided, the response returns all direct connect gateways associated with the VGW. If both are provided, the response only returns the association that matches both the direct connect gateway and the</p>
+<!-- @@@describeDirectConnectGatewayAssociations -->
+<!-- $$$describeDirectConnectGatewayAttachments[overload1]$$$describeDirectConnectGatewayAttachmentsconstDescribeDirectConnectGatewayAttachmentsRequest& -->
+<h3 class="fn" id="describeDirectConnectGatewayAttachments"><a name="describeDirectConnectGatewayAttachments"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describedirectconnectgatewayattachmentsresponse.html">DescribeDirectConnectGatewayAttachmentsResponse</a></span> *DirectConnectClient::<span class="name">describeDirectConnectGatewayAttachments</span>(const <span class="type"><a href="qtaws-directconnect-describedirectconnectgatewayattachmentsrequest.html">DescribeDirectConnectGatewayAttachmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describedirectconnectgatewayattachmentsresponse.html">DescribeDirectConnectGatewayAttachmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all direct connect gateway and virtual interface (VIF) attachments. Either a direct connect gateway ID or a VIF ID must be provided in the request. If a direct connect gateway ID is provided, the response returns all VIFs attached to the direct connect gateway. If a VIF ID is provided, the response returns all direct connect gateways attached to the VIF. If both are provided, the response only returns the attachment that matches both the direct connect gateway and the</p>
+<!-- @@@describeDirectConnectGatewayAttachments -->
+<!-- $$$describeDirectConnectGateways[overload1]$$$describeDirectConnectGatewaysconstDescribeDirectConnectGatewaysRequest& -->
+<h3 class="fn" id="describeDirectConnectGateways"><a name="describeDirectConnectGateways"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describedirectconnectgatewaysresponse.html">DescribeDirectConnectGatewaysResponse</a></span> *DirectConnectClient::<span class="name">describeDirectConnectGateways</span>(const <span class="type"><a href="qtaws-directconnect-describedirectconnectgatewaysrequest.html">DescribeDirectConnectGatewaysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describedirectconnectgatewaysresponse.html">DescribeDirectConnectGatewaysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of direct connect gateways in your account. Deleted direct connect gateways are not returned. You can provide a direct connect gateway ID in the request to return information about the specific direct connect gateway only. Otherwise, if a direct connect gateway ID is not provided, information about all of your direct connect gateways is returned.</p>
+<!-- @@@describeDirectConnectGateways -->
+<!-- $$$describeHostedConnections[overload1]$$$describeHostedConnectionsconstDescribeHostedConnectionsRequest& -->
+<h3 class="fn" id="describeHostedConnections"><a name="describeHostedConnections"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describehostedconnectionsresponse.html">DescribeHostedConnectionsResponse</a></span> *DirectConnectClient::<span class="name">describeHostedConnections</span>(const <span class="type"><a href="qtaws-directconnect-describehostedconnectionsrequest.html">DescribeHostedConnectionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describehostedconnectionsresponse.html">DescribeHostedConnectionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of hosted connections that have been provisioned on the given interconnect or link aggregation group</p>
+<p>(LAG)&gt; &lt;note&gt;</p>
+<p>This is intended for use by AWS Direct Connect partners</p>
+<!-- @@@describeHostedConnections -->
+<!-- $$$describeInterconnectLoa[overload1]$$$describeInterconnectLoaconstDescribeInterconnectLoaRequest& -->
+<h3 class="fn" id="describeInterconnectLoa"><a name="describeInterconnectLoa"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeinterconnectloaresponse.html">DescribeInterconnectLoaResponse</a></span> *DirectConnectClient::<span class="name">describeInterconnectLoa</span>(const <span class="type"><a href="qtaws-directconnect-describeinterconnectloarequest.html">DescribeInterconnectLoaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeinterconnectloaresponse.html">DescribeInterconnectLoaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecated in favor of</p>
+<p>&lt;a&gt;DescribeLoa&lt;/a&gt;&gt;</p>
+<p>Returns the LOA-CFA for an</p>
+<p>Interconnect&gt;</p>
+<p>The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that is used when establishing your cross connect to AWS at the colocation facility. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html&quot;&gt;Requesting Cross Connects at AWS Direct Connect Locations&lt;/a&gt; in the AWS Direct Connect user</p>
+<!-- @@@describeInterconnectLoa -->
+<!-- $$$describeInterconnects[overload1]$$$describeInterconnectsconstDescribeInterconnectsRequest& -->
+<h3 class="fn" id="describeInterconnects"><a name="describeInterconnects"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeinterconnectsresponse.html">DescribeInterconnectsResponse</a></span> *DirectConnectClient::<span class="name">describeInterconnects</span>(const <span class="type"><a href="qtaws-directconnect-describeinterconnectsrequest.html">DescribeInterconnectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeinterconnectsresponse.html">DescribeInterconnectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of interconnects owned by the AWS</p>
+<p>account&gt;</p>
+<p>If an interconnect ID is provided, it will only return this particular</p>
+<!-- @@@describeInterconnects -->
+<!-- $$$describeLags[overload1]$$$describeLagsconstDescribeLagsRequest& -->
+<h3 class="fn" id="describeLags"><a name="describeLags"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describelagsresponse.html">DescribeLagsResponse</a></span> *DirectConnectClient::<span class="name">describeLags</span>(const <span class="type"><a href="qtaws-directconnect-describelagsrequest.html">DescribeLagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describelagsresponse.html">DescribeLagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the link aggregation groups (LAGs) in your account.</p>
+<p>&lt;/p</p>
+<p>If a LAG ID is provided, only information about the specified LAG is</p>
+<!-- @@@describeLags -->
+<!-- $$$describeLoa[overload1]$$$describeLoaconstDescribeLoaRequest& -->
+<h3 class="fn" id="describeLoa"><a name="describeLoa"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describeloaresponse.html">DescribeLoaResponse</a></span> *DirectConnectClient::<span class="name">describeLoa</span>(const <span class="type"><a href="qtaws-directconnect-describeloarequest.html">DescribeLoaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describeloaresponse.html">DescribeLoaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the LOA-CFA for a connection, interconnect, or link aggregation group</p>
+<p>(LAG)&gt;</p>
+<p>The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that is used when establishing your cross connect to AWS at the colocation facility. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html&quot;&gt;Requesting Cross Connects at AWS Direct Connect Locations&lt;/a&gt; in the AWS Direct Connect user</p>
+<!-- @@@describeLoa -->
+<!-- $$$describeLocations[overload1]$$$describeLocations -->
+<h3 class="fn" id="describeLocations"><a name="describeLocations"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describelocationsresponse.html">DescribeLocationsResponse</a></span> *DirectConnectClient::<span class="name">describeLocations</span>()</h3>
+<p>Sends a DescribeLocations request to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describelocationsresponse.html">DescribeLocationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of AWS Direct Connect locations in the current AWS region. These are the locations that may be selected when calling &lt;a&gt;CreateConnection&lt;/a&gt; or</p>
+<!-- @@@describeLocations -->
+<!-- $$$describeTags[overload1]$$$describeTagsconstDescribeTagsRequest& -->
+<h3 class="fn" id="describeTags"><a name="describeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describetagsresponse.html">DescribeTagsResponse</a></span> *DirectConnectClient::<span class="name">describeTags</span>(const <span class="type"><a href="qtaws-directconnect-describetagsrequest.html">DescribeTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describetagsresponse.html">DescribeTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the tags associated with the specified Direct Connect</p>
+<!-- @@@describeTags -->
+<!-- $$$describeVirtualGateways[overload1]$$$describeVirtualGateways -->
+<h3 class="fn" id="describeVirtualGateways"><a name="describeVirtualGateways"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describevirtualgatewaysresponse.html">DescribeVirtualGatewaysResponse</a></span> *DirectConnectClient::<span class="name">describeVirtualGateways</span>()</h3>
+<p>Sends a DescribeVirtualGateways request to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describevirtualgatewaysresponse.html">DescribeVirtualGatewaysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of virtual private gateways owned by the AWS</p>
+<p>account&gt;</p>
+<p>You can create one or more AWS Direct Connect private virtual interfaces linking to a virtual private gateway. A virtual private gateway can be managed via Amazon Virtual Private Cloud (VPC) console or the &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html&quot;&gt;EC2 CreateVpnGateway&lt;/a&gt;</p>
+<!-- @@@describeVirtualGateways -->
+<!-- $$$describeVirtualInterfaces[overload1]$$$describeVirtualInterfacesconstDescribeVirtualInterfacesRequest& -->
+<h3 class="fn" id="describeVirtualInterfaces"><a name="describeVirtualInterfaces"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-describevirtualinterfacesresponse.html">DescribeVirtualInterfacesResponse</a></span> *DirectConnectClient::<span class="name">describeVirtualInterfaces</span>(const <span class="type"><a href="qtaws-directconnect-describevirtualinterfacesrequest.html">DescribeVirtualInterfacesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-describevirtualinterfacesresponse.html">DescribeVirtualInterfacesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Displays all virtual interfaces for an AWS account. Virtual interfaces deleted fewer than 15 minutes before you make the request are also returned. If you specify a connection ID, only the virtual interfaces associated with the connection are returned. If you specify a virtual interface ID, then only a single virtual interface is</p>
+<p>returned&gt;</p>
+<p>A virtual interface (VLAN) transmits the traffic between the AWS Direct Connect location and the</p>
+<!-- @@@describeVirtualInterfaces -->
+<!-- $$$disassociateConnectionFromLag[overload1]$$$disassociateConnectionFromLagconstDisassociateConnectionFromLagRequest& -->
+<h3 class="fn" id="disassociateConnectionFromLag"><a name="disassociateConnectionFromLag"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-disassociateconnectionfromlagresponse.html">DisassociateConnectionFromLagResponse</a></span> *DirectConnectClient::<span class="name">disassociateConnectionFromLag</span>(const <span class="type"><a href="qtaws-directconnect-disassociateconnectionfromlagrequest.html">DisassociateConnectionFromLagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-disassociateconnectionfromlagresponse.html">DisassociateConnectionFromLagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a connection from a link aggregation group (LAG). The connection is interrupted and re-established as a standalone connection (the connection is not deleted; to delete the connection, use the &lt;a&gt;DeleteConnection&lt;/a&gt; request). If the LAG has associated virtual interfaces or hosted connections, they remain associated with the LAG. A disassociated connection owned by an AWS Direct Connect partner is automatically converted to an</p>
+<p>interconnect&gt;</p>
+<p>If disassociating the connection will cause the LAG to fall below its setting for minimum number of operational connections, the request fails, except when it's the last member of the LAG. If all connections are disassociated, the LAG continues to exist as an empty LAG with no physical connections.</p>
+<!-- @@@disassociateConnectionFromLag -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-tagresourceresponse.html">TagResourceResponse</a></span> *DirectConnectClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-directconnect-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds the specified tags to the specified Direct Connect resource. Each Direct Connect resource can have a maximum of 50</p>
+<p>tags&gt;</p>
+<p>Each tag consists of a key and an optional value. If a tag with the same key is already associated with the Direct Connect resource, this action updates its</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-untagresourceresponse.html">UntagResourceResponse</a></span> *DirectConnectClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-directconnect-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes one or more tags from the specified Direct Connect</p>
+<!-- @@@untagResource -->
+<!-- $$$updateLag[overload1]$$$updateLagconstUpdateLagRequest& -->
+<h3 class="fn" id="updateLag"><a name="updateLag"></a><code>[slot] </code><span class="type"><a href="qtaws-directconnect-updatelagresponse.html">UpdateLagResponse</a></span> *DirectConnectClient::<span class="name">updateLag</span>(const <span class="type"><a href="qtaws-directconnect-updatelagrequest.html">UpdateLagRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-directconnect-directconnectclient.html">DirectConnectClient</a> service, and returns a pointer to an <a href="qtaws-directconnect-updatelagresponse.html">UpdateLagResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the attributes of a link aggregation group (LAG).</p>
+<p>&lt;/p</p>
+<p>You can update the following attributes:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The name of the</p>
+<p>LAG&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The value for the minimum number of connections that must be operational for the LAG itself to be operational.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>When you create a LAG, the default value for the minimum number of operational connections is zero (0). If you update this value, and the number of operational connections falls below the specified value, the LAG will automatically go down to avoid overutilization of the remaining connections. Adjusting this value should be done with care as it could force the LAG down if the value is set higher than the current number of operational</p>
+<!-- @@@updateLag -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

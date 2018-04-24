@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- kinesisclient.cpp -->
+  <title>KinesisClient Class | Kinesis</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawskinesis-index.html">Kinesis</a></li>
+<li><a href="qtawskinesis-module.html">C++ Classes</a></li>
+<li>KinesisClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">KinesisClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-kinesis-kinesisclient.html">QtAws::Kinesis::KinesisClient</a>)<br/></span>
+<!-- $$$KinesisClient-brief -->
+<p>The <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> class provides access to the Amazon Kinesis service. <a href="#details">More...</a></p>
+<!-- @@@KinesisClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;KinesisClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-kinesis-kinesisclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#KinesisClient">KinesisClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#KinesisClient-1">KinesisClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#addTagsToStream">addTagsToStream</a></b>(const AddTagsToStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#createStream">createStream</a></b>(const CreateStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DecreaseStreamRetentionPeriodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#decreaseStreamRetentionPeriod">decreaseStreamRetentionPeriod</a></b>(const DecreaseStreamRetentionPeriodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#deleteStream">deleteStream</a></b>(const DeleteStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLimitsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#describeLimits">describeLimits</a></b>(const DescribeLimitsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#describeStream">describeStream</a></b>(const DescribeStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeStreamSummaryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#describeStreamSummary">describeStreamSummary</a></b>(const DescribeStreamSummaryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableEnhancedMonitoringResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#disableEnhancedMonitoring">disableEnhancedMonitoring</a></b>(const DisableEnhancedMonitoringRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableEnhancedMonitoringResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#enableEnhancedMonitoring">enableEnhancedMonitoring</a></b>(const EnableEnhancedMonitoringRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#getRecords">getRecords</a></b>(const GetRecordsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetShardIteratorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#getShardIterator">getShardIterator</a></b>(const GetShardIteratorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IncreaseStreamRetentionPeriodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#increaseStreamRetentionPeriod">increaseStreamRetentionPeriod</a></b>(const IncreaseStreamRetentionPeriodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListShardsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#listShards">listShards</a></b>(const ListShardsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListStreamsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#listStreams">listStreams</a></b>(const ListStreamsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#listTagsForStream">listTagsForStream</a></b>(const ListTagsForStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> MergeShardsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#mergeShards">mergeShards</a></b>(const MergeShardsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRecordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#putRecord">putRecord</a></b>(const PutRecordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#putRecords">putRecords</a></b>(const PutRecordsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#removeTagsFromStream">removeTagsFromStream</a></b>(const RemoveTagsFromStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SplitShardResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#splitShard">splitShard</a></b>(const SplitShardRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartStreamEncryptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#startStreamEncryption">startStreamEncryption</a></b>(const StartStreamEncryptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopStreamEncryptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#stopStreamEncryption">stopStreamEncryption</a></b>(const StopStreamEncryptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateShardCountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-kinesis-kinesisclient.html#updateShardCount">updateShardCount</a></b>(const UpdateShardCountRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$KinesisClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> class provides access to the Amazon Kinesis service.</p>
+<p>&lt;fullname&gt;Amazon Kinesis Data Streams Service API Reference&lt;/fullname&gt;</p>
+<p>Amazon Kinesis Data Streams is a managed service that scales elastically for real-time processing of streaming big</p>
+</div>
+<!-- @@@KinesisClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$KinesisClient[overload1]$$$KinesisClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="KinesisClient"><a name="KinesisClient"></a>KinesisClient::<span class="name">KinesisClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@KinesisClient -->
+<!-- $$$KinesisClient$$$KinesisClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="KinesisClient-1"><a name="KinesisClient-1"></a>KinesisClient::<span class="name">KinesisClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-kinesis-kinesisclient.html#KinesisClient">KinesisClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@KinesisClient -->
+<!-- $$$addTagsToStream[overload1]$$$addTagsToStreamconstAddTagsToStreamRequest& -->
+<h3 class="fn" id="addTagsToStream"><a name="addTagsToStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-addtagstostreamresponse.html">AddTagsToStreamResponse</a></span> *KinesisClient::<span class="name">addTagsToStream</span>(const <span class="type"><a href="qtaws-kinesis-addtagstostreamrequest.html">AddTagsToStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-addtagstostreamresponse.html">AddTagsToStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates tags for the specified Kinesis data stream. Each stream can have up to 10</p>
+<p>tags&gt;</p>
+<p>If tags have already been assigned to the stream, &lt;code&gt;AddTagsToStream&lt;/code&gt; overwrites any existing tags that correspond to the specified tag</p>
+<p>keys&gt;</p>
+<p>&lt;a&gt;AddTagsToStream&lt;/a&gt; has a limit of five transactions per second per</p>
+<!-- @@@addTagsToStream -->
+<!-- $$$createStream[overload1]$$$createStreamconstCreateStreamRequest& -->
+<h3 class="fn" id="createStream"><a name="createStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-createstreamresponse.html">CreateStreamResponse</a></span> *KinesisClient::<span class="name">createStream</span>(const <span class="type"><a href="qtaws-kinesis-createstreamrequest.html">CreateStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-createstreamresponse.html">CreateStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Kinesis data stream. A stream captures and transports data records that are continuously emitted from different data sources or &lt;i&gt;producers&lt;/i&gt;. Scale-out within a stream is explicitly supported by means of shards, which are uniquely identified groups of data records in a</p>
+<p>stream&gt;</p>
+<p>You specify and control the number of shards that a stream is composed of. Each shard can support reads up to five transactions per second, up to a maximum data read total of 2 MB per second. Each shard can support writes up to 1,000 records per second, up to a maximum data write total of 1 MB per second. If the amount of data input increases or decreases, you can add or remove</p>
+<p>shards&gt;</p>
+<p>The stream name identifies the stream. The name is scoped to the AWS account used by the application. It is also scoped by AWS Region. That is, two streams in two different accounts can have the same name, and two streams in the same account, but in two different Regions, can have the same</p>
+<p>name&gt;</p>
+<p>&lt;code&gt;CreateStream&lt;/code&gt; is an asynchronous operation. Upon receiving a &lt;code&gt;CreateStream&lt;/code&gt; request, Kinesis Data Streams immediately returns and sets the stream status to &lt;code&gt;CREATING&lt;/code&gt;. After the stream is created, Kinesis Data Streams sets the stream status to &lt;code&gt;ACTIVE&lt;/code&gt;. You should perform read and write operations only on an &lt;code&gt;ACTIVE&lt;/code&gt; stream.</p>
+<p>&lt;/p</p>
+<p>You receive a &lt;code&gt;LimitExceededException&lt;/code&gt; when making a &lt;code&gt;CreateStream&lt;/code&gt; request when you try to do one of the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Have more than five streams in the &lt;code&gt;CREATING&lt;/code&gt; state at any point in</p>
+<p>time&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create more shards than are authorized for your</p>
+<p>account&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For the default shard limit for an AWS account, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html&quot;&gt;Amazon Kinesis Data Streams Limits&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer Guide&lt;/i&gt;. To increase this limit, &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html&quot;&gt;contact AWS</p>
+<p>Support&lt;/a&gt;&gt;</p>
+<p>You can use &lt;code&gt;DescribeStream&lt;/code&gt; to check the stream status, which is returned in</p>
+<p>&lt;code&gt;StreamStatus&lt;/code&gt;&gt;</p>
+<p>&lt;a&gt;CreateStream&lt;/a&gt; has a limit of five transactions per second per</p>
+<!-- @@@createStream -->
+<!-- $$$decreaseStreamRetentionPeriod[overload1]$$$decreaseStreamRetentionPeriodconstDecreaseStreamRetentionPeriodRequest& -->
+<h3 class="fn" id="decreaseStreamRetentionPeriod"><a name="decreaseStreamRetentionPeriod"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-decreasestreamretentionperiodresponse.html">DecreaseStreamRetentionPeriodResponse</a></span> *KinesisClient::<span class="name">decreaseStreamRetentionPeriod</span>(const <span class="type"><a href="qtaws-kinesis-decreasestreamretentionperiodrequest.html">DecreaseStreamRetentionPeriodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-decreasestreamretentionperiodresponse.html">DecreaseStreamRetentionPeriodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Decreases the Kinesis data stream's retention period, which is the length of time data records are accessible after they are added to the stream. The minimum value of a stream's retention period is 24</p>
+<p>hours&gt;</p>
+<p>This operation may result in lost data. For example, if the stream's retention period is 48 hours and is decreased to 24 hours, any data already in the stream that is older than 24 hours is</p>
+<!-- @@@decreaseStreamRetentionPeriod -->
+<!-- $$$deleteStream[overload1]$$$deleteStreamconstDeleteStreamRequest& -->
+<h3 class="fn" id="deleteStream"><a name="deleteStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-deletestreamresponse.html">DeleteStreamResponse</a></span> *KinesisClient::<span class="name">deleteStream</span>(const <span class="type"><a href="qtaws-kinesis-deletestreamrequest.html">DeleteStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-deletestreamresponse.html">DeleteStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a Kinesis data stream and all its shards and data. You must shut down any applications that are operating on the stream before you delete the stream. If an application attempts to operate on a deleted stream, it receives the exception</p>
+<p>&lt;code&gt;ResourceNotFoundException&lt;/code&gt;&gt;</p>
+<p>If the stream is in the &lt;code&gt;ACTIVE&lt;/code&gt; state, you can delete it. After a &lt;code&gt;DeleteStream&lt;/code&gt; request, the specified stream is in the &lt;code&gt;DELETING&lt;/code&gt; state until Kinesis Data Streams completes the</p>
+<p>deletion&gt;</p>
+<p>&lt;b&gt;Note:&lt;/b&gt; Kinesis Data Streams might continue to accept data read and write operations, such as &lt;a&gt;PutRecord&lt;/a&gt;, &lt;a&gt;PutRecords&lt;/a&gt;, and &lt;a&gt;GetRecords&lt;/a&gt;, on a stream in the &lt;code&gt;DELETING&lt;/code&gt; state until the stream deletion is</p>
+<p>complete&gt;</p>
+<p>When you delete a stream, any shards in that stream are also deleted, and any tags are dissociated from the</p>
+<p>stream&gt;</p>
+<p>You can use the &lt;a&gt;DescribeStream&lt;/a&gt; operation to check the state of the stream, which is returned in</p>
+<p>&lt;code&gt;StreamStatus&lt;/code&gt;&gt;</p>
+<p>&lt;a&gt;DeleteStream&lt;/a&gt; has a limit of five transactions per second per</p>
+<!-- @@@deleteStream -->
+<!-- $$$describeLimits[overload1]$$$describeLimitsconstDescribeLimitsRequest& -->
+<h3 class="fn" id="describeLimits"><a name="describeLimits"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-describelimitsresponse.html">DescribeLimitsResponse</a></span> *KinesisClient::<span class="name">describeLimits</span>(const <span class="type"><a href="qtaws-kinesis-describelimitsrequest.html">DescribeLimitsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-describelimitsresponse.html">DescribeLimitsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the shard limits and usage for the</p>
+<p>account&gt;</p>
+<p>If you update your account limits, the old limits might be returned for a few</p>
+<p>minutes&gt;</p>
+<p>This operation has a limit of one transaction per second per</p>
+<!-- @@@describeLimits -->
+<!-- $$$describeStream[overload1]$$$describeStreamconstDescribeStreamRequest& -->
+<h3 class="fn" id="describeStream"><a name="describeStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-describestreamresponse.html">DescribeStreamResponse</a></span> *KinesisClient::<span class="name">describeStream</span>(const <span class="type"><a href="qtaws-kinesis-describestreamrequest.html">DescribeStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-describestreamresponse.html">DescribeStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified Kinesis data</p>
+<p>stream&gt;</p>
+<p>The information returned includes the stream name, Amazon Resource Name (ARN), creation time, enhanced metric configuration, and shard map. The shard map is an array of shard objects. For each shard object, there is the hash key and sequence number ranges that the shard spans, and the IDs of any earlier shards that played in a role in creating the shard. Every record ingested in the stream is identified by a sequence number, which is assigned when the record is put into the</p>
+<p>stream&gt;</p>
+<p>You can limit the number of shards returned by each call. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-using-sdk-java-retrieve-shards.html&quot;&gt;Retrieving Shards from a Stream&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>There are no guarantees about the chronological order shards returned. To process shards in chronological order, use the ID of the parent shard to track the lineage to the oldest</p>
+<p>shard&gt;</p>
+<p>This operation has a limit of 10 transactions per second per</p>
+<!-- @@@describeStream -->
+<!-- $$$describeStreamSummary[overload1]$$$describeStreamSummaryconstDescribeStreamSummaryRequest& -->
+<h3 class="fn" id="describeStreamSummary"><a name="describeStreamSummary"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-describestreamsummaryresponse.html">DescribeStreamSummaryResponse</a></span> *KinesisClient::<span class="name">describeStreamSummary</span>(const <span class="type"><a href="qtaws-kinesis-describestreamsummaryrequest.html">DescribeStreamSummaryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-describestreamsummaryresponse.html">DescribeStreamSummaryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides a summarized description of the specified Kinesis data stream without the shard</p>
+<p>list&gt;</p>
+<p>The information returned includes the stream name, Amazon Resource Name (ARN), status, record retention period, approximate creation time, monitoring, encryption details, and open shard count.</p>
+<!-- @@@describeStreamSummary -->
+<!-- $$$disableEnhancedMonitoring[overload1]$$$disableEnhancedMonitoringconstDisableEnhancedMonitoringRequest& -->
+<h3 class="fn" id="disableEnhancedMonitoring"><a name="disableEnhancedMonitoring"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-disableenhancedmonitoringresponse.html">DisableEnhancedMonitoringResponse</a></span> *KinesisClient::<span class="name">disableEnhancedMonitoring</span>(const <span class="type"><a href="qtaws-kinesis-disableenhancedmonitoringrequest.html">DisableEnhancedMonitoringRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-disableenhancedmonitoringresponse.html">DisableEnhancedMonitoringResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables enhanced</p>
+<!-- @@@disableEnhancedMonitoring -->
+<!-- $$$enableEnhancedMonitoring[overload1]$$$enableEnhancedMonitoringconstEnableEnhancedMonitoringRequest& -->
+<h3 class="fn" id="enableEnhancedMonitoring"><a name="enableEnhancedMonitoring"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-enableenhancedmonitoringresponse.html">EnableEnhancedMonitoringResponse</a></span> *KinesisClient::<span class="name">enableEnhancedMonitoring</span>(const <span class="type"><a href="qtaws-kinesis-enableenhancedmonitoringrequest.html">EnableEnhancedMonitoringRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-enableenhancedmonitoringresponse.html">EnableEnhancedMonitoringResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables enhanced Kinesis data stream monitoring for shard-level</p>
+<!-- @@@enableEnhancedMonitoring -->
+<!-- $$$getRecords[overload1]$$$getRecordsconstGetRecordsRequest& -->
+<h3 class="fn" id="getRecords"><a name="getRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-getrecordsresponse.html">GetRecordsResponse</a></span> *KinesisClient::<span class="name">getRecords</span>(const <span class="type"><a href="qtaws-kinesis-getrecordsrequest.html">GetRecordsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-getrecordsresponse.html">GetRecordsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets data records from a Kinesis data stream's</p>
+<p>shard&gt;</p>
+<p>Specify a shard iterator using the &lt;code&gt;ShardIterator&lt;/code&gt; parameter. The shard iterator specifies the position in the shard from which you want to start reading data records sequentially. If there are no records available in the portion of the shard that the iterator points to, &lt;a&gt;GetRecords&lt;/a&gt; returns an empty list. It might take multiple calls to get to a portion of the shard that contains</p>
+<p>records&gt;</p>
+<p>You can scale by provisioning multiple shards per stream while considering service limits (for more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html&quot;&gt;Amazon Kinesis Data Streams Limits&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer Guide&lt;/i&gt;). Your application should have one thread per shard, each reading continuously from its stream. To read from a stream continually, call &lt;a&gt;GetRecords&lt;/a&gt; in a loop. Use &lt;a&gt;GetShardIterator&lt;/a&gt; to get the shard iterator to specify in the first &lt;a&gt;GetRecords&lt;/a&gt; call. &lt;a&gt;GetRecords&lt;/a&gt; returns a new shard iterator in &lt;code&gt;NextShardIterator&lt;/code&gt;. Specify the shard iterator returned in &lt;code&gt;NextShardIterator&lt;/code&gt; in subsequent calls to &lt;a&gt;GetRecords&lt;/a&gt;. If the shard has been closed, the shard iterator can't return more data and &lt;a&gt;GetRecords&lt;/a&gt; returns &lt;code&gt;null&lt;/code&gt; in &lt;code&gt;NextShardIterator&lt;/code&gt;. You can terminate the loop when the shard is closed, or when the shard iterator reaches the record with the sequence number or other attribute that marks it as the last record to</p>
+<p>process&gt;</p>
+<p>Each data record can be up to 1 MB in size, and each shard can read up to 2 MB per second. You can ensure that your calls don't exceed the maximum supported size or throughput by using the &lt;code&gt;Limit&lt;/code&gt; parameter to specify the maximum number of records that &lt;a&gt;GetRecords&lt;/a&gt; can return. Consider your average record size when determining this</p>
+<p>limit&gt;</p>
+<p>The size of the data returned by &lt;a&gt;GetRecords&lt;/a&gt; varies depending on the utilization of the shard. The maximum size of data that &lt;a&gt;GetRecords&lt;/a&gt; can return is 10 MB. If a call returns this amount of data, subsequent calls made within the next five seconds throw &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;. If there is insufficient provisioned throughput on the stream, subsequent calls made within the next one second throw &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;. &lt;a&gt;GetRecords&lt;/a&gt; won't return any data when it throws an exception. For this reason, we recommend that you wait one second between calls to &lt;a&gt;GetRecords&lt;/a&gt;; however, it's possible that the application will get exceptions for longer than 1</p>
+<p>second&gt;</p>
+<p>To detect whether the application is falling behind in processing, you can use the &lt;code&gt;MillisBehindLatest&lt;/code&gt; response attribute. You can also monitor the stream using CloudWatch metrics and other mechanisms (see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/monitoring.html&quot;&gt;Monitoring&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;)&gt;</p>
+<p>Each Amazon Kinesis record includes a value, &lt;code&gt;ApproximateArrivalTimestamp&lt;/code&gt;, that is set when a stream successfully receives and stores a record. This is commonly referred to as a server-side time stamp, whereas a client-side time stamp is set when a data producer creates or sends the record to a stream (a data producer is any data source putting data records into a stream, for example with &lt;a&gt;PutRecords&lt;/a&gt;). The time stamp has millisecond precision. There are no guarantees about the time stamp accuracy, or that the time stamp is always increasing. For example, records in a shard or across a stream might have time stamps that are out of</p>
+<!-- @@@getRecords -->
+<!-- $$$getShardIterator[overload1]$$$getShardIteratorconstGetShardIteratorRequest& -->
+<h3 class="fn" id="getShardIterator"><a name="getShardIterator"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-getsharditeratorresponse.html">GetShardIteratorResponse</a></span> *KinesisClient::<span class="name">getShardIterator</span>(const <span class="type"><a href="qtaws-kinesis-getsharditeratorrequest.html">GetShardIteratorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-getsharditeratorresponse.html">GetShardIteratorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets an Amazon Kinesis shard iterator. A shard iterator expires five minutes after it is returned to the</p>
+<p>requester&gt;</p>
+<p>A shard iterator specifies the shard position from which to start reading data records sequentially. The position is specified using the sequence number of a data record in a shard. A sequence number is the identifier associated with every record ingested in the stream, and is assigned when a record is put into the stream. Each stream has one or more</p>
+<p>shards&gt;</p>
+<p>You must specify the shard iterator type. For example, you can set the &lt;code&gt;ShardIteratorType&lt;/code&gt; parameter to read exactly from the position denoted by a specific sequence number by using the &lt;code&gt;AT_SEQUENCE_NUMBER&lt;/code&gt; shard iterator type. Alternatively, the parameter can read right after the sequence number by using the &lt;code&gt;AFTER_SEQUENCE_NUMBER&lt;/code&gt; shard iterator type, using sequence numbers returned by earlier calls to &lt;a&gt;PutRecord&lt;/a&gt;, &lt;a&gt;PutRecords&lt;/a&gt;, &lt;a&gt;GetRecords&lt;/a&gt;, or &lt;a&gt;DescribeStream&lt;/a&gt;. In the request, you can specify the shard iterator type &lt;code&gt;AT_TIMESTAMP&lt;/code&gt; to read records from an arbitrary point in time, &lt;code&gt;TRIM_HORIZON&lt;/code&gt; to cause &lt;code&gt;ShardIterator&lt;/code&gt; to point to the last untrimmed record in the shard in the system (the oldest data record in the shard), or &lt;code&gt;LATEST&lt;/code&gt; so that you always read the most recent data in the shard.</p>
+<p>&lt;/p</p>
+<p>When you read repeatedly from a stream, use a &lt;a&gt;GetShardIterator&lt;/a&gt; request to get the first shard iterator for use in your first &lt;a&gt;GetRecords&lt;/a&gt; request and for subsequent reads use the shard iterator returned by the &lt;a&gt;GetRecords&lt;/a&gt; request in &lt;code&gt;NextShardIterator&lt;/code&gt;. A new shard iterator is returned by every &lt;a&gt;GetRecords&lt;/a&gt; request in &lt;code&gt;NextShardIterator&lt;/code&gt;, which you use in the &lt;code&gt;ShardIterator&lt;/code&gt; parameter of the next &lt;a&gt;GetRecords&lt;/a&gt; request.</p>
+<p>&lt;/p</p>
+<p>If a &lt;a&gt;GetShardIterator&lt;/a&gt; request is made too often, you receive a &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;. For more information about throughput limits, see &lt;a&gt;GetRecords&lt;/a&gt;, and &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html&quot;&gt;Streams Limits&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If the shard is closed, &lt;a&gt;GetShardIterator&lt;/a&gt; returns a valid iterator for the last sequence number of the shard. A shard can be closed as a result of using &lt;a&gt;SplitShard&lt;/a&gt; or</p>
+<p>&lt;a&gt;MergeShards&lt;/a&gt;&gt;</p>
+<p>&lt;a&gt;GetShardIterator&lt;/a&gt; has a limit of five transactions per second per account per open</p>
+<!-- @@@getShardIterator -->
+<!-- $$$increaseStreamRetentionPeriod[overload1]$$$increaseStreamRetentionPeriodconstIncreaseStreamRetentionPeriodRequest& -->
+<h3 class="fn" id="increaseStreamRetentionPeriod"><a name="increaseStreamRetentionPeriod"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-increasestreamretentionperiodresponse.html">IncreaseStreamRetentionPeriodResponse</a></span> *KinesisClient::<span class="name">increaseStreamRetentionPeriod</span>(const <span class="type"><a href="qtaws-kinesis-increasestreamretentionperiodrequest.html">IncreaseStreamRetentionPeriodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-increasestreamretentionperiodresponse.html">IncreaseStreamRetentionPeriodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Increases the Kinesis data stream's retention period, which is the length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 168 hours (7</p>
+<p>days)&gt;</p>
+<p>If you choose a longer stream retention period, this operation increases the time period during which records that have not yet expired are accessible. However, it does not make previous, expired data (older than the stream's previous retention period) accessible after the operation has been called. For example, if a stream's retention period is set to 24 hours and is increased to 168 hours, any data that is older than 24 hours remains inaccessible to consumer</p>
+<!-- @@@increaseStreamRetentionPeriod -->
+<!-- $$$listShards[overload1]$$$listShardsconstListShardsRequest& -->
+<h3 class="fn" id="listShards"><a name="listShards"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-listshardsresponse.html">ListShardsResponse</a></span> *KinesisClient::<span class="name">listShards</span>(const <span class="type"><a href="qtaws-kinesis-listshardsrequest.html">ListShardsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-listshardsresponse.html">ListShardsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the shards in a stream and provides information about each</p>
+<p>shard&gt; &lt;b&gt;</p>
+<p>This API is a new operation that is used by the Amazon Kinesis Client Library (KCL). If you have a fine-grained IAM policy that only allows specific operations, you must update your policy to allow calls to this API. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html&quot;&gt;Controlling Access to Amazon Kinesis Data Streams Resources Using</p>
+<!-- @@@listShards -->
+<!-- $$$listStreams[overload1]$$$listStreamsconstListStreamsRequest& -->
+<h3 class="fn" id="listStreams"><a name="listStreams"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-liststreamsresponse.html">ListStreamsResponse</a></span> *KinesisClient::<span class="name">listStreams</span>(const <span class="type"><a href="qtaws-kinesis-liststreamsrequest.html">ListStreamsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-liststreamsresponse.html">ListStreamsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your Kinesis data</p>
+<p>streams&gt;</p>
+<p>The number of streams may be too large to return from a single call to &lt;code&gt;ListStreams&lt;/code&gt;. You can limit the number of returned streams using the &lt;code&gt;Limit&lt;/code&gt; parameter. If you do not specify a value for the &lt;code&gt;Limit&lt;/code&gt; parameter, Kinesis Data Streams uses the default limit, which is currently</p>
+<p>10&gt;</p>
+<p>You can detect if there are more streams available to list by using the &lt;code&gt;HasMoreStreams&lt;/code&gt; flag from the returned output. If there are more streams available, you can request more streams by using the name of the last stream returned by the &lt;code&gt;ListStreams&lt;/code&gt; request in the &lt;code&gt;ExclusiveStartStreamName&lt;/code&gt; parameter in a subsequent request to &lt;code&gt;ListStreams&lt;/code&gt;. The group of stream names returned by the subsequent request is then added to the list. You can continue this process until all the stream names have been collected in the list.</p>
+<p>&lt;/p</p>
+<p>&lt;a&gt;ListStreams&lt;/a&gt; has a limit of five transactions per second per</p>
+<!-- @@@listStreams -->
+<!-- $$$listTagsForStream[overload1]$$$listTagsForStreamconstListTagsForStreamRequest& -->
+<h3 class="fn" id="listTagsForStream"><a name="listTagsForStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-listtagsforstreamresponse.html">ListTagsForStreamResponse</a></span> *KinesisClient::<span class="name">listTagsForStream</span>(const <span class="type"><a href="qtaws-kinesis-listtagsforstreamrequest.html">ListTagsForStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-listtagsforstreamresponse.html">ListTagsForStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags for the specified Kinesis data stream. This operation has a limit of five transactions per second per</p>
+<!-- @@@listTagsForStream -->
+<!-- $$$mergeShards[overload1]$$$mergeShardsconstMergeShardsRequest& -->
+<h3 class="fn" id="mergeShards"><a name="mergeShards"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-mergeshardsresponse.html">MergeShardsResponse</a></span> *KinesisClient::<span class="name">mergeShards</span>(const <span class="type"><a href="qtaws-kinesis-mergeshardsrequest.html">MergeShardsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-mergeshardsresponse.html">MergeShardsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Merges two adjacent shards in a Kinesis data stream and combines them into a single shard to reduce the stream's capacity to ingest and transport data. Two shards are considered adjacent if the union of the hash key ranges for the two shards form a contiguous set with no gaps. For example, if you have two shards, one with a hash key range of 276..&#x2e;381 and the other with a hash key range of 382..&#x2e;454, then you could merge these two shards into a single shard that would have a hash key range of 276..&#x2e;454. After the merge, the single child shard receives data for all hash key values covered by the two parent</p>
+<p>shards&gt;</p>
+<p>&lt;code&gt;MergeShards&lt;/code&gt; is called when there is a need to reduce the overall capacity of a stream because of excess capacity that is not being used. You must specify the shard to be merged and the adjacent shard for a stream. For more information about merging shards, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-using-sdk-java-resharding-merge.html&quot;&gt;Merge Two Shards&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If the stream is in the &lt;code&gt;ACTIVE&lt;/code&gt; state, you can call &lt;code&gt;MergeShards&lt;/code&gt;. If a stream is in the &lt;code&gt;CREATING&lt;/code&gt;, &lt;code&gt;UPDATING&lt;/code&gt;, or &lt;code&gt;DELETING&lt;/code&gt; state, &lt;code&gt;MergeShards&lt;/code&gt; returns a &lt;code&gt;ResourceInUseException&lt;/code&gt;. If the specified stream does not exist, &lt;code&gt;MergeShards&lt;/code&gt; returns a &lt;code&gt;ResourceNotFoundException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>You can use &lt;a&gt;DescribeStream&lt;/a&gt; to check the state of the stream, which is returned in</p>
+<p>&lt;code&gt;StreamStatus&lt;/code&gt;&gt;</p>
+<p>&lt;code&gt;MergeShards&lt;/code&gt; is an asynchronous operation. Upon receiving a &lt;code&gt;MergeShards&lt;/code&gt; request, Amazon Kinesis Data Streams immediately returns a response and sets the &lt;code&gt;StreamStatus&lt;/code&gt; to &lt;code&gt;UPDATING&lt;/code&gt;. After the operation is completed, Kinesis Data Streams sets the &lt;code&gt;StreamStatus&lt;/code&gt; to &lt;code&gt;ACTIVE&lt;/code&gt;. Read and write operations continue to work while the stream is in the &lt;code&gt;UPDATING&lt;/code&gt; state.</p>
+<p>&lt;/p</p>
+<p>You use &lt;a&gt;DescribeStream&lt;/a&gt; to determine the shard IDs that are specified in the &lt;code&gt;MergeShards&lt;/code&gt; request.</p>
+<p>&lt;/p</p>
+<p>If you try to operate on too many streams in parallel using &lt;a&gt;CreateStream&lt;/a&gt;, &lt;a&gt;DeleteStream&lt;/a&gt;, &lt;code&gt;MergeShards&lt;/code&gt;, or &lt;a&gt;SplitShard&lt;/a&gt;, you receive a &lt;code&gt;LimitExceededException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;MergeShards&lt;/code&gt; has a limit of five transactions per second per</p>
+<!-- @@@mergeShards -->
+<!-- $$$putRecord[overload1]$$$putRecordconstPutRecordRequest& -->
+<h3 class="fn" id="putRecord"><a name="putRecord"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-putrecordresponse.html">PutRecordResponse</a></span> *KinesisClient::<span class="name">putRecord</span>(const <span class="type"><a href="qtaws-kinesis-putrecordrequest.html">PutRecordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-putrecordresponse.html">PutRecordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Writes a single data record into an Amazon Kinesis data stream. Call &lt;code&gt;PutRecord&lt;/code&gt; to send data into the stream for real-time ingestion and subsequent processing, one record at a time. Each shard can support writes up to 1,000 records per second, up to a maximum data write total of 1 MB per</p>
+<p>second&gt;</p>
+<p>You must specify the name of the stream that captures, stores, and transports the data; a partition key; and the data blob</p>
+<p>itself&gt;</p>
+<p>The data blob can be any type of data; for example, a segment from a log file, geographic/location data, website clickstream data, and so</p>
+<p>on&gt;</p>
+<p>The partition key is used by Kinesis Data Streams to distribute data across shards. Kinesis Data Streams segregates the data records that belong to a stream into multiple shards, using the partition key associated with each data record to determine the shard to which a given data record</p>
+<p>belongs&gt;</p>
+<p>Partition keys are Unicode strings, with a maximum length limit of 256 characters for each key. An MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards using the hash key ranges of the shards. You can override hashing the partition key to determine the shard by explicitly specifying a hash value using the &lt;code&gt;ExplicitHashKey&lt;/code&gt; parameter. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/developing-producers-with-sdk.html#kinesis-using-sdk-java-add-data-to-stream&quot;&gt;Adding Data to a Stream&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>&lt;code&gt;PutRecord&lt;/code&gt; returns the shard ID of where the data record was placed and the sequence number that was assigned to the data</p>
+<p>record&gt;</p>
+<p>Sequence numbers increase over time and are specific to a shard within a stream, not across all shards within a stream. To guarantee strictly increasing ordering, write serially to a shard and use the &lt;code&gt;SequenceNumberForOrdering&lt;/code&gt; parameter. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/developing-producers-with-sdk.html#kinesis-using-sdk-java-add-data-to-stream&quot;&gt;Adding Data to a Stream&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>If a &lt;code&gt;PutRecord&lt;/code&gt; request cannot be processed because of insufficient provisioned throughput on the shard involved in the request, &lt;code&gt;PutRecord&lt;/code&gt; throws &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use &lt;a&gt;IncreaseStreamRetentionPeriod&lt;/a&gt; or &lt;a&gt;DecreaseStreamRetentionPeriod&lt;/a&gt; to modify this retention</p>
+<!-- @@@putRecord -->
+<!-- $$$putRecords[overload1]$$$putRecordsconstPutRecordsRequest& -->
+<h3 class="fn" id="putRecords"><a name="putRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-putrecordsresponse.html">PutRecordsResponse</a></span> *KinesisClient::<span class="name">putRecords</span>(const <span class="type"><a href="qtaws-kinesis-putrecordsrequest.html">PutRecordsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-putrecordsresponse.html">PutRecordsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Writes multiple data records into a Kinesis data stream in a single call (also referred to as a &lt;code&gt;PutRecords&lt;/code&gt; request). Use this operation to send data into the stream for data ingestion and processing.</p>
+<p>&lt;/p</p>
+<p>Each &lt;code&gt;PutRecords&lt;/code&gt; request can support up to 500 records. Each record in the request can be as large as 1 MB, up to a limit of 5 MB for the entire request, including partition keys. Each shard can support writes up to 1,000 records per second, up to a maximum data write total of 1 MB per</p>
+<p>second&gt;</p>
+<p>You must specify the name of the stream that captures, stores, and transports the data; and an array of request &lt;code&gt;Records&lt;/code&gt;, with each record in the array requiring a partition key and data blob. The record size limit applies to the total size of the partition key and data</p>
+<p>blob&gt;</p>
+<p>The data blob can be any type of data; for example, a segment from a log file, geographic/location data, website clickstream data, and so</p>
+<p>on&gt;</p>
+<p>The partition key is used by Kinesis Data Streams as input to a hash function that maps the partition key and associated data to a specific shard. An MD5 hash function is used to map partition keys to 128-bit integer values and to map associated data records to shards. As a result of this hashing mechanism, all data records with the same partition key map to the same shard within the stream. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/developing-producers-with-sdk.html#kinesis-using-sdk-java-add-data-to-stream&quot;&gt;Adding Data to a Stream&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Each record in the &lt;code&gt;Records&lt;/code&gt; array may include an optional parameter, &lt;code&gt;ExplicitHashKey&lt;/code&gt;, which overrides the partition key to shard mapping. This parameter allows a data producer to determine explicitly the shard where the record is stored. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/developing-producers-with-sdk.html#kinesis-using-sdk-java-putrecords&quot;&gt;Adding Multiple Records with PutRecords&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>The &lt;code&gt;PutRecords&lt;/code&gt; response includes an array of response &lt;code&gt;Records&lt;/code&gt;. Each record in the response array directly correlates with a record in the request array using natural ordering, from the top to the bottom of the request and response. The response &lt;code&gt;Records&lt;/code&gt; array always includes the same number of records as the request</p>
+<p>array&gt;</p>
+<p>The response &lt;code&gt;Records&lt;/code&gt; array includes both successfully and unsuccessfully processed records. Kinesis Data Streams attempts to process all records in each &lt;code&gt;PutRecords&lt;/code&gt; request. A single record failure does not stop the processing of subsequent</p>
+<p>records&gt;</p>
+<p>A successfully processed record includes &lt;code&gt;ShardId&lt;/code&gt; and &lt;code&gt;SequenceNumber&lt;/code&gt; values. The &lt;code&gt;ShardId&lt;/code&gt; parameter identifies the shard in the stream where the record is stored. The &lt;code&gt;SequenceNumber&lt;/code&gt; parameter is an identifier assigned to the put record, unique to all records in the</p>
+<p>stream&gt;</p>
+<p>An unsuccessfully processed record includes &lt;code&gt;ErrorCode&lt;/code&gt; and &lt;code&gt;ErrorMessage&lt;/code&gt; values. &lt;code&gt;ErrorCode&lt;/code&gt; reflects the type of error and can be one of the following values: &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt; or &lt;code&gt;InternalFailure&lt;/code&gt;. &lt;code&gt;ErrorMessage&lt;/code&gt; provides more detailed information about the &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt; exception including the account ID, stream name, and shard ID of the record that was throttled. For more information about partially successful responses, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-using-sdk-java-add-data-to-stream.html#kinesis-using-sdk-java-putrecords&quot;&gt;Adding Multiple Records with PutRecords&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>By default, data records are accessible for 24 hours from the time that they are added to a stream. You can use &lt;a&gt;IncreaseStreamRetentionPeriod&lt;/a&gt; or &lt;a&gt;DecreaseStreamRetentionPeriod&lt;/a&gt; to modify this retention</p>
+<!-- @@@putRecords -->
+<!-- $$$removeTagsFromStream[overload1]$$$removeTagsFromStreamconstRemoveTagsFromStreamRequest& -->
+<h3 class="fn" id="removeTagsFromStream"><a name="removeTagsFromStream"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-removetagsfromstreamresponse.html">RemoveTagsFromStreamResponse</a></span> *KinesisClient::<span class="name">removeTagsFromStream</span>(const <span class="type"><a href="qtaws-kinesis-removetagsfromstreamrequest.html">RemoveTagsFromStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-removetagsfromstreamresponse.html">RemoveTagsFromStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from the specified Kinesis data stream. Removed tags are deleted and cannot be recovered after this operation successfully</p>
+<p>completes&gt;</p>
+<p>If you specify a tag that does not exist, it is</p>
+<p>ignored&gt;</p>
+<p>&lt;a&gt;RemoveTagsFromStream&lt;/a&gt; has a limit of five transactions per second per</p>
+<!-- @@@removeTagsFromStream -->
+<!-- $$$splitShard[overload1]$$$splitShardconstSplitShardRequest& -->
+<h3 class="fn" id="splitShard"><a name="splitShard"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-splitshardresponse.html">SplitShardResponse</a></span> *KinesisClient::<span class="name">splitShard</span>(const <span class="type"><a href="qtaws-kinesis-splitshardrequest.html">SplitShardRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-splitshardresponse.html">SplitShardResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Splits a shard into two new shards in the Kinesis data stream, to increase the stream's capacity to ingest and transport data. &lt;code&gt;SplitShard&lt;/code&gt; is called when there is a need to increase the overall capacity of a stream because of an expected increase in the volume of data records being ingested.</p>
+<p>&lt;/p</p>
+<p>You can also use &lt;code&gt;SplitShard&lt;/code&gt; when a shard appears to be approaching its maximum utilization; for example, the producers sending data into the specific shard are suddenly sending more than previously anticipated. You can also call &lt;code&gt;SplitShard&lt;/code&gt; to increase stream capacity, so that more Kinesis Data Streams applications can simultaneously read data from the stream for real-time processing.</p>
+<p>&lt;/p</p>
+<p>You must specify the shard to be split and the new hash key, which is the position in the shard where the shard gets split in two. In many cases, the new hash key might be the average of the beginning and ending hash key, but it can be any hash key value in the range being mapped into the shard. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-using-sdk-java-resharding-split.html&quot;&gt;Split a Shard&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can use &lt;a&gt;DescribeStream&lt;/a&gt; to determine the shard ID and hash key values for the &lt;code&gt;ShardToSplit&lt;/code&gt; and &lt;code&gt;NewStartingHashKey&lt;/code&gt; parameters that are specified in the &lt;code&gt;SplitShard&lt;/code&gt;</p>
+<p>request&gt;</p>
+<p>&lt;code&gt;SplitShard&lt;/code&gt; is an asynchronous operation. Upon receiving a &lt;code&gt;SplitShard&lt;/code&gt; request, Kinesis Data Streams immediately returns a response and sets the stream status to &lt;code&gt;UPDATING&lt;/code&gt;. After the operation is completed, Kinesis Data Streams sets the stream status to &lt;code&gt;ACTIVE&lt;/code&gt;. Read and write operations continue to work while the stream is in the &lt;code&gt;UPDATING&lt;/code&gt; state.</p>
+<p>&lt;/p</p>
+<p>You can use &lt;code&gt;DescribeStream&lt;/code&gt; to check the status of the stream, which is returned in &lt;code&gt;StreamStatus&lt;/code&gt;. If the stream is in the &lt;code&gt;ACTIVE&lt;/code&gt; state, you can call &lt;code&gt;SplitShard&lt;/code&gt;. If a stream is in &lt;code&gt;CREATING&lt;/code&gt; or &lt;code&gt;UPDATING&lt;/code&gt; or &lt;code&gt;DELETING&lt;/code&gt; states, &lt;code&gt;DescribeStream&lt;/code&gt; returns a</p>
+<p>&lt;code&gt;ResourceInUseException&lt;/code&gt;&gt;</p>
+<p>If the specified stream does not exist, &lt;code&gt;DescribeStream&lt;/code&gt; returns a &lt;code&gt;ResourceNotFoundException&lt;/code&gt;. If you try to create more shards than are authorized for your account, you receive a &lt;code&gt;LimitExceededException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>For the default shard limit for an AWS account, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html&quot;&gt;Streams Limits&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer Guide&lt;/i&gt;. To increase this limit, &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html&quot;&gt;contact AWS</p>
+<p>Support&lt;/a&gt;&gt;</p>
+<p>If you try to operate on too many streams simultaneously using &lt;a&gt;CreateStream&lt;/a&gt;, &lt;a&gt;DeleteStream&lt;/a&gt;, &lt;a&gt;MergeShards&lt;/a&gt;, and/or &lt;a&gt;SplitShard&lt;/a&gt;, you receive a &lt;code&gt;LimitExceededException&lt;/code&gt;.</p>
+<p>&lt;/p</p>
+<p>&lt;code&gt;SplitShard&lt;/code&gt; has a limit of five transactions per second per</p>
+<!-- @@@splitShard -->
+<!-- $$$startStreamEncryption[overload1]$$$startStreamEncryptionconstStartStreamEncryptionRequest& -->
+<h3 class="fn" id="startStreamEncryption"><a name="startStreamEncryption"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-startstreamencryptionresponse.html">StartStreamEncryptionResponse</a></span> *KinesisClient::<span class="name">startStreamEncryption</span>(const <span class="type"><a href="qtaws-kinesis-startstreamencryptionrequest.html">StartStreamEncryptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-startstreamencryptionresponse.html">StartStreamEncryptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables or updates server-side encryption using an AWS KMS key for a specified stream.</p>
+<p>&lt;/p</p>
+<p>Starting encryption is an asynchronous operation. Upon receiving the request, Kinesis Data Streams returns immediately and sets the status of the stream to &lt;code&gt;UPDATING&lt;/code&gt;. After the update is complete, Kinesis Data Streams sets the status of the stream back to &lt;code&gt;ACTIVE&lt;/code&gt;. Updating or applying encryption normally takes a few seconds to complete, but it can take minutes. You can continue to read and write data to your stream while its status is &lt;code&gt;UPDATING&lt;/code&gt;. Once the status of the stream is &lt;code&gt;ACTIVE&lt;/code&gt;, encryption begins for records written to the stream.</p>
+<p>&lt;/p</p>
+<p>API Limits: You can successfully apply a new AWS KMS key for server-side encryption 25 times in a rolling 24-hour</p>
+<p>period&gt;</p>
+<p>Note: It can take up to five seconds after the stream is in an &lt;code&gt;ACTIVE&lt;/code&gt; status before all records written to the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting the API response from &lt;code&gt;PutRecord&lt;/code&gt; or</p>
+<!-- @@@startStreamEncryption -->
+<!-- $$$stopStreamEncryption[overload1]$$$stopStreamEncryptionconstStopStreamEncryptionRequest& -->
+<h3 class="fn" id="stopStreamEncryption"><a name="stopStreamEncryption"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-stopstreamencryptionresponse.html">StopStreamEncryptionResponse</a></span> *KinesisClient::<span class="name">stopStreamEncryption</span>(const <span class="type"><a href="qtaws-kinesis-stopstreamencryptionrequest.html">StopStreamEncryptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-stopstreamencryptionresponse.html">StopStreamEncryptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables server-side encryption for a specified stream.</p>
+<p>&lt;/p</p>
+<p>Stopping encryption is an asynchronous operation. Upon receiving the request, Kinesis Data Streams returns immediately and sets the status of the stream to &lt;code&gt;UPDATING&lt;/code&gt;. After the update is complete, Kinesis Data Streams sets the status of the stream back to &lt;code&gt;ACTIVE&lt;/code&gt;. Stopping encryption normally takes a few seconds to complete, but it can take minutes. You can continue to read and write data to your stream while its status is &lt;code&gt;UPDATING&lt;/code&gt;. Once the status of the stream is &lt;code&gt;ACTIVE&lt;/code&gt;, records written to the stream are no longer encrypted by Kinesis Data Streams.</p>
+<p>&lt;/p</p>
+<p>API Limits: You can successfully disable server-side encryption 25 times in a rolling 24-hour period.</p>
+<p>&lt;/p</p>
+<p>Note: It can take up to five seconds after the stream is in an &lt;code&gt;ACTIVE&lt;/code&gt; status before all records written to the stream are no longer subject to encryption. After you disabled encryption, you can verify that encryption is not applied by inspecting the API response from &lt;code&gt;PutRecord&lt;/code&gt; or</p>
+<!-- @@@stopStreamEncryption -->
+<!-- $$$updateShardCount[overload1]$$$updateShardCountconstUpdateShardCountRequest& -->
+<h3 class="fn" id="updateShardCount"><a name="updateShardCount"></a><code>[slot] </code><span class="type"><a href="qtaws-kinesis-updateshardcountresponse.html">UpdateShardCountResponse</a></span> *KinesisClient::<span class="name">updateShardCount</span>(const <span class="type"><a href="qtaws-kinesis-updateshardcountrequest.html">UpdateShardCountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-kinesis-kinesisclient.html">KinesisClient</a> service, and returns a pointer to an <a href="qtaws-kinesis-updateshardcountresponse.html">UpdateShardCountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the shard count of the specified stream to the specified number of</p>
+<p>shards&gt;</p>
+<p>Updating the shard count is an asynchronous operation. Upon receiving the request, Kinesis Data Streams returns immediately and sets the status of the stream to &lt;code&gt;UPDATING&lt;/code&gt;. After the update is complete, Kinesis Data Streams sets the status of the stream back to &lt;code&gt;ACTIVE&lt;/code&gt;. Depending on the size of the stream, the scaling action could take a few minutes to complete. You can continue to read and write data to your stream while its status is</p>
+<p>&lt;code&gt;UPDATING&lt;/code&gt;&gt;</p>
+<p>To update the shard count, Kinesis Data Streams performs splits or merges on individual shards. This can cause short-lived shards to be created, in addition to the final shards. We recommend that you double or halve the shard count, as this results in the fewest number of splits or</p>
+<p>merges&gt;</p>
+<p>This operation has the following limits. You cannot do the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Scale more than twice per rolling 24-hour period per</p>
+<p>strea&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale up to more than double your current shard count for a</p>
+<p>strea&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale down below half your current shard count for a</p>
+<p>strea&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale up to more than 500 shards in a</p>
+<p>strea&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale a stream with more than 500 shards down unless the result is less than 500</p>
+<p>shard&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale up to more than the shard limit for your</p>
+<p>accoun&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For the default limits for an AWS account, see &lt;a href=&quot;http://docs.aws.amazon.com/kinesis/latest/dev/service-sizes-and-limits.html&quot;&gt;Streams Limits&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Streams Developer Guide&lt;/i&gt;. To request an increase in the call rate limit, the shard limit for this API, or your overall shard limit, use the &lt;a href=&quot;https://console.aws.amazon.com/support/v1#/case/create?issueType=service-limit-increase&amp;amp;limitType=service-code-kinesis&quot;&gt;limits</p>
+<!-- @@@updateShardCount -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

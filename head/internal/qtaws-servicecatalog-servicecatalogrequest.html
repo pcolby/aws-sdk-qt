@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- servicecatalogrequest.cpp -->
+  <title>ServiceCatalogRequest Class | ServiceCatalog</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsservicecatalog-index.html">ServiceCatalog</a></li>
+<li><a href="qtawsservicecatalog-module.html">C++ Classes</a></li>
+<li>ServiceCatalogRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ServiceCatalogRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-servicecatalog-servicecatalogrequest.html">QtAws::ServiceCatalog::ServiceCatalogRequest</a>)<br/></span>
+<!-- $$$ServiceCatalogRequest-brief -->
+<p>The <a href="qtaws-servicecatalog-servicecatalogrequest.html">ServiceCatalogRequest</a> class provides an interface for <a href="qtaws-servicecatalog.html">ServiceCatalog</a> requests. <a href="#details">More...</a></p>
+<!-- @@@ServiceCatalogRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ServiceCatalogRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-servicecatalog-acceptportfoliosharerequest.html">QtAws::ServiceCatalog::AcceptPortfolioShareRequest</a>, <a href="qtaws-servicecatalog-associateprincipalwithportfoliorequest.html">QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioRequest</a>, <a href="qtaws-servicecatalog-associateproductwithportfoliorequest.html">QtAws::ServiceCatalog::AssociateProductWithPortfolioRequest</a>, <a href="qtaws-servicecatalog-associatetagoptionwithresourcerequest.html">QtAws::ServiceCatalog::AssociateTagOptionWithResourceRequest</a>, <a href="qtaws-servicecatalog-copyproductrequest.html">QtAws::ServiceCatalog::CopyProductRequest</a>, <a href="qtaws-servicecatalog-createconstraintrequest.html">QtAws::ServiceCatalog::CreateConstraintRequest</a>, <a href="qtaws-servicecatalog-createportfoliorequest.html">QtAws::ServiceCatalog::CreatePortfolioRequest</a>, <a href="qtaws-servicecatalog-createportfoliosharerequest.html">QtAws::ServiceCatalog::CreatePortfolioShareRequest</a>, <a href="qtaws-servicecatalog-createproductrequest.html">QtAws::ServiceCatalog::CreateProductRequest</a>, <a href="qtaws-servicecatalog-createprovisionedproductplanrequest.html">QtAws::ServiceCatalog::CreateProvisionedProductPlanRequest</a>, <a href="qtaws-servicecatalog-createprovisioningartifactrequest.html">QtAws::ServiceCatalog::CreateProvisioningArtifactRequest</a>, <a href="qtaws-servicecatalog-createtagoptionrequest.html">QtAws::ServiceCatalog::CreateTagOptionRequest</a>, <a href="qtaws-servicecatalog-deleteconstraintrequest.html">QtAws::ServiceCatalog::DeleteConstraintRequest</a>, <a href="qtaws-servicecatalog-deleteportfoliorequest.html">QtAws::ServiceCatalog::DeletePortfolioRequest</a>, <a href="qtaws-servicecatalog-deleteportfoliosharerequest.html">QtAws::ServiceCatalog::DeletePortfolioShareRequest</a>, <a href="qtaws-servicecatalog-deleteproductrequest.html">QtAws::ServiceCatalog::DeleteProductRequest</a>, <a href="qtaws-servicecatalog-deleteprovisionedproductplanrequest.html">QtAws::ServiceCatalog::DeleteProvisionedProductPlanRequest</a>, <a href="qtaws-servicecatalog-deleteprovisioningartifactrequest.html">QtAws::ServiceCatalog::DeleteProvisioningArtifactRequest</a>, <a href="qtaws-servicecatalog-deletetagoptionrequest.html">QtAws::ServiceCatalog::DeleteTagOptionRequest</a>, <a href="qtaws-servicecatalog-describeconstraintrequest.html">QtAws::ServiceCatalog::DescribeConstraintRequest</a>, <a href="qtaws-servicecatalog-describecopyproductstatusrequest.html">QtAws::ServiceCatalog::DescribeCopyProductStatusRequest</a>, <a href="qtaws-servicecatalog-describeportfoliorequest.html">QtAws::ServiceCatalog::DescribePortfolioRequest</a>, <a href="qtaws-servicecatalog-describeproductasadminrequest.html">QtAws::ServiceCatalog::DescribeProductAsAdminRequest</a>, <a href="qtaws-servicecatalog-describeproductrequest.html">QtAws::ServiceCatalog::DescribeProductRequest</a>, <a href="qtaws-servicecatalog-describeproductviewrequest.html">QtAws::ServiceCatalog::DescribeProductViewRequest</a>, <a href="qtaws-servicecatalog-describeprovisionedproductplanrequest.html">QtAws::ServiceCatalog::DescribeProvisionedProductPlanRequest</a>, <a href="qtaws-servicecatalog-describeprovisionedproductrequest.html">QtAws::ServiceCatalog::DescribeProvisionedProductRequest</a>, <a href="qtaws-servicecatalog-describeprovisioningartifactrequest.html">QtAws::ServiceCatalog::DescribeProvisioningArtifactRequest</a>, <a href="qtaws-servicecatalog-describeprovisioningparametersrequest.html">QtAws::ServiceCatalog::DescribeProvisioningParametersRequest</a>, <a href="qtaws-servicecatalog-describerecordrequest.html">QtAws::ServiceCatalog::DescribeRecordRequest</a>, <a href="qtaws-servicecatalog-describetagoptionrequest.html">QtAws::ServiceCatalog::DescribeTagOptionRequest</a>, <a href="qtaws-servicecatalog-disassociateprincipalfromportfoliorequest.html">QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioRequest</a>, <a href="qtaws-servicecatalog-disassociateproductfromportfoliorequest.html">QtAws::ServiceCatalog::DisassociateProductFromPortfolioRequest</a>, <a href="qtaws-servicecatalog-disassociatetagoptionfromresourcerequest.html">QtAws::ServiceCatalog::DisassociateTagOptionFromResourceRequest</a>, <a href="qtaws-servicecatalog-executeprovisionedproductplanrequest.html">QtAws::ServiceCatalog::ExecuteProvisionedProductPlanRequest</a>, <a href="qtaws-servicecatalog-listacceptedportfoliosharesrequest.html">QtAws::ServiceCatalog::ListAcceptedPortfolioSharesRequest</a>, <a href="qtaws-servicecatalog-listconstraintsforportfoliorequest.html">QtAws::ServiceCatalog::ListConstraintsForPortfolioRequest</a>, <a href="qtaws-servicecatalog-listlaunchpathsrequest.html">QtAws::ServiceCatalog::ListLaunchPathsRequest</a>, <a href="qtaws-servicecatalog-listportfolioaccessrequest.html">QtAws::ServiceCatalog::ListPortfolioAccessRequest</a>, <a href="qtaws-servicecatalog-listportfoliosforproductrequest.html">QtAws::ServiceCatalog::ListPortfoliosForProductRequest</a>, <a href="qtaws-servicecatalog-listportfoliosrequest.html">QtAws::ServiceCatalog::ListPortfoliosRequest</a>, <a href="qtaws-servicecatalog-listprincipalsforportfoliorequest.html">QtAws::ServiceCatalog::ListPrincipalsForPortfolioRequest</a>, <a href="qtaws-servicecatalog-listprovisionedproductplansrequest.html">QtAws::ServiceCatalog::ListProvisionedProductPlansRequest</a>, <a href="qtaws-servicecatalog-listprovisioningartifactsrequest.html">QtAws::ServiceCatalog::ListProvisioningArtifactsRequest</a>, <a href="qtaws-servicecatalog-listrecordhistoryrequest.html">QtAws::ServiceCatalog::ListRecordHistoryRequest</a>, <a href="qtaws-servicecatalog-listresourcesfortagoptionrequest.html">QtAws::ServiceCatalog::ListResourcesForTagOptionRequest</a>, <a href="qtaws-servicecatalog-listtagoptionsrequest.html">QtAws::ServiceCatalog::ListTagOptionsRequest</a>, <a href="qtaws-servicecatalog-provisionproductrequest.html">QtAws::ServiceCatalog::ProvisionProductRequest</a>, <a href="qtaws-servicecatalog-rejectportfoliosharerequest.html">QtAws::ServiceCatalog::RejectPortfolioShareRequest</a>, <a href="qtaws-servicecatalog-scanprovisionedproductsrequest.html">QtAws::ServiceCatalog::ScanProvisionedProductsRequest</a>, <a href="qtaws-servicecatalog-searchproductsasadminrequest.html">QtAws::ServiceCatalog::SearchProductsAsAdminRequest</a>, <a href="qtaws-servicecatalog-searchproductsrequest.html">QtAws::ServiceCatalog::SearchProductsRequest</a>, <a href="qtaws-servicecatalog-searchprovisionedproductsrequest.html">QtAws::ServiceCatalog::SearchProvisionedProductsRequest</a>, <a href="qtaws-servicecatalog-terminateprovisionedproductrequest.html">QtAws::ServiceCatalog::TerminateProvisionedProductRequest</a>, <a href="qtaws-servicecatalog-updateconstraintrequest.html">QtAws::ServiceCatalog::UpdateConstraintRequest</a>, <a href="qtaws-servicecatalog-updateportfoliorequest.html">QtAws::ServiceCatalog::UpdatePortfolioRequest</a>, <a href="qtaws-servicecatalog-updateproductrequest.html">QtAws::ServiceCatalog::UpdateProductRequest</a>, <a href="qtaws-servicecatalog-updateprovisionedproductrequest.html">QtAws::ServiceCatalog::UpdateProvisionedProductRequest</a>, <a href="qtaws-servicecatalog-updateprovisioningartifactrequest.html">QtAws::ServiceCatalog::UpdateProvisioningArtifactRequest</a>, and <a href="qtaws-servicecatalog-updatetagoptionrequest.html">QtAws::ServiceCatalog::UpdateTagOptionRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-servicecatalog-servicecatalogrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#Action-enum">Action</a></b> { AcceptPortfolioShareAction, AssociatePrincipalWithPortfolioAction, AssociateProductWithPortfolioAction, AssociateTagOptionWithResourceAction, ..., UpdateTagOptionAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest">ServiceCatalogRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest-1">ServiceCatalogRequest</a></b>(const ServiceCatalogRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ServiceCatalogRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#operator-eq">operator=</a></b>(const ServiceCatalogRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#operator-eq-eq">operator==</a></b>(const ServiceCatalogRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest-2">ServiceCatalogRequest</a></b>(ServiceCatalogRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ServiceCatalogRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-servicecatalog-servicecatalogrequest.html">ServiceCatalogRequest</a> class provides an interface for <a href="qtaws-servicecatalog.html">ServiceCatalog</a> requests.</p>
+</div>
+<!-- @@@ServiceCatalogRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AcceptPortfolioShareAction$$$AssociatePrincipalWithPortfolioAction$$$AssociateProductWithPortfolioAction$$$AssociateTagOptionWithResourceAction$$$CopyProductAction$$$CreateConstraintAction$$$CreatePortfolioAction$$$CreatePortfolioShareAction$$$CreateProductAction$$$CreateProvisionedProductPlanAction$$$CreateProvisioningArtifactAction$$$CreateTagOptionAction$$$DeleteConstraintAction$$$DeletePortfolioAction$$$DeletePortfolioShareAction$$$DeleteProductAction$$$DeleteProvisionedProductPlanAction$$$DeleteProvisioningArtifactAction$$$DeleteTagOptionAction$$$DescribeConstraintAction$$$DescribeCopyProductStatusAction$$$DescribePortfolioAction$$$DescribeProductAction$$$DescribeProductAsAdminAction$$$DescribeProductViewAction$$$DescribeProvisionedProductAction$$$DescribeProvisionedProductPlanAction$$$DescribeProvisioningArtifactAction$$$DescribeProvisioningParametersAction$$$DescribeRecordAction$$$DescribeTagOptionAction$$$DisassociatePrincipalFromPortfolioAction$$$DisassociateProductFromPortfolioAction$$$DisassociateTagOptionFromResourceAction$$$ExecuteProvisionedProductPlanAction$$$ListAcceptedPortfolioSharesAction$$$ListConstraintsForPortfolioAction$$$ListLaunchPathsAction$$$ListPortfolioAccessAction$$$ListPortfoliosAction$$$ListPortfoliosForProductAction$$$ListPrincipalsForPortfolioAction$$$ListProvisionedProductPlansAction$$$ListProvisioningArtifactsAction$$$ListRecordHistoryAction$$$ListResourcesForTagOptionAction$$$ListTagOptionsAction$$$ProvisionProductAction$$$RejectPortfolioShareAction$$$ScanProvisionedProductsAction$$$SearchProductsAction$$$SearchProductsAsAdminAction$$$SearchProvisionedProductsAction$$$TerminateProvisionedProductAction$$$UpdateConstraintAction$$$UpdatePortfolioAction$$$UpdateProductAction$$$UpdateProvisionedProductAction$$$UpdateProvisioningArtifactAction$$$UpdateTagOptionAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum ServiceCatalogRequest::<span class="name">Action</span><br/>flags ServiceCatalogRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-servicecatalog.html">ServiceCatalog</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::AcceptPortfolioShareAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> AcceptPortfolioShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::AssociatePrincipalWithPortfolioAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> AssociatePrincipalWithPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::AssociateProductWithPortfolioAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> AssociateProductWithPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::AssociateTagOptionWithResourceAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> AssociateTagOptionWithResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CopyProductAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CopyProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreateConstraintAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreateConstraint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreatePortfolioAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreatePortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreatePortfolioShareAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreatePortfolioShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreateProductAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreateProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreateProvisionedProductPlanAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreateProvisionedProductPlan action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreateProvisioningArtifactAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreateProvisioningArtifact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::CreateTagOptionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> CreateTagOption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeleteConstraintAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeleteConstraint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeletePortfolioAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeletePortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeletePortfolioShareAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeletePortfolioShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeleteProductAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeleteProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeleteProvisionedProductPlanAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeleteProvisionedProductPlan action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeleteProvisioningArtifactAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeleteProvisioningArtifact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DeleteTagOptionAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DeleteTagOption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeConstraintAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeConstraint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeCopyProductStatusAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeCopyProductStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribePortfolioAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribePortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProductAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProductAsAdminAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProductAsAdmin action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProductViewAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProductView action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProvisionedProductAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProvisionedProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProvisionedProductPlanAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProvisionedProductPlan action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProvisioningArtifactAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProvisioningArtifact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeProvisioningParametersAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeProvisioningParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeRecordAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeRecord action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DescribeTagOptionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DescribeTagOption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DisassociatePrincipalFromPortfolioAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DisassociatePrincipalFromPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DisassociateProductFromPortfolioAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DisassociateProductFromPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::DisassociateTagOptionFromResourceAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> DisassociateTagOptionFromResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ExecuteProvisionedProductPlanAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ExecuteProvisionedProductPlan action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListAcceptedPortfolioSharesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListAcceptedPortfolioShares action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListConstraintsForPortfolioAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListConstraintsForPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListLaunchPathsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListLaunchPaths action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListPortfolioAccessAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListPortfolioAccess action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListPortfoliosAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListPortfolios action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListPortfoliosForProductAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListPortfoliosForProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListPrincipalsForPortfolioAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListPrincipalsForPortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListProvisionedProductPlansAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListProvisionedProductPlans action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListProvisioningArtifactsAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListProvisioningArtifacts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListRecordHistoryAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListRecordHistory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListResourcesForTagOptionAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListResourcesForTagOption action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ListTagOptionsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ListTagOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ProvisionProductAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ProvisionProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::RejectPortfolioShareAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> RejectPortfolioShare action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::ScanProvisionedProductsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> ScanProvisionedProducts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::SearchProductsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> SearchProducts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::SearchProductsAsAdminAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> SearchProductsAsAdmin action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::SearchProvisionedProductsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> SearchProvisionedProducts action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::TerminateProvisionedProductAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> TerminateProvisionedProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdateConstraintAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdateConstraint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdatePortfolioAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdatePortfolio action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdateProductAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdateProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdateProvisionedProductAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdateProvisionedProduct action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdateProvisioningArtifactAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdateProvisioningArtifact action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ServiceCatalog::ServiceCatalogRequest::UpdateTagOptionAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign"><a href="qtaws-servicecatalog.html">ServiceCatalog</a> UpdateTagOption action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ServiceCatalogRequest[overload1]$$$ServiceCatalogRequestconstAction -->
+<h3 class="fn" id="ServiceCatalogRequest"><a name="ServiceCatalogRequest"></a>ServiceCatalogRequest::<span class="name">ServiceCatalogRequest</span>(const <span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-servicecatalog-servicecatalogrequest.html">ServiceCatalogRequest</a> object for <a href="qtaws-servicecatalog.html">ServiceCatalog</a> <i>action</i>.</p>
+<!-- @@@ServiceCatalogRequest -->
+<!-- $$$ServiceCatalogRequest$$$ServiceCatalogRequestconstServiceCatalogRequest& -->
+<h3 class="fn" id="ServiceCatalogRequest-1"><a name="ServiceCatalogRequest-1"></a>ServiceCatalogRequest::<span class="name">ServiceCatalogRequest</span>(const <span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest">ServiceCatalogRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@ServiceCatalogRequest -->
+<!-- $$$ServiceCatalogRequest$$$ServiceCatalogRequestServiceCatalogRequestPrivate*const -->
+<h3 class="fn" id="ServiceCatalogRequest-2"><a name="ServiceCatalogRequest-2"></a><code>[protected] </code>ServiceCatalogRequest::<span class="name">ServiceCatalogRequest</span>(<span class="type"><a href="qtaws-servicecatalog-servicecatalogrequestprivate.html">ServiceCatalogRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-servicecatalog-servicecatalogrequest.html">ServiceCatalogRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-servicecatalog-servicecatalogrequestprivate.html">ServiceCatalogRequestPrivate</a>.</p>
+<!-- @@@ServiceCatalogRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#Action-enum">Action</a></span> ServiceCatalogRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> ServiceCatalogRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> ServiceCatalogRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> ServiceCatalogRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> ServiceCatalogRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> ServiceCatalogRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;ServiceCatalogRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> ServiceCatalogRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> ServiceCatalogRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> ServiceCatalogRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> ServiceCatalogRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-servicecatalog-servicecatalogrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> ServiceCatalogRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-servicecatalog.html">ServiceCatalog</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-servicecatalog.html">ServiceCatalog</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-servicecatalog-servicecatalogrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constServiceCatalogRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest">ServiceCatalogRequest</a></span> &amp;ServiceCatalogRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest">ServiceCatalogRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-servicecatalog-servicecatalogrequest.html">ServiceCatalogRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constServiceCatalogRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> ServiceCatalogRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-servicecatalog-servicecatalogrequest.html#ServiceCatalogRequest">ServiceCatalogRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

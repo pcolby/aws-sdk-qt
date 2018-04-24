@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- apigatewayclient.cpp -->
+  <title>APIGatewayClient Class | APIGateway</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsapigateway-index.html">APIGateway</a></li>
+<li><a href="qtawsapigateway-module.html">C++ Classes</a></li>
+<li>APIGatewayClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">APIGatewayClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-apigateway-apigatewayclient.html">QtAws::APIGateway::APIGatewayClient</a>)<br/></span>
+<!-- $$$APIGatewayClient-brief -->
+<p>The <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> class provides access to the Amazon API Gateway service. <a href="#details">More...</a></p>
+<!-- @@@APIGatewayClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;APIGatewayClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-apigateway-apigatewayclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#APIGatewayClient">APIGatewayClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#APIGatewayClient-1">APIGatewayClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createApiKey">createApiKey</a></b>(const CreateApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createAuthorizer">createAuthorizer</a></b>(const CreateAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBasePathMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createBasePathMapping">createBasePathMapping</a></b>(const CreateBasePathMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createDeployment">createDeployment</a></b>(const CreateDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDocumentationPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createDocumentationPart">createDocumentationPart</a></b>(const CreateDocumentationPartRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDocumentationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createDocumentationVersion">createDocumentationVersion</a></b>(const CreateDocumentationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDomainNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createDomainName">createDomainName</a></b>(const CreateDomainNameRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createModel">createModel</a></b>(const CreateModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRequestValidatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createRequestValidator">createRequestValidator</a></b>(const CreateRequestValidatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createResource">createResource</a></b>(const CreateResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createRestApi">createRestApi</a></b>(const CreateRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateStageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createStage">createStage</a></b>(const CreateStageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUsagePlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createUsagePlan">createUsagePlan</a></b>(const CreateUsagePlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUsagePlanKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createUsagePlanKey">createUsagePlanKey</a></b>(const CreateUsagePlanKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateVpcLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#createVpcLink">createVpcLink</a></b>(const CreateVpcLinkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteApiKey">deleteApiKey</a></b>(const DeleteApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteAuthorizer">deleteAuthorizer</a></b>(const DeleteAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBasePathMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteBasePathMapping">deleteBasePathMapping</a></b>(const DeleteBasePathMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteClientCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteClientCertificate">deleteClientCertificate</a></b>(const DeleteClientCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteDeployment">deleteDeployment</a></b>(const DeleteDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDocumentationPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteDocumentationPart">deleteDocumentationPart</a></b>(const DeleteDocumentationPartRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDocumentationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteDocumentationVersion">deleteDocumentationVersion</a></b>(const DeleteDocumentationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDomainNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteDomainName">deleteDomainName</a></b>(const DeleteDomainNameRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGatewayResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteGatewayResponse">deleteGatewayResponse</a></b>(const DeleteGatewayResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIntegrationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteIntegration">deleteIntegration</a></b>(const DeleteIntegrationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIntegrationResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteIntegrationResponse">deleteIntegrationResponse</a></b>(const DeleteIntegrationResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteMethod">deleteMethod</a></b>(const DeleteMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMethodResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteMethodResponse">deleteMethodResponse</a></b>(const DeleteMethodResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteModel">deleteModel</a></b>(const DeleteModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRequestValidatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteRequestValidator">deleteRequestValidator</a></b>(const DeleteRequestValidatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteResource">deleteResource</a></b>(const DeleteResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteRestApi">deleteRestApi</a></b>(const DeleteRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteStageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteStage">deleteStage</a></b>(const DeleteStageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUsagePlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteUsagePlan">deleteUsagePlan</a></b>(const DeleteUsagePlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUsagePlanKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteUsagePlanKey">deleteUsagePlanKey</a></b>(const DeleteUsagePlanKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteVpcLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#deleteVpcLink">deleteVpcLink</a></b>(const DeleteVpcLinkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> FlushStageAuthorizersCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#flushStageAuthorizersCache">flushStageAuthorizersCache</a></b>(const FlushStageAuthorizersCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> FlushStageCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#flushStageCache">flushStageCache</a></b>(const FlushStageCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GenerateClientCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#generateClientCertificate">generateClientCertificate</a></b>(const GenerateClientCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getAccount">getAccount</a></b>(const GetAccountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getApiKey">getApiKey</a></b>(const GetApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetApiKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getApiKeys">getApiKeys</a></b>(const GetApiKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getAuthorizer">getAuthorizer</a></b>(const GetAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAuthorizersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getAuthorizers">getAuthorizers</a></b>(const GetAuthorizersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBasePathMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getBasePathMapping">getBasePathMapping</a></b>(const GetBasePathMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBasePathMappingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getBasePathMappings">getBasePathMappings</a></b>(const GetBasePathMappingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetClientCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getClientCertificate">getClientCertificate</a></b>(const GetClientCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetClientCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getClientCertificates">getClientCertificates</a></b>(const GetClientCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDeployment">getDeployment</a></b>(const GetDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeploymentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDeployments">getDeployments</a></b>(const GetDeploymentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentationPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDocumentationPart">getDocumentationPart</a></b>(const GetDocumentationPartRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentationPartsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDocumentationParts">getDocumentationParts</a></b>(const GetDocumentationPartsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDocumentationVersion">getDocumentationVersion</a></b>(const GetDocumentationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentationVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDocumentationVersions">getDocumentationVersions</a></b>(const GetDocumentationVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDomainName">getDomainName</a></b>(const GetDomainNameRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getDomainNames">getDomainNames</a></b>(const GetDomainNamesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetExportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getExport">getExport</a></b>(const GetExportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGatewayResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getGatewayResponse">getGatewayResponse</a></b>(const GetGatewayResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGatewayResponsesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getGatewayResponses">getGatewayResponses</a></b>(const GetGatewayResponsesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntegrationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getIntegration">getIntegration</a></b>(const GetIntegrationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIntegrationResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getIntegrationResponse">getIntegrationResponse</a></b>(const GetIntegrationResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getMethod">getMethod</a></b>(const GetMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMethodResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getMethodResponse">getMethodResponse</a></b>(const GetMethodResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getModel">getModel</a></b>(const GetModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetModelTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getModelTemplate">getModelTemplate</a></b>(const GetModelTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetModelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getModels">getModels</a></b>(const GetModelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRequestValidatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getRequestValidator">getRequestValidator</a></b>(const GetRequestValidatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRequestValidatorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getRequestValidators">getRequestValidators</a></b>(const GetRequestValidatorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getResource">getResource</a></b>(const GetResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getResources">getResources</a></b>(const GetResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getRestApi">getRestApi</a></b>(const GetRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRestApisResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getRestApis">getRestApis</a></b>(const GetRestApisRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSdkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getSdk">getSdk</a></b>(const GetSdkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSdkTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getSdkType">getSdkType</a></b>(const GetSdkTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSdkTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getSdkTypes">getSdkTypes</a></b>(const GetSdkTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetStageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getStage">getStage</a></b>(const GetStageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetStagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getStages">getStages</a></b>(const GetStagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getTags">getTags</a></b>(const GetTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getUsage">getUsage</a></b>(const GetUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUsagePlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getUsagePlan">getUsagePlan</a></b>(const GetUsagePlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUsagePlanKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getUsagePlanKey">getUsagePlanKey</a></b>(const GetUsagePlanKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUsagePlanKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getUsagePlanKeys">getUsagePlanKeys</a></b>(const GetUsagePlanKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetUsagePlansResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getUsagePlans">getUsagePlans</a></b>(const GetUsagePlansRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVpcLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getVpcLink">getVpcLink</a></b>(const GetVpcLinkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetVpcLinksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#getVpcLinks">getVpcLinks</a></b>(const GetVpcLinksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportApiKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#importApiKeys">importApiKeys</a></b>(const ImportApiKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportDocumentationPartsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#importDocumentationParts">importDocumentationParts</a></b>(const ImportDocumentationPartsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#importRestApi">importRestApi</a></b>(const ImportRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutGatewayResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putGatewayResponse">putGatewayResponse</a></b>(const PutGatewayResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutIntegrationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putIntegration">putIntegration</a></b>(const PutIntegrationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutIntegrationResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putIntegrationResponse">putIntegrationResponse</a></b>(const PutIntegrationResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putMethod">putMethod</a></b>(const PutMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutMethodResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putMethodResponse">putMethodResponse</a></b>(const PutMethodResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#putRestApi">putRestApi</a></b>(const PutRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestInvokeAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#testInvokeAuthorizer">testInvokeAuthorizer</a></b>(const TestInvokeAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TestInvokeMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#testInvokeMethod">testInvokeMethod</a></b>(const TestInvokeMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAccountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateAccount">updateAccount</a></b>(const UpdateAccountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateApiKeyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateApiKey">updateApiKey</a></b>(const UpdateApiKeyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAuthorizerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateAuthorizer">updateAuthorizer</a></b>(const UpdateAuthorizerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBasePathMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateBasePathMapping">updateBasePathMapping</a></b>(const UpdateBasePathMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateClientCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateClientCertificate">updateClientCertificate</a></b>(const UpdateClientCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDeploymentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateDeployment">updateDeployment</a></b>(const UpdateDeploymentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentationPartResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateDocumentationPart">updateDocumentationPart</a></b>(const UpdateDocumentationPartRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentationVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateDocumentationVersion">updateDocumentationVersion</a></b>(const UpdateDocumentationVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDomainNameResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateDomainName">updateDomainName</a></b>(const UpdateDomainNameRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGatewayResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateGatewayResponse">updateGatewayResponse</a></b>(const UpdateGatewayResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIntegrationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateIntegration">updateIntegration</a></b>(const UpdateIntegrationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIntegrationResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateIntegrationResponse">updateIntegrationResponse</a></b>(const UpdateIntegrationResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateMethod">updateMethod</a></b>(const UpdateMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMethodResponseResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateMethodResponse">updateMethodResponse</a></b>(const UpdateMethodResponseRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateModel">updateModel</a></b>(const UpdateModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRequestValidatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateRequestValidator">updateRequestValidator</a></b>(const UpdateRequestValidatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateResource">updateResource</a></b>(const UpdateResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRestApiResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateRestApi">updateRestApi</a></b>(const UpdateRestApiRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateStageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateStage">updateStage</a></b>(const UpdateStageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateUsage">updateUsage</a></b>(const UpdateUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUsagePlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateUsagePlan">updateUsagePlan</a></b>(const UpdateUsagePlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateVpcLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-apigateway-apigatewayclient.html#updateVpcLink">updateVpcLink</a></b>(const UpdateVpcLinkRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$APIGatewayClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> class provides access to the Amazon API Gateway service.</p>
+<p>&lt;fullname&gt;Amazon API Gateway&lt;/fullname&gt;</p>
+<p>Amazon API Gateway helps developers deliver robust, secure, and scalable mobile and web application back ends. API Gateway allows developers to securely connect mobile and web applications to APIs that run on AWS Lambda, Amazon EC2, or other publicly addressable web services that are hosted outside of</p>
+</div>
+<!-- @@@APIGatewayClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$APIGatewayClient[overload1]$$$APIGatewayClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="APIGatewayClient"><a name="APIGatewayClient"></a>APIGatewayClient::<span class="name">APIGatewayClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@APIGatewayClient -->
+<!-- $$$APIGatewayClient$$$APIGatewayClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="APIGatewayClient-1"><a name="APIGatewayClient-1"></a>APIGatewayClient::<span class="name">APIGatewayClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-apigateway-apigatewayclient.html#APIGatewayClient">APIGatewayClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@APIGatewayClient -->
+<!-- $$$createApiKey[overload1]$$$createApiKeyconstCreateApiKeyRequest& -->
+<h3 class="fn" id="createApiKey"><a name="createApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createapikeyresponse.html">CreateApiKeyResponse</a></span> *APIGatewayClient::<span class="name">createApiKey</span>(const <span class="type"><a href="qtaws-apigateway-createapikeyrequest.html">CreateApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createapikeyresponse.html">CreateApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create an &lt;a&gt;ApiKey&lt;/a&gt; resource.</p>
+<p>&lt;/p &lt;div class=&quot;seeAlso&quot;&gt;&lt;a href=&quot;http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html&quot;&gt;AWS</p>
+<!-- @@@createApiKey -->
+<!-- $$$createAuthorizer[overload1]$$$createAuthorizerconstCreateAuthorizerRequest& -->
+<h3 class="fn" id="createAuthorizer"><a name="createAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createauthorizerresponse.html">CreateAuthorizerResponse</a></span> *APIGatewayClient::<span class="name">createAuthorizer</span>(const <span class="type"><a href="qtaws-apigateway-createauthorizerrequest.html">CreateAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createauthorizerresponse.html">CreateAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new &lt;a&gt;Authorizer&lt;/a&gt; resource to an existing &lt;a&gt;RestApi&lt;/a&gt;</p>
+<p>resource&gt; &lt;div class=&quot;seeAlso&quot;&gt;&lt;a</p>
+<!-- @@@createAuthorizer -->
+<!-- $$$createBasePathMapping[overload1]$$$createBasePathMappingconstCreateBasePathMappingRequest& -->
+<h3 class="fn" id="createBasePathMapping"><a name="createBasePathMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createbasepathmappingresponse.html">CreateBasePathMappingResponse</a></span> *APIGatewayClient::<span class="name">createBasePathMapping</span>(const <span class="type"><a href="qtaws-apigateway-createbasepathmappingrequest.html">CreateBasePathMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createbasepathmappingresponse.html">CreateBasePathMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;a&gt;BasePathMapping&lt;/a&gt;</p>
+<!-- @@@createBasePathMapping -->
+<!-- $$$createDeployment[overload1]$$$createDeploymentconstCreateDeploymentRequest& -->
+<h3 class="fn" id="createDeployment"><a name="createDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createdeploymentresponse.html">CreateDeploymentResponse</a></span> *APIGatewayClient::<span class="name">createDeployment</span>(const <span class="type"><a href="qtaws-apigateway-createdeploymentrequest.html">CreateDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createdeploymentresponse.html">CreateDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;Deployment&lt;/a&gt; resource, which makes a specified &lt;a&gt;RestApi&lt;/a&gt; callable over the</p>
+<!-- @@@createDeployment -->
+<!-- $$$createDocumentationPart[overload1]$$$createDocumentationPartconstCreateDocumentationPartRequest& -->
+<h3 class="fn" id="createDocumentationPart"><a name="createDocumentationPart"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createdocumentationpartresponse.html">CreateDocumentationPartResponse</a></span> *APIGatewayClient::<span class="name">createDocumentationPart</span>(const <span class="type"><a href="qtaws-apigateway-createdocumentationpartrequest.html">CreateDocumentationPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createdocumentationpartresponse.html">CreateDocumentationPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createDocumentationPart -->
+<!-- $$$createDocumentationVersion[overload1]$$$createDocumentationVersionconstCreateDocumentationVersionRequest& -->
+<h3 class="fn" id="createDocumentationVersion"><a name="createDocumentationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createdocumentationversionresponse.html">CreateDocumentationVersionResponse</a></span> *APIGatewayClient::<span class="name">createDocumentationVersion</span>(const <span class="type"><a href="qtaws-apigateway-createdocumentationversionrequest.html">CreateDocumentationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createdocumentationversionresponse.html">CreateDocumentationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@createDocumentationVersion -->
+<!-- $$$createDomainName[overload1]$$$createDomainNameconstCreateDomainNameRequest& -->
+<h3 class="fn" id="createDomainName"><a name="createDomainName"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createdomainnameresponse.html">CreateDomainNameResponse</a></span> *APIGatewayClient::<span class="name">createDomainName</span>(const <span class="type"><a href="qtaws-apigateway-createdomainnamerequest.html">CreateDomainNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createdomainnameresponse.html">CreateDomainNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new domain</p>
+<!-- @@@createDomainName -->
+<!-- $$$createModel[overload1]$$$createModelconstCreateModelRequest& -->
+<h3 class="fn" id="createModel"><a name="createModel"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createmodelresponse.html">CreateModelResponse</a></span> *APIGatewayClient::<span class="name">createModel</span>(const <span class="type"><a href="qtaws-apigateway-createmodelrequest.html">CreateModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createmodelresponse.html">CreateModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new &lt;a&gt;Model&lt;/a&gt; resource to an existing &lt;a&gt;RestApi&lt;/a&gt;</p>
+<!-- @@@createModel -->
+<!-- $$$createRequestValidator[overload1]$$$createRequestValidatorconstCreateRequestValidatorRequest& -->
+<h3 class="fn" id="createRequestValidator"><a name="createRequestValidator"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createrequestvalidatorresponse.html">CreateRequestValidatorResponse</a></span> *APIGatewayClient::<span class="name">createRequestValidator</span>(const <span class="type"><a href="qtaws-apigateway-createrequestvalidatorrequest.html">CreateRequestValidatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createrequestvalidatorresponse.html">CreateRequestValidatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;ReqeustValidator&lt;/a&gt; of a given</p>
+<!-- @@@createRequestValidator -->
+<!-- $$$createResource[overload1]$$$createResourceconstCreateResourceRequest& -->
+<h3 class="fn" id="createResource"><a name="createResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createresourceresponse.html">CreateResourceResponse</a></span> *APIGatewayClient::<span class="name">createResource</span>(const <span class="type"><a href="qtaws-apigateway-createresourcerequest.html">CreateResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createresourceresponse.html">CreateResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;Resource&lt;/a&gt;</p>
+<!-- @@@createResource -->
+<!-- $$$createRestApi[overload1]$$$createRestApiconstCreateRestApiRequest& -->
+<h3 class="fn" id="createRestApi"><a name="createRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createrestapiresponse.html">CreateRestApiResponse</a></span> *APIGatewayClient::<span class="name">createRestApi</span>(const <span class="type"><a href="qtaws-apigateway-createrestapirequest.html">CreateRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createrestapiresponse.html">CreateRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;a&gt;RestApi&lt;/a&gt;</p>
+<!-- @@@createRestApi -->
+<!-- $$$createStage[overload1]$$$createStageconstCreateStageRequest& -->
+<h3 class="fn" id="createStage"><a name="createStage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createstageresponse.html">CreateStageResponse</a></span> *APIGatewayClient::<span class="name">createStage</span>(const <span class="type"><a href="qtaws-apigateway-createstagerequest.html">CreateStageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createstageresponse.html">CreateStageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;a&gt;Stage&lt;/a&gt; resource that references a pre-existing &lt;a&gt;Deployment&lt;/a&gt; for the API.</p>
+<!-- @@@createStage -->
+<!-- $$$createUsagePlan[overload1]$$$createUsagePlanconstCreateUsagePlanRequest& -->
+<h3 class="fn" id="createUsagePlan"><a name="createUsagePlan"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createusageplanresponse.html">CreateUsagePlanResponse</a></span> *APIGatewayClient::<span class="name">createUsagePlan</span>(const <span class="type"><a href="qtaws-apigateway-createusageplanrequest.html">CreateUsagePlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createusageplanresponse.html">CreateUsagePlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a usage plan with the throttle and quota limits, as well as the associated API stages, specified in the payload.</p>
+<!-- @@@createUsagePlan -->
+<!-- $$$createUsagePlanKey[overload1]$$$createUsagePlanKeyconstCreateUsagePlanKeyRequest& -->
+<h3 class="fn" id="createUsagePlanKey"><a name="createUsagePlanKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createusageplankeyresponse.html">CreateUsagePlanKeyResponse</a></span> *APIGatewayClient::<span class="name">createUsagePlanKey</span>(const <span class="type"><a href="qtaws-apigateway-createusageplankeyrequest.html">CreateUsagePlanKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createusageplankeyresponse.html">CreateUsagePlanKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a usage plan key for adding an existing API key to a usage</p>
+<!-- @@@createUsagePlanKey -->
+<!-- $$$createVpcLink[overload1]$$$createVpcLinkconstCreateVpcLinkRequest& -->
+<h3 class="fn" id="createVpcLink"><a name="createVpcLink"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-createvpclinkresponse.html">CreateVpcLinkResponse</a></span> *APIGatewayClient::<span class="name">createVpcLink</span>(const <span class="type"><a href="qtaws-apigateway-createvpclinkrequest.html">CreateVpcLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-createvpclinkresponse.html">CreateVpcLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a VPC link, under the caller's account in a selected region, in an asynchronous operation that typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create and update VPC Endpoint</p>
+<!-- @@@createVpcLink -->
+<!-- $$$deleteApiKey[overload1]$$$deleteApiKeyconstDeleteApiKeyRequest& -->
+<h3 class="fn" id="deleteApiKey"><a name="deleteApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteapikeyresponse.html">DeleteApiKeyResponse</a></span> *APIGatewayClient::<span class="name">deleteApiKey</span>(const <span class="type"><a href="qtaws-apigateway-deleteapikeyrequest.html">DeleteApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteapikeyresponse.html">DeleteApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the &lt;a&gt;ApiKey&lt;/a&gt;</p>
+<!-- @@@deleteApiKey -->
+<!-- $$$deleteAuthorizer[overload1]$$$deleteAuthorizerconstDeleteAuthorizerRequest& -->
+<h3 class="fn" id="deleteAuthorizer"><a name="deleteAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteauthorizerresponse.html">DeleteAuthorizerResponse</a></span> *APIGatewayClient::<span class="name">deleteAuthorizer</span>(const <span class="type"><a href="qtaws-apigateway-deleteauthorizerrequest.html">DeleteAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteauthorizerresponse.html">DeleteAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing &lt;a&gt;Authorizer&lt;/a&gt;</p>
+<p>resource&gt; &lt;div class=&quot;seeAlso&quot;&gt;&lt;a</p>
+<!-- @@@deleteAuthorizer -->
+<!-- $$$deleteBasePathMapping[overload1]$$$deleteBasePathMappingconstDeleteBasePathMappingRequest& -->
+<h3 class="fn" id="deleteBasePathMapping"><a name="deleteBasePathMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletebasepathmappingresponse.html">DeleteBasePathMappingResponse</a></span> *APIGatewayClient::<span class="name">deleteBasePathMapping</span>(const <span class="type"><a href="qtaws-apigateway-deletebasepathmappingrequest.html">DeleteBasePathMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletebasepathmappingresponse.html">DeleteBasePathMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the &lt;a&gt;BasePathMapping&lt;/a&gt;</p>
+<!-- @@@deleteBasePathMapping -->
+<!-- $$$deleteClientCertificate[overload1]$$$deleteClientCertificateconstDeleteClientCertificateRequest& -->
+<h3 class="fn" id="deleteClientCertificate"><a name="deleteClientCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteclientcertificateresponse.html">DeleteClientCertificateResponse</a></span> *APIGatewayClient::<span class="name">deleteClientCertificate</span>(const <span class="type"><a href="qtaws-apigateway-deleteclientcertificaterequest.html">DeleteClientCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteclientcertificateresponse.html">DeleteClientCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the &lt;a&gt;ClientCertificate&lt;/a&gt;</p>
+<!-- @@@deleteClientCertificate -->
+<!-- $$$deleteDeployment[overload1]$$$deleteDeploymentconstDeleteDeploymentRequest& -->
+<h3 class="fn" id="deleteDeployment"><a name="deleteDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletedeploymentresponse.html">DeleteDeploymentResponse</a></span> *APIGatewayClient::<span class="name">deleteDeployment</span>(const <span class="type"><a href="qtaws-apigateway-deletedeploymentrequest.html">DeleteDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletedeploymentresponse.html">DeleteDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;a&gt;Deployment&lt;/a&gt; resource. Deleting a deployment will only succeed if there are no &lt;a&gt;Stage&lt;/a&gt; resources associated with</p>
+<!-- @@@deleteDeployment -->
+<!-- $$$deleteDocumentationPart[overload1]$$$deleteDocumentationPartconstDeleteDocumentationPartRequest& -->
+<h3 class="fn" id="deleteDocumentationPart"><a name="deleteDocumentationPart"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletedocumentationpartresponse.html">DeleteDocumentationPartResponse</a></span> *APIGatewayClient::<span class="name">deleteDocumentationPart</span>(const <span class="type"><a href="qtaws-apigateway-deletedocumentationpartrequest.html">DeleteDocumentationPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletedocumentationpartresponse.html">DeleteDocumentationPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteDocumentationPart -->
+<!-- $$$deleteDocumentationVersion[overload1]$$$deleteDocumentationVersionconstDeleteDocumentationVersionRequest& -->
+<h3 class="fn" id="deleteDocumentationVersion"><a name="deleteDocumentationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletedocumentationversionresponse.html">DeleteDocumentationVersionResponse</a></span> *APIGatewayClient::<span class="name">deleteDocumentationVersion</span>(const <span class="type"><a href="qtaws-apigateway-deletedocumentationversionrequest.html">DeleteDocumentationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletedocumentationversionresponse.html">DeleteDocumentationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteDocumentationVersion -->
+<!-- $$$deleteDomainName[overload1]$$$deleteDomainNameconstDeleteDomainNameRequest& -->
+<h3 class="fn" id="deleteDomainName"><a name="deleteDomainName"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletedomainnameresponse.html">DeleteDomainNameResponse</a></span> *APIGatewayClient::<span class="name">deleteDomainName</span>(const <span class="type"><a href="qtaws-apigateway-deletedomainnamerequest.html">DeleteDomainNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletedomainnameresponse.html">DeleteDomainNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the &lt;a&gt;DomainName&lt;/a&gt;</p>
+<!-- @@@deleteDomainName -->
+<!-- $$$deleteGatewayResponse[overload1]$$$deleteGatewayResponseconstDeleteGatewayResponseRequest& -->
+<h3 class="fn" id="deleteGatewayResponse"><a name="deleteGatewayResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletegatewayresponseresponse.html">DeleteGatewayResponseResponse</a></span> *APIGatewayClient::<span class="name">deleteGatewayResponse</span>(const <span class="type"><a href="qtaws-apigateway-deletegatewayresponserequest.html">DeleteGatewayResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletegatewayresponseresponse.html">DeleteGatewayResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Clears any customization of a &lt;a&gt;GatewayResponse&lt;/a&gt; of a specified response type on the given &lt;a&gt;RestApi&lt;/a&gt; and resets it with the default</p>
+<!-- @@@deleteGatewayResponse -->
+<!-- $$$deleteIntegration[overload1]$$$deleteIntegrationconstDeleteIntegrationRequest& -->
+<h3 class="fn" id="deleteIntegration"><a name="deleteIntegration"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteintegrationresponse.html">DeleteIntegrationResponse</a></span> *APIGatewayClient::<span class="name">deleteIntegration</span>(const <span class="type"><a href="qtaws-apigateway-deleteintegrationrequest.html">DeleteIntegrationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteintegrationresponse.html">DeleteIntegrationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a delete</p>
+<!-- @@@deleteIntegration -->
+<!-- $$$deleteIntegrationResponse[overload1]$$$deleteIntegrationResponseconstDeleteIntegrationResponseRequest& -->
+<h3 class="fn" id="deleteIntegrationResponse"><a name="deleteIntegrationResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteintegrationresponseresponse.html">DeleteIntegrationResponseResponse</a></span> *APIGatewayClient::<span class="name">deleteIntegrationResponse</span>(const <span class="type"><a href="qtaws-apigateway-deleteintegrationresponserequest.html">DeleteIntegrationResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteintegrationresponseresponse.html">DeleteIntegrationResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a delete integration</p>
+<!-- @@@deleteIntegrationResponse -->
+<!-- $$$deleteMethod[overload1]$$$deleteMethodconstDeleteMethodRequest& -->
+<h3 class="fn" id="deleteMethod"><a name="deleteMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletemethodresponse.html">DeleteMethodResponse</a></span> *APIGatewayClient::<span class="name">deleteMethod</span>(const <span class="type"><a href="qtaws-apigateway-deletemethodrequest.html">DeleteMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletemethodresponse.html">DeleteMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing &lt;a&gt;Method&lt;/a&gt;</p>
+<!-- @@@deleteMethod -->
+<!-- $$$deleteMethodResponse[overload1]$$$deleteMethodResponseconstDeleteMethodResponseRequest& -->
+<h3 class="fn" id="deleteMethodResponse"><a name="deleteMethodResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletemethodresponseresponse.html">DeleteMethodResponseResponse</a></span> *APIGatewayClient::<span class="name">deleteMethodResponse</span>(const <span class="type"><a href="qtaws-apigateway-deletemethodresponserequest.html">DeleteMethodResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletemethodresponseresponse.html">DeleteMethodResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing &lt;a&gt;MethodResponse&lt;/a&gt;</p>
+<!-- @@@deleteMethodResponse -->
+<!-- $$$deleteModel[overload1]$$$deleteModelconstDeleteModelRequest& -->
+<h3 class="fn" id="deleteModel"><a name="deleteModel"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletemodelresponse.html">DeleteModelResponse</a></span> *APIGatewayClient::<span class="name">deleteModel</span>(const <span class="type"><a href="qtaws-apigateway-deletemodelrequest.html">DeleteModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletemodelresponse.html">DeleteModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
+<!-- @@@deleteModel -->
+<!-- $$$deleteRequestValidator[overload1]$$$deleteRequestValidatorconstDeleteRequestValidatorRequest& -->
+<h3 class="fn" id="deleteRequestValidator"><a name="deleteRequestValidator"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleterequestvalidatorresponse.html">DeleteRequestValidatorResponse</a></span> *APIGatewayClient::<span class="name">deleteRequestValidator</span>(const <span class="type"><a href="qtaws-apigateway-deleterequestvalidatorrequest.html">DeleteRequestValidatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleterequestvalidatorresponse.html">DeleteRequestValidatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;a&gt;RequestValidator&lt;/a&gt; of a given</p>
+<!-- @@@deleteRequestValidator -->
+<!-- $$$deleteResource[overload1]$$$deleteResourceconstDeleteResourceRequest& -->
+<h3 class="fn" id="deleteResource"><a name="deleteResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteresourceresponse.html">DeleteResourceResponse</a></span> *APIGatewayClient::<span class="name">deleteResource</span>(const <span class="type"><a href="qtaws-apigateway-deleteresourcerequest.html">DeleteResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteresourceresponse.html">DeleteResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;a&gt;Resource&lt;/a&gt;</p>
+<!-- @@@deleteResource -->
+<!-- $$$deleteRestApi[overload1]$$$deleteRestApiconstDeleteRestApiRequest& -->
+<h3 class="fn" id="deleteRestApi"><a name="deleteRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleterestapiresponse.html">DeleteRestApiResponse</a></span> *APIGatewayClient::<span class="name">deleteRestApi</span>(const <span class="type"><a href="qtaws-apigateway-deleterestapirequest.html">DeleteRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleterestapiresponse.html">DeleteRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteRestApi -->
+<!-- $$$deleteStage[overload1]$$$deleteStageconstDeleteStageRequest& -->
+<h3 class="fn" id="deleteStage"><a name="deleteStage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletestageresponse.html">DeleteStageResponse</a></span> *APIGatewayClient::<span class="name">deleteStage</span>(const <span class="type"><a href="qtaws-apigateway-deletestagerequest.html">DeleteStageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletestageresponse.html">DeleteStageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;a&gt;Stage&lt;/a&gt;</p>
+<!-- @@@deleteStage -->
+<!-- $$$deleteUsagePlan[overload1]$$$deleteUsagePlanconstDeleteUsagePlanRequest& -->
+<h3 class="fn" id="deleteUsagePlan"><a name="deleteUsagePlan"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteusageplanresponse.html">DeleteUsagePlanResponse</a></span> *APIGatewayClient::<span class="name">deleteUsagePlan</span>(const <span class="type"><a href="qtaws-apigateway-deleteusageplanrequest.html">DeleteUsagePlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteusageplanresponse.html">DeleteUsagePlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a usage plan of a given plan</p>
+<!-- @@@deleteUsagePlan -->
+<!-- $$$deleteUsagePlanKey[overload1]$$$deleteUsagePlanKeyconstDeleteUsagePlanKeyRequest& -->
+<h3 class="fn" id="deleteUsagePlanKey"><a name="deleteUsagePlanKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deleteusageplankeyresponse.html">DeleteUsagePlanKeyResponse</a></span> *APIGatewayClient::<span class="name">deleteUsagePlanKey</span>(const <span class="type"><a href="qtaws-apigateway-deleteusageplankeyrequest.html">DeleteUsagePlanKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deleteusageplankeyresponse.html">DeleteUsagePlanKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a usage plan key and remove the underlying API key from the associated usage</p>
+<!-- @@@deleteUsagePlanKey -->
+<!-- $$$deleteVpcLink[overload1]$$$deleteVpcLinkconstDeleteVpcLinkRequest& -->
+<h3 class="fn" id="deleteVpcLink"><a name="deleteVpcLink"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-deletevpclinkresponse.html">DeleteVpcLinkResponse</a></span> *APIGatewayClient::<span class="name">deleteVpcLink</span>(const <span class="type"><a href="qtaws-apigateway-deletevpclinkrequest.html">DeleteVpcLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-deletevpclinkresponse.html">DeleteVpcLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an existing &lt;a&gt;VpcLink&lt;/a&gt; of a specified</p>
+<!-- @@@deleteVpcLink -->
+<!-- $$$flushStageAuthorizersCache[overload1]$$$flushStageAuthorizersCacheconstFlushStageAuthorizersCacheRequest& -->
+<h3 class="fn" id="flushStageAuthorizersCache"><a name="flushStageAuthorizersCache"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-flushstageauthorizerscacheresponse.html">FlushStageAuthorizersCacheResponse</a></span> *APIGatewayClient::<span class="name">flushStageAuthorizersCache</span>(const <span class="type"><a href="qtaws-apigateway-flushstageauthorizerscacherequest.html">FlushStageAuthorizersCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-flushstageauthorizerscacheresponse.html">FlushStageAuthorizersCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Flushes all authorizer cache entries on a</p>
+<!-- @@@flushStageAuthorizersCache -->
+<!-- $$$flushStageCache[overload1]$$$flushStageCacheconstFlushStageCacheRequest& -->
+<h3 class="fn" id="flushStageCache"><a name="flushStageCache"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-flushstagecacheresponse.html">FlushStageCacheResponse</a></span> *APIGatewayClient::<span class="name">flushStageCache</span>(const <span class="type"><a href="qtaws-apigateway-flushstagecacherequest.html">FlushStageCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-flushstagecacheresponse.html">FlushStageCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Flushes a stage's</p>
+<!-- @@@flushStageCache -->
+<!-- $$$generateClientCertificate[overload1]$$$generateClientCertificateconstGenerateClientCertificateRequest& -->
+<h3 class="fn" id="generateClientCertificate"><a name="generateClientCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-generateclientcertificateresponse.html">GenerateClientCertificateResponse</a></span> *APIGatewayClient::<span class="name">generateClientCertificate</span>(const <span class="type"><a href="qtaws-apigateway-generateclientcertificaterequest.html">GenerateClientCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-generateclientcertificateresponse.html">GenerateClientCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates a &lt;a&gt;ClientCertificate&lt;/a&gt;</p>
+<!-- @@@generateClientCertificate -->
+<!-- $$$getAccount[overload1]$$$getAccountconstGetAccountRequest& -->
+<h3 class="fn" id="getAccount"><a name="getAccount"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getaccountresponse.html">GetAccountResponse</a></span> *APIGatewayClient::<span class="name">getAccount</span>(const <span class="type"><a href="qtaws-apigateway-getaccountrequest.html">GetAccountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getaccountresponse.html">GetAccountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the current &lt;a&gt;Account&lt;/a&gt;</p>
+<!-- @@@getAccount -->
+<!-- $$$getApiKey[overload1]$$$getApiKeyconstGetApiKeyRequest& -->
+<h3 class="fn" id="getApiKey"><a name="getApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getapikeyresponse.html">GetApiKeyResponse</a></span> *APIGatewayClient::<span class="name">getApiKey</span>(const <span class="type"><a href="qtaws-apigateway-getapikeyrequest.html">GetApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getapikeyresponse.html">GetApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the current &lt;a&gt;ApiKey&lt;/a&gt;</p>
+<!-- @@@getApiKey -->
+<!-- $$$getApiKeys[overload1]$$$getApiKeysconstGetApiKeysRequest& -->
+<h3 class="fn" id="getApiKeys"><a name="getApiKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getapikeysresponse.html">GetApiKeysResponse</a></span> *APIGatewayClient::<span class="name">getApiKeys</span>(const <span class="type"><a href="qtaws-apigateway-getapikeysrequest.html">GetApiKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getapikeysresponse.html">GetApiKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the current &lt;a&gt;ApiKeys&lt;/a&gt;</p>
+<!-- @@@getApiKeys -->
+<!-- $$$getAuthorizer[overload1]$$$getAuthorizerconstGetAuthorizerRequest& -->
+<h3 class="fn" id="getAuthorizer"><a name="getAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getauthorizerresponse.html">GetAuthorizerResponse</a></span> *APIGatewayClient::<span class="name">getAuthorizer</span>(const <span class="type"><a href="qtaws-apigateway-getauthorizerrequest.html">GetAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getauthorizerresponse.html">GetAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe an existing &lt;a&gt;Authorizer&lt;/a&gt;</p>
+<p>resource&gt; &lt;div class=&quot;seeAlso&quot;&gt;&lt;a</p>
+<!-- @@@getAuthorizer -->
+<!-- $$$getAuthorizers[overload1]$$$getAuthorizersconstGetAuthorizersRequest& -->
+<h3 class="fn" id="getAuthorizers"><a name="getAuthorizers"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getauthorizersresponse.html">GetAuthorizersResponse</a></span> *APIGatewayClient::<span class="name">getAuthorizers</span>(const <span class="type"><a href="qtaws-apigateway-getauthorizersrequest.html">GetAuthorizersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getauthorizersresponse.html">GetAuthorizersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe an existing &lt;a&gt;Authorizers&lt;/a&gt;</p>
+<p>resource&gt; &lt;div class=&quot;seeAlso&quot;&gt;&lt;a</p>
+<!-- @@@getAuthorizers -->
+<!-- $$$getBasePathMapping[overload1]$$$getBasePathMappingconstGetBasePathMappingRequest& -->
+<h3 class="fn" id="getBasePathMapping"><a name="getBasePathMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getbasepathmappingresponse.html">GetBasePathMappingResponse</a></span> *APIGatewayClient::<span class="name">getBasePathMapping</span>(const <span class="type"><a href="qtaws-apigateway-getbasepathmappingrequest.html">GetBasePathMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getbasepathmappingresponse.html">GetBasePathMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe a &lt;a&gt;BasePathMapping&lt;/a&gt;</p>
+<!-- @@@getBasePathMapping -->
+<!-- $$$getBasePathMappings[overload1]$$$getBasePathMappingsconstGetBasePathMappingsRequest& -->
+<h3 class="fn" id="getBasePathMappings"><a name="getBasePathMappings"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getbasepathmappingsresponse.html">GetBasePathMappingsResponse</a></span> *APIGatewayClient::<span class="name">getBasePathMappings</span>(const <span class="type"><a href="qtaws-apigateway-getbasepathmappingsrequest.html">GetBasePathMappingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getbasepathmappingsresponse.html">GetBasePathMappingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a collection of &lt;a&gt;BasePathMapping&lt;/a&gt;</p>
+<!-- @@@getBasePathMappings -->
+<!-- $$$getClientCertificate[overload1]$$$getClientCertificateconstGetClientCertificateRequest& -->
+<h3 class="fn" id="getClientCertificate"><a name="getClientCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getclientcertificateresponse.html">GetClientCertificateResponse</a></span> *APIGatewayClient::<span class="name">getClientCertificate</span>(const <span class="type"><a href="qtaws-apigateway-getclientcertificaterequest.html">GetClientCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getclientcertificateresponse.html">GetClientCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the current &lt;a&gt;ClientCertificate&lt;/a&gt;</p>
+<!-- @@@getClientCertificate -->
+<!-- $$$getClientCertificates[overload1]$$$getClientCertificatesconstGetClientCertificatesRequest& -->
+<h3 class="fn" id="getClientCertificates"><a name="getClientCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getclientcertificatesresponse.html">GetClientCertificatesResponse</a></span> *APIGatewayClient::<span class="name">getClientCertificates</span>(const <span class="type"><a href="qtaws-apigateway-getclientcertificatesrequest.html">GetClientCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getclientcertificatesresponse.html">GetClientCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a collection of &lt;a&gt;ClientCertificate&lt;/a&gt;</p>
+<!-- @@@getClientCertificates -->
+<!-- $$$getDeployment[overload1]$$$getDeploymentconstGetDeploymentRequest& -->
+<h3 class="fn" id="getDeployment"><a name="getDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdeploymentresponse.html">GetDeploymentResponse</a></span> *APIGatewayClient::<span class="name">getDeployment</span>(const <span class="type"><a href="qtaws-apigateway-getdeploymentrequest.html">GetDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdeploymentresponse.html">GetDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a &lt;a&gt;Deployment&lt;/a&gt;</p>
+<!-- @@@getDeployment -->
+<!-- $$$getDeployments[overload1]$$$getDeploymentsconstGetDeploymentsRequest& -->
+<h3 class="fn" id="getDeployments"><a name="getDeployments"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdeploymentsresponse.html">GetDeploymentsResponse</a></span> *APIGatewayClient::<span class="name">getDeployments</span>(const <span class="type"><a href="qtaws-apigateway-getdeploymentsrequest.html">GetDeploymentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdeploymentsresponse.html">GetDeploymentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a &lt;a&gt;Deployments&lt;/a&gt;</p>
+<!-- @@@getDeployments -->
+<!-- $$$getDocumentationPart[overload1]$$$getDocumentationPartconstGetDocumentationPartRequest& -->
+<h3 class="fn" id="getDocumentationPart"><a name="getDocumentationPart"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdocumentationpartresponse.html">GetDocumentationPartResponse</a></span> *APIGatewayClient::<span class="name">getDocumentationPart</span>(const <span class="type"><a href="qtaws-apigateway-getdocumentationpartrequest.html">GetDocumentationPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdocumentationpartresponse.html">GetDocumentationPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getDocumentationPart -->
+<!-- $$$getDocumentationParts[overload1]$$$getDocumentationPartsconstGetDocumentationPartsRequest& -->
+<h3 class="fn" id="getDocumentationParts"><a name="getDocumentationParts"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdocumentationpartsresponse.html">GetDocumentationPartsResponse</a></span> *APIGatewayClient::<span class="name">getDocumentationParts</span>(const <span class="type"><a href="qtaws-apigateway-getdocumentationpartsrequest.html">GetDocumentationPartsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdocumentationpartsresponse.html">GetDocumentationPartsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getDocumentationParts -->
+<!-- $$$getDocumentationVersion[overload1]$$$getDocumentationVersionconstGetDocumentationVersionRequest& -->
+<h3 class="fn" id="getDocumentationVersion"><a name="getDocumentationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdocumentationversionresponse.html">GetDocumentationVersionResponse</a></span> *APIGatewayClient::<span class="name">getDocumentationVersion</span>(const <span class="type"><a href="qtaws-apigateway-getdocumentationversionrequest.html">GetDocumentationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdocumentationversionresponse.html">GetDocumentationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getDocumentationVersion -->
+<!-- $$$getDocumentationVersions[overload1]$$$getDocumentationVersionsconstGetDocumentationVersionsRequest& -->
+<h3 class="fn" id="getDocumentationVersions"><a name="getDocumentationVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdocumentationversionsresponse.html">GetDocumentationVersionsResponse</a></span> *APIGatewayClient::<span class="name">getDocumentationVersions</span>(const <span class="type"><a href="qtaws-apigateway-getdocumentationversionsrequest.html">GetDocumentationVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdocumentationversionsresponse.html">GetDocumentationVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getDocumentationVersions -->
+<!-- $$$getDomainName[overload1]$$$getDomainNameconstGetDomainNameRequest& -->
+<h3 class="fn" id="getDomainName"><a name="getDomainName"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdomainnameresponse.html">GetDomainNameResponse</a></span> *APIGatewayClient::<span class="name">getDomainName</span>(const <span class="type"><a href="qtaws-apigateway-getdomainnamerequest.html">GetDomainNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdomainnameresponse.html">GetDomainNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a domain name that is contained in a simpler, more intuitive URL that can be</p>
+<!-- @@@getDomainName -->
+<!-- $$$getDomainNames[overload1]$$$getDomainNamesconstGetDomainNamesRequest& -->
+<h3 class="fn" id="getDomainNames"><a name="getDomainNames"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getdomainnamesresponse.html">GetDomainNamesResponse</a></span> *APIGatewayClient::<span class="name">getDomainNames</span>(const <span class="type"><a href="qtaws-apigateway-getdomainnamesrequest.html">GetDomainNamesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getdomainnamesresponse.html">GetDomainNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a collection of &lt;a&gt;DomainName&lt;/a&gt;</p>
+<!-- @@@getDomainNames -->
+<!-- $$$getExport[overload1]$$$getExportconstGetExportRequest& -->
+<h3 class="fn" id="getExport"><a name="getExport"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getexportresponse.html">GetExportResponse</a></span> *APIGatewayClient::<span class="name">getExport</span>(const <span class="type"><a href="qtaws-apigateway-getexportrequest.html">GetExportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getexportresponse.html">GetExportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Exports a deployed version of a &lt;a&gt;RestApi&lt;/a&gt; in a specified</p>
+<!-- @@@getExport -->
+<!-- $$$getGatewayResponse[overload1]$$$getGatewayResponseconstGetGatewayResponseRequest& -->
+<h3 class="fn" id="getGatewayResponse"><a name="getGatewayResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getgatewayresponseresponse.html">GetGatewayResponseResponse</a></span> *APIGatewayClient::<span class="name">getGatewayResponse</span>(const <span class="type"><a href="qtaws-apigateway-getgatewayresponserequest.html">GetGatewayResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getgatewayresponseresponse.html">GetGatewayResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a &lt;a&gt;GatewayResponse&lt;/a&gt; of a specified response type on the given</p>
+<!-- @@@getGatewayResponse -->
+<!-- $$$getGatewayResponses[overload1]$$$getGatewayResponsesconstGetGatewayResponsesRequest& -->
+<h3 class="fn" id="getGatewayResponses"><a name="getGatewayResponses"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getgatewayresponsesresponse.html">GetGatewayResponsesResponse</a></span> *APIGatewayClient::<span class="name">getGatewayResponses</span>(const <span class="type"><a href="qtaws-apigateway-getgatewayresponsesrequest.html">GetGatewayResponsesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getgatewayresponsesresponse.html">GetGatewayResponsesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the &lt;a&gt;GatewayResponses&lt;/a&gt; collection on the given &lt;a&gt;RestApi&lt;/a&gt;. If an API developer has not added any definitions for gateway responses, the result will be the API Gateway-generated default &lt;a&gt;GatewayResponses&lt;/a&gt; collection for the supported response</p>
+<!-- @@@getGatewayResponses -->
+<!-- $$$getIntegration[overload1]$$$getIntegrationconstGetIntegrationRequest& -->
+<h3 class="fn" id="getIntegration"><a name="getIntegration"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getintegrationresponse.html">GetIntegrationResponse</a></span> *APIGatewayClient::<span class="name">getIntegration</span>(const <span class="type"><a href="qtaws-apigateway-getintegrationrequest.html">GetIntegrationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getintegrationresponse.html">GetIntegrationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get the integration</p>
+<!-- @@@getIntegration -->
+<!-- $$$getIntegrationResponse[overload1]$$$getIntegrationResponseconstGetIntegrationResponseRequest& -->
+<h3 class="fn" id="getIntegrationResponse"><a name="getIntegrationResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getintegrationresponseresponse.html">GetIntegrationResponseResponse</a></span> *APIGatewayClient::<span class="name">getIntegrationResponse</span>(const <span class="type"><a href="qtaws-apigateway-getintegrationresponserequest.html">GetIntegrationResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getintegrationresponseresponse.html">GetIntegrationResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a get integration</p>
+<!-- @@@getIntegrationResponse -->
+<!-- $$$getMethod[overload1]$$$getMethodconstGetMethodRequest& -->
+<h3 class="fn" id="getMethod"><a name="getMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getmethodresponse.html">GetMethodResponse</a></span> *APIGatewayClient::<span class="name">getMethod</span>(const <span class="type"><a href="qtaws-apigateway-getmethodrequest.html">GetMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getmethodresponse.html">GetMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describe an existing &lt;a&gt;Method&lt;/a&gt;</p>
+<!-- @@@getMethod -->
+<!-- $$$getMethodResponse[overload1]$$$getMethodResponseconstGetMethodResponseRequest& -->
+<h3 class="fn" id="getMethodResponse"><a name="getMethodResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getmethodresponseresponse.html">GetMethodResponseResponse</a></span> *APIGatewayClient::<span class="name">getMethodResponse</span>(const <span class="type"><a href="qtaws-apigateway-getmethodresponserequest.html">GetMethodResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getmethodresponseresponse.html">GetMethodResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a &lt;a&gt;MethodResponse&lt;/a&gt;</p>
+<!-- @@@getMethodResponse -->
+<!-- $$$getModel[overload1]$$$getModelconstGetModelRequest& -->
+<h3 class="fn" id="getModel"><a name="getModel"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getmodelresponse.html">GetModelResponse</a></span> *APIGatewayClient::<span class="name">getModel</span>(const <span class="type"><a href="qtaws-apigateway-getmodelrequest.html">GetModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getmodelresponse.html">GetModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes an existing model defined for a &lt;a&gt;RestApi&lt;/a&gt;</p>
+<!-- @@@getModel -->
+<!-- $$$getModelTemplate[overload1]$$$getModelTemplateconstGetModelTemplateRequest& -->
+<h3 class="fn" id="getModelTemplate"><a name="getModelTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getmodeltemplateresponse.html">GetModelTemplateResponse</a></span> *APIGatewayClient::<span class="name">getModelTemplate</span>(const <span class="type"><a href="qtaws-apigateway-getmodeltemplaterequest.html">GetModelTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getmodeltemplateresponse.html">GetModelTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates a sample mapping template that can be used to transform a payload into the structure of a</p>
+<!-- @@@getModelTemplate -->
+<!-- $$$getModels[overload1]$$$getModelsconstGetModelsRequest& -->
+<h3 class="fn" id="getModels"><a name="getModels"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getmodelsresponse.html">GetModelsResponse</a></span> *APIGatewayClient::<span class="name">getModels</span>(const <span class="type"><a href="qtaws-apigateway-getmodelsrequest.html">GetModelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getmodelsresponse.html">GetModelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes existing &lt;a&gt;Models&lt;/a&gt; defined for a &lt;a&gt;RestApi&lt;/a&gt;</p>
+<!-- @@@getModels -->
+<!-- $$$getRequestValidator[overload1]$$$getRequestValidatorconstGetRequestValidatorRequest& -->
+<h3 class="fn" id="getRequestValidator"><a name="getRequestValidator"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getrequestvalidatorresponse.html">GetRequestValidatorResponse</a></span> *APIGatewayClient::<span class="name">getRequestValidator</span>(const <span class="type"><a href="qtaws-apigateway-getrequestvalidatorrequest.html">GetRequestValidatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getrequestvalidatorresponse.html">GetRequestValidatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a &lt;a&gt;RequestValidator&lt;/a&gt; of a given</p>
+<!-- @@@getRequestValidator -->
+<!-- $$$getRequestValidators[overload1]$$$getRequestValidatorsconstGetRequestValidatorsRequest& -->
+<h3 class="fn" id="getRequestValidators"><a name="getRequestValidators"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getrequestvalidatorsresponse.html">GetRequestValidatorsResponse</a></span> *APIGatewayClient::<span class="name">getRequestValidators</span>(const <span class="type"><a href="qtaws-apigateway-getrequestvalidatorsrequest.html">GetRequestValidatorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getrequestvalidatorsresponse.html">GetRequestValidatorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the &lt;a&gt;RequestValidators&lt;/a&gt; collection of a given</p>
+<!-- @@@getRequestValidators -->
+<!-- $$$getResource[overload1]$$$getResourceconstGetResourceRequest& -->
+<h3 class="fn" id="getResource"><a name="getResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getresourceresponse.html">GetResourceResponse</a></span> *APIGatewayClient::<span class="name">getResource</span>(const <span class="type"><a href="qtaws-apigateway-getresourcerequest.html">GetResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getresourceresponse.html">GetResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about a</p>
+<!-- @@@getResource -->
+<!-- $$$getResources[overload1]$$$getResourcesconstGetResourcesRequest& -->
+<h3 class="fn" id="getResources"><a name="getResources"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getresourcesresponse.html">GetResourcesResponse</a></span> *APIGatewayClient::<span class="name">getResources</span>(const <span class="type"><a href="qtaws-apigateway-getresourcesrequest.html">GetResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getresourcesresponse.html">GetResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists information about a collection of &lt;a&gt;Resource&lt;/a&gt;</p>
+<!-- @@@getResources -->
+<!-- $$$getRestApi[overload1]$$$getRestApiconstGetRestApiRequest& -->
+<h3 class="fn" id="getRestApi"><a name="getRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getrestapiresponse.html">GetRestApiResponse</a></span> *APIGatewayClient::<span class="name">getRestApi</span>(const <span class="type"><a href="qtaws-apigateway-getrestapirequest.html">GetRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getrestapiresponse.html">GetRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the &lt;a&gt;RestApi&lt;/a&gt; resource in the</p>
+<!-- @@@getRestApi -->
+<!-- $$$getRestApis[overload1]$$$getRestApisconstGetRestApisRequest& -->
+<h3 class="fn" id="getRestApis"><a name="getRestApis"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getrestapisresponse.html">GetRestApisResponse</a></span> *APIGatewayClient::<span class="name">getRestApis</span>(const <span class="type"><a href="qtaws-apigateway-getrestapisrequest.html">GetRestApisRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getrestapisresponse.html">GetRestApisResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the &lt;a&gt;RestApis&lt;/a&gt; resources for your</p>
+<!-- @@@getRestApis -->
+<!-- $$$getSdk[overload1]$$$getSdkconstGetSdkRequest& -->
+<h3 class="fn" id="getSdk"><a name="getSdk"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getsdkresponse.html">GetSdkResponse</a></span> *APIGatewayClient::<span class="name">getSdk</span>(const <span class="type"><a href="qtaws-apigateway-getsdkrequest.html">GetSdkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getsdkresponse.html">GetSdkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates a client SDK for a &lt;a&gt;RestApi&lt;/a&gt; and</p>
+<!-- @@@getSdk -->
+<!-- $$$getSdkType[overload1]$$$getSdkTypeconstGetSdkTypeRequest& -->
+<h3 class="fn" id="getSdkType"><a name="getSdkType"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getsdktyperesponse.html">GetSdkTypeResponse</a></span> *APIGatewayClient::<span class="name">getSdkType</span>(const <span class="type"><a href="qtaws-apigateway-getsdktyperequest.html">GetSdkTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getsdktyperesponse.html">GetSdkTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSdkType -->
+<!-- $$$getSdkTypes[overload1]$$$getSdkTypesconstGetSdkTypesRequest& -->
+<h3 class="fn" id="getSdkTypes"><a name="getSdkTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getsdktypesresponse.html">GetSdkTypesResponse</a></span> *APIGatewayClient::<span class="name">getSdkTypes</span>(const <span class="type"><a href="qtaws-apigateway-getsdktypesrequest.html">GetSdkTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getsdktypesresponse.html">GetSdkTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getSdkTypes -->
+<!-- $$$getStage[overload1]$$$getStageconstGetStageRequest& -->
+<h3 class="fn" id="getStage"><a name="getStage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getstageresponse.html">GetStageResponse</a></span> *APIGatewayClient::<span class="name">getStage</span>(const <span class="type"><a href="qtaws-apigateway-getstagerequest.html">GetStageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getstageresponse.html">GetStageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about a &lt;a&gt;Stage&lt;/a&gt;</p>
+<!-- @@@getStage -->
+<!-- $$$getStages[overload1]$$$getStagesconstGetStagesRequest& -->
+<h3 class="fn" id="getStages"><a name="getStages"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getstagesresponse.html">GetStagesResponse</a></span> *APIGatewayClient::<span class="name">getStages</span>(const <span class="type"><a href="qtaws-apigateway-getstagesrequest.html">GetStagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getstagesresponse.html">GetStagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about one or more &lt;a&gt;Stage&lt;/a&gt;</p>
+<!-- @@@getStages -->
+<!-- $$$getTags[overload1]$$$getTagsconstGetTagsRequest& -->
+<h3 class="fn" id="getTags"><a name="getTags"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-gettagsresponse.html">GetTagsResponse</a></span> *APIGatewayClient::<span class="name">getTags</span>(const <span class="type"><a href="qtaws-apigateway-gettagsrequest.html">GetTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-gettagsresponse.html">GetTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the &lt;a&gt;Tags&lt;/a&gt; collection for a given</p>
+<!-- @@@getTags -->
+<!-- $$$getUsage[overload1]$$$getUsageconstGetUsageRequest& -->
+<h3 class="fn" id="getUsage"><a name="getUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getusageresponse.html">GetUsageResponse</a></span> *APIGatewayClient::<span class="name">getUsage</span>(const <span class="type"><a href="qtaws-apigateway-getusagerequest.html">GetUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getusageresponse.html">GetUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the usage data of a usage plan in a specified time</p>
+<!-- @@@getUsage -->
+<!-- $$$getUsagePlan[overload1]$$$getUsagePlanconstGetUsagePlanRequest& -->
+<h3 class="fn" id="getUsagePlan"><a name="getUsagePlan"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getusageplanresponse.html">GetUsagePlanResponse</a></span> *APIGatewayClient::<span class="name">getUsagePlan</span>(const <span class="type"><a href="qtaws-apigateway-getusageplanrequest.html">GetUsagePlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getusageplanresponse.html">GetUsagePlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a usage plan of a given plan</p>
+<!-- @@@getUsagePlan -->
+<!-- $$$getUsagePlanKey[overload1]$$$getUsagePlanKeyconstGetUsagePlanKeyRequest& -->
+<h3 class="fn" id="getUsagePlanKey"><a name="getUsagePlanKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getusageplankeyresponse.html">GetUsagePlanKeyResponse</a></span> *APIGatewayClient::<span class="name">getUsagePlanKey</span>(const <span class="type"><a href="qtaws-apigateway-getusageplankeyrequest.html">GetUsagePlanKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getusageplankeyresponse.html">GetUsagePlanKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a usage plan key of a given key</p>
+<!-- @@@getUsagePlanKey -->
+<!-- $$$getUsagePlanKeys[overload1]$$$getUsagePlanKeysconstGetUsagePlanKeysRequest& -->
+<h3 class="fn" id="getUsagePlanKeys"><a name="getUsagePlanKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getusageplankeysresponse.html">GetUsagePlanKeysResponse</a></span> *APIGatewayClient::<span class="name">getUsagePlanKeys</span>(const <span class="type"><a href="qtaws-apigateway-getusageplankeysrequest.html">GetUsagePlanKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getusageplankeysresponse.html">GetUsagePlanKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets all the usage plan keys representing the API keys added to a specified usage</p>
+<!-- @@@getUsagePlanKeys -->
+<!-- $$$getUsagePlans[overload1]$$$getUsagePlansconstGetUsagePlansRequest& -->
+<h3 class="fn" id="getUsagePlans"><a name="getUsagePlans"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getusageplansresponse.html">GetUsagePlansResponse</a></span> *APIGatewayClient::<span class="name">getUsagePlans</span>(const <span class="type"><a href="qtaws-apigateway-getusageplansrequest.html">GetUsagePlansRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getusageplansresponse.html">GetUsagePlansResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets all the usage plans of the caller's</p>
+<!-- @@@getUsagePlans -->
+<!-- $$$getVpcLink[overload1]$$$getVpcLinkconstGetVpcLinkRequest& -->
+<h3 class="fn" id="getVpcLink"><a name="getVpcLink"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getvpclinkresponse.html">GetVpcLinkResponse</a></span> *APIGatewayClient::<span class="name">getVpcLink</span>(const <span class="type"><a href="qtaws-apigateway-getvpclinkrequest.html">GetVpcLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getvpclinkresponse.html">GetVpcLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a specified VPC link under the caller's account in a</p>
+<!-- @@@getVpcLink -->
+<!-- $$$getVpcLinks[overload1]$$$getVpcLinksconstGetVpcLinksRequest& -->
+<h3 class="fn" id="getVpcLinks"><a name="getVpcLinks"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-getvpclinksresponse.html">GetVpcLinksResponse</a></span> *APIGatewayClient::<span class="name">getVpcLinks</span>(const <span class="type"><a href="qtaws-apigateway-getvpclinksrequest.html">GetVpcLinksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-getvpclinksresponse.html">GetVpcLinksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the &lt;a&gt;VpcLinks&lt;/a&gt; collection under the caller's account in a selected</p>
+<!-- @@@getVpcLinks -->
+<!-- $$$importApiKeys[overload1]$$$importApiKeysconstImportApiKeysRequest& -->
+<h3 class="fn" id="importApiKeys"><a name="importApiKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-importapikeysresponse.html">ImportApiKeysResponse</a></span> *APIGatewayClient::<span class="name">importApiKeys</span>(const <span class="type"><a href="qtaws-apigateway-importapikeysrequest.html">ImportApiKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-importapikeysresponse.html">ImportApiKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Import API keys from an external source, such as a CSV-formatted</p>
+<!-- @@@importApiKeys -->
+<!-- $$$importDocumentationParts[overload1]$$$importDocumentationPartsconstImportDocumentationPartsRequest& -->
+<h3 class="fn" id="importDocumentationParts"><a name="importDocumentationParts"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-importdocumentationpartsresponse.html">ImportDocumentationPartsResponse</a></span> *APIGatewayClient::<span class="name">importDocumentationParts</span>(const <span class="type"><a href="qtaws-apigateway-importdocumentationpartsrequest.html">ImportDocumentationPartsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-importdocumentationpartsresponse.html">ImportDocumentationPartsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@importDocumentationParts -->
+<!-- $$$importRestApi[overload1]$$$importRestApiconstImportRestApiRequest& -->
+<h3 class="fn" id="importRestApi"><a name="importRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-importrestapiresponse.html">ImportRestApiResponse</a></span> *APIGatewayClient::<span class="name">importRestApi</span>(const <span class="type"><a href="qtaws-apigateway-importrestapirequest.html">ImportRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-importrestapiresponse.html">ImportRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>A feature of the API Gateway control service for creating a new API from an external API definition</p>
+<!-- @@@importRestApi -->
+<!-- $$$putGatewayResponse[overload1]$$$putGatewayResponseconstPutGatewayResponseRequest& -->
+<h3 class="fn" id="putGatewayResponse"><a name="putGatewayResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putgatewayresponseresponse.html">PutGatewayResponseResponse</a></span> *APIGatewayClient::<span class="name">putGatewayResponse</span>(const <span class="type"><a href="qtaws-apigateway-putgatewayresponserequest.html">PutGatewayResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putgatewayresponseresponse.html">PutGatewayResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a customization of a &lt;a&gt;GatewayResponse&lt;/a&gt; of a specified response type and status code on the given</p>
+<!-- @@@putGatewayResponse -->
+<!-- $$$putIntegration[overload1]$$$putIntegrationconstPutIntegrationRequest& -->
+<h3 class="fn" id="putIntegration"><a name="putIntegration"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putintegrationresponse.html">PutIntegrationResponse</a></span> *APIGatewayClient::<span class="name">putIntegration</span>(const <span class="type"><a href="qtaws-apigateway-putintegrationrequest.html">PutIntegrationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putintegrationresponse.html">PutIntegrationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets up a method's</p>
+<!-- @@@putIntegration -->
+<!-- $$$putIntegrationResponse[overload1]$$$putIntegrationResponseconstPutIntegrationResponseRequest& -->
+<h3 class="fn" id="putIntegrationResponse"><a name="putIntegrationResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putintegrationresponseresponse.html">PutIntegrationResponseResponse</a></span> *APIGatewayClient::<span class="name">putIntegrationResponse</span>(const <span class="type"><a href="qtaws-apigateway-putintegrationresponserequest.html">PutIntegrationResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putintegrationresponseresponse.html">PutIntegrationResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents a put</p>
+<!-- @@@putIntegrationResponse -->
+<!-- $$$putMethod[overload1]$$$putMethodconstPutMethodRequest& -->
+<h3 class="fn" id="putMethod"><a name="putMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putmethodresponse.html">PutMethodResponse</a></span> *APIGatewayClient::<span class="name">putMethod</span>(const <span class="type"><a href="qtaws-apigateway-putmethodrequest.html">PutMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putmethodresponse.html">PutMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Add a method to an existing &lt;a&gt;Resource&lt;/a&gt;</p>
+<!-- @@@putMethod -->
+<!-- $$$putMethodResponse[overload1]$$$putMethodResponseconstPutMethodResponseRequest& -->
+<h3 class="fn" id="putMethodResponse"><a name="putMethodResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putmethodresponseresponse.html">PutMethodResponseResponse</a></span> *APIGatewayClient::<span class="name">putMethodResponse</span>(const <span class="type"><a href="qtaws-apigateway-putmethodresponserequest.html">PutMethodResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putmethodresponseresponse.html">PutMethodResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a &lt;a&gt;MethodResponse&lt;/a&gt; to an existing &lt;a&gt;Method&lt;/a&gt;</p>
+<!-- @@@putMethodResponse -->
+<!-- $$$putRestApi[overload1]$$$putRestApiconstPutRestApiRequest& -->
+<h3 class="fn" id="putRestApi"><a name="putRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-putrestapiresponse.html">PutRestApiResponse</a></span> *APIGatewayClient::<span class="name">putRestApi</span>(const <span class="type"><a href="qtaws-apigateway-putrestapirequest.html">PutRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-putrestapiresponse.html">PutRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>A feature of the API Gateway control service for updating an existing API with an input of external API definitions. The update can take the form of merging the supplied definition into the existing API or overwriting the existing</p>
+<!-- @@@putRestApi -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-tagresourceresponse.html">TagResourceResponse</a></span> *APIGatewayClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-apigateway-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates a tag on a given</p>
+<!-- @@@tagResource -->
+<!-- $$$testInvokeAuthorizer[overload1]$$$testInvokeAuthorizerconstTestInvokeAuthorizerRequest& -->
+<h3 class="fn" id="testInvokeAuthorizer"><a name="testInvokeAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-testinvokeauthorizerresponse.html">TestInvokeAuthorizerResponse</a></span> *APIGatewayClient::<span class="name">testInvokeAuthorizer</span>(const <span class="type"><a href="qtaws-apigateway-testinvokeauthorizerrequest.html">TestInvokeAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-testinvokeauthorizerresponse.html">TestInvokeAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Simulate the execution of an &lt;a&gt;Authorizer&lt;/a&gt; in your &lt;a&gt;RestApi&lt;/a&gt; with headers, parameters, and an incoming request</p>
+<p>body&gt; &lt;div class=&quot;seeAlso&quot;&gt; &lt;a href=&quot;http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html&quot;&gt;Enable custom</p>
+<!-- @@@testInvokeAuthorizer -->
+<!-- $$$testInvokeMethod[overload1]$$$testInvokeMethodconstTestInvokeMethodRequest& -->
+<h3 class="fn" id="testInvokeMethod"><a name="testInvokeMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-testinvokemethodresponse.html">TestInvokeMethodResponse</a></span> *APIGatewayClient::<span class="name">testInvokeMethod</span>(const <span class="type"><a href="qtaws-apigateway-testinvokemethodrequest.html">TestInvokeMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-testinvokemethodresponse.html">TestInvokeMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Simulate the execution of a &lt;a&gt;Method&lt;/a&gt; in your &lt;a&gt;RestApi&lt;/a&gt; with headers, parameters, and an incoming request</p>
+<!-- @@@testInvokeMethod -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-untagresourceresponse.html">UntagResourceResponse</a></span> *APIGatewayClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-apigateway-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a tag from a given</p>
+<!-- @@@untagResource -->
+<!-- $$$updateAccount[overload1]$$$updateAccountconstUpdateAccountRequest& -->
+<h3 class="fn" id="updateAccount"><a name="updateAccount"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateaccountresponse.html">UpdateAccountResponse</a></span> *APIGatewayClient::<span class="name">updateAccount</span>(const <span class="type"><a href="qtaws-apigateway-updateaccountrequest.html">UpdateAccountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateaccountresponse.html">UpdateAccountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about the current &lt;a&gt;Account&lt;/a&gt;</p>
+<!-- @@@updateAccount -->
+<!-- $$$updateApiKey[overload1]$$$updateApiKeyconstUpdateApiKeyRequest& -->
+<h3 class="fn" id="updateApiKey"><a name="updateApiKey"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateapikeyresponse.html">UpdateApiKeyResponse</a></span> *APIGatewayClient::<span class="name">updateApiKey</span>(const <span class="type"><a href="qtaws-apigateway-updateapikeyrequest.html">UpdateApiKeyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateapikeyresponse.html">UpdateApiKeyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about an &lt;a&gt;ApiKey&lt;/a&gt;</p>
+<!-- @@@updateApiKey -->
+<!-- $$$updateAuthorizer[overload1]$$$updateAuthorizerconstUpdateAuthorizerRequest& -->
+<h3 class="fn" id="updateAuthorizer"><a name="updateAuthorizer"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateauthorizerresponse.html">UpdateAuthorizerResponse</a></span> *APIGatewayClient::<span class="name">updateAuthorizer</span>(const <span class="type"><a href="qtaws-apigateway-updateauthorizerrequest.html">UpdateAuthorizerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateauthorizerresponse.html">UpdateAuthorizerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing &lt;a&gt;Authorizer&lt;/a&gt;</p>
+<p>resource&gt; &lt;div class=&quot;seeAlso&quot;&gt;&lt;a</p>
+<!-- @@@updateAuthorizer -->
+<!-- $$$updateBasePathMapping[overload1]$$$updateBasePathMappingconstUpdateBasePathMappingRequest& -->
+<h3 class="fn" id="updateBasePathMapping"><a name="updateBasePathMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatebasepathmappingresponse.html">UpdateBasePathMappingResponse</a></span> *APIGatewayClient::<span class="name">updateBasePathMapping</span>(const <span class="type"><a href="qtaws-apigateway-updatebasepathmappingrequest.html">UpdateBasePathMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatebasepathmappingresponse.html">UpdateBasePathMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about the &lt;a&gt;BasePathMapping&lt;/a&gt;</p>
+<!-- @@@updateBasePathMapping -->
+<!-- $$$updateClientCertificate[overload1]$$$updateClientCertificateconstUpdateClientCertificateRequest& -->
+<h3 class="fn" id="updateClientCertificate"><a name="updateClientCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateclientcertificateresponse.html">UpdateClientCertificateResponse</a></span> *APIGatewayClient::<span class="name">updateClientCertificate</span>(const <span class="type"><a href="qtaws-apigateway-updateclientcertificaterequest.html">UpdateClientCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateclientcertificateresponse.html">UpdateClientCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about an &lt;a&gt;ClientCertificate&lt;/a&gt;</p>
+<!-- @@@updateClientCertificate -->
+<!-- $$$updateDeployment[overload1]$$$updateDeploymentconstUpdateDeploymentRequest& -->
+<h3 class="fn" id="updateDeployment"><a name="updateDeployment"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatedeploymentresponse.html">UpdateDeploymentResponse</a></span> *APIGatewayClient::<span class="name">updateDeployment</span>(const <span class="type"><a href="qtaws-apigateway-updatedeploymentrequest.html">UpdateDeploymentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatedeploymentresponse.html">UpdateDeploymentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about a &lt;a&gt;Deployment&lt;/a&gt;</p>
+<!-- @@@updateDeployment -->
+<!-- $$$updateDocumentationPart[overload1]$$$updateDocumentationPartconstUpdateDocumentationPartRequest& -->
+<h3 class="fn" id="updateDocumentationPart"><a name="updateDocumentationPart"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatedocumentationpartresponse.html">UpdateDocumentationPartResponse</a></span> *APIGatewayClient::<span class="name">updateDocumentationPart</span>(const <span class="type"><a href="qtaws-apigateway-updatedocumentationpartrequest.html">UpdateDocumentationPartRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatedocumentationpartresponse.html">UpdateDocumentationPartResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateDocumentationPart -->
+<!-- $$$updateDocumentationVersion[overload1]$$$updateDocumentationVersionconstUpdateDocumentationVersionRequest& -->
+<h3 class="fn" id="updateDocumentationVersion"><a name="updateDocumentationVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatedocumentationversionresponse.html">UpdateDocumentationVersionResponse</a></span> *APIGatewayClient::<span class="name">updateDocumentationVersion</span>(const <span class="type"><a href="qtaws-apigateway-updatedocumentationversionrequest.html">UpdateDocumentationVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatedocumentationversionresponse.html">UpdateDocumentationVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateDocumentationVersion -->
+<!-- $$$updateDomainName[overload1]$$$updateDomainNameconstUpdateDomainNameRequest& -->
+<h3 class="fn" id="updateDomainName"><a name="updateDomainName"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatedomainnameresponse.html">UpdateDomainNameResponse</a></span> *APIGatewayClient::<span class="name">updateDomainName</span>(const <span class="type"><a href="qtaws-apigateway-updatedomainnamerequest.html">UpdateDomainNameRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatedomainnameresponse.html">UpdateDomainNameResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about the &lt;a&gt;DomainName&lt;/a&gt;</p>
+<!-- @@@updateDomainName -->
+<!-- $$$updateGatewayResponse[overload1]$$$updateGatewayResponseconstUpdateGatewayResponseRequest& -->
+<h3 class="fn" id="updateGatewayResponse"><a name="updateGatewayResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updategatewayresponseresponse.html">UpdateGatewayResponseResponse</a></span> *APIGatewayClient::<span class="name">updateGatewayResponse</span>(const <span class="type"><a href="qtaws-apigateway-updategatewayresponserequest.html">UpdateGatewayResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updategatewayresponseresponse.html">UpdateGatewayResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;a&gt;GatewayResponse&lt;/a&gt; of a specified response type on the given</p>
+<!-- @@@updateGatewayResponse -->
+<!-- $$$updateIntegration[overload1]$$$updateIntegrationconstUpdateIntegrationRequest& -->
+<h3 class="fn" id="updateIntegration"><a name="updateIntegration"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateintegrationresponse.html">UpdateIntegrationResponse</a></span> *APIGatewayClient::<span class="name">updateIntegration</span>(const <span class="type"><a href="qtaws-apigateway-updateintegrationrequest.html">UpdateIntegrationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateintegrationresponse.html">UpdateIntegrationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents an update</p>
+<!-- @@@updateIntegration -->
+<!-- $$$updateIntegrationResponse[overload1]$$$updateIntegrationResponseconstUpdateIntegrationResponseRequest& -->
+<h3 class="fn" id="updateIntegrationResponse"><a name="updateIntegrationResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateintegrationresponseresponse.html">UpdateIntegrationResponseResponse</a></span> *APIGatewayClient::<span class="name">updateIntegrationResponse</span>(const <span class="type"><a href="qtaws-apigateway-updateintegrationresponserequest.html">UpdateIntegrationResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateintegrationresponseresponse.html">UpdateIntegrationResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Represents an update integration</p>
+<!-- @@@updateIntegrationResponse -->
+<!-- $$$updateMethod[overload1]$$$updateMethodconstUpdateMethodRequest& -->
+<h3 class="fn" id="updateMethod"><a name="updateMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatemethodresponse.html">UpdateMethodResponse</a></span> *APIGatewayClient::<span class="name">updateMethod</span>(const <span class="type"><a href="qtaws-apigateway-updatemethodrequest.html">UpdateMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatemethodresponse.html">UpdateMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing &lt;a&gt;Method&lt;/a&gt;</p>
+<!-- @@@updateMethod -->
+<!-- $$$updateMethodResponse[overload1]$$$updateMethodResponseconstUpdateMethodResponseRequest& -->
+<h3 class="fn" id="updateMethodResponse"><a name="updateMethodResponse"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatemethodresponseresponse.html">UpdateMethodResponseResponse</a></span> *APIGatewayClient::<span class="name">updateMethodResponse</span>(const <span class="type"><a href="qtaws-apigateway-updatemethodresponserequest.html">UpdateMethodResponseRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatemethodresponseresponse.html">UpdateMethodResponseResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing &lt;a&gt;MethodResponse&lt;/a&gt;</p>
+<!-- @@@updateMethodResponse -->
+<!-- $$$updateModel[overload1]$$$updateModelconstUpdateModelRequest& -->
+<h3 class="fn" id="updateModel"><a name="updateModel"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatemodelresponse.html">UpdateModelResponse</a></span> *APIGatewayClient::<span class="name">updateModel</span>(const <span class="type"><a href="qtaws-apigateway-updatemodelrequest.html">UpdateModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatemodelresponse.html">UpdateModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about a</p>
+<!-- @@@updateModel -->
+<!-- $$$updateRequestValidator[overload1]$$$updateRequestValidatorconstUpdateRequestValidatorRequest& -->
+<h3 class="fn" id="updateRequestValidator"><a name="updateRequestValidator"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updaterequestvalidatorresponse.html">UpdateRequestValidatorResponse</a></span> *APIGatewayClient::<span class="name">updateRequestValidator</span>(const <span class="type"><a href="qtaws-apigateway-updaterequestvalidatorrequest.html">UpdateRequestValidatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updaterequestvalidatorresponse.html">UpdateRequestValidatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;a&gt;RequestValidator&lt;/a&gt; of a given</p>
+<!-- @@@updateRequestValidator -->
+<!-- $$$updateResource[overload1]$$$updateResourceconstUpdateResourceRequest& -->
+<h3 class="fn" id="updateResource"><a name="updateResource"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateresourceresponse.html">UpdateResourceResponse</a></span> *APIGatewayClient::<span class="name">updateResource</span>(const <span class="type"><a href="qtaws-apigateway-updateresourcerequest.html">UpdateResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateresourceresponse.html">UpdateResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about a &lt;a&gt;Resource&lt;/a&gt;</p>
+<!-- @@@updateResource -->
+<!-- $$$updateRestApi[overload1]$$$updateRestApiconstUpdateRestApiRequest& -->
+<h3 class="fn" id="updateRestApi"><a name="updateRestApi"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updaterestapiresponse.html">UpdateRestApiResponse</a></span> *APIGatewayClient::<span class="name">updateRestApi</span>(const <span class="type"><a href="qtaws-apigateway-updaterestapirequest.html">UpdateRestApiRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updaterestapiresponse.html">UpdateRestApiResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about the specified</p>
+<!-- @@@updateRestApi -->
+<!-- $$$updateStage[overload1]$$$updateStageconstUpdateStageRequest& -->
+<h3 class="fn" id="updateStage"><a name="updateStage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatestageresponse.html">UpdateStageResponse</a></span> *APIGatewayClient::<span class="name">updateStage</span>(const <span class="type"><a href="qtaws-apigateway-updatestagerequest.html">UpdateStageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatestageresponse.html">UpdateStageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes information about a &lt;a&gt;Stage&lt;/a&gt;</p>
+<!-- @@@updateStage -->
+<!-- $$$updateUsage[overload1]$$$updateUsageconstUpdateUsageRequest& -->
+<h3 class="fn" id="updateUsage"><a name="updateUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateusageresponse.html">UpdateUsageResponse</a></span> *APIGatewayClient::<span class="name">updateUsage</span>(const <span class="type"><a href="qtaws-apigateway-updateusagerequest.html">UpdateUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateusageresponse.html">UpdateUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Grants a temporary extension to the remaining quota of a usage plan associated with a specified API</p>
+<!-- @@@updateUsage -->
+<!-- $$$updateUsagePlan[overload1]$$$updateUsagePlanconstUpdateUsagePlanRequest& -->
+<h3 class="fn" id="updateUsagePlan"><a name="updateUsagePlan"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updateusageplanresponse.html">UpdateUsagePlanResponse</a></span> *APIGatewayClient::<span class="name">updateUsagePlan</span>(const <span class="type"><a href="qtaws-apigateway-updateusageplanrequest.html">UpdateUsagePlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updateusageplanresponse.html">UpdateUsagePlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a usage plan of a given plan</p>
+<!-- @@@updateUsagePlan -->
+<!-- $$$updateVpcLink[overload1]$$$updateVpcLinkconstUpdateVpcLinkRequest& -->
+<h3 class="fn" id="updateVpcLink"><a name="updateVpcLink"></a><code>[slot] </code><span class="type"><a href="qtaws-apigateway-updatevpclinkresponse.html">UpdateVpcLinkResponse</a></span> *APIGatewayClient::<span class="name">updateVpcLink</span>(const <span class="type"><a href="qtaws-apigateway-updatevpclinkrequest.html">UpdateVpcLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-apigateway-apigatewayclient.html">APIGatewayClient</a> service, and returns a pointer to an <a href="qtaws-apigateway-updatevpclinkresponse.html">UpdateVpcLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing &lt;a&gt;VpcLink&lt;/a&gt; of a specified</p>
+<!-- @@@updateVpcLink -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

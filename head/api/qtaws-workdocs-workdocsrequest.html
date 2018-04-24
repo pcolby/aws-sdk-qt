@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- workdocsrequest.cpp -->
+  <title>WorkDocsRequest Class | WorkDocs</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsworkdocs-index.html">WorkDocs</a></li>
+<li><a href="qtawsworkdocs-module.html">C++ Classes</a></li>
+<li>WorkDocsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WorkDocsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-workdocs-workdocsrequest.html">QtAws::WorkDocs::WorkDocsRequest</a>)<br/></span>
+<!-- $$$WorkDocsRequest-brief -->
+<p>The <a href="qtaws-workdocs-workdocsrequest.html">WorkDocsRequest</a> class provides an interface for <a href="qtaws-workdocs.html">WorkDocs</a> requests. <a href="#details">More...</a></p>
+<!-- @@@WorkDocsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WorkDocsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-workdocs-abortdocumentversionuploadrequest.html">QtAws::WorkDocs::AbortDocumentVersionUploadRequest</a>, <a href="qtaws-workdocs-activateuserrequest.html">QtAws::WorkDocs::ActivateUserRequest</a>, <a href="qtaws-workdocs-addresourcepermissionsrequest.html">QtAws::WorkDocs::AddResourcePermissionsRequest</a>, <a href="qtaws-workdocs-createcommentrequest.html">QtAws::WorkDocs::CreateCommentRequest</a>, <a href="qtaws-workdocs-createcustommetadatarequest.html">QtAws::WorkDocs::CreateCustomMetadataRequest</a>, <a href="qtaws-workdocs-createfolderrequest.html">QtAws::WorkDocs::CreateFolderRequest</a>, <a href="qtaws-workdocs-createlabelsrequest.html">QtAws::WorkDocs::CreateLabelsRequest</a>, <a href="qtaws-workdocs-createnotificationsubscriptionrequest.html">QtAws::WorkDocs::CreateNotificationSubscriptionRequest</a>, <a href="qtaws-workdocs-createuserrequest.html">QtAws::WorkDocs::CreateUserRequest</a>, <a href="qtaws-workdocs-deactivateuserrequest.html">QtAws::WorkDocs::DeactivateUserRequest</a>, <a href="qtaws-workdocs-deletecommentrequest.html">QtAws::WorkDocs::DeleteCommentRequest</a>, <a href="qtaws-workdocs-deletecustommetadatarequest.html">QtAws::WorkDocs::DeleteCustomMetadataRequest</a>, <a href="qtaws-workdocs-deletedocumentrequest.html">QtAws::WorkDocs::DeleteDocumentRequest</a>, <a href="qtaws-workdocs-deletefoldercontentsrequest.html">QtAws::WorkDocs::DeleteFolderContentsRequest</a>, <a href="qtaws-workdocs-deletefolderrequest.html">QtAws::WorkDocs::DeleteFolderRequest</a>, <a href="qtaws-workdocs-deletelabelsrequest.html">QtAws::WorkDocs::DeleteLabelsRequest</a>, <a href="qtaws-workdocs-deletenotificationsubscriptionrequest.html">QtAws::WorkDocs::DeleteNotificationSubscriptionRequest</a>, <a href="qtaws-workdocs-deleteuserrequest.html">QtAws::WorkDocs::DeleteUserRequest</a>, <a href="qtaws-workdocs-describeactivitiesrequest.html">QtAws::WorkDocs::DescribeActivitiesRequest</a>, <a href="qtaws-workdocs-describecommentsrequest.html">QtAws::WorkDocs::DescribeCommentsRequest</a>, <a href="qtaws-workdocs-describedocumentversionsrequest.html">QtAws::WorkDocs::DescribeDocumentVersionsRequest</a>, <a href="qtaws-workdocs-describefoldercontentsrequest.html">QtAws::WorkDocs::DescribeFolderContentsRequest</a>, <a href="qtaws-workdocs-describegroupsrequest.html">QtAws::WorkDocs::DescribeGroupsRequest</a>, <a href="qtaws-workdocs-describenotificationsubscriptionsrequest.html">QtAws::WorkDocs::DescribeNotificationSubscriptionsRequest</a>, <a href="qtaws-workdocs-describeresourcepermissionsrequest.html">QtAws::WorkDocs::DescribeResourcePermissionsRequest</a>, <a href="qtaws-workdocs-describerootfoldersrequest.html">QtAws::WorkDocs::DescribeRootFoldersRequest</a>, <a href="qtaws-workdocs-describeusersrequest.html">QtAws::WorkDocs::DescribeUsersRequest</a>, <a href="qtaws-workdocs-getcurrentuserrequest.html">QtAws::WorkDocs::GetCurrentUserRequest</a>, <a href="qtaws-workdocs-getdocumentpathrequest.html">QtAws::WorkDocs::GetDocumentPathRequest</a>, <a href="qtaws-workdocs-getdocumentrequest.html">QtAws::WorkDocs::GetDocumentRequest</a>, <a href="qtaws-workdocs-getdocumentversionrequest.html">QtAws::WorkDocs::GetDocumentVersionRequest</a>, <a href="qtaws-workdocs-getfolderpathrequest.html">QtAws::WorkDocs::GetFolderPathRequest</a>, <a href="qtaws-workdocs-getfolderrequest.html">QtAws::WorkDocs::GetFolderRequest</a>, <a href="qtaws-workdocs-initiatedocumentversionuploadrequest.html">QtAws::WorkDocs::InitiateDocumentVersionUploadRequest</a>, <a href="qtaws-workdocs-removeallresourcepermissionsrequest.html">QtAws::WorkDocs::RemoveAllResourcePermissionsRequest</a>, <a href="qtaws-workdocs-removeresourcepermissionrequest.html">QtAws::WorkDocs::RemoveResourcePermissionRequest</a>, <a href="qtaws-workdocs-updatedocumentrequest.html">QtAws::WorkDocs::UpdateDocumentRequest</a>, <a href="qtaws-workdocs-updatedocumentversionrequest.html">QtAws::WorkDocs::UpdateDocumentVersionRequest</a>, <a href="qtaws-workdocs-updatefolderrequest.html">QtAws::WorkDocs::UpdateFolderRequest</a>, and <a href="qtaws-workdocs-updateuserrequest.html">QtAws::WorkDocs::UpdateUserRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-workdocs-workdocsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#Action-enum">Action</a></b> { AbortDocumentVersionUploadAction, ActivateUserAction, AddResourcePermissionsAction, CreateCommentAction, ..., UpdateUserAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest">WorkDocsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest-1">WorkDocsRequest</a></b>(const WorkDocsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> WorkDocsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#operator-eq">operator=</a></b>(const WorkDocsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#operator-eq-eq">operator==</a></b>(const WorkDocsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest-2">WorkDocsRequest</a></b>(WorkDocsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WorkDocsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-workdocs-workdocsrequest.html">WorkDocsRequest</a> class provides an interface for <a href="qtaws-workdocs.html">WorkDocs</a> requests.</p>
+</div>
+<!-- @@@WorkDocsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AbortDocumentVersionUploadAction$$$ActivateUserAction$$$AddResourcePermissionsAction$$$CreateCommentAction$$$CreateCustomMetadataAction$$$CreateFolderAction$$$CreateLabelsAction$$$CreateNotificationSubscriptionAction$$$CreateUserAction$$$DeactivateUserAction$$$DeleteCommentAction$$$DeleteCustomMetadataAction$$$DeleteDocumentAction$$$DeleteFolderAction$$$DeleteFolderContentsAction$$$DeleteLabelsAction$$$DeleteNotificationSubscriptionAction$$$DeleteUserAction$$$DescribeActivitiesAction$$$DescribeCommentsAction$$$DescribeDocumentVersionsAction$$$DescribeFolderContentsAction$$$DescribeGroupsAction$$$DescribeNotificationSubscriptionsAction$$$DescribeResourcePermissionsAction$$$DescribeRootFoldersAction$$$DescribeUsersAction$$$GetCurrentUserAction$$$GetDocumentAction$$$GetDocumentPathAction$$$GetDocumentVersionAction$$$GetFolderAction$$$GetFolderPathAction$$$InitiateDocumentVersionUploadAction$$$RemoveAllResourcePermissionsAction$$$RemoveResourcePermissionAction$$$UpdateDocumentAction$$$UpdateDocumentVersionAction$$$UpdateFolderAction$$$UpdateUserAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum WorkDocsRequest::<span class="name">Action</span><br/>flags WorkDocsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-workdocs.html">WorkDocs</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::AbortDocumentVersionUploadAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> AbortDocumentVersionUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::ActivateUserAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> ActivateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::AddResourcePermissionsAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> AddResourcePermissions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateCommentAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateCustomMetadataAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateCustomMetadata action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateFolderAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateFolder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateLabelsAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateLabels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateNotificationSubscriptionAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateNotificationSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::CreateUserAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> CreateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeactivateUserAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeactivateUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteCommentAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteCustomMetadataAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteCustomMetadata action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteDocumentAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteFolderAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteFolder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteFolderContentsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteFolderContents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteLabelsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteLabels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteNotificationSubscriptionAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteNotificationSubscription action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DeleteUserAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DeleteUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeActivitiesAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeActivities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeCommentsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeComments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeDocumentVersionsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeDocumentVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeFolderContentsAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeFolderContents action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeGroupsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeNotificationSubscriptionsAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeNotificationSubscriptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeResourcePermissionsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeResourcePermissions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeRootFoldersAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeRootFolders action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::DescribeUsersAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> DescribeUsers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetCurrentUserAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetCurrentUser action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetDocumentAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetDocumentPathAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetDocumentPath action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetDocumentVersionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetDocumentVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetFolderAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetFolder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::GetFolderPathAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> GetFolderPath action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::InitiateDocumentVersionUploadAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> InitiateDocumentVersionUpload action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::RemoveAllResourcePermissionsAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> RemoveAllResourcePermissions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::RemoveResourcePermissionAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> RemoveResourcePermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::UpdateDocumentAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> UpdateDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::UpdateDocumentVersionAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> UpdateDocumentVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::UpdateFolderAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> UpdateFolder action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::WorkDocs::WorkDocsRequest::UpdateUserAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-workdocs.html">WorkDocs</a> UpdateUser action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WorkDocsRequest[overload1]$$$WorkDocsRequestconstAction -->
+<h3 class="fn" id="WorkDocsRequest"><a name="WorkDocsRequest"></a>WorkDocsRequest::<span class="name">WorkDocsRequest</span>(const <span class="type"><a href="qtaws-workdocs-workdocsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-workdocs-workdocsrequest.html">WorkDocsRequest</a> object for <a href="qtaws-workdocs.html">WorkDocs</a> <i>action</i>.</p>
+<!-- @@@WorkDocsRequest -->
+<!-- $$$WorkDocsRequest$$$WorkDocsRequestconstWorkDocsRequest& -->
+<h3 class="fn" id="WorkDocsRequest-1"><a name="WorkDocsRequest-1"></a>WorkDocsRequest::<span class="name">WorkDocsRequest</span>(const <span class="type"><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest">WorkDocsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@WorkDocsRequest -->
+<!-- $$$WorkDocsRequest$$$WorkDocsRequestWorkDocsRequestPrivate*const -->
+<h3 class="fn" id="WorkDocsRequest-2"><a name="WorkDocsRequest-2"></a><code>[protected] </code>WorkDocsRequest::<span class="name">WorkDocsRequest</span>(<span class="type">WorkDocsRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-workdocs-workdocsrequest.html">WorkDocsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from WorkDocsRequestPrivate.</p>
+<!-- @@@WorkDocsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-workdocs-workdocsrequest.html#Action-enum">Action</a></span> WorkDocsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-workdocs.html">WorkDocs</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> WorkDocsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-workdocs.html">WorkDocs</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> WorkDocsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-workdocs.html">WorkDocs</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> WorkDocsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> WorkDocsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> WorkDocsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;WorkDocsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> WorkDocsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-workdocs-workdocsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-workdocs.html">WorkDocs</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> WorkDocsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-workdocs.html">WorkDocs</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> WorkDocsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> WorkDocsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-workdocs-workdocsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> WorkDocsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-workdocs.html">WorkDocs</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-workdocs.html">WorkDocs</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-workdocs-workdocsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constWorkDocsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest">WorkDocsRequest</a></span> &amp;WorkDocsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest">WorkDocsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-workdocs-workdocsrequest.html">WorkDocsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constWorkDocsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> WorkDocsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-workdocs-workdocsrequest.html#WorkDocsRequest">WorkDocsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

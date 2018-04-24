@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- connectclient.cpp -->
+  <title>ConnectClient Class | Connect</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsconnect-index.html">Connect</a></li>
+<li><a href="qtawsconnect-module.html">C++ Classes</a></li>
+<li>ConnectClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ConnectClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-connect-connectclient.html">QtAws::Connect::ConnectClient</a>)<br/></span>
+<!-- $$$ConnectClient-brief -->
+<p>The <a href="qtaws-connect-connectclient.html">ConnectClient</a> class provides access to the Amazon Connect Service service. <a href="#details">More...</a></p>
+<!-- @@@ConnectClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ConnectClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-connect-connectclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-connect-connectclient.html#ConnectClient">ConnectClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-connect-connectclient.html#ConnectClient-1">ConnectClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> StartOutboundVoiceContactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-connect-connectclient.html#startOutboundVoiceContact">startOutboundVoiceContact</a></b>(const StartOutboundVoiceContactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopContactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-connect-connectclient.html#stopContact">stopContact</a></b>(const StopContactRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ConnectClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-connect-connectclient.html">ConnectClient</a> class provides access to the Amazon Connect Service service.</p>
+<p>The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy to set up and manage a customer contact center and provide reliable customer engagement at any</p>
+</div>
+<!-- @@@ConnectClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ConnectClient[overload1]$$$ConnectClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ConnectClient"><a name="ConnectClient"></a>ConnectClient::<span class="name">ConnectClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-connect-connectclient.html">ConnectClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ConnectClient -->
+<!-- $$$ConnectClient$$$ConnectClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ConnectClient-1"><a name="ConnectClient-1"></a>ConnectClient::<span class="name">ConnectClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-connect-connectclient.html#ConnectClient">ConnectClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ConnectClient -->
+<!-- $$$startOutboundVoiceContact[overload1]$$$startOutboundVoiceContactconstStartOutboundVoiceContactRequest& -->
+<h3 class="fn" id="startOutboundVoiceContact"><a name="startOutboundVoiceContact"></a><code>[slot] </code><span class="type"><a href="qtaws-connect-startoutboundvoicecontactresponse.html">StartOutboundVoiceContactResponse</a></span> *ConnectClient::<span class="name">startOutboundVoiceContact</span>(const <span class="type"><a href="qtaws-connect-startoutboundvoicecontactrequest.html">StartOutboundVoiceContactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-connect-connectclient.html">ConnectClient</a> service, and returns a pointer to an <a href="qtaws-connect-startoutboundvoicecontactresponse.html">StartOutboundVoiceContactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The &lt;code&gt;StartOutboundVoiceContact&lt;/code&gt; operation initiates a contact flow to place an outbound call to a</p>
+<p>customer&gt;</p>
+<p>There is a throttling limit placed on usage of the API that includes a &lt;code&gt;RateLimit&lt;/code&gt; of 2 per second, and a &lt;code&gt;BurstLimit&lt;/code&gt; of 5 per</p>
+<p>second&gt;</p>
+<p>If you are using an IAM account, it must have permissions to the &lt;code&gt;connect:StartOutboundVoiceContact&lt;/code&gt;</p>
+<!-- @@@startOutboundVoiceContact -->
+<!-- $$$stopContact[overload1]$$$stopContactconstStopContactRequest& -->
+<h3 class="fn" id="stopContact"><a name="stopContact"></a><code>[slot] </code><span class="type"><a href="qtaws-connect-stopcontactresponse.html">StopContactResponse</a></span> *ConnectClient::<span class="name">stopContact</span>(const <span class="type"><a href="qtaws-connect-stopcontactrequest.html">StopContactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-connect-connectclient.html">ConnectClient</a> service, and returns a pointer to an <a href="qtaws-connect-stopcontactresponse.html">StopContactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Ends the contact initiated by the &lt;code&gt;StartOutboundVoiceContact&lt;/code&gt;</p>
+<p>operation&gt;</p>
+<p>If you are using an IAM account, it must have permissions to the &lt;code&gt;connect:StopContact&lt;/code&gt;</p>
+<!-- @@@stopContact -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudwatchclient.cpp -->
+  <title>CloudWatchClient Class | CloudWatch</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudwatch-index.html">CloudWatch</a></li>
+<li><a href="qtawscloudwatch-module.html">C++ Classes</a></li>
+<li>CloudWatchClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudWatchClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudwatch-cloudwatchclient.html">QtAws::CloudWatch::CloudWatchClient</a>)<br/></span>
+<!-- $$$CloudWatchClient-brief -->
+<p>The <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> class provides access to the Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> service. <a href="#details">More...</a></p>
+<!-- @@@CloudWatchClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudWatchClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cloudwatch-cloudwatchclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#CloudWatchClient">CloudWatchClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#CloudWatchClient-1">CloudWatchClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAlarmsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#deleteAlarms">deleteAlarms</a></b>(const DeleteAlarmsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDashboardsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#deleteDashboards">deleteDashboards</a></b>(const DeleteDashboardsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAlarmHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#describeAlarmHistory">describeAlarmHistory</a></b>(const DescribeAlarmHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAlarmsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#describeAlarms">describeAlarms</a></b>(const DescribeAlarmsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAlarmsForMetricResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#describeAlarmsForMetric">describeAlarmsForMetric</a></b>(const DescribeAlarmsForMetricRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableAlarmActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#disableAlarmActions">disableAlarmActions</a></b>(const DisableAlarmActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableAlarmActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#enableAlarmActions">enableAlarmActions</a></b>(const EnableAlarmActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDashboardResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#getDashboard">getDashboard</a></b>(const GetDashboardRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMetricDataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#getMetricData">getMetricData</a></b>(const GetMetricDataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMetricStatisticsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#getMetricStatistics">getMetricStatistics</a></b>(const GetMetricStatisticsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDashboardsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#listDashboards">listDashboards</a></b>(const ListDashboardsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMetricsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#listMetrics">listMetrics</a></b>(const ListMetricsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutDashboardResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#putDashboard">putDashboard</a></b>(const PutDashboardRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutMetricAlarmResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#putMetricAlarm">putMetricAlarm</a></b>(const PutMetricAlarmRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutMetricDataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#putMetricData">putMetricData</a></b>(const PutMetricDataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetAlarmStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudwatch-cloudwatchclient.html#setAlarmState">setAlarmState</a></b>(const SetAlarmStateRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudWatchClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> class provides access to the Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> service.</p>
+<p>Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You can use <a href="qtaws-cloudwatch.html">CloudWatch</a> to collect and track metrics, which are the variables you want to measure for your resources and</p>
+<p>applications&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> alarms send notifications or automatically change the resources you are monitoring based on rules that you define. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances. Then, use this data to determine whether you should launch additional instances to handle increased load. You can also use this data to stop under-used instances to save</p>
+<p>money&gt;</p>
+<p>In addition to monitoring the built-in metrics that come with AWS, you can monitor your own custom metrics. With <a href="qtaws-cloudwatch.html">CloudWatch</a>, you gain system-wide visibility into resource utilization, application performance, and operational</p>
+</div>
+<!-- @@@CloudWatchClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudWatchClient[overload1]$$$CloudWatchClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudWatchClient"><a name="CloudWatchClient"></a>CloudWatchClient::<span class="name">CloudWatchClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudWatchClient -->
+<!-- $$$CloudWatchClient$$$CloudWatchClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudWatchClient-1"><a name="CloudWatchClient-1"></a>CloudWatchClient::<span class="name">CloudWatchClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cloudwatch-cloudwatchclient.html#CloudWatchClient">CloudWatchClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudWatchClient -->
+<!-- $$$deleteAlarms[overload1]$$$deleteAlarmsconstDeleteAlarmsRequest& -->
+<h3 class="fn" id="deleteAlarms"><a name="deleteAlarms"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-deletealarmsresponse.html">DeleteAlarmsResponse</a></span> *CloudWatchClient::<span class="name">deleteAlarms</span>(const <span class="type"><a href="qtaws-cloudwatch-deletealarmsrequest.html">DeleteAlarmsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-deletealarmsresponse.html">DeleteAlarmsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified alarms. In the event of an error, no alarms are</p>
+<!-- @@@deleteAlarms -->
+<!-- $$$deleteDashboards[overload1]$$$deleteDashboardsconstDeleteDashboardsRequest& -->
+<h3 class="fn" id="deleteDashboards"><a name="deleteDashboards"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-deletedashboardsresponse.html">DeleteDashboardsResponse</a></span> *CloudWatchClient::<span class="name">deleteDashboards</span>(const <span class="type"><a href="qtaws-cloudwatch-deletedashboardsrequest.html">DeleteDashboardsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-deletedashboardsresponse.html">DeleteDashboardsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes all dashboards that you specify. You may specify up to 100 dashboards to delete. If there is an error during this call, no dashboards are</p>
+<!-- @@@deleteDashboards -->
+<!-- $$$describeAlarmHistory[overload1]$$$describeAlarmHistoryconstDescribeAlarmHistoryRequest& -->
+<h3 class="fn" id="describeAlarmHistory"><a name="describeAlarmHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-describealarmhistoryresponse.html">DescribeAlarmHistoryResponse</a></span> *CloudWatchClient::<span class="name">describeAlarmHistory</span>(const <span class="type"><a href="qtaws-cloudwatch-describealarmhistoryrequest.html">DescribeAlarmHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-describealarmhistoryresponse.html">DescribeAlarmHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the history for the specified alarm. You can filter the results by date range or item type. If an alarm name is not specified, the histories for all alarms are</p>
+<p>returned&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> retains the history of an alarm even if you delete the</p>
+<!-- @@@describeAlarmHistory -->
+<!-- $$$describeAlarms[overload1]$$$describeAlarmsconstDescribeAlarmsRequest& -->
+<h3 class="fn" id="describeAlarms"><a name="describeAlarms"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-describealarmsresponse.html">DescribeAlarmsResponse</a></span> *CloudWatchClient::<span class="name">describeAlarms</span>(const <span class="type"><a href="qtaws-cloudwatch-describealarmsrequest.html">DescribeAlarmsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-describealarmsresponse.html">DescribeAlarmsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the specified alarms. If no alarms are specified, all alarms are returned. Alarms can be retrieved by using only a prefix for the alarm name, the alarm state, or a prefix for any</p>
+<!-- @@@describeAlarms -->
+<!-- $$$describeAlarmsForMetric[overload1]$$$describeAlarmsForMetricconstDescribeAlarmsForMetricRequest& -->
+<h3 class="fn" id="describeAlarmsForMetric"><a name="describeAlarmsForMetric"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-describealarmsformetricresponse.html">DescribeAlarmsForMetricResponse</a></span> *CloudWatchClient::<span class="name">describeAlarmsForMetric</span>(const <span class="type"><a href="qtaws-cloudwatch-describealarmsformetricrequest.html">DescribeAlarmsForMetricRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-describealarmsformetricresponse.html">DescribeAlarmsForMetricResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the alarms for the specified metric. To filter the results, specify a statistic, period, or</p>
+<!-- @@@describeAlarmsForMetric -->
+<!-- $$$disableAlarmActions[overload1]$$$disableAlarmActionsconstDisableAlarmActionsRequest& -->
+<h3 class="fn" id="disableAlarmActions"><a name="disableAlarmActions"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-disablealarmactionsresponse.html">DisableAlarmActionsResponse</a></span> *CloudWatchClient::<span class="name">disableAlarmActions</span>(const <span class="type"><a href="qtaws-cloudwatch-disablealarmactionsrequest.html">DisableAlarmActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-disablealarmactionsresponse.html">DisableAlarmActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the actions for the specified alarms. When an alarm's actions are disabled, the alarm actions do not execute when the alarm state</p>
+<!-- @@@disableAlarmActions -->
+<!-- $$$enableAlarmActions[overload1]$$$enableAlarmActionsconstEnableAlarmActionsRequest& -->
+<h3 class="fn" id="enableAlarmActions"><a name="enableAlarmActions"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-enablealarmactionsresponse.html">EnableAlarmActionsResponse</a></span> *CloudWatchClient::<span class="name">enableAlarmActions</span>(const <span class="type"><a href="qtaws-cloudwatch-enablealarmactionsrequest.html">EnableAlarmActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-enablealarmactionsresponse.html">EnableAlarmActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables the actions for the specified</p>
+<!-- @@@enableAlarmActions -->
+<!-- $$$getDashboard[overload1]$$$getDashboardconstGetDashboardRequest& -->
+<h3 class="fn" id="getDashboard"><a name="getDashboard"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-getdashboardresponse.html">GetDashboardResponse</a></span> *CloudWatchClient::<span class="name">getDashboard</span>(const <span class="type"><a href="qtaws-cloudwatch-getdashboardrequest.html">GetDashboardRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-getdashboardresponse.html">GetDashboardResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Displays the details of the dashboard that you</p>
+<p>specify&gt;</p>
+<p>To copy an existing dashboard, use &lt;code&gt;GetDashboard&lt;/code&gt;, and then use the data returned within &lt;code&gt;DashboardBody&lt;/code&gt; as the template for the new dashboard when you call &lt;code&gt;PutDashboard&lt;/code&gt; to create the</p>
+<!-- @@@getDashboard -->
+<!-- $$$getMetricData[overload1]$$$getMetricDataconstGetMetricDataRequest& -->
+<h3 class="fn" id="getMetricData"><a name="getMetricData"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-getmetricdataresponse.html">GetMetricDataResponse</a></span> *CloudWatchClient::<span class="name">getMetricData</span>(const <span class="type"><a href="qtaws-cloudwatch-getmetricdatarequest.html">GetMetricDataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-getmetricdataresponse.html">GetMetricDataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You can use the &lt;code&gt;GetMetricData&lt;/code&gt; API to retrieve as many as 100 different metrics in a single request, with a total of as many as 100,800 datapoints. You can also optionally perform math expressions on the values of the returned statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you could divide the Errors metric by the Invocations metric to get an error rate time series. For more information about metric math expressions, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax&quot;&gt;Metric Math Syntax and Functions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Calls to the &lt;code&gt;GetMetricData&lt;/code&gt; API have a different pricing structure than calls to &lt;code&gt;GetMetricStatistics&lt;/code&gt;. For more information about pricing, see &lt;a href=&quot;https://aws.amazon.com/cloudwatch/pricing/&quot;&gt;Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a></p>
+<!-- @@@getMetricData -->
+<!-- $$$getMetricStatistics[overload1]$$$getMetricStatisticsconstGetMetricStatisticsRequest& -->
+<h3 class="fn" id="getMetricStatistics"><a name="getMetricStatistics"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-getmetricstatisticsresponse.html">GetMetricStatisticsResponse</a></span> *CloudWatchClient::<span class="name">getMetricStatistics</span>(const <span class="type"><a href="qtaws-cloudwatch-getmetricstatisticsrequest.html">GetMetricStatisticsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-getmetricstatisticsresponse.html">GetMetricStatisticsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets statistics for the specified</p>
+<p>metric&gt;</p>
+<p>The maximum number of data points returned from a single call is 1,440. If you request more than 1,440 data points, <a href="qtaws-cloudwatch.html">CloudWatch</a> returns an error. To reduce the number of data points, you can narrow the specified time range and make multiple requests across adjacent time ranges, or you can increase the specified period. Data points are not returned in chronological</p>
+<p>order&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> aggregates data points based on the length of the period that you specify. For example, if you request statistics with a one-hour period, <a href="qtaws-cloudwatch.html">CloudWatch</a> aggregates all data points with time stamps that fall within each one-hour period. Therefore, the number of values aggregated by <a href="qtaws-cloudwatch.html">CloudWatch</a> is larger than the number of data points</p>
+<p>returned&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> needs raw data points to calculate percentile statistics. If you publish data using a statistic set instead, you can only retrieve percentile statistics for this data if one of the following conditions is</p>
+<p>true&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The SampleCount value of the statistic set is</p>
+<p>1&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The Min and the Max values of the statistic set are</p>
+<p>equal&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> retains metric data as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Data points with a period of less than 60 seconds are available for 3 hours. These data points are high-resolution metrics and are available only for custom metrics that have been defined with a &lt;code&gt;StorageResolution&lt;/code&gt; of</p>
+<p>1&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Data points with a period of 60 seconds (1-minute) are available for 15</p>
+<p>days&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Data points with a period of 300 seconds (5-minute) are available for 63</p>
+<p>days&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Data points with a period of 3600 seconds (1 hour) are available for 455 days (15</p>
+<p>months)&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Data points that are initially published with a shorter period are aggregated together for long-term storage. For example, if you collect data using a period of 1 minute, the data remains available for 15 days with 1-minute resolution. After 15 days, this data is still available, but is aggregated and retrievable only with a resolution of 5 minutes. After 63 days, the data is further aggregated and is available with a resolution of 1</p>
+<p>hour&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> started retaining 5-minute and 1-hour metric data as of July 9,</p>
+<p>2016&gt;</p>
+<p>For information about metrics and dimensions supported by AWS services, see the &lt;a href=&quot;http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html&quot;&gt;Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> Metrics and Dimensions Reference&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> User</p>
+<!-- @@@getMetricStatistics -->
+<!-- $$$listDashboards[overload1]$$$listDashboardsconstListDashboardsRequest& -->
+<h3 class="fn" id="listDashboards"><a name="listDashboards"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-listdashboardsresponse.html">ListDashboardsResponse</a></span> *CloudWatchClient::<span class="name">listDashboards</span>(const <span class="type"><a href="qtaws-cloudwatch-listdashboardsrequest.html">ListDashboardsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-listdashboardsresponse.html">ListDashboardsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the dashboards for your account. If you include &lt;code&gt;DashboardNamePrefix&lt;/code&gt;, only those dashboards with names starting with the prefix are listed. Otherwise, all dashboards in your account are listed.</p>
+<!-- @@@listDashboards -->
+<!-- $$$listMetrics[overload1]$$$listMetricsconstListMetricsRequest& -->
+<h3 class="fn" id="listMetrics"><a name="listMetrics"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-listmetricsresponse.html">ListMetricsResponse</a></span> *CloudWatchClient::<span class="name">listMetrics</span>(const <span class="type"><a href="qtaws-cloudwatch-listmetricsrequest.html">ListMetricsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-listmetricsresponse.html">ListMetricsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List the specified metrics. You can use the returned metrics with &lt;a&gt;GetMetricStatistics&lt;/a&gt; to obtain statistical</p>
+<p>data&gt;</p>
+<p>Up to 500 results are returned for any one call. To retrieve additional results, use the returned token with subsequent</p>
+<p>calls&gt;</p>
+<p>After you create a metric, allow up to fifteen minutes before the metric appears. Statistics about the metric, however, are available sooner using</p>
+<!-- @@@listMetrics -->
+<!-- $$$putDashboard[overload1]$$$putDashboardconstPutDashboardRequest& -->
+<h3 class="fn" id="putDashboard"><a name="putDashboard"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-putdashboardresponse.html">PutDashboardResponse</a></span> *CloudWatchClient::<span class="name">putDashboard</span>(const <span class="type"><a href="qtaws-cloudwatch-putdashboardrequest.html">PutDashboardRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-putdashboardresponse.html">PutDashboardResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a dashboard if it does not already exist, or updates an existing dashboard. If you update a dashboard, the entire contents are replaced with what you specify</p>
+<p>here&gt;</p>
+<p>You can have up to 500 dashboards per account. All dashboards in your account are global, not</p>
+<p>region-specific&gt;</p>
+<p>A simple way to create a dashboard using &lt;code&gt;PutDashboard&lt;/code&gt; is to copy an existing dashboard. To copy an existing dashboard using the console, you can load the dashboard and then use the View/edit source command in the Actions menu to display the JSON block for that dashboard. Another way to copy a dashboard is to use &lt;code&gt;GetDashboard&lt;/code&gt;, and then use the data returned within &lt;code&gt;DashboardBody&lt;/code&gt; as the template for the new dashboard when you call</p>
+<p>&lt;code&gt;PutDashboard&lt;/code&gt;&gt;</p>
+<p>When you create a dashboard with &lt;code&gt;PutDashboard&lt;/code&gt;, a good practice is to add a text widget at the top of the dashboard with a message that the dashboard was created by script and should not be changed in the console. This message could also point console users to the location of the &lt;code&gt;DashboardBody&lt;/code&gt; script or the CloudFormation template used to create the</p>
+<!-- @@@putDashboard -->
+<!-- $$$putMetricAlarm[overload1]$$$putMetricAlarmconstPutMetricAlarmRequest& -->
+<h3 class="fn" id="putMetricAlarm"><a name="putMetricAlarm"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-putmetricalarmresponse.html">PutMetricAlarmResponse</a></span> *CloudWatchClient::<span class="name">putMetricAlarm</span>(const <span class="type"><a href="qtaws-cloudwatch-putmetricalarmrequest.html">PutMetricAlarmRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-putmetricalarmresponse.html">PutMetricAlarmResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates an alarm and associates it with the specified metric. Optionally, this operation can associate one or more Amazon SNS resources with the</p>
+<p>alarm&gt;</p>
+<p>When this operation creates an alarm, the alarm state is immediately set to &lt;code&gt;INSUFFICIENT_DATA&lt;/code&gt;. The alarm is evaluated and its state is set appropriately. Any actions associated with the state are then</p>
+<p>executed&gt;</p>
+<p>When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous configuration of the</p>
+<p>alarm&gt;</p>
+<p>If you are an IAM user, you must have Amazon EC2 permissions for some</p>
+<p>operations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;iam:CreateServiceLinkedRole&lt;/code&gt; for all alarms with EC2</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DescribeInstanceStatus&lt;/code&gt; and &lt;code&gt;ec2:DescribeInstances&lt;/code&gt; for all alarms on EC2 instance status</p>
+<p>metric&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:StopInstances&lt;/code&gt; for alarms with stop</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:TerminateInstances&lt;/code&gt; for alarms with terminate</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ec2:DescribeInstanceRecoveryAttribute&lt;/code&gt; and &lt;code&gt;ec2:RecoverInstances&lt;/code&gt; for alarms with recover</p>
+<p>action&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If you have read/write permissions for Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> but not for Amazon EC2, you can still create an alarm, but the stop or terminate actions are not performed. However, if you are later granted the required permissions, the alarm actions that you created earlier are</p>
+<p>performed&gt;</p>
+<p>If you are using an IAM role (for example, an EC2 instance profile), you cannot stop or terminate the instance using alarm actions. However, you can still see the alarm state and perform any other actions such as Amazon SNS notifications or Auto Scaling</p>
+<p>policies&gt;</p>
+<p>If you are using temporary security credentials granted using AWS STS, you cannot stop or terminate an EC2 instance using alarm</p>
+<p>actions&gt;</p>
+<p>You must create at least one stop, terminate, or reboot alarm using either the Amazon EC2 or <a href="qtaws-cloudwatch.html">CloudWatch</a> consoles to create the &lt;b&gt;EC2ActionsAccess&lt;/b&gt; IAM role. After this IAM role is created, you can create stop, terminate, or reboot alarms using a command-line interface or</p>
+<!-- @@@putMetricAlarm -->
+<!-- $$$putMetricData[overload1]$$$putMetricDataconstPutMetricDataRequest& -->
+<h3 class="fn" id="putMetricData"><a name="putMetricData"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-putmetricdataresponse.html">PutMetricDataResponse</a></span> *CloudWatchClient::<span class="name">putMetricData</span>(const <span class="type"><a href="qtaws-cloudwatch-putmetricdatarequest.html">PutMetricDataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-putmetricdataresponse.html">PutMetricDataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Publishes metric data points to Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a>. <a href="qtaws-cloudwatch.html">CloudWatch</a> associates the data points with the specified metric. If the specified metric does not exist, <a href="qtaws-cloudwatch.html">CloudWatch</a> creates the metric. When <a href="qtaws-cloudwatch.html">CloudWatch</a> creates a metric, it can take up to fifteen minutes for the metric to appear in calls to</p>
+<p>&lt;a&gt;ListMetrics&lt;/a&gt;&gt;</p>
+<p>Each &lt;code&gt;PutMetricData&lt;/code&gt; request is limited to 40 KB in size for HTTP POST</p>
+<p>requests&gt;</p>
+<p>Although the &lt;code&gt;Value&lt;/code&gt; parameter accepts numbers of type &lt;code&gt;Double&lt;/code&gt;, <a href="qtaws-cloudwatch.html">CloudWatch</a> rejects values that are either too small or too large. Values must be in the range of 8.515920e-109 to 1.174271e+108 (Base 10) or 2e-360 to 2e360 (Base 2). In addition, special values (for example, NaN, +Infinity, -Infinity) are not</p>
+<p>supported&gt;</p>
+<p>You can use up to 10 dimensions per metric to further clarify what data the metric collects. For more information about specifying dimensions, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html&quot;&gt;Publishing Metrics&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Data points with time stamps from 24 hours ago or longer can take at least 48 hours to become available for &lt;a&gt;GetMetricStatistics&lt;/a&gt; from the time they are</p>
+<p>submitted&gt;</p>
+<p><a href="qtaws-cloudwatch.html">CloudWatch</a> needs raw data points to calculate percentile statistics. If you publish data using a statistic set instead, you can only retrieve percentile statistics for this data if one of the following conditions is</p>
+<p>true&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The SampleCount value of the statistic set is</p>
+<p>&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The Min and the Max values of the statistic set are</p>
+<!-- @@@putMetricData -->
+<!-- $$$setAlarmState[overload1]$$$setAlarmStateconstSetAlarmStateRequest& -->
+<h3 class="fn" id="setAlarmState"><a name="setAlarmState"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudwatch-setalarmstateresponse.html">SetAlarmStateResponse</a></span> *CloudWatchClient::<span class="name">setAlarmState</span>(const <span class="type"><a href="qtaws-cloudwatch-setalarmstaterequest.html">SetAlarmStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudwatch-cloudwatchclient.html">CloudWatchClient</a> service, and returns a pointer to an <a href="qtaws-cloudwatch-setalarmstateresponse.html">SetAlarmStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Temporarily sets the state of an alarm for testing purposes. When the updated state differs from the previous value, the action configured for the appropriate state is invoked. For example, if your alarm is configured to send an Amazon SNS message when an alarm is triggered, temporarily changing the alarm state to &lt;code&gt;ALARM&lt;/code&gt; sends an SNS message. The alarm returns to its actual state (often within seconds). Because the alarm state change happens quickly, it is typically only visible in the alarm's &lt;b&gt;History&lt;/b&gt; tab in the Amazon <a href="qtaws-cloudwatch.html">CloudWatch</a> console or through</p>
+<!-- @@@setAlarmState -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- applicationautoscalingclient.cpp -->
+  <title>ApplicationAutoScalingClient Class | ApplicationAutoScaling</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsapplicationautoscaling-index.html">ApplicationAutoScaling</a></li>
+<li><a href="qtawsapplicationautoscaling-module.html">C++ Classes</a></li>
+<li>ApplicationAutoScalingClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ApplicationAutoScalingClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">QtAws::ApplicationAutoScaling::ApplicationAutoScalingClient</a>)<br/></span>
+<!-- $$$ApplicationAutoScalingClient-brief -->
+<p>The <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> class provides access to the Application Auto Scaling service. <a href="#details">More...</a></p>
+<!-- @@@ApplicationAutoScalingClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ApplicationAutoScalingClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-applicationautoscaling-applicationautoscalingclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#ApplicationAutoScalingClient">ApplicationAutoScalingClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#ApplicationAutoScalingClient-1">ApplicationAutoScalingClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteScalingPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#deleteScalingPolicy">deleteScalingPolicy</a></b>(const DeleteScalingPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteScheduledActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#deleteScheduledAction">deleteScheduledAction</a></b>(const DeleteScheduledActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterScalableTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#deregisterScalableTarget">deregisterScalableTarget</a></b>(const DeregisterScalableTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalableTargetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#describeScalableTargets">describeScalableTargets</a></b>(const DescribeScalableTargetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalingActivitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#describeScalingActivities">describeScalingActivities</a></b>(const DescribeScalingActivitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalingPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#describeScalingPolicies">describeScalingPolicies</a></b>(const DescribeScalingPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScheduledActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#describeScheduledActions">describeScheduledActions</a></b>(const DescribeScheduledActionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutScalingPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#putScalingPolicy">putScalingPolicy</a></b>(const PutScalingPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutScheduledActionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#putScheduledAction">putScheduledAction</a></b>(const PutScheduledActionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterScalableTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#registerScalableTarget">registerScalableTarget</a></b>(const RegisterScalableTargetRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ApplicationAutoScalingClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> class provides access to the Application Auto Scaling service.</p>
+<p>With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use Application Auto Scaling to accomplish the following</p>
+<p>tasks&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Define scaling policies to automatically scale your AWS</p>
+<p>resource&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Scale your resources in response to CloudWatch</p>
+<p>alarm&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Schedule one-time or recurring scaling</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>View the history of your scaling</p>
+<p>event&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Application Auto Scaling can scale the following AWS</p>
+<p>resources&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Amazon ECS services. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html&quot;&gt;Service Auto Scaling&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon EC2 Spot fleets. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-auto-scaling.html&quot;&gt;Automatic Scaling for Spot Fleet&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon EMR clusters. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-automatic-scaling.html&quot;&gt;Using Automatic Scaling in Amazon EMR&lt;/a&gt; in the &lt;i&gt;Amazon EMR Management</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>AppStream 2.0 fleets. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/appstream2/latest/developerguide/autoscaling.html&quot;&gt;Fleet Auto Scaling for Amazon AppStream 2.0&lt;/a&gt; in the &lt;i&gt;Amazon AppStream 2.0 Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Provisioned read and write capacity for Amazon DynamoDB tables and global secondary indexes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AutoScaling.html&quot;&gt;Managing Throughput Capacity Automatically with DynamoDB Auto Scaling&lt;/a&gt; in the &lt;i&gt;Amazon DynamoDB Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon Aurora Replicas. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Integrating.AutoScaling.html&quot;&gt;Using Amazon Aurora Auto Scaling with Aurora</p>
+<p>Replicas&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Amazon SageMaker endpoints. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html&quot;&gt;Automatically Scaling Amazon SageMaker</p>
+<p>Models&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To configure automatic scaling for multiple resources across multiple services, use AWS Auto Scaling to create a scaling plan for your application. For more information, see &lt;a href=&quot;http://aws.amazon.com/autoscaling&quot;&gt;AWS Auto</p>
+<p>Scaling&lt;/a&gt;&gt;</p>
+<p>For a list of supported regions, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#as-app_region&quot;&gt;AWS Regions and Endpoints: Application Auto Scaling&lt;/a&gt; in the &lt;i&gt;AWS General</p>
+</div>
+<!-- @@@ApplicationAutoScalingClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ApplicationAutoScalingClient[overload1]$$$ApplicationAutoScalingClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ApplicationAutoScalingClient"><a name="ApplicationAutoScalingClient"></a>ApplicationAutoScalingClient::<span class="name">ApplicationAutoScalingClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ApplicationAutoScalingClient -->
+<!-- $$$ApplicationAutoScalingClient$$$ApplicationAutoScalingClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ApplicationAutoScalingClient-1"><a name="ApplicationAutoScalingClient-1"></a>ApplicationAutoScalingClient::<span class="name">ApplicationAutoScalingClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html#ApplicationAutoScalingClient">ApplicationAutoScalingClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ApplicationAutoScalingClient -->
+<!-- $$$deleteScalingPolicy[overload1]$$$deleteScalingPolicyconstDeleteScalingPolicyRequest& -->
+<h3 class="fn" id="deleteScalingPolicy"><a name="deleteScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-deletescalingpolicyresponse.html">DeleteScalingPolicyResponse</a></span> *ApplicationAutoScalingClient::<span class="name">deleteScalingPolicy</span>(const <span class="type"><a href="qtaws-applicationautoscaling-deletescalingpolicyrequest.html">DeleteScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-deletescalingpolicyresponse.html">DeleteScalingPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Application Auto Scaling scaling</p>
+<p>policy&gt;</p>
+<p>Deleting a policy deletes the underlying alarm action, but does not delete the CloudWatch alarm associated with the scaling policy, even if it no longer has an associated</p>
+<p>action&gt;</p>
+<p>To create a scaling policy or update an existing one, see</p>
+<!-- @@@deleteScalingPolicy -->
+<!-- $$$deleteScheduledAction[overload1]$$$deleteScheduledActionconstDeleteScheduledActionRequest& -->
+<h3 class="fn" id="deleteScheduledAction"><a name="deleteScheduledAction"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-deletescheduledactionresponse.html">DeleteScheduledActionResponse</a></span> *ApplicationAutoScalingClient::<span class="name">deleteScheduledAction</span>(const <span class="type"><a href="qtaws-applicationautoscaling-deletescheduledactionrequest.html">DeleteScheduledActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-deletescheduledactionresponse.html">DeleteScheduledActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Application Auto Scaling scheduled</p>
+<!-- @@@deleteScheduledAction -->
+<!-- $$$deregisterScalableTarget[overload1]$$$deregisterScalableTargetconstDeregisterScalableTargetRequest& -->
+<h3 class="fn" id="deregisterScalableTarget"><a name="deregisterScalableTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-deregisterscalabletargetresponse.html">DeregisterScalableTargetResponse</a></span> *ApplicationAutoScalingClient::<span class="name">deregisterScalableTarget</span>(const <span class="type"><a href="qtaws-applicationautoscaling-deregisterscalabletargetrequest.html">DeregisterScalableTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-deregisterscalabletargetresponse.html">DeregisterScalableTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters a scalable</p>
+<p>target&gt;</p>
+<p>Deregistering a scalable target deletes the scaling policies that are associated with</p>
+<p>it&gt;</p>
+<p>To create a scalable target or update an existing one, see</p>
+<!-- @@@deregisterScalableTarget -->
+<!-- $$$describeScalableTargets[overload1]$$$describeScalableTargetsconstDescribeScalableTargetsRequest& -->
+<h3 class="fn" id="describeScalableTargets"><a name="describeScalableTargets"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-describescalabletargetsresponse.html">DescribeScalableTargetsResponse</a></span> *ApplicationAutoScalingClient::<span class="name">describeScalableTargets</span>(const <span class="type"><a href="qtaws-applicationautoscaling-describescalabletargetsrequest.html">DescribeScalableTargetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-describescalabletargetsresponse.html">DescribeScalableTargetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the scalable targets in the specified</p>
+<p>namespace&gt;</p>
+<p>You can filter the results using the &lt;code&gt;ResourceIds&lt;/code&gt; and &lt;code&gt;ScalableDimension&lt;/code&gt;</p>
+<p>parameters&gt;</p>
+<p>To create a scalable target or update an existing one, see &lt;a&gt;RegisterScalableTarget&lt;/a&gt;. If you are no longer using a scalable target, you can deregister it using</p>
+<!-- @@@describeScalableTargets -->
+<!-- $$$describeScalingActivities[overload1]$$$describeScalingActivitiesconstDescribeScalingActivitiesRequest& -->
+<h3 class="fn" id="describeScalingActivities"><a name="describeScalingActivities"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-describescalingactivitiesresponse.html">DescribeScalingActivitiesResponse</a></span> *ApplicationAutoScalingClient::<span class="name">describeScalingActivities</span>(const <span class="type"><a href="qtaws-applicationautoscaling-describescalingactivitiesrequest.html">DescribeScalingActivitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-describescalingactivitiesresponse.html">DescribeScalingActivitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides descriptive information about the scaling activities in the specified namespace from the previous six</p>
+<p>weeks&gt;</p>
+<p>You can filter the results using the &lt;code&gt;ResourceId&lt;/code&gt; and &lt;code&gt;ScalableDimension&lt;/code&gt;</p>
+<p>parameters&gt;</p>
+<p>Scaling activities are triggered by CloudWatch alarms that are associated with scaling policies. To view the scaling policies for a service namespace, see &lt;a&gt;DescribeScalingPolicies&lt;/a&gt;. To create a scaling policy or update an existing one, see</p>
+<!-- @@@describeScalingActivities -->
+<!-- $$$describeScalingPolicies[overload1]$$$describeScalingPoliciesconstDescribeScalingPoliciesRequest& -->
+<h3 class="fn" id="describeScalingPolicies"><a name="describeScalingPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-describescalingpoliciesresponse.html">DescribeScalingPoliciesResponse</a></span> *ApplicationAutoScalingClient::<span class="name">describeScalingPolicies</span>(const <span class="type"><a href="qtaws-applicationautoscaling-describescalingpoliciesrequest.html">DescribeScalingPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-describescalingpoliciesresponse.html">DescribeScalingPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the scaling policies for the specified service</p>
+<p>namespace&gt;</p>
+<p>You can filter the results using the &lt;code&gt;ResourceId&lt;/code&gt;, &lt;code&gt;ScalableDimension&lt;/code&gt;, and &lt;code&gt;PolicyNames&lt;/code&gt;</p>
+<p>parameters&gt;</p>
+<p>To create a scaling policy or update an existing one, see &lt;a&gt;PutScalingPolicy&lt;/a&gt;. If you are no longer using a scaling policy, you can delete it using</p>
+<!-- @@@describeScalingPolicies -->
+<!-- $$$describeScheduledActions[overload1]$$$describeScheduledActionsconstDescribeScheduledActionsRequest& -->
+<h3 class="fn" id="describeScheduledActions"><a name="describeScheduledActions"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-describescheduledactionsresponse.html">DescribeScheduledActionsResponse</a></span> *ApplicationAutoScalingClient::<span class="name">describeScheduledActions</span>(const <span class="type"><a href="qtaws-applicationautoscaling-describescheduledactionsrequest.html">DescribeScheduledActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-describescheduledactionsresponse.html">DescribeScheduledActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the scheduled actions for the specified service</p>
+<p>namespace&gt;</p>
+<p>You can filter the results using the &lt;code&gt;ResourceId&lt;/code&gt;, &lt;code&gt;ScalableDimension&lt;/code&gt;, and &lt;code&gt;ScheduledActionNames&lt;/code&gt;</p>
+<p>parameters&gt;</p>
+<p>To create a scheduled action or update an existing one, see &lt;a&gt;PutScheduledAction&lt;/a&gt;. If you are no longer using a scheduled action, you can delete it using</p>
+<!-- @@@describeScheduledActions -->
+<!-- $$$putScalingPolicy[overload1]$$$putScalingPolicyconstPutScalingPolicyRequest& -->
+<h3 class="fn" id="putScalingPolicy"><a name="putScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-putscalingpolicyresponse.html">PutScalingPolicyResponse</a></span> *ApplicationAutoScalingClient::<span class="name">putScalingPolicy</span>(const <span class="type"><a href="qtaws-applicationautoscaling-putscalingpolicyrequest.html">PutScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-putscalingpolicyresponse.html">PutScalingPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a policy for an Application Auto Scaling scalable</p>
+<p>target&gt;</p>
+<p>Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scaling policy applies to the scalable target identified by those three attributes. You cannot create a scaling policy until you register the scalable target using</p>
+<p>&lt;a&gt;RegisterScalableTarget&lt;/a&gt;&gt;</p>
+<p>To update a policy, specify its policy name and the parameters that you want to change. Any parameters that you don't specify are not changed by this update</p>
+<p>request&gt;</p>
+<p>You can view the scaling policies for a service namespace using &lt;a&gt;DescribeScalingPolicies&lt;/a&gt;. If you are no longer using a scaling policy, you can delete it using</p>
+<!-- @@@putScalingPolicy -->
+<!-- $$$putScheduledAction[overload1]$$$putScheduledActionconstPutScheduledActionRequest& -->
+<h3 class="fn" id="putScheduledAction"><a name="putScheduledAction"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-putscheduledactionresponse.html">PutScheduledActionResponse</a></span> *ApplicationAutoScalingClient::<span class="name">putScheduledAction</span>(const <span class="type"><a href="qtaws-applicationautoscaling-putscheduledactionrequest.html">PutScheduledActionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-putscheduledactionresponse.html">PutScheduledActionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a scheduled action for an Application Auto Scaling scalable</p>
+<p>target&gt;</p>
+<p>Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scheduled action applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you register the scalable target using</p>
+<p>&lt;a&gt;RegisterScalableTarget&lt;/a&gt;&gt;</p>
+<p>To update an action, specify its name and the parameters that you want to change. If you don't specify start and end times, the old values are deleted. Any other parameters that you don't specify are not changed by this update</p>
+<p>request&gt;</p>
+<p>You can view the scheduled actions using &lt;a&gt;DescribeScheduledActions&lt;/a&gt;. If you are no longer using a scheduled action, you can delete it using</p>
+<!-- @@@putScheduledAction -->
+<!-- $$$registerScalableTarget[overload1]$$$registerScalableTargetconstRegisterScalableTargetRequest& -->
+<h3 class="fn" id="registerScalableTarget"><a name="registerScalableTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-applicationautoscaling-registerscalabletargetresponse.html">RegisterScalableTargetResponse</a></span> *ApplicationAutoScalingClient::<span class="name">registerScalableTarget</span>(const <span class="type"><a href="qtaws-applicationautoscaling-registerscalabletargetrequest.html">RegisterScalableTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-applicationautoscaling-applicationautoscalingclient.html">ApplicationAutoScalingClient</a> service, and returns a pointer to an <a href="qtaws-applicationautoscaling-registerscalabletargetresponse.html">RegisterScalableTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum values for its scalable</p>
+<p>dimension&gt;</p>
+<p>After you register a scalable target, you can create and apply scaling policies using &lt;a&gt;PutScalingPolicy&lt;/a&gt;. You can view the scaling policies for a service namespace using &lt;a&gt;DescribeScalableTargets&lt;/a&gt;. If you no longer need a scalable target, you can deregister it using</p>
+<!-- @@@registerScalableTarget -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

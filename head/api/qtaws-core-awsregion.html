@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsregion.cpp -->
+  <title>AwsRegion Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsRegion</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsRegion Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsregion.html">QtAws::Core::AwsRegion</a>)<br/></span>
+<!-- $$$AwsRegion-brief -->
+<p>The <a href="qtaws-core-awsregion.html">AwsRegion</a> class provides information about AWS regions. <a href="#details">More...</a></p>
+<!-- @@@AwsRegion -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsRegion&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsregion-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#CardinalDirection-enum">CardinalDirection</a></b> { North, NorthNorthEast, NorthEast, EastNorthEast, ..., NortNorthWest }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#MacroRegion-enum">MacroRegion</a></b> { AsiaPacific, Europe, SouthAmerica, UnitedStates, UnitedStatesGov }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#Region-enum">Region</a></b> { InvalidRegion, AP_Northeast_1, AP_Southeast_1, AP_Southeast_2, ..., US_West_2 }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#Region-enum">Regions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#AwsRegion">AwsRegion</a></b>(const Region <i>region</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#AwsRegion-1">AwsRegion</a></b>(const QString &amp;<i>regionName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#dtor.AwsRegion">~AwsRegion</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#fullName">fullName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#hostName">hostName</a></b>(const QString &amp;<i>serviceName</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#isSupported">isSupported</a></b>(const QString &amp;<i>serviceName</i>, const AwsEndpoint::Transports <i>transports</i> = AwsEndpoint::AnyTransport) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#isValid">isValid</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#name">name</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Region </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#region">region</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#supportedServices">supportedServices</a></b>(const AwsEndpoint::Transports <i>transports</i> = AwsEndpoint::AnyTransport) const</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Region </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#fromName">fromName</a></b>(const QString &amp;<i>regionName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#fullName-1">fullName</a></b>(const Region &amp;<i>region</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsregion.html#name-1">name</a></b>(const Region &amp;<i>region</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsRegion-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsregion.html">AwsRegion</a> class provides information about AWS regions.</p>
+<p>Basic usage example:</p>
+<pre class="cpp"><span class="keyword">const</span> AwsRegion region(AwsRegion<span class="operator">::</span>AP_Northeast_1);
+region<span class="operator">.</span>name();          <span class="comment">// &quot;ap-northeast-1&quot;</span>
+region<span class="operator">.</span>fullName();      <span class="comment">// &quot;Asia Pacific (Tokyo) Region&quot;</span>
+region<span class="operator">.</span>hostName(<span class="string">&quot;iam&quot;</span>); <span class="comment">// &quot;iam.amazonaws.com&quot;</span></pre>
+</div>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html</a>.</p>
+<!-- @@@AwsRegion -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$CardinalDirection$$$North$$$NorthNorthEast$$$NorthEast$$$EastNorthEast$$$East$$$EastSouthEast$$$SouthEast$$$SouthSouthEast$$$South$$$SouthSouthWest$$$SouthWest$$$WestSouthWest$$$West$$$WestNorthWest$$$NorthWest$$$NortNorthWest -->
+<h3 class="fn" id="CardinalDirection-enum"><a name="CardinalDirection-enum"></a>enum AwsRegion::<span class="name">CardinalDirection</span></h3>
+<p>This enum describes cardinal direction bit-flags for AWS regions.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::North</code></td><td class="topAlign tblval"><code>0x00</code></td><td class="topAlign">North.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::NorthNorthEast</code></td><td class="topAlign tblval"><code>0x10</code></td><td class="topAlign">North-north-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::NorthEast</code></td><td class="topAlign tblval"><code>0x20</code></td><td class="topAlign">North-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::EastNorthEast</code></td><td class="topAlign tblval"><code>0x30</code></td><td class="topAlign">East-north-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::East</code></td><td class="topAlign tblval"><code>0x40</code></td><td class="topAlign">East.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::EastSouthEast</code></td><td class="topAlign tblval"><code>0x50</code></td><td class="topAlign">East-south-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SouthEast</code></td><td class="topAlign tblval"><code>0x60</code></td><td class="topAlign">South-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SouthSouthEast</code></td><td class="topAlign tblval"><code>0x70</code></td><td class="topAlign">South-south-east.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::South</code></td><td class="topAlign tblval"><code>0x80</code></td><td class="topAlign">South.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SouthSouthWest</code></td><td class="topAlign tblval"><code>0x90</code></td><td class="topAlign">South-sputh-west.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SouthWest</code></td><td class="topAlign tblval"><code>0xA0</code></td><td class="topAlign">South-west.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::WestSouthWest</code></td><td class="topAlign tblval"><code>0xB0</code></td><td class="topAlign">West-south-west.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::West</code></td><td class="topAlign tblval"><code>0xC0</code></td><td class="topAlign">West.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::WestNorthWest</code></td><td class="topAlign tblval"><code>0xD0</code></td><td class="topAlign">West-north-west.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::NorthWest</code></td><td class="topAlign tblval"><code>0xE0</code></td><td class="topAlign">North-west.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::NortNorthWest</code></td><td class="topAlign tblval"><code>0xF0</code></td><td class="topAlign">Nort-north-west.</td></tr>
+</table></div>
+<!-- @@@CardinalDirection -->
+<!-- $$$MacroRegion$$$AsiaPacific$$$Europe$$$SouthAmerica$$$UnitedStates$$$UnitedStatesGov -->
+<h3 class="fn" id="MacroRegion-enum"><a name="MacroRegion-enum"></a>enum AwsRegion::<span class="name">MacroRegion</span></h3>
+<p>This enum describes macro region bit-flags for AWS regions.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::AsiaPacific</code></td><td class="topAlign tblval"><code>0x100</code></td><td class="topAlign">Asia-Pacific.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::Europe</code></td><td class="topAlign tblval"><code>0x300</code></td><td class="topAlign">Europe.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SouthAmerica</code></td><td class="topAlign tblval"><code>0xA00</code></td><td class="topAlign">South America.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::UnitedStates</code></td><td class="topAlign tblval"><code>0xB00</code></td><td class="topAlign">United States of America.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::UnitedStatesGov</code></td><td class="topAlign tblval"><code>0xC00</code></td><td class="topAlign">United States Government.</td></tr>
+</table></div>
+<!-- @@@MacroRegion -->
+<!-- $$$Region$$$InvalidRegion$$$AP_Northeast_1$$$AP_Southeast_1$$$AP_Southeast_2$$$EU_West_1$$$SA_East_1$$$US_East_1$$$US_Gov_West_1$$$US_West_1$$$US_West_2 -->
+<h3 class="flags" id="Region-enum"><a name="Region-enum"></a>enum AwsRegion::<span class="name">Region</span><br/>flags AwsRegion::<span class="name">Regions</span></h3>
+<p>This enum describes the available AWS regions.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::InvalidRegion</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Not a valid AWS region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::AP_Northeast_1</code></td><td class="topAlign tblval"><code>AsiaPacific + NorthEast + 0x1</code></td><td class="topAlign">Asia Pacific (Tokyo) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::AP_Southeast_1</code></td><td class="topAlign tblval"><code>AsiaPacific + SouthEast + 0x1</code></td><td class="topAlign">Asia Pacific (Singapore) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::AP_Southeast_2</code></td><td class="topAlign tblval"><code>AsiaPacific + SouthEast + 0x2</code></td><td class="topAlign">Asia Pacific (Sydney) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::EU_West_1</code></td><td class="topAlign tblval"><code>Europe + West + 0x1</code></td><td class="topAlign">EU (Ireland) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::SA_East_1</code></td><td class="topAlign tblval"><code>SouthAmerica + East + 0x1</code></td><td class="topAlign">São Paulo Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::US_East_1</code></td><td class="topAlign tblval"><code>UnitedStates + East + 0x1</code></td><td class="topAlign">US East (Northern Virginia) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::US_Gov_West_1</code></td><td class="topAlign tblval"><code>UnitedStatesGov + West + 0x1</code></td><td class="topAlign">AWS GovCloud (US) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::US_West_1</code></td><td class="topAlign tblval"><code>UnitedStates + West + 0x1</code></td><td class="topAlign">US West (Northern California) Region.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsRegion::US_West_2</code></td><td class="topAlign tblval"><code>UnitedStates + West + 0x2</code></td><td class="topAlign">US West (Oregon) Region.</td></tr>
+</table></div>
+<p>The Regions type is a typedef for <a href="">QFlags</a>&lt;Region&gt;. It stores an OR combination of Region values.</p>
+<!-- @@@Region -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsRegion[overload1]$$$AwsRegionconstRegion -->
+<h3 class="fn" id="AwsRegion"><a name="AwsRegion"></a>AwsRegion::<span class="name">AwsRegion</span>(const <span class="type"><a href="qtaws-core-awsregion.html#Region-enum">Region</a></span> <i>region</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsregion.html">AwsRegion</a> object for AWS <i>region</i>.</p>
+<!-- @@@AwsRegion -->
+<!-- $$$AwsRegion$$$AwsRegionconstQString& -->
+<h3 class="fn" id="AwsRegion-1"><a name="AwsRegion-1"></a>AwsRegion::<span class="name">AwsRegion</span>(const <span class="type">QString</span> &amp;<i>regionName</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsregion.html">AwsRegion</a> object for AWS <i>regionName</i>.</p>
+<p>If <i>regionName</i> is not recognised as a valid AWS region, <a href="qtaws-core-awsregion.html#isValid">isValid</a>() will return <code>false</code>.</p>
+<!-- @@@AwsRegion -->
+<!-- $$$~AwsRegion[overload1]$$$~AwsRegion -->
+<h3 class="fn" id="dtor.AwsRegion"><a name="dtor.AwsRegion"></a>AwsRegion::<span class="name">~AwsRegion</span>()</h3>
+<p>Destroys the AWS region.</p>
+<!-- @@@~AwsRegion -->
+<!-- $$$fromName[overload1]$$$fromNameconstQString& -->
+<h3 class="fn" id="fromName"><a name="fromName"></a><code>[static] </code><span class="type"><a href="qtaws-core-awsregion.html#Region-enum">Region</a></span> AwsRegion::<span class="name">fromName</span>(const <span class="type">QString</span> &amp;<i>regionName</i>)</h3>
+<p>Returns the <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a> enum value for <i>regionName</i>, or <a href="qtaws-core-awsregion.html#Region-enum">InvalidRegion</a> if not a valid region name.</p>
+<p><i>regionName</i> is not case sensitive.</p>
+<!-- @@@fromName -->
+<!-- $$$fullName[overload1]$$$fullName -->
+<h3 class="fn" id="fullName"><a name="fullName"></a><span class="type">QString</span> AwsRegion::<span class="name">fullName</span>() const</h3>
+<p>Returns the full name for this AWS region.</p>
+<p>This returns a humand-readable name for this object's region. For example, for the <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::US_East_1</a> region, this will return something like &quot;US East (Northern Virginia) Region&quot;.</p>
+<p>These full names were gleaned from http://aws.amazon.com/about-aws/globalinfrastructure/ and http://docs.aws.amazon.com/general/latest/gr/rande.html.</p>
+<!-- @@@fullName -->
+<!-- $$$fullName$$$fullNameconstRegion& -->
+<h3 class="fn" id="fullName-1"><a name="fullName-1"></a><code>[static] </code><span class="type">QString</span> AwsRegion::<span class="name">fullName</span>(const <span class="type"><a href="qtaws-core-awsregion.html#Region-enum">Region</a></span> &amp;<i>region</i>)</h3>
+<p>Returns the full name for AWS <i>region</i>.</p>
+<p>This returns a humand-readable name for the specified AWS region. For example, for the <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::US_East_1</a> region, this will return something like &quot;US East (Northern Virginia) Region&quot;.</p>
+<p>These full names were gleaned from http://aws.amazon.com/about-aws/globalinfrastructure/ and http://docs.aws.amazon.com/general/latest/gr/rande.html.</p>
+<!-- @@@fullName -->
+<!-- $$$hostName[overload1]$$$hostNameconstQString& -->
+<h3 class="fn" id="hostName"><a name="hostName"></a><span class="type">QString</span> AwsRegion::<span class="name">hostName</span>(const <span class="type">QString</span> &amp;<i>serviceName</i>) const</h3>
+<p>Returns the name of the host that supports <i>serviceName</i> for this region, or a null string if the service is not supported for this region.</p>
+<!-- @@@hostName -->
+<!-- $$$isSupported[overload1]$$$isSupportedconstQString&constAwsEndpoint::Transports -->
+<h3 class="fn" id="isSupported"><a name="isSupported"></a><span class="type">bool</span> AwsRegion::<span class="name">isSupported</span>(const <span class="type">QString</span> &amp;<i>serviceName</i>, const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">AwsEndpoint::Transports</a></span> <i>transports</i> = AwsEndpoint::AnyTransport) const</h3>
+<p>Returns <code>true</code> if <i>serviceName</i> is supported for this region, for <b>at least one</b> of the specified <i>transports</i>; <code>false</code> otherwise.</p>
+<!-- @@@isSupported -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><span class="type">bool</span> AwsRegion::<span class="name">isValid</span>() const</h3>
+<p>Returns <code>true</code> if this region is valid; <code>false</code> otherwise.</p>
+<p>Any <a href="qtaws-core-awsregion.html">AwsRegion</a> object created using one of the valid <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a> enumeration values (ie any but <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::InvalidRegion</a>) will be considered valid.</p>
+<p>However, if an unknown region name is supplied to the overloaded <a href="qtaws-core-awsregion.html">AwsRegion</a>(const QString &amp;regionName) constructor, then the constructed object will be considered invalid.</p>
+<!-- @@@isValid -->
+<!-- $$$name[overload1]$$$name -->
+<h3 class="fn" id="name"><a name="name"></a><span class="type">QString</span> AwsRegion::<span class="name">name</span>() const</h3>
+<p>Returns the canonical AWS name for this region, or a null string if invalid.</p>
+<p><b>See also </b><a href="qtaws-core-awsregion.html#isValid">isValid</a>.</p>
+<!-- @@@name -->
+<!-- $$$name$$$nameconstRegion& -->
+<h3 class="fn" id="name-1"><a name="name-1"></a><code>[static] </code><span class="type">QString</span> AwsRegion::<span class="name">name</span>(const <span class="type"><a href="qtaws-core-awsregion.html#Region-enum">Region</a></span> &amp;<i>region</i>)</h3>
+<p>Returns the canonical AWS name for <i>region</i>.</p>
+<!-- @@@name -->
+<!-- $$$region[overload1]$$$region -->
+<h3 class="fn" id="region"><a name="region"></a><span class="type"><a href="qtaws-core-awsregion.html#Region-enum">Region</a></span> AwsRegion::<span class="name">region</span>() const</h3>
+<p>Returns the region as an <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a> enum, or <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::InvalidRegion</a> if the region is invalid.</p>
+<p>If this object was given an <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a> value during construction, this function will simply return that enumeration value.</p>
+<p>If this object was constructed from an AWS region name, then this function will return the <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::Region</a> enumeration value corresponding to that AWS region name, or <a href="qtaws-core-awsregion.html#Region-enum">AwsRegion::InvalidRegion</a> if the given region name did not name a known, valid AWS region.</p>
+<!-- @@@region -->
+<!-- $$$supportedServices[overload1]$$$supportedServicesconstAwsEndpoint::Transports -->
+<h3 class="fn" id="supportedServices"><a name="supportedServices"></a><span class="type">QStringList</span> AwsRegion::<span class="name">supportedServices</span>(const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">AwsEndpoint::Transports</a></span> <i>transports</i> = AwsEndpoint::AnyTransport) const</h3>
+<p>Returns the list of the names of all AWS services support by this region for <b>at least one</b> of the specified <i>transports</i>. The list may be empty.</p>
+<!-- @@@supportedServices -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

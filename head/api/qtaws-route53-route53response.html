@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- route53response.cpp -->
+  <title>Route53Response Class | Route53</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsroute53-index.html">Route53</a></li>
+<li><a href="qtawsroute53-module.html">C++ Classes</a></li>
+<li>Route53Response</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Route53Response Class</h1>
+<span class="small-subtitle">(<a href="qtaws-route53-route53response.html">QtAws::Route53::Route53Response</a>)<br/></span>
+<!-- $$$Route53Response-brief -->
+<p>The <a href="qtaws-route53-route53response.html">Route53Response</a> class provides an interface for Route53 responses. <a href="#details">More...</a></p>
+<!-- @@@Route53Response -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Route53Response&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-route53-associatevpcwithhostedzoneresponse.html">QtAws::Route53::AssociateVPCWithHostedZoneResponse</a>, <a href="qtaws-route53-changeresourcerecordsetsresponse.html">QtAws::Route53::ChangeResourceRecordSetsResponse</a>, <a href="qtaws-route53-changetagsforresourceresponse.html">QtAws::Route53::ChangeTagsForResourceResponse</a>, <a href="qtaws-route53-createhealthcheckresponse.html">QtAws::Route53::CreateHealthCheckResponse</a>, <a href="qtaws-route53-createhostedzoneresponse.html">QtAws::Route53::CreateHostedZoneResponse</a>, <a href="qtaws-route53-createqueryloggingconfigresponse.html">QtAws::Route53::CreateQueryLoggingConfigResponse</a>, <a href="qtaws-route53-createreusabledelegationsetresponse.html">QtAws::Route53::CreateReusableDelegationSetResponse</a>, <a href="qtaws-route53-createtrafficpolicyinstanceresponse.html">QtAws::Route53::CreateTrafficPolicyInstanceResponse</a>, <a href="qtaws-route53-createtrafficpolicyresponse.html">QtAws::Route53::CreateTrafficPolicyResponse</a>, <a href="qtaws-route53-createtrafficpolicyversionresponse.html">QtAws::Route53::CreateTrafficPolicyVersionResponse</a>, <a href="qtaws-route53-createvpcassociationauthorizationresponse.html">QtAws::Route53::CreateVPCAssociationAuthorizationResponse</a>, <a href="qtaws-route53-deletehealthcheckresponse.html">QtAws::Route53::DeleteHealthCheckResponse</a>, <a href="qtaws-route53-deletehostedzoneresponse.html">QtAws::Route53::DeleteHostedZoneResponse</a>, <a href="qtaws-route53-deletequeryloggingconfigresponse.html">QtAws::Route53::DeleteQueryLoggingConfigResponse</a>, <a href="qtaws-route53-deletereusabledelegationsetresponse.html">QtAws::Route53::DeleteReusableDelegationSetResponse</a>, <a href="qtaws-route53-deletetrafficpolicyinstanceresponse.html">QtAws::Route53::DeleteTrafficPolicyInstanceResponse</a>, <a href="qtaws-route53-deletetrafficpolicyresponse.html">QtAws::Route53::DeleteTrafficPolicyResponse</a>, <a href="qtaws-route53-deletevpcassociationauthorizationresponse.html">QtAws::Route53::DeleteVPCAssociationAuthorizationResponse</a>, <a href="qtaws-route53-disassociatevpcfromhostedzoneresponse.html">QtAws::Route53::DisassociateVPCFromHostedZoneResponse</a>, <a href="qtaws-route53-getaccountlimitresponse.html">QtAws::Route53::GetAccountLimitResponse</a>, <a href="qtaws-route53-getchangeresponse.html">QtAws::Route53::GetChangeResponse</a>, <a href="qtaws-route53-getcheckeriprangesresponse.html">QtAws::Route53::GetCheckerIpRangesResponse</a>, <a href="qtaws-route53-getgeolocationresponse.html">QtAws::Route53::GetGeoLocationResponse</a>, <a href="qtaws-route53-gethealthcheckcountresponse.html">QtAws::Route53::GetHealthCheckCountResponse</a>, <a href="qtaws-route53-gethealthchecklastfailurereasonresponse.html">QtAws::Route53::GetHealthCheckLastFailureReasonResponse</a>, <a href="qtaws-route53-gethealthcheckresponse.html">QtAws::Route53::GetHealthCheckResponse</a>, <a href="qtaws-route53-gethealthcheckstatusresponse.html">QtAws::Route53::GetHealthCheckStatusResponse</a>, <a href="qtaws-route53-gethostedzonecountresponse.html">QtAws::Route53::GetHostedZoneCountResponse</a>, <a href="qtaws-route53-gethostedzonelimitresponse.html">QtAws::Route53::GetHostedZoneLimitResponse</a>, <a href="qtaws-route53-gethostedzoneresponse.html">QtAws::Route53::GetHostedZoneResponse</a>, <a href="qtaws-route53-getqueryloggingconfigresponse.html">QtAws::Route53::GetQueryLoggingConfigResponse</a>, <a href="qtaws-route53-getreusabledelegationsetlimitresponse.html">QtAws::Route53::GetReusableDelegationSetLimitResponse</a>, <a href="qtaws-route53-getreusabledelegationsetresponse.html">QtAws::Route53::GetReusableDelegationSetResponse</a>, <a href="qtaws-route53-gettrafficpolicyinstancecountresponse.html">QtAws::Route53::GetTrafficPolicyInstanceCountResponse</a>, <a href="qtaws-route53-gettrafficpolicyinstanceresponse.html">QtAws::Route53::GetTrafficPolicyInstanceResponse</a>, <a href="qtaws-route53-gettrafficpolicyresponse.html">QtAws::Route53::GetTrafficPolicyResponse</a>, <a href="qtaws-route53-listgeolocationsresponse.html">QtAws::Route53::ListGeoLocationsResponse</a>, <a href="qtaws-route53-listhealthchecksresponse.html">QtAws::Route53::ListHealthChecksResponse</a>, <a href="qtaws-route53-listhostedzonesbynameresponse.html">QtAws::Route53::ListHostedZonesByNameResponse</a>, <a href="qtaws-route53-listhostedzonesresponse.html">QtAws::Route53::ListHostedZonesResponse</a>, <a href="qtaws-route53-listqueryloggingconfigsresponse.html">QtAws::Route53::ListQueryLoggingConfigsResponse</a>, <a href="qtaws-route53-listresourcerecordsetsresponse.html">QtAws::Route53::ListResourceRecordSetsResponse</a>, <a href="qtaws-route53-listreusabledelegationsetsresponse.html">QtAws::Route53::ListReusableDelegationSetsResponse</a>, <a href="qtaws-route53-listtagsforresourceresponse.html">QtAws::Route53::ListTagsForResourceResponse</a>, <a href="qtaws-route53-listtagsforresourcesresponse.html">QtAws::Route53::ListTagsForResourcesResponse</a>, <a href="qtaws-route53-listtrafficpoliciesresponse.html">QtAws::Route53::ListTrafficPoliciesResponse</a>, <a href="qtaws-route53-listtrafficpolicyinstancesbyhostedzoneresponse.html">QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneResponse</a>, <a href="qtaws-route53-listtrafficpolicyinstancesbypolicyresponse.html">QtAws::Route53::ListTrafficPolicyInstancesByPolicyResponse</a>, <a href="qtaws-route53-listtrafficpolicyinstancesresponse.html">QtAws::Route53::ListTrafficPolicyInstancesResponse</a>, <a href="qtaws-route53-listtrafficpolicyversionsresponse.html">QtAws::Route53::ListTrafficPolicyVersionsResponse</a>, <a href="qtaws-route53-listvpcassociationauthorizationsresponse.html">QtAws::Route53::ListVPCAssociationAuthorizationsResponse</a>, <a href="qtaws-route53-testdnsanswerresponse.html">QtAws::Route53::TestDNSAnswerResponse</a>, <a href="qtaws-route53-updatehealthcheckresponse.html">QtAws::Route53::UpdateHealthCheckResponse</a>, <a href="qtaws-route53-updatehostedzonecommentresponse.html">QtAws::Route53::UpdateHostedZoneCommentResponse</a>, <a href="qtaws-route53-updatetrafficpolicycommentresponse.html">QtAws::Route53::UpdateTrafficPolicyCommentResponse</a>, and <a href="qtaws-route53-updatetrafficpolicyinstanceresponse.html">QtAws::Route53::UpdateTrafficPolicyInstanceResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-route53-route53response-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53response.html#Route53Response">Route53Response</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53response.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Route53Response-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-route53-route53response.html">Route53Response</a> class provides an interface for Route53 responses.</p>
+</div>
+<!-- @@@Route53Response -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Route53Response[overload1]$$$Route53ResponseQObject*const -->
+<h3 class="fn" id="Route53Response"><a name="Route53Response"></a>Route53Response::<span class="name">Route53Response</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-route53-route53response.html">Route53Response</a> object with parent <i>parent</i>.</p>
+<!-- @@@Route53Response -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> Route53Response::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

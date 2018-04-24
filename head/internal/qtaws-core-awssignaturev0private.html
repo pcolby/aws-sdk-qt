@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awssignaturev0.cpp -->
+  <title>AwsSignatureV0Private Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsSignatureV0Private</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsSignatureV0Private Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awssignaturev0private.html">QtAws::Core::AwsSignatureV0Private</a>)<br/></span>
+<!-- $$$AwsSignatureV0Private-brief -->
+<p>The <a href="qtaws-core-awssignaturev0private.html">AwsSignatureV0Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev0.html">AwsSignatureV0</a> class. <a href="#details">More...</a></p>
+<!-- @@@AwsSignatureV0Private -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsSignatureV0Private&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractsignatureprivate.html">QtAws::Core::AwsAbstractSignaturePrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-core-awssignaturev1private.html">QtAws::Core::AwsSignatureV1Private</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awssignaturev0private-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev0private.html#AwsSignatureV0Private">AwsSignatureV0Private</a></b>(AwsSignatureV0 * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev0private.html#adornRequest">adornRequest</a></b>(QNetworkRequest &amp;<i>request</i>, const AwsAbstractCredentials &amp;<i>credentials</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awssignaturev0private.html#canonicalQuery">canonicalQuery</a></b>(const QUrlQuery &amp;<i>query</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 public functions inherited from <a href="qtaws-core-awsabstractsignatureprivate.html#public-functions">QtAws::Core::AwsAbstractSignaturePrivate</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AwsSignatureV0Private-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awssignaturev0private.html">AwsSignatureV0Private</a> class provides private implementation for the <a href="qtaws-core-awssignaturev0.html">AwsSignatureV0</a> class.</p>
+</div>
+<!-- @@@AwsSignatureV0Private -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsSignatureV0Private[overload1]$$$AwsSignatureV0PrivateAwsSignatureV0*const -->
+<h3 class="fn" id="AwsSignatureV0Private"><a name="AwsSignatureV0Private"></a>AwsSignatureV0Private::<span class="name">AwsSignatureV0Private</span>(<span class="type"><a href="qtaws-core-awssignaturev0.html">AwsSignatureV0</a></span> * const <i>q</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awssignaturev0private.html">AwsSignatureV0Private</a> object with public implementation <i>q</i>.</p>
+<!-- @@@AwsSignatureV0Private -->
+<!-- $$$adornRequest[overload1]$$$adornRequestQNetworkRequest&constAwsAbstractCredentials& -->
+<h3 class="fn" id="adornRequest"><a name="adornRequest"></a><span class="type">void</span> AwsSignatureV0Private::<span class="name">adornRequest</span>(<span class="type">QNetworkRequest</span> &amp;<i>request</i>, const <span class="type"><a href="qtaws-core-awsabstractcredentials.html">AwsAbstractCredentials</a></span> &amp;<i>credentials</i>) const</h3>
+<p>Adds AWS Signature Version 0 adornments to a AWS <i>request</i>.</p>
+<p>In addition to service-specific request parameters, Amazon requires that version 1 signatures contain a number of common query parameters. This functions adds those query parameters to <i>request</i> if they're not already present.</p>
+<p>The query parameters added by this function, as required by Amazon, are:</p>
+<div class="table"><table class="generic">
+ <thead><tr class="qt-style"><th >Parameter Name</th><th >Parameter Value</th></tr></thead>
+<tr valign="top" class="odd"><td ><code>AWSAccessKeyId</code></td><td >The AWS Access Key ID from <i>credentials</i>.</td></tr>
+<tr valign="top" class="even"><td ><code>SignatureVersion</code></td><td >The version returned by <a href="qtaws-core-awssignaturev0.html#version">AwsSignatureV0::version</a>(); ie <code>0</code>.</td></tr>
+<tr valign="top" class="odd"><td ><code>Timestamp</code></td><td >Current UTC timestamp in ISO 8601 format, eg <code>2013-10-30T12:34:56Z</code>.<p><b>Note: </b>If <i>request</i> includes an <code>Expires</code> parameter, then <code>Timestamp</code> is not added.</p></td></tr>
+</table></div>
+<p><b>Note: </b>The <code>SignatureVersion</code> header is optional for version 0 signatures, but this function always includes it for clarity.</p><p><b>See also </b><a href="qtaws-core-awsabstractcredentials.html#accessKeyId">AwsAbstractCredentials::accessKeyId</a>().</p>
+<!-- @@@adornRequest -->
+<!-- $$$canonicalQuery[overload1]$$$canonicalQueryconstQUrlQuery& -->
+<h3 class="fn" id="canonicalQuery"><a name="canonicalQuery"></a><code>[virtual] </code><span class="type">QByteArray</span> AwsSignatureV0Private::<span class="name">canonicalQuery</span>(const <span class="type">QUrlQuery</span> &amp;<i>query</i>) const</h3>
+<p>Returns the AWS Signature version 0 canonical query string for <i>query</i>.</p>
+<p>This function returns a string containing the concatenation of <code>Action</code> and <code>Timestamp</code> (or <code>Expires</code>) query parameters.</p>
+<p>For example, for the following SQS query string:</p>
+<pre class="cpp"><span class="operator">?</span>Action<span class="operator">=</span>CreateQueue<span class="operator">&amp;</span>QueueName<span class="operator">=</span>queue2<span class="operator">&amp;</span>AWSAccessKeyId<span class="operator">=</span>AKIAIOSFODNN7EXAMPLE<span class="operator">&amp;</span>SignatureVersion<span class="operator">=</span><span class="number">1</span><span class="operator">&amp;</span>Expires<span class="operator">=</span><span class="number">2007</span><span class="operator">-</span><span class="number">01</span><span class="operator">-</span><span class="number">12T12</span>:<span class="number">00</span>:<span class="number">00Z</span><span class="operator">&amp;</span>Version<span class="operator">=</span><span class="number">2006</span><span class="operator">-</span><span class="number">04</span><span class="operator">-</span><span class="number">01</span></pre>
+<p>this function will return the following canonical form:</p>
+<pre class="cpp">CreateQueue2007<span class="operator">-</span><span class="number">01</span><span class="operator">-</span><span class="number">12T12</span>:<span class="number">00</span>:<span class="number">00Z</span></pre>
+<p><b>Note: </b><i>query</i> must already contain an <code>Action</code> and either a <code>Timestamp</code> or <code>Expires</code> query paramter. See <a href="qtaws-core-awssignaturev0private.html#adornRequest">adornRequest</a>().</p><!-- @@@canonicalQuery -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

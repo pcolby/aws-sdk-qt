@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- inspectorclient.cpp -->
+  <title>InspectorClient Class | Inspector</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsinspector-index.html">Inspector</a></li>
+<li><a href="qtawsinspector-module.html">C++ Classes</a></li>
+<li>InspectorClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">InspectorClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-inspector-inspectorclient.html">QtAws::Inspector::InspectorClient</a>)<br/></span>
+<!-- $$$InspectorClient-brief -->
+<p>The <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> class provides access to the Amazon Inspector service. <a href="#details">More...</a></p>
+<!-- @@@InspectorClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;InspectorClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-inspector-inspectorclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#InspectorClient">InspectorClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#InspectorClient-1">InspectorClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddAttributesToFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#addAttributesToFindings">addAttributesToFindings</a></b>(const AddAttributesToFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAssessmentTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#createAssessmentTarget">createAssessmentTarget</a></b>(const CreateAssessmentTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAssessmentTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#createAssessmentTemplate">createAssessmentTemplate</a></b>(const CreateAssessmentTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResourceGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#createResourceGroup">createResourceGroup</a></b>(const CreateResourceGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAssessmentRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#deleteAssessmentRun">deleteAssessmentRun</a></b>(const DeleteAssessmentRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAssessmentTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#deleteAssessmentTarget">deleteAssessmentTarget</a></b>(const DeleteAssessmentTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAssessmentTemplateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#deleteAssessmentTemplate">deleteAssessmentTemplate</a></b>(const DeleteAssessmentTemplateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAssessmentRunsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeAssessmentRuns">describeAssessmentRuns</a></b>(const DescribeAssessmentRunsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAssessmentTargetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeAssessmentTargets">describeAssessmentTargets</a></b>(const DescribeAssessmentTargetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAssessmentTemplatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeAssessmentTemplates">describeAssessmentTemplates</a></b>(const DescribeAssessmentTemplatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCrossAccountAccessRoleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeCrossAccountAccessRole">describeCrossAccountAccessRole</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeFindings">describeFindings</a></b>(const DescribeFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeResourceGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeResourceGroups">describeResourceGroups</a></b>(const DescribeResourceGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRulesPackagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#describeRulesPackages">describeRulesPackages</a></b>(const DescribeRulesPackagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAssessmentReportResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#getAssessmentReport">getAssessmentReport</a></b>(const GetAssessmentReportRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTelemetryMetadataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#getTelemetryMetadata">getTelemetryMetadata</a></b>(const GetTelemetryMetadataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssessmentRunAgentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listAssessmentRunAgents">listAssessmentRunAgents</a></b>(const ListAssessmentRunAgentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssessmentRunsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listAssessmentRuns">listAssessmentRuns</a></b>(const ListAssessmentRunsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssessmentTargetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listAssessmentTargets">listAssessmentTargets</a></b>(const ListAssessmentTargetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssessmentTemplatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listAssessmentTemplates">listAssessmentTemplates</a></b>(const ListAssessmentTemplatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListEventSubscriptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listEventSubscriptions">listEventSubscriptions</a></b>(const ListEventSubscriptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listFindings">listFindings</a></b>(const ListFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRulesPackagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listRulesPackages">listRulesPackages</a></b>(const ListRulesPackagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PreviewAgentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#previewAgents">previewAgents</a></b>(const PreviewAgentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterCrossAccountAccessRoleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#registerCrossAccountAccessRole">registerCrossAccountAccessRole</a></b>(const RegisterCrossAccountAccessRoleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveAttributesFromFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#removeAttributesFromFindings">removeAttributesFromFindings</a></b>(const RemoveAttributesFromFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#setTagsForResource">setTagsForResource</a></b>(const SetTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartAssessmentRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#startAssessmentRun">startAssessmentRun</a></b>(const StartAssessmentRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopAssessmentRunResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#stopAssessmentRun">stopAssessmentRun</a></b>(const StopAssessmentRunRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SubscribeToEventResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#subscribeToEvent">subscribeToEvent</a></b>(const SubscribeToEventRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnsubscribeFromEventResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#unsubscribeFromEvent">unsubscribeFromEvent</a></b>(const UnsubscribeFromEventRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAssessmentTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-inspector-inspectorclient.html#updateAssessmentTarget">updateAssessmentTarget</a></b>(const UpdateAssessmentTargetRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$InspectorClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> class provides access to the Amazon Inspector service.</p>
+<p>&lt;fullname&gt;Amazon Inspector&lt;/fullname&gt;</p>
+<p>Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html&quot;&gt; Amazon Inspector User</p>
+</div>
+<!-- @@@InspectorClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$InspectorClient[overload1]$$$InspectorClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="InspectorClient"><a name="InspectorClient"></a>InspectorClient::<span class="name">InspectorClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@InspectorClient -->
+<!-- $$$InspectorClient$$$InspectorClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="InspectorClient-1"><a name="InspectorClient-1"></a>InspectorClient::<span class="name">InspectorClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-inspector-inspectorclient.html#InspectorClient">InspectorClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@InspectorClient -->
+<!-- $$$addAttributesToFindings[overload1]$$$addAttributesToFindingsconstAddAttributesToFindingsRequest& -->
+<h3 class="fn" id="addAttributesToFindings"><a name="addAttributesToFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-addattributestofindingsresponse.html">AddAttributesToFindingsResponse</a></span> *InspectorClient::<span class="name">addAttributesToFindings</span>(const <span class="type"><a href="qtaws-inspector-addattributestofindingsrequest.html">AddAttributesToFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-addattributestofindingsresponse.html">AddAttributesToFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the</p>
+<!-- @@@addAttributesToFindings -->
+<!-- $$$createAssessmentTarget[overload1]$$$createAssessmentTargetconstCreateAssessmentTargetRequest& -->
+<h3 class="fn" id="createAssessmentTarget"><a name="createAssessmentTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-createassessmenttargetresponse.html">CreateAssessmentTargetResponse</a></span> *InspectorClient::<span class="name">createAssessmentTarget</span>(const <span class="type"><a href="qtaws-inspector-createassessmenttargetrequest.html">CreateAssessmentTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-createassessmenttargetresponse.html">CreateAssessmentTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new assessment target using the ARN of the resource group that is generated by &lt;a&gt;CreateResourceGroup&lt;/a&gt;. If the &lt;a href=&quot;https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html&quot;&gt;service-linked role&lt;/a&gt; isn’t already registered, also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security assessments. You can create up to 50 assessment targets per AWS account. You can run up to 500 concurrent agents per AWS account. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html&quot;&gt; Amazon Inspector Assessment</p>
+<!-- @@@createAssessmentTarget -->
+<!-- $$$createAssessmentTemplate[overload1]$$$createAssessmentTemplateconstCreateAssessmentTemplateRequest& -->
+<h3 class="fn" id="createAssessmentTemplate"><a name="createAssessmentTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-createassessmenttemplateresponse.html">CreateAssessmentTemplateResponse</a></span> *InspectorClient::<span class="name">createAssessmentTemplate</span>(const <span class="type"><a href="qtaws-inspector-createassessmenttemplaterequest.html">CreateAssessmentTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-createassessmenttemplateresponse.html">CreateAssessmentTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an assessment template for the assessment target that is specified by the ARN of the assessment target. If the &lt;a href=&quot;https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html&quot;&gt;service-linked role&lt;/a&gt; isn’t already registered, also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security</p>
+<!-- @@@createAssessmentTemplate -->
+<!-- $$$createResourceGroup[overload1]$$$createResourceGroupconstCreateResourceGroupRequest& -->
+<h3 class="fn" id="createResourceGroup"><a name="createResourceGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-createresourcegroupresponse.html">CreateResourceGroupResponse</a></span> *InspectorClient::<span class="name">createResourceGroup</span>(const <span class="type"><a href="qtaws-inspector-createresourcegrouprequest.html">CreateResourceGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-createresourcegroupresponse.html">CreateResourceGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a resource group using the specified set of tags (key and value pairs) that are used to select the EC2 instances to be included in an Amazon Inspector assessment target. The created resource group is then used to create an Amazon Inspector assessment target. For more information, see</p>
+<!-- @@@createResourceGroup -->
+<!-- $$$deleteAssessmentRun[overload1]$$$deleteAssessmentRunconstDeleteAssessmentRunRequest& -->
+<h3 class="fn" id="deleteAssessmentRun"><a name="deleteAssessmentRun"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-deleteassessmentrunresponse.html">DeleteAssessmentRunResponse</a></span> *InspectorClient::<span class="name">deleteAssessmentRun</span>(const <span class="type"><a href="qtaws-inspector-deleteassessmentrunrequest.html">DeleteAssessmentRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-deleteassessmentrunresponse.html">DeleteAssessmentRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the assessment run that is specified by the ARN of the assessment</p>
+<!-- @@@deleteAssessmentRun -->
+<!-- $$$deleteAssessmentTarget[overload1]$$$deleteAssessmentTargetconstDeleteAssessmentTargetRequest& -->
+<h3 class="fn" id="deleteAssessmentTarget"><a name="deleteAssessmentTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-deleteassessmenttargetresponse.html">DeleteAssessmentTargetResponse</a></span> *InspectorClient::<span class="name">deleteAssessmentTarget</span>(const <span class="type"><a href="qtaws-inspector-deleteassessmenttargetrequest.html">DeleteAssessmentTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-deleteassessmenttargetresponse.html">DeleteAssessmentTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the assessment target that is specified by the ARN of the assessment</p>
+<!-- @@@deleteAssessmentTarget -->
+<!-- $$$deleteAssessmentTemplate[overload1]$$$deleteAssessmentTemplateconstDeleteAssessmentTemplateRequest& -->
+<h3 class="fn" id="deleteAssessmentTemplate"><a name="deleteAssessmentTemplate"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-deleteassessmenttemplateresponse.html">DeleteAssessmentTemplateResponse</a></span> *InspectorClient::<span class="name">deleteAssessmentTemplate</span>(const <span class="type"><a href="qtaws-inspector-deleteassessmenttemplaterequest.html">DeleteAssessmentTemplateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-deleteassessmenttemplateresponse.html">DeleteAssessmentTemplateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the assessment template that is specified by the ARN of the assessment</p>
+<!-- @@@deleteAssessmentTemplate -->
+<!-- $$$describeAssessmentRuns[overload1]$$$describeAssessmentRunsconstDescribeAssessmentRunsRequest& -->
+<h3 class="fn" id="describeAssessmentRuns"><a name="describeAssessmentRuns"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describeassessmentrunsresponse.html">DescribeAssessmentRunsResponse</a></span> *InspectorClient::<span class="name">describeAssessmentRuns</span>(const <span class="type"><a href="qtaws-inspector-describeassessmentrunsrequest.html">DescribeAssessmentRunsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describeassessmentrunsresponse.html">DescribeAssessmentRunsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the assessment runs that are specified by the ARNs of the assessment</p>
+<!-- @@@describeAssessmentRuns -->
+<!-- $$$describeAssessmentTargets[overload1]$$$describeAssessmentTargetsconstDescribeAssessmentTargetsRequest& -->
+<h3 class="fn" id="describeAssessmentTargets"><a name="describeAssessmentTargets"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describeassessmenttargetsresponse.html">DescribeAssessmentTargetsResponse</a></span> *InspectorClient::<span class="name">describeAssessmentTargets</span>(const <span class="type"><a href="qtaws-inspector-describeassessmenttargetsrequest.html">DescribeAssessmentTargetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describeassessmenttargetsresponse.html">DescribeAssessmentTargetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the assessment targets that are specified by the ARNs of the assessment</p>
+<!-- @@@describeAssessmentTargets -->
+<!-- $$$describeAssessmentTemplates[overload1]$$$describeAssessmentTemplatesconstDescribeAssessmentTemplatesRequest& -->
+<h3 class="fn" id="describeAssessmentTemplates"><a name="describeAssessmentTemplates"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describeassessmenttemplatesresponse.html">DescribeAssessmentTemplatesResponse</a></span> *InspectorClient::<span class="name">describeAssessmentTemplates</span>(const <span class="type"><a href="qtaws-inspector-describeassessmenttemplatesrequest.html">DescribeAssessmentTemplatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describeassessmenttemplatesresponse.html">DescribeAssessmentTemplatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the assessment templates that are specified by the ARNs of the assessment</p>
+<!-- @@@describeAssessmentTemplates -->
+<!-- $$$describeCrossAccountAccessRole[overload1]$$$describeCrossAccountAccessRole -->
+<h3 class="fn" id="describeCrossAccountAccessRole"><a name="describeCrossAccountAccessRole"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describecrossaccountaccessroleresponse.html">DescribeCrossAccountAccessRoleResponse</a></span> *InspectorClient::<span class="name">describeCrossAccountAccessRole</span>()</h3>
+<p>Sends a DescribeCrossAccountAccessRole request to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describecrossaccountaccessroleresponse.html">DescribeCrossAccountAccessRoleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the IAM role that enables Amazon Inspector to access your AWS</p>
+<!-- @@@describeCrossAccountAccessRole -->
+<!-- $$$describeFindings[overload1]$$$describeFindingsconstDescribeFindingsRequest& -->
+<h3 class="fn" id="describeFindings"><a name="describeFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describefindingsresponse.html">DescribeFindingsResponse</a></span> *InspectorClient::<span class="name">describeFindings</span>(const <span class="type"><a href="qtaws-inspector-describefindingsrequest.html">DescribeFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describefindingsresponse.html">DescribeFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the findings that are specified by the ARNs of the</p>
+<!-- @@@describeFindings -->
+<!-- $$$describeResourceGroups[overload1]$$$describeResourceGroupsconstDescribeResourceGroupsRequest& -->
+<h3 class="fn" id="describeResourceGroups"><a name="describeResourceGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describeresourcegroupsresponse.html">DescribeResourceGroupsResponse</a></span> *InspectorClient::<span class="name">describeResourceGroups</span>(const <span class="type"><a href="qtaws-inspector-describeresourcegroupsrequest.html">DescribeResourceGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describeresourcegroupsresponse.html">DescribeResourceGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the resource groups that are specified by the ARNs of the resource</p>
+<!-- @@@describeResourceGroups -->
+<!-- $$$describeRulesPackages[overload1]$$$describeRulesPackagesconstDescribeRulesPackagesRequest& -->
+<h3 class="fn" id="describeRulesPackages"><a name="describeRulesPackages"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-describerulespackagesresponse.html">DescribeRulesPackagesResponse</a></span> *InspectorClient::<span class="name">describeRulesPackages</span>(const <span class="type"><a href="qtaws-inspector-describerulespackagesrequest.html">DescribeRulesPackagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-describerulespackagesresponse.html">DescribeRulesPackagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the rules packages that are specified by the ARNs of the rules</p>
+<!-- @@@describeRulesPackages -->
+<!-- $$$getAssessmentReport[overload1]$$$getAssessmentReportconstGetAssessmentReportRequest& -->
+<h3 class="fn" id="getAssessmentReport"><a name="getAssessmentReport"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-getassessmentreportresponse.html">GetAssessmentReportResponse</a></span> *InspectorClient::<span class="name">getAssessmentReport</span>(const <span class="type"><a href="qtaws-inspector-getassessmentreportrequest.html">GetAssessmentReportRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-getassessmentreportresponse.html">GetAssessmentReportResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Produces an assessment report that includes detailed and comprehensive results of a specified assessment run.</p>
+<!-- @@@getAssessmentReport -->
+<!-- $$$getTelemetryMetadata[overload1]$$$getTelemetryMetadataconstGetTelemetryMetadataRequest& -->
+<h3 class="fn" id="getTelemetryMetadata"><a name="getTelemetryMetadata"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-gettelemetrymetadataresponse.html">GetTelemetryMetadataResponse</a></span> *InspectorClient::<span class="name">getTelemetryMetadata</span>(const <span class="type"><a href="qtaws-inspector-gettelemetrymetadatarequest.html">GetTelemetryMetadataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-gettelemetrymetadataresponse.html">GetTelemetryMetadataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Information about the data that is collected for the specified assessment</p>
+<!-- @@@getTelemetryMetadata -->
+<!-- $$$listAssessmentRunAgents[overload1]$$$listAssessmentRunAgentsconstListAssessmentRunAgentsRequest& -->
+<h3 class="fn" id="listAssessmentRunAgents"><a name="listAssessmentRunAgents"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listassessmentrunagentsresponse.html">ListAssessmentRunAgentsResponse</a></span> *InspectorClient::<span class="name">listAssessmentRunAgents</span>(const <span class="type"><a href="qtaws-inspector-listassessmentrunagentsrequest.html">ListAssessmentRunAgentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listassessmentrunagentsresponse.html">ListAssessmentRunAgentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the agents of the assessment runs that are specified by the ARNs of the assessment</p>
+<!-- @@@listAssessmentRunAgents -->
+<!-- $$$listAssessmentRuns[overload1]$$$listAssessmentRunsconstListAssessmentRunsRequest& -->
+<h3 class="fn" id="listAssessmentRuns"><a name="listAssessmentRuns"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listassessmentrunsresponse.html">ListAssessmentRunsResponse</a></span> *InspectorClient::<span class="name">listAssessmentRuns</span>(const <span class="type"><a href="qtaws-inspector-listassessmentrunsrequest.html">ListAssessmentRunsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listassessmentrunsresponse.html">ListAssessmentRunsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the assessment runs that correspond to the assessment templates that are specified by the ARNs of the assessment</p>
+<!-- @@@listAssessmentRuns -->
+<!-- $$$listAssessmentTargets[overload1]$$$listAssessmentTargetsconstListAssessmentTargetsRequest& -->
+<h3 class="fn" id="listAssessmentTargets"><a name="listAssessmentTargets"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listassessmenttargetsresponse.html">ListAssessmentTargetsResponse</a></span> *InspectorClient::<span class="name">listAssessmentTargets</span>(const <span class="type"><a href="qtaws-inspector-listassessmenttargetsrequest.html">ListAssessmentTargetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listassessmenttargetsresponse.html">ListAssessmentTargetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the ARNs of the assessment targets within this AWS account. For more information about assessment targets, see &lt;a href=&quot;http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html&quot;&gt;Amazon Inspector Assessment</p>
+<!-- @@@listAssessmentTargets -->
+<!-- $$$listAssessmentTemplates[overload1]$$$listAssessmentTemplatesconstListAssessmentTemplatesRequest& -->
+<h3 class="fn" id="listAssessmentTemplates"><a name="listAssessmentTemplates"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listassessmenttemplatesresponse.html">ListAssessmentTemplatesResponse</a></span> *InspectorClient::<span class="name">listAssessmentTemplates</span>(const <span class="type"><a href="qtaws-inspector-listassessmenttemplatesrequest.html">ListAssessmentTemplatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listassessmenttemplatesresponse.html">ListAssessmentTemplatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the assessment templates that correspond to the assessment targets that are specified by the ARNs of the assessment</p>
+<!-- @@@listAssessmentTemplates -->
+<!-- $$$listEventSubscriptions[overload1]$$$listEventSubscriptionsconstListEventSubscriptionsRequest& -->
+<h3 class="fn" id="listEventSubscriptions"><a name="listEventSubscriptions"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listeventsubscriptionsresponse.html">ListEventSubscriptionsResponse</a></span> *InspectorClient::<span class="name">listEventSubscriptions</span>(const <span class="type"><a href="qtaws-inspector-listeventsubscriptionsrequest.html">ListEventSubscriptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listeventsubscriptionsresponse.html">ListEventSubscriptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the event subscriptions for the assessment template that is specified by the ARN of the assessment template. For more information, see &lt;a&gt;SubscribeToEvent&lt;/a&gt; and</p>
+<!-- @@@listEventSubscriptions -->
+<!-- $$$listFindings[overload1]$$$listFindingsconstListFindingsRequest& -->
+<h3 class="fn" id="listFindings"><a name="listFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listfindingsresponse.html">ListFindingsResponse</a></span> *InspectorClient::<span class="name">listFindings</span>(const <span class="type"><a href="qtaws-inspector-listfindingsrequest.html">ListFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listfindingsresponse.html">ListFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists findings that are generated by the assessment runs that are specified by the ARNs of the assessment</p>
+<!-- @@@listFindings -->
+<!-- $$$listRulesPackages[overload1]$$$listRulesPackagesconstListRulesPackagesRequest& -->
+<h3 class="fn" id="listRulesPackages"><a name="listRulesPackages"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listrulespackagesresponse.html">ListRulesPackagesResponse</a></span> *InspectorClient::<span class="name">listRulesPackages</span>(const <span class="type"><a href="qtaws-inspector-listrulespackagesrequest.html">ListRulesPackagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listrulespackagesresponse.html">ListRulesPackagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all available Amazon Inspector rules</p>
+<!-- @@@listRulesPackages -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *InspectorClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-inspector-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all tags associated with an assessment</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$previewAgents[overload1]$$$previewAgentsconstPreviewAgentsRequest& -->
+<h3 class="fn" id="previewAgents"><a name="previewAgents"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-previewagentsresponse.html">PreviewAgentsResponse</a></span> *InspectorClient::<span class="name">previewAgents</span>(const <span class="type"><a href="qtaws-inspector-previewagentsrequest.html">PreviewAgentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-previewagentsresponse.html">PreviewAgentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Previews the agents installed on the EC2 instances that are part of the specified assessment</p>
+<!-- @@@previewAgents -->
+<!-- $$$registerCrossAccountAccessRole[overload1]$$$registerCrossAccountAccessRoleconstRegisterCrossAccountAccessRoleRequest& -->
+<h3 class="fn" id="registerCrossAccountAccessRole"><a name="registerCrossAccountAccessRole"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-registercrossaccountaccessroleresponse.html">RegisterCrossAccountAccessRoleResponse</a></span> *InspectorClient::<span class="name">registerCrossAccountAccessRole</span>(const <span class="type"><a href="qtaws-inspector-registercrossaccountaccessrolerequest.html">RegisterCrossAccountAccessRoleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-registercrossaccountaccessroleresponse.html">RegisterCrossAccountAccessRoleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers the IAM role that grants Amazon Inspector access to AWS Services needed to perform security</p>
+<!-- @@@registerCrossAccountAccessRole -->
+<!-- $$$removeAttributesFromFindings[overload1]$$$removeAttributesFromFindingsconstRemoveAttributesFromFindingsRequest& -->
+<h3 class="fn" id="removeAttributesFromFindings"><a name="removeAttributesFromFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-removeattributesfromfindingsresponse.html">RemoveAttributesFromFindingsResponse</a></span> *InspectorClient::<span class="name">removeAttributesFromFindings</span>(const <span class="type"><a href="qtaws-inspector-removeattributesfromfindingsrequest.html">RemoveAttributesFromFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-removeattributesfromfindingsresponse.html">RemoveAttributesFromFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes entire attributes (key and value pairs) from the findings that are specified by the ARNs of the findings where an attribute with the specified key</p>
+<!-- @@@removeAttributesFromFindings -->
+<!-- $$$setTagsForResource[overload1]$$$setTagsForResourceconstSetTagsForResourceRequest& -->
+<h3 class="fn" id="setTagsForResource"><a name="setTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-settagsforresourceresponse.html">SetTagsForResourceResponse</a></span> *InspectorClient::<span class="name">setTagsForResource</span>(const <span class="type"><a href="qtaws-inspector-settagsforresourcerequest.html">SetTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-settagsforresourceresponse.html">SetTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment</p>
+<!-- @@@setTagsForResource -->
+<!-- $$$startAssessmentRun[overload1]$$$startAssessmentRunconstStartAssessmentRunRequest& -->
+<h3 class="fn" id="startAssessmentRun"><a name="startAssessmentRun"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-startassessmentrunresponse.html">StartAssessmentRunResponse</a></span> *InspectorClient::<span class="name">startAssessmentRun</span>(const <span class="type"><a href="qtaws-inspector-startassessmentrunrequest.html">StartAssessmentRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-startassessmentrunresponse.html">StartAssessmentRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the assessment run specified by the ARN of the assessment template. For this API to function properly, you must not exceed the limit of running up to 500 concurrent agents per AWS</p>
+<!-- @@@startAssessmentRun -->
+<!-- $$$stopAssessmentRun[overload1]$$$stopAssessmentRunconstStopAssessmentRunRequest& -->
+<h3 class="fn" id="stopAssessmentRun"><a name="stopAssessmentRun"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-stopassessmentrunresponse.html">StopAssessmentRunResponse</a></span> *InspectorClient::<span class="name">stopAssessmentRun</span>(const <span class="type"><a href="qtaws-inspector-stopassessmentrunrequest.html">StopAssessmentRunRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-stopassessmentrunresponse.html">StopAssessmentRunResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops the assessment run that is specified by the ARN of the assessment</p>
+<!-- @@@stopAssessmentRun -->
+<!-- $$$subscribeToEvent[overload1]$$$subscribeToEventconstSubscribeToEventRequest& -->
+<h3 class="fn" id="subscribeToEvent"><a name="subscribeToEvent"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-subscribetoeventresponse.html">SubscribeToEventResponse</a></span> *InspectorClient::<span class="name">subscribeToEvent</span>(const <span class="type"><a href="qtaws-inspector-subscribetoeventrequest.html">SubscribeToEventRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-subscribetoeventresponse.html">SubscribeToEventResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS</p>
+<!-- @@@subscribeToEvent -->
+<!-- $$$unsubscribeFromEvent[overload1]$$$unsubscribeFromEventconstUnsubscribeFromEventRequest& -->
+<h3 class="fn" id="unsubscribeFromEvent"><a name="unsubscribeFromEvent"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-unsubscribefromeventresponse.html">UnsubscribeFromEventResponse</a></span> *InspectorClient::<span class="name">unsubscribeFromEvent</span>(const <span class="type"><a href="qtaws-inspector-unsubscribefromeventrequest.html">UnsubscribeFromEventRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-unsubscribefromeventresponse.html">UnsubscribeFromEventResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS</p>
+<!-- @@@unsubscribeFromEvent -->
+<!-- $$$updateAssessmentTarget[overload1]$$$updateAssessmentTargetconstUpdateAssessmentTargetRequest& -->
+<h3 class="fn" id="updateAssessmentTarget"><a name="updateAssessmentTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-inspector-updateassessmenttargetresponse.html">UpdateAssessmentTargetResponse</a></span> *InspectorClient::<span class="name">updateAssessmentTarget</span>(const <span class="type"><a href="qtaws-inspector-updateassessmenttargetrequest.html">UpdateAssessmentTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-inspector-inspectorclient.html">InspectorClient</a> service, and returns a pointer to an <a href="qtaws-inspector-updateassessmenttargetresponse.html">UpdateAssessmentTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the assessment target that is specified by the ARN of the assessment</p>
+<!-- @@@updateAssessmentTarget -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

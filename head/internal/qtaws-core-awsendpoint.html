@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsendpoint.cpp -->
+  <title>AwsEndpoint Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsEndpoint</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsEndpoint Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsendpoint.html">QtAws::Core::AwsEndpoint</a>)<br/></span>
+<!-- $$$AwsEndpoint-brief -->
+<p>The <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> class provides information about AWS endpoints. <a href="#details">More...</a></p>
+<!-- @@@AwsEndpoint -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsEndpoint&gt;</span>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsendpoint-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#Transport-enum">Transport</a></b> { HTTP, HTTPS, SMTP, AnyTransport }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#AwsEndpoint">AwsEndpoint</a></b>(const QByteArray &amp;<i>hostName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#AwsEndpoint-1">AwsEndpoint</a></b>(const QString &amp;<i>hostName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#dtor.AwsEndpoint">~AwsEndpoint</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#fullServiceName">fullServiceName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#hostName">hostName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#isSupported-1">isSupported</a></b>(const Transport <i>transport</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#isValid">isValid</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#regionName">regionName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#serviceName">serviceName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#supportedRegions">supportedRegions</a></b>(const Transports <i>transport</i> = AnyTransport) const</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#fullServiceName-1">fullServiceName</a></b>(const QString &amp;<i>serviceName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#getEndpoint">getEndpoint</a></b>(const QString &amp;<i>regionName</i>, const QString &amp;<i>serviceName</i>, const Transports <i>transport</i> = AnyTransport)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#isSupported">isSupported</a></b>(const QString &amp;<i>regionName</i>, const QString &amp;<i>serviceName</i>, const Transports <i>transport</i> = AnyTransport)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#supportedRegions-1">supportedRegions</a></b>(const QString &amp;<i>serviceName</i>, const Transports <i>transport</i> = AnyTransport)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsendpoint.html#supportedServices">supportedServices</a></b>(const QString &amp;<i>regionName</i>, const Transports <i>transport</i> = AnyTransport)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsEndpoint-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> class provides information about AWS endpoints.</p>
+<p><b>Note: </b>This class provides fairly low-level access to AWS endpoint data. You should consider using the <a href="qtaws-core-awsregion.html">AwsRegion</a> and/or various AwsService-derived classes in preference to using this class directly where possible.</p><p>This class parses the `endpoint.xml` data available at http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</p>
+<p>The `endpoint.xml` file is embedded as a resource in the the AWS SDK for Qt library - not fetched remotely at runtime.</p>
+<p>Example usage:</p>
+<pre class="cpp">AwsEndpoint endpoint(QLatin1String(<span class="string">&quot;cloudformation.us-east-1.amazonaws.com&quot;</span>));
+
+endpoint<span class="operator">.</span>hostName();    <span class="comment">// &quot;cloudformation.us-east-1.amazonaws.com&quot;</span>
+endpoint<span class="operator">.</span>regionName();  <span class="comment">// &quot;us-east-1&quot;</span>
+endpoint<span class="operator">.</span>serviceName(); <span class="comment">// &quot;cloudformation&quot;</span>
+
+endpoint<span class="operator">.</span>supportedRegions(); <span class="comment">// [ &quot;us-east-1&quot; ]</span>
+
+endpoint<span class="operator">.</span>isSupported(AwsEndpoint<span class="operator">::</span>HTTP);  <span class="comment">// false</span>
+endpoint<span class="operator">.</span>isSupported(AwsEndpoint<span class="operator">::</span>HTTPS); <span class="comment">// true</span>
+
+<span class="type">QUrl</span> ec2 <span class="operator">=</span> AwsEndpoint<span class="operator">::</span>getEndpoint(<span class="string">&quot;ap-southeast-2&quot;</span><span class="operator">,</span> <span class="string">&quot;ec2&quot;</span>);
+<span class="type">QUrl</span> iam <span class="operator">=</span> AwsEndpoint<span class="operator">::</span>getEndpoint(<span class="string">&quot;ap-southeast-2&quot;</span><span class="operator">,</span> <span class="string">&quot;iam&quot;</span>);
+
+ec2<span class="operator">.</span>host(); <span class="comment">// &quot;ec2.ap-southeast-2.amazonaws.com&quot;</span>
+iam<span class="operator">.</span>host(); <span class="comment">// &quot;iam.amazonaws.com&quot;</span></pre>
+</div>
+<p><b>See also </b><a href="qtaws-core-awsregion.html">QtAws::Core::AwsRegion</a>.</p>
+<!-- @@@AwsEndpoint -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Transport$$$HTTP$$$HTTPS$$$SMTP$$$AnyTransport -->
+<h3 class="flags" id="Transport-enum"><a name="Transport-enum"></a>enum AwsEndpoint::<span class="name">Transport</span><br/>flags AwsEndpoint::<span class="name">Transports</span></h3>
+<p>This enum describes types of network transports supported by AWS endpoints.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsEndpoint::HTTP</code></td><td class="topAlign tblval"><code>0x01</code></td><td class="topAlign">Hypertext Transfer Protocol.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsEndpoint::HTTPS</code></td><td class="topAlign tblval"><code>0x02</code></td><td class="topAlign">Hypertext Transfer Protocol with transport layer security.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsEndpoint::SMTP</code></td><td class="topAlign tblval"><code>0x04</code></td><td class="topAlign">Simple Mail Transfer Protocol.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Core::AwsEndpoint::AnyTransport</code></td><td class="topAlign tblval"><code>HTTP | HTTPS | SMTP</code></td><td class="topAlign">Any available transport.</td></tr>
+</table></div>
+<p>Not all transports are supported by all endpoints. See <a href="qtaws-core-awsendpoint.html#isSupported">isSupported</a> for example.</p>
+<p>The Transports type is a typedef for <a href="">QFlags</a>&lt;Transport&gt;. It stores an OR combination of Transport values.</p>
+<!-- @@@Transport -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsEndpoint[overload1]$$$AwsEndpointconstQByteArray& -->
+<h3 class="fn" id="AwsEndpoint"><a name="AwsEndpoint"></a>AwsEndpoint::<span class="name">AwsEndpoint</span>(const <span class="type">QByteArray</span> &amp;<i>hostName</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> object for a UTF-8 encoded AWS <i>hostName</i>.</p>
+<!-- @@@AwsEndpoint -->
+<!-- $$$AwsEndpoint$$$AwsEndpointconstQString& -->
+<h3 class="fn" id="AwsEndpoint-1"><a name="AwsEndpoint-1"></a>AwsEndpoint::<span class="name">AwsEndpoint</span>(const <span class="type">QString</span> &amp;<i>hostName</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> object for AWS <i>hostName</i>.</p>
+<!-- @@@AwsEndpoint -->
+<!-- $$$~AwsEndpoint[overload1]$$$~AwsEndpoint -->
+<h3 class="fn" id="dtor.AwsEndpoint"><a name="dtor.AwsEndpoint"></a>AwsEndpoint::<span class="name">~AwsEndpoint</span>()</h3>
+<p>Destroys the AWS endpoint.</p>
+<!-- @@@~AwsEndpoint -->
+<!-- $$$fullServiceName[overload1]$$$fullServiceName -->
+<h3 class="fn" id="fullServiceName"><a name="fullServiceName"></a><span class="type">QString</span> AwsEndpoint::<span class="name">fullServiceName</span>() const</h3>
+<p>Returns the endpoint's full service name.</p>
+<p>The full service name is a human-readbale form. For example, the full name for the `cloudsearch` service is `Amazon CloudSearch`. Likewise, the full name for the `rds` service is `Amazon Relational Database Service`.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#serviceName">serviceName</a>.</p>
+<!-- @@@fullServiceName -->
+<!-- $$$fullServiceName$$$fullServiceNameconstQString& -->
+<h3 class="fn" id="fullServiceName-1"><a name="fullServiceName-1"></a><code>[static] </code><span class="type">QString</span> AwsEndpoint::<span class="name">fullServiceName</span>(const <span class="type">QString</span> &amp;<i>serviceName</i>)</h3>
+<p>Returns the full service name for the given <i>serviceName</i>.</p>
+<p>The full service name is a human-readbale form. For example, the full name for the `cloudsearch` service is `Amazon CloudSearch`. Likewise, the full name for the `rds` service is `Amazon Relational Database Service`.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#serviceName">serviceName</a>.</p>
+<!-- @@@fullServiceName -->
+<!-- $$$getEndpoint[overload1]$$$getEndpointconstQString&constQString&constTransports -->
+<h3 class="fn" id="getEndpoint"><a name="getEndpoint"></a><code>[static] </code><span class="type">QUrl</span> AwsEndpoint::<span class="name">getEndpoint</span>(const <span class="type">QString</span> &amp;<i>regionName</i>, const <span class="type">QString</span> &amp;<i>serviceName</i>, const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></span> <i>transport</i> = AnyTransport)</h3>
+<p>Returns the endpoint QUrl for AWS service <i>serviceName</i> in region <i>regionName</i>, or an invalid QUrl if there is no such endpoint.</p>
+<p>This function will return a QUrl object for accessing an AWS service. The region and service names must match those used by Amazon.</p>
+<p>If the specified region and/or service are not known to be valid for AWS, or the service is not supported in the specified region, then an invalid QUrl will be returned.</p>
+<p><b>Note: </b>An invalid QUrl is one for which QUrl::isValid() returns <code>false</code>.</p><p>The <i>transport</i> parameter may be used to specify one or more transports to consider. If the specified AWS endpoint exists, but does not support <i>any</i> of the given transports, then an invalid QUrl is returned.</p>
+<p>Where it makes sense to do so, the resulting QUrl's scheme will be set according to the requested transport. For example, if the selected transport is <a href="qtaws-core-awsendpoint.html#Transport-enum">AwsEndpoint::HTTPS</a>, then the resulting QUrl's schems will be set to <code>&quot;https&quot;</code>.</p>
+<p>If <i>transport</i> includes both <a href="qtaws-core-awsendpoint.html#Transport-enum">AwsEndpoint::HTTP</a> <i>and</i> <a href="qtaws-core-awsendpoint.html#Transport-enum">AwsEndpoint::HTTPS</a>, and both are supported by the AWS endpoint, then <code>&quot;https&quot;</code> will be used in preference to <code>&quot;http&quot;</code>.</p>
+<p><b>Note: </b>It is possible for the returned QUrl to specify a host that is not located in, nor dedicated to the specified region. For examepl, if requesting an endpoint for the <code>iam</code> service in <code>ap-southeast-2</code>, the returned endpoint is for a host (<code>iam.amazonaws.com</code>) which provides the <code>ami</code> services for all regions, not just <code>ap-southeast-2</code>. Services known to behave like this include: <code>cloudfront</code>, <code>iam</code>, <code>importexport</code>, <code>route53</code>, and <code>sts</code>.</p><p>Example usage:</p>
+<pre class="cpp"><span class="type">QUrl</span> ec2 <span class="operator">=</span> AwsEndpoint<span class="operator">::</span>getEndpoint(<span class="string">&quot;ap-southeast-2&quot;</span><span class="operator">,</span> <span class="string">&quot;ec2&quot;</span>);
+<span class="type">QUrl</span> iam <span class="operator">=</span> AwsEndpoint<span class="operator">::</span>getEndpoint(<span class="string">&quot;ap-southeast-2&quot;</span><span class="operator">,</span> <span class="string">&quot;iam&quot;</span>);
+ec2<span class="operator">.</span>host(); <span class="comment">// &quot;ec2.ap-southeast-2.amazonaws.com&quot;</span>
+iam<span class="operator">.</span>host(); <span class="comment">// &quot;iam.amazonaws.com&quot;</span></pre>
+<!-- @@@getEndpoint -->
+<!-- $$$hostName[overload1]$$$hostName -->
+<h3 class="fn" id="hostName"><a name="hostName"></a><span class="type">QString</span> AwsEndpoint::<span class="name">hostName</span>() const</h3>
+<p>Returns the name of the host represented by this endpoint.</p>
+<!-- @@@hostName -->
+<!-- $$$isSupported[overload1]$$$isSupportedconstQString&constQString&constTransports -->
+<h3 class="fn" id="isSupported"><a name="isSupported"></a><code>[static] </code><span class="type">bool</span> AwsEndpoint::<span class="name">isSupported</span>(const <span class="type">QString</span> &amp;<i>regionName</i>, const <span class="type">QString</span> &amp;<i>serviceName</i>, const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></span> <i>transport</i> = AnyTransport)</h3>
+<p>Returns <code>true</code> if the given <i>regionName</i>, <i>serviceName</i>, and <i>transport</i> combination supported by AWS; <code>false</code> otherwise.</p>
+<!-- @@@isSupported -->
+<!-- $$$isSupported$$$isSupportedconstTransport -->
+<h3 class="fn" id="isSupported-1"><a name="isSupported-1"></a><span class="type">bool</span> AwsEndpoint::<span class="name">isSupported</span>(const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transport</a></span> <i>transport</i>) const</h3>
+<p>Returns <code>true</code> if the given <code>transport</code> is supported by this endpoint; <code>false</code> otherwise.</p>
+<!-- @@@isSupported -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><span class="type">bool</span> AwsEndpoint::<span class="name">isValid</span>() const</h3>
+<p>Returns <code>true</code> is this endpoint is valid; <code>false</code> otherwise.</p>
+<p>The endpoint is considered valid if the host specified during construction is a known AWS host, and thus we know what region and service(s) it supports.</p>
+<p>For example:</p>
+<pre class="cpp">AwsEndpoint good(QLatin1String(<span class="string">&quot;cloudformation.us-east-1.amazonaws.com&quot;</span>));
+AwsEndpoint bad(QLatin1String(<span class="string">&quot;example.com&quot;</span>));
+Q_ASSERT(good<span class="operator">.</span>isValid()); <span class="comment">// good is valid.</span>
+Q_ASSERT(<span class="operator">!</span>bad<span class="operator">.</span>isValid()); <span class="comment">// bad is not.</span></pre>
+<!-- @@@isValid -->
+<!-- $$$regionName[overload1]$$$regionName -->
+<h3 class="fn" id="regionName"><a name="regionName"></a><span class="type">QString</span> AwsEndpoint::<span class="name">regionName</span>() const</h3>
+<p>Returns the endpoint's <i>primary</i> region name.</p>
+<p>It is possible for a single endpiont to support multuple regions, such as <code>iam.amazonaws.com</code>, which provides the <code>ami</code> servive for all (non-government) regions.</p>
+<p>In these cases, this function returns the primary region in which the service is located. The <a href="qtaws-core-awsendpoint.html#supportedRegions">AwsEndpoint::supportedRegions</a> function may be used to fetch the full list of regions this endpoint supports.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#supportedRegions">supportedRegions</a>.</p>
+<!-- @@@regionName -->
+<!-- $$$serviceName[overload1]$$$serviceName -->
+<h3 class="fn" id="serviceName"><a name="serviceName"></a><span class="type">QString</span> AwsEndpoint::<span class="name">serviceName</span>() const</h3>
+<p>Returns the endpoint's service name.</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#fullServiceName">fullServiceName</a>.</p>
+<!-- @@@serviceName -->
+<!-- $$$supportedRegions[overload1]$$$supportedRegionsconstTransports -->
+<h3 class="fn" id="supportedRegions"><a name="supportedRegions"></a><span class="type">QStringList</span> AwsEndpoint::<span class="name">supportedRegions</span>(const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></span> <i>transport</i> = AnyTransport) const</h3>
+<p>Returns a list of regions the endpoint supports for <i>at least one</i> of the the given <i>transport</i>s.</p>
+<p>Alternatvely, <a href="qtaws-core-awsendpoint.html#regionName">AwsEndpoint::regionName</a> may be used to get this endpoint's <i>primary</i> region.</p>
+<!-- @@@supportedRegions -->
+<!-- $$$supportedRegions$$$supportedRegionsconstQString&constTransports -->
+<h3 class="fn" id="supportedRegions-1"><a name="supportedRegions-1"></a><code>[static] </code><span class="type">QStringList</span> AwsEndpoint::<span class="name">supportedRegions</span>(const <span class="type">QString</span> &amp;<i>serviceName</i>, const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></span> <i>transport</i> = AnyTransport)</h3>
+<p>Returns a list <i>serviceName</i> regions that support <i>at least one</i> of the the given <i>transport</i>s.</p>
+<!-- @@@supportedRegions -->
+<!-- $$$supportedServices[overload1]$$$supportedServicesconstQString&constTransports -->
+<h3 class="fn" id="supportedServices"><a name="supportedServices"></a><code>[static] </code><span class="type">QStringList</span> AwsEndpoint::<span class="name">supportedServices</span>(const <span class="type">QString</span> &amp;<i>regionName</i>, const <span class="type"><a href="qtaws-core-awsendpoint.html#Transport-enum">Transports</a></span> <i>transport</i> = AnyTransport)</h3>
+<p>Returns a list <i>regionName</i> services that support <i>at least one</i> of the the given <i>transport</i>s.</p>
+<!-- @@@supportedServices -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

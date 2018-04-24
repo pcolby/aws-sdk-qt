@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sendmessagerequest.cpp -->
+  <title>SendMessageRequest Class | SQS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssqs-index.html">SQS</a></li>
+<li><a href="qtawssqs-module.html">C++ Classes</a></li>
+<li>SendMessageRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SendMessageRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sqs-sendmessagerequest.html">QtAws::SQS::SendMessageRequest</a>)<br/></span>
+<!-- $$$SendMessageRequest-brief -->
+<p>The <a href="qtaws-sqs-sendmessagerequest.html">SendMessageRequest</a> class provides an interface for SQS SendMessage requests. <a href="#details">More...</a></p>
+<!-- @@@SendMessageRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SendMessageRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-sqs-sqsrequest.html">QtAws::SQS::SqsRequest</a></td></tr></table></div><ul>
+<li><a href="qtaws-sqs-sendmessagerequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sqs-sendmessagerequest.html#SendMessageRequest">SendMessageRequest</a></b>(const SendMessageRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sqs-sendmessagerequest.html#SendMessageRequest-1">SendMessageRequest</a></b>()</td></tr>
+</table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sqs-sendmessagerequest.html#isValid">isValid</a></b>() const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-sqs-sqsrequest.html#public-functions">QtAws::SQS::SqsRequest</a></li>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QtAws::Core::AwsAbstractResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sqs-sendmessagerequest.html#response">response</a></b>(QNetworkReply * const <i>reply</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 protected functions inherited from <a href="qtaws-sqs-sqsrequest.html#protected-functions">QtAws::SQS::SqsRequest</a></li>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SendMessageRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sqs-sendmessagerequest.html">SendMessageRequest</a> class provides an interface for SQS SendMessage requests.</p>
+<p>Welcome to the &lt;i&gt;Amazon Simple Queue Service API</p>
+<p>Reference&lt;/i&gt;&gt;</p>
+<p>Amazon Simple Queue Service (Amazon SQS) is a reliable, highly-scalable hosted queue for storing messages as they travel between applications or microservices. Amazon SQS moves data between distributed application components and helps you decouple these</p>
+<p>components&gt; &lt;note&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html&quot;&gt;Standard queues&lt;/a&gt; are available in all regions. &lt;a href=&quot;http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html&quot;&gt;FIFO queues&lt;/a&gt; are available in the US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland)</p>
+<p>regions&gt; &lt;/note&gt;</p>
+<p>You can use &lt;a href=&quot;http://aws.amazon.com/tools/#sdk&quot;&gt;AWS SDKs&lt;/a&gt; to access Amazon SQS using your favorite programming language. The SDKs perform tasks such as the following</p>
+<p>automatically&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Cryptographically sign your service</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Retry</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Handle error</p>
+<p>response&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Additional Information&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://aws.amazon.com/sqs/&quot;&gt;Amazon SQS Product Page&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;Amazon Simple Queue Service Developer Guide&lt;/i&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html&quot;&gt;Making API Requests&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html&quot;&gt;Using Amazon SQS Message Attributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html&quot;&gt;Using Amazon SQS Dead-Letter Queues&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region&quot;&gt;Regions and Endpoints&lt;/a&gt;</p>
+</div>
+<p><b>See also </b><a href="qtaws-sqs-sqsclient.html#sendMessage">SqsClient::sendMessage</a>.</p>
+<!-- @@@SendMessageRequest -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SendMessageRequest[overload1]$$$SendMessageRequestconstSendMessageRequest& -->
+<h3 class="fn" id="SendMessageRequest"><a name="SendMessageRequest"></a>SendMessageRequest::<span class="name">SendMessageRequest</span>(const <span class="type"><a href="qtaws-sqs-sendmessagerequest.html#SendMessageRequest">SendMessageRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SendMessageRequest -->
+<!-- $$$SendMessageRequest$$$SendMessageRequest -->
+<h3 class="fn" id="SendMessageRequest-1"><a name="SendMessageRequest-1"></a>SendMessageRequest::<span class="name">SendMessageRequest</span>()</h3>
+<p>Constructs a <a href="qtaws-sqs-sendmessagerequest.html">SendMessageRequest</a> object.</p>
+<!-- @@@SendMessageRequest -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><code>[override virtual] </code><span class="type">bool</span> SendMessageRequest::<span class="name">isValid</span>() const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#isValid">AwsAbstractRequest::isValid</a>().</p>
+<!-- @@@isValid -->
+<!-- $$$response[overload1]$$$responseQNetworkReply*const -->
+<h3 class="fn" id="response"><a name="response"></a><code>[override virtual protected] </code><span class="type">QtAws::Core::AwsAbstractResponse</span> *SendMessageRequest::<span class="name">response</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#response">AwsAbstractRequest::response</a>().</p>
+<p>Returns a <a href="qtaws-sqs-sendmessageresponse.html">SendMessageResponse</a> object to process <i>reply</i>.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractclient.html#send">QtAws::Core::AwsAbstractClient::send</a>.</p>
+<!-- @@@response -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

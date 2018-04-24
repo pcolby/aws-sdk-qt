@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- resourcegroupstaggingapiclient.cpp -->
+  <title>ResourceGroupsTaggingAPIClient Class | ResourceGroupsTaggingAPI</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsresourcegroupstaggingapi-index.html">ResourceGroupsTaggingAPI</a></li>
+<li><a href="qtawsresourcegroupstaggingapi-module.html">C++ Classes</a></li>
+<li>ResourceGroupsTaggingAPIClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ResourceGroupsTaggingAPIClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient</a>)<br/></span>
+<!-- $$$ResourceGroupsTaggingAPIClient-brief -->
+<p>The <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> class provides access to the AWS Resource Groups Tagging API service. <a href="#details">More...</a></p>
+<!-- @@@ResourceGroupsTaggingAPIClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ResourceGroupsTaggingAPIClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#ResourceGroupsTaggingAPIClient">ResourceGroupsTaggingAPIClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#ResourceGroupsTaggingAPIClient-1">ResourceGroupsTaggingAPIClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> GetResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#getResources">getResources</a></b>(const GetResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTagKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#getTagKeys">getTagKeys</a></b>(const GetTagKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTagValuesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#getTagValues">getTagValues</a></b>(const GetTagValuesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#tagResources">tagResources</a></b>(const TagResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#untagResources">untagResources</a></b>(const UntagResourcesRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ResourceGroupsTaggingAPIClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> class provides access to the AWS Resource Groups Tagging API service.</p>
+<p>&lt;fullname&gt;Resource Groups Tagging API&lt;/fullname&gt;</p>
+<p>This guide describes the API operations for the resource groups</p>
+<p>tagging&gt;</p>
+<p>A tag is a label that you assign to an AWS resource. A tag consists of a key and a value, both of which you define. For example, if you have two Amazon EC2 instances, you might assign both a tag key of &quot;Stack.&quot; But the value of &quot;Stack&quot; might be &quot;Testing&quot; for one and &quot;Production&quot; for the</p>
+<p>other&gt;</p>
+<p>Tagging can help you organize your resources and enables you to simplify resource management, access management and cost allocation. For more information about tagging, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html&quot;&gt;Working with Tag Editor&lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/resource-groups.html&quot;&gt;Working with Resource Groups&lt;/a&gt;. For more information about permissions you need to use the resource groups tagging APIs, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-resource-groups.html&quot;&gt;Obtaining Permissions for Resource Groups &lt;/a&gt; and &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html&quot;&gt;Obtaining Permissions for Tagging</p>
+<p>&lt;/a&gt;&gt;</p>
+<p>You can use the resource groups tagging APIs to complete the following</p>
+<p>tasks&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Tag and untag supported resources located in the specified region for the AWS</p>
+<p>accoun&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use tag-based filters to search for resources located in the specified region for the AWS</p>
+<p>accoun&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>List all existing tag keys in the specified region for the AWS</p>
+<p>accoun&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>List all existing values for the specified key in the specified region for the AWS</p>
+<p>accoun&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Not all resources can have tags. For a lists of resources that you can tag, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html&quot;&gt;Supported Resources&lt;/a&gt; in the &lt;i&gt;AWS Resource Groups and Tag Editor User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>To make full use of the resource groups tagging APIs, you might need additional IAM permissions, including permission to access the resources of individual services as well as permission to view and apply tags to those resources. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html&quot;&gt;Obtaining Permissions for Tagging&lt;/a&gt; in the &lt;i&gt;AWS Resource Groups and Tag Editor User</p>
+</div>
+<!-- @@@ResourceGroupsTaggingAPIClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ResourceGroupsTaggingAPIClient[overload1]$$$ResourceGroupsTaggingAPIClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ResourceGroupsTaggingAPIClient"><a name="ResourceGroupsTaggingAPIClient"></a>ResourceGroupsTaggingAPIClient::<span class="name">ResourceGroupsTaggingAPIClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ResourceGroupsTaggingAPIClient -->
+<!-- $$$ResourceGroupsTaggingAPIClient$$$ResourceGroupsTaggingAPIClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ResourceGroupsTaggingAPIClient-1"><a name="ResourceGroupsTaggingAPIClient-1"></a>ResourceGroupsTaggingAPIClient::<span class="name">ResourceGroupsTaggingAPIClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html#ResourceGroupsTaggingAPIClient">ResourceGroupsTaggingAPIClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ResourceGroupsTaggingAPIClient -->
+<!-- $$$getResources[overload1]$$$getResourcesconstGetResourcesRequest& -->
+<h3 class="fn" id="getResources"><a name="getResources"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroupstaggingapi-getresourcesresponse.html">GetResourcesResponse</a></span> *ResourceGroupsTaggingAPIClient::<span class="name">getResources</span>(const <span class="type"><a href="qtaws-resourcegroupstaggingapi-getresourcesrequest.html">GetResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroupstaggingapi-getresourcesresponse.html">GetResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all the tagged resources that are associated with the specified tags (keys and values) located in the specified region for the AWS account. The tags and the resource types that you specify in the request are known as &lt;i&gt;filters&lt;/i&gt;. The response includes all tags that are associated with the requested resources. If no filter is provided, this action returns a paginated resource list with the associated</p>
+<!-- @@@getResources -->
+<!-- $$$getTagKeys[overload1]$$$getTagKeysconstGetTagKeysRequest& -->
+<h3 class="fn" id="getTagKeys"><a name="getTagKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroupstaggingapi-gettagkeysresponse.html">GetTagKeysResponse</a></span> *ResourceGroupsTaggingAPIClient::<span class="name">getTagKeys</span>(const <span class="type"><a href="qtaws-resourcegroupstaggingapi-gettagkeysrequest.html">GetTagKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroupstaggingapi-gettagkeysresponse.html">GetTagKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all tag keys in the specified region for the AWS</p>
+<!-- @@@getTagKeys -->
+<!-- $$$getTagValues[overload1]$$$getTagValuesconstGetTagValuesRequest& -->
+<h3 class="fn" id="getTagValues"><a name="getTagValues"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroupstaggingapi-gettagvaluesresponse.html">GetTagValuesResponse</a></span> *ResourceGroupsTaggingAPIClient::<span class="name">getTagValues</span>(const <span class="type"><a href="qtaws-resourcegroupstaggingapi-gettagvaluesrequest.html">GetTagValuesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroupstaggingapi-gettagvaluesresponse.html">GetTagValuesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all tag values for the specified key in the specified region for the AWS</p>
+<!-- @@@getTagValues -->
+<!-- $$$tagResources[overload1]$$$tagResourcesconstTagResourcesRequest& -->
+<h3 class="fn" id="tagResources"><a name="tagResources"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroupstaggingapi-tagresourcesresponse.html">TagResourcesResponse</a></span> *ResourceGroupsTaggingAPIClient::<span class="name">tagResources</span>(const <span class="type"><a href="qtaws-resourcegroupstaggingapi-tagresourcesrequest.html">TagResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroupstaggingapi-tagresourcesresponse.html">TagResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Applies one or more tags to the specified resources. Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Not all resources can have tags. For a list of resources that support tagging, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/supported-resources.html&quot;&gt;Supported Resources&lt;/a&gt; in the &lt;i&gt;AWS Resource Groups and Tag Editor User</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Each resource can have up to 50 tags. For other limits, see &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-restrictions&quot;&gt;Tag Restrictions&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User Guide for Linux</p>
+<p>Instances&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You can only tag resources that are located in the specified region for the AWS</p>
+<p>account&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>To add tags to a resource, you need the necessary permissions for the service that the resource belongs to as well as permissions for adding tags. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html&quot;&gt;Obtaining Permissions for Tagging&lt;/a&gt; in the &lt;i&gt;AWS Resource Groups and Tag Editor User</p>
+<!-- @@@tagResources -->
+<!-- $$$untagResources[overload1]$$$untagResourcesconstUntagResourcesRequest& -->
+<h3 class="fn" id="untagResources"><a name="untagResources"></a><code>[slot] </code><span class="type"><a href="qtaws-resourcegroupstaggingapi-untagresourcesresponse.html">UntagResourcesResponse</a></span> *ResourceGroupsTaggingAPIClient::<span class="name">untagResources</span>(const <span class="type"><a href="qtaws-resourcegroupstaggingapi-untagresourcesrequest.html">UntagResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiclient.html">ResourceGroupsTaggingAPIClient</a> service, and returns a pointer to an <a href="qtaws-resourcegroupstaggingapi-untagresourcesresponse.html">UntagResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified tags from the specified resources. When you specify a tag key, the action removes both that key and its associated value. The operation succeeds even if you attempt to remove tags from a resource that were already removed. Note the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>To remove tags from a resource, you need the necessary permissions for the service that the resource belongs to as well as permissions for removing tags. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/obtaining-permissions-for-tagging.html&quot;&gt;Obtaining Permissions for Tagging&lt;/a&gt; in the &lt;i&gt;AWS Resource Groups and Tag Editor User</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You can only tag resources that are located in the specified region for the AWS</p>
+<!-- @@@untagResources -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

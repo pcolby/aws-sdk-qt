@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudsearchclient.cpp -->
+  <title>CloudSearchClient Class | CloudSearch</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudsearch-index.html">CloudSearch</a></li>
+<li><a href="qtawscloudsearch-module.html">C++ Classes</a></li>
+<li>CloudSearchClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudSearchClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudsearch-cloudsearchclient.html">QtAws::CloudSearch::CloudSearchClient</a>)<br/></span>
+<!-- $$$CloudSearchClient-brief -->
+<p>The <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> class provides access to the Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> service. <a href="#details">More...</a></p>
+<!-- @@@CloudSearchClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudSearchClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cloudsearch-cloudsearchclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#CloudSearchClient">CloudSearchClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#CloudSearchClient-1">CloudSearchClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BuildSuggestersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#buildSuggesters">buildSuggesters</a></b>(const BuildSuggestersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#createDomain">createDomain</a></b>(const CreateDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DefineAnalysisSchemeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#defineAnalysisScheme">defineAnalysisScheme</a></b>(const DefineAnalysisSchemeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DefineExpressionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#defineExpression">defineExpression</a></b>(const DefineExpressionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DefineIndexFieldResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#defineIndexField">defineIndexField</a></b>(const DefineIndexFieldRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DefineSuggesterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#defineSuggester">defineSuggester</a></b>(const DefineSuggesterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAnalysisSchemeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#deleteAnalysisScheme">deleteAnalysisScheme</a></b>(const DeleteAnalysisSchemeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#deleteDomain">deleteDomain</a></b>(const DeleteDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteExpressionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#deleteExpression">deleteExpression</a></b>(const DeleteExpressionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIndexFieldResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#deleteIndexField">deleteIndexField</a></b>(const DeleteIndexFieldRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSuggesterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#deleteSuggester">deleteSuggester</a></b>(const DeleteSuggesterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAnalysisSchemesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeAnalysisSchemes">describeAnalysisSchemes</a></b>(const DescribeAnalysisSchemesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAvailabilityOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeAvailabilityOptions">describeAvailabilityOptions</a></b>(const DescribeAvailabilityOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDomainsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeDomains">describeDomains</a></b>(const DescribeDomainsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeExpressionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeExpressions">describeExpressions</a></b>(const DescribeExpressionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeIndexFieldsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeIndexFields">describeIndexFields</a></b>(const DescribeIndexFieldsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeScalingParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeScalingParameters">describeScalingParameters</a></b>(const DescribeScalingParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeServiceAccessPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeServiceAccessPolicies">describeServiceAccessPolicies</a></b>(const DescribeServiceAccessPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSuggestersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#describeSuggesters">describeSuggesters</a></b>(const DescribeSuggestersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IndexDocumentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#indexDocuments">indexDocuments</a></b>(const IndexDocumentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDomainNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#listDomainNames">listDomainNames</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAvailabilityOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#updateAvailabilityOptions">updateAvailabilityOptions</a></b>(const UpdateAvailabilityOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateScalingParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#updateScalingParameters">updateScalingParameters</a></b>(const UpdateScalingParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateServiceAccessPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudsearch-cloudsearchclient.html#updateServiceAccessPolicies">updateServiceAccessPolicies</a></b>(const UpdateServiceAccessPoliciesRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudSearchClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> class provides access to the Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> service.</p>
+<p>&lt;fullname&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Configuration Service&lt;/fullname&gt;</p>
+<p>You use the Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> configuration service to create, configure, and manage search domains. Configuration service requests are submitted using the AWS Query protocol. AWS Query requests are HTTP or HTTPS requests submitted via HTTP GET or POST with a query parameter named</p>
+<p>Action&gt;</p>
+<p>The endpoint for configuration service requests is region-specific: cloudsearch.&lt;i&gt;region&lt;/i&gt;.amazonaws.com. For example, cloudsearch.us-east-1.amazonaws.com. For a current list of supported regions and endpoints, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#cloudsearch_region&quot; target=&quot;_blank&quot;&gt;Regions and</p>
+</div>
+<!-- @@@CloudSearchClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudSearchClient[overload1]$$$CloudSearchClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudSearchClient"><a name="CloudSearchClient"></a>CloudSearchClient::<span class="name">CloudSearchClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudSearchClient -->
+<!-- $$$CloudSearchClient$$$CloudSearchClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudSearchClient-1"><a name="CloudSearchClient-1"></a>CloudSearchClient::<span class="name">CloudSearchClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cloudsearch-cloudsearchclient.html#CloudSearchClient">CloudSearchClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudSearchClient -->
+<!-- $$$buildSuggesters[overload1]$$$buildSuggestersconstBuildSuggestersRequest& -->
+<h3 class="fn" id="buildSuggesters"><a name="buildSuggesters"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-buildsuggestersresponse.html">BuildSuggestersResponse</a></span> *CloudSearchClient::<span class="name">buildSuggesters</span>(const <span class="type"><a href="qtaws-cloudsearch-buildsuggestersrequest.html">BuildSuggestersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-buildsuggestersresponse.html">BuildSuggestersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Indexes the search suggestions. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html#configuring-suggesters&quot;&gt;Configuring Suggesters&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@buildSuggesters -->
+<!-- $$$createDomain[overload1]$$$createDomainconstCreateDomainRequest& -->
+<h3 class="fn" id="createDomain"><a name="createDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-createdomainresponse.html">CreateDomainResponse</a></span> *CloudSearchClient::<span class="name">createDomain</span>(const <span class="type"><a href="qtaws-cloudsearch-createdomainrequest.html">CreateDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-createdomainresponse.html">CreateDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new search domain. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/creating-domains.html&quot; target=&quot;_blank&quot;&gt;Creating a Search Domain&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@createDomain -->
+<!-- $$$defineAnalysisScheme[overload1]$$$defineAnalysisSchemeconstDefineAnalysisSchemeRequest& -->
+<h3 class="fn" id="defineAnalysisScheme"><a name="defineAnalysisScheme"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-defineanalysisschemeresponse.html">DefineAnalysisSchemeResponse</a></span> *CloudSearchClient::<span class="name">defineAnalysisScheme</span>(const <span class="type"><a href="qtaws-cloudsearch-defineanalysisschemerequest.html">DefineAnalysisSchemeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-defineanalysisschemeresponse.html">DefineAnalysisSchemeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures an analysis scheme that can be applied to a &lt;code&gt;text&lt;/code&gt; or &lt;code&gt;text-array&lt;/code&gt; field to define language-specific text processing options. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html&quot; target=&quot;_blank&quot;&gt;Configuring Analysis Schemes&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@defineAnalysisScheme -->
+<!-- $$$defineExpression[overload1]$$$defineExpressionconstDefineExpressionRequest& -->
+<h3 class="fn" id="defineExpression"><a name="defineExpression"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-defineexpressionresponse.html">DefineExpressionResponse</a></span> *CloudSearchClient::<span class="name">defineExpression</span>(const <span class="type"><a href="qtaws-cloudsearch-defineexpressionrequest.html">DefineExpressionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-defineexpressionresponse.html">DefineExpressionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures an &lt;code&gt;&lt;a&gt;Expression&lt;/a&gt;&lt;/code&gt; for the search domain. Used to create new expressions and modify existing ones. If the expression exists, the new configuration replaces the old one. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html&quot; target=&quot;_blank&quot;&gt;Configuring Expressions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@defineExpression -->
+<!-- $$$defineIndexField[overload1]$$$defineIndexFieldconstDefineIndexFieldRequest& -->
+<h3 class="fn" id="defineIndexField"><a name="defineIndexField"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-defineindexfieldresponse.html">DefineIndexFieldResponse</a></span> *CloudSearchClient::<span class="name">defineIndexField</span>(const <span class="type"><a href="qtaws-cloudsearch-defineindexfieldrequest.html">DefineIndexFieldRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-defineindexfieldresponse.html">DefineIndexFieldResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures an &lt;code&gt;&lt;a&gt;IndexField&lt;/a&gt;&lt;/code&gt; for the search domain. Used to create new fields and modify existing ones. You must specify the name of the domain you are configuring and an index field configuration. The index field configuration specifies a unique name, the index field type, and the options you want to configure for the field. The options you can specify depend on the &lt;code&gt;&lt;a&gt;IndexFieldType&lt;/a&gt;&lt;/code&gt;. If the field exists, the new configuration replaces the old one. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-index-fields.html&quot; target=&quot;_blank&quot;&gt;Configuring Index Fields&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer Guide&lt;/i&gt;.</p>
+<!-- @@@defineIndexField -->
+<!-- $$$defineSuggester[overload1]$$$defineSuggesterconstDefineSuggesterRequest& -->
+<h3 class="fn" id="defineSuggester"><a name="defineSuggester"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-definesuggesterresponse.html">DefineSuggesterResponse</a></span> *CloudSearchClient::<span class="name">defineSuggester</span>(const <span class="type"><a href="qtaws-cloudsearch-definesuggesterrequest.html">DefineSuggesterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-definesuggesterresponse.html">DefineSuggesterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures a suggester for a domain. A suggester enables you to display possible matches before users finish typing their queries. When you configure a suggester, you must specify the name of the text field you want to search for possible matches and a unique name for the suggester. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html&quot; target=&quot;_blank&quot;&gt;Getting Search Suggestions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@defineSuggester -->
+<!-- $$$deleteAnalysisScheme[overload1]$$$deleteAnalysisSchemeconstDeleteAnalysisSchemeRequest& -->
+<h3 class="fn" id="deleteAnalysisScheme"><a name="deleteAnalysisScheme"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-deleteanalysisschemeresponse.html">DeleteAnalysisSchemeResponse</a></span> *CloudSearchClient::<span class="name">deleteAnalysisScheme</span>(const <span class="type"><a href="qtaws-cloudsearch-deleteanalysisschemerequest.html">DeleteAnalysisSchemeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-deleteanalysisschemeresponse.html">DeleteAnalysisSchemeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an analysis scheme. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html&quot; target=&quot;_blank&quot;&gt;Configuring Analysis Schemes&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer Guide&lt;/i&gt;.</p>
+<!-- @@@deleteAnalysisScheme -->
+<!-- $$$deleteDomain[overload1]$$$deleteDomainconstDeleteDomainRequest& -->
+<h3 class="fn" id="deleteDomain"><a name="deleteDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-deletedomainresponse.html">DeleteDomainResponse</a></span> *CloudSearchClient::<span class="name">deleteDomain</span>(const <span class="type"><a href="qtaws-cloudsearch-deletedomainrequest.html">DeleteDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-deletedomainresponse.html">DeleteDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a search domain and all of its data. Once a domain has been deleted, it cannot be recovered. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/deleting-domains.html&quot; target=&quot;_blank&quot;&gt;Deleting a Search Domain&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer Guide&lt;/i&gt;.</p>
+<!-- @@@deleteDomain -->
+<!-- $$$deleteExpression[overload1]$$$deleteExpressionconstDeleteExpressionRequest& -->
+<h3 class="fn" id="deleteExpression"><a name="deleteExpression"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-deleteexpressionresponse.html">DeleteExpressionResponse</a></span> *CloudSearchClient::<span class="name">deleteExpression</span>(const <span class="type"><a href="qtaws-cloudsearch-deleteexpressionrequest.html">DeleteExpressionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-deleteexpressionresponse.html">DeleteExpressionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes an &lt;code&gt;&lt;a&gt;Expression&lt;/a&gt;&lt;/code&gt; from the search domain. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html&quot; target=&quot;_blank&quot;&gt;Configuring Expressions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@deleteExpression -->
+<!-- $$$deleteIndexField[overload1]$$$deleteIndexFieldconstDeleteIndexFieldRequest& -->
+<h3 class="fn" id="deleteIndexField"><a name="deleteIndexField"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-deleteindexfieldresponse.html">DeleteIndexFieldResponse</a></span> *CloudSearchClient::<span class="name">deleteIndexField</span>(const <span class="type"><a href="qtaws-cloudsearch-deleteindexfieldrequest.html">DeleteIndexFieldRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-deleteindexfieldresponse.html">DeleteIndexFieldResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes an &lt;code&gt;&lt;a&gt;IndexField&lt;/a&gt;&lt;/code&gt; from the search domain. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-index-fields.html&quot; target=&quot;_blank&quot;&gt;Configuring Index Fields&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@deleteIndexField -->
+<!-- $$$deleteSuggester[overload1]$$$deleteSuggesterconstDeleteSuggesterRequest& -->
+<h3 class="fn" id="deleteSuggester"><a name="deleteSuggester"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-deletesuggesterresponse.html">DeleteSuggesterResponse</a></span> *CloudSearchClient::<span class="name">deleteSuggester</span>(const <span class="type"><a href="qtaws-cloudsearch-deletesuggesterrequest.html">DeleteSuggesterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-deletesuggesterresponse.html">DeleteSuggesterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a suggester. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html&quot; target=&quot;_blank&quot;&gt;Getting Search Suggestions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@deleteSuggester -->
+<!-- $$$describeAnalysisSchemes[overload1]$$$describeAnalysisSchemesconstDescribeAnalysisSchemesRequest& -->
+<h3 class="fn" id="describeAnalysisSchemes"><a name="describeAnalysisSchemes"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describeanalysisschemesresponse.html">DescribeAnalysisSchemesResponse</a></span> *CloudSearchClient::<span class="name">describeAnalysisSchemes</span>(const <span class="type"><a href="qtaws-cloudsearch-describeanalysisschemesrequest.html">DescribeAnalysisSchemesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describeanalysisschemesresponse.html">DescribeAnalysisSchemesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the analysis schemes configured for a domain. An analysis scheme defines language-specific text processing options for a &lt;code&gt;text&lt;/code&gt; field. Can be limited to specific analysis schemes by name. By default, shows all analysis schemes and includes any pending changes to the configuration. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-analysis-schemes.html&quot; target=&quot;_blank&quot;&gt;Configuring Analysis Schemes&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeAnalysisSchemes -->
+<!-- $$$describeAvailabilityOptions[overload1]$$$describeAvailabilityOptionsconstDescribeAvailabilityOptionsRequest& -->
+<h3 class="fn" id="describeAvailabilityOptions"><a name="describeAvailabilityOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describeavailabilityoptionsresponse.html">DescribeAvailabilityOptionsResponse</a></span> *CloudSearchClient::<span class="name">describeAvailabilityOptions</span>(const <span class="type"><a href="qtaws-cloudsearch-describeavailabilityoptionsrequest.html">DescribeAvailabilityOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describeavailabilityoptionsresponse.html">DescribeAvailabilityOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the availability options configured for a domain. By default, shows the configuration with any pending changes. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html&quot; target=&quot;_blank&quot;&gt;Configuring Availability Options&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeAvailabilityOptions -->
+<!-- $$$describeDomains[overload1]$$$describeDomainsconstDescribeDomainsRequest& -->
+<h3 class="fn" id="describeDomains"><a name="describeDomains"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describedomainsresponse.html">DescribeDomainsResponse</a></span> *CloudSearchClient::<span class="name">describeDomains</span>(const <span class="type"><a href="qtaws-cloudsearch-describedomainsrequest.html">DescribeDomainsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describedomainsresponse.html">DescribeDomainsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the search domains owned by this account. Can be limited to specific domains. Shows all domains by default. To get the number of searchable documents in a domain, use the console or submit a &lt;code&gt;matchall&lt;/code&gt; request to your domain's search endpoint: &lt;code&gt;q=matchall&amp;amp;amp;q.parser=structured&amp;amp;amp;size=0&lt;/code&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-domain-info.html&quot; target=&quot;_blank&quot;&gt;Getting Information about a Search Domain&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeDomains -->
+<!-- $$$describeExpressions[overload1]$$$describeExpressionsconstDescribeExpressionsRequest& -->
+<h3 class="fn" id="describeExpressions"><a name="describeExpressions"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describeexpressionsresponse.html">DescribeExpressionsResponse</a></span> *CloudSearchClient::<span class="name">describeExpressions</span>(const <span class="type"><a href="qtaws-cloudsearch-describeexpressionsrequest.html">DescribeExpressionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describeexpressionsresponse.html">DescribeExpressionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the expressions configured for the search domain. Can be limited to specific expressions by name. By default, shows all expressions and includes any pending changes to the configuration. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html&quot; target=&quot;_blank&quot;&gt;Configuring Expressions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeExpressions -->
+<!-- $$$describeIndexFields[overload1]$$$describeIndexFieldsconstDescribeIndexFieldsRequest& -->
+<h3 class="fn" id="describeIndexFields"><a name="describeIndexFields"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describeindexfieldsresponse.html">DescribeIndexFieldsResponse</a></span> *CloudSearchClient::<span class="name">describeIndexFields</span>(const <span class="type"><a href="qtaws-cloudsearch-describeindexfieldsrequest.html">DescribeIndexFieldsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describeindexfieldsresponse.html">DescribeIndexFieldsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the index fields configured for the search domain. Can be limited to specific fields by name. By default, shows all fields and includes any pending changes to the configuration. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-domain-info.html&quot; target=&quot;_blank&quot;&gt;Getting Domain Information&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeIndexFields -->
+<!-- $$$describeScalingParameters[overload1]$$$describeScalingParametersconstDescribeScalingParametersRequest& -->
+<h3 class="fn" id="describeScalingParameters"><a name="describeScalingParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describescalingparametersresponse.html">DescribeScalingParametersResponse</a></span> *CloudSearchClient::<span class="name">describeScalingParameters</span>(const <span class="type"><a href="qtaws-cloudsearch-describescalingparametersrequest.html">DescribeScalingParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describescalingparametersresponse.html">DescribeScalingParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the scaling parameters configured for a domain. A domain's scaling parameters specify the desired search instance type and replication count. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-scaling-options.html&quot; target=&quot;_blank&quot;&gt;Configuring Scaling Options&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeScalingParameters -->
+<!-- $$$describeServiceAccessPolicies[overload1]$$$describeServiceAccessPoliciesconstDescribeServiceAccessPoliciesRequest& -->
+<h3 class="fn" id="describeServiceAccessPolicies"><a name="describeServiceAccessPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describeserviceaccesspoliciesresponse.html">DescribeServiceAccessPoliciesResponse</a></span> *CloudSearchClient::<span class="name">describeServiceAccessPolicies</span>(const <span class="type"><a href="qtaws-cloudsearch-describeserviceaccesspoliciesrequest.html">DescribeServiceAccessPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describeserviceaccesspoliciesresponse.html">DescribeServiceAccessPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the access policies that control access to the domain's document and search endpoints. By default, shows the configuration with any pending changes. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html&quot; target=&quot;_blank&quot;&gt;Configuring Access for a Search Domain&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeServiceAccessPolicies -->
+<!-- $$$describeSuggesters[overload1]$$$describeSuggestersconstDescribeSuggestersRequest& -->
+<h3 class="fn" id="describeSuggesters"><a name="describeSuggesters"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-describesuggestersresponse.html">DescribeSuggestersResponse</a></span> *CloudSearchClient::<span class="name">describeSuggesters</span>(const <span class="type"><a href="qtaws-cloudsearch-describesuggestersrequest.html">DescribeSuggestersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-describesuggestersresponse.html">DescribeSuggestersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the suggesters configured for a domain. A suggester enables you to display possible matches before users finish typing their queries. Can be limited to specific suggesters by name. By default, shows all suggesters and includes any pending changes to the configuration. Set the &lt;code&gt;Deployed&lt;/code&gt; option to &lt;code&gt;true&lt;/code&gt; to show the active configuration and exclude pending changes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html&quot; target=&quot;_blank&quot;&gt;Getting Search Suggestions&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@describeSuggesters -->
+<!-- $$$indexDocuments[overload1]$$$indexDocumentsconstIndexDocumentsRequest& -->
+<h3 class="fn" id="indexDocuments"><a name="indexDocuments"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-indexdocumentsresponse.html">IndexDocumentsResponse</a></span> *CloudSearchClient::<span class="name">indexDocuments</span>(const <span class="type"><a href="qtaws-cloudsearch-indexdocumentsrequest.html">IndexDocumentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-indexdocumentsresponse.html">IndexDocumentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Tells the search domain to start indexing its documents using the latest indexing options. This operation must be invoked to activate options whose &lt;a&gt;OptionStatus&lt;/a&gt; is</p>
+<!-- @@@indexDocuments -->
+<!-- $$$listDomainNames[overload1]$$$listDomainNames -->
+<h3 class="fn" id="listDomainNames"><a name="listDomainNames"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-listdomainnamesresponse.html">ListDomainNamesResponse</a></span> *CloudSearchClient::<span class="name">listDomainNames</span>()</h3>
+<p>Sends a ListDomainNames request to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-listdomainnamesresponse.html">ListDomainNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all search domains owned by an</p>
+<!-- @@@listDomainNames -->
+<!-- $$$updateAvailabilityOptions[overload1]$$$updateAvailabilityOptionsconstUpdateAvailabilityOptionsRequest& -->
+<h3 class="fn" id="updateAvailabilityOptions"><a name="updateAvailabilityOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-updateavailabilityoptionsresponse.html">UpdateAvailabilityOptionsResponse</a></span> *CloudSearchClient::<span class="name">updateAvailabilityOptions</span>(const <span class="type"><a href="qtaws-cloudsearch-updateavailabilityoptionsrequest.html">UpdateAvailabilityOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-updateavailabilityoptionsresponse.html">UpdateAvailabilityOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures the availability options for a domain. Enabling the Multi-AZ option expands an Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> domain to an additional Availability Zone in the same Region to increase fault tolerance in the event of a service disruption. Changes to the Multi-AZ option can take about half an hour to become active. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-availability-options.html&quot; target=&quot;_blank&quot;&gt;Configuring Availability Options&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer</p>
+<!-- @@@updateAvailabilityOptions -->
+<!-- $$$updateScalingParameters[overload1]$$$updateScalingParametersconstUpdateScalingParametersRequest& -->
+<h3 class="fn" id="updateScalingParameters"><a name="updateScalingParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-updatescalingparametersresponse.html">UpdateScalingParametersResponse</a></span> *CloudSearchClient::<span class="name">updateScalingParameters</span>(const <span class="type"><a href="qtaws-cloudsearch-updatescalingparametersrequest.html">UpdateScalingParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-updatescalingparametersresponse.html">UpdateScalingParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures scaling parameters for a domain. A domain's scaling parameters specify the desired search instance type and replication count. Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> will still automatically scale your domain based on the volume of data and traffic, but not below the desired instance type and replication count. If the Multi-AZ option is enabled, these values control the resources used per Availability Zone. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-scaling-options.html&quot; target=&quot;_blank&quot;&gt;Configuring Scaling Options&lt;/a&gt; in the &lt;i&gt;Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a> Developer Guide&lt;/i&gt;.</p>
+<!-- @@@updateScalingParameters -->
+<!-- $$$updateServiceAccessPolicies[overload1]$$$updateServiceAccessPoliciesconstUpdateServiceAccessPoliciesRequest& -->
+<h3 class="fn" id="updateServiceAccessPolicies"><a name="updateServiceAccessPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-cloudsearch-updateserviceaccesspoliciesresponse.html">UpdateServiceAccessPoliciesResponse</a></span> *CloudSearchClient::<span class="name">updateServiceAccessPolicies</span>(const <span class="type"><a href="qtaws-cloudsearch-updateserviceaccesspoliciesrequest.html">UpdateServiceAccessPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cloudsearch-cloudsearchclient.html">CloudSearchClient</a> service, and returns a pointer to an <a href="qtaws-cloudsearch-updateserviceaccesspoliciesresponse.html">UpdateServiceAccessPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configures the access rules that control access to the domain's document and search endpoints. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html&quot; target=&quot;_blank&quot;&gt; Configuring Access for an Amazon <a href="qtaws-cloudsearch.html">CloudSearch</a></p>
+<!-- @@@updateServiceAccessPolicies -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

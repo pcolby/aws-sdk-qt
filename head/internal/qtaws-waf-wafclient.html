@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wafclient.cpp -->
+  <title>WafClient Class | WAF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawswaf-index.html">WAF</a></li>
+<li><a href="qtawswaf-module.html">C++ Classes</a></li>
+<li>WafClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WafClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-waf-wafclient.html">QtAws::WAF::WafClient</a>)<br/></span>
+<!-- $$$WafClient-brief -->
+<p>The <a href="qtaws-waf-wafclient.html">WafClient</a> class provides access to the AWS WAF service. <a href="#details">More...</a></p>
+<!-- @@@WafClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WafClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-waf-wafclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#WafClient">WafClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#WafClient-1">WafClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateByteMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createByteMatchSet">createByteMatchSet</a></b>(const CreateByteMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateGeoMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createGeoMatchSet">createGeoMatchSet</a></b>(const CreateGeoMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createIPSet">createIPSet</a></b>(const CreateIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRateBasedRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createRateBasedRule">createRateBasedRule</a></b>(const CreateRateBasedRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRegexMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createRegexMatchSet">createRegexMatchSet</a></b>(const CreateRegexMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRegexPatternSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createRegexPatternSet">createRegexPatternSet</a></b>(const CreateRegexPatternSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createRule">createRule</a></b>(const CreateRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateRuleGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createRuleGroup">createRuleGroup</a></b>(const CreateRuleGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSizeConstraintSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createSizeConstraintSet">createSizeConstraintSet</a></b>(const CreateSizeConstraintSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSqlInjectionMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createSqlInjectionMatchSet">createSqlInjectionMatchSet</a></b>(const CreateSqlInjectionMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateWebACLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createWebACL">createWebACL</a></b>(const CreateWebACLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateXssMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#createXssMatchSet">createXssMatchSet</a></b>(const CreateXssMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteByteMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteByteMatchSet">deleteByteMatchSet</a></b>(const DeleteByteMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteGeoMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteGeoMatchSet">deleteGeoMatchSet</a></b>(const DeleteGeoMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteIPSet">deleteIPSet</a></b>(const DeleteIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePermissionPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deletePermissionPolicy">deletePermissionPolicy</a></b>(const DeletePermissionPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRateBasedRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteRateBasedRule">deleteRateBasedRule</a></b>(const DeleteRateBasedRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRegexMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteRegexMatchSet">deleteRegexMatchSet</a></b>(const DeleteRegexMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRegexPatternSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteRegexPatternSet">deleteRegexPatternSet</a></b>(const DeleteRegexPatternSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteRule">deleteRule</a></b>(const DeleteRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteRuleGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteRuleGroup">deleteRuleGroup</a></b>(const DeleteRuleGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSizeConstraintSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteSizeConstraintSet">deleteSizeConstraintSet</a></b>(const DeleteSizeConstraintSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSqlInjectionMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteSqlInjectionMatchSet">deleteSqlInjectionMatchSet</a></b>(const DeleteSqlInjectionMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteWebACLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteWebACL">deleteWebACL</a></b>(const DeleteWebACLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteXssMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#deleteXssMatchSet">deleteXssMatchSet</a></b>(const DeleteXssMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetByteMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getByteMatchSet">getByteMatchSet</a></b>(const GetByteMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetChangeTokenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getChangeToken">getChangeToken</a></b>(const GetChangeTokenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetChangeTokenStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getChangeTokenStatus">getChangeTokenStatus</a></b>(const GetChangeTokenStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetGeoMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getGeoMatchSet">getGeoMatchSet</a></b>(const GetGeoMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getIPSet">getIPSet</a></b>(const GetIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPermissionPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getPermissionPolicy">getPermissionPolicy</a></b>(const GetPermissionPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRateBasedRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRateBasedRule">getRateBasedRule</a></b>(const GetRateBasedRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRateBasedRuleManagedKeysResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRateBasedRuleManagedKeys">getRateBasedRuleManagedKeys</a></b>(const GetRateBasedRuleManagedKeysRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRegexMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRegexMatchSet">getRegexMatchSet</a></b>(const GetRegexMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRegexPatternSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRegexPatternSet">getRegexPatternSet</a></b>(const GetRegexPatternSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRule">getRule</a></b>(const GetRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRuleGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getRuleGroup">getRuleGroup</a></b>(const GetRuleGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSampledRequestsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getSampledRequests">getSampledRequests</a></b>(const GetSampledRequestsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSizeConstraintSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getSizeConstraintSet">getSizeConstraintSet</a></b>(const GetSizeConstraintSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSqlInjectionMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getSqlInjectionMatchSet">getSqlInjectionMatchSet</a></b>(const GetSqlInjectionMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetWebACLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getWebACL">getWebACL</a></b>(const GetWebACLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetXssMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#getXssMatchSet">getXssMatchSet</a></b>(const GetXssMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListActivatedRulesInRuleGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listActivatedRulesInRuleGroup">listActivatedRulesInRuleGroup</a></b>(const ListActivatedRulesInRuleGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListByteMatchSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listByteMatchSets">listByteMatchSets</a></b>(const ListByteMatchSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListGeoMatchSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listGeoMatchSets">listGeoMatchSets</a></b>(const ListGeoMatchSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIPSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listIPSets">listIPSets</a></b>(const ListIPSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRateBasedRulesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listRateBasedRules">listRateBasedRules</a></b>(const ListRateBasedRulesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRegexMatchSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listRegexMatchSets">listRegexMatchSets</a></b>(const ListRegexMatchSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRegexPatternSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listRegexPatternSets">listRegexPatternSets</a></b>(const ListRegexPatternSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRuleGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listRuleGroups">listRuleGroups</a></b>(const ListRuleGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRulesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listRules">listRules</a></b>(const ListRulesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSizeConstraintSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listSizeConstraintSets">listSizeConstraintSets</a></b>(const ListSizeConstraintSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSqlInjectionMatchSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listSqlInjectionMatchSets">listSqlInjectionMatchSets</a></b>(const ListSqlInjectionMatchSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListSubscribedRuleGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listSubscribedRuleGroups">listSubscribedRuleGroups</a></b>(const ListSubscribedRuleGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListWebACLsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listWebACLs">listWebACLs</a></b>(const ListWebACLsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListXssMatchSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#listXssMatchSets">listXssMatchSets</a></b>(const ListXssMatchSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutPermissionPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#putPermissionPolicy">putPermissionPolicy</a></b>(const PutPermissionPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateByteMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateByteMatchSet">updateByteMatchSet</a></b>(const UpdateByteMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGeoMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateGeoMatchSet">updateGeoMatchSet</a></b>(const UpdateGeoMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateIPSet">updateIPSet</a></b>(const UpdateIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRateBasedRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateRateBasedRule">updateRateBasedRule</a></b>(const UpdateRateBasedRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRegexMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateRegexMatchSet">updateRegexMatchSet</a></b>(const UpdateRegexMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRegexPatternSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateRegexPatternSet">updateRegexPatternSet</a></b>(const UpdateRegexPatternSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateRule">updateRule</a></b>(const UpdateRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRuleGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateRuleGroup">updateRuleGroup</a></b>(const UpdateRuleGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSizeConstraintSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateSizeConstraintSet">updateSizeConstraintSet</a></b>(const UpdateSizeConstraintSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSqlInjectionMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateSqlInjectionMatchSet">updateSqlInjectionMatchSet</a></b>(const UpdateSqlInjectionMatchSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateWebACLResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateWebACL">updateWebACL</a></b>(const UpdateWebACLRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateXssMatchSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafclient.html#updateXssMatchSet">updateXssMatchSet</a></b>(const UpdateXssMatchSetRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WafClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-waf-wafclient.html">WafClient</a> class provides access to the AWS WAF service.</p>
+<p>This is the &lt;i&gt;AWS WAF API Reference&lt;/i&gt; for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data types via the endpoint &lt;i&gt;waf.amazonaws.com&lt;/i&gt;. This guide is for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to use the AWS WAF API, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+</div>
+<!-- @@@WafClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WafClient[overload1]$$$WafClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WafClient"><a name="WafClient"></a>WafClient::<span class="name">WafClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-waf-wafclient.html">WafClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@WafClient -->
+<!-- $$$WafClient$$$WafClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WafClient-1"><a name="WafClient-1"></a>WafClient::<span class="name">WafClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-waf-wafclient.html#WafClient">WafClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@WafClient -->
+<!-- $$$createByteMatchSet[overload1]$$$createByteMatchSetconstCreateByteMatchSetRequest& -->
+<h3 class="fn" id="createByteMatchSet"><a name="createByteMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createbytematchsetresponse.html">CreateByteMatchSetResponse</a></span> *WafClient::<span class="name">createByteMatchSet</span>(const <span class="type"><a href="qtaws-waf-createbytematchsetrequest.html">CreateByteMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createbytematchsetresponse.html">CreateByteMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;ByteMatchSet&lt;/code&gt;. You then use &lt;a&gt;UpdateByteMatchSet&lt;/a&gt; to identify the part of a web request that you want AWS WAF to inspect, such as the values of the &lt;code&gt;User-Agent&lt;/code&gt; header or the query string. For example, you can create a &lt;code&gt;ByteMatchSet&lt;/code&gt; that matches any requests with &lt;code&gt;User-Agent&lt;/code&gt; headers that contain the string &lt;code&gt;BadBot&lt;/code&gt;. You can then configure AWS WAF to reject those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;ByteMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateByteMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateByteMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateByteMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateByteMatchSet&lt;/a&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the value that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createByteMatchSet -->
+<!-- $$$createGeoMatchSet[overload1]$$$createGeoMatchSetconstCreateGeoMatchSetRequest& -->
+<h3 class="fn" id="createGeoMatchSet"><a name="createGeoMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-creategeomatchsetresponse.html">CreateGeoMatchSetResponse</a></span> *WafClient::<span class="name">createGeoMatchSet</span>(const <span class="type"><a href="qtaws-waf-creategeomatchsetrequest.html">CreateGeoMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-creategeomatchsetresponse.html">CreateGeoMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an &lt;a&gt;GeoMatchSet&lt;/a&gt;, which you use to specify which web requests you want to allow or block based on the country that the requests originate from. For example, if you're receiving a lot of requests from one or more countries and you want to block the requests, you can create an &lt;code&gt;GeoMatchSet&lt;/code&gt; that contains those countries and then configure AWS WAF to block the requests.</p>
+<p>&lt;/p</p>
+<p>To create and configure a &lt;code&gt;GeoMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateGeoMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateGeoMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateGeoMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateGeoMatchSetSet&lt;/code&gt; request to specify the countries that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createGeoMatchSet -->
+<!-- $$$createIPSet[overload1]$$$createIPSetconstCreateIPSetRequest& -->
+<h3 class="fn" id="createIPSet"><a name="createIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createipsetresponse.html">CreateIPSetResponse</a></span> *WafClient::<span class="name">createIPSet</span>(const <span class="type"><a href="qtaws-waf-createipsetrequest.html">CreateIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createipsetresponse.html">CreateIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an &lt;a&gt;IPSet&lt;/a&gt;, which you use to specify which web requests you want to allow or block based on the IP addresses that the requests originate from. For example, if you're receiving a lot of requests from one or more individual IP addresses or one or more ranges of IP addresses and you want to block the requests, you can create an &lt;code&gt;IPSet&lt;/code&gt; that contains those IP addresses and then configure AWS WAF to block the requests.</p>
+<p>&lt;/p</p>
+<p>To create and configure an &lt;code&gt;IPSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateIPSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateIPSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateIPSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateIPSet&lt;/code&gt; request to specify the IP addresses that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createIPSet -->
+<!-- $$$createRateBasedRule[overload1]$$$createRateBasedRuleconstCreateRateBasedRuleRequest& -->
+<h3 class="fn" id="createRateBasedRule"><a name="createRateBasedRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createratebasedruleresponse.html">CreateRateBasedRuleResponse</a></span> *WafClient::<span class="name">createRateBasedRule</span>(const <span class="type"><a href="qtaws-waf-createratebasedrulerequest.html">CreateRateBasedRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createratebasedruleresponse.html">CreateRateBasedRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;RateBasedRule&lt;/a&gt;. The &lt;code&gt;RateBasedRule&lt;/code&gt; contains a &lt;code&gt;RateLimit&lt;/code&gt;, which specifies the maximum number of requests that AWS WAF allows from a specified IP address in a five-minute period. The &lt;code&gt;RateBasedRule&lt;/code&gt; also contains the &lt;code&gt;IPSet&lt;/code&gt; objects, &lt;code&gt;ByteMatchSet&lt;/code&gt; objects, and other predicates that identify the requests that you want to count or block if these requests exceed the</p>
+<p>&lt;code&gt;RateLimit&lt;/code&gt;&gt;</p>
+<p>If you add more than one predicate to a &lt;code&gt;RateBasedRule&lt;/code&gt;, a request not only must exceed the &lt;code&gt;RateLimit&lt;/code&gt;, but it also must match all the specifications to be counted or blocked. For example, suppose you add the following to a</p>
+<p>&lt;code&gt;RateBasedRule&lt;/code&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>An &lt;code&gt;IPSet&lt;/code&gt; that matches the IP address &lt;code&gt;192.0&#x2e;2&#x2e;44/32&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; that matches &lt;code&gt;BadBot&lt;/code&gt; in the &lt;code&gt;User-Agent&lt;/code&gt;</p>
+<p>heade&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Further, you specify a &lt;code&gt;RateLimit&lt;/code&gt; of</p>
+<p>15,000&gt;</p>
+<p>You then add the &lt;code&gt;RateBasedRule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt; and specify that you want to block requests that meet the conditions in the rule. For a request to be blocked, it must come from the IP address 192.0&#x2e;2&#x2e;44 &lt;i&gt;and&lt;/i&gt; the &lt;code&gt;User-Agent&lt;/code&gt; header in the request must contain the value &lt;code&gt;BadBot&lt;/code&gt;. Further, requests that match these two conditions must be received at a rate of more than 15,000 requests every five minutes. If both conditions are met and the rate is exceeded, AWS WAF blocks the requests. If the rate drops below 15,000 for a five-minute period, AWS WAF no longer blocks the</p>
+<p>requests&gt;</p>
+<p>As a second example, suppose you want to limit requests to a particular page on your site. To do this, you could add the following to a</p>
+<p>&lt;code&gt;RateBasedRule&lt;/code&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; with &lt;code&gt;FieldToMatch&lt;/code&gt; of &lt;code&gt;URI&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;PositionalConstraint&lt;/code&gt; of &lt;code&gt;STARTS_WITH&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;TargetString&lt;/code&gt; of &lt;code&gt;login&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Further, you specify a &lt;code&gt;RateLimit&lt;/code&gt; of</p>
+<p>15,000&gt;</p>
+<p>By adding this &lt;code&gt;RateBasedRule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt;, you could limit requests to your login page without affecting the rest of your</p>
+<p>site&gt;</p>
+<p>To create and configure a &lt;code&gt;RateBasedRule&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the predicates that you want to include in the rule. For more information, see &lt;a&gt;CreateByteMatchSet&lt;/a&gt;, &lt;a&gt;CreateIPSet&lt;/a&gt;, and</p>
+<p>&lt;a&gt;CreateSqlInjectionMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateRateBasedRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateRule&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRateBasedRule&lt;/code&gt; request to specify the predicates that you want to include in the</p>
+<p>rule&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update a &lt;code&gt;WebACL&lt;/code&gt; that contains the &lt;code&gt;RateBasedRule&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;CreateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createRateBasedRule -->
+<!-- $$$createRegexMatchSet[overload1]$$$createRegexMatchSetconstCreateRegexMatchSetRequest& -->
+<h3 class="fn" id="createRegexMatchSet"><a name="createRegexMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createregexmatchsetresponse.html">CreateRegexMatchSetResponse</a></span> *WafClient::<span class="name">createRegexMatchSet</span>(const <span class="type"><a href="qtaws-waf-createregexmatchsetrequest.html">CreateRegexMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createregexmatchsetresponse.html">CreateRegexMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;RegexMatchSet&lt;/a&gt;. You then use &lt;a&gt;UpdateRegexMatchSet&lt;/a&gt; to identify the part of a web request that you want AWS WAF to inspect, such as the values of the &lt;code&gt;User-Agent&lt;/code&gt; header or the query string. For example, you can create a &lt;code&gt;RegexMatchSet&lt;/code&gt; that contains a &lt;code&gt;RegexMatchTuple&lt;/code&gt; that looks for any requests with &lt;code&gt;User-Agent&lt;/code&gt; headers that match a &lt;code&gt;RegexPatternSet&lt;/code&gt; with pattern &lt;code&gt;B[a@]dB[o0]t&lt;/code&gt;. You can then configure AWS WAF to reject those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;RegexMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateRegexMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateRegexMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateRegexMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateRegexMatchSet&lt;/a&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the value, using a &lt;code&gt;RegexPatternSet&lt;/code&gt;, that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createRegexMatchSet -->
+<!-- $$$createRegexPatternSet[overload1]$$$createRegexPatternSetconstCreateRegexPatternSetRequest& -->
+<h3 class="fn" id="createRegexPatternSet"><a name="createRegexPatternSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createregexpatternsetresponse.html">CreateRegexPatternSetResponse</a></span> *WafClient::<span class="name">createRegexPatternSet</span>(const <span class="type"><a href="qtaws-waf-createregexpatternsetrequest.html">CreateRegexPatternSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createregexpatternsetresponse.html">CreateRegexPatternSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;RegexPatternSet&lt;/code&gt;. You then use &lt;a&gt;UpdateRegexPatternSet&lt;/a&gt; to specify the regular expression (regex) pattern that you want AWS WAF to search for, such as &lt;code&gt;B[a@]dB[o0]t&lt;/code&gt;. You can then configure AWS WAF to reject those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;RegexPatternSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateRegexPatternSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateRegexPatternSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateRegexPatternSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateRegexPatternSet&lt;/a&gt; request to specify the string that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createRegexPatternSet -->
+<!-- $$$createRule[overload1]$$$createRuleconstCreateRuleRequest& -->
+<h3 class="fn" id="createRule"><a name="createRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createruleresponse.html">CreateRuleResponse</a></span> *WafClient::<span class="name">createRule</span>(const <span class="type"><a href="qtaws-waf-createrulerequest.html">CreateRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createruleresponse.html">CreateRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;Rule&lt;/code&gt;, which contains the &lt;code&gt;IPSet&lt;/code&gt; objects, &lt;code&gt;ByteMatchSet&lt;/code&gt; objects, and other predicates that identify the requests that you want to block. If you add more than one predicate to a &lt;code&gt;Rule&lt;/code&gt;, a request must match all of the specifications to be allowed or blocked. For example, suppose you add the following to a</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>An &lt;code&gt;IPSet&lt;/code&gt; that matches the IP address &lt;code&gt;192.0&#x2e;2&#x2e;44/32&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; that matches &lt;code&gt;BadBot&lt;/code&gt; in the &lt;code&gt;User-Agent&lt;/code&gt;</p>
+<p>heade&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You then add the &lt;code&gt;Rule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt; and specify that you want to blocks requests that satisfy the &lt;code&gt;Rule&lt;/code&gt;. For a request to be blocked, it must come from the IP address 192.0&#x2e;2&#x2e;44 &lt;i&gt;and&lt;/i&gt; the &lt;code&gt;User-Agent&lt;/code&gt; header in the request must contain the value</p>
+<p>&lt;code&gt;BadBot&lt;/code&gt;&gt;</p>
+<p>To create and configure a &lt;code&gt;Rule&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the predicates that you want to include in the &lt;code&gt;Rule&lt;/code&gt;. For more information, see &lt;a&gt;CreateByteMatchSet&lt;/a&gt;, &lt;a&gt;CreateIPSet&lt;/a&gt;, and</p>
+<p>&lt;a&gt;CreateSqlInjectionMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateRule&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRule&lt;/code&gt; request to specify the predicates that you want to include in the</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update a &lt;code&gt;WebACL&lt;/code&gt; that contains the &lt;code&gt;Rule&lt;/code&gt;. For more information, see</p>
+<p>&lt;a&gt;CreateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createRule -->
+<!-- $$$createRuleGroup[overload1]$$$createRuleGroupconstCreateRuleGroupRequest& -->
+<h3 class="fn" id="createRuleGroup"><a name="createRuleGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createrulegroupresponse.html">CreateRuleGroupResponse</a></span> *WafClient::<span class="name">createRuleGroup</span>(const <span class="type"><a href="qtaws-waf-createrulegrouprequest.html">CreateRuleGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createrulegroupresponse.html">CreateRuleGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;RuleGroup&lt;/code&gt;. A rule group is a collection of predefined rules that you add to a web ACL. You use &lt;a&gt;UpdateRuleGroup&lt;/a&gt; to add rules to the rule</p>
+<p>group&gt;</p>
+<p>Rule groups are subject to the following</p>
+<p>limits&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Three rule groups per account. You can request an increase to this limit by contacting customer</p>
+<p>support&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>One rule group per web</p>
+<p>ACL&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Ten rules per rule</p>
+<p>group&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createRuleGroup -->
+<!-- $$$createSizeConstraintSet[overload1]$$$createSizeConstraintSetconstCreateSizeConstraintSetRequest& -->
+<h3 class="fn" id="createSizeConstraintSet"><a name="createSizeConstraintSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createsizeconstraintsetresponse.html">CreateSizeConstraintSetResponse</a></span> *WafClient::<span class="name">createSizeConstraintSet</span>(const <span class="type"><a href="qtaws-waf-createsizeconstraintsetrequest.html">CreateSizeConstraintSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createsizeconstraintsetresponse.html">CreateSizeConstraintSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;SizeConstraintSet&lt;/code&gt;. You then use &lt;a&gt;UpdateSizeConstraintSet&lt;/a&gt; to identify the part of a web request that you want AWS WAF to check for length, such as the length of the &lt;code&gt;User-Agent&lt;/code&gt; header or the length of the query string. For example, you can create a &lt;code&gt;SizeConstraintSet&lt;/code&gt; that matches any requests that have a query string that is longer than 100 bytes. You can then configure AWS WAF to reject those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;SizeConstraintSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateSizeConstraintSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateSizeConstraintSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateSizeConstraintSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateSizeConstraintSet&lt;/a&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the value that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createSizeConstraintSet -->
+<!-- $$$createSqlInjectionMatchSet[overload1]$$$createSqlInjectionMatchSetconstCreateSqlInjectionMatchSetRequest& -->
+<h3 class="fn" id="createSqlInjectionMatchSet"><a name="createSqlInjectionMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createsqlinjectionmatchsetresponse.html">CreateSqlInjectionMatchSetResponse</a></span> *WafClient::<span class="name">createSqlInjectionMatchSet</span>(const <span class="type"><a href="qtaws-waf-createsqlinjectionmatchsetrequest.html">CreateSqlInjectionMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createsqlinjectionmatchsetresponse.html">CreateSqlInjectionMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;SqlInjectionMatchSet&lt;/a&gt;, which you use to allow, block, or count requests that contain snippets of SQL code in a specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious</p>
+<p>strings&gt;</p>
+<p>To create and configure a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateSqlInjectionMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateSqlInjectionMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateSqlInjectionMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateSqlInjectionMatchSet&lt;/a&gt; request to specify the parts of web requests in which you want to allow, block, or count malicious SQL</p>
+<p>code&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createSqlInjectionMatchSet -->
+<!-- $$$createWebACL[overload1]$$$createWebACLconstCreateWebACLRequest& -->
+<h3 class="fn" id="createWebACL"><a name="createWebACL"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createwebaclresponse.html">CreateWebACLResponse</a></span> *WafClient::<span class="name">createWebACL</span>(const <span class="type"><a href="qtaws-waf-createwebaclrequest.html">CreateWebACLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createwebaclresponse.html">CreateWebACLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;code&gt;WebACL&lt;/code&gt;, which contains the &lt;code&gt;Rules&lt;/code&gt; that identify the CloudFront web requests that you want to allow, block, or count. AWS WAF evaluates &lt;code&gt;Rules&lt;/code&gt; in order based on the value of &lt;code&gt;Priority&lt;/code&gt; for each</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt;</p>
+<p>You also specify a default action, either &lt;code&gt;ALLOW&lt;/code&gt; or &lt;code&gt;BLOCK&lt;/code&gt;. If a web request doesn't match any of the &lt;code&gt;Rules&lt;/code&gt; in a &lt;code&gt;WebACL&lt;/code&gt;, AWS WAF responds to the request with the default action.</p>
+<p>&lt;/p</p>
+<p>To create and configure a &lt;code&gt;WebACL&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the &lt;code&gt;ByteMatchSet&lt;/code&gt; objects and other predicates that you want to include in &lt;code&gt;Rules&lt;/code&gt;. For more information, see &lt;a&gt;CreateByteMatchSet&lt;/a&gt;, &lt;a&gt;UpdateByteMatchSet&lt;/a&gt;, &lt;a&gt;CreateIPSet&lt;/a&gt;, &lt;a&gt;UpdateIPSet&lt;/a&gt;, &lt;a&gt;CreateSqlInjectionMatchSet&lt;/a&gt;, and</p>
+<p>&lt;a&gt;UpdateSqlInjectionMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update the &lt;code&gt;Rules&lt;/code&gt; that you want to include in the &lt;code&gt;WebACL&lt;/code&gt;. For more information, see &lt;a&gt;CreateRule&lt;/a&gt; and</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateWebACL&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateWebACL&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateWebACL&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateWebACL&lt;/a&gt; request to specify the &lt;code&gt;Rules&lt;/code&gt; that you want to include in the &lt;code&gt;WebACL&lt;/code&gt;, to specify the default action, and to associate the &lt;code&gt;WebACL&lt;/code&gt; with a CloudFront</p>
+<p>distribution&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createWebACL -->
+<!-- $$$createXssMatchSet[overload1]$$$createXssMatchSetconstCreateXssMatchSetRequest& -->
+<h3 class="fn" id="createXssMatchSet"><a name="createXssMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-createxssmatchsetresponse.html">CreateXssMatchSetResponse</a></span> *WafClient::<span class="name">createXssMatchSet</span>(const <span class="type"><a href="qtaws-waf-createxssmatchsetrequest.html">CreateXssMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-createxssmatchsetresponse.html">CreateXssMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an &lt;a&gt;XssMatchSet&lt;/a&gt;, which you use to allow, block, or count requests that contain cross-site scripting attacks in the specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious</p>
+<p>strings&gt;</p>
+<p>To create and configure an &lt;code&gt;XssMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;CreateXssMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;CreateXssMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateXssMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;a&gt;UpdateXssMatchSet&lt;/a&gt; request to specify the parts of web requests in which you want to allow, block, or count cross-site scripting</p>
+<p>attacks&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@createXssMatchSet -->
+<!-- $$$deleteByteMatchSet[overload1]$$$deleteByteMatchSetconstDeleteByteMatchSetRequest& -->
+<h3 class="fn" id="deleteByteMatchSet"><a name="deleteByteMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletebytematchsetresponse.html">DeleteByteMatchSetResponse</a></span> *WafClient::<span class="name">deleteByteMatchSet</span>(const <span class="type"><a href="qtaws-waf-deletebytematchsetrequest.html">DeleteByteMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletebytematchsetresponse.html">DeleteByteMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;ByteMatchSet&lt;/a&gt;. You can't delete a &lt;code&gt;ByteMatchSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still includes any &lt;a&gt;ByteMatchTuple&lt;/a&gt; objects (any</p>
+<p>filters)&gt;</p>
+<p>If you just want to remove a &lt;code&gt;ByteMatchSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;ByteMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;ByteMatchSet&lt;/code&gt; to remove filters, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateByteMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteByteMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteByteMatchSet&lt;/code&gt;</p>
+<!-- @@@deleteByteMatchSet -->
+<!-- $$$deleteGeoMatchSet[overload1]$$$deleteGeoMatchSetconstDeleteGeoMatchSetRequest& -->
+<h3 class="fn" id="deleteGeoMatchSet"><a name="deleteGeoMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletegeomatchsetresponse.html">DeleteGeoMatchSetResponse</a></span> *WafClient::<span class="name">deleteGeoMatchSet</span>(const <span class="type"><a href="qtaws-waf-deletegeomatchsetrequest.html">DeleteGeoMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletegeomatchsetresponse.html">DeleteGeoMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;GeoMatchSet&lt;/a&gt;. You can't delete a &lt;code&gt;GeoMatchSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still includes any</p>
+<p>countries&gt;</p>
+<p>If you just want to remove a &lt;code&gt;GeoMatchSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;GeoMatchSet&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;GeoMatchSet&lt;/code&gt; to remove any countries. For more information, see</p>
+<p>&lt;a&gt;UpdateGeoMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteGeoMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteGeoMatchSet&lt;/code&gt;</p>
+<!-- @@@deleteGeoMatchSet -->
+<!-- $$$deleteIPSet[overload1]$$$deleteIPSetconstDeleteIPSetRequest& -->
+<h3 class="fn" id="deleteIPSet"><a name="deleteIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleteipsetresponse.html">DeleteIPSetResponse</a></span> *WafClient::<span class="name">deleteIPSet</span>(const <span class="type"><a href="qtaws-waf-deleteipsetrequest.html">DeleteIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleteipsetresponse.html">DeleteIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes an &lt;a&gt;IPSet&lt;/a&gt;. You can't delete an &lt;code&gt;IPSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still includes any IP</p>
+<p>addresses&gt;</p>
+<p>If you just want to remove an &lt;code&gt;IPSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete an &lt;code&gt;IPSet&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;IPSet&lt;/code&gt; to remove IP address ranges, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateIPSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteIPSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteIPSet&lt;/code&gt;</p>
+<!-- @@@deleteIPSet -->
+<!-- $$$deletePermissionPolicy[overload1]$$$deletePermissionPolicyconstDeletePermissionPolicyRequest& -->
+<h3 class="fn" id="deletePermissionPolicy"><a name="deletePermissionPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletepermissionpolicyresponse.html">DeletePermissionPolicyResponse</a></span> *WafClient::<span class="name">deletePermissionPolicy</span>(const <span class="type"><a href="qtaws-waf-deletepermissionpolicyrequest.html">DeletePermissionPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletepermissionpolicyresponse.html">DeletePermissionPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes an IAM policy from the specified</p>
+<p>RuleGroup&gt;</p>
+<p>The user making the request must be the owner of the</p>
+<!-- @@@deletePermissionPolicy -->
+<!-- $$$deleteRateBasedRule[overload1]$$$deleteRateBasedRuleconstDeleteRateBasedRuleRequest& -->
+<h3 class="fn" id="deleteRateBasedRule"><a name="deleteRateBasedRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleteratebasedruleresponse.html">DeleteRateBasedRuleResponse</a></span> *WafClient::<span class="name">deleteRateBasedRule</span>(const <span class="type"><a href="qtaws-waf-deleteratebasedrulerequest.html">DeleteRateBasedRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleteratebasedruleresponse.html">DeleteRateBasedRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;RateBasedRule&lt;/a&gt;. You can't delete a rule if it's still used in any &lt;code&gt;WebACL&lt;/code&gt; objects or if it still includes any predicates, such as &lt;code&gt;ByteMatchSet&lt;/code&gt;</p>
+<p>objects&gt;</p>
+<p>If you just want to remove a rule from a &lt;code&gt;WebACL&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateWebACL&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;RateBasedRule&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;RateBasedRule&lt;/code&gt; to remove predicates, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateRateBasedRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteRateBasedRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteRateBasedRule&lt;/code&gt;</p>
+<!-- @@@deleteRateBasedRule -->
+<!-- $$$deleteRegexMatchSet[overload1]$$$deleteRegexMatchSetconstDeleteRegexMatchSetRequest& -->
+<h3 class="fn" id="deleteRegexMatchSet"><a name="deleteRegexMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleteregexmatchsetresponse.html">DeleteRegexMatchSetResponse</a></span> *WafClient::<span class="name">deleteRegexMatchSet</span>(const <span class="type"><a href="qtaws-waf-deleteregexmatchsetrequest.html">DeleteRegexMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleteregexmatchsetresponse.html">DeleteRegexMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;RegexMatchSet&lt;/a&gt;. You can't delete a &lt;code&gt;RegexMatchSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still includes any &lt;code&gt;RegexMatchTuples&lt;/code&gt; objects (any</p>
+<p>filters)&gt;</p>
+<p>If you just want to remove a &lt;code&gt;RegexMatchSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;RegexMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;RegexMatchSet&lt;/code&gt; to remove filters, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateRegexMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteRegexMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteRegexMatchSet&lt;/code&gt;</p>
+<!-- @@@deleteRegexMatchSet -->
+<!-- $$$deleteRegexPatternSet[overload1]$$$deleteRegexPatternSetconstDeleteRegexPatternSetRequest& -->
+<h3 class="fn" id="deleteRegexPatternSet"><a name="deleteRegexPatternSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleteregexpatternsetresponse.html">DeleteRegexPatternSetResponse</a></span> *WafClient::<span class="name">deleteRegexPatternSet</span>(const <span class="type"><a href="qtaws-waf-deleteregexpatternsetrequest.html">DeleteRegexPatternSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleteregexpatternsetresponse.html">DeleteRegexPatternSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;RegexPatternSet&lt;/a&gt;. You can't delete a &lt;code&gt;RegexPatternSet&lt;/code&gt; if it's still used in any &lt;code&gt;RegexMatchSet&lt;/code&gt; or if the &lt;code&gt;RegexPatternSet&lt;/code&gt; is not empty.</p>
+<!-- @@@deleteRegexPatternSet -->
+<!-- $$$deleteRule[overload1]$$$deleteRuleconstDeleteRuleRequest& -->
+<h3 class="fn" id="deleteRule"><a name="deleteRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleteruleresponse.html">DeleteRuleResponse</a></span> *WafClient::<span class="name">deleteRule</span>(const <span class="type"><a href="qtaws-waf-deleterulerequest.html">DeleteRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleteruleresponse.html">DeleteRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;Rule&lt;/a&gt;. You can't delete a &lt;code&gt;Rule&lt;/code&gt; if it's still used in any &lt;code&gt;WebACL&lt;/code&gt; objects or if it still includes any predicates, such as &lt;code&gt;ByteMatchSet&lt;/code&gt;</p>
+<p>objects&gt;</p>
+<p>If you just want to remove a &lt;code&gt;Rule&lt;/code&gt; from a &lt;code&gt;WebACL&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateWebACL&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;Rule&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;Rule&lt;/code&gt; to remove predicates, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteRule&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteRule&lt;/code&gt;</p>
+<!-- @@@deleteRule -->
+<!-- $$$deleteRuleGroup[overload1]$$$deleteRuleGroupconstDeleteRuleGroupRequest& -->
+<h3 class="fn" id="deleteRuleGroup"><a name="deleteRuleGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deleterulegroupresponse.html">DeleteRuleGroupResponse</a></span> *WafClient::<span class="name">deleteRuleGroup</span>(const <span class="type"><a href="qtaws-waf-deleterulegrouprequest.html">DeleteRuleGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deleterulegroupresponse.html">DeleteRuleGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;RuleGroup&lt;/a&gt;. You can't delete a &lt;code&gt;RuleGroup&lt;/code&gt; if it's still used in any &lt;code&gt;WebACL&lt;/code&gt; objects or if it still includes any</p>
+<p>rules&gt;</p>
+<p>If you just want to remove a &lt;code&gt;RuleGroup&lt;/code&gt; from a &lt;code&gt;WebACL&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateWebACL&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;RuleGroup&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;RuleGroup&lt;/code&gt; to remove rules, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateRuleGroup&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteRuleGroup&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteRuleGroup&lt;/code&gt;</p>
+<!-- @@@deleteRuleGroup -->
+<!-- $$$deleteSizeConstraintSet[overload1]$$$deleteSizeConstraintSetconstDeleteSizeConstraintSetRequest& -->
+<h3 class="fn" id="deleteSizeConstraintSet"><a name="deleteSizeConstraintSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletesizeconstraintsetresponse.html">DeleteSizeConstraintSetResponse</a></span> *WafClient::<span class="name">deleteSizeConstraintSet</span>(const <span class="type"><a href="qtaws-waf-deletesizeconstraintsetrequest.html">DeleteSizeConstraintSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletesizeconstraintsetresponse.html">DeleteSizeConstraintSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;SizeConstraintSet&lt;/a&gt;. You can't delete a &lt;code&gt;SizeConstraintSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still includes any &lt;a&gt;SizeConstraint&lt;/a&gt; objects (any</p>
+<p>filters)&gt;</p>
+<p>If you just want to remove a &lt;code&gt;SizeConstraintSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;SizeConstraintSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;SizeConstraintSet&lt;/code&gt; to remove filters, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateSizeConstraintSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteSizeConstraintSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteSizeConstraintSet&lt;/code&gt;</p>
+<!-- @@@deleteSizeConstraintSet -->
+<!-- $$$deleteSqlInjectionMatchSet[overload1]$$$deleteSqlInjectionMatchSetconstDeleteSqlInjectionMatchSetRequest& -->
+<h3 class="fn" id="deleteSqlInjectionMatchSet"><a name="deleteSqlInjectionMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletesqlinjectionmatchsetresponse.html">DeleteSqlInjectionMatchSetResponse</a></span> *WafClient::<span class="name">deleteSqlInjectionMatchSet</span>(const <span class="type"><a href="qtaws-waf-deletesqlinjectionmatchsetrequest.html">DeleteSqlInjectionMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletesqlinjectionmatchsetresponse.html">DeleteSqlInjectionMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;SqlInjectionMatchSet&lt;/a&gt;. You can't delete a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still contains any &lt;a&gt;SqlInjectionMatchTuple&lt;/a&gt;</p>
+<p>objects&gt;</p>
+<p>If you just want to remove a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; to remove filters, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateSqlInjectionMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteSqlInjectionMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteSqlInjectionMatchSet&lt;/code&gt;</p>
+<!-- @@@deleteSqlInjectionMatchSet -->
+<!-- $$$deleteWebACL[overload1]$$$deleteWebACLconstDeleteWebACLRequest& -->
+<h3 class="fn" id="deleteWebACL"><a name="deleteWebACL"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletewebaclresponse.html">DeleteWebACLResponse</a></span> *WafClient::<span class="name">deleteWebACL</span>(const <span class="type"><a href="qtaws-waf-deletewebaclrequest.html">DeleteWebACLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletewebaclresponse.html">DeleteWebACLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes a &lt;a&gt;WebACL&lt;/a&gt;. You can't delete a &lt;code&gt;WebACL&lt;/code&gt; if it still contains any</p>
+<p>&lt;code&gt;Rules&lt;/code&gt;&gt;</p>
+<p>To delete a &lt;code&gt;WebACL&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;WebACL&lt;/code&gt; to remove &lt;code&gt;Rules&lt;/code&gt;, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteWebACL&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteWebACL&lt;/code&gt;</p>
+<!-- @@@deleteWebACL -->
+<!-- $$$deleteXssMatchSet[overload1]$$$deleteXssMatchSetconstDeleteXssMatchSetRequest& -->
+<h3 class="fn" id="deleteXssMatchSet"><a name="deleteXssMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-deletexssmatchsetresponse.html">DeleteXssMatchSetResponse</a></span> *WafClient::<span class="name">deleteXssMatchSet</span>(const <span class="type"><a href="qtaws-waf-deletexssmatchsetrequest.html">DeleteXssMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-deletexssmatchsetresponse.html">DeleteXssMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes an &lt;a&gt;XssMatchSet&lt;/a&gt;. You can't delete an &lt;code&gt;XssMatchSet&lt;/code&gt; if it's still used in any &lt;code&gt;Rules&lt;/code&gt; or if it still contains any &lt;a&gt;XssMatchTuple&lt;/a&gt;</p>
+<p>objects&gt;</p>
+<p>If you just want to remove an &lt;code&gt;XssMatchSet&lt;/code&gt; from a &lt;code&gt;Rule&lt;/code&gt;, use</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt;</p>
+<p>To permanently delete an &lt;code&gt;XssMatchSet&lt;/code&gt; from AWS WAF, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Update the &lt;code&gt;XssMatchSet&lt;/code&gt; to remove filters, if any. For more information, see</p>
+<p>&lt;a&gt;UpdateXssMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of a &lt;code&gt;DeleteXssMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit a &lt;code&gt;DeleteXssMatchSet&lt;/code&gt;</p>
+<!-- @@@deleteXssMatchSet -->
+<!-- $$$getByteMatchSet[overload1]$$$getByteMatchSetconstGetByteMatchSetRequest& -->
+<h3 class="fn" id="getByteMatchSet"><a name="getByteMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getbytematchsetresponse.html">GetByteMatchSetResponse</a></span> *WafClient::<span class="name">getByteMatchSet</span>(const <span class="type"><a href="qtaws-waf-getbytematchsetrequest.html">GetByteMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getbytematchsetresponse.html">GetByteMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;ByteMatchSet&lt;/a&gt; specified by</p>
+<!-- @@@getByteMatchSet -->
+<!-- $$$getChangeToken[overload1]$$$getChangeTokenconstGetChangeTokenRequest& -->
+<h3 class="fn" id="getChangeToken"><a name="getChangeToken"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getchangetokenresponse.html">GetChangeTokenResponse</a></span> *WafClient::<span class="name">getChangeToken</span>(const <span class="type"><a href="qtaws-waf-getchangetokenrequest.html">GetChangeTokenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getchangetokenresponse.html">GetChangeTokenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>When you want to create, update, or delete AWS WAF objects, get a change token and include the change token in the create, update, or delete request. Change tokens ensure that your application doesn't submit conflicting requests to AWS</p>
+<p>WAF&gt;</p>
+<p>Each create, update, or delete request must use a unique change token. If your application submits a &lt;code&gt;GetChangeToken&lt;/code&gt; request and then submits a second &lt;code&gt;GetChangeToken&lt;/code&gt; request before submitting a create, update, or delete request, the second &lt;code&gt;GetChangeToken&lt;/code&gt; request returns the same value as the first &lt;code&gt;GetChangeToken&lt;/code&gt;</p>
+<p>request&gt;</p>
+<p>When you use a change token in a create, update, or delete request, the status of the change token changes to &lt;code&gt;PENDING&lt;/code&gt;, which indicates that AWS WAF is propagating the change to all AWS WAF servers. Use &lt;code&gt;GetChangeTokenStatus&lt;/code&gt; to determine the status of your change</p>
+<!-- @@@getChangeToken -->
+<!-- $$$getChangeTokenStatus[overload1]$$$getChangeTokenStatusconstGetChangeTokenStatusRequest& -->
+<h3 class="fn" id="getChangeTokenStatus"><a name="getChangeTokenStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getchangetokenstatusresponse.html">GetChangeTokenStatusResponse</a></span> *WafClient::<span class="name">getChangeTokenStatus</span>(const <span class="type"><a href="qtaws-waf-getchangetokenstatusrequest.html">GetChangeTokenStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getchangetokenstatusresponse.html">GetChangeTokenStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the status of a &lt;code&gt;ChangeToken&lt;/code&gt; that you got by calling &lt;a&gt;GetChangeToken&lt;/a&gt;. &lt;code&gt;ChangeTokenStatus&lt;/code&gt; is one of the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;PROVISIONED&lt;/code&gt;: You requested the change token by calling &lt;code&gt;GetChangeToken&lt;/code&gt;, but you haven't used it yet in a call to create, update, or delete an AWS WAF</p>
+<p>object&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;PENDING&lt;/code&gt;: AWS WAF is propagating the create, update, or delete request to all AWS WAF</p>
+<p>servers&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;IN_SYNC&lt;/code&gt;: Propagation is</p>
+<!-- @@@getChangeTokenStatus -->
+<!-- $$$getGeoMatchSet[overload1]$$$getGeoMatchSetconstGetGeoMatchSetRequest& -->
+<h3 class="fn" id="getGeoMatchSet"><a name="getGeoMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getgeomatchsetresponse.html">GetGeoMatchSetResponse</a></span> *WafClient::<span class="name">getGeoMatchSet</span>(const <span class="type"><a href="qtaws-waf-getgeomatchsetrequest.html">GetGeoMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getgeomatchsetresponse.html">GetGeoMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;GeoMatchSet&lt;/a&gt; that is specified by</p>
+<!-- @@@getGeoMatchSet -->
+<!-- $$$getIPSet[overload1]$$$getIPSetconstGetIPSetRequest& -->
+<h3 class="fn" id="getIPSet"><a name="getIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getipsetresponse.html">GetIPSetResponse</a></span> *WafClient::<span class="name">getIPSet</span>(const <span class="type"><a href="qtaws-waf-getipsetrequest.html">GetIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getipsetresponse.html">GetIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;IPSet&lt;/a&gt; that is specified by</p>
+<!-- @@@getIPSet -->
+<!-- $$$getPermissionPolicy[overload1]$$$getPermissionPolicyconstGetPermissionPolicyRequest& -->
+<h3 class="fn" id="getPermissionPolicy"><a name="getPermissionPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getpermissionpolicyresponse.html">GetPermissionPolicyResponse</a></span> *WafClient::<span class="name">getPermissionPolicy</span>(const <span class="type"><a href="qtaws-waf-getpermissionpolicyrequest.html">GetPermissionPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getpermissionpolicyresponse.html">GetPermissionPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the IAM policy attached to the</p>
+<!-- @@@getPermissionPolicy -->
+<!-- $$$getRateBasedRule[overload1]$$$getRateBasedRuleconstGetRateBasedRuleRequest& -->
+<h3 class="fn" id="getRateBasedRule"><a name="getRateBasedRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getratebasedruleresponse.html">GetRateBasedRuleResponse</a></span> *WafClient::<span class="name">getRateBasedRule</span>(const <span class="type"><a href="qtaws-waf-getratebasedrulerequest.html">GetRateBasedRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getratebasedruleresponse.html">GetRateBasedRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;RateBasedRule&lt;/a&gt; that is specified by the &lt;code&gt;RuleId&lt;/code&gt; that you included in the &lt;code&gt;GetRateBasedRule&lt;/code&gt;</p>
+<!-- @@@getRateBasedRule -->
+<!-- $$$getRateBasedRuleManagedKeys[overload1]$$$getRateBasedRuleManagedKeysconstGetRateBasedRuleManagedKeysRequest& -->
+<h3 class="fn" id="getRateBasedRuleManagedKeys"><a name="getRateBasedRuleManagedKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getratebasedrulemanagedkeysresponse.html">GetRateBasedRuleManagedKeysResponse</a></span> *WafClient::<span class="name">getRateBasedRuleManagedKeys</span>(const <span class="type"><a href="qtaws-waf-getratebasedrulemanagedkeysrequest.html">GetRateBasedRuleManagedKeysRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getratebasedrulemanagedkeysresponse.html">GetRateBasedRuleManagedKeysResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of IP addresses currently being blocked by the &lt;a&gt;RateBasedRule&lt;/a&gt; that is specified by the &lt;code&gt;RuleId&lt;/code&gt;. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses exceed the rate limit, the 10,000 addresses with the highest rates will be</p>
+<!-- @@@getRateBasedRuleManagedKeys -->
+<!-- $$$getRegexMatchSet[overload1]$$$getRegexMatchSetconstGetRegexMatchSetRequest& -->
+<h3 class="fn" id="getRegexMatchSet"><a name="getRegexMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getregexmatchsetresponse.html">GetRegexMatchSetResponse</a></span> *WafClient::<span class="name">getRegexMatchSet</span>(const <span class="type"><a href="qtaws-waf-getregexmatchsetrequest.html">GetRegexMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getregexmatchsetresponse.html">GetRegexMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;RegexMatchSet&lt;/a&gt; specified by</p>
+<!-- @@@getRegexMatchSet -->
+<!-- $$$getRegexPatternSet[overload1]$$$getRegexPatternSetconstGetRegexPatternSetRequest& -->
+<h3 class="fn" id="getRegexPatternSet"><a name="getRegexPatternSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getregexpatternsetresponse.html">GetRegexPatternSetResponse</a></span> *WafClient::<span class="name">getRegexPatternSet</span>(const <span class="type"><a href="qtaws-waf-getregexpatternsetrequest.html">GetRegexPatternSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getregexpatternsetresponse.html">GetRegexPatternSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;RegexPatternSet&lt;/a&gt; specified by</p>
+<!-- @@@getRegexPatternSet -->
+<!-- $$$getRule[overload1]$$$getRuleconstGetRuleRequest& -->
+<h3 class="fn" id="getRule"><a name="getRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getruleresponse.html">GetRuleResponse</a></span> *WafClient::<span class="name">getRule</span>(const <span class="type"><a href="qtaws-waf-getrulerequest.html">GetRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getruleresponse.html">GetRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;Rule&lt;/a&gt; that is specified by the &lt;code&gt;RuleId&lt;/code&gt; that you included in the &lt;code&gt;GetRule&lt;/code&gt;</p>
+<!-- @@@getRule -->
+<!-- $$$getRuleGroup[overload1]$$$getRuleGroupconstGetRuleGroupRequest& -->
+<h3 class="fn" id="getRuleGroup"><a name="getRuleGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getrulegroupresponse.html">GetRuleGroupResponse</a></span> *WafClient::<span class="name">getRuleGroup</span>(const <span class="type"><a href="qtaws-waf-getrulegrouprequest.html">GetRuleGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getrulegroupresponse.html">GetRuleGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;RuleGroup&lt;/a&gt; that is specified by the &lt;code&gt;RuleGroupId&lt;/code&gt; that you included in the &lt;code&gt;GetRuleGroup&lt;/code&gt;</p>
+<p>request&gt;</p>
+<p>To view the rules in a rule group, use</p>
+<!-- @@@getRuleGroup -->
+<!-- $$$getSampledRequests[overload1]$$$getSampledRequestsconstGetSampledRequestsRequest& -->
+<h3 class="fn" id="getSampledRequests"><a name="getSampledRequests"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getsampledrequestsresponse.html">GetSampledRequestsResponse</a></span> *WafClient::<span class="name">getSampledRequests</span>(const <span class="type"><a href="qtaws-waf-getsampledrequestsrequest.html">GetSampledRequestsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getsampledrequestsresponse.html">GetSampledRequestsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets detailed information about a specified number of requests--a sample--that AWS WAF randomly selects from among the first 5,000 requests that your AWS resource received during a time range that you choose. You can specify a sample size of up to 500 requests, and you can specify any time range in the previous three</p>
+<p>hours&gt;</p>
+<p>&lt;code&gt;GetSampledRequests&lt;/code&gt; returns a time range, which is usually the time range that you specified. However, if your resource (such as a CloudFront distribution) received 5,000 requests before the specified time range elapsed, &lt;code&gt;GetSampledRequests&lt;/code&gt; returns an updated time range. This new time range indicates the actual period during which AWS WAF selected the requests in the</p>
+<!-- @@@getSampledRequests -->
+<!-- $$$getSizeConstraintSet[overload1]$$$getSizeConstraintSetconstGetSizeConstraintSetRequest& -->
+<h3 class="fn" id="getSizeConstraintSet"><a name="getSizeConstraintSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getsizeconstraintsetresponse.html">GetSizeConstraintSetResponse</a></span> *WafClient::<span class="name">getSizeConstraintSet</span>(const <span class="type"><a href="qtaws-waf-getsizeconstraintsetrequest.html">GetSizeConstraintSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getsizeconstraintsetresponse.html">GetSizeConstraintSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;SizeConstraintSet&lt;/a&gt; specified by</p>
+<!-- @@@getSizeConstraintSet -->
+<!-- $$$getSqlInjectionMatchSet[overload1]$$$getSqlInjectionMatchSetconstGetSqlInjectionMatchSetRequest& -->
+<h3 class="fn" id="getSqlInjectionMatchSet"><a name="getSqlInjectionMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getsqlinjectionmatchsetresponse.html">GetSqlInjectionMatchSetResponse</a></span> *WafClient::<span class="name">getSqlInjectionMatchSet</span>(const <span class="type"><a href="qtaws-waf-getsqlinjectionmatchsetrequest.html">GetSqlInjectionMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getsqlinjectionmatchsetresponse.html">GetSqlInjectionMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;SqlInjectionMatchSet&lt;/a&gt; that is specified by</p>
+<!-- @@@getSqlInjectionMatchSet -->
+<!-- $$$getWebACL[overload1]$$$getWebACLconstGetWebACLRequest& -->
+<h3 class="fn" id="getWebACL"><a name="getWebACL"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getwebaclresponse.html">GetWebACLResponse</a></span> *WafClient::<span class="name">getWebACL</span>(const <span class="type"><a href="qtaws-waf-getwebaclrequest.html">GetWebACLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getwebaclresponse.html">GetWebACLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;WebACL&lt;/a&gt; that is specified by</p>
+<!-- @@@getWebACL -->
+<!-- $$$getXssMatchSet[overload1]$$$getXssMatchSetconstGetXssMatchSetRequest& -->
+<h3 class="fn" id="getXssMatchSet"><a name="getXssMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-getxssmatchsetresponse.html">GetXssMatchSetResponse</a></span> *WafClient::<span class="name">getXssMatchSet</span>(const <span class="type"><a href="qtaws-waf-getxssmatchsetrequest.html">GetXssMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-getxssmatchsetresponse.html">GetXssMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;a&gt;XssMatchSet&lt;/a&gt; that is specified by</p>
+<!-- @@@getXssMatchSet -->
+<!-- $$$listActivatedRulesInRuleGroup[overload1]$$$listActivatedRulesInRuleGroupconstListActivatedRulesInRuleGroupRequest& -->
+<h3 class="fn" id="listActivatedRulesInRuleGroup"><a name="listActivatedRulesInRuleGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listactivatedrulesinrulegroupresponse.html">ListActivatedRulesInRuleGroupResponse</a></span> *WafClient::<span class="name">listActivatedRulesInRuleGroup</span>(const <span class="type"><a href="qtaws-waf-listactivatedrulesinrulegrouprequest.html">ListActivatedRulesInRuleGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listactivatedrulesinrulegroupresponse.html">ListActivatedRulesInRuleGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;ActivatedRule&lt;/a&gt;</p>
+<!-- @@@listActivatedRulesInRuleGroup -->
+<!-- $$$listByteMatchSets[overload1]$$$listByteMatchSetsconstListByteMatchSetsRequest& -->
+<h3 class="fn" id="listByteMatchSets"><a name="listByteMatchSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listbytematchsetsresponse.html">ListByteMatchSetsResponse</a></span> *WafClient::<span class="name">listByteMatchSets</span>(const <span class="type"><a href="qtaws-waf-listbytematchsetsrequest.html">ListByteMatchSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listbytematchsetsresponse.html">ListByteMatchSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;ByteMatchSetSummary&lt;/a&gt;</p>
+<!-- @@@listByteMatchSets -->
+<!-- $$$listGeoMatchSets[overload1]$$$listGeoMatchSetsconstListGeoMatchSetsRequest& -->
+<h3 class="fn" id="listGeoMatchSets"><a name="listGeoMatchSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listgeomatchsetsresponse.html">ListGeoMatchSetsResponse</a></span> *WafClient::<span class="name">listGeoMatchSets</span>(const <span class="type"><a href="qtaws-waf-listgeomatchsetsrequest.html">ListGeoMatchSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listgeomatchsetsresponse.html">ListGeoMatchSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;GeoMatchSetSummary&lt;/a&gt; objects in the</p>
+<!-- @@@listGeoMatchSets -->
+<!-- $$$listIPSets[overload1]$$$listIPSetsconstListIPSetsRequest& -->
+<h3 class="fn" id="listIPSets"><a name="listIPSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listipsetsresponse.html">ListIPSetsResponse</a></span> *WafClient::<span class="name">listIPSets</span>(const <span class="type"><a href="qtaws-waf-listipsetsrequest.html">ListIPSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listipsetsresponse.html">ListIPSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;IPSetSummary&lt;/a&gt; objects in the</p>
+<!-- @@@listIPSets -->
+<!-- $$$listRateBasedRules[overload1]$$$listRateBasedRulesconstListRateBasedRulesRequest& -->
+<h3 class="fn" id="listRateBasedRules"><a name="listRateBasedRules"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listratebasedrulesresponse.html">ListRateBasedRulesResponse</a></span> *WafClient::<span class="name">listRateBasedRules</span>(const <span class="type"><a href="qtaws-waf-listratebasedrulesrequest.html">ListRateBasedRulesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listratebasedrulesresponse.html">ListRateBasedRulesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RuleSummary&lt;/a&gt;</p>
+<!-- @@@listRateBasedRules -->
+<!-- $$$listRegexMatchSets[overload1]$$$listRegexMatchSetsconstListRegexMatchSetsRequest& -->
+<h3 class="fn" id="listRegexMatchSets"><a name="listRegexMatchSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listregexmatchsetsresponse.html">ListRegexMatchSetsResponse</a></span> *WafClient::<span class="name">listRegexMatchSets</span>(const <span class="type"><a href="qtaws-waf-listregexmatchsetsrequest.html">ListRegexMatchSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listregexmatchsetsresponse.html">ListRegexMatchSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RegexMatchSetSummary&lt;/a&gt;</p>
+<!-- @@@listRegexMatchSets -->
+<!-- $$$listRegexPatternSets[overload1]$$$listRegexPatternSetsconstListRegexPatternSetsRequest& -->
+<h3 class="fn" id="listRegexPatternSets"><a name="listRegexPatternSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listregexpatternsetsresponse.html">ListRegexPatternSetsResponse</a></span> *WafClient::<span class="name">listRegexPatternSets</span>(const <span class="type"><a href="qtaws-waf-listregexpatternsetsrequest.html">ListRegexPatternSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listregexpatternsetsresponse.html">ListRegexPatternSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RegexPatternSetSummary&lt;/a&gt;</p>
+<!-- @@@listRegexPatternSets -->
+<!-- $$$listRuleGroups[overload1]$$$listRuleGroupsconstListRuleGroupsRequest& -->
+<h3 class="fn" id="listRuleGroups"><a name="listRuleGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listrulegroupsresponse.html">ListRuleGroupsResponse</a></span> *WafClient::<span class="name">listRuleGroups</span>(const <span class="type"><a href="qtaws-waf-listrulegroupsrequest.html">ListRuleGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listrulegroupsresponse.html">ListRuleGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RuleGroup&lt;/a&gt;</p>
+<!-- @@@listRuleGroups -->
+<!-- $$$listRules[overload1]$$$listRulesconstListRulesRequest& -->
+<h3 class="fn" id="listRules"><a name="listRules"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listrulesresponse.html">ListRulesResponse</a></span> *WafClient::<span class="name">listRules</span>(const <span class="type"><a href="qtaws-waf-listrulesrequest.html">ListRulesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listrulesresponse.html">ListRulesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RuleSummary&lt;/a&gt;</p>
+<!-- @@@listRules -->
+<!-- $$$listSizeConstraintSets[overload1]$$$listSizeConstraintSetsconstListSizeConstraintSetsRequest& -->
+<h3 class="fn" id="listSizeConstraintSets"><a name="listSizeConstraintSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listsizeconstraintsetsresponse.html">ListSizeConstraintSetsResponse</a></span> *WafClient::<span class="name">listSizeConstraintSets</span>(const <span class="type"><a href="qtaws-waf-listsizeconstraintsetsrequest.html">ListSizeConstraintSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listsizeconstraintsetsresponse.html">ListSizeConstraintSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;SizeConstraintSetSummary&lt;/a&gt;</p>
+<!-- @@@listSizeConstraintSets -->
+<!-- $$$listSqlInjectionMatchSets[overload1]$$$listSqlInjectionMatchSetsconstListSqlInjectionMatchSetsRequest& -->
+<h3 class="fn" id="listSqlInjectionMatchSets"><a name="listSqlInjectionMatchSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listsqlinjectionmatchsetsresponse.html">ListSqlInjectionMatchSetsResponse</a></span> *WafClient::<span class="name">listSqlInjectionMatchSets</span>(const <span class="type"><a href="qtaws-waf-listsqlinjectionmatchsetsrequest.html">ListSqlInjectionMatchSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listsqlinjectionmatchsetsresponse.html">ListSqlInjectionMatchSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;SqlInjectionMatchSet&lt;/a&gt;</p>
+<!-- @@@listSqlInjectionMatchSets -->
+<!-- $$$listSubscribedRuleGroups[overload1]$$$listSubscribedRuleGroupsconstListSubscribedRuleGroupsRequest& -->
+<h3 class="fn" id="listSubscribedRuleGroups"><a name="listSubscribedRuleGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listsubscribedrulegroupsresponse.html">ListSubscribedRuleGroupsResponse</a></span> *WafClient::<span class="name">listSubscribedRuleGroups</span>(const <span class="type"><a href="qtaws-waf-listsubscribedrulegroupsrequest.html">ListSubscribedRuleGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listsubscribedrulegroupsresponse.html">ListSubscribedRuleGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;RuleGroup&lt;/a&gt; objects that you are subscribed</p>
+<!-- @@@listSubscribedRuleGroups -->
+<!-- $$$listWebACLs[overload1]$$$listWebACLsconstListWebACLsRequest& -->
+<h3 class="fn" id="listWebACLs"><a name="listWebACLs"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listwebaclsresponse.html">ListWebACLsResponse</a></span> *WafClient::<span class="name">listWebACLs</span>(const <span class="type"><a href="qtaws-waf-listwebaclsrequest.html">ListWebACLsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listwebaclsresponse.html">ListWebACLsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;WebACLSummary&lt;/a&gt; objects in the</p>
+<!-- @@@listWebACLs -->
+<!-- $$$listXssMatchSets[overload1]$$$listXssMatchSetsconstListXssMatchSetsRequest& -->
+<h3 class="fn" id="listXssMatchSets"><a name="listXssMatchSets"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-listxssmatchsetsresponse.html">ListXssMatchSetsResponse</a></span> *WafClient::<span class="name">listXssMatchSets</span>(const <span class="type"><a href="qtaws-waf-listxssmatchsetsrequest.html">ListXssMatchSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-listxssmatchsetsresponse.html">ListXssMatchSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;a&gt;XssMatchSet&lt;/a&gt;</p>
+<!-- @@@listXssMatchSets -->
+<!-- $$$putPermissionPolicy[overload1]$$$putPermissionPolicyconstPutPermissionPolicyRequest& -->
+<h3 class="fn" id="putPermissionPolicy"><a name="putPermissionPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-putpermissionpolicyresponse.html">PutPermissionPolicyResponse</a></span> *WafClient::<span class="name">putPermissionPolicy</span>(const <span class="type"><a href="qtaws-waf-putpermissionpolicyrequest.html">PutPermissionPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-putpermissionpolicyresponse.html">PutPermissionPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a IAM policy to the specified resource. The only supported use for this action is to share a RuleGroup across</p>
+<p>accounts&gt;</p>
+<p>The &lt;code&gt;PutPermissionPolicy&lt;/code&gt; is subject to the following</p>
+<p>restrictions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You can attach only one policy with each &lt;code&gt;PutPermissionPolicy&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The policy must include an &lt;code&gt;Effect&lt;/code&gt;, &lt;code&gt;Action&lt;/code&gt; and &lt;code&gt;Principal&lt;/code&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;Effect&lt;/code&gt; must specify</p>
+<p>&lt;code&gt;Allow&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Action&lt;/code&gt; in the policy must be &lt;code&gt;waf:UpdateWebACL&lt;/code&gt; and &lt;code&gt;waf-regional:UpdateWebACL&lt;/code&gt;. Any extra or wildcard actions in the policy will be</p>
+<p>rejected&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The policy cannot include a &lt;code&gt;Resource&lt;/code&gt;</p>
+<p>parameter&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The ARN in the request must be a valid WAF RuleGroup ARN and the RuleGroup must exist in the same</p>
+<p>region&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The user making the request must be the owner of the</p>
+<p>RuleGroup&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Your policy must be composed using IAM Policy version</p>
+<p>2012-10-17&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html&quot;&gt;IAM Policies&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>An example of a valid policy parameter is shown in the Examples section</p>
+<!-- @@@putPermissionPolicy -->
+<!-- $$$updateByteMatchSet[overload1]$$$updateByteMatchSetconstUpdateByteMatchSetRequest& -->
+<h3 class="fn" id="updateByteMatchSet"><a name="updateByteMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updatebytematchsetresponse.html">UpdateByteMatchSetResponse</a></span> *WafClient::<span class="name">updateByteMatchSet</span>(const <span class="type"><a href="qtaws-waf-updatebytematchsetrequest.html">UpdateByteMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updatebytematchsetresponse.html">UpdateByteMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;ByteMatchTuple&lt;/a&gt; objects (filters) in a &lt;a&gt;ByteMatchSet&lt;/a&gt;. For each &lt;code&gt;ByteMatchTuple&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the object from the array. If you want to change a &lt;code&gt;ByteMatchSetUpdate&lt;/code&gt; object, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The part of a web request that you want AWS WAF to inspect, such as a query string or the value of the &lt;code&gt;User-Agent&lt;/code&gt; header.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to look for. For more information, including how you specify the values for the AWS WAF API and the AWS CLI or SDKs, see &lt;code&gt;TargetString&lt;/code&gt; in the &lt;a&gt;ByteMatchTuple&lt;/a&gt; data type.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Where to look, such as at the beginning or the end of a query</p>
+<p>string&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Whether to perform any conversions on the request, such as converting it to lowercase, before inspecting it for the specified</p>
+<p>string&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For example, you can add a &lt;code&gt;ByteMatchSetUpdate&lt;/code&gt; object that matches web requests in which &lt;code&gt;User-Agent&lt;/code&gt; headers contain the string &lt;code&gt;BadBot&lt;/code&gt;. You can then configure AWS WAF to block those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;ByteMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a &lt;code&gt;ByteMatchSet.&lt;/code&gt; For more information, see</p>
+<p>&lt;a&gt;CreateByteMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateByteMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateByteMatchSet&lt;/code&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the value that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateByteMatchSet -->
+<!-- $$$updateGeoMatchSet[overload1]$$$updateGeoMatchSetconstUpdateGeoMatchSetRequest& -->
+<h3 class="fn" id="updateGeoMatchSet"><a name="updateGeoMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updategeomatchsetresponse.html">UpdateGeoMatchSetResponse</a></span> *WafClient::<span class="name">updateGeoMatchSet</span>(const <span class="type"><a href="qtaws-waf-updategeomatchsetrequest.html">UpdateGeoMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updategeomatchsetresponse.html">UpdateGeoMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;GeoMatchConstraint&lt;/a&gt; objects in an &lt;code&gt;GeoMatchSet&lt;/code&gt;. For each &lt;code&gt;GeoMatchConstraint&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the object from the array. If you want to change an &lt;code&gt;GeoMatchConstraint&lt;/code&gt; object, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Type&lt;/code&gt;. The only valid value for &lt;code&gt;Type&lt;/code&gt; is</p>
+<p>&lt;code&gt;Country&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Value&lt;/code&gt;, which is a two character code for the country to add to the &lt;code&gt;GeoMatchConstraint&lt;/code&gt; object. Valid codes are listed in</p>
+<p>&lt;a&gt;GeoMatchConstraint$Value&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To create and configure an &lt;code&gt;GeoMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Submit a &lt;a&gt;CreateGeoMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateGeoMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateGeoMatchSet&lt;/code&gt; request to specify the country that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>When you update an &lt;code&gt;GeoMatchSet&lt;/code&gt;, you specify the country that you want to add and/or the country that you want to delete. If you want to change a country, you delete the existing country and add the new</p>
+<p>one&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateGeoMatchSet -->
+<!-- $$$updateIPSet[overload1]$$$updateIPSetconstUpdateIPSetRequest& -->
+<h3 class="fn" id="updateIPSet"><a name="updateIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updateipsetresponse.html">UpdateIPSetResponse</a></span> *WafClient::<span class="name">updateIPSet</span>(const <span class="type"><a href="qtaws-waf-updateipsetrequest.html">UpdateIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updateipsetresponse.html">UpdateIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;IPSetDescriptor&lt;/a&gt; objects in an &lt;code&gt;IPSet&lt;/code&gt;. For each &lt;code&gt;IPSetDescriptor&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the object from the array. If you want to change an &lt;code&gt;IPSetDescriptor&lt;/code&gt; object, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The IP address version, &lt;code&gt;IPv4&lt;/code&gt; or &lt;code&gt;IPv6&lt;/code&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The IP address in CIDR notation, for example, &lt;code&gt;192.0&#x2e;2&#x2e;0/24&lt;/code&gt; (for the range of IP addresses from &lt;code&gt;192.0&#x2e;2&#x2e;0&lt;/code&gt; to &lt;code&gt;192.0&#x2e;2&#x2e;255&lt;/code&gt;) or &lt;code&gt;192.0&#x2e;2&#x2e;44/32&lt;/code&gt; (for the individual IP address &lt;code&gt;192.0&#x2e;2&#x2e;44&lt;/code&gt;).</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>AWS WAF supports /8, /16, /24, and /32 IP address ranges for IPv4, and /24, /32, /48, /56, /64 and /128 for IPv6. For more information about CIDR notation, see the Wikipedia entry &lt;a href=&quot;https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing&quot;&gt;Classless Inter-Domain</p>
+<p>Routing&lt;/a&gt;&gt;</p>
+<p>IPv6 addresses can be represented using any of the following</p>
+<p>formats&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>1111:0000:0000:0000:0000:0000:0000:0111/12&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>1111:0:0:0:0:0:0:0111/12&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>1111::0111/12&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>1111::111/12&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You use an &lt;code&gt;IPSet&lt;/code&gt; to specify which web requests you want to allow or block based on the IP addresses that the requests originated from. For example, if you're receiving a lot of requests from one or a small number of IP addresses and you want to block the requests, you can create an &lt;code&gt;IPSet&lt;/code&gt; that specifies those IP addresses, and then configure AWS WAF to block the requests.</p>
+<p>&lt;/p</p>
+<p>To create and configure an &lt;code&gt;IPSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Submit a &lt;a&gt;CreateIPSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateIPSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateIPSet&lt;/code&gt; request to specify the IP addresses that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>When you update an &lt;code&gt;IPSet&lt;/code&gt;, you specify the IP addresses that you want to add and/or the IP addresses that you want to delete. If you want to change an IP address, you delete the existing IP address and add the new</p>
+<p>one&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateIPSet -->
+<!-- $$$updateRateBasedRule[overload1]$$$updateRateBasedRuleconstUpdateRateBasedRuleRequest& -->
+<h3 class="fn" id="updateRateBasedRule"><a name="updateRateBasedRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updateratebasedruleresponse.html">UpdateRateBasedRuleResponse</a></span> *WafClient::<span class="name">updateRateBasedRule</span>(const <span class="type"><a href="qtaws-waf-updateratebasedrulerequest.html">UpdateRateBasedRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updateratebasedruleresponse.html">UpdateRateBasedRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;Predicate&lt;/a&gt; objects in a rule and updates the &lt;code&gt;RateLimit&lt;/code&gt; in the rule.</p>
+<p>&lt;/p</p>
+<p>Each &lt;code&gt;Predicate&lt;/code&gt; object identifies a predicate, such as a &lt;a&gt;ByteMatchSet&lt;/a&gt; or an &lt;a&gt;IPSet&lt;/a&gt;, that specifies the web requests that you want to block or count. The &lt;code&gt;RateLimit&lt;/code&gt; specifies the number of requests every five minutes that triggers the</p>
+<p>rule&gt;</p>
+<p>If you add more than one predicate to a &lt;code&gt;RateBasedRule&lt;/code&gt;, a request must match all the predicates and exceed the &lt;code&gt;RateLimit&lt;/code&gt; to be counted or blocked. For example, suppose you add the following to a</p>
+<p>&lt;code&gt;RateBasedRule&lt;/code&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>An &lt;code&gt;IPSet&lt;/code&gt; that matches the IP address &lt;code&gt;192.0&#x2e;2&#x2e;44/32&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; that matches &lt;code&gt;BadBot&lt;/code&gt; in the &lt;code&gt;User-Agent&lt;/code&gt;</p>
+<p>heade&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Further, you specify a &lt;code&gt;RateLimit&lt;/code&gt; of</p>
+<p>15,000&gt;</p>
+<p>You then add the &lt;code&gt;RateBasedRule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt; and specify that you want to block requests that satisfy the rule. For a request to be blocked, it must come from the IP address 192.0&#x2e;2&#x2e;44 &lt;i&gt;and&lt;/i&gt; the &lt;code&gt;User-Agent&lt;/code&gt; header in the request must contain the value &lt;code&gt;BadBot&lt;/code&gt;. Further, requests that match these two conditions much be received at a rate of more than 15,000 every five minutes. If the rate drops below this limit, AWS WAF no longer blocks the</p>
+<p>requests&gt;</p>
+<p>As a second example, suppose you want to limit requests to a particular page on your site. To do this, you could add the following to a</p>
+<p>&lt;code&gt;RateBasedRule&lt;/code&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; with &lt;code&gt;FieldToMatch&lt;/code&gt; of &lt;code&gt;URI&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;PositionalConstraint&lt;/code&gt; of &lt;code&gt;STARTS_WITH&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;TargetString&lt;/code&gt; of &lt;code&gt;login&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Further, you specify a &lt;code&gt;RateLimit&lt;/code&gt; of</p>
+<p>15,000&gt;</p>
+<p>By adding this &lt;code&gt;RateBasedRule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt;, you could limit requests to your login page without affecting the rest of your</p>
+<!-- @@@updateRateBasedRule -->
+<!-- $$$updateRegexMatchSet[overload1]$$$updateRegexMatchSetconstUpdateRegexMatchSetRequest& -->
+<h3 class="fn" id="updateRegexMatchSet"><a name="updateRegexMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updateregexmatchsetresponse.html">UpdateRegexMatchSetResponse</a></span> *WafClient::<span class="name">updateRegexMatchSet</span>(const <span class="type"><a href="qtaws-waf-updateregexmatchsetrequest.html">UpdateRegexMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updateregexmatchsetresponse.html">UpdateRegexMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;RegexMatchTuple&lt;/a&gt; objects (filters) in a &lt;a&gt;RegexMatchSet&lt;/a&gt;. For each &lt;code&gt;RegexMatchSetUpdate&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the object from the array. If you want to change a &lt;code&gt;RegexMatchSetUpdate&lt;/code&gt; object, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The part of a web request that you want AWS WAF to inspectupdate, such as a query string or the value of the &lt;code&gt;User-Agent&lt;/code&gt; header.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The identifier of the pattern (a regular expression) that you want AWS WAF to look for. For more information, see &lt;a&gt;RegexPatternSet&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Whether to perform any conversions on the request, such as converting it to lowercase, before inspecting it for the specified</p>
+<p>string&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For example, you can create a &lt;code&gt;RegexPatternSet&lt;/code&gt; that matches any requests with &lt;code&gt;User-Agent&lt;/code&gt; headers that contain the string &lt;code&gt;B[a@]dB[o0]t&lt;/code&gt;. You can then configure AWS WAF to reject those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;RegexMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a &lt;code&gt;RegexMatchSet.&lt;/code&gt; For more information, see</p>
+<p>&lt;a&gt;CreateRegexMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateRegexMatchSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRegexMatchSet&lt;/code&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the identifier of the &lt;code&gt;RegexPatternSet&lt;/code&gt; that contain the regular expression patters you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateRegexMatchSet -->
+<!-- $$$updateRegexPatternSet[overload1]$$$updateRegexPatternSetconstUpdateRegexPatternSetRequest& -->
+<h3 class="fn" id="updateRegexPatternSet"><a name="updateRegexPatternSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updateregexpatternsetresponse.html">UpdateRegexPatternSetResponse</a></span> *WafClient::<span class="name">updateRegexPatternSet</span>(const <span class="type"><a href="qtaws-waf-updateregexpatternsetrequest.html">UpdateRegexPatternSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updateregexpatternsetresponse.html">UpdateRegexPatternSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;code&gt;RegexPatternString&lt;/code&gt; objects in a &lt;a&gt;RegexPatternSet&lt;/a&gt;. For each &lt;code&gt;RegexPatternString&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the</p>
+<p>&lt;code&gt;RegexPatternString&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The regular expression pattern that you want to insert or delete. For more information, see &lt;a&gt;RegexPatternSet&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For example, you can create a &lt;code&gt;RegexPatternString&lt;/code&gt; such as &lt;code&gt;B[a@]dB[o0]t&lt;/code&gt;. AWS WAF will match this &lt;code&gt;RegexPatternString&lt;/code&gt;</p>
+<p>to&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>BadBo&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>BadB0&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>B@dBo&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>B@dB0&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To create and configure a &lt;code&gt;RegexPatternSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a &lt;code&gt;RegexPatternSet.&lt;/code&gt; For more information, see</p>
+<p>&lt;a&gt;CreateRegexPatternSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateRegexPatternSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRegexPatternSet&lt;/code&gt; request to specify the regular expression pattern that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateRegexPatternSet -->
+<!-- $$$updateRule[overload1]$$$updateRuleconstUpdateRuleRequest& -->
+<h3 class="fn" id="updateRule"><a name="updateRule"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updateruleresponse.html">UpdateRuleResponse</a></span> *WafClient::<span class="name">updateRule</span>(const <span class="type"><a href="qtaws-waf-updaterulerequest.html">UpdateRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updateruleresponse.html">UpdateRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;Predicate&lt;/a&gt; objects in a &lt;code&gt;Rule&lt;/code&gt;. Each &lt;code&gt;Predicate&lt;/code&gt; object identifies a predicate, such as a &lt;a&gt;ByteMatchSet&lt;/a&gt; or an &lt;a&gt;IPSet&lt;/a&gt;, that specifies the web requests that you want to allow, block, or count. If you add more than one predicate to a &lt;code&gt;Rule&lt;/code&gt;, a request must match all of the specifications to be allowed, blocked, or counted. For example, suppose you add the following to a &lt;code&gt;Rule&lt;/code&gt;:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ByteMatchSet&lt;/code&gt; that matches the value &lt;code&gt;BadBot&lt;/code&gt; in the &lt;code&gt;User-Agent&lt;/code&gt;</p>
+<p>heade&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>An &lt;code&gt;IPSet&lt;/code&gt; that matches the IP address &lt;code&gt;192.0&#x2e;2&#x2e;44&lt;/code&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You then add the &lt;code&gt;Rule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt; and specify that you want to block requests that satisfy the &lt;code&gt;Rule&lt;/code&gt;. For a request to be blocked, the &lt;code&gt;User-Agent&lt;/code&gt; header in the request must contain the value &lt;code&gt;BadBot&lt;/code&gt; &lt;i&gt;and&lt;/i&gt; the request must originate from the IP address</p>
+<p>192.0&#x2e;2&#x2e;44&gt;</p>
+<p>To create and configure a &lt;code&gt;Rule&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the predicates that you want to include in the</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create the &lt;code&gt;Rule&lt;/code&gt;. See</p>
+<p>&lt;a&gt;CreateRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateRule&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRule&lt;/code&gt; request to add predicates to the</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update a &lt;code&gt;WebACL&lt;/code&gt; that contains the &lt;code&gt;Rule&lt;/code&gt;. See</p>
+<p>&lt;a&gt;CreateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>If you want to replace one &lt;code&gt;ByteMatchSet&lt;/code&gt; or &lt;code&gt;IPSet&lt;/code&gt; with another, you delete the existing one and add the new</p>
+<p>one&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateRule -->
+<!-- $$$updateRuleGroup[overload1]$$$updateRuleGroupconstUpdateRuleGroupRequest& -->
+<h3 class="fn" id="updateRuleGroup"><a name="updateRuleGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updaterulegroupresponse.html">UpdateRuleGroupResponse</a></span> *WafClient::<span class="name">updateRuleGroup</span>(const <span class="type"><a href="qtaws-waf-updaterulegrouprequest.html">UpdateRuleGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updaterulegroupresponse.html">UpdateRuleGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;ActivatedRule&lt;/a&gt; objects in a</p>
+<p>&lt;code&gt;RuleGroup&lt;/code&gt;&gt;</p>
+<p>You can only insert &lt;code&gt;REGULAR&lt;/code&gt; rules into a rule</p>
+<p>group&gt;</p>
+<p>You can have a maximum of ten rules per rule</p>
+<p>group&gt;</p>
+<p>To create and configure a &lt;code&gt;RuleGroup&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the &lt;code&gt;Rules&lt;/code&gt; that you want to include in the &lt;code&gt;RuleGroup&lt;/code&gt;. See</p>
+<p>&lt;a&gt;CreateRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateRuleGroup&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateRuleGroup&lt;/code&gt; request to add &lt;code&gt;Rules&lt;/code&gt; to the</p>
+<p>&lt;code&gt;RuleGroup&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update a &lt;code&gt;WebACL&lt;/code&gt; that contains the &lt;code&gt;RuleGroup&lt;/code&gt;. See</p>
+<p>&lt;a&gt;CreateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>If you want to replace one &lt;code&gt;Rule&lt;/code&gt; with another, you delete the existing one and add the new</p>
+<p>one&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateRuleGroup -->
+<!-- $$$updateSizeConstraintSet[overload1]$$$updateSizeConstraintSetconstUpdateSizeConstraintSetRequest& -->
+<h3 class="fn" id="updateSizeConstraintSet"><a name="updateSizeConstraintSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updatesizeconstraintsetresponse.html">UpdateSizeConstraintSetResponse</a></span> *WafClient::<span class="name">updateSizeConstraintSet</span>(const <span class="type"><a href="qtaws-waf-updatesizeconstraintsetrequest.html">UpdateSizeConstraintSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updatesizeconstraintsetresponse.html">UpdateSizeConstraintSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;SizeConstraint&lt;/a&gt; objects (filters) in a &lt;a&gt;SizeConstraintSet&lt;/a&gt;. For each &lt;code&gt;SizeConstraint&lt;/code&gt; object, you specify the following values:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Whether to insert or delete the object from the array. If you want to change a &lt;code&gt;SizeConstraintSetUpdate&lt;/code&gt; object, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The part of a web request that you want AWS WAF to evaluate, such as the length of a query string or the length of the &lt;code&gt;User-Agent&lt;/code&gt;</p>
+<p>header&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Whether to perform any transformations on the request, such as converting it to lowercase, before checking its length. Note that transformations of the request body are not supported because the AWS resource forwards only the first &lt;code&gt;8192&lt;/code&gt; bytes of your request to AWS</p>
+<p>WAF&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>A &lt;code&gt;ComparisonOperator&lt;/code&gt; used for evaluating the selected part of the request against the specified &lt;code&gt;Size&lt;/code&gt;, such as equals, greater than, less than, and so</p>
+<p>on&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The length, in bytes, that you want AWS WAF to watch for in selected part of the request. The length is computed after applying the</p>
+<p>transformation&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For example, you can add a &lt;code&gt;SizeConstraintSetUpdate&lt;/code&gt; object that matches web requests in which the length of the &lt;code&gt;User-Agent&lt;/code&gt; header is greater than 100 bytes. You can then configure AWS WAF to block those</p>
+<p>requests&gt;</p>
+<p>To create and configure a &lt;code&gt;SizeConstraintSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create a &lt;code&gt;SizeConstraintSet.&lt;/code&gt; For more information, see</p>
+<p>&lt;a&gt;CreateSizeConstraintSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;code&gt;UpdateSizeConstraintSet&lt;/code&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateSizeConstraintSet&lt;/code&gt; request to specify the part of the request that you want AWS WAF to inspect (for example, the header or the URI) and the value that you want AWS WAF to watch</p>
+<p>for&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateSizeConstraintSet -->
+<!-- $$$updateSqlInjectionMatchSet[overload1]$$$updateSqlInjectionMatchSetconstUpdateSqlInjectionMatchSetRequest& -->
+<h3 class="fn" id="updateSqlInjectionMatchSet"><a name="updateSqlInjectionMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updatesqlinjectionmatchsetresponse.html">UpdateSqlInjectionMatchSetResponse</a></span> *WafClient::<span class="name">updateSqlInjectionMatchSet</span>(const <span class="type"><a href="qtaws-waf-updatesqlinjectionmatchsetrequest.html">UpdateSqlInjectionMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updatesqlinjectionmatchsetresponse.html">UpdateSqlInjectionMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;SqlInjectionMatchTuple&lt;/a&gt; objects (filters) in a &lt;a&gt;SqlInjectionMatchSet&lt;/a&gt;. For each &lt;code&gt;SqlInjectionMatchTuple&lt;/code&gt; object, you specify the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;Action&lt;/code&gt;: Whether to insert the object into or delete the object from the array. To change a &lt;code&gt;SqlInjectionMatchTuple&lt;/code&gt;, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;FieldToMatch&lt;/code&gt;: The part of web requests that you want AWS WAF to inspect and, if you want AWS WAF to inspect a header, the name of the</p>
+<p>header&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;TextTransformation&lt;/code&gt;: Which text transformation, if any, to perform on the web request before inspecting the request for snippets of malicious SQL</p>
+<p>code&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You use &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; objects to specify which CloudFront requests you want to allow, block, or count. For example, if you're receiving requests that contain snippets of SQL code in the query string and you want to block the requests, you can create a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt; with the applicable settings, and then configure AWS WAF to block the requests.</p>
+<p>&lt;/p</p>
+<p>To create and configure a &lt;code&gt;SqlInjectionMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Submit a &lt;a&gt;CreateSqlInjectionMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateIPSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateSqlInjectionMatchSet&lt;/code&gt; request to specify the parts of web requests that you want AWS WAF to inspect for snippets of SQL</p>
+<p>code&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateSqlInjectionMatchSet -->
+<!-- $$$updateWebACL[overload1]$$$updateWebACLconstUpdateWebACLRequest& -->
+<h3 class="fn" id="updateWebACL"><a name="updateWebACL"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updatewebaclresponse.html">UpdateWebACLResponse</a></span> *WafClient::<span class="name">updateWebACL</span>(const <span class="type"><a href="qtaws-waf-updatewebaclrequest.html">UpdateWebACLRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updatewebaclresponse.html">UpdateWebACLResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;ActivatedRule&lt;/a&gt; objects in a &lt;code&gt;WebACL&lt;/code&gt;. Each &lt;code&gt;Rule&lt;/code&gt; identifies web requests that you want to allow, block, or count. When you update a &lt;code&gt;WebACL&lt;/code&gt;, you specify the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A default action for the &lt;code&gt;WebACL&lt;/code&gt;, either &lt;code&gt;ALLOW&lt;/code&gt; or &lt;code&gt;BLOCK&lt;/code&gt;. AWS WAF performs the default action if a request doesn't match the criteria in any of the &lt;code&gt;Rules&lt;/code&gt; in a</p>
+<p>&lt;code&gt;WebACL&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;Rules&lt;/code&gt; that you want to add and/or delete. If you want to replace one &lt;code&gt;Rule&lt;/code&gt; with another, you delete the existing &lt;code&gt;Rule&lt;/code&gt; and add the new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>For each &lt;code&gt;Rule&lt;/code&gt;, whether you want AWS WAF to allow requests, block requests, or count requests that match the conditions in the</p>
+<p>&lt;code&gt;Rule&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The order in which you want AWS WAF to evaluate the &lt;code&gt;Rules&lt;/code&gt; in a &lt;code&gt;WebACL&lt;/code&gt;. If you add more than one &lt;code&gt;Rule&lt;/code&gt; to a &lt;code&gt;WebACL&lt;/code&gt;, AWS WAF evaluates each request against the &lt;code&gt;Rules&lt;/code&gt; in order based on the value of &lt;code&gt;Priority&lt;/code&gt;. (The &lt;code&gt;Rule&lt;/code&gt; that has the lowest value for &lt;code&gt;Priority&lt;/code&gt; is evaluated first.) When a web request matches all of the predicates (such as &lt;code&gt;ByteMatchSets&lt;/code&gt; and &lt;code&gt;IPSets&lt;/code&gt;) in a &lt;code&gt;Rule&lt;/code&gt;, AWS WAF immediately takes the corresponding action, allow or block, and doesn't evaluate the request against the remaining &lt;code&gt;Rules&lt;/code&gt; in the &lt;code&gt;WebACL&lt;/code&gt;, if any.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To create and configure a &lt;code&gt;WebACL&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Create and update the predicates that you want to include in &lt;code&gt;Rules&lt;/code&gt;. For more information, see &lt;a&gt;CreateByteMatchSet&lt;/a&gt;, &lt;a&gt;UpdateByteMatchSet&lt;/a&gt;, &lt;a&gt;CreateIPSet&lt;/a&gt;, &lt;a&gt;UpdateIPSet&lt;/a&gt;, &lt;a&gt;CreateSqlInjectionMatchSet&lt;/a&gt;, and</p>
+<p>&lt;a&gt;UpdateSqlInjectionMatchSet&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create and update the &lt;code&gt;Rules&lt;/code&gt; that you want to include in the &lt;code&gt;WebACL&lt;/code&gt;. For more information, see &lt;a&gt;CreateRule&lt;/a&gt; and</p>
+<p>&lt;a&gt;UpdateRule&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Create a &lt;code&gt;WebACL&lt;/code&gt;. See</p>
+<p>&lt;a&gt;CreateWebACL&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;code&gt;GetChangeToken&lt;/code&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateWebACL&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateWebACL&lt;/code&gt; request to specify the &lt;code&gt;Rules&lt;/code&gt; that you want to include in the &lt;code&gt;WebACL&lt;/code&gt;, to specify the default action, and to associate the &lt;code&gt;WebACL&lt;/code&gt; with a CloudFront distribution.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ol&gt;</p>
+<p>Be aware that if you try to add a RATE_BASED rule to a web ACL without setting the rule type when first creating the rule, the &lt;a&gt;UpdateWebACL&lt;/a&gt; request will fail because the request tries to add a REGULAR rule (the default rule type) with the specified ID, which does not exist.</p>
+<p>&lt;/p</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateWebACL -->
+<!-- $$$updateXssMatchSet[overload1]$$$updateXssMatchSetconstUpdateXssMatchSetRequest& -->
+<h3 class="fn" id="updateXssMatchSet"><a name="updateXssMatchSet"></a><code>[slot] </code><span class="type"><a href="qtaws-waf-updatexssmatchsetresponse.html">UpdateXssMatchSetResponse</a></span> *WafClient::<span class="name">updateXssMatchSet</span>(const <span class="type"><a href="qtaws-waf-updatexssmatchsetrequest.html">UpdateXssMatchSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-waf-wafclient.html">WafClient</a> service, and returns a pointer to an <a href="qtaws-waf-updatexssmatchsetresponse.html">UpdateXssMatchSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inserts or deletes &lt;a&gt;XssMatchTuple&lt;/a&gt; objects (filters) in an &lt;a&gt;XssMatchSet&lt;/a&gt;. For each &lt;code&gt;XssMatchTuple&lt;/code&gt; object, you specify the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;Action&lt;/code&gt;: Whether to insert the object into or delete the object from the array. To change a &lt;code&gt;XssMatchTuple&lt;/code&gt;, you delete the existing object and add a new</p>
+<p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;FieldToMatch&lt;/code&gt;: The part of web requests that you want AWS WAF to inspect and, if you want AWS WAF to inspect a header, the name of the</p>
+<p>header&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;TextTransformation&lt;/code&gt;: Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting</p>
+<p>attacks&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You use &lt;code&gt;XssMatchSet&lt;/code&gt; objects to specify which CloudFront requests you want to allow, block, or count. For example, if you're receiving requests that contain cross-site scripting attacks in the request body and you want to block the requests, you can create an &lt;code&gt;XssMatchSet&lt;/code&gt; with the applicable settings, and then configure AWS WAF to block the requests.</p>
+<p>&lt;/p</p>
+<p>To create and configure an &lt;code&gt;XssMatchSet&lt;/code&gt;, perform the following</p>
+<p>steps&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Submit a &lt;a&gt;CreateXssMatchSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use &lt;a&gt;GetChangeToken&lt;/a&gt; to get the change token that you provide in the &lt;code&gt;ChangeToken&lt;/code&gt; parameter of an &lt;a&gt;UpdateIPSet&lt;/a&gt;</p>
+<p>request&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Submit an &lt;code&gt;UpdateXssMatchSet&lt;/code&gt; request to specify the parts of web requests that you want AWS WAF to inspect for cross-site scripting</p>
+<p>attacks&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>For more information about how to use the AWS WAF API to allow or block HTTP requests, see the &lt;a href=&quot;http://docs.aws.amazon.com/waf/latest/developerguide/&quot;&gt;AWS WAF Developer</p>
+<!-- @@@updateXssMatchSet -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

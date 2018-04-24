@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ssmclient.cpp -->
+  <title>SsmClient Class | SSM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsssm-index.html">SSM</a></li>
+<li><a href="qtawsssm-module.html">C++ Classes</a></li>
+<li>SsmClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SsmClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ssm-ssmclient.html">QtAws::SSM::SsmClient</a>)<br/></span>
+<!-- $$$SsmClient-brief -->
+<p>The <a href="qtaws-ssm-ssmclient.html">SsmClient</a> class provides access to the Amazon Simple Systems Manager (SSM) ( SSM) service. <a href="#details">More...</a></p>
+<!-- @@@SsmClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SsmClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-ssm-ssmclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#SsmClient">SsmClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#SsmClient-1">SsmClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsToResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#addTagsToResource">addTagsToResource</a></b>(const AddTagsToResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelCommandResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#cancelCommand">cancelCommand</a></b>(const CancelCommandRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateActivationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createActivation">createActivation</a></b>(const CreateActivationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createAssociation">createAssociation</a></b>(const CreateAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAssociationBatchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createAssociationBatch">createAssociationBatch</a></b>(const CreateAssociationBatchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createDocument">createDocument</a></b>(const CreateDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createMaintenanceWindow">createMaintenanceWindow</a></b>(const CreateMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createPatchBaseline">createPatchBaseline</a></b>(const CreatePatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateResourceDataSyncResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#createResourceDataSync">createResourceDataSync</a></b>(const CreateResourceDataSyncRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteActivationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteActivation">deleteActivation</a></b>(const DeleteActivationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteAssociation">deleteAssociation</a></b>(const DeleteAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteDocument">deleteDocument</a></b>(const DeleteDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInventoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteInventory">deleteInventory</a></b>(const DeleteInventoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteMaintenanceWindow">deleteMaintenanceWindow</a></b>(const DeleteMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteParameterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteParameter">deleteParameter</a></b>(const DeleteParameterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteParameters">deleteParameters</a></b>(const DeleteParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deletePatchBaseline">deletePatchBaseline</a></b>(const DeletePatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteResourceDataSyncResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deleteResourceDataSync">deleteResourceDataSync</a></b>(const DeleteResourceDataSyncRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterManagedInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deregisterManagedInstance">deregisterManagedInstance</a></b>(const DeregisterManagedInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterPatchBaselineForPatchGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deregisterPatchBaselineForPatchGroup">deregisterPatchBaselineForPatchGroup</a></b>(const DeregisterPatchBaselineForPatchGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterTargetFromMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deregisterTargetFromMaintenanceWindow">deregisterTargetFromMaintenanceWindow</a></b>(const DeregisterTargetFromMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterTaskFromMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#deregisterTaskFromMaintenanceWindow">deregisterTaskFromMaintenanceWindow</a></b>(const DeregisterTaskFromMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeActivationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeActivations">describeActivations</a></b>(const DescribeActivationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeAssociation">describeAssociation</a></b>(const DescribeAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAutomationExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeAutomationExecutions">describeAutomationExecutions</a></b>(const DescribeAutomationExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAutomationStepExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeAutomationStepExecutions">describeAutomationStepExecutions</a></b>(const DescribeAutomationStepExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAvailablePatchesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeAvailablePatches">describeAvailablePatches</a></b>(const DescribeAvailablePatchesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeDocument">describeDocument</a></b>(const DescribeDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDocumentPermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeDocumentPermission">describeDocumentPermission</a></b>(const DescribeDocumentPermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEffectiveInstanceAssociationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeEffectiveInstanceAssociations">describeEffectiveInstanceAssociations</a></b>(const DescribeEffectiveInstanceAssociationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEffectivePatchesForPatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeEffectivePatchesForPatchBaseline">describeEffectivePatchesForPatchBaseline</a></b>(const DescribeEffectivePatchesForPatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstanceAssociationsStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInstanceAssociationsStatus">describeInstanceAssociationsStatus</a></b>(const DescribeInstanceAssociationsStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstanceInformationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInstanceInformation">describeInstanceInformation</a></b>(const DescribeInstanceInformationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstancePatchStatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInstancePatchStates">describeInstancePatchStates</a></b>(const DescribeInstancePatchStatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstancePatchStatesForPatchGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInstancePatchStatesForPatchGroup">describeInstancePatchStatesForPatchGroup</a></b>(const DescribeInstancePatchStatesForPatchGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInstancePatchesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInstancePatches">describeInstancePatches</a></b>(const DescribeInstancePatchesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeInventoryDeletionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeInventoryDeletions">describeInventoryDeletions</a></b>(const DescribeInventoryDeletionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowExecutionTaskInvocationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindowExecutionTaskInvocations">describeMaintenanceWindowExecutionTaskInvocations</a></b>(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowExecutionTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindowExecutionTasks">describeMaintenanceWindowExecutionTasks</a></b>(const DescribeMaintenanceWindowExecutionTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindowExecutions">describeMaintenanceWindowExecutions</a></b>(const DescribeMaintenanceWindowExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowTargetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindowTargets">describeMaintenanceWindowTargets</a></b>(const DescribeMaintenanceWindowTargetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindowTasks">describeMaintenanceWindowTasks</a></b>(const DescribeMaintenanceWindowTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeMaintenanceWindowsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeMaintenanceWindows">describeMaintenanceWindows</a></b>(const DescribeMaintenanceWindowsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describeParameters">describeParameters</a></b>(const DescribeParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePatchBaselinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describePatchBaselines">describePatchBaselines</a></b>(const DescribePatchBaselinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePatchGroupStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describePatchGroupState">describePatchGroupState</a></b>(const DescribePatchGroupStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePatchGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#describePatchGroups">describePatchGroups</a></b>(const DescribePatchGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAutomationExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getAutomationExecution">getAutomationExecution</a></b>(const GetAutomationExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCommandInvocationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getCommandInvocation">getCommandInvocation</a></b>(const GetCommandInvocationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDefaultPatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getDefaultPatchBaseline">getDefaultPatchBaseline</a></b>(const GetDefaultPatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeployablePatchSnapshotForInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getDeployablePatchSnapshotForInstance">getDeployablePatchSnapshotForInstance</a></b>(const GetDeployablePatchSnapshotForInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getDocument">getDocument</a></b>(const GetDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInventoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getInventory">getInventory</a></b>(const GetInventoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInventorySchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getInventorySchema">getInventorySchema</a></b>(const GetInventorySchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getMaintenanceWindow">getMaintenanceWindow</a></b>(const GetMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMaintenanceWindowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getMaintenanceWindowExecution">getMaintenanceWindowExecution</a></b>(const GetMaintenanceWindowExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMaintenanceWindowExecutionTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getMaintenanceWindowExecutionTask">getMaintenanceWindowExecutionTask</a></b>(const GetMaintenanceWindowExecutionTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMaintenanceWindowExecutionTaskInvocationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getMaintenanceWindowExecutionTaskInvocation">getMaintenanceWindowExecutionTaskInvocation</a></b>(const GetMaintenanceWindowExecutionTaskInvocationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMaintenanceWindowTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getMaintenanceWindowTask">getMaintenanceWindowTask</a></b>(const GetMaintenanceWindowTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetParameterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getParameter">getParameter</a></b>(const GetParameterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetParameterHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getParameterHistory">getParameterHistory</a></b>(const GetParameterHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getParameters">getParameters</a></b>(const GetParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetParametersByPathResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getParametersByPath">getParametersByPath</a></b>(const GetParametersByPathRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getPatchBaseline">getPatchBaseline</a></b>(const GetPatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPatchBaselineForPatchGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#getPatchBaselineForPatchGroup">getPatchBaselineForPatchGroup</a></b>(const GetPatchBaselineForPatchGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssociationVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listAssociationVersions">listAssociationVersions</a></b>(const ListAssociationVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAssociationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listAssociations">listAssociations</a></b>(const ListAssociationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCommandInvocationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listCommandInvocations">listCommandInvocations</a></b>(const ListCommandInvocationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCommandsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listCommands">listCommands</a></b>(const ListCommandsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListComplianceItemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listComplianceItems">listComplianceItems</a></b>(const ListComplianceItemsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListComplianceSummariesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listComplianceSummaries">listComplianceSummaries</a></b>(const ListComplianceSummariesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDocumentVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listDocumentVersions">listDocumentVersions</a></b>(const ListDocumentVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDocumentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listDocuments">listDocuments</a></b>(const ListDocumentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInventoryEntriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listInventoryEntries">listInventoryEntries</a></b>(const ListInventoryEntriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceComplianceSummariesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listResourceComplianceSummaries">listResourceComplianceSummaries</a></b>(const ListResourceComplianceSummariesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourceDataSyncResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listResourceDataSync">listResourceDataSync</a></b>(const ListResourceDataSyncRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModifyDocumentPermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#modifyDocumentPermission">modifyDocumentPermission</a></b>(const ModifyDocumentPermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutComplianceItemsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#putComplianceItems">putComplianceItems</a></b>(const PutComplianceItemsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutInventoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#putInventory">putInventory</a></b>(const PutInventoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutParameterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#putParameter">putParameter</a></b>(const PutParameterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterDefaultPatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#registerDefaultPatchBaseline">registerDefaultPatchBaseline</a></b>(const RegisterDefaultPatchBaselineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterPatchBaselineForPatchGroupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#registerPatchBaselineForPatchGroup">registerPatchBaselineForPatchGroup</a></b>(const RegisterPatchBaselineForPatchGroupRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterTargetWithMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#registerTargetWithMaintenanceWindow">registerTargetWithMaintenanceWindow</a></b>(const RegisterTargetWithMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterTaskWithMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#registerTaskWithMaintenanceWindow">registerTaskWithMaintenanceWindow</a></b>(const RegisterTaskWithMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#removeTagsFromResource">removeTagsFromResource</a></b>(const RemoveTagsFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendAutomationSignalResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#sendAutomationSignal">sendAutomationSignal</a></b>(const SendAutomationSignalRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SendCommandResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#sendCommand">sendCommand</a></b>(const SendCommandRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartAutomationExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#startAutomationExecution">startAutomationExecution</a></b>(const StartAutomationExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopAutomationExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#stopAutomationExecution">stopAutomationExecution</a></b>(const StopAutomationExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAssociationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateAssociation">updateAssociation</a></b>(const UpdateAssociationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAssociationStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateAssociationStatus">updateAssociationStatus</a></b>(const UpdateAssociationStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateDocument">updateDocument</a></b>(const UpdateDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentDefaultVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateDocumentDefaultVersion">updateDocumentDefaultVersion</a></b>(const UpdateDocumentDefaultVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMaintenanceWindowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateMaintenanceWindow">updateMaintenanceWindow</a></b>(const UpdateMaintenanceWindowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMaintenanceWindowTargetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateMaintenanceWindowTarget">updateMaintenanceWindowTarget</a></b>(const UpdateMaintenanceWindowTargetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateMaintenanceWindowTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateMaintenanceWindowTask">updateMaintenanceWindowTask</a></b>(const UpdateMaintenanceWindowTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateManagedInstanceRoleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updateManagedInstanceRole">updateManagedInstanceRole</a></b>(const UpdateManagedInstanceRoleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePatchBaselineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmclient.html#updatePatchBaseline">updatePatchBaseline</a></b>(const UpdatePatchBaselineRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SsmClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ssm-ssmclient.html">SsmClient</a> class provides access to the Amazon Simple Systems Manager (SSM) ( SSM) service.</p>
+<p>&lt;fullname&gt;AWS Systems Manager&lt;/fullname&gt;</p>
+<p>AWS Systems Manager is a collection of capabilities that helps you automate management tasks such as collecting system inventory, applying operating system (OS) patches, automating the creation of Amazon Machine Images (AMIs), and configuring operating systems (OSs) and applications at scale. Systems Manager lets you remotely and securely manage the configuration of your managed instances. A &lt;i&gt;managed instance&lt;/i&gt; is any Amazon EC2 instance or on-premises machine in your hybrid environment that has been configured for Systems</p>
+<p>Manager&gt;</p>
+<p>This reference is intended to be used with the &lt;a href=&quot;http://docs.aws.amazon.com/systems-manager/latest/userguide/&quot;&gt;AWS Systems Manager User</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>To get started, verify prerequisites and configure managed instances. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html&quot;&gt;Systems Manager</p>
+<p>Prerequisites&lt;/a&gt;&gt;</p>
+<p>For information about other API actions you can perform on Amazon EC2 instances, see the &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/APIReference/&quot;&gt;Amazon EC2 API Reference&lt;/a&gt;. For information about how to use a Query API, see &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/APIReference/making-api-requests.html&quot;&gt;Making API Requests&lt;/a&gt;.</p>
+</div>
+<!-- @@@SsmClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SsmClient[overload1]$$$SsmClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SsmClient"><a name="SsmClient"></a>SsmClient::<span class="name">SsmClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ssm-ssmclient.html">SsmClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SsmClient -->
+<!-- $$$SsmClient$$$SsmClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SsmClient-1"><a name="SsmClient-1"></a>SsmClient::<span class="name">SsmClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-ssm-ssmclient.html#SsmClient">SsmClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SsmClient -->
+<!-- $$$addTagsToResource[overload1]$$$addTagsToResourceconstAddTagsToResourceRequest& -->
+<h3 class="fn" id="addTagsToResource"><a name="addTagsToResource"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-addtagstoresourceresponse.html">AddTagsToResourceResponse</a></span> *SsmClient::<span class="name">addTagsToResource</span>(const <span class="type"><a href="qtaws-ssm-addtagstoresourcerequest.html">AddTagsToResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-addtagstoresourceresponse.html">AddTagsToResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents, managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you define. For example, you could define a set of tags for your account's managed instances that helps you track each instance's owner and stack level. For example: Key=Owner and Value=DbAdmin, SysAdmin, or Dev. Or Key=Stack and Value=Production, Pre-Production, or</p>
+<p>Test&gt;</p>
+<p>Each resource can have a maximum of 50 tags.</p>
+<p>&lt;/p</p>
+<p>We recommend that you devise a set of tag keys that meets your needs for each resource type. Using a consistent set of tag keys makes it easier for you to manage your resources. You can search and filter the resources based on the tags you add. Tags don't have any semantic meaning to Amazon EC2 and are interpreted strictly as a string of characters.</p>
+<p>&lt;/p</p>
+<p>For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html&quot;&gt;Tagging Your Amazon EC2 Resources&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User</p>
+<!-- @@@addTagsToResource -->
+<!-- $$$cancelCommand[overload1]$$$cancelCommandconstCancelCommandRequest& -->
+<h3 class="fn" id="cancelCommand"><a name="cancelCommand"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-cancelcommandresponse.html">CancelCommandResponse</a></span> *SsmClient::<span class="name">cancelCommand</span>(const <span class="type"><a href="qtaws-ssm-cancelcommandrequest.html">CancelCommandRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-cancelcommandresponse.html">CancelCommandResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attempts to cancel the command specified by the Command ID. There is no guarantee that the command will be terminated and the underlying process</p>
+<!-- @@@cancelCommand -->
+<!-- $$$createActivation[overload1]$$$createActivationconstCreateActivationRequest& -->
+<h3 class="fn" id="createActivation"><a name="createActivation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createactivationresponse.html">CreateActivationResponse</a></span> *SsmClient::<span class="name">createActivation</span>(const <span class="type"><a href="qtaws-ssm-createactivationrequest.html">CreateActivationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createactivationresponse.html">CreateActivationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers your on-premises server or virtual machine with Amazon EC2 so that you can manage these resources using Run Command. An on-premises server or virtual machine that has been registered with EC2 is called a managed instance. For more information about activations, see &lt;a href=&quot;http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html&quot;&gt;Setting Up Systems Manager in Hybrid</p>
+<!-- @@@createActivation -->
+<!-- $$$createAssociation[overload1]$$$createAssociationconstCreateAssociationRequest& -->
+<h3 class="fn" id="createAssociation"><a name="createAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createassociationresponse.html">CreateAssociationResponse</a></span> *SsmClient::<span class="name">createAssociation</span>(const <span class="type"><a href="qtaws-ssm-createassociationrequest.html">CreateAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createassociationresponse.html">CreateAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates the specified Systems Manager document with the specified instances or</p>
+<p>targets&gt;</p>
+<p>When you associate a document with one or more instances using instance IDs or tags, the SSM Agent running on the instance processes the document and configures the instance as</p>
+<p>specified&gt;</p>
+<p>If you associate a document with an instance that already has an associated document, the system throws the AssociationAlreadyExists</p>
+<!-- @@@createAssociation -->
+<!-- $$$createAssociationBatch[overload1]$$$createAssociationBatchconstCreateAssociationBatchRequest& -->
+<h3 class="fn" id="createAssociationBatch"><a name="createAssociationBatch"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createassociationbatchresponse.html">CreateAssociationBatchResponse</a></span> *SsmClient::<span class="name">createAssociationBatch</span>(const <span class="type"><a href="qtaws-ssm-createassociationbatchrequest.html">CreateAssociationBatchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createassociationbatchresponse.html">CreateAssociationBatchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates the specified Systems Manager document with the specified instances or</p>
+<p>targets&gt;</p>
+<p>When you associate a document with one or more instances using instance IDs or tags, the SSM Agent running on the instance processes the document and configures the instance as</p>
+<p>specified&gt;</p>
+<p>If you associate a document with an instance that already has an associated document, the system throws the AssociationAlreadyExists</p>
+<!-- @@@createAssociationBatch -->
+<!-- $$$createDocument[overload1]$$$createDocumentconstCreateDocumentRequest& -->
+<h3 class="fn" id="createDocument"><a name="createDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createdocumentresponse.html">CreateDocumentResponse</a></span> *SsmClient::<span class="name">createDocument</span>(const <span class="type"><a href="qtaws-ssm-createdocumentrequest.html">CreateDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createdocumentresponse.html">CreateDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Systems Manager</p>
+<p>document&gt;</p>
+<p>After you create a document, you can use CreateAssociation to associate it with one or more running</p>
+<!-- @@@createDocument -->
+<!-- $$$createMaintenanceWindow[overload1]$$$createMaintenanceWindowconstCreateMaintenanceWindowRequest& -->
+<h3 class="fn" id="createMaintenanceWindow"><a name="createMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createmaintenancewindowresponse.html">CreateMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">createMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-createmaintenancewindowrequest.html">CreateMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createmaintenancewindowresponse.html">CreateMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Maintenance</p>
+<!-- @@@createMaintenanceWindow -->
+<!-- $$$createPatchBaseline[overload1]$$$createPatchBaselineconstCreatePatchBaselineRequest& -->
+<h3 class="fn" id="createPatchBaseline"><a name="createPatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createpatchbaselineresponse.html">CreatePatchBaselineResponse</a></span> *SsmClient::<span class="name">createPatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-createpatchbaselinerequest.html">CreatePatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createpatchbaselineresponse.html">CreatePatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a patch</p>
+<p>baseline&gt; &lt;note&gt;</p>
+<p>For information about valid key and value pairs in &lt;code&gt;PatchFilters&lt;/code&gt; for each supported operating system type, see &lt;a</p>
+<!-- @@@createPatchBaseline -->
+<!-- $$$createResourceDataSync[overload1]$$$createResourceDataSyncconstCreateResourceDataSyncRequest& -->
+<h3 class="fn" id="createResourceDataSync"><a name="createResourceDataSync"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-createresourcedatasyncresponse.html">CreateResourceDataSyncResponse</a></span> *SsmClient::<span class="name">createResourceDataSync</span>(const <span class="type"><a href="qtaws-ssm-createresourcedatasyncrequest.html">CreateResourceDataSyncRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-createresourcedatasyncresponse.html">CreateResourceDataSyncResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a resource data sync configuration to a single bucket in Amazon S3. This is an asynchronous operation that returns immediately. After a successful initial sync is completed, the system continuously syncs data to the Amazon S3 bucket. To check the status of the sync, use the</p>
+<p>&lt;a&gt;ListResourceDataSync&lt;/a&gt;&gt;</p>
+<p>By default, data is not encrypted in Amazon S3. We strongly recommend that you enable encryption in Amazon S3 to ensure secure data storage. We also recommend that you secure access to the Amazon S3 bucket by creating a restrictive bucket policy. To view an example of a restrictive Amazon S3 bucket policy for Resource Data Sync, see &lt;a href=&quot;http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync&quot;&gt;Configuring Resource Data Sync for</p>
+<!-- @@@createResourceDataSync -->
+<!-- $$$deleteActivation[overload1]$$$deleteActivationconstDeleteActivationRequest& -->
+<h3 class="fn" id="deleteActivation"><a name="deleteActivation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteactivationresponse.html">DeleteActivationResponse</a></span> *SsmClient::<span class="name">deleteActivation</span>(const <span class="type"><a href="qtaws-ssm-deleteactivationrequest.html">DeleteActivationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteactivationresponse.html">DeleteActivationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an activation. You are not required to delete an activation. If you delete an activation, you can no longer use it to register additional managed instances. Deleting an activation does not de-register managed instances. You must manually de-register managed</p>
+<!-- @@@deleteActivation -->
+<!-- $$$deleteAssociation[overload1]$$$deleteAssociationconstDeleteAssociationRequest& -->
+<h3 class="fn" id="deleteAssociation"><a name="deleteAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteassociationresponse.html">DeleteAssociationResponse</a></span> *SsmClient::<span class="name">deleteAssociation</span>(const <span class="type"><a href="qtaws-ssm-deleteassociationrequest.html">DeleteAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteassociationresponse.html">DeleteAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates the specified Systems Manager document from the specified</p>
+<p>instance&gt;</p>
+<p>When you disassociate a document from an instance, it does not change the configuration of the instance. To change the configuration state of an instance after you disassociate a document, you must create a new document with the desired configuration and associate it with the</p>
+<!-- @@@deleteAssociation -->
+<!-- $$$deleteDocument[overload1]$$$deleteDocumentconstDeleteDocumentRequest& -->
+<h3 class="fn" id="deleteDocument"><a name="deleteDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deletedocumentresponse.html">DeleteDocumentResponse</a></span> *SsmClient::<span class="name">deleteDocument</span>(const <span class="type"><a href="qtaws-ssm-deletedocumentrequest.html">DeleteDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deletedocumentresponse.html">DeleteDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the Systems Manager document and all instance associations to the</p>
+<p>document&gt;</p>
+<p>Before you delete the document, we recommend that you use &lt;a&gt;DeleteAssociation&lt;/a&gt; to disassociate all instances that are associated with the</p>
+<!-- @@@deleteDocument -->
+<!-- $$$deleteInventory[overload1]$$$deleteInventoryconstDeleteInventoryRequest& -->
+<h3 class="fn" id="deleteInventory"><a name="deleteInventory"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteinventoryresponse.html">DeleteInventoryResponse</a></span> *SsmClient::<span class="name">deleteInventory</span>(const <span class="type"><a href="qtaws-ssm-deleteinventoryrequest.html">DeleteInventoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteinventoryresponse.html">DeleteInventoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Delete a custom inventory type, or the data associated with a custom Inventory type. Deleting a custom inventory type is also referred to as deleting a custom inventory</p>
+<!-- @@@deleteInventory -->
+<!-- $$$deleteMaintenanceWindow[overload1]$$$deleteMaintenanceWindowconstDeleteMaintenanceWindowRequest& -->
+<h3 class="fn" id="deleteMaintenanceWindow"><a name="deleteMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deletemaintenancewindowresponse.html">DeleteMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">deleteMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-deletemaintenancewindowrequest.html">DeleteMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deletemaintenancewindowresponse.html">DeleteMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a Maintenance</p>
+<!-- @@@deleteMaintenanceWindow -->
+<!-- $$$deleteParameter[overload1]$$$deleteParameterconstDeleteParameterRequest& -->
+<h3 class="fn" id="deleteParameter"><a name="deleteParameter"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteparameterresponse.html">DeleteParameterResponse</a></span> *SsmClient::<span class="name">deleteParameter</span>(const <span class="type"><a href="qtaws-ssm-deleteparameterrequest.html">DeleteParameterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteparameterresponse.html">DeleteParameterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Delete a parameter from the</p>
+<!-- @@@deleteParameter -->
+<!-- $$$deleteParameters[overload1]$$$deleteParametersconstDeleteParametersRequest& -->
+<h3 class="fn" id="deleteParameters"><a name="deleteParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteparametersresponse.html">DeleteParametersResponse</a></span> *SsmClient::<span class="name">deleteParameters</span>(const <span class="type"><a href="qtaws-ssm-deleteparametersrequest.html">DeleteParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteparametersresponse.html">DeleteParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Delete a list of parameters. This API is used to delete parameters by using the Amazon EC2</p>
+<!-- @@@deleteParameters -->
+<!-- $$$deletePatchBaseline[overload1]$$$deletePatchBaselineconstDeletePatchBaselineRequest& -->
+<h3 class="fn" id="deletePatchBaseline"><a name="deletePatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deletepatchbaselineresponse.html">DeletePatchBaselineResponse</a></span> *SsmClient::<span class="name">deletePatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-deletepatchbaselinerequest.html">DeletePatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deletepatchbaselineresponse.html">DeletePatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a patch</p>
+<!-- @@@deletePatchBaseline -->
+<!-- $$$deleteResourceDataSync[overload1]$$$deleteResourceDataSyncconstDeleteResourceDataSyncRequest& -->
+<h3 class="fn" id="deleteResourceDataSync"><a name="deleteResourceDataSync"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deleteresourcedatasyncresponse.html">DeleteResourceDataSyncResponse</a></span> *SsmClient::<span class="name">deleteResourceDataSync</span>(const <span class="type"><a href="qtaws-ssm-deleteresourcedatasyncrequest.html">DeleteResourceDataSyncRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deleteresourcedatasyncresponse.html">DeleteResourceDataSyncResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a Resource Data Sync configuration. After the configuration is deleted, changes to inventory data on managed instances are no longer synced with the target Amazon S3 bucket. Deleting a sync configuration does not delete data in the target Amazon S3</p>
+<!-- @@@deleteResourceDataSync -->
+<!-- $$$deregisterManagedInstance[overload1]$$$deregisterManagedInstanceconstDeregisterManagedInstanceRequest& -->
+<h3 class="fn" id="deregisterManagedInstance"><a name="deregisterManagedInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deregistermanagedinstanceresponse.html">DeregisterManagedInstanceResponse</a></span> *SsmClient::<span class="name">deregisterManagedInstance</span>(const <span class="type"><a href="qtaws-ssm-deregistermanagedinstancerequest.html">DeregisterManagedInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deregistermanagedinstanceresponse.html">DeregisterManagedInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any time. If you don't plan to use Run Command on the server, we suggest uninstalling the SSM Agent</p>
+<!-- @@@deregisterManagedInstance -->
+<!-- $$$deregisterPatchBaselineForPatchGroup[overload1]$$$deregisterPatchBaselineForPatchGroupconstDeregisterPatchBaselineForPatchGroupRequest& -->
+<h3 class="fn" id="deregisterPatchBaselineForPatchGroup"><a name="deregisterPatchBaselineForPatchGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deregisterpatchbaselineforpatchgroupresponse.html">DeregisterPatchBaselineForPatchGroupResponse</a></span> *SsmClient::<span class="name">deregisterPatchBaselineForPatchGroup</span>(const <span class="type"><a href="qtaws-ssm-deregisterpatchbaselineforpatchgrouprequest.html">DeregisterPatchBaselineForPatchGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deregisterpatchbaselineforpatchgroupresponse.html">DeregisterPatchBaselineForPatchGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a patch group from a patch</p>
+<!-- @@@deregisterPatchBaselineForPatchGroup -->
+<!-- $$$deregisterTargetFromMaintenanceWindow[overload1]$$$deregisterTargetFromMaintenanceWindowconstDeregisterTargetFromMaintenanceWindowRequest& -->
+<h3 class="fn" id="deregisterTargetFromMaintenanceWindow"><a name="deregisterTargetFromMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deregistertargetfrommaintenancewindowresponse.html">DeregisterTargetFromMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">deregisterTargetFromMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-deregistertargetfrommaintenancewindowrequest.html">DeregisterTargetFromMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deregistertargetfrommaintenancewindowresponse.html">DeregisterTargetFromMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a target from a Maintenance</p>
+<!-- @@@deregisterTargetFromMaintenanceWindow -->
+<!-- $$$deregisterTaskFromMaintenanceWindow[overload1]$$$deregisterTaskFromMaintenanceWindowconstDeregisterTaskFromMaintenanceWindowRequest& -->
+<h3 class="fn" id="deregisterTaskFromMaintenanceWindow"><a name="deregisterTaskFromMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-deregistertaskfrommaintenancewindowresponse.html">DeregisterTaskFromMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">deregisterTaskFromMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-deregistertaskfrommaintenancewindowrequest.html">DeregisterTaskFromMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-deregistertaskfrommaintenancewindowresponse.html">DeregisterTaskFromMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes a task from a Maintenance</p>
+<!-- @@@deregisterTaskFromMaintenanceWindow -->
+<!-- $$$describeActivations[overload1]$$$describeActivationsconstDescribeActivationsRequest& -->
+<h3 class="fn" id="describeActivations"><a name="describeActivations"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeactivationsresponse.html">DescribeActivationsResponse</a></span> *SsmClient::<span class="name">describeActivations</span>(const <span class="type"><a href="qtaws-ssm-describeactivationsrequest.html">DescribeActivationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeactivationsresponse.html">DescribeActivationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Details about the activation, including: the date and time the activation was created, the expiration date, the IAM role assigned to the instances in the activation, and the number of instances activated by this</p>
+<!-- @@@describeActivations -->
+<!-- $$$describeAssociation[overload1]$$$describeAssociationconstDescribeAssociationRequest& -->
+<h3 class="fn" id="describeAssociation"><a name="describeAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeassociationresponse.html">DescribeAssociationResponse</a></span> *SsmClient::<span class="name">describeAssociation</span>(const <span class="type"><a href="qtaws-ssm-describeassociationrequest.html">DescribeAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeassociationresponse.html">DescribeAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the association for the specified target or instance. If you created the association by using the &lt;code&gt;Targets&lt;/code&gt; parameter, then you must retrieve the association by using the association ID. If you created the association by specifying an instance ID and a Systems Manager document, then you retrieve the association by specifying the document name and the instance ID.</p>
+<!-- @@@describeAssociation -->
+<!-- $$$describeAutomationExecutions[overload1]$$$describeAutomationExecutionsconstDescribeAutomationExecutionsRequest& -->
+<h3 class="fn" id="describeAutomationExecutions"><a name="describeAutomationExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeautomationexecutionsresponse.html">DescribeAutomationExecutionsResponse</a></span> *SsmClient::<span class="name">describeAutomationExecutions</span>(const <span class="type"><a href="qtaws-ssm-describeautomationexecutionsrequest.html">DescribeAutomationExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeautomationexecutionsresponse.html">DescribeAutomationExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provides details about all active and terminated Automation</p>
+<!-- @@@describeAutomationExecutions -->
+<!-- $$$describeAutomationStepExecutions[overload1]$$$describeAutomationStepExecutionsconstDescribeAutomationStepExecutionsRequest& -->
+<h3 class="fn" id="describeAutomationStepExecutions"><a name="describeAutomationStepExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeautomationstepexecutionsresponse.html">DescribeAutomationStepExecutionsResponse</a></span> *SsmClient::<span class="name">describeAutomationStepExecutions</span>(const <span class="type"><a href="qtaws-ssm-describeautomationstepexecutionsrequest.html">DescribeAutomationStepExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeautomationstepexecutionsresponse.html">DescribeAutomationStepExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Information about all active and terminated step executions in an Automation</p>
+<!-- @@@describeAutomationStepExecutions -->
+<!-- $$$describeAvailablePatches[overload1]$$$describeAvailablePatchesconstDescribeAvailablePatchesRequest& -->
+<h3 class="fn" id="describeAvailablePatches"><a name="describeAvailablePatches"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeavailablepatchesresponse.html">DescribeAvailablePatchesResponse</a></span> *SsmClient::<span class="name">describeAvailablePatches</span>(const <span class="type"><a href="qtaws-ssm-describeavailablepatchesrequest.html">DescribeAvailablePatchesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeavailablepatchesresponse.html">DescribeAvailablePatchesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all patches that could possibly be included in a patch</p>
+<!-- @@@describeAvailablePatches -->
+<!-- $$$describeDocument[overload1]$$$describeDocumentconstDescribeDocumentRequest& -->
+<h3 class="fn" id="describeDocument"><a name="describeDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describedocumentresponse.html">DescribeDocumentResponse</a></span> *SsmClient::<span class="name">describeDocument</span>(const <span class="type"><a href="qtaws-ssm-describedocumentrequest.html">DescribeDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describedocumentresponse.html">DescribeDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified Systems Manager</p>
+<!-- @@@describeDocument -->
+<!-- $$$describeDocumentPermission[overload1]$$$describeDocumentPermissionconstDescribeDocumentPermissionRequest& -->
+<h3 class="fn" id="describeDocumentPermission"><a name="describeDocumentPermission"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describedocumentpermissionresponse.html">DescribeDocumentPermissionResponse</a></span> *SsmClient::<span class="name">describeDocumentPermission</span>(const <span class="type"><a href="qtaws-ssm-describedocumentpermissionrequest.html">DescribeDocumentPermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describedocumentpermissionresponse.html">DescribeDocumentPermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the permissions for a Systems Manager document. If you created the document, you are the owner. If a document is shared, it can either be shared privately (by specifying a user's AWS account ID) or publicly (&lt;i&gt;All&lt;/i&gt;).</p>
+<!-- @@@describeDocumentPermission -->
+<!-- $$$describeEffectiveInstanceAssociations[overload1]$$$describeEffectiveInstanceAssociationsconstDescribeEffectiveInstanceAssociationsRequest& -->
+<h3 class="fn" id="describeEffectiveInstanceAssociations"><a name="describeEffectiveInstanceAssociations"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeeffectiveinstanceassociationsresponse.html">DescribeEffectiveInstanceAssociationsResponse</a></span> *SsmClient::<span class="name">describeEffectiveInstanceAssociations</span>(const <span class="type"><a href="qtaws-ssm-describeeffectiveinstanceassociationsrequest.html">DescribeEffectiveInstanceAssociationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeeffectiveinstanceassociationsresponse.html">DescribeEffectiveInstanceAssociationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>All associations for the</p>
+<!-- @@@describeEffectiveInstanceAssociations -->
+<!-- $$$describeEffectivePatchesForPatchBaseline[overload1]$$$describeEffectivePatchesForPatchBaselineconstDescribeEffectivePatchesForPatchBaselineRequest& -->
+<h3 class="fn" id="describeEffectivePatchesForPatchBaseline"><a name="describeEffectivePatchesForPatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeeffectivepatchesforpatchbaselineresponse.html">DescribeEffectivePatchesForPatchBaselineResponse</a></span> *SsmClient::<span class="name">describeEffectivePatchesForPatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-describeeffectivepatchesforpatchbaselinerequest.html">DescribeEffectivePatchesForPatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeeffectivepatchesforpatchbaselineresponse.html">DescribeEffectivePatchesForPatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the current effective patches (the patch and the approval state) for the specified patch baseline. Note that this API applies only to Windows patch</p>
+<!-- @@@describeEffectivePatchesForPatchBaseline -->
+<!-- $$$describeInstanceAssociationsStatus[overload1]$$$describeInstanceAssociationsStatusconstDescribeInstanceAssociationsStatusRequest& -->
+<h3 class="fn" id="describeInstanceAssociationsStatus"><a name="describeInstanceAssociationsStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinstanceassociationsstatusresponse.html">DescribeInstanceAssociationsStatusResponse</a></span> *SsmClient::<span class="name">describeInstanceAssociationsStatus</span>(const <span class="type"><a href="qtaws-ssm-describeinstanceassociationsstatusrequest.html">DescribeInstanceAssociationsStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinstanceassociationsstatusresponse.html">DescribeInstanceAssociationsStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The status of the associations for the</p>
+<!-- @@@describeInstanceAssociationsStatus -->
+<!-- $$$describeInstanceInformation[overload1]$$$describeInstanceInformationconstDescribeInstanceInformationRequest& -->
+<h3 class="fn" id="describeInstanceInformation"><a name="describeInstanceInformation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinstanceinformationresponse.html">DescribeInstanceInformationResponse</a></span> *SsmClient::<span class="name">describeInstanceInformation</span>(const <span class="type"><a href="qtaws-ssm-describeinstanceinformationrequest.html">DescribeInstanceInformationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinstanceinformationresponse.html">DescribeInstanceInformationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more of your instances. You can use this to get information about instances like the operating system platform, the SSM Agent version (Linux), status etc. If you specify one or more instance IDs, it returns information for those instances. If you do not specify instance IDs, it returns information for all your instances. If you specify an instance ID that is not valid or an instance that you do not own, you receive an error.</p>
+<!-- @@@describeInstanceInformation -->
+<!-- $$$describeInstancePatchStates[overload1]$$$describeInstancePatchStatesconstDescribeInstancePatchStatesRequest& -->
+<h3 class="fn" id="describeInstancePatchStates"><a name="describeInstancePatchStates"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinstancepatchstatesresponse.html">DescribeInstancePatchStatesResponse</a></span> *SsmClient::<span class="name">describeInstancePatchStates</span>(const <span class="type"><a href="qtaws-ssm-describeinstancepatchstatesrequest.html">DescribeInstancePatchStatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinstancepatchstatesresponse.html">DescribeInstancePatchStatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the high-level patch state of one or more</p>
+<!-- @@@describeInstancePatchStates -->
+<!-- $$$describeInstancePatchStatesForPatchGroup[overload1]$$$describeInstancePatchStatesForPatchGroupconstDescribeInstancePatchStatesForPatchGroupRequest& -->
+<h3 class="fn" id="describeInstancePatchStatesForPatchGroup"><a name="describeInstancePatchStatesForPatchGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinstancepatchstatesforpatchgroupresponse.html">DescribeInstancePatchStatesForPatchGroupResponse</a></span> *SsmClient::<span class="name">describeInstancePatchStatesForPatchGroup</span>(const <span class="type"><a href="qtaws-ssm-describeinstancepatchstatesforpatchgrouprequest.html">DescribeInstancePatchStatesForPatchGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinstancepatchstatesforpatchgroupresponse.html">DescribeInstancePatchStatesForPatchGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the high-level patch state for the instances in the specified patch</p>
+<!-- @@@describeInstancePatchStatesForPatchGroup -->
+<!-- $$$describeInstancePatches[overload1]$$$describeInstancePatchesconstDescribeInstancePatchesRequest& -->
+<h3 class="fn" id="describeInstancePatches"><a name="describeInstancePatches"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinstancepatchesresponse.html">DescribeInstancePatchesResponse</a></span> *SsmClient::<span class="name">describeInstancePatches</span>(const <span class="type"><a href="qtaws-ssm-describeinstancepatchesrequest.html">DescribeInstancePatchesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinstancepatchesresponse.html">DescribeInstancePatchesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about the patches on the specified instance and their state relative to the patch baseline being used for the</p>
+<!-- @@@describeInstancePatches -->
+<!-- $$$describeInventoryDeletions[overload1]$$$describeInventoryDeletionsconstDescribeInventoryDeletionsRequest& -->
+<h3 class="fn" id="describeInventoryDeletions"><a name="describeInventoryDeletions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeinventorydeletionsresponse.html">DescribeInventoryDeletionsResponse</a></span> *SsmClient::<span class="name">describeInventoryDeletions</span>(const <span class="type"><a href="qtaws-ssm-describeinventorydeletionsrequest.html">DescribeInventoryDeletionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeinventorydeletionsresponse.html">DescribeInventoryDeletionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a specific delete inventory</p>
+<!-- @@@describeInventoryDeletions -->
+<!-- $$$describeMaintenanceWindowExecutionTaskInvocations[overload1]$$$describeMaintenanceWindowExecutionTaskInvocationsconstDescribeMaintenanceWindowExecutionTaskInvocationsRequest& -->
+<h3 class="fn" id="describeMaintenanceWindowExecutionTaskInvocations"><a name="describeMaintenanceWindowExecutionTaskInvocations"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutiontaskinvocationsresponse.html">DescribeMaintenanceWindowExecutionTaskInvocationsResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindowExecutionTaskInvocations</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutiontaskinvocationsrequest.html">DescribeMaintenanceWindowExecutionTaskInvocationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowexecutiontaskinvocationsresponse.html">DescribeMaintenanceWindowExecutionTaskInvocationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the individual task executions (one per target) for a particular task executed as part of a Maintenance Window</p>
+<!-- @@@describeMaintenanceWindowExecutionTaskInvocations -->
+<!-- $$$describeMaintenanceWindowExecutionTasks[overload1]$$$describeMaintenanceWindowExecutionTasksconstDescribeMaintenanceWindowExecutionTasksRequest& -->
+<h3 class="fn" id="describeMaintenanceWindowExecutionTasks"><a name="describeMaintenanceWindowExecutionTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutiontasksresponse.html">DescribeMaintenanceWindowExecutionTasksResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindowExecutionTasks</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutiontasksrequest.html">DescribeMaintenanceWindowExecutionTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowexecutiontasksresponse.html">DescribeMaintenanceWindowExecutionTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For a given Maintenance Window execution, lists the tasks that were</p>
+<!-- @@@describeMaintenanceWindowExecutionTasks -->
+<!-- $$$describeMaintenanceWindowExecutions[overload1]$$$describeMaintenanceWindowExecutionsconstDescribeMaintenanceWindowExecutionsRequest& -->
+<h3 class="fn" id="describeMaintenanceWindowExecutions"><a name="describeMaintenanceWindowExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutionsresponse.html">DescribeMaintenanceWindowExecutionsResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindowExecutions</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowexecutionsrequest.html">DescribeMaintenanceWindowExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowexecutionsresponse.html">DescribeMaintenanceWindowExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the executions of a Maintenance Window. This includes information about when the Maintenance Window was scheduled to be active, and information about tasks registered and run with the Maintenance</p>
+<!-- @@@describeMaintenanceWindowExecutions -->
+<!-- $$$describeMaintenanceWindowTargets[overload1]$$$describeMaintenanceWindowTargetsconstDescribeMaintenanceWindowTargetsRequest& -->
+<h3 class="fn" id="describeMaintenanceWindowTargets"><a name="describeMaintenanceWindowTargets"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowtargetsresponse.html">DescribeMaintenanceWindowTargetsResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindowTargets</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowtargetsrequest.html">DescribeMaintenanceWindowTargetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowtargetsresponse.html">DescribeMaintenanceWindowTargetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the targets registered with the Maintenance</p>
+<!-- @@@describeMaintenanceWindowTargets -->
+<!-- $$$describeMaintenanceWindowTasks[overload1]$$$describeMaintenanceWindowTasksconstDescribeMaintenanceWindowTasksRequest& -->
+<h3 class="fn" id="describeMaintenanceWindowTasks"><a name="describeMaintenanceWindowTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowtasksresponse.html">DescribeMaintenanceWindowTasksResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindowTasks</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowtasksrequest.html">DescribeMaintenanceWindowTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowtasksresponse.html">DescribeMaintenanceWindowTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tasks in a Maintenance</p>
+<!-- @@@describeMaintenanceWindowTasks -->
+<!-- $$$describeMaintenanceWindows[overload1]$$$describeMaintenanceWindowsconstDescribeMaintenanceWindowsRequest& -->
+<h3 class="fn" id="describeMaintenanceWindows"><a name="describeMaintenanceWindows"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describemaintenancewindowsresponse.html">DescribeMaintenanceWindowsResponse</a></span> *SsmClient::<span class="name">describeMaintenanceWindows</span>(const <span class="type"><a href="qtaws-ssm-describemaintenancewindowsrequest.html">DescribeMaintenanceWindowsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describemaintenancewindowsresponse.html">DescribeMaintenanceWindowsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the Maintenance Windows in an AWS</p>
+<!-- @@@describeMaintenanceWindows -->
+<!-- $$$describeParameters[overload1]$$$describeParametersconstDescribeParametersRequest& -->
+<h3 class="fn" id="describeParameters"><a name="describeParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describeparametersresponse.html">DescribeParametersResponse</a></span> *SsmClient::<span class="name">describeParameters</span>(const <span class="type"><a href="qtaws-ssm-describeparametersrequest.html">DescribeParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describeparametersresponse.html">DescribeParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get information about a</p>
+<p>parameter&gt;</p>
+<p>Request results are returned on a best-effort basis. If you specify &lt;code&gt;MaxResults&lt;/code&gt; in the request, the response includes information up to the limit specified. The number of items returned, however, can be between zero and the value of &lt;code&gt;MaxResults&lt;/code&gt;. If the service reaches an internal limit while processing the results, it stops the operation and returns the matching values up to that point and a &lt;code&gt;NextToken&lt;/code&gt;. You can specify the &lt;code&gt;NextToken&lt;/code&gt; in a subsequent call to get the next set of</p>
+<!-- @@@describeParameters -->
+<!-- $$$describePatchBaselines[overload1]$$$describePatchBaselinesconstDescribePatchBaselinesRequest& -->
+<h3 class="fn" id="describePatchBaselines"><a name="describePatchBaselines"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describepatchbaselinesresponse.html">DescribePatchBaselinesResponse</a></span> *SsmClient::<span class="name">describePatchBaselines</span>(const <span class="type"><a href="qtaws-ssm-describepatchbaselinesrequest.html">DescribePatchBaselinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describepatchbaselinesresponse.html">DescribePatchBaselinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the patch baselines in your AWS</p>
+<!-- @@@describePatchBaselines -->
+<!-- $$$describePatchGroupState[overload1]$$$describePatchGroupStateconstDescribePatchGroupStateRequest& -->
+<h3 class="fn" id="describePatchGroupState"><a name="describePatchGroupState"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describepatchgroupstateresponse.html">DescribePatchGroupStateResponse</a></span> *SsmClient::<span class="name">describePatchGroupState</span>(const <span class="type"><a href="qtaws-ssm-describepatchgroupstaterequest.html">DescribePatchGroupStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describepatchgroupstateresponse.html">DescribePatchGroupStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns high-level aggregated patch compliance state for a patch</p>
+<!-- @@@describePatchGroupState -->
+<!-- $$$describePatchGroups[overload1]$$$describePatchGroupsconstDescribePatchGroupsRequest& -->
+<h3 class="fn" id="describePatchGroups"><a name="describePatchGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-describepatchgroupsresponse.html">DescribePatchGroupsResponse</a></span> *SsmClient::<span class="name">describePatchGroups</span>(const <span class="type"><a href="qtaws-ssm-describepatchgroupsrequest.html">DescribePatchGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-describepatchgroupsresponse.html">DescribePatchGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all patch groups that have been registered with patch</p>
+<!-- @@@describePatchGroups -->
+<!-- $$$getAutomationExecution[overload1]$$$getAutomationExecutionconstGetAutomationExecutionRequest& -->
+<h3 class="fn" id="getAutomationExecution"><a name="getAutomationExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getautomationexecutionresponse.html">GetAutomationExecutionResponse</a></span> *SsmClient::<span class="name">getAutomationExecution</span>(const <span class="type"><a href="qtaws-ssm-getautomationexecutionrequest.html">GetAutomationExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getautomationexecutionresponse.html">GetAutomationExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get detailed information about a particular Automation</p>
+<!-- @@@getAutomationExecution -->
+<!-- $$$getCommandInvocation[overload1]$$$getCommandInvocationconstGetCommandInvocationRequest& -->
+<h3 class="fn" id="getCommandInvocation"><a name="getCommandInvocation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getcommandinvocationresponse.html">GetCommandInvocationResponse</a></span> *SsmClient::<span class="name">getCommandInvocation</span>(const <span class="type"><a href="qtaws-ssm-getcommandinvocationrequest.html">GetCommandInvocationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getcommandinvocationresponse.html">GetCommandInvocationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns detailed information about command execution for an invocation or plugin.</p>
+<!-- @@@getCommandInvocation -->
+<!-- $$$getDefaultPatchBaseline[overload1]$$$getDefaultPatchBaselineconstGetDefaultPatchBaselineRequest& -->
+<h3 class="fn" id="getDefaultPatchBaseline"><a name="getDefaultPatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getdefaultpatchbaselineresponse.html">GetDefaultPatchBaselineResponse</a></span> *SsmClient::<span class="name">getDefaultPatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-getdefaultpatchbaselinerequest.html">GetDefaultPatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getdefaultpatchbaselineresponse.html">GetDefaultPatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For example, you can create a default patch baseline for each operating</p>
+<!-- @@@getDefaultPatchBaseline -->
+<!-- $$$getDeployablePatchSnapshotForInstance[overload1]$$$getDeployablePatchSnapshotForInstanceconstGetDeployablePatchSnapshotForInstanceRequest& -->
+<h3 class="fn" id="getDeployablePatchSnapshotForInstance"><a name="getDeployablePatchSnapshotForInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getdeployablepatchsnapshotforinstanceresponse.html">GetDeployablePatchSnapshotForInstanceResponse</a></span> *SsmClient::<span class="name">getDeployablePatchSnapshotForInstance</span>(const <span class="type"><a href="qtaws-ssm-getdeployablepatchsnapshotforinstancerequest.html">GetDeployablePatchSnapshotForInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getdeployablepatchsnapshotforinstanceresponse.html">GetDeployablePatchSnapshotForInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the current snapshot for the patch baseline the instance uses. This API is primarily used by the AWS-RunPatchBaseline Systems Manager document.</p>
+<!-- @@@getDeployablePatchSnapshotForInstance -->
+<!-- $$$getDocument[overload1]$$$getDocumentconstGetDocumentRequest& -->
+<h3 class="fn" id="getDocument"><a name="getDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getdocumentresponse.html">GetDocumentResponse</a></span> *SsmClient::<span class="name">getDocument</span>(const <span class="type"><a href="qtaws-ssm-getdocumentrequest.html">GetDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getdocumentresponse.html">GetDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the contents of the specified Systems Manager</p>
+<!-- @@@getDocument -->
+<!-- $$$getInventory[overload1]$$$getInventoryconstGetInventoryRequest& -->
+<h3 class="fn" id="getInventory"><a name="getInventory"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getinventoryresponse.html">GetInventoryResponse</a></span> *SsmClient::<span class="name">getInventory</span>(const <span class="type"><a href="qtaws-ssm-getinventoryrequest.html">GetInventoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getinventoryresponse.html">GetInventoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Query inventory</p>
+<!-- @@@getInventory -->
+<!-- $$$getInventorySchema[overload1]$$$getInventorySchemaconstGetInventorySchemaRequest& -->
+<h3 class="fn" id="getInventorySchema"><a name="getInventorySchema"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getinventoryschemaresponse.html">GetInventorySchemaResponse</a></span> *SsmClient::<span class="name">getInventorySchema</span>(const <span class="type"><a href="qtaws-ssm-getinventoryschemarequest.html">GetInventorySchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getinventoryschemaresponse.html">GetInventorySchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Return a list of inventory type names for the account, or return a list of attribute names for a specific Inventory item type.</p>
+<!-- @@@getInventorySchema -->
+<!-- $$$getMaintenanceWindow[overload1]$$$getMaintenanceWindowconstGetMaintenanceWindowRequest& -->
+<h3 class="fn" id="getMaintenanceWindow"><a name="getMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getmaintenancewindowresponse.html">GetMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">getMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-getmaintenancewindowrequest.html">GetMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getmaintenancewindowresponse.html">GetMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a Maintenance</p>
+<!-- @@@getMaintenanceWindow -->
+<!-- $$$getMaintenanceWindowExecution[overload1]$$$getMaintenanceWindowExecutionconstGetMaintenanceWindowExecutionRequest& -->
+<h3 class="fn" id="getMaintenanceWindowExecution"><a name="getMaintenanceWindowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutionresponse.html">GetMaintenanceWindowExecutionResponse</a></span> *SsmClient::<span class="name">getMaintenanceWindowExecution</span>(const <span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutionrequest.html">GetMaintenanceWindowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getmaintenancewindowexecutionresponse.html">GetMaintenanceWindowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves details about a specific task executed as part of a Maintenance Window</p>
+<!-- @@@getMaintenanceWindowExecution -->
+<!-- $$$getMaintenanceWindowExecutionTask[overload1]$$$getMaintenanceWindowExecutionTaskconstGetMaintenanceWindowExecutionTaskRequest& -->
+<h3 class="fn" id="getMaintenanceWindowExecutionTask"><a name="getMaintenanceWindowExecutionTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutiontaskresponse.html">GetMaintenanceWindowExecutionTaskResponse</a></span> *SsmClient::<span class="name">getMaintenanceWindowExecutionTask</span>(const <span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutiontaskrequest.html">GetMaintenanceWindowExecutionTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getmaintenancewindowexecutiontaskresponse.html">GetMaintenanceWindowExecutionTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the details about a specific task executed as part of a Maintenance Window</p>
+<!-- @@@getMaintenanceWindowExecutionTask -->
+<!-- $$$getMaintenanceWindowExecutionTaskInvocation[overload1]$$$getMaintenanceWindowExecutionTaskInvocationconstGetMaintenanceWindowExecutionTaskInvocationRequest& -->
+<h3 class="fn" id="getMaintenanceWindowExecutionTaskInvocation"><a name="getMaintenanceWindowExecutionTaskInvocation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutiontaskinvocationresponse.html">GetMaintenanceWindowExecutionTaskInvocationResponse</a></span> *SsmClient::<span class="name">getMaintenanceWindowExecutionTaskInvocation</span>(const <span class="type"><a href="qtaws-ssm-getmaintenancewindowexecutiontaskinvocationrequest.html">GetMaintenanceWindowExecutionTaskInvocationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getmaintenancewindowexecutiontaskinvocationresponse.html">GetMaintenanceWindowExecutionTaskInvocationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a task invocation. A task invocation is a specific task executing on a specific target. Maintenance Windows report status for all invocations.</p>
+<!-- @@@getMaintenanceWindowExecutionTaskInvocation -->
+<!-- $$$getMaintenanceWindowTask[overload1]$$$getMaintenanceWindowTaskconstGetMaintenanceWindowTaskRequest& -->
+<h3 class="fn" id="getMaintenanceWindowTask"><a name="getMaintenanceWindowTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getmaintenancewindowtaskresponse.html">GetMaintenanceWindowTaskResponse</a></span> *SsmClient::<span class="name">getMaintenanceWindowTask</span>(const <span class="type"><a href="qtaws-ssm-getmaintenancewindowtaskrequest.html">GetMaintenanceWindowTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getmaintenancewindowtaskresponse.html">GetMaintenanceWindowTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tasks in a Maintenance</p>
+<!-- @@@getMaintenanceWindowTask -->
+<!-- $$$getParameter[overload1]$$$getParameterconstGetParameterRequest& -->
+<h3 class="fn" id="getParameter"><a name="getParameter"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getparameterresponse.html">GetParameterResponse</a></span> *SsmClient::<span class="name">getParameter</span>(const <span class="type"><a href="qtaws-ssm-getparameterrequest.html">GetParameterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getparameterresponse.html">GetParameterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get information about a parameter by using the parameter name.</p>
+<!-- @@@getParameter -->
+<!-- $$$getParameterHistory[overload1]$$$getParameterHistoryconstGetParameterHistoryRequest& -->
+<h3 class="fn" id="getParameterHistory"><a name="getParameterHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getparameterhistoryresponse.html">GetParameterHistoryResponse</a></span> *SsmClient::<span class="name">getParameterHistory</span>(const <span class="type"><a href="qtaws-ssm-getparameterhistoryrequest.html">GetParameterHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getparameterhistoryresponse.html">GetParameterHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Query a list of all parameters used by the AWS</p>
+<!-- @@@getParameterHistory -->
+<!-- $$$getParameters[overload1]$$$getParametersconstGetParametersRequest& -->
+<h3 class="fn" id="getParameters"><a name="getParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getparametersresponse.html">GetParametersResponse</a></span> *SsmClient::<span class="name">getParameters</span>(const <span class="type"><a href="qtaws-ssm-getparametersrequest.html">GetParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getparametersresponse.html">GetParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get details of a</p>
+<!-- @@@getParameters -->
+<!-- $$$getParametersByPath[overload1]$$$getParametersByPathconstGetParametersByPathRequest& -->
+<h3 class="fn" id="getParametersByPath"><a name="getParametersByPath"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getparametersbypathresponse.html">GetParametersByPathResponse</a></span> *SsmClient::<span class="name">getParametersByPath</span>(const <span class="type"><a href="qtaws-ssm-getparametersbypathrequest.html">GetParametersByPathRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getparametersbypathresponse.html">GetParametersByPathResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieve parameters in a specific hierarchy. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-working.html&quot;&gt;Working with Systems Manager Parameters&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>Request results are returned on a best-effort basis. If you specify &lt;code&gt;MaxResults&lt;/code&gt; in the request, the response includes information up to the limit specified. The number of items returned, however, can be between zero and the value of &lt;code&gt;MaxResults&lt;/code&gt;. If the service reaches an internal limit while processing the results, it stops the operation and returns the matching values up to that point and a &lt;code&gt;NextToken&lt;/code&gt;. You can specify the &lt;code&gt;NextToken&lt;/code&gt; in a subsequent call to get the next set of</p>
+<p>results&gt; &lt;note&gt;</p>
+<p>This API action doesn't support filtering by tags.</p>
+<!-- @@@getParametersByPath -->
+<!-- $$$getPatchBaseline[overload1]$$$getPatchBaselineconstGetPatchBaselineRequest& -->
+<h3 class="fn" id="getPatchBaseline"><a name="getPatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getpatchbaselineresponse.html">GetPatchBaselineResponse</a></span> *SsmClient::<span class="name">getPatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-getpatchbaselinerequest.html">GetPatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getpatchbaselineresponse.html">GetPatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a patch</p>
+<!-- @@@getPatchBaseline -->
+<!-- $$$getPatchBaselineForPatchGroup[overload1]$$$getPatchBaselineForPatchGroupconstGetPatchBaselineForPatchGroupRequest& -->
+<h3 class="fn" id="getPatchBaselineForPatchGroup"><a name="getPatchBaselineForPatchGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-getpatchbaselineforpatchgroupresponse.html">GetPatchBaselineForPatchGroupResponse</a></span> *SsmClient::<span class="name">getPatchBaselineForPatchGroup</span>(const <span class="type"><a href="qtaws-ssm-getpatchbaselineforpatchgrouprequest.html">GetPatchBaselineForPatchGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-getpatchbaselineforpatchgroupresponse.html">GetPatchBaselineForPatchGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the patch baseline that should be used for the specified patch</p>
+<!-- @@@getPatchBaselineForPatchGroup -->
+<!-- $$$listAssociationVersions[overload1]$$$listAssociationVersionsconstListAssociationVersionsRequest& -->
+<h3 class="fn" id="listAssociationVersions"><a name="listAssociationVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listassociationversionsresponse.html">ListAssociationVersionsResponse</a></span> *SsmClient::<span class="name">listAssociationVersions</span>(const <span class="type"><a href="qtaws-ssm-listassociationversionsrequest.html">ListAssociationVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listassociationversionsresponse.html">ListAssociationVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all versions of an association for a specific association</p>
+<!-- @@@listAssociationVersions -->
+<!-- $$$listAssociations[overload1]$$$listAssociationsconstListAssociationsRequest& -->
+<h3 class="fn" id="listAssociations"><a name="listAssociations"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listassociationsresponse.html">ListAssociationsResponse</a></span> *SsmClient::<span class="name">listAssociations</span>(const <span class="type"><a href="qtaws-ssm-listassociationsrequest.html">ListAssociationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listassociationsresponse.html">ListAssociationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the associations for the specified Systems Manager document or</p>
+<!-- @@@listAssociations -->
+<!-- $$$listCommandInvocations[overload1]$$$listCommandInvocationsconstListCommandInvocationsRequest& -->
+<h3 class="fn" id="listCommandInvocations"><a name="listCommandInvocations"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listcommandinvocationsresponse.html">ListCommandInvocationsResponse</a></span> *SsmClient::<span class="name">listCommandInvocations</span>(const <span class="type"><a href="qtaws-ssm-listcommandinvocationsrequest.html">ListCommandInvocationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listcommandinvocationsresponse.html">ListCommandInvocationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command invocation is created for each requested instance ID. ListCommandInvocations provide status about command</p>
+<!-- @@@listCommandInvocations -->
+<!-- $$$listCommands[overload1]$$$listCommandsconstListCommandsRequest& -->
+<h3 class="fn" id="listCommands"><a name="listCommands"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listcommandsresponse.html">ListCommandsResponse</a></span> *SsmClient::<span class="name">listCommands</span>(const <span class="type"><a href="qtaws-ssm-listcommandsrequest.html">ListCommandsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listcommandsresponse.html">ListCommandsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the commands requested by users of the AWS</p>
+<!-- @@@listCommands -->
+<!-- $$$listComplianceItems[overload1]$$$listComplianceItemsconstListComplianceItemsRequest& -->
+<h3 class="fn" id="listComplianceItems"><a name="listComplianceItems"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listcomplianceitemsresponse.html">ListComplianceItemsResponse</a></span> *SsmClient::<span class="name">listComplianceItems</span>(const <span class="type"><a href="qtaws-ssm-listcomplianceitemsrequest.html">ListComplianceItemsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listcomplianceitemsresponse.html">ListComplianceItemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For a specified resource ID, this API action returns a list of compliance statuses for different resource types. Currently, you can only specify one resource ID per call. List results depend on the criteria specified in the filter.</p>
+<!-- @@@listComplianceItems -->
+<!-- $$$listComplianceSummaries[overload1]$$$listComplianceSummariesconstListComplianceSummariesRequest& -->
+<h3 class="fn" id="listComplianceSummaries"><a name="listComplianceSummaries"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listcompliancesummariesresponse.html">ListComplianceSummariesResponse</a></span> *SsmClient::<span class="name">listComplianceSummaries</span>(const <span class="type"><a href="qtaws-ssm-listcompliancesummariesrequest.html">ListComplianceSummariesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listcompliancesummariesresponse.html">ListComplianceSummariesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a summary count of compliant and non-compliant resources for a compliance type. For example, this call can return State Manager associations, patches, or custom compliance types according to the filter criteria that you specify.</p>
+<!-- @@@listComplianceSummaries -->
+<!-- $$$listDocumentVersions[overload1]$$$listDocumentVersionsconstListDocumentVersionsRequest& -->
+<h3 class="fn" id="listDocumentVersions"><a name="listDocumentVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listdocumentversionsresponse.html">ListDocumentVersionsResponse</a></span> *SsmClient::<span class="name">listDocumentVersions</span>(const <span class="type"><a href="qtaws-ssm-listdocumentversionsrequest.html">ListDocumentVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listdocumentversionsresponse.html">ListDocumentVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List all versions for a</p>
+<!-- @@@listDocumentVersions -->
+<!-- $$$listDocuments[overload1]$$$listDocumentsconstListDocumentsRequest& -->
+<h3 class="fn" id="listDocuments"><a name="listDocuments"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listdocumentsresponse.html">ListDocumentsResponse</a></span> *SsmClient::<span class="name">listDocuments</span>(const <span class="type"><a href="qtaws-ssm-listdocumentsrequest.html">ListDocumentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listdocumentsresponse.html">ListDocumentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more of your Systems Manager</p>
+<!-- @@@listDocuments -->
+<!-- $$$listInventoryEntries[overload1]$$$listInventoryEntriesconstListInventoryEntriesRequest& -->
+<h3 class="fn" id="listInventoryEntries"><a name="listInventoryEntries"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listinventoryentriesresponse.html">ListInventoryEntriesResponse</a></span> *SsmClient::<span class="name">listInventoryEntries</span>(const <span class="type"><a href="qtaws-ssm-listinventoryentriesrequest.html">ListInventoryEntriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listinventoryentriesresponse.html">ListInventoryEntriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>A list of inventory items returned by the</p>
+<!-- @@@listInventoryEntries -->
+<!-- $$$listResourceComplianceSummaries[overload1]$$$listResourceComplianceSummariesconstListResourceComplianceSummariesRequest& -->
+<h3 class="fn" id="listResourceComplianceSummaries"><a name="listResourceComplianceSummaries"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listresourcecompliancesummariesresponse.html">ListResourceComplianceSummariesResponse</a></span> *SsmClient::<span class="name">listResourceComplianceSummaries</span>(const <span class="type"><a href="qtaws-ssm-listresourcecompliancesummariesrequest.html">ListResourceComplianceSummariesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listresourcecompliancesummariesresponse.html">ListResourceComplianceSummariesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a resource-level summary count. The summary includes information about compliant and non-compliant statuses and detailed compliance-item severity counts, according to the filter criteria you</p>
+<!-- @@@listResourceComplianceSummaries -->
+<!-- $$$listResourceDataSync[overload1]$$$listResourceDataSyncconstListResourceDataSyncRequest& -->
+<h3 class="fn" id="listResourceDataSync"><a name="listResourceDataSync"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listresourcedatasyncresponse.html">ListResourceDataSyncResponse</a></span> *SsmClient::<span class="name">listResourceDataSync</span>(const <span class="type"><a href="qtaws-ssm-listresourcedatasyncrequest.html">ListResourceDataSyncRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listresourcedatasyncresponse.html">ListResourceDataSyncResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your resource data sync configurations. Includes information about the last time a sync attempted to start, the last sync status, and the last time a sync successfully</p>
+<p>completed&gt;</p>
+<p>The number of sync configurations might be too large to return using a single call to &lt;code&gt;ListResourceDataSync&lt;/code&gt;. You can limit the number of sync configurations returned by using the &lt;code&gt;MaxResults&lt;/code&gt; parameter. To determine whether there are more sync configurations to list, check the value of &lt;code&gt;NextToken&lt;/code&gt; in the output. If there are more sync configurations to list, you can request them by specifying the &lt;code&gt;NextToken&lt;/code&gt; returned in the call to the parameter of a subsequent call.</p>
+<!-- @@@listResourceDataSync -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *SsmClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-ssm-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the tags assigned to the specified</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$modifyDocumentPermission[overload1]$$$modifyDocumentPermissionconstModifyDocumentPermissionRequest& -->
+<h3 class="fn" id="modifyDocumentPermission"><a name="modifyDocumentPermission"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-modifydocumentpermissionresponse.html">ModifyDocumentPermissionResponse</a></span> *SsmClient::<span class="name">modifyDocumentPermission</span>(const <span class="type"><a href="qtaws-ssm-modifydocumentpermissionrequest.html">ModifyDocumentPermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-modifydocumentpermissionresponse.html">ModifyDocumentPermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Shares a Systems Manager document publicly or privately. If you share a document privately, you must specify the AWS user account IDs for those people who can use the document. If you share a document publicly, you must specify &lt;i&gt;All&lt;/i&gt; as the account</p>
+<!-- @@@modifyDocumentPermission -->
+<!-- $$$putComplianceItems[overload1]$$$putComplianceItemsconstPutComplianceItemsRequest& -->
+<h3 class="fn" id="putComplianceItems"><a name="putComplianceItems"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-putcomplianceitemsresponse.html">PutComplianceItemsResponse</a></span> *SsmClient::<span class="name">putComplianceItems</span>(const <span class="type"><a href="qtaws-ssm-putcomplianceitemsrequest.html">PutComplianceItemsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-putcomplianceitemsresponse.html">PutComplianceItemsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a compliance type and other compliance details on a designated resource. This action lets you register custom compliance details with a resource. This call overwrites existing compliance information on the resource, so you must provide a full list of compliance items each time that you send the</p>
+<p>request&gt;</p>
+<p>ComplianceType can be one of the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>ExecutionId: The execution ID when the patch, association, or custom compliance item was</p>
+<p>applied&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>ExecutionType: Specify patch, association, or</p>
+<p>Custom:&lt;code&gt;string&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>ExecutionTime. The time the patch, association, or custom compliance item was applied to the</p>
+<p>instance&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Id: The patch, association, or custom compliance</p>
+<p>ID&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Title: A</p>
+<p>title&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Status: The status of the compliance item. For example, &lt;code&gt;approved&lt;/code&gt; for patches, or &lt;code&gt;Failed&lt;/code&gt; for</p>
+<p>associations&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Severity: A patch severity. For example,</p>
+<p>&lt;code&gt;critical&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DocumentName: A SSM document name. For example,</p>
+<p>AWS-RunPatchBaseline&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DocumentVersion: An SSM document version number. For example,</p>
+<p>4&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Classification: A patch classification. For example, &lt;code&gt;security</p>
+<p>updates&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>PatchBaselineId: A patch baseline</p>
+<p>ID&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>PatchSeverity: A patch severity. For example,</p>
+<p>&lt;code&gt;Critical&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>PatchState: A patch state. For example,</p>
+<p>&lt;code&gt;InstancesWithFailedPatches&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>PatchGroup: The name of a patch</p>
+<p>group&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>InstalledTime: The time the association, patch, or custom compliance item was applied to the resource. Specify the time by using the following format:</p>
+<!-- @@@putComplianceItems -->
+<!-- $$$putInventory[overload1]$$$putInventoryconstPutInventoryRequest& -->
+<h3 class="fn" id="putInventory"><a name="putInventory"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-putinventoryresponse.html">PutInventoryResponse</a></span> *SsmClient::<span class="name">putInventory</span>(const <span class="type"><a href="qtaws-ssm-putinventoryrequest.html">PutInventoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-putinventoryresponse.html">PutInventoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Bulk update custom inventory items on one more instance. The request adds an inventory item, if it doesn't already exist, or updates an inventory item, if it does</p>
+<!-- @@@putInventory -->
+<!-- $$$putParameter[overload1]$$$putParameterconstPutParameterRequest& -->
+<h3 class="fn" id="putParameter"><a name="putParameter"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-putparameterresponse.html">PutParameterResponse</a></span> *SsmClient::<span class="name">putParameter</span>(const <span class="type"><a href="qtaws-ssm-putparameterrequest.html">PutParameterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-putparameterresponse.html">PutParameterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Add one or more parameters to the</p>
+<!-- @@@putParameter -->
+<!-- $$$registerDefaultPatchBaseline[overload1]$$$registerDefaultPatchBaselineconstRegisterDefaultPatchBaselineRequest& -->
+<h3 class="fn" id="registerDefaultPatchBaseline"><a name="registerDefaultPatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-registerdefaultpatchbaselineresponse.html">RegisterDefaultPatchBaselineResponse</a></span> *SsmClient::<span class="name">registerDefaultPatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-registerdefaultpatchbaselinerequest.html">RegisterDefaultPatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-registerdefaultpatchbaselineresponse.html">RegisterDefaultPatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Defines the default patch</p>
+<!-- @@@registerDefaultPatchBaseline -->
+<!-- $$$registerPatchBaselineForPatchGroup[overload1]$$$registerPatchBaselineForPatchGroupconstRegisterPatchBaselineForPatchGroupRequest& -->
+<h3 class="fn" id="registerPatchBaselineForPatchGroup"><a name="registerPatchBaselineForPatchGroup"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-registerpatchbaselineforpatchgroupresponse.html">RegisterPatchBaselineForPatchGroupResponse</a></span> *SsmClient::<span class="name">registerPatchBaselineForPatchGroup</span>(const <span class="type"><a href="qtaws-ssm-registerpatchbaselineforpatchgrouprequest.html">RegisterPatchBaselineForPatchGroupRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-registerpatchbaselineforpatchgroupresponse.html">RegisterPatchBaselineForPatchGroupResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a patch baseline for a patch</p>
+<!-- @@@registerPatchBaselineForPatchGroup -->
+<!-- $$$registerTargetWithMaintenanceWindow[overload1]$$$registerTargetWithMaintenanceWindowconstRegisterTargetWithMaintenanceWindowRequest& -->
+<h3 class="fn" id="registerTargetWithMaintenanceWindow"><a name="registerTargetWithMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-registertargetwithmaintenancewindowresponse.html">RegisterTargetWithMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">registerTargetWithMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-registertargetwithmaintenancewindowrequest.html">RegisterTargetWithMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-registertargetwithmaintenancewindowresponse.html">RegisterTargetWithMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a target with a Maintenance</p>
+<!-- @@@registerTargetWithMaintenanceWindow -->
+<!-- $$$registerTaskWithMaintenanceWindow[overload1]$$$registerTaskWithMaintenanceWindowconstRegisterTaskWithMaintenanceWindowRequest& -->
+<h3 class="fn" id="registerTaskWithMaintenanceWindow"><a name="registerTaskWithMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-registertaskwithmaintenancewindowresponse.html">RegisterTaskWithMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">registerTaskWithMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-registertaskwithmaintenancewindowrequest.html">RegisterTaskWithMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-registertaskwithmaintenancewindowresponse.html">RegisterTaskWithMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new task to a Maintenance</p>
+<!-- @@@registerTaskWithMaintenanceWindow -->
+<!-- $$$removeTagsFromResource[overload1]$$$removeTagsFromResourceconstRemoveTagsFromResourceRequest& -->
+<h3 class="fn" id="removeTagsFromResource"><a name="removeTagsFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a></span> *SsmClient::<span class="name">removeTagsFromResource</span>(const <span class="type"><a href="qtaws-ssm-removetagsfromresourcerequest.html">RemoveTagsFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-removetagsfromresourceresponse.html">RemoveTagsFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes all tags from the specified</p>
+<!-- @@@removeTagsFromResource -->
+<!-- $$$sendAutomationSignal[overload1]$$$sendAutomationSignalconstSendAutomationSignalRequest& -->
+<h3 class="fn" id="sendAutomationSignal"><a name="sendAutomationSignal"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-sendautomationsignalresponse.html">SendAutomationSignalResponse</a></span> *SsmClient::<span class="name">sendAutomationSignal</span>(const <span class="type"><a href="qtaws-ssm-sendautomationsignalrequest.html">SendAutomationSignalRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-sendautomationsignalresponse.html">SendAutomationSignalResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends a signal to an Automation execution to change the current behavior or status of the execution.</p>
+<!-- @@@sendAutomationSignal -->
+<!-- $$$sendCommand[overload1]$$$sendCommandconstSendCommandRequest& -->
+<h3 class="fn" id="sendCommand"><a name="sendCommand"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-sendcommandresponse.html">SendCommandResponse</a></span> *SsmClient::<span class="name">sendCommand</span>(const <span class="type"><a href="qtaws-ssm-sendcommandrequest.html">SendCommandRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-sendcommandresponse.html">SendCommandResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Executes commands on one or more managed</p>
+<!-- @@@sendCommand -->
+<!-- $$$startAutomationExecution[overload1]$$$startAutomationExecutionconstStartAutomationExecutionRequest& -->
+<h3 class="fn" id="startAutomationExecution"><a name="startAutomationExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-startautomationexecutionresponse.html">StartAutomationExecutionResponse</a></span> *SsmClient::<span class="name">startAutomationExecution</span>(const <span class="type"><a href="qtaws-ssm-startautomationexecutionrequest.html">StartAutomationExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-startautomationexecutionresponse.html">StartAutomationExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates execution of an Automation</p>
+<!-- @@@startAutomationExecution -->
+<!-- $$$stopAutomationExecution[overload1]$$$stopAutomationExecutionconstStopAutomationExecutionRequest& -->
+<h3 class="fn" id="stopAutomationExecution"><a name="stopAutomationExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-stopautomationexecutionresponse.html">StopAutomationExecutionResponse</a></span> *SsmClient::<span class="name">stopAutomationExecution</span>(const <span class="type"><a href="qtaws-ssm-stopautomationexecutionrequest.html">StopAutomationExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-stopautomationexecutionresponse.html">StopAutomationExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stop an Automation that is currently</p>
+<!-- @@@stopAutomationExecution -->
+<!-- $$$updateAssociation[overload1]$$$updateAssociationconstUpdateAssociationRequest& -->
+<h3 class="fn" id="updateAssociation"><a name="updateAssociation"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updateassociationresponse.html">UpdateAssociationResponse</a></span> *SsmClient::<span class="name">updateAssociation</span>(const <span class="type"><a href="qtaws-ssm-updateassociationrequest.html">UpdateAssociationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updateassociationresponse.html">UpdateAssociationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an association. You can update the association name and version, the document version, schedule, parameters, and Amazon S3</p>
+<!-- @@@updateAssociation -->
+<!-- $$$updateAssociationStatus[overload1]$$$updateAssociationStatusconstUpdateAssociationStatusRequest& -->
+<h3 class="fn" id="updateAssociationStatus"><a name="updateAssociationStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updateassociationstatusresponse.html">UpdateAssociationStatusResponse</a></span> *SsmClient::<span class="name">updateAssociationStatus</span>(const <span class="type"><a href="qtaws-ssm-updateassociationstatusrequest.html">UpdateAssociationStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updateassociationstatusresponse.html">UpdateAssociationStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the status of the Systems Manager document associated with the specified</p>
+<!-- @@@updateAssociationStatus -->
+<!-- $$$updateDocument[overload1]$$$updateDocumentconstUpdateDocumentRequest& -->
+<h3 class="fn" id="updateDocument"><a name="updateDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatedocumentresponse.html">UpdateDocumentResponse</a></span> *SsmClient::<span class="name">updateDocument</span>(const <span class="type"><a href="qtaws-ssm-updatedocumentrequest.html">UpdateDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatedocumentresponse.html">UpdateDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>The document you want to</p>
+<!-- @@@updateDocument -->
+<!-- $$$updateDocumentDefaultVersion[overload1]$$$updateDocumentDefaultVersionconstUpdateDocumentDefaultVersionRequest& -->
+<h3 class="fn" id="updateDocumentDefaultVersion"><a name="updateDocumentDefaultVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatedocumentdefaultversionresponse.html">UpdateDocumentDefaultVersionResponse</a></span> *SsmClient::<span class="name">updateDocumentDefaultVersion</span>(const <span class="type"><a href="qtaws-ssm-updatedocumentdefaultversionrequest.html">UpdateDocumentDefaultVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatedocumentdefaultversionresponse.html">UpdateDocumentDefaultVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Set the default version of a document.</p>
+<!-- @@@updateDocumentDefaultVersion -->
+<!-- $$$updateMaintenanceWindow[overload1]$$$updateMaintenanceWindowconstUpdateMaintenanceWindowRequest& -->
+<h3 class="fn" id="updateMaintenanceWindow"><a name="updateMaintenanceWindow"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatemaintenancewindowresponse.html">UpdateMaintenanceWindowResponse</a></span> *SsmClient::<span class="name">updateMaintenanceWindow</span>(const <span class="type"><a href="qtaws-ssm-updatemaintenancewindowrequest.html">UpdateMaintenanceWindowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatemaintenancewindowresponse.html">UpdateMaintenanceWindowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates an existing Maintenance Window. Only specified parameters are</p>
+<!-- @@@updateMaintenanceWindow -->
+<!-- $$$updateMaintenanceWindowTarget[overload1]$$$updateMaintenanceWindowTargetconstUpdateMaintenanceWindowTargetRequest& -->
+<h3 class="fn" id="updateMaintenanceWindowTarget"><a name="updateMaintenanceWindowTarget"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatemaintenancewindowtargetresponse.html">UpdateMaintenanceWindowTargetResponse</a></span> *SsmClient::<span class="name">updateMaintenanceWindowTarget</span>(const <span class="type"><a href="qtaws-ssm-updatemaintenancewindowtargetrequest.html">UpdateMaintenanceWindowTargetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatemaintenancewindowtargetresponse.html">UpdateMaintenanceWindowTargetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the target of an existing Maintenance Window. You can't change the target type, but you can change the</p>
+<p>following&gt;</p>
+<p>The target from being an ID target to a Tag target, or a Tag target to an ID</p>
+<p>target&gt;</p>
+<p>IDs for an ID</p>
+<p>target&gt;</p>
+<p>Tags for a Tag</p>
+<p>target&gt;</p>
+<p>Owner&gt;</p>
+<p>Name&gt;</p>
+<p>Description&gt;</p>
+<p>If a parameter is null, then the corresponding field is not</p>
+<!-- @@@updateMaintenanceWindowTarget -->
+<!-- $$$updateMaintenanceWindowTask[overload1]$$$updateMaintenanceWindowTaskconstUpdateMaintenanceWindowTaskRequest& -->
+<h3 class="fn" id="updateMaintenanceWindowTask"><a name="updateMaintenanceWindowTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatemaintenancewindowtaskresponse.html">UpdateMaintenanceWindowTaskResponse</a></span> *SsmClient::<span class="name">updateMaintenanceWindowTask</span>(const <span class="type"><a href="qtaws-ssm-updatemaintenancewindowtaskrequest.html">UpdateMaintenanceWindowTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatemaintenancewindowtaskresponse.html">UpdateMaintenanceWindowTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following</p>
+<p>values&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to</p>
+<p>AWS-RunShellScript&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>ServiceRoleAr&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>TaskInvocationParameter&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Priorit&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>MaxConcurrenc&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>MaxError&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields required by the &lt;a&gt;RegisterTaskWithMaintenanceWindow&lt;/a&gt; action are required for this request. Optional fields that aren't specified are set to</p>
+<!-- @@@updateMaintenanceWindowTask -->
+<!-- $$$updateManagedInstanceRole[overload1]$$$updateManagedInstanceRoleconstUpdateManagedInstanceRoleRequest& -->
+<h3 class="fn" id="updateManagedInstanceRole"><a name="updateManagedInstanceRole"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatemanagedinstanceroleresponse.html">UpdateManagedInstanceRoleResponse</a></span> *SsmClient::<span class="name">updateManagedInstanceRole</span>(const <span class="type"><a href="qtaws-ssm-updatemanagedinstancerolerequest.html">UpdateManagedInstanceRoleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatemanagedinstanceroleresponse.html">UpdateManagedInstanceRoleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Assigns or changes an Amazon Identity and Access Management (IAM) role to the managed</p>
+<!-- @@@updateManagedInstanceRole -->
+<!-- $$$updatePatchBaseline[overload1]$$$updatePatchBaselineconstUpdatePatchBaselineRequest& -->
+<h3 class="fn" id="updatePatchBaseline"><a name="updatePatchBaseline"></a><code>[slot] </code><span class="type"><a href="qtaws-ssm-updatepatchbaselineresponse.html">UpdatePatchBaselineResponse</a></span> *SsmClient::<span class="name">updatePatchBaseline</span>(const <span class="type"><a href="qtaws-ssm-updatepatchbaselinerequest.html">UpdatePatchBaselineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ssm-ssmclient.html">SsmClient</a> service, and returns a pointer to an <a href="qtaws-ssm-updatepatchbaselineresponse.html">UpdatePatchBaselineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies an existing patch baseline. Fields not specified in the request are left</p>
+<p>unchanged&gt; &lt;note&gt;</p>
+<p>For information about valid key and value pairs in &lt;code&gt;PatchFilters&lt;/code&gt; for each supported operating system type, see &lt;a</p>
+<!-- @@@updatePatchBaseline -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

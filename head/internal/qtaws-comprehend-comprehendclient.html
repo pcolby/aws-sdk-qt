@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- comprehendclient.cpp -->
+  <title>ComprehendClient Class | Comprehend</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscomprehend-index.html">Comprehend</a></li>
+<li><a href="qtawscomprehend-module.html">C++ Classes</a></li>
+<li>ComprehendClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ComprehendClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-comprehend-comprehendclient.html">QtAws::Comprehend::ComprehendClient</a>)<br/></span>
+<!-- $$$ComprehendClient-brief -->
+<p>The <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> class provides access to the Amazon Comprehend service. <a href="#details">More...</a></p>
+<!-- @@@ComprehendClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ComprehendClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-comprehend-comprehendclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#ComprehendClient">ComprehendClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#ComprehendClient-1">ComprehendClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDetectDominantLanguageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#batchDetectDominantLanguage">batchDetectDominantLanguage</a></b>(const BatchDetectDominantLanguageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDetectEntitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#batchDetectEntities">batchDetectEntities</a></b>(const BatchDetectEntitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDetectKeyPhrasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#batchDetectKeyPhrases">batchDetectKeyPhrases</a></b>(const BatchDetectKeyPhrasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDetectSentimentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#batchDetectSentiment">batchDetectSentiment</a></b>(const BatchDetectSentimentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTopicsDetectionJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#describeTopicsDetectionJob">describeTopicsDetectionJob</a></b>(const DescribeTopicsDetectionJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectDominantLanguageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#detectDominantLanguage">detectDominantLanguage</a></b>(const DetectDominantLanguageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectEntitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#detectEntities">detectEntities</a></b>(const DetectEntitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectKeyPhrasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#detectKeyPhrases">detectKeyPhrases</a></b>(const DetectKeyPhrasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetectSentimentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#detectSentiment">detectSentiment</a></b>(const DetectSentimentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTopicsDetectionJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#listTopicsDetectionJobs">listTopicsDetectionJobs</a></b>(const ListTopicsDetectionJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartTopicsDetectionJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-comprehend-comprehendclient.html#startTopicsDetectionJob">startTopicsDetectionJob</a></b>(const StartTopicsDetectionJobRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ComprehendClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> class provides access to the Amazon Comprehend service.</p>
+<p>Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and</p>
+</div>
+<!-- @@@ComprehendClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ComprehendClient[overload1]$$$ComprehendClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ComprehendClient"><a name="ComprehendClient"></a>ComprehendClient::<span class="name">ComprehendClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ComprehendClient -->
+<!-- $$$ComprehendClient$$$ComprehendClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ComprehendClient-1"><a name="ComprehendClient-1"></a>ComprehendClient::<span class="name">ComprehendClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-comprehend-comprehendclient.html#ComprehendClient">ComprehendClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ComprehendClient -->
+<!-- $$$batchDetectDominantLanguage[overload1]$$$batchDetectDominantLanguageconstBatchDetectDominantLanguageRequest& -->
+<h3 class="fn" id="batchDetectDominantLanguage"><a name="batchDetectDominantLanguage"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-batchdetectdominantlanguageresponse.html">BatchDetectDominantLanguageResponse</a></span> *ComprehendClient::<span class="name">batchDetectDominantLanguage</span>(const <span class="type"><a href="qtaws-comprehend-batchdetectdominantlanguagerequest.html">BatchDetectDominantLanguageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-batchdetectdominantlanguageresponse.html">BatchDetectDominantLanguageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon Comprehend can detect, see &lt;a href=&quot;http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html&quot;&gt;Amazon Comprehend Supported Languages&lt;/a&gt;.</p>
+<!-- @@@batchDetectDominantLanguage -->
+<!-- $$$batchDetectEntities[overload1]$$$batchDetectEntitiesconstBatchDetectEntitiesRequest& -->
+<h3 class="fn" id="batchDetectEntities"><a name="batchDetectEntities"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-batchdetectentitiesresponse.html">BatchDetectEntitiesResponse</a></span> *ComprehendClient::<span class="name">batchDetectEntities</span>(const <span class="type"><a href="qtaws-comprehend-batchdetectentitiesrequest.html">BatchDetectEntitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-batchdetectentitiesresponse.html">BatchDetectEntitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inspects the text of a batch of documents and returns information about them. For more information about entities, see &lt;a&gt;how-entities&lt;/a&gt;</p>
+<!-- @@@batchDetectEntities -->
+<!-- $$$batchDetectKeyPhrases[overload1]$$$batchDetectKeyPhrasesconstBatchDetectKeyPhrasesRequest& -->
+<h3 class="fn" id="batchDetectKeyPhrases"><a name="batchDetectKeyPhrases"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-batchdetectkeyphrasesresponse.html">BatchDetectKeyPhrasesResponse</a></span> *ComprehendClient::<span class="name">batchDetectKeyPhrases</span>(const <span class="type"><a href="qtaws-comprehend-batchdetectkeyphrasesrequest.html">BatchDetectKeyPhrasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-batchdetectkeyphrasesresponse.html">BatchDetectKeyPhrasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects the key noun phrases found in a batch of</p>
+<!-- @@@batchDetectKeyPhrases -->
+<!-- $$$batchDetectSentiment[overload1]$$$batchDetectSentimentconstBatchDetectSentimentRequest& -->
+<h3 class="fn" id="batchDetectSentiment"><a name="batchDetectSentiment"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-batchdetectsentimentresponse.html">BatchDetectSentimentResponse</a></span> *ComprehendClient::<span class="name">batchDetectSentiment</span>(const <span class="type"><a href="qtaws-comprehend-batchdetectsentimentrequest.html">BatchDetectSentimentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-batchdetectsentimentresponse.html">BatchDetectSentimentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inspects a batch of documents and returns an inference of the prevailing sentiment, &lt;code&gt;POSITIVE&lt;/code&gt;, &lt;code&gt;NEUTRAL&lt;/code&gt;, &lt;code&gt;MIXED&lt;/code&gt;, or &lt;code&gt;NEGATIVE&lt;/code&gt;, in each</p>
+<!-- @@@batchDetectSentiment -->
+<!-- $$$describeTopicsDetectionJob[overload1]$$$describeTopicsDetectionJobconstDescribeTopicsDetectionJobRequest& -->
+<h3 class="fn" id="describeTopicsDetectionJob"><a name="describeTopicsDetectionJob"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-describetopicsdetectionjobresponse.html">DescribeTopicsDetectionJobResponse</a></span> *ComprehendClient::<span class="name">describeTopicsDetectionJob</span>(const <span class="type"><a href="qtaws-comprehend-describetopicsdetectionjobrequest.html">DescribeTopicsDetectionJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-describetopicsdetectionjobresponse.html">DescribeTopicsDetectionJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the properties associated with a topic detection job. Use this operation to get the status of a detection</p>
+<!-- @@@describeTopicsDetectionJob -->
+<!-- $$$detectDominantLanguage[overload1]$$$detectDominantLanguageconstDetectDominantLanguageRequest& -->
+<h3 class="fn" id="detectDominantLanguage"><a name="detectDominantLanguage"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-detectdominantlanguageresponse.html">DetectDominantLanguageResponse</a></span> *ComprehendClient::<span class="name">detectDominantLanguage</span>(const <span class="type"><a href="qtaws-comprehend-detectdominantlanguagerequest.html">DetectDominantLanguageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-detectdominantlanguageresponse.html">DetectDominantLanguageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see &lt;a href=&quot;http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html&quot;&gt;Amazon Comprehend Supported Languages&lt;/a&gt;.</p>
+<!-- @@@detectDominantLanguage -->
+<!-- $$$detectEntities[overload1]$$$detectEntitiesconstDetectEntitiesRequest& -->
+<h3 class="fn" id="detectEntities"><a name="detectEntities"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-detectentitiesresponse.html">DetectEntitiesResponse</a></span> *ComprehendClient::<span class="name">detectEntities</span>(const <span class="type"><a href="qtaws-comprehend-detectentitiesrequest.html">DetectEntitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-detectentitiesresponse.html">DetectEntitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inspects text for entities, and returns information about them. For more information, about entities, see &lt;a&gt;how-entities&lt;/a&gt;.</p>
+<!-- @@@detectEntities -->
+<!-- $$$detectKeyPhrases[overload1]$$$detectKeyPhrasesconstDetectKeyPhrasesRequest& -->
+<h3 class="fn" id="detectKeyPhrases"><a name="detectKeyPhrases"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-detectkeyphrasesresponse.html">DetectKeyPhrasesResponse</a></span> *ComprehendClient::<span class="name">detectKeyPhrases</span>(const <span class="type"><a href="qtaws-comprehend-detectkeyphrasesrequest.html">DetectKeyPhrasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-detectkeyphrasesresponse.html">DetectKeyPhrasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detects the key noun phrases found in the text.</p>
+<!-- @@@detectKeyPhrases -->
+<!-- $$$detectSentiment[overload1]$$$detectSentimentconstDetectSentimentRequest& -->
+<h3 class="fn" id="detectSentiment"><a name="detectSentiment"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-detectsentimentresponse.html">DetectSentimentResponse</a></span> *ComprehendClient::<span class="name">detectSentiment</span>(const <span class="type"><a href="qtaws-comprehend-detectsentimentrequest.html">DetectSentimentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-detectsentimentresponse.html">DetectSentimentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Inspects text and returns an inference of the prevailing sentiment (&lt;code&gt;POSITIVE&lt;/code&gt;, &lt;code&gt;NEUTRAL&lt;/code&gt;, &lt;code&gt;MIXED&lt;/code&gt;, or &lt;code&gt;NEGATIVE&lt;/code&gt;).</p>
+<!-- @@@detectSentiment -->
+<!-- $$$listTopicsDetectionJobs[overload1]$$$listTopicsDetectionJobsconstListTopicsDetectionJobsRequest& -->
+<h3 class="fn" id="listTopicsDetectionJobs"><a name="listTopicsDetectionJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-listtopicsdetectionjobsresponse.html">ListTopicsDetectionJobsResponse</a></span> *ComprehendClient::<span class="name">listTopicsDetectionJobs</span>(const <span class="type"><a href="qtaws-comprehend-listtopicsdetectionjobsrequest.html">ListTopicsDetectionJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-listtopicsdetectionjobsresponse.html">ListTopicsDetectionJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of the topic detection jobs that you have</p>
+<!-- @@@listTopicsDetectionJobs -->
+<!-- $$$startTopicsDetectionJob[overload1]$$$startTopicsDetectionJobconstStartTopicsDetectionJobRequest& -->
+<h3 class="fn" id="startTopicsDetectionJob"><a name="startTopicsDetectionJob"></a><code>[slot] </code><span class="type"><a href="qtaws-comprehend-starttopicsdetectionjobresponse.html">StartTopicsDetectionJobResponse</a></span> *ComprehendClient::<span class="name">startTopicsDetectionJob</span>(const <span class="type"><a href="qtaws-comprehend-starttopicsdetectionjobrequest.html">StartTopicsDetectionJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-comprehend-comprehendclient.html">ComprehendClient</a> service, and returns a pointer to an <a href="qtaws-comprehend-starttopicsdetectionjobresponse.html">StartTopicsDetectionJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts an asynchronous topic detection job. Use the &lt;code&gt;DescribeTopicDetectionJob&lt;/code&gt; operation to track the status of a</p>
+<!-- @@@startTopicsDetectionJob -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

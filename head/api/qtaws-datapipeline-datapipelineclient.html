@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- datapipelineclient.cpp -->
+  <title>DataPipelineClient Class | DataPipeline</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsdatapipeline-index.html">DataPipeline</a></li>
+<li><a href="qtawsdatapipeline-module.html">C++ Classes</a></li>
+<li>DataPipelineClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">DataPipelineClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-datapipeline-datapipelineclient.html">QtAws::DataPipeline::DataPipelineClient</a>)<br/></span>
+<!-- $$$DataPipelineClient-brief -->
+<p>The <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> class provides access to the AWS Data Pipeline service. <a href="#details">More...</a></p>
+<!-- @@@DataPipelineClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;DataPipelineClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-datapipeline-datapipelineclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#DataPipelineClient">DataPipelineClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#DataPipelineClient-1">DataPipelineClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> ActivatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#activatePipeline">activatePipeline</a></b>(const ActivatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#addTags">addTags</a></b>(const AddTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#createPipeline">createPipeline</a></b>(const CreatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeactivatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#deactivatePipeline">deactivatePipeline</a></b>(const DeactivatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#deletePipeline">deletePipeline</a></b>(const DeletePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeObjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#describeObjects">describeObjects</a></b>(const DescribeObjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePipelinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#describePipelines">describePipelines</a></b>(const DescribePipelinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EvaluateExpressionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#evaluateExpression">evaluateExpression</a></b>(const EvaluateExpressionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPipelineDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#getPipelineDefinition">getPipelineDefinition</a></b>(const GetPipelineDefinitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPipelinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#listPipelines">listPipelines</a></b>(const ListPipelinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PollForTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#pollForTask">pollForTask</a></b>(const PollForTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutPipelineDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#putPipelineDefinition">putPipelineDefinition</a></b>(const PutPipelineDefinitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QueryObjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#queryObjects">queryObjects</a></b>(const QueryObjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#removeTags">removeTags</a></b>(const RemoveTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReportTaskProgressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#reportTaskProgress">reportTaskProgress</a></b>(const ReportTaskProgressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReportTaskRunnerHeartbeatResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#reportTaskRunnerHeartbeat">reportTaskRunnerHeartbeat</a></b>(const ReportTaskRunnerHeartbeatRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#setStatus">setStatus</a></b>(const SetStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetTaskStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#setTaskStatus">setTaskStatus</a></b>(const SetTaskStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ValidatePipelineDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-datapipeline-datapipelineclient.html#validatePipelineDefinition">validatePipelineDefinition</a></b>(const ValidatePipelineDefinitionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$DataPipelineClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> class provides access to the AWS Data Pipeline service.</p>
+<p>AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details of scheduling and ensuring that data dependencies are met so that your application can focus on processing the</p>
+<p>data&gt;</p>
+<p>AWS Data Pipeline provides a JAR implementation of a task runner called AWS Data Pipeline Task Runner. AWS Data Pipeline Task Runner provides logic for common data management scenarios, such as performing database queries and running data analysis using Amazon Elastic MapReduce (Amazon EMR). You can use AWS Data Pipeline Task Runner as your task runner, or you can write your own task runner to provide custom data</p>
+<p>management&gt;</p>
+<p>AWS Data Pipeline implements two main sets of functionality. Use the first set to create a pipeline and define data sources, schedules, dependencies, and the transforms to be performed on the data. Use the second set in your task runner application to receive the next task ready for processing. The logic for performing the task, such as querying the data, running data analysis, or converting the data from one format to another, is contained within the task runner. The task runner performs the task assigned to it by the web service, reporting progress to the web service as it does so. When the task is done, the task runner reports the final success or failure of the task to the web</p>
+</div>
+<!-- @@@DataPipelineClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$DataPipelineClient[overload1]$$$DataPipelineClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DataPipelineClient"><a name="DataPipelineClient"></a>DataPipelineClient::<span class="name">DataPipelineClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@DataPipelineClient -->
+<!-- $$$DataPipelineClient$$$DataPipelineClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="DataPipelineClient-1"><a name="DataPipelineClient-1"></a>DataPipelineClient::<span class="name">DataPipelineClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-datapipeline-datapipelineclient.html#DataPipelineClient">DataPipelineClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@DataPipelineClient -->
+<!-- $$$activatePipeline[overload1]$$$activatePipelineconstActivatePipelineRequest& -->
+<h3 class="fn" id="activatePipeline"><a name="activatePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-activatepipelineresponse.html">ActivatePipelineResponse</a></span> *DataPipelineClient::<span class="name">activatePipeline</span>(const <span class="type"><a href="qtaws-datapipeline-activatepipelinerequest.html">ActivatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-activatepipelineresponse.html">ActivatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Validates the specified pipeline and starts processing pipeline tasks. If the pipeline does not pass validation, activation</p>
+<p>fails&gt;</p>
+<p>If you need to pause the pipeline to investigate an issue with a component, such as a data source or script, call</p>
+<p>&lt;a&gt;DeactivatePipeline&lt;/a&gt;&gt;</p>
+<p>To activate a finished pipeline, modify the end date for the pipeline and then activate</p>
+<!-- @@@activatePipeline -->
+<!-- $$$addTags[overload1]$$$addTagsconstAddTagsRequest& -->
+<h3 class="fn" id="addTags"><a name="addTags"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-addtagsresponse.html">AddTagsResponse</a></span> *DataPipelineClient::<span class="name">addTags</span>(const <span class="type"><a href="qtaws-datapipeline-addtagsrequest.html">AddTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-addtagsresponse.html">AddTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or modifies tags for the specified</p>
+<!-- @@@addTags -->
+<!-- $$$createPipeline[overload1]$$$createPipelineconstCreatePipelineRequest& -->
+<h3 class="fn" id="createPipeline"><a name="createPipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-createpipelineresponse.html">CreatePipelineResponse</a></span> *DataPipelineClient::<span class="name">createPipeline</span>(const <span class="type"><a href="qtaws-datapipeline-createpipelinerequest.html">CreatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-createpipelineresponse.html">CreatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new, empty pipeline. Use &lt;a&gt;PutPipelineDefinition&lt;/a&gt; to populate the</p>
+<!-- @@@createPipeline -->
+<!-- $$$deactivatePipeline[overload1]$$$deactivatePipelineconstDeactivatePipelineRequest& -->
+<h3 class="fn" id="deactivatePipeline"><a name="deactivatePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-deactivatepipelineresponse.html">DeactivatePipelineResponse</a></span> *DataPipelineClient::<span class="name">deactivatePipeline</span>(const <span class="type"><a href="qtaws-datapipeline-deactivatepipelinerequest.html">DeactivatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-deactivatepipelineresponse.html">DeactivatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deactivates the specified running pipeline. The pipeline is set to the &lt;code&gt;DEACTIVATING&lt;/code&gt; state until the deactivation process</p>
+<p>completes&gt;</p>
+<p>To resume a deactivated pipeline, use &lt;a&gt;ActivatePipeline&lt;/a&gt;. By default, the pipeline resumes from the last completed execution. Optionally, you can specify the date and time to resume the</p>
+<!-- @@@deactivatePipeline -->
+<!-- $$$deletePipeline[overload1]$$$deletePipelineconstDeletePipelineRequest& -->
+<h3 class="fn" id="deletePipeline"><a name="deletePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-deletepipelineresponse.html">DeletePipelineResponse</a></span> *DataPipelineClient::<span class="name">deletePipeline</span>(const <span class="type"><a href="qtaws-datapipeline-deletepipelinerequest.html">DeletePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-deletepipelineresponse.html">DeletePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a pipeline, its pipeline definition, and its run history. AWS Data Pipeline attempts to cancel instances associated with the pipeline that are currently being processed by task</p>
+<p>runners&gt;</p>
+<p>Deleting a pipeline cannot be undone. You cannot query or restore a deleted pipeline. To temporarily pause a pipeline instead of deleting it, call &lt;a&gt;SetStatus&lt;/a&gt; with the status set to &lt;code&gt;PAUSE&lt;/code&gt; on individual components. Components that are paused by &lt;a&gt;SetStatus&lt;/a&gt; can be</p>
+<!-- @@@deletePipeline -->
+<!-- $$$describeObjects[overload1]$$$describeObjectsconstDescribeObjectsRequest& -->
+<h3 class="fn" id="describeObjects"><a name="describeObjects"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-describeobjectsresponse.html">DescribeObjectsResponse</a></span> *DataPipelineClient::<span class="name">describeObjects</span>(const <span class="type"><a href="qtaws-datapipeline-describeobjectsrequest.html">DescribeObjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-describeobjectsresponse.html">DescribeObjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the object definitions for a set of objects associated with the pipeline. Object definitions are composed of a set of fields that define the properties of the</p>
+<!-- @@@describeObjects -->
+<!-- $$$describePipelines[overload1]$$$describePipelinesconstDescribePipelinesRequest& -->
+<h3 class="fn" id="describePipelines"><a name="describePipelines"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-describepipelinesresponse.html">DescribePipelinesResponse</a></span> *DataPipelineClient::<span class="name">describePipelines</span>(const <span class="type"><a href="qtaws-datapipeline-describepipelinesrequest.html">DescribePipelinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-describepipelinesresponse.html">DescribePipelinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata about one or more pipelines. The information retrieved includes the name of the pipeline, the pipeline identifier, its current state, and the user account that owns the pipeline. Using account credentials, you can retrieve metadata about pipelines that you or your IAM users have created. If you are using an IAM user account, you can retrieve metadata about only those pipelines for which you have read</p>
+<p>permissions&gt;</p>
+<p>To retrieve the full pipeline definition instead of metadata about the pipeline, call</p>
+<!-- @@@describePipelines -->
+<!-- $$$evaluateExpression[overload1]$$$evaluateExpressionconstEvaluateExpressionRequest& -->
+<h3 class="fn" id="evaluateExpression"><a name="evaluateExpression"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-evaluateexpressionresponse.html">EvaluateExpressionResponse</a></span> *DataPipelineClient::<span class="name">evaluateExpression</span>(const <span class="type"><a href="qtaws-datapipeline-evaluateexpressionrequest.html">EvaluateExpressionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-evaluateexpressionresponse.html">EvaluateExpressionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Task runners call &lt;code&gt;EvaluateExpression&lt;/code&gt; to evaluate a string in the context of the specified object. For example, a task runner can evaluate SQL queries stored in Amazon</p>
+<!-- @@@evaluateExpression -->
+<!-- $$$getPipelineDefinition[overload1]$$$getPipelineDefinitionconstGetPipelineDefinitionRequest& -->
+<h3 class="fn" id="getPipelineDefinition"><a name="getPipelineDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-getpipelinedefinitionresponse.html">GetPipelineDefinitionResponse</a></span> *DataPipelineClient::<span class="name">getPipelineDefinition</span>(const <span class="type"><a href="qtaws-datapipeline-getpipelinedefinitionrequest.html">GetPipelineDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-getpipelinedefinitionresponse.html">GetPipelineDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the definition of the specified pipeline. You can call &lt;code&gt;GetPipelineDefinition&lt;/code&gt; to retrieve the pipeline definition that you provided using</p>
+<!-- @@@getPipelineDefinition -->
+<!-- $$$listPipelines[overload1]$$$listPipelinesconstListPipelinesRequest& -->
+<h3 class="fn" id="listPipelines"><a name="listPipelines"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-listpipelinesresponse.html">ListPipelinesResponse</a></span> *DataPipelineClient::<span class="name">listPipelines</span>(const <span class="type"><a href="qtaws-datapipeline-listpipelinesrequest.html">ListPipelinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-listpipelinesresponse.html">ListPipelinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the pipeline identifiers for all active pipelines that you have permission to</p>
+<!-- @@@listPipelines -->
+<!-- $$$pollForTask[overload1]$$$pollForTaskconstPollForTaskRequest& -->
+<h3 class="fn" id="pollForTask"><a name="pollForTask"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-pollfortaskresponse.html">PollForTaskResponse</a></span> *DataPipelineClient::<span class="name">pollForTask</span>(const <span class="type"><a href="qtaws-datapipeline-pollfortaskrequest.html">PollForTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-pollfortaskresponse.html">PollForTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Task runners call &lt;code&gt;PollForTask&lt;/code&gt; to receive a task to perform from AWS Data Pipeline. The task runner specifies which tasks it can perform by setting a value for the &lt;code&gt;workerGroup&lt;/code&gt; parameter. The task returned can come from any of the pipelines that match the &lt;code&gt;workerGroup&lt;/code&gt; value passed in by the task runner and that was launched using the IAM user credentials specified by the task</p>
+<p>runner&gt;</p>
+<p>If tasks are ready in the work queue, &lt;code&gt;PollForTask&lt;/code&gt; returns a response immediately. If no tasks are available in the queue, &lt;code&gt;PollForTask&lt;/code&gt; uses long-polling and holds on to a poll connection for up to a 90 seconds, during which time the first newly scheduled task is handed to the task runner. To accomodate this, set the socket timeout in your task runner to 90 seconds. The task runner should not call &lt;code&gt;PollForTask&lt;/code&gt; again on the same &lt;code&gt;workerGroup&lt;/code&gt; until it receives a response, and this can take up to 90 seconds.</p>
+<!-- @@@pollForTask -->
+<!-- $$$putPipelineDefinition[overload1]$$$putPipelineDefinitionconstPutPipelineDefinitionRequest& -->
+<h3 class="fn" id="putPipelineDefinition"><a name="putPipelineDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-putpipelinedefinitionresponse.html">PutPipelineDefinitionResponse</a></span> *DataPipelineClient::<span class="name">putPipelineDefinition</span>(const <span class="type"><a href="qtaws-datapipeline-putpipelinedefinitionrequest.html">PutPipelineDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-putpipelinedefinitionresponse.html">PutPipelineDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds tasks, schedules, and preconditions to the specified pipeline. You can use &lt;code&gt;PutPipelineDefinition&lt;/code&gt; to populate a new</p>
+<p>pipeline&gt;</p>
+<p>&lt;code&gt;PutPipelineDefinition&lt;/code&gt; also validates the configuration as it adds it to the pipeline. Changes to the pipeline are saved unless one of the following three validation errors exists in the pipeline.</p>
+<p>&lt;/p &lt;ol&gt; &lt;li&gt;An object is missing a name or identifier field.&lt;/li&gt; &lt;li&gt;A string or reference field is empty.&lt;/li&gt; &lt;li&gt;The number of objects in the pipeline exceeds the maximum allowed objects.&lt;/li&gt; &lt;li&gt;The pipeline is in a FINISHED state.&lt;/li&gt; &lt;/ol&gt;</p>
+<p>Pipeline object definitions are passed to the &lt;code&gt;PutPipelineDefinition&lt;/code&gt; action and returned by the &lt;a&gt;GetPipelineDefinition&lt;/a&gt; action.</p>
+<!-- @@@putPipelineDefinition -->
+<!-- $$$queryObjects[overload1]$$$queryObjectsconstQueryObjectsRequest& -->
+<h3 class="fn" id="queryObjects"><a name="queryObjects"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-queryobjectsresponse.html">QueryObjectsResponse</a></span> *DataPipelineClient::<span class="name">queryObjects</span>(const <span class="type"><a href="qtaws-datapipeline-queryobjectsrequest.html">QueryObjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-queryobjectsresponse.html">QueryObjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Queries the specified pipeline for the names of objects that match the specified set of</p>
+<!-- @@@queryObjects -->
+<!-- $$$removeTags[overload1]$$$removeTagsconstRemoveTagsRequest& -->
+<h3 class="fn" id="removeTags"><a name="removeTags"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-removetagsresponse.html">RemoveTagsResponse</a></span> *DataPipelineClient::<span class="name">removeTags</span>(const <span class="type"><a href="qtaws-datapipeline-removetagsrequest.html">RemoveTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-removetagsresponse.html">RemoveTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes existing tags from the specified</p>
+<!-- @@@removeTags -->
+<!-- $$$reportTaskProgress[overload1]$$$reportTaskProgressconstReportTaskProgressRequest& -->
+<h3 class="fn" id="reportTaskProgress"><a name="reportTaskProgress"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-reporttaskprogressresponse.html">ReportTaskProgressResponse</a></span> *DataPipelineClient::<span class="name">reportTaskProgress</span>(const <span class="type"><a href="qtaws-datapipeline-reporttaskprogressrequest.html">ReportTaskProgressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-reporttaskprogressresponse.html">ReportTaskProgressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Task runners call &lt;code&gt;ReportTaskProgress&lt;/code&gt; when assigned a task to acknowledge that it has the task. If the web service does not receive this acknowledgement within 2 minutes, it assigns the task in a subsequent &lt;a&gt;PollForTask&lt;/a&gt; call. After this initial acknowledgement, the task runner only needs to report progress every 15 minutes to maintain its ownership of the task. You can change this reporting time from 15 minutes by specifying a &lt;code&gt;reportProgressTimeout&lt;/code&gt; field in your</p>
+<p>pipeline&gt;</p>
+<p>If a task runner does not report its status after 5 minutes, AWS Data Pipeline assumes that the task runner is unable to process the task and reassigns the task in a subsequent response to &lt;a&gt;PollForTask&lt;/a&gt;. Task runners should call &lt;code&gt;ReportTaskProgress&lt;/code&gt; every 60</p>
+<!-- @@@reportTaskProgress -->
+<!-- $$$reportTaskRunnerHeartbeat[overload1]$$$reportTaskRunnerHeartbeatconstReportTaskRunnerHeartbeatRequest& -->
+<h3 class="fn" id="reportTaskRunnerHeartbeat"><a name="reportTaskRunnerHeartbeat"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-reporttaskrunnerheartbeatresponse.html">ReportTaskRunnerHeartbeatResponse</a></span> *DataPipelineClient::<span class="name">reportTaskRunnerHeartbeat</span>(const <span class="type"><a href="qtaws-datapipeline-reporttaskrunnerheartbeatrequest.html">ReportTaskRunnerHeartbeatRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-reporttaskrunnerheartbeatresponse.html">ReportTaskRunnerHeartbeatResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Task runners call &lt;code&gt;ReportTaskRunnerHeartbeat&lt;/code&gt; every 15 minutes to indicate that they are operational. If the AWS Data Pipeline Task Runner is launched on a resource managed by AWS Data Pipeline, the web service can use this call to detect when the task runner application has failed and restart a new</p>
+<!-- @@@reportTaskRunnerHeartbeat -->
+<!-- $$$setStatus[overload1]$$$setStatusconstSetStatusRequest& -->
+<h3 class="fn" id="setStatus"><a name="setStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-setstatusresponse.html">SetStatusResponse</a></span> *DataPipelineClient::<span class="name">setStatus</span>(const <span class="type"><a href="qtaws-datapipeline-setstatusrequest.html">SetStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-setstatusresponse.html">SetStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests that the status of the specified physical or logical pipeline objects be updated in the specified pipeline. This update might not occur immediately, but is eventually consistent. The status that can be set depends on the type of object (for example, DataNode or Activity). You cannot perform this operation on &lt;code&gt;FINISHED&lt;/code&gt; pipelines and attempting to do so returns</p>
+<!-- @@@setStatus -->
+<!-- $$$setTaskStatus[overload1]$$$setTaskStatusconstSetTaskStatusRequest& -->
+<h3 class="fn" id="setTaskStatus"><a name="setTaskStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-settaskstatusresponse.html">SetTaskStatusResponse</a></span> *DataPipelineClient::<span class="name">setTaskStatus</span>(const <span class="type"><a href="qtaws-datapipeline-settaskstatusrequest.html">SetTaskStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-settaskstatusresponse.html">SetTaskStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Task runners call &lt;code&gt;SetTaskStatus&lt;/code&gt; to notify AWS Data Pipeline that a task is completed and provide information about the final status. A task runner makes this call regardless of whether the task was sucessful. A task runner does not need to call &lt;code&gt;SetTaskStatus&lt;/code&gt; for tasks that are canceled by the web service during a call to</p>
+<!-- @@@setTaskStatus -->
+<!-- $$$validatePipelineDefinition[overload1]$$$validatePipelineDefinitionconstValidatePipelineDefinitionRequest& -->
+<h3 class="fn" id="validatePipelineDefinition"><a name="validatePipelineDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-datapipeline-validatepipelinedefinitionresponse.html">ValidatePipelineDefinitionResponse</a></span> *DataPipelineClient::<span class="name">validatePipelineDefinition</span>(const <span class="type"><a href="qtaws-datapipeline-validatepipelinedefinitionrequest.html">ValidatePipelineDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-datapipeline-datapipelineclient.html">DataPipelineClient</a> service, and returns a pointer to an <a href="qtaws-datapipeline-validatepipelinedefinitionresponse.html">ValidatePipelineDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Validates the specified pipeline definition to ensure that it is well formed and can be run without</p>
+<!-- @@@validatePipelineDefinition -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

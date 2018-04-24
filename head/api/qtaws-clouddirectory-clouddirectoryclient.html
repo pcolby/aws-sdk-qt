@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- clouddirectoryclient.cpp -->
+  <title>CloudDirectoryClient Class | CloudDirectory</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsclouddirectory-index.html">CloudDirectory</a></li>
+<li><a href="qtawsclouddirectory-module.html">C++ Classes</a></li>
+<li>CloudDirectoryClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudDirectoryClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-clouddirectory-clouddirectoryclient.html">QtAws::CloudDirectory::CloudDirectoryClient</a>)<br/></span>
+<!-- $$$CloudDirectoryClient-brief -->
+<p>The <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> class provides access to the Amazon <a href="qtaws-clouddirectory.html">CloudDirectory</a> service. <a href="#details">More...</a></p>
+<!-- @@@CloudDirectoryClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudDirectoryClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-clouddirectory-clouddirectoryclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#CloudDirectoryClient">CloudDirectoryClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#CloudDirectoryClient-1">CloudDirectoryClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddFacetToObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#addFacetToObject">addFacetToObject</a></b>(const AddFacetToObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ApplySchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#applySchema">applySchema</a></b>(const ApplySchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#attachObject">attachObject</a></b>(const AttachObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#attachPolicy">attachPolicy</a></b>(const AttachPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachToIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#attachToIndex">attachToIndex</a></b>(const AttachToIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachTypedLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#attachTypedLink">attachTypedLink</a></b>(const AttachTypedLinkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchReadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#batchRead">batchRead</a></b>(const BatchReadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchWriteResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#batchWrite">batchWrite</a></b>(const BatchWriteRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createDirectory">createDirectory</a></b>(const CreateDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createFacet">createFacet</a></b>(const CreateFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createIndex">createIndex</a></b>(const CreateIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createObject">createObject</a></b>(const CreateObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createSchema">createSchema</a></b>(const CreateSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTypedLinkFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#createTypedLinkFacet">createTypedLinkFacet</a></b>(const CreateTypedLinkFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#deleteDirectory">deleteDirectory</a></b>(const DeleteDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#deleteFacet">deleteFacet</a></b>(const DeleteFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#deleteObject">deleteObject</a></b>(const DeleteObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#deleteSchema">deleteSchema</a></b>(const DeleteSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTypedLinkFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#deleteTypedLinkFacet">deleteTypedLinkFacet</a></b>(const DeleteTypedLinkFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachFromIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#detachFromIndex">detachFromIndex</a></b>(const DetachFromIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#detachObject">detachObject</a></b>(const DetachObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#detachPolicy">detachPolicy</a></b>(const DetachPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachTypedLinkResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#detachTypedLink">detachTypedLink</a></b>(const DetachTypedLinkRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisableDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#disableDirectory">disableDirectory</a></b>(const DisableDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EnableDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#enableDirectory">enableDirectory</a></b>(const EnableDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAppliedSchemaVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getAppliedSchemaVersion">getAppliedSchemaVersion</a></b>(const GetAppliedSchemaVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDirectoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getDirectory">getDirectory</a></b>(const GetDirectoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getFacet">getFacet</a></b>(const GetFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getObjectAttributes">getObjectAttributes</a></b>(const GetObjectAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetObjectInformationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getObjectInformation">getObjectInformation</a></b>(const GetObjectInformationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSchemaAsJsonResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getSchemaAsJson">getSchemaAsJson</a></b>(const GetSchemaAsJsonRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTypedLinkFacetInformationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#getTypedLinkFacetInformation">getTypedLinkFacetInformation</a></b>(const GetTypedLinkFacetInformationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAppliedSchemaArnsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listAppliedSchemaArns">listAppliedSchemaArns</a></b>(const ListAppliedSchemaArnsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAttachedIndicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listAttachedIndices">listAttachedIndices</a></b>(const ListAttachedIndicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDevelopmentSchemaArnsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listDevelopmentSchemaArns">listDevelopmentSchemaArns</a></b>(const ListDevelopmentSchemaArnsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDirectoriesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listDirectories">listDirectories</a></b>(const ListDirectoriesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFacetAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listFacetAttributes">listFacetAttributes</a></b>(const ListFacetAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFacetNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listFacetNames">listFacetNames</a></b>(const ListFacetNamesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIncomingTypedLinksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listIncomingTypedLinks">listIncomingTypedLinks</a></b>(const ListIncomingTypedLinksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIndexResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listIndex">listIndex</a></b>(const ListIndexRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listObjectAttributes">listObjectAttributes</a></b>(const ListObjectAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectChildrenResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listObjectChildren">listObjectChildren</a></b>(const ListObjectChildrenRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectParentPathsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listObjectParentPaths">listObjectParentPaths</a></b>(const ListObjectParentPathsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectParentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listObjectParents">listObjectParents</a></b>(const ListObjectParentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListObjectPoliciesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listObjectPolicies">listObjectPolicies</a></b>(const ListObjectPoliciesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOutgoingTypedLinksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listOutgoingTypedLinks">listOutgoingTypedLinks</a></b>(const ListOutgoingTypedLinksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPolicyAttachmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listPolicyAttachments">listPolicyAttachments</a></b>(const ListPolicyAttachmentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPublishedSchemaArnsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listPublishedSchemaArns">listPublishedSchemaArns</a></b>(const ListPublishedSchemaArnsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listTagsForResource">listTagsForResource</a></b>(const ListTagsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTypedLinkFacetAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listTypedLinkFacetAttributes">listTypedLinkFacetAttributes</a></b>(const ListTypedLinkFacetAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTypedLinkFacetNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#listTypedLinkFacetNames">listTypedLinkFacetNames</a></b>(const ListTypedLinkFacetNamesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> LookupPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#lookupPolicy">lookupPolicy</a></b>(const LookupPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PublishSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#publishSchema">publishSchema</a></b>(const PublishSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutSchemaFromJsonResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#putSchemaFromJson">putSchemaFromJson</a></b>(const PutSchemaFromJsonRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveFacetFromObjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#removeFacetFromObject">removeFacetFromObject</a></b>(const RemoveFacetFromObjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#updateFacet">updateFacet</a></b>(const UpdateFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateObjectAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#updateObjectAttributes">updateObjectAttributes</a></b>(const UpdateObjectAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#updateSchema">updateSchema</a></b>(const UpdateSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTypedLinkFacetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#updateTypedLinkFacet">updateTypedLinkFacet</a></b>(const UpdateTypedLinkFacetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpgradeAppliedSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#upgradeAppliedSchema">upgradeAppliedSchema</a></b>(const UpgradeAppliedSchemaRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpgradePublishedSchemaResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-clouddirectory-clouddirectoryclient.html#upgradePublishedSchema">upgradePublishedSchema</a></b>(const UpgradePublishedSchemaRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CloudDirectoryClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> class provides access to the Amazon <a href="qtaws-clouddirectory.html">CloudDirectory</a> service.</p>
+<p>&lt;fullname&gt;Amazon Cloud Directory&lt;/fullname&gt;</p>
+<p>Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call programmatically and includes detailed information on data types and errors. For information about AWS Directory Services features, see &lt;a href=&quot;https://aws.amazon.com/directoryservice/&quot;&gt;AWS Directory Service&lt;/a&gt; and the &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html&quot;&gt;AWS Directory Service Administration</p>
+</div>
+<!-- @@@CloudDirectoryClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudDirectoryClient[overload1]$$$CloudDirectoryClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudDirectoryClient"><a name="CloudDirectoryClient"></a>CloudDirectoryClient::<span class="name">CloudDirectoryClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CloudDirectoryClient -->
+<!-- $$$CloudDirectoryClient$$$CloudDirectoryClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CloudDirectoryClient-1"><a name="CloudDirectoryClient-1"></a>CloudDirectoryClient::<span class="name">CloudDirectoryClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-clouddirectory-clouddirectoryclient.html#CloudDirectoryClient">CloudDirectoryClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CloudDirectoryClient -->
+<!-- $$$addFacetToObject[overload1]$$$addFacetToObjectconstAddFacetToObjectRequest& -->
+<h3 class="fn" id="addFacetToObject"><a name="addFacetToObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-addfacettoobjectresponse.html">AddFacetToObjectResponse</a></span> *CloudDirectoryClient::<span class="name">addFacetToObject</span>(const <span class="type"><a href="qtaws-clouddirectory-addfacettoobjectrequest.html">AddFacetToObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-addfacettoobjectresponse.html">AddFacetToObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new &lt;a&gt;Facet&lt;/a&gt; to an object. An object can have more than one facet applied on</p>
+<!-- @@@addFacetToObject -->
+<!-- $$$applySchema[overload1]$$$applySchemaconstApplySchemaRequest& -->
+<h3 class="fn" id="applySchema"><a name="applySchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-applyschemaresponse.html">ApplySchemaResponse</a></span> *CloudDirectoryClient::<span class="name">applySchema</span>(const <span class="type"><a href="qtaws-clouddirectory-applyschemarequest.html">ApplySchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-applyschemaresponse.html">ApplySchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the input published schema, at the specified version, into the &lt;a&gt;Directory&lt;/a&gt; with the same name and version as that of the published</p>
+<!-- @@@applySchema -->
+<!-- $$$attachObject[overload1]$$$attachObjectconstAttachObjectRequest& -->
+<h3 class="fn" id="attachObject"><a name="attachObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-attachobjectresponse.html">AttachObjectResponse</a></span> *CloudDirectoryClient::<span class="name">attachObject</span>(const <span class="type"><a href="qtaws-clouddirectory-attachobjectrequest.html">AttachObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-attachobjectresponse.html">AttachObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches an existing object to another object. An object can be accessed in two</p>
+<p>ways&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Using the</p>
+<p>pat&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Using &lt;code&gt;ObjectIdentifier&lt;/code&gt;</p>
+<!-- @@@attachObject -->
+<!-- $$$attachPolicy[overload1]$$$attachPolicyconstAttachPolicyRequest& -->
+<h3 class="fn" id="attachPolicy"><a name="attachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-attachpolicyresponse.html">AttachPolicyResponse</a></span> *CloudDirectoryClient::<span class="name">attachPolicy</span>(const <span class="type"><a href="qtaws-clouddirectory-attachpolicyrequest.html">AttachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-attachpolicyresponse.html">AttachPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a policy object to a regular object. An object can have a limited number of attached</p>
+<!-- @@@attachPolicy -->
+<!-- $$$attachToIndex[overload1]$$$attachToIndexconstAttachToIndexRequest& -->
+<h3 class="fn" id="attachToIndex"><a name="attachToIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-attachtoindexresponse.html">AttachToIndexResponse</a></span> *CloudDirectoryClient::<span class="name">attachToIndex</span>(const <span class="type"><a href="qtaws-clouddirectory-attachtoindexrequest.html">AttachToIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-attachtoindexresponse.html">AttachToIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches the specified object to the specified</p>
+<!-- @@@attachToIndex -->
+<!-- $$$attachTypedLink[overload1]$$$attachTypedLinkconstAttachTypedLinkRequest& -->
+<h3 class="fn" id="attachTypedLink"><a name="attachTypedLink"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-attachtypedlinkresponse.html">AttachTypedLinkResponse</a></span> *CloudDirectoryClient::<span class="name">attachTypedLink</span>(const <span class="type"><a href="qtaws-clouddirectory-attachtypedlinkrequest.html">AttachTypedLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-attachtypedlinkresponse.html">AttachTypedLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a typed link to a specified source and target object. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@attachTypedLink -->
+<!-- $$$batchRead[overload1]$$$batchReadconstBatchReadRequest& -->
+<h3 class="fn" id="batchRead"><a name="batchRead"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-batchreadresponse.html">BatchReadResponse</a></span> *CloudDirectoryClient::<span class="name">batchRead</span>(const <span class="type"><a href="qtaws-clouddirectory-batchreadrequest.html">BatchReadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-batchreadresponse.html">BatchReadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Performs all the read operations in a batch.</p>
+<!-- @@@batchRead -->
+<!-- $$$batchWrite[overload1]$$$batchWriteconstBatchWriteRequest& -->
+<h3 class="fn" id="batchWrite"><a name="batchWrite"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-batchwriteresponse.html">BatchWriteResponse</a></span> *CloudDirectoryClient::<span class="name">batchWrite</span>(const <span class="type"><a href="qtaws-clouddirectory-batchwriterequest.html">BatchWriteRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-batchwriteresponse.html">BatchWriteResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Performs all the write operations in a batch. Either all the operations succeed or</p>
+<!-- @@@batchWrite -->
+<!-- $$$createDirectory[overload1]$$$createDirectoryconstCreateDirectoryRequest& -->
+<h3 class="fn" id="createDirectory"><a name="createDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createdirectoryresponse.html">CreateDirectoryResponse</a></span> *CloudDirectoryClient::<span class="name">createDirectory</span>(const <span class="type"><a href="qtaws-clouddirectory-createdirectoryrequest.html">CreateDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createdirectoryresponse.html">CreateDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;Directory&lt;/a&gt; by copying the published schema into the directory. A directory cannot be created without a</p>
+<!-- @@@createDirectory -->
+<!-- $$$createFacet[overload1]$$$createFacetconstCreateFacetRequest& -->
+<h3 class="fn" id="createFacet"><a name="createFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createfacetresponse.html">CreateFacetResponse</a></span> *CloudDirectoryClient::<span class="name">createFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-createfacetrequest.html">CreateFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createfacetresponse.html">CreateFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new &lt;a&gt;Facet&lt;/a&gt; in a schema. Facet creation is allowed only in development or applied</p>
+<!-- @@@createFacet -->
+<!-- $$$createIndex[overload1]$$$createIndexconstCreateIndexRequest& -->
+<h3 class="fn" id="createIndex"><a name="createIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createindexresponse.html">CreateIndexResponse</a></span> *CloudDirectoryClient::<span class="name">createIndex</span>(const <span class="type"><a href="qtaws-clouddirectory-createindexrequest.html">CreateIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createindexresponse.html">CreateIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an index object. See &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_indexing.html&quot;&gt;Indexing&lt;/a&gt; for more</p>
+<!-- @@@createIndex -->
+<!-- $$$createObject[overload1]$$$createObjectconstCreateObjectRequest& -->
+<h3 class="fn" id="createObject"><a name="createObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createobjectresponse.html">CreateObjectResponse</a></span> *CloudDirectoryClient::<span class="name">createObject</span>(const <span class="type"><a href="qtaws-clouddirectory-createobjectrequest.html">CreateObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createobjectresponse.html">CreateObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an object in a &lt;a&gt;Directory&lt;/a&gt;. Additionally attaches the object to a parent, if a parent reference and &lt;code&gt;LinkName&lt;/code&gt; is specified. An object is simply a collection of &lt;a&gt;Facet&lt;/a&gt; attributes. You can also use this API call to create a policy object, if the facet from which you create the object is a policy facet.</p>
+<!-- @@@createObject -->
+<!-- $$$createSchema[overload1]$$$createSchemaconstCreateSchemaRequest& -->
+<h3 class="fn" id="createSchema"><a name="createSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createschemaresponse.html">CreateSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">createSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-createschemarequest.html">CreateSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createschemaresponse.html">CreateSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new schema in a development state. A schema can exist in three</p>
+<p>phases&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;Development:&lt;/i&gt; This is a mutable phase of the schema. All new schemas are in the development phase. Once the schema is finalized, it can be</p>
+<p>published&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;Published:&lt;/i&gt; Published schemas are immutable and have a version associated with</p>
+<p>them&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;Applied:&lt;/i&gt; Applied schemas are mutable in a way that allows you to add new schema facets. You can also add new, nonrequired attributes to existing schema facets. You can apply only published schemas to directories.</p>
+<!-- @@@createSchema -->
+<!-- $$$createTypedLinkFacet[overload1]$$$createTypedLinkFacetconstCreateTypedLinkFacetRequest& -->
+<h3 class="fn" id="createTypedLinkFacet"><a name="createTypedLinkFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-createtypedlinkfacetresponse.html">CreateTypedLinkFacetResponse</a></span> *CloudDirectoryClient::<span class="name">createTypedLinkFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-createtypedlinkfacetrequest.html">CreateTypedLinkFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-createtypedlinkfacetresponse.html">CreateTypedLinkFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a &lt;a&gt;TypedLinkFacet&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@createTypedLinkFacet -->
+<!-- $$$deleteDirectory[overload1]$$$deleteDirectoryconstDeleteDirectoryRequest& -->
+<h3 class="fn" id="deleteDirectory"><a name="deleteDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-deletedirectoryresponse.html">DeleteDirectoryResponse</a></span> *CloudDirectoryClient::<span class="name">deleteDirectory</span>(const <span class="type"><a href="qtaws-clouddirectory-deletedirectoryrequest.html">DeleteDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-deletedirectoryresponse.html">DeleteDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a directory. Only disabled directories can be deleted. A deleted directory cannot be undone. Exercise extreme caution when deleting</p>
+<!-- @@@deleteDirectory -->
+<!-- $$$deleteFacet[overload1]$$$deleteFacetconstDeleteFacetRequest& -->
+<h3 class="fn" id="deleteFacet"><a name="deleteFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-deletefacetresponse.html">DeleteFacetResponse</a></span> *CloudDirectoryClient::<span class="name">deleteFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-deletefacetrequest.html">DeleteFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-deletefacetresponse.html">DeleteFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a given &lt;a&gt;Facet&lt;/a&gt;. All attributes and &lt;a&gt;Rule&lt;/a&gt;s that are associated with the facet will be deleted. Only development schema facets are allowed</p>
+<!-- @@@deleteFacet -->
+<!-- $$$deleteObject[overload1]$$$deleteObjectconstDeleteObjectRequest& -->
+<h3 class="fn" id="deleteObject"><a name="deleteObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-deleteobjectresponse.html">DeleteObjectResponse</a></span> *CloudDirectoryClient::<span class="name">deleteObject</span>(const <span class="type"><a href="qtaws-clouddirectory-deleteobjectrequest.html">DeleteObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-deleteobjectresponse.html">DeleteObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an object and its associated attributes. Only objects with no children and no parents can be</p>
+<!-- @@@deleteObject -->
+<!-- $$$deleteSchema[overload1]$$$deleteSchemaconstDeleteSchemaRequest& -->
+<h3 class="fn" id="deleteSchema"><a name="deleteSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-deleteschemaresponse.html">DeleteSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">deleteSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-deleteschemarequest.html">DeleteSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-deleteschemaresponse.html">DeleteSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a given schema. Schemas in a development and published state can only be deleted.</p>
+<!-- @@@deleteSchema -->
+<!-- $$$deleteTypedLinkFacet[overload1]$$$deleteTypedLinkFacetconstDeleteTypedLinkFacetRequest& -->
+<h3 class="fn" id="deleteTypedLinkFacet"><a name="deleteTypedLinkFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-deletetypedlinkfacetresponse.html">DeleteTypedLinkFacetResponse</a></span> *CloudDirectoryClient::<span class="name">deleteTypedLinkFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-deletetypedlinkfacetrequest.html">DeleteTypedLinkFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-deletetypedlinkfacetresponse.html">DeleteTypedLinkFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a &lt;a&gt;TypedLinkFacet&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@deleteTypedLinkFacet -->
+<!-- $$$detachFromIndex[overload1]$$$detachFromIndexconstDetachFromIndexRequest& -->
+<h3 class="fn" id="detachFromIndex"><a name="detachFromIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-detachfromindexresponse.html">DetachFromIndexResponse</a></span> *CloudDirectoryClient::<span class="name">detachFromIndex</span>(const <span class="type"><a href="qtaws-clouddirectory-detachfromindexrequest.html">DetachFromIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-detachfromindexresponse.html">DetachFromIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches the specified object from the specified</p>
+<!-- @@@detachFromIndex -->
+<!-- $$$detachObject[overload1]$$$detachObjectconstDetachObjectRequest& -->
+<h3 class="fn" id="detachObject"><a name="detachObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-detachobjectresponse.html">DetachObjectResponse</a></span> *CloudDirectoryClient::<span class="name">detachObject</span>(const <span class="type"><a href="qtaws-clouddirectory-detachobjectrequest.html">DetachObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-detachobjectresponse.html">DetachObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a given object from the parent object. The object that is to be detached from the parent is specified by the link</p>
+<!-- @@@detachObject -->
+<!-- $$$detachPolicy[overload1]$$$detachPolicyconstDetachPolicyRequest& -->
+<h3 class="fn" id="detachPolicy"><a name="detachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-detachpolicyresponse.html">DetachPolicyResponse</a></span> *CloudDirectoryClient::<span class="name">detachPolicy</span>(const <span class="type"><a href="qtaws-clouddirectory-detachpolicyrequest.html">DetachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-detachpolicyresponse.html">DetachPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a policy from an</p>
+<!-- @@@detachPolicy -->
+<!-- $$$detachTypedLink[overload1]$$$detachTypedLinkconstDetachTypedLinkRequest& -->
+<h3 class="fn" id="detachTypedLink"><a name="detachTypedLink"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-detachtypedlinkresponse.html">DetachTypedLinkResponse</a></span> *CloudDirectoryClient::<span class="name">detachTypedLink</span>(const <span class="type"><a href="qtaws-clouddirectory-detachtypedlinkrequest.html">DetachTypedLinkRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-detachtypedlinkresponse.html">DetachTypedLinkResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a typed link from a specified source and target object. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@detachTypedLink -->
+<!-- $$$disableDirectory[overload1]$$$disableDirectoryconstDisableDirectoryRequest& -->
+<h3 class="fn" id="disableDirectory"><a name="disableDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-disabledirectoryresponse.html">DisableDirectoryResponse</a></span> *CloudDirectoryClient::<span class="name">disableDirectory</span>(const <span class="type"><a href="qtaws-clouddirectory-disabledirectoryrequest.html">DisableDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-disabledirectoryresponse.html">DisableDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables the specified directory. Disabled directories cannot be read or written to. Only enabled directories can be disabled. Disabled directories may be</p>
+<!-- @@@disableDirectory -->
+<!-- $$$enableDirectory[overload1]$$$enableDirectoryconstEnableDirectoryRequest& -->
+<h3 class="fn" id="enableDirectory"><a name="enableDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-enabledirectoryresponse.html">EnableDirectoryResponse</a></span> *CloudDirectoryClient::<span class="name">enableDirectory</span>(const <span class="type"><a href="qtaws-clouddirectory-enabledirectoryrequest.html">EnableDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-enabledirectoryresponse.html">EnableDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables the specified directory. Only disabled directories can be enabled. Once enabled, the directory can then be read and written</p>
+<!-- @@@enableDirectory -->
+<!-- $$$getAppliedSchemaVersion[overload1]$$$getAppliedSchemaVersionconstGetAppliedSchemaVersionRequest& -->
+<h3 class="fn" id="getAppliedSchemaVersion"><a name="getAppliedSchemaVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getappliedschemaversionresponse.html">GetAppliedSchemaVersionResponse</a></span> *CloudDirectoryClient::<span class="name">getAppliedSchemaVersion</span>(const <span class="type"><a href="qtaws-clouddirectory-getappliedschemaversionrequest.html">GetAppliedSchemaVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getappliedschemaversionresponse.html">GetAppliedSchemaVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns current applied schema version ARN, including the minor version in</p>
+<!-- @@@getAppliedSchemaVersion -->
+<!-- $$$getDirectory[overload1]$$$getDirectoryconstGetDirectoryRequest& -->
+<h3 class="fn" id="getDirectory"><a name="getDirectory"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getdirectoryresponse.html">GetDirectoryResponse</a></span> *CloudDirectoryClient::<span class="name">getDirectory</span>(const <span class="type"><a href="qtaws-clouddirectory-getdirectoryrequest.html">GetDirectoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getdirectoryresponse.html">GetDirectoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata about a</p>
+<!-- @@@getDirectory -->
+<!-- $$$getFacet[overload1]$$$getFacetconstGetFacetRequest& -->
+<h3 class="fn" id="getFacet"><a name="getFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getfacetresponse.html">GetFacetResponse</a></span> *CloudDirectoryClient::<span class="name">getFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-getfacetrequest.html">GetFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getfacetresponse.html">GetFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets details of the &lt;a&gt;Facet&lt;/a&gt;, such as facet name, attributes, &lt;a&gt;Rule&lt;/a&gt;s, or &lt;code&gt;ObjectType&lt;/code&gt;. You can call this on all kinds of schema facets -- published, development, or</p>
+<!-- @@@getFacet -->
+<!-- $$$getObjectAttributes[overload1]$$$getObjectAttributesconstGetObjectAttributesRequest& -->
+<h3 class="fn" id="getObjectAttributes"><a name="getObjectAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getobjectattributesresponse.html">GetObjectAttributesResponse</a></span> *CloudDirectoryClient::<span class="name">getObjectAttributes</span>(const <span class="type"><a href="qtaws-clouddirectory-getobjectattributesrequest.html">GetObjectAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getobjectattributesresponse.html">GetObjectAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves attributes within a facet that are associated with an</p>
+<!-- @@@getObjectAttributes -->
+<!-- $$$getObjectInformation[overload1]$$$getObjectInformationconstGetObjectInformationRequest& -->
+<h3 class="fn" id="getObjectInformation"><a name="getObjectInformation"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getobjectinformationresponse.html">GetObjectInformationResponse</a></span> *CloudDirectoryClient::<span class="name">getObjectInformation</span>(const <span class="type"><a href="qtaws-clouddirectory-getobjectinformationrequest.html">GetObjectInformationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getobjectinformationresponse.html">GetObjectInformationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves metadata about an</p>
+<!-- @@@getObjectInformation -->
+<!-- $$$getSchemaAsJson[overload1]$$$getSchemaAsJsonconstGetSchemaAsJsonRequest& -->
+<h3 class="fn" id="getSchemaAsJson"><a name="getSchemaAsJson"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-getschemaasjsonresponse.html">GetSchemaAsJsonResponse</a></span> *CloudDirectoryClient::<span class="name">getSchemaAsJson</span>(const <span class="type"><a href="qtaws-clouddirectory-getschemaasjsonrequest.html">GetSchemaAsJsonRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-getschemaasjsonresponse.html">GetSchemaAsJsonResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a JSON representation of the schema. See &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat&quot;&gt;JSON Schema Format&lt;/a&gt; for more</p>
+<!-- @@@getSchemaAsJson -->
+<!-- $$$getTypedLinkFacetInformation[overload1]$$$getTypedLinkFacetInformationconstGetTypedLinkFacetInformationRequest& -->
+<h3 class="fn" id="getTypedLinkFacetInformation"><a name="getTypedLinkFacetInformation"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-gettypedlinkfacetinformationresponse.html">GetTypedLinkFacetInformationResponse</a></span> *CloudDirectoryClient::<span class="name">getTypedLinkFacetInformation</span>(const <span class="type"><a href="qtaws-clouddirectory-gettypedlinkfacetinformationrequest.html">GetTypedLinkFacetInformationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-gettypedlinkfacetinformationresponse.html">GetTypedLinkFacetInformationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the identity attribute order for a specific &lt;a&gt;TypedLinkFacet&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@getTypedLinkFacetInformation -->
+<!-- $$$listAppliedSchemaArns[overload1]$$$listAppliedSchemaArnsconstListAppliedSchemaArnsRequest& -->
+<h3 class="fn" id="listAppliedSchemaArns"><a name="listAppliedSchemaArns"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listappliedschemaarnsresponse.html">ListAppliedSchemaArnsResponse</a></span> *CloudDirectoryClient::<span class="name">listAppliedSchemaArns</span>(const <span class="type"><a href="qtaws-clouddirectory-listappliedschemaarnsrequest.html">ListAppliedSchemaArnsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listappliedschemaarnsresponse.html">ListAppliedSchemaArnsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists schema major versions applied to a directory. If &lt;code&gt;SchemaArn&lt;/code&gt; is provided, lists the minor</p>
+<!-- @@@listAppliedSchemaArns -->
+<!-- $$$listAttachedIndices[overload1]$$$listAttachedIndicesconstListAttachedIndicesRequest& -->
+<h3 class="fn" id="listAttachedIndices"><a name="listAttachedIndices"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listattachedindicesresponse.html">ListAttachedIndicesResponse</a></span> *CloudDirectoryClient::<span class="name">listAttachedIndices</span>(const <span class="type"><a href="qtaws-clouddirectory-listattachedindicesrequest.html">ListAttachedIndicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listattachedindicesresponse.html">ListAttachedIndicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists indices attached to the specified</p>
+<!-- @@@listAttachedIndices -->
+<!-- $$$listDevelopmentSchemaArns[overload1]$$$listDevelopmentSchemaArnsconstListDevelopmentSchemaArnsRequest& -->
+<h3 class="fn" id="listDevelopmentSchemaArns"><a name="listDevelopmentSchemaArns"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listdevelopmentschemaarnsresponse.html">ListDevelopmentSchemaArnsResponse</a></span> *CloudDirectoryClient::<span class="name">listDevelopmentSchemaArns</span>(const <span class="type"><a href="qtaws-clouddirectory-listdevelopmentschemaarnsrequest.html">ListDevelopmentSchemaArnsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listdevelopmentschemaarnsresponse.html">ListDevelopmentSchemaArnsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves each Amazon Resource Name (ARN) of schemas in the development</p>
+<!-- @@@listDevelopmentSchemaArns -->
+<!-- $$$listDirectories[overload1]$$$listDirectoriesconstListDirectoriesRequest& -->
+<h3 class="fn" id="listDirectories"><a name="listDirectories"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listdirectoriesresponse.html">ListDirectoriesResponse</a></span> *CloudDirectoryClient::<span class="name">listDirectories</span>(const <span class="type"><a href="qtaws-clouddirectory-listdirectoriesrequest.html">ListDirectoriesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listdirectoriesresponse.html">ListDirectoriesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists directories created within an</p>
+<!-- @@@listDirectories -->
+<!-- $$$listFacetAttributes[overload1]$$$listFacetAttributesconstListFacetAttributesRequest& -->
+<h3 class="fn" id="listFacetAttributes"><a name="listFacetAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listfacetattributesresponse.html">ListFacetAttributesResponse</a></span> *CloudDirectoryClient::<span class="name">listFacetAttributes</span>(const <span class="type"><a href="qtaws-clouddirectory-listfacetattributesrequest.html">ListFacetAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listfacetattributesresponse.html">ListFacetAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves attributes attached to the</p>
+<!-- @@@listFacetAttributes -->
+<!-- $$$listFacetNames[overload1]$$$listFacetNamesconstListFacetNamesRequest& -->
+<h3 class="fn" id="listFacetNames"><a name="listFacetNames"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listfacetnamesresponse.html">ListFacetNamesResponse</a></span> *CloudDirectoryClient::<span class="name">listFacetNames</span>(const <span class="type"><a href="qtaws-clouddirectory-listfacetnamesrequest.html">ListFacetNamesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listfacetnamesresponse.html">ListFacetNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the names of facets that exist in a</p>
+<!-- @@@listFacetNames -->
+<!-- $$$listIncomingTypedLinks[overload1]$$$listIncomingTypedLinksconstListIncomingTypedLinksRequest& -->
+<h3 class="fn" id="listIncomingTypedLinks"><a name="listIncomingTypedLinks"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listincomingtypedlinksresponse.html">ListIncomingTypedLinksResponse</a></span> *CloudDirectoryClient::<span class="name">listIncomingTypedLinks</span>(const <span class="type"><a href="qtaws-clouddirectory-listincomingtypedlinksrequest.html">ListIncomingTypedLinksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listincomingtypedlinksresponse.html">ListIncomingTypedLinksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a paginated list of all the incoming &lt;a&gt;TypedLinkSpecifier&lt;/a&gt; information for an object. It also supports filtering by typed link facet and identity attributes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@listIncomingTypedLinks -->
+<!-- $$$listIndex[overload1]$$$listIndexconstListIndexRequest& -->
+<h3 class="fn" id="listIndex"><a name="listIndex"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listindexresponse.html">ListIndexResponse</a></span> *CloudDirectoryClient::<span class="name">listIndex</span>(const <span class="type"><a href="qtaws-clouddirectory-listindexrequest.html">ListIndexRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listindexresponse.html">ListIndexResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists objects attached to the specified</p>
+<!-- @@@listIndex -->
+<!-- $$$listObjectAttributes[overload1]$$$listObjectAttributesconstListObjectAttributesRequest& -->
+<h3 class="fn" id="listObjectAttributes"><a name="listObjectAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listobjectattributesresponse.html">ListObjectAttributesResponse</a></span> *CloudDirectoryClient::<span class="name">listObjectAttributes</span>(const <span class="type"><a href="qtaws-clouddirectory-listobjectattributesrequest.html">ListObjectAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listobjectattributesresponse.html">ListObjectAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all attributes that are associated with an object.</p>
+<!-- @@@listObjectAttributes -->
+<!-- $$$listObjectChildren[overload1]$$$listObjectChildrenconstListObjectChildrenRequest& -->
+<h3 class="fn" id="listObjectChildren"><a name="listObjectChildren"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listobjectchildrenresponse.html">ListObjectChildrenResponse</a></span> *CloudDirectoryClient::<span class="name">listObjectChildren</span>(const <span class="type"><a href="qtaws-clouddirectory-listobjectchildrenrequest.html">ListObjectChildrenRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listobjectchildrenresponse.html">ListObjectChildrenResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a paginated list of child objects that are associated with a given</p>
+<!-- @@@listObjectChildren -->
+<!-- $$$listObjectParentPaths[overload1]$$$listObjectParentPathsconstListObjectParentPathsRequest& -->
+<h3 class="fn" id="listObjectParentPaths"><a name="listObjectParentPaths"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listobjectparentpathsresponse.html">ListObjectParentPathsResponse</a></span> *CloudDirectoryClient::<span class="name">listObjectParentPaths</span>(const <span class="type"><a href="qtaws-clouddirectory-listobjectparentpathsrequest.html">ListObjectParentPathsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listobjectparentpathsresponse.html">ListObjectParentPathsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all available parent paths for any object type such as node, leaf node, policy node, and index node objects. For more information about objects, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#dirstructure&quot;&gt;Directory</p>
+<p>Structure&lt;/a&gt;&gt;</p>
+<p>Use this API to evaluate all parents for an object. The call returns all objects from the root of the directory up to the requested object. The API returns the number of paths based on user-defined &lt;code&gt;MaxResults&lt;/code&gt;, in case there are multiple paths to the parent. The order of the paths and nodes returned is consistent among multiple API calls unless the objects are deleted or moved. Paths not leading to the directory root are ignored from the target</p>
+<!-- @@@listObjectParentPaths -->
+<!-- $$$listObjectParents[overload1]$$$listObjectParentsconstListObjectParentsRequest& -->
+<h3 class="fn" id="listObjectParents"><a name="listObjectParents"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listobjectparentsresponse.html">ListObjectParentsResponse</a></span> *CloudDirectoryClient::<span class="name">listObjectParents</span>(const <span class="type"><a href="qtaws-clouddirectory-listobjectparentsrequest.html">ListObjectParentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listobjectparentsresponse.html">ListObjectParentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists parent objects that are associated with a given object in pagination</p>
+<!-- @@@listObjectParents -->
+<!-- $$$listObjectPolicies[overload1]$$$listObjectPoliciesconstListObjectPoliciesRequest& -->
+<h3 class="fn" id="listObjectPolicies"><a name="listObjectPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listobjectpoliciesresponse.html">ListObjectPoliciesResponse</a></span> *CloudDirectoryClient::<span class="name">listObjectPolicies</span>(const <span class="type"><a href="qtaws-clouddirectory-listobjectpoliciesrequest.html">ListObjectPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listobjectpoliciesresponse.html">ListObjectPoliciesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns policies attached to an object in pagination</p>
+<!-- @@@listObjectPolicies -->
+<!-- $$$listOutgoingTypedLinks[overload1]$$$listOutgoingTypedLinksconstListOutgoingTypedLinksRequest& -->
+<h3 class="fn" id="listOutgoingTypedLinks"><a name="listOutgoingTypedLinks"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listoutgoingtypedlinksresponse.html">ListOutgoingTypedLinksResponse</a></span> *CloudDirectoryClient::<span class="name">listOutgoingTypedLinks</span>(const <span class="type"><a href="qtaws-clouddirectory-listoutgoingtypedlinksrequest.html">ListOutgoingTypedLinksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listoutgoingtypedlinksresponse.html">ListOutgoingTypedLinksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a paginated list of all the outgoing &lt;a&gt;TypedLinkSpecifier&lt;/a&gt; information for an object. It also supports filtering by typed link facet and identity attributes. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@listOutgoingTypedLinks -->
+<!-- $$$listPolicyAttachments[overload1]$$$listPolicyAttachmentsconstListPolicyAttachmentsRequest& -->
+<h3 class="fn" id="listPolicyAttachments"><a name="listPolicyAttachments"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listpolicyattachmentsresponse.html">ListPolicyAttachmentsResponse</a></span> *CloudDirectoryClient::<span class="name">listPolicyAttachments</span>(const <span class="type"><a href="qtaws-clouddirectory-listpolicyattachmentsrequest.html">ListPolicyAttachmentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listpolicyattachmentsresponse.html">ListPolicyAttachmentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all of the &lt;code&gt;ObjectIdentifiers&lt;/code&gt; to which a given policy is</p>
+<!-- @@@listPolicyAttachments -->
+<!-- $$$listPublishedSchemaArns[overload1]$$$listPublishedSchemaArnsconstListPublishedSchemaArnsRequest& -->
+<h3 class="fn" id="listPublishedSchemaArns"><a name="listPublishedSchemaArns"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listpublishedschemaarnsresponse.html">ListPublishedSchemaArnsResponse</a></span> *CloudDirectoryClient::<span class="name">listPublishedSchemaArns</span>(const <span class="type"><a href="qtaws-clouddirectory-listpublishedschemaarnsrequest.html">ListPublishedSchemaArnsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listpublishedschemaarnsresponse.html">ListPublishedSchemaArnsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the major version families of each published schema. If a major version ARN is provided as &lt;code&gt;SchemaArn&lt;/code&gt;, the minor version revisions in that family are listed</p>
+<!-- @@@listPublishedSchemaArns -->
+<!-- $$$listTagsForResource[overload1]$$$listTagsForResourceconstListTagsForResourceRequest& -->
+<h3 class="fn" id="listTagsForResource"><a name="listTagsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listtagsforresourceresponse.html">ListTagsForResourceResponse</a></span> *CloudDirectoryClient::<span class="name">listTagsForResource</span>(const <span class="type"><a href="qtaws-clouddirectory-listtagsforresourcerequest.html">ListTagsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listtagsforresourceresponse.html">ListTagsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns tags for a resource. Tagging is currently supported only for directories with a limit of 50 tags per directory. All 50 tags are returned for a given directory with this API</p>
+<!-- @@@listTagsForResource -->
+<!-- $$$listTypedLinkFacetAttributes[overload1]$$$listTypedLinkFacetAttributesconstListTypedLinkFacetAttributesRequest& -->
+<h3 class="fn" id="listTypedLinkFacetAttributes"><a name="listTypedLinkFacetAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listtypedlinkfacetattributesresponse.html">ListTypedLinkFacetAttributesResponse</a></span> *CloudDirectoryClient::<span class="name">listTypedLinkFacetAttributes</span>(const <span class="type"><a href="qtaws-clouddirectory-listtypedlinkfacetattributesrequest.html">ListTypedLinkFacetAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listtypedlinkfacetattributesresponse.html">ListTypedLinkFacetAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a paginated list of all attribute definitions for a particular &lt;a&gt;TypedLinkFacet&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@listTypedLinkFacetAttributes -->
+<!-- $$$listTypedLinkFacetNames[overload1]$$$listTypedLinkFacetNamesconstListTypedLinkFacetNamesRequest& -->
+<h3 class="fn" id="listTypedLinkFacetNames"><a name="listTypedLinkFacetNames"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-listtypedlinkfacetnamesresponse.html">ListTypedLinkFacetNamesResponse</a></span> *CloudDirectoryClient::<span class="name">listTypedLinkFacetNames</span>(const <span class="type"><a href="qtaws-clouddirectory-listtypedlinkfacetnamesrequest.html">ListTypedLinkFacetNamesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-listtypedlinkfacetnamesresponse.html">ListTypedLinkFacetNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a paginated list of &lt;code&gt;TypedLink&lt;/code&gt; facet names for a particular schema. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@listTypedLinkFacetNames -->
+<!-- $$$lookupPolicy[overload1]$$$lookupPolicyconstLookupPolicyRequest& -->
+<h3 class="fn" id="lookupPolicy"><a name="lookupPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-lookuppolicyresponse.html">LookupPolicyResponse</a></span> *CloudDirectoryClient::<span class="name">lookupPolicy</span>(const <span class="type"><a href="qtaws-clouddirectory-lookuppolicyrequest.html">LookupPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-lookuppolicyresponse.html">LookupPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all policies from the root of the &lt;a&gt;Directory&lt;/a&gt; to the object specified. If there are no policies present, an empty list is returned. If policies are present, and if some objects don't have the policies attached, it returns the &lt;code&gt;ObjectIdentifier&lt;/code&gt; for such objects. If policies are present, it returns &lt;code&gt;ObjectIdentifier&lt;/code&gt;, &lt;code&gt;policyId&lt;/code&gt;, and &lt;code&gt;policyType&lt;/code&gt;. Paths that don't lead to the root from the target object are ignored. For more information, see &lt;a</p>
+<!-- @@@lookupPolicy -->
+<!-- $$$publishSchema[overload1]$$$publishSchemaconstPublishSchemaRequest& -->
+<h3 class="fn" id="publishSchema"><a name="publishSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-publishschemaresponse.html">PublishSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">publishSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-publishschemarequest.html">PublishSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-publishschemaresponse.html">PublishSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Publishes a development schema with a major version and a recommended minor</p>
+<!-- @@@publishSchema -->
+<!-- $$$putSchemaFromJson[overload1]$$$putSchemaFromJsonconstPutSchemaFromJsonRequest& -->
+<h3 class="fn" id="putSchemaFromJson"><a name="putSchemaFromJson"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-putschemafromjsonresponse.html">PutSchemaFromJsonResponse</a></span> *CloudDirectoryClient::<span class="name">putSchemaFromJson</span>(const <span class="type"><a href="qtaws-clouddirectory-putschemafromjsonrequest.html">PutSchemaFromJsonRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-putschemafromjsonresponse.html">PutSchemaFromJsonResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allows a schema to be updated using JSON upload. Only available for development schemas. See &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat&quot;&gt;JSON Schema Format&lt;/a&gt; for more</p>
+<!-- @@@putSchemaFromJson -->
+<!-- $$$removeFacetFromObject[overload1]$$$removeFacetFromObjectconstRemoveFacetFromObjectRequest& -->
+<h3 class="fn" id="removeFacetFromObject"><a name="removeFacetFromObject"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-removefacetfromobjectresponse.html">RemoveFacetFromObjectResponse</a></span> *CloudDirectoryClient::<span class="name">removeFacetFromObject</span>(const <span class="type"><a href="qtaws-clouddirectory-removefacetfromobjectrequest.html">RemoveFacetFromObjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-removefacetfromobjectresponse.html">RemoveFacetFromObjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the specified facet from the specified</p>
+<!-- @@@removeFacetFromObject -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-tagresourceresponse.html">TagResourceResponse</a></span> *CloudDirectoryClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-clouddirectory-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>An API operation for adding tags to a</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-untagresourceresponse.html">UntagResourceResponse</a></span> *CloudDirectoryClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-clouddirectory-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>An API operation for removing tags from a</p>
+<!-- @@@untagResource -->
+<!-- $$$updateFacet[overload1]$$$updateFacetconstUpdateFacetRequest& -->
+<h3 class="fn" id="updateFacet"><a name="updateFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-updatefacetresponse.html">UpdateFacetResponse</a></span> *CloudDirectoryClient::<span class="name">updateFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-updatefacetrequest.html">UpdateFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-updatefacetresponse.html">UpdateFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Does the</p>
+<p>following&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Adds new &lt;code&gt;Attributes&lt;/code&gt;, &lt;code&gt;Rules&lt;/code&gt;, or</p>
+<p>&lt;code&gt;ObjectTypes&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Updates existing &lt;code&gt;Attributes&lt;/code&gt;, &lt;code&gt;Rules&lt;/code&gt;, or</p>
+<p>&lt;code&gt;ObjectTypes&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Deletes existing &lt;code&gt;Attributes&lt;/code&gt;, &lt;code&gt;Rules&lt;/code&gt;, or</p>
+<!-- @@@updateFacet -->
+<!-- $$$updateObjectAttributes[overload1]$$$updateObjectAttributesconstUpdateObjectAttributesRequest& -->
+<h3 class="fn" id="updateObjectAttributes"><a name="updateObjectAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-updateobjectattributesresponse.html">UpdateObjectAttributesResponse</a></span> *CloudDirectoryClient::<span class="name">updateObjectAttributes</span>(const <span class="type"><a href="qtaws-clouddirectory-updateobjectattributesrequest.html">UpdateObjectAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-updateobjectattributesresponse.html">UpdateObjectAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a given object's</p>
+<!-- @@@updateObjectAttributes -->
+<!-- $$$updateSchema[overload1]$$$updateSchemaconstUpdateSchemaRequest& -->
+<h3 class="fn" id="updateSchema"><a name="updateSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-updateschemaresponse.html">UpdateSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">updateSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-updateschemarequest.html">UpdateSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-updateschemaresponse.html">UpdateSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the schema name with a new name. Only development schema names can be</p>
+<!-- @@@updateSchema -->
+<!-- $$$updateTypedLinkFacet[overload1]$$$updateTypedLinkFacetconstUpdateTypedLinkFacetRequest& -->
+<h3 class="fn" id="updateTypedLinkFacet"><a name="updateTypedLinkFacet"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-updatetypedlinkfacetresponse.html">UpdateTypedLinkFacetResponse</a></span> *CloudDirectoryClient::<span class="name">updateTypedLinkFacet</span>(const <span class="type"><a href="qtaws-clouddirectory-updatetypedlinkfacetrequest.html">UpdateTypedLinkFacetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-updatetypedlinkfacetresponse.html">UpdateTypedLinkFacetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a &lt;a&gt;TypedLinkFacet&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink&quot;&gt;Typed</p>
+<!-- @@@updateTypedLinkFacet -->
+<!-- $$$upgradeAppliedSchema[overload1]$$$upgradeAppliedSchemaconstUpgradeAppliedSchemaRequest& -->
+<h3 class="fn" id="upgradeAppliedSchema"><a name="upgradeAppliedSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-upgradeappliedschemaresponse.html">UpgradeAppliedSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">upgradeAppliedSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-upgradeappliedschemarequest.html">UpgradeAppliedSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-upgradeappliedschemaresponse.html">UpgradeAppliedSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Upgrades a single directory in-place using the &lt;code&gt;PublishedSchemaArn&lt;/code&gt; with schema updates found in &lt;code&gt;MinorVersion&lt;/code&gt;. Backwards-compatible minor version upgrades are instantaneously available for readers on all objects in the directory. Note: This is a synchronous API call and upgrades only one schema on a given directory per call. To upgrade multiple directories from one schema, you would need to call this API on each</p>
+<!-- @@@upgradeAppliedSchema -->
+<!-- $$$upgradePublishedSchema[overload1]$$$upgradePublishedSchemaconstUpgradePublishedSchemaRequest& -->
+<h3 class="fn" id="upgradePublishedSchema"><a name="upgradePublishedSchema"></a><code>[slot] </code><span class="type"><a href="qtaws-clouddirectory-upgradepublishedschemaresponse.html">UpgradePublishedSchemaResponse</a></span> *CloudDirectoryClient::<span class="name">upgradePublishedSchema</span>(const <span class="type"><a href="qtaws-clouddirectory-upgradepublishedschemarequest.html">UpgradePublishedSchemaRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-clouddirectory-clouddirectoryclient.html">CloudDirectoryClient</a> service, and returns a pointer to an <a href="qtaws-clouddirectory-upgradepublishedschemaresponse.html">UpgradePublishedSchemaResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Upgrades a published schema under a new minor version revision using the current contents of</p>
+<!-- @@@upgradePublishedSchema -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

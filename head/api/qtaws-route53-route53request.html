@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- route53request.cpp -->
+  <title>Route53Request Class | Route53</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsroute53-index.html">Route53</a></li>
+<li><a href="qtawsroute53-module.html">C++ Classes</a></li>
+<li>Route53Request</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Route53Request Class</h1>
+<span class="small-subtitle">(<a href="qtaws-route53-route53request.html">QtAws::Route53::Route53Request</a>)<br/></span>
+<!-- $$$Route53Request-brief -->
+<p>The <a href="qtaws-route53-route53request.html">Route53Request</a> class provides an interface for Route53 requests. <a href="#details">More...</a></p>
+<!-- @@@Route53Request -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;Route53Request&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-route53-associatevpcwithhostedzonerequest.html">QtAws::Route53::AssociateVPCWithHostedZoneRequest</a>, <a href="qtaws-route53-changeresourcerecordsetsrequest.html">QtAws::Route53::ChangeResourceRecordSetsRequest</a>, <a href="qtaws-route53-changetagsforresourcerequest.html">QtAws::Route53::ChangeTagsForResourceRequest</a>, <a href="qtaws-route53-createhealthcheckrequest.html">QtAws::Route53::CreateHealthCheckRequest</a>, <a href="qtaws-route53-createhostedzonerequest.html">QtAws::Route53::CreateHostedZoneRequest</a>, <a href="qtaws-route53-createqueryloggingconfigrequest.html">QtAws::Route53::CreateQueryLoggingConfigRequest</a>, <a href="qtaws-route53-createreusabledelegationsetrequest.html">QtAws::Route53::CreateReusableDelegationSetRequest</a>, <a href="qtaws-route53-createtrafficpolicyinstancerequest.html">QtAws::Route53::CreateTrafficPolicyInstanceRequest</a>, <a href="qtaws-route53-createtrafficpolicyrequest.html">QtAws::Route53::CreateTrafficPolicyRequest</a>, <a href="qtaws-route53-createtrafficpolicyversionrequest.html">QtAws::Route53::CreateTrafficPolicyVersionRequest</a>, <a href="qtaws-route53-createvpcassociationauthorizationrequest.html">QtAws::Route53::CreateVPCAssociationAuthorizationRequest</a>, <a href="qtaws-route53-deletehealthcheckrequest.html">QtAws::Route53::DeleteHealthCheckRequest</a>, <a href="qtaws-route53-deletehostedzonerequest.html">QtAws::Route53::DeleteHostedZoneRequest</a>, <a href="qtaws-route53-deletequeryloggingconfigrequest.html">QtAws::Route53::DeleteQueryLoggingConfigRequest</a>, <a href="qtaws-route53-deletereusabledelegationsetrequest.html">QtAws::Route53::DeleteReusableDelegationSetRequest</a>, <a href="qtaws-route53-deletetrafficpolicyinstancerequest.html">QtAws::Route53::DeleteTrafficPolicyInstanceRequest</a>, <a href="qtaws-route53-deletetrafficpolicyrequest.html">QtAws::Route53::DeleteTrafficPolicyRequest</a>, <a href="qtaws-route53-deletevpcassociationauthorizationrequest.html">QtAws::Route53::DeleteVPCAssociationAuthorizationRequest</a>, <a href="qtaws-route53-disassociatevpcfromhostedzonerequest.html">QtAws::Route53::DisassociateVPCFromHostedZoneRequest</a>, <a href="qtaws-route53-getaccountlimitrequest.html">QtAws::Route53::GetAccountLimitRequest</a>, <a href="qtaws-route53-getchangerequest.html">QtAws::Route53::GetChangeRequest</a>, <a href="qtaws-route53-getcheckeriprangesrequest.html">QtAws::Route53::GetCheckerIpRangesRequest</a>, <a href="qtaws-route53-getgeolocationrequest.html">QtAws::Route53::GetGeoLocationRequest</a>, <a href="qtaws-route53-gethealthcheckcountrequest.html">QtAws::Route53::GetHealthCheckCountRequest</a>, <a href="qtaws-route53-gethealthchecklastfailurereasonrequest.html">QtAws::Route53::GetHealthCheckLastFailureReasonRequest</a>, <a href="qtaws-route53-gethealthcheckrequest.html">QtAws::Route53::GetHealthCheckRequest</a>, <a href="qtaws-route53-gethealthcheckstatusrequest.html">QtAws::Route53::GetHealthCheckStatusRequest</a>, <a href="qtaws-route53-gethostedzonecountrequest.html">QtAws::Route53::GetHostedZoneCountRequest</a>, <a href="qtaws-route53-gethostedzonelimitrequest.html">QtAws::Route53::GetHostedZoneLimitRequest</a>, <a href="qtaws-route53-gethostedzonerequest.html">QtAws::Route53::GetHostedZoneRequest</a>, <a href="qtaws-route53-getqueryloggingconfigrequest.html">QtAws::Route53::GetQueryLoggingConfigRequest</a>, <a href="qtaws-route53-getreusabledelegationsetlimitrequest.html">QtAws::Route53::GetReusableDelegationSetLimitRequest</a>, <a href="qtaws-route53-getreusabledelegationsetrequest.html">QtAws::Route53::GetReusableDelegationSetRequest</a>, <a href="qtaws-route53-gettrafficpolicyinstancecountrequest.html">QtAws::Route53::GetTrafficPolicyInstanceCountRequest</a>, <a href="qtaws-route53-gettrafficpolicyinstancerequest.html">QtAws::Route53::GetTrafficPolicyInstanceRequest</a>, <a href="qtaws-route53-gettrafficpolicyrequest.html">QtAws::Route53::GetTrafficPolicyRequest</a>, <a href="qtaws-route53-listgeolocationsrequest.html">QtAws::Route53::ListGeoLocationsRequest</a>, <a href="qtaws-route53-listhealthchecksrequest.html">QtAws::Route53::ListHealthChecksRequest</a>, <a href="qtaws-route53-listhostedzonesbynamerequest.html">QtAws::Route53::ListHostedZonesByNameRequest</a>, <a href="qtaws-route53-listhostedzonesrequest.html">QtAws::Route53::ListHostedZonesRequest</a>, <a href="qtaws-route53-listqueryloggingconfigsrequest.html">QtAws::Route53::ListQueryLoggingConfigsRequest</a>, <a href="qtaws-route53-listresourcerecordsetsrequest.html">QtAws::Route53::ListResourceRecordSetsRequest</a>, <a href="qtaws-route53-listreusabledelegationsetsrequest.html">QtAws::Route53::ListReusableDelegationSetsRequest</a>, <a href="qtaws-route53-listtagsforresourcerequest.html">QtAws::Route53::ListTagsForResourceRequest</a>, <a href="qtaws-route53-listtagsforresourcesrequest.html">QtAws::Route53::ListTagsForResourcesRequest</a>, <a href="qtaws-route53-listtrafficpoliciesrequest.html">QtAws::Route53::ListTrafficPoliciesRequest</a>, <a href="qtaws-route53-listtrafficpolicyinstancesbyhostedzonerequest.html">QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneRequest</a>, <a href="qtaws-route53-listtrafficpolicyinstancesbypolicyrequest.html">QtAws::Route53::ListTrafficPolicyInstancesByPolicyRequest</a>, <a href="qtaws-route53-listtrafficpolicyinstancesrequest.html">QtAws::Route53::ListTrafficPolicyInstancesRequest</a>, <a href="qtaws-route53-listtrafficpolicyversionsrequest.html">QtAws::Route53::ListTrafficPolicyVersionsRequest</a>, <a href="qtaws-route53-listvpcassociationauthorizationsrequest.html">QtAws::Route53::ListVPCAssociationAuthorizationsRequest</a>, <a href="qtaws-route53-testdnsanswerrequest.html">QtAws::Route53::TestDNSAnswerRequest</a>, <a href="qtaws-route53-updatehealthcheckrequest.html">QtAws::Route53::UpdateHealthCheckRequest</a>, <a href="qtaws-route53-updatehostedzonecommentrequest.html">QtAws::Route53::UpdateHostedZoneCommentRequest</a>, <a href="qtaws-route53-updatetrafficpolicycommentrequest.html">QtAws::Route53::UpdateTrafficPolicyCommentRequest</a>, and <a href="qtaws-route53-updatetrafficpolicyinstancerequest.html">QtAws::Route53::UpdateTrafficPolicyInstanceRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-route53-route53request-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#Action-enum">Action</a></b> { AssociateVPCWithHostedZoneAction, ChangeResourceRecordSetsAction, ChangeTagsForResourceAction, CreateHealthCheckAction, ..., UpdateTrafficPolicyInstanceAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#Route53Request">Route53Request</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#Route53Request-1">Route53Request</a></b>(const Route53Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Route53Request &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#operator-eq">operator=</a></b>(const Route53Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#operator-eq-eq">operator==</a></b>(const Route53Request &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#Route53Request-2">Route53Request</a></b>(Route53RequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-route53-route53request.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$Route53Request-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-route53-route53request.html">Route53Request</a> class provides an interface for Route53 requests.</p>
+</div>
+<!-- @@@Route53Request -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AssociateVPCWithHostedZoneAction$$$ChangeResourceRecordSetsAction$$$ChangeTagsForResourceAction$$$CreateHealthCheckAction$$$CreateHostedZoneAction$$$CreateQueryLoggingConfigAction$$$CreateReusableDelegationSetAction$$$CreateTrafficPolicyAction$$$CreateTrafficPolicyInstanceAction$$$CreateTrafficPolicyVersionAction$$$CreateVPCAssociationAuthorizationAction$$$DeleteHealthCheckAction$$$DeleteHostedZoneAction$$$DeleteQueryLoggingConfigAction$$$DeleteReusableDelegationSetAction$$$DeleteTrafficPolicyAction$$$DeleteTrafficPolicyInstanceAction$$$DeleteVPCAssociationAuthorizationAction$$$DisassociateVPCFromHostedZoneAction$$$GetAccountLimitAction$$$GetChangeAction$$$GetCheckerIpRangesAction$$$GetGeoLocationAction$$$GetHealthCheckAction$$$GetHealthCheckCountAction$$$GetHealthCheckLastFailureReasonAction$$$GetHealthCheckStatusAction$$$GetHostedZoneAction$$$GetHostedZoneCountAction$$$GetHostedZoneLimitAction$$$GetQueryLoggingConfigAction$$$GetReusableDelegationSetAction$$$GetReusableDelegationSetLimitAction$$$GetTrafficPolicyAction$$$GetTrafficPolicyInstanceAction$$$GetTrafficPolicyInstanceCountAction$$$ListGeoLocationsAction$$$ListHealthChecksAction$$$ListHostedZonesAction$$$ListHostedZonesByNameAction$$$ListQueryLoggingConfigsAction$$$ListResourceRecordSetsAction$$$ListReusableDelegationSetsAction$$$ListTagsForResourceAction$$$ListTagsForResourcesAction$$$ListTrafficPoliciesAction$$$ListTrafficPolicyInstancesAction$$$ListTrafficPolicyInstancesByHostedZoneAction$$$ListTrafficPolicyInstancesByPolicyAction$$$ListTrafficPolicyVersionsAction$$$ListVPCAssociationAuthorizationsAction$$$TestDNSAnswerAction$$$UpdateHealthCheckAction$$$UpdateHostedZoneCommentAction$$$UpdateTrafficPolicyCommentAction$$$UpdateTrafficPolicyInstanceAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum Route53Request::<span class="name">Action</span><br/>flags Route53Request::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Route53 requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::AssociateVPCWithHostedZoneAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Route53 AssociateVPCWithHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ChangeResourceRecordSetsAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Route53 ChangeResourceRecordSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ChangeTagsForResourceAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Route53 ChangeTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateHealthCheckAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Route53 CreateHealthCheck action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateHostedZoneAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Route53 CreateHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateQueryLoggingConfigAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Route53 CreateQueryLoggingConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateReusableDelegationSetAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Route53 CreateReusableDelegationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateTrafficPolicyAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Route53 CreateTrafficPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateTrafficPolicyInstanceAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Route53 CreateTrafficPolicyInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateTrafficPolicyVersionAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Route53 CreateTrafficPolicyVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::CreateVPCAssociationAuthorizationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Route53 CreateVPCAssociationAuthorization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteHealthCheckAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Route53 DeleteHealthCheck action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteHostedZoneAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Route53 DeleteHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteQueryLoggingConfigAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Route53 DeleteQueryLoggingConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteReusableDelegationSetAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Route53 DeleteReusableDelegationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteTrafficPolicyAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Route53 DeleteTrafficPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteTrafficPolicyInstanceAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Route53 DeleteTrafficPolicyInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DeleteVPCAssociationAuthorizationAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Route53 DeleteVPCAssociationAuthorization action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::DisassociateVPCFromHostedZoneAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Route53 DisassociateVPCFromHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetAccountLimitAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Route53 GetAccountLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetChangeAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Route53 GetChange action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetCheckerIpRangesAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Route53 GetCheckerIpRanges action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetGeoLocationAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Route53 GetGeoLocation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHealthCheckAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Route53 GetHealthCheck action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHealthCheckCountAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Route53 GetHealthCheckCount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHealthCheckLastFailureReasonAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Route53 GetHealthCheckLastFailureReason action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHealthCheckStatusAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Route53 GetHealthCheckStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHostedZoneAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Route53 GetHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHostedZoneCountAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Route53 GetHostedZoneCount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetHostedZoneLimitAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Route53 GetHostedZoneLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetQueryLoggingConfigAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Route53 GetQueryLoggingConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetReusableDelegationSetAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Route53 GetReusableDelegationSet action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetReusableDelegationSetLimitAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Route53 GetReusableDelegationSetLimit action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetTrafficPolicyAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Route53 GetTrafficPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetTrafficPolicyInstanceAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Route53 GetTrafficPolicyInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::GetTrafficPolicyInstanceCountAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Route53 GetTrafficPolicyInstanceCount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListGeoLocationsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Route53 ListGeoLocations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListHealthChecksAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Route53 ListHealthChecks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListHostedZonesAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Route53 ListHostedZones action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListHostedZonesByNameAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Route53 ListHostedZonesByName action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListQueryLoggingConfigsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Route53 ListQueryLoggingConfigs action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListResourceRecordSetsAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Route53 ListResourceRecordSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListReusableDelegationSetsAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Route53 ListReusableDelegationSets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Route53 ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTagsForResourcesAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Route53 ListTagsForResources action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTrafficPoliciesAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Route53 ListTrafficPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTrafficPolicyInstancesAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Route53 ListTrafficPolicyInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTrafficPolicyInstancesByHostedZoneAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Route53 ListTrafficPolicyInstancesByHostedZone action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTrafficPolicyInstancesByPolicyAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Route53 ListTrafficPolicyInstancesByPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListTrafficPolicyVersionsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Route53 ListTrafficPolicyVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::ListVPCAssociationAuthorizationsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Route53 ListVPCAssociationAuthorizations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::TestDNSAnswerAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Route53 TestDNSAnswer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::UpdateHealthCheckAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Route53 UpdateHealthCheck action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::UpdateHostedZoneCommentAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Route53 UpdateHostedZoneComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::UpdateTrafficPolicyCommentAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Route53 UpdateTrafficPolicyComment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Route53::Route53Request::UpdateTrafficPolicyInstanceAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Route53 UpdateTrafficPolicyInstance action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Route53Request[overload1]$$$Route53RequestconstAction -->
+<h3 class="fn" id="Route53Request"><a name="Route53Request"></a>Route53Request::<span class="name">Route53Request</span>(const <span class="type"><a href="qtaws-route53-route53request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-route53-route53request.html">Route53Request</a> object for Route53 <i>action</i>.</p>
+<!-- @@@Route53Request -->
+<!-- $$$Route53Request$$$Route53RequestconstRoute53Request& -->
+<h3 class="fn" id="Route53Request-1"><a name="Route53Request-1"></a>Route53Request::<span class="name">Route53Request</span>(const <span class="type"><a href="qtaws-route53-route53request.html#Route53Request">Route53Request</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@Route53Request -->
+<!-- $$$Route53Request$$$Route53RequestRoute53RequestPrivate*const -->
+<h3 class="fn" id="Route53Request-2"><a name="Route53Request-2"></a><code>[protected] </code>Route53Request::<span class="name">Route53Request</span>(<span class="type">Route53RequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-route53-route53request.html">Route53Request</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from Route53RequestPrivate.</p>
+<!-- @@@Route53Request -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-route53-route53request.html#Action-enum">Action</a></span> Route53Request::<span class="name">action</span>() const</h3>
+<p>Returns the Route53 action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> Route53Request::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Route53 action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> Route53Request::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Route53 API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> Route53Request::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> Route53Request::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> Route53Request::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;Route53Request::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> Route53Request::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-route53-route53request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Route53 action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> Route53Request::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Route53 API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> Route53Request::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> Route53Request::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-route53-route53request.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> Route53Request::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Route53 request using the given <i>endpoint</i>.</p>
+<p>This Route53 implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-route53-route53request.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constRoute53Request& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-route53-route53request.html#Route53Request">Route53Request</a></span> &amp;Route53Request::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-route53-route53request.html#Route53Request">Route53Request</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-route53-route53request.html">Route53Request</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constRoute53Request& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> Route53Request::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-route53-route53request.html#Route53Request">Route53Request</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

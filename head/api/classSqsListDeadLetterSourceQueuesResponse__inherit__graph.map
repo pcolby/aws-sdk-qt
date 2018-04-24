@@ -1,4 +1,0 @@
-<map id="SqsListDeadLetterSourceQueuesResponse" name="SqsListDeadLetterSourceQueuesResponse">
-<area shape="rect" id="node2" href="$classSqsResponse.html" title="Interface class for processing SQS responses. " alt="" coords="61,155,165,181"/>
-<area shape="rect" id="node3" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="35,80,191,107"/>
-</map>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- autoscalingrequest.cpp -->
+  <title>AutoScalingRequest Class | AutoScaling</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsautoscaling-index.html">AutoScaling</a></li>
+<li><a href="qtawsautoscaling-module.html">C++ Classes</a></li>
+<li>AutoScalingRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AutoScalingRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-autoscaling-autoscalingrequest.html">QtAws::AutoScaling::AutoScalingRequest</a>)<br/></span>
+<!-- $$$AutoScalingRequest-brief -->
+<p>The <a href="qtaws-autoscaling-autoscalingrequest.html">AutoScalingRequest</a> class provides an interface for <a href="qtaws-autoscaling.html">AutoScaling</a> requests. <a href="#details">More...</a></p>
+<!-- @@@AutoScalingRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AutoScalingRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-autoscaling-attachinstancesrequest.html">QtAws::AutoScaling::AttachInstancesRequest</a>, <a href="qtaws-autoscaling-attachloadbalancersrequest.html">QtAws::AutoScaling::AttachLoadBalancersRequest</a>, <a href="qtaws-autoscaling-attachloadbalancertargetgroupsrequest.html">QtAws::AutoScaling::AttachLoadBalancerTargetGroupsRequest</a>, <a href="qtaws-autoscaling-completelifecycleactionrequest.html">QtAws::AutoScaling::CompleteLifecycleActionRequest</a>, <a href="qtaws-autoscaling-createautoscalinggrouprequest.html">QtAws::AutoScaling::CreateAutoScalingGroupRequest</a>, <a href="qtaws-autoscaling-createlaunchconfigurationrequest.html">QtAws::AutoScaling::CreateLaunchConfigurationRequest</a>, <a href="qtaws-autoscaling-createorupdatetagsrequest.html">QtAws::AutoScaling::CreateOrUpdateTagsRequest</a>, <a href="qtaws-autoscaling-deleteautoscalinggrouprequest.html">QtAws::AutoScaling::DeleteAutoScalingGroupRequest</a>, <a href="qtaws-autoscaling-deletelaunchconfigurationrequest.html">QtAws::AutoScaling::DeleteLaunchConfigurationRequest</a>, <a href="qtaws-autoscaling-deletelifecyclehookrequest.html">QtAws::AutoScaling::DeleteLifecycleHookRequest</a>, <a href="qtaws-autoscaling-deletenotificationconfigurationrequest.html">QtAws::AutoScaling::DeleteNotificationConfigurationRequest</a>, <a href="qtaws-autoscaling-deletepolicyrequest.html">QtAws::AutoScaling::DeletePolicyRequest</a>, <a href="qtaws-autoscaling-deletescheduledactionrequest.html">QtAws::AutoScaling::DeleteScheduledActionRequest</a>, <a href="qtaws-autoscaling-deletetagsrequest.html">QtAws::AutoScaling::DeleteTagsRequest</a>, <a href="qtaws-autoscaling-describeautoscalinggroupsrequest.html">QtAws::AutoScaling::DescribeAutoScalingGroupsRequest</a>, <a href="qtaws-autoscaling-describeautoscalinginstancesrequest.html">QtAws::AutoScaling::DescribeAutoScalingInstancesRequest</a>, <a href="qtaws-autoscaling-describelaunchconfigurationsrequest.html">QtAws::AutoScaling::DescribeLaunchConfigurationsRequest</a>, <a href="qtaws-autoscaling-describelifecyclehooksrequest.html">QtAws::AutoScaling::DescribeLifecycleHooksRequest</a>, <a href="qtaws-autoscaling-describeloadbalancersrequest.html">QtAws::AutoScaling::DescribeLoadBalancersRequest</a>, <a href="qtaws-autoscaling-describeloadbalancertargetgroupsrequest.html">QtAws::AutoScaling::DescribeLoadBalancerTargetGroupsRequest</a>, <a href="qtaws-autoscaling-describenotificationconfigurationsrequest.html">QtAws::AutoScaling::DescribeNotificationConfigurationsRequest</a>, <a href="qtaws-autoscaling-describepoliciesrequest.html">QtAws::AutoScaling::DescribePoliciesRequest</a>, <a href="qtaws-autoscaling-describescalingactivitiesrequest.html">QtAws::AutoScaling::DescribeScalingActivitiesRequest</a>, <a href="qtaws-autoscaling-describescheduledactionsrequest.html">QtAws::AutoScaling::DescribeScheduledActionsRequest</a>, <a href="qtaws-autoscaling-describetagsrequest.html">QtAws::AutoScaling::DescribeTagsRequest</a>, <a href="qtaws-autoscaling-detachinstancesrequest.html">QtAws::AutoScaling::DetachInstancesRequest</a>, <a href="qtaws-autoscaling-detachloadbalancersrequest.html">QtAws::AutoScaling::DetachLoadBalancersRequest</a>, <a href="qtaws-autoscaling-detachloadbalancertargetgroupsrequest.html">QtAws::AutoScaling::DetachLoadBalancerTargetGroupsRequest</a>, <a href="qtaws-autoscaling-disablemetricscollectionrequest.html">QtAws::AutoScaling::DisableMetricsCollectionRequest</a>, <a href="qtaws-autoscaling-enablemetricscollectionrequest.html">QtAws::AutoScaling::EnableMetricsCollectionRequest</a>, <a href="qtaws-autoscaling-enterstandbyrequest.html">QtAws::AutoScaling::EnterStandbyRequest</a>, <a href="qtaws-autoscaling-executepolicyrequest.html">QtAws::AutoScaling::ExecutePolicyRequest</a>, <a href="qtaws-autoscaling-exitstandbyrequest.html">QtAws::AutoScaling::ExitStandbyRequest</a>, <a href="qtaws-autoscaling-putlifecyclehookrequest.html">QtAws::AutoScaling::PutLifecycleHookRequest</a>, <a href="qtaws-autoscaling-putnotificationconfigurationrequest.html">QtAws::AutoScaling::PutNotificationConfigurationRequest</a>, <a href="qtaws-autoscaling-putscalingpolicyrequest.html">QtAws::AutoScaling::PutScalingPolicyRequest</a>, <a href="qtaws-autoscaling-putscheduledupdategroupactionrequest.html">QtAws::AutoScaling::PutScheduledUpdateGroupActionRequest</a>, <a href="qtaws-autoscaling-recordlifecycleactionheartbeatrequest.html">QtAws::AutoScaling::RecordLifecycleActionHeartbeatRequest</a>, <a href="qtaws-autoscaling-resumeprocessesrequest.html">QtAws::AutoScaling::ResumeProcessesRequest</a>, <a href="qtaws-autoscaling-setdesiredcapacityrequest.html">QtAws::AutoScaling::SetDesiredCapacityRequest</a>, <a href="qtaws-autoscaling-setinstancehealthrequest.html">QtAws::AutoScaling::SetInstanceHealthRequest</a>, <a href="qtaws-autoscaling-setinstanceprotectionrequest.html">QtAws::AutoScaling::SetInstanceProtectionRequest</a>, <a href="qtaws-autoscaling-suspendprocessesrequest.html">QtAws::AutoScaling::SuspendProcessesRequest</a>, <a href="qtaws-autoscaling-terminateinstanceinautoscalinggrouprequest.html">QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupRequest</a>, and <a href="qtaws-autoscaling-updateautoscalinggrouprequest.html">QtAws::AutoScaling::UpdateAutoScalingGroupRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-autoscaling-autoscalingrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#Action-enum">Action</a></b> { AttachInstancesAction, AttachLoadBalancerTargetGroupsAction, AttachLoadBalancersAction, CompleteLifecycleActionAction, ..., UpdateAutoScalingGroupAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest">AutoScalingRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest-1">AutoScalingRequest</a></b>(const AutoScalingRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AutoScalingRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#operator-eq">operator=</a></b>(const AutoScalingRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#operator-eq-eq">operator==</a></b>(const AutoScalingRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest-2">AutoScalingRequest</a></b>(AutoScalingRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscaling-autoscalingrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$AutoScalingRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-autoscaling-autoscalingrequest.html">AutoScalingRequest</a> class provides an interface for <a href="qtaws-autoscaling.html">AutoScaling</a> requests.</p>
+</div>
+<!-- @@@AutoScalingRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AttachInstancesAction$$$AttachLoadBalancerTargetGroupsAction$$$AttachLoadBalancersAction$$$CompleteLifecycleActionAction$$$CreateAutoScalingGroupAction$$$CreateLaunchConfigurationAction$$$CreateOrUpdateTagsAction$$$DeleteAutoScalingGroupAction$$$DeleteLaunchConfigurationAction$$$DeleteLifecycleHookAction$$$DeleteNotificationConfigurationAction$$$DeletePolicyAction$$$DeleteScheduledActionAction$$$DeleteTagsAction$$$DescribeAccountLimitsAction$$$DescribeAdjustmentTypesAction$$$DescribeAutoScalingGroupsAction$$$DescribeAutoScalingInstancesAction$$$DescribeAutoScalingNotificationTypesAction$$$DescribeLaunchConfigurationsAction$$$DescribeLifecycleHookTypesAction$$$DescribeLifecycleHooksAction$$$DescribeLoadBalancerTargetGroupsAction$$$DescribeLoadBalancersAction$$$DescribeMetricCollectionTypesAction$$$DescribeNotificationConfigurationsAction$$$DescribePoliciesAction$$$DescribeScalingActivitiesAction$$$DescribeScalingProcessTypesAction$$$DescribeScheduledActionsAction$$$DescribeTagsAction$$$DescribeTerminationPolicyTypesAction$$$DetachInstancesAction$$$DetachLoadBalancerTargetGroupsAction$$$DetachLoadBalancersAction$$$DisableMetricsCollectionAction$$$EnableMetricsCollectionAction$$$EnterStandbyAction$$$ExecutePolicyAction$$$ExitStandbyAction$$$PutLifecycleHookAction$$$PutNotificationConfigurationAction$$$PutScalingPolicyAction$$$PutScheduledUpdateGroupActionAction$$$RecordLifecycleActionHeartbeatAction$$$ResumeProcessesAction$$$SetDesiredCapacityAction$$$SetInstanceHealthAction$$$SetInstanceProtectionAction$$$SuspendProcessesAction$$$TerminateInstanceInAutoScalingGroupAction$$$UpdateAutoScalingGroupAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum AutoScalingRequest::<span class="name">Action</span><br/>flags AutoScalingRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-autoscaling.html">AutoScaling</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::AttachInstancesAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> AttachInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::AttachLoadBalancerTargetGroupsAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> AttachLoadBalancerTargetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::AttachLoadBalancersAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> AttachLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::CompleteLifecycleActionAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> CompleteLifecycleAction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::CreateAutoScalingGroupAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> CreateAutoScalingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::CreateLaunchConfigurationAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> CreateLaunchConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::CreateOrUpdateTagsAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> CreateOrUpdateTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteAutoScalingGroupAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteAutoScalingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteLaunchConfigurationAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteLaunchConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteLifecycleHookAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteLifecycleHook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteNotificationConfigurationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteNotificationConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeletePolicyAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeletePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteScheduledActionAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteScheduledAction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DeleteTagsAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DeleteTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeAccountLimitsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeAccountLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeAdjustmentTypesAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeAdjustmentTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeAutoScalingGroupsAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeAutoScalingGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeAutoScalingInstancesAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeAutoScalingInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeAutoScalingNotificationTypesAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeAutoScalingNotificationTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeLaunchConfigurationsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeLaunchConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeLifecycleHookTypesAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeLifecycleHookTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeLifecycleHooksAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeLifecycleHooks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeLoadBalancerTargetGroupsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeLoadBalancerTargetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeLoadBalancersAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeMetricCollectionTypesAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeMetricCollectionTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeNotificationConfigurationsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeNotificationConfigurations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribePoliciesAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribePolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeScalingActivitiesAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeScalingActivities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeScalingProcessTypesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeScalingProcessTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeScheduledActionsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeScheduledActions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeTagsAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DescribeTerminationPolicyTypesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DescribeTerminationPolicyTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DetachInstancesAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DetachInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DetachLoadBalancerTargetGroupsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DetachLoadBalancerTargetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DetachLoadBalancersAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DetachLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::DisableMetricsCollectionAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> DisableMetricsCollection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::EnableMetricsCollectionAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> EnableMetricsCollection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::EnterStandbyAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> EnterStandby action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::ExecutePolicyAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> ExecutePolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::ExitStandbyAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> ExitStandby action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::PutLifecycleHookAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> PutLifecycleHook action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::PutNotificationConfigurationAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> PutNotificationConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::PutScalingPolicyAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> PutScalingPolicy action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::PutScheduledUpdateGroupActionAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> PutScheduledUpdateGroupAction action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::RecordLifecycleActionHeartbeatAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> RecordLifecycleActionHeartbeat action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::ResumeProcessesAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> ResumeProcesses action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::SetDesiredCapacityAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> SetDesiredCapacity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::SetInstanceHealthAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> SetInstanceHealth action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::SetInstanceProtectionAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> SetInstanceProtection action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::SuspendProcessesAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> SuspendProcesses action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::TerminateInstanceInAutoScalingGroupAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> TerminateInstanceInAutoScalingGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScaling::AutoScalingRequest::UpdateAutoScalingGroupAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign"><a href="qtaws-autoscaling.html">AutoScaling</a> UpdateAutoScalingGroup action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AutoScalingRequest[overload1]$$$AutoScalingRequestconstAction -->
+<h3 class="fn" id="AutoScalingRequest"><a name="AutoScalingRequest"></a>AutoScalingRequest::<span class="name">AutoScalingRequest</span>(const <span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-autoscaling-autoscalingrequest.html">AutoScalingRequest</a> object for <a href="qtaws-autoscaling.html">AutoScaling</a> <i>action</i>.</p>
+<!-- @@@AutoScalingRequest -->
+<!-- $$$AutoScalingRequest$$$AutoScalingRequestconstAutoScalingRequest& -->
+<h3 class="fn" id="AutoScalingRequest-1"><a name="AutoScalingRequest-1"></a>AutoScalingRequest::<span class="name">AutoScalingRequest</span>(const <span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest">AutoScalingRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@AutoScalingRequest -->
+<!-- $$$AutoScalingRequest$$$AutoScalingRequestAutoScalingRequestPrivate*const -->
+<h3 class="fn" id="AutoScalingRequest-2"><a name="AutoScalingRequest-2"></a><code>[protected] </code>AutoScalingRequest::<span class="name">AutoScalingRequest</span>(<span class="type">AutoScalingRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-autoscaling-autoscalingrequest.html">AutoScalingRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from AutoScalingRequestPrivate.</p>
+<!-- @@@AutoScalingRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#Action-enum">Action</a></span> AutoScalingRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-autoscaling.html">AutoScaling</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> AutoScalingRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-autoscaling.html">AutoScaling</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> AutoScalingRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-autoscaling.html">AutoScaling</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> AutoScalingRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> AutoScalingRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> AutoScalingRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;AutoScalingRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> AutoScalingRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-autoscaling.html">AutoScaling</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> AutoScalingRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-autoscaling.html">AutoScaling</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> AutoScalingRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> AutoScalingRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-autoscaling-autoscalingrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> AutoScalingRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-autoscaling.html">AutoScaling</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-autoscaling.html">AutoScaling</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-autoscaling-autoscalingrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constAutoScalingRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest">AutoScalingRequest</a></span> &amp;AutoScalingRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest">AutoScalingRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-autoscaling-autoscalingrequest.html">AutoScalingRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constAutoScalingRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> AutoScalingRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-autoscaling-autoscalingrequest.html#AutoScalingRequest">AutoScalingRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

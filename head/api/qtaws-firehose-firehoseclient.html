@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- firehoseclient.cpp -->
+  <title>FirehoseClient Class | Firehose</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsfirehose-index.html">Firehose</a></li>
+<li><a href="qtawsfirehose-module.html">C++ Classes</a></li>
+<li>FirehoseClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">FirehoseClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-firehose-firehoseclient.html">QtAws::Firehose::FirehoseClient</a>)<br/></span>
+<!-- $$$FirehoseClient-brief -->
+<p>The <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> class provides access to the Amazon Kinesis Firehose service. <a href="#details">More...</a></p>
+<!-- @@@FirehoseClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;FirehoseClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-firehose-firehoseclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#FirehoseClient">FirehoseClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#FirehoseClient-1">FirehoseClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#createDeliveryStream">createDeliveryStream</a></b>(const CreateDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#deleteDeliveryStream">deleteDeliveryStream</a></b>(const DeleteDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#describeDeliveryStream">describeDeliveryStream</a></b>(const DescribeDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeliveryStreamsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#listDeliveryStreams">listDeliveryStreams</a></b>(const ListDeliveryStreamsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsForDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#listTagsForDeliveryStream">listTagsForDeliveryStream</a></b>(const ListTagsForDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRecordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#putRecord">putRecord</a></b>(const PutRecordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutRecordBatchResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#putRecordBatch">putRecordBatch</a></b>(const PutRecordBatchRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#tagDeliveryStream">tagDeliveryStream</a></b>(const TagDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagDeliveryStreamResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#untagDeliveryStream">untagDeliveryStream</a></b>(const UntagDeliveryStreamRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDestinationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-firehose-firehoseclient.html#updateDestination">updateDestination</a></b>(const UpdateDestinationRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$FirehoseClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> class provides access to the Amazon Kinesis Firehose service.</p>
+<p>&lt;fullname&gt;Amazon Kinesis Data Firehose API Reference&lt;/fullname&gt;</p>
+<p>Amazon Kinesis Data Firehose is a fully managed service that delivers real-time streaming data to destinations such as Amazon Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), Amazon Redshift, and</p>
+</div>
+<!-- @@@FirehoseClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$FirehoseClient[overload1]$$$FirehoseClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="FirehoseClient"><a name="FirehoseClient"></a>FirehoseClient::<span class="name">FirehoseClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@FirehoseClient -->
+<!-- $$$FirehoseClient$$$FirehoseClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="FirehoseClient-1"><a name="FirehoseClient-1"></a>FirehoseClient::<span class="name">FirehoseClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-firehose-firehoseclient.html#FirehoseClient">FirehoseClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@FirehoseClient -->
+<!-- $$$createDeliveryStream[overload1]$$$createDeliveryStreamconstCreateDeliveryStreamRequest& -->
+<h3 class="fn" id="createDeliveryStream"><a name="createDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-createdeliverystreamresponse.html">CreateDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">createDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-createdeliverystreamrequest.html">CreateDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-createdeliverystreamresponse.html">CreateDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a delivery</p>
+<p>stream&gt;</p>
+<p>By default, you can create up to 50 delivery streams per AWS</p>
+<p>Region&gt;</p>
+<p>This is an asynchronous operation that immediately returns. The initial status of the delivery stream is &lt;code&gt;CREATING&lt;/code&gt;. After the delivery stream is created, its status is &lt;code&gt;ACTIVE&lt;/code&gt; and it now accepts data. Attempts to send data to a delivery stream that is not in the &lt;code&gt;ACTIVE&lt;/code&gt; state cause an exception. To check the state of a delivery stream, use</p>
+<p>&lt;a&gt;DescribeDeliveryStream&lt;/a&gt;&gt;</p>
+<p>A Kinesis Data Firehose delivery stream can be configured to receive records directly from providers using &lt;a&gt;PutRecord&lt;/a&gt; or &lt;a&gt;PutRecordBatch&lt;/a&gt;, or it can be configured to use an existing Kinesis data stream as its source. To specify a Kinesis data stream as input, set the &lt;code&gt;DeliveryStreamType&lt;/code&gt; parameter to &lt;code&gt;KinesisStreamAsSource&lt;/code&gt;, and provide the Kinesis data stream Amazon Resource Name (ARN) and role ARN in the &lt;code&gt;KinesisStreamSourceConfiguration&lt;/code&gt;</p>
+<p>parameter&gt;</p>
+<p>A delivery stream is configured with a single destination: Amazon S3, Amazon ES, Amazon Redshift, or Splunk. Specify only one of the following destination configuration parameters: &lt;code&gt;ExtendedS3DestinationConfiguration&lt;/code&gt;, &lt;code&gt;S3DestinationConfiguration&lt;/code&gt;, &lt;code&gt;ElasticsearchDestinationConfiguration&lt;/code&gt;, &lt;code&gt;RedshiftDestinationConfiguration&lt;/code&gt;, or</p>
+<p>&lt;code&gt;SplunkDestinationConfiguration&lt;/code&gt;&gt;</p>
+<p>When you specify &lt;code&gt;S3DestinationConfiguration&lt;/code&gt;, you can also provide the following optional values: &lt;code&gt;BufferingHints&lt;/code&gt;, &lt;code&gt;EncryptionConfiguration&lt;/code&gt;, and &lt;code&gt;CompressionFormat&lt;/code&gt;. By default, if no &lt;code&gt;BufferingHints&lt;/code&gt; value is provided, Kinesis Data Firehose buffers data up to 5 MB or for 5 minutes, whichever condition is satisfied first. &lt;code&gt;BufferingHints&lt;/code&gt; is a hint, so there are some cases where the service cannot adhere to these conditions strictly. For example, record boundaries are such that the size is a little over or under the configured buffering size. By default, no encryption is performed. We strongly recommend that you enable encryption to ensure secure data storage in Amazon</p>
+<p>S3&gt;</p>
+<p>A few notes about Amazon Redshift as a</p>
+<p>destination&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>An Amazon Redshift destination requires an S3 bucket as intermediate location. This is because Kinesis Data Firehose first delivers data to Amazon S3 and then uses &lt;code&gt;COPY&lt;/code&gt; syntax to load data into an Amazon Redshift table. This is specified in the &lt;code&gt;RedshiftDestinationConfiguration.S3Configuration&lt;/code&gt;</p>
+<p>parameter&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The compression formats &lt;code&gt;SNAPPY&lt;/code&gt; or &lt;code&gt;ZIP&lt;/code&gt; cannot be specified in &lt;code&gt;RedshiftDestinationConfiguration.S3Configuration&lt;/code&gt; because the Amazon Redshift &lt;code&gt;COPY&lt;/code&gt; operation that reads from the S3 bucket doesn't support these compression</p>
+<p>formats&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>We strongly recommend that you use the user name and password that you provide exclusively with Kinesis Data Firehose. In addition, the permissions for the account should be restricted for Amazon Redshift &lt;code&gt;INSERT&lt;/code&gt;</p>
+<p>permissions&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Kinesis Data Firehose assumes the IAM role that is configured as part of the destination. The role should allow the Kinesis Data Firehose principal to assume the role, and the role should have permissions that allow the service to deliver the data. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3&quot;&gt;Grant Kinesis Firehose Access to an Amazon S3 Destination&lt;/a&gt; in the &lt;i&gt;Amazon Kinesis Data Firehose Developer</p>
+<!-- @@@createDeliveryStream -->
+<!-- $$$deleteDeliveryStream[overload1]$$$deleteDeliveryStreamconstDeleteDeliveryStreamRequest& -->
+<h3 class="fn" id="deleteDeliveryStream"><a name="deleteDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-deletedeliverystreamresponse.html">DeleteDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">deleteDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-deletedeliverystreamrequest.html">DeleteDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-deletedeliverystreamresponse.html">DeleteDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a delivery stream and its</p>
+<p>data&gt;</p>
+<p>You can delete a delivery stream only if it is in &lt;code&gt;ACTIVE&lt;/code&gt; or &lt;code&gt;DELETING&lt;/code&gt; state, and not in the &lt;code&gt;CREATING&lt;/code&gt; state. While the deletion request is in process, the delivery stream is in the &lt;code&gt;DELETING&lt;/code&gt;</p>
+<p>state&gt;</p>
+<p>To check the state of a delivery stream, use</p>
+<p>&lt;a&gt;DescribeDeliveryStream&lt;/a&gt;&gt;</p>
+<p>While the delivery stream is &lt;code&gt;DELETING&lt;/code&gt; state, the service may continue to accept the records, but the service doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, you should first stop any applications that are sending records before deleting a delivery</p>
+<!-- @@@deleteDeliveryStream -->
+<!-- $$$describeDeliveryStream[overload1]$$$describeDeliveryStreamconstDescribeDeliveryStreamRequest& -->
+<h3 class="fn" id="describeDeliveryStream"><a name="describeDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-describedeliverystreamresponse.html">DescribeDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">describeDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-describedeliverystreamrequest.html">DescribeDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-describedeliverystreamresponse.html">DescribeDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified delivery stream and gets the status. For example, after your delivery stream is created, call &lt;code&gt;DescribeDeliveryStream&lt;/code&gt; to see whether the delivery stream is &lt;code&gt;ACTIVE&lt;/code&gt; and therefore ready for data to be sent to</p>
+<!-- @@@describeDeliveryStream -->
+<!-- $$$listDeliveryStreams[overload1]$$$listDeliveryStreamsconstListDeliveryStreamsRequest& -->
+<h3 class="fn" id="listDeliveryStreams"><a name="listDeliveryStreams"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-listdeliverystreamsresponse.html">ListDeliveryStreamsResponse</a></span> *FirehoseClient::<span class="name">listDeliveryStreams</span>(const <span class="type"><a href="qtaws-firehose-listdeliverystreamsrequest.html">ListDeliveryStreamsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-listdeliverystreamsresponse.html">ListDeliveryStreamsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists your delivery</p>
+<p>streams&gt;</p>
+<p>The number of delivery streams might be too large to return using a single call to &lt;code&gt;ListDeliveryStreams&lt;/code&gt;. You can limit the number of delivery streams returned, using the &lt;b&gt;Limit&lt;/b&gt; parameter. To determine whether there are more delivery streams to list, check the value of &lt;code&gt;HasMoreDeliveryStreams&lt;/code&gt; in the output. If there are more delivery streams to list, you can request them by specifying the name of the last delivery stream returned in the call in the &lt;code&gt;ExclusiveStartDeliveryStreamName&lt;/code&gt; parameter of a subsequent</p>
+<!-- @@@listDeliveryStreams -->
+<!-- $$$listTagsForDeliveryStream[overload1]$$$listTagsForDeliveryStreamconstListTagsForDeliveryStreamRequest& -->
+<h3 class="fn" id="listTagsForDeliveryStream"><a name="listTagsForDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-listtagsfordeliverystreamresponse.html">ListTagsForDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">listTagsForDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-listtagsfordeliverystreamrequest.html">ListTagsForDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-listtagsfordeliverystreamresponse.html">ListTagsForDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the tags for the specified delivery stream. This operation has a limit of five transactions per second per account.</p>
+<!-- @@@listTagsForDeliveryStream -->
+<!-- $$$putRecord[overload1]$$$putRecordconstPutRecordRequest& -->
+<h3 class="fn" id="putRecord"><a name="putRecord"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-putrecordresponse.html">PutRecordResponse</a></span> *FirehoseClient::<span class="name">putRecord</span>(const <span class="type"><a href="qtaws-firehose-putrecordrequest.html">PutRecordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-putrecordresponse.html">PutRecordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Writes a single data record into an Amazon Kinesis Data Firehose delivery stream. To write multiple data records into a delivery stream, use &lt;a&gt;PutRecordBatch&lt;/a&gt;. Applications using these operations are referred to as</p>
+<p>producers&gt;</p>
+<p>By default, each delivery stream can take in up to 2,000 transactions per second, 5,000 records per second, or 5 MB per second. Note that if you use &lt;code&gt;PutRecord&lt;/code&gt; and &lt;a&gt;PutRecordBatch&lt;/a&gt;, the limits are an aggregate across these two operations for each delivery stream. For more information about limits and how to request an increase, see &lt;a href=&quot;http://docs.aws.amazon.com/firehose/latest/dev/limits.html&quot;&gt;Amazon Kinesis Data Firehose Limits&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You must specify the name of the delivery stream and the data record when using &lt;code&gt;PutRecord&lt;/code&gt;. The data record consists of a data blob that can be up to 1,000 KB in size and any kind of data. For example, it can be a segment from a log file, geographic location data, website clickstream data, and so</p>
+<p>on&gt;</p>
+<p>Kinesis Data Firehose buffers records before delivering them to the destination. To disambiguate the data blobs at the destination, a common solution is to use delimiters in the data, such as a newline (&lt;code&gt;<b class="redFont"><code>\n</code></b>&lt;/code&gt;) or some other character unique within the data. This allows the consumer application to parse individual data items when reading the data from the</p>
+<p>destination&gt;</p>
+<p>The &lt;code&gt;PutRecord&lt;/code&gt; operation returns a &lt;code&gt;RecordId&lt;/code&gt;, which is a unique string assigned to each record. Producer applications can use this ID for purposes such as auditability and</p>
+<p>investigation&gt;</p>
+<p>If the &lt;code&gt;PutRecord&lt;/code&gt; operation throws a &lt;code&gt;ServiceUnavailableException&lt;/code&gt;, back off and retry. If the exception persists, it is possible that the throughput limits have been exceeded for the delivery stream.</p>
+<p>&lt;/p</p>
+<p>Data records sent to Kinesis Data Firehose are stored for 24 hours from the time they are added to a delivery stream as it attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is no longer</p>
+<!-- @@@putRecord -->
+<!-- $$$putRecordBatch[overload1]$$$putRecordBatchconstPutRecordBatchRequest& -->
+<h3 class="fn" id="putRecordBatch"><a name="putRecordBatch"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-putrecordbatchresponse.html">PutRecordBatchResponse</a></span> *FirehoseClient::<span class="name">putRecordBatch</span>(const <span class="type"><a href="qtaws-firehose-putrecordbatchrequest.html">PutRecordBatchRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-putrecordbatchresponse.html">PutRecordBatchResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Writes multiple data records into a delivery stream in a single call, which can achieve higher throughput per producer than when writing single records. To write single data records into a delivery stream, use &lt;a&gt;PutRecord&lt;/a&gt;. Applications using these operations are referred to as</p>
+<p>producers&gt;</p>
+<p>By default, each delivery stream can take in up to 2,000 transactions per second, 5,000 records per second, or 5 MB per second. If you use &lt;a&gt;PutRecord&lt;/a&gt; and &lt;code&gt;PutRecordBatch&lt;/code&gt;, the limits are an aggregate across these two operations for each delivery stream. For more information about limits, see &lt;a href=&quot;http://docs.aws.amazon.com/firehose/latest/dev/limits.html&quot;&gt;Amazon Kinesis Data Firehose</p>
+<p>Limits&lt;/a&gt;&gt;</p>
+<p>Each &lt;code&gt;PutRecordBatch&lt;/code&gt; request supports up to 500 records. Each record in the request can be as large as 1,000 KB (before 64-bit encoding), up to a limit of 4 MB for the entire request. These limits cannot be</p>
+<p>changed&gt;</p>
+<p>You must specify the name of the delivery stream and the data record when using &lt;a&gt;PutRecord&lt;/a&gt;. The data record consists of a data blob that can be up to 1,000 KB in size and any kind of data. For example, it could be a segment from a log file, geographic location data, website clickstream data, and so</p>
+<p>on&gt;</p>
+<p>Kinesis Data Firehose buffers records before delivering them to the destination. To disambiguate the data blobs at the destination, a common solution is to use delimiters in the data, such as a newline (&lt;code&gt;<b class="redFont"><code>\n</code></b>&lt;/code&gt;) or some other character unique within the data. This allows the consumer application to parse individual data items when reading the data from the</p>
+<p>destination&gt;</p>
+<p>The &lt;code&gt;PutRecordBatch&lt;/code&gt; response includes a count of failed records, &lt;code&gt;FailedPutCount&lt;/code&gt;, and an array of responses, &lt;code&gt;RequestResponses&lt;/code&gt;. Each entry in the &lt;code&gt;RequestResponses&lt;/code&gt; array provides additional information about the processed record. It directly correlates with a record in the request array using the same ordering, from the top to the bottom. The response array always includes the same number of records as the request array. &lt;code&gt;RequestResponses&lt;/code&gt; includes both successfully and unsuccessfully processed records. Kinesis Data Firehose attempts to process all records in each &lt;code&gt;PutRecordBatch&lt;/code&gt; request. A single record failure does not stop the processing of subsequent</p>
+<p>records&gt;</p>
+<p>A successfully processed record includes a &lt;code&gt;RecordId&lt;/code&gt; value, which is unique for the record. An unsuccessfully processed record includes &lt;code&gt;ErrorCode&lt;/code&gt; and &lt;code&gt;ErrorMessage&lt;/code&gt; values. &lt;code&gt;ErrorCode&lt;/code&gt; reflects the type of error, and is one of the following values: &lt;code&gt;ServiceUnavailable&lt;/code&gt; or &lt;code&gt;InternalFailure&lt;/code&gt;. &lt;code&gt;ErrorMessage&lt;/code&gt; provides more detailed information about the</p>
+<p>error&gt;</p>
+<p>If there is an internal server error or a timeout, the write might have completed or it might have failed. If &lt;code&gt;FailedPutCount&lt;/code&gt; is greater than 0, retry the request, resending only those records that might have failed processing. This minimizes the possible duplicate records and also reduces the total bytes sent (and corresponding charges). We recommend that you handle any duplicates at the</p>
+<p>destination&gt;</p>
+<p>If &lt;code&gt;PutRecordBatch&lt;/code&gt; throws &lt;code&gt;ServiceUnavailableException&lt;/code&gt;, back off and retry. If the exception persists, it is possible that the throughput limits have been exceeded for the delivery</p>
+<p>stream&gt;</p>
+<p>Data records sent to Kinesis Data Firehose are stored for 24 hours from the time they are added to a delivery stream as it attempts to send the records to the destination. If the destination is unreachable for more than 24 hours, the data is no longer</p>
+<!-- @@@putRecordBatch -->
+<!-- $$$tagDeliveryStream[overload1]$$$tagDeliveryStreamconstTagDeliveryStreamRequest& -->
+<h3 class="fn" id="tagDeliveryStream"><a name="tagDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-tagdeliverystreamresponse.html">TagDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">tagDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-tagdeliverystreamrequest.html">TagDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-tagdeliverystreamresponse.html">TagDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates tags for the specified delivery stream. A tag is a key-value pair (the value is optional) that you can define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you specify in the request. Tags are metadata. For example, you can add friendly names and descriptions or other types of information that can help you distinguish the delivery stream. For more information about tags, see &lt;a href=&quot;https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html&quot;&gt;Using Cost Allocation Tags&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User Guide&lt;/i&gt;.</p>
+<p>&lt;/p</p>
+<p>Each delivery stream can have up to 50 tags.</p>
+<p>&lt;/p</p>
+<p>This operation has a limit of five transactions per second per account.</p>
+<!-- @@@tagDeliveryStream -->
+<!-- $$$untagDeliveryStream[overload1]$$$untagDeliveryStreamconstUntagDeliveryStreamRequest& -->
+<h3 class="fn" id="untagDeliveryStream"><a name="untagDeliveryStream"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-untagdeliverystreamresponse.html">UntagDeliveryStreamResponse</a></span> *FirehoseClient::<span class="name">untagDeliveryStream</span>(const <span class="type"><a href="qtaws-firehose-untagdeliverystreamrequest.html">UntagDeliveryStreamRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-untagdeliverystreamresponse.html">UntagDeliveryStreamResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from the specified delivery stream. Removed tags are deleted, and you can't recover them after this operation successfully</p>
+<p>completes&gt;</p>
+<p>If you specify a tag that doesn't exist, the operation ignores</p>
+<p>it&gt;</p>
+<p>This operation has a limit of five transactions per second per account.</p>
+<!-- @@@untagDeliveryStream -->
+<!-- $$$updateDestination[overload1]$$$updateDestinationconstUpdateDestinationRequest& -->
+<h3 class="fn" id="updateDestination"><a name="updateDestination"></a><code>[slot] </code><span class="type"><a href="qtaws-firehose-updatedestinationresponse.html">UpdateDestinationResponse</a></span> *FirehoseClient::<span class="name">updateDestination</span>(const <span class="type"><a href="qtaws-firehose-updatedestinationrequest.html">UpdateDestinationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-firehose-firehoseclient.html">FirehoseClient</a> service, and returns a pointer to an <a href="qtaws-firehose-updatedestinationresponse.html">UpdateDestinationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified destination of the specified delivery</p>
+<p>stream&gt;</p>
+<p>Use this operation to change the destination type (for example, to replace the Amazon S3 destination with Amazon Redshift) or change the parameters associated with a destination (for example, to change the bucket name of the Amazon S3 destination). The update might not occur immediately. The target delivery stream remains active while the configurations are updated, so data writes to the delivery stream can continue during this process. The updated configurations are usually effective within a few</p>
+<p>minutes&gt;</p>
+<p>Switching between Amazon ES and other services is not supported. For an Amazon ES destination, you can only update to another Amazon ES</p>
+<p>destination&gt;</p>
+<p>If the destination type is the same, Kinesis Data Firehose merges the configuration parameters specified with the destination configuration that already exists on the delivery stream. If any of the parameters are not specified in the call, the existing values are retained. For example, in the Amazon S3 destination, if &lt;a&gt;EncryptionConfiguration&lt;/a&gt; is not specified, then the existing &lt;code&gt;EncryptionConfiguration&lt;/code&gt; is maintained on the</p>
+<p>destination&gt;</p>
+<p>If the destination type is not the same, for example, changing the destination from Amazon S3 to Amazon Redshift, Kinesis Data Firehose does not merge any parameters. In this case, all parameters must be</p>
+<p>specified&gt;</p>
+<p>Kinesis Data Firehose uses &lt;code&gt;CurrentDeliveryStreamVersionId&lt;/code&gt; to avoid race conditions and conflicting merges. This is a required field, and the service updates the configuration only if the existing configuration has a version ID that matches. After the update is applied successfully, the version ID is updated, and you can retrieve it using &lt;a&gt;DescribeDeliveryStream&lt;/a&gt;. Use the new version ID to set &lt;code&gt;CurrentDeliveryStreamVersionId&lt;/code&gt; in the next</p>
+<!-- @@@updateDestination -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cognitosyncclient.cpp -->
+  <title>CognitoSyncClient Class | CognitoSync</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscognitosync-index.html">CognitoSync</a></li>
+<li><a href="qtawscognitosync-module.html">C++ Classes</a></li>
+<li>CognitoSyncClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CognitoSyncClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cognitosync-cognitosyncclient.html">QtAws::CognitoSync::CognitoSyncClient</a>)<br/></span>
+<!-- $$$CognitoSyncClient-brief -->
+<p>The <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> class provides access to the Amazon Cognito Sync service. <a href="#details">More...</a></p>
+<!-- @@@CognitoSyncClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CognitoSyncClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-cognitosync-cognitosyncclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#CognitoSyncClient">CognitoSyncClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#CognitoSyncClient-1">CognitoSyncClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BulkPublishResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#bulkPublish">bulkPublish</a></b>(const BulkPublishRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#deleteDataset">deleteDataset</a></b>(const DeleteDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#describeDataset">describeDataset</a></b>(const DescribeDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeIdentityPoolUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#describeIdentityPoolUsage">describeIdentityPoolUsage</a></b>(const DescribeIdentityPoolUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeIdentityUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#describeIdentityUsage">describeIdentityUsage</a></b>(const DescribeIdentityUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBulkPublishDetailsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#getBulkPublishDetails">getBulkPublishDetails</a></b>(const GetBulkPublishDetailsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCognitoEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#getCognitoEvents">getCognitoEvents</a></b>(const GetCognitoEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIdentityPoolConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#getIdentityPoolConfiguration">getIdentityPoolConfiguration</a></b>(const GetIdentityPoolConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDatasetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#listDatasets">listDatasets</a></b>(const ListDatasetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIdentityPoolUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#listIdentityPoolUsage">listIdentityPoolUsage</a></b>(const ListIdentityPoolUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#listRecords">listRecords</a></b>(const ListRecordsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#registerDevice">registerDevice</a></b>(const RegisterDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetCognitoEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#setCognitoEvents">setCognitoEvents</a></b>(const SetCognitoEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SetIdentityPoolConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#setIdentityPoolConfiguration">setIdentityPoolConfiguration</a></b>(const SetIdentityPoolConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SubscribeToDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#subscribeToDataset">subscribeToDataset</a></b>(const SubscribeToDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnsubscribeFromDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#unsubscribeFromDataset">unsubscribeFromDataset</a></b>(const UnsubscribeFromDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-cognitosync-cognitosyncclient.html#updateRecords">updateRecords</a></b>(const UpdateRecordsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CognitoSyncClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> class provides access to the Amazon Cognito Sync service.</p>
+<p>&lt;fullname&gt;Amazon Cognito Sync&lt;/fullname&gt;</p>
+<p>Amazon Cognito Sync provides an AWS service and client library that enable cross-device syncing of application-related user data. High-level client libraries are available for both iOS and Android. You can use these libraries to persist data locally so that it's available even if the device is offline. Developer credentials don't need to be stored on the mobile device to access the service. You can use Amazon Cognito to obtain a normalized user ID and credentials. User data is persisted in a dataset that can store up to 1 MB of key-value pairs, and you can have up to 20 datasets per user</p>
+<p>identity&gt;</p>
+<p>With Amazon Cognito Sync, the data stored for each identity is accessible only to credentials assigned to that identity. In order to use the Cognito Sync service, you need to make API calls using credentials retrieved with &lt;a href=&quot;http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/Welcome.html&quot;&gt;Amazon Cognito Identity</p>
+<p>service&lt;/a&gt;&gt;</p>
+<p>If you want to use Cognito Sync in an Android or iOS application, you will probably want to make API calls via the AWS Mobile SDK. To learn more, see the &lt;a href=&quot;http://docs.aws.amazon.com/mobile/sdkforandroid/developerguide/cognito-sync.html&quot;&gt;Developer Guide for Android&lt;/a&gt; and the &lt;a href=&quot;http://docs.aws.amazon.com/mobile/sdkforios/developerguide/cognito-sync.html&quot;&gt;Developer Guide for</p>
+</div>
+<!-- @@@CognitoSyncClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CognitoSyncClient[overload1]$$$CognitoSyncClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CognitoSyncClient"><a name="CognitoSyncClient"></a>CognitoSyncClient::<span class="name">CognitoSyncClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CognitoSyncClient -->
+<!-- $$$CognitoSyncClient$$$CognitoSyncClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CognitoSyncClient-1"><a name="CognitoSyncClient-1"></a>CognitoSyncClient::<span class="name">CognitoSyncClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-cognitosync-cognitosyncclient.html#CognitoSyncClient">CognitoSyncClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CognitoSyncClient -->
+<!-- $$$bulkPublish[overload1]$$$bulkPublishconstBulkPublishRequest& -->
+<h3 class="fn" id="bulkPublish"><a name="bulkPublish"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-bulkpublishresponse.html">BulkPublishResponse</a></span> *CognitoSyncClient::<span class="name">bulkPublish</span>(const <span class="type"><a href="qtaws-cognitosync-bulkpublishrequest.html">BulkPublishRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-bulkpublishresponse.html">BulkPublishResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of the request via the GetBulkPublishDetails</p>
+<p>operation&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@bulkPublish -->
+<!-- $$$deleteDataset[overload1]$$$deleteDatasetconstDeleteDatasetRequest& -->
+<h3 class="fn" id="deleteDataset"><a name="deleteDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-deletedatasetresponse.html">DeleteDatasetResponse</a></span> *CognitoSyncClient::<span class="name">deleteDataset</span>(const <span class="type"><a href="qtaws-cognitosync-deletedatasetrequest.html">DeleteDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-deletedatasetresponse.html">DeleteDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specific dataset. The dataset will be deleted permanently, and the action can't be undone. Datasets that this dataset was merged with will no longer report the merge. Any subsequent operation on this dataset will result in a</p>
+<p>ResourceNotFoundException&gt;</p>
+<p>This API can be called with temporary user credentials provided by Cognito Identity or with developer</p>
+<!-- @@@deleteDataset -->
+<!-- $$$describeDataset[overload1]$$$describeDatasetconstDescribeDatasetRequest& -->
+<h3 class="fn" id="describeDataset"><a name="describeDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-describedatasetresponse.html">DescribeDatasetResponse</a></span> *CognitoSyncClient::<span class="name">describeDataset</span>(const <span class="type"><a href="qtaws-cognitosync-describedatasetrequest.html">DescribeDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-describedatasetresponse.html">DescribeDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets meta data about a dataset by identity and dataset name. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity</p>
+<p>data&gt;</p>
+<p>This API can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API</p>
+<!-- @@@describeDataset -->
+<!-- $$$describeIdentityPoolUsage[overload1]$$$describeIdentityPoolUsageconstDescribeIdentityPoolUsageRequest& -->
+<h3 class="fn" id="describeIdentityPoolUsage"><a name="describeIdentityPoolUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-describeidentitypoolusageresponse.html">DescribeIdentityPoolUsageResponse</a></span> *CognitoSyncClient::<span class="name">describeIdentityPoolUsage</span>(const <span class="type"><a href="qtaws-cognitosync-describeidentitypoolusagerequest.html">DescribeIdentityPoolUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-describeidentitypoolusageresponse.html">DescribeIdentityPoolUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets usage details (for example, data storage) about a particular identity</p>
+<p>pool&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@describeIdentityPoolUsage -->
+<!-- $$$describeIdentityUsage[overload1]$$$describeIdentityUsageconstDescribeIdentityUsageRequest& -->
+<h3 class="fn" id="describeIdentityUsage"><a name="describeIdentityUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-describeidentityusageresponse.html">DescribeIdentityUsageResponse</a></span> *CognitoSyncClient::<span class="name">describeIdentityUsage</span>(const <span class="type"><a href="qtaws-cognitosync-describeidentityusagerequest.html">DescribeIdentityUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-describeidentityusageresponse.html">DescribeIdentityUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets usage information for an identity, including number of datasets and data</p>
+<p>usage&gt;</p>
+<p>This API can be called with temporary user credentials provided by Cognito Identity or with developer</p>
+<!-- @@@describeIdentityUsage -->
+<!-- $$$getBulkPublishDetails[overload1]$$$getBulkPublishDetailsconstGetBulkPublishDetailsRequest& -->
+<h3 class="fn" id="getBulkPublishDetails"><a name="getBulkPublishDetails"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-getbulkpublishdetailsresponse.html">GetBulkPublishDetailsResponse</a></span> *CognitoSyncClient::<span class="name">getBulkPublishDetails</span>(const <span class="type"><a href="qtaws-cognitosync-getbulkpublishdetailsrequest.html">GetBulkPublishDetailsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-getbulkpublishdetailsresponse.html">GetBulkPublishDetailsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Get the status of the last BulkPublish operation for an identity</p>
+<p>pool&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@getBulkPublishDetails -->
+<!-- $$$getCognitoEvents[overload1]$$$getCognitoEventsconstGetCognitoEventsRequest& -->
+<h3 class="fn" id="getCognitoEvents"><a name="getCognitoEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-getcognitoeventsresponse.html">GetCognitoEventsResponse</a></span> *CognitoSyncClient::<span class="name">getCognitoEvents</span>(const <span class="type"><a href="qtaws-cognitosync-getcognitoeventsrequest.html">GetCognitoEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-getcognitoeventsresponse.html">GetCognitoEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the events and the corresponding Lambda functions associated with an identity</p>
+<p>pool&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@getCognitoEvents -->
+<!-- $$$getIdentityPoolConfiguration[overload1]$$$getIdentityPoolConfigurationconstGetIdentityPoolConfigurationRequest& -->
+<h3 class="fn" id="getIdentityPoolConfiguration"><a name="getIdentityPoolConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-getidentitypoolconfigurationresponse.html">GetIdentityPoolConfigurationResponse</a></span> *CognitoSyncClient::<span class="name">getIdentityPoolConfiguration</span>(const <span class="type"><a href="qtaws-cognitosync-getidentitypoolconfigurationrequest.html">GetIdentityPoolConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-getidentitypoolconfigurationresponse.html">GetIdentityPoolConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the configuration settings of an identity</p>
+<p>pool&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@getIdentityPoolConfiguration -->
+<!-- $$$listDatasets[overload1]$$$listDatasetsconstListDatasetsRequest& -->
+<h3 class="fn" id="listDatasets"><a name="listDatasets"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-listdatasetsresponse.html">ListDatasetsResponse</a></span> *CognitoSyncClient::<span class="name">listDatasets</span>(const <span class="type"><a href="qtaws-cognitosync-listdatasetsrequest.html">ListDatasetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-listdatasetsresponse.html">ListDatasetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists datasets for an identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity</p>
+<p>data&gt;</p>
+<p>ListDatasets can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use the Cognito Identity credentials to make this API</p>
+<!-- @@@listDatasets -->
+<!-- $$$listIdentityPoolUsage[overload1]$$$listIdentityPoolUsageconstListIdentityPoolUsageRequest& -->
+<h3 class="fn" id="listIdentityPoolUsage"><a name="listIdentityPoolUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-listidentitypoolusageresponse.html">ListIdentityPoolUsageResponse</a></span> *CognitoSyncClient::<span class="name">listIdentityPoolUsage</span>(const <span class="type"><a href="qtaws-cognitosync-listidentitypoolusagerequest.html">ListIdentityPoolUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-listidentitypoolusageresponse.html">ListIdentityPoolUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of identity pools registered with</p>
+<p>Cognito&gt;</p>
+<p>ListIdentityPoolUsage can only be called with developer credentials. You cannot make this API call with the temporary user credentials provided by Cognito</p>
+<!-- @@@listIdentityPoolUsage -->
+<!-- $$$listRecords[overload1]$$$listRecordsconstListRecordsRequest& -->
+<h3 class="fn" id="listRecords"><a name="listRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-listrecordsresponse.html">ListRecordsResponse</a></span> *CognitoSyncClient::<span class="name">listRecords</span>(const <span class="type"><a href="qtaws-cognitosync-listrecordsrequest.html">ListRecordsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-listrecordsresponse.html">ListRecordsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets paginated records, optionally changed after a particular sync count for a dataset and identity. With Amazon Cognito Sync, each identity has access only to its own data. Thus, the credentials used to make this API call need to have access to the identity</p>
+<p>data&gt;</p>
+<p>ListRecords can be called with temporary user credentials provided by Cognito Identity or with developer credentials. You should use Cognito Identity credentials to make this API</p>
+<!-- @@@listRecords -->
+<!-- $$$registerDevice[overload1]$$$registerDeviceconstRegisterDeviceRequest& -->
+<h3 class="fn" id="registerDevice"><a name="registerDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-registerdeviceresponse.html">RegisterDeviceResponse</a></span> *CognitoSyncClient::<span class="name">registerDevice</span>(const <span class="type"><a href="qtaws-cognitosync-registerdevicerequest.html">RegisterDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-registerdeviceresponse.html">RegisterDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a device to receive push sync</p>
+<p>notifications&gt;</p>
+<p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer</p>
+<!-- @@@registerDevice -->
+<!-- $$$setCognitoEvents[overload1]$$$setCognitoEventsconstSetCognitoEventsRequest& -->
+<h3 class="fn" id="setCognitoEvents"><a name="setCognitoEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-setcognitoeventsresponse.html">SetCognitoEventsResponse</a></span> *CognitoSyncClient::<span class="name">setCognitoEvents</span>(const <span class="type"><a href="qtaws-cognitosync-setcognitoeventsrequest.html">SetCognitoEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-setcognitoeventsresponse.html">SetCognitoEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular</p>
+<p>key&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@setCognitoEvents -->
+<!-- $$$setIdentityPoolConfiguration[overload1]$$$setIdentityPoolConfigurationconstSetIdentityPoolConfigurationRequest& -->
+<h3 class="fn" id="setIdentityPoolConfiguration"><a name="setIdentityPoolConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-setidentitypoolconfigurationresponse.html">SetIdentityPoolConfigurationResponse</a></span> *CognitoSyncClient::<span class="name">setIdentityPoolConfiguration</span>(const <span class="type"><a href="qtaws-cognitosync-setidentitypoolconfigurationrequest.html">SetIdentityPoolConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-setidentitypoolconfigurationresponse.html">SetIdentityPoolConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the necessary configuration for push</p>
+<p>sync&gt;</p>
+<p>This API can only be called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito</p>
+<!-- @@@setIdentityPoolConfiguration -->
+<!-- $$$subscribeToDataset[overload1]$$$subscribeToDatasetconstSubscribeToDatasetRequest& -->
+<h3 class="fn" id="subscribeToDataset"><a name="subscribeToDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-subscribetodatasetresponse.html">SubscribeToDatasetResponse</a></span> *CognitoSyncClient::<span class="name">subscribeToDataset</span>(const <span class="type"><a href="qtaws-cognitosync-subscribetodatasetrequest.html">SubscribeToDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-subscribetodatasetresponse.html">SubscribeToDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Subscribes to receive notifications when a dataset is modified by another</p>
+<p>device&gt;</p>
+<p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer</p>
+<!-- @@@subscribeToDataset -->
+<!-- $$$unsubscribeFromDataset[overload1]$$$unsubscribeFromDatasetconstUnsubscribeFromDatasetRequest& -->
+<h3 class="fn" id="unsubscribeFromDataset"><a name="unsubscribeFromDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-unsubscribefromdatasetresponse.html">UnsubscribeFromDatasetResponse</a></span> *CognitoSyncClient::<span class="name">unsubscribeFromDataset</span>(const <span class="type"><a href="qtaws-cognitosync-unsubscribefromdatasetrequest.html">UnsubscribeFromDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-unsubscribefromdatasetresponse.html">UnsubscribeFromDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Unsubscribes from receiving notifications when a dataset is modified by another</p>
+<p>device&gt;</p>
+<p>This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with developer</p>
+<!-- @@@unsubscribeFromDataset -->
+<!-- $$$updateRecords[overload1]$$$updateRecordsconstUpdateRecordsRequest& -->
+<h3 class="fn" id="updateRecords"><a name="updateRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-cognitosync-updaterecordsresponse.html">UpdateRecordsResponse</a></span> *CognitoSyncClient::<span class="name">updateRecords</span>(const <span class="type"><a href="qtaws-cognitosync-updaterecordsrequest.html">UpdateRecordsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-cognitosync-cognitosyncclient.html">CognitoSyncClient</a> service, and returns a pointer to an <a href="qtaws-cognitosync-updaterecordsresponse.html">UpdateRecordsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Posts updates to records and adds and deletes records for a dataset and</p>
+<p>user&gt;</p>
+<p>The sync count in the record patch is your last known sync count for that record. The server will reject an UpdateRecords request with a ResourceConflictException if you try to patch a record with a new value but a stale sync</p>
+<p>count&gt;</p>
+<p>For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new highScore with sync count of 4, the request will be rejected. To obtain the current sync count for a record, call ListRecords. On a successful update of the record, the response returns the new sync count for that record. You should present that sync count the next time you try to update that same record. When the record does not exist, specify the sync count as</p>
+<p>0&gt;</p>
+<p>This API can be called with temporary user credentials provided by Cognito Identity or with developer</p>
+<!-- @@@updateRecords -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

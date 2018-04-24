@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- swfrequest.cpp -->
+  <title>SwfRequest Class | SWF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsswf-index.html">SWF</a></li>
+<li><a href="qtawsswf-module.html">C++ Classes</a></li>
+<li>SwfRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SwfRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-swf-swfrequest.html">QtAws::SWF::SwfRequest</a>)<br/></span>
+<!-- $$$SwfRequest-brief -->
+<p>The <a href="qtaws-swf-swfrequest.html">SwfRequest</a> class provides an interface for SWF requests. <a href="#details">More...</a></p>
+<!-- @@@SwfRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SwfRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-swf-countclosedworkflowexecutionsrequest.html">QtAws::SWF::CountClosedWorkflowExecutionsRequest</a>, <a href="qtaws-swf-countopenworkflowexecutionsrequest.html">QtAws::SWF::CountOpenWorkflowExecutionsRequest</a>, <a href="qtaws-swf-countpendingactivitytasksrequest.html">QtAws::SWF::CountPendingActivityTasksRequest</a>, <a href="qtaws-swf-countpendingdecisiontasksrequest.html">QtAws::SWF::CountPendingDecisionTasksRequest</a>, <a href="qtaws-swf-deprecateactivitytyperequest.html">QtAws::SWF::DeprecateActivityTypeRequest</a>, <a href="qtaws-swf-deprecatedomainrequest.html">QtAws::SWF::DeprecateDomainRequest</a>, <a href="qtaws-swf-deprecateworkflowtyperequest.html">QtAws::SWF::DeprecateWorkflowTypeRequest</a>, <a href="qtaws-swf-describeactivitytyperequest.html">QtAws::SWF::DescribeActivityTypeRequest</a>, <a href="qtaws-swf-describedomainrequest.html">QtAws::SWF::DescribeDomainRequest</a>, <a href="qtaws-swf-describeworkflowexecutionrequest.html">QtAws::SWF::DescribeWorkflowExecutionRequest</a>, <a href="qtaws-swf-describeworkflowtyperequest.html">QtAws::SWF::DescribeWorkflowTypeRequest</a>, <a href="qtaws-swf-getworkflowexecutionhistoryrequest.html">QtAws::SWF::GetWorkflowExecutionHistoryRequest</a>, <a href="qtaws-swf-listactivitytypesrequest.html">QtAws::SWF::ListActivityTypesRequest</a>, <a href="qtaws-swf-listclosedworkflowexecutionsrequest.html">QtAws::SWF::ListClosedWorkflowExecutionsRequest</a>, <a href="qtaws-swf-listdomainsrequest.html">QtAws::SWF::ListDomainsRequest</a>, <a href="qtaws-swf-listopenworkflowexecutionsrequest.html">QtAws::SWF::ListOpenWorkflowExecutionsRequest</a>, <a href="qtaws-swf-listworkflowtypesrequest.html">QtAws::SWF::ListWorkflowTypesRequest</a>, <a href="qtaws-swf-pollforactivitytaskrequest.html">QtAws::SWF::PollForActivityTaskRequest</a>, <a href="qtaws-swf-pollfordecisiontaskrequest.html">QtAws::SWF::PollForDecisionTaskRequest</a>, <a href="qtaws-swf-recordactivitytaskheartbeatrequest.html">QtAws::SWF::RecordActivityTaskHeartbeatRequest</a>, <a href="qtaws-swf-registeractivitytyperequest.html">QtAws::SWF::RegisterActivityTypeRequest</a>, <a href="qtaws-swf-registerdomainrequest.html">QtAws::SWF::RegisterDomainRequest</a>, <a href="qtaws-swf-registerworkflowtyperequest.html">QtAws::SWF::RegisterWorkflowTypeRequest</a>, <a href="qtaws-swf-requestcancelworkflowexecutionrequest.html">QtAws::SWF::RequestCancelWorkflowExecutionRequest</a>, <a href="qtaws-swf-respondactivitytaskcanceledrequest.html">QtAws::SWF::RespondActivityTaskCanceledRequest</a>, <a href="qtaws-swf-respondactivitytaskcompletedrequest.html">QtAws::SWF::RespondActivityTaskCompletedRequest</a>, <a href="qtaws-swf-respondactivitytaskfailedrequest.html">QtAws::SWF::RespondActivityTaskFailedRequest</a>, <a href="qtaws-swf-responddecisiontaskcompletedrequest.html">QtAws::SWF::RespondDecisionTaskCompletedRequest</a>, <a href="qtaws-swf-signalworkflowexecutionrequest.html">QtAws::SWF::SignalWorkflowExecutionRequest</a>, <a href="qtaws-swf-startworkflowexecutionrequest.html">QtAws::SWF::StartWorkflowExecutionRequest</a>, and <a href="qtaws-swf-terminateworkflowexecutionrequest.html">QtAws::SWF::TerminateWorkflowExecutionRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-swf-swfrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#Action-enum">Action</a></b> { CountClosedWorkflowExecutionsAction, CountOpenWorkflowExecutionsAction, CountPendingActivityTasksAction, CountPendingDecisionTasksAction, ..., TerminateWorkflowExecutionAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#SwfRequest">SwfRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#SwfRequest-1">SwfRequest</a></b>(const SwfRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SwfRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#operator-eq">operator=</a></b>(const SwfRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#operator-eq-eq">operator==</a></b>(const SwfRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#SwfRequest-2">SwfRequest</a></b>(SwfRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SwfRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-swf-swfrequest.html">SwfRequest</a> class provides an interface for SWF requests.</p>
+</div>
+<!-- @@@SwfRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CountClosedWorkflowExecutionsAction$$$CountOpenWorkflowExecutionsAction$$$CountPendingActivityTasksAction$$$CountPendingDecisionTasksAction$$$DeprecateActivityTypeAction$$$DeprecateDomainAction$$$DeprecateWorkflowTypeAction$$$DescribeActivityTypeAction$$$DescribeDomainAction$$$DescribeWorkflowExecutionAction$$$DescribeWorkflowTypeAction$$$GetWorkflowExecutionHistoryAction$$$ListActivityTypesAction$$$ListClosedWorkflowExecutionsAction$$$ListDomainsAction$$$ListOpenWorkflowExecutionsAction$$$ListWorkflowTypesAction$$$PollForActivityTaskAction$$$PollForDecisionTaskAction$$$RecordActivityTaskHeartbeatAction$$$RegisterActivityTypeAction$$$RegisterDomainAction$$$RegisterWorkflowTypeAction$$$RequestCancelWorkflowExecutionAction$$$RespondActivityTaskCanceledAction$$$RespondActivityTaskCompletedAction$$$RespondActivityTaskFailedAction$$$RespondDecisionTaskCompletedAction$$$SignalWorkflowExecutionAction$$$StartWorkflowExecutionAction$$$TerminateWorkflowExecutionAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SwfRequest::<span class="name">Action</span><br/>flags SwfRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as SWF requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::CountClosedWorkflowExecutionsAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">SWF CountClosedWorkflowExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::CountOpenWorkflowExecutionsAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">SWF CountOpenWorkflowExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::CountPendingActivityTasksAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">SWF CountPendingActivityTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::CountPendingDecisionTasksAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">SWF CountPendingDecisionTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DeprecateActivityTypeAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">SWF DeprecateActivityType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DeprecateDomainAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">SWF DeprecateDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DeprecateWorkflowTypeAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">SWF DeprecateWorkflowType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DescribeActivityTypeAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">SWF DescribeActivityType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DescribeDomainAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">SWF DescribeDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DescribeWorkflowExecutionAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">SWF DescribeWorkflowExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::DescribeWorkflowTypeAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">SWF DescribeWorkflowType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::GetWorkflowExecutionHistoryAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">SWF GetWorkflowExecutionHistory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::ListActivityTypesAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">SWF ListActivityTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::ListClosedWorkflowExecutionsAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">SWF ListClosedWorkflowExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::ListDomainsAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">SWF ListDomains action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::ListOpenWorkflowExecutionsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">SWF ListOpenWorkflowExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::ListWorkflowTypesAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">SWF ListWorkflowTypes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::PollForActivityTaskAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">SWF PollForActivityTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::PollForDecisionTaskAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">SWF PollForDecisionTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RecordActivityTaskHeartbeatAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">SWF RecordActivityTaskHeartbeat action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RegisterActivityTypeAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">SWF RegisterActivityType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RegisterDomainAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">SWF RegisterDomain action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RegisterWorkflowTypeAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">SWF RegisterWorkflowType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RequestCancelWorkflowExecutionAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">SWF RequestCancelWorkflowExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RespondActivityTaskCanceledAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">SWF RespondActivityTaskCanceled action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RespondActivityTaskCompletedAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">SWF RespondActivityTaskCompleted action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RespondActivityTaskFailedAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">SWF RespondActivityTaskFailed action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::RespondDecisionTaskCompletedAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">SWF RespondDecisionTaskCompleted action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::SignalWorkflowExecutionAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">SWF SignalWorkflowExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::StartWorkflowExecutionAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">SWF StartWorkflowExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SWF::SwfRequest::TerminateWorkflowExecutionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">SWF TerminateWorkflowExecution action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SwfRequest[overload1]$$$SwfRequestconstAction -->
+<h3 class="fn" id="SwfRequest"><a name="SwfRequest"></a>SwfRequest::<span class="name">SwfRequest</span>(const <span class="type"><a href="qtaws-swf-swfrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-swf-swfrequest.html">SwfRequest</a> object for SWF <i>action</i>.</p>
+<!-- @@@SwfRequest -->
+<!-- $$$SwfRequest$$$SwfRequestconstSwfRequest& -->
+<h3 class="fn" id="SwfRequest-1"><a name="SwfRequest-1"></a>SwfRequest::<span class="name">SwfRequest</span>(const <span class="type"><a href="qtaws-swf-swfrequest.html#SwfRequest">SwfRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SwfRequest -->
+<!-- $$$SwfRequest$$$SwfRequestSwfRequestPrivate*const -->
+<h3 class="fn" id="SwfRequest-2"><a name="SwfRequest-2"></a><code>[protected] </code>SwfRequest::<span class="name">SwfRequest</span>(<span class="type"><a href="qtaws-swf-swfrequestprivate.html">SwfRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-swf-swfrequest.html">SwfRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-swf-swfrequestprivate.html">SwfRequestPrivate</a>.</p>
+<!-- @@@SwfRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-swf-swfrequest.html#Action-enum">Action</a></span> SwfRequest::<span class="name">action</span>() const</h3>
+<p>Returns the SWF action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SwfRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the SWF action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SwfRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the SWF API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SwfRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SwfRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SwfRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SwfRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SwfRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-swf-swfrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the SWF action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SwfRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the SWF API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SwfRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SwfRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-swf-swfrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SwfRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the SWF request using the given <i>endpoint</i>.</p>
+<p>This SWF implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-swf-swfrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSwfRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-swf-swfrequest.html#SwfRequest">SwfRequest</a></span> &amp;SwfRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-swf-swfrequest.html#SwfRequest">SwfRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-swf-swfrequest.html">SwfRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSwfRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SwfRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-swf-swfrequest.html#SwfRequest">SwfRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

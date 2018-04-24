@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- configserviceclient.cpp -->
+  <title>ConfigServiceClient Class | ConfigService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsconfigservice-index.html">ConfigService</a></li>
+<li><a href="qtawsconfigservice-module.html">C++ Classes</a></li>
+<li>ConfigServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ConfigServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-configservice-configserviceclient.html">QtAws::ConfigService::ConfigServiceClient</a>)<br/></span>
+<!-- $$$ConfigServiceClient-brief -->
+<p>The <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> class provides access to the AWS Config (Config Service) service. <a href="#details">More...</a></p>
+<!-- @@@ConfigServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ConfigServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-configservice-configserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#ConfigServiceClient">ConfigServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#ConfigServiceClient-1">ConfigServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetResourceConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#batchGetResourceConfig">batchGetResourceConfig</a></b>(const BatchGetResourceConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAggregationAuthorizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteAggregationAuthorization">deleteAggregationAuthorization</a></b>(const DeleteAggregationAuthorizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteConfigRule">deleteConfigRule</a></b>(const DeleteConfigRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationAggregatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteConfigurationAggregator">deleteConfigurationAggregator</a></b>(const DeleteConfigurationAggregatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConfigurationRecorderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteConfigurationRecorder">deleteConfigurationRecorder</a></b>(const DeleteConfigurationRecorderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDeliveryChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteDeliveryChannel">deleteDeliveryChannel</a></b>(const DeleteDeliveryChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEvaluationResultsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deleteEvaluationResults">deleteEvaluationResults</a></b>(const DeleteEvaluationResultsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePendingAggregationRequestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deletePendingAggregationRequest">deletePendingAggregationRequest</a></b>(const DeletePendingAggregationRequestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeliverConfigSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#deliverConfigSnapshot">deliverConfigSnapshot</a></b>(const DeliverConfigSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAggregateComplianceByConfigRulesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeAggregateComplianceByConfigRules">describeAggregateComplianceByConfigRules</a></b>(const DescribeAggregateComplianceByConfigRulesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAggregationAuthorizationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeAggregationAuthorizations">describeAggregationAuthorizations</a></b>(const DescribeAggregationAuthorizationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeComplianceByConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeComplianceByConfigRule">describeComplianceByConfigRule</a></b>(const DescribeComplianceByConfigRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeComplianceByResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeComplianceByResource">describeComplianceByResource</a></b>(const DescribeComplianceByResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigRuleEvaluationStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigRuleEvaluationStatus">describeConfigRuleEvaluationStatus</a></b>(const DescribeConfigRuleEvaluationStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigRulesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigRules">describeConfigRules</a></b>(const DescribeConfigRulesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationAggregatorSourcesStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigurationAggregatorSourcesStatus">describeConfigurationAggregatorSourcesStatus</a></b>(const DescribeConfigurationAggregatorSourcesStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationAggregatorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigurationAggregators">describeConfigurationAggregators</a></b>(const DescribeConfigurationAggregatorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationRecorderStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigurationRecorderStatus">describeConfigurationRecorderStatus</a></b>(const DescribeConfigurationRecorderStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConfigurationRecordersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeConfigurationRecorders">describeConfigurationRecorders</a></b>(const DescribeConfigurationRecordersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDeliveryChannelStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeDeliveryChannelStatus">describeDeliveryChannelStatus</a></b>(const DescribeDeliveryChannelStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDeliveryChannelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describeDeliveryChannels">describeDeliveryChannels</a></b>(const DescribeDeliveryChannelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePendingAggregationRequestsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#describePendingAggregationRequests">describePendingAggregationRequests</a></b>(const DescribePendingAggregationRequestsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAggregateComplianceDetailsByConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getAggregateComplianceDetailsByConfigRule">getAggregateComplianceDetailsByConfigRule</a></b>(const GetAggregateComplianceDetailsByConfigRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAggregateConfigRuleComplianceSummaryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getAggregateConfigRuleComplianceSummary">getAggregateConfigRuleComplianceSummary</a></b>(const GetAggregateConfigRuleComplianceSummaryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetComplianceDetailsByConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getComplianceDetailsByConfigRule">getComplianceDetailsByConfigRule</a></b>(const GetComplianceDetailsByConfigRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetComplianceDetailsByResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getComplianceDetailsByResource">getComplianceDetailsByResource</a></b>(const GetComplianceDetailsByResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetComplianceSummaryByConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getComplianceSummaryByConfigRule">getComplianceSummaryByConfigRule</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetComplianceSummaryByResourceTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getComplianceSummaryByResourceType">getComplianceSummaryByResourceType</a></b>(const GetComplianceSummaryByResourceTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDiscoveredResourceCountsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getDiscoveredResourceCounts">getDiscoveredResourceCounts</a></b>(const GetDiscoveredResourceCountsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetResourceConfigHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#getResourceConfigHistory">getResourceConfigHistory</a></b>(const GetResourceConfigHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDiscoveredResourcesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#listDiscoveredResources">listDiscoveredResources</a></b>(const ListDiscoveredResourcesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutAggregationAuthorizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putAggregationAuthorization">putAggregationAuthorization</a></b>(const PutAggregationAuthorizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutConfigRuleResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putConfigRule">putConfigRule</a></b>(const PutConfigRuleRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutConfigurationAggregatorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putConfigurationAggregator">putConfigurationAggregator</a></b>(const PutConfigurationAggregatorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutConfigurationRecorderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putConfigurationRecorder">putConfigurationRecorder</a></b>(const PutConfigurationRecorderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutDeliveryChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putDeliveryChannel">putDeliveryChannel</a></b>(const PutDeliveryChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutEvaluationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#putEvaluations">putEvaluations</a></b>(const PutEvaluationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartConfigRulesEvaluationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#startConfigRulesEvaluation">startConfigRulesEvaluation</a></b>(const StartConfigRulesEvaluationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartConfigurationRecorderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#startConfigurationRecorder">startConfigurationRecorder</a></b>(const StartConfigurationRecorderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopConfigurationRecorderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-configservice-configserviceclient.html#stopConfigurationRecorder">stopConfigurationRecorder</a></b>(const StopConfigurationRecorderRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ConfigServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> class provides access to the AWS Config (Config Service) service.</p>
+<p>&lt;fullname&gt;AWS Config&lt;/fullname&gt;</p>
+<p>AWS Config provides a way to keep track of the configurations of all the AWS resources associated with your AWS account. You can use AWS Config to get the current and historical configurations of each AWS resource and also to get information about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of resources currently supported by AWS Config, see &lt;a href=&quot;http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources&quot;&gt;Supported AWS</p>
+<p>Resources&lt;/a&gt;&gt;</p>
+<p>You can access and manage AWS Config through the AWS Management Console, the AWS Command Line Interface (AWS CLI), the AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a request with this protocol, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html&quot;&gt;Signature Version 4 Signing Process&lt;/a&gt;. For detailed information about AWS Config features and their associated actions or commands, as well as how to work with AWS Management Console, see &lt;a href=&quot;http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html&quot;&gt;What Is AWS Config&lt;/a&gt; in the &lt;i&gt;AWS Config Developer</p>
+<p>Guide&lt;/i&gt;&gt; &lt;ul&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;/ul&gt; &lt;ul&gt; &lt;li&gt; &lt;/li&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt; &lt;li/&gt;</p>
+</div>
+<!-- @@@ConfigServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ConfigServiceClient[overload1]$$$ConfigServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ConfigServiceClient"><a name="ConfigServiceClient"></a>ConfigServiceClient::<span class="name">ConfigServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ConfigServiceClient -->
+<!-- $$$ConfigServiceClient$$$ConfigServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ConfigServiceClient-1"><a name="ConfigServiceClient-1"></a>ConfigServiceClient::<span class="name">ConfigServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-configservice-configserviceclient.html#ConfigServiceClient">ConfigServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ConfigServiceClient -->
+<!-- $$$batchGetResourceConfig[overload1]$$$batchGetResourceConfigconstBatchGetResourceConfigRequest& -->
+<h3 class="fn" id="batchGetResourceConfig"><a name="batchGetResourceConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-batchgetresourceconfigresponse.html">BatchGetResourceConfigResponse</a></span> *ConfigServiceClient::<span class="name">batchGetResourceConfig</span>(const <span class="type"><a href="qtaws-configservice-batchgetresourceconfigrequest.html">BatchGetResourceConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-batchgetresourceconfigresponse.html">BatchGetResourceConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current configuration for one or more requested resources. The operation also returns a list of resources that are not processed in the current request. If there are no unprocessed resources, the operation returns an empty unprocessedResourceKeys list.</p>
+<p>&lt;/p &lt;note&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The API does not return results for deleted</p>
+<p>resources&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The API does not return any tags for the requested resources. This information is filtered out of the supplementaryConfiguration section of the API</p>
+<!-- @@@batchGetResourceConfig -->
+<!-- $$$deleteAggregationAuthorization[overload1]$$$deleteAggregationAuthorizationconstDeleteAggregationAuthorizationRequest& -->
+<h3 class="fn" id="deleteAggregationAuthorization"><a name="deleteAggregationAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deleteaggregationauthorizationresponse.html">DeleteAggregationAuthorizationResponse</a></span> *ConfigServiceClient::<span class="name">deleteAggregationAuthorization</span>(const <span class="type"><a href="qtaws-configservice-deleteaggregationauthorizationrequest.html">DeleteAggregationAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deleteaggregationauthorizationresponse.html">DeleteAggregationAuthorizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the authorization granted to the specified configuration aggregator account in a specified</p>
+<!-- @@@deleteAggregationAuthorization -->
+<!-- $$$deleteConfigRule[overload1]$$$deleteConfigRuleconstDeleteConfigRuleRequest& -->
+<h3 class="fn" id="deleteConfigRule"><a name="deleteConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deleteconfigruleresponse.html">DeleteConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">deleteConfigRule</span>(const <span class="type"><a href="qtaws-configservice-deleteconfigrulerequest.html">DeleteConfigRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deleteconfigruleresponse.html">DeleteConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified AWS Config rule and all of its evaluation</p>
+<p>results&gt;</p>
+<p>AWS Config sets the state of a rule to &lt;code&gt;DELETING&lt;/code&gt; until the deletion is complete. You cannot update a rule while it is in this state. If you make a &lt;code&gt;PutConfigRule&lt;/code&gt; or &lt;code&gt;DeleteConfigRule&lt;/code&gt; request for the rule, you will receive a</p>
+<p>&lt;code&gt;ResourceInUseException&lt;/code&gt;&gt;</p>
+<p>You can check the state of a rule by using the &lt;code&gt;DescribeConfigRules&lt;/code&gt;</p>
+<!-- @@@deleteConfigRule -->
+<!-- $$$deleteConfigurationAggregator[overload1]$$$deleteConfigurationAggregatorconstDeleteConfigurationAggregatorRequest& -->
+<h3 class="fn" id="deleteConfigurationAggregator"><a name="deleteConfigurationAggregator"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deleteconfigurationaggregatorresponse.html">DeleteConfigurationAggregatorResponse</a></span> *ConfigServiceClient::<span class="name">deleteConfigurationAggregator</span>(const <span class="type"><a href="qtaws-configservice-deleteconfigurationaggregatorrequest.html">DeleteConfigurationAggregatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deleteconfigurationaggregatorresponse.html">DeleteConfigurationAggregatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified configuration aggregator and the aggregated data associated with the</p>
+<!-- @@@deleteConfigurationAggregator -->
+<!-- $$$deleteConfigurationRecorder[overload1]$$$deleteConfigurationRecorderconstDeleteConfigurationRecorderRequest& -->
+<h3 class="fn" id="deleteConfigurationRecorder"><a name="deleteConfigurationRecorder"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deleteconfigurationrecorderresponse.html">DeleteConfigurationRecorderResponse</a></span> *ConfigServiceClient::<span class="name">deleteConfigurationRecorder</span>(const <span class="type"><a href="qtaws-configservice-deleteconfigurationrecorderrequest.html">DeleteConfigurationRecorderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deleteconfigurationrecorderresponse.html">DeleteConfigurationRecorderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the configuration</p>
+<p>recorder&gt;</p>
+<p>After the configuration recorder is deleted, AWS Config will not record resource configuration changes until you create a new configuration</p>
+<p>recorder&gt;</p>
+<p>This action does not delete the configuration information that was previously recorded. You will be able to access the previously recorded information by using the &lt;code&gt;GetResourceConfigHistory&lt;/code&gt; action, but you will not be able to access this information in the AWS Config console until you create a new configuration</p>
+<!-- @@@deleteConfigurationRecorder -->
+<!-- $$$deleteDeliveryChannel[overload1]$$$deleteDeliveryChannelconstDeleteDeliveryChannelRequest& -->
+<h3 class="fn" id="deleteDeliveryChannel"><a name="deleteDeliveryChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deletedeliverychannelresponse.html">DeleteDeliveryChannelResponse</a></span> *ConfigServiceClient::<span class="name">deleteDeliveryChannel</span>(const <span class="type"><a href="qtaws-configservice-deletedeliverychannelrequest.html">DeleteDeliveryChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deletedeliverychannelresponse.html">DeleteDeliveryChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the delivery</p>
+<p>channel&gt;</p>
+<p>Before you can delete the delivery channel, you must stop the configuration recorder by using the &lt;a&gt;StopConfigurationRecorder&lt;/a&gt;</p>
+<!-- @@@deleteDeliveryChannel -->
+<!-- $$$deleteEvaluationResults[overload1]$$$deleteEvaluationResultsconstDeleteEvaluationResultsRequest& -->
+<h3 class="fn" id="deleteEvaluationResults"><a name="deleteEvaluationResults"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deleteevaluationresultsresponse.html">DeleteEvaluationResultsResponse</a></span> *ConfigServiceClient::<span class="name">deleteEvaluationResults</span>(const <span class="type"><a href="qtaws-configservice-deleteevaluationresultsrequest.html">DeleteEvaluationResultsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deleteevaluationresultsresponse.html">DeleteEvaluationResultsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the evaluation results for the specified AWS Config rule. You can specify one AWS Config rule per request. After you delete the evaluation results, you can call the &lt;a&gt;StartConfigRulesEvaluation&lt;/a&gt; API to start evaluating your AWS resources against the</p>
+<!-- @@@deleteEvaluationResults -->
+<!-- $$$deletePendingAggregationRequest[overload1]$$$deletePendingAggregationRequestconstDeletePendingAggregationRequestRequest& -->
+<h3 class="fn" id="deletePendingAggregationRequest"><a name="deletePendingAggregationRequest"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deletependingaggregationrequestresponse.html">DeletePendingAggregationRequestResponse</a></span> *ConfigServiceClient::<span class="name">deletePendingAggregationRequest</span>(const <span class="type"><a href="qtaws-configservice-deletependingaggregationrequestrequest.html">DeletePendingAggregationRequestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deletependingaggregationrequestresponse.html">DeletePendingAggregationRequestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes pending authorization requests for a specified aggregator account in a specified</p>
+<!-- @@@deletePendingAggregationRequest -->
+<!-- $$$deliverConfigSnapshot[overload1]$$$deliverConfigSnapshotconstDeliverConfigSnapshotRequest& -->
+<h3 class="fn" id="deliverConfigSnapshot"><a name="deliverConfigSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-deliverconfigsnapshotresponse.html">DeliverConfigSnapshotResponse</a></span> *ConfigServiceClient::<span class="name">deliverConfigSnapshot</span>(const <span class="type"><a href="qtaws-configservice-deliverconfigsnapshotrequest.html">DeliverConfigSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-deliverconfigsnapshotresponse.html">DeliverConfigSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel. After the delivery has started, AWS Config sends the following notifications using an Amazon SNS topic that you have</p>
+<p>specified&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Notification of the start of the</p>
+<p>delivery&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Notification of the completion of the delivery, if the delivery was successfully</p>
+<p>completed&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Notification of delivery failure, if the delivery</p>
+<!-- @@@deliverConfigSnapshot -->
+<!-- $$$describeAggregateComplianceByConfigRules[overload1]$$$describeAggregateComplianceByConfigRulesconstDescribeAggregateComplianceByConfigRulesRequest& -->
+<h3 class="fn" id="describeAggregateComplianceByConfigRules"><a name="describeAggregateComplianceByConfigRules"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeaggregatecompliancebyconfigrulesresponse.html">DescribeAggregateComplianceByConfigRulesResponse</a></span> *ConfigServiceClient::<span class="name">describeAggregateComplianceByConfigRules</span>(const <span class="type"><a href="qtaws-configservice-describeaggregatecompliancebyconfigrulesrequest.html">DescribeAggregateComplianceByConfigRulesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeaggregatecompliancebyconfigrulesresponse.html">DescribeAggregateComplianceByConfigRulesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>The results can return an empty result page, but if you have a nextToken, the results are displayed on the next</p>
+<!-- @@@describeAggregateComplianceByConfigRules -->
+<!-- $$$describeAggregationAuthorizations[overload1]$$$describeAggregationAuthorizationsconstDescribeAggregationAuthorizationsRequest& -->
+<h3 class="fn" id="describeAggregationAuthorizations"><a name="describeAggregationAuthorizations"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeaggregationauthorizationsresponse.html">DescribeAggregationAuthorizationsResponse</a></span> *ConfigServiceClient::<span class="name">describeAggregationAuthorizations</span>(const <span class="type"><a href="qtaws-configservice-describeaggregationauthorizationsrequest.html">DescribeAggregationAuthorizationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeaggregationauthorizationsresponse.html">DescribeAggregationAuthorizationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of authorizations granted to various aggregator accounts and</p>
+<!-- @@@describeAggregationAuthorizations -->
+<!-- $$$describeComplianceByConfigRule[overload1]$$$describeComplianceByConfigRuleconstDescribeComplianceByConfigRuleRequest& -->
+<h3 class="fn" id="describeComplianceByConfigRule"><a name="describeComplianceByConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describecompliancebyconfigruleresponse.html">DescribeComplianceByConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">describeComplianceByConfigRule</span>(const <span class="type"><a href="qtaws-configservice-describecompliancebyconfigrulerequest.html">DescribeComplianceByConfigRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describecompliancebyconfigruleresponse.html">DescribeComplianceByConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Indicates whether the specified AWS Config rules are compliant. If a rule is noncompliant, this action returns the number of AWS resources that do not comply with the</p>
+<p>rule&gt;</p>
+<p>A rule is compliant if all of the evaluated resources comply with it. It is noncompliant if any of these resources do not</p>
+<p>comply&gt;</p>
+<p>If AWS Config has no current evaluation results for the rule, it returns &lt;code&gt;INSUFFICIENT_DATA&lt;/code&gt;. This result might indicate one of the following</p>
+<p>conditions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>AWS Config has never invoked an evaluation for the rule. To check whether it has, use the &lt;code&gt;DescribeConfigRuleEvaluationStatus&lt;/code&gt; action to get the &lt;code&gt;LastSuccessfulInvocationTime&lt;/code&gt; and</p>
+<p>&lt;code&gt;LastFailedInvocationTime&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The rule's AWS Lambda function is failing to send evaluation results to AWS Config. Verify that the role you assigned to your configuration recorder includes the &lt;code&gt;config:PutEvaluations&lt;/code&gt; permission. If the rule is a custom rule, verify that the AWS Lambda execution role includes the &lt;code&gt;config:PutEvaluations&lt;/code&gt;</p>
+<p>permission&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The rule's AWS Lambda function has returned &lt;code&gt;NOT_APPLICABLE&lt;/code&gt; for all evaluation results. This can occur if the resources were deleted or removed from the rule's</p>
+<!-- @@@describeComplianceByConfigRule -->
+<!-- $$$describeComplianceByResource[overload1]$$$describeComplianceByResourceconstDescribeComplianceByResourceRequest& -->
+<h3 class="fn" id="describeComplianceByResource"><a name="describeComplianceByResource"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describecompliancebyresourceresponse.html">DescribeComplianceByResourceResponse</a></span> *ConfigServiceClient::<span class="name">describeComplianceByResource</span>(const <span class="type"><a href="qtaws-configservice-describecompliancebyresourcerequest.html">DescribeComplianceByResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describecompliancebyresourceresponse.html">DescribeComplianceByResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Indicates whether the specified AWS resources are compliant. If a resource is noncompliant, this action returns the number of AWS Config rules that the resource does not comply</p>
+<p>with&gt;</p>
+<p>A resource is compliant if it complies with all the AWS Config rules that evaluate it. It is noncompliant if it does not comply with one or more of these</p>
+<p>rules&gt;</p>
+<p>If AWS Config has no current evaluation results for the resource, it returns &lt;code&gt;INSUFFICIENT_DATA&lt;/code&gt;. This result might indicate one of the following conditions about the rules that evaluate the</p>
+<p>resource&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>AWS Config has never invoked an evaluation for the rule. To check whether it has, use the &lt;code&gt;DescribeConfigRuleEvaluationStatus&lt;/code&gt; action to get the &lt;code&gt;LastSuccessfulInvocationTime&lt;/code&gt; and</p>
+<p>&lt;code&gt;LastFailedInvocationTime&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The rule's AWS Lambda function is failing to send evaluation results to AWS Config. Verify that the role that you assigned to your configuration recorder includes the &lt;code&gt;config:PutEvaluations&lt;/code&gt; permission. If the rule is a custom rule, verify that the AWS Lambda execution role includes the &lt;code&gt;config:PutEvaluations&lt;/code&gt;</p>
+<p>permission&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The rule's AWS Lambda function has returned &lt;code&gt;NOT_APPLICABLE&lt;/code&gt; for all evaluation results. This can occur if the resources were deleted or removed from the rule's</p>
+<!-- @@@describeComplianceByResource -->
+<!-- $$$describeConfigRuleEvaluationStatus[overload1]$$$describeConfigRuleEvaluationStatusconstDescribeConfigRuleEvaluationStatusRequest& -->
+<h3 class="fn" id="describeConfigRuleEvaluationStatus"><a name="describeConfigRuleEvaluationStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigruleevaluationstatusresponse.html">DescribeConfigRuleEvaluationStatusResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigRuleEvaluationStatus</span>(const <span class="type"><a href="qtaws-configservice-describeconfigruleevaluationstatusrequest.html">DescribeConfigRuleEvaluationStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigruleevaluationstatusresponse.html">DescribeConfigRuleEvaluationStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns status information for each of your AWS managed Config rules. The status includes information such as the last time AWS Config invoked the rule, the last time AWS Config failed to invoke the rule, and the related error for the last</p>
+<!-- @@@describeConfigRuleEvaluationStatus -->
+<!-- $$$describeConfigRules[overload1]$$$describeConfigRulesconstDescribeConfigRulesRequest& -->
+<h3 class="fn" id="describeConfigRules"><a name="describeConfigRules"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigrulesresponse.html">DescribeConfigRulesResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigRules</span>(const <span class="type"><a href="qtaws-configservice-describeconfigrulesrequest.html">DescribeConfigRulesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigrulesresponse.html">DescribeConfigRulesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns details about your AWS Config</p>
+<!-- @@@describeConfigRules -->
+<!-- $$$describeConfigurationAggregatorSourcesStatus[overload1]$$$describeConfigurationAggregatorSourcesStatusconstDescribeConfigurationAggregatorSourcesStatusRequest& -->
+<h3 class="fn" id="describeConfigurationAggregatorSourcesStatus"><a name="describeConfigurationAggregatorSourcesStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigurationaggregatorsourcesstatusresponse.html">DescribeConfigurationAggregatorSourcesStatusResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigurationAggregatorSourcesStatus</span>(const <span class="type"><a href="qtaws-configservice-describeconfigurationaggregatorsourcesstatusrequest.html">DescribeConfigurationAggregatorSourcesStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigurationaggregatorsourcesstatusresponse.html">DescribeConfigurationAggregatorSourcesStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns status information for sources within an aggregator. The status includes information about the last time AWS Config aggregated data from source accounts or AWS Config failed to aggregate data from source accounts with the related error code or message.</p>
+<!-- @@@describeConfigurationAggregatorSourcesStatus -->
+<!-- $$$describeConfigurationAggregators[overload1]$$$describeConfigurationAggregatorsconstDescribeConfigurationAggregatorsRequest& -->
+<h3 class="fn" id="describeConfigurationAggregators"><a name="describeConfigurationAggregators"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigurationaggregatorsresponse.html">DescribeConfigurationAggregatorsResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigurationAggregators</span>(const <span class="type"><a href="qtaws-configservice-describeconfigurationaggregatorsrequest.html">DescribeConfigurationAggregatorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigurationaggregatorsresponse.html">DescribeConfigurationAggregatorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details of one or more configuration aggregators. If the configuration aggregator is not specified, this action returns the details for all the configuration aggregators associated with the account.</p>
+<!-- @@@describeConfigurationAggregators -->
+<!-- $$$describeConfigurationRecorderStatus[overload1]$$$describeConfigurationRecorderStatusconstDescribeConfigurationRecorderStatusRequest& -->
+<h3 class="fn" id="describeConfigurationRecorderStatus"><a name="describeConfigurationRecorderStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigurationrecorderstatusresponse.html">DescribeConfigurationRecorderStatusResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigurationRecorderStatus</span>(const <span class="type"><a href="qtaws-configservice-describeconfigurationrecorderstatusrequest.html">DescribeConfigurationRecorderStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigurationrecorderstatusresponse.html">DescribeConfigurationRecorderStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current status of the specified configuration recorder. If a configuration recorder is not specified, this action returns the status of all configuration recorders associated with the</p>
+<p>account&gt; &lt;note&gt;</p>
+<p>Currently, you can specify only one configuration recorder per region in your</p>
+<!-- @@@describeConfigurationRecorderStatus -->
+<!-- $$$describeConfigurationRecorders[overload1]$$$describeConfigurationRecordersconstDescribeConfigurationRecordersRequest& -->
+<h3 class="fn" id="describeConfigurationRecorders"><a name="describeConfigurationRecorders"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describeconfigurationrecordersresponse.html">DescribeConfigurationRecordersResponse</a></span> *ConfigServiceClient::<span class="name">describeConfigurationRecorders</span>(const <span class="type"><a href="qtaws-configservice-describeconfigurationrecordersrequest.html">DescribeConfigurationRecordersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describeconfigurationrecordersresponse.html">DescribeConfigurationRecordersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the details for the specified configuration recorders. If the configuration recorder is not specified, this action returns the details for all configuration recorders associated with the</p>
+<p>account&gt; &lt;note&gt;</p>
+<p>Currently, you can specify only one configuration recorder per region in your</p>
+<!-- @@@describeConfigurationRecorders -->
+<!-- $$$describeDeliveryChannelStatus[overload1]$$$describeDeliveryChannelStatusconstDescribeDeliveryChannelStatusRequest& -->
+<h3 class="fn" id="describeDeliveryChannelStatus"><a name="describeDeliveryChannelStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describedeliverychannelstatusresponse.html">DescribeDeliveryChannelStatusResponse</a></span> *ConfigServiceClient::<span class="name">describeDeliveryChannelStatus</span>(const <span class="type"><a href="qtaws-configservice-describedeliverychannelstatusrequest.html">DescribeDeliveryChannelStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describedeliverychannelstatusresponse.html">DescribeDeliveryChannelStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the current status of the specified delivery channel. If a delivery channel is not specified, this action returns the current status of all delivery channels associated with the</p>
+<p>account&gt; &lt;note&gt;</p>
+<p>Currently, you can specify only one delivery channel per region in your</p>
+<!-- @@@describeDeliveryChannelStatus -->
+<!-- $$$describeDeliveryChannels[overload1]$$$describeDeliveryChannelsconstDescribeDeliveryChannelsRequest& -->
+<h3 class="fn" id="describeDeliveryChannels"><a name="describeDeliveryChannels"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describedeliverychannelsresponse.html">DescribeDeliveryChannelsResponse</a></span> *ConfigServiceClient::<span class="name">describeDeliveryChannels</span>(const <span class="type"><a href="qtaws-configservice-describedeliverychannelsrequest.html">DescribeDeliveryChannelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describedeliverychannelsresponse.html">DescribeDeliveryChannelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns details about the specified delivery channel. If a delivery channel is not specified, this action returns the details of all delivery channels associated with the</p>
+<p>account&gt; &lt;note&gt;</p>
+<p>Currently, you can specify only one delivery channel per region in your</p>
+<!-- @@@describeDeliveryChannels -->
+<!-- $$$describePendingAggregationRequests[overload1]$$$describePendingAggregationRequestsconstDescribePendingAggregationRequestsRequest& -->
+<h3 class="fn" id="describePendingAggregationRequests"><a name="describePendingAggregationRequests"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-describependingaggregationrequestsresponse.html">DescribePendingAggregationRequestsResponse</a></span> *ConfigServiceClient::<span class="name">describePendingAggregationRequests</span>(const <span class="type"><a href="qtaws-configservice-describependingaggregationrequestsrequest.html">DescribePendingAggregationRequestsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-describependingaggregationrequestsresponse.html">DescribePendingAggregationRequestsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all pending aggregation</p>
+<!-- @@@describePendingAggregationRequests -->
+<!-- $$$getAggregateComplianceDetailsByConfigRule[overload1]$$$getAggregateComplianceDetailsByConfigRuleconstGetAggregateComplianceDetailsByConfigRuleRequest& -->
+<h3 class="fn" id="getAggregateComplianceDetailsByConfigRule"><a name="getAggregateComplianceDetailsByConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getaggregatecompliancedetailsbyconfigruleresponse.html">GetAggregateComplianceDetailsByConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">getAggregateComplianceDetailsByConfigRule</span>(const <span class="type"><a href="qtaws-configservice-getaggregatecompliancedetailsbyconfigrulerequest.html">GetAggregateComplianceDetailsByConfigRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getaggregatecompliancedetailsbyconfigruleresponse.html">GetAggregateComplianceDetailsByConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the evaluation results for the specified AWS Config rule for a specific resource in a rule. The results indicate which AWS resources were evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the rule.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>The results can return an empty result page. But if you have a nextToken, the results are displayed on the next</p>
+<!-- @@@getAggregateComplianceDetailsByConfigRule -->
+<!-- $$$getAggregateConfigRuleComplianceSummary[overload1]$$$getAggregateConfigRuleComplianceSummaryconstGetAggregateConfigRuleComplianceSummaryRequest& -->
+<h3 class="fn" id="getAggregateConfigRuleComplianceSummary"><a name="getAggregateConfigRuleComplianceSummary"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getaggregateconfigrulecompliancesummaryresponse.html">GetAggregateConfigRuleComplianceSummaryResponse</a></span> *ConfigServiceClient::<span class="name">getAggregateConfigRuleComplianceSummary</span>(const <span class="type"><a href="qtaws-configservice-getaggregateconfigrulecompliancesummaryrequest.html">GetAggregateConfigRuleComplianceSummaryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getaggregateconfigrulecompliancesummaryresponse.html">GetAggregateConfigRuleComplianceSummaryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of compliant and noncompliant rules for one or more accounts and regions in an</p>
+<p>aggregator&gt; &lt;note&gt;</p>
+<p>The results can return an empty result page, but if you have a nextToken, the results are displayed on the next</p>
+<!-- @@@getAggregateConfigRuleComplianceSummary -->
+<!-- $$$getComplianceDetailsByConfigRule[overload1]$$$getComplianceDetailsByConfigRuleconstGetComplianceDetailsByConfigRuleRequest& -->
+<h3 class="fn" id="getComplianceDetailsByConfigRule"><a name="getComplianceDetailsByConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getcompliancedetailsbyconfigruleresponse.html">GetComplianceDetailsByConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">getComplianceDetailsByConfigRule</span>(const <span class="type"><a href="qtaws-configservice-getcompliancedetailsbyconfigrulerequest.html">GetComplianceDetailsByConfigRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getcompliancedetailsbyconfigruleresponse.html">GetComplianceDetailsByConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the evaluation results for the specified AWS Config rule. The results indicate which AWS resources were evaluated by the rule, when each resource was last evaluated, and whether each resource complies with the</p>
+<!-- @@@getComplianceDetailsByConfigRule -->
+<!-- $$$getComplianceDetailsByResource[overload1]$$$getComplianceDetailsByResourceconstGetComplianceDetailsByResourceRequest& -->
+<h3 class="fn" id="getComplianceDetailsByResource"><a name="getComplianceDetailsByResource"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getcompliancedetailsbyresourceresponse.html">GetComplianceDetailsByResourceResponse</a></span> *ConfigServiceClient::<span class="name">getComplianceDetailsByResource</span>(const <span class="type"><a href="qtaws-configservice-getcompliancedetailsbyresourcerequest.html">GetComplianceDetailsByResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getcompliancedetailsbyresourceresponse.html">GetComplianceDetailsByResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the evaluation results for the specified AWS resource. The results indicate which AWS Config rules were used to evaluate the resource, when each rule was last used, and whether the resource complies with each</p>
+<!-- @@@getComplianceDetailsByResource -->
+<!-- $$$getComplianceSummaryByConfigRule[overload1]$$$getComplianceSummaryByConfigRule -->
+<h3 class="fn" id="getComplianceSummaryByConfigRule"><a name="getComplianceSummaryByConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getcompliancesummarybyconfigruleresponse.html">GetComplianceSummaryByConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">getComplianceSummaryByConfigRule</span>()</h3>
+<p>Sends a GetComplianceSummaryByConfigRule request to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getcompliancesummarybyconfigruleresponse.html">GetComplianceSummaryByConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of AWS Config rules that are compliant and noncompliant, up to a maximum of 25 for</p>
+<!-- @@@getComplianceSummaryByConfigRule -->
+<!-- $$$getComplianceSummaryByResourceType[overload1]$$$getComplianceSummaryByResourceTypeconstGetComplianceSummaryByResourceTypeRequest& -->
+<h3 class="fn" id="getComplianceSummaryByResourceType"><a name="getComplianceSummaryByResourceType"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getcompliancesummarybyresourcetyperesponse.html">GetComplianceSummaryByResourceTypeResponse</a></span> *ConfigServiceClient::<span class="name">getComplianceSummaryByResourceType</span>(const <span class="type"><a href="qtaws-configservice-getcompliancesummarybyresourcetyperequest.html">GetComplianceSummaryByResourceTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getcompliancesummarybyresourcetyperesponse.html">GetComplianceSummaryByResourceTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of resources that are compliant and the number that are noncompliant. You can specify one or more resource types to get these numbers for each resource type. The maximum number returned is</p>
+<!-- @@@getComplianceSummaryByResourceType -->
+<!-- $$$getDiscoveredResourceCounts[overload1]$$$getDiscoveredResourceCountsconstGetDiscoveredResourceCountsRequest& -->
+<h3 class="fn" id="getDiscoveredResourceCounts"><a name="getDiscoveredResourceCounts"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getdiscoveredresourcecountsresponse.html">GetDiscoveredResourceCountsResponse</a></span> *ConfigServiceClient::<span class="name">getDiscoveredResourceCounts</span>(const <span class="type"><a href="qtaws-configservice-getdiscoveredresourcecountsrequest.html">GetDiscoveredResourceCountsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getdiscoveredresourcecountsresponse.html">GetDiscoveredResourceCountsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the resource types, the number of each resource type, and the total number of resources that AWS Config is recording in this region for your AWS account.</p>
+<p>&lt;/p &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Example&lt;/b&gt;</p>
+<p>&lt;/p &lt;ol&gt; &lt;li&gt;</p>
+<p>AWS Config is recording three resource types in the US East (Ohio) Region for your account: 25 EC2 instances, 20 IAM users, and 15 S3</p>
+<p>buckets&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You make a call to the &lt;code&gt;GetDiscoveredResourceCounts&lt;/code&gt; action and specify that you want all resource types.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>AWS Config returns the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>The resource types (EC2 instances, IAM users, and S3</p>
+<p>buckets)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The number of each resource type (25, 20, and</p>
+<p>15)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The total number of all resources</p>
+<p>(60)&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>The response is paginated. By default, AWS Config lists 100 &lt;a&gt;ResourceCount&lt;/a&gt; objects on each page. You can customize this number with the &lt;code&gt;limit&lt;/code&gt; parameter. The response includes a &lt;code&gt;nextToken&lt;/code&gt; string. To get the next page of results, run the request again and specify the string for the &lt;code&gt;nextToken&lt;/code&gt;</p>
+<p>parameter&gt; &lt;note&gt;</p>
+<p>If you make a call to the &lt;a&gt;GetDiscoveredResourceCounts&lt;/a&gt; action, you might not immediately receive resource counts in the following</p>
+<p>situations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You are a new AWS Config</p>
+<p>customer&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You just enabled resource</p>
+<p>recording&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>It might take a few minutes for AWS Config to record and count your resources. Wait a few minutes and then retry the &lt;a&gt;GetDiscoveredResourceCounts&lt;/a&gt; action.</p>
+<!-- @@@getDiscoveredResourceCounts -->
+<!-- $$$getResourceConfigHistory[overload1]$$$getResourceConfigHistoryconstGetResourceConfigHistoryRequest& -->
+<h3 class="fn" id="getResourceConfigHistory"><a name="getResourceConfigHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-getresourceconfighistoryresponse.html">GetResourceConfigHistoryResponse</a></span> *ConfigServiceClient::<span class="name">getResourceConfigHistory</span>(const <span class="type"><a href="qtaws-configservice-getresourceconfighistoryrequest.html">GetResourceConfigHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-getresourceconfighistoryresponse.html">GetResourceConfigHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of configuration items for the specified resource. The list contains details about each state of the resource during the specified time</p>
+<p>interval&gt;</p>
+<p>The response is paginated. By default, AWS Config returns a limit of 10 configuration items per page. You can customize this number with the &lt;code&gt;limit&lt;/code&gt; parameter. The response includes a &lt;code&gt;nextToken&lt;/code&gt; string. To get the next page of results, run the request again and specify the string for the &lt;code&gt;nextToken&lt;/code&gt;</p>
+<p>parameter&gt; &lt;note&gt;</p>
+<p>Each call to the API is limited to span a duration of seven days. It is likely that the number of records returned is smaller than the specified &lt;code&gt;limit&lt;/code&gt;. In such cases, you can make another call, using the</p>
+<!-- @@@getResourceConfigHistory -->
+<!-- $$$listDiscoveredResources[overload1]$$$listDiscoveredResourcesconstListDiscoveredResourcesRequest& -->
+<h3 class="fn" id="listDiscoveredResources"><a name="listDiscoveredResources"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-listdiscoveredresourcesresponse.html">ListDiscoveredResourcesResponse</a></span> *ConfigServiceClient::<span class="name">listDiscoveredResources</span>(const <span class="type"><a href="qtaws-configservice-listdiscoveredresourcesrequest.html">ListDiscoveredResourcesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-listdiscoveredresourcesresponse.html">ListDiscoveredResourcesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource identifier includes the resource type, ID, and (if available) the custom resource name. The results consist of resources that AWS Config has discovered, including those that AWS Config is not currently recording. You can narrow the results to include only resources that have specific resource IDs or a resource</p>
+<p>name&gt; &lt;note&gt;</p>
+<p>You can specify either resource IDs or a resource name, but not both, in the same</p>
+<p>request&gt; &lt;/note&gt;</p>
+<p>The response is paginated. By default, AWS Config lists 100 resource identifiers on each page. You can customize this number with the &lt;code&gt;limit&lt;/code&gt; parameter. The response includes a &lt;code&gt;nextToken&lt;/code&gt; string. To get the next page of results, run the request again and specify the string for the &lt;code&gt;nextToken&lt;/code&gt;</p>
+<!-- @@@listDiscoveredResources -->
+<!-- $$$putAggregationAuthorization[overload1]$$$putAggregationAuthorizationconstPutAggregationAuthorizationRequest& -->
+<h3 class="fn" id="putAggregationAuthorization"><a name="putAggregationAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putaggregationauthorizationresponse.html">PutAggregationAuthorizationResponse</a></span> *ConfigServiceClient::<span class="name">putAggregationAuthorization</span>(const <span class="type"><a href="qtaws-configservice-putaggregationauthorizationrequest.html">PutAggregationAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putaggregationauthorizationresponse.html">PutAggregationAuthorizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Authorizes the aggregator account and region to collect data from the source account and region.</p>
+<!-- @@@putAggregationAuthorization -->
+<!-- $$$putConfigRule[overload1]$$$putConfigRuleconstPutConfigRuleRequest& -->
+<h3 class="fn" id="putConfigRule"><a name="putConfigRule"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putconfigruleresponse.html">PutConfigRuleResponse</a></span> *ConfigServiceClient::<span class="name">putConfigRule</span>(const <span class="type"><a href="qtaws-configservice-putconfigrulerequest.html">PutConfigRuleRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putconfigruleresponse.html">PutConfigRuleResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or updates an AWS Config rule for evaluating whether your AWS resources comply with your desired</p>
+<p>configurations&gt;</p>
+<p>You can use this action for custom AWS Config rules and AWS managed Config rules. A custom AWS Config rule is a rule that you develop and maintain. An AWS managed Config rule is a customizable, predefined rule that AWS Config</p>
+<p>provides&gt;</p>
+<p>If you are adding a new custom AWS Config rule, you must first create the AWS Lambda function that the rule invokes to evaluate your resources. When you use the &lt;code&gt;PutConfigRule&lt;/code&gt; action to add the rule to AWS Config, you must specify the Amazon Resource Name (ARN) that AWS Lambda assigns to the function. Specify the ARN for the &lt;code&gt;SourceIdentifier&lt;/code&gt; key. This key is part of the &lt;code&gt;Source&lt;/code&gt; object, which is part of the &lt;code&gt;ConfigRule&lt;/code&gt; object.</p>
+<p>&lt;/p</p>
+<p>If you are adding an AWS managed Config rule, specify the rule's identifier for the &lt;code&gt;SourceIdentifier&lt;/code&gt; key. To reference AWS managed Config rule identifiers, see &lt;a href=&quot;http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html&quot;&gt;About AWS Managed Config</p>
+<p>Rules&lt;/a&gt;&gt;</p>
+<p>For any new rule that you add, specify the &lt;code&gt;ConfigRuleName&lt;/code&gt; in the &lt;code&gt;ConfigRule&lt;/code&gt; object. Do not specify the &lt;code&gt;ConfigRuleArn&lt;/code&gt; or the &lt;code&gt;ConfigRuleId&lt;/code&gt;. These values are generated by AWS Config for new</p>
+<p>rules&gt;</p>
+<p>If you are updating a rule that you added previously, you can specify the rule by &lt;code&gt;ConfigRuleName&lt;/code&gt;, &lt;code&gt;ConfigRuleId&lt;/code&gt;, or &lt;code&gt;ConfigRuleArn&lt;/code&gt; in the &lt;code&gt;ConfigRule&lt;/code&gt; data type that you use in this</p>
+<p>request&gt;</p>
+<p>The maximum number of rules that AWS Config supports is</p>
+<p>50&gt;</p>
+<p>For information about requesting a rule limit increase, see &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config&quot;&gt;AWS Config Limits&lt;/a&gt; in the &lt;i&gt;AWS General Reference</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>For more information about developing and using AWS Config rules, see &lt;a href=&quot;http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html&quot;&gt;Evaluating AWS Resource Configurations with AWS Config&lt;/a&gt; in the &lt;i&gt;AWS Config Developer</p>
+<!-- @@@putConfigRule -->
+<!-- $$$putConfigurationAggregator[overload1]$$$putConfigurationAggregatorconstPutConfigurationAggregatorRequest& -->
+<h3 class="fn" id="putConfigurationAggregator"><a name="putConfigurationAggregator"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putconfigurationaggregatorresponse.html">PutConfigurationAggregatorResponse</a></span> *ConfigServiceClient::<span class="name">putConfigurationAggregator</span>(const <span class="type"><a href="qtaws-configservice-putconfigurationaggregatorrequest.html">PutConfigurationAggregatorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putconfigurationaggregatorresponse.html">PutConfigurationAggregatorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates and updates the configuration aggregator with the selected source accounts and</p>
+<p>regions&gt; &lt;note&gt;</p>
+<p>AWS Config should be enabled in accounts and regions you want to</p>
+<!-- @@@putConfigurationAggregator -->
+<!-- $$$putConfigurationRecorder[overload1]$$$putConfigurationRecorderconstPutConfigurationRecorderRequest& -->
+<h3 class="fn" id="putConfigurationRecorder"><a name="putConfigurationRecorder"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putconfigurationrecorderresponse.html">PutConfigurationRecorderResponse</a></span> *ConfigServiceClient::<span class="name">putConfigurationRecorder</span>(const <span class="type"><a href="qtaws-configservice-putconfigurationrecorderrequest.html">PutConfigurationRecorderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putconfigurationrecorderresponse.html">PutConfigurationRecorderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new configuration recorder to record the selected resource</p>
+<p>configurations&gt;</p>
+<p>You can use this action to change the role &lt;code&gt;roleARN&lt;/code&gt; or the &lt;code&gt;recordingGroup&lt;/code&gt; of an existing recorder. To change the role, call the action on the existing configuration recorder and specify a</p>
+<p>role&gt; &lt;note&gt;</p>
+<p>Currently, you can specify only one configuration recorder per region in your</p>
+<p>account&gt;</p>
+<p>If &lt;code&gt;ConfigurationRecorder&lt;/code&gt; does not have the &lt;b&gt;recordingGroup&lt;/b&gt; parameter specified, the default is to record all supported resource</p>
+<!-- @@@putConfigurationRecorder -->
+<!-- $$$putDeliveryChannel[overload1]$$$putDeliveryChannelconstPutDeliveryChannelRequest& -->
+<h3 class="fn" id="putDeliveryChannel"><a name="putDeliveryChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putdeliverychannelresponse.html">PutDeliveryChannelResponse</a></span> *ConfigServiceClient::<span class="name">putDeliveryChannel</span>(const <span class="type"><a href="qtaws-configservice-putdeliverychannelrequest.html">PutDeliveryChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putdeliverychannelresponse.html">PutDeliveryChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS</p>
+<p>topic&gt;</p>
+<p>Before you can create a delivery channel, you must create a configuration</p>
+<p>recorder&gt;</p>
+<p>You can use this action to change the Amazon S3 bucket or an Amazon SNS topic of the existing delivery channel. To change the Amazon S3 bucket or an Amazon SNS topic, call this action and specify the changed values for the S3 bucket and the SNS topic. If you specify a different value for either the S3 bucket or the SNS topic, this action will keep the existing value for the parameter that is not</p>
+<p>changed&gt; &lt;note&gt;</p>
+<p>You can have only one delivery channel per region in your</p>
+<!-- @@@putDeliveryChannel -->
+<!-- $$$putEvaluations[overload1]$$$putEvaluationsconstPutEvaluationsRequest& -->
+<h3 class="fn" id="putEvaluations"><a name="putEvaluations"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-putevaluationsresponse.html">PutEvaluationsResponse</a></span> *ConfigServiceClient::<span class="name">putEvaluations</span>(const <span class="type"><a href="qtaws-configservice-putevaluationsrequest.html">PutEvaluationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-putevaluationsresponse.html">PutEvaluationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by an AWS Lambda function to deliver evaluation results to AWS Config. This action is required in every AWS Lambda function that is invoked by an AWS Config</p>
+<!-- @@@putEvaluations -->
+<!-- $$$startConfigRulesEvaluation[overload1]$$$startConfigRulesEvaluationconstStartConfigRulesEvaluationRequest& -->
+<h3 class="fn" id="startConfigRulesEvaluation"><a name="startConfigRulesEvaluation"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-startconfigrulesevaluationresponse.html">StartConfigRulesEvaluationResponse</a></span> *ConfigServiceClient::<span class="name">startConfigRulesEvaluation</span>(const <span class="type"><a href="qtaws-configservice-startconfigrulesevaluationrequest.html">StartConfigRulesEvaluationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-startconfigrulesevaluationresponse.html">StartConfigRulesEvaluationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Runs an on-demand evaluation for the specified AWS Config rules against the last known configuration state of the resources. Use &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt; when you want to test that a rule you updated is working as expected. &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt; does not re-record the latest configuration state for your resources. It re-runs an evaluation against the last known state of your resources.</p>
+<p>&lt;/p</p>
+<p>You can specify up to 25 AWS Config rules per request.</p>
+<p>&lt;/p</p>
+<p>An existing &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt; call for the specified rules must complete before you can call the API again. If you chose to have AWS Config stream to an Amazon SNS topic, you will receive a &lt;code&gt;ConfigRuleEvaluationStarted&lt;/code&gt; notification when the evaluation</p>
+<p>starts&gt; &lt;note&gt;</p>
+<p>You don't need to call the &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt; API to run an evaluation for a new rule. When you create a rule, AWS Config evaluates your resources against the rule automatically.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>The &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt; API is useful if you want to run on-demand evaluations, such as the following</p>
+<p>example&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>You have a custom rule that evaluates your IAM resources every 24</p>
+<p>hours&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You update your Lambda function to add additional conditions to your</p>
+<p>rule&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Instead of waiting for the next periodic evaluation, you call the &lt;code&gt;StartConfigRulesEvaluation&lt;/code&gt;</p>
+<p>API&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>AWS Config invokes your Lambda function and evaluates your IAM</p>
+<p>resources&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Your custom rule will still run periodic evaluations every 24</p>
+<!-- @@@startConfigRulesEvaluation -->
+<!-- $$$startConfigurationRecorder[overload1]$$$startConfigurationRecorderconstStartConfigurationRecorderRequest& -->
+<h3 class="fn" id="startConfigurationRecorder"><a name="startConfigurationRecorder"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-startconfigurationrecorderresponse.html">StartConfigurationRecorderResponse</a></span> *ConfigServiceClient::<span class="name">startConfigurationRecorder</span>(const <span class="type"><a href="qtaws-configservice-startconfigurationrecorderrequest.html">StartConfigurationRecorderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-startconfigurationrecorderresponse.html">StartConfigurationRecorderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts recording configurations of the AWS resources you have selected to record in your AWS</p>
+<p>account&gt;</p>
+<p>You must have created at least one delivery channel to successfully start the configuration</p>
+<!-- @@@startConfigurationRecorder -->
+<!-- $$$stopConfigurationRecorder[overload1]$$$stopConfigurationRecorderconstStopConfigurationRecorderRequest& -->
+<h3 class="fn" id="stopConfigurationRecorder"><a name="stopConfigurationRecorder"></a><code>[slot] </code><span class="type"><a href="qtaws-configservice-stopconfigurationrecorderresponse.html">StopConfigurationRecorderResponse</a></span> *ConfigServiceClient::<span class="name">stopConfigurationRecorder</span>(const <span class="type"><a href="qtaws-configservice-stopconfigurationrecorderrequest.html">StopConfigurationRecorderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-configservice-configserviceclient.html">ConfigServiceClient</a> service, and returns a pointer to an <a href="qtaws-configservice-stopconfigurationrecorderresponse.html">StopConfigurationRecorderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops recording configurations of the AWS resources you have selected to record in your AWS</p>
+<!-- @@@stopConfigurationRecorder -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- marketplacemeteringclient.cpp -->
+  <title>MarketplaceMeteringClient Class | MarketplaceMetering</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmarketplacemetering-index.html">MarketplaceMetering</a></li>
+<li><a href="qtawsmarketplacemetering-module.html">C++ Classes</a></li>
+<li>MarketplaceMeteringClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MarketplaceMeteringClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-marketplacemetering-marketplacemeteringclient.html">QtAws::MarketplaceMetering::MarketplaceMeteringClient</a>)<br/></span>
+<!-- $$$MarketplaceMeteringClient-brief -->
+<p>The <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> class provides access to the AWSMarketplace Metering service. <a href="#details">More...</a></p>
+<!-- @@@MarketplaceMeteringClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MarketplaceMeteringClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-marketplacemetering-marketplacemeteringclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-marketplacemetering-marketplacemeteringclient.html#MarketplaceMeteringClient">MarketplaceMeteringClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-marketplacemetering-marketplacemeteringclient.html#MarketplaceMeteringClient-1">MarketplaceMeteringClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchMeterUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-marketplacemetering-marketplacemeteringclient.html#batchMeterUsage">batchMeterUsage</a></b>(const BatchMeterUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> MeterUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-marketplacemetering-marketplacemeteringclient.html#meterUsage">meterUsage</a></b>(const MeterUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ResolveCustomerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-marketplacemetering-marketplacemeteringclient.html#resolveCustomer">resolveCustomer</a></b>(const ResolveCustomerRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$MarketplaceMeteringClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> class provides access to the AWSMarketplace Metering service.</p>
+<p>&lt;fullname&gt;AWS Marketplace Metering Service&lt;/fullname&gt;</p>
+<p>This reference provides descriptions of the low-level AWS Marketplace Metering Service</p>
+<p>API&gt;</p>
+<p>AWS Marketplace sellers can use this API to submit usage data for custom usage</p>
+<p>dimensions&gt;</p>
+<p>&lt;b&gt;Submitting Metering Records&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;MeterUsage&lt;/i&gt;- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2</p>
+<p>instance&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;BatchMeterUsage&lt;/i&gt;- Submits the metering record for a set of customers. BatchMeterUsage is called from a software-as-a-service (SaaS)</p>
+<p>application&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>&lt;b&gt;Accepting New Customers&lt;/b&gt;</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;i&gt;ResolveCustomer&lt;/i&gt;- Called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a Registration Token through the browser. The Registration Token is resolved through this API to obtain a CustomerIdentifier and Product</p>
+</div>
+<!-- @@@MarketplaceMeteringClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MarketplaceMeteringClient[overload1]$$$MarketplaceMeteringClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MarketplaceMeteringClient"><a name="MarketplaceMeteringClient"></a>MarketplaceMeteringClient::<span class="name">MarketplaceMeteringClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@MarketplaceMeteringClient -->
+<!-- $$$MarketplaceMeteringClient$$$MarketplaceMeteringClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="MarketplaceMeteringClient-1"><a name="MarketplaceMeteringClient-1"></a>MarketplaceMeteringClient::<span class="name">MarketplaceMeteringClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-marketplacemetering-marketplacemeteringclient.html#MarketplaceMeteringClient">MarketplaceMeteringClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@MarketplaceMeteringClient -->
+<!-- $$$batchMeterUsage[overload1]$$$batchMeterUsageconstBatchMeterUsageRequest& -->
+<h3 class="fn" id="batchMeterUsage"><a name="batchMeterUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-marketplacemetering-batchmeterusageresponse.html">BatchMeterUsageResponse</a></span> *MarketplaceMeteringClient::<span class="name">batchMeterUsage</span>(const <span class="type"><a href="qtaws-marketplacemetering-batchmeterusagerequest.html">BatchMeterUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> service, and returns a pointer to an <a href="qtaws-marketplacemetering-batchmeterusageresponse.html">BatchMeterUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>BatchMeterUsage is called from a SaaS application listed on the AWS Marketplace to post metering records for a set of</p>
+<p>customers&gt;</p>
+<p>For identical requests, the API is idempotent; requests can be retried with the same records or a subset of the input</p>
+<p>records&gt;</p>
+<p>Every request to BatchMeterUsage is for one product. If you need to meter usage for multiple products, you must make multiple calls to</p>
+<p>BatchMeterUsage&gt;</p>
+<p>BatchMeterUsage can process up to 25 UsageRecords at a</p>
+<!-- @@@batchMeterUsage -->
+<!-- $$$meterUsage[overload1]$$$meterUsageconstMeterUsageRequest& -->
+<h3 class="fn" id="meterUsage"><a name="meterUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-marketplacemetering-meterusageresponse.html">MeterUsageResponse</a></span> *MarketplaceMeteringClient::<span class="name">meterUsage</span>(const <span class="type"><a href="qtaws-marketplacemetering-meterusagerequest.html">MeterUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> service, and returns a pointer to an <a href="qtaws-marketplacemetering-meterusageresponse.html">MeterUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>API to emit metering records. For identical requests, the API is idempotent. It simply returns the metering record</p>
+<p>ID&gt;</p>
+<p>MeterUsage is authenticated on the buyer's AWS account, generally when running from an EC2 instance on the AWS</p>
+<!-- @@@meterUsage -->
+<!-- $$$resolveCustomer[overload1]$$$resolveCustomerconstResolveCustomerRequest& -->
+<h3 class="fn" id="resolveCustomer"><a name="resolveCustomer"></a><code>[slot] </code><span class="type"><a href="qtaws-marketplacemetering-resolvecustomerresponse.html">ResolveCustomerResponse</a></span> *MarketplaceMeteringClient::<span class="name">resolveCustomer</span>(const <span class="type"><a href="qtaws-marketplacemetering-resolvecustomerrequest.html">ResolveCustomerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-marketplacemetering-marketplacemeteringclient.html">MarketplaceMeteringClient</a> service, and returns a pointer to an <a href="qtaws-marketplacemetering-resolvecustomerresponse.html">ResolveCustomerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>ResolveCustomer is called by a SaaS application during the registration process. When a buyer visits your website during the registration process, the buyer submits a registration token through their browser. The registration token is resolved through this API to obtain a CustomerIdentifier and product</p>
+<!-- @@@resolveCustomer -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

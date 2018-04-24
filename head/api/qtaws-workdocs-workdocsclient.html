@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- workdocsclient.cpp -->
+  <title>WorkDocsClient Class | WorkDocs</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsworkdocs-index.html">WorkDocs</a></li>
+<li><a href="qtawsworkdocs-module.html">C++ Classes</a></li>
+<li>WorkDocsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WorkDocsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-workdocs-workdocsclient.html">QtAws::WorkDocs::WorkDocsClient</a>)<br/></span>
+<!-- $$$WorkDocsClient-brief -->
+<p>The <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> class provides access to the Amazon <a href="qtaws-workdocs.html">WorkDocs</a> service. <a href="#details">More...</a></p>
+<!-- @@@WorkDocsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WorkDocsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-workdocs-workdocsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#WorkDocsClient">WorkDocsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#WorkDocsClient-1">WorkDocsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AbortDocumentVersionUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#abortDocumentVersionUpload">abortDocumentVersionUpload</a></b>(const AbortDocumentVersionUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ActivateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#activateUser">activateUser</a></b>(const ActivateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AddResourcePermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#addResourcePermissions">addResourcePermissions</a></b>(const AddResourcePermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createComment">createComment</a></b>(const CreateCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateCustomMetadataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createCustomMetadata">createCustomMetadata</a></b>(const CreateCustomMetadataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateFolderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createFolder">createFolder</a></b>(const CreateFolderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLabelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createLabels">createLabels</a></b>(const CreateLabelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNotificationSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createNotificationSubscription">createNotificationSubscription</a></b>(const CreateNotificationSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#createUser">createUser</a></b>(const CreateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeactivateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deactivateUser">deactivateUser</a></b>(const DeactivateUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCommentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteComment">deleteComment</a></b>(const DeleteCommentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteCustomMetadataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteCustomMetadata">deleteCustomMetadata</a></b>(const DeleteCustomMetadataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteDocument">deleteDocument</a></b>(const DeleteDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFolderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteFolder">deleteFolder</a></b>(const DeleteFolderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFolderContentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteFolderContents">deleteFolderContents</a></b>(const DeleteFolderContentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLabelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteLabels">deleteLabels</a></b>(const DeleteLabelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNotificationSubscriptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteNotificationSubscription">deleteNotificationSubscription</a></b>(const DeleteNotificationSubscriptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#deleteUser">deleteUser</a></b>(const DeleteUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeActivitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeActivities">describeActivities</a></b>(const DescribeActivitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCommentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeComments">describeComments</a></b>(const DescribeCommentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDocumentVersionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeDocumentVersions">describeDocumentVersions</a></b>(const DescribeDocumentVersionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeFolderContentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeFolderContents">describeFolderContents</a></b>(const DescribeFolderContentsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeGroupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeGroups">describeGroups</a></b>(const DescribeGroupsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNotificationSubscriptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeNotificationSubscriptions">describeNotificationSubscriptions</a></b>(const DescribeNotificationSubscriptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeResourcePermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeResourcePermissions">describeResourcePermissions</a></b>(const DescribeResourcePermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRootFoldersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeRootFolders">describeRootFolders</a></b>(const DescribeRootFoldersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeUsersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#describeUsers">describeUsers</a></b>(const DescribeUsersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetCurrentUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getCurrentUser">getCurrentUser</a></b>(const GetCurrentUserRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getDocument">getDocument</a></b>(const GetDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentPathResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getDocumentPath">getDocumentPath</a></b>(const GetDocumentPathRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDocumentVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getDocumentVersion">getDocumentVersion</a></b>(const GetDocumentVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFolderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getFolder">getFolder</a></b>(const GetFolderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFolderPathResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#getFolderPath">getFolderPath</a></b>(const GetFolderPathRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateDocumentVersionUploadResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#initiateDocumentVersionUpload">initiateDocumentVersionUpload</a></b>(const InitiateDocumentVersionUploadRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveAllResourcePermissionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#removeAllResourcePermissions">removeAllResourcePermissions</a></b>(const RemoveAllResourcePermissionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemoveResourcePermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#removeResourcePermission">removeResourcePermission</a></b>(const RemoveResourcePermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#updateDocument">updateDocument</a></b>(const UpdateDocumentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDocumentVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#updateDocumentVersion">updateDocumentVersion</a></b>(const UpdateDocumentVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFolderResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#updateFolder">updateFolder</a></b>(const UpdateFolderRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateUserResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-workdocs-workdocsclient.html#updateUser">updateUser</a></b>(const UpdateUserRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WorkDocsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> class provides access to the Amazon <a href="qtaws-workdocs.html">WorkDocs</a> service.</p>
+<p>The <a href="qtaws-workdocs.html">WorkDocs</a> API is designed for the following use</p>
+<p>cases&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>File Migration: File migration applications are supported for users who want to migrate their files from an on-premises or off-premises file system or service. Users can insert files into a user directory structure, as well as allow for basic metadata changes, such as modifications to the permissions of</p>
+<p>files&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Security: Support security applications are supported for users who have additional security needs, such as antivirus or data loss prevention. The API actions, along with AWS CloudTrail, allow these applications to detect when changes occur in Amazon <a href="qtaws-workdocs.html">WorkDocs</a>. Then, the application can take the necessary actions and replace the target file. If the target file violates the policy, the application can also choose to email the</p>
+<p>user&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>eDiscovery/Analytics: General administrative applications are supported, such as eDiscovery and analytics. These applications can choose to mimic or record the actions in an Amazon <a href="qtaws-workdocs.html">WorkDocs</a> site, along with AWS CloudTrail, to replicate data for eDiscovery, backup, or analytical</p>
+<p>applications&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>All Amazon <a href="qtaws-workdocs.html">WorkDocs</a> API actions are Amazon authenticated and certificate-signed. They not only require the use of the AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission policies. By creating a role and allowing an IAM user to access the Amazon <a href="qtaws-workdocs.html">WorkDocs</a> site, the IAM user gains full administrative visibility into the entire Amazon <a href="qtaws-workdocs.html">WorkDocs</a> site (or as set in the IAM policy). This includes, but is not limited to, the ability to modify file permissions and upload any file to any user. This allows developers to perform the three use cases above, as well as give users the ability to grant access on a selective basis using the IAM</p>
+</div>
+<!-- @@@WorkDocsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WorkDocsClient[overload1]$$$WorkDocsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkDocsClient"><a name="WorkDocsClient"></a>WorkDocsClient::<span class="name">WorkDocsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@WorkDocsClient -->
+<!-- $$$WorkDocsClient$$$WorkDocsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="WorkDocsClient-1"><a name="WorkDocsClient-1"></a>WorkDocsClient::<span class="name">WorkDocsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-workdocs-workdocsclient.html#WorkDocsClient">WorkDocsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@WorkDocsClient -->
+<!-- $$$abortDocumentVersionUpload[overload1]$$$abortDocumentVersionUploadconstAbortDocumentVersionUploadRequest& -->
+<h3 class="fn" id="abortDocumentVersionUpload"><a name="abortDocumentVersionUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-abortdocumentversionuploadresponse.html">AbortDocumentVersionUploadResponse</a></span> *WorkDocsClient::<span class="name">abortDocumentVersionUpload</span>(const <span class="type"><a href="qtaws-workdocs-abortdocumentversionuploadrequest.html">AbortDocumentVersionUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-abortdocumentversionuploadresponse.html">AbortDocumentVersionUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Aborts the upload of the specified document version that was previously initiated by &lt;a&gt;InitiateDocumentVersionUpload&lt;/a&gt;. The client should make this call only when it no longer intends to upload the document version, or fails to do</p>
+<!-- @@@abortDocumentVersionUpload -->
+<!-- $$$activateUser[overload1]$$$activateUserconstActivateUserRequest& -->
+<h3 class="fn" id="activateUser"><a name="activateUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-activateuserresponse.html">ActivateUserResponse</a></span> *WorkDocsClient::<span class="name">activateUser</span>(const <span class="type"><a href="qtaws-workdocs-activateuserrequest.html">ActivateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-activateuserresponse.html">ActivateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Activates the specified user. Only active users can access Amazon</p>
+<!-- @@@activateUser -->
+<!-- $$$addResourcePermissions[overload1]$$$addResourcePermissionsconstAddResourcePermissionsRequest& -->
+<h3 class="fn" id="addResourcePermissions"><a name="addResourcePermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-addresourcepermissionsresponse.html">AddResourcePermissionsResponse</a></span> *WorkDocsClient::<span class="name">addResourcePermissions</span>(const <span class="type"><a href="qtaws-workdocs-addresourcepermissionsrequest.html">AddResourcePermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-addresourcepermissionsresponse.html">AddResourcePermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a set of permissions for the specified folder or document. The resource permissions are overwritten if the principals already have different</p>
+<!-- @@@addResourcePermissions -->
+<!-- $$$createComment[overload1]$$$createCommentconstCreateCommentRequest& -->
+<h3 class="fn" id="createComment"><a name="createComment"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createcommentresponse.html">CreateCommentResponse</a></span> *WorkDocsClient::<span class="name">createComment</span>(const <span class="type"><a href="qtaws-workdocs-createcommentrequest.html">CreateCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createcommentresponse.html">CreateCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a new comment to the specified document</p>
+<!-- @@@createComment -->
+<!-- $$$createCustomMetadata[overload1]$$$createCustomMetadataconstCreateCustomMetadataRequest& -->
+<h3 class="fn" id="createCustomMetadata"><a name="createCustomMetadata"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createcustommetadataresponse.html">CreateCustomMetadataResponse</a></span> *WorkDocsClient::<span class="name">createCustomMetadata</span>(const <span class="type"><a href="qtaws-workdocs-createcustommetadatarequest.html">CreateCustomMetadataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createcustommetadataresponse.html">CreateCustomMetadataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds one or more custom properties to the specified resource (a folder, document, or</p>
+<!-- @@@createCustomMetadata -->
+<!-- $$$createFolder[overload1]$$$createFolderconstCreateFolderRequest& -->
+<h3 class="fn" id="createFolder"><a name="createFolder"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createfolderresponse.html">CreateFolderResponse</a></span> *WorkDocsClient::<span class="name">createFolder</span>(const <span class="type"><a href="qtaws-workdocs-createfolderrequest.html">CreateFolderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createfolderresponse.html">CreateFolderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a folder with the specified name and parent</p>
+<!-- @@@createFolder -->
+<!-- $$$createLabels[overload1]$$$createLabelsconstCreateLabelsRequest& -->
+<h3 class="fn" id="createLabels"><a name="createLabels"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createlabelsresponse.html">CreateLabelsResponse</a></span> *WorkDocsClient::<span class="name">createLabels</span>(const <span class="type"><a href="qtaws-workdocs-createlabelsrequest.html">CreateLabelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createlabelsresponse.html">CreateLabelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds the specified list of labels to the given resource (a document or</p>
+<!-- @@@createLabels -->
+<!-- $$$createNotificationSubscription[overload1]$$$createNotificationSubscriptionconstCreateNotificationSubscriptionRequest& -->
+<h3 class="fn" id="createNotificationSubscription"><a name="createNotificationSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createnotificationsubscriptionresponse.html">CreateNotificationSubscriptionResponse</a></span> *WorkDocsClient::<span class="name">createNotificationSubscription</span>(const <span class="type"><a href="qtaws-workdocs-createnotificationsubscriptionrequest.html">CreateNotificationSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createnotificationsubscriptionresponse.html">CreateNotificationSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Configure <a href="qtaws-workdocs.html">WorkDocs</a> to use Amazon SNS</p>
+<p>notifications&gt;</p>
+<p>The endpoint receives a confirmation message, and must confirm the subscription. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.confirm&quot;&gt;Confirm the Subscription&lt;/a&gt; in the &lt;i&gt;Amazon Simple Notification Service Developer</p>
+<!-- @@@createNotificationSubscription -->
+<!-- $$$createUser[overload1]$$$createUserconstCreateUserRequest& -->
+<h3 class="fn" id="createUser"><a name="createUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-createuserresponse.html">CreateUserResponse</a></span> *WorkDocsClient::<span class="name">createUser</span>(const <span class="type"><a href="qtaws-workdocs-createuserrequest.html">CreateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-createuserresponse.html">CreateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a user in a Simple AD or Microsoft AD directory. The status of a newly created user is &quot;ACTIVE&quot;. New users can access Amazon</p>
+<!-- @@@createUser -->
+<!-- $$$deactivateUser[overload1]$$$deactivateUserconstDeactivateUserRequest& -->
+<h3 class="fn" id="deactivateUser"><a name="deactivateUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deactivateuserresponse.html">DeactivateUserResponse</a></span> *WorkDocsClient::<span class="name">deactivateUser</span>(const <span class="type"><a href="qtaws-workdocs-deactivateuserrequest.html">DeactivateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deactivateuserresponse.html">DeactivateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deactivates the specified user, which revokes the user's access to Amazon</p>
+<!-- @@@deactivateUser -->
+<!-- $$$deleteComment[overload1]$$$deleteCommentconstDeleteCommentRequest& -->
+<h3 class="fn" id="deleteComment"><a name="deleteComment"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletecommentresponse.html">DeleteCommentResponse</a></span> *WorkDocsClient::<span class="name">deleteComment</span>(const <span class="type"><a href="qtaws-workdocs-deletecommentrequest.html">DeleteCommentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletecommentresponse.html">DeleteCommentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified comment from the document</p>
+<!-- @@@deleteComment -->
+<!-- $$$deleteCustomMetadata[overload1]$$$deleteCustomMetadataconstDeleteCustomMetadataRequest& -->
+<h3 class="fn" id="deleteCustomMetadata"><a name="deleteCustomMetadata"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletecustommetadataresponse.html">DeleteCustomMetadataResponse</a></span> *WorkDocsClient::<span class="name">deleteCustomMetadata</span>(const <span class="type"><a href="qtaws-workdocs-deletecustommetadatarequest.html">DeleteCustomMetadataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletecustommetadataresponse.html">DeleteCustomMetadataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes custom metadata from the specified</p>
+<!-- @@@deleteCustomMetadata -->
+<!-- $$$deleteDocument[overload1]$$$deleteDocumentconstDeleteDocumentRequest& -->
+<h3 class="fn" id="deleteDocument"><a name="deleteDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletedocumentresponse.html">DeleteDocumentResponse</a></span> *WorkDocsClient::<span class="name">deleteDocument</span>(const <span class="type"><a href="qtaws-workdocs-deletedocumentrequest.html">DeleteDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletedocumentresponse.html">DeleteDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes the specified document and its associated</p>
+<!-- @@@deleteDocument -->
+<!-- $$$deleteFolder[overload1]$$$deleteFolderconstDeleteFolderRequest& -->
+<h3 class="fn" id="deleteFolder"><a name="deleteFolder"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletefolderresponse.html">DeleteFolderResponse</a></span> *WorkDocsClient::<span class="name">deleteFolder</span>(const <span class="type"><a href="qtaws-workdocs-deletefolderrequest.html">DeleteFolderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletefolderresponse.html">DeleteFolderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Permanently deletes the specified folder and its</p>
+<!-- @@@deleteFolder -->
+<!-- $$$deleteFolderContents[overload1]$$$deleteFolderContentsconstDeleteFolderContentsRequest& -->
+<h3 class="fn" id="deleteFolderContents"><a name="deleteFolderContents"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletefoldercontentsresponse.html">DeleteFolderContentsResponse</a></span> *WorkDocsClient::<span class="name">deleteFolderContents</span>(const <span class="type"><a href="qtaws-workdocs-deletefoldercontentsrequest.html">DeleteFolderContentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletefoldercontentsresponse.html">DeleteFolderContentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the contents of the specified</p>
+<!-- @@@deleteFolderContents -->
+<!-- $$$deleteLabels[overload1]$$$deleteLabelsconstDeleteLabelsRequest& -->
+<h3 class="fn" id="deleteLabels"><a name="deleteLabels"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletelabelsresponse.html">DeleteLabelsResponse</a></span> *WorkDocsClient::<span class="name">deleteLabels</span>(const <span class="type"><a href="qtaws-workdocs-deletelabelsrequest.html">DeleteLabelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletelabelsresponse.html">DeleteLabelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified list of labels from a</p>
+<!-- @@@deleteLabels -->
+<!-- $$$deleteNotificationSubscription[overload1]$$$deleteNotificationSubscriptionconstDeleteNotificationSubscriptionRequest& -->
+<h3 class="fn" id="deleteNotificationSubscription"><a name="deleteNotificationSubscription"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deletenotificationsubscriptionresponse.html">DeleteNotificationSubscriptionResponse</a></span> *WorkDocsClient::<span class="name">deleteNotificationSubscription</span>(const <span class="type"><a href="qtaws-workdocs-deletenotificationsubscriptionrequest.html">DeleteNotificationSubscriptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deletenotificationsubscriptionresponse.html">DeleteNotificationSubscriptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified subscription from the specified</p>
+<!-- @@@deleteNotificationSubscription -->
+<!-- $$$deleteUser[overload1]$$$deleteUserconstDeleteUserRequest& -->
+<h3 class="fn" id="deleteUser"><a name="deleteUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-deleteuserresponse.html">DeleteUserResponse</a></span> *WorkDocsClient::<span class="name">deleteUser</span>(const <span class="type"><a href="qtaws-workdocs-deleteuserrequest.html">DeleteUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-deleteuserresponse.html">DeleteUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified user from a Simple AD or Microsoft AD</p>
+<!-- @@@deleteUser -->
+<!-- $$$describeActivities[overload1]$$$describeActivitiesconstDescribeActivitiesRequest& -->
+<h3 class="fn" id="describeActivities"><a name="describeActivities"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describeactivitiesresponse.html">DescribeActivitiesResponse</a></span> *WorkDocsClient::<span class="name">describeActivities</span>(const <span class="type"><a href="qtaws-workdocs-describeactivitiesrequest.html">DescribeActivitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describeactivitiesresponse.html">DescribeActivitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the user activities in a specified time</p>
+<!-- @@@describeActivities -->
+<!-- $$$describeComments[overload1]$$$describeCommentsconstDescribeCommentsRequest& -->
+<h3 class="fn" id="describeComments"><a name="describeComments"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describecommentsresponse.html">DescribeCommentsResponse</a></span> *WorkDocsClient::<span class="name">describeComments</span>(const <span class="type"><a href="qtaws-workdocs-describecommentsrequest.html">DescribeCommentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describecommentsresponse.html">DescribeCommentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List all the comments for the specified document</p>
+<!-- @@@describeComments -->
+<!-- $$$describeDocumentVersions[overload1]$$$describeDocumentVersionsconstDescribeDocumentVersionsRequest& -->
+<h3 class="fn" id="describeDocumentVersions"><a name="describeDocumentVersions"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describedocumentversionsresponse.html">DescribeDocumentVersionsResponse</a></span> *WorkDocsClient::<span class="name">describeDocumentVersions</span>(const <span class="type"><a href="qtaws-workdocs-describedocumentversionsrequest.html">DescribeDocumentVersionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describedocumentversionsresponse.html">DescribeDocumentVersionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the document versions for the specified</p>
+<p>document&gt;</p>
+<p>By default, only active versions are</p>
+<!-- @@@describeDocumentVersions -->
+<!-- $$$describeFolderContents[overload1]$$$describeFolderContentsconstDescribeFolderContentsRequest& -->
+<h3 class="fn" id="describeFolderContents"><a name="describeFolderContents"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describefoldercontentsresponse.html">DescribeFolderContentsResponse</a></span> *WorkDocsClient::<span class="name">describeFolderContents</span>(const <span class="type"><a href="qtaws-workdocs-describefoldercontentsrequest.html">DescribeFolderContentsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describefoldercontentsresponse.html">DescribeFolderContentsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the contents of the specified folder, including its documents and</p>
+<p>subfolders&gt;</p>
+<p>By default, Amazon <a href="qtaws-workdocs.html">WorkDocs</a> returns the first 100 active document and folder metadata items. If there are more results, the response includes a marker that you can use to request the next set of results. You can also request initialized</p>
+<!-- @@@describeFolderContents -->
+<!-- $$$describeGroups[overload1]$$$describeGroupsconstDescribeGroupsRequest& -->
+<h3 class="fn" id="describeGroups"><a name="describeGroups"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describegroupsresponse.html">DescribeGroupsResponse</a></span> *WorkDocsClient::<span class="name">describeGroups</span>(const <span class="type"><a href="qtaws-workdocs-describegroupsrequest.html">DescribeGroupsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describegroupsresponse.html">DescribeGroupsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the groups specified by</p>
+<!-- @@@describeGroups -->
+<!-- $$$describeNotificationSubscriptions[overload1]$$$describeNotificationSubscriptionsconstDescribeNotificationSubscriptionsRequest& -->
+<h3 class="fn" id="describeNotificationSubscriptions"><a name="describeNotificationSubscriptions"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describenotificationsubscriptionsresponse.html">DescribeNotificationSubscriptionsResponse</a></span> *WorkDocsClient::<span class="name">describeNotificationSubscriptions</span>(const <span class="type"><a href="qtaws-workdocs-describenotificationsubscriptionsrequest.html">DescribeNotificationSubscriptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describenotificationsubscriptionsresponse.html">DescribeNotificationSubscriptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the specified notification</p>
+<!-- @@@describeNotificationSubscriptions -->
+<!-- $$$describeResourcePermissions[overload1]$$$describeResourcePermissionsconstDescribeResourcePermissionsRequest& -->
+<h3 class="fn" id="describeResourcePermissions"><a name="describeResourcePermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describeresourcepermissionsresponse.html">DescribeResourcePermissionsResponse</a></span> *WorkDocsClient::<span class="name">describeResourcePermissions</span>(const <span class="type"><a href="qtaws-workdocs-describeresourcepermissionsrequest.html">DescribeResourcePermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describeresourcepermissionsresponse.html">DescribeResourcePermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the permissions of a specified</p>
+<!-- @@@describeResourcePermissions -->
+<!-- $$$describeRootFolders[overload1]$$$describeRootFoldersconstDescribeRootFoldersRequest& -->
+<h3 class="fn" id="describeRootFolders"><a name="describeRootFolders"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describerootfoldersresponse.html">DescribeRootFoldersResponse</a></span> *WorkDocsClient::<span class="name">describeRootFolders</span>(const <span class="type"><a href="qtaws-workdocs-describerootfoldersrequest.html">DescribeRootFoldersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describerootfoldersresponse.html">DescribeRootFoldersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the current user's special folders; the &lt;code&gt;RootFolder&lt;/code&gt; and the &lt;code&gt;RecycleBin&lt;/code&gt;. &lt;code&gt;RootFolder&lt;/code&gt; is the root of user's files and folders and &lt;code&gt;RecycleBin&lt;/code&gt; is the root of recycled items. This is not a valid action for SigV4 (administrative API)</p>
+<!-- @@@describeRootFolders -->
+<!-- $$$describeUsers[overload1]$$$describeUsersconstDescribeUsersRequest& -->
+<h3 class="fn" id="describeUsers"><a name="describeUsers"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-describeusersresponse.html">DescribeUsersResponse</a></span> *WorkDocsClient::<span class="name">describeUsers</span>(const <span class="type"><a href="qtaws-workdocs-describeusersrequest.html">DescribeUsersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-describeusersresponse.html">DescribeUsersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified users. You can describe all users or filter the results (for example, by status or</p>
+<p>organization)&gt;</p>
+<p>By default, Amazon <a href="qtaws-workdocs.html">WorkDocs</a> returns the first 24 active or pending users. If there are more results, the response includes a marker that you can use to request the next set of</p>
+<!-- @@@describeUsers -->
+<!-- $$$getCurrentUser[overload1]$$$getCurrentUserconstGetCurrentUserRequest& -->
+<h3 class="fn" id="getCurrentUser"><a name="getCurrentUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getcurrentuserresponse.html">GetCurrentUserResponse</a></span> *WorkDocsClient::<span class="name">getCurrentUser</span>(const <span class="type"><a href="qtaws-workdocs-getcurrentuserrequest.html">GetCurrentUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getcurrentuserresponse.html">GetCurrentUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves details of the current user for whom the authentication token was generated. This is not a valid action for SigV4 (administrative API)</p>
+<!-- @@@getCurrentUser -->
+<!-- $$$getDocument[overload1]$$$getDocumentconstGetDocumentRequest& -->
+<h3 class="fn" id="getDocument"><a name="getDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getdocumentresponse.html">GetDocumentResponse</a></span> *WorkDocsClient::<span class="name">getDocument</span>(const <span class="type"><a href="qtaws-workdocs-getdocumentrequest.html">GetDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getdocumentresponse.html">GetDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves details of a</p>
+<!-- @@@getDocument -->
+<!-- $$$getDocumentPath[overload1]$$$getDocumentPathconstGetDocumentPathRequest& -->
+<h3 class="fn" id="getDocumentPath"><a name="getDocumentPath"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getdocumentpathresponse.html">GetDocumentPathResponse</a></span> *WorkDocsClient::<span class="name">getDocumentPath</span>(const <span class="type"><a href="qtaws-workdocs-getdocumentpathrequest.html">GetDocumentPathRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getdocumentpathresponse.html">GetDocumentPathResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the path information (the hierarchy from the root folder) for the requested</p>
+<p>document&gt;</p>
+<p>By default, Amazon <a href="qtaws-workdocs.html">WorkDocs</a> returns a maximum of 100 levels upwards from the requested document and only includes the IDs of the parent folders in the path. You can limit the maximum number of levels. You can also request the names of the parent</p>
+<!-- @@@getDocumentPath -->
+<!-- $$$getDocumentVersion[overload1]$$$getDocumentVersionconstGetDocumentVersionRequest& -->
+<h3 class="fn" id="getDocumentVersion"><a name="getDocumentVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getdocumentversionresponse.html">GetDocumentVersionResponse</a></span> *WorkDocsClient::<span class="name">getDocumentVersion</span>(const <span class="type"><a href="qtaws-workdocs-getdocumentversionrequest.html">GetDocumentVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getdocumentversionresponse.html">GetDocumentVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves version metadata for the specified</p>
+<!-- @@@getDocumentVersion -->
+<!-- $$$getFolder[overload1]$$$getFolderconstGetFolderRequest& -->
+<h3 class="fn" id="getFolder"><a name="getFolder"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getfolderresponse.html">GetFolderResponse</a></span> *WorkDocsClient::<span class="name">getFolder</span>(const <span class="type"><a href="qtaws-workdocs-getfolderrequest.html">GetFolderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getfolderresponse.html">GetFolderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the metadata of the specified</p>
+<!-- @@@getFolder -->
+<!-- $$$getFolderPath[overload1]$$$getFolderPathconstGetFolderPathRequest& -->
+<h3 class="fn" id="getFolderPath"><a name="getFolderPath"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-getfolderpathresponse.html">GetFolderPathResponse</a></span> *WorkDocsClient::<span class="name">getFolderPath</span>(const <span class="type"><a href="qtaws-workdocs-getfolderpathrequest.html">GetFolderPathRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-getfolderpathresponse.html">GetFolderPathResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the path information (the hierarchy from the root folder) for the specified</p>
+<p>folder&gt;</p>
+<p>By default, Amazon <a href="qtaws-workdocs.html">WorkDocs</a> returns a maximum of 100 levels upwards from the requested folder and only includes the IDs of the parent folders in the path. You can limit the maximum number of levels. You can also request the parent folder</p>
+<!-- @@@getFolderPath -->
+<!-- $$$initiateDocumentVersionUpload[overload1]$$$initiateDocumentVersionUploadconstInitiateDocumentVersionUploadRequest& -->
+<h3 class="fn" id="initiateDocumentVersionUpload"><a name="initiateDocumentVersionUpload"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-initiatedocumentversionuploadresponse.html">InitiateDocumentVersionUploadResponse</a></span> *WorkDocsClient::<span class="name">initiateDocumentVersionUpload</span>(const <span class="type"><a href="qtaws-workdocs-initiatedocumentversionuploadrequest.html">InitiateDocumentVersionUploadRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-initiatedocumentversionuploadresponse.html">InitiateDocumentVersionUploadResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new document object and version</p>
+<p>object&gt;</p>
+<p>The client specifies the parent folder ID and name of the document to upload. The ID is optionally specified when creating a new version of an existing document. This is the first step to upload a document. Next, upload the document to the URL returned from the call, and then call</p>
+<p>&lt;a&gt;UpdateDocumentVersion&lt;/a&gt;&gt;</p>
+<p>To cancel the document upload, call</p>
+<!-- @@@initiateDocumentVersionUpload -->
+<!-- $$$removeAllResourcePermissions[overload1]$$$removeAllResourcePermissionsconstRemoveAllResourcePermissionsRequest& -->
+<h3 class="fn" id="removeAllResourcePermissions"><a name="removeAllResourcePermissions"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-removeallresourcepermissionsresponse.html">RemoveAllResourcePermissionsResponse</a></span> *WorkDocsClient::<span class="name">removeAllResourcePermissions</span>(const <span class="type"><a href="qtaws-workdocs-removeallresourcepermissionsrequest.html">RemoveAllResourcePermissionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-removeallresourcepermissionsresponse.html">RemoveAllResourcePermissionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes all the permissions from the specified</p>
+<!-- @@@removeAllResourcePermissions -->
+<!-- $$$removeResourcePermission[overload1]$$$removeResourcePermissionconstRemoveResourcePermissionRequest& -->
+<h3 class="fn" id="removeResourcePermission"><a name="removeResourcePermission"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-removeresourcepermissionresponse.html">RemoveResourcePermissionResponse</a></span> *WorkDocsClient::<span class="name">removeResourcePermission</span>(const <span class="type"><a href="qtaws-workdocs-removeresourcepermissionrequest.html">RemoveResourcePermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-removeresourcepermissionresponse.html">RemoveResourcePermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes the permission for the specified principal from the specified</p>
+<!-- @@@removeResourcePermission -->
+<!-- $$$updateDocument[overload1]$$$updateDocumentconstUpdateDocumentRequest& -->
+<h3 class="fn" id="updateDocument"><a name="updateDocument"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-updatedocumentresponse.html">UpdateDocumentResponse</a></span> *WorkDocsClient::<span class="name">updateDocument</span>(const <span class="type"><a href="qtaws-workdocs-updatedocumentrequest.html">UpdateDocumentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-updatedocumentresponse.html">UpdateDocumentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified attributes of a document. The user must have access to both the document and its parent folder, if</p>
+<!-- @@@updateDocument -->
+<!-- $$$updateDocumentVersion[overload1]$$$updateDocumentVersionconstUpdateDocumentVersionRequest& -->
+<h3 class="fn" id="updateDocumentVersion"><a name="updateDocumentVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-updatedocumentversionresponse.html">UpdateDocumentVersionResponse</a></span> *WorkDocsClient::<span class="name">updateDocumentVersion</span>(const <span class="type"><a href="qtaws-workdocs-updatedocumentversionrequest.html">UpdateDocumentVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-updatedocumentversionresponse.html">UpdateDocumentVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes the status of the document version to ACTIVE.</p>
+<p>&lt;/p</p>
+<p>Amazon <a href="qtaws-workdocs.html">WorkDocs</a> also sets its document container to ACTIVE. This is the last step in a document upload, after the client uploads the document to an S3-presigned URL returned by &lt;a&gt;InitiateDocumentVersionUpload&lt;/a&gt;.</p>
+<!-- @@@updateDocumentVersion -->
+<!-- $$$updateFolder[overload1]$$$updateFolderconstUpdateFolderRequest& -->
+<h3 class="fn" id="updateFolder"><a name="updateFolder"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-updatefolderresponse.html">UpdateFolderResponse</a></span> *WorkDocsClient::<span class="name">updateFolder</span>(const <span class="type"><a href="qtaws-workdocs-updatefolderrequest.html">UpdateFolderRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-updatefolderresponse.html">UpdateFolderResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified attributes of the specified folder. The user must have access to both the folder and its parent folder, if</p>
+<!-- @@@updateFolder -->
+<!-- $$$updateUser[overload1]$$$updateUserconstUpdateUserRequest& -->
+<h3 class="fn" id="updateUser"><a name="updateUser"></a><code>[slot] </code><span class="type"><a href="qtaws-workdocs-updateuserresponse.html">UpdateUserResponse</a></span> *WorkDocsClient::<span class="name">updateUser</span>(const <span class="type"><a href="qtaws-workdocs-updateuserrequest.html">UpdateUserRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-workdocs-workdocsclient.html">WorkDocsClient</a> service, and returns a pointer to an <a href="qtaws-workdocs-updateuserresponse.html">UpdateUserResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon <a href="qtaws-workdocs.html">WorkDocs</a></p>
+<!-- @@@updateUser -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

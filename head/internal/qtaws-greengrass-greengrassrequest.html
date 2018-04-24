@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- greengrassrequest.cpp -->
+  <title>GreengrassRequest Class | Greengrass</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsgreengrass-index.html">Greengrass</a></li>
+<li><a href="qtawsgreengrass-module.html">C++ Classes</a></li>
+<li>GreengrassRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GreengrassRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-greengrass-greengrassrequest.html">QtAws::Greengrass::GreengrassRequest</a>)<br/></span>
+<!-- $$$GreengrassRequest-brief -->
+<p>The <a href="qtaws-greengrass-greengrassrequest.html">GreengrassRequest</a> class provides an interface for Greengrass requests. <a href="#details">More...</a></p>
+<!-- @@@GreengrassRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GreengrassRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-greengrass-associateroletogrouprequest.html">QtAws::Greengrass::AssociateRoleToGroupRequest</a>, <a href="qtaws-greengrass-associateserviceroletoaccountrequest.html">QtAws::Greengrass::AssociateServiceRoleToAccountRequest</a>, <a href="qtaws-greengrass-createcoredefinitionrequest.html">QtAws::Greengrass::CreateCoreDefinitionRequest</a>, <a href="qtaws-greengrass-createcoredefinitionversionrequest.html">QtAws::Greengrass::CreateCoreDefinitionVersionRequest</a>, <a href="qtaws-greengrass-createdeploymentrequest.html">QtAws::Greengrass::CreateDeploymentRequest</a>, <a href="qtaws-greengrass-createdevicedefinitionrequest.html">QtAws::Greengrass::CreateDeviceDefinitionRequest</a>, <a href="qtaws-greengrass-createdevicedefinitionversionrequest.html">QtAws::Greengrass::CreateDeviceDefinitionVersionRequest</a>, <a href="qtaws-greengrass-createfunctiondefinitionrequest.html">QtAws::Greengrass::CreateFunctionDefinitionRequest</a>, <a href="qtaws-greengrass-createfunctiondefinitionversionrequest.html">QtAws::Greengrass::CreateFunctionDefinitionVersionRequest</a>, <a href="qtaws-greengrass-creategroupcertificateauthorityrequest.html">QtAws::Greengrass::CreateGroupCertificateAuthorityRequest</a>, <a href="qtaws-greengrass-creategrouprequest.html">QtAws::Greengrass::CreateGroupRequest</a>, <a href="qtaws-greengrass-creategroupversionrequest.html">QtAws::Greengrass::CreateGroupVersionRequest</a>, <a href="qtaws-greengrass-createloggerdefinitionrequest.html">QtAws::Greengrass::CreateLoggerDefinitionRequest</a>, <a href="qtaws-greengrass-createloggerdefinitionversionrequest.html">QtAws::Greengrass::CreateLoggerDefinitionVersionRequest</a>, <a href="qtaws-greengrass-createresourcedefinitionrequest.html">QtAws::Greengrass::CreateResourceDefinitionRequest</a>, <a href="qtaws-greengrass-createresourcedefinitionversionrequest.html">QtAws::Greengrass::CreateResourceDefinitionVersionRequest</a>, <a href="qtaws-greengrass-createsoftwareupdatejobrequest.html">QtAws::Greengrass::CreateSoftwareUpdateJobRequest</a>, <a href="qtaws-greengrass-createsubscriptiondefinitionrequest.html">QtAws::Greengrass::CreateSubscriptionDefinitionRequest</a>, <a href="qtaws-greengrass-createsubscriptiondefinitionversionrequest.html">QtAws::Greengrass::CreateSubscriptionDefinitionVersionRequest</a>, <a href="qtaws-greengrass-deletecoredefinitionrequest.html">QtAws::Greengrass::DeleteCoreDefinitionRequest</a>, <a href="qtaws-greengrass-deletedevicedefinitionrequest.html">QtAws::Greengrass::DeleteDeviceDefinitionRequest</a>, <a href="qtaws-greengrass-deletefunctiondefinitionrequest.html">QtAws::Greengrass::DeleteFunctionDefinitionRequest</a>, <a href="qtaws-greengrass-deletegrouprequest.html">QtAws::Greengrass::DeleteGroupRequest</a>, <a href="qtaws-greengrass-deleteloggerdefinitionrequest.html">QtAws::Greengrass::DeleteLoggerDefinitionRequest</a>, <a href="qtaws-greengrass-deleteresourcedefinitionrequest.html">QtAws::Greengrass::DeleteResourceDefinitionRequest</a>, <a href="qtaws-greengrass-deletesubscriptiondefinitionrequest.html">QtAws::Greengrass::DeleteSubscriptionDefinitionRequest</a>, <a href="qtaws-greengrass-disassociaterolefromgrouprequest.html">QtAws::Greengrass::DisassociateRoleFromGroupRequest</a>, <a href="qtaws-greengrass-disassociateservicerolefromaccountrequest.html">QtAws::Greengrass::DisassociateServiceRoleFromAccountRequest</a>, <a href="qtaws-greengrass-getassociatedrolerequest.html">QtAws::Greengrass::GetAssociatedRoleRequest</a>, <a href="qtaws-greengrass-getconnectivityinforequest.html">QtAws::Greengrass::GetConnectivityInfoRequest</a>, <a href="qtaws-greengrass-getcoredefinitionrequest.html">QtAws::Greengrass::GetCoreDefinitionRequest</a>, <a href="qtaws-greengrass-getcoredefinitionversionrequest.html">QtAws::Greengrass::GetCoreDefinitionVersionRequest</a>, <a href="qtaws-greengrass-getdeploymentstatusrequest.html">QtAws::Greengrass::GetDeploymentStatusRequest</a>, <a href="qtaws-greengrass-getdevicedefinitionrequest.html">QtAws::Greengrass::GetDeviceDefinitionRequest</a>, <a href="qtaws-greengrass-getdevicedefinitionversionrequest.html">QtAws::Greengrass::GetDeviceDefinitionVersionRequest</a>, <a href="qtaws-greengrass-getfunctiondefinitionrequest.html">QtAws::Greengrass::GetFunctionDefinitionRequest</a>, <a href="qtaws-greengrass-getfunctiondefinitionversionrequest.html">QtAws::Greengrass::GetFunctionDefinitionVersionRequest</a>, <a href="qtaws-greengrass-getgroupcertificateauthorityrequest.html">QtAws::Greengrass::GetGroupCertificateAuthorityRequest</a>, <a href="qtaws-greengrass-getgroupcertificateconfigurationrequest.html">QtAws::Greengrass::GetGroupCertificateConfigurationRequest</a>, <a href="qtaws-greengrass-getgrouprequest.html">QtAws::Greengrass::GetGroupRequest</a>, <a href="qtaws-greengrass-getgroupversionrequest.html">QtAws::Greengrass::GetGroupVersionRequest</a>, <a href="qtaws-greengrass-getloggerdefinitionrequest.html">QtAws::Greengrass::GetLoggerDefinitionRequest</a>, <a href="qtaws-greengrass-getloggerdefinitionversionrequest.html">QtAws::Greengrass::GetLoggerDefinitionVersionRequest</a>, <a href="qtaws-greengrass-getresourcedefinitionrequest.html">QtAws::Greengrass::GetResourceDefinitionRequest</a>, <a href="qtaws-greengrass-getresourcedefinitionversionrequest.html">QtAws::Greengrass::GetResourceDefinitionVersionRequest</a>, <a href="qtaws-greengrass-getserviceroleforaccountrequest.html">QtAws::Greengrass::GetServiceRoleForAccountRequest</a>, <a href="qtaws-greengrass-getsubscriptiondefinitionrequest.html">QtAws::Greengrass::GetSubscriptionDefinitionRequest</a>, <a href="qtaws-greengrass-getsubscriptiondefinitionversionrequest.html">QtAws::Greengrass::GetSubscriptionDefinitionVersionRequest</a>, <a href="qtaws-greengrass-listcoredefinitionsrequest.html">QtAws::Greengrass::ListCoreDefinitionsRequest</a>, <a href="qtaws-greengrass-listcoredefinitionversionsrequest.html">QtAws::Greengrass::ListCoreDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-listdeploymentsrequest.html">QtAws::Greengrass::ListDeploymentsRequest</a>, <a href="qtaws-greengrass-listdevicedefinitionsrequest.html">QtAws::Greengrass::ListDeviceDefinitionsRequest</a>, <a href="qtaws-greengrass-listdevicedefinitionversionsrequest.html">QtAws::Greengrass::ListDeviceDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-listfunctiondefinitionsrequest.html">QtAws::Greengrass::ListFunctionDefinitionsRequest</a>, <a href="qtaws-greengrass-listfunctiondefinitionversionsrequest.html">QtAws::Greengrass::ListFunctionDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-listgroupcertificateauthoritiesrequest.html">QtAws::Greengrass::ListGroupCertificateAuthoritiesRequest</a>, <a href="qtaws-greengrass-listgroupsrequest.html">QtAws::Greengrass::ListGroupsRequest</a>, <a href="qtaws-greengrass-listgroupversionsrequest.html">QtAws::Greengrass::ListGroupVersionsRequest</a>, <a href="qtaws-greengrass-listloggerdefinitionsrequest.html">QtAws::Greengrass::ListLoggerDefinitionsRequest</a>, <a href="qtaws-greengrass-listloggerdefinitionversionsrequest.html">QtAws::Greengrass::ListLoggerDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-listresourcedefinitionsrequest.html">QtAws::Greengrass::ListResourceDefinitionsRequest</a>, <a href="qtaws-greengrass-listresourcedefinitionversionsrequest.html">QtAws::Greengrass::ListResourceDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-listsubscriptiondefinitionsrequest.html">QtAws::Greengrass::ListSubscriptionDefinitionsRequest</a>, <a href="qtaws-greengrass-listsubscriptiondefinitionversionsrequest.html">QtAws::Greengrass::ListSubscriptionDefinitionVersionsRequest</a>, <a href="qtaws-greengrass-resetdeploymentsrequest.html">QtAws::Greengrass::ResetDeploymentsRequest</a>, <a href="qtaws-greengrass-updateconnectivityinforequest.html">QtAws::Greengrass::UpdateConnectivityInfoRequest</a>, <a href="qtaws-greengrass-updatecoredefinitionrequest.html">QtAws::Greengrass::UpdateCoreDefinitionRequest</a>, <a href="qtaws-greengrass-updatedevicedefinitionrequest.html">QtAws::Greengrass::UpdateDeviceDefinitionRequest</a>, <a href="qtaws-greengrass-updatefunctiondefinitionrequest.html">QtAws::Greengrass::UpdateFunctionDefinitionRequest</a>, <a href="qtaws-greengrass-updategroupcertificateconfigurationrequest.html">QtAws::Greengrass::UpdateGroupCertificateConfigurationRequest</a>, <a href="qtaws-greengrass-updategrouprequest.html">QtAws::Greengrass::UpdateGroupRequest</a>, <a href="qtaws-greengrass-updateloggerdefinitionrequest.html">QtAws::Greengrass::UpdateLoggerDefinitionRequest</a>, <a href="qtaws-greengrass-updateresourcedefinitionrequest.html">QtAws::Greengrass::UpdateResourceDefinitionRequest</a>, and <a href="qtaws-greengrass-updatesubscriptiondefinitionrequest.html">QtAws::Greengrass::UpdateSubscriptionDefinitionRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-greengrass-greengrassrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#Action-enum">Action</a></b> { AssociateRoleToGroupAction, AssociateServiceRoleToAccountAction, CreateCoreDefinitionAction, CreateCoreDefinitionVersionAction, ..., UpdateSubscriptionDefinitionAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest">GreengrassRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest-1">GreengrassRequest</a></b>(const GreengrassRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GreengrassRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#operator-eq">operator=</a></b>(const GreengrassRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#operator-eq-eq">operator==</a></b>(const GreengrassRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest-2">GreengrassRequest</a></b>(GreengrassRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-greengrass-greengrassrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GreengrassRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-greengrass-greengrassrequest.html">GreengrassRequest</a> class provides an interface for Greengrass requests.</p>
+</div>
+<!-- @@@GreengrassRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AssociateRoleToGroupAction$$$AssociateServiceRoleToAccountAction$$$CreateCoreDefinitionAction$$$CreateCoreDefinitionVersionAction$$$CreateDeploymentAction$$$CreateDeviceDefinitionAction$$$CreateDeviceDefinitionVersionAction$$$CreateFunctionDefinitionAction$$$CreateFunctionDefinitionVersionAction$$$CreateGroupAction$$$CreateGroupCertificateAuthorityAction$$$CreateGroupVersionAction$$$CreateLoggerDefinitionAction$$$CreateLoggerDefinitionVersionAction$$$CreateResourceDefinitionAction$$$CreateResourceDefinitionVersionAction$$$CreateSoftwareUpdateJobAction$$$CreateSubscriptionDefinitionAction$$$CreateSubscriptionDefinitionVersionAction$$$DeleteCoreDefinitionAction$$$DeleteDeviceDefinitionAction$$$DeleteFunctionDefinitionAction$$$DeleteGroupAction$$$DeleteLoggerDefinitionAction$$$DeleteResourceDefinitionAction$$$DeleteSubscriptionDefinitionAction$$$DisassociateRoleFromGroupAction$$$DisassociateServiceRoleFromAccountAction$$$GetAssociatedRoleAction$$$GetConnectivityInfoAction$$$GetCoreDefinitionAction$$$GetCoreDefinitionVersionAction$$$GetDeploymentStatusAction$$$GetDeviceDefinitionAction$$$GetDeviceDefinitionVersionAction$$$GetFunctionDefinitionAction$$$GetFunctionDefinitionVersionAction$$$GetGroupAction$$$GetGroupCertificateAuthorityAction$$$GetGroupCertificateConfigurationAction$$$GetGroupVersionAction$$$GetLoggerDefinitionAction$$$GetLoggerDefinitionVersionAction$$$GetResourceDefinitionAction$$$GetResourceDefinitionVersionAction$$$GetServiceRoleForAccountAction$$$GetSubscriptionDefinitionAction$$$GetSubscriptionDefinitionVersionAction$$$ListCoreDefinitionVersionsAction$$$ListCoreDefinitionsAction$$$ListDeploymentsAction$$$ListDeviceDefinitionVersionsAction$$$ListDeviceDefinitionsAction$$$ListFunctionDefinitionVersionsAction$$$ListFunctionDefinitionsAction$$$ListGroupCertificateAuthoritiesAction$$$ListGroupVersionsAction$$$ListGroupsAction$$$ListLoggerDefinitionVersionsAction$$$ListLoggerDefinitionsAction$$$ListResourceDefinitionVersionsAction$$$ListResourceDefinitionsAction$$$ListSubscriptionDefinitionVersionsAction$$$ListSubscriptionDefinitionsAction$$$ResetDeploymentsAction$$$UpdateConnectivityInfoAction$$$UpdateCoreDefinitionAction$$$UpdateDeviceDefinitionAction$$$UpdateFunctionDefinitionAction$$$UpdateGroupAction$$$UpdateGroupCertificateConfigurationAction$$$UpdateLoggerDefinitionAction$$$UpdateResourceDefinitionAction$$$UpdateSubscriptionDefinitionAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum GreengrassRequest::<span class="name">Action</span><br/>flags GreengrassRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as Greengrass requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::AssociateRoleToGroupAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Greengrass AssociateRoleToGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::AssociateServiceRoleToAccountAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Greengrass AssociateServiceRoleToAccount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateCoreDefinitionAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Greengrass CreateCoreDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateCoreDefinitionVersionAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Greengrass CreateCoreDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateDeploymentAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Greengrass CreateDeployment action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateDeviceDefinitionAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Greengrass CreateDeviceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateDeviceDefinitionVersionAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Greengrass CreateDeviceDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateFunctionDefinitionAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">Greengrass CreateFunctionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateFunctionDefinitionVersionAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">Greengrass CreateFunctionDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateGroupAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">Greengrass CreateGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateGroupCertificateAuthorityAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Greengrass CreateGroupCertificateAuthority action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateGroupVersionAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Greengrass CreateGroupVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateLoggerDefinitionAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Greengrass CreateLoggerDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateLoggerDefinitionVersionAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Greengrass CreateLoggerDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateResourceDefinitionAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">Greengrass CreateResourceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateResourceDefinitionVersionAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">Greengrass CreateResourceDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateSoftwareUpdateJobAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">Greengrass CreateSoftwareUpdateJob action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateSubscriptionDefinitionAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">Greengrass CreateSubscriptionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::CreateSubscriptionDefinitionVersionAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">Greengrass CreateSubscriptionDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteCoreDefinitionAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">Greengrass DeleteCoreDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteDeviceDefinitionAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">Greengrass DeleteDeviceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteFunctionDefinitionAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">Greengrass DeleteFunctionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteGroupAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">Greengrass DeleteGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteLoggerDefinitionAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">Greengrass DeleteLoggerDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteResourceDefinitionAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">Greengrass DeleteResourceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DeleteSubscriptionDefinitionAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">Greengrass DeleteSubscriptionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DisassociateRoleFromGroupAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">Greengrass DisassociateRoleFromGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::DisassociateServiceRoleFromAccountAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">Greengrass DisassociateServiceRoleFromAccount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetAssociatedRoleAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">Greengrass GetAssociatedRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetConnectivityInfoAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">Greengrass GetConnectivityInfo action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetCoreDefinitionAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">Greengrass GetCoreDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetCoreDefinitionVersionAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">Greengrass GetCoreDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetDeploymentStatusAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">Greengrass GetDeploymentStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetDeviceDefinitionAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">Greengrass GetDeviceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetDeviceDefinitionVersionAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">Greengrass GetDeviceDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetFunctionDefinitionAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">Greengrass GetFunctionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetFunctionDefinitionVersionAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">Greengrass GetFunctionDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetGroupAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">Greengrass GetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetGroupCertificateAuthorityAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">Greengrass GetGroupCertificateAuthority action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetGroupCertificateConfigurationAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">Greengrass GetGroupCertificateConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetGroupVersionAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">Greengrass GetGroupVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetLoggerDefinitionAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">Greengrass GetLoggerDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetLoggerDefinitionVersionAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">Greengrass GetLoggerDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetResourceDefinitionAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">Greengrass GetResourceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetResourceDefinitionVersionAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">Greengrass GetResourceDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetServiceRoleForAccountAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">Greengrass GetServiceRoleForAccount action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetSubscriptionDefinitionAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">Greengrass GetSubscriptionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::GetSubscriptionDefinitionVersionAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">Greengrass GetSubscriptionDefinitionVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListCoreDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">Greengrass ListCoreDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListCoreDefinitionsAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">Greengrass ListCoreDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListDeploymentsAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">Greengrass ListDeployments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListDeviceDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">Greengrass ListDeviceDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListDeviceDefinitionsAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">Greengrass ListDeviceDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListFunctionDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">Greengrass ListFunctionDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListFunctionDefinitionsAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">Greengrass ListFunctionDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListGroupCertificateAuthoritiesAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">Greengrass ListGroupCertificateAuthorities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListGroupVersionsAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">Greengrass ListGroupVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListGroupsAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">Greengrass ListGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListLoggerDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">Greengrass ListLoggerDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListLoggerDefinitionsAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">Greengrass ListLoggerDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListResourceDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">Greengrass ListResourceDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListResourceDefinitionsAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">Greengrass ListResourceDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListSubscriptionDefinitionVersionsAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">Greengrass ListSubscriptionDefinitionVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ListSubscriptionDefinitionsAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">Greengrass ListSubscriptionDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::ResetDeploymentsAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">Greengrass ResetDeployments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateConnectivityInfoAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">Greengrass UpdateConnectivityInfo action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateCoreDefinitionAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">Greengrass UpdateCoreDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateDeviceDefinitionAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">Greengrass UpdateDeviceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateFunctionDefinitionAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">Greengrass UpdateFunctionDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateGroupAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">Greengrass UpdateGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateGroupCertificateConfigurationAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">Greengrass UpdateGroupCertificateConfiguration action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateLoggerDefinitionAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">Greengrass UpdateLoggerDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateResourceDefinitionAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">Greengrass UpdateResourceDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::Greengrass::GreengrassRequest::UpdateSubscriptionDefinitionAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">Greengrass UpdateSubscriptionDefinition action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GreengrassRequest[overload1]$$$GreengrassRequestconstAction -->
+<h3 class="fn" id="GreengrassRequest"><a name="GreengrassRequest"></a>GreengrassRequest::<span class="name">GreengrassRequest</span>(const <span class="type"><a href="qtaws-greengrass-greengrassrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-greengrass-greengrassrequest.html">GreengrassRequest</a> object for Greengrass <i>action</i>.</p>
+<!-- @@@GreengrassRequest -->
+<!-- $$$GreengrassRequest$$$GreengrassRequestconstGreengrassRequest& -->
+<h3 class="fn" id="GreengrassRequest-1"><a name="GreengrassRequest-1"></a>GreengrassRequest::<span class="name">GreengrassRequest</span>(const <span class="type"><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest">GreengrassRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@GreengrassRequest -->
+<!-- $$$GreengrassRequest$$$GreengrassRequestGreengrassRequestPrivate*const -->
+<h3 class="fn" id="GreengrassRequest-2"><a name="GreengrassRequest-2"></a><code>[protected] </code>GreengrassRequest::<span class="name">GreengrassRequest</span>(<span class="type"><a href="qtaws-greengrass-greengrassrequestprivate.html">GreengrassRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-greengrass-greengrassrequest.html">GreengrassRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-greengrass-greengrassrequestprivate.html">GreengrassRequestPrivate</a>.</p>
+<!-- @@@GreengrassRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-greengrass-greengrassrequest.html#Action-enum">Action</a></span> GreengrassRequest::<span class="name">action</span>() const</h3>
+<p>Returns the Greengrass action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> GreengrassRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the Greengrass action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> GreengrassRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the Greengrass API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> GreengrassRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> GreengrassRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> GreengrassRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;GreengrassRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> GreengrassRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-greengrass-greengrassrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the Greengrass action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> GreengrassRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the Greengrass API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> GreengrassRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> GreengrassRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-greengrass-greengrassrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> GreengrassRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the Greengrass request using the given <i>endpoint</i>.</p>
+<p>This Greengrass implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-greengrass-greengrassrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constGreengrassRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest">GreengrassRequest</a></span> &amp;GreengrassRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest">GreengrassRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-greengrass-greengrassrequest.html">GreengrassRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constGreengrassRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> GreengrassRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-greengrass-greengrassrequest.html#GreengrassRequest">GreengrassRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

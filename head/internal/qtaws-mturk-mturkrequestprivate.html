@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- mturkrequest.cpp -->
+  <title>MTurkRequestPrivate Class | MTurk</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsmturk-index.html">MTurk</a></li>
+<li><a href="qtawsmturk-module.html">C++ Classes</a></li>
+<li>MTurkRequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">MTurkRequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-mturk-mturkrequestprivate.html">QtAws::MTurk::MTurkRequestPrivate</a>)<br/></span>
+<!-- $$$MTurkRequestPrivate-brief -->
+<p>The <a href="qtaws-mturk-mturkrequestprivate.html">MTurkRequestPrivate</a> class provides private implementation for <a href="qtaws-mturk-mturkrequest.html">MTurkRequest</a>. <a href="#details">More...</a></p>
+<!-- @@@MTurkRequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;MTurkRequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-mturk-acceptqualificationrequestrequestprivate.html">QtAws::MTurk::AcceptQualificationRequestRequestPrivate</a>, <a href="qtaws-mturk-approveassignmentrequestprivate.html">QtAws::MTurk::ApproveAssignmentRequestPrivate</a>, <a href="qtaws-mturk-associatequalificationwithworkerrequestprivate.html">QtAws::MTurk::AssociateQualificationWithWorkerRequestPrivate</a>, <a href="qtaws-mturk-createadditionalassignmentsforhitrequestprivate.html">QtAws::MTurk::CreateAdditionalAssignmentsForHITRequestPrivate</a>, <a href="qtaws-mturk-createhitrequestprivate.html">QtAws::MTurk::CreateHITRequestPrivate</a>, <a href="qtaws-mturk-createhittyperequestprivate.html">QtAws::MTurk::CreateHITTypeRequestPrivate</a>, <a href="qtaws-mturk-createhitwithhittyperequestprivate.html">QtAws::MTurk::CreateHITWithHITTypeRequestPrivate</a>, <a href="qtaws-mturk-createqualificationtyperequestprivate.html">QtAws::MTurk::CreateQualificationTypeRequestPrivate</a>, <a href="qtaws-mturk-createworkerblockrequestprivate.html">QtAws::MTurk::CreateWorkerBlockRequestPrivate</a>, <a href="qtaws-mturk-deletehitrequestprivate.html">QtAws::MTurk::DeleteHITRequestPrivate</a>, <a href="qtaws-mturk-deletequalificationtyperequestprivate.html">QtAws::MTurk::DeleteQualificationTypeRequestPrivate</a>, <a href="qtaws-mturk-deleteworkerblockrequestprivate.html">QtAws::MTurk::DeleteWorkerBlockRequestPrivate</a>, <a href="qtaws-mturk-disassociatequalificationfromworkerrequestprivate.html">QtAws::MTurk::DisassociateQualificationFromWorkerRequestPrivate</a>, <a href="qtaws-mturk-getaccountbalancerequestprivate.html">QtAws::MTurk::GetAccountBalanceRequestPrivate</a>, <a href="qtaws-mturk-getassignmentrequestprivate.html">QtAws::MTurk::GetAssignmentRequestPrivate</a>, <a href="qtaws-mturk-getfileuploadurlrequestprivate.html">QtAws::MTurk::GetFileUploadURLRequestPrivate</a>, <a href="qtaws-mturk-gethitrequestprivate.html">QtAws::MTurk::GetHITRequestPrivate</a>, <a href="qtaws-mturk-getqualificationscorerequestprivate.html">QtAws::MTurk::GetQualificationScoreRequestPrivate</a>, <a href="qtaws-mturk-getqualificationtyperequestprivate.html">QtAws::MTurk::GetQualificationTypeRequestPrivate</a>, <a href="qtaws-mturk-listassignmentsforhitrequestprivate.html">QtAws::MTurk::ListAssignmentsForHITRequestPrivate</a>, <a href="qtaws-mturk-listbonuspaymentsrequestprivate.html">QtAws::MTurk::ListBonusPaymentsRequestPrivate</a>, <a href="qtaws-mturk-listhitsforqualificationtyperequestprivate.html">QtAws::MTurk::ListHITsForQualificationTypeRequestPrivate</a>, <a href="qtaws-mturk-listhitsrequestprivate.html">QtAws::MTurk::ListHITsRequestPrivate</a>, <a href="qtaws-mturk-listqualificationrequestsrequestprivate.html">QtAws::MTurk::ListQualificationRequestsRequestPrivate</a>, <a href="qtaws-mturk-listqualificationtypesrequestprivate.html">QtAws::MTurk::ListQualificationTypesRequestPrivate</a>, <a href="qtaws-mturk-listreviewablehitsrequestprivate.html">QtAws::MTurk::ListReviewableHITsRequestPrivate</a>, <a href="qtaws-mturk-listreviewpolicyresultsforhitrequestprivate.html">QtAws::MTurk::ListReviewPolicyResultsForHITRequestPrivate</a>, <a href="qtaws-mturk-listworkerblocksrequestprivate.html">QtAws::MTurk::ListWorkerBlocksRequestPrivate</a>, <a href="qtaws-mturk-listworkerswithqualificationtyperequestprivate.html">QtAws::MTurk::ListWorkersWithQualificationTypeRequestPrivate</a>, <a href="qtaws-mturk-notifyworkersrequestprivate.html">QtAws::MTurk::NotifyWorkersRequestPrivate</a>, <a href="qtaws-mturk-rejectassignmentrequestprivate.html">QtAws::MTurk::RejectAssignmentRequestPrivate</a>, <a href="qtaws-mturk-rejectqualificationrequestrequestprivate.html">QtAws::MTurk::RejectQualificationRequestRequestPrivate</a>, <a href="qtaws-mturk-sendbonusrequestprivate.html">QtAws::MTurk::SendBonusRequestPrivate</a>, <a href="qtaws-mturk-sendtesteventnotificationrequestprivate.html">QtAws::MTurk::SendTestEventNotificationRequestPrivate</a>, <a href="qtaws-mturk-updateexpirationforhitrequestprivate.html">QtAws::MTurk::UpdateExpirationForHITRequestPrivate</a>, <a href="qtaws-mturk-updatehitreviewstatusrequestprivate.html">QtAws::MTurk::UpdateHITReviewStatusRequestPrivate</a>, <a href="qtaws-mturk-updatehittypeofhitrequestprivate.html">QtAws::MTurk::UpdateHITTypeOfHITRequestPrivate</a>, <a href="qtaws-mturk-updatenotificationsettingsrequestprivate.html">QtAws::MTurk::UpdateNotificationSettingsRequestPrivate</a>, and <a href="qtaws-mturk-updatequalificationtyperequestprivate.html">QtAws::MTurk::UpdateQualificationTypeRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-mturk-mturkrequestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkrequestprivate.html#MTurkRequestPrivate">MTurkRequestPrivate</a></b>(const MTurkRequest::Action <i>action</i>, MTurkRequest * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkrequestprivate.html#MTurkRequestPrivate-1">MTurkRequestPrivate</a></b>(const MTurkRequestPrivate &amp;<i>other</i>, MTurkRequest * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-mturk-mturkrequestprivate.html#toString">toString</a></b>(const MTurkRequest::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$MTurkRequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-mturk-mturkrequestprivate.html">MTurkRequestPrivate</a> class provides private implementation for <a href="qtaws-mturk-mturkrequest.html">MTurkRequest</a>.</p>
+</div>
+<!-- @@@MTurkRequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$MTurkRequestPrivate[overload1]$$$MTurkRequestPrivateconstMTurkRequest::ActionMTurkRequest*const -->
+<h3 class="fn" id="MTurkRequestPrivate"><a name="MTurkRequestPrivate"></a>MTurkRequestPrivate::<span class="name">MTurkRequestPrivate</span>(const <span class="type"><a href="qtaws-mturk-mturkrequest.html#Action-enum">MTurkRequest::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-mturk-mturkrequest.html">MTurkRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-mturk-mturkrequestprivate.html">MTurkRequestPrivate</a> object for <a href="qtaws-mturk.html">MTurk</a> <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@MTurkRequestPrivate -->
+<!-- $$$MTurkRequestPrivate$$$MTurkRequestPrivateconstMTurkRequestPrivate&MTurkRequest*const -->
+<h3 class="fn" id="MTurkRequestPrivate-1"><a name="MTurkRequestPrivate-1"></a>MTurkRequestPrivate::<span class="name">MTurkRequestPrivate</span>(const <span class="type"><a href="qtaws-mturk-mturkrequestprivate.html#MTurkRequestPrivate">MTurkRequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-mturk-mturkrequest.html">MTurkRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-mturk-mturkrequest.html">MTurkRequest</a> class's copy constructor.</p>
+<!-- @@@MTurkRequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstMTurkRequest::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> MTurkRequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-mturk-mturkrequest.html#Action-enum">MTurkRequest::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-mturk-mturkrequest.html#Action-enum">MTurkRequest::Action</a> enumerator values to their respective string representations, appropriate for use with the <a href="qtaws-mturk.html">MTurk</a> service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

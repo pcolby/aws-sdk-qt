@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- sagemakerclient.cpp -->
+  <title>SageMakerClient Class | SageMaker</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssagemaker-index.html">SageMaker</a></li>
+<li><a href="qtawssagemaker-module.html">C++ Classes</a></li>
+<li>SageMakerClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SageMakerClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-sagemaker-sagemakerclient.html">QtAws::SageMaker::SageMakerClient</a>)<br/></span>
+<!-- $$$SageMakerClient-brief -->
+<p>The <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> class provides access to the Amazon <a href="qtaws-sagemaker.html">SageMaker</a> Service service. <a href="#details">More...</a></p>
+<!-- @@@SageMakerClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SageMakerClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-sagemaker-sagemakerclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#SageMakerClient">SageMakerClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#SageMakerClient-1">SageMakerClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#addTags">addTags</a></b>(const AddTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createEndpoint">createEndpoint</a></b>(const CreateEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEndpointConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createEndpointConfig">createEndpointConfig</a></b>(const CreateEndpointConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createModel">createModel</a></b>(const CreateModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createNotebookInstance">createNotebookInstance</a></b>(const CreateNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNotebookInstanceLifecycleConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createNotebookInstanceLifecycleConfig">createNotebookInstanceLifecycleConfig</a></b>(const CreateNotebookInstanceLifecycleConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePresignedNotebookInstanceUrlResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createPresignedNotebookInstanceUrl">createPresignedNotebookInstanceUrl</a></b>(const CreatePresignedNotebookInstanceUrlRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTrainingJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#createTrainingJob">createTrainingJob</a></b>(const CreateTrainingJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteEndpoint">deleteEndpoint</a></b>(const DeleteEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEndpointConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteEndpointConfig">deleteEndpointConfig</a></b>(const DeleteEndpointConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteModel">deleteModel</a></b>(const DeleteModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteNotebookInstance">deleteNotebookInstance</a></b>(const DeleteNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNotebookInstanceLifecycleConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteNotebookInstanceLifecycleConfig">deleteNotebookInstanceLifecycleConfig</a></b>(const DeleteNotebookInstanceLifecycleConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#deleteTags">deleteTags</a></b>(const DeleteTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeEndpoint">describeEndpoint</a></b>(const DescribeEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeEndpointConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeEndpointConfig">describeEndpointConfig</a></b>(const DescribeEndpointConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeModelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeModel">describeModel</a></b>(const DescribeModelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeNotebookInstance">describeNotebookInstance</a></b>(const DescribeNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNotebookInstanceLifecycleConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeNotebookInstanceLifecycleConfig">describeNotebookInstanceLifecycleConfig</a></b>(const DescribeNotebookInstanceLifecycleConfigRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTrainingJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#describeTrainingJob">describeTrainingJob</a></b>(const DescribeTrainingJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListEndpointConfigsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listEndpointConfigs">listEndpointConfigs</a></b>(const ListEndpointConfigsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListEndpointsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listEndpoints">listEndpoints</a></b>(const ListEndpointsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListModelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listModels">listModels</a></b>(const ListModelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListNotebookInstanceLifecycleConfigsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listNotebookInstanceLifecycleConfigs">listNotebookInstanceLifecycleConfigs</a></b>(const ListNotebookInstanceLifecycleConfigsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListNotebookInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listNotebookInstances">listNotebookInstances</a></b>(const ListNotebookInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTrainingJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#listTrainingJobs">listTrainingJobs</a></b>(const ListTrainingJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#startNotebookInstance">startNotebookInstance</a></b>(const StartNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#stopNotebookInstance">stopNotebookInstance</a></b>(const StopNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopTrainingJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#stopTrainingJob">stopTrainingJob</a></b>(const StopTrainingJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#updateEndpoint">updateEndpoint</a></b>(const UpdateEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEndpointWeightsAndCapacitiesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#updateEndpointWeightsAndCapacities">updateEndpointWeightsAndCapacities</a></b>(const UpdateEndpointWeightsAndCapacitiesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNotebookInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#updateNotebookInstance">updateNotebookInstance</a></b>(const UpdateNotebookInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNotebookInstanceLifecycleConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-sagemaker-sagemakerclient.html#updateNotebookInstanceLifecycleConfig">updateNotebookInstanceLifecycleConfig</a></b>(const UpdateNotebookInstanceLifecycleConfigRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SageMakerClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> class provides access to the Amazon <a href="qtaws-sagemaker.html">SageMaker</a> Service service.</p>
+</div>
+<!-- @@@SageMakerClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SageMakerClient[overload1]$$$SageMakerClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SageMakerClient"><a name="SageMakerClient"></a>SageMakerClient::<span class="name">SageMakerClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SageMakerClient -->
+<!-- $$$SageMakerClient$$$SageMakerClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SageMakerClient-1"><a name="SageMakerClient-1"></a>SageMakerClient::<span class="name">SageMakerClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-sagemaker-sagemakerclient.html#SageMakerClient">SageMakerClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SageMakerClient -->
+<!-- $$$addTags[overload1]$$$addTagsconstAddTagsRequest& -->
+<h3 class="fn" id="addTags"><a name="addTags"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-addtagsresponse.html">AddTagsResponse</a></span> *SageMakerClient::<span class="name">addTags</span>(const <span class="type"><a href="qtaws-sagemaker-addtagsrequest.html">AddTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-addtagsresponse.html">AddTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or overwrites one or more tags for the specified Amazon <a href="qtaws-sagemaker.html">SageMaker</a> resource. You can add tags to notebook instances, training jobs, models, endpoint configurations, and endpoints.</p>
+<p>&lt;/p</p>
+<p>Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what&quot;&gt;Using Cost Allocation Tags&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User Guide&lt;/i&gt;.</p>
+<!-- @@@addTags -->
+<!-- $$$createEndpoint[overload1]$$$createEndpointconstCreateEndpointRequest& -->
+<h3 class="fn" id="createEndpoint"><a name="createEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createendpointresponse.html">CreateEndpointResponse</a></span> *SageMakerClient::<span class="name">createEndpoint</span>(const <span class="type"><a href="qtaws-sagemaker-createendpointrequest.html">CreateEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createendpointresponse.html">CreateEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an endpoint using the endpoint configuration specified in the request. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> uses the endpoint to provision resources and deploy models. You create the endpoint configuration with the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html&quot;&gt;CreateEndpointConfig&lt;/a&gt; API.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Use this API only for hosting models using Amazon <a href="qtaws-sagemaker.html">SageMaker</a> hosting services.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>The endpoint name must be unique within an AWS Region in your AWS account.</p>
+<p>&lt;/p</p>
+<p>When it receives the request, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> creates the endpoint, launches the resources (ML compute instances), and deploys the model(s) on them.</p>
+<p>&lt;/p</p>
+<p>When Amazon <a href="qtaws-sagemaker.html">SageMaker</a> receives the request, it sets the endpoint status to &lt;code&gt;Creating&lt;/code&gt;. After it creates the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> can then process incoming requests for inferences. To check the status of an endpoint, use the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html&quot;&gt;DescribeEndpoint&lt;/a&gt;</p>
+<p>API&gt;</p>
+<p>For an example, see &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/ex1.html&quot;&gt;Exercise 1: Using the K-Means Algorithm Provided by Amazon <a href="qtaws-sagemaker.html">SageMaker</a>&lt;/a&gt;.</p>
+<!-- @@@createEndpoint -->
+<!-- $$$createEndpointConfig[overload1]$$$createEndpointConfigconstCreateEndpointConfigRequest& -->
+<h3 class="fn" id="createEndpointConfig"><a name="createEndpointConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createendpointconfigresponse.html">CreateEndpointConfigResponse</a></span> *SageMakerClient::<span class="name">createEndpointConfig</span>(const <span class="type"><a href="qtaws-sagemaker-createendpointconfigrequest.html">CreateEndpointConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createendpointconfigresponse.html">CreateEndpointConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an endpoint configuration that Amazon <a href="qtaws-sagemaker.html">SageMaker</a> hosting services uses to deploy models. In the configuration, you identify one or more models, created using the &lt;code&gt;CreateModel&lt;/code&gt; API, to deploy and the resources that you want Amazon <a href="qtaws-sagemaker.html">SageMaker</a> to provision. Then you call the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html&quot;&gt;CreateEndpoint&lt;/a&gt; API.</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>Use this API only if you want to use Amazon <a href="qtaws-sagemaker.html">SageMaker</a> hosting services to deploy models into production.</p>
+<p>&lt;/p &lt;/note&gt;</p>
+<p>In the request, you define one or more &lt;code&gt;ProductionVariant&lt;/code&gt;s, each of which identifies a model. Each &lt;code&gt;ProductionVariant&lt;/code&gt; parameter also describes the resources that you want Amazon <a href="qtaws-sagemaker.html">SageMaker</a> to provision. This includes the number and type of ML compute instances to deploy.</p>
+<p>&lt;/p</p>
+<p>If you are hosting multiple models, you also assign a &lt;code&gt;VariantWeight&lt;/code&gt; to specify how much traffic you want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign traffic weight 2 for model A and 1 for model B. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> distributes two-thirds of the traffic to Model A, and one-third to model B.</p>
+<!-- @@@createEndpointConfig -->
+<!-- $$$createModel[overload1]$$$createModelconstCreateModelRequest& -->
+<h3 class="fn" id="createModel"><a name="createModel"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createmodelresponse.html">CreateModelResponse</a></span> *SageMakerClient::<span class="name">createModel</span>(const <span class="type"><a href="qtaws-sagemaker-createmodelrequest.html">CreateModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createmodelresponse.html">CreateModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a model in Amazon <a href="qtaws-sagemaker.html">SageMaker</a>. In the request, you name the model and describe one or more containers. For each container, you specify the docker image containing inference code, artifacts (from prior training), and custom environment map that the inference code uses when you deploy the model into production.</p>
+<p>&lt;/p</p>
+<p>Use this API to create a model only if you want to use Amazon <a href="qtaws-sagemaker.html">SageMaker</a> hosting services. To host your model, you create an endpoint configuration with the &lt;code&gt;CreateEndpointConfig&lt;/code&gt; API, and then create an endpoint with the &lt;code&gt;CreateEndpoint&lt;/code&gt; API.</p>
+<p>&lt;/p</p>
+<p>Amazon <a href="qtaws-sagemaker.html">SageMaker</a> then deploys all of the containers that you defined for the model in the hosting environment.</p>
+<p>&lt;/p</p>
+<p>In the &lt;code&gt;CreateModel&lt;/code&gt; request, you must define a container with the &lt;code&gt;PrimaryContainer&lt;/code&gt; parameter.</p>
+<p>&lt;/p</p>
+<p>In the request, you also provide an IAM role that Amazon <a href="qtaws-sagemaker.html">SageMaker</a> can assume to access model artifacts and docker image for deployment on ML compute hosting instances. In addition, you also use the IAM role to manage permissions the inference code needs. For example, if the inference code access any other AWS resources, you grant necessary permissions via this</p>
+<!-- @@@createModel -->
+<!-- $$$createNotebookInstance[overload1]$$$createNotebookInstanceconstCreateNotebookInstanceRequest& -->
+<h3 class="fn" id="createNotebookInstance"><a name="createNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createnotebookinstanceresponse.html">CreateNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">createNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-createnotebookinstancerequest.html">CreateNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createnotebookinstanceresponse.html">CreateNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an Amazon <a href="qtaws-sagemaker.html">SageMaker</a> notebook instance. A notebook instance is a machine learning (ML) compute instance running on a Jupyter notebook.</p>
+<p>&lt;/p</p>
+<p>In a &lt;code&gt;CreateNotebookInstance&lt;/code&gt; request, specify the type of ML compute instance that you want to run. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> launches the instance, installs common libraries that you can use to explore datasets for model training, and attaches an ML storage volume to the notebook instance.</p>
+<p>&lt;/p</p>
+<p>Amazon <a href="qtaws-sagemaker.html">SageMaker</a> also provides a set of example notebooks. Each notebook demonstrates how to use Amazon <a href="qtaws-sagemaker.html">SageMaker</a> with a specific algorithm or with a machine learning framework.</p>
+<p>&lt;/p</p>
+<p>After receiving the request, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> does the</p>
+<p>following&gt; &lt;ol&gt; &lt;li&gt;</p>
+<p>Creates a network interface in the Amazon <a href="qtaws-sagemaker.html">SageMaker</a></p>
+<p>VPC&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>(Option) If you specified &lt;code&gt;SubnetId&lt;/code&gt;, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> creates a network interface in your own VPC, which is inferred from the subnet ID that you provide in the input. When creating this network interface, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> attaches the security group that you specified in the request to the network interface that it creates in your</p>
+<p>VPC&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Launches an EC2 instance of the type specified in the request in the Amazon <a href="qtaws-sagemaker.html">SageMaker</a> VPC. If you specified &lt;code&gt;SubnetId&lt;/code&gt; of your VPC, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> specifies both network interfaces when launching this instance. This enables inbound traffic from your own VPC to the notebook instance, assuming that the security groups allow</p>
+<p>it&gt; &lt;/li&gt; &lt;/ol&gt;</p>
+<p>After creating the notebook instance, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> returns its Amazon Resource Name</p>
+<p>(ARN)&gt;</p>
+<p>After Amazon <a href="qtaws-sagemaker.html">SageMaker</a> creates the notebook instance, you can connect to the Jupyter server and work in Jupyter notebooks. For example, you can write code to explore a dataset that you can use for model training, train a model, host models by creating Amazon <a href="qtaws-sagemaker.html">SageMaker</a> endpoints, and validate hosted models.</p>
+<p>&lt;/p</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html&quot;&gt;How It Works&lt;/a&gt;.</p>
+<!-- @@@createNotebookInstance -->
+<!-- $$$createNotebookInstanceLifecycleConfig[overload1]$$$createNotebookInstanceLifecycleConfigconstCreateNotebookInstanceLifecycleConfigRequest& -->
+<h3 class="fn" id="createNotebookInstanceLifecycleConfig"><a name="createNotebookInstanceLifecycleConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createnotebookinstancelifecycleconfigresponse.html">CreateNotebookInstanceLifecycleConfigResponse</a></span> *SageMakerClient::<span class="name">createNotebookInstanceLifecycleConfig</span>(const <span class="type"><a href="qtaws-sagemaker-createnotebookinstancelifecycleconfigrequest.html">CreateNotebookInstanceLifecycleConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createnotebookinstancelifecycleconfigresponse.html">CreateNotebookInstanceLifecycleConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a lifecycle configuration that you can associate with a notebook instance. A &lt;i&gt;lifecycle configuration&lt;/i&gt; is a collection of shell scripts that run when you create or start a notebook</p>
+<p>instance&gt;</p>
+<p>Each lifecycle configuration script has a limit of 16384</p>
+<p>characters&gt;</p>
+<p>The value of the &lt;code&gt;$PATH&lt;/code&gt; environment variable that is available to both scripts is</p>
+<p>&lt;code&gt;/sbin:bin:/usr/sbin:/usr/bin&lt;/code&gt;&gt;</p>
+<p>View CloudWatch Logs for notebook instance lifecycle configurations in log group &lt;code&gt;/aws/sagemaker/NotebookInstances&lt;/code&gt; in log stream</p>
+<p>&lt;code&gt;[notebook-instance-name]/[LifecycleConfigHook]&lt;/code&gt;&gt;</p>
+<p>Lifecycle configuration scripts cannot run for longer than 5 minutes. If a script runs for longer than 5 minutes, it fails and the notebook instance is not created or</p>
+<p>started&gt;</p>
+<p>For information about notebook instance lifestyle configurations, see</p>
+<!-- @@@createNotebookInstanceLifecycleConfig -->
+<!-- $$$createPresignedNotebookInstanceUrl[overload1]$$$createPresignedNotebookInstanceUrlconstCreatePresignedNotebookInstanceUrlRequest& -->
+<h3 class="fn" id="createPresignedNotebookInstanceUrl"><a name="createPresignedNotebookInstanceUrl"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createpresignednotebookinstanceurlresponse.html">CreatePresignedNotebookInstanceUrlResponse</a></span> *SageMakerClient::<span class="name">createPresignedNotebookInstanceUrl</span>(const <span class="type"><a href="qtaws-sagemaker-createpresignednotebookinstanceurlrequest.html">CreatePresignedNotebookInstanceUrlRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createpresignednotebookinstanceurlresponse.html">CreatePresignedNotebookInstanceUrlResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a URL that you can use to connect to the Juypter server from a notebook instance. In the Amazon <a href="qtaws-sagemaker.html">SageMaker</a> console, when you choose &lt;code&gt;Open&lt;/code&gt; next to a notebook instance, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> opens a new tab showing the Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.</p>
+<!-- @@@createPresignedNotebookInstanceUrl -->
+<!-- $$$createTrainingJob[overload1]$$$createTrainingJobconstCreateTrainingJobRequest& -->
+<h3 class="fn" id="createTrainingJob"><a name="createTrainingJob"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-createtrainingjobresponse.html">CreateTrainingJobResponse</a></span> *SageMakerClient::<span class="name">createTrainingJob</span>(const <span class="type"><a href="qtaws-sagemaker-createtrainingjobrequest.html">CreateTrainingJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-createtrainingjobresponse.html">CreateTrainingJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a model training job. After training completes, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> saves the resulting model artifacts to an Amazon S3 location that you specify.</p>
+<p>&lt;/p</p>
+<p>If you choose to host your model using Amazon <a href="qtaws-sagemaker.html">SageMaker</a> hosting services, you can use the resulting model artifacts as part of the model. You can also use the artifacts in a deep learning service other than Amazon <a href="qtaws-sagemaker.html">SageMaker</a>, provided that you know how to use them for inferences.</p>
+<p>&lt;/p</p>
+<p>In the request body, you provide the following:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;AlgorithmSpecification&lt;/code&gt; - Identifies the training algorithm to use.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;HyperParameters&lt;/code&gt; - Specify these algorithm-specific parameters to influence the quality of the final model. For a list of hyperparameters for each training algorithm provided by Amazon <a href="qtaws-sagemaker.html">SageMaker</a>, see &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/algos.html&quot;&gt;Algorithms&lt;/a&gt;.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;InputDataConfig&lt;/code&gt; - Describes the training dataset and the Amazon S3 location where it is</p>
+<p>stored&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;OutputDataConfig&lt;/code&gt; - Identifies the Amazon S3 location where you want Amazon <a href="qtaws-sagemaker.html">SageMaker</a> to save the results of model training.</p>
+<p>&lt;/p &lt;p/&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ResourceConfig&lt;/code&gt; - Identifies the resources, ML compute instances, and ML storage volumes to deploy for model training. In distributed training, you specify more than one instance.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;RoleARN&lt;/code&gt; - The Amazon Resource Number (ARN) that Amazon <a href="qtaws-sagemaker.html">SageMaker</a> assumes to perform tasks on your behalf during model training. You must grant this role the necessary permissions so that Amazon <a href="qtaws-sagemaker.html">SageMaker</a> can successfully complete model training.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;StoppingCondition&lt;/code&gt; - Sets a duration for training. Use this parameter to cap model training costs.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For more information about Amazon <a href="qtaws-sagemaker.html">SageMaker</a>, see &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html&quot;&gt;How It Works&lt;/a&gt;.</p>
+<!-- @@@createTrainingJob -->
+<!-- $$$deleteEndpoint[overload1]$$$deleteEndpointconstDeleteEndpointRequest& -->
+<h3 class="fn" id="deleteEndpoint"><a name="deleteEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deleteendpointresponse.html">DeleteEndpointResponse</a></span> *SageMakerClient::<span class="name">deleteEndpoint</span>(const <span class="type"><a href="qtaws-sagemaker-deleteendpointrequest.html">DeleteEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deleteendpointresponse.html">DeleteEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an endpoint. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> frees up all of the resources that were deployed when the endpoint was created.</p>
+<!-- @@@deleteEndpoint -->
+<!-- $$$deleteEndpointConfig[overload1]$$$deleteEndpointConfigconstDeleteEndpointConfigRequest& -->
+<h3 class="fn" id="deleteEndpointConfig"><a name="deleteEndpointConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deleteendpointconfigresponse.html">DeleteEndpointConfigResponse</a></span> *SageMakerClient::<span class="name">deleteEndpointConfig</span>(const <span class="type"><a href="qtaws-sagemaker-deleteendpointconfigrequest.html">DeleteEndpointConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deleteendpointconfigresponse.html">DeleteEndpointConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an endpoint configuration. The &lt;code&gt;DeleteEndpoingConfig&lt;/code&gt; API deletes only the specified configuration. It does not delete endpoints created using the configuration.</p>
+<!-- @@@deleteEndpointConfig -->
+<!-- $$$deleteModel[overload1]$$$deleteModelconstDeleteModelRequest& -->
+<h3 class="fn" id="deleteModel"><a name="deleteModel"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deletemodelresponse.html">DeleteModelResponse</a></span> *SageMakerClient::<span class="name">deleteModel</span>(const <span class="type"><a href="qtaws-sagemaker-deletemodelrequest.html">DeleteModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deletemodelresponse.html">DeleteModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a model. The &lt;code&gt;DeleteModel&lt;/code&gt; API deletes only the model entry that was created in Amazon <a href="qtaws-sagemaker.html">SageMaker</a> when you called the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html&quot;&gt;CreateModel&lt;/a&gt; API. It does not delete model artifacts, inference code, or the IAM role that you specified when creating the model.</p>
+<!-- @@@deleteModel -->
+<!-- $$$deleteNotebookInstance[overload1]$$$deleteNotebookInstanceconstDeleteNotebookInstanceRequest& -->
+<h3 class="fn" id="deleteNotebookInstance"><a name="deleteNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deletenotebookinstanceresponse.html">DeleteNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">deleteNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-deletenotebookinstancerequest.html">DeleteNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deletenotebookinstanceresponse.html">DeleteNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an Amazon <a href="qtaws-sagemaker.html">SageMaker</a> notebook instance. Before you can delete a notebook instance, you must call the &lt;code&gt;StopNotebookInstance&lt;/code&gt; API.</p>
+<p>&lt;/p &lt;b&gt;</p>
+<p>When you delete a notebook instance, you lose all of your data. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> removes the ML compute instance, and deletes the ML storage volume and the network interface associated with the notebook instance.</p>
+<!-- @@@deleteNotebookInstance -->
+<!-- $$$deleteNotebookInstanceLifecycleConfig[overload1]$$$deleteNotebookInstanceLifecycleConfigconstDeleteNotebookInstanceLifecycleConfigRequest& -->
+<h3 class="fn" id="deleteNotebookInstanceLifecycleConfig"><a name="deleteNotebookInstanceLifecycleConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deletenotebookinstancelifecycleconfigresponse.html">DeleteNotebookInstanceLifecycleConfigResponse</a></span> *SageMakerClient::<span class="name">deleteNotebookInstanceLifecycleConfig</span>(const <span class="type"><a href="qtaws-sagemaker-deletenotebookinstancelifecycleconfigrequest.html">DeleteNotebookInstanceLifecycleConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deletenotebookinstancelifecycleconfigresponse.html">DeleteNotebookInstanceLifecycleConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a notebook instance lifecycle</p>
+<!-- @@@deleteNotebookInstanceLifecycleConfig -->
+<!-- $$$deleteTags[overload1]$$$deleteTagsconstDeleteTagsRequest& -->
+<h3 class="fn" id="deleteTags"><a name="deleteTags"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-deletetagsresponse.html">DeleteTagsResponse</a></span> *SageMakerClient::<span class="name">deleteTags</span>(const <span class="type"><a href="qtaws-sagemaker-deletetagsrequest.html">DeleteTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-deletetagsresponse.html">DeleteTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified tags from an Amazon <a href="qtaws-sagemaker.html">SageMaker</a></p>
+<p>resource&gt;</p>
+<p>To list a resource's tags, use the &lt;code&gt;ListTags&lt;/code&gt; API.</p>
+<!-- @@@deleteTags -->
+<!-- $$$describeEndpoint[overload1]$$$describeEndpointconstDescribeEndpointRequest& -->
+<h3 class="fn" id="describeEndpoint"><a name="describeEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describeendpointresponse.html">DescribeEndpointResponse</a></span> *SageMakerClient::<span class="name">describeEndpoint</span>(const <span class="type"><a href="qtaws-sagemaker-describeendpointrequest.html">DescribeEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describeendpointresponse.html">DescribeEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the description of an</p>
+<!-- @@@describeEndpoint -->
+<!-- $$$describeEndpointConfig[overload1]$$$describeEndpointConfigconstDescribeEndpointConfigRequest& -->
+<h3 class="fn" id="describeEndpointConfig"><a name="describeEndpointConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describeendpointconfigresponse.html">DescribeEndpointConfigResponse</a></span> *SageMakerClient::<span class="name">describeEndpointConfig</span>(const <span class="type"><a href="qtaws-sagemaker-describeendpointconfigrequest.html">DescribeEndpointConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describeendpointconfigresponse.html">DescribeEndpointConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the description of an endpoint configuration created using the &lt;code&gt;CreateEndpointConfig&lt;/code&gt;</p>
+<!-- @@@describeEndpointConfig -->
+<!-- $$$describeModel[overload1]$$$describeModelconstDescribeModelRequest& -->
+<h3 class="fn" id="describeModel"><a name="describeModel"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describemodelresponse.html">DescribeModelResponse</a></span> *SageMakerClient::<span class="name">describeModel</span>(const <span class="type"><a href="qtaws-sagemaker-describemodelrequest.html">DescribeModelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describemodelresponse.html">DescribeModelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a model that you created using the &lt;code&gt;CreateModel&lt;/code&gt;</p>
+<!-- @@@describeModel -->
+<!-- $$$describeNotebookInstance[overload1]$$$describeNotebookInstanceconstDescribeNotebookInstanceRequest& -->
+<h3 class="fn" id="describeNotebookInstance"><a name="describeNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describenotebookinstanceresponse.html">DescribeNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">describeNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-describenotebookinstancerequest.html">DescribeNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describenotebookinstanceresponse.html">DescribeNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a notebook</p>
+<!-- @@@describeNotebookInstance -->
+<!-- $$$describeNotebookInstanceLifecycleConfig[overload1]$$$describeNotebookInstanceLifecycleConfigconstDescribeNotebookInstanceLifecycleConfigRequest& -->
+<h3 class="fn" id="describeNotebookInstanceLifecycleConfig"><a name="describeNotebookInstanceLifecycleConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describenotebookinstancelifecycleconfigresponse.html">DescribeNotebookInstanceLifecycleConfigResponse</a></span> *SageMakerClient::<span class="name">describeNotebookInstanceLifecycleConfig</span>(const <span class="type"><a href="qtaws-sagemaker-describenotebookinstancelifecycleconfigrequest.html">DescribeNotebookInstanceLifecycleConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describenotebookinstancelifecycleconfigresponse.html">DescribeNotebookInstanceLifecycleConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a description of a notebook instance lifecycle</p>
+<p>configuration&gt;</p>
+<p>For information about notebook instance lifestyle configurations, see</p>
+<!-- @@@describeNotebookInstanceLifecycleConfig -->
+<!-- $$$describeTrainingJob[overload1]$$$describeTrainingJobconstDescribeTrainingJobRequest& -->
+<h3 class="fn" id="describeTrainingJob"><a name="describeTrainingJob"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-describetrainingjobresponse.html">DescribeTrainingJobResponse</a></span> *SageMakerClient::<span class="name">describeTrainingJob</span>(const <span class="type"><a href="qtaws-sagemaker-describetrainingjobrequest.html">DescribeTrainingJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-describetrainingjobresponse.html">DescribeTrainingJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a training</p>
+<!-- @@@describeTrainingJob -->
+<!-- $$$listEndpointConfigs[overload1]$$$listEndpointConfigsconstListEndpointConfigsRequest& -->
+<h3 class="fn" id="listEndpointConfigs"><a name="listEndpointConfigs"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listendpointconfigsresponse.html">ListEndpointConfigsResponse</a></span> *SageMakerClient::<span class="name">listEndpointConfigs</span>(const <span class="type"><a href="qtaws-sagemaker-listendpointconfigsrequest.html">ListEndpointConfigsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listendpointconfigsresponse.html">ListEndpointConfigsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists endpoint</p>
+<!-- @@@listEndpointConfigs -->
+<!-- $$$listEndpoints[overload1]$$$listEndpointsconstListEndpointsRequest& -->
+<h3 class="fn" id="listEndpoints"><a name="listEndpoints"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listendpointsresponse.html">ListEndpointsResponse</a></span> *SageMakerClient::<span class="name">listEndpoints</span>(const <span class="type"><a href="qtaws-sagemaker-listendpointsrequest.html">ListEndpointsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listendpointsresponse.html">ListEndpointsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists</p>
+<!-- @@@listEndpoints -->
+<!-- $$$listModels[overload1]$$$listModelsconstListModelsRequest& -->
+<h3 class="fn" id="listModels"><a name="listModels"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listmodelsresponse.html">ListModelsResponse</a></span> *SageMakerClient::<span class="name">listModels</span>(const <span class="type"><a href="qtaws-sagemaker-listmodelsrequest.html">ListModelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listmodelsresponse.html">ListModelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists models created with the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html&quot;&gt;CreateModel&lt;/a&gt;</p>
+<!-- @@@listModels -->
+<!-- $$$listNotebookInstanceLifecycleConfigs[overload1]$$$listNotebookInstanceLifecycleConfigsconstListNotebookInstanceLifecycleConfigsRequest& -->
+<h3 class="fn" id="listNotebookInstanceLifecycleConfigs"><a name="listNotebookInstanceLifecycleConfigs"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listnotebookinstancelifecycleconfigsresponse.html">ListNotebookInstanceLifecycleConfigsResponse</a></span> *SageMakerClient::<span class="name">listNotebookInstanceLifecycleConfigs</span>(const <span class="type"><a href="qtaws-sagemaker-listnotebookinstancelifecycleconfigsrequest.html">ListNotebookInstanceLifecycleConfigsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listnotebookinstancelifecycleconfigsresponse.html">ListNotebookInstanceLifecycleConfigsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists notebook instance lifestyle configurations created with the</p>
+<!-- @@@listNotebookInstanceLifecycleConfigs -->
+<!-- $$$listNotebookInstances[overload1]$$$listNotebookInstancesconstListNotebookInstancesRequest& -->
+<h3 class="fn" id="listNotebookInstances"><a name="listNotebookInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listnotebookinstancesresponse.html">ListNotebookInstancesResponse</a></span> *SageMakerClient::<span class="name">listNotebookInstances</span>(const <span class="type"><a href="qtaws-sagemaker-listnotebookinstancesrequest.html">ListNotebookInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listnotebookinstancesresponse.html">ListNotebookInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of the Amazon <a href="qtaws-sagemaker.html">SageMaker</a> notebook instances in the requester's account in an AWS Region.</p>
+<!-- @@@listNotebookInstances -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listtagsresponse.html">ListTagsResponse</a></span> *SageMakerClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-sagemaker-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the tags for the specified Amazon <a href="qtaws-sagemaker.html">SageMaker</a></p>
+<!-- @@@listTags -->
+<!-- $$$listTrainingJobs[overload1]$$$listTrainingJobsconstListTrainingJobsRequest& -->
+<h3 class="fn" id="listTrainingJobs"><a name="listTrainingJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-listtrainingjobsresponse.html">ListTrainingJobsResponse</a></span> *SageMakerClient::<span class="name">listTrainingJobs</span>(const <span class="type"><a href="qtaws-sagemaker-listtrainingjobsrequest.html">ListTrainingJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-listtrainingjobsresponse.html">ListTrainingJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists training</p>
+<!-- @@@listTrainingJobs -->
+<!-- $$$startNotebookInstance[overload1]$$$startNotebookInstanceconstStartNotebookInstanceRequest& -->
+<h3 class="fn" id="startNotebookInstance"><a name="startNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-startnotebookinstanceresponse.html">StartNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">startNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-startnotebookinstancerequest.html">StartNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-startnotebookinstanceresponse.html">StartNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Launches an ML compute instance with the latest version of the libraries and attaches your ML storage volume. After configuring the notebook instance, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> sets the notebook instance status to &lt;code&gt;InService&lt;/code&gt;. A notebook instance's status must be &lt;code&gt;InService&lt;/code&gt; before you can connect to your Jupyter notebook.</p>
+<!-- @@@startNotebookInstance -->
+<!-- $$$stopNotebookInstance[overload1]$$$stopNotebookInstanceconstStopNotebookInstanceRequest& -->
+<h3 class="fn" id="stopNotebookInstance"><a name="stopNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-stopnotebookinstanceresponse.html">StopNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">stopNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-stopnotebookinstancerequest.html">StopNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-stopnotebookinstanceresponse.html">StopNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Terminates the ML compute instance. Before terminating the instance, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> disconnects the ML storage volume from it. Amazon <a href="qtaws-sagemaker.html">SageMaker</a> preserves the ML storage volume.</p>
+<p>&lt;/p</p>
+<p>To access data on the ML storage volume for a notebook instance that has been terminated, call the &lt;code&gt;StartNotebookInstance&lt;/code&gt; API. &lt;code&gt;StartNotebookInstance&lt;/code&gt; launches another ML compute instance, configures it, and attaches the preserved ML storage volume so you can continue your work.</p>
+<!-- @@@stopNotebookInstance -->
+<!-- $$$stopTrainingJob[overload1]$$$stopTrainingJobconstStopTrainingJobRequest& -->
+<h3 class="fn" id="stopTrainingJob"><a name="stopTrainingJob"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-stoptrainingjobresponse.html">StopTrainingJobResponse</a></span> *SageMakerClient::<span class="name">stopTrainingJob</span>(const <span class="type"><a href="qtaws-sagemaker-stoptrainingjobrequest.html">StopTrainingJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-stoptrainingjobresponse.html">StopTrainingJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a training job. To stop a job, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> sends the algorithm the &lt;code&gt;SIGTERM&lt;/code&gt; signal, which delays job termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results of the training is not lost.</p>
+<p>&lt;/p</p>
+<p>Training algorithms provided by Amazon <a href="qtaws-sagemaker.html">SageMaker</a> save the intermediate results of a model training job. This intermediate data is a valid model artifact. You can use the model artifacts that are saved when Amazon <a href="qtaws-sagemaker.html">SageMaker</a> stops a training job to create a model.</p>
+<p>&lt;/p</p>
+<p>When it receives a &lt;code&gt;StopTrainingJob&lt;/code&gt; request, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> changes the status of the job to &lt;code&gt;Stopping&lt;/code&gt;. After Amazon <a href="qtaws-sagemaker.html">SageMaker</a> stops the job, it sets the status to</p>
+<!-- @@@stopTrainingJob -->
+<!-- $$$updateEndpoint[overload1]$$$updateEndpointconstUpdateEndpointRequest& -->
+<h3 class="fn" id="updateEndpoint"><a name="updateEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-updateendpointresponse.html">UpdateEndpointResponse</a></span> *SageMakerClient::<span class="name">updateEndpoint</span>(const <span class="type"><a href="qtaws-sagemaker-updateendpointrequest.html">UpdateEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-updateendpointresponse.html">UpdateEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deploys the new &lt;code&gt;EndpointConfig&lt;/code&gt; specified in the request, switches to using newly created endpoint, and then deletes resources provisioned for the endpoint using the previous &lt;code&gt;EndpointConfig&lt;/code&gt; (there is no availability loss).</p>
+<p>&lt;/p</p>
+<p>When Amazon <a href="qtaws-sagemaker.html">SageMaker</a> receives the request, it sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html&quot;&gt;DescribeEndpoint&lt;/a&gt; API.</p>
+<!-- @@@updateEndpoint -->
+<!-- $$$updateEndpointWeightsAndCapacities[overload1]$$$updateEndpointWeightsAndCapacitiesconstUpdateEndpointWeightsAndCapacitiesRequest& -->
+<h3 class="fn" id="updateEndpointWeightsAndCapacities"><a name="updateEndpointWeightsAndCapacities"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-updateendpointweightsandcapacitiesresponse.html">UpdateEndpointWeightsAndCapacitiesResponse</a></span> *SageMakerClient::<span class="name">updateEndpointWeightsAndCapacities</span>(const <span class="type"><a href="qtaws-sagemaker-updateendpointweightsandcapacitiesrequest.html">UpdateEndpointWeightsAndCapacitiesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-updateendpointweightsandcapacitiesresponse.html">UpdateEndpointWeightsAndCapacitiesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates variant weight of one or more variants associated with an existing endpoint, or capacity of one variant associated with an existing endpoint. When it receives the request, Amazon <a href="qtaws-sagemaker.html">SageMaker</a> sets the endpoint status to &lt;code&gt;Updating&lt;/code&gt;. After updating the endpoint, it sets the status to &lt;code&gt;InService&lt;/code&gt;. To check the status of an endpoint, use the &lt;a href=&quot;http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html&quot;&gt;DescribeEndpoint&lt;/a&gt; API.</p>
+<!-- @@@updateEndpointWeightsAndCapacities -->
+<!-- $$$updateNotebookInstance[overload1]$$$updateNotebookInstanceconstUpdateNotebookInstanceRequest& -->
+<h3 class="fn" id="updateNotebookInstance"><a name="updateNotebookInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-updatenotebookinstanceresponse.html">UpdateNotebookInstanceResponse</a></span> *SageMakerClient::<span class="name">updateNotebookInstance</span>(const <span class="type"><a href="qtaws-sagemaker-updatenotebookinstancerequest.html">UpdateNotebookInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-updatenotebookinstanceresponse.html">UpdateNotebookInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for your notebook instance to accommodate changes in your workload requirements. You can also update the VPC security</p>
+<!-- @@@updateNotebookInstance -->
+<!-- $$$updateNotebookInstanceLifecycleConfig[overload1]$$$updateNotebookInstanceLifecycleConfigconstUpdateNotebookInstanceLifecycleConfigRequest& -->
+<h3 class="fn" id="updateNotebookInstanceLifecycleConfig"><a name="updateNotebookInstanceLifecycleConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-sagemaker-updatenotebookinstancelifecycleconfigresponse.html">UpdateNotebookInstanceLifecycleConfigResponse</a></span> *SageMakerClient::<span class="name">updateNotebookInstanceLifecycleConfig</span>(const <span class="type"><a href="qtaws-sagemaker-updatenotebookinstancelifecycleconfigrequest.html">UpdateNotebookInstanceLifecycleConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-sagemaker-sagemakerclient.html">SageMakerClient</a> service, and returns a pointer to an <a href="qtaws-sagemaker-updatenotebookinstancelifecycleconfigresponse.html">UpdateNotebookInstanceLifecycleConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a notebook instance lifecycle configuration created with the</p>
+<!-- @@@updateNotebookInstanceLifecycleConfig -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

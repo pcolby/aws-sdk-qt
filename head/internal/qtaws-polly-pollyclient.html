@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- pollyclient.cpp -->
+  <title>PollyClient Class | Polly</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawspolly-index.html">Polly</a></li>
+<li><a href="qtawspolly-module.html">C++ Classes</a></li>
+<li>PollyClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">PollyClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-polly-pollyclient.html">QtAws::Polly::PollyClient</a>)<br/></span>
+<!-- $$$PollyClient-brief -->
+<p>The <a href="qtaws-polly-pollyclient.html">PollyClient</a> class provides access to the Amazon Polly service. <a href="#details">More...</a></p>
+<!-- @@@PollyClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;PollyClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-polly-pollyclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#PollyClient">PollyClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#PollyClient-1">PollyClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLexiconResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#deleteLexicon">deleteLexicon</a></b>(const DeleteLexiconRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeVoicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#describeVoices">describeVoices</a></b>(const DescribeVoicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLexiconResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#getLexicon">getLexicon</a></b>(const GetLexiconRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListLexiconsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#listLexicons">listLexicons</a></b>(const ListLexiconsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutLexiconResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#putLexicon">putLexicon</a></b>(const PutLexiconRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SynthesizeSpeechResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-polly-pollyclient.html#synthesizeSpeech">synthesizeSpeech</a></b>(const SynthesizeSpeechRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$PollyClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-polly-pollyclient.html">PollyClient</a> class provides access to the Amazon Polly service.</p>
+<p>Amazon Polly is a web service that makes it easy to synthesize speech from</p>
+<p>text&gt;</p>
+<p>The Amazon Polly service provides API operations for synthesizing high-quality speech from plain text and Speech Synthesis Markup Language (SSML), along with managing pronunciations lexicons that enable you to get the best results for your application</p>
+</div>
+<!-- @@@PollyClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$PollyClient[overload1]$$$PollyClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="PollyClient"><a name="PollyClient"></a>PollyClient::<span class="name">PollyClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-polly-pollyclient.html">PollyClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@PollyClient -->
+<!-- $$$PollyClient$$$PollyClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="PollyClient-1"><a name="PollyClient-1"></a>PollyClient::<span class="name">PollyClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-polly-pollyclient.html#PollyClient">PollyClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@PollyClient -->
+<!-- $$$deleteLexicon[overload1]$$$deleteLexiconconstDeleteLexiconRequest& -->
+<h3 class="fn" id="deleteLexicon"><a name="deleteLexicon"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-deletelexiconresponse.html">DeleteLexiconResponse</a></span> *PollyClient::<span class="name">deleteLexicon</span>(const <span class="type"><a href="qtaws-polly-deletelexiconrequest.html">DeleteLexiconRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-deletelexiconresponse.html">DeleteLexiconResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified pronunciation lexicon stored in an AWS Region. A lexicon which has been deleted is not available for speech synthesis, nor is it possible to retrieve it using either the &lt;code&gt;GetLexicon&lt;/code&gt; or &lt;code&gt;ListLexicon&lt;/code&gt;</p>
+<p>APIs&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html&quot;&gt;Managing</p>
+<!-- @@@deleteLexicon -->
+<!-- $$$describeVoices[overload1]$$$describeVoicesconstDescribeVoicesRequest& -->
+<h3 class="fn" id="describeVoices"><a name="describeVoices"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-describevoicesresponse.html">DescribeVoicesResponse</a></span> *PollyClient::<span class="name">describeVoices</span>(const <span class="type"><a href="qtaws-polly-describevoicesrequest.html">DescribeVoicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-describevoicesresponse.html">DescribeVoicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of voices that are available for use when requesting speech synthesis. Each voice speaks a specified language, is either male or female, and is identified by an ID, which is the ASCII version of the voice name.</p>
+<p>&lt;/p</p>
+<p>When synthesizing speech ( &lt;code&gt;SynthesizeSpeech&lt;/code&gt; ), you provide the voice ID for the voice you want from the list of voices returned by</p>
+<p>&lt;code&gt;DescribeVoices&lt;/code&gt;&gt;</p>
+<p>For example, you want your news reader application to read news in a specific language, but giving a user the option to choose the voice. Using the &lt;code&gt;DescribeVoices&lt;/code&gt; operation you can provide the user with a list of available voices to select</p>
+<p>from&gt;</p>
+<p>You can optionally specify a language code to filter the available voices. For example, if you specify &lt;code&gt;en-US&lt;/code&gt;, the operation returns a list of all available US English voices.</p>
+<p>&lt;/p</p>
+<p>This operation requires permissions to perform the &lt;code&gt;polly:DescribeVoices&lt;/code&gt;</p>
+<!-- @@@describeVoices -->
+<!-- $$$getLexicon[overload1]$$$getLexiconconstGetLexiconRequest& -->
+<h3 class="fn" id="getLexicon"><a name="getLexicon"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-getlexiconresponse.html">GetLexiconResponse</a></span> *PollyClient::<span class="name">getLexicon</span>(const <span class="type"><a href="qtaws-polly-getlexiconrequest.html">GetLexiconRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-getlexiconresponse.html">GetLexiconResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html&quot;&gt;Managing</p>
+<!-- @@@getLexicon -->
+<!-- $$$listLexicons[overload1]$$$listLexiconsconstListLexiconsRequest& -->
+<h3 class="fn" id="listLexicons"><a name="listLexicons"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-listlexiconsresponse.html">ListLexiconsResponse</a></span> *PollyClient::<span class="name">listLexicons</span>(const <span class="type"><a href="qtaws-polly-listlexiconsrequest.html">ListLexiconsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-listlexiconsresponse.html">ListLexiconsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html&quot;&gt;Managing</p>
+<!-- @@@listLexicons -->
+<!-- $$$putLexicon[overload1]$$$putLexiconconstPutLexiconRequest& -->
+<h3 class="fn" id="putLexicon"><a name="putLexicon"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-putlexiconresponse.html">PutLexiconResponse</a></span> *PollyClient::<span class="name">putLexicon</span>(const <span class="type"><a href="qtaws-polly-putlexiconrequest.html">PutLexiconRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-putlexiconresponse.html">PutLexiconResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stores a pronunciation lexicon in an AWS Region. If a lexicon with the same name already exists in the region, it is overwritten by the new lexicon. Lexicon operations have eventual consistency, therefore, it might take some time before the lexicon is available to the SynthesizeSpeech</p>
+<p>operation&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html&quot;&gt;Managing</p>
+<!-- @@@putLexicon -->
+<!-- $$$synthesizeSpeech[overload1]$$$synthesizeSpeechconstSynthesizeSpeechRequest& -->
+<h3 class="fn" id="synthesizeSpeech"><a name="synthesizeSpeech"></a><code>[slot] </code><span class="type"><a href="qtaws-polly-synthesizespeechresponse.html">SynthesizeSpeechResponse</a></span> *PollyClient::<span class="name">synthesizeSpeech</span>(const <span class="type"><a href="qtaws-polly-synthesizespeechrequest.html">SynthesizeSpeechRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-polly-pollyclient.html">PollyClient</a> service, and returns a pointer to an <a href="qtaws-polly-synthesizespeechresponse.html">SynthesizeSpeechResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices) unless phoneme mapping is used. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html&quot;&gt;How it</p>
+<!-- @@@synthesizeSpeech -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

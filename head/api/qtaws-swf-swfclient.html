@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- swfclient.cpp -->
+  <title>SwfClient Class | SWF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsswf-index.html">SWF</a></li>
+<li><a href="qtawsswf-module.html">C++ Classes</a></li>
+<li>SwfClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SwfClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-swf-swfclient.html">QtAws::SWF::SwfClient</a>)<br/></span>
+<!-- $$$SwfClient-brief -->
+<p>The <a href="qtaws-swf-swfclient.html">SwfClient</a> class provides access to the Amazon Simple Workflow Service ( SWF) service. <a href="#details">More...</a></p>
+<!-- @@@SwfClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SwfClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-swf-swfclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#SwfClient">SwfClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#SwfClient-1">SwfClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CountClosedWorkflowExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#countClosedWorkflowExecutions">countClosedWorkflowExecutions</a></b>(const CountClosedWorkflowExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CountOpenWorkflowExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#countOpenWorkflowExecutions">countOpenWorkflowExecutions</a></b>(const CountOpenWorkflowExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CountPendingActivityTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#countPendingActivityTasks">countPendingActivityTasks</a></b>(const CountPendingActivityTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CountPendingDecisionTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#countPendingDecisionTasks">countPendingDecisionTasks</a></b>(const CountPendingDecisionTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeprecateActivityTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#deprecateActivityType">deprecateActivityType</a></b>(const DeprecateActivityTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeprecateDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#deprecateDomain">deprecateDomain</a></b>(const DeprecateDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeprecateWorkflowTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#deprecateWorkflowType">deprecateWorkflowType</a></b>(const DeprecateWorkflowTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeActivityTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#describeActivityType">describeActivityType</a></b>(const DescribeActivityTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#describeDomain">describeDomain</a></b>(const DescribeDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkflowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#describeWorkflowExecution">describeWorkflowExecution</a></b>(const DescribeWorkflowExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeWorkflowTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#describeWorkflowType">describeWorkflowType</a></b>(const DescribeWorkflowTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetWorkflowExecutionHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#getWorkflowExecutionHistory">getWorkflowExecutionHistory</a></b>(const GetWorkflowExecutionHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListActivityTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#listActivityTypes">listActivityTypes</a></b>(const ListActivityTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListClosedWorkflowExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#listClosedWorkflowExecutions">listClosedWorkflowExecutions</a></b>(const ListClosedWorkflowExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDomainsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#listDomains">listDomains</a></b>(const ListDomainsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListOpenWorkflowExecutionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#listOpenWorkflowExecutions">listOpenWorkflowExecutions</a></b>(const ListOpenWorkflowExecutionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListWorkflowTypesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#listWorkflowTypes">listWorkflowTypes</a></b>(const ListWorkflowTypesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PollForActivityTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#pollForActivityTask">pollForActivityTask</a></b>(const PollForActivityTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PollForDecisionTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#pollForDecisionTask">pollForDecisionTask</a></b>(const PollForDecisionTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RecordActivityTaskHeartbeatResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#recordActivityTaskHeartbeat">recordActivityTaskHeartbeat</a></b>(const RecordActivityTaskHeartbeatRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterActivityTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#registerActivityType">registerActivityType</a></b>(const RegisterActivityTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#registerDomain">registerDomain</a></b>(const RegisterDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterWorkflowTypeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#registerWorkflowType">registerWorkflowType</a></b>(const RegisterWorkflowTypeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RequestCancelWorkflowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#requestCancelWorkflowExecution">requestCancelWorkflowExecution</a></b>(const RequestCancelWorkflowExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RespondActivityTaskCanceledResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#respondActivityTaskCanceled">respondActivityTaskCanceled</a></b>(const RespondActivityTaskCanceledRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RespondActivityTaskCompletedResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#respondActivityTaskCompleted">respondActivityTaskCompleted</a></b>(const RespondActivityTaskCompletedRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RespondActivityTaskFailedResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#respondActivityTaskFailed">respondActivityTaskFailed</a></b>(const RespondActivityTaskFailedRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RespondDecisionTaskCompletedResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#respondDecisionTaskCompleted">respondDecisionTaskCompleted</a></b>(const RespondDecisionTaskCompletedRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SignalWorkflowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#signalWorkflowExecution">signalWorkflowExecution</a></b>(const SignalWorkflowExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartWorkflowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#startWorkflowExecution">startWorkflowExecution</a></b>(const StartWorkflowExecutionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateWorkflowExecutionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-swf-swfclient.html#terminateWorkflowExecution">terminateWorkflowExecution</a></b>(const TerminateWorkflowExecutionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SwfClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-swf-swfclient.html">SwfClient</a> class provides access to the Amazon Simple Workflow Service ( SWF) service.</p>
+<p>&lt;fullname&gt;Amazon Simple Workflow Service&lt;/fullname&gt;</p>
+<p>The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that use Amazon's cloud to coordinate work across distributed components. In Amazon SWF, a &lt;i&gt;task&lt;/i&gt; represents a logical unit of work that is performed by a component of your workflow. Coordinating tasks in a workflow involves managing intertask dependencies, scheduling, and concurrency in accordance with the logical flow of the</p>
+<p>application&gt;</p>
+<p>Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying complexities such as tracking their progress and maintaining their</p>
+<p>state&gt;</p>
+<p>This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the &lt;i&gt; &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/&quot;&gt;Amazon SWF Developer Guide&lt;/a&gt;</p>
+</div>
+<!-- @@@SwfClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SwfClient[overload1]$$$SwfClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SwfClient"><a name="SwfClient"></a>SwfClient::<span class="name">SwfClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-swf-swfclient.html">SwfClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SwfClient -->
+<!-- $$$SwfClient$$$SwfClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SwfClient-1"><a name="SwfClient-1"></a>SwfClient::<span class="name">SwfClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-swf-swfclient.html#SwfClient">SwfClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SwfClient -->
+<!-- $$$countClosedWorkflowExecutions[overload1]$$$countClosedWorkflowExecutionsconstCountClosedWorkflowExecutionsRequest& -->
+<h3 class="fn" id="countClosedWorkflowExecutions"><a name="countClosedWorkflowExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-countclosedworkflowexecutionsresponse.html">CountClosedWorkflowExecutionsResponse</a></span> *SwfClient::<span class="name">countClosedWorkflowExecutions</span>(const <span class="type"><a href="qtaws-swf-countclosedworkflowexecutionsrequest.html">CountClosedWorkflowExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-countclosedworkflowexecutionsresponse.html">CountClosedWorkflowExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of closed workflow executions within the given domain that meet the specified filtering</p>
+<p>criteria&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagFilter.tag&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:tagFilter.tag&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@countClosedWorkflowExecutions -->
+<!-- $$$countOpenWorkflowExecutions[overload1]$$$countOpenWorkflowExecutionsconstCountOpenWorkflowExecutionsRequest& -->
+<h3 class="fn" id="countOpenWorkflowExecutions"><a name="countOpenWorkflowExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-countopenworkflowexecutionsresponse.html">CountOpenWorkflowExecutionsResponse</a></span> *SwfClient::<span class="name">countOpenWorkflowExecutions</span>(const <span class="type"><a href="qtaws-swf-countopenworkflowexecutionsrequest.html">CountOpenWorkflowExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-countopenworkflowexecutionsresponse.html">CountOpenWorkflowExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the number of open workflow executions within the given domain that meet the specified filtering</p>
+<p>criteria&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagFilter.tag&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:tagFilter.tag&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@countOpenWorkflowExecutions -->
+<!-- $$$countPendingActivityTasks[overload1]$$$countPendingActivityTasksconstCountPendingActivityTasksRequest& -->
+<h3 class="fn" id="countPendingActivityTasks"><a name="countPendingActivityTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-countpendingactivitytasksresponse.html">CountPendingActivityTasksResponse</a></span> *SwfClient::<span class="name">countPendingActivityTasks</span>(const <span class="type"><a href="qtaws-swf-countpendingactivitytasksrequest.html">CountPendingActivityTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-countpendingactivitytasksresponse.html">CountPendingActivityTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the estimated number of activity tasks in the specified task list. The count returned is an approximation and isn't guaranteed to be exact. If you specify a task list that no activity task was ever scheduled in then &lt;code&gt;0&lt;/code&gt; is</p>
+<p>returned&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the &lt;code&gt;taskList.name&lt;/code&gt; parameter by using a &lt;code&gt;Condition&lt;/code&gt; element with the &lt;code&gt;swf:taskList.name&lt;/code&gt; key to allow the action to access only certain task</p>
+<p>lists&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@countPendingActivityTasks -->
+<!-- $$$countPendingDecisionTasks[overload1]$$$countPendingDecisionTasksconstCountPendingDecisionTasksRequest& -->
+<h3 class="fn" id="countPendingDecisionTasks"><a name="countPendingDecisionTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-countpendingdecisiontasksresponse.html">CountPendingDecisionTasksResponse</a></span> *SwfClient::<span class="name">countPendingDecisionTasks</span>(const <span class="type"><a href="qtaws-swf-countpendingdecisiontasksrequest.html">CountPendingDecisionTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-countpendingdecisiontasksresponse.html">CountPendingDecisionTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the estimated number of decision tasks in the specified task list. The count returned is an approximation and isn't guaranteed to be exact. If you specify a task list that no decision task was ever scheduled in then &lt;code&gt;0&lt;/code&gt; is</p>
+<p>returned&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the &lt;code&gt;taskList.name&lt;/code&gt; parameter by using a &lt;code&gt;Condition&lt;/code&gt; element with the &lt;code&gt;swf:taskList.name&lt;/code&gt; key to allow the action to access only certain task</p>
+<p>lists&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@countPendingDecisionTasks -->
+<!-- $$$deprecateActivityType[overload1]$$$deprecateActivityTypeconstDeprecateActivityTypeRequest& -->
+<h3 class="fn" id="deprecateActivityType"><a name="deprecateActivityType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-deprecateactivitytyperesponse.html">DeprecateActivityTypeResponse</a></span> *SwfClient::<span class="name">deprecateActivityType</span>(const <span class="type"><a href="qtaws-swf-deprecateactivitytyperequest.html">DeprecateActivityTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-deprecateactivitytyperesponse.html">DeprecateActivityTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecates the specified &lt;i&gt;activity type&lt;/i&gt;. After an activity type has been deprecated, you cannot create new tasks of that activity type. Tasks of this type that were scheduled before the type was deprecated continue to</p>
+<p>run&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;activityType.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:activityType.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;activityType.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:activityType.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@deprecateActivityType -->
+<!-- $$$deprecateDomain[overload1]$$$deprecateDomainconstDeprecateDomainRequest& -->
+<h3 class="fn" id="deprecateDomain"><a name="deprecateDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-deprecatedomainresponse.html">DeprecateDomainResponse</a></span> *SwfClient::<span class="name">deprecateDomain</span>(const <span class="type"><a href="qtaws-swf-deprecatedomainrequest.html">DeprecateDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-deprecatedomainresponse.html">DeprecateDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecates the specified domain. After a domain has been deprecated it cannot be used to create new workflow executions or register new types. However, you can still use visibility actions on this domain. Deprecating a domain also deprecates all activity and workflow types registered in the domain. Executions that were started before the domain was deprecated continues to</p>
+<p>run&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@deprecateDomain -->
+<!-- $$$deprecateWorkflowType[overload1]$$$deprecateWorkflowTypeconstDeprecateWorkflowTypeRequest& -->
+<h3 class="fn" id="deprecateWorkflowType"><a name="deprecateWorkflowType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-deprecateworkflowtyperesponse.html">DeprecateWorkflowTypeResponse</a></span> *SwfClient::<span class="name">deprecateWorkflowType</span>(const <span class="type"><a href="qtaws-swf-deprecateworkflowtyperequest.html">DeprecateWorkflowTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-deprecateworkflowtyperesponse.html">DeprecateWorkflowTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deprecates the specified &lt;i&gt;workflow type&lt;/i&gt;. After a workflow type has been deprecated, you cannot create new executions of that type. Executions that were started before the type was deprecated continues to run. A deprecated workflow type may still be used when calling visibility</p>
+<p>actions&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@deprecateWorkflowType -->
+<!-- $$$describeActivityType[overload1]$$$describeActivityTypeconstDescribeActivityTypeRequest& -->
+<h3 class="fn" id="describeActivityType"><a name="describeActivityType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-describeactivitytyperesponse.html">DescribeActivityTypeResponse</a></span> *SwfClient::<span class="name">describeActivityType</span>(const <span class="type"><a href="qtaws-swf-describeactivitytyperequest.html">DescribeActivityTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-describeactivitytyperesponse.html">DescribeActivityTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified activity type. This includes configuration settings provided when the type was registered and other general information about the</p>
+<p>type&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;activityType.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:activityType.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;activityType.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:activityType.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@describeActivityType -->
+<!-- $$$describeDomain[overload1]$$$describeDomainconstDescribeDomainRequest& -->
+<h3 class="fn" id="describeDomain"><a name="describeDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-describedomainresponse.html">DescribeDomainResponse</a></span> *SwfClient::<span class="name">describeDomain</span>(const <span class="type"><a href="qtaws-swf-describedomainrequest.html">DescribeDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-describedomainresponse.html">DescribeDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified domain, including description and</p>
+<p>status&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@describeDomain -->
+<!-- $$$describeWorkflowExecution[overload1]$$$describeWorkflowExecutionconstDescribeWorkflowExecutionRequest& -->
+<h3 class="fn" id="describeWorkflowExecution"><a name="describeWorkflowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-describeworkflowexecutionresponse.html">DescribeWorkflowExecutionResponse</a></span> *SwfClient::<span class="name">describeWorkflowExecution</span>(const <span class="type"><a href="qtaws-swf-describeworkflowexecutionrequest.html">DescribeWorkflowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-describeworkflowexecutionresponse.html">DescribeWorkflowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified workflow execution including its type and some</p>
+<p>statistics&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@describeWorkflowExecution -->
+<!-- $$$describeWorkflowType[overload1]$$$describeWorkflowTypeconstDescribeWorkflowTypeRequest& -->
+<h3 class="fn" id="describeWorkflowType"><a name="describeWorkflowType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-describeworkflowtyperesponse.html">DescribeWorkflowTypeResponse</a></span> *SwfClient::<span class="name">describeWorkflowType</span>(const <span class="type"><a href="qtaws-swf-describeworkflowtyperequest.html">DescribeWorkflowTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-describeworkflowtyperesponse.html">DescribeWorkflowTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified &lt;i&gt;workflow type&lt;/i&gt;. This includes configuration settings specified when the type was registered and other information such as creation date, current status,</p>
+<p>etc&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@describeWorkflowType -->
+<!-- $$$getWorkflowExecutionHistory[overload1]$$$getWorkflowExecutionHistoryconstGetWorkflowExecutionHistoryRequest& -->
+<h3 class="fn" id="getWorkflowExecutionHistory"><a name="getWorkflowExecutionHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-getworkflowexecutionhistoryresponse.html">GetWorkflowExecutionHistoryResponse</a></span> *SwfClient::<span class="name">getWorkflowExecutionHistory</span>(const <span class="type"><a href="qtaws-swf-getworkflowexecutionhistoryrequest.html">GetWorkflowExecutionHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-getworkflowexecutionhistoryresponse.html">GetWorkflowExecutionHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the history of the specified workflow execution. The results may be split into multiple pages. To retrieve subsequent pages, make the call again using the &lt;code&gt;nextPageToken&lt;/code&gt; returned by the initial</p>
+<p>call&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@getWorkflowExecutionHistory -->
+<!-- $$$listActivityTypes[overload1]$$$listActivityTypesconstListActivityTypesRequest& -->
+<h3 class="fn" id="listActivityTypes"><a name="listActivityTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-listactivitytypesresponse.html">ListActivityTypesResponse</a></span> *SwfClient::<span class="name">listActivityTypes</span>(const <span class="type"><a href="qtaws-swf-listactivitytypesrequest.html">ListActivityTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-listactivitytypesresponse.html">ListActivityTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all activities registered in the specified domain that match the specified name and registration status. The result includes information like creation date, current status of the activity, etc. The results may be split into multiple pages. To retrieve subsequent pages, make the call again using the &lt;code&gt;nextPageToken&lt;/code&gt; returned by the initial</p>
+<p>call&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@listActivityTypes -->
+<!-- $$$listClosedWorkflowExecutions[overload1]$$$listClosedWorkflowExecutionsconstListClosedWorkflowExecutionsRequest& -->
+<h3 class="fn" id="listClosedWorkflowExecutions"><a name="listClosedWorkflowExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-listclosedworkflowexecutionsresponse.html">ListClosedWorkflowExecutionsResponse</a></span> *SwfClient::<span class="name">listClosedWorkflowExecutions</span>(const <span class="type"><a href="qtaws-swf-listclosedworkflowexecutionsrequest.html">ListClosedWorkflowExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-listclosedworkflowexecutionsresponse.html">ListClosedWorkflowExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of closed workflow executions in the specified domain that meet the filtering criteria. The results may be split into multiple pages. To retrieve subsequent pages, make the call again using the nextPageToken returned by the initial</p>
+<p>call&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagFilter.tag&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:tagFilter.tag&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@listClosedWorkflowExecutions -->
+<!-- $$$listDomains[overload1]$$$listDomainsconstListDomainsRequest& -->
+<h3 class="fn" id="listDomains"><a name="listDomains"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-listdomainsresponse.html">ListDomainsResponse</a></span> *SwfClient::<span class="name">listDomains</span>(const <span class="type"><a href="qtaws-swf-listdomainsrequest.html">ListDomainsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-listdomainsresponse.html">ListDomainsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of domains registered in the account. The results may be split into multiple pages. To retrieve subsequent pages, make the call again using the nextPageToken returned by the initial</p>
+<p>call&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified domains. The element must be set to &lt;code&gt;arn:aws:swf::AccountID:domain/*&lt;/code&gt;, where &lt;i&gt;AccountID&lt;/i&gt; is the account ID, with no</p>
+<p>dashes&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@listDomains -->
+<!-- $$$listOpenWorkflowExecutions[overload1]$$$listOpenWorkflowExecutionsconstListOpenWorkflowExecutionsRequest& -->
+<h3 class="fn" id="listOpenWorkflowExecutions"><a name="listOpenWorkflowExecutions"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-listopenworkflowexecutionsresponse.html">ListOpenWorkflowExecutionsResponse</a></span> *SwfClient::<span class="name">listOpenWorkflowExecutions</span>(const <span class="type"><a href="qtaws-swf-listopenworkflowexecutionsrequest.html">ListOpenWorkflowExecutionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-listopenworkflowexecutionsresponse.html">ListOpenWorkflowExecutionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of open workflow executions in the specified domain that meet the filtering criteria. The results may be split into multiple pages. To retrieve subsequent pages, make the call again using the nextPageToken returned by the initial</p>
+<p>call&gt; &lt;note&gt;</p>
+<p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and</p>
+<p>changes&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagFilter.tag&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:tagFilter.tag&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;typeFilter.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:typeFilter.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@listOpenWorkflowExecutions -->
+<!-- $$$listWorkflowTypes[overload1]$$$listWorkflowTypesconstListWorkflowTypesRequest& -->
+<h3 class="fn" id="listWorkflowTypes"><a name="listWorkflowTypes"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-listworkflowtypesresponse.html">ListWorkflowTypesResponse</a></span> *SwfClient::<span class="name">listWorkflowTypes</span>(const <span class="type"><a href="qtaws-swf-listworkflowtypesrequest.html">ListWorkflowTypesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-listworkflowtypesresponse.html">ListWorkflowTypesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about workflow types in the specified domain. The results may be split into multiple pages that can be retrieved by making the call</p>
+<p>repeatedly&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@listWorkflowTypes -->
+<!-- $$$pollForActivityTask[overload1]$$$pollForActivityTaskconstPollForActivityTaskRequest& -->
+<h3 class="fn" id="pollForActivityTask"><a name="pollForActivityTask"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-pollforactivitytaskresponse.html">PollForActivityTaskResponse</a></span> *SwfClient::<span class="name">pollForActivityTask</span>(const <span class="type"><a href="qtaws-swf-pollforactivitytaskrequest.html">PollForActivityTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-pollforactivitytaskresponse.html">PollForActivityTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to get an &lt;a&gt;ActivityTask&lt;/a&gt; from the specified activity &lt;code&gt;taskList&lt;/code&gt;. This initiates a long poll, where the service holds the HTTP connection open and responds as soon as a task becomes available. The maximum time the service holds on to the request before responding is 60 seconds. If no task is available within 60 seconds, the poll returns an empty result. An empty result, in this context, means that an ActivityTask is returned, but that the value of taskToken is an empty string. If a task is returned, the worker should use its type to identify and process it</p>
+<p>correctly&gt; &lt;b&gt;</p>
+<p>Workers should set their client side socket timeout to at least 70 seconds (10 seconds higher than the maximum time service may hold the poll</p>
+<p>request)&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the &lt;code&gt;taskList.name&lt;/code&gt; parameter by using a &lt;code&gt;Condition&lt;/code&gt; element with the &lt;code&gt;swf:taskList.name&lt;/code&gt; key to allow the action to access only certain task</p>
+<p>lists&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@pollForActivityTask -->
+<!-- $$$pollForDecisionTask[overload1]$$$pollForDecisionTaskconstPollForDecisionTaskRequest& -->
+<h3 class="fn" id="pollForDecisionTask"><a name="pollForDecisionTask"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-pollfordecisiontaskresponse.html">PollForDecisionTaskResponse</a></span> *SwfClient::<span class="name">pollForDecisionTask</span>(const <span class="type"><a href="qtaws-swf-pollfordecisiontaskrequest.html">PollForDecisionTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-pollfordecisiontaskresponse.html">PollForDecisionTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by deciders to get a &lt;a&gt;DecisionTask&lt;/a&gt; from the specified decision &lt;code&gt;taskList&lt;/code&gt;. A decision task may be returned for any open workflow execution that is using the specified task list. The task includes a paginated view of the history of the workflow execution. The decider should use the workflow type and the history to determine how to properly handle the</p>
+<p>task&gt;</p>
+<p>This action initiates a long poll, where the service holds the HTTP connection open and responds as soon a task becomes available. If no decision task is available in the specified task list before the timeout of 60 seconds expires, an empty result is returned. An empty result, in this context, means that a DecisionTask is returned, but that the value of taskToken is an empty</p>
+<p>string&gt; &lt;b&gt;</p>
+<p>Deciders should set their client side socket timeout to at least 70 seconds (10 seconds higher than the</p>
+<p>timeout)&gt; &lt;/b&gt; &lt;b&gt;</p>
+<p>Because the number of workflow history events for a single workflow execution might be very large, the result returned might be split up across a number of pages. To retrieve subsequent pages, make additional calls to &lt;code&gt;PollForDecisionTask&lt;/code&gt; using the &lt;code&gt;nextPageToken&lt;/code&gt; returned by the initial call. Note that you do &lt;i&gt;not&lt;/i&gt; call &lt;code&gt;GetWorkflowExecutionHistory&lt;/code&gt; with this &lt;code&gt;nextPageToken&lt;/code&gt;. Instead, call &lt;code&gt;PollForDecisionTask&lt;/code&gt;</p>
+<p>again&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the &lt;code&gt;taskList.name&lt;/code&gt; parameter by using a &lt;code&gt;Condition&lt;/code&gt; element with the &lt;code&gt;swf:taskList.name&lt;/code&gt; key to allow the action to access only certain task</p>
+<p>lists&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@pollForDecisionTask -->
+<!-- $$$recordActivityTaskHeartbeat[overload1]$$$recordActivityTaskHeartbeatconstRecordActivityTaskHeartbeatRequest& -->
+<h3 class="fn" id="recordActivityTaskHeartbeat"><a name="recordActivityTaskHeartbeat"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-recordactivitytaskheartbeatresponse.html">RecordActivityTaskHeartbeatResponse</a></span> *SwfClient::<span class="name">recordActivityTaskHeartbeat</span>(const <span class="type"><a href="qtaws-swf-recordactivitytaskheartbeatrequest.html">RecordActivityTaskHeartbeatRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-recordactivitytaskheartbeatresponse.html">RecordActivityTaskHeartbeatResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by activity workers to report to the service that the &lt;a&gt;ActivityTask&lt;/a&gt; represented by the specified &lt;code&gt;taskToken&lt;/code&gt; is still making progress. The worker can also specify details of the progress, for example percent complete, using the &lt;code&gt;details&lt;/code&gt; parameter. This action can also be used by the worker as a mechanism to check if cancellation is being requested for the activity task. If a cancellation is being attempted for the specified task, then the boolean &lt;code&gt;cancelRequested&lt;/code&gt; flag returned by the service is set to</p>
+<p>&lt;code&gt;true&lt;/code&gt;&gt;</p>
+<p>This action resets the &lt;code&gt;taskHeartbeatTimeout&lt;/code&gt; clock. The &lt;code&gt;taskHeartbeatTimeout&lt;/code&gt; is specified in</p>
+<p>&lt;a&gt;RegisterActivityType&lt;/a&gt;&gt;</p>
+<p>This action doesn't in itself create an event in the workflow execution history. However, if the task times out, the workflow execution history contains a &lt;code&gt;ActivityTaskTimedOut&lt;/code&gt; event that contains the information from the last heartbeat generated by the activity</p>
+<p>worker&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;taskStartToCloseTimeout&lt;/code&gt; of an activity type is the maximum duration of an activity task, regardless of the number of &lt;a&gt;RecordActivityTaskHeartbeat&lt;/a&gt; requests received. The &lt;code&gt;taskStartToCloseTimeout&lt;/code&gt; is also specified in</p>
+<p>&lt;a&gt;RegisterActivityType&lt;/a&gt;&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>This operation is only useful for long-lived activities to report liveliness of the task and to determine if a cancellation is being</p>
+<p>attempted&gt; &lt;/note&gt; &lt;b&gt;</p>
+<p>If the &lt;code&gt;cancelRequested&lt;/code&gt; flag returns &lt;code&gt;true&lt;/code&gt;, a cancellation is being attempted. If the worker can cancel the activity, it should respond with &lt;a&gt;RespondActivityTaskCanceled&lt;/a&gt;. Otherwise, it should ignore the cancellation</p>
+<p>request&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@recordActivityTaskHeartbeat -->
+<!-- $$$registerActivityType[overload1]$$$registerActivityTypeconstRegisterActivityTypeRequest& -->
+<h3 class="fn" id="registerActivityType"><a name="registerActivityType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-registeractivitytyperesponse.html">RegisterActivityTypeResponse</a></span> *SwfClient::<span class="name">registerActivityType</span>(const <span class="type"><a href="qtaws-swf-registeractivitytyperequest.html">RegisterActivityTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-registeractivitytyperesponse.html">RegisterActivityTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a new &lt;i&gt;activity type&lt;/i&gt; along with its configuration settings in the specified</p>
+<p>domain&gt; &lt;b&gt;</p>
+<p>A &lt;code&gt;TypeAlreadyExists&lt;/code&gt; fault is returned if the type already exists in the domain. You cannot change any configuration settings of the type after its registration, and it must be registered as a new</p>
+<p>version&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;defaultTaskList.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:defaultTaskList.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@registerActivityType -->
+<!-- $$$registerDomain[overload1]$$$registerDomainconstRegisterDomainRequest& -->
+<h3 class="fn" id="registerDomain"><a name="registerDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-registerdomainresponse.html">RegisterDomainResponse</a></span> *SwfClient::<span class="name">registerDomain</span>(const <span class="type"><a href="qtaws-swf-registerdomainrequest.html">RegisterDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-registerdomainresponse.html">RegisterDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a new</p>
+<p>domain&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to control domain access for this action. The name of the domain being registered is available as the resource of this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@registerDomain -->
+<!-- $$$registerWorkflowType[overload1]$$$registerWorkflowTypeconstRegisterWorkflowTypeRequest& -->
+<h3 class="fn" id="registerWorkflowType"><a name="registerWorkflowType"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-registerworkflowtyperesponse.html">RegisterWorkflowTypeResponse</a></span> *SwfClient::<span class="name">registerWorkflowType</span>(const <span class="type"><a href="qtaws-swf-registerworkflowtyperequest.html">RegisterWorkflowTypeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-registerworkflowtyperesponse.html">RegisterWorkflowTypeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a new &lt;i&gt;workflow type&lt;/i&gt; and its configuration settings in the specified</p>
+<p>domain&gt;</p>
+<p>The retention period for the workflow history is set by the &lt;a&gt;RegisterDomain&lt;/a&gt;</p>
+<p>action&gt; &lt;b&gt;</p>
+<p>If the type already exists, then a &lt;code&gt;TypeAlreadyExists&lt;/code&gt; fault is returned. You cannot change the configuration settings of a workflow type once it is registered and it must be registered as a new</p>
+<p>version&gt; &lt;/b&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;defaultTaskList.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:defaultTaskList.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@registerWorkflowType -->
+<!-- $$$requestCancelWorkflowExecution[overload1]$$$requestCancelWorkflowExecutionconstRequestCancelWorkflowExecutionRequest& -->
+<h3 class="fn" id="requestCancelWorkflowExecution"><a name="requestCancelWorkflowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-requestcancelworkflowexecutionresponse.html">RequestCancelWorkflowExecutionResponse</a></span> *SwfClient::<span class="name">requestCancelWorkflowExecution</span>(const <span class="type"><a href="qtaws-swf-requestcancelworkflowexecutionrequest.html">RequestCancelWorkflowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-requestcancelworkflowexecutionresponse.html">RequestCancelWorkflowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Records a &lt;code&gt;WorkflowExecutionCancelRequested&lt;/code&gt; event in the currently running workflow execution identified by the given domain, workflowId, and runId. This logically requests the cancellation of the workflow execution as a whole. It is up to the decider to take appropriate actions when it receives an execution history with this</p>
+<p>event&gt; &lt;note&gt;</p>
+<p>If the runId isn't specified, the &lt;code&gt;WorkflowExecutionCancelRequested&lt;/code&gt; event is recorded in the history of the current open workflow execution with the specified workflowId in the</p>
+<p>domain&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>Because this action allows the workflow to properly clean up and gracefully close, it should be used instead of &lt;a&gt;TerminateWorkflowExecution&lt;/a&gt; when</p>
+<p>possible&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@requestCancelWorkflowExecution -->
+<!-- $$$respondActivityTaskCanceled[overload1]$$$respondActivityTaskCanceledconstRespondActivityTaskCanceledRequest& -->
+<h3 class="fn" id="respondActivityTaskCanceled"><a name="respondActivityTaskCanceled"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-respondactivitytaskcanceledresponse.html">RespondActivityTaskCanceledResponse</a></span> *SwfClient::<span class="name">respondActivityTaskCanceled</span>(const <span class="type"><a href="qtaws-swf-respondactivitytaskcanceledrequest.html">RespondActivityTaskCanceledRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-respondactivitytaskcanceledresponse.html">RespondActivityTaskCanceledResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to tell the service that the &lt;a&gt;ActivityTask&lt;/a&gt; identified by the &lt;code&gt;taskToken&lt;/code&gt; was successfully canceled. Additional &lt;code&gt;details&lt;/code&gt; can be provided using the &lt;code&gt;details&lt;/code&gt;</p>
+<p>argument&gt;</p>
+<p>These &lt;code&gt;details&lt;/code&gt; (if provided) appear in the &lt;code&gt;ActivityTaskCanceled&lt;/code&gt; event added to the workflow</p>
+<p>history&gt; &lt;b&gt;</p>
+<p>Only use this operation if the &lt;code&gt;canceled&lt;/code&gt; flag of a &lt;a&gt;RecordActivityTaskHeartbeat&lt;/a&gt; request returns &lt;code&gt;true&lt;/code&gt; and if the activity can be safely undone or</p>
+<p>abandoned&gt; &lt;/b&gt;</p>
+<p>A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open while a worker is processing it. A task is closed after it has been specified in a call to &lt;a&gt;RespondActivityTaskCompleted&lt;/a&gt;, RespondActivityTaskCanceled, &lt;a&gt;RespondActivityTaskFailed&lt;/a&gt;, or the task has &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types&quot;&gt;timed</p>
+<p>out&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@respondActivityTaskCanceled -->
+<!-- $$$respondActivityTaskCompleted[overload1]$$$respondActivityTaskCompletedconstRespondActivityTaskCompletedRequest& -->
+<h3 class="fn" id="respondActivityTaskCompleted"><a name="respondActivityTaskCompleted"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-respondactivitytaskcompletedresponse.html">RespondActivityTaskCompletedResponse</a></span> *SwfClient::<span class="name">respondActivityTaskCompleted</span>(const <span class="type"><a href="qtaws-swf-respondactivitytaskcompletedrequest.html">RespondActivityTaskCompletedRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-respondactivitytaskcompletedresponse.html">RespondActivityTaskCompletedResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to tell the service that the &lt;a&gt;ActivityTask&lt;/a&gt; identified by the &lt;code&gt;taskToken&lt;/code&gt; completed successfully with a &lt;code&gt;result&lt;/code&gt; (if provided). The &lt;code&gt;result&lt;/code&gt; appears in the &lt;code&gt;ActivityTaskCompleted&lt;/code&gt; event in the workflow</p>
+<p>history&gt; &lt;b&gt;</p>
+<p>If the requested task doesn't complete successfully, use &lt;a&gt;RespondActivityTaskFailed&lt;/a&gt; instead. If the worker finds that the task is canceled through the &lt;code&gt;canceled&lt;/code&gt; flag returned by &lt;a&gt;RecordActivityTaskHeartbeat&lt;/a&gt;, it should cancel the task, clean up and then call</p>
+<p>&lt;a&gt;RespondActivityTaskCanceled&lt;/a&gt;&gt; &lt;/b&gt;</p>
+<p>A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open while a worker is processing it. A task is closed after it has been specified in a call to RespondActivityTaskCompleted, &lt;a&gt;RespondActivityTaskCanceled&lt;/a&gt;, &lt;a&gt;RespondActivityTaskFailed&lt;/a&gt;, or the task has &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types&quot;&gt;timed</p>
+<p>out&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@respondActivityTaskCompleted -->
+<!-- $$$respondActivityTaskFailed[overload1]$$$respondActivityTaskFailedconstRespondActivityTaskFailedRequest& -->
+<h3 class="fn" id="respondActivityTaskFailed"><a name="respondActivityTaskFailed"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-respondactivitytaskfailedresponse.html">RespondActivityTaskFailedResponse</a></span> *SwfClient::<span class="name">respondActivityTaskFailed</span>(const <span class="type"><a href="qtaws-swf-respondactivitytaskfailedrequest.html">RespondActivityTaskFailedRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-respondactivitytaskfailedresponse.html">RespondActivityTaskFailedResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by workers to tell the service that the &lt;a&gt;ActivityTask&lt;/a&gt; identified by the &lt;code&gt;taskToken&lt;/code&gt; has failed with &lt;code&gt;reason&lt;/code&gt; (if specified). The &lt;code&gt;reason&lt;/code&gt; and &lt;code&gt;details&lt;/code&gt; appear in the &lt;code&gt;ActivityTaskFailed&lt;/code&gt; event added to the workflow</p>
+<p>history&gt;</p>
+<p>A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open while a worker is processing it. A task is closed after it has been specified in a call to &lt;a&gt;RespondActivityTaskCompleted&lt;/a&gt;, &lt;a&gt;RespondActivityTaskCanceled&lt;/a&gt;, RespondActivityTaskFailed, or the task has &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types&quot;&gt;timed</p>
+<p>out&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@respondActivityTaskFailed -->
+<!-- $$$respondDecisionTaskCompleted[overload1]$$$respondDecisionTaskCompletedconstRespondDecisionTaskCompletedRequest& -->
+<h3 class="fn" id="respondDecisionTaskCompleted"><a name="respondDecisionTaskCompleted"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-responddecisiontaskcompletedresponse.html">RespondDecisionTaskCompletedResponse</a></span> *SwfClient::<span class="name">respondDecisionTaskCompleted</span>(const <span class="type"><a href="qtaws-swf-responddecisiontaskcompletedrequest.html">RespondDecisionTaskCompletedRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-responddecisiontaskcompletedresponse.html">RespondDecisionTaskCompletedResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Used by deciders to tell the service that the &lt;a&gt;DecisionTask&lt;/a&gt; identified by the &lt;code&gt;taskToken&lt;/code&gt; has successfully completed. The &lt;code&gt;decisions&lt;/code&gt; argument specifies the list of decisions made while processing the</p>
+<p>task&gt;</p>
+<p>A &lt;code&gt;DecisionTaskCompleted&lt;/code&gt; event is added to the workflow history. The &lt;code&gt;executionContext&lt;/code&gt; specified is attached to the event in the workflow execution</p>
+<p>history&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>If an IAM policy grants permission to use &lt;code&gt;RespondDecisionTaskCompleted&lt;/code&gt;, it can express permissions for the list of decisions in the &lt;code&gt;decisions&lt;/code&gt; parameter. Each of the decisions has one or more parameters, much like a regular API call. To allow for policies to be as readable as possible, you can express permissions on decisions as if they were actual API calls, including applying conditions to some parameters. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@respondDecisionTaskCompleted -->
+<!-- $$$signalWorkflowExecution[overload1]$$$signalWorkflowExecutionconstSignalWorkflowExecutionRequest& -->
+<h3 class="fn" id="signalWorkflowExecution"><a name="signalWorkflowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-signalworkflowexecutionresponse.html">SignalWorkflowExecutionResponse</a></span> *SwfClient::<span class="name">signalWorkflowExecution</span>(const <span class="type"><a href="qtaws-swf-signalworkflowexecutionrequest.html">SignalWorkflowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-signalworkflowexecutionresponse.html">SignalWorkflowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Records a &lt;code&gt;WorkflowExecutionSignaled&lt;/code&gt; event in the workflow execution history and creates a decision task for the workflow execution identified by the given domain, workflowId and runId. The event is recorded with the specified user defined signalName and input (if</p>
+<p>provided)&gt; &lt;note&gt;</p>
+<p>If a runId isn't specified, then the &lt;code&gt;WorkflowExecutionSignaled&lt;/code&gt; event is recorded in the history of the current open workflow with the matching workflowId in the</p>
+<p>domain&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>If the specified workflow execution isn't open, this method fails with</p>
+<p>&lt;code&gt;UnknownResource&lt;/code&gt;&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@signalWorkflowExecution -->
+<!-- $$$startWorkflowExecution[overload1]$$$startWorkflowExecutionconstStartWorkflowExecutionRequest& -->
+<h3 class="fn" id="startWorkflowExecution"><a name="startWorkflowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-startworkflowexecutionresponse.html">StartWorkflowExecutionResponse</a></span> *SwfClient::<span class="name">startWorkflowExecution</span>(const <span class="type"><a href="qtaws-swf-startworkflowexecutionrequest.html">StartWorkflowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-startworkflowexecutionresponse.html">StartWorkflowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts an execution of the workflow type in the specified domain using the provided &lt;code&gt;workflowId&lt;/code&gt; and input</p>
+<p>data&gt;</p>
+<p>This action returns the newly started workflow</p>
+<p>execution&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Constrain the following parameters by using a &lt;code&gt;Condition&lt;/code&gt; element with the appropriate</p>
+<p>keys&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagList.member.0&lt;/code&gt;: The key is</p>
+<p>&lt;code&gt;swf:tagList.member.0&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagList.member.1&lt;/code&gt;: The key is</p>
+<p>&lt;code&gt;swf:tagList.member.1&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagList.member.2&lt;/code&gt;: The key is</p>
+<p>&lt;code&gt;swf:tagList.member.2&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagList.member.3&lt;/code&gt;: The key is</p>
+<p>&lt;code&gt;swf:tagList.member.3&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;tagList.member.4&lt;/code&gt;: The key is</p>
+<p>&lt;code&gt;swf:tagList.member.4&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;taskList&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:taskList.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.name&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.name&lt;/code&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;workflowType.version&lt;/code&gt;: String constraint. The key is</p>
+<p>&lt;code&gt;swf:workflowType.version&lt;/code&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@startWorkflowExecution -->
+<!-- $$$terminateWorkflowExecution[overload1]$$$terminateWorkflowExecutionconstTerminateWorkflowExecutionRequest& -->
+<h3 class="fn" id="terminateWorkflowExecution"><a name="terminateWorkflowExecution"></a><code>[slot] </code><span class="type"><a href="qtaws-swf-terminateworkflowexecutionresponse.html">TerminateWorkflowExecutionResponse</a></span> *SwfClient::<span class="name">terminateWorkflowExecution</span>(const <span class="type"><a href="qtaws-swf-terminateworkflowexecutionrequest.html">TerminateWorkflowExecutionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-swf-swfclient.html">SwfClient</a> service, and returns a pointer to an <a href="qtaws-swf-terminateworkflowexecutionresponse.html">TerminateWorkflowExecutionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Records a &lt;code&gt;WorkflowExecutionTerminated&lt;/code&gt; event and forces closure of the workflow execution identified by the given domain, runId, and workflowId. The child policy, registered with the workflow type or specified when starting this execution, is applied to any open child workflow executions of this workflow</p>
+<p>execution&gt; &lt;b&gt;</p>
+<p>If the identified workflow execution was in progress, it is terminated</p>
+<p>immediately&gt; &lt;/b&gt; &lt;note&gt;</p>
+<p>If a runId isn't specified, then the &lt;code&gt;WorkflowExecutionTerminated&lt;/code&gt; event is recorded in the history of the current open workflow with the matching workflowId in the</p>
+<p>domain&gt; &lt;/note&gt; &lt;note&gt;</p>
+<p>You should consider using &lt;a&gt;RequestCancelWorkflowExecution&lt;/a&gt; action instead because it allows the workflow to gracefully close while &lt;a&gt;TerminateWorkflowExecution&lt;/a&gt;</p>
+<p>doesn't&gt; &lt;/note&gt;</p>
+<p>&lt;b&gt;Access Control&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>You can use IAM policies to control this action's access to Amazon SWF resources as</p>
+<p>follows&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Use a &lt;code&gt;Resource&lt;/code&gt; element with the domain name to limit the action to only specified</p>
+<p>domains&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Use an &lt;code&gt;Action&lt;/code&gt; element to allow or deny permission to call this</p>
+<p>action&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>You cannot use an IAM policy to constrain this action's</p>
+<p>parameters&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's &lt;code&gt;cause&lt;/code&gt; parameter is set to &lt;code&gt;OPERATION_NOT_PERMITTED&lt;/code&gt;. For details and example IAM policies, see &lt;a href=&quot;http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html&quot;&gt;Using IAM to Manage Access to Amazon SWF Workflows&lt;/a&gt; in the &lt;i&gt;Amazon SWF Developer</p>
+<!-- @@@terminateWorkflowExecution -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

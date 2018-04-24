@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- budgetsclient.cpp -->
+  <title>BudgetsClient Class | Budgets</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsbudgets-index.html">Budgets</a></li>
+<li><a href="qtawsbudgets-module.html">C++ Classes</a></li>
+<li>BudgetsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">BudgetsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-budgets-budgetsclient.html">QtAws::Budgets::BudgetsClient</a>)<br/></span>
+<!-- $$$BudgetsClient-brief -->
+<p>The <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> class provides access to the AWS Budgets service. <a href="#details">More...</a></p>
+<!-- @@@BudgetsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;BudgetsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-budgets-budgetsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#BudgetsClient">BudgetsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#BudgetsClient-1">BudgetsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateBudgetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#createBudget">createBudget</a></b>(const CreateBudgetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#createNotification">createNotification</a></b>(const CreateNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSubscriberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#createSubscriber">createSubscriber</a></b>(const CreateSubscriberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteBudgetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#deleteBudget">deleteBudget</a></b>(const DeleteBudgetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#deleteNotification">deleteNotification</a></b>(const DeleteNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteSubscriberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#deleteSubscriber">deleteSubscriber</a></b>(const DeleteSubscriberRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBudgetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#describeBudget">describeBudget</a></b>(const DescribeBudgetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeBudgetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#describeBudgets">describeBudgets</a></b>(const DescribeBudgetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeNotificationsForBudgetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#describeNotificationsForBudget">describeNotificationsForBudget</a></b>(const DescribeNotificationsForBudgetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeSubscribersForNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#describeSubscribersForNotification">describeSubscribersForNotification</a></b>(const DescribeSubscribersForNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateBudgetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#updateBudget">updateBudget</a></b>(const UpdateBudgetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateNotificationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#updateNotification">updateNotification</a></b>(const UpdateNotificationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateSubscriberResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-budgets-budgetsclient.html#updateSubscriber">updateSubscriber</a></b>(const UpdateSubscriberRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$BudgetsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> class provides access to the AWS Budgets service.</p>
+<p>Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your usage-to-date and current estimated charges from AWS and to see how much your predicted usage accrues in charges by the end of the month. Budgets also compare current estimates and charges to the amount that you indicated you want to use or spend and lets you see how much of your budget has been used. AWS updates your budget status several times a day. Budgets track your unblended costs, subscriptions, and refunds. You can create the following types of</p>
+<p>budgets&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Cost budgets allow you to say how much you want to spend on a</p>
+<p>service&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Usage budgets allow you to say how many hours you want to use for one or more</p>
+<p>services&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>RI utilization budgets allow you to define a utilization threshold and receive alerts when RIs are tracking below that</p>
+<p>threshold&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You can create up to 20,000 budgets per AWS master account. Your first two budgets are free of charge. Each additional budget costs $0.02 per day. You can set up optional notifications that warn you if you exceed, or are forecasted to exceed, your budgeted amount. You can have notifications sent to an Amazon SNS topic, to an email address, or to both. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-sns-policy.html&quot;&gt;Creating an Amazon SNS Topic for Budget Notifications&lt;/a&gt;. AWS Free Tier usage alerts via AWS Budgets are provided for you, and do not count toward your budget</p>
+<p>limits&gt;</p>
+<p>Service</p>
+<p>Endpoin&gt;</p>
+<p>The AWS Budgets API provides the following</p>
+<p>endpoint&gt; &lt;ul&gt; &lt;li&gt;</p>
+</div>
+<!-- @@@BudgetsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$BudgetsClient[overload1]$$$BudgetsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="BudgetsClient"><a name="BudgetsClient"></a>BudgetsClient::<span class="name">BudgetsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@BudgetsClient -->
+<!-- $$$BudgetsClient$$$BudgetsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="BudgetsClient-1"><a name="BudgetsClient-1"></a>BudgetsClient::<span class="name">BudgetsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-budgets-budgetsclient.html#BudgetsClient">BudgetsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@BudgetsClient -->
+<!-- $$$createBudget[overload1]$$$createBudgetconstCreateBudgetRequest& -->
+<h3 class="fn" id="createBudget"><a name="createBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-createbudgetresponse.html">CreateBudgetResponse</a></span> *BudgetsClient::<span class="name">createBudget</span>(const <span class="type"><a href="qtaws-budgets-createbudgetrequest.html">CreateBudgetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-createbudgetresponse.html">CreateBudgetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a budget and, if included, notifications and subscribers.</p>
+<!-- @@@createBudget -->
+<!-- $$$createNotification[overload1]$$$createNotificationconstCreateNotificationRequest& -->
+<h3 class="fn" id="createNotification"><a name="createNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-createnotificationresponse.html">CreateNotificationResponse</a></span> *BudgetsClient::<span class="name">createNotification</span>(const <span class="type"><a href="qtaws-budgets-createnotificationrequest.html">CreateNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-createnotificationresponse.html">CreateNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a notification. You must create the budget before you create the associated</p>
+<!-- @@@createNotification -->
+<!-- $$$createSubscriber[overload1]$$$createSubscriberconstCreateSubscriberRequest& -->
+<h3 class="fn" id="createSubscriber"><a name="createSubscriber"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-createsubscriberresponse.html">CreateSubscriberResponse</a></span> *BudgetsClient::<span class="name">createSubscriber</span>(const <span class="type"><a href="qtaws-budgets-createsubscriberrequest.html">CreateSubscriberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-createsubscriberresponse.html">CreateSubscriberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a subscriber. You must create the associated budget and notification before you create the</p>
+<!-- @@@createSubscriber -->
+<!-- $$$deleteBudget[overload1]$$$deleteBudgetconstDeleteBudgetRequest& -->
+<h3 class="fn" id="deleteBudget"><a name="deleteBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletebudgetresponse.html">DeleteBudgetResponse</a></span> *BudgetsClient::<span class="name">deleteBudget</span>(const <span class="type"><a href="qtaws-budgets-deletebudgetrequest.html">DeleteBudgetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletebudgetresponse.html">DeleteBudgetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a budget. You can delete your budget at any</p>
+<p>time&gt;</p>
+<p>&lt;b&gt;Deleting a budget also deletes the notifications and subscribers associated with that budget.&lt;/b&gt;</p>
+<!-- @@@deleteBudget -->
+<!-- $$$deleteNotification[overload1]$$$deleteNotificationconstDeleteNotificationRequest& -->
+<h3 class="fn" id="deleteNotification"><a name="deleteNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletenotificationresponse.html">DeleteNotificationResponse</a></span> *BudgetsClient::<span class="name">deleteNotification</span>(const <span class="type"><a href="qtaws-budgets-deletenotificationrequest.html">DeleteNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletenotificationresponse.html">DeleteNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
+<p>notification&gt;</p>
+<p>&lt;b&gt;Deleting a notification also deletes the subscribers associated with the notification.&lt;/b&gt;</p>
+<!-- @@@deleteNotification -->
+<!-- $$$deleteSubscriber[overload1]$$$deleteSubscriberconstDeleteSubscriberRequest& -->
+<h3 class="fn" id="deleteSubscriber"><a name="deleteSubscriber"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletesubscriberresponse.html">DeleteSubscriberResponse</a></span> *BudgetsClient::<span class="name">deleteSubscriber</span>(const <span class="type"><a href="qtaws-budgets-deletesubscriberrequest.html">DeleteSubscriberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletesubscriberresponse.html">DeleteSubscriberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
+<p>subscriber&gt;</p>
+<p>&lt;b&gt;Deleting the last subscriber to a notification also deletes the notification.&lt;/b&gt;</p>
+<!-- @@@deleteSubscriber -->
+<!-- $$$describeBudget[overload1]$$$describeBudgetconstDescribeBudgetRequest& -->
+<h3 class="fn" id="describeBudget"><a name="describeBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describebudgetresponse.html">DescribeBudgetResponse</a></span> *BudgetsClient::<span class="name">describeBudget</span>(const <span class="type"><a href="qtaws-budgets-describebudgetrequest.html">DescribeBudgetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describebudgetresponse.html">DescribeBudgetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a</p>
+<!-- @@@describeBudget -->
+<!-- $$$describeBudgets[overload1]$$$describeBudgetsconstDescribeBudgetsRequest& -->
+<h3 class="fn" id="describeBudgets"><a name="describeBudgets"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describebudgetsresponse.html">DescribeBudgetsResponse</a></span> *BudgetsClient::<span class="name">describeBudgets</span>(const <span class="type"><a href="qtaws-budgets-describebudgetsrequest.html">DescribeBudgetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describebudgetsresponse.html">DescribeBudgetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the budgets associated with an</p>
+<!-- @@@describeBudgets -->
+<!-- $$$describeNotificationsForBudget[overload1]$$$describeNotificationsForBudgetconstDescribeNotificationsForBudgetRequest& -->
+<h3 class="fn" id="describeNotificationsForBudget"><a name="describeNotificationsForBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describenotificationsforbudgetresponse.html">DescribeNotificationsForBudgetResponse</a></span> *BudgetsClient::<span class="name">describeNotificationsForBudget</span>(const <span class="type"><a href="qtaws-budgets-describenotificationsforbudgetrequest.html">DescribeNotificationsForBudgetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describenotificationsforbudgetresponse.html">DescribeNotificationsForBudgetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the notifications associated with a</p>
+<!-- @@@describeNotificationsForBudget -->
+<!-- $$$describeSubscribersForNotification[overload1]$$$describeSubscribersForNotificationconstDescribeSubscribersForNotificationRequest& -->
+<h3 class="fn" id="describeSubscribersForNotification"><a name="describeSubscribersForNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describesubscribersfornotificationresponse.html">DescribeSubscribersForNotificationResponse</a></span> *BudgetsClient::<span class="name">describeSubscribersForNotification</span>(const <span class="type"><a href="qtaws-budgets-describesubscribersfornotificationrequest.html">DescribeSubscribersForNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describesubscribersfornotificationresponse.html">DescribeSubscribersForNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the subscribers associated with a</p>
+<!-- @@@describeSubscribersForNotification -->
+<!-- $$$updateBudget[overload1]$$$updateBudgetconstUpdateBudgetRequest& -->
+<h3 class="fn" id="updateBudget"><a name="updateBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-updatebudgetresponse.html">UpdateBudgetResponse</a></span> *BudgetsClient::<span class="name">updateBudget</span>(const <span class="type"><a href="qtaws-budgets-updatebudgetrequest.html">UpdateBudgetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-updatebudgetresponse.html">UpdateBudgetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a budget. You can change every part of a budget except for the &lt;code&gt;budgetName&lt;/code&gt; and the &lt;code&gt;calculatedSpend&lt;/code&gt;. When a budget is modified, the &lt;code&gt;calculatedSpend&lt;/code&gt; drops to zero until AWS has new usage data to use for</p>
+<!-- @@@updateBudget -->
+<!-- $$$updateNotification[overload1]$$$updateNotificationconstUpdateNotificationRequest& -->
+<h3 class="fn" id="updateNotification"><a name="updateNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-updatenotificationresponse.html">UpdateNotificationResponse</a></span> *BudgetsClient::<span class="name">updateNotification</span>(const <span class="type"><a href="qtaws-budgets-updatenotificationrequest.html">UpdateNotificationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-updatenotificationresponse.html">UpdateNotificationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a</p>
+<!-- @@@updateNotification -->
+<!-- $$$updateSubscriber[overload1]$$$updateSubscriberconstUpdateSubscriberRequest& -->
+<h3 class="fn" id="updateSubscriber"><a name="updateSubscriber"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-updatesubscriberresponse.html">UpdateSubscriberResponse</a></span> *BudgetsClient::<span class="name">updateSubscriber</span>(const <span class="type"><a href="qtaws-budgets-updatesubscriberrequest.html">UpdateSubscriberRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-updatesubscriberresponse.html">UpdateSubscriberResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a</p>
+<!-- @@@updateSubscriber -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

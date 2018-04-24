@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsabstractresponse.cpp -->
+  <title>AwsAbstractResponse Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsAbstractResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsAbstractResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a>)<br/></span>
+<!-- $$$AwsAbstractResponse-brief -->
+<p>The <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a> class provides an interface for AWS responses. <a href="#details">More...</a></p>
+<!-- @@@AwsAbstractResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsAbstractResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-acm-acmresponse.html">QtAws::ACM::AcmResponse</a>, <a href="qtaws-acmpca-acmpcaresponse.html">QtAws::ACMPCA::AcmpcaResponse</a>, <a href="qtaws-alexaforbusiness-alexaforbusinessresponse.html">QtAws::AlexaForBusiness::AlexaForBusinessResponse</a>, <a href="qtaws-apigateway-apigatewayresponse.html">QtAws::APIGateway::APIGatewayResponse</a>, <a href="qtaws-applicationautoscaling-applicationautoscalingresponse.html">QtAws::ApplicationAutoScaling::ApplicationAutoScalingResponse</a>, <a href="qtaws-applicationdiscoveryservice-applicationdiscoveryserviceresponse.html">QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponse</a>, <a href="qtaws-appstream-appstreamresponse.html">QtAws::AppStream::AppStreamResponse</a>, <a href="qtaws-appsync-appsyncresponse.html">QtAws::AppSync::AppSyncResponse</a>, <a href="qtaws-athena-athenaresponse.html">QtAws::Athena::AthenaResponse</a>, <a href="qtaws-autoscaling-autoscalingresponse.html">QtAws::AutoScaling::AutoScalingResponse</a>, <a href="qtaws-autoscalingplans-autoscalingplansresponse.html">QtAws::AutoScalingPlans::AutoScalingPlansResponse</a>, <a href="qtaws-batch-batchresponse.html">QtAws::Batch::BatchResponse</a>, <a href="qtaws-budgets-budgetsresponse.html">QtAws::Budgets::BudgetsResponse</a>, <a href="qtaws-cloud9-cloud9response.html">QtAws::Cloud9::Cloud9Response</a>, <a href="qtaws-clouddirectory-clouddirectoryresponse.html">QtAws::CloudDirectory::CloudDirectoryResponse</a>, <a href="qtaws-cloudformation-cloudformationresponse.html">QtAws::CloudFormation::CloudFormationResponse</a>, <a href="qtaws-cloudfront-cloudfrontresponse.html">QtAws::CloudFront::CloudFrontResponse</a>, <a href="qtaws-cloudhsm-cloudhsmresponse.html">QtAws::CloudHSM::CloudHSMResponse</a>, <a href="qtaws-cloudhsmv2-cloudhsmv2response.html">QtAws::CloudHSMV2::CloudHSMV2Response</a>, <a href="qtaws-cloudsearch-cloudsearchresponse.html">QtAws::CloudSearch::CloudSearchResponse</a>, <a href="qtaws-cloudsearchdomain-cloudsearchdomainresponse.html">QtAws::CloudSearchDomain::CloudSearchDomainResponse</a>, <a href="qtaws-cloudtrail-cloudtrailresponse.html">QtAws::CloudTrail::CloudTrailResponse</a>, <a href="qtaws-cloudwatch-cloudwatchresponse.html">QtAws::CloudWatch::CloudWatchResponse</a>, <a href="qtaws-cloudwatchevents-cloudwatcheventsresponse.html">QtAws::CloudWatchEvents::CloudWatchEventsResponse</a>, <a href="qtaws-cloudwatchlogs-cloudwatchlogsresponse.html">QtAws::CloudWatchLogs::CloudWatchLogsResponse</a>, <a href="qtaws-codebuild-codebuildresponse.html">QtAws::CodeBuild::CodeBuildResponse</a>, <a href="qtaws-codecommit-codecommitresponse.html">QtAws::CodeCommit::CodeCommitResponse</a>, <a href="qtaws-codedeploy-codedeployresponse.html">QtAws::CodeDeploy::CodeDeployResponse</a>, <a href="qtaws-codepipeline-codepipelineresponse.html">QtAws::CodePipeline::CodePipelineResponse</a>, <a href="qtaws-codestar-codestarresponse.html">QtAws::CodeStar::CodeStarResponse</a>, <a href="qtaws-cognitoidentity-cognitoidentityresponse.html">QtAws::CognitoIdentity::CognitoIdentityResponse</a>, <a href="qtaws-cognitoidentityprovider-cognitoidentityproviderresponse.html">QtAws::CognitoIdentityProvider::CognitoIdentityProviderResponse</a>, <a href="qtaws-cognitosync-cognitosyncresponse.html">QtAws::CognitoSync::CognitoSyncResponse</a>, <a href="qtaws-comprehend-comprehendresponse.html">QtAws::Comprehend::ComprehendResponse</a>, <a href="qtaws-configservice-configserviceresponse.html">QtAws::ConfigService::ConfigServiceResponse</a>, <a href="qtaws-connect-connectresponse.html">QtAws::Connect::ConnectResponse</a>, <a href="qtaws-costandusagereportservice-costandusagereportserviceresponse.html">QtAws::CostandUsageReportService::CostandUsageReportServiceResponse</a>, <a href="qtaws-costexplorer-costexplorerresponse.html">QtAws::CostExplorer::CostExplorerResponse</a>, <a href="qtaws-databasemigrationservice-databasemigrationserviceresponse.html">QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse</a>, <a href="qtaws-datapipeline-datapipelineresponse.html">QtAws::DataPipeline::DataPipelineResponse</a>, <a href="qtaws-dax-daxresponse.html">QtAws::DAX::DaxResponse</a>, <a href="qtaws-devicefarm-devicefarmresponse.html">QtAws::DeviceFarm::DeviceFarmResponse</a>, <a href="qtaws-directconnect-directconnectresponse.html">QtAws::DirectConnect::DirectConnectResponse</a>, <a href="qtaws-directoryservice-directoryserviceresponse.html">QtAws::DirectoryService::DirectoryServiceResponse</a>, <a href="qtaws-dynamodb-dynamodbresponse.html">QtAws::DynamoDB::DynamoDBResponse</a>, <a href="qtaws-dynamodbstreams-dynamodbstreamsresponse.html">QtAws::DynamoDBStreams::DynamoDBStreamsResponse</a>, <a href="qtaws-ec2-ec2response.html">QtAws::EC2::Ec2Response</a>, <a href="qtaws-ecr-ecrresponse.html">QtAws::ECR::EcrResponse</a>, <a href="qtaws-ecs-ecsresponse.html">QtAws::ECS::EcsResponse</a>, <a href="qtaws-efs-efsresponse.html">QtAws::EFS::EfsResponse</a>, <a href="qtaws-elasticache-elasticacheresponse.html">QtAws::ElastiCache::ElastiCacheResponse</a>, <a href="qtaws-elasticbeanstalk-elasticbeanstalkresponse.html">QtAws::ElasticBeanstalk::ElasticBeanstalkResponse</a>, <a href="qtaws-elasticloadbalancing-elasticloadbalancingresponse.html">QtAws::ElasticLoadBalancing::ElasticLoadBalancingResponse</a>, <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2response.html">QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Response</a>, <a href="qtaws-elasticsearchservice-elasticsearchserviceresponse.html">QtAws::ElasticsearchService::ElasticsearchServiceResponse</a>, <a href="qtaws-elastictranscoder-elastictranscoderresponse.html">QtAws::ElasticTranscoder::ElasticTranscoderResponse</a>, <a href="qtaws-emr-emrresponse.html">QtAws::EMR::EmrResponse</a>, <a href="qtaws-firehose-firehoseresponse.html">QtAws::Firehose::FirehoseResponse</a>, <a href="qtaws-fms-fmsresponse.html">QtAws::FMS::FmsResponse</a>, <a href="qtaws-gamelift-gameliftresponse.html">QtAws::GameLift::GameLiftResponse</a>, <a href="qtaws-glacier-glacierresponse.html">QtAws::Glacier::GlacierResponse</a>, <a href="qtaws-glue-glueresponse.html">QtAws::Glue::GlueResponse</a>, <a href="qtaws-greengrass-greengrassresponse.html">QtAws::Greengrass::GreengrassResponse</a>, <a href="qtaws-guardduty-guarddutyresponse.html">QtAws::GuardDuty::GuardDutyResponse</a>, <a href="qtaws-health-healthresponse.html">QtAws::Health::HealthResponse</a>, <a href="qtaws-iam-iamresponse.html">QtAws::IAM::IamResponse</a>, <a href="qtaws-importexport-importexportresponse.html">QtAws::ImportExport::ImportExportResponse</a>, <a href="qtaws-inspector-inspectorresponse.html">QtAws::Inspector::InspectorResponse</a>, <a href="qtaws-iot-iotresponse.html">QtAws::IoT::IoTResponse</a>, <a href="qtaws-iotdataplane-iotdataplaneresponse.html">QtAws::IoTDataPlane::IoTDataPlaneResponse</a>, <a href="qtaws-iotjobsdataplane-iotjobsdataplaneresponse.html">QtAws::IoTJobsDataPlane::IoTJobsDataPlaneResponse</a>, <a href="qtaws-kinesis-kinesisresponse.html">QtAws::Kinesis::KinesisResponse</a>, <a href="qtaws-kinesisanalytics-kinesisanalyticsresponse.html">QtAws::KinesisAnalytics::KinesisAnalyticsResponse</a>, <a href="qtaws-kinesisvideo-kinesisvideoresponse.html">QtAws::KinesisVideo::KinesisVideoResponse</a>, <a href="qtaws-kinesisvideoarchivedmedia-kinesisvideoarchivedmediaresponse.html">QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaResponse</a>, <a href="qtaws-kinesisvideomedia-kinesisvideomediaresponse.html">QtAws::KinesisVideoMedia::KinesisVideoMediaResponse</a>, <a href="qtaws-kms-kmsresponse.html">QtAws::KMS::KmsResponse</a>, <a href="qtaws-lambda-lambdaresponse.html">QtAws::Lambda::LambdaResponse</a>, <a href="qtaws-lexmodelbuildingservice-lexmodelbuildingserviceresponse.html">QtAws::LexModelBuildingService::LexModelBuildingServiceResponse</a>, <a href="qtaws-lexruntimeservice-lexruntimeserviceresponse.html">QtAws::LexRuntimeService::LexRuntimeServiceResponse</a>, <a href="qtaws-lightsail-lightsailresponse.html">QtAws::Lightsail::LightsailResponse</a>, <a href="qtaws-machinelearning-machinelearningresponse.html">QtAws::MachineLearning::MachineLearningResponse</a>, <a href="qtaws-marketplacecommerceanalytics-marketplacecommerceanalyticsresponse.html">QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsResponse</a>, <a href="qtaws-marketplaceentitlementservice-marketplaceentitlementserviceresponse.html">QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponse</a>, <a href="qtaws-marketplacemetering-marketplacemeteringresponse.html">QtAws::MarketplaceMetering::MarketplaceMeteringResponse</a>, <a href="qtaws-mediaconvert-mediaconvertresponse.html">QtAws::MediaConvert::MediaConvertResponse</a>, <a href="qtaws-medialive-medialiveresponse.html">QtAws::MediaLive::MediaLiveResponse</a>, <a href="qtaws-mediapackage-mediapackageresponse.html">QtAws::MediaPackage::MediaPackageResponse</a>, <a href="qtaws-mediastore-mediastoreresponse.html">QtAws::MediaStore::MediaStoreResponse</a>, <a href="qtaws-mediastoredata-mediastoredataresponse.html">QtAws::MediaStoreData::MediaStoreDataResponse</a>, <a href="qtaws-migrationhub-migrationhubresponse.html">QtAws::MigrationHub::MigrationHubResponse</a>, <a href="qtaws-mobile-mobileresponse.html">QtAws::Mobile::MobileResponse</a>, <a href="qtaws-mobileanalytics-mobileanalyticsresponse.html">QtAws::MobileAnalytics::MobileAnalyticsResponse</a>, <a href="qtaws-mq-mqresponse.html">QtAws::MQ::MqResponse</a>, <a href="qtaws-mturk-mturkresponse.html">QtAws::MTurk::MTurkResponse</a>, <a href="qtaws-opsworks-opsworksresponse.html">QtAws::OpsWorks::OpsWorksResponse</a>, <a href="qtaws-opsworkscm-opsworkscmresponse.html">QtAws::OpsWorksCM::OpsWorksCMResponse</a>, <a href="qtaws-organizations-organizationsresponse.html">QtAws::Organizations::OrganizationsResponse</a>, <a href="qtaws-pinpoint-pinpointresponse.html">QtAws::Pinpoint::PinpointResponse</a>, <a href="qtaws-polly-pollyresponse.html">QtAws::Polly::PollyResponse</a>, <a href="qtaws-pricing-pricingresponse.html">QtAws::Pricing::PricingResponse</a>, <a href="qtaws-rds-rdsresponse.html">QtAws::RDS::RdsResponse</a>, <a href="qtaws-redshift-redshiftresponse.html">QtAws::Redshift::RedshiftResponse</a>, <a href="qtaws-rekognition-rekognitionresponse.html">QtAws::Rekognition::RekognitionResponse</a>, <a href="qtaws-resourcegroups-resourcegroupsresponse.html">QtAws::ResourceGroups::ResourceGroupsResponse</a>, <a href="qtaws-resourcegroupstaggingapi-resourcegroupstaggingapiresponse.html">QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIResponse</a>, <a href="qtaws-route53-route53response.html">QtAws::Route53::Route53Response</a>, <a href="qtaws-route53domains-route53domainsresponse.html">QtAws::Route53Domains::Route53DomainsResponse</a>, <a href="qtaws-s3-s3response.html">QtAws::S3::S3Response</a>, <a href="qtaws-sagemaker-sagemakerresponse.html">QtAws::SageMaker::SageMakerResponse</a>, <a href="qtaws-sagemakerruntime-sagemakerruntimeresponse.html">QtAws::SageMakerRuntime::SageMakerRuntimeResponse</a>, <a href="qtaws-secretsmanager-secretsmanagerresponse.html">QtAws::SecretsManager::SecretsManagerResponse</a>, <a href="qtaws-serverlessapplicationrepository-serverlessapplicationrepositoryresponse.html">QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryResponse</a>, <a href="qtaws-servicecatalog-servicecatalogresponse.html">QtAws::ServiceCatalog::ServiceCatalogResponse</a>, <a href="qtaws-servicediscovery-servicediscoveryresponse.html">QtAws::ServiceDiscovery::ServiceDiscoveryResponse</a>, <a href="qtaws-ses-sesresponse.html">QtAws::SES::SesResponse</a>, <a href="qtaws-sfn-sfnresponse.html">QtAws::SFN::SfnResponse</a>, <a href="qtaws-shield-shieldresponse.html">QtAws::Shield::ShieldResponse</a>, <a href="qtaws-simpledb-simpledbresponse.html">QtAws::SimpleDB::SimpleDBResponse</a>, <a href="qtaws-sms-smsresponse.html">QtAws::SMS::SmsResponse</a>, <a href="qtaws-snowball-snowballresponse.html">QtAws::Snowball::SnowballResponse</a>, <a href="qtaws-sns-snsresponse.html">QtAws::SNS::SnsResponse</a>, <a href="qtaws-sqs-sqsresponse.html">QtAws::SQS::SqsResponse</a>, <a href="qtaws-ssm-ssmresponse.html">QtAws::SSM::SsmResponse</a>, <a href="qtaws-storagegateway-storagegatewayresponse.html">QtAws::StorageGateway::StorageGatewayResponse</a>, <a href="qtaws-sts-stsresponse.html">QtAws::STS::StsResponse</a>, <a href="qtaws-support-supportresponse.html">QtAws::Support::SupportResponse</a>, <a href="qtaws-swf-swfresponse.html">QtAws::SWF::SwfResponse</a>, <a href="qtaws-transcribeservice-transcribeserviceresponse.html">QtAws::TranscribeService::TranscribeServiceResponse</a>, <a href="qtaws-translate-translateresponse.html">QtAws::Translate::TranslateResponse</a>, <a href="qtaws-waf-wafresponse.html">QtAws::WAF::WafResponse</a>, <a href="qtaws-wafregional-wafregionalresponse.html">QtAws::WAFRegional::WAFRegionalResponse</a>, <a href="qtaws-workdocs-workdocsresponse.html">QtAws::WorkDocs::WorkDocsResponse</a>, <a href="qtaws-workmail-workmailresponse.html">QtAws::WorkMail::WorkMailResponse</a>, <a href="qtaws-workspaces-workspacesresponse.html">QtAws::WorkSpaces::WorkSpacesResponse</a>, and <a href="qtaws-xray-xrayresponse.html">QtAws::XRay::XRayResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsabstractresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#AwsAbstractResponse">AwsAbstractResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#dtor.AwsAbstractResponse">~AwsAbstractResponse</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#errorString">errorString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#isValid">isValid</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkReply::NetworkError </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#networkError">networkError</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual const AwsAbstractRequest *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#request">request</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QXmlStreamReader::Error </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#xmlParseError">xmlParseError</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#xmlParseErrorString">xmlParseErrorString</a></b>() const</td></tr>
+</table></div>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#finished">finished</a></b>()</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QVariantMap </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#toVariant">toVariant</a></b>(QXmlStreamReader &amp;<i>xml</i>, const QString &amp;<i>prefix</i> = QLatin1String( &quot;.&quot; ), const int <i>maxDepth</i> = 1024)</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#AwsAbstractResponse-1">AwsAbstractResponse</a></b>(AwsAbstractResponsePrivate * const <i>d</i>, QObject * const <i>parent</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#isSuccess">isSuccess</a></b>(QNetworkReply * const <i>reply</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#parse">parse</a></b>(QNetworkReply * const <i>reply</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#parseSuccess">parseSuccess</a></b>(QIODevice &amp;<i>response</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#setReply">setReply</a></b>(QNetworkReply * const <i>reply</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#setRequest">setRequest</a></b>(const AwsAbstractRequest * const <i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#setXmlError">setXmlError</a></b>(const QXmlStreamReader &amp;<i>xml</i>)</td></tr>
+</table></div>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractresponse.html#replyFinished">replyFinished</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsAbstractResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a> class provides an interface for AWS responses.</p>
+<p>Typically instances of <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a>-derviced classes are returned by their respective <a href="qtaws-core-awsabstractrequest.html">AwsAbstractRequest</a>-derived classes, often via an intermediate <a href="qtaws-core-awsabstractclient.html">AwsAbstractClient</a>-derived class.</p>
+<p>For example, sending an SqsCreateQueueRequest results in a pointer to an SqsCreateQueueResponse object, optionally via an SqsClient instance.</p>
+</div>
+<!-- @@@AwsAbstractResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsAbstractResponse[overload1]$$$AwsAbstractResponseQObject*const -->
+<h3 class="fn" id="AwsAbstractResponse"><a name="AwsAbstractResponse"></a>AwsAbstractResponse::<span class="name">AwsAbstractResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs an <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@AwsAbstractResponse -->
+<!-- $$$AwsAbstractResponse$$$AwsAbstractResponseAwsAbstractResponsePrivate*constQObject*const -->
+<h3 class="fn" id="AwsAbstractResponse-1"><a name="AwsAbstractResponse-1"></a><code>[protected] </code>AwsAbstractResponse::<span class="name">AwsAbstractResponse</span>(<span class="type"><a href="qtaws-core-awsabstractresponseprivate.html">AwsAbstractResponsePrivate</a></span> * const <i>d</i>, <span class="type">QObject</span> * const <i>parent</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a> object with private implementation <i>d</i>, and parent <i>parent</i>.</p>
+<!-- @@@AwsAbstractResponse -->
+<!-- $$$~AwsAbstractResponse[overload1]$$$~AwsAbstractResponse -->
+<h3 class="fn" id="dtor.AwsAbstractResponse"><a name="dtor.AwsAbstractResponse"></a><code>[virtual] </code>AwsAbstractResponse::<span class="name">~AwsAbstractResponse</span>()</h3>
+<p>Destroys the AWS response.</p>
+<!-- @@@~AwsAbstractResponse -->
+<!-- $$$errorString[overload1]$$$errorString -->
+<h3 class="fn" id="errorString"><a name="errorString"></a><code>[virtual] </code><span class="type">QString</span> AwsAbstractResponse::<span class="name">errorString</span>() const</h3>
+<p>Returns the network reply error string, or a null string if none have occurred.</p>
+<p>This base implementation returns either the internal network reply object's error string (if the reply object has an error), or the internal XML parse error (if one was set, eg via set <a href="qtaws-core-awsabstractresponse.html#setXmlError">setXmlError</a>), otherwise a null QString.</p>
+<p>Derived classes may override this function to support additional error types. Typically such derived implementations would check this base implementation's result first, or fallback to this base implementation. For example:</p>
+<pre class="cpp"><span class="keyword">if</span> (weHaveOurOwnCustomError()) {
+    <span class="keyword">return</span> customErrorString();
+} <span class="keyword">else</span> {
+    <span class="keyword">return</span> AwsAbstractResponse<span class="operator">::</span>errorString();
+}</pre>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a>(), <a href="qtaws-core-awsabstractresponse.html#networkError">networkError</a>(), and <a href="qtaws-core-awsabstractresponse.html#xmlParseError">xmlParseError</a>().</p>
+<!-- @@@errorString -->
+<!-- $$$finished[overload1]$$$finished -->
+<h3 class="fn" id="finished"><a name="finished"></a><code>[signal] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">finished</span>()</h3>
+<p>Emitted when this object has finished parsing the response.</p>
+<p>Upon receiving this signal, slots should check <a href="qtaws-core-awsabstractresponse.html#isValid">isValid</a> or <a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a> to check if the response was successful or not.</p>
+<!-- @@@finished -->
+<!-- $$$hasError[overload1]$$$hasError -->
+<h3 class="fn" id="hasError"><a name="hasError"></a><code>[virtual] </code><span class="type">bool</span> AwsAbstractResponse::<span class="name">hasError</span>() const</h3>
+<p>Returns <code>true</code> if an error occurred processing this reponse; <code>false</code> otherwise.</p>
+<p>Errors could be anything from network requests errors, to errors validating AWS response content.</p>
+<p>This base implementation supports network, and XML parsing errors. Derived classes may override this function to support additional error types.</p>
+<p><b>Note: </b>This function may be equivalent to !<a href="qtaws-core-awsabstractresponse.html#isValid">isValid</a>, however, it is not safe for this function's implementation to be just that, since derived classes may assume the inverse, resulting in an infinite cycle between the two functions.</p><p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#errorString">errorString</a>() and <a href="qtaws-core-awsabstractresponse.html#isValid">isValid</a>().</p>
+<!-- @@@hasError -->
+<!-- $$$isSuccess[overload1]$$$isSuccessQNetworkReply*const -->
+<h3 class="fn" id="isSuccess"><a name="isSuccess"></a><code>[virtual protected] </code><span class="type">bool</span> AwsAbstractResponse::<span class="name">isSuccess</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>) const</h3>
+<p>Returns <code>true</code> if <i>reply</i> represents a successful reponse; <code>false</code> otherwise.</p>
+<p>This base implementation simply checks that <i>reply</i> has no errors, and that it represents an HTTP response with a 2xx HTTP status code.</p>
+<p>Derived classes may override this function to perform other checks, and/or to support non-HTTP responses.</p>
+<p>This function is used by the base implementation of the parse function, to delegate responsibility to either the <a href="qtaws-core-awsabstractresponse.html#parseSuccess">parseSuccess</a> or <a href="qtaws-core-awsabstractresponse.html#parseFailure">parseFailure</a> functions.</p>
+<!-- @@@isSuccess -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn" id="isValid"><a name="isValid"></a><code>[virtual] </code><span class="type">bool</span> AwsAbstractResponse::<span class="name">isValid</span>() const</h3>
+<p>Returns <code>true</code> of this response is valid; <code>false</code> otherwise.</p>
+<p>This base implementation simply checks for the absense of network and XML parsing errors. Derived classes may override this function to check other error types, and/or apply additional validation rules.</p>
+<p><b>Note: </b>This function may be equivalent to !<a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a>, however, it is not safe for this function's implementation to be just that, since derived classes may assume the inverse, resulting in an infinite cycle between the two functions.</p><p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a>().</p>
+<!-- @@@isValid -->
+<!-- $$$networkError[overload1]$$$networkError -->
+<h3 class="fn" id="networkError"><a name="networkError"></a><code>[virtual] </code><span class="type">QNetworkReply::NetworkError</span> AwsAbstractResponse::<span class="name">networkError</span>() const</h3>
+<p>Returns the network error, or QNetowkrReply::NoError is there is none.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a>() and <a href="qtaws-core-awsabstractresponse.html#errorString">errorString</a>().</p>
+<!-- @@@networkError -->
+<!-- $$$parse[overload1]$$$parseQNetworkReply*const -->
+<h3 class="fn" id="parse"><a name="parse"></a><code>[virtual protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">parse</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>)</h3>
+<p>Parses an AWS response from a network <i>reply</i>.</p>
+<p>This base implementation reports networks, if any occurred, otherwise uses the result of the virtual <a href="qtaws-core-awsabstractresponse.html#isSuccess">isSuccess</a> function to delegate parsing to either the pure virtual <a href="qtaws-core-awsabstractresponse.html#parseSuccess">parseSuccess</a> or pure virtual <a href="qtaws-core-awsabstractresponse.html#parseFailure">parseFailure</a> methods.</p>
+<p>Typically derived classes will only implement <a href="qtaws-core-awsabstractresponse.html#parseSuccess">parseSuccess</a> and <a href="qtaws-core-awsabstractresponse.html#parseFailure">parseFailure</a>, without needing to override this function.</p>
+<!-- @@@parse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[pure virtual protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Parses a failure <i>response</i>.</p>
+<p>Derived classes must implement this function to process failure responses (as defined by the virtual <a href="qtaws-core-awsabstractresponse.html#isSuccess">isSuccess</a> function).</p>
+<!-- @@@parseFailure -->
+<!-- $$$parseSuccess[overload1]$$$parseSuccessQIODevice& -->
+<h3 class="fn" id="parseSuccess"><a name="parseSuccess"></a><code>[pure virtual protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">parseSuccess</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Parses a successful <i>response</i>.</p>
+<p>Derived classes must implement this function to process successful responses (as defined by the virtual <a href="qtaws-core-awsabstractresponse.html#isSuccess">isSuccess</a> function).</p>
+<!-- @@@parseSuccess -->
+<!-- $$$replyFinished[overload1]$$$replyFinished -->
+<h3 class="fn" id="replyFinished"><a name="replyFinished"></a><code>[virtual protected slot] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">replyFinished</span>()</h3>
+<p>Executed when the internal network reply is finished.</p>
+<p>This slot should only be connectedd to QNetworkReply signals (specifcally, this function asserts that the signal sender is an qobject-castable to QNetworkReply).</p>
+<p>This is convenience slot, that really exists just to abstract the sender casting logic from the parse function (ie so derived classes can override parse without having to implement explicit casts).</p>
+<!-- @@@replyFinished -->
+<!-- $$$request[overload1]$$$request -->
+<h3 class="fn" id="request"><a name="request"></a><code>[pure virtual] </code>const <span class="type"><a href="qtaws-core-awsabstractrequest.html">AwsAbstractRequest</a></span> *AwsAbstractResponse::<span class="name">request</span>() const</h3>
+<p>Return the response's originating AWS request.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#setRequest">setRequest</a>().</p>
+<!-- @@@request -->
+<!-- $$$setReply[overload1]$$$setReplyQNetworkReply*const -->
+<h3 class="fn" id="setReply"><a name="setReply"></a><code>[protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">setReply</span>(<span class="type">QNetworkReply</span> * const <i>reply</i>)</h3>
+<p>Sets the network <i>reply</i> to listen for an AWS response.</p>
+<!-- @@@setReply -->
+<!-- $$$setRequest[overload1]$$$setRequestconstAwsAbstractRequest*const -->
+<h3 class="fn" id="setRequest"><a name="setRequest"></a><code>[protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">setRequest</span>(const <span class="type"><a href="qtaws-core-awsabstractrequest.html">AwsAbstractRequest</a></span> * const <i>request</i>)</h3>
+<p>Sets the AWS <i>request</i> that originated this response.</p>
+<p><b>Note: </b>This object will take ownership of the <i>request</i> pointer, and will <code>delete</code> <i>request</i> on destruction.</p><p>Callers should normally create a new request instance (making use of the request classes' copy-constructors). For example:</p>
+<pre class="cpp">setRequest(<span class="keyword">new</span> SpecializedAwsRequest(specializedRequest));</pre>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#request">request</a>().</p>
+<!-- @@@setRequest -->
+<!-- $$$setXmlError[overload1]$$$setXmlErrorconstQXmlStreamReader& -->
+<h3 class="fn" id="setXmlError"><a name="setXmlError"></a><code>[protected] </code><span class="type">void</span> AwsAbstractResponse::<span class="name">setXmlError</span>(const <span class="type">QXmlStreamReader</span> &amp;<i>xml</i>)</h3>
+<p>Sets the XML error from <i>xml</i>.</p>
+<p>If <i>xml</i> has no error, this effectively clears any existing XML parsing error.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#xmlParseError">xmlParseError</a> and <a href="qtaws-core-awsabstractresponse.html#xmlParseErrorString">xmlParseErrorString</a>.</p>
+<!-- @@@setXmlError -->
+<!-- $$$toVariant[overload1]$$$toVariantQXmlStreamReader&constQString&constint -->
+<h3 class="fn" id="toVariant"><a name="toVariant"></a><code>[static] </code><span class="type">QVariantMap</span> AwsAbstractResponse::<span class="name">toVariant</span>(<span class="type">QXmlStreamReader</span> &amp;<i>xml</i>, const <span class="type">QString</span> &amp;<i>prefix</i> = QLatin1String( &quot;.&quot; ), const <span class="type">int</span> <i>maxDepth</i> = 1024)</h3>
+<p>Returns a QVariantMap representation of <i>xml</i>, stopping at <i>maxDepth</i>.</p>
+<p>If supplied, <i>prefix</i> will be applied to special (non-element) child entry names.</p>
+<p>This function is used internally to embed opaque XML structures, such as the SQS service's ErrorResponse::Error::Detail, which the SQS schema defines as an arbitrary complex type.</p>
+<p><b>Note: </b>This static function exists within the <a href="qtaws-core-awsabstractresponse.html">AwsAbstractResponse</a> for historic reasons. It should probably be moved out of this class, and into a more generic utility space at some point.</p><p>@todo Move this toVariant function to somewhere more generic.</p>
+<!-- @@@toVariant -->
+<!-- $$$xmlParseError[overload1]$$$xmlParseError -->
+<h3 class="fn" id="xmlParseError"><a name="xmlParseError"></a><code>[virtual] </code><span class="type">QXmlStreamReader::Error</span> AwsAbstractResponse::<span class="name">xmlParseError</span>() const</h3>
+<p>Returns the XML parse error if there is one; QXmlStreamReader::NoError otherwise.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a> and <a href="qtaws-core-awsabstractresponse.html#errorString">errorString</a>.</p>
+<!-- @@@xmlParseError -->
+<!-- $$$xmlParseErrorString[overload1]$$$xmlParseErrorString -->
+<h3 class="fn" id="xmlParseErrorString"><a name="xmlParseErrorString"></a><code>[virtual] </code><span class="type">QString</span> AwsAbstractResponse::<span class="name">xmlParseErrorString</span>() const</h3>
+<p>Returns the XML parse error string, or a null string is there is none.</p>
+<p><b>See also </b><a href="qtaws-core-awsabstractresponse.html#hasError">hasError</a> and <a href="qtaws-core-awsabstractresponse.html#errorString">errorString</a>.</p>
+<!-- @@@xmlParseErrorString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

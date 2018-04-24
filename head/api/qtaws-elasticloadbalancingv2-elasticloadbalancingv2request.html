@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- elasticloadbalancingv2request.cpp -->
+  <title>ElasticLoadBalancingv2Request Class | ElasticLoadBalancingv2</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawselasticloadbalancingv2-index.html">ElasticLoadBalancingv2</a></li>
+<li><a href="qtawselasticloadbalancingv2-module.html">C++ Classes</a></li>
+<li>ElasticLoadBalancingv2Request</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ElasticLoadBalancingv2Request Class</h1>
+<span class="small-subtitle">(<a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request</a>)<br/></span>
+<!-- $$$ElasticLoadBalancingv2Request-brief -->
+<p>The <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">ElasticLoadBalancingv2Request</a> class provides an interface for <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> requests. <a href="#details">More...</a></p>
+<!-- @@@ElasticLoadBalancingv2Request -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ElasticLoadBalancingv2Request&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-elasticloadbalancingv2-addlistenercertificatesrequest.html">QtAws::ElasticLoadBalancingv2::AddListenerCertificatesRequest</a>, <a href="qtaws-elasticloadbalancingv2-addtagsrequest.html">QtAws::ElasticLoadBalancingv2::AddTagsRequest</a>, <a href="qtaws-elasticloadbalancingv2-createlistenerrequest.html">QtAws::ElasticLoadBalancingv2::CreateListenerRequest</a>, <a href="qtaws-elasticloadbalancingv2-createloadbalancerrequest.html">QtAws::ElasticLoadBalancingv2::CreateLoadBalancerRequest</a>, <a href="qtaws-elasticloadbalancingv2-createrulerequest.html">QtAws::ElasticLoadBalancingv2::CreateRuleRequest</a>, <a href="qtaws-elasticloadbalancingv2-createtargetgrouprequest.html">QtAws::ElasticLoadBalancingv2::CreateTargetGroupRequest</a>, <a href="qtaws-elasticloadbalancingv2-deletelistenerrequest.html">QtAws::ElasticLoadBalancingv2::DeleteListenerRequest</a>, <a href="qtaws-elasticloadbalancingv2-deleteloadbalancerrequest.html">QtAws::ElasticLoadBalancingv2::DeleteLoadBalancerRequest</a>, <a href="qtaws-elasticloadbalancingv2-deleterulerequest.html">QtAws::ElasticLoadBalancingv2::DeleteRuleRequest</a>, <a href="qtaws-elasticloadbalancingv2-deletetargetgrouprequest.html">QtAws::ElasticLoadBalancingv2::DeleteTargetGroupRequest</a>, <a href="qtaws-elasticloadbalancingv2-deregistertargetsrequest.html">QtAws::ElasticLoadBalancingv2::DeregisterTargetsRequest</a>, <a href="qtaws-elasticloadbalancingv2-describeaccountlimitsrequest.html">QtAws::ElasticLoadBalancingv2::DescribeAccountLimitsRequest</a>, <a href="qtaws-elasticloadbalancingv2-describelistenercertificatesrequest.html">QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesRequest</a>, <a href="qtaws-elasticloadbalancingv2-describelistenersrequest.html">QtAws::ElasticLoadBalancingv2::DescribeListenersRequest</a>, <a href="qtaws-elasticloadbalancingv2-describeloadbalancerattributesrequest.html">QtAws::ElasticLoadBalancingv2::DescribeLoadBalancerAttributesRequest</a>, <a href="qtaws-elasticloadbalancingv2-describeloadbalancersrequest.html">QtAws::ElasticLoadBalancingv2::DescribeLoadBalancersRequest</a>, <a href="qtaws-elasticloadbalancingv2-describerulesrequest.html">QtAws::ElasticLoadBalancingv2::DescribeRulesRequest</a>, <a href="qtaws-elasticloadbalancingv2-describesslpoliciesrequest.html">QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesRequest</a>, <a href="qtaws-elasticloadbalancingv2-describetagsrequest.html">QtAws::ElasticLoadBalancingv2::DescribeTagsRequest</a>, <a href="qtaws-elasticloadbalancingv2-describetargetgroupattributesrequest.html">QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesRequest</a>, <a href="qtaws-elasticloadbalancingv2-describetargetgroupsrequest.html">QtAws::ElasticLoadBalancingv2::DescribeTargetGroupsRequest</a>, <a href="qtaws-elasticloadbalancingv2-describetargethealthrequest.html">QtAws::ElasticLoadBalancingv2::DescribeTargetHealthRequest</a>, <a href="qtaws-elasticloadbalancingv2-modifylistenerrequest.html">QtAws::ElasticLoadBalancingv2::ModifyListenerRequest</a>, <a href="qtaws-elasticloadbalancingv2-modifyloadbalancerattributesrequest.html">QtAws::ElasticLoadBalancingv2::ModifyLoadBalancerAttributesRequest</a>, <a href="qtaws-elasticloadbalancingv2-modifyrulerequest.html">QtAws::ElasticLoadBalancingv2::ModifyRuleRequest</a>, <a href="qtaws-elasticloadbalancingv2-modifytargetgroupattributesrequest.html">QtAws::ElasticLoadBalancingv2::ModifyTargetGroupAttributesRequest</a>, <a href="qtaws-elasticloadbalancingv2-modifytargetgrouprequest.html">QtAws::ElasticLoadBalancingv2::ModifyTargetGroupRequest</a>, <a href="qtaws-elasticloadbalancingv2-registertargetsrequest.html">QtAws::ElasticLoadBalancingv2::RegisterTargetsRequest</a>, <a href="qtaws-elasticloadbalancingv2-removelistenercertificatesrequest.html">QtAws::ElasticLoadBalancingv2::RemoveListenerCertificatesRequest</a>, <a href="qtaws-elasticloadbalancingv2-removetagsrequest.html">QtAws::ElasticLoadBalancingv2::RemoveTagsRequest</a>, <a href="qtaws-elasticloadbalancingv2-setipaddresstyperequest.html">QtAws::ElasticLoadBalancingv2::SetIpAddressTypeRequest</a>, <a href="qtaws-elasticloadbalancingv2-setruleprioritiesrequest.html">QtAws::ElasticLoadBalancingv2::SetRulePrioritiesRequest</a>, <a href="qtaws-elasticloadbalancingv2-setsecuritygroupsrequest.html">QtAws::ElasticLoadBalancingv2::SetSecurityGroupsRequest</a>, and <a href="qtaws-elasticloadbalancingv2-setsubnetsrequest.html">QtAws::ElasticLoadBalancingv2::SetSubnetsRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#Action-enum">Action</a></b> { AddListenerCertificatesAction, AddTagsAction, CreateListenerAction, CreateLoadBalancerAction, ..., SetSubnetsAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request">ElasticLoadBalancingv2Request</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request-1">ElasticLoadBalancingv2Request</a></b>(const ElasticLoadBalancingv2Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ElasticLoadBalancingv2Request &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#operator-eq">operator=</a></b>(const ElasticLoadBalancingv2Request &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#operator-eq-eq">operator==</a></b>(const ElasticLoadBalancingv2Request &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request-2">ElasticLoadBalancingv2Request</a></b>(ElasticLoadBalancingv2RequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ElasticLoadBalancingv2Request-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">ElasticLoadBalancingv2Request</a> class provides an interface for <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> requests.</p>
+</div>
+<!-- @@@ElasticLoadBalancingv2Request -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddListenerCertificatesAction$$$AddTagsAction$$$CreateListenerAction$$$CreateLoadBalancerAction$$$CreateRuleAction$$$CreateTargetGroupAction$$$DeleteListenerAction$$$DeleteLoadBalancerAction$$$DeleteRuleAction$$$DeleteTargetGroupAction$$$DeregisterTargetsAction$$$DescribeAccountLimitsAction$$$DescribeListenerCertificatesAction$$$DescribeListenersAction$$$DescribeLoadBalancerAttributesAction$$$DescribeLoadBalancersAction$$$DescribeRulesAction$$$DescribeSSLPoliciesAction$$$DescribeTagsAction$$$DescribeTargetGroupAttributesAction$$$DescribeTargetGroupsAction$$$DescribeTargetHealthAction$$$ModifyListenerAction$$$ModifyLoadBalancerAttributesAction$$$ModifyRuleAction$$$ModifyTargetGroupAction$$$ModifyTargetGroupAttributesAction$$$RegisterTargetsAction$$$RemoveListenerCertificatesAction$$$RemoveTagsAction$$$SetIpAddressTypeAction$$$SetRulePrioritiesAction$$$SetSecurityGroupsAction$$$SetSubnetsAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum ElasticLoadBalancingv2Request::<span class="name">Action</span><br/>flags ElasticLoadBalancingv2Request::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::AddListenerCertificatesAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> AddListenerCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::AddTagsAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> AddTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::CreateListenerAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> CreateListener action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::CreateLoadBalancerAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> CreateLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::CreateRuleAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> CreateRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::CreateTargetGroupAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> CreateTargetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DeleteListenerAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DeleteListener action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DeleteLoadBalancerAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DeleteLoadBalancer action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DeleteRuleAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DeleteRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DeleteTargetGroupAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DeleteTargetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DeregisterTargetsAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DeregisterTargets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeAccountLimitsAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeAccountLimits action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeListenerCertificatesAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeListenerCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeListenersAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeListeners action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeLoadBalancerAttributesAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeLoadBalancerAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeLoadBalancersAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeLoadBalancers action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeRulesAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeRules action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeSSLPoliciesAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeSSLPolicies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeTagsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeTargetGroupAttributesAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeTargetGroupAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeTargetGroupsAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeTargetGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::DescribeTargetHealthAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> DescribeTargetHealth action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::ModifyListenerAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> ModifyListener action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::ModifyLoadBalancerAttributesAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> ModifyLoadBalancerAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::ModifyRuleAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> ModifyRule action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::ModifyTargetGroupAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> ModifyTargetGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::ModifyTargetGroupAttributesAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> ModifyTargetGroupAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::RegisterTargetsAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> RegisterTargets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::RemoveListenerCertificatesAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> RemoveListenerCertificates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::RemoveTagsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> RemoveTags action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::SetIpAddressTypeAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> SetIpAddressType action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::SetRulePrioritiesAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> SetRulePriorities action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::SetSecurityGroupsAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> SetSecurityGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request::SetSubnetsAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign"><a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> SetSubnets action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ElasticLoadBalancingv2Request[overload1]$$$ElasticLoadBalancingv2RequestconstAction -->
+<h3 class="fn" id="ElasticLoadBalancingv2Request"><a name="ElasticLoadBalancingv2Request"></a>ElasticLoadBalancingv2Request::<span class="name">ElasticLoadBalancingv2Request</span>(const <span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">ElasticLoadBalancingv2Request</a> object for <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> <i>action</i>.</p>
+<!-- @@@ElasticLoadBalancingv2Request -->
+<!-- $$$ElasticLoadBalancingv2Request$$$ElasticLoadBalancingv2RequestconstElasticLoadBalancingv2Request& -->
+<h3 class="fn" id="ElasticLoadBalancingv2Request-1"><a name="ElasticLoadBalancingv2Request-1"></a>ElasticLoadBalancingv2Request::<span class="name">ElasticLoadBalancingv2Request</span>(const <span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request">ElasticLoadBalancingv2Request</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@ElasticLoadBalancingv2Request -->
+<!-- $$$ElasticLoadBalancingv2Request$$$ElasticLoadBalancingv2RequestElasticLoadBalancingv2RequestPrivate*const -->
+<h3 class="fn" id="ElasticLoadBalancingv2Request-2"><a name="ElasticLoadBalancingv2Request-2"></a><code>[protected] </code>ElasticLoadBalancingv2Request::<span class="name">ElasticLoadBalancingv2Request</span>(<span class="type">ElasticLoadBalancingv2RequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">ElasticLoadBalancingv2Request</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from ElasticLoadBalancingv2RequestPrivate.</p>
+<!-- @@@ElasticLoadBalancingv2Request -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#Action-enum">Action</a></span> ElasticLoadBalancingv2Request::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> ElasticLoadBalancingv2Request::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> ElasticLoadBalancingv2Request::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> ElasticLoadBalancingv2Request::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> ElasticLoadBalancingv2Request::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> ElasticLoadBalancingv2Request::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;ElasticLoadBalancingv2Request::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> ElasticLoadBalancingv2Request::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> ElasticLoadBalancingv2Request::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> ElasticLoadBalancingv2Request::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> ElasticLoadBalancingv2Request::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> ElasticLoadBalancingv2Request::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-elasticloadbalancingv2.html">ElasticLoadBalancingv2</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constElasticLoadBalancingv2Request& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request">ElasticLoadBalancingv2Request</a></span> &amp;ElasticLoadBalancingv2Request::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request">ElasticLoadBalancingv2Request</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html">ElasticLoadBalancingv2Request</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constElasticLoadBalancingv2Request& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> ElasticLoadBalancingv2Request::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-elasticloadbalancingv2-elasticloadbalancingv2request.html#ElasticLoadBalancingv2Request">ElasticLoadBalancingv2Request</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wafresponse.cpp -->
+  <title>WafResponse Class | WAF</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawswaf-index.html">WAF</a></li>
+<li><a href="qtawswaf-module.html">C++ Classes</a></li>
+<li>WafResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">WafResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-waf-wafresponse.html">QtAws::WAF::WafResponse</a>)<br/></span>
+<!-- $$$WafResponse-brief -->
+<p>The <a href="qtaws-waf-wafresponse.html">WafResponse</a> class provides an interface for WAF responses. <a href="#details">More...</a></p>
+<!-- @@@WafResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;WafResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-waf-createbytematchsetresponse.html">QtAws::WAF::CreateByteMatchSetResponse</a>, <a href="qtaws-waf-creategeomatchsetresponse.html">QtAws::WAF::CreateGeoMatchSetResponse</a>, <a href="qtaws-waf-createipsetresponse.html">QtAws::WAF::CreateIPSetResponse</a>, <a href="qtaws-waf-createratebasedruleresponse.html">QtAws::WAF::CreateRateBasedRuleResponse</a>, <a href="qtaws-waf-createregexmatchsetresponse.html">QtAws::WAF::CreateRegexMatchSetResponse</a>, <a href="qtaws-waf-createregexpatternsetresponse.html">QtAws::WAF::CreateRegexPatternSetResponse</a>, <a href="qtaws-waf-createrulegroupresponse.html">QtAws::WAF::CreateRuleGroupResponse</a>, <a href="qtaws-waf-createruleresponse.html">QtAws::WAF::CreateRuleResponse</a>, <a href="qtaws-waf-createsizeconstraintsetresponse.html">QtAws::WAF::CreateSizeConstraintSetResponse</a>, <a href="qtaws-waf-createsqlinjectionmatchsetresponse.html">QtAws::WAF::CreateSqlInjectionMatchSetResponse</a>, <a href="qtaws-waf-createwebaclresponse.html">QtAws::WAF::CreateWebACLResponse</a>, <a href="qtaws-waf-createxssmatchsetresponse.html">QtAws::WAF::CreateXssMatchSetResponse</a>, <a href="qtaws-waf-deletebytematchsetresponse.html">QtAws::WAF::DeleteByteMatchSetResponse</a>, <a href="qtaws-waf-deletegeomatchsetresponse.html">QtAws::WAF::DeleteGeoMatchSetResponse</a>, <a href="qtaws-waf-deleteipsetresponse.html">QtAws::WAF::DeleteIPSetResponse</a>, <a href="qtaws-waf-deletepermissionpolicyresponse.html">QtAws::WAF::DeletePermissionPolicyResponse</a>, <a href="qtaws-waf-deleteratebasedruleresponse.html">QtAws::WAF::DeleteRateBasedRuleResponse</a>, <a href="qtaws-waf-deleteregexmatchsetresponse.html">QtAws::WAF::DeleteRegexMatchSetResponse</a>, <a href="qtaws-waf-deleteregexpatternsetresponse.html">QtAws::WAF::DeleteRegexPatternSetResponse</a>, <a href="qtaws-waf-deleterulegroupresponse.html">QtAws::WAF::DeleteRuleGroupResponse</a>, <a href="qtaws-waf-deleteruleresponse.html">QtAws::WAF::DeleteRuleResponse</a>, <a href="qtaws-waf-deletesizeconstraintsetresponse.html">QtAws::WAF::DeleteSizeConstraintSetResponse</a>, <a href="qtaws-waf-deletesqlinjectionmatchsetresponse.html">QtAws::WAF::DeleteSqlInjectionMatchSetResponse</a>, <a href="qtaws-waf-deletewebaclresponse.html">QtAws::WAF::DeleteWebACLResponse</a>, <a href="qtaws-waf-deletexssmatchsetresponse.html">QtAws::WAF::DeleteXssMatchSetResponse</a>, <a href="qtaws-waf-getbytematchsetresponse.html">QtAws::WAF::GetByteMatchSetResponse</a>, <a href="qtaws-waf-getchangetokenresponse.html">QtAws::WAF::GetChangeTokenResponse</a>, <a href="qtaws-waf-getchangetokenstatusresponse.html">QtAws::WAF::GetChangeTokenStatusResponse</a>, <a href="qtaws-waf-getgeomatchsetresponse.html">QtAws::WAF::GetGeoMatchSetResponse</a>, <a href="qtaws-waf-getipsetresponse.html">QtAws::WAF::GetIPSetResponse</a>, <a href="qtaws-waf-getpermissionpolicyresponse.html">QtAws::WAF::GetPermissionPolicyResponse</a>, <a href="qtaws-waf-getratebasedrulemanagedkeysresponse.html">QtAws::WAF::GetRateBasedRuleManagedKeysResponse</a>, <a href="qtaws-waf-getratebasedruleresponse.html">QtAws::WAF::GetRateBasedRuleResponse</a>, <a href="qtaws-waf-getregexmatchsetresponse.html">QtAws::WAF::GetRegexMatchSetResponse</a>, <a href="qtaws-waf-getregexpatternsetresponse.html">QtAws::WAF::GetRegexPatternSetResponse</a>, <a href="qtaws-waf-getrulegroupresponse.html">QtAws::WAF::GetRuleGroupResponse</a>, <a href="qtaws-waf-getruleresponse.html">QtAws::WAF::GetRuleResponse</a>, <a href="qtaws-waf-getsampledrequestsresponse.html">QtAws::WAF::GetSampledRequestsResponse</a>, <a href="qtaws-waf-getsizeconstraintsetresponse.html">QtAws::WAF::GetSizeConstraintSetResponse</a>, <a href="qtaws-waf-getsqlinjectionmatchsetresponse.html">QtAws::WAF::GetSqlInjectionMatchSetResponse</a>, <a href="qtaws-waf-getwebaclresponse.html">QtAws::WAF::GetWebACLResponse</a>, <a href="qtaws-waf-getxssmatchsetresponse.html">QtAws::WAF::GetXssMatchSetResponse</a>, <a href="qtaws-waf-listactivatedrulesinrulegroupresponse.html">QtAws::WAF::ListActivatedRulesInRuleGroupResponse</a>, <a href="qtaws-waf-listbytematchsetsresponse.html">QtAws::WAF::ListByteMatchSetsResponse</a>, <a href="qtaws-waf-listgeomatchsetsresponse.html">QtAws::WAF::ListGeoMatchSetsResponse</a>, <a href="qtaws-waf-listipsetsresponse.html">QtAws::WAF::ListIPSetsResponse</a>, <a href="qtaws-waf-listratebasedrulesresponse.html">QtAws::WAF::ListRateBasedRulesResponse</a>, <a href="qtaws-waf-listregexmatchsetsresponse.html">QtAws::WAF::ListRegexMatchSetsResponse</a>, <a href="qtaws-waf-listregexpatternsetsresponse.html">QtAws::WAF::ListRegexPatternSetsResponse</a>, <a href="qtaws-waf-listrulegroupsresponse.html">QtAws::WAF::ListRuleGroupsResponse</a>, <a href="qtaws-waf-listrulesresponse.html">QtAws::WAF::ListRulesResponse</a>, <a href="qtaws-waf-listsizeconstraintsetsresponse.html">QtAws::WAF::ListSizeConstraintSetsResponse</a>, <a href="qtaws-waf-listsqlinjectionmatchsetsresponse.html">QtAws::WAF::ListSqlInjectionMatchSetsResponse</a>, <a href="qtaws-waf-listsubscribedrulegroupsresponse.html">QtAws::WAF::ListSubscribedRuleGroupsResponse</a>, <a href="qtaws-waf-listwebaclsresponse.html">QtAws::WAF::ListWebACLsResponse</a>, <a href="qtaws-waf-listxssmatchsetsresponse.html">QtAws::WAF::ListXssMatchSetsResponse</a>, <a href="qtaws-waf-putpermissionpolicyresponse.html">QtAws::WAF::PutPermissionPolicyResponse</a>, <a href="qtaws-waf-updatebytematchsetresponse.html">QtAws::WAF::UpdateByteMatchSetResponse</a>, <a href="qtaws-waf-updategeomatchsetresponse.html">QtAws::WAF::UpdateGeoMatchSetResponse</a>, <a href="qtaws-waf-updateipsetresponse.html">QtAws::WAF::UpdateIPSetResponse</a>, <a href="qtaws-waf-updateratebasedruleresponse.html">QtAws::WAF::UpdateRateBasedRuleResponse</a>, <a href="qtaws-waf-updateregexmatchsetresponse.html">QtAws::WAF::UpdateRegexMatchSetResponse</a>, <a href="qtaws-waf-updateregexpatternsetresponse.html">QtAws::WAF::UpdateRegexPatternSetResponse</a>, <a href="qtaws-waf-updaterulegroupresponse.html">QtAws::WAF::UpdateRuleGroupResponse</a>, <a href="qtaws-waf-updateruleresponse.html">QtAws::WAF::UpdateRuleResponse</a>, <a href="qtaws-waf-updatesizeconstraintsetresponse.html">QtAws::WAF::UpdateSizeConstraintSetResponse</a>, <a href="qtaws-waf-updatesqlinjectionmatchsetresponse.html">QtAws::WAF::UpdateSqlInjectionMatchSetResponse</a>, <a href="qtaws-waf-updatewebaclresponse.html">QtAws::WAF::UpdateWebACLResponse</a>, and <a href="qtaws-waf-updatexssmatchsetresponse.html">QtAws::WAF::UpdateXssMatchSetResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-waf-wafresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafresponse.html#WafResponse">WafResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-waf-wafresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$WafResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-waf-wafresponse.html">WafResponse</a> class provides an interface for WAF responses.</p>
+</div>
+<!-- @@@WafResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$WafResponse[overload1]$$$WafResponseQObject*const -->
+<h3 class="fn" id="WafResponse"><a name="WafResponse"></a>WafResponse::<span class="name">WafResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-waf-wafresponse.html">WafResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@WafResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> WafResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

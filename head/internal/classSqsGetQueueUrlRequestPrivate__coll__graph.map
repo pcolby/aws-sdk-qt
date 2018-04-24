@@ -1,5 +1,0 @@
-<map id="SqsGetQueueUrlRequestPrivate" name="SqsGetQueueUrlRequestPrivate">
-<area shape="rect" id="node2" href="$classSqsRequestPrivate.html" title="Private implementation for SqsRequest. " alt="" coords="43,95,178,121"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="119,5,305,32"/>
-<area shape="rect" id="node4" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="203,95,349,121"/>
-</map>

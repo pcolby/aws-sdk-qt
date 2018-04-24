@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- guarddutyrequest.cpp -->
+  <title>GuardDutyRequestPrivate Class | GuardDuty</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsguardduty-index.html">GuardDuty</a></li>
+<li><a href="qtawsguardduty-module.html">C++ Classes</a></li>
+<li>GuardDutyRequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GuardDutyRequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-guardduty-guarddutyrequestprivate.html">QtAws::GuardDuty::GuardDutyRequestPrivate</a>)<br/></span>
+<!-- $$$GuardDutyRequestPrivate-brief -->
+<p>The <a href="qtaws-guardduty-guarddutyrequestprivate.html">GuardDutyRequestPrivate</a> class provides private implementation for <a href="qtaws-guardduty-guarddutyrequest.html">GuardDutyRequest</a>. <a href="#details">More...</a></p>
+<!-- @@@GuardDutyRequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GuardDutyRequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-guardduty-acceptinvitationrequestprivate.html">QtAws::GuardDuty::AcceptInvitationRequestPrivate</a>, <a href="qtaws-guardduty-archivefindingsrequestprivate.html">QtAws::GuardDuty::ArchiveFindingsRequestPrivate</a>, <a href="qtaws-guardduty-createdetectorrequestprivate.html">QtAws::GuardDuty::CreateDetectorRequestPrivate</a>, <a href="qtaws-guardduty-createipsetrequestprivate.html">QtAws::GuardDuty::CreateIPSetRequestPrivate</a>, <a href="qtaws-guardduty-createmembersrequestprivate.html">QtAws::GuardDuty::CreateMembersRequestPrivate</a>, <a href="qtaws-guardduty-createsamplefindingsrequestprivate.html">QtAws::GuardDuty::CreateSampleFindingsRequestPrivate</a>, <a href="qtaws-guardduty-createthreatintelsetrequestprivate.html">QtAws::GuardDuty::CreateThreatIntelSetRequestPrivate</a>, <a href="qtaws-guardduty-declineinvitationsrequestprivate.html">QtAws::GuardDuty::DeclineInvitationsRequestPrivate</a>, <a href="qtaws-guardduty-deletedetectorrequestprivate.html">QtAws::GuardDuty::DeleteDetectorRequestPrivate</a>, <a href="qtaws-guardduty-deleteinvitationsrequestprivate.html">QtAws::GuardDuty::DeleteInvitationsRequestPrivate</a>, <a href="qtaws-guardduty-deleteipsetrequestprivate.html">QtAws::GuardDuty::DeleteIPSetRequestPrivate</a>, <a href="qtaws-guardduty-deletemembersrequestprivate.html">QtAws::GuardDuty::DeleteMembersRequestPrivate</a>, <a href="qtaws-guardduty-deletethreatintelsetrequestprivate.html">QtAws::GuardDuty::DeleteThreatIntelSetRequestPrivate</a>, <a href="qtaws-guardduty-disassociatefrommasteraccountrequestprivate.html">QtAws::GuardDuty::DisassociateFromMasterAccountRequestPrivate</a>, <a href="qtaws-guardduty-disassociatemembersrequestprivate.html">QtAws::GuardDuty::DisassociateMembersRequestPrivate</a>, <a href="qtaws-guardduty-getdetectorrequestprivate.html">QtAws::GuardDuty::GetDetectorRequestPrivate</a>, <a href="qtaws-guardduty-getfindingsrequestprivate.html">QtAws::GuardDuty::GetFindingsRequestPrivate</a>, <a href="qtaws-guardduty-getfindingsstatisticsrequestprivate.html">QtAws::GuardDuty::GetFindingsStatisticsRequestPrivate</a>, <a href="qtaws-guardduty-getinvitationscountrequestprivate.html">QtAws::GuardDuty::GetInvitationsCountRequestPrivate</a>, <a href="qtaws-guardduty-getipsetrequestprivate.html">QtAws::GuardDuty::GetIPSetRequestPrivate</a>, <a href="qtaws-guardduty-getmasteraccountrequestprivate.html">QtAws::GuardDuty::GetMasterAccountRequestPrivate</a>, <a href="qtaws-guardduty-getmembersrequestprivate.html">QtAws::GuardDuty::GetMembersRequestPrivate</a>, <a href="qtaws-guardduty-getthreatintelsetrequestprivate.html">QtAws::GuardDuty::GetThreatIntelSetRequestPrivate</a>, <a href="qtaws-guardduty-invitemembersrequestprivate.html">QtAws::GuardDuty::InviteMembersRequestPrivate</a>, <a href="qtaws-guardduty-listdetectorsrequestprivate.html">QtAws::GuardDuty::ListDetectorsRequestPrivate</a>, <a href="qtaws-guardduty-listfindingsrequestprivate.html">QtAws::GuardDuty::ListFindingsRequestPrivate</a>, <a href="qtaws-guardduty-listinvitationsrequestprivate.html">QtAws::GuardDuty::ListInvitationsRequestPrivate</a>, <a href="qtaws-guardduty-listipsetsrequestprivate.html">QtAws::GuardDuty::ListIPSetsRequestPrivate</a>, <a href="qtaws-guardduty-listmembersrequestprivate.html">QtAws::GuardDuty::ListMembersRequestPrivate</a>, <a href="qtaws-guardduty-listthreatintelsetsrequestprivate.html">QtAws::GuardDuty::ListThreatIntelSetsRequestPrivate</a>, <a href="qtaws-guardduty-startmonitoringmembersrequestprivate.html">QtAws::GuardDuty::StartMonitoringMembersRequestPrivate</a>, <a href="qtaws-guardduty-stopmonitoringmembersrequestprivate.html">QtAws::GuardDuty::StopMonitoringMembersRequestPrivate</a>, <a href="qtaws-guardduty-unarchivefindingsrequestprivate.html">QtAws::GuardDuty::UnarchiveFindingsRequestPrivate</a>, <a href="qtaws-guardduty-updatedetectorrequestprivate.html">QtAws::GuardDuty::UpdateDetectorRequestPrivate</a>, <a href="qtaws-guardduty-updatefindingsfeedbackrequestprivate.html">QtAws::GuardDuty::UpdateFindingsFeedbackRequestPrivate</a>, <a href="qtaws-guardduty-updateipsetrequestprivate.html">QtAws::GuardDuty::UpdateIPSetRequestPrivate</a>, and <a href="qtaws-guardduty-updatethreatintelsetrequestprivate.html">QtAws::GuardDuty::UpdateThreatIntelSetRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-guardduty-guarddutyrequestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyrequestprivate.html#GuardDutyRequestPrivate">GuardDutyRequestPrivate</a></b>(const GuardDutyRequest::Action <i>action</i>, GuardDutyRequest * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyrequestprivate.html#GuardDutyRequestPrivate-1">GuardDutyRequestPrivate</a></b>(const GuardDutyRequestPrivate &amp;<i>other</i>, GuardDutyRequest * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyrequestprivate.html#toString">toString</a></b>(const GuardDutyRequest::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$GuardDutyRequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-guardduty-guarddutyrequestprivate.html">GuardDutyRequestPrivate</a> class provides private implementation for <a href="qtaws-guardduty-guarddutyrequest.html">GuardDutyRequest</a>.</p>
+</div>
+<!-- @@@GuardDutyRequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GuardDutyRequestPrivate[overload1]$$$GuardDutyRequestPrivateconstGuardDutyRequest::ActionGuardDutyRequest*const -->
+<h3 class="fn" id="GuardDutyRequestPrivate"><a name="GuardDutyRequestPrivate"></a>GuardDutyRequestPrivate::<span class="name">GuardDutyRequestPrivate</span>(const <span class="type"><a href="qtaws-guardduty-guarddutyrequest.html#Action-enum">GuardDutyRequest::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-guardduty-guarddutyrequest.html">GuardDutyRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-guardduty-guarddutyrequestprivate.html">GuardDutyRequestPrivate</a> object for <a href="qtaws-guardduty.html">GuardDuty</a> <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@GuardDutyRequestPrivate -->
+<!-- $$$GuardDutyRequestPrivate$$$GuardDutyRequestPrivateconstGuardDutyRequestPrivate&GuardDutyRequest*const -->
+<h3 class="fn" id="GuardDutyRequestPrivate-1"><a name="GuardDutyRequestPrivate-1"></a>GuardDutyRequestPrivate::<span class="name">GuardDutyRequestPrivate</span>(const <span class="type"><a href="qtaws-guardduty-guarddutyrequestprivate.html#GuardDutyRequestPrivate">GuardDutyRequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-guardduty-guarddutyrequest.html">GuardDutyRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-guardduty-guarddutyrequest.html">GuardDutyRequest</a> class's copy constructor.</p>
+<!-- @@@GuardDutyRequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstGuardDutyRequest::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> GuardDutyRequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-guardduty-guarddutyrequest.html#Action-enum">GuardDutyRequest::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-guardduty-guarddutyrequest.html#Action-enum">GuardDutyRequest::Action</a> enumerator values to their respective string representations, appropriate for use with the <a href="qtaws-guardduty.html">GuardDuty</a> service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

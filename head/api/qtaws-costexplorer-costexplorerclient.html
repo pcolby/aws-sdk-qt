@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- costexplorerclient.cpp -->
+  <title>CostExplorerClient Class | CostExplorer</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscostexplorer-index.html">CostExplorer</a></li>
+<li><a href="qtawscostexplorer-module.html">C++ Classes</a></li>
+<li>CostExplorerClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CostExplorerClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-costexplorer-costexplorerclient.html">QtAws::CostExplorer::CostExplorerClient</a>)<br/></span>
+<!-- $$$CostExplorerClient-brief -->
+<p>The <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> class provides access to the AWS Cost Explorer Service service. <a href="#details">More...</a></p>
+<!-- @@@CostExplorerClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CostExplorerClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-costexplorer-costexplorerclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#CostExplorerClient">CostExplorerClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#CostExplorerClient-1">CostExplorerClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> GetCostAndUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getCostAndUsage">getCostAndUsage</a></b>(const GetCostAndUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDimensionValuesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getDimensionValues">getDimensionValues</a></b>(const GetDimensionValuesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetReservationCoverageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getReservationCoverage">getReservationCoverage</a></b>(const GetReservationCoverageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetReservationPurchaseRecommendationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getReservationPurchaseRecommendation">getReservationPurchaseRecommendation</a></b>(const GetReservationPurchaseRecommendationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetReservationUtilizationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getReservationUtilization">getReservationUtilization</a></b>(const GetReservationUtilizationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-costexplorer-costexplorerclient.html#getTags">getTags</a></b>(const GetTagsRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CostExplorerClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> class provides access to the AWS Cost Explorer Service service.</p>
+<p>The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily write operations for Amazon DynamoDB database tables in your production environment.</p>
+<p>&lt;/p</p>
+<p>Service</p>
+<p>Endpoin&gt;</p>
+<p>The Cost Explorer API provides the following</p>
+<p>endpoint&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>https://ce.us-east-1.amazonaws.co&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>For information about costs associated with the Cost Explorer API, see &lt;a href=&quot;https://aws.amazon.com/aws-cost-management/pricing/&quot;&gt;AWS Cost Management</p>
+</div>
+<!-- @@@CostExplorerClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CostExplorerClient[overload1]$$$CostExplorerClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CostExplorerClient"><a name="CostExplorerClient"></a>CostExplorerClient::<span class="name">CostExplorerClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CostExplorerClient -->
+<!-- $$$CostExplorerClient$$$CostExplorerClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CostExplorerClient-1"><a name="CostExplorerClient-1"></a>CostExplorerClient::<span class="name">CostExplorerClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-costexplorer-costexplorerclient.html#CostExplorerClient">CostExplorerClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CostExplorerClient -->
+<!-- $$$getCostAndUsage[overload1]$$$getCostAndUsageconstGetCostAndUsageRequest& -->
+<h3 class="fn" id="getCostAndUsage"><a name="getCostAndUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-getcostandusageresponse.html">GetCostAndUsageResponse</a></span> *CostExplorerClient::<span class="name">getCostAndUsage</span>(const <span class="type"><a href="qtaws-costexplorer-getcostandusagerequest.html">GetCostAndUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-getcostandusageresponse.html">GetCostAndUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as &lt;code&gt;BlendedCosts&lt;/code&gt; or &lt;code&gt;UsageQuantity&lt;/code&gt;, that you want the request to return. You can also filter and group your data by various dimensions, such as &lt;code&gt;SERVICE&lt;/code&gt; or &lt;code&gt;AZ&lt;/code&gt;, in a specific time range. For a complete list of valid dimensions, see the &lt;code&gt; &lt;a href=&quot;http://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html&quot;&gt;GetDimensionValues&lt;/a&gt; &lt;/code&gt; operation. Master accounts in an organization in AWS Organizations have access to all member</p>
+<!-- @@@getCostAndUsage -->
+<!-- $$$getDimensionValues[overload1]$$$getDimensionValuesconstGetDimensionValuesRequest& -->
+<h3 class="fn" id="getDimensionValues"><a name="getDimensionValues"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-getdimensionvaluesresponse.html">GetDimensionValuesResponse</a></span> *CostExplorerClient::<span class="name">getDimensionValues</span>(const <span class="type"><a href="qtaws-costexplorer-getdimensionvaluesrequest.html">GetDimensionValuesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-getdimensionvaluesresponse.html">GetDimensionValuesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves all available filter values for a specified filter over a period of time. You can search the dimension values for an arbitrary string.</p>
+<!-- @@@getDimensionValues -->
+<!-- $$$getReservationCoverage[overload1]$$$getReservationCoverageconstGetReservationCoverageRequest& -->
+<h3 class="fn" id="getReservationCoverage"><a name="getReservationCoverage"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-getreservationcoverageresponse.html">GetReservationCoverageResponse</a></span> *CostExplorerClient::<span class="name">getReservationCoverage</span>(const <span class="type"><a href="qtaws-costexplorer-getreservationcoveragerequest.html">GetReservationCoverageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-getreservationcoverageresponse.html">GetReservationCoverageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the reservation coverage for your account. This allows you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's master account can see the coverage of the associated member accounts. For any time period, you can filter data about reservation usage by the following</p>
+<p>dimensions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>A&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>CACHE_ENGIN&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DATABASE_ENGIN&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>DEPLOYMENT_OPTIO&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>INSTANCE_TYP&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>LINKED_ACCOUN&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>OPERATING_SYSTE&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>PLATFOR&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>REGIO&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>SERVIC&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>TA&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>TENANC&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>To determine valid values for a dimension, use the &lt;code&gt;GetDimensionValues&lt;/code&gt; operation.</p>
+<!-- @@@getReservationCoverage -->
+<!-- $$$getReservationPurchaseRecommendation[overload1]$$$getReservationPurchaseRecommendationconstGetReservationPurchaseRecommendationRequest& -->
+<h3 class="fn" id="getReservationPurchaseRecommendation"><a name="getReservationPurchaseRecommendation"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-getreservationpurchaserecommendationresponse.html">GetReservationPurchaseRecommendationResponse</a></span> *CostExplorerClient::<span class="name">getReservationPurchaseRecommendation</span>(const <span class="type"><a href="qtaws-costexplorer-getreservationpurchaserecommendationrequest.html">GetReservationPurchaseRecommendationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-getreservationpurchaserecommendationresponse.html">GetReservationPurchaseRecommendationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets recommendations for which reservations to purchase. These recommendations could help you reduce your costs. Reservations provide a discounted hourly rate (up to 75%) compared to On-Demand</p>
+<p>pricing&gt;</p>
+<p>AWS generates your recommendations by identifying your On-Demand usage during a specific time period and collecting your usage into categories that are eligible for a reservation. After AWS has these categories, it simulates every combination of reservations in each category of usage to identify the best number of each type of RI to purchase to maximize your estimated savings.</p>
+<p>&lt;/p</p>
+<p>For example, AWS automatically aggregates your EC2 Linux, shared tenancy, and c4 family usage in the US West (Oregon) Region and recommends that you buy size-flexible regional reservations to apply to the c4 family usage. AWS recommends the smallest size instance in an instance family. This makes it easier to purchase a size-flexible RI. AWS also shows the equal number of normalized units so that you can purchase any instance size that you want. For this example, your RI recommendation would be for &lt;code&gt;c4.large&lt;/code&gt;, because that is the smallest size instance in the c4 instance</p>
+<!-- @@@getReservationPurchaseRecommendation -->
+<!-- $$$getReservationUtilization[overload1]$$$getReservationUtilizationconstGetReservationUtilizationRequest& -->
+<h3 class="fn" id="getReservationUtilization"><a name="getReservationUtilization"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-getreservationutilizationresponse.html">GetReservationUtilizationResponse</a></span> *CostExplorerClient::<span class="name">getReservationUtilization</span>(const <span class="type"><a href="qtaws-costexplorer-getreservationutilizationrequest.html">GetReservationUtilizationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-getreservationutilizationresponse.html">GetReservationUtilizationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the reservation utilization for your account. Master accounts in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use &lt;code&gt;GetDimensionValues&lt;/code&gt; to determine the possible dimension values. Currently, you can group only by &lt;code&gt;SUBSCRIPTION_ID&lt;/code&gt;.</p>
+<!-- @@@getReservationUtilization -->
+<!-- $$$getTags[overload1]$$$getTagsconstGetTagsRequest& -->
+<h3 class="fn" id="getTags"><a name="getTags"></a><code>[slot] </code><span class="type"><a href="qtaws-costexplorer-gettagsresponse.html">GetTagsResponse</a></span> *CostExplorerClient::<span class="name">getTags</span>(const <span class="type"><a href="qtaws-costexplorer-gettagsrequest.html">GetTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-costexplorer-costexplorerclient.html">CostExplorerClient</a> service, and returns a pointer to an <a href="qtaws-costexplorer-gettagsresponse.html">GetTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Queries for available tag keys and tag values for a specified period. You can search the tag values for an arbitrary string.</p>
+<!-- @@@getTags -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

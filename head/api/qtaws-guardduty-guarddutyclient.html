@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- guarddutyclient.cpp -->
+  <title>GuardDutyClient Class | GuardDuty</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsguardduty-index.html">GuardDuty</a></li>
+<li><a href="qtawsguardduty-module.html">C++ Classes</a></li>
+<li>GuardDutyClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">GuardDutyClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-guardduty-guarddutyclient.html">QtAws::GuardDuty::GuardDutyClient</a>)<br/></span>
+<!-- $$$GuardDutyClient-brief -->
+<p>The <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> class provides access to the Amazon <a href="qtaws-guardduty.html">GuardDuty</a> service. <a href="#details">More...</a></p>
+<!-- @@@GuardDutyClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;GuardDutyClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-guardduty-guarddutyclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#GuardDutyClient">GuardDutyClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#GuardDutyClient-1">GuardDutyClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AcceptInvitationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#acceptInvitation">acceptInvitation</a></b>(const AcceptInvitationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ArchiveFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#archiveFindings">archiveFindings</a></b>(const ArchiveFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDetectorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#createDetector">createDetector</a></b>(const CreateDetectorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#createIPSet">createIPSet</a></b>(const CreateIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#createMembers">createMembers</a></b>(const CreateMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateSampleFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#createSampleFindings">createSampleFindings</a></b>(const CreateSampleFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateThreatIntelSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#createThreatIntelSet">createThreatIntelSet</a></b>(const CreateThreatIntelSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeclineInvitationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#declineInvitations">declineInvitations</a></b>(const DeclineInvitationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDetectorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteDetector">deleteDetector</a></b>(const DeleteDetectorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteIPSet">deleteIPSet</a></b>(const DeleteIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInvitationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteInvitations">deleteInvitations</a></b>(const DeleteInvitationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteMembers">deleteMembers</a></b>(const DeleteMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteThreatIntelSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteThreatIntelSet">deleteThreatIntelSet</a></b>(const DeleteThreatIntelSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateFromMasterAccountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#disassociateFromMasterAccount">disassociateFromMasterAccount</a></b>(const DisassociateFromMasterAccountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#disassociateMembers">disassociateMembers</a></b>(const DisassociateMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDetectorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getDetector">getDetector</a></b>(const GetDetectorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getFindings">getFindings</a></b>(const GetFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFindingsStatisticsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getFindingsStatistics">getFindingsStatistics</a></b>(const GetFindingsStatisticsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getIPSet">getIPSet</a></b>(const GetIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInvitationsCountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getInvitationsCount">getInvitationsCount</a></b>(const GetInvitationsCountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMasterAccountResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getMasterAccount">getMasterAccount</a></b>(const GetMasterAccountRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getMembers">getMembers</a></b>(const GetMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetThreatIntelSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#getThreatIntelSet">getThreatIntelSet</a></b>(const GetThreatIntelSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InviteMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#inviteMembers">inviteMembers</a></b>(const InviteMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDetectorsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listDetectors">listDetectors</a></b>(const ListDetectorsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listFindings">listFindings</a></b>(const ListFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListIPSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listIPSets">listIPSets</a></b>(const ListIPSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListInvitationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listInvitations">listInvitations</a></b>(const ListInvitationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listMembers">listMembers</a></b>(const ListMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListThreatIntelSetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#listThreatIntelSets">listThreatIntelSets</a></b>(const ListThreatIntelSetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartMonitoringMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#startMonitoringMembers">startMonitoringMembers</a></b>(const StartMonitoringMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopMonitoringMembersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#stopMonitoringMembers">stopMonitoringMembers</a></b>(const StopMonitoringMembersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnarchiveFindingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#unarchiveFindings">unarchiveFindings</a></b>(const UnarchiveFindingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDetectorResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#updateDetector">updateDetector</a></b>(const UpdateDetectorRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFindingsFeedbackResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#updateFindingsFeedback">updateFindingsFeedback</a></b>(const UpdateFindingsFeedbackRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateIPSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#updateIPSet">updateIPSet</a></b>(const UpdateIPSetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateThreatIntelSetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-guardduty-guarddutyclient.html#updateThreatIntelSet">updateThreatIntelSet</a></b>(const UpdateThreatIntelSetRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$GuardDutyClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> class provides access to the Amazon <a href="qtaws-guardduty.html">GuardDuty</a> service.</p>
+</div>
+<!-- @@@GuardDutyClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$GuardDutyClient[overload1]$$$GuardDutyClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GuardDutyClient"><a name="GuardDutyClient"></a>GuardDutyClient::<span class="name">GuardDutyClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@GuardDutyClient -->
+<!-- $$$GuardDutyClient$$$GuardDutyClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="GuardDutyClient-1"><a name="GuardDutyClient-1"></a>GuardDutyClient::<span class="name">GuardDutyClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-guardduty-guarddutyclient.html#GuardDutyClient">GuardDutyClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@GuardDutyClient -->
+<!-- $$$acceptInvitation[overload1]$$$acceptInvitationconstAcceptInvitationRequest& -->
+<h3 class="fn" id="acceptInvitation"><a name="acceptInvitation"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-acceptinvitationresponse.html">AcceptInvitationResponse</a></span> *GuardDutyClient::<span class="name">acceptInvitation</span>(const <span class="type"><a href="qtaws-guardduty-acceptinvitationrequest.html">AcceptInvitationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-acceptinvitationresponse.html">AcceptInvitationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@acceptInvitation -->
+<!-- $$$archiveFindings[overload1]$$$archiveFindingsconstArchiveFindingsRequest& -->
+<h3 class="fn" id="archiveFindings"><a name="archiveFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-archivefindingsresponse.html">ArchiveFindingsResponse</a></span> *GuardDutyClient::<span class="name">archiveFindings</span>(const <span class="type"><a href="qtaws-guardduty-archivefindingsrequest.html">ArchiveFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-archivefindingsresponse.html">ArchiveFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@archiveFindings -->
+<!-- $$$createDetector[overload1]$$$createDetectorconstCreateDetectorRequest& -->
+<h3 class="fn" id="createDetector"><a name="createDetector"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-createdetectorresponse.html">CreateDetectorResponse</a></span> *GuardDutyClient::<span class="name">createDetector</span>(const <span class="type"><a href="qtaws-guardduty-createdetectorrequest.html">CreateDetectorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-createdetectorresponse.html">CreateDetectorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a single Amazon <a href="qtaws-guardduty.html">GuardDuty</a> detector. A detector is an object that represents the <a href="qtaws-guardduty.html">GuardDuty</a> service. A detector</p>
+<!-- @@@createDetector -->
+<!-- $$$createIPSet[overload1]$$$createIPSetconstCreateIPSetRequest& -->
+<h3 class="fn" id="createIPSet"><a name="createIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-createipsetresponse.html">CreateIPSetResponse</a></span> *GuardDutyClient::<span class="name">createIPSet</span>(const <span class="type"><a href="qtaws-guardduty-createipsetrequest.html">CreateIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-createipsetresponse.html">CreateIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS</p>
+<!-- @@@createIPSet -->
+<!-- $$$createMembers[overload1]$$$createMembersconstCreateMembersRequest& -->
+<h3 class="fn" id="createMembers"><a name="createMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-createmembersresponse.html">CreateMembersResponse</a></span> *GuardDutyClient::<span class="name">createMembers</span>(const <span class="type"><a href="qtaws-guardduty-createmembersrequest.html">CreateMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-createmembersresponse.html">CreateMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can</p>
+<!-- @@@createMembers -->
+<!-- $$$createSampleFindings[overload1]$$$createSampleFindingsconstCreateSampleFindingsRequest& -->
+<h3 class="fn" id="createSampleFindings"><a name="createSampleFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-createsamplefindingsresponse.html">CreateSampleFindingsResponse</a></span> *GuardDutyClient::<span class="name">createSampleFindings</span>(const <span class="type"><a href="qtaws-guardduty-createsamplefindingsrequest.html">CreateSampleFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-createsamplefindingsresponse.html">CreateSampleFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the</p>
+<!-- @@@createSampleFindings -->
+<!-- $$$createThreatIntelSet[overload1]$$$createThreatIntelSetconstCreateThreatIntelSetRequest& -->
+<h3 class="fn" id="createThreatIntelSet"><a name="createThreatIntelSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-createthreatintelsetresponse.html">CreateThreatIntelSetResponse</a></span> *GuardDutyClient::<span class="name">createThreatIntelSet</span>(const <span class="type"><a href="qtaws-guardduty-createthreatintelsetrequest.html">CreateThreatIntelSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-createthreatintelsetresponse.html">CreateThreatIntelSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. <a href="qtaws-guardduty.html">GuardDuty</a> generates findings based</p>
+<!-- @@@createThreatIntelSet -->
+<!-- $$$declineInvitations[overload1]$$$declineInvitationsconstDeclineInvitationsRequest& -->
+<h3 class="fn" id="declineInvitations"><a name="declineInvitations"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-declineinvitationsresponse.html">DeclineInvitationsResponse</a></span> *GuardDutyClient::<span class="name">declineInvitations</span>(const <span class="type"><a href="qtaws-guardduty-declineinvitationsrequest.html">DeclineInvitationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-declineinvitationsresponse.html">DeclineInvitationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@declineInvitations -->
+<!-- $$$deleteDetector[overload1]$$$deleteDetectorconstDeleteDetectorRequest& -->
+<h3 class="fn" id="deleteDetector"><a name="deleteDetector"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-deletedetectorresponse.html">DeleteDetectorResponse</a></span> *GuardDutyClient::<span class="name">deleteDetector</span>(const <span class="type"><a href="qtaws-guardduty-deletedetectorrequest.html">DeleteDetectorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-deletedetectorresponse.html">DeleteDetectorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteDetector -->
+<!-- $$$deleteIPSet[overload1]$$$deleteIPSetconstDeleteIPSetRequest& -->
+<h3 class="fn" id="deleteIPSet"><a name="deleteIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-deleteipsetresponse.html">DeleteIPSetResponse</a></span> *GuardDutyClient::<span class="name">deleteIPSet</span>(const <span class="type"><a href="qtaws-guardduty-deleteipsetrequest.html">DeleteIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-deleteipsetresponse.html">DeleteIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteIPSet -->
+<!-- $$$deleteInvitations[overload1]$$$deleteInvitationsconstDeleteInvitationsRequest& -->
+<h3 class="fn" id="deleteInvitations"><a name="deleteInvitations"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-deleteinvitationsresponse.html">DeleteInvitationsResponse</a></span> *GuardDutyClient::<span class="name">deleteInvitations</span>(const <span class="type"><a href="qtaws-guardduty-deleteinvitationsrequest.html">DeleteInvitationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-deleteinvitationsresponse.html">DeleteInvitationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteInvitations -->
+<!-- $$$deleteMembers[overload1]$$$deleteMembersconstDeleteMembersRequest& -->
+<h3 class="fn" id="deleteMembers"><a name="deleteMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-deletemembersresponse.html">DeleteMembersResponse</a></span> *GuardDutyClient::<span class="name">deleteMembers</span>(const <span class="type"><a href="qtaws-guardduty-deletemembersrequest.html">DeleteMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-deletemembersresponse.html">DeleteMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteMembers -->
+<!-- $$$deleteThreatIntelSet[overload1]$$$deleteThreatIntelSetconstDeleteThreatIntelSetRequest& -->
+<h3 class="fn" id="deleteThreatIntelSet"><a name="deleteThreatIntelSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-deletethreatintelsetresponse.html">DeleteThreatIntelSetResponse</a></span> *GuardDutyClient::<span class="name">deleteThreatIntelSet</span>(const <span class="type"><a href="qtaws-guardduty-deletethreatintelsetrequest.html">DeleteThreatIntelSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-deletethreatintelsetresponse.html">DeleteThreatIntelSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@deleteThreatIntelSet -->
+<!-- $$$disassociateFromMasterAccount[overload1]$$$disassociateFromMasterAccountconstDisassociateFromMasterAccountRequest& -->
+<h3 class="fn" id="disassociateFromMasterAccount"><a name="disassociateFromMasterAccount"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-disassociatefrommasteraccountresponse.html">DisassociateFromMasterAccountResponse</a></span> *GuardDutyClient::<span class="name">disassociateFromMasterAccount</span>(const <span class="type"><a href="qtaws-guardduty-disassociatefrommasteraccountrequest.html">DisassociateFromMasterAccountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-disassociatefrommasteraccountresponse.html">DisassociateFromMasterAccountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@disassociateFromMasterAccount -->
+<!-- $$$disassociateMembers[overload1]$$$disassociateMembersconstDisassociateMembersRequest& -->
+<h3 class="fn" id="disassociateMembers"><a name="disassociateMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-disassociatemembersresponse.html">DisassociateMembersResponse</a></span> *GuardDutyClient::<span class="name">disassociateMembers</span>(const <span class="type"><a href="qtaws-guardduty-disassociatemembersrequest.html">DisassociateMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-disassociatemembersresponse.html">DisassociateMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@disassociateMembers -->
+<!-- $$$getDetector[overload1]$$$getDetectorconstGetDetectorRequest& -->
+<h3 class="fn" id="getDetector"><a name="getDetector"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getdetectorresponse.html">GetDetectorResponse</a></span> *GuardDutyClient::<span class="name">getDetector</span>(const <span class="type"><a href="qtaws-guardduty-getdetectorrequest.html">GetDetectorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getdetectorresponse.html">GetDetectorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getDetector -->
+<!-- $$$getFindings[overload1]$$$getFindingsconstGetFindingsRequest& -->
+<h3 class="fn" id="getFindings"><a name="getFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getfindingsresponse.html">GetFindingsResponse</a></span> *GuardDutyClient::<span class="name">getFindings</span>(const <span class="type"><a href="qtaws-guardduty-getfindingsrequest.html">GetFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getfindingsresponse.html">GetFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getFindings -->
+<!-- $$$getFindingsStatistics[overload1]$$$getFindingsStatisticsconstGetFindingsStatisticsRequest& -->
+<h3 class="fn" id="getFindingsStatistics"><a name="getFindingsStatistics"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getfindingsstatisticsresponse.html">GetFindingsStatisticsResponse</a></span> *GuardDutyClient::<span class="name">getFindingsStatistics</span>(const <span class="type"><a href="qtaws-guardduty-getfindingsstatisticsrequest.html">GetFindingsStatisticsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getfindingsstatisticsresponse.html">GetFindingsStatisticsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getFindingsStatistics -->
+<!-- $$$getIPSet[overload1]$$$getIPSetconstGetIPSetRequest& -->
+<h3 class="fn" id="getIPSet"><a name="getIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getipsetresponse.html">GetIPSetResponse</a></span> *GuardDutyClient::<span class="name">getIPSet</span>(const <span class="type"><a href="qtaws-guardduty-getipsetrequest.html">GetIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getipsetresponse.html">GetIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getIPSet -->
+<!-- $$$getInvitationsCount[overload1]$$$getInvitationsCountconstGetInvitationsCountRequest& -->
+<h3 class="fn" id="getInvitationsCount"><a name="getInvitationsCount"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getinvitationscountresponse.html">GetInvitationsCountResponse</a></span> *GuardDutyClient::<span class="name">getInvitationsCount</span>(const <span class="type"><a href="qtaws-guardduty-getinvitationscountrequest.html">GetInvitationsCountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getinvitationscountresponse.html">GetInvitationsCountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the count of all <a href="qtaws-guardduty.html">GuardDuty</a> membership invitations that were sent to the current member account except the</p>
+<!-- @@@getInvitationsCount -->
+<!-- $$$getMasterAccount[overload1]$$$getMasterAccountconstGetMasterAccountRequest& -->
+<h3 class="fn" id="getMasterAccount"><a name="getMasterAccount"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getmasteraccountresponse.html">GetMasterAccountResponse</a></span> *GuardDutyClient::<span class="name">getMasterAccount</span>(const <span class="type"><a href="qtaws-guardduty-getmasteraccountrequest.html">GetMasterAccountRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getmasteraccountresponse.html">GetMasterAccountResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getMasterAccount -->
+<!-- $$$getMembers[overload1]$$$getMembersconstGetMembersRequest& -->
+<h3 class="fn" id="getMembers"><a name="getMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getmembersresponse.html">GetMembersResponse</a></span> *GuardDutyClient::<span class="name">getMembers</span>(const <span class="type"><a href="qtaws-guardduty-getmembersrequest.html">GetMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getmembersresponse.html">GetMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getMembers -->
+<!-- $$$getThreatIntelSet[overload1]$$$getThreatIntelSetconstGetThreatIntelSetRequest& -->
+<h3 class="fn" id="getThreatIntelSet"><a name="getThreatIntelSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-getthreatintelsetresponse.html">GetThreatIntelSetResponse</a></span> *GuardDutyClient::<span class="name">getThreatIntelSet</span>(const <span class="type"><a href="qtaws-guardduty-getthreatintelsetrequest.html">GetThreatIntelSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-getthreatintelsetresponse.html">GetThreatIntelSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@getThreatIntelSet -->
+<!-- $$$inviteMembers[overload1]$$$inviteMembersconstInviteMembersRequest& -->
+<h3 class="fn" id="inviteMembers"><a name="inviteMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-invitemembersresponse.html">InviteMembersResponse</a></span> *GuardDutyClient::<span class="name">inviteMembers</span>(const <span class="type"><a href="qtaws-guardduty-invitemembersrequest.html">InviteMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-invitemembersresponse.html">InviteMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Invites other AWS accounts (created as members of the current AWS account by CreateMembers) to enable <a href="qtaws-guardduty.html">GuardDuty</a> and allow the current AWS account to view and manage these accounts' <a href="qtaws-guardduty.html">GuardDuty</a> findings on their behalf as the master</p>
+<!-- @@@inviteMembers -->
+<!-- $$$listDetectors[overload1]$$$listDetectorsconstListDetectorsRequest& -->
+<h3 class="fn" id="listDetectors"><a name="listDetectors"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listdetectorsresponse.html">ListDetectorsResponse</a></span> *GuardDutyClient::<span class="name">listDetectors</span>(const <span class="type"><a href="qtaws-guardduty-listdetectorsrequest.html">ListDetectorsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listdetectorsresponse.html">ListDetectorsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listDetectors -->
+<!-- $$$listFindings[overload1]$$$listFindingsconstListFindingsRequest& -->
+<h3 class="fn" id="listFindings"><a name="listFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listfindingsresponse.html">ListFindingsResponse</a></span> *GuardDutyClient::<span class="name">listFindings</span>(const <span class="type"><a href="qtaws-guardduty-listfindingsrequest.html">ListFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listfindingsresponse.html">ListFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listFindings -->
+<!-- $$$listIPSets[overload1]$$$listIPSetsconstListIPSetsRequest& -->
+<h3 class="fn" id="listIPSets"><a name="listIPSets"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listipsetsresponse.html">ListIPSetsResponse</a></span> *GuardDutyClient::<span class="name">listIPSets</span>(const <span class="type"><a href="qtaws-guardduty-listipsetsrequest.html">ListIPSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listipsetsresponse.html">ListIPSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listIPSets -->
+<!-- $$$listInvitations[overload1]$$$listInvitationsconstListInvitationsRequest& -->
+<h3 class="fn" id="listInvitations"><a name="listInvitations"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listinvitationsresponse.html">ListInvitationsResponse</a></span> *GuardDutyClient::<span class="name">listInvitations</span>(const <span class="type"><a href="qtaws-guardduty-listinvitationsrequest.html">ListInvitationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listinvitationsresponse.html">ListInvitationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listInvitations -->
+<!-- $$$listMembers[overload1]$$$listMembersconstListMembersRequest& -->
+<h3 class="fn" id="listMembers"><a name="listMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listmembersresponse.html">ListMembersResponse</a></span> *GuardDutyClient::<span class="name">listMembers</span>(const <span class="type"><a href="qtaws-guardduty-listmembersrequest.html">ListMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listmembersresponse.html">ListMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listMembers -->
+<!-- $$$listThreatIntelSets[overload1]$$$listThreatIntelSetsconstListThreatIntelSetsRequest& -->
+<h3 class="fn" id="listThreatIntelSets"><a name="listThreatIntelSets"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-listthreatintelsetsresponse.html">ListThreatIntelSetsResponse</a></span> *GuardDutyClient::<span class="name">listThreatIntelSets</span>(const <span class="type"><a href="qtaws-guardduty-listthreatintelsetsrequest.html">ListThreatIntelSetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-listthreatintelsetsresponse.html">ListThreatIntelSetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@listThreatIntelSets -->
+<!-- $$$startMonitoringMembers[overload1]$$$startMonitoringMembersconstStartMonitoringMembersRequest& -->
+<h3 class="fn" id="startMonitoringMembers"><a name="startMonitoringMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-startmonitoringmembersresponse.html">StartMonitoringMembersResponse</a></span> *GuardDutyClient::<span class="name">startMonitoringMembers</span>(const <span class="type"><a href="qtaws-guardduty-startmonitoringmembersrequest.html">StartMonitoringMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-startmonitoringmembersresponse.html">StartMonitoringMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Re-enables <a href="qtaws-guardduty.html">GuardDuty</a> to monitor findings of the member accounts specified by the account IDs. A master <a href="qtaws-guardduty.html">GuardDuty</a> account</p>
+<!-- @@@startMonitoringMembers -->
+<!-- $$$stopMonitoringMembers[overload1]$$$stopMonitoringMembersconstStopMonitoringMembersRequest& -->
+<h3 class="fn" id="stopMonitoringMembers"><a name="stopMonitoringMembers"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-stopmonitoringmembersresponse.html">StopMonitoringMembersResponse</a></span> *GuardDutyClient::<span class="name">stopMonitoringMembers</span>(const <span class="type"><a href="qtaws-guardduty-stopmonitoringmembersrequest.html">StopMonitoringMembersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-stopmonitoringmembersresponse.html">StopMonitoringMembersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables <a href="qtaws-guardduty.html">GuardDuty</a> from monitoring findings of the member accounts specified by the account IDs. After running this command, a master <a href="qtaws-guardduty.html">GuardDuty</a> account can run StartMonitoringMembers to re-enable <a href="qtaws-guardduty.html">GuardDuty</a> to monitor these members'</p>
+<!-- @@@stopMonitoringMembers -->
+<!-- $$$unarchiveFindings[overload1]$$$unarchiveFindingsconstUnarchiveFindingsRequest& -->
+<h3 class="fn" id="unarchiveFindings"><a name="unarchiveFindings"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-unarchivefindingsresponse.html">UnarchiveFindingsResponse</a></span> *GuardDutyClient::<span class="name">unarchiveFindings</span>(const <span class="type"><a href="qtaws-guardduty-unarchivefindingsrequest.html">UnarchiveFindingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-unarchivefindingsresponse.html">UnarchiveFindingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@unarchiveFindings -->
+<!-- $$$updateDetector[overload1]$$$updateDetectorconstUpdateDetectorRequest& -->
+<h3 class="fn" id="updateDetector"><a name="updateDetector"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-updatedetectorresponse.html">UpdateDetectorResponse</a></span> *GuardDutyClient::<span class="name">updateDetector</span>(const <span class="type"><a href="qtaws-guardduty-updatedetectorrequest.html">UpdateDetectorRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-updatedetectorresponse.html">UpdateDetectorResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateDetector -->
+<!-- $$$updateFindingsFeedback[overload1]$$$updateFindingsFeedbackconstUpdateFindingsFeedbackRequest& -->
+<h3 class="fn" id="updateFindingsFeedback"><a name="updateFindingsFeedback"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-updatefindingsfeedbackresponse.html">UpdateFindingsFeedbackResponse</a></span> *GuardDutyClient::<span class="name">updateFindingsFeedback</span>(const <span class="type"><a href="qtaws-guardduty-updatefindingsfeedbackrequest.html">UpdateFindingsFeedbackRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-updatefindingsfeedbackresponse.html">UpdateFindingsFeedbackResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateFindingsFeedback -->
+<!-- $$$updateIPSet[overload1]$$$updateIPSetconstUpdateIPSetRequest& -->
+<h3 class="fn" id="updateIPSet"><a name="updateIPSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-updateipsetresponse.html">UpdateIPSetResponse</a></span> *GuardDutyClient::<span class="name">updateIPSet</span>(const <span class="type"><a href="qtaws-guardduty-updateipsetrequest.html">UpdateIPSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-updateipsetresponse.html">UpdateIPSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateIPSet -->
+<!-- $$$updateThreatIntelSet[overload1]$$$updateThreatIntelSetconstUpdateThreatIntelSetRequest& -->
+<h3 class="fn" id="updateThreatIntelSet"><a name="updateThreatIntelSet"></a><code>[slot] </code><span class="type"><a href="qtaws-guardduty-updatethreatintelsetresponse.html">UpdateThreatIntelSetResponse</a></span> *GuardDutyClient::<span class="name">updateThreatIntelSet</span>(const <span class="type"><a href="qtaws-guardduty-updatethreatintelsetrequest.html">UpdateThreatIntelSetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-guardduty-guarddutyclient.html">GuardDutyClient</a> service, and returns a pointer to an <a href="qtaws-guardduty-updatethreatintelsetresponse.html">UpdateThreatIntelSetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><!-- @@@updateThreatIntelSet -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

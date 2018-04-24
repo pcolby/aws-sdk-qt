@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lightsailclient.cpp -->
+  <title>LightsailClient Class | Lightsail</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslightsail-index.html">Lightsail</a></li>
+<li><a href="qtawslightsail-module.html">C++ Classes</a></li>
+<li>LightsailClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LightsailClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lightsail-lightsailclient.html">QtAws::Lightsail::LightsailClient</a>)<br/></span>
+<!-- $$$LightsailClient-brief -->
+<p>The <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> class provides access to the Amazon Lightsail service. <a href="#details">More...</a></p>
+<!-- @@@LightsailClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LightsailClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-lightsail-lightsailclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#LightsailClient">LightsailClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#LightsailClient-1">LightsailClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AllocateStaticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#allocateStaticIp">allocateStaticIp</a></b>(const AllocateStaticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachDiskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#attachDisk">attachDisk</a></b>(const AttachDiskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachInstancesToLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#attachInstancesToLoadBalancer">attachInstancesToLoadBalancer</a></b>(const AttachInstancesToLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachLoadBalancerTlsCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#attachLoadBalancerTlsCertificate">attachLoadBalancerTlsCertificate</a></b>(const AttachLoadBalancerTlsCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AttachStaticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#attachStaticIp">attachStaticIp</a></b>(const AttachStaticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CloseInstancePublicPortsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#closeInstancePublicPorts">closeInstancePublicPorts</a></b>(const CloseInstancePublicPortsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDiskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createDisk">createDisk</a></b>(const CreateDiskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDiskFromSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createDiskFromSnapshot">createDiskFromSnapshot</a></b>(const CreateDiskFromSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDiskSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createDiskSnapshot">createDiskSnapshot</a></b>(const CreateDiskSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createDomain">createDomain</a></b>(const CreateDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDomainEntryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createDomainEntry">createDomainEntry</a></b>(const CreateDomainEntryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInstanceSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createInstanceSnapshot">createInstanceSnapshot</a></b>(const CreateInstanceSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createInstances">createInstances</a></b>(const CreateInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateInstancesFromSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createInstancesFromSnapshot">createInstancesFromSnapshot</a></b>(const CreateInstancesFromSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateKeyPairResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createKeyPair">createKeyPair</a></b>(const CreateKeyPairRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createLoadBalancer">createLoadBalancer</a></b>(const CreateLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateLoadBalancerTlsCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#createLoadBalancerTlsCertificate">createLoadBalancerTlsCertificate</a></b>(const CreateLoadBalancerTlsCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDiskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteDisk">deleteDisk</a></b>(const DeleteDiskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDiskSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteDiskSnapshot">deleteDiskSnapshot</a></b>(const DeleteDiskSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteDomain">deleteDomain</a></b>(const DeleteDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDomainEntryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteDomainEntry">deleteDomainEntry</a></b>(const DeleteDomainEntryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteInstance">deleteInstance</a></b>(const DeleteInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteInstanceSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteInstanceSnapshot">deleteInstanceSnapshot</a></b>(const DeleteInstanceSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteKeyPairResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteKeyPair">deleteKeyPair</a></b>(const DeleteKeyPairRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteLoadBalancer">deleteLoadBalancer</a></b>(const DeleteLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteLoadBalancerTlsCertificateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#deleteLoadBalancerTlsCertificate">deleteLoadBalancerTlsCertificate</a></b>(const DeleteLoadBalancerTlsCertificateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachDiskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#detachDisk">detachDisk</a></b>(const DetachDiskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachInstancesFromLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#detachInstancesFromLoadBalancer">detachInstancesFromLoadBalancer</a></b>(const DetachInstancesFromLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DetachStaticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#detachStaticIp">detachStaticIp</a></b>(const DetachStaticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DownloadDefaultKeyPairResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#downloadDefaultKeyPair">downloadDefaultKeyPair</a></b>(const DownloadDefaultKeyPairRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetActiveNamesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getActiveNames">getActiveNames</a></b>(const GetActiveNamesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBlueprintsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getBlueprints">getBlueprints</a></b>(const GetBlueprintsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetBundlesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getBundles">getBundles</a></b>(const GetBundlesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDiskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDisk">getDisk</a></b>(const GetDiskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDiskSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDiskSnapshot">getDiskSnapshot</a></b>(const GetDiskSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDiskSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDiskSnapshots">getDiskSnapshots</a></b>(const GetDiskSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDisksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDisks">getDisks</a></b>(const GetDisksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDomain">getDomain</a></b>(const GetDomainRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDomainsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getDomains">getDomains</a></b>(const GetDomainsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstance">getInstance</a></b>(const GetInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceAccessDetailsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstanceAccessDetails">getInstanceAccessDetails</a></b>(const GetInstanceAccessDetailsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceMetricDataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstanceMetricData">getInstanceMetricData</a></b>(const GetInstanceMetricDataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstancePortStatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstancePortStates">getInstancePortStates</a></b>(const GetInstancePortStatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceSnapshotResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstanceSnapshot">getInstanceSnapshot</a></b>(const GetInstanceSnapshotRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceSnapshotsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstanceSnapshots">getInstanceSnapshots</a></b>(const GetInstanceSnapshotsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstanceStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstanceState">getInstanceState</a></b>(const GetInstanceStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getInstances">getInstances</a></b>(const GetInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetKeyPairResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getKeyPair">getKeyPair</a></b>(const GetKeyPairRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetKeyPairsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getKeyPairs">getKeyPairs</a></b>(const GetKeyPairsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLoadBalancerResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getLoadBalancer">getLoadBalancer</a></b>(const GetLoadBalancerRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLoadBalancerMetricDataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getLoadBalancerMetricData">getLoadBalancerMetricData</a></b>(const GetLoadBalancerMetricDataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLoadBalancerTlsCertificatesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getLoadBalancerTlsCertificates">getLoadBalancerTlsCertificates</a></b>(const GetLoadBalancerTlsCertificatesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetLoadBalancersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getLoadBalancers">getLoadBalancers</a></b>(const GetLoadBalancersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOperationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getOperation">getOperation</a></b>(const GetOperationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOperationsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getOperations">getOperations</a></b>(const GetOperationsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetOperationsForResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getOperationsForResource">getOperationsForResource</a></b>(const GetOperationsForResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetRegionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getRegions">getRegions</a></b>(const GetRegionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetStaticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getStaticIp">getStaticIp</a></b>(const GetStaticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetStaticIpsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#getStaticIps">getStaticIps</a></b>(const GetStaticIpsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ImportKeyPairResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#importKeyPair">importKeyPair</a></b>(const ImportKeyPairRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IsVpcPeeredResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#isVpcPeered">isVpcPeered</a></b>(const IsVpcPeeredRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> OpenInstancePublicPortsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#openInstancePublicPorts">openInstancePublicPorts</a></b>(const OpenInstancePublicPortsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PeerVpcResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#peerVpc">peerVpc</a></b>(const PeerVpcRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutInstancePublicPortsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#putInstancePublicPorts">putInstancePublicPorts</a></b>(const PutInstancePublicPortsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RebootInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#rebootInstance">rebootInstance</a></b>(const RebootInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ReleaseStaticIpResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#releaseStaticIp">releaseStaticIp</a></b>(const ReleaseStaticIpRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#startInstance">startInstance</a></b>(const StartInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#stopInstance">stopInstance</a></b>(const StopInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnpeerVpcResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#unpeerVpc">unpeerVpc</a></b>(const UnpeerVpcRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDomainEntryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#updateDomainEntry">updateDomainEntry</a></b>(const UpdateDomainEntryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateLoadBalancerAttributeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lightsail-lightsailclient.html#updateLoadBalancerAttribute">updateLoadBalancerAttribute</a></b>(const UpdateLoadBalancerAttributeRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$LightsailClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> class provides access to the Amazon Lightsail service.</p>
+<p>Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers. Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the Lightsail console or by using the API or command-line interface</p>
+<p>(CLI)&gt;</p>
+<p>For more information about Lightsail concepts and tasks, see the &lt;a href=&quot;https://lightsail.aws.amazon.com/ls/docs/all&quot;&gt;Lightsail Dev</p>
+<p>Guide&lt;/a&gt;&gt;</p>
+<p>To use the Lightsail API or the CLI, you will need to use AWS Identity and Access Management (IAM) to generate access keys. For details about how to set this up, see the &lt;a href=&quot;http://lightsail.aws.amazon.com/ls/docs/how-to/article/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli&quot;&gt;Lightsail Dev</p>
+</div>
+<!-- @@@LightsailClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LightsailClient[overload1]$$$LightsailClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LightsailClient"><a name="LightsailClient"></a>LightsailClient::<span class="name">LightsailClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@LightsailClient -->
+<!-- $$$LightsailClient$$$LightsailClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LightsailClient-1"><a name="LightsailClient-1"></a>LightsailClient::<span class="name">LightsailClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-lightsail-lightsailclient.html#LightsailClient">LightsailClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@LightsailClient -->
+<!-- $$$allocateStaticIp[overload1]$$$allocateStaticIpconstAllocateStaticIpRequest& -->
+<h3 class="fn" id="allocateStaticIp"><a name="allocateStaticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-allocatestaticipresponse.html">AllocateStaticIpResponse</a></span> *LightsailClient::<span class="name">allocateStaticIp</span>(const <span class="type"><a href="qtaws-lightsail-allocatestaticiprequest.html">AllocateStaticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-allocatestaticipresponse.html">AllocateStaticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Allocates a static IP</p>
+<!-- @@@allocateStaticIp -->
+<!-- $$$attachDisk[overload1]$$$attachDiskconstAttachDiskRequest& -->
+<h3 class="fn" id="attachDisk"><a name="attachDisk"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-attachdiskresponse.html">AttachDiskResponse</a></span> *LightsailClient::<span class="name">attachDisk</span>(const <span class="type"><a href="qtaws-lightsail-attachdiskrequest.html">AttachDiskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-attachdiskresponse.html">AttachDiskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the specified disk</p>
+<!-- @@@attachDisk -->
+<!-- $$$attachInstancesToLoadBalancer[overload1]$$$attachInstancesToLoadBalancerconstAttachInstancesToLoadBalancerRequest& -->
+<h3 class="fn" id="attachInstancesToLoadBalancer"><a name="attachInstancesToLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-attachinstancestoloadbalancerresponse.html">AttachInstancesToLoadBalancerResponse</a></span> *LightsailClient::<span class="name">attachInstancesToLoadBalancer</span>(const <span class="type"><a href="qtaws-lightsail-attachinstancestoloadbalancerrequest.html">AttachInstancesToLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-attachinstancestoloadbalancerresponse.html">AttachInstancesToLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches one or more Lightsail instances to a load</p>
+<p>balancer&gt;</p>
+<p>After some time, the instances are attached to the load balancer and the health check status is</p>
+<!-- @@@attachInstancesToLoadBalancer -->
+<!-- $$$attachLoadBalancerTlsCertificate[overload1]$$$attachLoadBalancerTlsCertificateconstAttachLoadBalancerTlsCertificateRequest& -->
+<h3 class="fn" id="attachLoadBalancerTlsCertificate"><a name="attachLoadBalancerTlsCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-attachloadbalancertlscertificateresponse.html">AttachLoadBalancerTlsCertificateResponse</a></span> *LightsailClient::<span class="name">attachLoadBalancerTlsCertificate</span>(const <span class="type"><a href="qtaws-lightsail-attachloadbalancertlscertificaterequest.html">AttachLoadBalancerTlsCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-attachloadbalancertlscertificateresponse.html">AttachLoadBalancerTlsCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a Transport Layer Security (TLS) certificate to your load balancer. TLS is just an updated, more secure version of Secure Socket Layer</p>
+<p>(SSL)&gt;</p>
+<p>Once you create and validate your certificate, you can attach it to your load balancer. You can also use this API to rotate the certificates on your account. Use the &lt;code&gt;AttachLoadBalancerTlsCertificate&lt;/code&gt; operation with the non-attached certificate, and it will replace the existing one and become the attached</p>
+<!-- @@@attachLoadBalancerTlsCertificate -->
+<!-- $$$attachStaticIp[overload1]$$$attachStaticIpconstAttachStaticIpRequest& -->
+<h3 class="fn" id="attachStaticIp"><a name="attachStaticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-attachstaticipresponse.html">AttachStaticIpResponse</a></span> *LightsailClient::<span class="name">attachStaticIp</span>(const <span class="type"><a href="qtaws-lightsail-attachstaticiprequest.html">AttachStaticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-attachstaticipresponse.html">AttachStaticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a static IP address to a specific Amazon Lightsail</p>
+<!-- @@@attachStaticIp -->
+<!-- $$$closeInstancePublicPorts[overload1]$$$closeInstancePublicPortsconstCloseInstancePublicPortsRequest& -->
+<h3 class="fn" id="closeInstancePublicPorts"><a name="closeInstancePublicPorts"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-closeinstancepublicportsresponse.html">CloseInstancePublicPortsResponse</a></span> *LightsailClient::<span class="name">closeInstancePublicPorts</span>(const <span class="type"><a href="qtaws-lightsail-closeinstancepublicportsrequest.html">CloseInstancePublicPortsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-closeinstancepublicportsresponse.html">CloseInstancePublicPortsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Closes the public ports on a specific Amazon Lightsail</p>
+<!-- @@@closeInstancePublicPorts -->
+<!-- $$$createDisk[overload1]$$$createDiskconstCreateDiskRequest& -->
+<h3 class="fn" id="createDisk"><a name="createDisk"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-creatediskresponse.html">CreateDiskResponse</a></span> *LightsailClient::<span class="name">createDisk</span>(const <span class="type"><a href="qtaws-lightsail-creatediskrequest.html">CreateDiskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-creatediskresponse.html">CreateDiskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a block storage disk that can be attached to a Lightsail instance in the same Availability Zone (e.g&#x2e;, &lt;code&gt;us-east-2a&lt;/code&gt;). The disk is created in the regional endpoint that you send the HTTP request to. For more information, see &lt;a href=&quot;https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail&quot;&gt;Regions and Availability Zones in</p>
+<!-- @@@createDisk -->
+<!-- $$$createDiskFromSnapshot[overload1]$$$createDiskFromSnapshotconstCreateDiskFromSnapshotRequest& -->
+<h3 class="fn" id="createDiskFromSnapshot"><a name="createDiskFromSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-creatediskfromsnapshotresponse.html">CreateDiskFromSnapshotResponse</a></span> *LightsailClient::<span class="name">createDiskFromSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-creatediskfromsnapshotrequest.html">CreateDiskFromSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-creatediskfromsnapshotresponse.html">CreateDiskFromSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a block storage disk from a disk snapshot that can be attached to a Lightsail instance in the same Availability Zone (e.g&#x2e;, &lt;code&gt;us-east-2a&lt;/code&gt;). The disk is created in the regional endpoint that you send the HTTP request to. For more information, see &lt;a href=&quot;https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail&quot;&gt;Regions and Availability Zones in</p>
+<!-- @@@createDiskFromSnapshot -->
+<!-- $$$createDiskSnapshot[overload1]$$$createDiskSnapshotconstCreateDiskSnapshotRequest& -->
+<h3 class="fn" id="createDiskSnapshot"><a name="createDiskSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createdisksnapshotresponse.html">CreateDiskSnapshotResponse</a></span> *LightsailClient::<span class="name">createDiskSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-createdisksnapshotrequest.html">CreateDiskSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createdisksnapshotresponse.html">CreateDiskSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a snapshot of a block storage disk. You can use snapshots for backups, to make copies of disks, and to save data before shutting down a Lightsail</p>
+<p>instance&gt;</p>
+<p>You can take a snapshot of an attached disk that is in use; however, snapshots only capture data that has been written to your disk at the time the snapshot command is issued. This may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the disk long enough to take a snapshot, your snapshot should be complete. Nevertheless, if you cannot pause all file writes to the disk, you should unmount the disk from within the Lightsail instance, issue the create disk snapshot command, and then remount the disk to ensure a consistent and complete snapshot. You may remount and use your disk while the snapshot status is</p>
+<!-- @@@createDiskSnapshot -->
+<!-- $$$createDomain[overload1]$$$createDomainconstCreateDomainRequest& -->
+<h3 class="fn" id="createDomain"><a name="createDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createdomainresponse.html">CreateDomainResponse</a></span> *LightsailClient::<span class="name">createDomain</span>(const <span class="type"><a href="qtaws-lightsail-createdomainrequest.html">CreateDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createdomainresponse.html">CreateDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a domain resource for the specified domain (e.g&#x2e;,</p>
+<!-- @@@createDomain -->
+<!-- $$$createDomainEntry[overload1]$$$createDomainEntryconstCreateDomainEntryRequest& -->
+<h3 class="fn" id="createDomainEntry"><a name="createDomainEntry"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createdomainentryresponse.html">CreateDomainEntryResponse</a></span> *LightsailClient::<span class="name">createDomainEntry</span>(const <span class="type"><a href="qtaws-lightsail-createdomainentryrequest.html">CreateDomainEntryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createdomainentryresponse.html">CreateDomainEntryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX</p>
+<!-- @@@createDomainEntry -->
+<!-- $$$createInstanceSnapshot[overload1]$$$createInstanceSnapshotconstCreateInstanceSnapshotRequest& -->
+<h3 class="fn" id="createInstanceSnapshot"><a name="createInstanceSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createinstancesnapshotresponse.html">CreateInstanceSnapshotResponse</a></span> *LightsailClient::<span class="name">createInstanceSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-createinstancesnapshotrequest.html">CreateInstanceSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createinstancesnapshotresponse.html">CreateInstanceSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a snapshot of a specific virtual private server, or &lt;i&gt;instance&lt;/i&gt;. You can use a snapshot to create a new instance that is based on that</p>
+<!-- @@@createInstanceSnapshot -->
+<!-- $$$createInstances[overload1]$$$createInstancesconstCreateInstancesRequest& -->
+<h3 class="fn" id="createInstances"><a name="createInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createinstancesresponse.html">CreateInstancesResponse</a></span> *LightsailClient::<span class="name">createInstances</span>(const <span class="type"><a href="qtaws-lightsail-createinstancesrequest.html">CreateInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createinstancesresponse.html">CreateInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates one or more Amazon Lightsail virtual private servers, or</p>
+<!-- @@@createInstances -->
+<!-- $$$createInstancesFromSnapshot[overload1]$$$createInstancesFromSnapshotconstCreateInstancesFromSnapshotRequest& -->
+<h3 class="fn" id="createInstancesFromSnapshot"><a name="createInstancesFromSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createinstancesfromsnapshotresponse.html">CreateInstancesFromSnapshotResponse</a></span> *LightsailClient::<span class="name">createInstancesFromSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-createinstancesfromsnapshotrequest.html">CreateInstancesFromSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createinstancesfromsnapshotresponse.html">CreateInstancesFromSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uses a specific snapshot as a blueprint for creating one or more new instances that are based on that identical</p>
+<!-- @@@createInstancesFromSnapshot -->
+<!-- $$$createKeyPair[overload1]$$$createKeyPairconstCreateKeyPairRequest& -->
+<h3 class="fn" id="createKeyPair"><a name="createKeyPair"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createkeypairresponse.html">CreateKeyPairResponse</a></span> *LightsailClient::<span class="name">createKeyPair</span>(const <span class="type"><a href="qtaws-lightsail-createkeypairrequest.html">CreateKeyPairRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createkeypairresponse.html">CreateKeyPairResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates sn SSH key</p>
+<!-- @@@createKeyPair -->
+<!-- $$$createLoadBalancer[overload1]$$$createLoadBalancerconstCreateLoadBalancerRequest& -->
+<h3 class="fn" id="createLoadBalancer"><a name="createLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createloadbalancerresponse.html">CreateLoadBalancerResponse</a></span> *LightsailClient::<span class="name">createLoadBalancer</span>(const <span class="type"><a href="qtaws-lightsail-createloadbalancerrequest.html">CreateLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createloadbalancerresponse.html">CreateLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Lightsail load balancer. To learn more about deciding whether to load balance your application, see &lt;a href=&quot;https://lightsail.aws.amazon.com/ls/docs/how-to/article/configure-lightsail-instances-for-load-balancing&quot;&gt;Configure your Lightsail instances for load balancing&lt;/a&gt;. You can create up to 5 load balancers per AWS Region in your</p>
+<p>account&gt;</p>
+<p>When you create a load balancer, you can specify a unique name and port settings. To change additional load balancer settings, use the &lt;code&gt;UpdateLoadBalancerAttribute&lt;/code&gt;</p>
+<!-- @@@createLoadBalancer -->
+<!-- $$$createLoadBalancerTlsCertificate[overload1]$$$createLoadBalancerTlsCertificateconstCreateLoadBalancerTlsCertificateRequest& -->
+<h3 class="fn" id="createLoadBalancerTlsCertificate"><a name="createLoadBalancerTlsCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-createloadbalancertlscertificateresponse.html">CreateLoadBalancerTlsCertificateResponse</a></span> *LightsailClient::<span class="name">createLoadBalancerTlsCertificate</span>(const <span class="type"><a href="qtaws-lightsail-createloadbalancertlscertificaterequest.html">CreateLoadBalancerTlsCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-createloadbalancertlscertificateresponse.html">CreateLoadBalancerTlsCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a Lightsail load balancer TLS</p>
+<p>certificate&gt;</p>
+<p>TLS is just an updated, more secure version of Secure Socket Layer</p>
+<!-- @@@createLoadBalancerTlsCertificate -->
+<!-- $$$deleteDisk[overload1]$$$deleteDiskconstDeleteDiskRequest& -->
+<h3 class="fn" id="deleteDisk"><a name="deleteDisk"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deletediskresponse.html">DeleteDiskResponse</a></span> *LightsailClient::<span class="name">deleteDisk</span>(const <span class="type"><a href="qtaws-lightsail-deletediskrequest.html">DeleteDiskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deletediskresponse.html">DeleteDiskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified block storage disk. The disk must be in the &lt;code&gt;available&lt;/code&gt; state (not attached to a Lightsail</p>
+<p>instance)&gt; &lt;note&gt;</p>
+<p>The disk may remain in the &lt;code&gt;deleting&lt;/code&gt; state for several</p>
+<!-- @@@deleteDisk -->
+<!-- $$$deleteDiskSnapshot[overload1]$$$deleteDiskSnapshotconstDeleteDiskSnapshotRequest& -->
+<h3 class="fn" id="deleteDiskSnapshot"><a name="deleteDiskSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deletedisksnapshotresponse.html">DeleteDiskSnapshotResponse</a></span> *LightsailClient::<span class="name">deleteDiskSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-deletedisksnapshotrequest.html">DeleteDiskSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deletedisksnapshotresponse.html">DeleteDiskSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified disk</p>
+<p>snapshot&gt;</p>
+<p>When you make periodic snapshots of a disk, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the</p>
+<!-- @@@deleteDiskSnapshot -->
+<!-- $$$deleteDomain[overload1]$$$deleteDomainconstDeleteDomainRequest& -->
+<h3 class="fn" id="deleteDomain"><a name="deleteDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deletedomainresponse.html">DeleteDomainResponse</a></span> *LightsailClient::<span class="name">deleteDomain</span>(const <span class="type"><a href="qtaws-lightsail-deletedomainrequest.html">DeleteDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deletedomainresponse.html">DeleteDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified domain recordset and all of its domain</p>
+<!-- @@@deleteDomain -->
+<!-- $$$deleteDomainEntry[overload1]$$$deleteDomainEntryconstDeleteDomainEntryRequest& -->
+<h3 class="fn" id="deleteDomainEntry"><a name="deleteDomainEntry"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deletedomainentryresponse.html">DeleteDomainEntryResponse</a></span> *LightsailClient::<span class="name">deleteDomainEntry</span>(const <span class="type"><a href="qtaws-lightsail-deletedomainentryrequest.html">DeleteDomainEntryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deletedomainentryresponse.html">DeleteDomainEntryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific domain</p>
+<!-- @@@deleteDomainEntry -->
+<!-- $$$deleteInstance[overload1]$$$deleteInstanceconstDeleteInstanceRequest& -->
+<h3 class="fn" id="deleteInstance"><a name="deleteInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deleteinstanceresponse.html">DeleteInstanceResponse</a></span> *LightsailClient::<span class="name">deleteInstance</span>(const <span class="type"><a href="qtaws-lightsail-deleteinstancerequest.html">DeleteInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deleteinstanceresponse.html">DeleteInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific Amazon Lightsail virtual private server, or</p>
+<!-- @@@deleteInstance -->
+<!-- $$$deleteInstanceSnapshot[overload1]$$$deleteInstanceSnapshotconstDeleteInstanceSnapshotRequest& -->
+<h3 class="fn" id="deleteInstanceSnapshot"><a name="deleteInstanceSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deleteinstancesnapshotresponse.html">DeleteInstanceSnapshotResponse</a></span> *LightsailClient::<span class="name">deleteInstanceSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-deleteinstancesnapshotrequest.html">DeleteInstanceSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deleteinstancesnapshotresponse.html">DeleteInstanceSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific snapshot of a virtual private server (or</p>
+<!-- @@@deleteInstanceSnapshot -->
+<!-- $$$deleteKeyPair[overload1]$$$deleteKeyPairconstDeleteKeyPairRequest& -->
+<h3 class="fn" id="deleteKeyPair"><a name="deleteKeyPair"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deletekeypairresponse.html">DeleteKeyPairResponse</a></span> *LightsailClient::<span class="name">deleteKeyPair</span>(const <span class="type"><a href="qtaws-lightsail-deletekeypairrequest.html">DeleteKeyPairRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deletekeypairresponse.html">DeleteKeyPairResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific SSH key</p>
+<!-- @@@deleteKeyPair -->
+<!-- $$$deleteLoadBalancer[overload1]$$$deleteLoadBalancerconstDeleteLoadBalancerRequest& -->
+<h3 class="fn" id="deleteLoadBalancer"><a name="deleteLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deleteloadbalancerresponse.html">DeleteLoadBalancerResponse</a></span> *LightsailClient::<span class="name">deleteLoadBalancer</span>(const <span class="type"><a href="qtaws-lightsail-deleteloadbalancerrequest.html">DeleteLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deleteloadbalancerresponse.html">DeleteLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a Lightsail load balancer and all its associated SSL/TLS certificates. Once the load balancer is deleted, you will need to create a new load balancer, create a new certificate, and verify domain ownership</p>
+<!-- @@@deleteLoadBalancer -->
+<!-- $$$deleteLoadBalancerTlsCertificate[overload1]$$$deleteLoadBalancerTlsCertificateconstDeleteLoadBalancerTlsCertificateRequest& -->
+<h3 class="fn" id="deleteLoadBalancerTlsCertificate"><a name="deleteLoadBalancerTlsCertificate"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-deleteloadbalancertlscertificateresponse.html">DeleteLoadBalancerTlsCertificateResponse</a></span> *LightsailClient::<span class="name">deleteLoadBalancerTlsCertificate</span>(const <span class="type"><a href="qtaws-lightsail-deleteloadbalancertlscertificaterequest.html">DeleteLoadBalancerTlsCertificateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-deleteloadbalancertlscertificateresponse.html">DeleteLoadBalancerTlsCertificateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an SSL/TLS certificate associated with a Lightsail load</p>
+<!-- @@@deleteLoadBalancerTlsCertificate -->
+<!-- $$$detachDisk[overload1]$$$detachDiskconstDetachDiskRequest& -->
+<h3 class="fn" id="detachDisk"><a name="detachDisk"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-detachdiskresponse.html">DetachDiskResponse</a></span> *LightsailClient::<span class="name">detachDisk</span>(const <span class="type"><a href="qtaws-lightsail-detachdiskrequest.html">DetachDiskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-detachdiskresponse.html">DetachDiskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a stopped block storage disk from a Lightsail instance. Make sure to unmount any file systems on the device within your operating system before stopping the instance and detaching the</p>
+<!-- @@@detachDisk -->
+<!-- $$$detachInstancesFromLoadBalancer[overload1]$$$detachInstancesFromLoadBalancerconstDetachInstancesFromLoadBalancerRequest& -->
+<h3 class="fn" id="detachInstancesFromLoadBalancer"><a name="detachInstancesFromLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-detachinstancesfromloadbalancerresponse.html">DetachInstancesFromLoadBalancerResponse</a></span> *LightsailClient::<span class="name">detachInstancesFromLoadBalancer</span>(const <span class="type"><a href="qtaws-lightsail-detachinstancesfromloadbalancerrequest.html">DetachInstancesFromLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-detachinstancesfromloadbalancerresponse.html">DetachInstancesFromLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches the specified instances from a Lightsail load</p>
+<p>balancer&gt;</p>
+<p>This operation waits until the instances are no longer needed before they are detached from the load</p>
+<!-- @@@detachInstancesFromLoadBalancer -->
+<!-- $$$detachStaticIp[overload1]$$$detachStaticIpconstDetachStaticIpRequest& -->
+<h3 class="fn" id="detachStaticIp"><a name="detachStaticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-detachstaticipresponse.html">DetachStaticIpResponse</a></span> *LightsailClient::<span class="name">detachStaticIp</span>(const <span class="type"><a href="qtaws-lightsail-detachstaticiprequest.html">DetachStaticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-detachstaticipresponse.html">DetachStaticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a static IP from the Amazon Lightsail instance to which it is</p>
+<!-- @@@detachStaticIp -->
+<!-- $$$downloadDefaultKeyPair[overload1]$$$downloadDefaultKeyPairconstDownloadDefaultKeyPairRequest& -->
+<h3 class="fn" id="downloadDefaultKeyPair"><a name="downloadDefaultKeyPair"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-downloaddefaultkeypairresponse.html">DownloadDefaultKeyPairResponse</a></span> *LightsailClient::<span class="name">downloadDefaultKeyPair</span>(const <span class="type"><a href="qtaws-lightsail-downloaddefaultkeypairrequest.html">DownloadDefaultKeyPairRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-downloaddefaultkeypairresponse.html">DownloadDefaultKeyPairResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Downloads the default SSH key pair from the user's</p>
+<!-- @@@downloadDefaultKeyPair -->
+<!-- $$$getActiveNames[overload1]$$$getActiveNamesconstGetActiveNamesRequest& -->
+<h3 class="fn" id="getActiveNames"><a name="getActiveNames"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getactivenamesresponse.html">GetActiveNamesResponse</a></span> *LightsailClient::<span class="name">getActiveNames</span>(const <span class="type"><a href="qtaws-lightsail-getactivenamesrequest.html">GetActiveNamesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getactivenamesresponse.html">GetActiveNamesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the names of all active (not deleted)</p>
+<!-- @@@getActiveNames -->
+<!-- $$$getBlueprints[overload1]$$$getBlueprintsconstGetBlueprintsRequest& -->
+<h3 class="fn" id="getBlueprints"><a name="getBlueprints"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getblueprintsresponse.html">GetBlueprintsResponse</a></span> *LightsailClient::<span class="name">getBlueprints</span>(const <span class="type"><a href="qtaws-lightsail-getblueprintsrequest.html">GetBlueprintsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getblueprintsresponse.html">GetBlueprintsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of available instance images, or &lt;i&gt;blueprints&lt;/i&gt;. You can use a blueprint to create a new virtual private server already running a specific operating system, as well as a preinstalled app or development stack. The software each instance is running depends on the blueprint image you</p>
+<!-- @@@getBlueprints -->
+<!-- $$$getBundles[overload1]$$$getBundlesconstGetBundlesRequest& -->
+<h3 class="fn" id="getBundles"><a name="getBundles"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getbundlesresponse.html">GetBundlesResponse</a></span> *LightsailClient::<span class="name">getBundles</span>(const <span class="type"><a href="qtaws-lightsail-getbundlesrequest.html">GetBundlesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getbundlesresponse.html">GetBundlesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the list of bundles that are available for purchase. A bundle describes the specs for your virtual private server (or</p>
+<!-- @@@getBundles -->
+<!-- $$$getDisk[overload1]$$$getDiskconstGetDiskRequest& -->
+<h3 class="fn" id="getDisk"><a name="getDisk"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdiskresponse.html">GetDiskResponse</a></span> *LightsailClient::<span class="name">getDisk</span>(const <span class="type"><a href="qtaws-lightsail-getdiskrequest.html">GetDiskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdiskresponse.html">GetDiskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific block storage</p>
+<!-- @@@getDisk -->
+<!-- $$$getDiskSnapshot[overload1]$$$getDiskSnapshotconstGetDiskSnapshotRequest& -->
+<h3 class="fn" id="getDiskSnapshot"><a name="getDiskSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdisksnapshotresponse.html">GetDiskSnapshotResponse</a></span> *LightsailClient::<span class="name">getDiskSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-getdisksnapshotrequest.html">GetDiskSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdisksnapshotresponse.html">GetDiskSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific block storage disk</p>
+<!-- @@@getDiskSnapshot -->
+<!-- $$$getDiskSnapshots[overload1]$$$getDiskSnapshotsconstGetDiskSnapshotsRequest& -->
+<h3 class="fn" id="getDiskSnapshots"><a name="getDiskSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdisksnapshotsresponse.html">GetDiskSnapshotsResponse</a></span> *LightsailClient::<span class="name">getDiskSnapshots</span>(const <span class="type"><a href="qtaws-lightsail-getdisksnapshotsrequest.html">GetDiskSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdisksnapshotsresponse.html">GetDiskSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all block storage disk snapshots in your AWS account and</p>
+<p>region&gt;</p>
+<p>If you are describing a long list of disk snapshots, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the</p>
+<!-- @@@getDiskSnapshots -->
+<!-- $$$getDisks[overload1]$$$getDisksconstGetDisksRequest& -->
+<h3 class="fn" id="getDisks"><a name="getDisks"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdisksresponse.html">GetDisksResponse</a></span> *LightsailClient::<span class="name">getDisks</span>(const <span class="type"><a href="qtaws-lightsail-getdisksrequest.html">GetDisksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdisksresponse.html">GetDisksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all block storage disks in your AWS account and</p>
+<p>region&gt;</p>
+<p>If you are describing a long list of disks, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the</p>
+<!-- @@@getDisks -->
+<!-- $$$getDomain[overload1]$$$getDomainconstGetDomainRequest& -->
+<h3 class="fn" id="getDomain"><a name="getDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdomainresponse.html">GetDomainResponse</a></span> *LightsailClient::<span class="name">getDomain</span>(const <span class="type"><a href="qtaws-lightsail-getdomainrequest.html">GetDomainRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdomainresponse.html">GetDomainResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific domain</p>
+<!-- @@@getDomain -->
+<!-- $$$getDomains[overload1]$$$getDomainsconstGetDomainsRequest& -->
+<h3 class="fn" id="getDomains"><a name="getDomains"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getdomainsresponse.html">GetDomainsResponse</a></span> *LightsailClient::<span class="name">getDomains</span>(const <span class="type"><a href="qtaws-lightsail-getdomainsrequest.html">GetDomainsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getdomainsresponse.html">GetDomainsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all domains in the user's</p>
+<!-- @@@getDomains -->
+<!-- $$$getInstance[overload1]$$$getInstanceconstGetInstanceRequest& -->
+<h3 class="fn" id="getInstance"><a name="getInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstanceresponse.html">GetInstanceResponse</a></span> *LightsailClient::<span class="name">getInstance</span>(const <span class="type"><a href="qtaws-lightsail-getinstancerequest.html">GetInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstanceresponse.html">GetInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific Amazon Lightsail instance, which is a virtual private</p>
+<!-- @@@getInstance -->
+<!-- $$$getInstanceAccessDetails[overload1]$$$getInstanceAccessDetailsconstGetInstanceAccessDetailsRequest& -->
+<h3 class="fn" id="getInstanceAccessDetails"><a name="getInstanceAccessDetails"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstanceaccessdetailsresponse.html">GetInstanceAccessDetailsResponse</a></span> *LightsailClient::<span class="name">getInstanceAccessDetails</span>(const <span class="type"><a href="qtaws-lightsail-getinstanceaccessdetailsrequest.html">GetInstanceAccessDetailsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstanceaccessdetailsresponse.html">GetInstanceAccessDetailsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns temporary SSH keys you can use to connect to a specific virtual private server, or</p>
+<!-- @@@getInstanceAccessDetails -->
+<!-- $$$getInstanceMetricData[overload1]$$$getInstanceMetricDataconstGetInstanceMetricDataRequest& -->
+<h3 class="fn" id="getInstanceMetricData"><a name="getInstanceMetricData"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstancemetricdataresponse.html">GetInstanceMetricDataResponse</a></span> *LightsailClient::<span class="name">getInstanceMetricData</span>(const <span class="type"><a href="qtaws-lightsail-getinstancemetricdatarequest.html">GetInstanceMetricDataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstancemetricdataresponse.html">GetInstanceMetricDataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the data points for the specified Amazon Lightsail instance metric, given an instance</p>
+<!-- @@@getInstanceMetricData -->
+<!-- $$$getInstancePortStates[overload1]$$$getInstancePortStatesconstGetInstancePortStatesRequest& -->
+<h3 class="fn" id="getInstancePortStates"><a name="getInstancePortStates"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstanceportstatesresponse.html">GetInstancePortStatesResponse</a></span> *LightsailClient::<span class="name">getInstancePortStates</span>(const <span class="type"><a href="qtaws-lightsail-getinstanceportstatesrequest.html">GetInstancePortStatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstanceportstatesresponse.html">GetInstancePortStatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the port states for a specific virtual private server, or</p>
+<!-- @@@getInstancePortStates -->
+<!-- $$$getInstanceSnapshot[overload1]$$$getInstanceSnapshotconstGetInstanceSnapshotRequest& -->
+<h3 class="fn" id="getInstanceSnapshot"><a name="getInstanceSnapshot"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstancesnapshotresponse.html">GetInstanceSnapshotResponse</a></span> *LightsailClient::<span class="name">getInstanceSnapshot</span>(const <span class="type"><a href="qtaws-lightsail-getinstancesnapshotrequest.html">GetInstanceSnapshotRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstancesnapshotresponse.html">GetInstanceSnapshotResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific instance</p>
+<!-- @@@getInstanceSnapshot -->
+<!-- $$$getInstanceSnapshots[overload1]$$$getInstanceSnapshotsconstGetInstanceSnapshotsRequest& -->
+<h3 class="fn" id="getInstanceSnapshots"><a name="getInstanceSnapshots"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstancesnapshotsresponse.html">GetInstanceSnapshotsResponse</a></span> *LightsailClient::<span class="name">getInstanceSnapshots</span>(const <span class="type"><a href="qtaws-lightsail-getinstancesnapshotsrequest.html">GetInstanceSnapshotsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstancesnapshotsresponse.html">GetInstanceSnapshotsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns all instance snapshots for the user's</p>
+<!-- @@@getInstanceSnapshots -->
+<!-- $$$getInstanceState[overload1]$$$getInstanceStateconstGetInstanceStateRequest& -->
+<h3 class="fn" id="getInstanceState"><a name="getInstanceState"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstancestateresponse.html">GetInstanceStateResponse</a></span> *LightsailClient::<span class="name">getInstanceState</span>(const <span class="type"><a href="qtaws-lightsail-getinstancestaterequest.html">GetInstanceStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstancestateresponse.html">GetInstanceStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the state of a specific instance. Works on one instance at a</p>
+<!-- @@@getInstanceState -->
+<!-- $$$getInstances[overload1]$$$getInstancesconstGetInstancesRequest& -->
+<h3 class="fn" id="getInstances"><a name="getInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getinstancesresponse.html">GetInstancesResponse</a></span> *LightsailClient::<span class="name">getInstances</span>(const <span class="type"><a href="qtaws-lightsail-getinstancesrequest.html">GetInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getinstancesresponse.html">GetInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all Amazon Lightsail virtual private servers, or</p>
+<!-- @@@getInstances -->
+<!-- $$$getKeyPair[overload1]$$$getKeyPairconstGetKeyPairRequest& -->
+<h3 class="fn" id="getKeyPair"><a name="getKeyPair"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getkeypairresponse.html">GetKeyPairResponse</a></span> *LightsailClient::<span class="name">getKeyPair</span>(const <span class="type"><a href="qtaws-lightsail-getkeypairrequest.html">GetKeyPairRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getkeypairresponse.html">GetKeyPairResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific key</p>
+<!-- @@@getKeyPair -->
+<!-- $$$getKeyPairs[overload1]$$$getKeyPairsconstGetKeyPairsRequest& -->
+<h3 class="fn" id="getKeyPairs"><a name="getKeyPairs"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getkeypairsresponse.html">GetKeyPairsResponse</a></span> *LightsailClient::<span class="name">getKeyPairs</span>(const <span class="type"><a href="qtaws-lightsail-getkeypairsrequest.html">GetKeyPairsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getkeypairsresponse.html">GetKeyPairsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all key pairs in the user's</p>
+<!-- @@@getKeyPairs -->
+<!-- $$$getLoadBalancer[overload1]$$$getLoadBalancerconstGetLoadBalancerRequest& -->
+<h3 class="fn" id="getLoadBalancer"><a name="getLoadBalancer"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getloadbalancerresponse.html">GetLoadBalancerResponse</a></span> *LightsailClient::<span class="name">getLoadBalancer</span>(const <span class="type"><a href="qtaws-lightsail-getloadbalancerrequest.html">GetLoadBalancerRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getloadbalancerresponse.html">GetLoadBalancerResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified Lightsail load</p>
+<!-- @@@getLoadBalancer -->
+<!-- $$$getLoadBalancerMetricData[overload1]$$$getLoadBalancerMetricDataconstGetLoadBalancerMetricDataRequest& -->
+<h3 class="fn" id="getLoadBalancerMetricData"><a name="getLoadBalancerMetricData"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getloadbalancermetricdataresponse.html">GetLoadBalancerMetricDataResponse</a></span> *LightsailClient::<span class="name">getLoadBalancerMetricData</span>(const <span class="type"><a href="qtaws-lightsail-getloadbalancermetricdatarequest.html">GetLoadBalancerMetricDataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getloadbalancermetricdataresponse.html">GetLoadBalancerMetricDataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about health metrics for your Lightsail load</p>
+<!-- @@@getLoadBalancerMetricData -->
+<!-- $$$getLoadBalancerTlsCertificates[overload1]$$$getLoadBalancerTlsCertificatesconstGetLoadBalancerTlsCertificatesRequest& -->
+<h3 class="fn" id="getLoadBalancerTlsCertificates"><a name="getLoadBalancerTlsCertificates"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getloadbalancertlscertificatesresponse.html">GetLoadBalancerTlsCertificatesResponse</a></span> *LightsailClient::<span class="name">getLoadBalancerTlsCertificates</span>(const <span class="type"><a href="qtaws-lightsail-getloadbalancertlscertificatesrequest.html">GetLoadBalancerTlsCertificatesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getloadbalancertlscertificatesresponse.html">GetLoadBalancerTlsCertificatesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the TLS certificates that are associated with the specified Lightsail load</p>
+<p>balancer&gt;</p>
+<p>TLS is just an updated, more secure version of Secure Socket Layer</p>
+<p>(SSL)&gt;</p>
+<p>You can have a maximum of 2 certificates associated with a Lightsail load balancer. One is active and the other is</p>
+<!-- @@@getLoadBalancerTlsCertificates -->
+<!-- $$$getLoadBalancers[overload1]$$$getLoadBalancersconstGetLoadBalancersRequest& -->
+<h3 class="fn" id="getLoadBalancers"><a name="getLoadBalancers"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getloadbalancersresponse.html">GetLoadBalancersResponse</a></span> *LightsailClient::<span class="name">getLoadBalancers</span>(const <span class="type"><a href="qtaws-lightsail-getloadbalancersrequest.html">GetLoadBalancersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getloadbalancersresponse.html">GetLoadBalancersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all load balancers in an</p>
+<p>account&gt;</p>
+<p>If you are describing a long list of load balancers, you can paginate the output to make the list more manageable. You can use the pageToken and nextPageToken values to retrieve the next items in the</p>
+<!-- @@@getLoadBalancers -->
+<!-- $$$getOperation[overload1]$$$getOperationconstGetOperationRequest& -->
+<h3 class="fn" id="getOperation"><a name="getOperation"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getoperationresponse.html">GetOperationResponse</a></span> *LightsailClient::<span class="name">getOperation</span>(const <span class="type"><a href="qtaws-lightsail-getoperationrequest.html">GetOperationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getoperationresponse.html">GetOperationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific operation. Operations include events such as when you create an instance, allocate a static IP, attach a static IP, and so</p>
+<!-- @@@getOperation -->
+<!-- $$$getOperations[overload1]$$$getOperationsconstGetOperationsRequest& -->
+<h3 class="fn" id="getOperations"><a name="getOperations"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getoperationsresponse.html">GetOperationsResponse</a></span> *LightsailClient::<span class="name">getOperations</span>(const <span class="type"><a href="qtaws-lightsail-getoperationsrequest.html">GetOperationsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getoperationsresponse.html">GetOperationsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all</p>
+<p>operations&gt;</p>
+<p>Results are returned from oldest to newest, up to a maximum of 200. Results can be paged by making each subsequent call to &lt;code&gt;GetOperations&lt;/code&gt; use the maximum (last) &lt;code&gt;statusChangedAt&lt;/code&gt; value from the previous</p>
+<!-- @@@getOperations -->
+<!-- $$$getOperationsForResource[overload1]$$$getOperationsForResourceconstGetOperationsForResourceRequest& -->
+<h3 class="fn" id="getOperationsForResource"><a name="getOperationsForResource"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getoperationsforresourceresponse.html">GetOperationsForResourceResponse</a></span> *LightsailClient::<span class="name">getOperationsForResource</span>(const <span class="type"><a href="qtaws-lightsail-getoperationsforresourcerequest.html">GetOperationsForResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getoperationsforresourceresponse.html">GetOperationsForResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets operations for a specific resource (e.g&#x2e;, an instance or a static</p>
+<!-- @@@getOperationsForResource -->
+<!-- $$$getRegions[overload1]$$$getRegionsconstGetRegionsRequest& -->
+<h3 class="fn" id="getRegions"><a name="getRegions"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getregionsresponse.html">GetRegionsResponse</a></span> *LightsailClient::<span class="name">getRegions</span>(const <span class="type"><a href="qtaws-lightsail-getregionsrequest.html">GetRegionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getregionsresponse.html">GetRegionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of all valid regions for Amazon Lightsail. Use the &lt;code&gt;include availability zones&lt;/code&gt; parameter to also return the availability zones in a</p>
+<!-- @@@getRegions -->
+<!-- $$$getStaticIp[overload1]$$$getStaticIpconstGetStaticIpRequest& -->
+<h3 class="fn" id="getStaticIp"><a name="getStaticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getstaticipresponse.html">GetStaticIpResponse</a></span> *LightsailClient::<span class="name">getStaticIp</span>(const <span class="type"><a href="qtaws-lightsail-getstaticiprequest.html">GetStaticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getstaticipresponse.html">GetStaticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific static</p>
+<!-- @@@getStaticIp -->
+<!-- $$$getStaticIps[overload1]$$$getStaticIpsconstGetStaticIpsRequest& -->
+<h3 class="fn" id="getStaticIps"><a name="getStaticIps"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-getstaticipsresponse.html">GetStaticIpsResponse</a></span> *LightsailClient::<span class="name">getStaticIps</span>(const <span class="type"><a href="qtaws-lightsail-getstaticipsrequest.html">GetStaticIpsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-getstaticipsresponse.html">GetStaticIpsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about all static IPs in the user's</p>
+<!-- @@@getStaticIps -->
+<!-- $$$importKeyPair[overload1]$$$importKeyPairconstImportKeyPairRequest& -->
+<h3 class="fn" id="importKeyPair"><a name="importKeyPair"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-importkeypairresponse.html">ImportKeyPairResponse</a></span> *LightsailClient::<span class="name">importKeyPair</span>(const <span class="type"><a href="qtaws-lightsail-importkeypairrequest.html">ImportKeyPairRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-importkeypairresponse.html">ImportKeyPairResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Imports a public SSH key from a specific key</p>
+<!-- @@@importKeyPair -->
+<!-- $$$isVpcPeered[overload1]$$$isVpcPeeredconstIsVpcPeeredRequest& -->
+<h3 class="fn" id="isVpcPeered"><a name="isVpcPeered"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-isvpcpeeredresponse.html">IsVpcPeeredResponse</a></span> *LightsailClient::<span class="name">isVpcPeered</span>(const <span class="type"><a href="qtaws-lightsail-isvpcpeeredrequest.html">IsVpcPeeredRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-isvpcpeeredresponse.html">IsVpcPeeredResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a Boolean value indicating whether your Lightsail VPC is</p>
+<!-- @@@isVpcPeered -->
+<!-- $$$openInstancePublicPorts[overload1]$$$openInstancePublicPortsconstOpenInstancePublicPortsRequest& -->
+<h3 class="fn" id="openInstancePublicPorts"><a name="openInstancePublicPorts"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-openinstancepublicportsresponse.html">OpenInstancePublicPortsResponse</a></span> *LightsailClient::<span class="name">openInstancePublicPorts</span>(const <span class="type"><a href="qtaws-lightsail-openinstancepublicportsrequest.html">OpenInstancePublicPortsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-openinstancepublicportsresponse.html">OpenInstancePublicPortsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds public ports to an Amazon Lightsail</p>
+<!-- @@@openInstancePublicPorts -->
+<!-- $$$peerVpc[overload1]$$$peerVpcconstPeerVpcRequest& -->
+<h3 class="fn" id="peerVpc"><a name="peerVpc"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-peervpcresponse.html">PeerVpcResponse</a></span> *LightsailClient::<span class="name">peerVpc</span>(const <span class="type"><a href="qtaws-lightsail-peervpcrequest.html">PeerVpcRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-peervpcresponse.html">PeerVpcResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Tries to peer the Lightsail VPC with the user's default</p>
+<!-- @@@peerVpc -->
+<!-- $$$putInstancePublicPorts[overload1]$$$putInstancePublicPortsconstPutInstancePublicPortsRequest& -->
+<h3 class="fn" id="putInstancePublicPorts"><a name="putInstancePublicPorts"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-putinstancepublicportsresponse.html">PutInstancePublicPortsResponse</a></span> *LightsailClient::<span class="name">putInstancePublicPorts</span>(const <span class="type"><a href="qtaws-lightsail-putinstancepublicportsrequest.html">PutInstancePublicPortsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-putinstancepublicportsresponse.html">PutInstancePublicPortsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets the specified open ports for an Amazon Lightsail instance, and closes all ports for every protocol not included in the current</p>
+<!-- @@@putInstancePublicPorts -->
+<!-- $$$rebootInstance[overload1]$$$rebootInstanceconstRebootInstanceRequest& -->
+<h3 class="fn" id="rebootInstance"><a name="rebootInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-rebootinstanceresponse.html">RebootInstanceResponse</a></span> *LightsailClient::<span class="name">rebootInstance</span>(const <span class="type"><a href="qtaws-lightsail-rebootinstancerequest.html">RebootInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-rebootinstanceresponse.html">RebootInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public IP address. To use the same IP address after restarting, create a static IP address and attach it to the</p>
+<!-- @@@rebootInstance -->
+<!-- $$$releaseStaticIp[overload1]$$$releaseStaticIpconstReleaseStaticIpRequest& -->
+<h3 class="fn" id="releaseStaticIp"><a name="releaseStaticIp"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-releasestaticipresponse.html">ReleaseStaticIpResponse</a></span> *LightsailClient::<span class="name">releaseStaticIp</span>(const <span class="type"><a href="qtaws-lightsail-releasestaticiprequest.html">ReleaseStaticIpRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-releasestaticipresponse.html">ReleaseStaticIpResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specific static IP from your</p>
+<!-- @@@releaseStaticIp -->
+<!-- $$$startInstance[overload1]$$$startInstanceconstStartInstanceRequest& -->
+<h3 class="fn" id="startInstance"><a name="startInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-startinstanceresponse.html">StartInstanceResponse</a></span> *LightsailClient::<span class="name">startInstance</span>(const <span class="type"><a href="qtaws-lightsail-startinstancerequest.html">StartInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-startinstanceresponse.html">StartInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance</p>
+<!-- @@@startInstance -->
+<!-- $$$stopInstance[overload1]$$$stopInstanceconstStopInstanceRequest& -->
+<h3 class="fn" id="stopInstance"><a name="stopInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-stopinstanceresponse.html">StopInstanceResponse</a></span> *LightsailClient::<span class="name">stopInstance</span>(const <span class="type"><a href="qtaws-lightsail-stopinstancerequest.html">StopInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-stopinstanceresponse.html">StopInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a specific Amazon Lightsail instance that is currently</p>
+<!-- @@@stopInstance -->
+<!-- $$$unpeerVpc[overload1]$$$unpeerVpcconstUnpeerVpcRequest& -->
+<h3 class="fn" id="unpeerVpc"><a name="unpeerVpc"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-unpeervpcresponse.html">UnpeerVpcResponse</a></span> *LightsailClient::<span class="name">unpeerVpc</span>(const <span class="type"><a href="qtaws-lightsail-unpeervpcrequest.html">UnpeerVpcRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-unpeervpcresponse.html">UnpeerVpcResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attempts to unpeer the Lightsail VPC from the user's default</p>
+<!-- @@@unpeerVpc -->
+<!-- $$$updateDomainEntry[overload1]$$$updateDomainEntryconstUpdateDomainEntryRequest& -->
+<h3 class="fn" id="updateDomainEntry"><a name="updateDomainEntry"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-updatedomainentryresponse.html">UpdateDomainEntryResponse</a></span> *LightsailClient::<span class="name">updateDomainEntry</span>(const <span class="type"><a href="qtaws-lightsail-updatedomainentryrequest.html">UpdateDomainEntryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-updatedomainentryresponse.html">UpdateDomainEntryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a domain recordset after it is</p>
+<!-- @@@updateDomainEntry -->
+<!-- $$$updateLoadBalancerAttribute[overload1]$$$updateLoadBalancerAttributeconstUpdateLoadBalancerAttributeRequest& -->
+<h3 class="fn" id="updateLoadBalancerAttribute"><a name="updateLoadBalancerAttribute"></a><code>[slot] </code><span class="type"><a href="qtaws-lightsail-updateloadbalancerattributeresponse.html">UpdateLoadBalancerAttributeResponse</a></span> *LightsailClient::<span class="name">updateLoadBalancerAttribute</span>(const <span class="type"><a href="qtaws-lightsail-updateloadbalancerattributerequest.html">UpdateLoadBalancerAttributeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lightsail-lightsailclient.html">LightsailClient</a> service, and returns a pointer to an <a href="qtaws-lightsail-updateloadbalancerattributeresponse.html">UpdateLoadBalancerAttributeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified attribute for a load balancer. You can only update one attribute at a</p>
+<!-- @@@updateLoadBalancerAttribute -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

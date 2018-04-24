@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- lambdaclient.cpp -->
+  <title>LambdaClient Class | Lambda</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawslambda-index.html">Lambda</a></li>
+<li><a href="qtawslambda-module.html">C++ Classes</a></li>
+<li>LambdaClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">LambdaClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-lambda-lambdaclient.html">QtAws::Lambda::LambdaClient</a>)<br/></span>
+<!-- $$$LambdaClient-brief -->
+<p>The <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> class provides access to the AWS Lambda service. <a href="#details">More...</a></p>
+<!-- @@@LambdaClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;LambdaClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-lambda-lambdaclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#LambdaClient">LambdaClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#LambdaClient-1">LambdaClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AddPermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#addPermission">addPermission</a></b>(const AddPermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#createAlias">createAlias</a></b>(const CreateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateEventSourceMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#createEventSourceMapping">createEventSourceMapping</a></b>(const CreateEventSourceMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#createFunction">createFunction</a></b>(const CreateFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#deleteAlias">deleteAlias</a></b>(const DeleteAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteEventSourceMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#deleteEventSourceMapping">deleteEventSourceMapping</a></b>(const DeleteEventSourceMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#deleteFunction">deleteFunction</a></b>(const DeleteFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteFunctionConcurrencyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#deleteFunctionConcurrency">deleteFunctionConcurrency</a></b>(const DeleteFunctionConcurrencyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAccountSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getAccountSettings">getAccountSettings</a></b>(const GetAccountSettingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getAlias">getAlias</a></b>(const GetAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEventSourceMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getEventSourceMapping">getEventSourceMapping</a></b>(const GetEventSourceMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getFunction">getFunction</a></b>(const GetFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetFunctionConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getFunctionConfiguration">getFunctionConfiguration</a></b>(const GetFunctionConfigurationRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetPolicyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#getPolicy">getPolicy</a></b>(const GetPolicyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InvokeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#invoke">invoke</a></b>(const InvokeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InvokeAsyncResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#invokeAsync">invokeAsync</a></b>(const InvokeAsyncRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAliasesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#listAliases">listAliases</a></b>(const ListAliasesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListEventSourceMappingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#listEventSourceMappings">listEventSourceMappings</a></b>(const ListEventSourceMappingsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListFunctionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#listFunctions">listFunctions</a></b>(const ListFunctionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#listTags">listTags</a></b>(const ListTagsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListVersionsByFunctionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#listVersionsByFunction">listVersionsByFunction</a></b>(const ListVersionsByFunctionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PublishVersionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#publishVersion">publishVersion</a></b>(const PublishVersionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutFunctionConcurrencyResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#putFunctionConcurrency">putFunctionConcurrency</a></b>(const PutFunctionConcurrencyRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RemovePermissionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#removePermission">removePermission</a></b>(const RemovePermissionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#tagResource">tagResource</a></b>(const TagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#updateAlias">updateAlias</a></b>(const UpdateAliasRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateEventSourceMappingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#updateEventSourceMapping">updateEventSourceMapping</a></b>(const UpdateEventSourceMappingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFunctionCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#updateFunctionCode">updateFunctionCode</a></b>(const UpdateFunctionCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateFunctionConfigurationResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-lambda-lambdaclient.html#updateFunctionConfiguration">updateFunctionConfiguration</a></b>(const UpdateFunctionConfigurationRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$LambdaClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> class provides access to the AWS Lambda service.</p>
+<p>&lt;fullname&gt;AWS Lambda&lt;/fullname&gt;</p>
+<p>&lt;b&gt;Overview&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>This is the &lt;i&gt;AWS Lambda API Reference&lt;/i&gt;. The AWS Lambda Developer Guide provides additional information. For the service overview, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/welcome.html&quot;&gt;What is AWS Lambda&lt;/a&gt;, and for information about how the service works, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html&quot;&gt;AWS Lambda: How it Works&lt;/a&gt; in the &lt;b&gt;AWS Lambda Developer</p>
+</div>
+<!-- @@@LambdaClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$LambdaClient[overload1]$$$LambdaClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LambdaClient"><a name="LambdaClient"></a>LambdaClient::<span class="name">LambdaClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@LambdaClient -->
+<!-- $$$LambdaClient$$$LambdaClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="LambdaClient-1"><a name="LambdaClient-1"></a>LambdaClient::<span class="name">LambdaClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-lambda-lambdaclient.html#LambdaClient">LambdaClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@LambdaClient -->
+<!-- $$$addPermission[overload1]$$$addPermissionconstAddPermissionRequest& -->
+<h3 class="fn" id="addPermission"><a name="addPermission"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-addpermissionresponse.html">AddPermissionResponse</a></span> *LambdaClient::<span class="name">addPermission</span>(const <span class="type"><a href="qtaws-lambda-addpermissionrequest.html">AddPermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-addpermissionresponse.html">AddPermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds a permission to the resource policy associated with the specified AWS Lambda function. You use resource policies to grant permissions to event sources that use &lt;i&gt;push&lt;/i&gt; model. In a &lt;i&gt;push&lt;/i&gt; model, event sources (such as Amazon S3 and custom applications) invoke your Lambda function. Each permission you add to the resource policy allows an event source, permission to invoke the Lambda function.</p>
+<p>&lt;/p</p>
+<p>For information about the push model, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html&quot;&gt;Lambda Functions&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>If you are using versioning, the permissions you add are specific to the Lambda function version or alias you specify in the &lt;code&gt;AddPermission&lt;/code&gt; request via the &lt;code&gt;Qualifier&lt;/code&gt; parameter. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:AddPermission&lt;/code&gt;</p>
+<!-- @@@addPermission -->
+<!-- $$$createAlias[overload1]$$$createAliasconstCreateAliasRequest& -->
+<h3 class="fn" id="createAlias"><a name="createAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-createaliasresponse.html">CreateAliasResponse</a></span> *LambdaClient::<span class="name">createAlias</span>(const <span class="type"><a href="qtaws-lambda-createaliasrequest.html">CreateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-createaliasresponse.html">CreateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an alias that points to the specified Lambda function version. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html&quot;&gt;Introduction to AWS Lambda</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>Alias names are unique for a given function. This requires permission for the lambda:CreateAlias</p>
+<!-- @@@createAlias -->
+<!-- $$$createEventSourceMapping[overload1]$$$createEventSourceMappingconstCreateEventSourceMappingRequest& -->
+<h3 class="fn" id="createEventSourceMapping"><a name="createEventSourceMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-createeventsourcemappingresponse.html">CreateEventSourceMappingResponse</a></span> *LambdaClient::<span class="name">createEventSourceMapping</span>(const <span class="type"><a href="qtaws-lambda-createeventsourcemappingrequest.html">CreateEventSourceMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-createeventsourcemappingresponse.html">CreateEventSourceMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Identifies a stream as an event source for a Lambda function. It can be either an Amazon Kinesis stream or an Amazon DynamoDB stream. AWS Lambda invokes the specified function when records are posted to the</p>
+<p>stream&gt;</p>
+<p>This association between a stream source and a Lambda function is called the event source</p>
+<p>mapping&gt;</p>
+<p>You provide mapping information (for example, which stream to read from and which Lambda function to invoke) in the request</p>
+<p>body&gt;</p>
+<p>Each event source, such as an Amazon Kinesis or a DynamoDB stream, can be associated with multiple AWS Lambda functions. A given Lambda function can be associated with multiple AWS event</p>
+<p>sources&gt;</p>
+<p>If you are using versioning, you can specify a specific function version or an alias via the function name parameter. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:CreateEventSourceMapping&lt;/code&gt;</p>
+<!-- @@@createEventSourceMapping -->
+<!-- $$$createFunction[overload1]$$$createFunctionconstCreateFunctionRequest& -->
+<h3 class="fn" id="createFunction"><a name="createFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-createfunctionresponse.html">CreateFunctionResponse</a></span> *LambdaClient::<span class="name">createFunction</span>(const <span class="type"><a href="qtaws-lambda-createfunctionrequest.html">CreateFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-createfunctionresponse.html">CreateFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Lambda function. The function metadata is created from the request parameters, and the code for the function is provided by a .zip file in the request body. If the function name already exists, the operation will fail. Note that the function name is</p>
+<p>case-sensitive&gt;</p>
+<p>If you are using versioning, you can also publish a version of the Lambda function you are creating using the &lt;code&gt;Publish&lt;/code&gt; parameter. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:CreateFunction&lt;/code&gt;</p>
+<!-- @@@createFunction -->
+<!-- $$$deleteAlias[overload1]$$$deleteAliasconstDeleteAliasRequest& -->
+<h3 class="fn" id="deleteAlias"><a name="deleteAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-deletealiasresponse.html">DeleteAliasResponse</a></span> *LambdaClient::<span class="name">deleteAlias</span>(const <span class="type"><a href="qtaws-lambda-deletealiasrequest.html">DeleteAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-deletealiasresponse.html">DeleteAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Lambda function alias. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html&quot;&gt;Introduction to AWS Lambda</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This requires permission for the lambda:DeleteAlias</p>
+<!-- @@@deleteAlias -->
+<!-- $$$deleteEventSourceMapping[overload1]$$$deleteEventSourceMappingconstDeleteEventSourceMappingRequest& -->
+<h3 class="fn" id="deleteEventSourceMapping"><a name="deleteEventSourceMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-deleteeventsourcemappingresponse.html">DeleteEventSourceMappingResponse</a></span> *LambdaClient::<span class="name">deleteEventSourceMapping</span>(const <span class="type"><a href="qtaws-lambda-deleteeventsourcemappingrequest.html">DeleteEventSourceMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-deleteeventsourcemappingresponse.html">DeleteEventSourceMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes an event source mapping. This means AWS Lambda will no longer invoke the function for events in the associated</p>
+<p>source&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:DeleteEventSourceMapping&lt;/code&gt;</p>
+<!-- @@@deleteEventSourceMapping -->
+<!-- $$$deleteFunction[overload1]$$$deleteFunctionconstDeleteFunctionRequest& -->
+<h3 class="fn" id="deleteFunction"><a name="deleteFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-deletefunctionresponse.html">DeleteFunctionResponse</a></span> *LambdaClient::<span class="name">deleteFunction</span>(const <span class="type"><a href="qtaws-lambda-deletefunctionrequest.html">DeleteFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-deletefunctionresponse.html">DeleteFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified Lambda function code and</p>
+<p>configuration&gt;</p>
+<p>If you are using the versioning feature and you don't specify a function version in your &lt;code&gt;DeleteFunction&lt;/code&gt; request, AWS Lambda will delete the function, including all its versions, and any aliases pointing to the function versions. To delete a specific function version, you must provide the function version via the &lt;code&gt;Qualifier&lt;/code&gt; parameter. For information about function versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>When you delete a function the associated resource policy is also deleted. You will need to delete the event source mappings</p>
+<p>explicitly&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:DeleteFunction&lt;/code&gt;</p>
+<!-- @@@deleteFunction -->
+<!-- $$$deleteFunctionConcurrency[overload1]$$$deleteFunctionConcurrencyconstDeleteFunctionConcurrencyRequest& -->
+<h3 class="fn" id="deleteFunctionConcurrency"><a name="deleteFunctionConcurrency"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-deletefunctionconcurrencyresponse.html">DeleteFunctionConcurrencyResponse</a></span> *LambdaClient::<span class="name">deleteFunctionConcurrency</span>(const <span class="type"><a href="qtaws-lambda-deletefunctionconcurrencyrequest.html">DeleteFunctionConcurrencyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-deletefunctionconcurrencyresponse.html">DeleteFunctionConcurrencyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes concurrent execution limits from this function. For more information, see</p>
+<!-- @@@deleteFunctionConcurrency -->
+<!-- $$$getAccountSettings[overload1]$$$getAccountSettingsconstGetAccountSettingsRequest& -->
+<h3 class="fn" id="getAccountSettings"><a name="getAccountSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-getaccountsettingsresponse.html">GetAccountSettingsResponse</a></span> *LambdaClient::<span class="name">getAccountSettings</span>(const <span class="type"><a href="qtaws-lambda-getaccountsettingsrequest.html">GetAccountSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-getaccountsettingsresponse.html">GetAccountSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a customer's account</p>
+<p>settings&gt;</p>
+<p>You can use this operation to retrieve Lambda limits information, such as code size and concurrency limits. For more information about limits, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/limits.html&quot;&gt;AWS Lambda Limits&lt;/a&gt;. You can also retrieve resource usage statistics, such as code storage usage and function</p>
+<!-- @@@getAccountSettings -->
+<!-- $$$getAlias[overload1]$$$getAliasconstGetAliasRequest& -->
+<h3 class="fn" id="getAlias"><a name="getAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-getaliasresponse.html">GetAliasResponse</a></span> *LambdaClient::<span class="name">getAlias</span>(const <span class="type"><a href="qtaws-lambda-getaliasrequest.html">GetAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-getaliasresponse.html">GetAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the specified alias information such as the alias ARN, description, and function version it is pointing to. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html&quot;&gt;Introduction to AWS Lambda</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This requires permission for the &lt;code&gt;lambda:GetAlias&lt;/code&gt;</p>
+<!-- @@@getAlias -->
+<!-- $$$getEventSourceMapping[overload1]$$$getEventSourceMappingconstGetEventSourceMappingRequest& -->
+<h3 class="fn" id="getEventSourceMapping"><a name="getEventSourceMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-geteventsourcemappingresponse.html">GetEventSourceMappingResponse</a></span> *LambdaClient::<span class="name">getEventSourceMapping</span>(const <span class="type"><a href="qtaws-lambda-geteventsourcemappingrequest.html">GetEventSourceMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-geteventsourcemappingresponse.html">GetEventSourceMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns configuration information for the specified event source mapping (see</p>
+<p>&lt;a&gt;CreateEventSourceMapping&lt;/a&gt;)&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:GetEventSourceMapping&lt;/code&gt;</p>
+<!-- @@@getEventSourceMapping -->
+<!-- $$$getFunction[overload1]$$$getFunctionconstGetFunctionRequest& -->
+<h3 class="fn" id="getFunction"><a name="getFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-getfunctionresponse.html">GetFunctionResponse</a></span> *LambdaClient::<span class="name">getFunction</span>(const <span class="type"><a href="qtaws-lambda-getfunctionrequest.html">GetFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-getfunctionresponse.html">GetFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the configuration information of the Lambda function and a presigned URL link to the .zip file you uploaded with &lt;a&gt;CreateFunction&lt;/a&gt; so you can download the .zip file. Note that the URL is valid for up to 10 minutes. The configuration information is the same information you provided as parameters when uploading the</p>
+<p>function&gt;</p>
+<p>Using the optional &lt;code&gt;Qualifier&lt;/code&gt; parameter, you can specify a specific function version for which you want this information. If you don't specify this parameter, the API uses unqualified function ARN which return information about the &lt;code&gt;$LATEST&lt;/code&gt; version of the Lambda function. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:GetFunction&lt;/code&gt;</p>
+<!-- @@@getFunction -->
+<!-- $$$getFunctionConfiguration[overload1]$$$getFunctionConfigurationconstGetFunctionConfigurationRequest& -->
+<h3 class="fn" id="getFunctionConfiguration"><a name="getFunctionConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-getfunctionconfigurationresponse.html">GetFunctionConfigurationResponse</a></span> *LambdaClient::<span class="name">getFunctionConfiguration</span>(const <span class="type"><a href="qtaws-lambda-getfunctionconfigurationrequest.html">GetFunctionConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-getfunctionconfigurationresponse.html">GetFunctionConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the configuration information of the Lambda function. This the same information you provided as parameters when uploading the function by using</p>
+<p>&lt;a&gt;CreateFunction&lt;/a&gt;&gt;</p>
+<p>If you are using the versioning feature, you can retrieve this information for a specific function version by using the optional &lt;code&gt;Qualifier&lt;/code&gt; parameter and specifying the function version or alias that points to it. If you don't provide it, the API returns information about the $LATEST version of the function. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:GetFunctionConfiguration&lt;/code&gt;</p>
+<!-- @@@getFunctionConfiguration -->
+<!-- $$$getPolicy[overload1]$$$getPolicyconstGetPolicyRequest& -->
+<h3 class="fn" id="getPolicy"><a name="getPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-getpolicyresponse.html">GetPolicyResponse</a></span> *LambdaClient::<span class="name">getPolicy</span>(const <span class="type"><a href="qtaws-lambda-getpolicyrequest.html">GetPolicyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-getpolicyresponse.html">GetPolicyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the resource policy associated with the specified Lambda</p>
+<p>function&gt;</p>
+<p>If you are using the versioning feature, you can get the resource policy associated with the specific Lambda function version or alias by specifying the version or alias name using the &lt;code&gt;Qualifier&lt;/code&gt; parameter. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>You need permission for the &lt;code&gt;lambda:GetPolicy action.&lt;/code&gt;</p>
+<!-- @@@getPolicy -->
+<!-- $$$invoke[overload1]$$$invokeconstInvokeRequest& -->
+<h3 class="fn" id="invoke"><a name="invoke"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-invokeresponse.html">InvokeResponse</a></span> *LambdaClient::<span class="name">invoke</span>(const <span class="type"><a href="qtaws-lambda-invokerequest.html">InvokeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-invokeresponse.html">InvokeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Invokes a specific Lambda function. For an example, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/with-dynamodb-create-function.html#with-dbb-invoke-manually&quot;&gt;Create the Lambda Function and Test It Manually&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>If you are using the versioning feature, you can invoke the specific function version by providing function version or alias name that is pointing to the function version using the &lt;code&gt;Qualifier&lt;/code&gt; parameter in the request. If you don't provide the &lt;code&gt;Qualifier&lt;/code&gt; parameter, the &lt;code&gt;$LATEST&lt;/code&gt; version of the Lambda function is invoked. Invocations occur at least once in response to an event and functions must be idempotent to handle this. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:InvokeFunction&lt;/code&gt;</p>
+<p>action&gt; &lt;note&gt;</p>
+<p>The &lt;code&gt;TooManyRequestsException&lt;/code&gt; noted below will return the following: &lt;code&gt;ConcurrentInvocationLimitExceeded&lt;/code&gt; will be returned if you have no functions with reserved concurrency and have exceeded your account concurrent limit or if a function without reserved concurrency exceeds the account's unreserved concurrency limit. &lt;code&gt;ReservedFunctionConcurrentInvocationLimitExceeded&lt;/code&gt; will be returned when a function with reserved concurrency exceeds its configured concurrency limit.</p>
+<!-- @@@invoke -->
+<!-- $$$invokeAsync[overload1]$$$invokeAsyncconstInvokeAsyncRequest& -->
+<h3 class="fn" id="invokeAsync"><a name="invokeAsync"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-invokeasyncresponse.html">InvokeAsyncResponse</a></span> *LambdaClient::<span class="name">invokeAsync</span>(const <span class="type"><a href="qtaws-lambda-invokeasyncrequest.html">InvokeAsyncRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-invokeasyncresponse.html">InvokeAsyncResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;b&gt;</p>
+<p>This API is deprecated. We recommend you use &lt;code&gt;Invoke&lt;/code&gt; API (see</p>
+<p>&lt;a&gt;Invoke&lt;/a&gt;)&gt; &lt;/b&gt;</p>
+<p>Submits an invocation request to AWS Lambda. Upon receiving the request, Lambda executes the specified function asynchronously. To see the logs generated by the Lambda function execution, see the CloudWatch Logs</p>
+<p>console&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:InvokeFunction&lt;/code&gt;</p>
+<!-- @@@invokeAsync -->
+<!-- $$$listAliases[overload1]$$$listAliasesconstListAliasesRequest& -->
+<h3 class="fn" id="listAliases"><a name="listAliases"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-listaliasesresponse.html">ListAliasesResponse</a></span> *LambdaClient::<span class="name">listAliases</span>(const <span class="type"><a href="qtaws-lambda-listaliasesrequest.html">ListAliasesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-listaliasesresponse.html">ListAliasesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns list of aliases created for a Lambda function. For each alias, the response includes information such as the alias ARN, description, alias name, and the function version to which it points. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html&quot;&gt;Introduction to AWS Lambda</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This requires permission for the lambda:ListAliases</p>
+<!-- @@@listAliases -->
+<!-- $$$listEventSourceMappings[overload1]$$$listEventSourceMappingsconstListEventSourceMappingsRequest& -->
+<h3 class="fn" id="listEventSourceMappings"><a name="listEventSourceMappings"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-listeventsourcemappingsresponse.html">ListEventSourceMappingsResponse</a></span> *LambdaClient::<span class="name">listEventSourceMappings</span>(const <span class="type"><a href="qtaws-lambda-listeventsourcemappingsrequest.html">ListEventSourceMappingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-listeventsourcemappingsresponse.html">ListEventSourceMappingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of event source mappings you created using the &lt;code&gt;CreateEventSourceMapping&lt;/code&gt; (see &lt;a&gt;CreateEventSourceMapping&lt;/a&gt;).</p>
+<p>&lt;/p</p>
+<p>For each mapping, the API returns configuration information. You can optionally specify filters to retrieve specific event source</p>
+<p>mappings&gt;</p>
+<p>If you are using the versioning feature, you can get list of event source mappings for a specific Lambda function version or an alias as described in the &lt;code&gt;FunctionName&lt;/code&gt; parameter. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:ListEventSourceMappings&lt;/code&gt;</p>
+<!-- @@@listEventSourceMappings -->
+<!-- $$$listFunctions[overload1]$$$listFunctionsconstListFunctionsRequest& -->
+<h3 class="fn" id="listFunctions"><a name="listFunctions"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-listfunctionsresponse.html">ListFunctionsResponse</a></span> *LambdaClient::<span class="name">listFunctions</span>(const <span class="type"><a href="qtaws-lambda-listfunctionsrequest.html">ListFunctionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-listfunctionsresponse.html">ListFunctionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of your Lambda functions. For each function, the response includes the function configuration information. You must use &lt;a&gt;GetFunction&lt;/a&gt; to retrieve the code for your</p>
+<p>function&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:ListFunctions&lt;/code&gt;</p>
+<p>action&gt;</p>
+<p>If you are using the versioning feature, you can list all of your functions or only &lt;code&gt;$LATEST&lt;/code&gt; versions. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<!-- @@@listFunctions -->
+<!-- $$$listTags[overload1]$$$listTagsconstListTagsRequest& -->
+<h3 class="fn" id="listTags"><a name="listTags"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-listtagsresponse.html">ListTagsResponse</a></span> *LambdaClient::<span class="name">listTags</span>(const <span class="type"><a href="qtaws-lambda-listtagsrequest.html">ListTagsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-listtagsresponse.html">ListTagsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of tags assigned to a function when supplied the function ARN (Amazon Resource Name). For more information on Tagging, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/tagging.html&quot;&gt;Tagging Lambda Functions&lt;/a&gt; in the &lt;b&gt;AWS Lambda Developer</p>
+<!-- @@@listTags -->
+<!-- $$$listVersionsByFunction[overload1]$$$listVersionsByFunctionconstListVersionsByFunctionRequest& -->
+<h3 class="fn" id="listVersionsByFunction"><a name="listVersionsByFunction"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-listversionsbyfunctionresponse.html">ListVersionsByFunctionResponse</a></span> *LambdaClient::<span class="name">listVersionsByFunction</span>(const <span class="type"><a href="qtaws-lambda-listversionsbyfunctionrequest.html">ListVersionsByFunctionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-listversionsbyfunctionresponse.html">ListVersionsByFunctionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>List all versions of a function. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<!-- @@@listVersionsByFunction -->
+<!-- $$$publishVersion[overload1]$$$publishVersionconstPublishVersionRequest& -->
+<h3 class="fn" id="publishVersion"><a name="publishVersion"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-publishversionresponse.html">PublishVersionResponse</a></span> *LambdaClient::<span class="name">publishVersion</span>(const <span class="type"><a href="qtaws-lambda-publishversionrequest.html">PublishVersionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-publishversionresponse.html">PublishVersionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Publishes a version of your function from the current snapshot of $LATEST. That is, AWS Lambda takes a snapshot of the function code and configuration information from $LATEST and publishes a new version. The code and configuration cannot be modified after publication. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<!-- @@@publishVersion -->
+<!-- $$$putFunctionConcurrency[overload1]$$$putFunctionConcurrencyconstPutFunctionConcurrencyRequest& -->
+<h3 class="fn" id="putFunctionConcurrency"><a name="putFunctionConcurrency"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-putfunctionconcurrencyresponse.html">PutFunctionConcurrencyResponse</a></span> *LambdaClient::<span class="name">putFunctionConcurrency</span>(const <span class="type"><a href="qtaws-lambda-putfunctionconcurrencyrequest.html">PutFunctionConcurrencyRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-putfunctionconcurrencyresponse.html">PutFunctionConcurrencyResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets a limit on the number of concurrent executions available to this function. It is a subset of your account's total concurrent execution limit per region. Note that Lambda automatically reserves a buffer of 100 concurrent executions for functions without any reserved concurrency limit. This means if your account limit is 1000, you have a total of 900 available to allocate to individual functions. For more information, see</p>
+<!-- @@@putFunctionConcurrency -->
+<!-- $$$removePermission[overload1]$$$removePermissionconstRemovePermissionRequest& -->
+<h3 class="fn" id="removePermission"><a name="removePermission"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-removepermissionresponse.html">RemovePermissionResponse</a></span> *LambdaClient::<span class="name">removePermission</span>(const <span class="type"><a href="qtaws-lambda-removepermissionrequest.html">RemovePermissionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-removepermissionresponse.html">RemovePermissionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You can remove individual permissions from an resource policy associated with a Lambda function by providing a statement ID that you provided when you added the</p>
+<p>permission&gt;</p>
+<p>If you are using versioning, the permissions you remove are specific to the Lambda function version or alias you specify in the &lt;code&gt;AddPermission&lt;/code&gt; request via the &lt;code&gt;Qualifier&lt;/code&gt; parameter. For more information about versioning, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>Note that removal of a permission will cause an active event source to lose permission to the</p>
+<p>function&gt;</p>
+<p>You need permission for the &lt;code&gt;lambda:RemovePermission&lt;/code&gt;</p>
+<!-- @@@removePermission -->
+<!-- $$$tagResource[overload1]$$$tagResourceconstTagResourceRequest& -->
+<h3 class="fn" id="tagResource"><a name="tagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-tagresourceresponse.html">TagResourceResponse</a></span> *LambdaClient::<span class="name">tagResource</span>(const <span class="type"><a href="qtaws-lambda-tagresourcerequest.html">TagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-tagresourceresponse.html">TagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a list of tags (key-value pairs) on the Lambda function. Requires the Lambda function ARN (Amazon Resource Name). If a key is specified without a value, Lambda creates a tag with the specified key and a value of null. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/tagging.html&quot;&gt;Tagging Lambda Functions&lt;/a&gt; in the &lt;b&gt;AWS Lambda Developer Guide&lt;/b&gt;.</p>
+<!-- @@@tagResource -->
+<!-- $$$untagResource[overload1]$$$untagResourceconstUntagResourceRequest& -->
+<h3 class="fn" id="untagResource"><a name="untagResource"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-untagresourceresponse.html">UntagResourceResponse</a></span> *LambdaClient::<span class="name">untagResource</span>(const <span class="type"><a href="qtaws-lambda-untagresourcerequest.html">UntagResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-untagresourceresponse.html">UntagResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Removes tags from a Lambda function. Requires the function ARN (Amazon Resource Name). For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/tagging.html&quot;&gt;Tagging Lambda Functions&lt;/a&gt; in the &lt;b&gt;AWS Lambda Developer Guide&lt;/b&gt;.</p>
+<!-- @@@untagResource -->
+<!-- $$$updateAlias[overload1]$$$updateAliasconstUpdateAliasRequest& -->
+<h3 class="fn" id="updateAlias"><a name="updateAlias"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-updatealiasresponse.html">UpdateAliasResponse</a></span> *LambdaClient::<span class="name">updateAlias</span>(const <span class="type"><a href="qtaws-lambda-updatealiasrequest.html">UpdateAliasRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-updatealiasresponse.html">UpdateAliasResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Using this API you can update the function version to which the alias points and the alias description. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/aliases-intro.html&quot;&gt;Introduction to AWS Lambda</p>
+<p>Aliases&lt;/a&gt;&gt;</p>
+<p>This requires permission for the lambda:UpdateAlias</p>
+<!-- @@@updateAlias -->
+<!-- $$$updateEventSourceMapping[overload1]$$$updateEventSourceMappingconstUpdateEventSourceMappingRequest& -->
+<h3 class="fn" id="updateEventSourceMapping"><a name="updateEventSourceMapping"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-updateeventsourcemappingresponse.html">UpdateEventSourceMappingResponse</a></span> *LambdaClient::<span class="name">updateEventSourceMapping</span>(const <span class="type"><a href="qtaws-lambda-updateeventsourcemappingrequest.html">UpdateEventSourceMappingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-updateeventsourcemappingresponse.html">UpdateEventSourceMappingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>You can update an event source mapping. This is useful if you want to change the parameters of the existing mapping without losing your position in the stream. You can change which function will receive the stream records, but to change the stream itself, you must create a new</p>
+<p>mapping&gt;</p>
+<p>If you are using the versioning feature, you can update the event source mapping to map to a specific Lambda function version or alias as described in the &lt;code&gt;FunctionName&lt;/code&gt; parameter. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>If you disable the event source mapping, AWS Lambda stops polling. If you enable again, it will resume polling from the time it had stopped polling, so you don't lose processing of any records. However, if you delete event source mapping and create it again, it will</p>
+<p>reset&gt;</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:UpdateEventSourceMapping&lt;/code&gt;</p>
+<!-- @@@updateEventSourceMapping -->
+<!-- $$$updateFunctionCode[overload1]$$$updateFunctionCodeconstUpdateFunctionCodeRequest& -->
+<h3 class="fn" id="updateFunctionCode"><a name="updateFunctionCode"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-updatefunctioncoderesponse.html">UpdateFunctionCodeResponse</a></span> *LambdaClient::<span class="name">updateFunctionCode</span>(const <span class="type"><a href="qtaws-lambda-updatefunctioncoderequest.html">UpdateFunctionCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-updatefunctioncoderesponse.html">UpdateFunctionCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the code for the specified Lambda function. This operation must only be used on an existing Lambda function and cannot be used to update the function</p>
+<p>configuration&gt;</p>
+<p>If you are using the versioning feature, note this API will always update the $LATEST version of your Lambda function. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:UpdateFunctionCode&lt;/code&gt;</p>
+<!-- @@@updateFunctionCode -->
+<!-- $$$updateFunctionConfiguration[overload1]$$$updateFunctionConfigurationconstUpdateFunctionConfigurationRequest& -->
+<h3 class="fn" id="updateFunctionConfiguration"><a name="updateFunctionConfiguration"></a><code>[slot] </code><span class="type"><a href="qtaws-lambda-updatefunctionconfigurationresponse.html">UpdateFunctionConfigurationResponse</a></span> *LambdaClient::<span class="name">updateFunctionConfiguration</span>(const <span class="type"><a href="qtaws-lambda-updatefunctionconfigurationrequest.html">UpdateFunctionConfigurationRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-lambda-lambdaclient.html">LambdaClient</a> service, and returns a pointer to an <a href="qtaws-lambda-updatefunctionconfigurationresponse.html">UpdateFunctionConfigurationResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the configuration parameters for the specified Lambda function by using the values provided in the request. You provide only the parameters you want to change. This operation must only be used on an existing Lambda function and cannot be used to update the function's</p>
+<p>code&gt;</p>
+<p>If you are using the versioning feature, note this API will always update the $LATEST version of your Lambda function. For information about the versioning feature, see &lt;a href=&quot;http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html&quot;&gt;AWS Lambda Function Versioning and Aliases&lt;/a&gt;.</p>
+<p>&lt;/p</p>
+<p>This operation requires permission for the &lt;code&gt;lambda:UpdateFunctionConfiguration&lt;/code&gt;</p>
+<!-- @@@updateFunctionConfiguration -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

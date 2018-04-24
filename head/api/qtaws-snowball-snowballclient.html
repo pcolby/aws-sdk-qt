@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- snowballclient.cpp -->
+  <title>SnowballClient Class | Snowball</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawssnowball-index.html">Snowball</a></li>
+<li><a href="qtawssnowball-module.html">C++ Classes</a></li>
+<li>SnowballClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SnowballClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-snowball-snowballclient.html">QtAws::Snowball::SnowballClient</a>)<br/></span>
+<!-- $$$SnowballClient-brief -->
+<p>The <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> class provides access to the Amazon Import/Export Snowball service. <a href="#details">More...</a></p>
+<!-- @@@SnowballClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SnowballClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-snowball-snowballclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#SnowballClient">SnowballClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#SnowballClient-1">SnowballClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CancelClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#cancelCluster">cancelCluster</a></b>(const CancelClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#cancelJob">cancelJob</a></b>(const CancelJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateAddressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#createAddress">createAddress</a></b>(const CreateAddressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#createCluster">createCluster</a></b>(const CreateClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#createJob">createJob</a></b>(const CreateJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAddressResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#describeAddress">describeAddress</a></b>(const DescribeAddressRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeAddressesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#describeAddresses">describeAddresses</a></b>(const DescribeAddressesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#describeCluster">describeCluster</a></b>(const DescribeClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#describeJob">describeJob</a></b>(const DescribeJobRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobManifestResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#getJobManifest">getJobManifest</a></b>(const GetJobManifestRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetJobUnlockCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#getJobUnlockCode">getJobUnlockCode</a></b>(const GetJobUnlockCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetSnowballUsageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#getSnowballUsage">getSnowballUsage</a></b>(const GetSnowballUsageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListClusterJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#listClusterJobs">listClusterJobs</a></b>(const ListClusterJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#listClusters">listClusters</a></b>(const ListClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListJobsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#listJobs">listJobs</a></b>(const ListJobsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#updateCluster">updateCluster</a></b>(const UpdateClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateJobResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-snowball-snowballclient.html#updateJob">updateJob</a></b>(const UpdateJobRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SnowballClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> class provides access to the Amazon Import/Export Snowball service.</p>
+<p>AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described here provide access to the same functionality that is available in the AWS Snowball Management Console, which enables you to create and manage jobs for Snowball. To transfer data locally with a Snowball appliance, you'll need to use the Snowball client or the Amazon S3 API adapter for Snowball. For more information, see the &lt;a href=&quot;http://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html&quot;&gt;User</p>
+</div>
+<!-- @@@SnowballClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SnowballClient[overload1]$$$SnowballClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SnowballClient"><a name="SnowballClient"></a>SnowballClient::<span class="name">SnowballClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@SnowballClient -->
+<!-- $$$SnowballClient$$$SnowballClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="SnowballClient-1"><a name="SnowballClient-1"></a>SnowballClient::<span class="name">SnowballClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-snowball-snowballclient.html#SnowballClient">SnowballClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@SnowballClient -->
+<!-- $$$cancelCluster[overload1]$$$cancelClusterconstCancelClusterRequest& -->
+<h3 class="fn" id="cancelCluster"><a name="cancelCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-cancelclusterresponse.html">CancelClusterResponse</a></span> *SnowballClient::<span class="name">cancelCluster</span>(const <span class="type"><a href="qtaws-snowball-cancelclusterrequest.html">CancelClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-cancelclusterresponse.html">CancelClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels a cluster job. You can only cancel a cluster job while it's in the &lt;code&gt;AwaitingQuorum&lt;/code&gt; status. You'll have at least an hour after creating a cluster job to cancel</p>
+<!-- @@@cancelCluster -->
+<!-- $$$cancelJob[overload1]$$$cancelJobconstCancelJobRequest& -->
+<h3 class="fn" id="cancelJob"><a name="cancelJob"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-canceljobresponse.html">CancelJobResponse</a></span> *SnowballClient::<span class="name">cancelJob</span>(const <span class="type"><a href="qtaws-snowball-canceljobrequest.html">CancelJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-canceljobresponse.html">CancelJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels the specified job. You can only cancel a job before its &lt;code&gt;JobState&lt;/code&gt; value changes to &lt;code&gt;PreparingAppliance&lt;/code&gt;. Requesting the &lt;code&gt;ListJobs&lt;/code&gt; or &lt;code&gt;DescribeJob&lt;/code&gt; action will return a job's &lt;code&gt;JobState&lt;/code&gt; as part of the response element data</p>
+<!-- @@@cancelJob -->
+<!-- $$$createAddress[overload1]$$$createAddressconstCreateAddressRequest& -->
+<h3 class="fn" id="createAddress"><a name="createAddress"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-createaddressresponse.html">CreateAddressResponse</a></span> *SnowballClient::<span class="name">createAddress</span>(const <span class="type"><a href="qtaws-snowball-createaddressrequest.html">CreateAddressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-createaddressresponse.html">CreateAddressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an address for a Snowball to be shipped to. In most regions, addresses are validated at the time of creation. The address you provide must be located within the serviceable area of your region. If the address is invalid or unsupported, then an exception is</p>
+<!-- @@@createAddress -->
+<!-- $$$createCluster[overload1]$$$createClusterconstCreateClusterRequest& -->
+<h3 class="fn" id="createCluster"><a name="createCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-createclusterresponse.html">CreateClusterResponse</a></span> *SnowballClient::<span class="name">createCluster</span>(const <span class="type"><a href="qtaws-snowball-createclusterrequest.html">CreateClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-createclusterresponse.html">CreateClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates an empty cluster. Each cluster supports five nodes. You use the &lt;a&gt;CreateJob&lt;/a&gt; action separately to create the jobs for each of these nodes. The cluster does not ship until these five node jobs have been</p>
+<!-- @@@createCluster -->
+<!-- $$$createJob[overload1]$$$createJobconstCreateJobRequest& -->
+<h3 class="fn" id="createJob"><a name="createJob"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-createjobresponse.html">CreateJobResponse</a></span> *SnowballClient::<span class="name">createJob</span>(const <span class="type"><a href="qtaws-snowball-createjobrequest.html">CreateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-createjobresponse.html">CreateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a job to import or export data between Amazon S3 and your on-premises data center. Your AWS account must have the right trust policies and permissions in place to create a job for Snowball. If you're creating a job for a node in a cluster, you only need to provide the &lt;code&gt;clusterId&lt;/code&gt; value; the other job attributes are inherited from the cluster.</p>
+<!-- @@@createJob -->
+<!-- $$$describeAddress[overload1]$$$describeAddressconstDescribeAddressRequest& -->
+<h3 class="fn" id="describeAddress"><a name="describeAddress"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-describeaddressresponse.html">DescribeAddressResponse</a></span> *SnowballClient::<span class="name">describeAddress</span>(const <span class="type"><a href="qtaws-snowball-describeaddressrequest.html">DescribeAddressRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-describeaddressresponse.html">DescribeAddressResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Takes an &lt;code&gt;AddressId&lt;/code&gt; and returns specific details about that address in the form of an &lt;code&gt;Address&lt;/code&gt;</p>
+<!-- @@@describeAddress -->
+<!-- $$$describeAddresses[overload1]$$$describeAddressesconstDescribeAddressesRequest& -->
+<h3 class="fn" id="describeAddresses"><a name="describeAddresses"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-describeaddressesresponse.html">DescribeAddressesResponse</a></span> *SnowballClient::<span class="name">describeAddresses</span>(const <span class="type"><a href="qtaws-snowball-describeaddressesrequest.html">DescribeAddressesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-describeaddressesresponse.html">DescribeAddressesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a specified number of &lt;code&gt;ADDRESS&lt;/code&gt; objects. Calling this API in one of the US regions will return addresses from the list of all addresses associated with this account in all US</p>
+<!-- @@@describeAddresses -->
+<!-- $$$describeCluster[overload1]$$$describeClusterconstDescribeClusterRequest& -->
+<h3 class="fn" id="describeCluster"><a name="describeCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-describeclusterresponse.html">DescribeClusterResponse</a></span> *SnowballClient::<span class="name">describeCluster</span>(const <span class="type"><a href="qtaws-snowball-describeclusterrequest.html">DescribeClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-describeclusterresponse.html">DescribeClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific cluster including shipping information, cluster status, and other important</p>
+<!-- @@@describeCluster -->
+<!-- $$$describeJob[overload1]$$$describeJobconstDescribeJobRequest& -->
+<h3 class="fn" id="describeJob"><a name="describeJob"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-describejobresponse.html">DescribeJobResponse</a></span> *SnowballClient::<span class="name">describeJob</span>(const <span class="type"><a href="qtaws-snowball-describejobrequest.html">DescribeJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-describejobresponse.html">DescribeJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about a specific job including shipping information, job status, and other important metadata.</p>
+<!-- @@@describeJob -->
+<!-- $$$getJobManifest[overload1]$$$getJobManifestconstGetJobManifestRequest& -->
+<h3 class="fn" id="getJobManifest"><a name="getJobManifest"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-getjobmanifestresponse.html">GetJobManifestResponse</a></span> *SnowballClient::<span class="name">getJobManifest</span>(const <span class="type"><a href="qtaws-snowball-getjobmanifestrequest.html">GetJobManifestRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-getjobmanifestresponse.html">GetJobManifestResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a link to an Amazon S3 presigned URL for the manifest file associated with the specified &lt;code&gt;JobId&lt;/code&gt; value. You can access the manifest file for up to 60 minutes after this request has been made. To access the manifest file after 60 minutes have passed, you'll have to make another call to the &lt;code&gt;GetJobManifest&lt;/code&gt;</p>
+<p>action&gt;</p>
+<p>The manifest is an encrypted file that you can download after your job enters the &lt;code&gt;WithCustomer&lt;/code&gt; status. The manifest is decrypted by using the &lt;code&gt;UnlockCode&lt;/code&gt; code value, when you pass both values to the Snowball through the Snowball client when the client is started for the first</p>
+<p>time&gt;</p>
+<p>As a best practice, we recommend that you don't save a copy of an &lt;code&gt;UnlockCode&lt;/code&gt; value in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snowball associated with that</p>
+<p>job&gt;</p>
+<p>The credentials of a given job, including its manifest file and unlock code, expire 90 days after the job is</p>
+<!-- @@@getJobManifest -->
+<!-- $$$getJobUnlockCode[overload1]$$$getJobUnlockCodeconstGetJobUnlockCodeRequest& -->
+<h3 class="fn" id="getJobUnlockCode"><a name="getJobUnlockCode"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-getjobunlockcoderesponse.html">GetJobUnlockCodeResponse</a></span> *SnowballClient::<span class="name">getJobUnlockCode</span>(const <span class="type"><a href="qtaws-snowball-getjobunlockcoderequest.html">GetJobUnlockCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-getjobunlockcoderesponse.html">GetJobUnlockCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns the &lt;code&gt;UnlockCode&lt;/code&gt; code value for the specified job. A particular &lt;code&gt;UnlockCode&lt;/code&gt; value can be accessed for up to 90 days after the associated job has been</p>
+<p>created&gt;</p>
+<p>The &lt;code&gt;UnlockCode&lt;/code&gt; value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is used to decrypt the manifest file when it is passed along with the manifest to the Snowball through the Snowball client when the client is started for the first</p>
+<p>time&gt;</p>
+<p>As a best practice, we recommend that you don't save a copy of the &lt;code&gt;UnlockCode&lt;/code&gt; in the same location as the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snowball associated with that</p>
+<!-- @@@getJobUnlockCode -->
+<!-- $$$getSnowballUsage[overload1]$$$getSnowballUsageconstGetSnowballUsageRequest& -->
+<h3 class="fn" id="getSnowballUsage"><a name="getSnowballUsage"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-getsnowballusageresponse.html">GetSnowballUsageResponse</a></span> *SnowballClient::<span class="name">getSnowballUsage</span>(const <span class="type"><a href="qtaws-snowball-getsnowballusagerequest.html">GetSnowballUsageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-getsnowballusageresponse.html">GetSnowballUsageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the Snowball service limit for your account, and also the number of Snowballs your account has in</p>
+<p>use&gt;</p>
+<p>The default service limit for the number of Snowballs that you can have at one time is 1. If you want to increase your service limit, contact AWS</p>
+<!-- @@@getSnowballUsage -->
+<!-- $$$listClusterJobs[overload1]$$$listClusterJobsconstListClusterJobsRequest& -->
+<h3 class="fn" id="listClusterJobs"><a name="listClusterJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-listclusterjobsresponse.html">ListClusterJobsResponse</a></span> *SnowballClient::<span class="name">listClusterJobs</span>(const <span class="type"><a href="qtaws-snowball-listclusterjobsrequest.html">ListClusterJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-listclusterjobsresponse.html">ListClusterJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;code&gt;JobListEntry&lt;/code&gt; objects of the specified length. Each &lt;code&gt;JobListEntry&lt;/code&gt; object is for a job in the specified cluster and contains a job's state, a job's ID, and other</p>
+<!-- @@@listClusterJobs -->
+<!-- $$$listClusters[overload1]$$$listClustersconstListClustersRequest& -->
+<h3 class="fn" id="listClusters"><a name="listClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-listclustersresponse.html">ListClustersResponse</a></span> *SnowballClient::<span class="name">listClusters</span>(const <span class="type"><a href="qtaws-snowball-listclustersrequest.html">ListClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-listclustersresponse.html">ListClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;code&gt;ClusterListEntry&lt;/code&gt; objects of the specified length. Each &lt;code&gt;ClusterListEntry&lt;/code&gt; object contains a cluster's state, a cluster's ID, and other important status</p>
+<!-- @@@listClusters -->
+<!-- $$$listJobs[overload1]$$$listJobsconstListJobsRequest& -->
+<h3 class="fn" id="listJobs"><a name="listJobs"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-listjobsresponse.html">ListJobsResponse</a></span> *SnowballClient::<span class="name">listJobs</span>(const <span class="type"><a href="qtaws-snowball-listjobsrequest.html">ListJobsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-listjobsresponse.html">ListJobsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns an array of &lt;code&gt;JobListEntry&lt;/code&gt; objects of the specified length. Each &lt;code&gt;JobListEntry&lt;/code&gt; object contains a job's state, a job's ID, and a value that indicates whether the job is a job part, in the case of export jobs. Calling this API action in one of the US regions will return jobs from the list of all jobs associated with this account in all US</p>
+<!-- @@@listJobs -->
+<!-- $$$updateCluster[overload1]$$$updateClusterconstUpdateClusterRequest& -->
+<h3 class="fn" id="updateCluster"><a name="updateCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-updateclusterresponse.html">UpdateClusterResponse</a></span> *SnowballClient::<span class="name">updateCluster</span>(const <span class="type"><a href="qtaws-snowball-updateclusterrequest.html">UpdateClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-updateclusterresponse.html">UpdateClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>While a cluster's &lt;code&gt;ClusterState&lt;/code&gt; value is in the &lt;code&gt;AwaitingQuorum&lt;/code&gt; state, you can update some of the information associated with a cluster. Once the cluster changes to a different job state, usually 60 minutes after the cluster being created, this action is no longer</p>
+<!-- @@@updateCluster -->
+<!-- $$$updateJob[overload1]$$$updateJobconstUpdateJobRequest& -->
+<h3 class="fn" id="updateJob"><a name="updateJob"></a><code>[slot] </code><span class="type"><a href="qtaws-snowball-updatejobresponse.html">UpdateJobResponse</a></span> *SnowballClient::<span class="name">updateJob</span>(const <span class="type"><a href="qtaws-snowball-updatejobrequest.html">UpdateJobRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-snowball-snowballclient.html">SnowballClient</a> service, and returns a pointer to an <a href="qtaws-snowball-updatejobresponse.html">UpdateJobResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>While a job's &lt;code&gt;JobState&lt;/code&gt; value is &lt;code&gt;New&lt;/code&gt;, you can update some of the information associated with a job. Once the job changes to a different job state, usually within 60 minutes of the job being created, this action is no longer</p>
+<!-- @@@updateJob -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

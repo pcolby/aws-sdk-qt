@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- awsabstractsignature.cpp -->
+  <title>AwsAbstractSignaturePrivate Class | Core</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscore-index.html">Core</a></li>
+<li><a href="qtawscore-module.html">C++ Classes</a></li>
+<li>AwsAbstractSignaturePrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">AwsAbstractSignaturePrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-core-awsabstractsignatureprivate.html">QtAws::Core::AwsAbstractSignaturePrivate</a>)<br/></span>
+<!-- $$$AwsAbstractSignaturePrivate-brief -->
+<p>The <a href="qtaws-core-awsabstractsignatureprivate.html">AwsAbstractSignaturePrivate</a> class provides private implementation for the <a href="qtaws-core-awsabstractsignature.html">AwsAbstractSignature</a> class. <a href="#details">More...</a></p>
+<!-- @@@AwsAbstractSignaturePrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AwsAbstractSignaturePrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-core-awssignaturev0private.html">QtAws::Core::AwsSignatureV0Private</a>, <a href="qtaws-core-awssignaturev2private.html">QtAws::Core::AwsSignatureV2Private</a>, <a href="qtaws-core-awssignaturev3private.html">QtAws::Core::AwsSignatureV3Private</a>, and <a href="qtaws-core-awssignaturev4private.html">QtAws::Core::AwsSignatureV4Private</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-core-awsabstractsignatureprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#AwsAbstractSignaturePrivate">AwsAbstractSignaturePrivate</a></b>(AwsAbstractSignature * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#dtor.AwsAbstractSignaturePrivate">~AwsAbstractSignaturePrivate</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#canonicalPath">canonicalPath</a></b>(const QUrl &amp;<i>url</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#canonicalQuery">canonicalQuery</a></b>(const QUrlQuery &amp;<i>query</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#httpMethod">httpMethod</a></b>(const QNetworkAccessManager::Operation <i>operation</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-core-awsabstractsignatureprivate.html#setQueryItem">setQueryItem</a></b>(QUrlQuery &amp;<i>query</i>, const QString &amp;<i>key</i>, const QString &amp;<i>value</i>, const bool <i>warnOnNonIdenticalDuplicate</i> = true) const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$AwsAbstractSignaturePrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-core-awsabstractsignatureprivate.html">AwsAbstractSignaturePrivate</a> class provides private implementation for the <a href="qtaws-core-awsabstractsignature.html">AwsAbstractSignature</a> class.</p>
+</div>
+<!-- @@@AwsAbstractSignaturePrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$AwsAbstractSignaturePrivate[overload1]$$$AwsAbstractSignaturePrivateAwsAbstractSignature*const -->
+<h3 class="fn" id="AwsAbstractSignaturePrivate"><a name="AwsAbstractSignaturePrivate"></a>AwsAbstractSignaturePrivate::<span class="name">AwsAbstractSignaturePrivate</span>(<span class="type"><a href="qtaws-core-awsabstractsignature.html">AwsAbstractSignature</a></span> * const <i>q</i>)</h3>
+<p>Constructs an <a href="qtaws-core-awsabstractsignatureprivate.html">AwsAbstractSignaturePrivate</a> object with public implementation <i>q</i>.</p>
+<!-- @@@AwsAbstractSignaturePrivate -->
+<!-- $$$~AwsAbstractSignaturePrivate[overload1]$$$~AwsAbstractSignaturePrivate -->
+<h3 class="fn" id="dtor.AwsAbstractSignaturePrivate"><a name="dtor.AwsAbstractSignaturePrivate"></a><code>[virtual] </code>AwsAbstractSignaturePrivate::<span class="name">~AwsAbstractSignaturePrivate</span>()</h3>
+<p>Destroys the AWS signatures's private object.</p>
+<p>This virtual destructor does nothing (yet) - its here to allow for safe polymorphic destruction.</p>
+<!-- @@@~AwsAbstractSignaturePrivate -->
+<!-- $$$canonicalPath[overload1]$$$canonicalPathconstQUrl& -->
+<h3 class="fn" id="canonicalPath"><a name="canonicalPath"></a><span class="type">QString</span> AwsAbstractSignaturePrivate::<span class="name">canonicalPath</span>(const <span class="type">QUrl</span> &amp;<i>url</i>) const</h3>
+<p>Returns an AWS Signature canonical path for <i>url</i>.</p>
+<p>This function simply returns the fully-URL-encoded path. However, if the path is empty, then a single <code>/</code> is returned, as is required by Amazon for both V2 and V4 signatures (and presumably other versions too).</p>
+<p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> and <a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>.</p>
+<!-- @@@canonicalPath -->
+<!-- $$$canonicalQuery[overload1]$$$canonicalQueryconstQUrlQuery& -->
+<h3 class="fn" id="canonicalQuery"><a name="canonicalQuery"></a><span class="type">QByteArray</span> AwsAbstractSignaturePrivate::<span class="name">canonicalQuery</span>(const <span class="type">QUrlQuery</span> &amp;<i>query</i>) const</h3>
+<p>Returns an AWS Signature canonical query string for <i>query</i>.</p>
+<p>This function returns an HTTP query string in Amazon's canonical form. That is, all query parameters are sorted by keys (<b>but not keys-then-values</b>), then joined with <code>&amp;</code> separators, in <code>key=value</code> pairs with both keys and values being URL percent encoded.</p>
+<p><b>Note: </b>The canonical form produced by this function is used by Amazon's later signature formats (versions 2, 3 and 4), but not their earlier formats (versions 0 and 1).</p><p><b>See also </b><a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html">http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html</a> and <a href="http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html">http://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html</a>.</p>
+<!-- @@@canonicalQuery -->
+<!-- $$$httpMethod[overload1]$$$httpMethodconstQNetworkAccessManager::Operation -->
+<h3 class="fn" id="httpMethod"><a name="httpMethod"></a><span class="type">QString</span> AwsAbstractSignaturePrivate::<span class="name">httpMethod</span>(const <span class="type">QNetworkAccessManager::Operation</span> <i>operation</i>) const</h3>
+<p>Returns the AWS Signature request method string for <i>operation</i>.</p>
+<p>This function simply converts QNetworkAccessManager operations (enum values) to strings appropriate to use in AWS signatures.</p>
+<p>If <i>operation</i> is not a valid AWS network operation a null string will be returned.</p>
+<!-- @@@httpMethod -->
+<!-- $$$setQueryItem[overload1]$$$setQueryItemQUrlQuery&constQString&constQString&constbool -->
+<h3 class="fn" id="setQueryItem"><a name="setQueryItem"></a><span class="type">bool</span> AwsAbstractSignaturePrivate::<span class="name">setQueryItem</span>(<span class="type">QUrlQuery</span> &amp;<i>query</i>, const <span class="type">QString</span> &amp;<i>key</i>, const <span class="type">QString</span> &amp;<i>value</i>, const <span class="type">bool</span> <i>warnOnNonIdenticalDuplicate</i> = true) const</h3>
+<p>Sets the pair <i>key</i> = <i>value</i> in <i>query</i>, checking for existing values first.</p>
+<p>This function is a light wrapper around QUrlQuery::addQueryItem() that first checks for existing values. Existing values will not be overwritten, instead if existing values are found, this function will simply check if the exsting value matches the desired <i>value</i>, and if not, will return <code>false</code> and optionally (if <i>warnOnNonIdenticalDuplicate</i> is <code>true</code>) issue a qWarning().</p>
+<p>Typically, when setting something that must be a specific value, such as an access key ID, <i>warnOnNonIdenticalDuplicate</i> would be <code>true</code>. However, when setting query items as a fall-back default, such as a current timestamp, <i>warnOnNonIdenticalDuplicate</i> would typically be set to <code>false</code>.</p>
+<p>Returns <code>true</code> if the query item was set successfully or was already set to the requested value previously; <code>false</code> otherwise.</p>
+<!-- @@@setQueryItem -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ecsrequest.cpp -->
+  <title>EcsRequest Class | ECS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsecs-index.html">ECS</a></li>
+<li><a href="qtawsecs-module.html">C++ Classes</a></li>
+<li>EcsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">EcsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ecs-ecsrequest.html">QtAws::ECS::EcsRequest</a>)<br/></span>
+<!-- $$$EcsRequest-brief -->
+<p>The <a href="qtaws-ecs-ecsrequest.html">EcsRequest</a> class provides an interface for ECS requests. <a href="#details">More...</a></p>
+<!-- @@@EcsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;EcsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-ecs-createclusterrequest.html">QtAws::ECS::CreateClusterRequest</a>, <a href="qtaws-ecs-createservicerequest.html">QtAws::ECS::CreateServiceRequest</a>, <a href="qtaws-ecs-deleteattributesrequest.html">QtAws::ECS::DeleteAttributesRequest</a>, <a href="qtaws-ecs-deleteclusterrequest.html">QtAws::ECS::DeleteClusterRequest</a>, <a href="qtaws-ecs-deleteservicerequest.html">QtAws::ECS::DeleteServiceRequest</a>, <a href="qtaws-ecs-deregistercontainerinstancerequest.html">QtAws::ECS::DeregisterContainerInstanceRequest</a>, <a href="qtaws-ecs-deregistertaskdefinitionrequest.html">QtAws::ECS::DeregisterTaskDefinitionRequest</a>, <a href="qtaws-ecs-describeclustersrequest.html">QtAws::ECS::DescribeClustersRequest</a>, <a href="qtaws-ecs-describecontainerinstancesrequest.html">QtAws::ECS::DescribeContainerInstancesRequest</a>, <a href="qtaws-ecs-describeservicesrequest.html">QtAws::ECS::DescribeServicesRequest</a>, <a href="qtaws-ecs-describetaskdefinitionrequest.html">QtAws::ECS::DescribeTaskDefinitionRequest</a>, <a href="qtaws-ecs-describetasksrequest.html">QtAws::ECS::DescribeTasksRequest</a>, <a href="qtaws-ecs-discoverpollendpointrequest.html">QtAws::ECS::DiscoverPollEndpointRequest</a>, <a href="qtaws-ecs-listattributesrequest.html">QtAws::ECS::ListAttributesRequest</a>, <a href="qtaws-ecs-listclustersrequest.html">QtAws::ECS::ListClustersRequest</a>, <a href="qtaws-ecs-listcontainerinstancesrequest.html">QtAws::ECS::ListContainerInstancesRequest</a>, <a href="qtaws-ecs-listservicesrequest.html">QtAws::ECS::ListServicesRequest</a>, <a href="qtaws-ecs-listtaskdefinitionfamiliesrequest.html">QtAws::ECS::ListTaskDefinitionFamiliesRequest</a>, <a href="qtaws-ecs-listtaskdefinitionsrequest.html">QtAws::ECS::ListTaskDefinitionsRequest</a>, <a href="qtaws-ecs-listtasksrequest.html">QtAws::ECS::ListTasksRequest</a>, <a href="qtaws-ecs-putattributesrequest.html">QtAws::ECS::PutAttributesRequest</a>, <a href="qtaws-ecs-registercontainerinstancerequest.html">QtAws::ECS::RegisterContainerInstanceRequest</a>, <a href="qtaws-ecs-registertaskdefinitionrequest.html">QtAws::ECS::RegisterTaskDefinitionRequest</a>, <a href="qtaws-ecs-runtaskrequest.html">QtAws::ECS::RunTaskRequest</a>, <a href="qtaws-ecs-starttaskrequest.html">QtAws::ECS::StartTaskRequest</a>, <a href="qtaws-ecs-stoptaskrequest.html">QtAws::ECS::StopTaskRequest</a>, <a href="qtaws-ecs-submitcontainerstatechangerequest.html">QtAws::ECS::SubmitContainerStateChangeRequest</a>, <a href="qtaws-ecs-submittaskstatechangerequest.html">QtAws::ECS::SubmitTaskStateChangeRequest</a>, <a href="qtaws-ecs-updatecontaineragentrequest.html">QtAws::ECS::UpdateContainerAgentRequest</a>, <a href="qtaws-ecs-updatecontainerinstancesstaterequest.html">QtAws::ECS::UpdateContainerInstancesStateRequest</a>, and <a href="qtaws-ecs-updateservicerequest.html">QtAws::ECS::UpdateServiceRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-ecs-ecsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#Action-enum">Action</a></b> { CreateClusterAction, CreateServiceAction, DeleteAttributesAction, DeleteClusterAction, ..., UpdateServiceAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#EcsRequest">EcsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#EcsRequest-1">EcsRequest</a></b>(const EcsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> EcsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#operator-eq">operator=</a></b>(const EcsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#operator-eq-eq">operator==</a></b>(const EcsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#EcsRequest-2">EcsRequest</a></b>(EcsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$EcsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ecs-ecsrequest.html">EcsRequest</a> class provides an interface for ECS requests.</p>
+</div>
+<!-- @@@EcsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CreateClusterAction$$$CreateServiceAction$$$DeleteAttributesAction$$$DeleteClusterAction$$$DeleteServiceAction$$$DeregisterContainerInstanceAction$$$DeregisterTaskDefinitionAction$$$DescribeClustersAction$$$DescribeContainerInstancesAction$$$DescribeServicesAction$$$DescribeTaskDefinitionAction$$$DescribeTasksAction$$$DiscoverPollEndpointAction$$$ListAttributesAction$$$ListClustersAction$$$ListContainerInstancesAction$$$ListServicesAction$$$ListTaskDefinitionFamiliesAction$$$ListTaskDefinitionsAction$$$ListTasksAction$$$PutAttributesAction$$$RegisterContainerInstanceAction$$$RegisterTaskDefinitionAction$$$RunTaskAction$$$StartTaskAction$$$StopTaskAction$$$SubmitContainerStateChangeAction$$$SubmitTaskStateChangeAction$$$UpdateContainerAgentAction$$$UpdateContainerInstancesStateAction$$$UpdateServiceAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum EcsRequest::<span class="name">Action</span><br/>flags EcsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as ECS requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::CreateClusterAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">ECS CreateCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::CreateServiceAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">ECS CreateService action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DeleteAttributesAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">ECS DeleteAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DeleteClusterAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">ECS DeleteCluster action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DeleteServiceAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">ECS DeleteService action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DeregisterContainerInstanceAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">ECS DeregisterContainerInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DeregisterTaskDefinitionAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">ECS DeregisterTaskDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DescribeClustersAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">ECS DescribeClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DescribeContainerInstancesAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">ECS DescribeContainerInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DescribeServicesAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">ECS DescribeServices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DescribeTaskDefinitionAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">ECS DescribeTaskDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DescribeTasksAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">ECS DescribeTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::DiscoverPollEndpointAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">ECS DiscoverPollEndpoint action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListAttributesAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">ECS ListAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListClustersAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">ECS ListClusters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListContainerInstancesAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">ECS ListContainerInstances action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListServicesAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">ECS ListServices action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListTaskDefinitionFamiliesAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">ECS ListTaskDefinitionFamilies action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListTaskDefinitionsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">ECS ListTaskDefinitions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::ListTasksAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">ECS ListTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::PutAttributesAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">ECS PutAttributes action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::RegisterContainerInstanceAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">ECS RegisterContainerInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::RegisterTaskDefinitionAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">ECS RegisterTaskDefinition action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::RunTaskAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">ECS RunTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::StartTaskAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">ECS StartTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::StopTaskAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">ECS StopTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::SubmitContainerStateChangeAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">ECS SubmitContainerStateChange action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::SubmitTaskStateChangeAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">ECS SubmitTaskStateChange action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::UpdateContainerAgentAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">ECS UpdateContainerAgent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::UpdateContainerInstancesStateAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">ECS UpdateContainerInstancesState action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::ECS::EcsRequest::UpdateServiceAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">ECS UpdateService action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$EcsRequest[overload1]$$$EcsRequestconstAction -->
+<h3 class="fn" id="EcsRequest"><a name="EcsRequest"></a>EcsRequest::<span class="name">EcsRequest</span>(const <span class="type"><a href="qtaws-ecs-ecsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-ecs-ecsrequest.html">EcsRequest</a> object for ECS <i>action</i>.</p>
+<!-- @@@EcsRequest -->
+<!-- $$$EcsRequest$$$EcsRequestconstEcsRequest& -->
+<h3 class="fn" id="EcsRequest-1"><a name="EcsRequest-1"></a>EcsRequest::<span class="name">EcsRequest</span>(const <span class="type"><a href="qtaws-ecs-ecsrequest.html#EcsRequest">EcsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@EcsRequest -->
+<!-- $$$EcsRequest$$$EcsRequestEcsRequestPrivate*const -->
+<h3 class="fn" id="EcsRequest-2"><a name="EcsRequest-2"></a><code>[protected] </code>EcsRequest::<span class="name">EcsRequest</span>(<span class="type"><a href="qtaws-ecs-ecsrequestprivate.html">EcsRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-ecs-ecsrequest.html">EcsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-ecs-ecsrequestprivate.html">EcsRequestPrivate</a>.</p>
+<!-- @@@EcsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-ecs-ecsrequest.html#Action-enum">Action</a></span> EcsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the ECS action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> EcsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the ECS action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> EcsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the ECS API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> EcsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> EcsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> EcsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;EcsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> EcsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-ecs-ecsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the ECS action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> EcsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the ECS API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> EcsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> EcsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-ecs-ecsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> EcsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the ECS request using the given <i>endpoint</i>.</p>
+<p>This ECS implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-ecs-ecsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constEcsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-ecs-ecsrequest.html#EcsRequest">EcsRequest</a></span> &amp;EcsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-ecs-ecsrequest.html#EcsRequest">EcsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-ecs-ecsrequest.html">EcsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constEcsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> EcsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-ecs-ecsrequest.html#EcsRequest">EcsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

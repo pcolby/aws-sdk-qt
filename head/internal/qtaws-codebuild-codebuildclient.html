@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- codebuildclient.cpp -->
+  <title>CodeBuildClient Class | CodeBuild</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscodebuild-index.html">CodeBuild</a></li>
+<li><a href="qtawscodebuild-module.html">C++ Classes</a></li>
+<li>CodeBuildClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CodeBuildClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-codebuild-codebuildclient.html">QtAws::CodeBuild::CodeBuildClient</a>)<br/></span>
+<!-- $$$CodeBuildClient-brief -->
+<p>The <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> class provides access to the AWS <a href="qtaws-codebuild.html">CodeBuild</a> service. <a href="#details">More...</a></p>
+<!-- @@@CodeBuildClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CodeBuildClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-codebuild-codebuildclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#CodeBuildClient">CodeBuildClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#CodeBuildClient-1">CodeBuildClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchDeleteBuildsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#batchDeleteBuilds">batchDeleteBuilds</a></b>(const BatchDeleteBuildsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetBuildsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#batchGetBuilds">batchGetBuilds</a></b>(const BatchGetBuildsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> BatchGetProjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#batchGetProjects">batchGetProjects</a></b>(const BatchGetProjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#createProject">createProject</a></b>(const CreateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateWebhookResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#createWebhook">createWebhook</a></b>(const CreateWebhookRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#deleteProject">deleteProject</a></b>(const DeleteProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteWebhookResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#deleteWebhook">deleteWebhook</a></b>(const DeleteWebhookRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InvalidateProjectCacheResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#invalidateProjectCache">invalidateProjectCache</a></b>(const InvalidateProjectCacheRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBuildsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#listBuilds">listBuilds</a></b>(const ListBuildsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListBuildsForProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#listBuildsForProject">listBuildsForProject</a></b>(const ListBuildsForProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListCuratedEnvironmentImagesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#listCuratedEnvironmentImages">listCuratedEnvironmentImages</a></b>(const ListCuratedEnvironmentImagesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProjectsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#listProjects">listProjects</a></b>(const ListProjectsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartBuildResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#startBuild">startBuild</a></b>(const StartBuildRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopBuildResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#stopBuild">stopBuild</a></b>(const StopBuildRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProjectResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#updateProject">updateProject</a></b>(const UpdateProjectRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateWebhookResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-codebuild-codebuildclient.html#updateWebhook">updateWebhook</a></b>(const UpdateWebhookRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$CodeBuildClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> class provides access to the AWS <a href="qtaws-codebuild.html">CodeBuild</a> service.</p>
+<p>&lt;fullname&gt;AWS <a href="qtaws-codebuild.html">CodeBuild</a>&lt;/fullname&gt;</p>
+<p>AWS <a href="qtaws-codebuild.html">CodeBuild</a> is a fully managed build service in the cloud. AWS <a href="qtaws-codebuild.html">CodeBuild</a> compiles your source code, runs unit tests, and produces artifacts that are ready to deploy. AWS <a href="qtaws-codebuild.html">CodeBuild</a> eliminates the need to provision, manage, and scale your own build servers. It provides prepackaged build environments for the most popular programming languages and build tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS <a href="qtaws-codebuild.html">CodeBuild</a> to use your own build tools. AWS <a href="qtaws-codebuild.html">CodeBuild</a> scales automatically to meet peak build requests, and you pay only for the build time you consume. For more information about AWS <a href="qtaws-codebuild.html">CodeBuild</a>, see the &lt;i&gt;AWS <a href="qtaws-codebuild.html">CodeBuild</a> User</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>AWS <a href="qtaws-codebuild.html">CodeBuild</a> supports these</p>
+<p>operations&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;BatchDeleteBuilds&lt;/code&gt;: Deletes one or more</p>
+<p>builds&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;BatchGetProjects&lt;/code&gt;: Gets information about one or more build projects. A &lt;i&gt;build project&lt;/i&gt; defines how AWS <a href="qtaws-codebuild.html">CodeBuild</a> will run a build. This includes information such as where to get the source code to build, the build environment to use, the build commands to run, and where to store the build output. A &lt;i&gt;build environment&lt;/i&gt; represents a combination of operating system, programming language runtime, and tools that AWS <a href="qtaws-codebuild.html">CodeBuild</a> will use to run a build. Also, you can add tags to build projects to help manage your resources and</p>
+<p>costs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;CreateProject&lt;/code&gt;: Creates a build</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;CreateWebhook&lt;/code&gt;: For an existing AWS <a href="qtaws-codebuild.html">CodeBuild</a> build project that has its source code stored in a GitHub repository, enables AWS <a href="qtaws-codebuild.html">CodeBuild</a> to begin automatically rebuilding the source code every time a code change is pushed to the</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UpdateWebhook&lt;/code&gt;: Changes the settings of an existing</p>
+<p>webhook&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DeleteProject&lt;/code&gt;: Deletes a build</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;DeleteWebhook&lt;/code&gt;: For an existing AWS <a href="qtaws-codebuild.html">CodeBuild</a> build project that has its source code stored in a GitHub repository, stops AWS <a href="qtaws-codebuild.html">CodeBuild</a> from automatically rebuilding the source code every time a code change is pushed to the</p>
+<p>repository&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListProjects&lt;/code&gt;: Gets a list of build project names, with each build project name representing a single build</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;UpdateProject&lt;/code&gt;: Changes the settings of an existing build</p>
+<p>project&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;BatchGetBuilds&lt;/code&gt;: Gets information about one or more</p>
+<p>builds&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListBuilds&lt;/code&gt;: Gets a list of build IDs, with each build ID representing a single</p>
+<p>build&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListBuildsForProject&lt;/code&gt;: Gets a list of build IDs for the specified build project, with each build ID representing a single</p>
+<p>build&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;StartBuild&lt;/code&gt;: Starts running a</p>
+<p>build&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;StopBuild&lt;/code&gt;: Attempts to stop running a</p>
+<p>build&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;code&gt;ListCuratedEnvironmentImages&lt;/code&gt;: Gets information about Docker images that are managed by AWS</p>
+</div>
+<!-- @@@CodeBuildClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CodeBuildClient[overload1]$$$CodeBuildClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeBuildClient"><a name="CodeBuildClient"></a>CodeBuildClient::<span class="name">CodeBuildClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@CodeBuildClient -->
+<!-- $$$CodeBuildClient$$$CodeBuildClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="CodeBuildClient-1"><a name="CodeBuildClient-1"></a>CodeBuildClient::<span class="name">CodeBuildClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-codebuild-codebuildclient.html#CodeBuildClient">CodeBuildClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@CodeBuildClient -->
+<!-- $$$batchDeleteBuilds[overload1]$$$batchDeleteBuildsconstBatchDeleteBuildsRequest& -->
+<h3 class="fn" id="batchDeleteBuilds"><a name="batchDeleteBuilds"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-batchdeletebuildsresponse.html">BatchDeleteBuildsResponse</a></span> *CodeBuildClient::<span class="name">batchDeleteBuilds</span>(const <span class="type"><a href="qtaws-codebuild-batchdeletebuildsrequest.html">BatchDeleteBuildsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-batchdeletebuildsresponse.html">BatchDeleteBuildsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes one or more</p>
+<!-- @@@batchDeleteBuilds -->
+<!-- $$$batchGetBuilds[overload1]$$$batchGetBuildsconstBatchGetBuildsRequest& -->
+<h3 class="fn" id="batchGetBuilds"><a name="batchGetBuilds"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-batchgetbuildsresponse.html">BatchGetBuildsResponse</a></span> *CodeBuildClient::<span class="name">batchGetBuilds</span>(const <span class="type"><a href="qtaws-codebuild-batchgetbuildsrequest.html">BatchGetBuildsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-batchgetbuildsresponse.html">BatchGetBuildsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about</p>
+<!-- @@@batchGetBuilds -->
+<!-- $$$batchGetProjects[overload1]$$$batchGetProjectsconstBatchGetProjectsRequest& -->
+<h3 class="fn" id="batchGetProjects"><a name="batchGetProjects"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-batchgetprojectsresponse.html">BatchGetProjectsResponse</a></span> *CodeBuildClient::<span class="name">batchGetProjects</span>(const <span class="type"><a href="qtaws-codebuild-batchgetprojectsrequest.html">BatchGetProjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-batchgetprojectsresponse.html">BatchGetProjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about build</p>
+<!-- @@@batchGetProjects -->
+<!-- $$$createProject[overload1]$$$createProjectconstCreateProjectRequest& -->
+<h3 class="fn" id="createProject"><a name="createProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-createprojectresponse.html">CreateProjectResponse</a></span> *CodeBuildClient::<span class="name">createProject</span>(const <span class="type"><a href="qtaws-codebuild-createprojectrequest.html">CreateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-createprojectresponse.html">CreateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a build</p>
+<!-- @@@createProject -->
+<!-- $$$createWebhook[overload1]$$$createWebhookconstCreateWebhookRequest& -->
+<h3 class="fn" id="createWebhook"><a name="createWebhook"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-createwebhookresponse.html">CreateWebhookResponse</a></span> *CodeBuildClient::<span class="name">createWebhook</span>(const <span class="type"><a href="qtaws-codebuild-createwebhookrequest.html">CreateWebhookRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-createwebhookresponse.html">CreateWebhookResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For an existing AWS <a href="qtaws-codebuild.html">CodeBuild</a> build project that has its source code stored in a GitHub repository, enables AWS <a href="qtaws-codebuild.html">CodeBuild</a> to begin automatically rebuilding the source code every time a code change is pushed to the</p>
+<p>repository&gt; &lt;b&gt;</p>
+<p>If you enable webhooks for an AWS <a href="qtaws-codebuild.html">CodeBuild</a> project, and the project is used as a build step in AWS CodePipeline, then two identical builds will be created for each commit. One build is triggered through webhooks, and one through AWS CodePipeline. Because billing is on a per-build basis, you will be billed for both builds. Therefore, if you are using AWS CodePipeline, we recommend that you disable webhooks in <a href="qtaws-codebuild.html">CodeBuild</a>. In the AWS <a href="qtaws-codebuild.html">CodeBuild</a> console, clear the Webhook box. For more information, see step 9 in &lt;a href=&quot;http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console&quot;&gt;Change a Build Project's</p>
+<!-- @@@createWebhook -->
+<!-- $$$deleteProject[overload1]$$$deleteProjectconstDeleteProjectRequest& -->
+<h3 class="fn" id="deleteProject"><a name="deleteProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-deleteprojectresponse.html">DeleteProjectResponse</a></span> *CodeBuildClient::<span class="name">deleteProject</span>(const <span class="type"><a href="qtaws-codebuild-deleteprojectrequest.html">DeleteProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-deleteprojectresponse.html">DeleteProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a build</p>
+<!-- @@@deleteProject -->
+<!-- $$$deleteWebhook[overload1]$$$deleteWebhookconstDeleteWebhookRequest& -->
+<h3 class="fn" id="deleteWebhook"><a name="deleteWebhook"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-deletewebhookresponse.html">DeleteWebhookResponse</a></span> *CodeBuildClient::<span class="name">deleteWebhook</span>(const <span class="type"><a href="qtaws-codebuild-deletewebhookrequest.html">DeleteWebhookRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-deletewebhookresponse.html">DeleteWebhookResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>For an existing AWS <a href="qtaws-codebuild.html">CodeBuild</a> build project that has its source code stored in a GitHub repository, stops AWS <a href="qtaws-codebuild.html">CodeBuild</a> from automatically rebuilding the source code every time a code change is pushed to the</p>
+<!-- @@@deleteWebhook -->
+<!-- $$$invalidateProjectCache[overload1]$$$invalidateProjectCacheconstInvalidateProjectCacheRequest& -->
+<h3 class="fn" id="invalidateProjectCache"><a name="invalidateProjectCache"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-invalidateprojectcacheresponse.html">InvalidateProjectCacheResponse</a></span> *CodeBuildClient::<span class="name">invalidateProjectCache</span>(const <span class="type"><a href="qtaws-codebuild-invalidateprojectcacherequest.html">InvalidateProjectCacheRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-invalidateprojectcacheresponse.html">InvalidateProjectCacheResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resets the cache for a</p>
+<!-- @@@invalidateProjectCache -->
+<!-- $$$listBuilds[overload1]$$$listBuildsconstListBuildsRequest& -->
+<h3 class="fn" id="listBuilds"><a name="listBuilds"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-listbuildsresponse.html">ListBuildsResponse</a></span> *CodeBuildClient::<span class="name">listBuilds</span>(const <span class="type"><a href="qtaws-codebuild-listbuildsrequest.html">ListBuildsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-listbuildsresponse.html">ListBuildsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of build IDs, with each build ID representing a single</p>
+<!-- @@@listBuilds -->
+<!-- $$$listBuildsForProject[overload1]$$$listBuildsForProjectconstListBuildsForProjectRequest& -->
+<h3 class="fn" id="listBuildsForProject"><a name="listBuildsForProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-listbuildsforprojectresponse.html">ListBuildsForProjectResponse</a></span> *CodeBuildClient::<span class="name">listBuildsForProject</span>(const <span class="type"><a href="qtaws-codebuild-listbuildsforprojectrequest.html">ListBuildsForProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-listbuildsforprojectresponse.html">ListBuildsForProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of build IDs for the specified build project, with each build ID representing a single</p>
+<!-- @@@listBuildsForProject -->
+<!-- $$$listCuratedEnvironmentImages[overload1]$$$listCuratedEnvironmentImagesconstListCuratedEnvironmentImagesRequest& -->
+<h3 class="fn" id="listCuratedEnvironmentImages"><a name="listCuratedEnvironmentImages"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-listcuratedenvironmentimagesresponse.html">ListCuratedEnvironmentImagesResponse</a></span> *CodeBuildClient::<span class="name">listCuratedEnvironmentImages</span>(const <span class="type"><a href="qtaws-codebuild-listcuratedenvironmentimagesrequest.html">ListCuratedEnvironmentImagesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-listcuratedenvironmentimagesresponse.html">ListCuratedEnvironmentImagesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about Docker images that are managed by AWS</p>
+<!-- @@@listCuratedEnvironmentImages -->
+<!-- $$$listProjects[overload1]$$$listProjectsconstListProjectsRequest& -->
+<h3 class="fn" id="listProjects"><a name="listProjects"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-listprojectsresponse.html">ListProjectsResponse</a></span> *CodeBuildClient::<span class="name">listProjects</span>(const <span class="type"><a href="qtaws-codebuild-listprojectsrequest.html">ListProjectsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-listprojectsresponse.html">ListProjectsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets a list of build project names, with each build project name representing a single build</p>
+<!-- @@@listProjects -->
+<!-- $$$startBuild[overload1]$$$startBuildconstStartBuildRequest& -->
+<h3 class="fn" id="startBuild"><a name="startBuild"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-startbuildresponse.html">StartBuildResponse</a></span> *CodeBuildClient::<span class="name">startBuild</span>(const <span class="type"><a href="qtaws-codebuild-startbuildrequest.html">StartBuildRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-startbuildresponse.html">StartBuildResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts running a</p>
+<!-- @@@startBuild -->
+<!-- $$$stopBuild[overload1]$$$stopBuildconstStopBuildRequest& -->
+<h3 class="fn" id="stopBuild"><a name="stopBuild"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-stopbuildresponse.html">StopBuildResponse</a></span> *CodeBuildClient::<span class="name">stopBuild</span>(const <span class="type"><a href="qtaws-codebuild-stopbuildrequest.html">StopBuildRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-stopbuildresponse.html">StopBuildResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attempts to stop running a</p>
+<!-- @@@stopBuild -->
+<!-- $$$updateProject[overload1]$$$updateProjectconstUpdateProjectRequest& -->
+<h3 class="fn" id="updateProject"><a name="updateProject"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-updateprojectresponse.html">UpdateProjectResponse</a></span> *CodeBuildClient::<span class="name">updateProject</span>(const <span class="type"><a href="qtaws-codebuild-updateprojectrequest.html">UpdateProjectRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-updateprojectresponse.html">UpdateProjectResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Changes the settings of a build</p>
+<!-- @@@updateProject -->
+<!-- $$$updateWebhook[overload1]$$$updateWebhookconstUpdateWebhookRequest& -->
+<h3 class="fn" id="updateWebhook"><a name="updateWebhook"></a><code>[slot] </code><span class="type"><a href="qtaws-codebuild-updatewebhookresponse.html">UpdateWebhookResponse</a></span> *CodeBuildClient::<span class="name">updateWebhook</span>(const <span class="type"><a href="qtaws-codebuild-updatewebhookrequest.html">UpdateWebhookRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-codebuild-codebuildclient.html">CodeBuildClient</a> service, and returns a pointer to an <a href="qtaws-codebuild-updatewebhookresponse.html">UpdateWebhookResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the webhook associated with an AWS <a href="qtaws-codebuild.html">CodeBuild</a> build project.</p>
+<!-- @@@updateWebhook -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotdataplaneclient.cpp -->
+  <title>IoTDataPlaneClient Class | IoTDataPlane</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiotdataplane-index.html">IoTDataPlane</a></li>
+<li><a href="qtawsiotdataplane-module.html">C++ Classes</a></li>
+<li>IoTDataPlaneClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTDataPlaneClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iotdataplane-iotdataplaneclient.html">QtAws::IoTDataPlane::IoTDataPlaneClient</a>)<br/></span>
+<!-- $$$IoTDataPlaneClient-brief -->
+<p>The <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> class provides access to the AWS IoT Data Plane service. <a href="#details">More...</a></p>
+<!-- @@@IoTDataPlaneClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTDataPlaneClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-iotdataplane-iotdataplaneclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#IoTDataPlaneClient">IoTDataPlaneClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#IoTDataPlaneClient-1">IoTDataPlaneClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteThingShadowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#deleteThingShadow">deleteThingShadow</a></b>(const DeleteThingShadowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetThingShadowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#getThingShadow">getThingShadow</a></b>(const GetThingShadowRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PublishResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#publish">publish</a></b>(const PublishRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateThingShadowResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotdataplane-iotdataplaneclient.html#updateThingShadow">updateThingShadow</a></b>(const UpdateThingShadowRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTDataPlaneClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> class provides access to the AWS IoT Data Plane service.</p>
+<p>&lt;fullname&gt;AWS IoT&lt;/fullname&gt;</p>
+<p>AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators, embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent representation of your things and their state in the AWS</p>
+</div>
+<!-- @@@IoTDataPlaneClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTDataPlaneClient[overload1]$$$IoTDataPlaneClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTDataPlaneClient"><a name="IoTDataPlaneClient"></a>IoTDataPlaneClient::<span class="name">IoTDataPlaneClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@IoTDataPlaneClient -->
+<!-- $$$IoTDataPlaneClient$$$IoTDataPlaneClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTDataPlaneClient-1"><a name="IoTDataPlaneClient-1"></a>IoTDataPlaneClient::<span class="name">IoTDataPlaneClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-iotdataplane-iotdataplaneclient.html#IoTDataPlaneClient">IoTDataPlaneClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@IoTDataPlaneClient -->
+<!-- $$$deleteThingShadow[overload1]$$$deleteThingShadowconstDeleteThingShadowRequest& -->
+<h3 class="fn" id="deleteThingShadow"><a name="deleteThingShadow"></a><code>[slot] </code><span class="type"><a href="qtaws-iotdataplane-deletethingshadowresponse.html">DeleteThingShadowResponse</a></span> *IoTDataPlaneClient::<span class="name">deleteThingShadow</span>(const <span class="type"><a href="qtaws-iotdataplane-deletethingshadowrequest.html">DeleteThingShadowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotdataplane-deletethingshadowresponse.html">DeleteThingShadowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the thing shadow for the specified</p>
+<p>thing&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html&quot;&gt;DeleteThingShadow&lt;/a&gt; in the &lt;i&gt;AWS IoT Developer</p>
+<!-- @@@deleteThingShadow -->
+<!-- $$$getThingShadow[overload1]$$$getThingShadowconstGetThingShadowRequest& -->
+<h3 class="fn" id="getThingShadow"><a name="getThingShadow"></a><code>[slot] </code><span class="type"><a href="qtaws-iotdataplane-getthingshadowresponse.html">GetThingShadowResponse</a></span> *IoTDataPlaneClient::<span class="name">getThingShadow</span>(const <span class="type"><a href="qtaws-iotdataplane-getthingshadowrequest.html">GetThingShadowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotdataplane-getthingshadowresponse.html">GetThingShadowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the thing shadow for the specified</p>
+<p>thing&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html&quot;&gt;GetThingShadow&lt;/a&gt; in the &lt;i&gt;AWS IoT Developer</p>
+<!-- @@@getThingShadow -->
+<!-- $$$publish[overload1]$$$publishconstPublishRequest& -->
+<h3 class="fn" id="publish"><a name="publish"></a><code>[slot] </code><span class="type"><a href="qtaws-iotdataplane-publishresponse.html">PublishResponse</a></span> *IoTDataPlaneClient::<span class="name">publish</span>(const <span class="type"><a href="qtaws-iotdataplane-publishrequest.html">PublishRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotdataplane-publishresponse.html">PublishResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Publishes state</p>
+<p>information&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http&quot;&gt;HTTP Protocol&lt;/a&gt; in the &lt;i&gt;AWS IoT Developer</p>
+<!-- @@@publish -->
+<!-- $$$updateThingShadow[overload1]$$$updateThingShadowconstUpdateThingShadowRequest& -->
+<h3 class="fn" id="updateThingShadow"><a name="updateThingShadow"></a><code>[slot] </code><span class="type"><a href="qtaws-iotdataplane-updatethingshadowresponse.html">UpdateThingShadowResponse</a></span> *IoTDataPlaneClient::<span class="name">updateThingShadow</span>(const <span class="type"><a href="qtaws-iotdataplane-updatethingshadowrequest.html">UpdateThingShadowRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotdataplane-iotdataplaneclient.html">IoTDataPlaneClient</a> service, and returns a pointer to an <a href="qtaws-iotdataplane-updatethingshadowresponse.html">UpdateThingShadowResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the thing shadow for the specified</p>
+<p>thing&gt;</p>
+<p>For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html&quot;&gt;UpdateThingShadow&lt;/a&gt; in the &lt;i&gt;AWS IoT Developer</p>
+<!-- @@@updateThingShadow -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

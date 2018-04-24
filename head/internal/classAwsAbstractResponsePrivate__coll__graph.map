@@ -1,5 +1,0 @@
-<map id="AwsAbstractResponsePrivate" name="AwsAbstractResponsePrivate">
-<area shape="rect" id="node4" href="$classAwsAbstractResponse.html" title="Interface class for processing AWS responses. " alt="" coords="57,184,213,211"/>
-<area shape="rect" id="node2" href="$classAwsAbstractRequest.html" title="Interface class for providing AWS requests. " alt="" coords="278,5,425,32"/>
-<area shape="rect" id="node3" href="$classAwsAbstractRequestPrivate.html" title="Private implementation for AwsAbstractRequest. " alt="" coords="322,95,509,121"/>
-</map>

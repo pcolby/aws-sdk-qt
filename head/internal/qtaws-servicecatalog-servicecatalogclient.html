@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- servicecatalogclient.cpp -->
+  <title>ServiceCatalogClient Class | ServiceCatalog</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsservicecatalog-index.html">ServiceCatalog</a></li>
+<li><a href="qtawsservicecatalog-module.html">C++ Classes</a></li>
+<li>ServiceCatalogClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">ServiceCatalogClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-servicecatalog-servicecatalogclient.html">QtAws::ServiceCatalog::ServiceCatalogClient</a>)<br/></span>
+<!-- $$$ServiceCatalogClient-brief -->
+<p>The <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> class provides access to the AWS Service Catalog service. <a href="#details">More...</a></p>
+<!-- @@@ServiceCatalogClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;ServiceCatalogClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-servicecatalog-servicecatalogclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#ServiceCatalogClient">ServiceCatalogClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#ServiceCatalogClient-1">ServiceCatalogClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> AcceptPortfolioShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#acceptPortfolioShare">acceptPortfolioShare</a></b>(const AcceptPortfolioShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociatePrincipalWithPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#associatePrincipalWithPortfolio">associatePrincipalWithPortfolio</a></b>(const AssociatePrincipalWithPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateProductWithPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#associateProductWithPortfolio">associateProductWithPortfolio</a></b>(const AssociateProductWithPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> AssociateTagOptionWithResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#associateTagOptionWithResource">associateTagOptionWithResource</a></b>(const AssociateTagOptionWithResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CopyProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#copyProduct">copyProduct</a></b>(const CopyProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateConstraintResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createConstraint">createConstraint</a></b>(const CreateConstraintRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createPortfolio">createPortfolio</a></b>(const CreatePortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePortfolioShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createPortfolioShare">createPortfolioShare</a></b>(const CreatePortfolioShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createProduct">createProduct</a></b>(const CreateProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProvisionedProductPlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createProvisionedProductPlan">createProvisionedProductPlan</a></b>(const CreateProvisionedProductPlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateProvisioningArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createProvisioningArtifact">createProvisioningArtifact</a></b>(const CreateProvisioningArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateTagOptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#createTagOption">createTagOption</a></b>(const CreateTagOptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteConstraintResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deleteConstraint">deleteConstraint</a></b>(const DeleteConstraintRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deletePortfolio">deletePortfolio</a></b>(const DeletePortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePortfolioShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deletePortfolioShare">deletePortfolioShare</a></b>(const DeletePortfolioShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deleteProduct">deleteProduct</a></b>(const DeleteProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProvisionedProductPlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deleteProvisionedProductPlan">deleteProvisionedProductPlan</a></b>(const DeleteProvisionedProductPlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteProvisioningArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deleteProvisioningArtifact">deleteProvisioningArtifact</a></b>(const DeleteProvisioningArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteTagOptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#deleteTagOption">deleteTagOption</a></b>(const DeleteTagOptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeConstraintResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeConstraint">describeConstraint</a></b>(const DescribeConstraintRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeCopyProductStatusResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeCopyProductStatus">describeCopyProductStatus</a></b>(const DescribeCopyProductStatusRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describePortfolio">describePortfolio</a></b>(const DescribePortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProduct">describeProduct</a></b>(const DescribeProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProductAsAdminResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProductAsAdmin">describeProductAsAdmin</a></b>(const DescribeProductAsAdminRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProductViewResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProductView">describeProductView</a></b>(const DescribeProductViewRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProvisionedProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProvisionedProduct">describeProvisionedProduct</a></b>(const DescribeProvisionedProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProvisionedProductPlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProvisionedProductPlan">describeProvisionedProductPlan</a></b>(const DescribeProvisionedProductPlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProvisioningArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProvisioningArtifact">describeProvisioningArtifact</a></b>(const DescribeProvisioningArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeProvisioningParametersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeProvisioningParameters">describeProvisioningParameters</a></b>(const DescribeProvisioningParametersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeRecordResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeRecord">describeRecord</a></b>(const DescribeRecordRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTagOptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#describeTagOption">describeTagOption</a></b>(const DescribeTagOptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociatePrincipalFromPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#disassociatePrincipalFromPortfolio">disassociatePrincipalFromPortfolio</a></b>(const DisassociatePrincipalFromPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateProductFromPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#disassociateProductFromPortfolio">disassociateProductFromPortfolio</a></b>(const DisassociateProductFromPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DisassociateTagOptionFromResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#disassociateTagOptionFromResource">disassociateTagOptionFromResource</a></b>(const DisassociateTagOptionFromResourceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ExecuteProvisionedProductPlanResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#executeProvisionedProductPlan">executeProvisionedProductPlan</a></b>(const ExecuteProvisionedProductPlanRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAcceptedPortfolioSharesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listAcceptedPortfolioShares">listAcceptedPortfolioShares</a></b>(const ListAcceptedPortfolioSharesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListConstraintsForPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listConstraintsForPortfolio">listConstraintsForPortfolio</a></b>(const ListConstraintsForPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListLaunchPathsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listLaunchPaths">listLaunchPaths</a></b>(const ListLaunchPathsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPortfolioAccessResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listPortfolioAccess">listPortfolioAccess</a></b>(const ListPortfolioAccessRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPortfoliosResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listPortfolios">listPortfolios</a></b>(const ListPortfoliosRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPortfoliosForProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listPortfoliosForProduct">listPortfoliosForProduct</a></b>(const ListPortfoliosForProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPrincipalsForPortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listPrincipalsForPortfolio">listPrincipalsForPortfolio</a></b>(const ListPrincipalsForPortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProvisionedProductPlansResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listProvisionedProductPlans">listProvisionedProductPlans</a></b>(const ListProvisionedProductPlansRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListProvisioningArtifactsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listProvisioningArtifacts">listProvisioningArtifacts</a></b>(const ListProvisioningArtifactsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListRecordHistoryResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listRecordHistory">listRecordHistory</a></b>(const ListRecordHistoryRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListResourcesForTagOptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listResourcesForTagOption">listResourcesForTagOption</a></b>(const ListResourcesForTagOptionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTagOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#listTagOptions">listTagOptions</a></b>(const ListTagOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ProvisionProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#provisionProduct">provisionProduct</a></b>(const ProvisionProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RejectPortfolioShareResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#rejectPortfolioShare">rejectPortfolioShare</a></b>(const RejectPortfolioShareRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ScanProvisionedProductsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#scanProvisionedProducts">scanProvisionedProducts</a></b>(const ScanProvisionedProductsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchProductsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#searchProducts">searchProducts</a></b>(const SearchProductsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchProductsAsAdminResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#searchProductsAsAdmin">searchProductsAsAdmin</a></b>(const SearchProductsAsAdminRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SearchProvisionedProductsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#searchProvisionedProducts">searchProvisionedProducts</a></b>(const SearchProvisionedProductsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> TerminateProvisionedProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#terminateProvisionedProduct">terminateProvisionedProduct</a></b>(const TerminateProvisionedProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateConstraintResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updateConstraint">updateConstraint</a></b>(const UpdateConstraintRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePortfolioResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updatePortfolio">updatePortfolio</a></b>(const UpdatePortfolioRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updateProduct">updateProduct</a></b>(const UpdateProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProvisionedProductResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updateProvisionedProduct">updateProvisionedProduct</a></b>(const UpdateProvisionedProductRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateProvisioningArtifactResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updateProvisioningArtifact">updateProvisioningArtifact</a></b>(const UpdateProvisioningArtifactRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateTagOptionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-servicecatalog-servicecatalogclient.html#updateTagOption">updateTagOption</a></b>(const UpdateTagOptionRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$ServiceCatalogClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> class provides access to the AWS Service Catalog service.</p>
+<p>&lt;fullname&gt;AWS Service Catalog&lt;/fullname&gt;</p>
+<p>&lt;a href=&quot;https://aws.amazon.com/servicecatalog/&quot;&gt;AWS Service Catalog&lt;/a&gt; enables organizations to create and manage catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be familiar with the terminology discussed in &lt;a href=&quot;http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html&quot;&gt;AWS Service Catalog</p>
+</div>
+<!-- @@@ServiceCatalogClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ServiceCatalogClient[overload1]$$$ServiceCatalogClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ServiceCatalogClient"><a name="ServiceCatalogClient"></a>ServiceCatalogClient::<span class="name">ServiceCatalogClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@ServiceCatalogClient -->
+<!-- $$$ServiceCatalogClient$$$ServiceCatalogClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="ServiceCatalogClient-1"><a name="ServiceCatalogClient-1"></a>ServiceCatalogClient::<span class="name">ServiceCatalogClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-servicecatalog-servicecatalogclient.html#ServiceCatalogClient">ServiceCatalogClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@ServiceCatalogClient -->
+<!-- $$$acceptPortfolioShare[overload1]$$$acceptPortfolioShareconstAcceptPortfolioShareRequest& -->
+<h3 class="fn" id="acceptPortfolioShare"><a name="acceptPortfolioShare"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-acceptportfolioshareresponse.html">AcceptPortfolioShareResponse</a></span> *ServiceCatalogClient::<span class="name">acceptPortfolioShare</span>(const <span class="type"><a href="qtaws-servicecatalog-acceptportfoliosharerequest.html">AcceptPortfolioShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-acceptportfolioshareresponse.html">AcceptPortfolioShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Accepts an offer to share the specified</p>
+<!-- @@@acceptPortfolioShare -->
+<!-- $$$associatePrincipalWithPortfolio[overload1]$$$associatePrincipalWithPortfolioconstAssociatePrincipalWithPortfolioRequest& -->
+<h3 class="fn" id="associatePrincipalWithPortfolio"><a name="associatePrincipalWithPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-associateprincipalwithportfolioresponse.html">AssociatePrincipalWithPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">associatePrincipalWithPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-associateprincipalwithportfoliorequest.html">AssociatePrincipalWithPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-associateprincipalwithportfolioresponse.html">AssociatePrincipalWithPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates the specified principal ARN with the specified</p>
+<!-- @@@associatePrincipalWithPortfolio -->
+<!-- $$$associateProductWithPortfolio[overload1]$$$associateProductWithPortfolioconstAssociateProductWithPortfolioRequest& -->
+<h3 class="fn" id="associateProductWithPortfolio"><a name="associateProductWithPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-associateproductwithportfolioresponse.html">AssociateProductWithPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">associateProductWithPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-associateproductwithportfoliorequest.html">AssociateProductWithPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-associateproductwithportfolioresponse.html">AssociateProductWithPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associates the specified product with the specified</p>
+<!-- @@@associateProductWithPortfolio -->
+<!-- $$$associateTagOptionWithResource[overload1]$$$associateTagOptionWithResourceconstAssociateTagOptionWithResourceRequest& -->
+<h3 class="fn" id="associateTagOptionWithResource"><a name="associateTagOptionWithResource"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-associatetagoptionwithresourceresponse.html">AssociateTagOptionWithResourceResponse</a></span> *ServiceCatalogClient::<span class="name">associateTagOptionWithResource</span>(const <span class="type"><a href="qtaws-servicecatalog-associatetagoptionwithresourcerequest.html">AssociateTagOptionWithResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-associatetagoptionwithresourceresponse.html">AssociateTagOptionWithResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Associate the specified TagOption with the specified portfolio or</p>
+<!-- @@@associateTagOptionWithResource -->
+<!-- $$$copyProduct[overload1]$$$copyProductconstCopyProductRequest& -->
+<h3 class="fn" id="copyProduct"><a name="copyProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-copyproductresponse.html">CopyProductResponse</a></span> *ServiceCatalogClient::<span class="name">copyProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-copyproductrequest.html">CopyProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-copyproductresponse.html">CopyProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Copies the specified source product to the specified target product or a new</p>
+<p>product&gt;</p>
+<p>You can copy a product to the same account or another account. You can copy a product to the same region or another</p>
+<p>region&gt;</p>
+<p>This operation is performed asynchronously. To track the progress of the operation, use</p>
+<!-- @@@copyProduct -->
+<!-- $$$createConstraint[overload1]$$$createConstraintconstCreateConstraintRequest& -->
+<h3 class="fn" id="createConstraint"><a name="createConstraint"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createconstraintresponse.html">CreateConstraintResponse</a></span> *ServiceCatalogClient::<span class="name">createConstraint</span>(const <span class="type"><a href="qtaws-servicecatalog-createconstraintrequest.html">CreateConstraintRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createconstraintresponse.html">CreateConstraintResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createConstraint -->
+<!-- $$$createPortfolio[overload1]$$$createPortfolioconstCreatePortfolioRequest& -->
+<h3 class="fn" id="createPortfolio"><a name="createPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createportfolioresponse.html">CreatePortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">createPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-createportfoliorequest.html">CreatePortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createportfolioresponse.html">CreatePortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createPortfolio -->
+<!-- $$$createPortfolioShare[overload1]$$$createPortfolioShareconstCreatePortfolioShareRequest& -->
+<h3 class="fn" id="createPortfolioShare"><a name="createPortfolioShare"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createportfolioshareresponse.html">CreatePortfolioShareResponse</a></span> *ServiceCatalogClient::<span class="name">createPortfolioShare</span>(const <span class="type"><a href="qtaws-servicecatalog-createportfoliosharerequest.html">CreatePortfolioShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createportfolioshareresponse.html">CreatePortfolioShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Shares the specified portfolio with the specified</p>
+<!-- @@@createPortfolioShare -->
+<!-- $$$createProduct[overload1]$$$createProductconstCreateProductRequest& -->
+<h3 class="fn" id="createProduct"><a name="createProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createproductresponse.html">CreateProductResponse</a></span> *ServiceCatalogClient::<span class="name">createProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-createproductrequest.html">CreateProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createproductresponse.html">CreateProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createProduct -->
+<!-- $$$createProvisionedProductPlan[overload1]$$$createProvisionedProductPlanconstCreateProvisionedProductPlanRequest& -->
+<h3 class="fn" id="createProvisionedProductPlan"><a name="createProvisionedProductPlan"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createprovisionedproductplanresponse.html">CreateProvisionedProductPlanResponse</a></span> *ServiceCatalogClient::<span class="name">createProvisionedProductPlan</span>(const <span class="type"><a href="qtaws-servicecatalog-createprovisionedproductplanrequest.html">CreateProvisionedProductPlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createprovisionedproductplanresponse.html">CreateProvisionedProductPlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a plan. A plan includes the list of resources to be created (when provisioning a new product) or modified (when updating a provisioned product) when the plan is</p>
+<p>executed&gt;</p>
+<p>You can create one plan per provisioned product. To create a plan for an existing provisioned product, the product status must be AVAILBLE or</p>
+<p>TAINTED&gt;</p>
+<p>To view the resource changes in the change set, use &lt;a&gt;DescribeProvisionedProductPlan&lt;/a&gt;. To create or modify the provisioned product, use</p>
+<!-- @@@createProvisionedProductPlan -->
+<!-- $$$createProvisioningArtifact[overload1]$$$createProvisioningArtifactconstCreateProvisioningArtifactRequest& -->
+<h3 class="fn" id="createProvisioningArtifact"><a name="createProvisioningArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createprovisioningartifactresponse.html">CreateProvisioningArtifactResponse</a></span> *ServiceCatalogClient::<span class="name">createProvisioningArtifact</span>(const <span class="type"><a href="qtaws-servicecatalog-createprovisioningartifactrequest.html">CreateProvisioningArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createprovisioningartifactresponse.html">CreateProvisioningArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a provisioning artifact (also known as a version) for the specified</p>
+<p>product&gt;</p>
+<p>You cannot create a provisioning artifact for a product that was shared with</p>
+<!-- @@@createProvisioningArtifact -->
+<!-- $$$createTagOption[overload1]$$$createTagOptionconstCreateTagOptionRequest& -->
+<h3 class="fn" id="createTagOption"><a name="createTagOption"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-createtagoptionresponse.html">CreateTagOptionResponse</a></span> *ServiceCatalogClient::<span class="name">createTagOption</span>(const <span class="type"><a href="qtaws-servicecatalog-createtagoptionrequest.html">CreateTagOptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-createtagoptionresponse.html">CreateTagOptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a</p>
+<!-- @@@createTagOption -->
+<!-- $$$deleteConstraint[overload1]$$$deleteConstraintconstDeleteConstraintRequest& -->
+<h3 class="fn" id="deleteConstraint"><a name="deleteConstraint"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteconstraintresponse.html">DeleteConstraintResponse</a></span> *ServiceCatalogClient::<span class="name">deleteConstraint</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteconstraintrequest.html">DeleteConstraintRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteconstraintresponse.html">DeleteConstraintResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteConstraint -->
+<!-- $$$deletePortfolio[overload1]$$$deletePortfolioconstDeletePortfolioRequest& -->
+<h3 class="fn" id="deletePortfolio"><a name="deletePortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteportfolioresponse.html">DeletePortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">deletePortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteportfoliorequest.html">DeletePortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteportfolioresponse.html">DeletePortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>portfolio&gt;</p>
+<p>You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared</p>
+<!-- @@@deletePortfolio -->
+<!-- $$$deletePortfolioShare[overload1]$$$deletePortfolioShareconstDeletePortfolioShareRequest& -->
+<h3 class="fn" id="deletePortfolioShare"><a name="deletePortfolioShare"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteportfolioshareresponse.html">DeletePortfolioShareResponse</a></span> *ServiceCatalogClient::<span class="name">deletePortfolioShare</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteportfoliosharerequest.html">DeletePortfolioShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteportfolioshareresponse.html">DeletePortfolioShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops sharing the specified portfolio with the specified</p>
+<!-- @@@deletePortfolioShare -->
+<!-- $$$deleteProduct[overload1]$$$deleteProductconstDeleteProductRequest& -->
+<h3 class="fn" id="deleteProduct"><a name="deleteProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteproductresponse.html">DeleteProductResponse</a></span> *ServiceCatalogClient::<span class="name">deleteProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteproductrequest.html">DeleteProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteproductresponse.html">DeleteProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>product&gt;</p>
+<p>You cannot delete a product if it was shared with you or is associated with a</p>
+<!-- @@@deleteProduct -->
+<!-- $$$deleteProvisionedProductPlan[overload1]$$$deleteProvisionedProductPlanconstDeleteProvisionedProductPlanRequest& -->
+<h3 class="fn" id="deleteProvisionedProductPlan"><a name="deleteProvisionedProductPlan"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteprovisionedproductplanresponse.html">DeleteProvisionedProductPlanResponse</a></span> *ServiceCatalogClient::<span class="name">deleteProvisionedProductPlan</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteprovisionedproductplanrequest.html">DeleteProvisionedProductPlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteprovisionedproductplanresponse.html">DeleteProvisionedProductPlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteProvisionedProductPlan -->
+<!-- $$$deleteProvisioningArtifact[overload1]$$$deleteProvisioningArtifactconstDeleteProvisioningArtifactRequest& -->
+<h3 class="fn" id="deleteProvisioningArtifact"><a name="deleteProvisioningArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deleteprovisioningartifactresponse.html">DeleteProvisioningArtifactResponse</a></span> *ServiceCatalogClient::<span class="name">deleteProvisioningArtifact</span>(const <span class="type"><a href="qtaws-servicecatalog-deleteprovisioningartifactrequest.html">DeleteProvisioningArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deleteprovisioningartifactresponse.html">DeleteProvisioningArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified provisioning artifact (also known as a version) for the specified</p>
+<p>product&gt;</p>
+<p>You cannot delete a provisioning artifact associated with a product that was shared with you. You cannot delete the last provisioning artifact for a product, because a product must have at least one provisioning</p>
+<!-- @@@deleteProvisioningArtifact -->
+<!-- $$$deleteTagOption[overload1]$$$deleteTagOptionconstDeleteTagOptionRequest& -->
+<h3 class="fn" id="deleteTagOption"><a name="deleteTagOption"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-deletetagoptionresponse.html">DeleteTagOptionResponse</a></span> *ServiceCatalogClient::<span class="name">deleteTagOption</span>(const <span class="type"><a href="qtaws-servicecatalog-deletetagoptionrequest.html">DeleteTagOptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-deletetagoptionresponse.html">DeleteTagOptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<p>TagOption&gt;</p>
+<p>You cannot delete a TagOption if it is associated with a product or</p>
+<!-- @@@deleteTagOption -->
+<!-- $$$describeConstraint[overload1]$$$describeConstraintconstDescribeConstraintRequest& -->
+<h3 class="fn" id="describeConstraint"><a name="describeConstraint"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeconstraintresponse.html">DescribeConstraintResponse</a></span> *ServiceCatalogClient::<span class="name">describeConstraint</span>(const <span class="type"><a href="qtaws-servicecatalog-describeconstraintrequest.html">DescribeConstraintRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeconstraintresponse.html">DescribeConstraintResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeConstraint -->
+<!-- $$$describeCopyProductStatus[overload1]$$$describeCopyProductStatusconstDescribeCopyProductStatusRequest& -->
+<h3 class="fn" id="describeCopyProductStatus"><a name="describeCopyProductStatus"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describecopyproductstatusresponse.html">DescribeCopyProductStatusResponse</a></span> *ServiceCatalogClient::<span class="name">describeCopyProductStatus</span>(const <span class="type"><a href="qtaws-servicecatalog-describecopyproductstatusrequest.html">DescribeCopyProductStatusRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describecopyproductstatusresponse.html">DescribeCopyProductStatusResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets the status of the specified copy product</p>
+<!-- @@@describeCopyProductStatus -->
+<!-- $$$describePortfolio[overload1]$$$describePortfolioconstDescribePortfolioRequest& -->
+<h3 class="fn" id="describePortfolio"><a name="describePortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeportfolioresponse.html">DescribePortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">describePortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-describeportfoliorequest.html">DescribePortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeportfolioresponse.html">DescribePortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describePortfolio -->
+<!-- $$$describeProduct[overload1]$$$describeProductconstDescribeProductRequest& -->
+<h3 class="fn" id="describeProduct"><a name="describeProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeproductresponse.html">DescribeProductResponse</a></span> *ServiceCatalogClient::<span class="name">describeProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-describeproductrequest.html">DescribeProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeproductresponse.html">DescribeProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeProduct -->
+<!-- $$$describeProductAsAdmin[overload1]$$$describeProductAsAdminconstDescribeProductAsAdminRequest& -->
+<h3 class="fn" id="describeProductAsAdmin"><a name="describeProductAsAdmin"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeproductasadminresponse.html">DescribeProductAsAdminResponse</a></span> *ServiceCatalogClient::<span class="name">describeProductAsAdmin</span>(const <span class="type"><a href="qtaws-servicecatalog-describeproductasadminrequest.html">DescribeProductAsAdminRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeproductasadminresponse.html">DescribeProductAsAdminResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified product. This operation is run with administrator</p>
+<!-- @@@describeProductAsAdmin -->
+<!-- $$$describeProductView[overload1]$$$describeProductViewconstDescribeProductViewRequest& -->
+<h3 class="fn" id="describeProductView"><a name="describeProductView"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeproductviewresponse.html">DescribeProductViewResponse</a></span> *ServiceCatalogClient::<span class="name">describeProductView</span>(const <span class="type"><a href="qtaws-servicecatalog-describeproductviewrequest.html">DescribeProductViewRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeproductviewresponse.html">DescribeProductViewResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeProductView -->
+<!-- $$$describeProvisionedProduct[overload1]$$$describeProvisionedProductconstDescribeProvisionedProductRequest& -->
+<h3 class="fn" id="describeProvisionedProduct"><a name="describeProvisionedProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeprovisionedproductresponse.html">DescribeProvisionedProductResponse</a></span> *ServiceCatalogClient::<span class="name">describeProvisionedProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-describeprovisionedproductrequest.html">DescribeProvisionedProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeprovisionedproductresponse.html">DescribeProvisionedProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified provisioned</p>
+<!-- @@@describeProvisionedProduct -->
+<!-- $$$describeProvisionedProductPlan[overload1]$$$describeProvisionedProductPlanconstDescribeProvisionedProductPlanRequest& -->
+<h3 class="fn" id="describeProvisionedProductPlan"><a name="describeProvisionedProductPlan"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeprovisionedproductplanresponse.html">DescribeProvisionedProductPlanResponse</a></span> *ServiceCatalogClient::<span class="name">describeProvisionedProductPlan</span>(const <span class="type"><a href="qtaws-servicecatalog-describeprovisionedproductplanrequest.html">DescribeProvisionedProductPlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeprovisionedproductplanresponse.html">DescribeProvisionedProductPlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the resource changes for the specified</p>
+<!-- @@@describeProvisionedProductPlan -->
+<!-- $$$describeProvisioningArtifact[overload1]$$$describeProvisioningArtifactconstDescribeProvisioningArtifactRequest& -->
+<h3 class="fn" id="describeProvisioningArtifact"><a name="describeProvisioningArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeprovisioningartifactresponse.html">DescribeProvisioningArtifactResponse</a></span> *ServiceCatalogClient::<span class="name">describeProvisioningArtifact</span>(const <span class="type"><a href="qtaws-servicecatalog-describeprovisioningartifactrequest.html">DescribeProvisioningArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeprovisioningartifactresponse.html">DescribeProvisioningArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified provisioning artifact (also known as a version) for the specified</p>
+<!-- @@@describeProvisioningArtifact -->
+<!-- $$$describeProvisioningParameters[overload1]$$$describeProvisioningParametersconstDescribeProvisioningParametersRequest& -->
+<h3 class="fn" id="describeProvisioningParameters"><a name="describeProvisioningParameters"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describeprovisioningparametersresponse.html">DescribeProvisioningParametersResponse</a></span> *ServiceCatalogClient::<span class="name">describeProvisioningParameters</span>(const <span class="type"><a href="qtaws-servicecatalog-describeprovisioningparametersrequest.html">DescribeProvisioningParametersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describeprovisioningparametersresponse.html">DescribeProvisioningParametersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the configuration required to provision the specified product using the specified provisioning</p>
+<p>artifact&gt;</p>
+<p>If the output contains a TagOption key with an empty list of values, there is a TagOption conflict for that key. The end user cannot take action to fix the conflict, and launch is not blocked. In subsequent calls to &lt;a&gt;ProvisionProduct&lt;/a&gt;, do not include conflicted TagOption keys as tags, or this causes the error &quot;Parameter validation failed: Missing required parameter in Tags[&lt;i&gt;N&lt;/i&gt;]:&lt;i&gt;Value&lt;/i&gt;&quot;. Tag the provisioned product with the value</p>
+<!-- @@@describeProvisioningParameters -->
+<!-- $$$describeRecord[overload1]$$$describeRecordconstDescribeRecordRequest& -->
+<h3 class="fn" id="describeRecord"><a name="describeRecord"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describerecordresponse.html">DescribeRecordResponse</a></span> *ServiceCatalogClient::<span class="name">describeRecord</span>(const <span class="type"><a href="qtaws-servicecatalog-describerecordrequest.html">DescribeRecordRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describerecordresponse.html">DescribeRecordResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified request</p>
+<p>operation&gt;</p>
+<p>Use this operation after calling a request operation (for example, &lt;a&gt;ProvisionProduct&lt;/a&gt;, &lt;a&gt;TerminateProvisionedProduct&lt;/a&gt;, or &lt;a&gt;UpdateProvisionedProduct&lt;/a&gt;).</p>
+<!-- @@@describeRecord -->
+<!-- $$$describeTagOption[overload1]$$$describeTagOptionconstDescribeTagOptionRequest& -->
+<h3 class="fn" id="describeTagOption"><a name="describeTagOption"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-describetagoptionresponse.html">DescribeTagOptionResponse</a></span> *ServiceCatalogClient::<span class="name">describeTagOption</span>(const <span class="type"><a href="qtaws-servicecatalog-describetagoptionrequest.html">DescribeTagOptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-describetagoptionresponse.html">DescribeTagOptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the specified</p>
+<!-- @@@describeTagOption -->
+<!-- $$$disassociatePrincipalFromPortfolio[overload1]$$$disassociatePrincipalFromPortfolioconstDisassociatePrincipalFromPortfolioRequest& -->
+<h3 class="fn" id="disassociatePrincipalFromPortfolio"><a name="disassociatePrincipalFromPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-disassociateprincipalfromportfolioresponse.html">DisassociatePrincipalFromPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">disassociatePrincipalFromPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-disassociateprincipalfromportfoliorequest.html">DisassociatePrincipalFromPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-disassociateprincipalfromportfolioresponse.html">DisassociatePrincipalFromPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a previously associated principal ARN from a specified</p>
+<!-- @@@disassociatePrincipalFromPortfolio -->
+<!-- $$$disassociateProductFromPortfolio[overload1]$$$disassociateProductFromPortfolioconstDisassociateProductFromPortfolioRequest& -->
+<h3 class="fn" id="disassociateProductFromPortfolio"><a name="disassociateProductFromPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-disassociateproductfromportfolioresponse.html">DisassociateProductFromPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">disassociateProductFromPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-disassociateproductfromportfoliorequest.html">DisassociateProductFromPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-disassociateproductfromportfolioresponse.html">DisassociateProductFromPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates the specified product from the specified portfolio.</p>
+<!-- @@@disassociateProductFromPortfolio -->
+<!-- $$$disassociateTagOptionFromResource[overload1]$$$disassociateTagOptionFromResourceconstDisassociateTagOptionFromResourceRequest& -->
+<h3 class="fn" id="disassociateTagOptionFromResource"><a name="disassociateTagOptionFromResource"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-disassociatetagoptionfromresourceresponse.html">DisassociateTagOptionFromResourceResponse</a></span> *ServiceCatalogClient::<span class="name">disassociateTagOptionFromResource</span>(const <span class="type"><a href="qtaws-servicecatalog-disassociatetagoptionfromresourcerequest.html">DisassociateTagOptionFromResourceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-disassociatetagoptionfromresourceresponse.html">DisassociateTagOptionFromResourceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates the specified TagOption from the specified</p>
+<!-- @@@disassociateTagOptionFromResource -->
+<!-- $$$executeProvisionedProductPlan[overload1]$$$executeProvisionedProductPlanconstExecuteProvisionedProductPlanRequest& -->
+<h3 class="fn" id="executeProvisionedProductPlan"><a name="executeProvisionedProductPlan"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-executeprovisionedproductplanresponse.html">ExecuteProvisionedProductPlanResponse</a></span> *ServiceCatalogClient::<span class="name">executeProvisionedProductPlan</span>(const <span class="type"><a href="qtaws-servicecatalog-executeprovisionedproductplanrequest.html">ExecuteProvisionedProductPlanRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-executeprovisionedproductplanresponse.html">ExecuteProvisionedProductPlanResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provisions or modifies a product based on the resource changes for the specified</p>
+<!-- @@@executeProvisionedProductPlan -->
+<!-- $$$listAcceptedPortfolioShares[overload1]$$$listAcceptedPortfolioSharesconstListAcceptedPortfolioSharesRequest& -->
+<h3 class="fn" id="listAcceptedPortfolioShares"><a name="listAcceptedPortfolioShares"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listacceptedportfoliosharesresponse.html">ListAcceptedPortfolioSharesResponse</a></span> *ServiceCatalogClient::<span class="name">listAcceptedPortfolioShares</span>(const <span class="type"><a href="qtaws-servicecatalog-listacceptedportfoliosharesrequest.html">ListAcceptedPortfolioSharesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listacceptedportfoliosharesresponse.html">ListAcceptedPortfolioSharesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all portfolios for which sharing was accepted by this</p>
+<!-- @@@listAcceptedPortfolioShares -->
+<!-- $$$listConstraintsForPortfolio[overload1]$$$listConstraintsForPortfolioconstListConstraintsForPortfolioRequest& -->
+<h3 class="fn" id="listConstraintsForPortfolio"><a name="listConstraintsForPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listconstraintsforportfolioresponse.html">ListConstraintsForPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">listConstraintsForPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-listconstraintsforportfoliorequest.html">ListConstraintsForPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listconstraintsforportfolioresponse.html">ListConstraintsForPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the constraints for the specified portfolio and</p>
+<!-- @@@listConstraintsForPortfolio -->
+<!-- $$$listLaunchPaths[overload1]$$$listLaunchPathsconstListLaunchPathsRequest& -->
+<h3 class="fn" id="listLaunchPaths"><a name="listLaunchPaths"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listlaunchpathsresponse.html">ListLaunchPathsResponse</a></span> *ServiceCatalogClient::<span class="name">listLaunchPaths</span>(const <span class="type"><a href="qtaws-servicecatalog-listlaunchpathsrequest.html">ListLaunchPathsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listlaunchpathsresponse.html">ListLaunchPathsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the</p>
+<!-- @@@listLaunchPaths -->
+<!-- $$$listPortfolioAccess[overload1]$$$listPortfolioAccessconstListPortfolioAccessRequest& -->
+<h3 class="fn" id="listPortfolioAccess"><a name="listPortfolioAccess"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listportfolioaccessresponse.html">ListPortfolioAccessResponse</a></span> *ServiceCatalogClient::<span class="name">listPortfolioAccess</span>(const <span class="type"><a href="qtaws-servicecatalog-listportfolioaccessrequest.html">ListPortfolioAccessRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listportfolioaccessresponse.html">ListPortfolioAccessResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the account IDs that have access to the specified</p>
+<!-- @@@listPortfolioAccess -->
+<!-- $$$listPortfolios[overload1]$$$listPortfoliosconstListPortfoliosRequest& -->
+<h3 class="fn" id="listPortfolios"><a name="listPortfolios"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listportfoliosresponse.html">ListPortfoliosResponse</a></span> *ServiceCatalogClient::<span class="name">listPortfolios</span>(const <span class="type"><a href="qtaws-servicecatalog-listportfoliosrequest.html">ListPortfoliosRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listportfoliosresponse.html">ListPortfoliosResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all portfolios in the</p>
+<!-- @@@listPortfolios -->
+<!-- $$$listPortfoliosForProduct[overload1]$$$listPortfoliosForProductconstListPortfoliosForProductRequest& -->
+<h3 class="fn" id="listPortfoliosForProduct"><a name="listPortfoliosForProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listportfoliosforproductresponse.html">ListPortfoliosForProductResponse</a></span> *ServiceCatalogClient::<span class="name">listPortfoliosForProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-listportfoliosforproductrequest.html">ListPortfoliosForProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listportfoliosforproductresponse.html">ListPortfoliosForProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all portfolios that the specified product is associated</p>
+<!-- @@@listPortfoliosForProduct -->
+<!-- $$$listPrincipalsForPortfolio[overload1]$$$listPrincipalsForPortfolioconstListPrincipalsForPortfolioRequest& -->
+<h3 class="fn" id="listPrincipalsForPortfolio"><a name="listPrincipalsForPortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listprincipalsforportfolioresponse.html">ListPrincipalsForPortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">listPrincipalsForPortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-listprincipalsforportfoliorequest.html">ListPrincipalsForPortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listprincipalsforportfolioresponse.html">ListPrincipalsForPortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all principal ARNs associated with the specified</p>
+<!-- @@@listPrincipalsForPortfolio -->
+<!-- $$$listProvisionedProductPlans[overload1]$$$listProvisionedProductPlansconstListProvisionedProductPlansRequest& -->
+<h3 class="fn" id="listProvisionedProductPlans"><a name="listProvisionedProductPlans"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listprovisionedproductplansresponse.html">ListProvisionedProductPlansResponse</a></span> *ServiceCatalogClient::<span class="name">listProvisionedProductPlans</span>(const <span class="type"><a href="qtaws-servicecatalog-listprovisionedproductplansrequest.html">ListProvisionedProductPlansRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listprovisionedproductplansresponse.html">ListProvisionedProductPlansResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the plans for the specified provisioned product or all plans to which the user has</p>
+<!-- @@@listProvisionedProductPlans -->
+<!-- $$$listProvisioningArtifacts[overload1]$$$listProvisioningArtifactsconstListProvisioningArtifactsRequest& -->
+<h3 class="fn" id="listProvisioningArtifacts"><a name="listProvisioningArtifacts"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listprovisioningartifactsresponse.html">ListProvisioningArtifactsResponse</a></span> *ServiceCatalogClient::<span class="name">listProvisioningArtifacts</span>(const <span class="type"><a href="qtaws-servicecatalog-listprovisioningartifactsrequest.html">ListProvisioningArtifactsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listprovisioningartifactsresponse.html">ListProvisioningArtifactsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all provisioning artifacts (also known as versions) for the specified</p>
+<!-- @@@listProvisioningArtifacts -->
+<!-- $$$listRecordHistory[overload1]$$$listRecordHistoryconstListRecordHistoryRequest& -->
+<h3 class="fn" id="listRecordHistory"><a name="listRecordHistory"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listrecordhistoryresponse.html">ListRecordHistoryResponse</a></span> *ServiceCatalogClient::<span class="name">listRecordHistory</span>(const <span class="type"><a href="qtaws-servicecatalog-listrecordhistoryrequest.html">ListRecordHistoryRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listrecordhistoryresponse.html">ListRecordHistoryResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the specified requests or all performed</p>
+<!-- @@@listRecordHistory -->
+<!-- $$$listResourcesForTagOption[overload1]$$$listResourcesForTagOptionconstListResourcesForTagOptionRequest& -->
+<h3 class="fn" id="listResourcesForTagOption"><a name="listResourcesForTagOption"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listresourcesfortagoptionresponse.html">ListResourcesForTagOptionResponse</a></span> *ServiceCatalogClient::<span class="name">listResourcesForTagOption</span>(const <span class="type"><a href="qtaws-servicecatalog-listresourcesfortagoptionrequest.html">ListResourcesForTagOptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listresourcesfortagoptionresponse.html">ListResourcesForTagOptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the resources associated with the specified</p>
+<!-- @@@listResourcesForTagOption -->
+<!-- $$$listTagOptions[overload1]$$$listTagOptionsconstListTagOptionsRequest& -->
+<h3 class="fn" id="listTagOptions"><a name="listTagOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-listtagoptionsresponse.html">ListTagOptionsResponse</a></span> *ServiceCatalogClient::<span class="name">listTagOptions</span>(const <span class="type"><a href="qtaws-servicecatalog-listtagoptionsrequest.html">ListTagOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-listtagoptionsresponse.html">ListTagOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the specified TagOptions or all</p>
+<!-- @@@listTagOptions -->
+<!-- $$$provisionProduct[overload1]$$$provisionProductconstProvisionProductRequest& -->
+<h3 class="fn" id="provisionProduct"><a name="provisionProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-provisionproductresponse.html">ProvisionProductResponse</a></span> *ServiceCatalogClient::<span class="name">provisionProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-provisionproductrequest.html">ProvisionProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-provisionproductresponse.html">ProvisionProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Provisions the specified</p>
+<p>product&gt;</p>
+<p>A provisioned product is a resourced instance of a product. For example, provisioning a product based on a CloudFormation template launches a CloudFormation stack and its underlying resources. You can check the status of this request using</p>
+<p>&lt;a&gt;DescribeRecord&lt;/a&gt;&gt;</p>
+<p>If the request contains a tag key with an empty list of values, there is a tag conflict for that key. Do not include conflicted keys as tags, or this causes the error &quot;Parameter validation failed: Missing required parameter in</p>
+<!-- @@@provisionProduct -->
+<!-- $$$rejectPortfolioShare[overload1]$$$rejectPortfolioShareconstRejectPortfolioShareRequest& -->
+<h3 class="fn" id="rejectPortfolioShare"><a name="rejectPortfolioShare"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-rejectportfolioshareresponse.html">RejectPortfolioShareResponse</a></span> *ServiceCatalogClient::<span class="name">rejectPortfolioShare</span>(const <span class="type"><a href="qtaws-servicecatalog-rejectportfoliosharerequest.html">RejectPortfolioShareRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-rejectportfolioshareresponse.html">RejectPortfolioShareResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Rejects an offer to share the specified</p>
+<!-- @@@rejectPortfolioShare -->
+<!-- $$$scanProvisionedProducts[overload1]$$$scanProvisionedProductsconstScanProvisionedProductsRequest& -->
+<h3 class="fn" id="scanProvisionedProducts"><a name="scanProvisionedProducts"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-scanprovisionedproductsresponse.html">ScanProvisionedProductsResponse</a></span> *ServiceCatalogClient::<span class="name">scanProvisionedProducts</span>(const <span class="type"><a href="qtaws-servicecatalog-scanprovisionedproductsrequest.html">ScanProvisionedProductsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-scanprovisionedproductsresponse.html">ScanProvisionedProductsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the provisioned products that are available (not</p>
+<p>terminated)&gt;</p>
+<p>To use additional filtering, see</p>
+<!-- @@@scanProvisionedProducts -->
+<!-- $$$searchProducts[overload1]$$$searchProductsconstSearchProductsRequest& -->
+<h3 class="fn" id="searchProducts"><a name="searchProducts"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-searchproductsresponse.html">SearchProductsResponse</a></span> *ServiceCatalogClient::<span class="name">searchProducts</span>(const <span class="type"><a href="qtaws-servicecatalog-searchproductsrequest.html">SearchProductsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-searchproductsresponse.html">SearchProductsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the products to which the caller has</p>
+<!-- @@@searchProducts -->
+<!-- $$$searchProductsAsAdmin[overload1]$$$searchProductsAsAdminconstSearchProductsAsAdminRequest& -->
+<h3 class="fn" id="searchProductsAsAdmin"><a name="searchProductsAsAdmin"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-searchproductsasadminresponse.html">SearchProductsAsAdminResponse</a></span> *ServiceCatalogClient::<span class="name">searchProductsAsAdmin</span>(const <span class="type"><a href="qtaws-servicecatalog-searchproductsasadminrequest.html">SearchProductsAsAdminRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-searchproductsasadminresponse.html">SearchProductsAsAdminResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the products for the specified portfolio or all</p>
+<!-- @@@searchProductsAsAdmin -->
+<!-- $$$searchProvisionedProducts[overload1]$$$searchProvisionedProductsconstSearchProvisionedProductsRequest& -->
+<h3 class="fn" id="searchProvisionedProducts"><a name="searchProvisionedProducts"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-searchprovisionedproductsresponse.html">SearchProvisionedProductsResponse</a></span> *ServiceCatalogClient::<span class="name">searchProvisionedProducts</span>(const <span class="type"><a href="qtaws-servicecatalog-searchprovisionedproductsrequest.html">SearchProvisionedProductsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-searchprovisionedproductsresponse.html">SearchProvisionedProductsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Gets information about the provisioned products that meet the specified</p>
+<!-- @@@searchProvisionedProducts -->
+<!-- $$$terminateProvisionedProduct[overload1]$$$terminateProvisionedProductconstTerminateProvisionedProductRequest& -->
+<h3 class="fn" id="terminateProvisionedProduct"><a name="terminateProvisionedProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-terminateprovisionedproductresponse.html">TerminateProvisionedProductResponse</a></span> *ServiceCatalogClient::<span class="name">terminateProvisionedProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-terminateprovisionedproductrequest.html">TerminateProvisionedProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-terminateprovisionedproductresponse.html">TerminateProvisionedProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Terminates the specified provisioned</p>
+<p>product&gt;</p>
+<p>This operation does not delete any records associated with the provisioned</p>
+<p>product&gt;</p>
+<p>You can check the status of this request using</p>
+<!-- @@@terminateProvisionedProduct -->
+<!-- $$$updateConstraint[overload1]$$$updateConstraintconstUpdateConstraintRequest& -->
+<h3 class="fn" id="updateConstraint"><a name="updateConstraint"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updateconstraintresponse.html">UpdateConstraintResponse</a></span> *ServiceCatalogClient::<span class="name">updateConstraint</span>(const <span class="type"><a href="qtaws-servicecatalog-updateconstraintrequest.html">UpdateConstraintRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updateconstraintresponse.html">UpdateConstraintResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<!-- @@@updateConstraint -->
+<!-- $$$updatePortfolio[overload1]$$$updatePortfolioconstUpdatePortfolioRequest& -->
+<h3 class="fn" id="updatePortfolio"><a name="updatePortfolio"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updateportfolioresponse.html">UpdatePortfolioResponse</a></span> *ServiceCatalogClient::<span class="name">updatePortfolio</span>(const <span class="type"><a href="qtaws-servicecatalog-updateportfoliorequest.html">UpdatePortfolioRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updateportfolioresponse.html">UpdatePortfolioResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<p>portfolio&gt;</p>
+<p>You cannot update a product that was shared with</p>
+<!-- @@@updatePortfolio -->
+<!-- $$$updateProduct[overload1]$$$updateProductconstUpdateProductRequest& -->
+<h3 class="fn" id="updateProduct"><a name="updateProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updateproductresponse.html">UpdateProductResponse</a></span> *ServiceCatalogClient::<span class="name">updateProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-updateproductrequest.html">UpdateProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updateproductresponse.html">UpdateProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<!-- @@@updateProduct -->
+<!-- $$$updateProvisionedProduct[overload1]$$$updateProvisionedProductconstUpdateProvisionedProductRequest& -->
+<h3 class="fn" id="updateProvisionedProduct"><a name="updateProvisionedProduct"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updateprovisionedproductresponse.html">UpdateProvisionedProductResponse</a></span> *ServiceCatalogClient::<span class="name">updateProvisionedProduct</span>(const <span class="type"><a href="qtaws-servicecatalog-updateprovisionedproductrequest.html">UpdateProvisionedProductRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updateprovisionedproductresponse.html">UpdateProvisionedProductResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Requests updates to the configuration of the specified provisioned</p>
+<p>product&gt;</p>
+<p>If there are tags associated with the object, they cannot be updated or added. Depending on the specific updates requested, this operation can update with no interruption, with some interruption, or replace the provisioned product</p>
+<p>entirely&gt;</p>
+<p>You can check the status of this request using</p>
+<!-- @@@updateProvisionedProduct -->
+<!-- $$$updateProvisioningArtifact[overload1]$$$updateProvisioningArtifactconstUpdateProvisioningArtifactRequest& -->
+<h3 class="fn" id="updateProvisioningArtifact"><a name="updateProvisioningArtifact"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updateprovisioningartifactresponse.html">UpdateProvisioningArtifactResponse</a></span> *ServiceCatalogClient::<span class="name">updateProvisioningArtifact</span>(const <span class="type"><a href="qtaws-servicecatalog-updateprovisioningartifactrequest.html">UpdateProvisioningArtifactRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updateprovisioningartifactresponse.html">UpdateProvisioningArtifactResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified provisioning artifact (also known as a version) for the specified</p>
+<p>product&gt;</p>
+<p>You cannot update a provisioning artifact for a product that was shared with</p>
+<!-- @@@updateProvisioningArtifact -->
+<!-- $$$updateTagOption[overload1]$$$updateTagOptionconstUpdateTagOptionRequest& -->
+<h3 class="fn" id="updateTagOption"><a name="updateTagOption"></a><code>[slot] </code><span class="type"><a href="qtaws-servicecatalog-updatetagoptionresponse.html">UpdateTagOptionResponse</a></span> *ServiceCatalogClient::<span class="name">updateTagOption</span>(const <span class="type"><a href="qtaws-servicecatalog-updatetagoptionrequest.html">UpdateTagOptionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-servicecatalog-servicecatalogclient.html">ServiceCatalogClient</a> service, and returns a pointer to an <a href="qtaws-servicecatalog-updatetagoptionresponse.html">UpdateTagOptionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the specified</p>
+<!-- @@@updateTagOption -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

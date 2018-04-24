@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- storagegatewayresponse.cpp -->
+  <title>StorageGatewayResponse Class | StorageGateway</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsstoragegateway-index.html">StorageGateway</a></li>
+<li><a href="qtawsstoragegateway-module.html">C++ Classes</a></li>
+<li>StorageGatewayResponse</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">StorageGatewayResponse Class</h1>
+<span class="small-subtitle">(<a href="qtaws-storagegateway-storagegatewayresponse.html">QtAws::StorageGateway::StorageGatewayResponse</a>)<br/></span>
+<!-- $$$StorageGatewayResponse-brief -->
+<p>The <a href="qtaws-storagegateway-storagegatewayresponse.html">StorageGatewayResponse</a> class provides an interface for <a href="qtaws-storagegateway.html">StorageGateway</a> responses. <a href="#details">More...</a></p>
+<!-- @@@StorageGatewayResponse -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;StorageGatewayResponse&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractresponse.html">QtAws::Core::AwsAbstractResponse</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-storagegateway-activategatewayresponse.html">QtAws::StorageGateway::ActivateGatewayResponse</a>, <a href="qtaws-storagegateway-addcacheresponse.html">QtAws::StorageGateway::AddCacheResponse</a>, <a href="qtaws-storagegateway-addtagstoresourceresponse.html">QtAws::StorageGateway::AddTagsToResourceResponse</a>, <a href="qtaws-storagegateway-adduploadbufferresponse.html">QtAws::StorageGateway::AddUploadBufferResponse</a>, <a href="qtaws-storagegateway-addworkingstorageresponse.html">QtAws::StorageGateway::AddWorkingStorageResponse</a>, <a href="qtaws-storagegateway-cancelarchivalresponse.html">QtAws::StorageGateway::CancelArchivalResponse</a>, <a href="qtaws-storagegateway-cancelretrievalresponse.html">QtAws::StorageGateway::CancelRetrievalResponse</a>, <a href="qtaws-storagegateway-createcachediscsivolumeresponse.html">QtAws::StorageGateway::CreateCachediSCSIVolumeResponse</a>, <a href="qtaws-storagegateway-createnfsfileshareresponse.html">QtAws::StorageGateway::CreateNFSFileShareResponse</a>, <a href="qtaws-storagegateway-createsnapshotfromvolumerecoverypointresponse.html">QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointResponse</a>, <a href="qtaws-storagegateway-createsnapshotresponse.html">QtAws::StorageGateway::CreateSnapshotResponse</a>, <a href="qtaws-storagegateway-createstorediscsivolumeresponse.html">QtAws::StorageGateway::CreateStorediSCSIVolumeResponse</a>, <a href="qtaws-storagegateway-createtapesresponse.html">QtAws::StorageGateway::CreateTapesResponse</a>, <a href="qtaws-storagegateway-createtapewithbarcoderesponse.html">QtAws::StorageGateway::CreateTapeWithBarcodeResponse</a>, <a href="qtaws-storagegateway-deletebandwidthratelimitresponse.html">QtAws::StorageGateway::DeleteBandwidthRateLimitResponse</a>, <a href="qtaws-storagegateway-deletechapcredentialsresponse.html">QtAws::StorageGateway::DeleteChapCredentialsResponse</a>, <a href="qtaws-storagegateway-deletefileshareresponse.html">QtAws::StorageGateway::DeleteFileShareResponse</a>, <a href="qtaws-storagegateway-deletegatewayresponse.html">QtAws::StorageGateway::DeleteGatewayResponse</a>, <a href="qtaws-storagegateway-deletesnapshotscheduleresponse.html">QtAws::StorageGateway::DeleteSnapshotScheduleResponse</a>, <a href="qtaws-storagegateway-deletetapearchiveresponse.html">QtAws::StorageGateway::DeleteTapeArchiveResponse</a>, <a href="qtaws-storagegateway-deletetaperesponse.html">QtAws::StorageGateway::DeleteTapeResponse</a>, <a href="qtaws-storagegateway-deletevolumeresponse.html">QtAws::StorageGateway::DeleteVolumeResponse</a>, <a href="qtaws-storagegateway-describebandwidthratelimitresponse.html">QtAws::StorageGateway::DescribeBandwidthRateLimitResponse</a>, <a href="qtaws-storagegateway-describecachediscsivolumesresponse.html">QtAws::StorageGateway::DescribeCachediSCSIVolumesResponse</a>, <a href="qtaws-storagegateway-describecacheresponse.html">QtAws::StorageGateway::DescribeCacheResponse</a>, <a href="qtaws-storagegateway-describechapcredentialsresponse.html">QtAws::StorageGateway::DescribeChapCredentialsResponse</a>, <a href="qtaws-storagegateway-describegatewayinformationresponse.html">QtAws::StorageGateway::DescribeGatewayInformationResponse</a>, <a href="qtaws-storagegateway-describemaintenancestarttimeresponse.html">QtAws::StorageGateway::DescribeMaintenanceStartTimeResponse</a>, <a href="qtaws-storagegateway-describenfsfilesharesresponse.html">QtAws::StorageGateway::DescribeNFSFileSharesResponse</a>, <a href="qtaws-storagegateway-describesnapshotscheduleresponse.html">QtAws::StorageGateway::DescribeSnapshotScheduleResponse</a>, <a href="qtaws-storagegateway-describestorediscsivolumesresponse.html">QtAws::StorageGateway::DescribeStorediSCSIVolumesResponse</a>, <a href="qtaws-storagegateway-describetapearchivesresponse.html">QtAws::StorageGateway::DescribeTapeArchivesResponse</a>, <a href="qtaws-storagegateway-describetaperecoverypointsresponse.html">QtAws::StorageGateway::DescribeTapeRecoveryPointsResponse</a>, <a href="qtaws-storagegateway-describetapesresponse.html">QtAws::StorageGateway::DescribeTapesResponse</a>, <a href="qtaws-storagegateway-describeuploadbufferresponse.html">QtAws::StorageGateway::DescribeUploadBufferResponse</a>, <a href="qtaws-storagegateway-describevtldevicesresponse.html">QtAws::StorageGateway::DescribeVTLDevicesResponse</a>, <a href="qtaws-storagegateway-describeworkingstorageresponse.html">QtAws::StorageGateway::DescribeWorkingStorageResponse</a>, <a href="qtaws-storagegateway-disablegatewayresponse.html">QtAws::StorageGateway::DisableGatewayResponse</a>, <a href="qtaws-storagegateway-listfilesharesresponse.html">QtAws::StorageGateway::ListFileSharesResponse</a>, <a href="qtaws-storagegateway-listgatewaysresponse.html">QtAws::StorageGateway::ListGatewaysResponse</a>, <a href="qtaws-storagegateway-listlocaldisksresponse.html">QtAws::StorageGateway::ListLocalDisksResponse</a>, <a href="qtaws-storagegateway-listtagsforresourceresponse.html">QtAws::StorageGateway::ListTagsForResourceResponse</a>, <a href="qtaws-storagegateway-listtapesresponse.html">QtAws::StorageGateway::ListTapesResponse</a>, <a href="qtaws-storagegateway-listvolumeinitiatorsresponse.html">QtAws::StorageGateway::ListVolumeInitiatorsResponse</a>, <a href="qtaws-storagegateway-listvolumerecoverypointsresponse.html">QtAws::StorageGateway::ListVolumeRecoveryPointsResponse</a>, <a href="qtaws-storagegateway-listvolumesresponse.html">QtAws::StorageGateway::ListVolumesResponse</a>, <a href="qtaws-storagegateway-notifywhenuploadedresponse.html">QtAws::StorageGateway::NotifyWhenUploadedResponse</a>, <a href="qtaws-storagegateway-refreshcacheresponse.html">QtAws::StorageGateway::RefreshCacheResponse</a>, <a href="qtaws-storagegateway-removetagsfromresourceresponse.html">QtAws::StorageGateway::RemoveTagsFromResourceResponse</a>, <a href="qtaws-storagegateway-resetcacheresponse.html">QtAws::StorageGateway::ResetCacheResponse</a>, <a href="qtaws-storagegateway-retrievetapearchiveresponse.html">QtAws::StorageGateway::RetrieveTapeArchiveResponse</a>, <a href="qtaws-storagegateway-retrievetaperecoverypointresponse.html">QtAws::StorageGateway::RetrieveTapeRecoveryPointResponse</a>, <a href="qtaws-storagegateway-setlocalconsolepasswordresponse.html">QtAws::StorageGateway::SetLocalConsolePasswordResponse</a>, <a href="qtaws-storagegateway-shutdowngatewayresponse.html">QtAws::StorageGateway::ShutdownGatewayResponse</a>, <a href="qtaws-storagegateway-startgatewayresponse.html">QtAws::StorageGateway::StartGatewayResponse</a>, <a href="qtaws-storagegateway-updatebandwidthratelimitresponse.html">QtAws::StorageGateway::UpdateBandwidthRateLimitResponse</a>, <a href="qtaws-storagegateway-updatechapcredentialsresponse.html">QtAws::StorageGateway::UpdateChapCredentialsResponse</a>, <a href="qtaws-storagegateway-updategatewayinformationresponse.html">QtAws::StorageGateway::UpdateGatewayInformationResponse</a>, <a href="qtaws-storagegateway-updategatewaysoftwarenowresponse.html">QtAws::StorageGateway::UpdateGatewaySoftwareNowResponse</a>, <a href="qtaws-storagegateway-updatemaintenancestarttimeresponse.html">QtAws::StorageGateway::UpdateMaintenanceStartTimeResponse</a>, <a href="qtaws-storagegateway-updatenfsfileshareresponse.html">QtAws::StorageGateway::UpdateNFSFileShareResponse</a>, <a href="qtaws-storagegateway-updatesnapshotscheduleresponse.html">QtAws::StorageGateway::UpdateSnapshotScheduleResponse</a>, and <a href="qtaws-storagegateway-updatevtldevicetyperesponse.html">QtAws::StorageGateway::UpdateVTLDeviceTypeResponse</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-storagegateway-storagegatewayresponse-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayresponse.html#StorageGatewayResponse">StorageGatewayResponse</a></b>(QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractresponse.html#public-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="protected-slots"></a>
+<h2 id="protected-slots">Protected Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-storagegateway-storagegatewayresponse.html#parseFailure">parseFailure</a></b>(QIODevice &amp;<i>response</i>) override</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 protected slot inherited from <a href="qtaws-core-awsabstractresponse.html#protected-slots">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 signal inherited from <a href="qtaws-core-awsabstractresponse.html#signals">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">1 static public member inherited from <a href="qtaws-core-awsabstractresponse.html#static-public-members">QtAws::Core::AwsAbstractResponse</a></li>
+<li class="fn">7 protected functions inherited from <a href="qtaws-core-awsabstractresponse.html#protected-functions">QtAws::Core::AwsAbstractResponse</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$StorageGatewayResponse-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-storagegateway-storagegatewayresponse.html">StorageGatewayResponse</a> class provides an interface for <a href="qtaws-storagegateway.html">StorageGateway</a> responses.</p>
+</div>
+<!-- @@@StorageGatewayResponse -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$StorageGatewayResponse[overload1]$$$StorageGatewayResponseQObject*const -->
+<h3 class="fn" id="StorageGatewayResponse"><a name="StorageGatewayResponse"></a>StorageGatewayResponse::<span class="name">StorageGatewayResponse</span>(<span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-storagegateway-storagegatewayresponse.html">StorageGatewayResponse</a> object with parent <i>parent</i>.</p>
+<!-- @@@StorageGatewayResponse -->
+<!-- $$$parseFailure[overload1]$$$parseFailureQIODevice& -->
+<h3 class="fn" id="parseFailure"><a name="parseFailure"></a><code>[override virtual protected slot] </code><span class="type">void</span> StorageGatewayResponse::<span class="name">parseFailure</span>(<span class="type">QIODevice</span> &amp;<i>response</i>)</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractresponse.html#parseFailure">AwsAbstractResponse::parseFailure</a>().</p>
+<!-- @@@parseFailure -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

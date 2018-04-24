@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cloudformationrequest.cpp -->
+  <title>CloudFormationRequestPrivate Class | CloudFormation</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawscloudformation-index.html">CloudFormation</a></li>
+<li><a href="qtawscloudformation-module.html">C++ Classes</a></li>
+<li>CloudFormationRequestPrivate</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">CloudFormationRequestPrivate Class</h1>
+<span class="small-subtitle">(<a href="qtaws-cloudformation-cloudformationrequestprivate.html">QtAws::CloudFormation::CloudFormationRequestPrivate</a>)<br/></span>
+<!-- $$$CloudFormationRequestPrivate-brief -->
+<p>The <a href="qtaws-cloudformation-cloudformationrequestprivate.html">CloudFormationRequestPrivate</a> class provides private implementation for <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a>. <a href="#details">More...</a></p>
+<!-- @@@CloudFormationRequestPrivate -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;CloudFormationRequestPrivate&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequestprivate.html">QtAws::Core::AwsAbstractRequestPrivate</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-cloudformation-cancelupdatestackrequestprivate.html">QtAws::CloudFormation::CancelUpdateStackRequestPrivate</a>, <a href="qtaws-cloudformation-continueupdaterollbackrequestprivate.html">QtAws::CloudFormation::ContinueUpdateRollbackRequestPrivate</a>, <a href="qtaws-cloudformation-createchangesetrequestprivate.html">QtAws::CloudFormation::CreateChangeSetRequestPrivate</a>, <a href="qtaws-cloudformation-createstackinstancesrequestprivate.html">QtAws::CloudFormation::CreateStackInstancesRequestPrivate</a>, <a href="qtaws-cloudformation-createstackrequestprivate.html">QtAws::CloudFormation::CreateStackRequestPrivate</a>, <a href="qtaws-cloudformation-createstacksetrequestprivate.html">QtAws::CloudFormation::CreateStackSetRequestPrivate</a>, <a href="qtaws-cloudformation-deletechangesetrequestprivate.html">QtAws::CloudFormation::DeleteChangeSetRequestPrivate</a>, <a href="qtaws-cloudformation-deletestackinstancesrequestprivate.html">QtAws::CloudFormation::DeleteStackInstancesRequestPrivate</a>, <a href="qtaws-cloudformation-deletestackrequestprivate.html">QtAws::CloudFormation::DeleteStackRequestPrivate</a>, <a href="qtaws-cloudformation-deletestacksetrequestprivate.html">QtAws::CloudFormation::DeleteStackSetRequestPrivate</a>, <a href="qtaws-cloudformation-describeaccountlimitsrequestprivate.html">QtAws::CloudFormation::DescribeAccountLimitsRequestPrivate</a>, <a href="qtaws-cloudformation-describechangesetrequestprivate.html">QtAws::CloudFormation::DescribeChangeSetRequestPrivate</a>, <a href="qtaws-cloudformation-describestackeventsrequestprivate.html">QtAws::CloudFormation::DescribeStackEventsRequestPrivate</a>, <a href="qtaws-cloudformation-describestackinstancerequestprivate.html">QtAws::CloudFormation::DescribeStackInstanceRequestPrivate</a>, <a href="qtaws-cloudformation-describestackresourcerequestprivate.html">QtAws::CloudFormation::DescribeStackResourceRequestPrivate</a>, <a href="qtaws-cloudformation-describestackresourcesrequestprivate.html">QtAws::CloudFormation::DescribeStackResourcesRequestPrivate</a>, <a href="qtaws-cloudformation-describestacksetoperationrequestprivate.html">QtAws::CloudFormation::DescribeStackSetOperationRequestPrivate</a>, <a href="qtaws-cloudformation-describestacksetrequestprivate.html">QtAws::CloudFormation::DescribeStackSetRequestPrivate</a>, <a href="qtaws-cloudformation-describestacksrequestprivate.html">QtAws::CloudFormation::DescribeStacksRequestPrivate</a>, <a href="qtaws-cloudformation-estimatetemplatecostrequestprivate.html">QtAws::CloudFormation::EstimateTemplateCostRequestPrivate</a>, <a href="qtaws-cloudformation-executechangesetrequestprivate.html">QtAws::CloudFormation::ExecuteChangeSetRequestPrivate</a>, <a href="qtaws-cloudformation-getstackpolicyrequestprivate.html">QtAws::CloudFormation::GetStackPolicyRequestPrivate</a>, <a href="qtaws-cloudformation-gettemplaterequestprivate.html">QtAws::CloudFormation::GetTemplateRequestPrivate</a>, <a href="qtaws-cloudformation-gettemplatesummaryrequestprivate.html">QtAws::CloudFormation::GetTemplateSummaryRequestPrivate</a>, <a href="qtaws-cloudformation-listchangesetsrequestprivate.html">QtAws::CloudFormation::ListChangeSetsRequestPrivate</a>, <a href="qtaws-cloudformation-listexportsrequestprivate.html">QtAws::CloudFormation::ListExportsRequestPrivate</a>, <a href="qtaws-cloudformation-listimportsrequestprivate.html">QtAws::CloudFormation::ListImportsRequestPrivate</a>, <a href="qtaws-cloudformation-liststackinstancesrequestprivate.html">QtAws::CloudFormation::ListStackInstancesRequestPrivate</a>, <a href="qtaws-cloudformation-liststackresourcesrequestprivate.html">QtAws::CloudFormation::ListStackResourcesRequestPrivate</a>, <a href="qtaws-cloudformation-liststacksetoperationresultsrequestprivate.html">QtAws::CloudFormation::ListStackSetOperationResultsRequestPrivate</a>, <a href="qtaws-cloudformation-liststacksetoperationsrequestprivate.html">QtAws::CloudFormation::ListStackSetOperationsRequestPrivate</a>, <a href="qtaws-cloudformation-liststacksetsrequestprivate.html">QtAws::CloudFormation::ListStackSetsRequestPrivate</a>, <a href="qtaws-cloudformation-liststacksrequestprivate.html">QtAws::CloudFormation::ListStacksRequestPrivate</a>, <a href="qtaws-cloudformation-setstackpolicyrequestprivate.html">QtAws::CloudFormation::SetStackPolicyRequestPrivate</a>, <a href="qtaws-cloudformation-signalresourcerequestprivate.html">QtAws::CloudFormation::SignalResourceRequestPrivate</a>, <a href="qtaws-cloudformation-stopstacksetoperationrequestprivate.html">QtAws::CloudFormation::StopStackSetOperationRequestPrivate</a>, <a href="qtaws-cloudformation-updatestackinstancesrequestprivate.html">QtAws::CloudFormation::UpdateStackInstancesRequestPrivate</a>, <a href="qtaws-cloudformation-updatestackrequestprivate.html">QtAws::CloudFormation::UpdateStackRequestPrivate</a>, <a href="qtaws-cloudformation-updatestacksetrequestprivate.html">QtAws::CloudFormation::UpdateStackSetRequestPrivate</a>, <a href="qtaws-cloudformation-updateterminationprotectionrequestprivate.html">QtAws::CloudFormation::UpdateTerminationProtectionRequestPrivate</a>, and <a href="qtaws-cloudformation-validatetemplaterequestprivate.html">QtAws::CloudFormation::ValidateTemplateRequestPrivate</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-cloudformation-cloudformationrequestprivate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequestprivate.html#CloudFormationRequestPrivate">CloudFormationRequestPrivate</a></b>(const CloudFormationRequest::Action <i>action</i>, CloudFormationRequest * const <i>q</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequestprivate.html#CloudFormationRequestPrivate-1">CloudFormationRequestPrivate</a></b>(const CloudFormationRequestPrivate &amp;<i>other</i>, CloudFormationRequest * const <i>q</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">2 public functions inherited from <a href="qtaws-core-awsabstractrequestprivate.html#public-functions">QtAws::Core::AwsAbstractRequestPrivate</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-cloudformation-cloudformationrequestprivate.html#toString">toString</a></b>(const CloudFormationRequest::Action &amp;<i>action</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$CloudFormationRequestPrivate-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-cloudformation-cloudformationrequestprivate.html">CloudFormationRequestPrivate</a> class provides private implementation for <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a>.</p>
+</div>
+<!-- @@@CloudFormationRequestPrivate -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$CloudFormationRequestPrivate[overload1]$$$CloudFormationRequestPrivateconstCloudFormationRequest::ActionCloudFormationRequest*const -->
+<h3 class="fn" id="CloudFormationRequestPrivate"><a name="CloudFormationRequestPrivate"></a>CloudFormationRequestPrivate::<span class="name">CloudFormationRequestPrivate</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">CloudFormationRequest::Action</a></span> <i>action</i>, <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a <a href="qtaws-cloudformation-cloudformationrequestprivate.html">CloudFormationRequestPrivate</a> object for <a href="qtaws-cloudformation.html">CloudFormation</a> <i>action</i>, with public implementation <i>q</i>.</p>
+<!-- @@@CloudFormationRequestPrivate -->
+<!-- $$$CloudFormationRequestPrivate$$$CloudFormationRequestPrivateconstCloudFormationRequestPrivate&CloudFormationRequest*const -->
+<h3 class="fn" id="CloudFormationRequestPrivate-1"><a name="CloudFormationRequestPrivate-1"></a>CloudFormationRequestPrivate::<span class="name">CloudFormationRequestPrivate</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequestprivate.html#CloudFormationRequestPrivate">CloudFormationRequestPrivate</a></span> &amp;<i>other</i>, <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a></span> * const <i>q</i>)</h3>
+<p>Constructs a copy of <i>other</i>, with public implementation <i>q</i>.</p>
+<p>This copy-like constructor copies everything from <i>other</i>, except for the the object's pointer to its public instance - for that, <i>q</i> is used instead.</p>
+<p>This is required to support the <a href="qtaws-cloudformation-cloudformationrequest.html">CloudFormationRequest</a> class's copy constructor.</p>
+<!-- @@@CloudFormationRequestPrivate -->
+<!-- $$$toString[overload1]$$$toStringconstCloudFormationRequest::Action& -->
+<h3 class="fn" id="toString"><a name="toString"></a><code>[static] </code><span class="type">QString</span> CloudFormationRequestPrivate::<span class="name">toString</span>(const <span class="type"><a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">CloudFormationRequest::Action</a></span> &amp;<i>action</i>)</h3>
+<p>Returns a string represention of <i>action</i>, or a null string if <i>action</i> is invalid.</p>
+<p>This function converts <a href="qtaws-cloudformation-cloudformationrequest.html#Action-enum">CloudFormationRequest::Action</a> enumerator values to their respective string representations, appropriate for use with the <a href="qtaws-cloudformation.html">CloudFormation</a> service's Action query parameters.</p>
+<!-- @@@toString -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

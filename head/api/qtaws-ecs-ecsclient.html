@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ecsclient.cpp -->
+  <title>EcsClient Class | ECS</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsecs-index.html">ECS</a></li>
+<li><a href="qtawsecs-module.html">C++ Classes</a></li>
+<li>EcsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">EcsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ecs-ecsclient.html">QtAws::ECS::EcsClient</a>)<br/></span>
+<!-- $$$EcsClient-brief -->
+<p>The <a href="qtaws-ecs-ecsclient.html">EcsClient</a> class provides access to the Amazon EC2 Container Service ( ECS) service. <a href="#details">More...</a></p>
+<!-- @@@EcsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;EcsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-ecs-ecsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#EcsClient">EcsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#EcsClient-1">EcsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> CreateClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#createCluster">createCluster</a></b>(const CreateClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateServiceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#createService">createService</a></b>(const CreateServiceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#deleteAttributes">deleteAttributes</a></b>(const DeleteAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteClusterResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#deleteCluster">deleteCluster</a></b>(const DeleteClusterRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteServiceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#deleteService">deleteService</a></b>(const DeleteServiceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterContainerInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#deregisterContainerInstance">deregisterContainerInstance</a></b>(const DeregisterContainerInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeregisterTaskDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#deregisterTaskDefinition">deregisterTaskDefinition</a></b>(const DeregisterTaskDefinitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#describeClusters">describeClusters</a></b>(const DescribeClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeContainerInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#describeContainerInstances">describeContainerInstances</a></b>(const DescribeContainerInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeServicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#describeServices">describeServices</a></b>(const DescribeServicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTaskDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#describeTaskDefinition">describeTaskDefinition</a></b>(const DescribeTaskDefinitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#describeTasks">describeTasks</a></b>(const DescribeTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DiscoverPollEndpointResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#discoverPollEndpoint">discoverPollEndpoint</a></b>(const DiscoverPollEndpointRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listAttributes">listAttributes</a></b>(const ListAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListClustersResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listClusters">listClusters</a></b>(const ListClustersRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListContainerInstancesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listContainerInstances">listContainerInstances</a></b>(const ListContainerInstancesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListServicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listServices">listServices</a></b>(const ListServicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTaskDefinitionFamiliesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listTaskDefinitionFamilies">listTaskDefinitionFamilies</a></b>(const ListTaskDefinitionFamiliesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTaskDefinitionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listTaskDefinitions">listTaskDefinitions</a></b>(const ListTaskDefinitionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListTasksResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#listTasks">listTasks</a></b>(const ListTasksRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutAttributesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#putAttributes">putAttributes</a></b>(const PutAttributesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterContainerInstanceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#registerContainerInstance">registerContainerInstance</a></b>(const RegisterContainerInstanceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RegisterTaskDefinitionResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#registerTaskDefinition">registerTaskDefinition</a></b>(const RegisterTaskDefinitionRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RunTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#runTask">runTask</a></b>(const RunTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#startTask">startTask</a></b>(const StartTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopTaskResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#stopTask">stopTask</a></b>(const StopTaskRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SubmitContainerStateChangeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#submitContainerStateChange">submitContainerStateChange</a></b>(const SubmitContainerStateChangeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SubmitTaskStateChangeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#submitTaskStateChange">submitTaskStateChange</a></b>(const SubmitTaskStateChangeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateContainerAgentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#updateContainerAgent">updateContainerAgent</a></b>(const UpdateContainerAgentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateContainerInstancesStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#updateContainerInstancesState">updateContainerInstancesState</a></b>(const UpdateContainerInstancesStateRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateServiceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ecs-ecsclient.html#updateService">updateService</a></b>(const UpdateServiceRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$EcsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ecs-ecsclient.html">EcsClient</a> class provides access to the Amazon EC2 Container Service ( ECS) service.</p>
+<p>Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2 launch type. For more information about launch types, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html&quot;&gt;Amazon ECS Launch</p>
+<p>Types&lt;/a&gt;&gt;</p>
+<p>Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2</p>
+<p>features&gt;</p>
+<p>You can use Amazon ECS to schedule the placement of containers across your cluster based on your resource needs, isolation policies, and availability requirements. Amazon ECS eliminates the need for you to operate your own cluster management and configuration management systems or worry about scaling your management</p>
+</div>
+<!-- @@@EcsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$EcsClient[overload1]$$$EcsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EcsClient"><a name="EcsClient"></a>EcsClient::<span class="name">EcsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-ecs-ecsclient.html">EcsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@EcsClient -->
+<!-- $$$EcsClient$$$EcsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="EcsClient-1"><a name="EcsClient-1"></a>EcsClient::<span class="name">EcsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-ecs-ecsclient.html#EcsClient">EcsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@EcsClient -->
+<!-- $$$createCluster[overload1]$$$createClusterconstCreateClusterRequest& -->
+<h3 class="fn" id="createCluster"><a name="createCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-createclusterresponse.html">CreateClusterResponse</a></span> *EcsClient::<span class="name">createCluster</span>(const <span class="type"><a href="qtaws-ecs-createclusterrequest.html">CreateClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-createclusterresponse.html">CreateClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a new Amazon ECS cluster. By default, your account receives a &lt;code&gt;default&lt;/code&gt; cluster when you launch your first container instance. However, you can create your own cluster with a unique name with the &lt;code&gt;CreateCluster&lt;/code&gt;</p>
+<p>action&gt; &lt;note&gt;</p>
+<p>When you call the &lt;a&gt;CreateCluster&lt;/a&gt; API operation, Amazon ECS attempts to create the service-linked role for your account so that required resources in other AWS services can be managed on your behalf. However, if the IAM user that makes the call does not have permissions to create the service-linked role, it is not created. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html&quot;&gt;Using Service-Linked Roles for Amazon ECS&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@createCluster -->
+<!-- $$$createService[overload1]$$$createServiceconstCreateServiceRequest& -->
+<h3 class="fn" id="createService"><a name="createService"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-createserviceresponse.html">CreateServiceResponse</a></span> *EcsClient::<span class="name">createService</span>(const <span class="type"><a href="qtaws-ecs-createservicerequest.html">CreateServiceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-createserviceresponse.html">CreateServiceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Runs and maintains a desired number of tasks from a specified task definition. If the number of tasks running in a service drops below &lt;code&gt;desiredCount&lt;/code&gt;, Amazon ECS spawns another copy of the task in the specified cluster. To update an existing service, see</p>
+<p>&lt;a&gt;UpdateService&lt;/a&gt;&gt;</p>
+<p>In addition to maintaining the desired count of tasks in your service, you can optionally run your service behind a load balancer. The load balancer distributes traffic across the tasks that are associated with the service. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html&quot;&gt;Service Load Balancing&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can optionally specify a deployment configuration for your service. During a deployment, the service scheduler uses the &lt;code&gt;minimumHealthyPercent&lt;/code&gt; and &lt;code&gt;maximumPercent&lt;/code&gt; parameters to determine the deployment strategy. The deployment is triggered by changing the task definition or the desired count of a service with an &lt;a&gt;UpdateService&lt;/a&gt;</p>
+<p>operation&gt;</p>
+<p>The &lt;code&gt;minimumHealthyPercent&lt;/code&gt; represents a lower limit on the number of your service's tasks that must remain in the &lt;code&gt;RUNNING&lt;/code&gt; state during a deployment, as a percentage of the &lt;code&gt;desiredCount&lt;/code&gt; (rounded up to the nearest integer). This parameter enables you to deploy without using additional cluster capacity. For example, if your service has a &lt;code&gt;desiredCount&lt;/code&gt; of four tasks and a &lt;code&gt;minimumHealthyPercent&lt;/code&gt; of 50%, the scheduler can stop two existing tasks to free up cluster capacity before starting two new tasks. Tasks for services that &lt;i&gt;do not&lt;/i&gt; use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state. Tasks for services that &lt;i&gt;do&lt;/i&gt; use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state and the container instance they are hosted on is reported as healthy by the load balancer. The default value for &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is 50% in the console and 100% for the AWS CLI, the AWS SDKs, and the</p>
+<p>APIs&gt;</p>
+<p>The &lt;code&gt;maximumPercent&lt;/code&gt; parameter represents an upper limit on the number of your service's tasks that are allowed in the &lt;code&gt;RUNNING&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; state during a deployment, as a percentage of the &lt;code&gt;desiredCount&lt;/code&gt; (rounded down to the nearest integer). This parameter enables you to define the deployment batch size. For example, if your service has a &lt;code&gt;desiredCount&lt;/code&gt; of four tasks and a &lt;code&gt;maximumPercent&lt;/code&gt; value of 200%, the scheduler can start four new tasks before stopping the four older tasks (provided that the cluster resources required to do this are available). The default value for &lt;code&gt;maximumPercent&lt;/code&gt; is</p>
+<p>200%&gt;</p>
+<p>When the service scheduler launches new tasks, it determines task placement in your cluster using the following</p>
+<p>logic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Determine which of the container instances in your cluster can support your service's task definition (for example, they have the required CPU, memory, ports, and container instance</p>
+<p>attributes)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>By default, the service scheduler attempts to balance tasks across Availability Zones in this manner (although you can choose a different placement strategy) with the &lt;code&gt;placementStrategy&lt;/code&gt;</p>
+<p>parameter)&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Sort the valid container instances by the fewest number of running tasks for this service in the same Availability Zone as the instance. For example, if zone A has one running service task and zones B and C each have zero, valid container instances in either zone B or C are considered optimal for</p>
+<p>placement&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Place the new service task on a valid container instance in an optimal Availability Zone (based on the previous steps), favoring container instances with the fewest number of running tasks for this</p>
+<!-- @@@createService -->
+<!-- $$$deleteAttributes[overload1]$$$deleteAttributesconstDeleteAttributesRequest& -->
+<h3 class="fn" id="deleteAttributes"><a name="deleteAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-deleteattributesresponse.html">DeleteAttributesResponse</a></span> *EcsClient::<span class="name">deleteAttributes</span>(const <span class="type"><a href="qtaws-ecs-deleteattributesrequest.html">DeleteAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-deleteattributesresponse.html">DeleteAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes one or more custom attributes from an Amazon ECS</p>
+<!-- @@@deleteAttributes -->
+<!-- $$$deleteCluster[overload1]$$$deleteClusterconstDeleteClusterRequest& -->
+<h3 class="fn" id="deleteCluster"><a name="deleteCluster"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-deleteclusterresponse.html">DeleteClusterResponse</a></span> *EcsClient::<span class="name">deleteCluster</span>(const <span class="type"><a href="qtaws-ecs-deleteclusterrequest.html">DeleteClusterRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-deleteclusterresponse.html">DeleteClusterResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified cluster. You must deregister all container instances from this cluster before you may delete it. You can list the container instances in a cluster with &lt;a&gt;ListContainerInstances&lt;/a&gt; and deregister them with</p>
+<!-- @@@deleteCluster -->
+<!-- $$$deleteService[overload1]$$$deleteServiceconstDeleteServiceRequest& -->
+<h3 class="fn" id="deleteService"><a name="deleteService"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-deleteserviceresponse.html">DeleteServiceResponse</a></span> *EcsClient::<span class="name">deleteService</span>(const <span class="type"><a href="qtaws-ecs-deleteservicerequest.html">DeleteServiceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-deleteserviceresponse.html">DeleteServiceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a specified service within a cluster. You can delete a service if you have no running tasks in it and the desired task count is zero. If the service is actively maintaining tasks, you cannot delete it, and you must update the service to a desired task count of zero. For more information, see</p>
+<p>&lt;a&gt;UpdateService&lt;/a&gt;&gt; &lt;note&gt;</p>
+<p>When you delete a service, if there are still running tasks that require cleanup, the service status moves from &lt;code&gt;ACTIVE&lt;/code&gt; to &lt;code&gt;DRAINING&lt;/code&gt;, and the service is no longer visible in the console or in &lt;a&gt;ListServices&lt;/a&gt; API operations. After the tasks have stopped, then the service status moves from &lt;code&gt;DRAINING&lt;/code&gt; to &lt;code&gt;INACTIVE&lt;/code&gt;. Services in the &lt;code&gt;DRAINING&lt;/code&gt; or &lt;code&gt;INACTIVE&lt;/code&gt; status can still be viewed with &lt;a&gt;DescribeServices&lt;/a&gt; API operations. However, in the future, &lt;code&gt;INACTIVE&lt;/code&gt; services may be cleaned up and purged from Amazon ECS record keeping, and &lt;a&gt;DescribeServices&lt;/a&gt; API operations on those services return a &lt;code&gt;ServiceNotFoundException&lt;/code&gt;</p>
+<!-- @@@deleteService -->
+<!-- $$$deregisterContainerInstance[overload1]$$$deregisterContainerInstanceconstDeregisterContainerInstanceRequest& -->
+<h3 class="fn" id="deregisterContainerInstance"><a name="deregisterContainerInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-deregistercontainerinstanceresponse.html">DeregisterContainerInstanceResponse</a></span> *EcsClient::<span class="name">deregisterContainerInstance</span>(const <span class="type"><a href="qtaws-ecs-deregistercontainerinstancerequest.html">DeregisterContainerInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-deregistercontainerinstanceresponse.html">DeregisterContainerInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters an Amazon ECS container instance from the specified cluster. This instance is no longer available to run</p>
+<p>tasks&gt;</p>
+<p>If you intend to use the container instance for some other purpose after deregistration, you should stop all of the tasks running on the container instance before deregistration. That prevents any orphaned tasks from consuming</p>
+<p>resources&gt;</p>
+<p>Deregistering a container instance removes the instance from a cluster, but it does not terminate the EC2 instance; if you are finished using the instance, be sure to terminate it in the Amazon EC2 console to stop</p>
+<p>billing&gt; &lt;note&gt;</p>
+<p>If you terminate a running container instance, Amazon ECS automatically deregisters the instance from your cluster (stopped container instances or instances with disconnected agents are not automatically deregistered when</p>
+<!-- @@@deregisterContainerInstance -->
+<!-- $$$deregisterTaskDefinition[overload1]$$$deregisterTaskDefinitionconstDeregisterTaskDefinitionRequest& -->
+<h3 class="fn" id="deregisterTaskDefinition"><a name="deregisterTaskDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-deregistertaskdefinitionresponse.html">DeregisterTaskDefinitionResponse</a></span> *EcsClient::<span class="name">deregisterTaskDefinition</span>(const <span class="type"><a href="qtaws-ecs-deregistertaskdefinitionrequest.html">DeregisterTaskDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-deregistertaskdefinitionresponse.html">DeregisterTaskDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deregisters the specified task definition by family and revision. Upon deregistration, the task definition is marked as &lt;code&gt;INACTIVE&lt;/code&gt;. Existing tasks and services that reference an &lt;code&gt;INACTIVE&lt;/code&gt; task definition continue to run without disruption. Existing services that reference an &lt;code&gt;INACTIVE&lt;/code&gt; task definition can still scale up or down by modifying the service's desired</p>
+<p>count&gt;</p>
+<p>You cannot use an &lt;code&gt;INACTIVE&lt;/code&gt; task definition to run new tasks or create new services, and you cannot update an existing service to reference an &lt;code&gt;INACTIVE&lt;/code&gt; task definition (although there may be up to a 10-minute window following deregistration where these restrictions have not yet taken</p>
+<p>effect)&gt; &lt;note&gt;</p>
+<p>At this time, &lt;code&gt;INACTIVE&lt;/code&gt; task definitions remain discoverable in your account indefinitely; however, this behavior is subject to change in the future, so you should not rely on &lt;code&gt;INACTIVE&lt;/code&gt; task definitions persisting beyond the lifecycle of any associated tasks and</p>
+<!-- @@@deregisterTaskDefinition -->
+<!-- $$$describeClusters[overload1]$$$describeClustersconstDescribeClustersRequest& -->
+<h3 class="fn" id="describeClusters"><a name="describeClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-describeclustersresponse.html">DescribeClustersResponse</a></span> *EcsClient::<span class="name">describeClusters</span>(const <span class="type"><a href="qtaws-ecs-describeclustersrequest.html">DescribeClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-describeclustersresponse.html">DescribeClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes one or more of your</p>
+<!-- @@@describeClusters -->
+<!-- $$$describeContainerInstances[overload1]$$$describeContainerInstancesconstDescribeContainerInstancesRequest& -->
+<h3 class="fn" id="describeContainerInstances"><a name="describeContainerInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-describecontainerinstancesresponse.html">DescribeContainerInstancesResponse</a></span> *EcsClient::<span class="name">describeContainerInstances</span>(const <span class="type"><a href="qtaws-ecs-describecontainerinstancesrequest.html">DescribeContainerInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-describecontainerinstancesresponse.html">DescribeContainerInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes Amazon Elastic Container Service container instances. Returns metadata about registered and remaining resources on each container instance</p>
+<!-- @@@describeContainerInstances -->
+<!-- $$$describeServices[overload1]$$$describeServicesconstDescribeServicesRequest& -->
+<h3 class="fn" id="describeServices"><a name="describeServices"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-describeservicesresponse.html">DescribeServicesResponse</a></span> *EcsClient::<span class="name">describeServices</span>(const <span class="type"><a href="qtaws-ecs-describeservicesrequest.html">DescribeServicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-describeservicesresponse.html">DescribeServicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes the specified services running in your</p>
+<!-- @@@describeServices -->
+<!-- $$$describeTaskDefinition[overload1]$$$describeTaskDefinitionconstDescribeTaskDefinitionRequest& -->
+<h3 class="fn" id="describeTaskDefinition"><a name="describeTaskDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-describetaskdefinitionresponse.html">DescribeTaskDefinitionResponse</a></span> *EcsClient::<span class="name">describeTaskDefinition</span>(const <span class="type"><a href="qtaws-ecs-describetaskdefinitionrequest.html">DescribeTaskDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-describetaskdefinitionresponse.html">DescribeTaskDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a task definition. You can specify a &lt;code&gt;family&lt;/code&gt; and &lt;code&gt;revision&lt;/code&gt; to find information about a specific task definition, or you can simply specify the family to find the latest &lt;code&gt;ACTIVE&lt;/code&gt; revision in that</p>
+<p>family&gt; &lt;note&gt;</p>
+<p>You can only describe &lt;code&gt;INACTIVE&lt;/code&gt; task definitions while an active task or service references</p>
+<!-- @@@describeTaskDefinition -->
+<!-- $$$describeTasks[overload1]$$$describeTasksconstDescribeTasksRequest& -->
+<h3 class="fn" id="describeTasks"><a name="describeTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-describetasksresponse.html">DescribeTasksResponse</a></span> *EcsClient::<span class="name">describeTasks</span>(const <span class="type"><a href="qtaws-ecs-describetasksrequest.html">DescribeTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-describetasksresponse.html">DescribeTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes a specified task or</p>
+<!-- @@@describeTasks -->
+<!-- $$$discoverPollEndpoint[overload1]$$$discoverPollEndpointconstDiscoverPollEndpointRequest& -->
+<h3 class="fn" id="discoverPollEndpoint"><a name="discoverPollEndpoint"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-discoverpollendpointresponse.html">DiscoverPollEndpointResponse</a></span> *EcsClient::<span class="name">discoverPollEndpoint</span>(const <span class="type"><a href="qtaws-ecs-discoverpollendpointrequest.html">DiscoverPollEndpointRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-discoverpollendpointresponse.html">DiscoverPollEndpointResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;note&gt;</p>
+<p>This action is only used by the Amazon ECS agent, and it is not intended for use outside of the</p>
+<p>agent&gt; &lt;/note&gt;</p>
+<p>Returns an endpoint for the Amazon ECS agent to poll for</p>
+<!-- @@@discoverPollEndpoint -->
+<!-- $$$listAttributes[overload1]$$$listAttributesconstListAttributesRequest& -->
+<h3 class="fn" id="listAttributes"><a name="listAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listattributesresponse.html">ListAttributesResponse</a></span> *EcsClient::<span class="name">listAttributes</span>(const <span class="type"><a href="qtaws-ecs-listattributesrequest.html">ListAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listattributesresponse.html">ListAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the attributes for Amazon ECS resources within a specified target type and cluster. When you specify a target type and cluster, &lt;code&gt;ListAttributes&lt;/code&gt; returns a list of attribute objects, one for each attribute on each resource. You can filter the list of results to a single attribute name to only return results that have that name. You can also filter the results by attribute name and value, for example, to see which container instances in a cluster are running a Linux AMI (&lt;code&gt;ecs.os-type=linux&lt;/code&gt;).</p>
+<!-- @@@listAttributes -->
+<!-- $$$listClusters[overload1]$$$listClustersconstListClustersRequest& -->
+<h3 class="fn" id="listClusters"><a name="listClusters"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listclustersresponse.html">ListClustersResponse</a></span> *EcsClient::<span class="name">listClusters</span>(const <span class="type"><a href="qtaws-ecs-listclustersrequest.html">ListClustersRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listclustersresponse.html">ListClustersResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of existing</p>
+<!-- @@@listClusters -->
+<!-- $$$listContainerInstances[overload1]$$$listContainerInstancesconstListContainerInstancesRequest& -->
+<h3 class="fn" id="listContainerInstances"><a name="listContainerInstances"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listcontainerinstancesresponse.html">ListContainerInstancesResponse</a></span> *EcsClient::<span class="name">listContainerInstances</span>(const <span class="type"><a href="qtaws-ecs-listcontainerinstancesrequest.html">ListContainerInstancesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listcontainerinstancesresponse.html">ListContainerInstancesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of container instances in a specified cluster. You can filter the results of a &lt;code&gt;ListContainerInstances&lt;/code&gt; operation with cluster query language statements inside the &lt;code&gt;filter&lt;/code&gt; parameter. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html&quot;&gt;Cluster Query Language&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@listContainerInstances -->
+<!-- $$$listServices[overload1]$$$listServicesconstListServicesRequest& -->
+<h3 class="fn" id="listServices"><a name="listServices"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listservicesresponse.html">ListServicesResponse</a></span> *EcsClient::<span class="name">listServices</span>(const <span class="type"><a href="qtaws-ecs-listservicesrequest.html">ListServicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listservicesresponse.html">ListServicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the services that are running in a specified</p>
+<!-- @@@listServices -->
+<!-- $$$listTaskDefinitionFamilies[overload1]$$$listTaskDefinitionFamiliesconstListTaskDefinitionFamiliesRequest& -->
+<h3 class="fn" id="listTaskDefinitionFamilies"><a name="listTaskDefinitionFamilies"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listtaskdefinitionfamiliesresponse.html">ListTaskDefinitionFamiliesResponse</a></span> *EcsClient::<span class="name">listTaskDefinitionFamilies</span>(const <span class="type"><a href="qtaws-ecs-listtaskdefinitionfamiliesrequest.html">ListTaskDefinitionFamiliesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listtaskdefinitionfamiliesresponse.html">ListTaskDefinitionFamiliesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of task definition families that are registered to your account (which may include task definition families that no longer have any &lt;code&gt;ACTIVE&lt;/code&gt; task definition</p>
+<p>revisions)&gt;</p>
+<p>You can filter out task definition families that do not contain any &lt;code&gt;ACTIVE&lt;/code&gt; task definition revisions by setting the &lt;code&gt;status&lt;/code&gt; parameter to &lt;code&gt;ACTIVE&lt;/code&gt;. You can also filter the results with the &lt;code&gt;familyPrefix&lt;/code&gt;</p>
+<!-- @@@listTaskDefinitionFamilies -->
+<!-- $$$listTaskDefinitions[overload1]$$$listTaskDefinitionsconstListTaskDefinitionsRequest& -->
+<h3 class="fn" id="listTaskDefinitions"><a name="listTaskDefinitions"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listtaskdefinitionsresponse.html">ListTaskDefinitionsResponse</a></span> *EcsClient::<span class="name">listTaskDefinitions</span>(const <span class="type"><a href="qtaws-ecs-listtaskdefinitionsrequest.html">ListTaskDefinitionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listtaskdefinitionsresponse.html">ListTaskDefinitionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of task definitions that are registered to your account. You can filter the results by family name with the &lt;code&gt;familyPrefix&lt;/code&gt; parameter or by status with the &lt;code&gt;status&lt;/code&gt;</p>
+<!-- @@@listTaskDefinitions -->
+<!-- $$$listTasks[overload1]$$$listTasksconstListTasksRequest& -->
+<h3 class="fn" id="listTasks"><a name="listTasks"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-listtasksresponse.html">ListTasksResponse</a></span> *EcsClient::<span class="name">listTasks</span>(const <span class="type"><a href="qtaws-ecs-listtasksrequest.html">ListTasksRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-listtasksresponse.html">ListTasksResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns a list of tasks for a specified cluster. You can filter the results by family name, by a particular container instance, or by the desired status of the task with the &lt;code&gt;family&lt;/code&gt;, &lt;code&gt;containerInstance&lt;/code&gt;, and &lt;code&gt;desiredStatus&lt;/code&gt;</p>
+<p>parameters&gt;</p>
+<p>Recently stopped tasks might appear in the returned results. Currently, stopped tasks appear in the returned results for at least one hour.</p>
+<!-- @@@listTasks -->
+<!-- $$$putAttributes[overload1]$$$putAttributesconstPutAttributesRequest& -->
+<h3 class="fn" id="putAttributes"><a name="putAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-putattributesresponse.html">PutAttributesResponse</a></span> *EcsClient::<span class="name">putAttributes</span>(const <span class="type"><a href="qtaws-ecs-putattributesrequest.html">PutAttributesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-putattributesresponse.html">PutAttributesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Create or update an attribute on an Amazon ECS resource. If the attribute does not exist, it is created. If the attribute exists, its value is replaced with the specified value. To delete an attribute, use &lt;a&gt;DeleteAttributes&lt;/a&gt;. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes&quot;&gt;Attributes&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@putAttributes -->
+<!-- $$$registerContainerInstance[overload1]$$$registerContainerInstanceconstRegisterContainerInstanceRequest& -->
+<h3 class="fn" id="registerContainerInstance"><a name="registerContainerInstance"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-registercontainerinstanceresponse.html">RegisterContainerInstanceResponse</a></span> *EcsClient::<span class="name">registerContainerInstance</span>(const <span class="type"><a href="qtaws-ecs-registercontainerinstancerequest.html">RegisterContainerInstanceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-registercontainerinstanceresponse.html">RegisterContainerInstanceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;note&gt;</p>
+<p>This action is only used by the Amazon ECS agent, and it is not intended for use outside of the</p>
+<p>agent&gt; &lt;/note&gt;</p>
+<p>Registers an EC2 instance into the specified cluster. This instance becomes available to place containers</p>
+<!-- @@@registerContainerInstance -->
+<!-- $$$registerTaskDefinition[overload1]$$$registerTaskDefinitionconstRegisterTaskDefinitionRequest& -->
+<h3 class="fn" id="registerTaskDefinition"><a name="registerTaskDefinition"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-registertaskdefinitionresponse.html">RegisterTaskDefinitionResponse</a></span> *EcsClient::<span class="name">registerTaskDefinition</span>(const <span class="type"><a href="qtaws-ecs-registertaskdefinitionrequest.html">RegisterTaskDefinitionRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-registertaskdefinitionresponse.html">RegisterTaskDefinitionResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Registers a new task definition from the supplied &lt;code&gt;family&lt;/code&gt; and &lt;code&gt;containerDefinitions&lt;/code&gt;. Optionally, you can add data volumes to your containers with the &lt;code&gt;volumes&lt;/code&gt; parameter. For more information about task definition parameters and defaults, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html&quot;&gt;Amazon ECS Task Definitions&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can specify an IAM role for your task with the &lt;code&gt;taskRoleArn&lt;/code&gt; parameter. When you specify an IAM role for a task, its containers can then use the latest versions of the AWS CLI or SDKs to make API requests to the AWS services that are specified in the IAM policy associated with the role. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html&quot;&gt;IAM Roles for Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>You can specify a Docker networking mode for the containers in your task definition with the &lt;code&gt;networkMode&lt;/code&gt; parameter. The available network modes correspond to those described in &lt;a href=&quot;https://docs.docker.com/engine/reference/run/#/network-settings&quot;&gt;Network settings&lt;/a&gt; in the Docker run reference. If you specify the &lt;code&gt;awsvpc&lt;/code&gt; network mode, the task is allocated an Elastic Network Interface, and you must specify a &lt;a&gt;NetworkConfiguration&lt;/a&gt; when you create a service or run a task with the task definition. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html&quot;&gt;Task Networking&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@registerTaskDefinition -->
+<!-- $$$runTask[overload1]$$$runTaskconstRunTaskRequest& -->
+<h3 class="fn" id="runTask"><a name="runTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-runtaskresponse.html">RunTaskResponse</a></span> *EcsClient::<span class="name">runTask</span>(const <span class="type"><a href="qtaws-ecs-runtaskrequest.html">RunTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-runtaskresponse.html">RunTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a new task using the specified task</p>
+<p>definition&gt;</p>
+<p>You can allow Amazon ECS to place tasks for you, or you can customize how Amazon ECS places tasks using placement constraints and placement strategies. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html&quot;&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<p>Guide&lt;/i&gt;&gt;</p>
+<p>Alternatively, you can use &lt;a&gt;StartTask&lt;/a&gt; to use your own scheduler or place tasks manually on specific container</p>
+<p>instances&gt;</p>
+<p>The Amazon ECS API follows an eventual consistency model, due to the distributed nature of the system supporting the API. This means that the result of an API command you run that affects your Amazon ECS resources might not be immediately visible to all subsequent commands you run. You should keep this in mind when you carry out an API command that immediately follows a previous API</p>
+<p>command&gt;</p>
+<p>To manage eventual consistency, you can do the</p>
+<p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Confirm the state of the resource before you run a command to modify it. Run the DescribeTasks command using an exponential backoff algorithm to ensure that you allow enough time for the previous command to propagate through the system. To do this, run the DescribeTasks command repeatedly, starting with a couple of seconds of wait time, and increasing gradually up to five minutes of wait</p>
+<p>time&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Add wait time between subsequent commands, even if the DescribeTasks command returns an accurate response. Apply an exponential backoff algorithm starting with a couple of seconds of wait time, and increase gradually up to about five minutes of wait</p>
+<!-- @@@runTask -->
+<!-- $$$startTask[overload1]$$$startTaskconstStartTaskRequest& -->
+<h3 class="fn" id="startTask"><a name="startTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-starttaskresponse.html">StartTaskResponse</a></span> *EcsClient::<span class="name">startTask</span>(const <span class="type"><a href="qtaws-ecs-starttaskrequest.html">StartTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-starttaskresponse.html">StartTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts a new task from the specified task definition on the specified container instance or</p>
+<p>instances&gt;</p>
+<p>Alternatively, you can use &lt;a&gt;RunTask&lt;/a&gt; to place tasks for you. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html&quot;&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@startTask -->
+<!-- $$$stopTask[overload1]$$$stopTaskconstStopTaskRequest& -->
+<h3 class="fn" id="stopTask"><a name="stopTask"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-stoptaskresponse.html">StopTaskResponse</a></span> *EcsClient::<span class="name">stopTask</span>(const <span class="type"><a href="qtaws-ecs-stoptaskrequest.html">StopTaskRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-stoptaskresponse.html">StopTaskResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Stops a running</p>
+<p>task&gt;</p>
+<p>When &lt;a&gt;StopTask&lt;/a&gt; is called on a task, the equivalent of &lt;code&gt;docker stop&lt;/code&gt; is issued to the containers running in the task. This results in a &lt;code&gt;SIGTERM&lt;/code&gt; and a default 30-second timeout, after which &lt;code&gt;SIGKILL&lt;/code&gt; is sent and the containers are forcibly stopped. If the container handles the &lt;code&gt;SIGTERM&lt;/code&gt; gracefully and exits within 30 seconds from receiving it, no &lt;code&gt;SIGKILL&lt;/code&gt; is</p>
+<p>sent&gt; &lt;note&gt;</p>
+<p>The default 30-second timeout can be configured on the Amazon ECS container agent with the &lt;code&gt;ECS_CONTAINER_STOP_TIMEOUT&lt;/code&gt; variable. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html&quot;&gt;Amazon ECS Container Agent Configuration&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@stopTask -->
+<!-- $$$submitContainerStateChange[overload1]$$$submitContainerStateChangeconstSubmitContainerStateChangeRequest& -->
+<h3 class="fn" id="submitContainerStateChange"><a name="submitContainerStateChange"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-submitcontainerstatechangeresponse.html">SubmitContainerStateChangeResponse</a></span> *EcsClient::<span class="name">submitContainerStateChange</span>(const <span class="type"><a href="qtaws-ecs-submitcontainerstatechangerequest.html">SubmitContainerStateChangeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-submitcontainerstatechangeresponse.html">SubmitContainerStateChangeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;note&gt;</p>
+<p>This action is only used by the Amazon ECS agent, and it is not intended for use outside of the</p>
+<p>agent&gt; &lt;/note&gt;</p>
+<p>Sent to acknowledge that a container changed</p>
+<!-- @@@submitContainerStateChange -->
+<!-- $$$submitTaskStateChange[overload1]$$$submitTaskStateChangeconstSubmitTaskStateChangeRequest& -->
+<h3 class="fn" id="submitTaskStateChange"><a name="submitTaskStateChange"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-submittaskstatechangeresponse.html">SubmitTaskStateChangeResponse</a></span> *EcsClient::<span class="name">submitTaskStateChange</span>(const <span class="type"><a href="qtaws-ecs-submittaskstatechangerequest.html">SubmitTaskStateChangeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-submittaskstatechangeresponse.html">SubmitTaskStateChangeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>&lt;note&gt;</p>
+<p>This action is only used by the Amazon ECS agent, and it is not intended for use outside of the</p>
+<p>agent&gt; &lt;/note&gt;</p>
+<p>Sent to acknowledge that a task changed</p>
+<!-- @@@submitTaskStateChange -->
+<!-- $$$updateContainerAgent[overload1]$$$updateContainerAgentconstUpdateContainerAgentRequest& -->
+<h3 class="fn" id="updateContainerAgent"><a name="updateContainerAgent"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-updatecontaineragentresponse.html">UpdateContainerAgentResponse</a></span> *EcsClient::<span class="name">updateContainerAgent</span>(const <span class="type"><a href="qtaws-ecs-updatecontaineragentrequest.html">UpdateContainerAgentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-updatecontaineragentresponse.html">UpdateContainerAgentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the Amazon ECS container agent on a specified container instance. Updating the Amazon ECS container agent does not interrupt running tasks or services on the container instance. The process for updating the agent differs depending on whether your container instance was launched with the Amazon ECS-optimized AMI or another operating</p>
+<p>system&gt;</p>
+<p>&lt;code&gt;UpdateContainerAgent&lt;/code&gt; requires the Amazon ECS-optimized AMI or Amazon Linux with the &lt;code&gt;ecs-init&lt;/code&gt; service installed and running. For help updating the Amazon ECS container agent on other operating systems, see &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html#manually_update_agent&quot;&gt;Manually Updating the Amazon ECS Container Agent&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer</p>
+<!-- @@@updateContainerAgent -->
+<!-- $$$updateContainerInstancesState[overload1]$$$updateContainerInstancesStateconstUpdateContainerInstancesStateRequest& -->
+<h3 class="fn" id="updateContainerInstancesState"><a name="updateContainerInstancesState"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-updatecontainerinstancesstateresponse.html">UpdateContainerInstancesStateResponse</a></span> *EcsClient::<span class="name">updateContainerInstancesState</span>(const <span class="type"><a href="qtaws-ecs-updatecontainerinstancesstaterequest.html">UpdateContainerInstancesStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-updatecontainerinstancesstateresponse.html">UpdateContainerInstancesStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the status of an Amazon ECS container</p>
+<p>instance&gt;</p>
+<p>You can change the status of a container instance to &lt;code&gt;DRAINING&lt;/code&gt; to manually remove an instance from a cluster, for example to perform system updates, update the Docker daemon, or scale down the cluster size.</p>
+<p>&lt;/p</p>
+<p>When you set a container instance to &lt;code&gt;DRAINING&lt;/code&gt;, Amazon ECS prevents new tasks from being scheduled for placement on the container instance and replacement service tasks are started on other container instances in the cluster if the resources are available. Service tasks on the container instance that are in the &lt;code&gt;PENDING&lt;/code&gt; state are stopped</p>
+<p>immediately&gt;</p>
+<p>Service tasks on the container instance that are in the &lt;code&gt;RUNNING&lt;/code&gt; state are stopped and replaced according to the service's deployment configuration parameters, &lt;code&gt;minimumHealthyPercent&lt;/code&gt; and &lt;code&gt;maximumPercent&lt;/code&gt;. You can change the deployment configuration of your service using</p>
+<p>&lt;a&gt;UpdateService&lt;/a&gt;&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is below 100%, the scheduler can ignore &lt;code&gt;desiredCount&lt;/code&gt; temporarily during task replacement. For example, &lt;code&gt;desiredCount&lt;/code&gt; is four tasks, a minimum of 50% allows the scheduler to stop two existing tasks before starting two new tasks. If the minimum is 100%, the service scheduler can't remove existing tasks until the replacement tasks are considered healthy. Tasks for services that do not use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state. Tasks for services that use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state and the container instance they are hosted on is reported as healthy by the load</p>
+<p>balancer&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;maximumPercent&lt;/code&gt; parameter represents an upper limit on the number of running tasks during task replacement, which enables you to define the replacement batch size. For example, if &lt;code&gt;desiredCount&lt;/code&gt; of four tasks, a maximum of 200% starts four new tasks before stopping the four tasks to be drained (provided that the cluster resources required to do this are available). If the maximum is 100%, then replacement tasks can't start until the draining tasks have</p>
+<p>stopped&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>Any &lt;code&gt;PENDING&lt;/code&gt; or &lt;code&gt;RUNNING&lt;/code&gt; tasks that do not belong to a service are not affected; you must wait for them to finish or stop them</p>
+<p>manually&gt;</p>
+<p>A container instance has completed draining when it has no more &lt;code&gt;RUNNING&lt;/code&gt; tasks. You can verify this using</p>
+<p>&lt;a&gt;ListTasks&lt;/a&gt;&gt;</p>
+<p>When you set a container instance to &lt;code&gt;ACTIVE&lt;/code&gt;, the Amazon ECS scheduler can begin scheduling tasks on the instance</p>
+<!-- @@@updateContainerInstancesState -->
+<!-- $$$updateService[overload1]$$$updateServiceconstUpdateServiceRequest& -->
+<h3 class="fn" id="updateService"><a name="updateService"></a><code>[slot] </code><span class="type"><a href="qtaws-ecs-updateserviceresponse.html">UpdateServiceResponse</a></span> *EcsClient::<span class="name">updateService</span>(const <span class="type"><a href="qtaws-ecs-updateservicerequest.html">UpdateServiceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-ecs-ecsclient.html">EcsClient</a> service, and returns a pointer to an <a href="qtaws-ecs-updateserviceresponse.html">UpdateServiceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Modifies the desired count, deployment configuration, network configuration, or task definition used in a</p>
+<p>service&gt;</p>
+<p>You can add to or subtract from the number of instantiations of a task definition in a service by specifying the cluster that the service is running in and a new &lt;code&gt;desiredCount&lt;/code&gt;</p>
+<p>parameter&gt;</p>
+<p>If you have updated the Docker image of your application, you can create a new task definition with that image and deploy it to your service. The service scheduler uses the minimum healthy percent and maximum percent parameters (in the service's deployment configuration) to determine the deployment</p>
+<p>strategy&gt; &lt;note&gt;</p>
+<p>If your updated Docker image uses the same tag as what is in the existing task definition for your service (for example, &lt;code&gt;my_image:latest&lt;/code&gt;), you do not need to create a new revision of your task definition. You can update the service using the &lt;code&gt;forceNewDeployment&lt;/code&gt; option. The new tasks launched by the deployment pull the current image/tag combination from your repository when they</p>
+<p>start&gt; &lt;/note&gt;</p>
+<p>You can also update the deployment configuration of a service. When a deployment is triggered by updating the task definition of a service, the service scheduler uses the deployment configuration parameters, &lt;code&gt;minimumHealthyPercent&lt;/code&gt; and &lt;code&gt;maximumPercent&lt;/code&gt;, to determine the deployment</p>
+<p>strategy&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>If &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is below 100%, the scheduler can ignore &lt;code&gt;desiredCount&lt;/code&gt; temporarily during a deployment. For example, if &lt;code&gt;desiredCount&lt;/code&gt; is four tasks, a minimum of 50% allows the scheduler to stop two existing tasks before starting two new tasks. Tasks for services that do not use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state. Tasks for services that use a load balancer are considered healthy if they are in the &lt;code&gt;RUNNING&lt;/code&gt; state and the container instance they are hosted on is reported as healthy by the load</p>
+<p>balancer&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>The &lt;code&gt;maximumPercent&lt;/code&gt; parameter represents an upper limit on the number of running tasks during a deployment, which enables you to define the deployment batch size. For example, if &lt;code&gt;desiredCount&lt;/code&gt; is four tasks, a maximum of 200% starts four new tasks before stopping the four older tasks (provided that the cluster resources required to do this are</p>
+<p>available)&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>When &lt;a&gt;UpdateService&lt;/a&gt; stops a task during a deployment, the equivalent of &lt;code&gt;docker stop&lt;/code&gt; is issued to the containers running in the task. This results in a &lt;code&gt;SIGTERM&lt;/code&gt; and a 30-second timeout, after which &lt;code&gt;SIGKILL&lt;/code&gt; is sent and the containers are forcibly stopped. If the container handles the &lt;code&gt;SIGTERM&lt;/code&gt; gracefully and exits within 30 seconds from receiving it, no &lt;code&gt;SIGKILL&lt;/code&gt; is</p>
+<p>sent&gt;</p>
+<p>When the service scheduler launches new tasks, it determines task placement in your cluster with the following</p>
+<p>logic&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Determine which of the container instances in your cluster can support your service's task definition (for example, they have the required CPU, memory, ports, and container instance</p>
+<p>attributes)&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>By default, the service scheduler attempts to balance tasks across Availability Zones in this manner (although you can choose a different placement</p>
+<p>strategy)&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Sort the valid container instances by the fewest number of running tasks for this service in the same Availability Zone as the instance. For example, if zone A has one running service task and zones B and C each have zero, valid container instances in either zone B or C are considered optimal for</p>
+<p>placement&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Place the new service task on a valid container instance in an optimal Availability Zone (based on the previous steps), favoring container instances with the fewest number of running tasks for this</p>
+<p>service&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>When the service scheduler stops running tasks, it attempts to maintain balance across the Availability Zones in your cluster using the following logic:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Sort the container instances by the largest number of running tasks for this service in the same Availability Zone as the instance. For example, if zone A has one running service task and zones B and C each have two, container instances in either zone B or C are considered optimal for</p>
+<p>termination&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Stop the task on a container instance in an optimal Availability Zone (based on the previous steps), favoring container instances with the largest number of running tasks for this</p>
+<!-- @@@updateService -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

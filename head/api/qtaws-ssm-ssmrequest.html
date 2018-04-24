@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ssmrequest.cpp -->
+  <title>SsmRequest Class | SSM</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsssm-index.html">SSM</a></li>
+<li><a href="qtawsssm-module.html">C++ Classes</a></li>
+<li>SsmRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">SsmRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-ssm-ssmrequest.html">QtAws::SSM::SsmRequest</a>)<br/></span>
+<!-- $$$SsmRequest-brief -->
+<p>The <a href="qtaws-ssm-ssmrequest.html">SsmRequest</a> class provides an interface for SSM requests. <a href="#details">More...</a></p>
+<!-- @@@SsmRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;SsmRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-ssm-addtagstoresourcerequest.html">QtAws::SSM::AddTagsToResourceRequest</a>, <a href="qtaws-ssm-cancelcommandrequest.html">QtAws::SSM::CancelCommandRequest</a>, <a href="qtaws-ssm-createactivationrequest.html">QtAws::SSM::CreateActivationRequest</a>, <a href="qtaws-ssm-createassociationbatchrequest.html">QtAws::SSM::CreateAssociationBatchRequest</a>, <a href="qtaws-ssm-createassociationrequest.html">QtAws::SSM::CreateAssociationRequest</a>, <a href="qtaws-ssm-createdocumentrequest.html">QtAws::SSM::CreateDocumentRequest</a>, <a href="qtaws-ssm-createmaintenancewindowrequest.html">QtAws::SSM::CreateMaintenanceWindowRequest</a>, <a href="qtaws-ssm-createpatchbaselinerequest.html">QtAws::SSM::CreatePatchBaselineRequest</a>, <a href="qtaws-ssm-createresourcedatasyncrequest.html">QtAws::SSM::CreateResourceDataSyncRequest</a>, <a href="qtaws-ssm-deleteactivationrequest.html">QtAws::SSM::DeleteActivationRequest</a>, <a href="qtaws-ssm-deleteassociationrequest.html">QtAws::SSM::DeleteAssociationRequest</a>, <a href="qtaws-ssm-deletedocumentrequest.html">QtAws::SSM::DeleteDocumentRequest</a>, <a href="qtaws-ssm-deleteinventoryrequest.html">QtAws::SSM::DeleteInventoryRequest</a>, <a href="qtaws-ssm-deletemaintenancewindowrequest.html">QtAws::SSM::DeleteMaintenanceWindowRequest</a>, <a href="qtaws-ssm-deleteparameterrequest.html">QtAws::SSM::DeleteParameterRequest</a>, <a href="qtaws-ssm-deleteparametersrequest.html">QtAws::SSM::DeleteParametersRequest</a>, <a href="qtaws-ssm-deletepatchbaselinerequest.html">QtAws::SSM::DeletePatchBaselineRequest</a>, <a href="qtaws-ssm-deleteresourcedatasyncrequest.html">QtAws::SSM::DeleteResourceDataSyncRequest</a>, <a href="qtaws-ssm-deregistermanagedinstancerequest.html">QtAws::SSM::DeregisterManagedInstanceRequest</a>, <a href="qtaws-ssm-deregisterpatchbaselineforpatchgrouprequest.html">QtAws::SSM::DeregisterPatchBaselineForPatchGroupRequest</a>, <a href="qtaws-ssm-deregistertargetfrommaintenancewindowrequest.html">QtAws::SSM::DeregisterTargetFromMaintenanceWindowRequest</a>, <a href="qtaws-ssm-deregistertaskfrommaintenancewindowrequest.html">QtAws::SSM::DeregisterTaskFromMaintenanceWindowRequest</a>, <a href="qtaws-ssm-describeactivationsrequest.html">QtAws::SSM::DescribeActivationsRequest</a>, <a href="qtaws-ssm-describeassociationrequest.html">QtAws::SSM::DescribeAssociationRequest</a>, <a href="qtaws-ssm-describeautomationexecutionsrequest.html">QtAws::SSM::DescribeAutomationExecutionsRequest</a>, <a href="qtaws-ssm-describeautomationstepexecutionsrequest.html">QtAws::SSM::DescribeAutomationStepExecutionsRequest</a>, <a href="qtaws-ssm-describeavailablepatchesrequest.html">QtAws::SSM::DescribeAvailablePatchesRequest</a>, <a href="qtaws-ssm-describedocumentpermissionrequest.html">QtAws::SSM::DescribeDocumentPermissionRequest</a>, <a href="qtaws-ssm-describedocumentrequest.html">QtAws::SSM::DescribeDocumentRequest</a>, <a href="qtaws-ssm-describeeffectiveinstanceassociationsrequest.html">QtAws::SSM::DescribeEffectiveInstanceAssociationsRequest</a>, <a href="qtaws-ssm-describeeffectivepatchesforpatchbaselinerequest.html">QtAws::SSM::DescribeEffectivePatchesForPatchBaselineRequest</a>, <a href="qtaws-ssm-describeinstanceassociationsstatusrequest.html">QtAws::SSM::DescribeInstanceAssociationsStatusRequest</a>, <a href="qtaws-ssm-describeinstanceinformationrequest.html">QtAws::SSM::DescribeInstanceInformationRequest</a>, <a href="qtaws-ssm-describeinstancepatchesrequest.html">QtAws::SSM::DescribeInstancePatchesRequest</a>, <a href="qtaws-ssm-describeinstancepatchstatesforpatchgrouprequest.html">QtAws::SSM::DescribeInstancePatchStatesForPatchGroupRequest</a>, <a href="qtaws-ssm-describeinstancepatchstatesrequest.html">QtAws::SSM::DescribeInstancePatchStatesRequest</a>, <a href="qtaws-ssm-describeinventorydeletionsrequest.html">QtAws::SSM::DescribeInventoryDeletionsRequest</a>, <a href="qtaws-ssm-describemaintenancewindowexecutionsrequest.html">QtAws::SSM::DescribeMaintenanceWindowExecutionsRequest</a>, <a href="qtaws-ssm-describemaintenancewindowexecutiontaskinvocationsrequest.html">QtAws::SSM::DescribeMaintenanceWindowExecutionTaskInvocationsRequest</a>, <a href="qtaws-ssm-describemaintenancewindowexecutiontasksrequest.html">QtAws::SSM::DescribeMaintenanceWindowExecutionTasksRequest</a>, <a href="qtaws-ssm-describemaintenancewindowsrequest.html">QtAws::SSM::DescribeMaintenanceWindowsRequest</a>, <a href="qtaws-ssm-describemaintenancewindowtargetsrequest.html">QtAws::SSM::DescribeMaintenanceWindowTargetsRequest</a>, <a href="qtaws-ssm-describemaintenancewindowtasksrequest.html">QtAws::SSM::DescribeMaintenanceWindowTasksRequest</a>, <a href="qtaws-ssm-describeparametersrequest.html">QtAws::SSM::DescribeParametersRequest</a>, <a href="qtaws-ssm-describepatchbaselinesrequest.html">QtAws::SSM::DescribePatchBaselinesRequest</a>, <a href="qtaws-ssm-describepatchgroupsrequest.html">QtAws::SSM::DescribePatchGroupsRequest</a>, <a href="qtaws-ssm-describepatchgroupstaterequest.html">QtAws::SSM::DescribePatchGroupStateRequest</a>, <a href="qtaws-ssm-getautomationexecutionrequest.html">QtAws::SSM::GetAutomationExecutionRequest</a>, <a href="qtaws-ssm-getcommandinvocationrequest.html">QtAws::SSM::GetCommandInvocationRequest</a>, <a href="qtaws-ssm-getdefaultpatchbaselinerequest.html">QtAws::SSM::GetDefaultPatchBaselineRequest</a>, <a href="qtaws-ssm-getdeployablepatchsnapshotforinstancerequest.html">QtAws::SSM::GetDeployablePatchSnapshotForInstanceRequest</a>, <a href="qtaws-ssm-getdocumentrequest.html">QtAws::SSM::GetDocumentRequest</a>, <a href="qtaws-ssm-getinventoryrequest.html">QtAws::SSM::GetInventoryRequest</a>, <a href="qtaws-ssm-getinventoryschemarequest.html">QtAws::SSM::GetInventorySchemaRequest</a>, <a href="qtaws-ssm-getmaintenancewindowexecutionrequest.html">QtAws::SSM::GetMaintenanceWindowExecutionRequest</a>, <a href="qtaws-ssm-getmaintenancewindowexecutiontaskinvocationrequest.html">QtAws::SSM::GetMaintenanceWindowExecutionTaskInvocationRequest</a>, <a href="qtaws-ssm-getmaintenancewindowexecutiontaskrequest.html">QtAws::SSM::GetMaintenanceWindowExecutionTaskRequest</a>, <a href="qtaws-ssm-getmaintenancewindowrequest.html">QtAws::SSM::GetMaintenanceWindowRequest</a>, <a href="qtaws-ssm-getmaintenancewindowtaskrequest.html">QtAws::SSM::GetMaintenanceWindowTaskRequest</a>, <a href="qtaws-ssm-getparameterhistoryrequest.html">QtAws::SSM::GetParameterHistoryRequest</a>, <a href="qtaws-ssm-getparameterrequest.html">QtAws::SSM::GetParameterRequest</a>, <a href="qtaws-ssm-getparametersbypathrequest.html">QtAws::SSM::GetParametersByPathRequest</a>, <a href="qtaws-ssm-getparametersrequest.html">QtAws::SSM::GetParametersRequest</a>, <a href="qtaws-ssm-getpatchbaselineforpatchgrouprequest.html">QtAws::SSM::GetPatchBaselineForPatchGroupRequest</a>, <a href="qtaws-ssm-getpatchbaselinerequest.html">QtAws::SSM::GetPatchBaselineRequest</a>, <a href="qtaws-ssm-listassociationsrequest.html">QtAws::SSM::ListAssociationsRequest</a>, <a href="qtaws-ssm-listassociationversionsrequest.html">QtAws::SSM::ListAssociationVersionsRequest</a>, <a href="qtaws-ssm-listcommandinvocationsrequest.html">QtAws::SSM::ListCommandInvocationsRequest</a>, <a href="qtaws-ssm-listcommandsrequest.html">QtAws::SSM::ListCommandsRequest</a>, <a href="qtaws-ssm-listcomplianceitemsrequest.html">QtAws::SSM::ListComplianceItemsRequest</a>, <a href="qtaws-ssm-listcompliancesummariesrequest.html">QtAws::SSM::ListComplianceSummariesRequest</a>, <a href="qtaws-ssm-listdocumentsrequest.html">QtAws::SSM::ListDocumentsRequest</a>, <a href="qtaws-ssm-listdocumentversionsrequest.html">QtAws::SSM::ListDocumentVersionsRequest</a>, <a href="qtaws-ssm-listinventoryentriesrequest.html">QtAws::SSM::ListInventoryEntriesRequest</a>, <a href="qtaws-ssm-listresourcecompliancesummariesrequest.html">QtAws::SSM::ListResourceComplianceSummariesRequest</a>, <a href="qtaws-ssm-listresourcedatasyncrequest.html">QtAws::SSM::ListResourceDataSyncRequest</a>, <a href="qtaws-ssm-listtagsforresourcerequest.html">QtAws::SSM::ListTagsForResourceRequest</a>, <a href="qtaws-ssm-modifydocumentpermissionrequest.html">QtAws::SSM::ModifyDocumentPermissionRequest</a>, <a href="qtaws-ssm-putcomplianceitemsrequest.html">QtAws::SSM::PutComplianceItemsRequest</a>, <a href="qtaws-ssm-putinventoryrequest.html">QtAws::SSM::PutInventoryRequest</a>, <a href="qtaws-ssm-putparameterrequest.html">QtAws::SSM::PutParameterRequest</a>, <a href="qtaws-ssm-registerdefaultpatchbaselinerequest.html">QtAws::SSM::RegisterDefaultPatchBaselineRequest</a>, <a href="qtaws-ssm-registerpatchbaselineforpatchgrouprequest.html">QtAws::SSM::RegisterPatchBaselineForPatchGroupRequest</a>, <a href="qtaws-ssm-registertargetwithmaintenancewindowrequest.html">QtAws::SSM::RegisterTargetWithMaintenanceWindowRequest</a>, <a href="qtaws-ssm-registertaskwithmaintenancewindowrequest.html">QtAws::SSM::RegisterTaskWithMaintenanceWindowRequest</a>, <a href="qtaws-ssm-removetagsfromresourcerequest.html">QtAws::SSM::RemoveTagsFromResourceRequest</a>, <a href="qtaws-ssm-sendautomationsignalrequest.html">QtAws::SSM::SendAutomationSignalRequest</a>, <a href="qtaws-ssm-sendcommandrequest.html">QtAws::SSM::SendCommandRequest</a>, <a href="qtaws-ssm-startautomationexecutionrequest.html">QtAws::SSM::StartAutomationExecutionRequest</a>, <a href="qtaws-ssm-stopautomationexecutionrequest.html">QtAws::SSM::StopAutomationExecutionRequest</a>, <a href="qtaws-ssm-updateassociationrequest.html">QtAws::SSM::UpdateAssociationRequest</a>, <a href="qtaws-ssm-updateassociationstatusrequest.html">QtAws::SSM::UpdateAssociationStatusRequest</a>, <a href="qtaws-ssm-updatedocumentdefaultversionrequest.html">QtAws::SSM::UpdateDocumentDefaultVersionRequest</a>, <a href="qtaws-ssm-updatedocumentrequest.html">QtAws::SSM::UpdateDocumentRequest</a>, <a href="qtaws-ssm-updatemaintenancewindowrequest.html">QtAws::SSM::UpdateMaintenanceWindowRequest</a>, <a href="qtaws-ssm-updatemaintenancewindowtargetrequest.html">QtAws::SSM::UpdateMaintenanceWindowTargetRequest</a>, <a href="qtaws-ssm-updatemaintenancewindowtaskrequest.html">QtAws::SSM::UpdateMaintenanceWindowTaskRequest</a>, <a href="qtaws-ssm-updatemanagedinstancerolerequest.html">QtAws::SSM::UpdateManagedInstanceRoleRequest</a>, and <a href="qtaws-ssm-updatepatchbaselinerequest.html">QtAws::SSM::UpdatePatchBaselineRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-ssm-ssmrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#Action-enum">Action</a></b> { AddTagsToResourceAction, CancelCommandAction, CreateActivationAction, CreateAssociationAction, ..., UpdatePatchBaselineAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#SsmRequest">SsmRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#SsmRequest-1">SsmRequest</a></b>(const SsmRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SsmRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#operator-eq">operator=</a></b>(const SsmRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#operator-eq-eq">operator==</a></b>(const SsmRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#SsmRequest-2">SsmRequest</a></b>(SsmRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-ssm-ssmrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$SsmRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-ssm-ssmrequest.html">SsmRequest</a> class provides an interface for SSM requests.</p>
+</div>
+<!-- @@@SsmRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$AddTagsToResourceAction$$$CancelCommandAction$$$CreateActivationAction$$$CreateAssociationAction$$$CreateAssociationBatchAction$$$CreateDocumentAction$$$CreateMaintenanceWindowAction$$$CreatePatchBaselineAction$$$CreateResourceDataSyncAction$$$DeleteActivationAction$$$DeleteAssociationAction$$$DeleteDocumentAction$$$DeleteInventoryAction$$$DeleteMaintenanceWindowAction$$$DeleteParameterAction$$$DeleteParametersAction$$$DeletePatchBaselineAction$$$DeleteResourceDataSyncAction$$$DeregisterManagedInstanceAction$$$DeregisterPatchBaselineForPatchGroupAction$$$DeregisterTargetFromMaintenanceWindowAction$$$DeregisterTaskFromMaintenanceWindowAction$$$DescribeActivationsAction$$$DescribeAssociationAction$$$DescribeAutomationExecutionsAction$$$DescribeAutomationStepExecutionsAction$$$DescribeAvailablePatchesAction$$$DescribeDocumentAction$$$DescribeDocumentPermissionAction$$$DescribeEffectiveInstanceAssociationsAction$$$DescribeEffectivePatchesForPatchBaselineAction$$$DescribeInstanceAssociationsStatusAction$$$DescribeInstanceInformationAction$$$DescribeInstancePatchStatesAction$$$DescribeInstancePatchStatesForPatchGroupAction$$$DescribeInstancePatchesAction$$$DescribeInventoryDeletionsAction$$$DescribeMaintenanceWindowExecutionTaskInvocationsAction$$$DescribeMaintenanceWindowExecutionTasksAction$$$DescribeMaintenanceWindowExecutionsAction$$$DescribeMaintenanceWindowTargetsAction$$$DescribeMaintenanceWindowTasksAction$$$DescribeMaintenanceWindowsAction$$$DescribeParametersAction$$$DescribePatchBaselinesAction$$$DescribePatchGroupStateAction$$$DescribePatchGroupsAction$$$GetAutomationExecutionAction$$$GetCommandInvocationAction$$$GetDefaultPatchBaselineAction$$$GetDeployablePatchSnapshotForInstanceAction$$$GetDocumentAction$$$GetInventoryAction$$$GetInventorySchemaAction$$$GetMaintenanceWindowAction$$$GetMaintenanceWindowExecutionAction$$$GetMaintenanceWindowExecutionTaskAction$$$GetMaintenanceWindowExecutionTaskInvocationAction$$$GetMaintenanceWindowTaskAction$$$GetParameterAction$$$GetParameterHistoryAction$$$GetParametersAction$$$GetParametersByPathAction$$$GetPatchBaselineAction$$$GetPatchBaselineForPatchGroupAction$$$ListAssociationVersionsAction$$$ListAssociationsAction$$$ListCommandInvocationsAction$$$ListCommandsAction$$$ListComplianceItemsAction$$$ListComplianceSummariesAction$$$ListDocumentVersionsAction$$$ListDocumentsAction$$$ListInventoryEntriesAction$$$ListResourceComplianceSummariesAction$$$ListResourceDataSyncAction$$$ListTagsForResourceAction$$$ModifyDocumentPermissionAction$$$PutComplianceItemsAction$$$PutInventoryAction$$$PutParameterAction$$$RegisterDefaultPatchBaselineAction$$$RegisterPatchBaselineForPatchGroupAction$$$RegisterTargetWithMaintenanceWindowAction$$$RegisterTaskWithMaintenanceWindowAction$$$RemoveTagsFromResourceAction$$$SendAutomationSignalAction$$$SendCommandAction$$$StartAutomationExecutionAction$$$StopAutomationExecutionAction$$$UpdateAssociationAction$$$UpdateAssociationStatusAction$$$UpdateDocumentAction$$$UpdateDocumentDefaultVersionAction$$$UpdateMaintenanceWindowAction$$$UpdateMaintenanceWindowTargetAction$$$UpdateMaintenanceWindowTaskAction$$$UpdateManagedInstanceRoleAction$$$UpdatePatchBaselineAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum SsmRequest::<span class="name">Action</span><br/>flags SsmRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as SSM requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::AddTagsToResourceAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">SSM AddTagsToResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CancelCommandAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">SSM CancelCommand action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateActivationAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">SSM CreateActivation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateAssociationAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">SSM CreateAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateAssociationBatchAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">SSM CreateAssociationBatch action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateDocumentAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">SSM CreateDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">SSM CreateMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreatePatchBaselineAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">SSM CreatePatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::CreateResourceDataSyncAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">SSM CreateResourceDataSync action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteActivationAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">SSM DeleteActivation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteAssociationAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">SSM DeleteAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteDocumentAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">SSM DeleteDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteInventoryAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">SSM DeleteInventory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">SSM DeleteMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteParameterAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">SSM DeleteParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteParametersAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">SSM DeleteParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeletePatchBaselineAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">SSM DeletePatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeleteResourceDataSyncAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">SSM DeleteResourceDataSync action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeregisterManagedInstanceAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">SSM DeregisterManagedInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeregisterPatchBaselineForPatchGroupAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">SSM DeregisterPatchBaselineForPatchGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeregisterTargetFromMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">SSM DeregisterTargetFromMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DeregisterTaskFromMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">SSM DeregisterTaskFromMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeActivationsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">SSM DescribeActivations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeAssociationAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">SSM DescribeAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeAutomationExecutionsAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">SSM DescribeAutomationExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeAutomationStepExecutionsAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">SSM DescribeAutomationStepExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeAvailablePatchesAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">SSM DescribeAvailablePatches action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeDocumentAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">SSM DescribeDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeDocumentPermissionAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">SSM DescribeDocumentPermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeEffectiveInstanceAssociationsAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">SSM DescribeEffectiveInstanceAssociations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeEffectivePatchesForPatchBaselineAction</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">SSM DescribeEffectivePatchesForPatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInstanceAssociationsStatusAction</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">SSM DescribeInstanceAssociationsStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInstanceInformationAction</code></td><td class="topAlign tblval"><code>32</code></td><td class="topAlign">SSM DescribeInstanceInformation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInstancePatchStatesAction</code></td><td class="topAlign tblval"><code>33</code></td><td class="topAlign">SSM DescribeInstancePatchStates action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInstancePatchStatesForPatchGroupAction</code></td><td class="topAlign tblval"><code>34</code></td><td class="topAlign">SSM DescribeInstancePatchStatesForPatchGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInstancePatchesAction</code></td><td class="topAlign tblval"><code>35</code></td><td class="topAlign">SSM DescribeInstancePatches action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeInventoryDeletionsAction</code></td><td class="topAlign tblval"><code>36</code></td><td class="topAlign">SSM DescribeInventoryDeletions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowExecutionTaskInvocationsAction</code></td><td class="topAlign tblval"><code>37</code></td><td class="topAlign">SSM DescribeMaintenanceWindowExecutionTaskInvocations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowExecutionTasksAction</code></td><td class="topAlign tblval"><code>38</code></td><td class="topAlign">SSM DescribeMaintenanceWindowExecutionTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowExecutionsAction</code></td><td class="topAlign tblval"><code>39</code></td><td class="topAlign">SSM DescribeMaintenanceWindowExecutions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowTargetsAction</code></td><td class="topAlign tblval"><code>40</code></td><td class="topAlign">SSM DescribeMaintenanceWindowTargets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowTasksAction</code></td><td class="topAlign tblval"><code>41</code></td><td class="topAlign">SSM DescribeMaintenanceWindowTasks action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeMaintenanceWindowsAction</code></td><td class="topAlign tblval"><code>42</code></td><td class="topAlign">SSM DescribeMaintenanceWindows action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribeParametersAction</code></td><td class="topAlign tblval"><code>43</code></td><td class="topAlign">SSM DescribeParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribePatchBaselinesAction</code></td><td class="topAlign tblval"><code>44</code></td><td class="topAlign">SSM DescribePatchBaselines action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribePatchGroupStateAction</code></td><td class="topAlign tblval"><code>45</code></td><td class="topAlign">SSM DescribePatchGroupState action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::DescribePatchGroupsAction</code></td><td class="topAlign tblval"><code>46</code></td><td class="topAlign">SSM DescribePatchGroups action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetAutomationExecutionAction</code></td><td class="topAlign tblval"><code>47</code></td><td class="topAlign">SSM GetAutomationExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetCommandInvocationAction</code></td><td class="topAlign tblval"><code>48</code></td><td class="topAlign">SSM GetCommandInvocation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetDefaultPatchBaselineAction</code></td><td class="topAlign tblval"><code>49</code></td><td class="topAlign">SSM GetDefaultPatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetDeployablePatchSnapshotForInstanceAction</code></td><td class="topAlign tblval"><code>50</code></td><td class="topAlign">SSM GetDeployablePatchSnapshotForInstance action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetDocumentAction</code></td><td class="topAlign tblval"><code>51</code></td><td class="topAlign">SSM GetDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetInventoryAction</code></td><td class="topAlign tblval"><code>52</code></td><td class="topAlign">SSM GetInventory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetInventorySchemaAction</code></td><td class="topAlign tblval"><code>53</code></td><td class="topAlign">SSM GetInventorySchema action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>54</code></td><td class="topAlign">SSM GetMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetMaintenanceWindowExecutionAction</code></td><td class="topAlign tblval"><code>55</code></td><td class="topAlign">SSM GetMaintenanceWindowExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetMaintenanceWindowExecutionTaskAction</code></td><td class="topAlign tblval"><code>56</code></td><td class="topAlign">SSM GetMaintenanceWindowExecutionTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetMaintenanceWindowExecutionTaskInvocationAction</code></td><td class="topAlign tblval"><code>57</code></td><td class="topAlign">SSM GetMaintenanceWindowExecutionTaskInvocation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetMaintenanceWindowTaskAction</code></td><td class="topAlign tblval"><code>58</code></td><td class="topAlign">SSM GetMaintenanceWindowTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetParameterAction</code></td><td class="topAlign tblval"><code>59</code></td><td class="topAlign">SSM GetParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetParameterHistoryAction</code></td><td class="topAlign tblval"><code>60</code></td><td class="topAlign">SSM GetParameterHistory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetParametersAction</code></td><td class="topAlign tblval"><code>61</code></td><td class="topAlign">SSM GetParameters action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetParametersByPathAction</code></td><td class="topAlign tblval"><code>62</code></td><td class="topAlign">SSM GetParametersByPath action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetPatchBaselineAction</code></td><td class="topAlign tblval"><code>63</code></td><td class="topAlign">SSM GetPatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::GetPatchBaselineForPatchGroupAction</code></td><td class="topAlign tblval"><code>64</code></td><td class="topAlign">SSM GetPatchBaselineForPatchGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListAssociationVersionsAction</code></td><td class="topAlign tblval"><code>65</code></td><td class="topAlign">SSM ListAssociationVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListAssociationsAction</code></td><td class="topAlign tblval"><code>66</code></td><td class="topAlign">SSM ListAssociations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListCommandInvocationsAction</code></td><td class="topAlign tblval"><code>67</code></td><td class="topAlign">SSM ListCommandInvocations action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListCommandsAction</code></td><td class="topAlign tblval"><code>68</code></td><td class="topAlign">SSM ListCommands action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListComplianceItemsAction</code></td><td class="topAlign tblval"><code>69</code></td><td class="topAlign">SSM ListComplianceItems action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListComplianceSummariesAction</code></td><td class="topAlign tblval"><code>70</code></td><td class="topAlign">SSM ListComplianceSummaries action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListDocumentVersionsAction</code></td><td class="topAlign tblval"><code>71</code></td><td class="topAlign">SSM ListDocumentVersions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListDocumentsAction</code></td><td class="topAlign tblval"><code>72</code></td><td class="topAlign">SSM ListDocuments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListInventoryEntriesAction</code></td><td class="topAlign tblval"><code>73</code></td><td class="topAlign">SSM ListInventoryEntries action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListResourceComplianceSummariesAction</code></td><td class="topAlign tblval"><code>74</code></td><td class="topAlign">SSM ListResourceComplianceSummaries action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListResourceDataSyncAction</code></td><td class="topAlign tblval"><code>75</code></td><td class="topAlign">SSM ListResourceDataSync action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ListTagsForResourceAction</code></td><td class="topAlign tblval"><code>76</code></td><td class="topAlign">SSM ListTagsForResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::ModifyDocumentPermissionAction</code></td><td class="topAlign tblval"><code>77</code></td><td class="topAlign">SSM ModifyDocumentPermission action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::PutComplianceItemsAction</code></td><td class="topAlign tblval"><code>78</code></td><td class="topAlign">SSM PutComplianceItems action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::PutInventoryAction</code></td><td class="topAlign tblval"><code>79</code></td><td class="topAlign">SSM PutInventory action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::PutParameterAction</code></td><td class="topAlign tblval"><code>80</code></td><td class="topAlign">SSM PutParameter action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::RegisterDefaultPatchBaselineAction</code></td><td class="topAlign tblval"><code>81</code></td><td class="topAlign">SSM RegisterDefaultPatchBaseline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::RegisterPatchBaselineForPatchGroupAction</code></td><td class="topAlign tblval"><code>82</code></td><td class="topAlign">SSM RegisterPatchBaselineForPatchGroup action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::RegisterTargetWithMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>83</code></td><td class="topAlign">SSM RegisterTargetWithMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::RegisterTaskWithMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>84</code></td><td class="topAlign">SSM RegisterTaskWithMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::RemoveTagsFromResourceAction</code></td><td class="topAlign tblval"><code>85</code></td><td class="topAlign">SSM RemoveTagsFromResource action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::SendAutomationSignalAction</code></td><td class="topAlign tblval"><code>86</code></td><td class="topAlign">SSM SendAutomationSignal action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::SendCommandAction</code></td><td class="topAlign tblval"><code>87</code></td><td class="topAlign">SSM SendCommand action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::StartAutomationExecutionAction</code></td><td class="topAlign tblval"><code>88</code></td><td class="topAlign">SSM StartAutomationExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::StopAutomationExecutionAction</code></td><td class="topAlign tblval"><code>89</code></td><td class="topAlign">SSM StopAutomationExecution action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateAssociationAction</code></td><td class="topAlign tblval"><code>90</code></td><td class="topAlign">SSM UpdateAssociation action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateAssociationStatusAction</code></td><td class="topAlign tblval"><code>91</code></td><td class="topAlign">SSM UpdateAssociationStatus action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateDocumentAction</code></td><td class="topAlign tblval"><code>92</code></td><td class="topAlign">SSM UpdateDocument action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateDocumentDefaultVersionAction</code></td><td class="topAlign tblval"><code>93</code></td><td class="topAlign">SSM UpdateDocumentDefaultVersion action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateMaintenanceWindowAction</code></td><td class="topAlign tblval"><code>94</code></td><td class="topAlign">SSM UpdateMaintenanceWindow action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateMaintenanceWindowTargetAction</code></td><td class="topAlign tblval"><code>95</code></td><td class="topAlign">SSM UpdateMaintenanceWindowTarget action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateMaintenanceWindowTaskAction</code></td><td class="topAlign tblval"><code>96</code></td><td class="topAlign">SSM UpdateMaintenanceWindowTask action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdateManagedInstanceRoleAction</code></td><td class="topAlign tblval"><code>97</code></td><td class="topAlign">SSM UpdateManagedInstanceRole action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::SSM::SsmRequest::UpdatePatchBaselineAction</code></td><td class="topAlign tblval"><code>98</code></td><td class="topAlign">SSM UpdatePatchBaseline action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$SsmRequest[overload1]$$$SsmRequestconstAction -->
+<h3 class="fn" id="SsmRequest"><a name="SsmRequest"></a>SsmRequest::<span class="name">SsmRequest</span>(const <span class="type"><a href="qtaws-ssm-ssmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-ssm-ssmrequest.html">SsmRequest</a> object for SSM <i>action</i>.</p>
+<!-- @@@SsmRequest -->
+<!-- $$$SsmRequest$$$SsmRequestconstSsmRequest& -->
+<h3 class="fn" id="SsmRequest-1"><a name="SsmRequest-1"></a>SsmRequest::<span class="name">SsmRequest</span>(const <span class="type"><a href="qtaws-ssm-ssmrequest.html#SsmRequest">SsmRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@SsmRequest -->
+<!-- $$$SsmRequest$$$SsmRequestSsmRequestPrivate*const -->
+<h3 class="fn" id="SsmRequest-2"><a name="SsmRequest-2"></a><code>[protected] </code>SsmRequest::<span class="name">SsmRequest</span>(<span class="type">SsmRequestPrivate</span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-ssm-ssmrequest.html">SsmRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from SsmRequestPrivate.</p>
+<!-- @@@SsmRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-ssm-ssmrequest.html#Action-enum">Action</a></span> SsmRequest::<span class="name">action</span>() const</h3>
+<p>Returns the SSM action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> SsmRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the SSM action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> SsmRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the SSM API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> SsmRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> SsmRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> SsmRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;SsmRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> SsmRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-ssm-ssmrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the SSM action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> SsmRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the SSM API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> SsmRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> SsmRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-ssm-ssmrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> SsmRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the SSM request using the given <i>endpoint</i>.</p>
+<p>This SSM implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-ssm-ssmrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constSsmRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-ssm-ssmrequest.html#SsmRequest">SsmRequest</a></span> &amp;SsmRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-ssm-ssmrequest.html#SsmRequest">SsmRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-ssm-ssmrequest.html">SsmRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constSsmRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> SsmRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-ssm-ssmrequest.html#SsmRequest">SsmRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>
