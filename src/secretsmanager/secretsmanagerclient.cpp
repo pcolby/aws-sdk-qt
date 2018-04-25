@@ -104,8 +104,8 @@ namespace SecretsManager {
  *  We recommend that you use the AWS SDKs to make programmatic API calls to Secrets Manager. However, you also can use the
  *  Secrets Manager HTTP Query API to make direct calls to the Secrets Manager web service. To learn more about the Secrets
  *  Manager HTTP Query API, see <a
- *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_query-requests.html">Making Query Requests</a> in
- *  the <i>AWS Secrets Manager User Guide</i>.
+ *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/query-requests.html">Making Query Requests</a> in the
+ *  <i>AWS Secrets Manager User Guide</i>.
  * 
  *  </p
  * 
@@ -297,19 +297,19 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * list>
  *
- * You provide the secret data to be encrypted by putting text in the <code>SecretString</code> parameter or binary data in
- * the <code>SecretBinary</code> parameter. If you include <code>SecretString</code> or <code>SecretBinary</code> then
- * Secrets Manager also creates an initial secret version and, if you don't supply a staging label, automatically maps the
- * new version's ID to the staging label
+ * You provide the secret data to be encrypted by putting text in either the <code>SecretString</code> parameter or binary
+ * data in the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
+ * <code>SecretBinary</code> then Secrets Manager also creates an initial secret version and, if you don't supply a staging
+ * label, automatically maps the new version's ID to the staging label
  *
  * <code>AWSCURRENT</code>> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
+ * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager
+ * uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this
+ * key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in the same
+ * AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in AWS
+ * having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
@@ -513,10 +513,10 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the contents of the encrypted fields <code>SecretString</code> and <code>SecretBinary</code> from the
- * specified version of a
+ * Retrieves the contents of the encrypted fields <code>SecretString</code> or <code>SecretBinary</code> from the specified
+ * version of a secret, whichever contains
  *
- * secret>
+ * content>
  *
  * <b>Minimum permissions</b>
  *
@@ -668,12 +668,12 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  *
  * from> </li> </ul> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
+ * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager
+ * uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this
+ * key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in the same
+ * AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in AWS
+ * having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
@@ -991,12 +991,12 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * ones> </li> </ul> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
+ * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager
+ * uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this
+ * key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in the same
+ * AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in AWS
+ * having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
