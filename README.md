@@ -67,14 +67,14 @@ popd
 
 ## API Documentation
 
-See the doxygen-generated [API documentation](http://pcolby.github.io/aws-sdk-qt/head/api/annotated.html).
+See the [API documentation](http://pcolby.github.io/aws-sdk-qt/head/api/qtaws-index.html).
 
-There's also [internal documentation](http://pcolby.github.io/aws-sdk-qt/head/internal/annotated.html) for those
-interested in the internal library implementation.
+There's also [internal documentation](http://pcolby.github.io/aws-sdk-qt/head/internal/qtaws-index.html)
+for anyone interested in the internal library implementation.
 
 ## Test Coverage
 
 See the [test coverage report](http://pcolby.github.io/aws-sdk-qt/head/coverage/).
 
-[AWS]: http://aws.amazon.com/ "Amazon Web Services"
-[Qt]: http://qt.io/ "Qt Cross-platform Devleopment Framework"
+[AWS]: https://aws.amazon.com/ "Amazon Web Services"
+[Qt]: https://qt.io/ "Qt Cross-platform Devleopment Framework"
