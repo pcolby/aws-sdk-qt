@@ -77,4 +77,4 @@ interested in the internal library implementation.
 See the [test coverage report](http://pcolby.github.io/aws-sdk-qt/head/coverage/).
 
 [AWS]: http://aws.amazon.com/ "Amazon Web Services"
-[Qt]: http://qt-project.org/ "Qt Cross-platform Devleopment Framework"
+[Qt]: http://qt.io/ "Qt Cross-platform Devleopment Framework"
