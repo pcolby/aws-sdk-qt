@@ -6,4 +6,4 @@ files extracted from [aws4_testsuite.zip](https://awsiammedia.s3.amazonaws.com/p
 
 See http://docs.aws.amazon.com/general/latest/gr/signature-v4-test-suite.html for licensing, etc.
 
-These files are applied by the AWS SDK for Qt's unit tests only.
+These files are applied by QtAws unit tests only.

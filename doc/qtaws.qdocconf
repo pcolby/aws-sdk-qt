@@ -1,7 +1,7 @@
 include(global/qtaws-defaults.qdocconf)
 
 project = QtAws
-description = AWS SDK for Qt
+description = Unnoficial AWS SDK for Qt
 headerdirs  = src
 sourcedirs  = src
 

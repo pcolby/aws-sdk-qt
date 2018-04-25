@@ -1,4 +1,4 @@
-# AWS SDK for Qt
+# QtAws
 [![Build Status](https://img.shields.io/travis/pcolby/aws-sdk-qt/master.svg "Linux (Travis CI)")](https://travis-ci.org/pcolby/aws-sdk-qt)
 [![Build Status](https://img.shields.io/appveyor/ci/pcolby/aws-sdk-qt/master.svg "Windows (AppVeyor)")](https://ci.appveyor.com/project/pcolby/aws-sdk-qt)
 [![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/aws-sdk-qt.svg?label=codecov)](https://codecov.io/github/pcolby/aws-sdk-qt)
@@ -8,7 +8,7 @@
 [![GitHub Release](http://img.shields.io/github/release/pcolby/aws-sdk-qt.svg)](https://github.com/pcolby/aws-sdk-qt/releases/latest)
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 
-The AWS SDK for Qt provides a modern [Qt] (version 5.1 or later) interface for [AWS].
+QtAws is an *unnoficial* [AWS] SDK for [Qt].
 
 The library is still in early stages of development, but already includes much
 of the basic framework plumbing required for implementing asynchronous AWS
@@ -41,7 +41,7 @@ worthwhile :)
 
 ## Requirements
 ### Qt 5.1+
-AWS SDK for Qt requires Qt 5.1 or later, as the library makes use of Qt's
+QtAws requires Qt 5.1 or later, as the library makes use of Qt's
 QMessageAuthenticationCode class for generating HMAC codes for AWS request
 signatures, and that class was first added in Qt 5.1.0.
 

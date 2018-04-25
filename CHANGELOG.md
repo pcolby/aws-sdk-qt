@@ -1,4 +1,4 @@
-## AWS SDK for Qt Changelog
+## QtAws Changelog
 
 ### 0.3.0 (_unreleased_)
 Initial release with broad implementation based on code-generation from
