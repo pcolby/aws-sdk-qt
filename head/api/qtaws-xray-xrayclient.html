@@ -64,9 +64,11 @@
 <h2 id="public-slots">Public Slots</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> BatchGetTracesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#batchGetTraces">batchGetTraces</a></b>(const BatchGetTracesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetEncryptionConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getEncryptionConfig">getEncryptionConfig</a></b>(const GetEncryptionConfigRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> GetServiceGraphResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getServiceGraph">getServiceGraph</a></b>(const GetServiceGraphRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> GetTraceGraphResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getTraceGraph">getTraceGraph</a></b>(const GetTraceGraphRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> GetTraceSummariesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#getTraceSummaries">getTraceSummaries</a></b>(const GetTraceSummariesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutEncryptionConfigResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#putEncryptionConfig">putEncryptionConfig</a></b>(const PutEncryptionConfigRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> PutTelemetryRecordsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#putTelemetryRecords">putTelemetryRecords</a></b>(const PutTelemetryRecordsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> PutTraceSegmentsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayclient.html#putTraceSegments">putTraceSegments</a></b>(const PutTraceSegmentsRequest &amp;<i>request</i>)</td></tr>
 </table></div>
@@ -101,6 +103,11 @@
 <p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-batchgettracesresponse.html">BatchGetTracesResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a single request. Use &lt;code&gt;GetTraceSummaries&lt;/code&gt; to get a list of trace</p>
 <!-- @@@batchGetTraces -->
+<!-- $$$getEncryptionConfig[overload1]$$$getEncryptionConfigconstGetEncryptionConfigRequest& -->
+<h3 class="fn" id="getEncryptionConfig"><a name="getEncryptionConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-getencryptionconfigresponse.html">GetEncryptionConfigResponse</a></span> *XRayClient::<span class="name">getEncryptionConfig</span>(const <span class="type"><a href="qtaws-xray-getencryptionconfigrequest.html">GetEncryptionConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-getencryptionconfigresponse.html">GetEncryptionConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the current encryption configuration for X-Ray</p>
+<!-- @@@getEncryptionConfig -->
 <!-- $$$getServiceGraph[overload1]$$$getServiceGraphconstGetServiceGraphRequest& -->
 <h3 class="fn" id="getServiceGraph"><a name="getServiceGraph"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-getservicegraphresponse.html">GetServiceGraphResponse</a></span> *XRayClient::<span class="name">getServiceGraph</span>(const <span class="type"><a href="qtaws-xray-getservicegraphrequest.html">GetServiceGraphRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-getservicegraphresponse.html">GetServiceGraphResponse</a> object to track the result.</p>
@@ -126,6 +133,11 @@
 <p>&lt;/p</p>
 <p>For a full list of indexed fields and keywords that you can use in filter expressions, see &lt;a href=&quot;http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html&quot;&gt;Using Filter Expressions&lt;/a&gt; in the &lt;i&gt;AWS X-Ray Developer</p>
 <!-- @@@getTraceSummaries -->
+<!-- $$$putEncryptionConfig[overload1]$$$putEncryptionConfigconstPutEncryptionConfigRequest& -->
+<h3 class="fn" id="putEncryptionConfig"><a name="putEncryptionConfig"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-putencryptionconfigresponse.html">PutEncryptionConfigResponse</a></span> *XRayClient::<span class="name">putEncryptionConfig</span>(const <span class="type"><a href="qtaws-xray-putencryptionconfigrequest.html">PutEncryptionConfigRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-putencryptionconfigresponse.html">PutEncryptionConfigResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the encryption configuration for X-Ray</p>
+<!-- @@@putEncryptionConfig -->
 <!-- $$$putTelemetryRecords[overload1]$$$putTelemetryRecordsconstPutTelemetryRecordsRequest& -->
 <h3 class="fn" id="putTelemetryRecords"><a name="putTelemetryRecords"></a><code>[slot] </code><span class="type"><a href="qtaws-xray-puttelemetryrecordsresponse.html">PutTelemetryRecordsResponse</a></span> *XRayClient::<span class="name">putTelemetryRecords</span>(const <span class="type"><a href="qtaws-xray-puttelemetryrecordsrequest.html">PutTelemetryRecordsRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-puttelemetryrecordsresponse.html">PutTelemetryRecordsResponse</a> object to track the result.</p>
@@ -136,7 +148,7 @@
 <p>Sends <i>request</i> to the <a href="qtaws-xray-xrayclient.html">XRayClient</a> service, and returns a pointer to an <a href="qtaws-xray-puttracesegmentsresponse.html">PutTraceSegmentsResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of</p>
 <p>subsegments&gt;</p>
-<p>Segments must include the following fields. For the full segment document schema, see &lt;a href=&quot;http://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html&quot;&gt;AWS X-Ray Segment Documents&lt;/a&gt; in the &lt;i&gt;AWS X-Ray Developer</p>
+<p>Segments must include the following fields. For the full segment document schema, see &lt;a href=&quot;https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html&quot;&gt;AWS X-Ray Segment Documents&lt;/a&gt; in the &lt;i&gt;AWS X-Ray Developer</p>
 <p>Guide&lt;/i&gt;&gt; &lt;p class=&quot;title&quot;&gt; &lt;b&gt;Required Segment Document Fields&lt;/b&gt;</p>
 <p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;code&gt;name&lt;/code&gt; - The name of the service that handled the</p>

@@ -50,14 +50,14 @@
 <!-- @@@XRayRequest -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;XRayRequest&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-xray-batchgettracesrequest.html">QtAws::XRay::BatchGetTracesRequest</a>, <a href="qtaws-xray-getservicegraphrequest.html">QtAws::XRay::GetServiceGraphRequest</a>, <a href="qtaws-xray-gettracegraphrequest.html">QtAws::XRay::GetTraceGraphRequest</a>, <a href="qtaws-xray-gettracesummariesrequest.html">QtAws::XRay::GetTraceSummariesRequest</a>, <a href="qtaws-xray-puttelemetryrecordsrequest.html">QtAws::XRay::PutTelemetryRecordsRequest</a>, and <a href="qtaws-xray-puttracesegmentsrequest.html">QtAws::XRay::PutTraceSegmentsRequest</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-xray-batchgettracesrequest.html">QtAws::XRay::BatchGetTracesRequest</a>, <a href="qtaws-xray-getencryptionconfigrequest.html">QtAws::XRay::GetEncryptionConfigRequest</a>, <a href="qtaws-xray-getservicegraphrequest.html">QtAws::XRay::GetServiceGraphRequest</a>, <a href="qtaws-xray-gettracegraphrequest.html">QtAws::XRay::GetTraceGraphRequest</a>, <a href="qtaws-xray-gettracesummariesrequest.html">QtAws::XRay::GetTraceSummariesRequest</a>, <a href="qtaws-xray-putencryptionconfigrequest.html">QtAws::XRay::PutEncryptionConfigRequest</a>, <a href="qtaws-xray-puttelemetryrecordsrequest.html">QtAws::XRay::PutTelemetryRecordsRequest</a>, and <a href="qtaws-xray-puttracesegmentsrequest.html">QtAws::XRay::PutTraceSegmentsRequest</a></p>
 </td></tr></table></div><ul>
 <li><a href="qtaws-xray-xrayrequest-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayrequest.html#Action-enum">Action</a></b> { BatchGetTracesAction, GetServiceGraphAction, GetTraceGraphAction, GetTraceSummariesAction, PutTelemetryRecordsAction, PutTraceSegmentsAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayrequest.html#Action-enum">Action</a></b> { BatchGetTracesAction, GetEncryptionConfigAction, GetServiceGraphAction, GetTraceGraphAction, ..., PutTraceSegmentsAction }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-xray-xrayrequest.html#Action-enum">Actions</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
@@ -104,16 +104,18 @@
 <!-- @@@XRayRequest -->
 <div class="types">
 <h2>Member Type Documentation</h2>
-<!-- $$$Action$$$BatchGetTracesAction$$$GetServiceGraphAction$$$GetTraceGraphAction$$$GetTraceSummariesAction$$$PutTelemetryRecordsAction$$$PutTraceSegmentsAction -->
+<!-- $$$Action$$$BatchGetTracesAction$$$GetEncryptionConfigAction$$$GetServiceGraphAction$$$GetTraceGraphAction$$$GetTraceSummariesAction$$$PutEncryptionConfigAction$$$PutTelemetryRecordsAction$$$PutTraceSegmentsAction -->
 <h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum XRayRequest::<span class="name">Action</span><br/>flags XRayRequest::<span class="name">Actions</span></h3>
 <p>This enum describes the actions that can be performed as <a href="qtaws-xray.html">XRay</a> requests.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::BatchGetTracesAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> BatchGetTraces action.</td></tr>
-<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetServiceGraphAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetServiceGraph action.</td></tr>
-<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetTraceGraphAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetTraceGraph action.</td></tr>
-<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetTraceSummariesAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetTraceSummaries action.</td></tr>
-<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::PutTelemetryRecordsAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> PutTelemetryRecords action.</td></tr>
-<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::PutTraceSegmentsAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> PutTraceSegments action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetEncryptionConfigAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetEncryptionConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetServiceGraphAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetServiceGraph action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetTraceGraphAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetTraceGraph action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::GetTraceSummariesAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> GetTraceSummaries action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::PutEncryptionConfigAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> PutEncryptionConfig action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::PutTelemetryRecordsAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> PutTelemetryRecords action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::XRay::XRayRequest::PutTraceSegmentsAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-xray.html">XRay</a> PutTraceSegments action.</td></tr>
 </table></div>
 <p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
 <!-- @@@Action -->

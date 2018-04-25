@@ -289,7 +289,9 @@
 <p>Celebrity recognition in a video is an asynchronous operation. Analysis is started by a call to which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the celebrity recognition operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartCelebrityRecognition&lt;/code&gt;. To get the results of the celebrity recognition analysis, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetCelebrityDetection&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartCelebrityDetection&lt;/code&gt;. For more information, see</p>
 <p>&lt;a&gt;video&lt;/a&gt;&gt;</p>
 <p>&lt;code&gt;GetCelebrityRecognition&lt;/code&gt; returns detected celebrities and the time(s) they are detected in an array (&lt;code&gt;Celebrities&lt;/code&gt;) of objects. Each &lt;code&gt;CelebrityRecognition&lt;/code&gt; contains information about the celebrity in a object and the time, &lt;code&gt;Timestamp&lt;/code&gt;, the celebrity was detected.</p>
-<p>&lt;/p</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>&lt;code&gt;GetCelebrityRecognition&lt;/code&gt; only returns the default facial attributes (&lt;code&gt;BoundingBox&lt;/code&gt;, &lt;code&gt;Confidence&lt;/code&gt;, &lt;code&gt;Landmarks&lt;/code&gt;, &lt;code&gt;Pose&lt;/code&gt;, and &lt;code&gt;Quality&lt;/code&gt;). The other facial attributes listed in the &lt;code&gt;Face&lt;/code&gt; object of the following response syntax are not returned. For more information, see .</p>
+<p>&lt;/p &lt;/note&gt;</p>
 <p>By default, the &lt;code&gt;Celebrities&lt;/code&gt; array is sorted by time (milliseconds from the start of the video). You can also sort the array by celebrity by specifying the value &lt;code&gt;ID&lt;/code&gt; in the &lt;code&gt;SortBy&lt;/code&gt; input</p>
 <p>parameter&gt;</p>
 <p>The &lt;code&gt;CelebrityDetail&lt;/code&gt; object includes the celebrity identifer and additional information urls. If you don't store the additional information urls, you can get them later by calling with the celebrity</p>
@@ -331,8 +333,10 @@
 <p>video&gt;</p>
 <p>Face search in a video is an asynchronous operation. You start face search by calling to which returns a job identifier (&lt;code&gt;JobId&lt;/code&gt;). When the search operation finishes, Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. To get the search results, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call &lt;code&gt;GetFaceSearch&lt;/code&gt; and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to &lt;code&gt;StartFaceSearch&lt;/code&gt;. For more information, see</p>
 <p>&lt;a&gt;collections&lt;/a&gt;&gt;</p>
-<p>The search results are retured in an array, &lt;code&gt;Persons&lt;/code&gt;, of objects. Each&lt;code&gt;PersonMatch&lt;/code&gt; element contains details about the matching faces in the input collection, person information for the matched person, and the time the person was matched in the</p>
-<p>video&gt;</p>
+<p>The search results are retured in an array, &lt;code&gt;Persons&lt;/code&gt;, of objects. Each&lt;code&gt;PersonMatch&lt;/code&gt; element contains details about the matching faces in the input collection, person information (facial attributes, bounding boxes, and person identifer) for the matched person, and the time the person was matched in the</p>
+<p>video&gt; &lt;note&gt;</p>
+<p>&lt;code&gt;GetFaceSearch&lt;/code&gt; only returns the default facial attributes (&lt;code&gt;BoundingBox&lt;/code&gt;, &lt;code&gt;Confidence&lt;/code&gt;, &lt;code&gt;Landmarks&lt;/code&gt;, &lt;code&gt;Pose&lt;/code&gt;, and &lt;code&gt;Quality&lt;/code&gt;). The other facial attributes listed in the &lt;code&gt;Face&lt;/code&gt; object of the following response syntax are not returned. For more information, see .</p>
+<p>&lt;/p &lt;/note&gt;</p>
 <p>By default, the &lt;code&gt;Persons&lt;/code&gt; array is sorted by the time, in milliseconds from the start of the video, persons are matched. You can also sort by persons by specifying &lt;code&gt;INDEX&lt;/code&gt; for the &lt;code&gt;SORTBY&lt;/code&gt; input</p>
 <!-- @@@getFaceSearch -->
 <!-- $$$getLabelDetection[overload1]$$$getLabelDetectionconstGetLabelDetectionRequest& -->
@@ -358,7 +362,9 @@
 <p>To get the results of the person tracking operation, first check that the status value published to the Amazon SNS topic is &lt;code&gt;SUCCEEDED&lt;/code&gt;. If so, call and pass the job identifier (&lt;code&gt;JobId&lt;/code&gt;) from the initial call to</p>
 <p>&lt;code&gt;StartPersonTracking&lt;/code&gt;&gt;</p>
 <p>&lt;code&gt;GetPersonTracking&lt;/code&gt; returns an array, &lt;code&gt;Persons&lt;/code&gt;, of tracked persons and the time(s) they were tracked in the video.</p>
-<p>&lt;/p</p>
+<p>&lt;/p &lt;note&gt;</p>
+<p>&lt;code&gt;GetPersonTracking&lt;/code&gt; only returns the default facial attributes (&lt;code&gt;BoundingBox&lt;/code&gt;, &lt;code&gt;Confidence&lt;/code&gt;, &lt;code&gt;Landmarks&lt;/code&gt;, &lt;code&gt;Pose&lt;/code&gt;, and &lt;code&gt;Quality&lt;/code&gt;). The other facial attributes listed in the &lt;code&gt;Face&lt;/code&gt; object of the following response syntax are not returned. For more information, see .</p>
+<p>&lt;/p &lt;/note&gt;</p>
 <p>By default, the array is sorted by the time(s) a person is tracked in the video. You can sort by tracked persons by specifying &lt;code&gt;INDEX&lt;/code&gt; for the &lt;code&gt;SortBy&lt;/code&gt; input</p>
 <p>parameter&gt;</p>
 <p>Use the &lt;code&gt;MaxResults&lt;/code&gt; parameter to limit the number of items returned. If there are more results than specified in &lt;code&gt;MaxResults&lt;/code&gt;, the value of &lt;code&gt;NextToken&lt;/code&gt; in the operation response contains a pagination token for getting the next set of results. To get the next page of results, call &lt;code&gt;GetPersonTracking&lt;/code&gt; and populate the &lt;code&gt;NextToken&lt;/code&gt; request parameter with the token value returned from the previous call to</p>
