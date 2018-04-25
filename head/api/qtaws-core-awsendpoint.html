@@ -87,7 +87,7 @@
 <h2 id="details">Detailed Description</h2>
 <p>The <a href="qtaws-core-awsendpoint.html">AwsEndpoint</a> class provides information about AWS endpoints.</p>
 <p><b>Note: </b>This class provides fairly low-level access to AWS endpoint data. You should consider using the <a href="qtaws-core-awsregion.html">AwsRegion</a> and/or various AwsService-derived classes in preference to using this class directly where possible.</p><p>This class parses the `endpoint.xml` data available at http://aws-sdk-configurations.amazonwebservices.com/endpoints.xml</p>
-<p>The `endpoint.xml` file is embedded as a resource in the the AWS SDK for Qt library - not fetched remotely at runtime.</p>
+<p>The `endpoint.xml` file is embedded as a resource in the <a href="qtaws.html">QtAws</a> library - not fetched remotely at runtime.</p>
 <p>Example usage:</p>
 <pre class="cpp">AwsEndpoint endpoint(QLatin1String(<span class="string">&quot;cloudformation.us-east-1.amazonaws.com&quot;</span>));
 
