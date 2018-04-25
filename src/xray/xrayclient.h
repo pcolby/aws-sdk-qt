@@ -30,12 +30,16 @@ namespace XRay {
 class XRayClientPrivate;
 class BatchGetTracesRequest;
 class BatchGetTracesResponse;
+class GetEncryptionConfigRequest;
+class GetEncryptionConfigResponse;
 class GetServiceGraphRequest;
 class GetServiceGraphResponse;
 class GetTraceGraphRequest;
 class GetTraceGraphResponse;
 class GetTraceSummariesRequest;
 class GetTraceSummariesResponse;
+class PutEncryptionConfigRequest;
+class PutEncryptionConfigResponse;
 class PutTelemetryRecordsRequest;
 class PutTelemetryRecordsResponse;
 class PutTraceSegmentsRequest;
@@ -58,9 +62,11 @@ public:
 
 public slots:
     BatchGetTracesResponse * batchGetTraces(const BatchGetTracesRequest &request);
+    GetEncryptionConfigResponse * getEncryptionConfig(const GetEncryptionConfigRequest &request);
     GetServiceGraphResponse * getServiceGraph(const GetServiceGraphRequest &request);
     GetTraceGraphResponse * getTraceGraph(const GetTraceGraphRequest &request);
     GetTraceSummariesResponse * getTraceSummaries(const GetTraceSummariesRequest &request);
+    PutEncryptionConfigResponse * putEncryptionConfig(const PutEncryptionConfigRequest &request);
     PutTelemetryRecordsResponse * putTelemetryRecords(const PutTelemetryRecordsRequest &request);
     PutTraceSegmentsResponse * putTraceSegments(const PutTraceSegmentsRequest &request);
 

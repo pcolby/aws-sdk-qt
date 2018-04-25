@@ -38,9 +38,11 @@ public:
     /// Actions supported by XRay.
     enum Action {
         BatchGetTracesAction,
+        GetEncryptionConfigAction,
         GetServiceGraphAction,
         GetTraceGraphAction,
         GetTraceSummariesAction,
+        PutEncryptionConfigAction,
         PutTelemetryRecordsAction,
         PutTraceSegmentsAction,
     };

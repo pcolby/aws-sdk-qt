@@ -37,9 +37,11 @@ namespace XRay {
  * requests.
  *
  * \value BatchGetTracesAction XRay BatchGetTraces action.
+ * \value GetEncryptionConfigAction XRay GetEncryptionConfig action.
  * \value GetServiceGraphAction XRay GetServiceGraph action.
  * \value GetTraceGraphAction XRay GetTraceGraph action.
  * \value GetTraceSummariesAction XRay GetTraceSummaries action.
+ * \value PutEncryptionConfigAction XRay PutEncryptionConfig action.
  * \value PutTelemetryRecordsAction XRay PutTelemetryRecords action.
  * \value PutTraceSegmentsAction XRay PutTraceSegments action.
  */

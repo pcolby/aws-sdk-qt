@@ -23,12 +23,16 @@
 #include "core/awssignaturev4.h"
 #include "batchgettracesrequest.h"
 #include "batchgettracesresponse.h"
+#include "getencryptionconfigrequest.h"
+#include "getencryptionconfigresponse.h"
 #include "getservicegraphrequest.h"
 #include "getservicegraphresponse.h"
 #include "gettracegraphrequest.h"
 #include "gettracegraphresponse.h"
 #include "gettracesummariesrequest.h"
 #include "gettracesummariesresponse.h"
+#include "putencryptionconfigrequest.h"
+#include "putencryptionconfigresponse.h"
 #include "puttelemetryrecordsrequest.h"
 #include "puttelemetryrecordsresponse.h"
 #include "puttracesegmentsrequest.h"
@@ -128,6 +132,19 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
 
 /*!
  * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the current encryption configuration for X-Ray
+ */
+GetEncryptionConfigResponse * XRayClient::getEncryptionConfig(const GetEncryptionConfigRequest &request)
+{
+    return qobject_cast<GetEncryptionConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
  * GetServiceGraphResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -193,6 +210,19 @@ GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummarie
 
 /*!
  * Sends \a request to the XRayClient service, and returns a pointer to an
+ * PutEncryptionConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the encryption configuration for X-Ray
+ */
+PutEncryptionConfigResponse * XRayClient::putEncryptionConfig(const PutEncryptionConfigRequest &request)
+{
+    return qobject_cast<PutEncryptionConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
  * PutTelemetryRecordsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -216,8 +246,8 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  * subsegments>
  *
  * Segments must include the following fields. For the full segment document schema, see <a
- * href="http://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html">AWS X-Ray Segment Documents</a> in
- * the <i>AWS X-Ray Developer
+ * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html">AWS X-Ray Segment Documents</a>
+ * in the <i>AWS X-Ray Developer
  *
  * Guide</i>> <p class="title"> <b>Required Segment Document Fields</b>
  *

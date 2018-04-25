@@ -14,6 +14,10 @@ HEADERS += \
     batchgettracesrequest_p.h \
     batchgettracesresponse.h \
     batchgettracesresponse_p.h \
+    getencryptionconfigrequest.h \
+    getencryptionconfigrequest_p.h \
+    getencryptionconfigresponse.h \
+    getencryptionconfigresponse_p.h \
     getservicegraphrequest.h \
     getservicegraphrequest_p.h \
     getservicegraphresponse.h \
@@ -26,6 +30,10 @@ HEADERS += \
     gettracesummariesrequest_p.h \
     gettracesummariesresponse.h \
     gettracesummariesresponse_p.h \
+    putencryptionconfigrequest.h \
+    putencryptionconfigrequest_p.h \
+    putencryptionconfigresponse.h \
+    putencryptionconfigresponse_p.h \
     puttelemetryrecordsrequest.h \
     puttelemetryrecordsrequest_p.h \
     puttelemetryrecordsresponse.h \
@@ -44,12 +52,16 @@ HEADERS += \
 SOURCES += \
     batchgettracesrequest.cpp \
     batchgettracesresponse.cpp \
+    getencryptionconfigrequest.cpp \
+    getencryptionconfigresponse.cpp \
     getservicegraphrequest.cpp \
     getservicegraphresponse.cpp \
     gettracegraphrequest.cpp \
     gettracegraphresponse.cpp \
     gettracesummariesrequest.cpp \
     gettracesummariesresponse.cpp \
+    putencryptionconfigrequest.cpp \
+    putencryptionconfigresponse.cpp \
     puttelemetryrecordsrequest.cpp \
     puttelemetryrecordsresponse.cpp \
     puttracesegmentsrequest.cpp \
