@@ -1,9 +1,9 @@
 #!/bin/bash
 
-BUILDDIR=~/tmp/build/libqtaws-qmake-gcc-qt591
+BUILDDIR=~/tmp/build/qdocs
 
 rm -rf head
 mkdir head
-cp -a "$BUILDDIR/doc/doxygen/api" head/api
-cp -a "$BUILDDIR/doc/doxygen/all" head/internal
-cp -a "$BUILDDIR/release/unit-test-all-coverage/" head/coverage
+cp -a "$BUILDDIR-ext/html" head/api
+cp -a "$BUILDDIR-int/html" head/internal
+#cp -a "$BUILDDIR/release/unit-test-all-coverage/" head/coverage
