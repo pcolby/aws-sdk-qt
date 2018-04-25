@@ -20,6 +20,7 @@ syntaxhighlighting = true
 
 # Don't use seprate sub-directories for each module.
 HTML.nosubdirs = "true"
+HTML.outputsubdir = "."
 
 # Add a red "[internal]" indicator to items marked with \internal.
 macro.internal.HTML = "<span style="color:red">[internal]</span>"
