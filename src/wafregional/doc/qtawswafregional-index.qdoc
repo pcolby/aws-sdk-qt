@@ -3,7 +3,7 @@
     \page qtawswafregional-index.html
     \title Qt Aws WAFRegional
 
-    \brief The AWS WAFRegional module is part aws-sdk-qt.
+    \brief Classes for the AWS WAF Regional service
 
     (This is the page the forms the overview for the servce.)
 */

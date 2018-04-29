@@ -3,7 +3,7 @@
     \page qtawsservicediscovery-index.html
     \title Qt Aws ServiceDiscovery
 
-    \brief The AWS ServiceDiscovery module is part aws-sdk-qt.
+    \brief Classes for the Amazon Route 53 Auto Naming (ServiceDiscovery) service
 
     (This is the page the forms the overview for the servce.)
 */

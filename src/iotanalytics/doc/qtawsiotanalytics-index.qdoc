@@ -3,7 +3,7 @@
     \page qtawsiotanalytics-index.html
     \title Qt Aws IoTAnalytics
 
-    \brief The AWS IoTAnalytics module is part aws-sdk-qt.
+    \brief Classes for the AWS IoT Analytics service
 
     (This is the page the forms the overview for the servce.)
 */

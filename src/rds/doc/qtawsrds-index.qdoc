@@ -3,7 +3,7 @@
     \page qtawsrds-index.html
     \title Qt Aws RDS
 
-    \brief The AWS RDS module is part aws-sdk-qt.
+    \brief Classes for the Amazon Relational Database Service ( RDS) service
 
     (This is the page the forms the overview for the servce.)
 */

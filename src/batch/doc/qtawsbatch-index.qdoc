@@ -3,7 +3,7 @@
     \page qtawsbatch-index.html
     \title Qt Aws Batch
 
-    \brief The AWS Batch module is part aws-sdk-qt.
+    \brief Classes for the AWS Batch service
 
     (This is the page the forms the overview for the servce.)
 */

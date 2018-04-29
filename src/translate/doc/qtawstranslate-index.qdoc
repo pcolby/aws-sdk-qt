@@ -3,7 +3,7 @@
     \page qtawstranslate-index.html
     \title Qt Aws Translate
 
-    \brief The AWS Translate module is part aws-sdk-qt.
+    \brief Classes for the Amazon Translate service
 
     (This is the page the forms the overview for the servce.)
 */

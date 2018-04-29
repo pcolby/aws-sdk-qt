@@ -3,7 +3,7 @@
     \page qtawsecr-index.html
     \title Qt Aws ECR
 
-    \brief The AWS ECR module is part aws-sdk-qt.
+    \brief Classes for the Amazon EC2 Container Registry ( ECR) service
 
     (This is the page the forms the overview for the servce.)
 */

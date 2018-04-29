@@ -3,7 +3,7 @@
     \page qtawslexruntimeservice-index.html
     \title Qt Aws LexRuntimeService
 
-    \brief The AWS LexRuntimeService module is part aws-sdk-qt.
+    \brief Classes for the Amazon Lex Runtime Service service
 
     (This is the page the forms the overview for the servce.)
 */

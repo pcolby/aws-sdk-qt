@@ -3,7 +3,7 @@
     \page qtawsathena-index.html
     \title Qt Aws Athena
 
-    \brief The AWS Athena module is part aws-sdk-qt.
+    \brief Classes for the Amazon Athena service
 
     (This is the page the forms the overview for the servce.)
 */

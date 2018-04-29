@@ -3,7 +3,7 @@
     \page qtawsinspector-index.html
     \title Qt Aws Inspector
 
-    \brief The AWS Inspector module is part aws-sdk-qt.
+    \brief Classes for the Amazon Inspector service
 
     (This is the page the forms the overview for the servce.)
 */

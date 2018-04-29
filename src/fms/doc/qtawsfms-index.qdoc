@@ -3,7 +3,7 @@
     \page qtawsfms-index.html
     \title Qt Aws FMS
 
-    \brief The AWS FMS module is part aws-sdk-qt.
+    \brief Classes for the Firewall Management Service (FMS) service
 
     (This is the page the forms the overview for the servce.)
 */

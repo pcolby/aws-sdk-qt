@@ -3,7 +3,7 @@
     \page qtawselasticache-index.html
     \title Qt Aws ElastiCache
 
-    \brief The AWS ElastiCache module is part aws-sdk-qt.
+    \brief Classes for the Amazon ElastiCache service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawscloudformation-index.html
     \title Qt Aws CloudFormation
 
-    \brief The AWS CloudFormation module is part aws-sdk-qt.
+    \brief Classes for the AWS CloudFormation service
 
     (This is the page the forms the overview for the servce.)
 */

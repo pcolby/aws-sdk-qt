@@ -3,7 +3,7 @@
     \page qtawsappstream-index.html
     \title Qt Aws AppStream
 
-    \brief The AWS AppStream module is part aws-sdk-qt.
+    \brief Classes for the Amazon AppStream service
 
     (This is the page the forms the overview for the servce.)
 */

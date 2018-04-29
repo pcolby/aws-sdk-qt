@@ -3,7 +3,7 @@
     \page qtawsdirectconnect-index.html
     \title Qt Aws DirectConnect
 
-    \brief The AWS DirectConnect module is part aws-sdk-qt.
+    \brief Classes for the AWS Direct Connect service
 
     (This is the page the forms the overview for the servce.)
 */

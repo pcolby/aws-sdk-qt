@@ -3,7 +3,7 @@
     \page qtawscodepipeline-index.html
     \title Qt Aws CodePipeline
 
-    \brief The AWS CodePipeline module is part aws-sdk-qt.
+    \brief Classes for the AWS CodePipeline service
 
     (This is the page the forms the overview for the servce.)
 */

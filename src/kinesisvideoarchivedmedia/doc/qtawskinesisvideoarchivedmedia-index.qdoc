@@ -3,7 +3,7 @@
     \page qtawskinesisvideoarchivedmedia-index.html
     \title Qt Aws KinesisVideoArchivedMedia
 
-    \brief The AWS KinesisVideoArchivedMedia module is part aws-sdk-qt.
+    \brief Classes for the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service
 
     (This is the page the forms the overview for the servce.)
 */

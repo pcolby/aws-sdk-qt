@@ -3,7 +3,7 @@
     \page qtawsmobile-index.html
     \title Qt Aws Mobile
 
-    \brief The AWS Mobile module is part aws-sdk-qt.
+    \brief Classes for the AWS Mobile service
 
     (This is the page the forms the overview for the servce.)
 */

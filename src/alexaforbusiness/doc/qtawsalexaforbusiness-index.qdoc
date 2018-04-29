@@ -3,7 +3,7 @@
     \page qtawsalexaforbusiness-index.html
     \title Qt Aws AlexaForBusiness
 
-    \brief The AWS AlexaForBusiness module is part aws-sdk-qt.
+    \brief Classes for the Alexa For Business service
 
     (This is the page the forms the overview for the servce.)
 */

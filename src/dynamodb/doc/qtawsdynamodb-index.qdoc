@@ -3,7 +3,7 @@
     \page qtawsdynamodb-index.html
     \title Qt Aws DynamoDB
 
-    \brief The AWS DynamoDB module is part aws-sdk-qt.
+    \brief Classes for the Amazon DynamoDB service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsclouddirectory-index.html
     \title Qt Aws CloudDirectory
 
-    \brief The AWS CloudDirectory module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudDirectory service
 
     (This is the page the forms the overview for the servce.)
 */

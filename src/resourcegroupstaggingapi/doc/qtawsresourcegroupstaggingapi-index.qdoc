@@ -3,7 +3,7 @@
     \page qtawsresourcegroupstaggingapi-index.html
     \title Qt Aws ResourceGroupsTaggingAPI
 
-    \brief The AWS ResourceGroupsTaggingAPI module is part aws-sdk-qt.
+    \brief Classes for the AWS Resource Groups Tagging API service
 
     (This is the page the forms the overview for the servce.)
 */

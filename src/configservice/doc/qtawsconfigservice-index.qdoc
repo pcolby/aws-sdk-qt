@@ -3,7 +3,7 @@
     \page qtawsconfigservice-index.html
     \title Qt Aws ConfigService
 
-    \brief The AWS ConfigService module is part aws-sdk-qt.
+    \brief Classes for the AWS Config (Config Service) service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsses-index.html
     \title Qt Aws SES
 
-    \brief The AWS SES module is part aws-sdk-qt.
+    \brief Classes for the Amazon Simple Email Service ( SES) service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsxray-index.html
     \title Qt Aws XRay
 
-    \brief The AWS XRay module is part aws-sdk-qt.
+    \brief Classes for the AWS X-Ray service
 
     (This is the page the forms the overview for the servce.)
 */

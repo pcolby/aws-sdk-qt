@@ -3,7 +3,7 @@
     \page qtawsdynamodbstreams-index.html
     \title Qt Aws DynamoDBStreams
 
-    \brief The AWS DynamoDBStreams module is part aws-sdk-qt.
+    \brief Classes for the Amazon DynamoDB Streams service
 
     (This is the page the forms the overview for the servce.)
 */

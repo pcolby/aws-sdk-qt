@@ -3,7 +3,7 @@
     \page qtawscloudwatchlogs-index.html
     \title Qt Aws CloudWatchLogs
 
-    \brief The AWS CloudWatchLogs module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudWatch Logs service
 
     (This is the page the forms the overview for the servce.)
 */

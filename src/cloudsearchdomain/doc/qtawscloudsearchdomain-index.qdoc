@@ -3,7 +3,7 @@
     \page qtawscloudsearchdomain-index.html
     \title Qt Aws CloudSearchDomain
 
-    \brief The AWS CloudSearchDomain module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudSearch Domain service
 
     (This is the page the forms the overview for the servce.)
 */

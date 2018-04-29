@@ -3,7 +3,7 @@
     \page qtawssimpledb-index.html
     \title Qt Aws SimpleDB
 
-    \brief The AWS SimpleDB module is part aws-sdk-qt.
+    \brief Classes for the Amazon SimpleDB service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsappsync-index.html
     \title Qt Aws AppSync
 
-    \brief The AWS AppSync module is part aws-sdk-qt.
+    \brief Classes for the AWS AppSync service
 
     (This is the page the forms the overview for the servce.)
 */

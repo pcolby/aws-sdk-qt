@@ -3,7 +3,7 @@
     \page qtawsecs-index.html
     \title Qt Aws ECS
 
-    \brief The AWS ECS module is part aws-sdk-qt.
+    \brief Classes for the Amazon EC2 Container Service ( ECS) service
 
     (This is the page the forms the overview for the servce.)
 */

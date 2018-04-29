@@ -3,7 +3,7 @@
     \page qtawsbudgets-index.html
     \title Qt Aws Budgets
 
-    \brief The AWS Budgets module is part aws-sdk-qt.
+    \brief Classes for the AWS Budgets service
 
     (This is the page the forms the overview for the servce.)
 */

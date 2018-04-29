@@ -3,7 +3,7 @@
     \page qtawssns-index.html
     \title Qt Aws SNS
 
-    \brief The AWS SNS module is part aws-sdk-qt.
+    \brief Classes for the Amazon Simple Notification Service ( SNS) service
 
     (This is the page the forms the overview for the servce.)
 */

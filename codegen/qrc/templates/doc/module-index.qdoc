@@ -6,7 +6,7 @@
     \page {{ModuleName|lower}}-index.html
     \title Qt Aws {{ServiceName}}
 
-    \brief The AWS {{ServiceName}} module is part aws-sdk-qt.
+    \brief Classes for the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service
 
     (This is the page the forms the overview for the servce.)
 */

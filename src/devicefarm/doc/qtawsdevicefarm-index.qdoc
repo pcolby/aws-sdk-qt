@@ -3,7 +3,7 @@
     \page qtawsdevicefarm-index.html
     \title Qt Aws DeviceFarm
 
-    \brief The AWS DeviceFarm module is part aws-sdk-qt.
+    \brief Classes for the AWS Device Farm service
 
     (This is the page the forms the overview for the servce.)
 */

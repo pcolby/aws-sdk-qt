@@ -3,7 +3,7 @@
     \page qtawscloudfront-index.html
     \title Qt Aws CloudFront
 
-    \brief The AWS CloudFront module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudFront service
 
     (This is the page the forms the overview for the servce.)
 */

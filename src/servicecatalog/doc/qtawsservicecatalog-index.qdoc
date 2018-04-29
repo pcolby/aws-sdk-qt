@@ -3,7 +3,7 @@
     \page qtawsservicecatalog-index.html
     \title Qt Aws ServiceCatalog
 
-    \brief The AWS ServiceCatalog module is part aws-sdk-qt.
+    \brief Classes for the AWS Service Catalog service
 
     (This is the page the forms the overview for the servce.)
 */

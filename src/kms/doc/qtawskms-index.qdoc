@@ -3,7 +3,7 @@
     \page qtawskms-index.html
     \title Qt Aws KMS
 
-    \brief The AWS KMS module is part aws-sdk-qt.
+    \brief Classes for the AWS Key Management Service (KMS) service
 
     (This is the page the forms the overview for the servce.)
 */

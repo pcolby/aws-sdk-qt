@@ -3,7 +3,7 @@
     \page qtawsec2-index.html
     \title Qt Aws EC2
 
-    \brief The AWS EC2 module is part aws-sdk-qt.
+    \brief Classes for the Amazon Elastic Compute Cloud ( EC2) service
 
     (This is the page the forms the overview for the servce.)
 */

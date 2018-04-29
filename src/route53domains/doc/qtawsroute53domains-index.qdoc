@@ -3,7 +3,7 @@
     \page qtawsroute53domains-index.html
     \title Qt Aws Route53Domains
 
-    \brief The AWS Route53Domains module is part aws-sdk-qt.
+    \brief Classes for the Amazon Route 53 Domains service
 
     (This is the page the forms the overview for the servce.)
 */

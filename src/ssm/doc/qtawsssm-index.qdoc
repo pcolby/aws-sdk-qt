@@ -3,7 +3,7 @@
     \page qtawsssm-index.html
     \title Qt Aws SSM
 
-    \brief The AWS SSM module is part aws-sdk-qt.
+    \brief Classes for the Amazon Simple Systems Manager (SSM) ( SSM) service
 
     (This is the page the forms the overview for the servce.)
 */

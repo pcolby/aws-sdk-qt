@@ -3,7 +3,7 @@
     \page qtawsiot-index.html
     \title Qt Aws IoT
 
-    \brief The AWS IoT module is part aws-sdk-qt.
+    \brief Classes for the AWS IoT service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsroute53-index.html
     \title Qt Aws Route53
 
-    \brief The AWS Route53 module is part aws-sdk-qt.
+    \brief Classes for the Amazon Route 53 service
 
     (This is the page the forms the overview for the servce.)
 */

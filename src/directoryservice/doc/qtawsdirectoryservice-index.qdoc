@@ -3,7 +3,7 @@
     \page qtawsdirectoryservice-index.html
     \title Qt Aws DirectoryService
 
-    \brief The AWS DirectoryService module is part aws-sdk-qt.
+    \brief Classes for the AWS Directory Service service
 
     (This is the page the forms the overview for the servce.)
 */

@@ -3,7 +3,7 @@
     \page qtawsdax-index.html
     \title Qt Aws DAX
 
-    \brief The AWS DAX module is part aws-sdk-qt.
+    \brief Classes for the Amazon DynamoDB Accelerator (DAX) ( DAX) service
 
     (This is the page the forms the overview for the servce.)
 */

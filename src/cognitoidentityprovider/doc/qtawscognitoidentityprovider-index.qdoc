@@ -3,7 +3,7 @@
     \page qtawscognitoidentityprovider-index.html
     \title Qt Aws CognitoIdentityProvider
 
-    \brief The AWS CognitoIdentityProvider module is part aws-sdk-qt.
+    \brief Classes for the Amazon Cognito Identity Provider service
 
     (This is the page the forms the overview for the servce.)
 */

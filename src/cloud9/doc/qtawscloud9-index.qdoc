@@ -3,7 +3,7 @@
     \page qtawscloud9-index.html
     \title Qt Aws Cloud9
 
-    \brief The AWS Cloud9 module is part aws-sdk-qt.
+    \brief Classes for the AWS Cloud9 service
 
     (This is the page the forms the overview for the servce.)
 */

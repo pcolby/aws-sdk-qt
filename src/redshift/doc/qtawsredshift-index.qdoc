@@ -3,7 +3,7 @@
     \page qtawsredshift-index.html
     \title Qt Aws Redshift
 
-    \brief The AWS Redshift module is part aws-sdk-qt.
+    \brief Classes for the Amazon Redshift service
 
     (This is the page the forms the overview for the servce.)
 */

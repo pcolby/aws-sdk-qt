@@ -3,7 +3,7 @@
     \page qtawscostandusagereportservice-index.html
     \title Qt Aws CostandUsageReportService
 
-    \brief The AWS CostandUsageReportService module is part aws-sdk-qt.
+    \brief Classes for the AWS Cost and Usage Report Service service
 
     (This is the page the forms the overview for the servce.)
 */

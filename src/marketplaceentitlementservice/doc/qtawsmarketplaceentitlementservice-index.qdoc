@@ -3,7 +3,7 @@
     \page qtawsmarketplaceentitlementservice-index.html
     \title Qt Aws MarketplaceEntitlementService
 
-    \brief The AWS MarketplaceEntitlementService module is part aws-sdk-qt.
+    \brief Classes for the AWS Marketplace Entitlement Service service
 
     (This is the page the forms the overview for the servce.)
 */

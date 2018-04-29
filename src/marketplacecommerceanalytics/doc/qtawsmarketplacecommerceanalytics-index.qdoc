@@ -3,7 +3,7 @@
     \page qtawsmarketplacecommerceanalytics-index.html
     \title Qt Aws MarketplaceCommerceAnalytics
 
-    \brief The AWS MarketplaceCommerceAnalytics module is part aws-sdk-qt.
+    \brief Classes for the AWS Marketplace Commerce Analytics service
 
     (This is the page the forms the overview for the servce.)
 */

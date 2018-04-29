@@ -3,7 +3,7 @@
     \page qtawsmachinelearning-index.html
     \title Qt Aws MachineLearning
 
-    \brief The AWS MachineLearning module is part aws-sdk-qt.
+    \brief Classes for the Amazon Machine Learning service
 
     (This is the page the forms the overview for the servce.)
 */

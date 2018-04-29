@@ -3,7 +3,7 @@
     \page qtawsiam-index.html
     \title Qt Aws IAM
 
-    \brief The AWS IAM module is part aws-sdk-qt.
+    \brief Classes for the AWS Identity and Access Management (IAM) service
 
     (This is the page the forms the overview for the servce.)
 */

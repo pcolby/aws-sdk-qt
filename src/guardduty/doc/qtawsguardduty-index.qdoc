@@ -3,7 +3,7 @@
     \page qtawsguardduty-index.html
     \title Qt Aws GuardDuty
 
-    \brief The AWS GuardDuty module is part aws-sdk-qt.
+    \brief Classes for the Amazon GuardDuty service
 
     (This is the page the forms the overview for the servce.)
 */

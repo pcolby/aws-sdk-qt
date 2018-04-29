@@ -3,7 +3,7 @@
     \page qtawsworkmail-index.html
     \title Qt Aws WorkMail
 
-    \brief The AWS WorkMail module is part aws-sdk-qt.
+    \brief Classes for the Amazon WorkMail service
 
     (This is the page the forms the overview for the servce.)
 */

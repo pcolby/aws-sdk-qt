@@ -3,7 +3,7 @@
     \page qtawscodedeploy-index.html
     \title Qt Aws CodeDeploy
 
-    \brief The AWS CodeDeploy module is part aws-sdk-qt.
+    \brief Classes for the AWS CodeDeploy service
 
     (This is the page the forms the overview for the servce.)
 */

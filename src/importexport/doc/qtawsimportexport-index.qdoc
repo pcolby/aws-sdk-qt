@@ -3,7 +3,7 @@
     \page qtawsimportexport-index.html
     \title Qt Aws ImportExport
 
-    \brief The AWS ImportExport module is part aws-sdk-qt.
+    \brief Classes for the AWS Import/Export service
 
     (This is the page the forms the overview for the servce.)
 */

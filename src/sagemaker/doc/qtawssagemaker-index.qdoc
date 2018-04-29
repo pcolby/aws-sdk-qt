@@ -3,7 +3,7 @@
     \page qtawssagemaker-index.html
     \title Qt Aws SageMaker
 
-    \brief The AWS SageMaker module is part aws-sdk-qt.
+    \brief Classes for the Amazon SageMaker Service service
 
     (This is the page the forms the overview for the servce.)
 */

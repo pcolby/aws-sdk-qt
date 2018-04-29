@@ -3,7 +3,7 @@
     \page qtawsmediapackage-index.html
     \title Qt Aws MediaPackage
 
-    \brief The AWS MediaPackage module is part aws-sdk-qt.
+    \brief Classes for the AWS Elemental MediaPackage service
 
     (This is the page the forms the overview for the servce.)
 */

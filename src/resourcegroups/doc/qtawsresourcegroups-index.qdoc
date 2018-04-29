@@ -3,7 +3,7 @@
     \page qtawsresourcegroups-index.html
     \title Qt Aws ResourceGroups
 
-    \brief The AWS ResourceGroups module is part aws-sdk-qt.
+    \brief Classes for the AWS Resource Groups service
 
     (This is the page the forms the overview for the servce.)
 */

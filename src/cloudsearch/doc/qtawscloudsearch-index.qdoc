@@ -3,7 +3,7 @@
     \page qtawscloudsearch-index.html
     \title Qt Aws CloudSearch
 
-    \brief The AWS CloudSearch module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudSearch service
 
     (This is the page the forms the overview for the servce.)
 */

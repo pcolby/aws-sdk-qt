@@ -3,7 +3,7 @@
     \page qtawslambda-index.html
     \title Qt Aws Lambda
 
-    \brief The AWS Lambda module is part aws-sdk-qt.
+    \brief Classes for the AWS Lambda service
 
     (This is the page the forms the overview for the servce.)
 */

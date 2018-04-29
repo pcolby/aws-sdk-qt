@@ -3,7 +3,7 @@
     \page qtawscloudwatch-index.html
     \title Qt Aws CloudWatch
 
-    \brief The AWS CloudWatch module is part aws-sdk-qt.
+    \brief Classes for the Amazon CloudWatch service
 
     (This is the page the forms the overview for the servce.)
 */

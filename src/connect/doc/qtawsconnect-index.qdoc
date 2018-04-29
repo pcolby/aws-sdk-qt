@@ -3,7 +3,7 @@
     \page qtawsconnect-index.html
     \title Qt Aws Connect
 
-    \brief The AWS Connect module is part aws-sdk-qt.
+    \brief Classes for the Amazon Connect Service service
 
     (This is the page the forms the overview for the servce.)
 */
