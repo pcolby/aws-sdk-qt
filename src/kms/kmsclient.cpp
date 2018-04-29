@@ -99,7 +99,7 @@
  * \namespace QtAws::KMS
  * \brief The QtAws::KMS contains stuff...
  *
- * \inmodule QtAwsKMS
+ * \inmodule QtAwsKms
  *
  * @todo Move this to a separate template file.
  */

@@ -63,7 +63,7 @@
  * \namespace QtAws::MQ
  * \brief The QtAws::MQ contains stuff...
  *
- * \inmodule QtAwsMQ
+ * \inmodule QtAwsMq
  *
  * @todo Move this to a separate template file.
  */

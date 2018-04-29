@@ -51,7 +51,7 @@
  * \namespace QtAws::SMS
  * \brief The QtAws::SMS contains stuff...
  *
- * \inmodule QtAwsSMS
+ * \inmodule QtAwsSms
  *
  * @todo Move this to a separate template file.
  */

@@ -69,7 +69,7 @@
  * \namespace QtAws::SQS
  * \brief The QtAws::SQS contains stuff...
  *
- * \inmodule QtAwsSQS
+ * \inmodule QtAwsSqs
  *
  * @todo Move this to a separate template file.
  */

@@ -53,7 +53,7 @@
  * \namespace QtAws::FMS
  * \brief The QtAws::FMS contains stuff...
  *
- * \inmodule QtAwsFMS
+ * \inmodule QtAwsFms
  *
  * @todo Move this to a separate template file.
  */

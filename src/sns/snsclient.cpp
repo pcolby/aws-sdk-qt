@@ -89,7 +89,7 @@
  * \namespace QtAws::SNS
  * \brief The QtAws::SNS contains stuff...
  *
- * \inmodule QtAwsSNS
+ * \inmodule QtAwsSns
  *
  * @todo Move this to a separate template file.
  */

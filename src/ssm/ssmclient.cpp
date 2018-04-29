@@ -227,7 +227,7 @@
  * \namespace QtAws::SSM
  * \brief The QtAws::SSM contains stuff...
  *
- * \inmodule QtAwsSSM
+ * \inmodule QtAwsSsm
  *
  * @todo Move this to a separate template file.
  */

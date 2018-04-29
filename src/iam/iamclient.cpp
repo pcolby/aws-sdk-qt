@@ -270,7 +270,7 @@
  * \namespace QtAws::IAM
  * \brief The QtAws::IAM contains stuff...
  *
- * \inmodule QtAwsIAM
+ * \inmodule QtAwsIam
  *
  * @todo Move this to a separate template file.
  */

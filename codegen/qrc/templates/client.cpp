@@ -17,7 +17,7 @@
  * \namespace QtAws::{{NameSpaceName}}
  * \brief The QtAws::{{NameSpaceName}} contains stuff...
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule {{ModuleName}}
  *
  * @todo Move this to a separate template file.
  */

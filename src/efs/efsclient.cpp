@@ -51,7 +51,7 @@
  * \namespace QtAws::EFS
  * \brief The QtAws::EFS contains stuff...
  *
- * \inmodule QtAwsEFS
+ * \inmodule QtAwsEfs
  *
  * @todo Move this to a separate template file.
  */

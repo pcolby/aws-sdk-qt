@@ -71,7 +71,7 @@
  * \namespace QtAws::DAX
  * \brief The QtAws::DAX contains stuff...
  *
- * \inmodule QtAwsDAX
+ * \inmodule QtAwsDax
  *
  * @todo Move this to a separate template file.
  */

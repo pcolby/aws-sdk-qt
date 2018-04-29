@@ -91,7 +91,7 @@
  * \namespace QtAws::SWF
  * \brief The QtAws::SWF contains stuff...
  *
- * \inmodule QtAwsSWF
+ * \inmodule QtAwsSwf
  *
  * @todo Move this to a separate template file.
  */

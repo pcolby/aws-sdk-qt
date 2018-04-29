@@ -167,7 +167,7 @@
  * \namespace QtAws::WAF
  * \brief The QtAws::WAF contains stuff...
  *
- * \inmodule QtAwsWAF
+ * \inmodule QtAwsWaf
  *
  * @todo Move this to a separate template file.
  */

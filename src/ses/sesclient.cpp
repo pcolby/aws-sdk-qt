@@ -165,7 +165,7 @@
  * \namespace QtAws::SES
  * \brief The QtAws::SES contains stuff...
  *
- * \inmodule QtAwsSES
+ * \inmodule QtAwsSes
  *
  * @todo Move this to a separate template file.
  */

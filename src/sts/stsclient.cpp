@@ -43,7 +43,7 @@
  * \namespace QtAws::STS
  * \brief The QtAws::STS contains stuff...
  *
- * \inmodule QtAwsSTS
+ * \inmodule QtAwsSts
  *
  * @todo Move this to a separate template file.
  */

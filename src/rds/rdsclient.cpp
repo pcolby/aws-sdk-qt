@@ -211,7 +211,7 @@
  * \namespace QtAws::RDS
  * \brief The QtAws::RDS contains stuff...
  *
- * \inmodule QtAwsRDS
+ * \inmodule QtAwsRds
  *
  * @todo Move this to a separate template file.
  */

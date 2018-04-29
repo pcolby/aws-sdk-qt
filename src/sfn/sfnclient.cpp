@@ -67,7 +67,7 @@
  * \namespace QtAws::SFN
  * \brief The QtAws::SFN contains stuff...
  *
- * \inmodule QtAwsSFN
+ * \inmodule QtAwsSfn
  *
  * @todo Move this to a separate template file.
  */

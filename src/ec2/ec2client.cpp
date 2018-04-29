@@ -565,7 +565,7 @@
  * \namespace QtAws::EC2
  * \brief The QtAws::EC2 contains stuff...
  *
- * \inmodule QtAwsEC2
+ * \inmodule QtAwsEc2
  *
  * @todo Move this to a separate template file.
  */

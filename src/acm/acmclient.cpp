@@ -53,7 +53,7 @@
  * \namespace QtAws::ACM
  * \brief The QtAws::ACM contains stuff...
  *
- * \inmodule QtAwsACM
+ * \inmodule QtAwsAcm
  *
  * @todo Move this to a separate template file.
  */

@@ -91,7 +91,7 @@
  * \namespace QtAws::ECS
  * \brief The QtAws::ECS contains stuff...
  *
- * \inmodule QtAwsECS
+ * \inmodule QtAwsEcs
  *
  * @todo Move this to a separate template file.
  */

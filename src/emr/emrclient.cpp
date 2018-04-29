@@ -83,7 +83,7 @@
  * \namespace QtAws::EMR
  * \brief The QtAws::EMR contains stuff...
  *
- * \inmodule QtAwsEMR
+ * \inmodule QtAwsEmr
  *
  * @todo Move this to a separate template file.
  */

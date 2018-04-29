@@ -61,7 +61,7 @@
  * \namespace QtAws::ACMPCA
  * \brief The QtAws::ACMPCA contains stuff...
  *
- * \inmodule QtAwsACMPCA
+ * \inmodule QtAwsAcmpca
  *
  * @todo Move this to a separate template file.
  */

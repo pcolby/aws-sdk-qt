@@ -73,7 +73,7 @@
  * \namespace QtAws::ECR
  * \brief The QtAws::ECR contains stuff...
  *
- * \inmodule QtAwsECR
+ * \inmodule QtAwsEcr
  *
  * @todo Move this to a separate template file.
  */
