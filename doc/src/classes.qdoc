@@ -1,31 +1,119 @@
 /*!
+    \page classesandfunctions.html
+    \title Class and Function Documentation
+    \brief Lists and Indexes of classes, functions, and types.
 
-\page classes.html
+    Links to indexes and lists for finding class and function
+    reference documentation.
 
-\title C++ Classes
+    \section2 Class Lists
 
-\section1 Annotated Lists
+    \annotatedlist classlists
 
-\c annotatedlist provides a list of classes in given \e group.
+    \section2 Function Lists
 
-\section2 Clients
-\annotatedlist aws-clients
+    \annotatedlist funclists
+*/
 
-\section2 Authentication
-\annotatedlist aws-authentication
 
-\section1 generatelist
+/*!
+    \page classes.html
+    \title All Classes
 
-\section2 Core
-\generatelist{classesbymodule QtAwsCore}
+    \brief If you know the name of the class you want, find it here.
 
-\section2 RDS
-\generatelist{classesbymodule QtAwsRDS}
+    This is a list of all QtAws classes. The following pages contain different
+    API listings in different categories:
 
-\section2 XRay
-\generatelist{classesbymodule QtAwsXRay}
+    \list
+    \li \l{All Functions}
+    \li \l{All Namespaces}
+    \li \l{Obsolete Classes}
+    \endlist
 
-\section2 generatelist annotatedclasses
-\generatelist annotatedclasses
+    \generatelist classes
+*/
 
+
+/*!
+    \page annotated.html
+    \title Annotated Class List
+    \ingroup classlists
+
+    \brief If you don't know the name of the class you want, but you
+    know what the class should do, you might try looking here.
+
+    QtAws classes with brief descriptions:
+
+    \generatelist annotatedclasses
+*/
+
+
+/*!
+    \page hierarchy.html
+
+    \title Inheritance Hierarchy
+    \ingroup classlists
+
+    \brief The C++ class inheritance hierarchy for all classes in QtAws.
+
+    \generatelist classhierarchy
+*/
+
+
+/*!
+    \page obsoleteclasses.html
+    \title Obsolete Classes
+    \ingroup classlists
+
+    \brief Classes and members marked obsolete that should not be used in new code.
+
+    \section1 C++ classes that are deprecated
+
+    The following Qt C++ classes are now obsolete. Obsolete classes
+    are no longer maintained. They are provided to keep old source
+    code working, but they can be removed in a future release. We
+    strongly advise against using these classes in new code.
+
+    \generatelist obsoleteclasses
+
+    \section1 C++ classes that contain one or more members that are deprecated
+
+    The following Qt C++ classes contain one or more members that are
+    now obsolete. Obsolete members are no longer maintained. They are
+    provided to keep old source code working, but they can be removed
+    in a future release. We strongly advise against using these obsolete
+    members in new code. Click on a class to see its deprecated members.
+
+    \generatelist obsoletecppmembers
+
+*/
+
+
+/*!
+    \page functions.html
+    \title All Functions
+    \ingroup funclists
+
+    \brief All documented Qt functions listed alphabetically with a
+    link to where each one is declared.
+
+    This is the list of all documented member functions and global
+    functions in QtAws.  Each function has a link to the class or
+    header file where it is declared and documented.
+
+    \generatelist functionindex
+*/
+
+
+/*!
+    \page namespaces.html
+    \title All Namespaces
+    \ingroup classlists
+
+    \brief A QtQws namespace contains enum types, functions, and sometimes classes.
+
+    This is a list of the main namespaces in QtAws.
+
+    \generatelist{namespaces}
 */
