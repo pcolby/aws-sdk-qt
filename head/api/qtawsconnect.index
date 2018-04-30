@@ -2,8 +2,8 @@
 <!DOCTYPE QDOCINDEX>
 <INDEX url="" title="AWS Connect SDK for Qt" version="" project="QtAwsConnect" indexTitle="qtawsconnect-index.html">
     <namespace threadsafety="unspecified" name="" status="active" access="public" module="qtawsconnect">
-        <namespace threadsafety="unspecified" name="QtAws" href="qtaws.html" status="internal" access="private" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="27">
-            <namespace threadsafety="unspecified" name="Connect" fullname="QtAws::Connect" href="qtaws-connect.html" status="active" access="public" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="28" module="QtAwsConnect" brief="QtAws::Connect contains stuff..">
+        <namespace threadsafety="unspecified" name="QtAws" href="qtaws.html" status="active" access="public" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="27" module="QtAws" brief="Parent namespace for all other QtAws namespaces">
+            <namespace threadsafety="unspecified" name="Connect" fullname="QtAws::Connect" href="qtaws-connect.html" status="active" access="public" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="28" module="QtAwsConnect" brief="Contains classess for accessing Amazon Connect Service">
                 <class threadsafety="unspecified" name="ConnectClient" fullname="QtAws::Connect::ConnectClient" href="qtaws-connect-connectclient.html" status="active" access="public" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="36" bases="QtAws::Core::AwsAbstractClient" module="QtAwsConnect" groups="aws-clients" brief="Access to the Amazon Connect Service service">
                     <function threadsafety="unspecified" name="ConnectClient" fullname="QtAws::Connect::ConnectClient::ConnectClient" href="qtaws-connect-connectclient.html#ConnectClient-1" status="active" access="public" location="connectclient.h" filepath="/home/paul/src/aws-sdk-qt/src/connect/connectclient.h" lineno="46" virtual="non" meta="constructor" const="false" static="false" overload="true" delete="false" default="false" final="false" override="false" overload-number="1" type="" signature="ConnectClient(const QUrl &amp;endpoint, QtAws::Core::AwsAbstractCredentials *credentials, QNetworkAccessManager * const manager, QObject * const parent)">
                         <parameter left="const QUrl &amp;" right="" name="endpoint" default=""/>
@@ -192,9 +192,10 @@
                 </class>
             </namespace>
         </namespace>
-        <page name="qtawsconnect-index.html" href="qtawsconnect-index.html" status="active" location="qtawsconnect-index.qdoc" filepath="/home/paul/src/aws-sdk-qt/src/connect/doc/qtawsconnect-index.qdoc" lineno="2" subtype="page" title="Qt Aws Connect" fulltitle="Qt Aws Connect" subtitle="" module="QtAwsConnect" brief="AWS Connect module is part aws-sdk-qt"/>
+        <page name="qtawsconnect-index.html" href="qtawsconnect-index.html" status="active" location="qtawsconnect-index.qdoc" filepath="/home/paul/src/aws-sdk-qt/src/connect/doc/qtawsconnect-index.qdoc" lineno="2" subtype="page" title="Qt Aws Connect" fulltitle="Qt Aws Connect" subtitle="" module="QtAwsConnect" brief="Classes for the Amazon Connect Service service"/>
         <group name="aws-clients" href="aws-clients.html" status="internal" seen="false" title="" members="ConnectClient,ConnectClientPrivate"/>
         <group name="modules" href="modules.html" status="internal" seen="false" title="" members="QtAwsConnect"/>
+        <module name="QtAws" href="qtaws-module.html" status="internal" seen="false" title="" members="QtAws"/>
         <module name="QtAwsConnect" href="qtawsconnect-module.html" status="active" location="qtawsconnect.qdoc" filepath="/home/paul/src/aws-sdk-qt/src/connect/doc/qtawsconnect.qdoc" lineno="2" seen="true" title="Connect C++ Classes" module="QtAwsConnect" groups="modules" members="Connect,ConnectClient,ConnectClientPrivate,ConnectRequest,ConnectRequestPrivate,ConnectResponse,ConnectResponsePrivate,StartOutboundVoiceContactRequest,StartOutboundVoiceContactRequestPrivate,StartOutboundVoiceContactResponse,StartOutboundVoiceContactResponsePrivate,StopContactRequest,StopContactRequestPrivate,StopContactResponse,StopContactResponsePrivate" brief="Provides AWS Connect functionality"/>
     </namespace>
 </INDEX>

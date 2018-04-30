@@ -2,18 +2,25 @@
 <!DOCTYPE QDOCINDEX>
 <INDEX url="" title="Unnoficial AWS SDK for Qt" version="" project="QtAws">
     <namespace threadsafety="unspecified" name="" status="active" access="public" module="qtaws">
-        <page name="classes.html" href="classes.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="1" subtype="page" title="C++ Classes" fulltitle="C++ Classes" subtitle="" module="QtAws">
-            <contents name="annotated-lists" title="Annotated Lists" level="1"/>
-            <contents name="clients" title="Clients" level="2"/>
-            <contents name="authentication" title="Authentication" level="2"/>
-            <contents name="generatelist" title="generatelist" level="1"/>
-            <contents name="core" title="Core" level="2"/>
-            <contents name="rds" title="RDS" level="2"/>
-            <contents name="xray" title="XRay" level="2"/>
-            <contents name="generatelist-annotatedclasses" title="generatelist annotatedclasses" level="2"/>
+        <page name="classes.html" href="classes.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="19" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="QtAws" brief="If you know the name of the class you want, find it here"/>
+        <page name="functions.html" href="functions.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="93" subtype="page" title="All Functions" fulltitle="All Functions" subtitle="" module="QtAws" groups="funclists" brief="All documented Qt functions listed alphabetically with a link to where each one is declared"/>
+        <page name="namespaces.html" href="namespaces.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="109" subtype="page" title="All Namespaces" fulltitle="All Namespaces" subtitle="" module="QtAws" groups="classlists" brief="A QtQws namespace contains enum types, functions, and sometimes classes"/>
+        <page name="annotated.html" href="annotated.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="38" subtype="page" title="Annotated Class List" fulltitle="Annotated Class List" subtitle="" module="QtAws" groups="classlists" brief="If you don't know the name of the class you want, but you know what the class should do, you might try looking here"/>
+        <page name="classesandfunctions.html" href="classesandfunctions.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="1" subtype="page" title="Class and Function Documentation" fulltitle="Class and Function Documentation" subtitle="" module="QtAws" brief="Lists and Indexes of classes, functions, and types">
+            <contents name="class-lists" title="Class Lists" level="2"/>
+            <contents name="function-lists" title="Function Lists" level="2"/>
+        </page>
+        <page name="hierarchy.html" href="hierarchy.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="52" subtype="page" title="Inheritance Hierarchy" fulltitle="Inheritance Hierarchy" subtitle="" module="QtAws" groups="classlists" brief="C++ class inheritance hierarchy for all classes in QtAws"/>
+        <page name="obsoleteclasses.html" href="obsoleteclasses.html" status="active" location="classes.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/classes.qdoc" lineno="64" subtype="page" title="Obsolete Classes" fulltitle="Obsolete Classes" subtitle="" module="QtAws" groups="classlists" brief="Classes and members marked obsolete that should not be used in new code">
+            <contents name="c-classes-that-are-deprecated" title="C++ classes that are deprecated" level="1"/>
+            <contents name="c-classes-that-contain-one-or-more-members-that-are-deprecated" title="C++ classes that contain one or more members that are deprecated" level="1"/>
         </page>
         <page name="qtaws-index.html" href="qtaws-index.html" status="active" location="qtaws-index.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/qtaws-index.qdoc" lineno="1" subtype="page" title="QtAws 0.3" fulltitle="QtAws 0.3" subtitle="" module="QtAws"/>
+        <namespace threadsafety="unspecified" name="QtAws" href="qtaws.html" status="active" access="public" location="qtaws-namespace.h" filepath="/home/paul/src/aws-sdk-qt/doc/src/qtaws-namespace.h" lineno="7" module="QtAws" brief="Parent namespace for all other QtAws namespaces"/>
         <group name="aws-authentication" href="aws-authentication.html" status="active" location="auth.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/auth.qdoc" lineno="1" seen="true" title="AWS Authentication" module="QtAws"/>
         <group name="aws-clients" href="aws-clients.html" status="active" location="core.qdoc" filepath="/home/paul/src/aws-sdk-qt/doc/src/core.qdoc" lineno="1" seen="true" title="AWS Clients" module="QtAws"/>
+        <group name="classlists" href="classlists.html" status="internal" seen="false" title="" members="annotated.html,hierarchy.html,obsoleteclasses.html,namespaces.html"/>
+        <group name="funclists" href="funclists.html" status="internal" seen="false" title="" members="functions.html"/>
+        <module name="QtAws" href="qtaws-module.html" status="internal" seen="false" title="" members="QtAws"/>
     </namespace>
 </INDEX>
