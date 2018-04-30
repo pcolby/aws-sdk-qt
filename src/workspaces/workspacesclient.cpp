@@ -55,7 +55,7 @@
 
 /*!
  * \namespace QtAws::WorkSpaces
- * \brief The QtAws::WorkSpaces contains stuff...
+ * \brief Contains classess for accessing Amazon WorkSpaces.
  *
  * \inmodule QtAwsWorkSpaces
  *

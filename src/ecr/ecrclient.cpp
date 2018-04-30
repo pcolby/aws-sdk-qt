@@ -71,7 +71,7 @@
 
 /*!
  * \namespace QtAws::ECR
- * \brief The QtAws::ECR contains stuff...
+ * \brief Contains classess for accessing Amazon EC2 Container Registry ( ECR).
  *
  * \inmodule QtAwsEcr
  *

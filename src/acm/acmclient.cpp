@@ -51,7 +51,7 @@
 
 /*!
  * \namespace QtAws::ACM
- * \brief The QtAws::ACM contains stuff...
+ * \brief Contains classess for accessing AWS Certificate Manager (ACM).
  *
  * \inmodule QtAwsAcm
  *

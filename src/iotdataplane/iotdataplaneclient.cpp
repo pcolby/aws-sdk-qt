@@ -35,7 +35,7 @@
 
 /*!
  * \namespace QtAws::IoTDataPlane
- * \brief The QtAws::IoTDataPlane contains stuff...
+ * \brief Contains classess for accessing AWS IoT Data Plane.
  *
  * \inmodule QtAwsIoTDataPlane
  *

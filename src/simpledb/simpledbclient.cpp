@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::SimpleDB
- * \brief The QtAws::SimpleDB contains stuff...
+ * \brief Contains classess for accessing Amazon SimpleDB.
  *
  * \inmodule QtAwsSimpleDB
  *

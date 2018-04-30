@@ -89,7 +89,7 @@
 
 /*!
  * \namespace QtAws::ECS
- * \brief The QtAws::ECS contains stuff...
+ * \brief Contains classess for accessing Amazon EC2 Container Service ( ECS).
  *
  * \inmodule QtAwsEcs
  *

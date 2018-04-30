@@ -113,7 +113,7 @@
 
 /*!
  * \namespace QtAws::DirectConnect
- * \brief The QtAws::DirectConnect contains stuff...
+ * \brief Contains classess for accessing AWS Direct Connect.
  *
  * \inmodule QtAwsDirectConnect
  *

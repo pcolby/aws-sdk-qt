@@ -89,7 +89,7 @@
 
 /*!
  * \namespace QtAws::WorkMail
- * \brief The QtAws::WorkMail contains stuff...
+ * \brief Contains classess for accessing Amazon WorkMail.
  *
  * \inmodule QtAwsWorkMail
  *

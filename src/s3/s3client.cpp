@@ -182,7 +182,7 @@
 
 /*!
  * \namespace QtAws::S3
- * \brief The QtAws::S3 contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Storage Service ( S3).
  *
  * \inmodule QtAwsS3
  *

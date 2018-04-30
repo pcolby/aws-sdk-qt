@@ -101,7 +101,7 @@
 
 /*!
  * \namespace QtAws::GuardDuty
- * \brief The QtAws::GuardDuty contains stuff...
+ * \brief Contains classess for accessing Amazon GuardDuty.
  *
  * \inmodule QtAwsGuardDuty
  *

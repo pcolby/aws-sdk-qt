@@ -97,7 +97,7 @@
 
 /*!
  * \namespace QtAws::KMS
- * \brief The QtAws::KMS contains stuff...
+ * \brief Contains classess for accessing AWS Key Management Service (KMS).
  *
  * \inmodule QtAwsKms
  *

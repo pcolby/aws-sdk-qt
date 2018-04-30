@@ -124,7 +124,7 @@
 
 /*!
  * \namespace QtAws::AutoScaling
- * \brief The QtAws::AutoScaling contains stuff...
+ * \brief Contains classess for accessing Auto Scaling.
  *
  * \inmodule QtAwsAutoScaling
  *

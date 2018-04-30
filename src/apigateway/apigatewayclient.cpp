@@ -267,7 +267,7 @@
 
 /*!
  * \namespace QtAws::APIGateway
- * \brief The QtAws::APIGateway contains stuff...
+ * \brief Contains classess for accessing Amazon API Gateway.
  *
  * \inmodule QtAwsAPIGateway
  *

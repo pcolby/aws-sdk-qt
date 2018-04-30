@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::SageMakerRuntime
- * \brief The QtAws::SageMakerRuntime contains stuff...
+ * \brief Contains classess for accessing Amazon SageMaker Runtime.
  *
  * \inmodule QtAwsSageMakerRuntime
  *

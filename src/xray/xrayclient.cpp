@@ -43,7 +43,7 @@
 
 /*!
  * \namespace QtAws::XRay
- * \brief The QtAws::XRay contains stuff...
+ * \brief Contains classess for accessing AWS X-Ray.
  *
  * \inmodule QtAwsXRay
  *

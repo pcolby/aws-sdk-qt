@@ -81,7 +81,7 @@
 
 /*!
  * \namespace QtAws::EMR
- * \brief The QtAws::EMR contains stuff...
+ * \brief Contains classess for accessing Amazon Elastic MapReduce ( EMR).
  *
  * \inmodule QtAwsEmr
  *

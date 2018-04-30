@@ -81,7 +81,7 @@
 
 /*!
  * \namespace QtAws::AppSync
- * \brief The QtAws::AppSync contains stuff...
+ * \brief Contains classess for accessing AWS AppSync.
  *
  * \inmodule QtAwsAppSync
  *

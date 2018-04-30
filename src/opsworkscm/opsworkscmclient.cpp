@@ -57,7 +57,7 @@
 
 /*!
  * \namespace QtAws::OpsWorksCM
- * \brief The QtAws::OpsWorksCM contains stuff...
+ * \brief Contains classess for accessing AWS OpsWorks for Chef Automate (OpsWorksCM).
  *
  * \inmodule QtAwsOpsWorksCM
  *

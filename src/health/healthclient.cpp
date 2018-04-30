@@ -39,7 +39,7 @@
 
 /*!
  * \namespace QtAws::Health
- * \brief The QtAws::Health contains stuff...
+ * \brief Contains classess for accessing AWS Health APIs and Notifications.
  *
  * \inmodule QtAwsHealth
  *

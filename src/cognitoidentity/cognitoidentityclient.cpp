@@ -63,7 +63,7 @@
 
 /*!
  * \namespace QtAws::CognitoIdentity
- * \brief The QtAws::CognitoIdentity contains stuff...
+ * \brief Contains classess for accessing Amazon Cognito Identity.
  *
  * \inmodule QtAwsCognitoIdentity
  *

@@ -49,7 +49,7 @@
 
 /*!
  * \namespace QtAws::Comprehend
- * \brief The QtAws::Comprehend contains stuff...
+ * \brief Contains classess for accessing Amazon Comprehend.
  *
  * \inmodule QtAwsComprehend
  *

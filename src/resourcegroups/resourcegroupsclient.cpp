@@ -51,7 +51,7 @@
 
 /*!
  * \namespace QtAws::ResourceGroups
- * \brief The QtAws::ResourceGroups contains stuff...
+ * \brief Contains classess for accessing AWS Resource Groups.
  *
  * \inmodule QtAwsResourceGroups
  *

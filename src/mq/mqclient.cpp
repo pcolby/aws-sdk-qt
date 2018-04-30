@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::MQ
- * \brief The QtAws::MQ contains stuff...
+ * \brief Contains classess for accessing AmazonMQ.
  *
  * \inmodule QtAwsMq
  *

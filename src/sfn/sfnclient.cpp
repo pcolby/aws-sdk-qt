@@ -65,7 +65,7 @@
 
 /*!
  * \namespace QtAws::SFN
- * \brief The QtAws::SFN contains stuff...
+ * \brief Contains classess for accessing AWS Step Functions ( SFN).
  *
  * \inmodule QtAwsSfn
  *

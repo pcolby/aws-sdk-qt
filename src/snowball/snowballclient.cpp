@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::Snowball
- * \brief The QtAws::Snowball contains stuff...
+ * \brief Contains classess for accessing Amazon Import/Export Snowball.
  *
  * \inmodule QtAwsSnowball
  *

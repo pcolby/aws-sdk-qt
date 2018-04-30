@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::MarketplaceEntitlementService
- * \brief The QtAws::MarketplaceEntitlementService contains stuff...
+ * \brief Contains classess for accessing AWS Marketplace Entitlement Service.
  *
  * \inmodule QtAwsMarketplaceEntitlementService
  *

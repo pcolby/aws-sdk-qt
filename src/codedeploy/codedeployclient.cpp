@@ -107,7 +107,7 @@
 
 /*!
  * \namespace QtAws::CodeDeploy
- * \brief The QtAws::CodeDeploy contains stuff...
+ * \brief Contains classess for accessing AWS CodeDeploy.
  *
  * \inmodule QtAwsCodeDeploy
  *

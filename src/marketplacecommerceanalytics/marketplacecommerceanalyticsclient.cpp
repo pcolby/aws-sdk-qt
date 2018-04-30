@@ -31,7 +31,7 @@
 
 /*!
  * \namespace QtAws::MarketplaceCommerceAnalytics
- * \brief The QtAws::MarketplaceCommerceAnalytics contains stuff...
+ * \brief Contains classess for accessing AWS Marketplace Commerce Analytics.
  *
  * \inmodule QtAwsMarketplaceCommerceAnalytics
  *

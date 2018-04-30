@@ -15,7 +15,7 @@
 
 /*!
  * \namespace QtAws::{{NameSpaceName}}
- * \brief The QtAws::{{NameSpaceName}} contains stuff...
+ * \brief Contains classess for accessing {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %}.
  *
  * \inmodule {{ModuleName}}
  *

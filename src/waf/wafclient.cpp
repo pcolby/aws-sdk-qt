@@ -165,7 +165,7 @@
 
 /*!
  * \namespace QtAws::WAF
- * \brief The QtAws::WAF contains stuff...
+ * \brief Contains classess for accessing AWS WAF.
  *
  * \inmodule QtAwsWaf
  *

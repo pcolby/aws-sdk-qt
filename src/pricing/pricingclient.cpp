@@ -33,7 +33,7 @@
 
 /*!
  * \namespace QtAws::Pricing
- * \brief The QtAws::Pricing contains stuff...
+ * \brief Contains classess for accessing AWS Price List Service ( Pricing).
  *
  * \inmodule QtAwsPricing
  *

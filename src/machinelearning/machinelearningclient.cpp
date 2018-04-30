@@ -83,7 +83,7 @@
 
 /*!
  * \namespace QtAws::MachineLearning
- * \brief The QtAws::MachineLearning contains stuff...
+ * \brief Contains classess for accessing Amazon Machine Learning.
  *
  * \inmodule QtAwsMachineLearning
  *

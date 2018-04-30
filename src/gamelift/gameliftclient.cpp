@@ -157,7 +157,7 @@
 
 /*!
  * \namespace QtAws::GameLift
- * \brief The QtAws::GameLift contains stuff...
+ * \brief Contains classess for accessing Amazon GameLift.
  *
  * \inmodule QtAwsGameLift
  *

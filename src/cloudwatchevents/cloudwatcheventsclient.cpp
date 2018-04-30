@@ -57,7 +57,7 @@
 
 /*!
  * \namespace QtAws::CloudWatchEvents
- * \brief The QtAws::CloudWatchEvents contains stuff...
+ * \brief Contains classess for accessing Amazon CloudWatch Events.
  *
  * \inmodule QtAwsCloudWatchEvents
  *

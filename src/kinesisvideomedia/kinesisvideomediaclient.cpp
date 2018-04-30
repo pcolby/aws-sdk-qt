@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::KinesisVideoMedia
- * \brief The QtAws::KinesisVideoMedia contains stuff...
+ * \brief Contains classess for accessing Amazon Kinesis Video Streams Media (Kinesis Video Media).
  *
  * \inmodule QtAwsKinesisVideoMedia
  *

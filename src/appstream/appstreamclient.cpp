@@ -93,7 +93,7 @@
 
 /*!
  * \namespace QtAws::AppStream
- * \brief The QtAws::AppStream contains stuff...
+ * \brief Contains classess for accessing Amazon AppStream.
  *
  * \inmodule QtAwsAppStream
  *

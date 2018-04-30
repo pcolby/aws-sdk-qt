@@ -115,7 +115,7 @@
 
 /*!
  * \namespace QtAws::DatabaseMigrationService
- * \brief The QtAws::DatabaseMigrationService contains stuff...
+ * \brief Contains classess for accessing AWS Database Migration Service.
  *
  * \inmodule QtAwsDatabaseMigrationService
  *

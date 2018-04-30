@@ -93,7 +93,7 @@
 
 /*!
  * \namespace QtAws::Rekognition
- * \brief The QtAws::Rekognition contains stuff...
+ * \brief Contains classess for accessing Amazon Rekognition.
  *
  * \inmodule QtAwsRekognition
  *

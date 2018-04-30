@@ -51,7 +51,7 @@
 
 /*!
  * \namespace QtAws::FMS
- * \brief The QtAws::FMS contains stuff...
+ * \brief Contains classess for accessing Firewall Management Service (FMS).
  *
  * \inmodule QtAwsFms
  *

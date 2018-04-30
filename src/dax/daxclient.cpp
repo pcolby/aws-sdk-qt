@@ -69,7 +69,7 @@
 
 /*!
  * \namespace QtAws::DAX
- * \brief The QtAws::DAX contains stuff...
+ * \brief Contains classess for accessing Amazon DynamoDB Accelerator (DAX) ( DAX).
  *
  * \inmodule QtAwsDax
  *

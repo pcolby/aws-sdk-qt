@@ -64,7 +64,7 @@
 
 /*!
  * \namespace QtAws::ApplicationDiscoveryService
- * \brief The QtAws::ApplicationDiscoveryService contains stuff...
+ * \brief Contains classess for accessing AWS Application Discovery Service.
  *
  * \inmodule QtAwsApplicationDiscoveryService
  *

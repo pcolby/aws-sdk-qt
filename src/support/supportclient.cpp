@@ -55,7 +55,7 @@
 
 /*!
  * \namespace QtAws::Support
- * \brief The QtAws::Support contains stuff...
+ * \brief Contains classess for accessing AWS Support.
  *
  * \inmodule QtAwsSupport
  *

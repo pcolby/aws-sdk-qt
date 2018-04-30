@@ -147,7 +147,7 @@
 
 /*!
  * \namespace QtAws::ServiceCatalog
- * \brief The QtAws::ServiceCatalog contains stuff...
+ * \brief Contains classess for accessing AWS Service Catalog.
  *
  * \inmodule QtAwsServiceCatalog
  *

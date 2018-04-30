@@ -49,7 +49,7 @@
 
 /*!
  * \namespace QtAws::MediaPackage
- * \brief The QtAws::MediaPackage contains stuff...
+ * \brief Contains classess for accessing AWS Elemental MediaPackage.
  *
  * \inmodule QtAwsMediaPackage
  *

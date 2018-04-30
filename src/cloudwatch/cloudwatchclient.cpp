@@ -59,7 +59,7 @@
 
 /*!
  * \namespace QtAws::CloudWatch
- * \brief The QtAws::CloudWatch contains stuff...
+ * \brief Contains classess for accessing Amazon CloudWatch.
  *
  * \inmodule QtAwsCloudWatch
  *

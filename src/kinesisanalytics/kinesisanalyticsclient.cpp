@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::KinesisAnalytics
- * \brief The QtAws::KinesisAnalytics contains stuff...
+ * \brief Contains classess for accessing Amazon Kinesis Analytics.
  *
  * \inmodule QtAwsKinesisAnalytics
  *

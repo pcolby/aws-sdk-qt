@@ -209,7 +209,7 @@
 
 /*!
  * \namespace QtAws::RDS
- * \brief The QtAws::RDS contains stuff...
+ * \brief Contains classess for accessing Amazon Relational Database Service ( RDS).
  *
  * \inmodule QtAwsRds
  *

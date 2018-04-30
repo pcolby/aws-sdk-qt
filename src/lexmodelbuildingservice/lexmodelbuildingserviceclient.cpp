@@ -99,7 +99,7 @@
 
 /*!
  * \namespace QtAws::LexModelBuildingService
- * \brief The QtAws::LexModelBuildingService contains stuff...
+ * \brief Contains classess for accessing Amazon Lex Model Building Service.
  *
  * \inmodule QtAwsLexModelBuildingService
  *

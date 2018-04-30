@@ -107,7 +107,7 @@
 
 /*!
  * \namespace QtAws::ElastiCache
- * \brief The QtAws::ElastiCache contains stuff...
+ * \brief Contains classess for accessing Amazon ElastiCache.
  *
  * \inmodule QtAwsElastiCache
  *

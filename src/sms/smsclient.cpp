@@ -49,7 +49,7 @@
 
 /*!
  * \namespace QtAws::SMS
- * \brief The QtAws::SMS contains stuff...
+ * \brief Contains classess for accessing AWS Server Migration Service (SMS).
  *
  * \inmodule QtAwsSms
  *

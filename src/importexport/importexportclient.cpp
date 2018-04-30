@@ -39,7 +39,7 @@
 
 /*!
  * \namespace QtAws::ImportExport
- * \brief The QtAws::ImportExport contains stuff...
+ * \brief Contains classess for accessing AWS Import/Export.
  *
  * \inmodule QtAwsImportExport
  *

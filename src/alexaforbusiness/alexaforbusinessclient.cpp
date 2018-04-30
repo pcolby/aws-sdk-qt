@@ -123,7 +123,7 @@
 
 /*!
  * \namespace QtAws::AlexaForBusiness
- * \brief The QtAws::AlexaForBusiness contains stuff...
+ * \brief Contains classess for accessing Alexa For Business.
  *
  * \inmodule QtAwsAlexaForBusiness
  *

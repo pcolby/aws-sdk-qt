@@ -153,7 +153,7 @@
 
 /*!
  * \namespace QtAws::CloudDirectory
- * \brief The QtAws::CloudDirectory contains stuff...
+ * \brief Contains classess for accessing Amazon CloudDirectory.
  *
  * \inmodule QtAwsCloudDirectory
  *

@@ -59,7 +59,7 @@
 
 /*!
  * \namespace QtAws::MigrationHub
- * \brief The QtAws::MigrationHub contains stuff...
+ * \brief Contains classess for accessing AWS Migration Hub.
  *
  * \inmodule QtAwsMigrationHub
  *

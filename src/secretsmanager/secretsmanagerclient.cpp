@@ -57,7 +57,7 @@
 
 /*!
  * \namespace QtAws::SecretsManager
- * \brief The QtAws::SecretsManager contains stuff...
+ * \brief Contains classess for accessing AWS Secrets Manager.
  *
  * \inmodule QtAwsSecretsManager
  *

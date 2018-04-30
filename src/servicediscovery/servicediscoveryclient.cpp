@@ -63,7 +63,7 @@
 
 /*!
  * \namespace QtAws::ServiceDiscovery
- * \brief The QtAws::ServiceDiscovery contains stuff...
+ * \brief Contains classess for accessing Amazon Route 53 Auto Naming (ServiceDiscovery).
  *
  * \inmodule QtAwsServiceDiscovery
  *

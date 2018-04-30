@@ -39,7 +39,7 @@
 
 /*!
  * \namespace QtAws::CostExplorer
- * \brief The QtAws::CostExplorer contains stuff...
+ * \brief Contains classess for accessing AWS Cost Explorer Service.
  *
  * \inmodule QtAwsCostExplorer
  *

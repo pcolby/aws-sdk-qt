@@ -87,7 +87,7 @@
 
 /*!
  * \namespace QtAws::IoTAnalytics
- * \brief The QtAws::IoTAnalytics contains stuff...
+ * \brief Contains classess for accessing AWS IoT Analytics.
  *
  * \inmodule QtAwsIoTAnalytics
  *

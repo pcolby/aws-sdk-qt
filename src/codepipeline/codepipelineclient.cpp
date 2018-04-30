@@ -81,7 +81,7 @@
 
 /*!
  * \namespace QtAws::CodePipeline
- * \brief The QtAws::CodePipeline contains stuff...
+ * \brief Contains classess for accessing AWS CodePipeline.
  *
  * \inmodule QtAwsCodePipeline
  *

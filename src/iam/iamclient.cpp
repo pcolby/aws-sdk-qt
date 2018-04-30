@@ -268,7 +268,7 @@
 
 /*!
  * \namespace QtAws::IAM
- * \brief The QtAws::IAM contains stuff...
+ * \brief Contains classess for accessing AWS Identity and Access Management (IAM).
  *
  * \inmodule QtAwsIam
  *

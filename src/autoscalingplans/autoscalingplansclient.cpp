@@ -37,7 +37,7 @@
 
 /*!
  * \namespace QtAws::AutoScalingPlans
- * \brief The QtAws::AutoScalingPlans contains stuff...
+ * \brief Contains classess for accessing AWS Auto Scaling Plans.
  *
  * \inmodule QtAwsAutoScalingPlans
  *

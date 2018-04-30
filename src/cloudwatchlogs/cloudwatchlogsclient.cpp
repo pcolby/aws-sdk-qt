@@ -93,7 +93,7 @@
 
 /*!
  * \namespace QtAws::CloudWatchLogs
- * \brief The QtAws::CloudWatchLogs contains stuff...
+ * \brief Contains classess for accessing Amazon CloudWatch Logs.
  *
  * \inmodule QtAwsCloudWatchLogs
  *

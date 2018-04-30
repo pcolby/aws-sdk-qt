@@ -112,7 +112,7 @@
 
 /*!
  * \namespace QtAws::ElasticBeanstalk
- * \brief The QtAws::ElasticBeanstalk contains stuff...
+ * \brief Contains classess for accessing AWS Elastic Beanstalk.
  *
  * \inmodule QtAwsElasticBeanstalk
  *

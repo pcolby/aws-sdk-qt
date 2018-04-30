@@ -563,7 +563,7 @@
 
 /*!
  * \namespace QtAws::EC2
- * \brief The QtAws::EC2 contains stuff...
+ * \brief Contains classess for accessing Amazon Elastic Compute Cloud ( EC2).
  *
  * \inmodule QtAwsEc2
  *

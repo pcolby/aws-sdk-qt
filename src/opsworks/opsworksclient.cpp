@@ -173,7 +173,7 @@
 
 /*!
  * \namespace QtAws::OpsWorks
- * \brief The QtAws::OpsWorks contains stuff...
+ * \brief Contains classess for accessing AWS OpsWorks.
  *
  * \inmodule QtAwsOpsWorks
  *

@@ -59,7 +59,7 @@
 
 /*!
  * \namespace QtAws::ACMPCA
- * \brief The QtAws::ACMPCA contains stuff...
+ * \brief Contains classess for accessing AWS Certificate Manager Private Certificate Authority (ACM-PCA).
  *
  * \inmodule QtAwsAcmpca
  *

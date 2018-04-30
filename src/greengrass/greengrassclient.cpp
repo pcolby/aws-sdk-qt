@@ -175,7 +175,7 @@
 
 /*!
  * \namespace QtAws::Greengrass
- * \brief The QtAws::Greengrass contains stuff...
+ * \brief Contains classess for accessing AWS Greengrass.
  *
  * \inmodule QtAwsGreengrass
  *

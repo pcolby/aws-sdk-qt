@@ -108,7 +108,7 @@
 
 /*!
  * \namespace QtAws::Organizations
- * \brief The QtAws::Organizations contains stuff...
+ * \brief Contains classess for accessing AWS Organizations.
  *
  * \inmodule QtAwsOrganizations
  *

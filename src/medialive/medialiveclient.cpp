@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::MediaLive
- * \brief The QtAws::MediaLive contains stuff...
+ * \brief Contains classess for accessing AWS Elemental MediaLive.
  *
  * \inmodule QtAwsMediaLive
  *

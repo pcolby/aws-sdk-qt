@@ -63,7 +63,7 @@
 
 /*!
  * \namespace QtAws::CodeStar
- * \brief The QtAws::CodeStar contains stuff...
+ * \brief Contains classess for accessing AWS CodeStar.
  *
  * \inmodule QtAwsCodeStar
  *

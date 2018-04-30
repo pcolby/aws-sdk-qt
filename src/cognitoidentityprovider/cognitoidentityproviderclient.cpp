@@ -217,7 +217,7 @@
 
 /*!
  * \namespace QtAws::CognitoIdentityProvider
- * \brief The QtAws::CognitoIdentityProvider contains stuff...
+ * \brief Contains classess for accessing Amazon Cognito Identity Provider.
  *
  * \inmodule QtAwsCognitoIdentityProvider
  *

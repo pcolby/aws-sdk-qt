@@ -99,7 +99,7 @@
 
 /*!
  * \namespace QtAws::CodeCommit
- * \brief The QtAws::CodeCommit contains stuff...
+ * \brief Contains classess for accessing AWS CodeCommit.
  *
  * \inmodule QtAwsCodeCommit
  *

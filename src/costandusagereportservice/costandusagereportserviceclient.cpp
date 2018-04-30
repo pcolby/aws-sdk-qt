@@ -33,7 +33,7 @@
 
 /*!
  * \namespace QtAws::CostandUsageReportService
- * \brief The QtAws::CostandUsageReportService contains stuff...
+ * \brief Contains classess for accessing AWS Cost and Usage Report Service.
  *
  * \inmodule QtAwsCostandUsageReportService
  *

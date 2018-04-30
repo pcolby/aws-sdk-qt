@@ -225,7 +225,7 @@
 
 /*!
  * \namespace QtAws::SSM
- * \brief The QtAws::SSM contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Systems Manager (SSM) ( SSM).
  *
  * \inmodule QtAwsSsm
  *

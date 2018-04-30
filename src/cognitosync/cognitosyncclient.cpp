@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::CognitoSync
- * \brief The QtAws::CognitoSync contains stuff...
+ * \brief Contains classess for accessing Amazon Cognito Sync.
  *
  * \inmodule QtAwsCognitoSync
  *

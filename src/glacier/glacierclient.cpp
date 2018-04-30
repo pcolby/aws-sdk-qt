@@ -93,7 +93,7 @@
 
 /*!
  * \namespace QtAws::Glacier
- * \brief The QtAws::Glacier contains stuff...
+ * \brief Contains classess for accessing Amazon Glacier.
  *
  * \inmodule QtAwsGlacier
  *

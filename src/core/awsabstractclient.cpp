@@ -33,7 +33,7 @@ namespace Core {
 
 /*!
  * \namespace QtAws::Core
- * \brief Encapsulates stuff..
+ * \brief Contains core classes for accessing AWS services.
  *
  * \inmodule QtAwsCore
  *

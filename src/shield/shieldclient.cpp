@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::Shield
- * \brief The QtAws::Shield contains stuff...
+ * \brief Contains classess for accessing AWS Shield.
  *
  * \inmodule QtAwsShield
  *

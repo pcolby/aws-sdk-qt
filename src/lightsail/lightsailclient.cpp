@@ -169,7 +169,7 @@
 
 /*!
  * \namespace QtAws::Lightsail
- * \brief The QtAws::Lightsail contains stuff...
+ * \brief Contains classess for accessing Amazon Lightsail.
  *
  * \inmodule QtAwsLightsail
  *

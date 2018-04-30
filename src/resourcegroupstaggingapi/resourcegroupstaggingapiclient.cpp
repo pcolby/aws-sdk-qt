@@ -37,7 +37,7 @@
 
 /*!
  * \namespace QtAws::ResourceGroupsTaggingAPI
- * \brief The QtAws::ResourceGroupsTaggingAPI contains stuff...
+ * \brief Contains classess for accessing AWS Resource Groups Tagging API.
  *
  * \inmodule QtAwsResourceGroupsTaggingAPI
  *

@@ -31,7 +31,7 @@
 
 /*!
  * \namespace QtAws::Connect
- * \brief The QtAws::Connect contains stuff...
+ * \brief Contains classess for accessing Amazon Connect Service.
  *
  * \inmodule QtAwsConnect
  *

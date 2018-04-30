@@ -107,7 +107,7 @@
 
 /*!
  * \namespace QtAws::WorkDocs
- * \brief The QtAws::WorkDocs contains stuff...
+ * \brief Contains classess for accessing Amazon WorkDocs.
  *
  * \inmodule QtAwsWorkDocs
  *

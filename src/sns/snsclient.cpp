@@ -87,7 +87,7 @@
 
 /*!
  * \namespace QtAws::SNS
- * \brief The QtAws::SNS contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Notification Service ( SNS).
  *
  * \inmodule QtAwsSns
  *

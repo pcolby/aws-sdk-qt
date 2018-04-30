@@ -173,7 +173,7 @@
 
 /*!
  * \namespace QtAws::WAFRegional
- * \brief The QtAws::WAFRegional contains stuff...
+ * \brief Contains classess for accessing AWS WAF Regional.
  *
  * \inmodule QtAwsWAFRegional
  *

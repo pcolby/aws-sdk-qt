@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::Cloud9
- * \brief The QtAws::Cloud9 contains stuff...
+ * \brief Contains classess for accessing AWS Cloud9.
  *
  * \inmodule QtAwsCloud9
  *

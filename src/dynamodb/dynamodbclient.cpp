@@ -89,7 +89,7 @@
 
 /*!
  * \namespace QtAws::DynamoDB
- * \brief The QtAws::DynamoDB contains stuff...
+ * \brief Contains classess for accessing Amazon DynamoDB.
  *
  * \inmodule QtAwsDynamoDB
  *

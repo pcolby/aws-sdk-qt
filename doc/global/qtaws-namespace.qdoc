@@ -1,7 +1,7 @@
 /*!
 
 \namespace QtAws
-\brief The QtAws namespace contains all of the QtAws library
+\brief Parent namespace for all other QtAws namespaces.
 \inmodule QtAws
 
 All about the QtAWS namespace..

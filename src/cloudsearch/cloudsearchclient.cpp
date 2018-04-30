@@ -74,7 +74,7 @@
 
 /*!
  * \namespace QtAws::CloudSearch
- * \brief The QtAws::CloudSearch contains stuff...
+ * \brief Contains classess for accessing Amazon CloudSearch.
  *
  * \inmodule QtAwsCloudSearch
  *

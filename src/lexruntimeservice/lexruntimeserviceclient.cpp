@@ -31,7 +31,7 @@
 
 /*!
  * \namespace QtAws::LexRuntimeService
- * \brief The QtAws::LexRuntimeService contains stuff...
+ * \brief Contains classess for accessing Amazon Lex Runtime Service.
  *
  * \inmodule QtAwsLexRuntimeService
  *

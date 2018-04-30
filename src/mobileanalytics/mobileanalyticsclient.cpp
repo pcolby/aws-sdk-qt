@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::MobileAnalytics
- * \brief The QtAws::MobileAnalytics contains stuff...
+ * \brief Contains classess for accessing Amazon Mobile Analytics.
  *
  * \inmodule QtAwsMobileAnalytics
  *

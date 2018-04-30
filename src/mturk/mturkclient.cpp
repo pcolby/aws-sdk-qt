@@ -105,7 +105,7 @@
 
 /*!
  * \namespace QtAws::MTurk
- * \brief The QtAws::MTurk contains stuff...
+ * \brief Contains classess for accessing Amazon Mechanical Turk ( MTurk).
  *
  * \inmodule QtAwsMTurk
  *

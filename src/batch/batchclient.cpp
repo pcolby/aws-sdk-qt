@@ -59,7 +59,7 @@
 
 /*!
  * \namespace QtAws::Batch
- * \brief The QtAws::Batch contains stuff...
+ * \brief Contains classess for accessing AWS Batch.
  *
  * \inmodule QtAwsBatch
  *

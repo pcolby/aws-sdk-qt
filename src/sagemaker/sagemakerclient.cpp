@@ -95,7 +95,7 @@
 
 /*!
  * \namespace QtAws::SageMaker
- * \brief The QtAws::SageMaker contains stuff...
+ * \brief Contains classess for accessing Amazon SageMaker Service.
  *
  * \inmodule QtAwsSageMaker
  *

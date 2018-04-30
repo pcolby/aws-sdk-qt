@@ -151,7 +151,7 @@
 
 /*!
  * \namespace QtAws::DeviceFarm
- * \brief The QtAws::DeviceFarm contains stuff...
+ * \brief Contains classess for accessing AWS Device Farm.
  *
  * \inmodule QtAwsDeviceFarm
  *

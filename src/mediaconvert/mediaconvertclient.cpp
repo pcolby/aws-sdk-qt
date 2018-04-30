@@ -67,7 +67,7 @@
 
 /*!
  * \namespace QtAws::MediaConvert
- * \brief The QtAws::MediaConvert contains stuff...
+ * \brief Contains classess for accessing AWS Elemental MediaConvert.
  *
  * \inmodule QtAwsMediaConvert
  *

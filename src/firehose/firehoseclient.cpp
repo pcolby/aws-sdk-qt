@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::Firehose
- * \brief The QtAws::Firehose contains stuff...
+ * \brief Contains classess for accessing Amazon Kinesis Firehose.
  *
  * \inmodule QtAwsFirehose
  *

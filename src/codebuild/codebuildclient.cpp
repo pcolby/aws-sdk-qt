@@ -59,7 +59,7 @@
 
 /*!
  * \namespace QtAws::CodeBuild
- * \brief The QtAws::CodeBuild contains stuff...
+ * \brief Contains classess for accessing AWS CodeBuild.
  *
  * \inmodule QtAwsCodeBuild
  *

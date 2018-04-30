@@ -55,7 +55,7 @@
 
 /*!
  * \namespace QtAws::CloudTrail
- * \brief The QtAws::CloudTrail contains stuff...
+ * \brief Contains classess for accessing AWS CloudTrail.
  *
  * \inmodule QtAwsCloudTrail
  *

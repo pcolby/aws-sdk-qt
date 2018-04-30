@@ -53,7 +53,7 @@
 
 /*!
  * \namespace QtAws::Budgets
- * \brief The QtAws::Budgets contains stuff...
+ * \brief Contains classess for accessing AWS Budgets.
  *
  * \inmodule QtAwsBudgets
  *

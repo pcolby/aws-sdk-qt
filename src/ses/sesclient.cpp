@@ -163,7 +163,7 @@
 
 /*!
  * \namespace QtAws::SES
- * \brief The QtAws::SES contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Email Service ( SES).
  *
  * \inmodule QtAwsSes
  *

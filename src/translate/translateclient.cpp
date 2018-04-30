@@ -29,7 +29,7 @@
 
 /*!
  * \namespace QtAws::Translate
- * \brief The QtAws::Translate contains stuff...
+ * \brief Contains classess for accessing Amazon Translate.
  *
  * \inmodule QtAwsTranslate
  *

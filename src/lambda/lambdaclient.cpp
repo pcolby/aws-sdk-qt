@@ -87,7 +87,7 @@
 
 /*!
  * \namespace QtAws::Lambda
- * \brief The QtAws::Lambda contains stuff...
+ * \brief Contains classess for accessing AWS Lambda.
  *
  * \inmodule QtAwsLambda
  *

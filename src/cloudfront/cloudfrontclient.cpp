@@ -119,7 +119,7 @@
 
 /*!
  * \namespace QtAws::CloudFront
- * \brief The QtAws::CloudFront contains stuff...
+ * \brief Contains classess for accessing Amazon CloudFront.
  *
  * \inmodule QtAwsCloudFront
  *

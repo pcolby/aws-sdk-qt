@@ -73,7 +73,7 @@
 
 /*!
  * \namespace QtAws::Kinesis
- * \brief The QtAws::Kinesis contains stuff...
+ * \brief Contains classess for accessing Amazon Kinesis.
  *
  * \inmodule QtAwsKinesis
  *

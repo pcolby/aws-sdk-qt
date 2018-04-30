@@ -49,7 +49,7 @@
 
 /*!
  * \namespace QtAws::EFS
- * \brief The QtAws::EFS contains stuff...
+ * \brief Contains classess for accessing Amazon Elastic File System (EFS).
  *
  * \inmodule QtAwsEfs
  *

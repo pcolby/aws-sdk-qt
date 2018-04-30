@@ -37,7 +37,7 @@
 
 /*!
  * \namespace QtAws::MediaStoreData
- * \brief The QtAws::MediaStoreData contains stuff...
+ * \brief Contains classess for accessing AWS Elemental MediaStore Data Plane.
  *
  * \inmodule QtAwsMediaStoreData
  *

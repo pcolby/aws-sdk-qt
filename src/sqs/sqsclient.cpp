@@ -67,7 +67,7 @@
 
 /*!
  * \namespace QtAws::SQS
- * \brief The QtAws::SQS contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Queue Service ( SQS).
  *
  * \inmodule QtAwsSqs
  *

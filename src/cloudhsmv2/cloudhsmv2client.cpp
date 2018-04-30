@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::CloudHSMV2
- * \brief The QtAws::CloudHSMV2 contains stuff...
+ * \brief Contains classess for accessing AWS CloudHSM V2.
  *
  * \inmodule QtAwsCloudHSMV2
  *

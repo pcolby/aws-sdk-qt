@@ -33,7 +33,7 @@
 
 /*!
  * \namespace QtAws::CloudSearchDomain
- * \brief The QtAws::CloudSearchDomain contains stuff...
+ * \brief Contains classess for accessing Amazon CloudSearch Domain.
  *
  * \inmodule QtAwsCloudSearchDomain
  *

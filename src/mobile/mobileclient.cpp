@@ -45,7 +45,7 @@
 
 /*!
  * \namespace QtAws::Mobile
- * \brief The QtAws::Mobile contains stuff...
+ * \brief Contains classess for accessing AWS Mobile.
  *
  * \inmodule QtAwsMobile
  *

@@ -153,7 +153,7 @@
 
 /*!
  * \namespace QtAws::StorageGateway
- * \brief The QtAws::StorageGateway contains stuff...
+ * \brief Contains classess for accessing AWS Storage Gateway.
  *
  * \inmodule QtAwsStorageGateway
  *

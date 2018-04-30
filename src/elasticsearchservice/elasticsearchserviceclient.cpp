@@ -53,7 +53,7 @@
 
 /*!
  * \namespace QtAws::ElasticsearchService
- * \brief The QtAws::ElasticsearchService contains stuff...
+ * \brief Contains classess for accessing Amazon Elasticsearch Service.
  *
  * \inmodule QtAwsElasticsearchService
  *

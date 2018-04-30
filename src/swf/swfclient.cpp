@@ -89,7 +89,7 @@
 
 /*!
  * \namespace QtAws::SWF
- * \brief The QtAws::SWF contains stuff...
+ * \brief Contains classess for accessing Amazon Simple Workflow Service ( SWF).
  *
  * \inmodule QtAwsSwf
  *

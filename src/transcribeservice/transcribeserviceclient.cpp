@@ -43,7 +43,7 @@
 
 /*!
  * \namespace QtAws::TranscribeService
- * \brief The QtAws::TranscribeService contains stuff...
+ * \brief Contains classess for accessing Amazon Transcribe Service.
  *
  * \inmodule QtAwsTranscribeService
  *

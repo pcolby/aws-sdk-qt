@@ -67,7 +67,7 @@
 
 /*!
  * \namespace QtAws::CloudHSM
- * \brief The QtAws::CloudHSM contains stuff...
+ * \brief Contains classess for accessing Amazon CloudHSM.
  *
  * \inmodule QtAwsCloudHSM
  *

@@ -109,7 +109,7 @@
 
 /*!
  * \namespace QtAws::CloudFormation
- * \brief The QtAws::CloudFormation contains stuff...
+ * \brief Contains classess for accessing AWS CloudFormation.
  *
  * \inmodule QtAwsCloudFormation
  *

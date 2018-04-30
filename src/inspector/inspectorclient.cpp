@@ -92,7 +92,7 @@
 
 /*!
  * \namespace QtAws::Inspector
- * \brief The QtAws::Inspector contains stuff...
+ * \brief Contains classess for accessing Amazon Inspector.
  *
  * \inmodule QtAwsInspector
  *

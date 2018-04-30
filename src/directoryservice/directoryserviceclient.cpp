@@ -107,7 +107,7 @@
 
 /*!
  * \namespace QtAws::DirectoryService
- * \brief The QtAws::DirectoryService contains stuff...
+ * \brief Contains classess for accessing AWS Directory Service.
  *
  * \inmodule QtAwsDirectoryService
  *

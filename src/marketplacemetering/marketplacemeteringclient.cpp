@@ -33,7 +33,7 @@
 
 /*!
  * \namespace QtAws::MarketplaceMetering
- * \brief The QtAws::MarketplaceMetering contains stuff...
+ * \brief Contains classess for accessing AWSMarketplace Metering.
  *
  * \inmodule QtAwsMarketplaceMetering
  *

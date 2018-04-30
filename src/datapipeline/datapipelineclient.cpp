@@ -65,7 +65,7 @@
 
 /*!
  * \namespace QtAws::DataPipeline
- * \brief The QtAws::DataPipeline contains stuff...
+ * \brief Contains classess for accessing AWS Data Pipeline.
  *
  * \inmodule QtAwsDataPipeline
  *

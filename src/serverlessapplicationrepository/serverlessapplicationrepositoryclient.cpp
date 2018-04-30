@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::ServerlessApplicationRepository
- * \brief The QtAws::ServerlessApplicationRepository contains stuff...
+ * \brief Contains classess for accessing AWSServerlessApplicationRepository.
  *
  * \inmodule QtAwsServerlessApplicationRepository
  *

@@ -41,7 +41,7 @@
 
 /*!
  * \namespace QtAws::STS
- * \brief The QtAws::STS contains stuff...
+ * \brief Contains classess for accessing AWS Security Token Service ( STS).
  *
  * \inmodule QtAwsSts
  *

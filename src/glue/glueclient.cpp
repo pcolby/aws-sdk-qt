@@ -183,7 +183,7 @@
 
 /*!
  * \namespace QtAws::Glue
- * \brief The QtAws::Glue contains stuff...
+ * \brief Contains classess for accessing AWS Glue.
  *
  * \inmodule QtAwsGlue
  *

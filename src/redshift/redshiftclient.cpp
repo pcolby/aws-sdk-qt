@@ -153,7 +153,7 @@
 
 /*!
  * \namespace QtAws::Redshift
- * \brief The QtAws::Redshift contains stuff...
+ * \brief Contains classess for accessing Amazon Redshift.
  *
  * \inmodule QtAwsRedshift
  *

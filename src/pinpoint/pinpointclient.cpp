@@ -157,7 +157,7 @@
 
 /*!
  * \namespace QtAws::Pinpoint
- * \brief The QtAws::Pinpoint contains stuff...
+ * \brief Contains classess for accessing Amazon Pinpoint.
  *
  * \inmodule QtAwsPinpoint
  *

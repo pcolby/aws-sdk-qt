@@ -39,7 +39,7 @@
 
 /*!
  * \namespace QtAws::Polly
- * \brief The QtAws::Polly contains stuff...
+ * \brief Contains classess for accessing Amazon Polly.
  *
  * \inmodule QtAwsPolly
  *

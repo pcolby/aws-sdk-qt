@@ -35,7 +35,7 @@
 
 /*!
  * \namespace QtAws::DynamoDBStreams
- * \brief The QtAws::DynamoDBStreams contains stuff...
+ * \brief Contains classess for accessing Amazon DynamoDB Streams.
  *
  * \inmodule QtAwsDynamoDBStreams
  *

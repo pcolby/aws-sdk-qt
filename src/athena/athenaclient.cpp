@@ -49,7 +49,7 @@
 
 /*!
  * \namespace QtAws::Athena
- * \brief The QtAws::Athena contains stuff...
+ * \brief Contains classess for accessing Amazon Athena.
  *
  * \inmodule QtAwsAthena
  *

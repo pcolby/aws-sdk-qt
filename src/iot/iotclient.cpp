@@ -273,7 +273,7 @@
 
 /*!
  * \namespace QtAws::IoT
- * \brief The QtAws::IoT contains stuff...
+ * \brief Contains classess for accessing AWS IoT.
  *
  * \inmodule QtAwsIoT
  *

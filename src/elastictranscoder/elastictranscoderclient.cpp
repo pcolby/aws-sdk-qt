@@ -61,7 +61,7 @@
 
 /*!
  * \namespace QtAws::ElasticTranscoder
- * \brief The QtAws::ElasticTranscoder contains stuff...
+ * \brief Contains classess for accessing Amazon Elastic Transcoder.
  *
  * \inmodule QtAwsElasticTranscoder
  *

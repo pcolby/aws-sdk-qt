@@ -139,7 +139,7 @@
 
 /*!
  * \namespace QtAws::Route53
- * \brief The QtAws::Route53 contains stuff...
+ * \brief Contains classess for accessing Amazon Route 53.
  *
  * \inmodule QtAwsRoute53
  *

@@ -47,7 +47,7 @@
 
 /*!
  * \namespace QtAws::MediaStore
- * \brief The QtAws::MediaStore contains stuff...
+ * \brief Contains classess for accessing AWS Elemental MediaStore.
  *
  * \inmodule QtAwsMediaStore
  *

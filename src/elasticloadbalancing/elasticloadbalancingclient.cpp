@@ -85,7 +85,7 @@
 
 /*!
  * \namespace QtAws::ElasticLoadBalancing
- * \brief The QtAws::ElasticLoadBalancing contains stuff...
+ * \brief Contains classess for accessing Elastic Load Balancing.
  *
  * \inmodule QtAwsElasticLoadBalancing
  *

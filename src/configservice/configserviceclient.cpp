@@ -106,7 +106,7 @@
 
 /*!
  * \namespace QtAws::ConfigService
- * \brief The QtAws::ConfigService contains stuff...
+ * \brief Contains classess for accessing AWS Config (Config Service).
  *
  * \inmodule QtAwsConfigService
  *

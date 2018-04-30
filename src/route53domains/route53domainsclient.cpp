@@ -75,7 +75,7 @@
 
 /*!
  * \namespace QtAws::Route53Domains
- * \brief The QtAws::Route53Domains contains stuff...
+ * \brief Contains classess for accessing Amazon Route 53 Domains.
  *
  * \inmodule QtAwsRoute53Domains
  *
