@@ -1,4 +1,3 @@
-../doc/qtaws.qdocconf
 core/doc/qtawscore.qdocconf
 acm/doc/qtawsacm.qdocconf
 acmpca/doc/qtawsacmpca.qdocconf
@@ -137,3 +136,4 @@ workdocs/doc/qtawsworkdocs.qdocconf
 workmail/doc/qtawsworkmail.qdocconf
 workspaces/doc/qtawsworkspaces.qdocconf
 xray/doc/qtawsxray.qdocconf
+../doc/qtaws.qdocconf

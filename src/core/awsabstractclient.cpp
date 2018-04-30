@@ -32,15 +32,6 @@ namespace QtAws {
 namespace Core {
 
 /*!
- * \namespace QtAws
- * \brief Encapsulates stuff..
- *
- * \inmodule QtAws
- *
- * @todo move this to a separate qdoc file.
- */
-
-/*!
  * \namespace QtAws::Core
  * \brief Encapsulates stuff..
  *

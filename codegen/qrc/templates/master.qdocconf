@@ -1,5 +1,5 @@
-../doc/qtaws.qdocconf
 core/doc/qtawscore.qdocconf
 {% for name in ModuleNames %}
 {{name|lower}}/doc/qtaws{{name|lower}}.qdocconf
 {% endfor %}
+../doc/qtaws.qdocconf

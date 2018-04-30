@@ -19,3 +19,11 @@ HTML.outputsubdir = "."
 
 # Add a red "[internal]" indicator to items marked with \internal.
 macro.internal.HTML = "<span style="color:red">[internal]</span>"
+
+# For QDoc to include a module's classes in the \geneatelist outputs, the
+# module itself must document the QtAws namespace (this is a limitation in
+# QDoc's single-exec mode only). Also, QDoc will use the last QtAws namespace
+# documentation it finds (in case they differ). So we simply make sure all
+# modules include the documentation, and do so from a single source so we
+# know exactly what the final chosen documentation will be.
+sources += qtaws-namespace.qdoc
