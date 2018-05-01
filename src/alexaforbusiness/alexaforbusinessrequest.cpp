@@ -62,6 +62,7 @@ namespace AlexaForBusiness {
  * \value GetRoomAction AlexaForBusiness GetRoom action.
  * \value GetRoomSkillParameterAction AlexaForBusiness GetRoomSkillParameter action.
  * \value GetSkillGroupAction AlexaForBusiness GetSkillGroup action.
+ * \value ListDeviceEventsAction AlexaForBusiness ListDeviceEvents action.
  * \value ListSkillsAction AlexaForBusiness ListSkills action.
  * \value ListTagsAction AlexaForBusiness ListTags action.
  * \value PutRoomSkillParameterAction AlexaForBusiness PutRoomSkillParameter action.

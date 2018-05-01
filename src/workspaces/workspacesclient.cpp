@@ -21,12 +21,22 @@
 #include "workspacesclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associateipgroupsrequest.h"
+#include "associateipgroupsresponse.h"
+#include "authorizeiprulesrequest.h"
+#include "authorizeiprulesresponse.h"
+#include "createipgrouprequest.h"
+#include "createipgroupresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
 #include "createworkspacesrequest.h"
 #include "createworkspacesresponse.h"
+#include "deleteipgrouprequest.h"
+#include "deleteipgroupresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "describeipgroupsrequest.h"
+#include "describeipgroupsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
 #include "describeworkspacebundlesrequest.h"
@@ -37,18 +47,26 @@
 #include "describeworkspacesresponse.h"
 #include "describeworkspacesconnectionstatusrequest.h"
 #include "describeworkspacesconnectionstatusresponse.h"
+#include "disassociateipgroupsrequest.h"
+#include "disassociateipgroupsresponse.h"
 #include "modifyworkspacepropertiesrequest.h"
 #include "modifyworkspacepropertiesresponse.h"
+#include "modifyworkspacestaterequest.h"
+#include "modifyworkspacestateresponse.h"
 #include "rebootworkspacesrequest.h"
 #include "rebootworkspacesresponse.h"
 #include "rebuildworkspacesrequest.h"
 #include "rebuildworkspacesresponse.h"
+#include "revokeiprulesrequest.h"
+#include "revokeiprulesresponse.h"
 #include "startworkspacesrequest.h"
 #include "startworkspacesresponse.h"
 #include "stopworkspacesrequest.h"
 #include "stopworkspacesresponse.h"
 #include "terminateworkspacesrequest.h"
 #include "terminateworkspacesresponse.h"
+#include "updaterulesofipgrouprequest.h"
+#include "updaterulesofipgroupresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -132,11 +150,66 @@ WorkSpacesClient::WorkSpacesClient(
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * AssociateIpGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified IP access control group with the specified
+ */
+AssociateIpGroupsResponse * WorkSpacesClient::associateIpGroups(const AssociateIpGroupsRequest &request)
+{
+    return qobject_cast<AssociateIpGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * AuthorizeIpRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more rules to the specified IP access control
+ *
+ * group>
+ *
+ * This action gives users permission to access their WorkSpaces from the CIDR address ranges specified in the
+ */
+AuthorizeIpRulesResponse * WorkSpacesClient::authorizeIpRules(const AuthorizeIpRulesRequest &request)
+{
+    return qobject_cast<AuthorizeIpRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * CreateIpGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an IP access control
+ *
+ * group>
+ *
+ * An IP access control group provides you with the ability to control the IP addresses from which users are allowed to
+ * access their WorkSpaces. To specify the CIDR address ranges, add rules to your IP access control group and then
+ * associate the group with your directory. You can add rules when you create the group or at any time using
+ *
+ * <a>AuthorizeIpRules</a>>
+ *
+ * There is a default IP access control group associated with your directory. If you don't associate an IP access control
+ * group with your directory, the default group is used. The default group includes a default rule that allows users to
+ * access their WorkSpaces from anywhere. You cannot modify the default IP access control group for your
+ */
+CreateIpGroupResponse * WorkSpacesClient::createIpGroup(const CreateIpGroupRequest &request)
+{
+    return qobject_cast<CreateIpGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * CreateTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates tags for the specified
+ * Creates the specified tags for the specified
  */
 CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &request)
 {
@@ -162,11 +235,28 @@ CreateWorkspacesResponse * WorkSpacesClient::createWorkspaces(const CreateWorksp
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DeleteIpGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified IP access control
+ *
+ * group>
+ *
+ * You cannot delete an IP access control group that is associated with a
+ */
+DeleteIpGroupResponse * WorkSpacesClient::deleteIpGroup(const DeleteIpGroupRequest &request)
+{
+    return qobject_cast<DeleteIpGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DeleteTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified tags from a
+ * Deletes the specified tags from the specified
  */
 DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -175,11 +265,24 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeIpGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more of your IP access control
+ */
+DescribeIpGroupsResponse * WorkSpacesClient::describeIpGroups(const DescribeIpGroupsRequest &request)
+{
+    return qobject_cast<DescribeIpGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DescribeTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the tags for the specified
+ * Describes the specified tags for the specified
  */
 DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -248,6 +351,19 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DisassociateIpGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates the specified IP access control group from the specified
+ */
+DisassociateIpGroupsResponse * WorkSpacesClient::disassociateIpGroups(const DisassociateIpGroupsRequest &request)
+{
+    return qobject_cast<DisassociateIpGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * ModifyWorkspacePropertiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -261,6 +377,25 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ModifyWorkspaceStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the state of the specified
+ *
+ * WorkSpace>
+ *
+ * To maintain a WorkSpace without being interrupted, set the WorkSpace state to <code>ADMIN_MAINTENANCE</code>. WorkSpaces
+ * in this state do not respond to requests to reboot, stop, start, or rebuild. An AutoStop WorkSpace in this state is not
+ * stopped. Users can log into a WorkSpace in the <code>ADMIN_MAINTENANCE</code>
+ */
+ModifyWorkspaceStateResponse * WorkSpacesClient::modifyWorkspaceState(const ModifyWorkspaceStateRequest &request)
+{
+    return qobject_cast<ModifyWorkspaceStateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * RebootWorkspacesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -269,9 +404,9 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
  *
  * WorkSpaces>
  *
- * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code>, <code>IMPAIRED</code>, or
+ * You cannot reboot a WorkSpace unless its state is <code>AVAILABLE</code> or
  *
- * <code>INOPERABLE</code>>
+ * <code>UNHEALTHY</code>>
  *
  * This operation is asynchronous and returns before the WorkSpaces have
  */
@@ -288,11 +423,11 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
  *
  * Rebuilds the specified
  *
- * WorkSpaces>
+ * WorkSpace>
  *
- * You cannot rebuild a WorkSpace unless its state is <code>AVAILABLE</code> or
+ * You cannot rebuild a WorkSpace unless its state is <code>AVAILABLE</code>, <code>ERROR</code>, or
  *
- * <code>ERROR</code>>
+ * <code>UNHEALTHY</code>>
  *
  * Rebuilding a WorkSpace is a potentially destructive action that can result in the loss of data. For more information,
  * see <a href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild a
@@ -304,6 +439,19 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
 RebuildWorkspacesResponse * WorkSpacesClient::rebuildWorkspaces(const RebuildWorkspacesRequest &request)
 {
     return qobject_cast<RebuildWorkspacesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * RevokeIpRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more rules from the specified IP access control
+ */
+RevokeIpRulesResponse * WorkSpacesClient::revokeIpRules(const RevokeIpRulesRequest &request)
+{
+    return qobject_cast<RevokeIpRulesResponse *>(send(request));
 }
 
 /*!
@@ -365,6 +513,19 @@ StopWorkspacesResponse * WorkSpacesClient::stopWorkspaces(const StopWorkspacesRe
 TerminateWorkspacesResponse * WorkSpacesClient::terminateWorkspaces(const TerminateWorkspacesRequest &request)
 {
     return qobject_cast<TerminateWorkspacesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * UpdateRulesOfIpGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Replaces the current rules of the specified IP access control group with the specified
+ */
+UpdateRulesOfIpGroupResponse * WorkSpacesClient::updateRulesOfIpGroup(const UpdateRulesOfIpGroupRequest &request)
+{
+    return qobject_cast<UpdateRulesOfIpGroupResponse *>(send(request));
 }
 
 /*!

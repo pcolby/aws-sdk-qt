@@ -80,6 +80,8 @@ class GetRoomSkillParameterRequest;
 class GetRoomSkillParameterResponse;
 class GetSkillGroupRequest;
 class GetSkillGroupResponse;
+class ListDeviceEventsRequest;
+class ListDeviceEventsResponse;
 class ListSkillsRequest;
 class ListSkillsResponse;
 class ListTagsRequest;
@@ -167,6 +169,7 @@ public slots:
     GetRoomResponse * getRoom(const GetRoomRequest &request);
     GetRoomSkillParameterResponse * getRoomSkillParameter(const GetRoomSkillParameterRequest &request);
     GetSkillGroupResponse * getSkillGroup(const GetSkillGroupRequest &request);
+    ListDeviceEventsResponse * listDeviceEvents(const ListDeviceEventsRequest &request);
     ListSkillsResponse * listSkills(const ListSkillsRequest &request);
     ListTagsResponse * listTags(const ListTagsRequest &request);
     PutRoomSkillParameterResponse * putRoomSkillParameter(const PutRoomSkillParameterRequest &request);

@@ -28,12 +28,22 @@ namespace QtAws {
 namespace WorkSpaces {
 
 class WorkSpacesClientPrivate;
+class AssociateIpGroupsRequest;
+class AssociateIpGroupsResponse;
+class AuthorizeIpRulesRequest;
+class AuthorizeIpRulesResponse;
+class CreateIpGroupRequest;
+class CreateIpGroupResponse;
 class CreateTagsRequest;
 class CreateTagsResponse;
 class CreateWorkspacesRequest;
 class CreateWorkspacesResponse;
+class DeleteIpGroupRequest;
+class DeleteIpGroupResponse;
 class DeleteTagsRequest;
 class DeleteTagsResponse;
+class DescribeIpGroupsRequest;
+class DescribeIpGroupsResponse;
 class DescribeTagsRequest;
 class DescribeTagsResponse;
 class DescribeWorkspaceBundlesRequest;
@@ -44,18 +54,26 @@ class DescribeWorkspacesRequest;
 class DescribeWorkspacesResponse;
 class DescribeWorkspacesConnectionStatusRequest;
 class DescribeWorkspacesConnectionStatusResponse;
+class DisassociateIpGroupsRequest;
+class DisassociateIpGroupsResponse;
 class ModifyWorkspacePropertiesRequest;
 class ModifyWorkspacePropertiesResponse;
+class ModifyWorkspaceStateRequest;
+class ModifyWorkspaceStateResponse;
 class RebootWorkspacesRequest;
 class RebootWorkspacesResponse;
 class RebuildWorkspacesRequest;
 class RebuildWorkspacesResponse;
+class RevokeIpRulesRequest;
+class RevokeIpRulesResponse;
 class StartWorkspacesRequest;
 class StartWorkspacesResponse;
 class StopWorkspacesRequest;
 class StopWorkspacesResponse;
 class TerminateWorkspacesRequest;
 class TerminateWorkspacesResponse;
+class UpdateRulesOfIpGroupRequest;
+class UpdateRulesOfIpGroupResponse;
 
 class QTAWS_EXPORT WorkSpacesClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -73,20 +91,29 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateIpGroupsResponse * associateIpGroups(const AssociateIpGroupsRequest &request);
+    AuthorizeIpRulesResponse * authorizeIpRules(const AuthorizeIpRulesRequest &request);
+    CreateIpGroupResponse * createIpGroup(const CreateIpGroupRequest &request);
     CreateTagsResponse * createTags(const CreateTagsRequest &request);
     CreateWorkspacesResponse * createWorkspaces(const CreateWorkspacesRequest &request);
+    DeleteIpGroupResponse * deleteIpGroup(const DeleteIpGroupRequest &request);
     DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeIpGroupsResponse * describeIpGroups(const DescribeIpGroupsRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     DescribeWorkspaceBundlesResponse * describeWorkspaceBundles(const DescribeWorkspaceBundlesRequest &request);
     DescribeWorkspaceDirectoriesResponse * describeWorkspaceDirectories(const DescribeWorkspaceDirectoriesRequest &request);
     DescribeWorkspacesResponse * describeWorkspaces(const DescribeWorkspacesRequest &request);
     DescribeWorkspacesConnectionStatusResponse * describeWorkspacesConnectionStatus(const DescribeWorkspacesConnectionStatusRequest &request);
+    DisassociateIpGroupsResponse * disassociateIpGroups(const DisassociateIpGroupsRequest &request);
     ModifyWorkspacePropertiesResponse * modifyWorkspaceProperties(const ModifyWorkspacePropertiesRequest &request);
+    ModifyWorkspaceStateResponse * modifyWorkspaceState(const ModifyWorkspaceStateRequest &request);
     RebootWorkspacesResponse * rebootWorkspaces(const RebootWorkspacesRequest &request);
     RebuildWorkspacesResponse * rebuildWorkspaces(const RebuildWorkspacesRequest &request);
+    RevokeIpRulesResponse * revokeIpRules(const RevokeIpRulesRequest &request);
     StartWorkspacesResponse * startWorkspaces(const StartWorkspacesRequest &request);
     StopWorkspacesResponse * stopWorkspaces(const StopWorkspacesRequest &request);
     TerminateWorkspacesResponse * terminateWorkspaces(const TerminateWorkspacesRequest &request);
+    UpdateRulesOfIpGroupResponse * updateRulesOfIpGroup(const UpdateRulesOfIpGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(WorkSpacesClient)

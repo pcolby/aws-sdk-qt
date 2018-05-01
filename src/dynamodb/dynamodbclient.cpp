@@ -43,6 +43,8 @@
 #include "describecontinuousbackupsresponse.h"
 #include "describeglobaltablerequest.h"
 #include "describeglobaltableresponse.h"
+#include "describeglobaltablesettingsrequest.h"
+#include "describeglobaltablesettingsresponse.h"
 #include "describelimitsrequest.h"
 #include "describelimitsresponse.h"
 #include "describetablerequest.h"
@@ -77,6 +79,8 @@
 #include "updatecontinuousbackupsresponse.h"
 #include "updateglobaltablerequest.h"
 #include "updateglobaltableresponse.h"
+#include "updateglobaltablesettingsrequest.h"
+#include "updateglobaltablesettingsresponse.h"
 #include "updateitemrequest.h"
 #include "updateitemresponse.h"
 #include "updatetablerequest.h"
@@ -440,6 +444,26 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
  * </p </li> <li>
  *
  * The tables must have DynamoDB Streams enabled (NEW_AND_OLD_IMAGES).
+ *
+ * </p </li> <li>
+ *
+ * The tables must have same provisioned and maximum write capacity units.
+ *
+ * </p </li> </ul>
+ *
+ * If global secondary indexes are specified, then the following conditions must also be met:
+ *
+ * </p <ul> <li>
+ *
+ * The global secondary indexes must have the same name.
+ *
+ * </p </li> <li>
+ *
+ * The global secondary indexes must have the same hash key and sort key (if present).
+ *
+ * </p </li> <li>
+ *
+ * The global secondary indexes must have the same provisioned and maximum write capacity units.
  */
 CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobalTableRequest &request)
 {
@@ -593,7 +617,7 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
  * </p
  *
  * <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time. You can restore your table to any
- * point in time during the last 35 days with a 1-minute granularity.
+ * point in time during the last 35 days.
  *
  * </p
  *
@@ -615,6 +639,19 @@ DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(co
 DescribeGlobalTableResponse * DynamoDBClient::describeGlobalTable(const DescribeGlobalTableRequest &request)
 {
     return qobject_cast<DescribeGlobalTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeGlobalTableSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes region specific settings for a global
+ */
+DescribeGlobalTableSettingsResponse * DynamoDBClient::describeGlobalTableSettings(const DescribeGlobalTableSettingsRequest &request)
+{
+    return qobject_cast<DescribeGlobalTableSettingsResponse *>(send(request));
 }
 
 /*!
@@ -1038,11 +1075,39 @@ RestoreTableFromBackupResponse * DynamoDBClient::restoreTableFromBackup(const Re
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Restores the specified table to the specified point in time within <code>EarliestRestorableDateTime</code> and
- * <code>LatestRestorableDateTime</code>. You can restore your table to any point in time during the last 35 days with a
- * 1-minute granularity. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given
- * account.
+ * <code>LatestRestorableDateTime</code>. You can restore your table to any point in time during the last 35 days. Any
+ * number of users can execute up to 4 concurrent restores (any type of restore) in a given account.
  *
  * </p
+ *
+ * When you restore using point in time recovery, DynamoDB restores your table data to the state based on the selected date
+ * and time (day:hour:minute:second) to a new table.
+ *
+ * </p
+ *
+ * Along with data, the following are also included on the new restored table using point in time recovery:
+ *
+ * </p <ul> <li>
+ *
+ * Global secondary indexes
+ *
+ * (GSIs> </li> <li>
+ *
+ * Local secondary indexes
+ *
+ * (LSIs> </li> <li>
+ *
+ * Provisioned read and write
+ *
+ * capacit> </li> <li>
+ *
+ * Encryption
+ *
+ * setting> <b>
+ *
+ * All these settings come from the current settings of the source table at the time of restore.
+ *
+ * </p </b> </li> </ul>
  *
  * You must manually set up the following on the restored
  *
@@ -1181,7 +1246,7 @@ UntagResourceResponse * DynamoDBClient::untagResource(const UntagResourceRequest
  * </p
  *
  * <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time. You can restore your table to any
- * point in time during the last 35 days with a 1-minute granularity.
+ * point in time during the last 35 days..
  */
 UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const UpdateContinuousBackupsRequest &request)
 {
@@ -1196,16 +1261,45 @@ UpdateContinuousBackupsResponse * DynamoDBClient::updateContinuousBackups(const 
  *
  * Adds or removes replicas in the specified global table. The global table must already exist to be able to use this
  * operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key
- * schema, and must have DynamoDB Streams
+ * schema, and must have DynamoDB Streams enabled and must have same provisioned and maximum write capacity
  *
- * enabled> <note>
+ * units> <note>
  *
  * Although you can use <code>UpdateGlobalTable</code> to add replicas and remove replicas in a single request, for
  * simplicity we recommend that you issue separate requests for adding or removing
+ *
+ * replicas> </note>
+ *
+ * If global secondary indexes are specified, then the following conditions must also be met:
+ *
+ * </p <ul> <li>
+ *
+ * The global secondary indexes must have the same name.
+ *
+ * </p </li> <li>
+ *
+ * The global secondary indexes must have the same hash key and sort key (if present).
+ *
+ * </p </li> <li>
+ *
+ * The global secondary indexes must have the same provisioned and maximum write capacity units.
  */
 UpdateGlobalTableResponse * DynamoDBClient::updateGlobalTable(const UpdateGlobalTableRequest &request)
 {
     return qobject_cast<UpdateGlobalTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * UpdateGlobalTableSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates settings for a global
+ */
+UpdateGlobalTableSettingsResponse * DynamoDBClient::updateGlobalTableSettings(const UpdateGlobalTableSettingsRequest &request)
+{
+    return qobject_cast<UpdateGlobalTableSettingsResponse *>(send(request));
 }
 
 /*!

@@ -47,6 +47,7 @@ namespace DynamoDB {
  * \value DescribeBackupAction DynamoDB DescribeBackup action.
  * \value DescribeContinuousBackupsAction DynamoDB DescribeContinuousBackups action.
  * \value DescribeGlobalTableAction DynamoDB DescribeGlobalTable action.
+ * \value DescribeGlobalTableSettingsAction DynamoDB DescribeGlobalTableSettings action.
  * \value DescribeLimitsAction DynamoDB DescribeLimits action.
  * \value DescribeTableAction DynamoDB DescribeTable action.
  * \value DescribeTimeToLiveAction DynamoDB DescribeTimeToLive action.
@@ -64,6 +65,7 @@ namespace DynamoDB {
  * \value UntagResourceAction DynamoDB UntagResource action.
  * \value UpdateContinuousBackupsAction DynamoDB UpdateContinuousBackups action.
  * \value UpdateGlobalTableAction DynamoDB UpdateGlobalTable action.
+ * \value UpdateGlobalTableSettingsAction DynamoDB UpdateGlobalTableSettings action.
  * \value UpdateItemAction DynamoDB UpdateItem action.
  * \value UpdateTableAction DynamoDB UpdateTable action.
  * \value UpdateTimeToLiveAction DynamoDB UpdateTimeToLive action.

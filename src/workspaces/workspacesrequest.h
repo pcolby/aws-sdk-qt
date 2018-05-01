@@ -37,20 +37,29 @@ class QTAWS_EXPORT WorkSpacesRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by WorkSpaces.
     enum Action {
+        AssociateIpGroupsAction,
+        AuthorizeIpRulesAction,
+        CreateIpGroupAction,
         CreateTagsAction,
         CreateWorkspacesAction,
+        DeleteIpGroupAction,
         DeleteTagsAction,
+        DescribeIpGroupsAction,
         DescribeTagsAction,
         DescribeWorkspaceBundlesAction,
         DescribeWorkspaceDirectoriesAction,
         DescribeWorkspacesAction,
         DescribeWorkspacesConnectionStatusAction,
+        DisassociateIpGroupsAction,
         ModifyWorkspacePropertiesAction,
+        ModifyWorkspaceStateAction,
         RebootWorkspacesAction,
         RebuildWorkspacesAction,
+        RevokeIpRulesAction,
         StartWorkspacesAction,
         StopWorkspacesAction,
         TerminateWorkspacesAction,
+        UpdateRulesOfIpGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

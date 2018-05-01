@@ -120,6 +120,10 @@ HEADERS += \
     getskillgrouprequest_p.h \
     getskillgroupresponse.h \
     getskillgroupresponse_p.h \
+    listdeviceeventsrequest.h \
+    listdeviceeventsrequest_p.h \
+    listdeviceeventsresponse.h \
+    listdeviceeventsresponse_p.h \
     listskillsrequest.h \
     listskillsrequest_p.h \
     listskillsresponse.h \
@@ -265,6 +269,8 @@ SOURCES += \
     getroomskillparameterresponse.cpp \
     getskillgrouprequest.cpp \
     getskillgroupresponse.cpp \
+    listdeviceeventsrequest.cpp \
+    listdeviceeventsresponse.cpp \
     listskillsrequest.cpp \
     listskillsresponse.cpp \
     listtagsrequest.cpp \

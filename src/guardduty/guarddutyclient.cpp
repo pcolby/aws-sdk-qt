@@ -561,7 +561,7 @@ StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const S
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disables GuardDuty from monitoring findings of the member accounts specified by the account IDs. After running this
- * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members'
+ * command, a master GuardDuty account can run StartMonitoringMembers to re-enable GuardDuty to monitor these members’
  */
 StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const StopMonitoringMembersRequest &request)
 {

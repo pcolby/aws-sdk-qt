@@ -234,8 +234,8 @@ DisableDomainTransferLockResponse * Route53DomainsClient::disableDomainTransferL
  *
  * The period during which you can renew a domain name varies by TLD. For a list of TLDs and their renewal policies, see <a
  * href="http://wiki.gandi.net/en/domains/renew#renewal_restoration_and_deletion_times">"Renewal, restoration, and deletion
- * times"</a> on the website for our registrar partner, Gandi. Route 53 requires that you renew before the end of the
- * renewal period that is listed on the Gandi website so we can complete processing before the
+ * times"</a> on the website for our registrar associate, Gandi. Amazon Route 53 requires that you renew before the end of
+ * the renewal period that is listed on the Gandi website so we can complete processing before the
  */
 EnableDomainAutoRenewResponse * Route53DomainsClient::enableDomainAutoRenew(const EnableDomainAutoRenewRequest &request)
 {
@@ -365,8 +365,9 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation registers a domain. Domains are registered by the AWS registrar partner, Gandi. For some top-level
- * domains (TLDs), this operation requires extra
+ * This operation registers a domain. Domains are registered either by Amazon Registrar (for .com, .net, and .org domains)
+ * or by our registrar associate, Gandi (for all other domains). For some top-level domains (TLDs), this operation requires
+ * extra
  *
  * parameters>
  *
@@ -384,8 +385,9 @@ ListTagsForDomainResponse * Route53DomainsClient::listTagsForDomain(const ListTa
  *
  * registration> </li> <li>
  *
- * Optionally enables privacy protection, so WHOIS queries return contact information for our registrar partner, Gandi,
- * instead of the information you entered for registrant, admin, and tech
+ * Optionally enables privacy protection, so WHOIS queries return contact information either for Amazon Registrar (for
+ * .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If you don't enable privacy
+ * protection, WHOIS queries return the information that you entered for the registrant, admin, and tech
  *
  * contacts> </li> <li>
  *
@@ -457,9 +459,10 @@ RetrieveDomainAuthCodeResponse * Route53DomainsClient::retrieveDomainAuthCode(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * This operation transfers a domain from another registrar to Amazon Route 53. When the transfer is complete, the domain
- * is registered with the AWS registrar partner,
+ * is registered either with Amazon Registrar (for .com, .net, and .org domains) or with our registrar associate, Gandi
+ * (for all other
  *
- * Gandi>
+ * TLDs)>
  *
  * For transfer requirements, a detailed procedure, and information about viewing the status of a domain transfer, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html">Transferring
@@ -493,10 +496,10 @@ TransferDomainResponse * Route53DomainsClient::transferDomain(const TransferDoma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation updates the contact information for a particular domain. Information for at least one contact
- * (registrant, administrator, or technical) must be supplied for
+ * This operation updates the contact information for a particular domain. You must specify information for at least one
+ * contact: registrant, administrator, or
  *
- * update>
+ * technical>
  *
  * If the update is successful, this method returns an operation ID that you can use to track the progress and completion
  * of the action. If the request is not completed successfully, the domain registrant will be notified by
@@ -512,16 +515,16 @@ UpdateDomainContactResponse * Route53DomainsClient::updateDomainContact(const Up
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This operation updates the specified domain contact's privacy setting. When the privacy option is enabled, personal
- * information such as postal or email address is hidden from the results of a public WHOIS query. The privacy services are
- * provided by the AWS registrar, Gandi. For more information, see the <a
- * href="http://www.gandi.net/domain/whois/?currency=USD&amp;amp;lang=en">Gandi privacy
+ * This operation updates the specified domain contact's privacy setting. When privacy protection is enabled, contact
+ * information such as email address is replaced either with contact information for Amazon Registrar (for .com, .net, and
+ * .org domains) or with contact information for our registrar associate,
  *
- * features</a>>
+ * Gandi>
  *
- * This operation only affects the privacy of the specified contact type (registrant, administrator, or tech). Successful
- * acceptance returns an operation ID that you can use with <a>GetOperationDetail</a> to track the progress and completion
- * of the action. If the request is not completed successfully, the domain registrant will be notified by
+ * This operation affects only the contact information for the specified contact type (registrant, administrator, or tech).
+ * If the request succeeds, Amazon Route 53 returns an operation ID that you can use with <a>GetOperationDetail</a> to
+ * track the progress and completion of the action. If the request doesn't complete successfully, the domain registrant
+ * will be notified by
  */
 UpdateDomainContactPrivacyResponse * Route53DomainsClient::updateDomainContactPrivacy(const UpdateDomainContactPrivacyRequest &request)
 {

@@ -73,6 +73,8 @@
 #include "getroomskillparameterresponse.h"
 #include "getskillgrouprequest.h"
 #include "getskillgroupresponse.h"
+#include "listdeviceeventsrequest.h"
+#include "listdeviceeventsresponse.h"
 #include "listskillsrequest.h"
 #include "listskillsresponse.h"
 #include "listtagsrequest.h"
@@ -141,10 +143,10 @@ namespace AlexaForBusiness {
  * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
- *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
- *  skills using the Alexa Skills Kit, and the Alexa for Business APIs, and you can make these available as private skills
- *  for your organization. Alexa for Business also makes it easy to voice-enable your products and services, providing
- *  context-aware voice experiences for your
+ *  need for managing Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware
+ *  voice skills using the Alexa Skills Kit and the Alexa for Business API operations. You can make also these available as
+ *  private skills for your organization. Alexa for Business makes it easy to voice-enable your products and services,
+ *  providing context-aware voice experiences for your
  */
 
 /*!
@@ -206,7 +208,7 @@ AlexaForBusinessClient::AlexaForBusinessClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a contact to a given address
+ * Associates a contact with a given address
  */
 AssociateContactWithAddressBookResponse * AlexaForBusinessClient::associateContactWithAddressBook(const AssociateContactWithAddressBookRequest &request)
 {
@@ -219,8 +221,8 @@ AssociateContactWithAddressBookResponse * AlexaForBusinessClient::associateConta
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a device to a given room. This applies all the settings from the room profile to the device, and all the
- * skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is
+ * Associates a device with a given room. This applies all the settings from the room profile to the device, and all the
+ * skills in any skill groups added to that room. This operation requires the device to be online, or else a manual sync is
  * required.
  */
 AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoom(const AssociateDeviceWithRoomRequest &request)
@@ -234,7 +236,7 @@ AssociateDeviceWithRoomResponse * AlexaForBusinessClient::associateDeviceWithRoo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a skill group to a given room. This enables all skills in the associated skill group on all devices in the
+ * Associates a skill group with a given room. This enables all skills in the associated skill group on all devices in the
  */
 AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGroupWithRoom(const AssociateSkillGroupWithRoomRequest &request)
 {
@@ -543,6 +545,21 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListDeviceEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the Device Event history for up to 30 days. If EventType isn't specified in the request, this returns a list of
+ * all device events in reverse chronological order. If EventType is specified, this returns a list of device events for
+ * that EventType in reverse chronological order.
+ */
+ListDeviceEventsResponse * AlexaForBusinessClient::listDeviceEvents(const ListDeviceEventsRequest &request)
+{
+    return qobject_cast<ListDeviceEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * ListSkillsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -717,7 +734,7 @@ SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvita
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resets a device and its account to the known default settings by clearing all information and settings set by previous
+ * Resets a device and its account to the known default settings, by clearing all information and settings set by previous
  */
 StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDeviceSyncRequest &request)
 {

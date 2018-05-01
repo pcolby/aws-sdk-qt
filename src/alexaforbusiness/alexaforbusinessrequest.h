@@ -63,6 +63,7 @@ public:
         GetRoomAction,
         GetRoomSkillParameterAction,
         GetSkillGroupAction,
+        ListDeviceEventsAction,
         ListSkillsAction,
         ListTagsAction,
         PutRoomSkillParameterAction,

@@ -54,6 +54,10 @@ HEADERS += \
     describeglobaltablerequest_p.h \
     describeglobaltableresponse.h \
     describeglobaltableresponse_p.h \
+    describeglobaltablesettingsrequest.h \
+    describeglobaltablesettingsrequest_p.h \
+    describeglobaltablesettingsresponse.h \
+    describeglobaltablesettingsresponse_p.h \
     describelimitsrequest.h \
     describelimitsrequest_p.h \
     describelimitsresponse.h \
@@ -128,6 +132,10 @@ HEADERS += \
     updateglobaltablerequest_p.h \
     updateglobaltableresponse.h \
     updateglobaltableresponse_p.h \
+    updateglobaltablesettingsrequest.h \
+    updateglobaltablesettingsrequest_p.h \
+    updateglobaltablesettingsresponse.h \
+    updateglobaltablesettingsresponse_p.h \
     updateitemrequest.h \
     updateitemrequest_p.h \
     updateitemresponse.h \
@@ -164,6 +172,8 @@ SOURCES += \
     describecontinuousbackupsresponse.cpp \
     describeglobaltablerequest.cpp \
     describeglobaltableresponse.cpp \
+    describeglobaltablesettingsrequest.cpp \
+    describeglobaltablesettingsresponse.cpp \
     describelimitsrequest.cpp \
     describelimitsresponse.cpp \
     describetablerequest.cpp \
@@ -201,6 +211,8 @@ SOURCES += \
     updatecontinuousbackupsresponse.cpp \
     updateglobaltablerequest.cpp \
     updateglobaltableresponse.cpp \
+    updateglobaltablesettingsrequest.cpp \
+    updateglobaltablesettingsresponse.cpp \
     updateitemrequest.cpp \
     updateitemresponse.cpp \
     updatetablerequest.cpp \

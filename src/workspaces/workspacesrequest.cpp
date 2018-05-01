@@ -36,20 +36,29 @@ namespace WorkSpaces {
  * This enum describes the actions that can be performed as WorkSpaces
  * requests.
  *
+ * \value AssociateIpGroupsAction WorkSpaces AssociateIpGroups action.
+ * \value AuthorizeIpRulesAction WorkSpaces AuthorizeIpRules action.
+ * \value CreateIpGroupAction WorkSpaces CreateIpGroup action.
  * \value CreateTagsAction WorkSpaces CreateTags action.
  * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.
+ * \value DeleteIpGroupAction WorkSpaces DeleteIpGroup action.
  * \value DeleteTagsAction WorkSpaces DeleteTags action.
+ * \value DescribeIpGroupsAction WorkSpaces DescribeIpGroups action.
  * \value DescribeTagsAction WorkSpaces DescribeTags action.
  * \value DescribeWorkspaceBundlesAction WorkSpaces DescribeWorkspaceBundles action.
  * \value DescribeWorkspaceDirectoriesAction WorkSpaces DescribeWorkspaceDirectories action.
  * \value DescribeWorkspacesAction WorkSpaces DescribeWorkspaces action.
  * \value DescribeWorkspacesConnectionStatusAction WorkSpaces DescribeWorkspacesConnectionStatus action.
+ * \value DisassociateIpGroupsAction WorkSpaces DisassociateIpGroups action.
  * \value ModifyWorkspacePropertiesAction WorkSpaces ModifyWorkspaceProperties action.
+ * \value ModifyWorkspaceStateAction WorkSpaces ModifyWorkspaceState action.
  * \value RebootWorkspacesAction WorkSpaces RebootWorkspaces action.
  * \value RebuildWorkspacesAction WorkSpaces RebuildWorkspaces action.
+ * \value RevokeIpRulesAction WorkSpaces RevokeIpRules action.
  * \value StartWorkspacesAction WorkSpaces StartWorkspaces action.
  * \value StopWorkspacesAction WorkSpaces StopWorkspaces action.
  * \value TerminateWorkspacesAction WorkSpaces TerminateWorkspaces action.
+ * \value UpdateRulesOfIpGroupAction WorkSpaces UpdateRulesOfIpGroup action.
  */
 
 /*!
