@@ -76,6 +76,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createDefaultVpc">createDefaultVpc</a></b></span>(const CreateDefaultVpcRequest &amp;) : CreateDefaultVpcResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createDhcpOptions">createDhcpOptions</a></b></span>(const CreateDhcpOptionsRequest &amp;) : CreateDhcpOptionsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createEgressOnlyInternetGateway">createEgressOnlyInternetGateway</a></b></span>(const CreateEgressOnlyInternetGatewayRequest &amp;) : CreateEgressOnlyInternetGatewayResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createFleet">createFleet</a></b></span>(const CreateFleetRequest &amp;) : CreateFleetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createFlowLogs">createFlowLogs</a></b></span>(const CreateFlowLogsRequest &amp;) : CreateFlowLogsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createFpgaImage">createFpgaImage</a></b></span>(const CreateFpgaImageRequest &amp;) : CreateFpgaImageResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#createImage">createImage</a></b></span>(const CreateImageRequest &amp;) : CreateImageResponse *</li>
@@ -112,6 +113,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteCustomerGateway">deleteCustomerGateway</a></b></span>(const DeleteCustomerGatewayRequest &amp;) : DeleteCustomerGatewayResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteDhcpOptions">deleteDhcpOptions</a></b></span>(const DeleteDhcpOptionsRequest &amp;) : DeleteDhcpOptionsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteEgressOnlyInternetGateway">deleteEgressOnlyInternetGateway</a></b></span>(const DeleteEgressOnlyInternetGatewayRequest &amp;) : DeleteEgressOnlyInternetGatewayResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteFleets">deleteFleets</a></b></span>(const DeleteFleetsRequest &amp;) : DeleteFleetsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteFlowLogs">deleteFlowLogs</a></b></span>(const DeleteFlowLogsRequest &amp;) : DeleteFlowLogsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteFpgaImage">deleteFpgaImage</a></b></span>(const DeleteFpgaImageRequest &amp;) : DeleteFpgaImageResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#deleteInternetGateway">deleteInternetGateway</a></b></span>(const DeleteInternetGatewayRequest &amp;) : DeleteInternetGatewayResponse *</li>
@@ -153,6 +155,9 @@
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeEgressOnlyInternetGateways">describeEgressOnlyInternetGateways</a></b></span>(const DescribeEgressOnlyInternetGatewaysRequest &amp;) : DescribeEgressOnlyInternetGatewaysResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeElasticGpus">describeElasticGpus</a></b></span>(const DescribeElasticGpusRequest &amp;) : DescribeElasticGpusResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeExportTasks">describeExportTasks</a></b></span>(const DescribeExportTasksRequest &amp;) : DescribeExportTasksResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFleetHistory">describeFleetHistory</a></b></span>(const DescribeFleetHistoryRequest &amp;) : DescribeFleetHistoryResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFleetInstances">describeFleetInstances</a></b></span>(const DescribeFleetInstancesRequest &amp;) : DescribeFleetInstancesResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFleets">describeFleets</a></b></span>(const DescribeFleetsRequest &amp;) : DescribeFleetsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFlowLogs">describeFlowLogs</a></b></span>(const DescribeFlowLogsRequest &amp;) : DescribeFlowLogsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFpgaImageAttribute">describeFpgaImageAttribute</a></b></span>(const DescribeFpgaImageAttributeRequest &amp;) : DescribeFpgaImageAttributeResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeFpgaImages">describeFpgaImages</a></b></span>(const DescribeFpgaImagesRequest &amp;) : DescribeFpgaImagesResponse *</li>
@@ -177,9 +182,9 @@
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeMovingAddresses">describeMovingAddresses</a></b></span>(const DescribeMovingAddressesRequest &amp;) : DescribeMovingAddressesResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeNatGateways">describeNatGateways</a></b></span>(const DescribeNatGatewaysRequest &amp;) : DescribeNatGatewaysResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeNetworkAcls">describeNetworkAcls</a></b></span>(const DescribeNetworkAclsRequest &amp;) : DescribeNetworkAclsResponse *</li>
+</ul></td><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeNetworkInterfaceAttribute">describeNetworkInterfaceAttribute</a></b></span>(const DescribeNetworkInterfaceAttributeRequest &amp;) : DescribeNetworkInterfaceAttributeResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeNetworkInterfacePermissions">describeNetworkInterfacePermissions</a></b></span>(const DescribeNetworkInterfacePermissionsRequest &amp;) : DescribeNetworkInterfacePermissionsResponse *</li>
-</ul></td><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describeNetworkInterfaces">describeNetworkInterfaces</a></b></span>(const DescribeNetworkInterfacesRequest &amp;) : DescribeNetworkInterfacesResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describePlacementGroups">describePlacementGroups</a></b></span>(const DescribePlacementGroupsRequest &amp;) : DescribePlacementGroupsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#describePrefixLists">describePrefixLists</a></b></span>(const DescribePrefixListsRequest &amp;) : DescribePrefixListsResponse *</li>
@@ -252,6 +257,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#importKeyPair">importKeyPair</a></b></span>(const ImportKeyPairRequest &amp;) : ImportKeyPairResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#importSnapshot">importSnapshot</a></b></span>(const ImportSnapshotRequest &amp;) : ImportSnapshotResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#importVolume">importVolume</a></b></span>(const ImportVolumeRequest &amp;) : ImportVolumeResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#modifyFleet">modifyFleet</a></b></span>(const ModifyFleetRequest &amp;) : ModifyFleetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#modifyFpgaImageAttribute">modifyFpgaImageAttribute</a></b></span>(const ModifyFpgaImageAttributeRequest &amp;) : ModifyFpgaImageAttributeResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#modifyHosts">modifyHosts</a></b></span>(const ModifyHostsRequest &amp;) : ModifyHostsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-ec2-ec2client.html#modifyIdFormat">modifyIdFormat</a></b></span>(const ModifyIdFormatRequest &amp;) : ModifyIdFormatResponse *</li>

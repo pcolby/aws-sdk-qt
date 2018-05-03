@@ -86,9 +86,9 @@
 <p>&lt;/p</p>
 <p>This is the AWS <a href="qtaws-codepipeline.html">CodePipeline</a> API Reference. This guide provides descriptions of the actions and data types for AWS <a href="qtaws-codepipeline.html">CodePipeline</a>. Some functionality for your pipeline is only configurable through the API. For additional information, see the &lt;a href=&quot;http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html&quot;&gt;AWS <a href="qtaws-codepipeline.html">CodePipeline</a> User</p>
 <p>Guide&lt;/a&gt;&gt;</p>
-<p>You can use the AWS <a href="qtaws-codepipeline.html">CodePipeline</a> API to work with pipelines, stages, actions, gates, and transitions, as described</p>
+<p>You can use the AWS <a href="qtaws-codepipeline.html">CodePipeline</a> API to work with pipelines, stages, actions, and transitions, as described</p>
 <p>below&gt;</p>
-<p>&lt;i&gt;Pipelines&lt;/i&gt; are models of automated release processes. Each pipeline is uniquely named, and consists of actions, gates, and stages.</p>
+<p>&lt;i&gt;Pipelines&lt;/i&gt; are models of automated release processes. Each pipeline is uniquely named, and consists of stages, actions, and transitions.</p>
 <p>&lt;/p</p>
 <p>You can work with pipelines by</p>
 <p>calling&gt; &lt;ul&gt; &lt;li&gt;</p>
@@ -110,10 +110,16 @@
 <p>pipeline&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;UpdatePipeline&lt;/a&gt;, which updates a pipeline with edits or changes to the structure of the</p>
 <p>pipeline&gt; &lt;/li&gt; &lt;/ul&gt;</p>
-<p>Pipelines include &lt;i&gt;stages&lt;/i&gt;, which are logical groupings of gates and actions. Each stage contains one or more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call &lt;a&gt;GetPipelineState&lt;/a&gt;, which displays the status of a pipeline, including the status of stages in the pipeline, or &lt;a&gt;GetPipeline&lt;/a&gt;, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, also refer to the &lt;a href=&quot;http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html&quot;&gt;AWS <a href="qtaws-codepipeline.html">CodePipeline</a> Pipeline Structure</p>
+<p>Pipelines include &lt;i&gt;stages&lt;/i&gt;. Each stage contains one or more actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call &lt;a&gt;GetPipelineState&lt;/a&gt;, which displays the status of a pipeline, including the status of stages in the pipeline, or &lt;a&gt;GetPipeline&lt;/a&gt;, which returns the entire structure of the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, also refer to the &lt;a href=&quot;http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html&quot;&gt;AWS <a href="qtaws-codepipeline.html">CodePipeline</a> Pipeline Structure</p>
 <p>Reference&lt;/a&gt;&gt;</p>
-<p>Pipeline stages include &lt;i&gt;actions&lt;/i&gt;, which are categorized into categories such as source or build actions performed within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as &lt;a&gt;CreatePipeline&lt;/a&gt; and &lt;a&gt;GetPipelineState&lt;/a&gt;.</p>
-<p>&lt;/p</p>
+<p>Pipeline stages include &lt;i&gt;actions&lt;/i&gt;, which are categorized into categories such as source or build actions performed within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with actions when working with pipeline operations such as &lt;a&gt;CreatePipeline&lt;/a&gt; and &lt;a&gt;GetPipelineState&lt;/a&gt;. Valid action categories</p>
+<p>are&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>Sourc&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Buil&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Tes&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Deplo&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Approva&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Invok&gt; &lt;/li&gt; &lt;/ul&gt;</p>
 <p>Pipelines also include &lt;i&gt;transitions&lt;/i&gt;, which allow the transition of artifacts from one stage to the next in a pipeline after the actions in one stage</p>
 <p>complete&gt;</p>
 <p>You can work with transitions by</p>

@@ -146,7 +146,7 @@
 <p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-enabledomainautorenewresponse.html">EnableDomainAutoRenewResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation configures Amazon Route 53 to automatically renew the specified domain before the domain registration expires. The cost of renewing your domain registration is billed to your AWS</p>
 <p>account&gt;</p>
-<p>The period during which you can renew a domain name varies by TLD. For a list of TLDs and their renewal policies, see &lt;a href=&quot;http://wiki.gandi.net/en/domains/renew#renewal_restoration_and_deletion_times&quot;&gt;&quot;Renewal, restoration, and deletion times&quot;&lt;/a&gt; on the website for our registrar partner, Gandi. Route 53 requires that you renew before the end of the renewal period that is listed on the Gandi website so we can complete processing before the</p>
+<p>The period during which you can renew a domain name varies by TLD. For a list of TLDs and their renewal policies, see &lt;a href=&quot;http://wiki.gandi.net/en/domains/renew#renewal_restoration_and_deletion_times&quot;&gt;&quot;Renewal, restoration, and deletion times&quot;&lt;/a&gt; on the website for our registrar associate, Gandi. Amazon Route 53 requires that you renew before the end of the renewal period that is listed on the Gandi website so we can complete processing before the</p>
 <!-- @@@enableDomainAutoRenew -->
 <!-- $$$enableDomainTransferLock[overload1]$$$enableDomainTransferLockconstEnableDomainTransferLockRequest& -->
 <h3 class="fn" id="enableDomainTransferLock"><a name="enableDomainTransferLock"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-enabledomaintransferlockresponse.html">EnableDomainTransferLockResponse</a></span> *Route53DomainsClient::<span class="name">enableDomainTransferLock</span>(const <span class="type"><a href="qtaws-route53domains-enabledomaintransferlockrequest.html">EnableDomainTransferLockRequest</a></span> &amp;<i>request</i>)</h3>
@@ -195,7 +195,7 @@
 <!-- $$$registerDomain[overload1]$$$registerDomainconstRegisterDomainRequest& -->
 <h3 class="fn" id="registerDomain"><a name="registerDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-registerdomainresponse.html">RegisterDomainResponse</a></span> *Route53DomainsClient::<span class="name">registerDomain</span>(const <span class="type"><a href="qtaws-route53domains-registerdomainrequest.html">RegisterDomainRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-registerdomainresponse.html">RegisterDomainResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation registers a domain. Domains are registered by the AWS registrar partner, Gandi. For some top-level domains (TLDs), this operation requires extra</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation registers a domain. Domains are registered either by Amazon Registrar (for .com, .net, and .org domains) or by our registrar associate, Gandi (for all other domains). For some top-level domains (TLDs), this operation requires extra</p>
 <p>parameters&gt;</p>
 <p>When you register a domain, Amazon Route 53 does the</p>
 <p>following&gt; &lt;ul&gt; &lt;li&gt;</p>
@@ -203,7 +203,7 @@
 <p>servers&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Enables autorenew, so your domain registration will renew automatically each year. We'll notify you in advance of the renewal date so you can choose whether to renew the</p>
 <p>registration&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Optionally enables privacy protection, so WHOIS queries return contact information for our registrar partner, Gandi, instead of the information you entered for registrant, admin, and tech</p>
+<p>Optionally enables privacy protection, so WHOIS queries return contact information either for Amazon Registrar (for .com, .net, and .org domains) or for our registrar associate, Gandi (for all other TLDs). If you don't enable privacy protection, WHOIS queries return the information that you entered for the registrant, admin, and tech</p>
 <p>contacts&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>If registration is successful, returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant is notified by</p>
 <p>email&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -229,8 +229,8 @@
 <!-- $$$transferDomain[overload1]$$$transferDomainconstTransferDomainRequest& -->
 <h3 class="fn" id="transferDomain"><a name="transferDomain"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-transferdomainresponse.html">TransferDomainResponse</a></span> *Route53DomainsClient::<span class="name">transferDomain</span>(const <span class="type"><a href="qtaws-route53domains-transferdomainrequest.html">TransferDomainRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-transferdomainresponse.html">TransferDomainResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation transfers a domain from another registrar to Amazon Route 53. When the transfer is complete, the domain is registered with the AWS registrar partner,</p>
-<p>Gandi&gt;</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation transfers a domain from another registrar to Amazon Route 53. When the transfer is complete, the domain is registered either with Amazon Registrar (for .com, .net, and .org domains) or with our registrar associate, Gandi (for all other</p>
+<p>TLDs)&gt;</p>
 <p>For transfer requirements, a detailed procedure, and information about viewing the status of a domain transfer, see &lt;a href=&quot;http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html&quot;&gt;Transferring Registration for a Domain to Amazon Route 53&lt;/a&gt; in the &lt;i&gt;Amazon Route 53 Developer</p>
 <p>Guide&lt;/i&gt;&gt;</p>
 <p>If the registrar for your domain is also the DNS service provider for the domain, we highly recommend that you consider transferring your DNS service to Amazon Route 53 or to another DNS service provider before you transfer your registration. Some registrars provide free DNS service when you purchase a domain registration. When you transfer the registration, the previous registrar will not renew your domain registration and could end your DNS service at any</p>
@@ -242,16 +242,16 @@
 <!-- $$$updateDomainContact[overload1]$$$updateDomainContactconstUpdateDomainContactRequest& -->
 <h3 class="fn" id="updateDomainContact"><a name="updateDomainContact"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomaincontactresponse.html">UpdateDomainContactResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainContact</span>(const <span class="type"><a href="qtaws-route53domains-updatedomaincontactrequest.html">UpdateDomainContactRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatedomaincontactresponse.html">UpdateDomainContactResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the contact information for a particular domain. Information for at least one contact (registrant, administrator, or technical) must be supplied for</p>
-<p>update&gt;</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the contact information for a particular domain. You must specify information for at least one contact: registrant, administrator, or</p>
+<p>technical&gt;</p>
 <p>If the update is successful, this method returns an operation ID that you can use to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
 <!-- @@@updateDomainContact -->
 <!-- $$$updateDomainContactPrivacy[overload1]$$$updateDomainContactPrivacyconstUpdateDomainContactPrivacyRequest& -->
 <h3 class="fn" id="updateDomainContactPrivacy"><a name="updateDomainContactPrivacy"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomaincontactprivacyresponse.html">UpdateDomainContactPrivacyResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainContactPrivacy</span>(const <span class="type"><a href="qtaws-route53domains-updatedomaincontactprivacyrequest.html">UpdateDomainContactPrivacyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-route53domains-route53domainsclient.html">Route53DomainsClient</a> service, and returns a pointer to an <a href="qtaws-route53domains-updatedomaincontactprivacyresponse.html">UpdateDomainContactPrivacyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the specified domain contact's privacy setting. When the privacy option is enabled, personal information such as postal or email address is hidden from the results of a public WHOIS query. The privacy services are provided by the AWS registrar, Gandi. For more information, see the &lt;a href=&quot;http://www.gandi.net/domain/whois/?currency=USD&amp;amp;amp;lang=en&quot;&gt;Gandi privacy</p>
-<p>features&lt;/a&gt;&gt;</p>
-<p>This operation only affects the privacy of the specified contact type (registrant, administrator, or tech). Successful acceptance returns an operation ID that you can use with &lt;a&gt;GetOperationDetail&lt;/a&gt; to track the progress and completion of the action. If the request is not completed successfully, the domain registrant will be notified by</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>This operation updates the specified domain contact's privacy setting. When privacy protection is enabled, contact information such as email address is replaced either with contact information for Amazon Registrar (for .com, .net, and .org domains) or with contact information for our registrar associate,</p>
+<p>Gandi&gt;</p>
+<p>This operation affects only the contact information for the specified contact type (registrant, administrator, or tech). If the request succeeds, Amazon Route 53 returns an operation ID that you can use with &lt;a&gt;GetOperationDetail&lt;/a&gt; to track the progress and completion of the action. If the request doesn't complete successfully, the domain registrant will be notified by</p>
 <!-- @@@updateDomainContactPrivacy -->
 <!-- $$$updateDomainNameservers[overload1]$$$updateDomainNameserversconstUpdateDomainNameserversRequest& -->
 <h3 class="fn" id="updateDomainNameservers"><a name="updateDomainNameservers"></a><code>[slot] </code><span class="type"><a href="qtaws-route53domains-updatedomainnameserversresponse.html">UpdateDomainNameserversResponse</a></span> *Route53DomainsClient::<span class="name">updateDomainNameservers</span>(const <span class="type"><a href="qtaws-route53domains-updatedomainnameserversrequest.html">UpdateDomainNameserversRequest</a></span> &amp;<i>request</i>)</h3>

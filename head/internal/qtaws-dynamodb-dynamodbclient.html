@@ -74,6 +74,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeBackupResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeBackup">describeBackup</a></b>(const DescribeBackupRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeContinuousBackupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeContinuousBackups">describeContinuousBackups</a></b>(const DescribeContinuousBackupsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeGlobalTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeGlobalTable">describeGlobalTable</a></b>(const DescribeGlobalTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeGlobalTableSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeGlobalTableSettings">describeGlobalTableSettings</a></b>(const DescribeGlobalTableSettingsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeLimitsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeLimits">describeLimits</a></b>(const DescribeLimitsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeTable">describeTable</a></b>(const DescribeTableRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> DescribeTimeToLiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#describeTimeToLive">describeTimeToLive</a></b>(const DescribeTimeToLiveRequest &amp;<i>request</i>)</td></tr>
@@ -91,6 +92,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> UntagResourceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#untagResource">untagResource</a></b>(const UntagResourceRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateContinuousBackupsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateContinuousBackups">updateContinuousBackups</a></b>(const UpdateContinuousBackupsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateGlobalTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateGlobalTable">updateGlobalTable</a></b>(const UpdateGlobalTableRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateGlobalTableSettingsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateGlobalTableSettings">updateGlobalTableSettings</a></b>(const UpdateGlobalTableSettingsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateItemResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateItem">updateItem</a></b>(const UpdateItemRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateTableResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateTable">updateTable</a></b>(const UpdateTableRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateTimeToLiveResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-dynamodb-dynamodbclient.html#updateTimeToLive">updateTimeToLive</a></b>(const UpdateTimeToLiveRequest &amp;<i>request</i>)</td></tr>
@@ -226,6 +228,16 @@
 <p>The tables must have the same hash key and sort key (if present).</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>The tables must have <a href="qtaws-dynamodb.html">DynamoDB</a> Streams enabled (NEW_AND_OLD_IMAGES).</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The tables must have same provisioned and maximum write capacity units.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt;</p>
+<p>If global secondary indexes are specified, then the following conditions must also be met:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same name.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same hash key and sort key (if present).</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same provisioned and maximum write capacity units.</p>
 <!-- @@@createGlobalTable -->
 <!-- $$$createTable[overload1]$$$createTableconstCreateTableRequest& -->
 <h3 class="fn" id="createTable"><a name="createTable"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-createtableresponse.html">CreateTableResponse</a></span> *DynamoDBClient::<span class="name">createTable</span>(const <span class="type"><a href="qtaws-dynamodb-createtablerequest.html">CreateTableRequest</a></span> &amp;<i>request</i>)</h3>
@@ -283,7 +295,7 @@
 <p>ENABLED&gt;</p>
 <p>Once continuous backups and point in time recovery are enabled, you can restore to any point in time within &lt;code&gt;EarliestRestorableDateTime&lt;/code&gt; and &lt;code&gt;LatestRestorableDateTime&lt;/code&gt;.</p>
 <p>&lt;/p</p>
-<p>&lt;code&gt;LatestRestorableDateTime&lt;/code&gt; is typically 5 minutes before the current time. You can restore your table to any point in time during the last 35 days with a 1-minute granularity.</p>
+<p>&lt;code&gt;LatestRestorableDateTime&lt;/code&gt; is typically 5 minutes before the current time. You can restore your table to any point in time during the last 35 days.</p>
 <p>&lt;/p</p>
 <p>You can call &lt;code&gt;DescribeContinuousBackups&lt;/code&gt; at a maximum rate of 10 times per</p>
 <!-- @@@describeContinuousBackups -->
@@ -292,6 +304,11 @@
 <p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-describeglobaltableresponse.html">DescribeGlobalTableResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Returns information about the specified global</p>
 <!-- @@@describeGlobalTable -->
+<!-- $$$describeGlobalTableSettings[overload1]$$$describeGlobalTableSettingsconstDescribeGlobalTableSettingsRequest& -->
+<h3 class="fn" id="describeGlobalTableSettings"><a name="describeGlobalTableSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-describeglobaltablesettingsresponse.html">DescribeGlobalTableSettingsResponse</a></span> *DynamoDBClient::<span class="name">describeGlobalTableSettings</span>(const <span class="type"><a href="qtaws-dynamodb-describeglobaltablesettingsrequest.html">DescribeGlobalTableSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-describeglobaltablesettingsresponse.html">DescribeGlobalTableSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Describes region specific settings for a global</p>
+<!-- @@@describeGlobalTableSettings -->
 <!-- $$$describeLimits[overload1]$$$describeLimitsconstDescribeLimitsRequest& -->
 <h3 class="fn" id="describeLimits"><a name="describeLimits"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-describelimitsresponse.html">DescribeLimitsResponse</a></span> *DynamoDBClient::<span class="name">describeLimits</span>(const <span class="type"><a href="qtaws-dynamodb-describelimitsrequest.html">DescribeLimitsRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-describelimitsresponse.html">DescribeLimitsResponse</a> object to track the result.</p>
@@ -451,8 +468,22 @@
 <!-- $$$restoreTableToPointInTime[overload1]$$$restoreTableToPointInTimeconstRestoreTableToPointInTimeRequest& -->
 <h3 class="fn" id="restoreTableToPointInTime"><a name="restoreTableToPointInTime"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-restoretabletopointintimeresponse.html">RestoreTableToPointInTimeResponse</a></span> *DynamoDBClient::<span class="name">restoreTableToPointInTime</span>(const <span class="type"><a href="qtaws-dynamodb-restoretabletopointintimerequest.html">RestoreTableToPointInTimeRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-restoretabletopointintimeresponse.html">RestoreTableToPointInTimeResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores the specified table to the specified point in time within &lt;code&gt;EarliestRestorableDateTime&lt;/code&gt; and &lt;code&gt;LatestRestorableDateTime&lt;/code&gt;. You can restore your table to any point in time during the last 35 days with a 1-minute granularity. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given account.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Restores the specified table to the specified point in time within &lt;code&gt;EarliestRestorableDateTime&lt;/code&gt; and &lt;code&gt;LatestRestorableDateTime&lt;/code&gt;. You can restore your table to any point in time during the last 35 days. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given account.</p>
 <p>&lt;/p</p>
+<p>When you restore using point in time recovery, <a href="qtaws-dynamodb.html">DynamoDB</a> restores your table data to the state based on the selected date and time (day:hour:minute:second) to a new table.</p>
+<p>&lt;/p</p>
+<p>Along with data, the following are also included on the new restored table using point in time recovery:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>Global secondary indexes</p>
+<p>(GSIs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Local secondary indexes</p>
+<p>(LSIs&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Provisioned read and write</p>
+<p>capacit&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Encryption</p>
+<p>setting&gt; &lt;b&gt;</p>
+<p>All these settings come from the current settings of the source table at the time of restore.</p>
+<p>&lt;/p &lt;/b&gt; &lt;/li&gt; &lt;/ul&gt;</p>
 <p>You must manually set up the following on the restored</p>
 <p>table&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>Auto scaling</p>
@@ -502,15 +533,28 @@
 <p>ENABLED&gt;</p>
 <p>Once continuous backups and point in time recovery are enabled, you can restore to any point in time within &lt;code&gt;EarliestRestorableDateTime&lt;/code&gt; and &lt;code&gt;LatestRestorableDateTime&lt;/code&gt;.</p>
 <p>&lt;/p</p>
-<p>&lt;code&gt;LatestRestorableDateTime&lt;/code&gt; is typically 5 minutes before the current time. You can restore your table to any point in time during the last 35 days with a 1-minute granularity.</p>
+<p>&lt;code&gt;LatestRestorableDateTime&lt;/code&gt; is typically 5 minutes before the current time. You can restore your table to any point in time during the last 35 days..</p>
 <!-- @@@updateContinuousBackups -->
 <!-- $$$updateGlobalTable[overload1]$$$updateGlobalTableconstUpdateGlobalTableRequest& -->
 <h3 class="fn" id="updateGlobalTable"><a name="updateGlobalTable"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-updateglobaltableresponse.html">UpdateGlobalTableResponse</a></span> *DynamoDBClient::<span class="name">updateGlobalTable</span>(const <span class="type"><a href="qtaws-dynamodb-updateglobaltablerequest.html">UpdateGlobalTableRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-updateglobaltableresponse.html">UpdateGlobalTableResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or removes replicas in the specified global table. The global table must already exist to be able to use this operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key schema, and must have <a href="qtaws-dynamodb.html">DynamoDB</a> Streams</p>
-<p>enabled&gt; &lt;note&gt;</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds or removes replicas in the specified global table. The global table must already exist to be able to use this operation. Any replica to be added must be empty, must have the same name as the global table, must have the same key schema, and must have <a href="qtaws-dynamodb.html">DynamoDB</a> Streams enabled and must have same provisioned and maximum write capacity</p>
+<p>units&gt; &lt;note&gt;</p>
 <p>Although you can use &lt;code&gt;UpdateGlobalTable&lt;/code&gt; to add replicas and remove replicas in a single request, for simplicity we recommend that you issue separate requests for adding or removing</p>
+<p>replicas&gt; &lt;/note&gt;</p>
+<p>If global secondary indexes are specified, then the following conditions must also be met:</p>
+<p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same name.</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same hash key and sort key (if present).</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>The global secondary indexes must have the same provisioned and maximum write capacity units.</p>
 <!-- @@@updateGlobalTable -->
+<!-- $$$updateGlobalTableSettings[overload1]$$$updateGlobalTableSettingsconstUpdateGlobalTableSettingsRequest& -->
+<h3 class="fn" id="updateGlobalTableSettings"><a name="updateGlobalTableSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-updateglobaltablesettingsresponse.html">UpdateGlobalTableSettingsResponse</a></span> *DynamoDBClient::<span class="name">updateGlobalTableSettings</span>(const <span class="type"><a href="qtaws-dynamodb-updateglobaltablesettingsrequest.html">UpdateGlobalTableSettingsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-updateglobaltablesettingsresponse.html">UpdateGlobalTableSettingsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates settings for a global</p>
+<!-- @@@updateGlobalTableSettings -->
 <!-- $$$updateItem[overload1]$$$updateItemconstUpdateItemRequest& -->
 <h3 class="fn" id="updateItem"><a name="updateItem"></a><code>[slot] </code><span class="type"><a href="qtaws-dynamodb-updateitemresponse.html">UpdateItemResponse</a></span> *DynamoDBClient::<span class="name">updateItem</span>(const <span class="type"><a href="qtaws-dynamodb-updateitemrequest.html">UpdateItemRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-dynamodb-dynamodbclient.html">DynamoDBClient</a> service, and returns a pointer to an <a href="qtaws-dynamodb-updateitemresponse.html">UpdateItemResponse</a> object to track the result.</p>
