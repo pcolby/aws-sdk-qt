@@ -158,6 +158,10 @@ HEADERS += \
     createegressonlyinternetgatewayrequest_p.h \
     createegressonlyinternetgatewayresponse.h \
     createegressonlyinternetgatewayresponse_p.h \
+    createfleetrequest.h \
+    createfleetrequest_p.h \
+    createfleetresponse.h \
+    createfleetresponse_p.h \
     createflowlogsrequest.h \
     createflowlogsrequest_p.h \
     createflowlogsresponse.h \
@@ -294,6 +298,10 @@ HEADERS += \
     deleteegressonlyinternetgatewayrequest_p.h \
     deleteegressonlyinternetgatewayresponse.h \
     deleteegressonlyinternetgatewayresponse_p.h \
+    deletefleetsrequest.h \
+    deletefleetsrequest_p.h \
+    deletefleetsresponse.h \
+    deletefleetsresponse_p.h \
     deleteflowlogsrequest.h \
     deleteflowlogsrequest_p.h \
     deleteflowlogsresponse.h \
@@ -458,6 +466,18 @@ HEADERS += \
     describeexporttasksrequest_p.h \
     describeexporttasksresponse.h \
     describeexporttasksresponse_p.h \
+    describefleethistoryrequest.h \
+    describefleethistoryrequest_p.h \
+    describefleethistoryresponse.h \
+    describefleethistoryresponse_p.h \
+    describefleetinstancesrequest.h \
+    describefleetinstancesrequest_p.h \
+    describefleetinstancesresponse.h \
+    describefleetinstancesresponse_p.h \
+    describefleetsrequest.h \
+    describefleetsrequest_p.h \
+    describefleetsresponse.h \
+    describefleetsresponse_p.h \
     describeflowlogsrequest.h \
     describeflowlogsrequest_p.h \
     describeflowlogsresponse.h \
@@ -848,6 +868,10 @@ HEADERS += \
     importvolumerequest_p.h \
     importvolumeresponse.h \
     importvolumeresponse_p.h \
+    modifyfleetrequest.h \
+    modifyfleetrequest_p.h \
+    modifyfleetresponse.h \
+    modifyfleetresponse_p.h \
     modifyfpgaimageattributerequest.h \
     modifyfpgaimageattributerequest_p.h \
     modifyfpgaimageattributeresponse.h \
@@ -1164,6 +1188,8 @@ SOURCES += \
     createdhcpoptionsresponse.cpp \
     createegressonlyinternetgatewayrequest.cpp \
     createegressonlyinternetgatewayresponse.cpp \
+    createfleetrequest.cpp \
+    createfleetresponse.cpp \
     createflowlogsrequest.cpp \
     createflowlogsresponse.cpp \
     createfpgaimagerequest.cpp \
@@ -1232,6 +1258,8 @@ SOURCES += \
     deletedhcpoptionsresponse.cpp \
     deleteegressonlyinternetgatewayrequest.cpp \
     deleteegressonlyinternetgatewayresponse.cpp \
+    deletefleetsrequest.cpp \
+    deletefleetsresponse.cpp \
     deleteflowlogsrequest.cpp \
     deleteflowlogsresponse.cpp \
     deletefpgaimagerequest.cpp \
@@ -1314,6 +1342,12 @@ SOURCES += \
     describeelasticgpusresponse.cpp \
     describeexporttasksrequest.cpp \
     describeexporttasksresponse.cpp \
+    describefleethistoryrequest.cpp \
+    describefleethistoryresponse.cpp \
+    describefleetinstancesrequest.cpp \
+    describefleetinstancesresponse.cpp \
+    describefleetsrequest.cpp \
+    describefleetsresponse.cpp \
     describeflowlogsrequest.cpp \
     describeflowlogsresponse.cpp \
     describefpgaimageattributerequest.cpp \
@@ -1509,6 +1543,8 @@ SOURCES += \
     importsnapshotresponse.cpp \
     importvolumerequest.cpp \
     importvolumeresponse.cpp \
+    modifyfleetrequest.cpp \
+    modifyfleetresponse.cpp \
     modifyfpgaimageattributerequest.cpp \
     modifyfpgaimageattributeresponse.cpp \
     modifyhostsrequest.cpp \

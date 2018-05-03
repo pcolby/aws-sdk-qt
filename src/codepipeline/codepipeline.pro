@@ -40,6 +40,14 @@ HEADERS += \
     deletepipelinerequest_p.h \
     deletepipelineresponse.h \
     deletepipelineresponse_p.h \
+    deletewebhookrequest.h \
+    deletewebhookrequest_p.h \
+    deletewebhookresponse.h \
+    deletewebhookresponse_p.h \
+    deregisterwebhookwiththirdpartyrequest.h \
+    deregisterwebhookwiththirdpartyrequest_p.h \
+    deregisterwebhookwiththirdpartyresponse.h \
+    deregisterwebhookwiththirdpartyresponse_p.h \
     disablestagetransitionrequest.h \
     disablestagetransitionrequest_p.h \
     disablestagetransitionresponse.h \
@@ -80,6 +88,10 @@ HEADERS += \
     listpipelinesrequest_p.h \
     listpipelinesresponse.h \
     listpipelinesresponse_p.h \
+    listwebhooksrequest.h \
+    listwebhooksrequest_p.h \
+    listwebhooksresponse.h \
+    listwebhooksresponse_p.h \
     pollforjobsrequest.h \
     pollforjobsrequest_p.h \
     pollforjobsresponse.h \
@@ -112,6 +124,14 @@ HEADERS += \
     putthirdpartyjobsuccessresultrequest_p.h \
     putthirdpartyjobsuccessresultresponse.h \
     putthirdpartyjobsuccessresultresponse_p.h \
+    putwebhookrequest.h \
+    putwebhookrequest_p.h \
+    putwebhookresponse.h \
+    putwebhookresponse_p.h \
+    registerwebhookwiththirdpartyrequest.h \
+    registerwebhookwiththirdpartyrequest_p.h \
+    registerwebhookwiththirdpartyresponse.h \
+    registerwebhookwiththirdpartyresponse_p.h \
     retrystageexecutionrequest.h \
     retrystageexecutionrequest_p.h \
     retrystageexecutionresponse.h \
@@ -141,6 +161,10 @@ SOURCES += \
     deletecustomactiontyperesponse.cpp \
     deletepipelinerequest.cpp \
     deletepipelineresponse.cpp \
+    deletewebhookrequest.cpp \
+    deletewebhookresponse.cpp \
+    deregisterwebhookwiththirdpartyrequest.cpp \
+    deregisterwebhookwiththirdpartyresponse.cpp \
     disablestagetransitionrequest.cpp \
     disablestagetransitionresponse.cpp \
     enablestagetransitionrequest.cpp \
@@ -161,6 +185,8 @@ SOURCES += \
     listpipelineexecutionsresponse.cpp \
     listpipelinesrequest.cpp \
     listpipelinesresponse.cpp \
+    listwebhooksrequest.cpp \
+    listwebhooksresponse.cpp \
     pollforjobsrequest.cpp \
     pollforjobsresponse.cpp \
     pollforthirdpartyjobsrequest.cpp \
@@ -177,6 +203,10 @@ SOURCES += \
     putthirdpartyjobfailureresultresponse.cpp \
     putthirdpartyjobsuccessresultrequest.cpp \
     putthirdpartyjobsuccessresultresponse.cpp \
+    putwebhookrequest.cpp \
+    putwebhookresponse.cpp \
+    registerwebhookwiththirdpartyrequest.cpp \
+    registerwebhookwiththirdpartyresponse.cpp \
     retrystageexecutionrequest.cpp \
     retrystageexecutionresponse.cpp \
     startpipelineexecutionrequest.cpp \

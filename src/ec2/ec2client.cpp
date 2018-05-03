@@ -95,6 +95,8 @@
 #include "createdhcpoptionsresponse.h"
 #include "createegressonlyinternetgatewayrequest.h"
 #include "createegressonlyinternetgatewayresponse.h"
+#include "createfleetrequest.h"
+#include "createfleetresponse.h"
 #include "createflowlogsrequest.h"
 #include "createflowlogsresponse.h"
 #include "createfpgaimagerequest.h"
@@ -163,6 +165,8 @@
 #include "deletedhcpoptionsresponse.h"
 #include "deleteegressonlyinternetgatewayrequest.h"
 #include "deleteegressonlyinternetgatewayresponse.h"
+#include "deletefleetsrequest.h"
+#include "deletefleetsresponse.h"
 #include "deleteflowlogsrequest.h"
 #include "deleteflowlogsresponse.h"
 #include "deletefpgaimagerequest.h"
@@ -245,6 +249,12 @@
 #include "describeelasticgpusresponse.h"
 #include "describeexporttasksrequest.h"
 #include "describeexporttasksresponse.h"
+#include "describefleethistoryrequest.h"
+#include "describefleethistoryresponse.h"
+#include "describefleetinstancesrequest.h"
+#include "describefleetinstancesresponse.h"
+#include "describefleetsrequest.h"
+#include "describefleetsresponse.h"
 #include "describeflowlogsrequest.h"
 #include "describeflowlogsresponse.h"
 #include "describefpgaimageattributerequest.h"
@@ -437,6 +447,8 @@
 #include "importsnapshotresponse.h"
 #include "importvolumerequest.h"
 #include "importvolumeresponse.h"
+#include "modifyfleetrequest.h"
+#include "modifyfleetresponse.h"
 #include "modifyfpgaimageattributerequest.h"
 #include "modifyfpgaimageattributeresponse.h"
 #include "modifyhostsrequest.h"
@@ -1235,9 +1247,9 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
  * Cancels one or more Spot Instance requests. Spot Instances are instances that Amazon EC2 starts on your behalf when the
  * maximum price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * Elastic Compute Cloud User
+ * EC2 User Guide for Linux
  *
- * Guide</i>> <b>
+ * Instances</i>> <b>
  *
  * Canceling a Spot Instance request does not terminate running Spot Instances associated with the
  */
@@ -1480,6 +1492,30 @@ CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptions
 CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGateway(const CreateEgressOnlyInternetGatewayRequest &request)
 {
     return qobject_cast<CreateEgressOnlyInternetGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Launches an EC2
+ *
+ * Fleet>
+ *
+ * You can create a single EC2 Fleet that includes multiple launch specifications that vary by instance type, AMI,
+ * Availability Zone, or
+ *
+ * subnet>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-launch-ec2-fleet.html">Launching an EC2 Fleet</a> in
+ * the <i>Amazon Elastic Compute Cloud User
+ */
+CreateFleetResponse * Ec2Client::createFleet(const CreateFleetRequest &request)
+{
+    return qobject_cast<CreateFleetResponse *>(send(request));
 }
 
 /*!
@@ -1987,7 +2023,7 @@ CreateSnapshotResponse * Ec2Client::createSnapshot(const CreateSnapshotRequest &
  * Creates a data feed for Spot Instances, enabling you to view Spot Instance usage logs. You can create one data feed per
  * AWS account. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
- * <i>Amazon Elastic Compute Cloud User
+ * <i>Amazon EC2 User Guide for Linux
  */
 CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscription(const CreateSpotDatafeedSubscriptionRequest &request)
 {
@@ -2355,6 +2391,26 @@ DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptions
 DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGateway(const DeleteEgressOnlyInternetGatewayRequest &request)
 {
     return qobject_cast<DeleteEgressOnlyInternetGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified EC2
+ *
+ * Fleet>
+ *
+ * After you delete an EC2 Fleet, the EC2 Fleet launches no new instances. You must specify whether the EC2 Fleet should
+ * also terminate its instances. If you terminate the instances, the EC2 Fleet enters the <code>deleted_terminating</code>
+ * state. Otherwise, the EC2 Fleet enters the <code>deleted_running</code> state, and the instances continue to run until
+ * they are interrupted or you terminate them manually.
+ */
+DeleteFleetsResponse * Ec2Client::deleteFleets(const DeleteFleetsRequest &request)
+{
+    return qobject_cast<DeleteFleetsResponse *>(send(request));
 }
 
 /*!
@@ -3047,6 +3103,45 @@ DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElast
 DescribeExportTasksResponse * Ec2Client::describeExportTasks(const DescribeExportTasksRequest &request)
 {
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFleetHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the events for the specified EC2 Fleet during the specified
+ */
+DescribeFleetHistoryResponse * Ec2Client::describeFleetHistory(const DescribeFleetHistoryRequest &request)
+{
+    return qobject_cast<DescribeFleetHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFleetInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the running instances for the specified EC2
+ */
+DescribeFleetInstancesResponse * Ec2Client::describeFleetInstances(const DescribeFleetInstancesRequest &request)
+{
+    return qobject_cast<DescribeFleetInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeFleetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified EC2
+ */
+DescribeFleetsResponse * Ec2Client::describeFleets(const DescribeFleetsRequest &request)
+{
+    return qobject_cast<DescribeFleetsResponse *>(send(request));
 }
 
 /*!
@@ -3917,7 +4012,7 @@ DescribeSnapshotsResponse * Ec2Client::describeSnapshots(const DescribeSnapshots
  *
  * Describes the data feed for Spot Instances. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance Data Feed</a> in the
- * <i>Amazon Elastic Compute Cloud User
+ * <i>Amazon EC2 User Guide for Linux
  */
 DescribeSpotDatafeedSubscriptionResponse * Ec2Client::describeSpotDatafeedSubscription(const DescribeSpotDatafeedSubscriptionRequest &request)
 {
@@ -3981,9 +4076,9 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
  * Describes the Spot Instance requests that belong to your account. Spot Instances are instances that Amazon EC2 launches
  * when the Spot price that you specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * Elastic Compute Cloud User
+ * EC2 User Guide for Linux
  *
- * Guide</i>>
+ * Instances</i>>
  *
  * You can use <code>DescribeSpotInstanceRequests</code> to find a running Spot Instance by examining the response. If the
  * status of the Spot Instance is <code>fulfilled</code>, the instance ID appears in the response and contains the
@@ -3992,7 +4087,7 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
  *
  * <code>spot</code>>
  *
- * Spot Instance requests are deleted 4 hours after they are canceled and their instances are
+ * Spot Instance requests are deleted four hours after they are canceled and their instances are
  */
 DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(const DescribeSpotInstanceRequestsRequest &request)
 {
@@ -4007,9 +4102,9 @@ DescribeSpotInstanceRequestsResponse * Ec2Client::describeSpotInstanceRequests(c
  *
  * Describes the Spot price history. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html">Spot Instance Pricing
- * History</a> in the <i>Amazon Elastic Compute Cloud User
+ * History</a> in the <i>Amazon EC2 User Guide for Linux
  *
- * Guide</i>>
+ * Instances</i>>
  *
  * When you specify a start and end time, this operation returns the prices of the instance types within the time range
  * that you specified and the time when the price changed. The price is valid within the time period that you specified;
@@ -4891,6 +4986,23 @@ ImportSnapshotResponse * Ec2Client::importSnapshot(const ImportSnapshotRequest &
 ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &request)
 {
     return qobject_cast<ImportVolumeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyFleetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the specified EC2
+ *
+ * Fleet>
+ *
+ * While the EC2 Fleet is being modified, it is in the <code>modifying</code>
+ */
+ModifyFleetResponse * Ec2Client::modifyFleet(const ModifyFleetRequest &request)
+{
+    return qobject_cast<ModifyFleetResponse *>(send(request));
 }
 
 /*!
@@ -5832,6 +5944,11 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
  *
  * request>
  *
+ * The Spot Fleet request specifies the total target capacity and the On-Demand target capacity. Amazon EC2 calculates the
+ * difference between the total capacity and On-Demand capacity, and launches the difference as Spot
+ *
+ * capacity>
+ *
  * You can submit a single request that includes multiple launch specifications that vary by instance type, AMI,
  * Availability Zone, or
  *
@@ -5848,13 +5965,13 @@ ReportInstanceStatusResponse * Ec2Client::reportInstanceStatus(const ReportInsta
  *
  * fleet>
  *
- * You can specify tags for the Spot Instances. You cannot tag other resource types in a Spot Fleet request; only the
- * <code>instance</code> resource type is
+ * You can specify tags for the Spot Instances. You cannot tag other resource types in a Spot Fleet request because only
+ * the <code>instance</code> resource type is
  *
  * supported>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html">Spot
- * Fleet Requests</a> in the <i>Amazon Elastic Compute Cloud User
+ * Fleet Requests</a> in the <i>Amazon EC2 User Guide for Linux
  */
 RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetRequest &request)
 {
@@ -5870,7 +5987,7 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
  * Creates a Spot Instance request. Spot Instances are instances that Amazon EC2 launches when the maximum price that you
  * specify exceeds the current Spot price. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * Elastic Compute Cloud User
+ * EC2 User Guide for Linux
  */
 RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpotInstancesRequest &request)
 {

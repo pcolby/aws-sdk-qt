@@ -73,6 +73,7 @@ namespace EC2 {
  * \value CreateDefaultVpcAction EC2 CreateDefaultVpc action.
  * \value CreateDhcpOptionsAction EC2 CreateDhcpOptions action.
  * \value CreateEgressOnlyInternetGatewayAction EC2 CreateEgressOnlyInternetGateway action.
+ * \value CreateFleetAction EC2 CreateFleet action.
  * \value CreateFlowLogsAction EC2 CreateFlowLogs action.
  * \value CreateFpgaImageAction EC2 CreateFpgaImage action.
  * \value CreateImageAction EC2 CreateImage action.
@@ -107,6 +108,7 @@ namespace EC2 {
  * \value DeleteCustomerGatewayAction EC2 DeleteCustomerGateway action.
  * \value DeleteDhcpOptionsAction EC2 DeleteDhcpOptions action.
  * \value DeleteEgressOnlyInternetGatewayAction EC2 DeleteEgressOnlyInternetGateway action.
+ * \value DeleteFleetsAction EC2 DeleteFleets action.
  * \value DeleteFlowLogsAction EC2 DeleteFlowLogs action.
  * \value DeleteFpgaImageAction EC2 DeleteFpgaImage action.
  * \value DeleteInternetGatewayAction EC2 DeleteInternetGateway action.
@@ -148,6 +150,9 @@ namespace EC2 {
  * \value DescribeEgressOnlyInternetGatewaysAction EC2 DescribeEgressOnlyInternetGateways action.
  * \value DescribeElasticGpusAction EC2 DescribeElasticGpus action.
  * \value DescribeExportTasksAction EC2 DescribeExportTasks action.
+ * \value DescribeFleetHistoryAction EC2 DescribeFleetHistory action.
+ * \value DescribeFleetInstancesAction EC2 DescribeFleetInstances action.
+ * \value DescribeFleetsAction EC2 DescribeFleets action.
  * \value DescribeFlowLogsAction EC2 DescribeFlowLogs action.
  * \value DescribeFpgaImageAttributeAction EC2 DescribeFpgaImageAttribute action.
  * \value DescribeFpgaImagesAction EC2 DescribeFpgaImages action.
@@ -244,6 +249,7 @@ namespace EC2 {
  * \value ImportKeyPairAction EC2 ImportKeyPair action.
  * \value ImportSnapshotAction EC2 ImportSnapshot action.
  * \value ImportVolumeAction EC2 ImportVolume action.
+ * \value ModifyFleetAction EC2 ModifyFleet action.
  * \value ModifyFpgaImageAttributeAction EC2 ModifyFpgaImageAttribute action.
  * \value ModifyHostsAction EC2 ModifyHosts action.
  * \value ModifyIdFormatAction EC2 ModifyIdFormat action.

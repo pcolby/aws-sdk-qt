@@ -42,6 +42,8 @@ namespace CodePipeline {
  * \value CreatePipelineAction CodePipeline CreatePipeline action.
  * \value DeleteCustomActionTypeAction CodePipeline DeleteCustomActionType action.
  * \value DeletePipelineAction CodePipeline DeletePipeline action.
+ * \value DeleteWebhookAction CodePipeline DeleteWebhook action.
+ * \value DeregisterWebhookWithThirdPartyAction CodePipeline DeregisterWebhookWithThirdParty action.
  * \value DisableStageTransitionAction CodePipeline DisableStageTransition action.
  * \value EnableStageTransitionAction CodePipeline EnableStageTransition action.
  * \value GetJobDetailsAction CodePipeline GetJobDetails action.
@@ -52,6 +54,7 @@ namespace CodePipeline {
  * \value ListActionTypesAction CodePipeline ListActionTypes action.
  * \value ListPipelineExecutionsAction CodePipeline ListPipelineExecutions action.
  * \value ListPipelinesAction CodePipeline ListPipelines action.
+ * \value ListWebhooksAction CodePipeline ListWebhooks action.
  * \value PollForJobsAction CodePipeline PollForJobs action.
  * \value PollForThirdPartyJobsAction CodePipeline PollForThirdPartyJobs action.
  * \value PutActionRevisionAction CodePipeline PutActionRevision action.
@@ -60,6 +63,8 @@ namespace CodePipeline {
  * \value PutJobSuccessResultAction CodePipeline PutJobSuccessResult action.
  * \value PutThirdPartyJobFailureResultAction CodePipeline PutThirdPartyJobFailureResult action.
  * \value PutThirdPartyJobSuccessResultAction CodePipeline PutThirdPartyJobSuccessResult action.
+ * \value PutWebhookAction CodePipeline PutWebhook action.
+ * \value RegisterWebhookWithThirdPartyAction CodePipeline RegisterWebhookWithThirdParty action.
  * \value RetryStageExecutionAction CodePipeline RetryStageExecution action.
  * \value StartPipelineExecutionAction CodePipeline StartPipelineExecution action.
  * \value UpdatePipelineAction CodePipeline UpdatePipeline action.

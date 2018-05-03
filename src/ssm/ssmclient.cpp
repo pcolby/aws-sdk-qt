@@ -1067,6 +1067,10 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
  *
  * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
  * example, you can create a default patch baseline for each operating
+ *
+ * system>
+ *
+ * If you do not specify an operating system value, the default patch baseline for Windows is
  */
 GetDefaultPatchBaselineResponse * SsmClient::getDefaultPatchBaseline(const GetDefaultPatchBaselineRequest &request)
 {
@@ -1571,7 +1575,7 @@ PutInventoryResponse * SsmClient::putInventory(const PutInventoryRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Add one or more parameters to the
+ * Add a parameter to the
  */
 PutParameterResponse * SsmClient::putParameter(const PutParameterRequest &request)
 {

@@ -33,6 +33,10 @@
 #include "deletecustomactiontyperesponse.h"
 #include "deletepipelinerequest.h"
 #include "deletepipelineresponse.h"
+#include "deletewebhookrequest.h"
+#include "deletewebhookresponse.h"
+#include "deregisterwebhookwiththirdpartyrequest.h"
+#include "deregisterwebhookwiththirdpartyresponse.h"
 #include "disablestagetransitionrequest.h"
 #include "disablestagetransitionresponse.h"
 #include "enablestagetransitionrequest.h"
@@ -53,6 +57,8 @@
 #include "listpipelineexecutionsresponse.h"
 #include "listpipelinesrequest.h"
 #include "listpipelinesresponse.h"
+#include "listwebhooksrequest.h"
+#include "listwebhooksresponse.h"
 #include "pollforjobsrequest.h"
 #include "pollforjobsresponse.h"
 #include "pollforthirdpartyjobsrequest.h"
@@ -69,6 +75,10 @@
 #include "putthirdpartyjobfailureresultresponse.h"
 #include "putthirdpartyjobsuccessresultrequest.h"
 #include "putthirdpartyjobsuccessresultresponse.h"
+#include "putwebhookrequest.h"
+#include "putwebhookresponse.h"
+#include "registerwebhookwiththirdpartyrequest.h"
+#include "registerwebhookwiththirdpartyresponse.h"
 #include "retrystageexecutionrequest.h"
 #include "retrystageexecutionresponse.h"
 #include "startpipelineexecutionrequest.h"
@@ -110,12 +120,12 @@ namespace CodePipeline {
  * 
  *  Guide</a>>
  * 
- *  You can use the AWS CodePipeline API to work with pipelines, stages, actions, gates, and transitions, as described
+ *  You can use the AWS CodePipeline API to work with pipelines, stages, actions, and transitions, as described
  * 
  *  below>
  * 
- *  <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of actions,
- *  gates, and stages.
+ *  <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages,
+ *  actions, and transitions.
  * 
  *  </p
  * 
@@ -160,24 +170,36 @@ namespace CodePipeline {
  * 
  *  pipeline> </li> </ul>
  * 
- *  Pipelines include <i>stages</i>, which are logical groupings of gates and actions. Each stage contains one or more
- *  actions that must complete before the next stage begins. A stage will result in success or failure. If a stage fails,
- *  then the pipeline stops at that stage and will remain stopped until either a new version of an artifact appears in the
- *  source location, or a user takes action to re-run the most recent artifact through the pipeline. You can call
- *  <a>GetPipelineState</a>, which displays the status of a pipeline, including the status of stages in the pipeline, or
- *  <a>GetPipeline</a>, which returns the entire structure of the pipeline, including the stages of that pipeline. For more
- *  information about the structure of stages and actions, also refer to the <a
- *  href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline
- *  Structure
+ *  Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage
+ *  begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will
+ *  remain stopped until either a new version of an artifact appears in the source location, or a user takes action to
+ *  re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of
+ *  a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of
+ *  the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions,
+ *  also refer to the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
+ *  CodePipeline Pipeline Structure
  * 
  *  Reference</a>>
  * 
  *  Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed
  *  within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source
  *  such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
- *  actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>.
+ *  actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action
+ *  categories
  * 
- *  </p
+ *  are> <ul> <li>
+ * 
+ *  Sourc> </li> <li>
+ * 
+ *  Buil> </li> <li>
+ * 
+ *  Tes> </li> <li>
+ * 
+ *  Deplo> </li> <li>
+ * 
+ *  Approva> </li> <li>
+ * 
+ *  Invok> </li> </ul>
  * 
  *  Pipelines also include <i>transitions</i>, which allow the transition of artifacts from one stage to the next in a
  *  pipeline after the actions in one stage
@@ -379,7 +401,9 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  *
  * actions> <b>
  *
- * You cannot recreate a custom action after it has been deleted unless you increase the version number of the
+ * To re-create a custom action after it has been deleted you must use a string in the version field that has never been
+ * used before. This string can be an incremented version number, for example. To restore a deleted custom action, use a
+ * JSON file that is identical to the deleted action, including the original string in the version
  */
 DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(const DeleteCustomActionTypeRequest &request)
 {
@@ -397,6 +421,35 @@ DeleteCustomActionTypeResponse * CodePipelineClient::deleteCustomActionType(cons
 DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipelineRequest &request)
 {
     return qobject_cast<DeletePipelineResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * DeleteWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a previously created webhook by name. Deleting the webhook stops AWS CodePipeline from starting a pipeline every
+ * time an external event occurs. The API will return successfully when trying to delete a webhook that is already deleted.
+ * If a deleted webhook is re-created by calling PutWebhook with the same name, it will have a different
+ */
+DeleteWebhookResponse * CodePipelineClient::deleteWebhook(const DeleteWebhookRequest &request)
+{
+    return qobject_cast<DeleteWebhookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * DeregisterWebhookWithThirdPartyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the connection between the webhook that was created by CodePipeline and the external tool with events to be
+ * detected. Currently only supported for webhooks that target an action type of
+ */
+DeregisterWebhookWithThirdPartyResponse * CodePipelineClient::deregisterWebhookWithThirdParty(const DeregisterWebhookWithThirdPartyRequest &request)
+{
+    return qobject_cast<DeregisterWebhookWithThirdPartyResponse *>(send(request));
 }
 
 /*!
@@ -545,13 +598,29 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
 
 /*!
  * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListWebhooksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a listing of all the webhooks in this region for this account. The output lists all webhooks and includes the
+ * webhook URL and ARN, as well the configuration for each
+ */
+ListWebhooksResponse * CodePipelineClient::listWebhooks(const ListWebhooksRequest &request)
+{
+    return qobject_cast<ListWebhooksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
  * PollForJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about any jobs for AWS CodePipeline to act
+ * Returns information about any jobs for AWS CodePipeline to act upon. PollForJobs is only valid for action types with
+ * "Custom" in the owner field. If the action type contains "AWS" or "ThirdParty" in the owner field, the PollForJobs
+ * action returns an
  *
- * upon> <b>
+ * error> <b>
  *
  * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
  * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
@@ -656,6 +725,37 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
 PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
 {
     return qobject_cast<PutThirdPartyJobSuccessResultResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * PutWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Defines a webhook and returns a unique webhook URL generated by CodePipeline. This URL can be supplied to third party
+ * source hosting providers to call every time there's a code change. When CodePipeline receives a POST request on this
+ * URL, the pipeline defined in the webhook is started as long as the POST request satisfied the authentication and
+ * filtering requirements supplied when defining the webhook. RegisterWebhookWithThirdParty and
+ * DeregisterWebhookWithThirdParty APIs can be used to automatically configure supported third parties to call the
+ * generated webhook
+ */
+PutWebhookResponse * CodePipelineClient::putWebhook(const PutWebhookRequest &request)
+{
+    return qobject_cast<PutWebhookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * RegisterWebhookWithThirdPartyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Configures a connection between the webhook that was created and the external tool with events to be
+ */
+RegisterWebhookWithThirdPartyResponse * CodePipelineClient::registerWebhookWithThirdParty(const RegisterWebhookWithThirdPartyRequest &request)
+{
+    return qobject_cast<RegisterWebhookWithThirdPartyResponse *>(send(request));
 }
 
 /*!
