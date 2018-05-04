@@ -203,6 +203,8 @@
 <h3 class="fn" id="listApiKeys"><a name="listApiKeys"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listapikeysresponse.html">ListApiKeysResponse</a></span> *AppSyncClient::<span class="name">listApiKeys</span>(const <span class="type"><a href="qtaws-appsync-listapikeysrequest.html">ListApiKeysRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-appsync-appsyncclient.html">AppSyncClient</a> service, and returns a pointer to an <a href="qtaws-appsync-listapikeysresponse.html">ListApiKeysResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the API keys for a given</p>
+<p>API&gt; &lt;note&gt;</p>
+<p>API keys are deleted automatically sometime after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call &lt;code&gt;DeleteApiKey&lt;/code&gt; to manually delete a key before it's automatically</p>
 <!-- @@@listApiKeys -->
 <!-- $$$listDataSources[overload1]$$$listDataSourcesconstListDataSourcesRequest& -->
 <h3 class="fn" id="listDataSources"><a name="listDataSources"></a><code>[slot] </code><span class="type"><a href="qtaws-appsync-listdatasourcesresponse.html">ListDataSourcesResponse</a></span> *AppSyncClient::<span class="name">listDataSources</span>(const <span class="type"><a href="qtaws-appsync-listdatasourcesrequest.html">ListDataSourcesRequest</a></span> &amp;<i>request</i>)</h3>
