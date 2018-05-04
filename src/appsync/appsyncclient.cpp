@@ -374,6 +374,12 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the API keys for a given
+ *
+ * API> <note>
+ *
+ * API keys are deleted automatically sometime after they expire. However, they may still be included in the response until
+ * they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's
+ * automatically
  */
 ListApiKeysResponse * AppSyncClient::listApiKeys(const ListApiKeysRequest &request)
 {

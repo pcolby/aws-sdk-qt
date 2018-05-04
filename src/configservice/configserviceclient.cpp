@@ -143,9 +143,6 @@ namespace ConfigService {
  *  For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
  *  AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
  *  AWS Config</a> in the <i>AWS Config Developer
- * 
- *  Guide</i>> <ul> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li/>
- *  <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li> </li> <li/> <li/> <li/> <li/>
  */
 
 /*!
@@ -907,11 +904,18 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates and updates the configuration aggregator with the selected source accounts and
+ * Creates and updates the configuration aggregator with the selected source accounts and regions. The source account can
+ * be individual account(s) or an
  *
- * regions> <note>
+ * organization> <note>
  *
- * AWS Config should be enabled in accounts and regions you want to
+ * AWS Config should be enabled in source accounts and regions you want to
+ *
+ * aggregate>
+ *
+ * If your source type is an organization, you must be signed in to the master account and all features must be enabled in
+ * your organization. AWS Config calls <code>EnableAwsServiceAccess</code> API to enable integration between AWS Config and
+ * AWS Organizations.
  */
 PutConfigurationAggregatorResponse * ConfigServiceClient::putConfigurationAggregator(const PutConfigurationAggregatorRequest &request)
 {

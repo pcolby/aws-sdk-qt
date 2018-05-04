@@ -299,10 +299,10 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * You provide the secret data to be encrypted by putting text in either the <code>SecretString</code> parameter or binary
  * data in the <code>SecretBinary</code> parameter, but not both. If you include <code>SecretString</code> or
- * <code>SecretBinary</code> then Secrets Manager also creates an initial secret version and, if you don't supply a staging
- * label, automatically maps the new version's ID to the staging label
+ * <code>SecretBinary</code> then Secrets Manager also creates an initial secret version and automatically attaches the
+ * staging label <code>AWSCURRENT</code> to the new
  *
- * <code>AWSCURRENT</code>> <note> <ul> <li>
+ * version> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager
@@ -637,9 +637,9 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  *
  * Stores a new encrypted secret value in the specified secret. To do this, the operation creates a new version and
  * attaches it to the secret. The version can contain a new <code>SecretString</code> value or a new
- * <code>SecretBinary</code>
+ * <code>SecretBinary</code> value. You can also specify the staging labels that are initially attached to the new
  *
- * value> <note>
+ * version> <note>
  *
  * The Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with the
  * <code>SecretBinary</code> field you must use the AWS CLI or one of the AWS
@@ -652,22 +652,22 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  * version> </li> <li>
  *
  * If another version of this secret already exists, then this operation does not automatically move any staging labels
- * other than those that you specify in the <code>VersionStages</code>
+ * other than those that you explicitly specify in the <code>VersionStages</code>
  *
  * parameter> </li> <li>
+ *
+ * If this operation moves the staging label <code>AWSCURRENT</code> from another version to this version (because you
+ * included it in the <code>StagingLabels</code> parameter) then Secrets Manager also automatically moves the staging label
+ * <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed
+ *
+ * from> </li> <li>
  *
  * This operation is idempotent. If a version with a <code>SecretVersionId</code> with the same value as the
  * <code>ClientRequestToken</code> parameter already exists and you specify the same secret data, the operation succeeds
  * but does nothing. However, if the secret data is different, then the operation fails because you cannot modify an
  * existing version; you can only create new
  *
- * ones> </li> <li>
- *
- * If this operation moves the staging label <code>AWSCURRENT</code> to this version (because you included it in the
- * <code>StagingLabels</code> parameter) then Secrets Manager also automatically moves the staging label
- * <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed
- *
- * from> </li> </ul> <note> <ul> <li>
+ * ones> </li> </ul> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager
@@ -982,16 +982,15 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * SDKs> </note> <ul> <li>
  *
- * If this update creates the first version of the secret or if you did not include the <code>VersionStages</code>
- * parameter then Secrets Manager automatically attaches the staging label <code>AWSCURRENT</code> to the new version and
- * removes it from any version that had it previously. The previous version (if any) is then given the staging label
- *
- * <code>AWSPREVIOUS</code>> </li> <li>
- *
  * If a version with a <code>SecretVersionId</code> with the same value as the <code>ClientRequestToken</code> parameter
  * already exists, the operation generates an error. You cannot modify an existing version, you can only create new
  *
- * ones> </li> </ul> <note> <ul> <li>
+ * ones> </li> <li>
+ *
+ * If you include <code>SecretString</code> or <code>SecretBinary</code> to create a new secret version, Secrets Manager
+ * automatically attaches the staging label <code>AWSCURRENT</code> to the new version.
+ *
+ * </p </li> </ul> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets Manager

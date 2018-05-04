@@ -53,9 +53,6 @@ namespace ConfigService {
  *  For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
  *  AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
  *  AWS Config</a> in the <i>AWS Config Developer
- * 
- *  Guide</i>> <ul> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li/>
- *  <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li> </li> <li/> <li/> <li/> <li/>
  *
  * \sa ConfigServiceClient::getComplianceDetailsByConfigRule
  */
