@@ -42,6 +42,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-core-awsabstractclient.html#apiVersion">apiVersion</a></b></span>() const : QString</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#archiveFindings">archiveFindings</a></b></span>(const ArchiveFindingsRequest &amp;) : ArchiveFindingsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#createDetector">createDetector</a></b></span>(const CreateDetectorRequest &amp;) : CreateDetectorResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#createFilter">createFilter</a></b></span>(const CreateFilterRequest &amp;) : CreateFilterResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#createIPSet">createIPSet</a></b></span>(const CreateIPSetRequest &amp;) : CreateIPSetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#createMembers">createMembers</a></b></span>(const CreateMembersRequest &amp;) : CreateMembersResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#createSampleFindings">createSampleFindings</a></b></span>(const CreateSampleFindingsRequest &amp;) : CreateSampleFindingsResponse *</li>
@@ -50,6 +51,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-core-awsabstractclient.html#d_ptr-var">d_ptr</a></b></span> : AwsAbstractClientPrivate * const</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#declineInvitations">declineInvitations</a></b></span>(const DeclineInvitationsRequest &amp;) : DeclineInvitationsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteDetector">deleteDetector</a></b></span>(const DeleteDetectorRequest &amp;) : DeleteDetectorResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteFilter">deleteFilter</a></b></span>(const DeleteFilterRequest &amp;) : DeleteFilterResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteIPSet">deleteIPSet</a></b></span>(const DeleteIPSetRequest &amp;) : DeleteIPSetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteInvitations">deleteInvitations</a></b></span>(const DeleteInvitationsRequest &amp;) : DeleteInvitationsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#deleteMembers">deleteMembers</a></b></span>(const DeleteMembersRequest &amp;) : DeleteMembersResponse *</li>
@@ -59,6 +61,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-core-awsabstractclient.html#endpoint">endpoint</a></b></span>() const : QUrl</li>
 <li class="fn"><span class="name"><b><a href="qtaws-core-awsabstractclient.html#endpointPrefix">endpointPrefix</a></b></span>() const : QString</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getDetector">getDetector</a></b></span>(const GetDetectorRequest &amp;) : GetDetectorResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getFilter">getFilter</a></b></span>(const GetFilterRequest &amp;) : GetFilterResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getFindings">getFindings</a></b></span>(const GetFindingsRequest &amp;) : GetFindingsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getFindingsStatistics">getFindingsStatistics</a></b></span>(const GetFindingsStatisticsRequest &amp;) : GetFindingsStatisticsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getIPSet">getIPSet</a></b></span>(const GetIPSetRequest &amp;) : GetIPSetResponse *</li>
@@ -69,6 +72,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#getThreatIntelSet">getThreatIntelSet</a></b></span>(const GetThreatIntelSetRequest &amp;) : GetThreatIntelSetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#inviteMembers">inviteMembers</a></b></span>(const InviteMembersRequest &amp;) : InviteMembersResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#listDetectors">listDetectors</a></b></span>(const ListDetectorsRequest &amp;) : ListDetectorsResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#listFilters">listFilters</a></b></span>(const ListFiltersRequest &amp;) : ListFiltersResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#listFindings">listFindings</a></b></span>(const ListFindingsRequest &amp;) : ListFindingsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#listIPSets">listIPSets</a></b></span>(const ListIPSetsRequest &amp;) : ListIPSetsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#listInvitations">listInvitations</a></b></span>(const ListInvitationsRequest &amp;) : ListInvitationsResponse *</li>
@@ -88,6 +92,7 @@
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#stopMonitoringMembers">stopMonitoringMembers</a></b></span>(const StopMonitoringMembersRequest &amp;) : StopMonitoringMembersResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#unarchiveFindings">unarchiveFindings</a></b></span>(const UnarchiveFindingsRequest &amp;) : UnarchiveFindingsResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#updateDetector">updateDetector</a></b></span>(const UpdateDetectorRequest &amp;) : UpdateDetectorResponse *</li>
+<li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#updateFilter">updateFilter</a></b></span>(const UpdateFilterRequest &amp;) : UpdateFilterResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#updateFindingsFeedback">updateFindingsFeedback</a></b></span>(const UpdateFindingsFeedbackRequest &amp;) : UpdateFindingsFeedbackResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#updateIPSet">updateIPSet</a></b></span>(const UpdateIPSetRequest &amp;) : UpdateIPSetResponse *</li>
 <li class="fn"><span class="name"><b><a href="qtaws-guardduty-guarddutyclient.html#updateThreatIntelSet">updateThreatIntelSet</a></b></span>(const UpdateThreatIntelSetRequest &amp;) : UpdateThreatIntelSetResponse *</li>
