@@ -22,6 +22,10 @@ HEADERS += \
     createdetectorrequest_p.h \
     createdetectorresponse.h \
     createdetectorresponse_p.h \
+    createfilterrequest.h \
+    createfilterrequest_p.h \
+    createfilterresponse.h \
+    createfilterresponse_p.h \
     createipsetrequest.h \
     createipsetrequest_p.h \
     createipsetresponse.h \
@@ -46,6 +50,10 @@ HEADERS += \
     deletedetectorrequest_p.h \
     deletedetectorresponse.h \
     deletedetectorresponse_p.h \
+    deletefilterrequest.h \
+    deletefilterrequest_p.h \
+    deletefilterresponse.h \
+    deletefilterresponse_p.h \
     deleteinvitationsrequest.h \
     deleteinvitationsrequest_p.h \
     deleteinvitationsresponse.h \
@@ -74,6 +82,10 @@ HEADERS += \
     getdetectorrequest_p.h \
     getdetectorresponse.h \
     getdetectorresponse_p.h \
+    getfilterrequest.h \
+    getfilterrequest_p.h \
+    getfilterresponse.h \
+    getfilterresponse_p.h \
     getfindingsrequest.h \
     getfindingsrequest_p.h \
     getfindingsresponse.h \
@@ -116,6 +128,10 @@ HEADERS += \
     listdetectorsrequest_p.h \
     listdetectorsresponse.h \
     listdetectorsresponse_p.h \
+    listfiltersrequest.h \
+    listfiltersrequest_p.h \
+    listfiltersresponse.h \
+    listfiltersresponse_p.h \
     listfindingsrequest.h \
     listfindingsrequest_p.h \
     listfindingsresponse.h \
@@ -152,6 +168,10 @@ HEADERS += \
     updatedetectorrequest_p.h \
     updatedetectorresponse.h \
     updatedetectorresponse_p.h \
+    updatefilterrequest.h \
+    updatefilterrequest_p.h \
+    updatefilterresponse.h \
+    updatefilterresponse_p.h \
     updatefindingsfeedbackrequest.h \
     updatefindingsfeedbackrequest_p.h \
     updatefindingsfeedbackresponse.h \
@@ -172,6 +192,8 @@ SOURCES += \
     archivefindingsresponse.cpp \
     createdetectorrequest.cpp \
     createdetectorresponse.cpp \
+    createfilterrequest.cpp \
+    createfilterresponse.cpp \
     createipsetrequest.cpp \
     createipsetresponse.cpp \
     createmembersrequest.cpp \
@@ -184,6 +206,8 @@ SOURCES += \
     declineinvitationsresponse.cpp \
     deletedetectorrequest.cpp \
     deletedetectorresponse.cpp \
+    deletefilterrequest.cpp \
+    deletefilterresponse.cpp \
     deleteinvitationsrequest.cpp \
     deleteinvitationsresponse.cpp \
     deleteipsetrequest.cpp \
@@ -198,6 +222,8 @@ SOURCES += \
     disassociatemembersresponse.cpp \
     getdetectorrequest.cpp \
     getdetectorresponse.cpp \
+    getfilterrequest.cpp \
+    getfilterresponse.cpp \
     getfindingsrequest.cpp \
     getfindingsresponse.cpp \
     getfindingsstatisticsrequest.cpp \
@@ -219,6 +245,8 @@ SOURCES += \
     invitemembersresponse.cpp \
     listdetectorsrequest.cpp \
     listdetectorsresponse.cpp \
+    listfiltersrequest.cpp \
+    listfiltersresponse.cpp \
     listfindingsrequest.cpp \
     listfindingsresponse.cpp \
     listinvitationsrequest.cpp \
@@ -237,6 +265,8 @@ SOURCES += \
     unarchivefindingsresponse.cpp \
     updatedetectorrequest.cpp \
     updatedetectorresponse.cpp \
+    updatefilterrequest.cpp \
+    updatefilterresponse.cpp \
     updatefindingsfeedbackrequest.cpp \
     updatefindingsfeedbackresponse.cpp \
     updateipsetrequest.cpp \

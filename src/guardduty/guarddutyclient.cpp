@@ -27,6 +27,8 @@
 #include "archivefindingsresponse.h"
 #include "createdetectorrequest.h"
 #include "createdetectorresponse.h"
+#include "createfilterrequest.h"
+#include "createfilterresponse.h"
 #include "createipsetrequest.h"
 #include "createipsetresponse.h"
 #include "createmembersrequest.h"
@@ -39,6 +41,8 @@
 #include "declineinvitationsresponse.h"
 #include "deletedetectorrequest.h"
 #include "deletedetectorresponse.h"
+#include "deletefilterrequest.h"
+#include "deletefilterresponse.h"
 #include "deleteipsetrequest.h"
 #include "deleteipsetresponse.h"
 #include "deleteinvitationsrequest.h"
@@ -53,6 +57,8 @@
 #include "disassociatemembersresponse.h"
 #include "getdetectorrequest.h"
 #include "getdetectorresponse.h"
+#include "getfilterrequest.h"
+#include "getfilterresponse.h"
 #include "getfindingsrequest.h"
 #include "getfindingsresponse.h"
 #include "getfindingsstatisticsrequest.h"
@@ -71,6 +77,8 @@
 #include "invitemembersresponse.h"
 #include "listdetectorsrequest.h"
 #include "listdetectorsresponse.h"
+#include "listfiltersrequest.h"
+#include "listfiltersresponse.h"
 #include "listfindingsrequest.h"
 #include "listfindingsresponse.h"
 #include "listipsetsrequest.h"
@@ -89,6 +97,8 @@
 #include "unarchivefindingsresponse.h"
 #include "updatedetectorrequest.h"
 #include "updatedetectorresponse.h"
+#include "updatefilterrequest.h"
+#include "updatefilterresponse.h"
 #include "updatefindingsfeedbackrequest.h"
 #include "updatefindingsfeedbackresponse.h"
 #include "updateipsetrequest.h"
@@ -212,6 +222,18 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
 
 /*!
  * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * CreateFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateFilterResponse * GuardDutyClient::createFilter(const CreateFilterRequest &request)
+{
+    return qobject_cast<CreateFilterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
  * CreateIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -284,6 +306,18 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
 DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorRequest &request)
 {
     return qobject_cast<DeleteDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * DeleteFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteFilterResponse * GuardDutyClient::deleteFilter(const DeleteFilterRequest &request)
+{
+    return qobject_cast<DeleteFilterResponse *>(send(request));
 }
 
 /*!
@@ -368,6 +402,18 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
 GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &request)
 {
     return qobject_cast<GetDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * GetFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetFilterResponse * GuardDutyClient::getFilter(const GetFilterRequest &request)
+{
+    return qobject_cast<GetFilterResponse *>(send(request));
 }
 
 /*!
@@ -483,6 +529,18 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
 
 /*!
  * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * ListFiltersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListFiltersResponse * GuardDutyClient::listFilters(const ListFiltersRequest &request)
+{
+    return qobject_cast<ListFiltersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
  * ListFindingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -590,6 +648,18 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
 UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorRequest &request)
 {
     return qobject_cast<UpdateDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * UpdateFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateFilterResponse * GuardDutyClient::updateFilter(const UpdateFilterRequest &request)
+{
+    return qobject_cast<UpdateFilterResponse *>(send(request));
 }
 
 /*!

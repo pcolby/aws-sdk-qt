@@ -39,12 +39,14 @@ namespace GuardDuty {
  * \value AcceptInvitationAction GuardDuty AcceptInvitation action.
  * \value ArchiveFindingsAction GuardDuty ArchiveFindings action.
  * \value CreateDetectorAction GuardDuty CreateDetector action.
+ * \value CreateFilterAction GuardDuty CreateFilter action.
  * \value CreateIPSetAction GuardDuty CreateIPSet action.
  * \value CreateMembersAction GuardDuty CreateMembers action.
  * \value CreateSampleFindingsAction GuardDuty CreateSampleFindings action.
  * \value CreateThreatIntelSetAction GuardDuty CreateThreatIntelSet action.
  * \value DeclineInvitationsAction GuardDuty DeclineInvitations action.
  * \value DeleteDetectorAction GuardDuty DeleteDetector action.
+ * \value DeleteFilterAction GuardDuty DeleteFilter action.
  * \value DeleteIPSetAction GuardDuty DeleteIPSet action.
  * \value DeleteInvitationsAction GuardDuty DeleteInvitations action.
  * \value DeleteMembersAction GuardDuty DeleteMembers action.
@@ -52,6 +54,7 @@ namespace GuardDuty {
  * \value DisassociateFromMasterAccountAction GuardDuty DisassociateFromMasterAccount action.
  * \value DisassociateMembersAction GuardDuty DisassociateMembers action.
  * \value GetDetectorAction GuardDuty GetDetector action.
+ * \value GetFilterAction GuardDuty GetFilter action.
  * \value GetFindingsAction GuardDuty GetFindings action.
  * \value GetFindingsStatisticsAction GuardDuty GetFindingsStatistics action.
  * \value GetIPSetAction GuardDuty GetIPSet action.
@@ -61,6 +64,7 @@ namespace GuardDuty {
  * \value GetThreatIntelSetAction GuardDuty GetThreatIntelSet action.
  * \value InviteMembersAction GuardDuty InviteMembers action.
  * \value ListDetectorsAction GuardDuty ListDetectors action.
+ * \value ListFiltersAction GuardDuty ListFilters action.
  * \value ListFindingsAction GuardDuty ListFindings action.
  * \value ListIPSetsAction GuardDuty ListIPSets action.
  * \value ListInvitationsAction GuardDuty ListInvitations action.
@@ -70,6 +74,7 @@ namespace GuardDuty {
  * \value StopMonitoringMembersAction GuardDuty StopMonitoringMembers action.
  * \value UnarchiveFindingsAction GuardDuty UnarchiveFindings action.
  * \value UpdateDetectorAction GuardDuty UpdateDetector action.
+ * \value UpdateFilterAction GuardDuty UpdateFilter action.
  * \value UpdateFindingsFeedbackAction GuardDuty UpdateFindingsFeedback action.
  * \value UpdateIPSetAction GuardDuty UpdateIPSet action.
  * \value UpdateThreatIntelSetAction GuardDuty UpdateThreatIntelSet action.
