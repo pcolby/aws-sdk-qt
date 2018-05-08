@@ -36,6 +36,10 @@
 #include "describeelasticsearchdomainsresponse.h"
 #include "describeelasticsearchinstancetypelimitsrequest.h"
 #include "describeelasticsearchinstancetypelimitsresponse.h"
+#include "describereservedelasticsearchinstanceofferingsrequest.h"
+#include "describereservedelasticsearchinstanceofferingsresponse.h"
+#include "describereservedelasticsearchinstancesrequest.h"
+#include "describereservedelasticsearchinstancesresponse.h"
 #include "listdomainnamesresponse.h"
 #include "listelasticsearchinstancetypesrequest.h"
 #include "listelasticsearchinstancetypesresponse.h"
@@ -43,6 +47,8 @@
 #include "listelasticsearchversionsresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
+#include "purchasereservedelasticsearchinstanceofferingrequest.h"
+#include "purchasereservedelasticsearchinstanceofferingresponse.h"
 #include "removetagsrequest.h"
 #include "removetagsresponse.h"
 #include "updateelasticsearchdomainconfigrequest.h"
@@ -251,6 +257,32 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeReservedElasticsearchInstanceOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists available reserved Elasticsearch instance
+ */
+DescribeReservedElasticsearchInstanceOfferingsResponse * ElasticsearchServiceClient::describeReservedElasticsearchInstanceOfferings(const DescribeReservedElasticsearchInstanceOfferingsRequest &request)
+{
+    return qobject_cast<DescribeReservedElasticsearchInstanceOfferingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DescribeReservedElasticsearchInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about reserved Elasticsearch instances for this
+ */
+DescribeReservedElasticsearchInstancesResponse * ElasticsearchServiceClient::describeReservedElasticsearchInstances(const DescribeReservedElasticsearchInstancesRequest &request)
+{
+    return qobject_cast<DescribeReservedElasticsearchInstancesResponse *>(send(request));
+}
+
+/*!
  * Sends a ListDomainNames request to the ElasticsearchServiceClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
@@ -300,6 +332,19 @@ ListElasticsearchVersionsResponse * ElasticsearchServiceClient::listElasticsearc
 ListTagsResponse * ElasticsearchServiceClient::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * PurchaseReservedElasticsearchInstanceOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to purchase reserved Elasticsearch
+ */
+PurchaseReservedElasticsearchInstanceOfferingResponse * ElasticsearchServiceClient::purchaseReservedElasticsearchInstanceOffering(const PurchaseReservedElasticsearchInstanceOfferingRequest &request)
+{
+    return qobject_cast<PurchaseReservedElasticsearchInstanceOfferingResponse *>(send(request));
 }
 
 /*!

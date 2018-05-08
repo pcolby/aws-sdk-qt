@@ -40,6 +40,14 @@ HEADERS += \
     describeelasticsearchinstancetypelimitsrequest_p.h \
     describeelasticsearchinstancetypelimitsresponse.h \
     describeelasticsearchinstancetypelimitsresponse_p.h \
+    describereservedelasticsearchinstanceofferingsrequest.h \
+    describereservedelasticsearchinstanceofferingsrequest_p.h \
+    describereservedelasticsearchinstanceofferingsresponse.h \
+    describereservedelasticsearchinstanceofferingsresponse_p.h \
+    describereservedelasticsearchinstancesrequest.h \
+    describereservedelasticsearchinstancesrequest_p.h \
+    describereservedelasticsearchinstancesresponse.h \
+    describereservedelasticsearchinstancesresponse_p.h \
     elasticsearchserviceclient.h \
     elasticsearchserviceclient_p.h \
     elasticsearchservicerequest.h \
@@ -60,6 +68,10 @@ HEADERS += \
     listtagsrequest_p.h \
     listtagsresponse.h \
     listtagsresponse_p.h \
+    purchasereservedelasticsearchinstanceofferingrequest.h \
+    purchasereservedelasticsearchinstanceofferingrequest_p.h \
+    purchasereservedelasticsearchinstanceofferingresponse.h \
+    purchasereservedelasticsearchinstanceofferingresponse_p.h \
     removetagsrequest.h \
     removetagsrequest_p.h \
     removetagsresponse.h \
@@ -85,6 +97,10 @@ SOURCES += \
     describeelasticsearchdomainsresponse.cpp \
     describeelasticsearchinstancetypelimitsrequest.cpp \
     describeelasticsearchinstancetypelimitsresponse.cpp \
+    describereservedelasticsearchinstanceofferingsrequest.cpp \
+    describereservedelasticsearchinstanceofferingsresponse.cpp \
+    describereservedelasticsearchinstancesrequest.cpp \
+    describereservedelasticsearchinstancesresponse.cpp \
     elasticsearchserviceclient.cpp \
     elasticsearchservicerequest.cpp \
     elasticsearchserviceresponse.cpp \
@@ -95,6 +111,8 @@ SOURCES += \
     listelasticsearchversionsresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
+    purchasereservedelasticsearchinstanceofferingrequest.cpp \
+    purchasereservedelasticsearchinstanceofferingresponse.cpp \
     removetagsrequest.cpp \
     removetagsresponse.cpp \
     updateelasticsearchdomainconfigrequest.cpp \

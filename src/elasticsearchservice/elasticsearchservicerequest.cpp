@@ -44,10 +44,13 @@ namespace ElasticsearchService {
  * \value DescribeElasticsearchDomainConfigAction ElasticsearchService DescribeElasticsearchDomainConfig action.
  * \value DescribeElasticsearchDomainsAction ElasticsearchService DescribeElasticsearchDomains action.
  * \value DescribeElasticsearchInstanceTypeLimitsAction ElasticsearchService DescribeElasticsearchInstanceTypeLimits action.
+ * \value DescribeReservedElasticsearchInstanceOfferingsAction ElasticsearchService DescribeReservedElasticsearchInstanceOfferings action.
+ * \value DescribeReservedElasticsearchInstancesAction ElasticsearchService DescribeReservedElasticsearchInstances action.
  * \value ListDomainNamesAction ElasticsearchService ListDomainNames action.
  * \value ListElasticsearchInstanceTypesAction ElasticsearchService ListElasticsearchInstanceTypes action.
  * \value ListElasticsearchVersionsAction ElasticsearchService ListElasticsearchVersions action.
  * \value ListTagsAction ElasticsearchService ListTags action.
+ * \value PurchaseReservedElasticsearchInstanceOfferingAction ElasticsearchService PurchaseReservedElasticsearchInstanceOffering action.
  * \value RemoveTagsAction ElasticsearchService RemoveTags action.
  * \value UpdateElasticsearchDomainConfigAction ElasticsearchService UpdateElasticsearchDomainConfig action.
  */

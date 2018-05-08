@@ -45,10 +45,13 @@ public:
         DescribeElasticsearchDomainConfigAction,
         DescribeElasticsearchDomainsAction,
         DescribeElasticsearchInstanceTypeLimitsAction,
+        DescribeReservedElasticsearchInstanceOfferingsAction,
+        DescribeReservedElasticsearchInstancesAction,
         ListDomainNamesAction,
         ListElasticsearchInstanceTypesAction,
         ListElasticsearchVersionsAction,
         ListTagsAction,
+        PurchaseReservedElasticsearchInstanceOfferingAction,
         RemoveTagsAction,
         UpdateElasticsearchDomainConfigAction,
     };
