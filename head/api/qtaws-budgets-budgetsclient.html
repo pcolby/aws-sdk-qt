@@ -86,34 +86,22 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>The <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> class provides access to the AWS Budgets service.</p>
-<p>The AWS Budgets API enables you to use AWS Budgets to plan your service usage, service costs, and instance reservations. The API reference provides descriptions, syntax, and usage examples for each of the actions and data types for AWS Budgets.</p>
-<p>&lt;/p</p>
-<p>Budgets provide you with a way to see the following</p>
-<p>information&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>How close your plan is to your budgeted amount or to the free tier</p>
-<p>limit&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Your usage-to-date, including how much you've used of your Reserved Instances</p>
-<p>(RIs&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Your current estimated charges from AWS, and how much your predicted usage will accrue in charges by the end of the</p>
-<p>mont&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>How much of your budget has been</p>
-<p>use&gt; &lt;/li&gt; &lt;/ul&gt;</p>
-<p>AWS updates your budget status several times a day. Budgets track your unblended costs, subscriptions, refunds, and RIs. You can create the following types of</p>
+<p>Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your usage-to-date and current estimated charges from AWS and to see how much your predicted usage accrues in charges by the end of the month. Budgets also compare current estimates and charges to the amount that you indicated you want to use or spend and lets you see how much of your budget has been used. AWS updates your budget status several times a day. Budgets track your unblended costs, subscriptions, and refunds. You can create the following types of</p>
 <p>budgets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;Cost budgets&lt;/b&gt; - Plan how much you want to spend on a</p>
+<p>Cost budgets allow you to say how much you want to spend on a</p>
 <p>service&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;Usage budgets&lt;/b&gt; - Plan how much you want to use one or more</p>
+<p>Usage budgets allow you to say how many hours you want to use for one or more</p>
 <p>services&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;RI utilization budgets&lt;/b&gt; - Define a utilization threshold, and receive alerts when your RI usage falls below that threshold. This lets you see if your RIs are unused or</p>
-<p>under-utilized&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;RI coverage budgets&lt;/b&gt; - Define a coverage threshold, and receive alerts when the number of your instance hours that are covered by RIs fall below that threshold. This lets you see how much of your instance usage is covered by a</p>
-<p>reservation&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>RI utilization budgets allow you to define a utilization threshold and receive alerts when RIs are tracking below that</p>
+<p>threshold&gt; &lt;/li&gt; &lt;/ul&gt;</p>
+<p>You can create up to 20,000 budgets per AWS master account. Your first two budgets are free of charge. Each additional budget costs $0.02 per day. You can set up optional notifications that warn you if you exceed, or are forecasted to exceed, your budgeted amount. You can have notifications sent to an Amazon SNS topic, to an email address, or to both. For more information, see &lt;a href=&quot;https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-sns-policy.html&quot;&gt;Creating an Amazon SNS Topic for Budget Notifications&lt;/a&gt;. AWS Free Tier usage alerts via AWS Budgets are provided for you, and do not count toward your budget</p>
+<p>limits&gt;</p>
 <p>Service</p>
 <p>Endpoin&gt;</p>
 <p>The AWS Budgets API provides the following</p>
 <p>endpoint&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>https://budgets.amazonaws.co&gt; &lt;/li&gt; &lt;/ul&gt;</p>
-<p>For information about costs that are associated with the AWS Budgets API, see &lt;a href=&quot;https://aws.amazon.com/aws-cost-management/pricing/&quot;&gt;AWS Cost Management</p>
+<p>For information about costs associated with the AWS Budgets API, see &lt;a href=&quot;https://aws.amazon.com/aws-cost-management/pricing/&quot;&gt;AWS Cost Management</p>
 </div>
 <!-- @@@BudgetsClient -->
 <div class="func">
@@ -149,22 +137,22 @@
 <h3 class="fn" id="deleteBudget"><a name="deleteBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletebudgetresponse.html">DeleteBudgetResponse</a></span> *BudgetsClient::<span class="name">deleteBudget</span>(const <span class="type"><a href="qtaws-budgets-deletebudgetrequest.html">DeleteBudgetRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletebudgetresponse.html">DeleteBudgetResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a budget. You can delete your budget at any</p>
-<p>time&gt; &lt;b&gt;</p>
-<p>Deleting a budget also deletes the notifications and subscribers that are associated with that</p>
+<p>time&gt;</p>
+<p>&lt;b&gt;Deleting a budget also deletes the notifications and subscribers associated with that budget.&lt;/b&gt;</p>
 <!-- @@@deleteBudget -->
 <!-- $$$deleteNotification[overload1]$$$deleteNotificationconstDeleteNotificationRequest& -->
 <h3 class="fn" id="deleteNotification"><a name="deleteNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletenotificationresponse.html">DeleteNotificationResponse</a></span> *BudgetsClient::<span class="name">deleteNotification</span>(const <span class="type"><a href="qtaws-budgets-deletenotificationrequest.html">DeleteNotificationRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletenotificationresponse.html">DeleteNotificationResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
-<p>notification&gt; &lt;b&gt;</p>
-<p>Deleting a notification also deletes the subscribers that are associated with the</p>
+<p>notification&gt;</p>
+<p>&lt;b&gt;Deleting a notification also deletes the subscribers associated with the notification.&lt;/b&gt;</p>
 <!-- @@@deleteNotification -->
 <!-- $$$deleteSubscriber[overload1]$$$deleteSubscriberconstDeleteSubscriberRequest& -->
 <h3 class="fn" id="deleteSubscriber"><a name="deleteSubscriber"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-deletesubscriberresponse.html">DeleteSubscriberResponse</a></span> *BudgetsClient::<span class="name">deleteSubscriber</span>(const <span class="type"><a href="qtaws-budgets-deletesubscriberrequest.html">DeleteSubscriberRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-deletesubscriberresponse.html">DeleteSubscriberResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a</p>
-<p>subscriber&gt; &lt;b&gt;</p>
-<p>Deleting the last subscriber to a notification also deletes the</p>
+<p>subscriber&gt;</p>
+<p>&lt;b&gt;Deleting the last subscriber to a notification also deletes the notification.&lt;/b&gt;</p>
 <!-- @@@deleteSubscriber -->
 <!-- $$$describeBudget[overload1]$$$describeBudgetconstDescribeBudgetRequest& -->
 <h3 class="fn" id="describeBudget"><a name="describeBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describebudgetresponse.html">DescribeBudgetResponse</a></span> *BudgetsClient::<span class="name">describeBudget</span>(const <span class="type"><a href="qtaws-budgets-describebudgetrequest.html">DescribeBudgetRequest</a></span> &amp;<i>request</i>)</h3>
@@ -174,22 +162,22 @@
 <!-- $$$describeBudgets[overload1]$$$describeBudgetsconstDescribeBudgetsRequest& -->
 <h3 class="fn" id="describeBudgets"><a name="describeBudgets"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describebudgetsresponse.html">DescribeBudgetsResponse</a></span> *BudgetsClient::<span class="name">describeBudgets</span>(const <span class="type"><a href="qtaws-budgets-describebudgetsrequest.html">DescribeBudgetsRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describebudgetsresponse.html">DescribeBudgetsResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the budgets that are associated with an</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the budgets associated with an</p>
 <!-- @@@describeBudgets -->
 <!-- $$$describeNotificationsForBudget[overload1]$$$describeNotificationsForBudgetconstDescribeNotificationsForBudgetRequest& -->
 <h3 class="fn" id="describeNotificationsForBudget"><a name="describeNotificationsForBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describenotificationsforbudgetresponse.html">DescribeNotificationsForBudgetResponse</a></span> *BudgetsClient::<span class="name">describeNotificationsForBudget</span>(const <span class="type"><a href="qtaws-budgets-describenotificationsforbudgetrequest.html">DescribeNotificationsForBudgetRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describenotificationsforbudgetresponse.html">DescribeNotificationsForBudgetResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the notifications that are associated with a</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the notifications associated with a</p>
 <!-- @@@describeNotificationsForBudget -->
 <!-- $$$describeSubscribersForNotification[overload1]$$$describeSubscribersForNotificationconstDescribeSubscribersForNotificationRequest& -->
 <h3 class="fn" id="describeSubscribersForNotification"><a name="describeSubscribersForNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-describesubscribersfornotificationresponse.html">DescribeSubscribersForNotificationResponse</a></span> *BudgetsClient::<span class="name">describeSubscribersForNotification</span>(const <span class="type"><a href="qtaws-budgets-describesubscribersfornotificationrequest.html">DescribeSubscribersForNotificationRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-describesubscribersfornotificationresponse.html">DescribeSubscribersForNotificationResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the subscribers that are associated with a</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the subscribers associated with a</p>
 <!-- @@@describeSubscribersForNotification -->
 <!-- $$$updateBudget[overload1]$$$updateBudgetconstUpdateBudgetRequest& -->
 <h3 class="fn" id="updateBudget"><a name="updateBudget"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-updatebudgetresponse.html">UpdateBudgetResponse</a></span> *BudgetsClient::<span class="name">updateBudget</span>(const <span class="type"><a href="qtaws-budgets-updatebudgetrequest.html">UpdateBudgetRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-budgets-budgetsclient.html">BudgetsClient</a> service, and returns a pointer to an <a href="qtaws-budgets-updatebudgetresponse.html">UpdateBudgetResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a budget. You can change every part of a budget except for the &lt;code&gt;budgetName&lt;/code&gt; and the &lt;code&gt;calculatedSpend&lt;/code&gt;. When you modify a budget, the &lt;code&gt;calculatedSpend&lt;/code&gt; drops to zero until AWS has new usage data to use for</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates a budget. You can change every part of a budget except for the &lt;code&gt;budgetName&lt;/code&gt; and the &lt;code&gt;calculatedSpend&lt;/code&gt;. When a budget is modified, the &lt;code&gt;calculatedSpend&lt;/code&gt; drops to zero until AWS has new usage data to use for</p>
 <!-- @@@updateBudget -->
 <!-- $$$updateNotification[overload1]$$$updateNotificationconstUpdateNotificationRequest& -->
 <h3 class="fn" id="updateNotification"><a name="updateNotification"></a><code>[slot] </code><span class="type"><a href="qtaws-budgets-updatenotificationresponse.html">UpdateNotificationResponse</a></span> *BudgetsClient::<span class="name">updateNotification</span>(const <span class="type"><a href="qtaws-budgets-updatenotificationrequest.html">UpdateNotificationRequest</a></span> &amp;<i>request</i>)</h3>
