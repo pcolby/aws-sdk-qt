@@ -30,6 +30,10 @@ HEADERS += \
     authorizedbsecuritygroupingressrequest_p.h \
     authorizedbsecuritygroupingressresponse.h \
     authorizedbsecuritygroupingressresponse_p.h \
+    backtrackdbclusterrequest.h \
+    backtrackdbclusterrequest_p.h \
+    backtrackdbclusterresponse.h \
+    backtrackdbclusterresponse_p.h \
     copydbclusterparametergrouprequest.h \
     copydbclusterparametergrouprequest_p.h \
     copydbclusterparametergroupresponse.h \
@@ -142,6 +146,10 @@ HEADERS += \
     describecertificatesrequest_p.h \
     describecertificatesresponse.h \
     describecertificatesresponse_p.h \
+    describedbclusterbacktracksrequest.h \
+    describedbclusterbacktracksrequest_p.h \
+    describedbclusterbacktracksresponse.h \
+    describedbclusterbacktracksresponse_p.h \
     describedbclusterparametergroupsrequest.h \
     describedbclusterparametergroupsrequest_p.h \
     describedbclusterparametergroupsresponse.h \
@@ -392,6 +400,8 @@ SOURCES += \
     applypendingmaintenanceactionresponse.cpp \
     authorizedbsecuritygroupingressrequest.cpp \
     authorizedbsecuritygroupingressresponse.cpp \
+    backtrackdbclusterrequest.cpp \
+    backtrackdbclusterresponse.cpp \
     copydbclusterparametergrouprequest.cpp \
     copydbclusterparametergroupresponse.cpp \
     copydbclustersnapshotrequest.cpp \
@@ -448,6 +458,8 @@ SOURCES += \
     describeaccountattributesresponse.cpp \
     describecertificatesrequest.cpp \
     describecertificatesresponse.cpp \
+    describedbclusterbacktracksrequest.cpp \
+    describedbclusterbacktracksresponse.cpp \
     describedbclusterparametergroupsrequest.cpp \
     describedbclusterparametergroupsresponse.cpp \
     describedbclusterparametersrequest.cpp \

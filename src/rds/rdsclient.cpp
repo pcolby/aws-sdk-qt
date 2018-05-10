@@ -31,6 +31,8 @@
 #include "applypendingmaintenanceactionresponse.h"
 #include "authorizedbsecuritygroupingressrequest.h"
 #include "authorizedbsecuritygroupingressresponse.h"
+#include "backtrackdbclusterrequest.h"
+#include "backtrackdbclusterresponse.h"
 #include "copydbclusterparametergrouprequest.h"
 #include "copydbclusterparametergroupresponse.h"
 #include "copydbclustersnapshotrequest.h"
@@ -87,6 +89,8 @@
 #include "describeaccountattributesresponse.h"
 #include "describecertificatesrequest.h"
 #include "describecertificatesresponse.h"
+#include "describedbclusterbacktracksrequest.h"
+#include "describedbclusterbacktracksresponse.h"
 #include "describedbclusterparametergroupsrequest.h"
 #include "describedbclusterparametergroupsresponse.h"
 #include "describedbclusterparametersrequest.h"
@@ -430,6 +434,25 @@ ApplyPendingMaintenanceActionResponse * RdsClient::applyPendingMaintenanceAction
 AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIngress(const AuthorizeDBSecurityGroupIngressRequest &request)
 {
     return qobject_cast<AuthorizeDBSecurityGroupIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * BacktrackDBClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Backtracks a DB cluster to a specific time, without creating a new DB
+ *
+ * cluster>
+ *
+ * For more information on backtracking, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Managing.Backtrack.html"> Backtracking an Aurora
+ * DB Cluster</a> in the <i>Amazon RDS User Guide.</i>
+ */
+BacktrackDBClusterResponse * RdsClient::backtrackDBCluster(const BacktrackDBClusterRequest &request)
+{
+    return qobject_cast<BacktrackDBClusterResponse *>(send(request));
 }
 
 /*!
@@ -1056,6 +1079,25 @@ DescribeAccountAttributesResponse * RdsClient::describeAccountAttributes(const D
 DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCertificatesRequest &request)
 {
     return qobject_cast<DescribeCertificatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBClusterBacktracksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about backtracks for a DB
+ *
+ * cluster>
+ *
+ * For more information on Amazon Aurora, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
+ * RDS User Guide.</i>
+ */
+DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(const DescribeDBClusterBacktracksRequest &request)
+{
+    return qobject_cast<DescribeDBClusterBacktracksResponse *>(send(request));
 }
 
 /*!

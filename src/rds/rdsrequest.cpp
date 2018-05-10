@@ -41,6 +41,7 @@ namespace RDS {
  * \value AddTagsToResourceAction RDS AddTagsToResource action.
  * \value ApplyPendingMaintenanceActionAction RDS ApplyPendingMaintenanceAction action.
  * \value AuthorizeDBSecurityGroupIngressAction RDS AuthorizeDBSecurityGroupIngress action.
+ * \value BacktrackDBClusterAction RDS BacktrackDBCluster action.
  * \value CopyDBClusterParameterGroupAction RDS CopyDBClusterParameterGroup action.
  * \value CopyDBClusterSnapshotAction RDS CopyDBClusterSnapshot action.
  * \value CopyDBParameterGroupAction RDS CopyDBParameterGroup action.
@@ -69,6 +70,7 @@ namespace RDS {
  * \value DeleteOptionGroupAction RDS DeleteOptionGroup action.
  * \value DescribeAccountAttributesAction RDS DescribeAccountAttributes action.
  * \value DescribeCertificatesAction RDS DescribeCertificates action.
+ * \value DescribeDBClusterBacktracksAction RDS DescribeDBClusterBacktracks action.
  * \value DescribeDBClusterParameterGroupsAction RDS DescribeDBClusterParameterGroups action.
  * \value DescribeDBClusterParametersAction RDS DescribeDBClusterParameters action.
  * \value DescribeDBClusterSnapshotAttributesAction RDS DescribeDBClusterSnapshotAttributes action.
