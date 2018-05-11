@@ -121,12 +121,16 @@
 #include "resolvealiasresponse.h"
 #include "searchgamesessionsrequest.h"
 #include "searchgamesessionsresponse.h"
+#include "startfleetactionsrequest.h"
+#include "startfleetactionsresponse.h"
 #include "startgamesessionplacementrequest.h"
 #include "startgamesessionplacementresponse.h"
 #include "startmatchbackfillrequest.h"
 #include "startmatchbackfillresponse.h"
 #include "startmatchmakingrequest.h"
 #include "startmatchmakingresponse.h"
+#include "stopfleetactionsrequest.h"
+#include "stopfleetactionsresponse.h"
 #include "stopgamesessionplacementrequest.h"
 #include "stopgamesessionplacementresponse.h"
 #include "stopmatchmakingrequest.h"
@@ -192,7 +196,7 @@ namespace GameLift {
  * 
  *  session> </li> <li>
  * 
- *  <b>Configure and manage game server resources</b> -- Manage builds, fleets, queues, and aliases; set autoscaling
+ *  <b>Configure and manage game server resources</b> -- Manage builds, fleets, queues, and aliases; set auto-scaling
  *  policies; retrieve logs and
  * 
  *  metrics> </li> </ul>
@@ -456,21 +460,29 @@ namespace GameLift {
  * 
  *  down> </li> <li>
  * 
- *  Autoscale -- Manage autoscaling rules and apply them to a
+ *  Autoscale -- Manage auto-scaling rules and apply them to a
  * 
  *  fleet> <ul> <li>
  * 
- *  <a>PutScalingPolicy</a> -- Create a new autoscaling policy, or update an existing
+ *  <a>PutScalingPolicy</a> -- Create a new auto-scaling policy, or update an existing
  * 
  *  one> </li> <li>
  * 
- *  <a>DescribeScalingPolicies</a> -- Retrieve an existing autoscaling
+ *  <a>DescribeScalingPolicies</a> -- Retrieve an existing auto-scaling
  * 
  *  policy> </li> <li>
  * 
- *  <a>DeleteScalingPolicy</a> -- Delete an autoscaling policy and stop it from affecting a fleet's
+ *  <a>DeleteScalingPolicy</a> -- Delete an auto-scaling policy and stop it from affecting a fleet's
  * 
- *  capacity> </li> </ul> </li> </ul> </li> <li>
+ *  capacity> </li> <li>
+ * 
+ *  <a>StartFleetActions</a> -- Restart a fleet's auto-scaling
+ * 
+ *  policies> </li> <li>
+ * 
+ *  <a>StopFleetActions</a> -- Suspend a fleet's auto-scaling
+ * 
+ *  policies> </li> </ul> </li> </ul> </li> <li>
  * 
  *  <b>Manage VPC peering connections for fleets</b>
  * 
@@ -954,11 +966,19 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -971,6 +991,10 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -1000,33 +1024,13 @@ CreateBuildResponse * GameLiftClient::createBuild(const CreateBuildRequest &requ
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 CreateFleetResponse * GameLiftClient::createFleet(const CreateFleetRequest &request)
 {
@@ -1673,11 +1677,19 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -1690,6 +1702,10 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -1719,33 +1735,13 @@ DeleteBuildResponse * GameLiftClient::deleteBuild(const DeleteBuildRequest &requ
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DeleteFleetResponse * GameLiftClient::deleteFleet(const DeleteFleetRequest &request)
 {
@@ -1843,65 +1839,13 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  *
  * with>
  *
- * Fleet-related operations
+ * To temporarily suspend scaling policies, call <a>StopFleetActions</a>. This operation suspends all policies for the
+ *
+ * fleet>
+ *
+ * Operations related to fleet capacity scaling
  *
  * include> <ul> <li>
- *
- * <a>CreateFleet</a>
- *
- * </p </li> <li>
- *
- * <a>ListFleets</a>
- *
- * </p </li> <li>
- *
- * Describe
- *
- * fleets> <ul> <li>
- *
- * <a>DescribeFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetUtilization</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeRuntimeConfiguration</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetEvents</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Update
- *
- * fleets> <ul> <li>
- *
- * <a>UpdateFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateRuntimeConfiguration</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Manage fleet
- *
- * capacity> <ul> <li>
  *
  * <a>DescribeFleetCapacity</a>
  *
@@ -1911,23 +1855,35 @@ DeleteMatchmakingConfigurationResponse * GameLiftClient::deleteMatchmakingConfig
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
  * <a>DescribeEC2InstanceLimits</a>
  *
- * </p </li> </ul> </li> <li>
+ * </p </li> <li>
  *
- * <a>DeleteFleet</a>
+ * Manage scaling
+ *
+ * policies> <ul> <li>
+ *
+ * <a>PutScalingPolicy</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DescribeScalingPolicies</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DeleteScalingPolicy</a>
+ *
+ * (auto-scaling> </li> </ul> </li> <li>
+ *
+ * Manage fleet
+ *
+ * actions> <ul> <li>
+ *
+ * <a>StartFleetActions</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>StopFleetActions</a>
  */
 DeleteScalingPolicyResponse * GameLiftClient::deleteScalingPolicy(const DeleteScalingPolicyRequest &request)
 {
@@ -2143,11 +2099,19 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2160,6 +2124,10 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2189,33 +2157,13 @@ DescribeBuildResponse * GameLiftClient::describeBuild(const DescribeBuildRequest
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(const DescribeEC2InstanceLimitsRequest &request)
 {
@@ -2253,11 +2201,19 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2270,6 +2226,10 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2299,33 +2259,13 @@ DescribeEC2InstanceLimitsResponse * GameLiftClient::describeEC2InstanceLimits(co
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const DescribeFleetAttributesRequest &request)
 {
@@ -2363,11 +2303,19 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2380,6 +2328,10 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2409,33 +2361,13 @@ DescribeFleetAttributesResponse * GameLiftClient::describeFleetAttributes(const 
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const DescribeFleetCapacityRequest &request)
 {
@@ -2466,11 +2398,19 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2483,6 +2423,10 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2512,33 +2456,13 @@ DescribeFleetCapacityResponse * GameLiftClient::describeFleetCapacity(const Desc
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const DescribeFleetEventsRequest &request)
 {
@@ -2570,11 +2494,19 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2587,6 +2519,10 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2616,33 +2552,13 @@ DescribeFleetEventsResponse * GameLiftClient::describeFleetEvents(const Describe
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(const DescribeFleetPortSettingsRequest &request)
 {
@@ -2679,11 +2595,19 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -2696,6 +2620,10 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -2725,33 +2653,13 @@ DescribeFleetPortSettingsResponse * GameLiftClient::describeFleetPortSettings(co
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeFleetUtilizationResponse * GameLiftClient::describeFleetUtilization(const DescribeFleetUtilizationRequest &request)
 {
@@ -3233,11 +3141,19 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -3250,6 +3166,10 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -3279,33 +3199,13 @@ DescribePlayerSessionsResponse * GameLiftClient::describePlayerSessions(const De
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfiguration(const DescribeRuntimeConfigurationRequest &request)
 {
@@ -3328,65 +3228,15 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  *
  * fleet>
  *
- * Fleet-related operations
+ * A fleet may have all of its scaling policies suspended (<a>StopFleetActions</a>). This action does not affect the status
+ * of the scaling policies, which remains ACTIVE. To see whether a fleet's scaling policies are in force or suspended, call
+ * <a>DescribeFleetAttributes</a> and check the stopped
+ *
+ * actions>
+ *
+ * Operations related to fleet capacity scaling
  *
  * include> <ul> <li>
- *
- * <a>CreateFleet</a>
- *
- * </p </li> <li>
- *
- * <a>ListFleets</a>
- *
- * </p </li> <li>
- *
- * Describe
- *
- * fleets> <ul> <li>
- *
- * <a>DescribeFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetUtilization</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeRuntimeConfiguration</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetEvents</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Update
- *
- * fleets> <ul> <li>
- *
- * <a>UpdateFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateRuntimeConfiguration</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Manage fleet
- *
- * capacity> <ul> <li>
  *
  * <a>DescribeFleetCapacity</a>
  *
@@ -3396,23 +3246,35 @@ DescribeRuntimeConfigurationResponse * GameLiftClient::describeRuntimeConfigurat
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
  * <a>DescribeEC2InstanceLimits</a>
  *
- * </p </li> </ul> </li> <li>
+ * </p </li> <li>
  *
- * <a>DeleteFleet</a>
+ * Manage scaling
+ *
+ * policies> <ul> <li>
+ *
+ * <a>PutScalingPolicy</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DescribeScalingPolicies</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DeleteScalingPolicy</a>
+ *
+ * (auto-scaling> </li> </ul> </li> <li>
+ *
+ * Manage fleet
+ *
+ * actions> <ul> <li>
+ *
+ * <a>StartFleetActions</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>StopFleetActions</a>
  */
 DescribeScalingPoliciesResponse * GameLiftClient::describeScalingPolicies(const DescribeScalingPoliciesRequest &request)
 {
@@ -3718,11 +3580,19 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -3735,6 +3605,10 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -3764,33 +3638,13 @@ ListBuildsResponse * GameLiftClient::listBuilds(const ListBuildsRequest &request
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request)
 {
@@ -3803,13 +3657,73 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a scaling policy for a fleet. An active scaling policy prompts Amazon GameLift to track a certain
- * metric for a fleet and automatically change the fleet's capacity in specific circumstances. Each scaling policy contains
- * one rule statement. Fleets can have multiple scaling policies in force
+ * Creates or updates a scaling policy for a fleet. Scaling policies are used to automatically scale a fleet's hosting
+ * capacity to meet player demand. An active scaling policy instructs Amazon GameLift to track a fleet metric and
+ * automatically change the fleet's capacity when a certain threshold is reached. There are two types of scaling policies:
+ * target-based and rule-based. Use a target-based policy to quickly and efficiently manage fleet scaling; this option is
+ * the most commonly used. Use rule-based policies when you need to exert fine-grained control over auto-scaling.
  *
- * simultaneously>
+ * </p
  *
- * A scaling policy rule statement has the following
+ * Fleets can have multiple scaling policies of each type in force at the same time; you can have one target-based policy,
+ * one or multiple rule-based scaling policies, or both. We recommend caution, however, because multiple auto-scaling
+ * policies can have unintended
+ *
+ * consequences>
+ *
+ * You can temporarily suspend all scaling policies for a fleet by calling <a>StopFleetActions</a> with the fleet action
+ * AUTO_SCALING. To resume scaling policies, call <a>StartFleetActions</a> with the same fleet action. To stop just one
+ * scaling policy--or to permanently remove it, you must delete the policy with
+ *
+ * <a>DeleteScalingPolicy</a>>
+ *
+ * Learn more about how to work with auto-scaling in <a
+ * href="http://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-autoscaling.html">Set Up Fleet Automatic
+ *
+ * Scaling</a>>
+ *
+ * <b>Target-based policy</b>
+ *
+ * </p
+ *
+ * A target-based policy tracks a single metric: PercentAvailableGameSessions. This metric tells us how much of a fleet's
+ * hosting capacity is ready to host game sessions but is not currently in use. This is the fleet's buffer; it measures the
+ * additional player demand that the fleet could handle at current capacity. With a target-based policy, you set your ideal
+ * buffer size and leave it to Amazon GameLift to take whatever action is needed to maintain that target.
+ *
+ * </p
+ *
+ * For example, you might choose to maintain a 10% buffer for a fleet that has the capacity to host 100 simultaneous game
+ * sessions. This policy tells Amazon GameLift to take action whenever the fleet's available capacity falls below or rises
+ * above 10 game sessions. Amazon GameLift will start new instances or stop unused instances in order to return to the 10%
+ * buffer.
+ *
+ * </p
+ *
+ * To create or update a target-based policy, specify a fleet ID and name, and set the policy type to "TargetBased".
+ * Specify the metric to track (PercentAvailableGameSessions) and reference a <a>TargetConfiguration</a> object with your
+ * desired buffer value. Exclude all other parameters. On a successful request, the policy name is returned. The scaling
+ * policy is automatically in force as soon as it's successfully created. If the fleet's auto-scaling actions are
+ * temporarily suspended, the new policy will be in force once the fleet actions are
+ *
+ * restarted>
+ *
+ * <b>Rule-based policy</b>
+ *
+ * </p
+ *
+ * A rule-based policy tracks specified fleet metric, sets a threshold value, and specifies the type of action to initiate
+ * when triggered. With a rule-based policy, you can select from several available fleet metrics. Each policy specifies
+ * whether to scale up or scale down (and by how much), so you need one policy for each type of action.
+ *
+ * </p
+ *
+ * For example, a policy may make the following statement: "If the percentage of idle instances is greater than 20% for
+ * more than 15 minutes, then reduce the fleet capacity by
+ *
+ * 10%.>
+ *
+ * A policy's rule statement has the following
  *
  * structure>
  *
@@ -3818,80 +3732,25 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  *
  * <code>[ScalingAdjustment]</code>>
  *
- * For example, this policy: "If the number of idle instances exceeds 20 for more than 15 minutes, then reduce the fleet
- * capacity by 10 instances" could be implemented as the following rule
+ * To implement the example, the rule statement would look like
  *
- * statement>
+ * this>
  *
- * If [IdleInstances] is [GreaterThanOrEqualToThreshold] [20] for [15] minutes, then [ChangeInCapacity] by
+ * If <code>[PercentIdleInstances]</code> is <code>[GreaterThanThreshold]</code> <code>[20]</code> for <code>[15]</code>
+ * minutes, then <code>[PercentChangeInCapacity]</code> to/by
  *
- * [-10]>
+ * <code>[10]</code>>
  *
- * To create or update a scaling policy, specify a unique combination of name and fleet ID, and set the rule values. All
- * parameters for this action are required. If successful, the policy name is returned. Scaling policies cannot be
- * suspended or made inactive. To stop enforcing a scaling policy, call
+ * To create or update a scaling policy, specify a unique combination of name and fleet ID, and set the policy type to
+ * "RuleBased". Specify the parameter values for a policy rule statement. On a successful request, the policy name is
+ * returned. Scaling policies are automatically in force as soon as they're successfully created. If the fleet's
+ * auto-scaling actions are temporarily suspended, the new policy will be in force once the fleet actions are
  *
- * <a>DeleteScalingPolicy</a>>
+ * restarted>
  *
- * Fleet-related operations
+ * Operations related to fleet capacity scaling
  *
  * include> <ul> <li>
- *
- * <a>CreateFleet</a>
- *
- * </p </li> <li>
- *
- * <a>ListFleets</a>
- *
- * </p </li> <li>
- *
- * Describe
- *
- * fleets> <ul> <li>
- *
- * <a>DescribeFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetUtilization</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeRuntimeConfiguration</a>
- *
- * </p </li> <li>
- *
- * <a>DescribeFleetEvents</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Update
- *
- * fleets> <ul> <li>
- *
- * <a>UpdateFleetAttributes</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetPortSettings</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateRuntimeConfiguration</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * Manage fleet
- *
- * capacity> <ul> <li>
  *
  * <a>DescribeFleetCapacity</a>
  *
@@ -3901,23 +3760,35 @@ ListFleetsResponse * GameLiftClient::listFleets(const ListFleetsRequest &request
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
  * <a>DescribeEC2InstanceLimits</a>
  *
- * </p </li> </ul> </li> <li>
+ * </p </li> <li>
  *
- * <a>DeleteFleet</a>
+ * Manage scaling
+ *
+ * policies> <ul> <li>
+ *
+ * <a>PutScalingPolicy</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DescribeScalingPolicies</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DeleteScalingPolicy</a>
+ *
+ * (auto-scaling> </li> </ul> </li> <li>
+ *
+ * Manage fleet
+ *
+ * actions> <ul> <li>
+ *
+ * <a>StartFleetActions</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>StopFleetActions</a>
  */
 PutScalingPolicyResponse * GameLiftClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -4009,8 +3880,8 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
  * <b>gameSessionProperties</b> -- Custom data defined in a game session's <code>GameProperty</code> parameter.
  * <code>GameProperty</code> values are stored as key:value pairs; the filter expression must indicate the key and a string
  * to search the data values for. For example, to search for game sessions with custom data containing the key:value pair
- * "gameMode:brawl", specify the following: gameSessionProperties.gameMode = "brawl". All custom data values are searched
- * as
+ * "gameMode:brawl", specify the following: <code>gameSessionProperties.gameMode = "brawl"</code>. All custom data values
+ * are searched as
  *
  * strings> </li> <li>
  *
@@ -4097,6 +3968,70 @@ ResolveAliasResponse * GameLiftClient::resolveAlias(const ResolveAliasRequest &r
 SearchGameSessionsResponse * GameLiftClient::searchGameSessions(const SearchGameSessionsRequest &request)
 {
     return qobject_cast<SearchGameSessionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StartFleetActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Resumes activity on a fleet that was suspended with <a>StopFleetActions</a>. Currently, this operation is used to
+ * restart a fleet's auto-scaling activity.
+ *
+ * </p
+ *
+ * To start fleet actions, specify the fleet ID and the type of actions to restart. When auto-scaling fleet actions are
+ * restarted, Amazon GameLift once again initiates scaling events as triggered by the fleet's scaling policies. If actions
+ * on the fleet were never stopped, this operation will have no effect. You can view a fleet's stopped actions using
+ *
+ * <a>DescribeFleetAttributes</a>>
+ *
+ * Operations related to fleet capacity scaling
+ *
+ * include> <ul> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>UpdateFleetCapacity</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
+ *
+ * </p </li> <li>
+ *
+ * Manage scaling
+ *
+ * policies> <ul> <li>
+ *
+ * <a>PutScalingPolicy</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DescribeScalingPolicies</a>
+ *
+ * (auto-scaling> </li> <li>
+ *
+ * <a>DeleteScalingPolicy</a>
+ *
+ * (auto-scaling> </li> </ul> </li> <li>
+ *
+ * Manage fleet
+ *
+ * actions> <ul> <li>
+ *
+ * <a>StartFleetActions</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>StopFleetActions</a>
+ */
+StartFleetActionsResponse * GameLiftClient::startFleetActions(const StartFleetActionsRequest &request)
+{
+    return qobject_cast<StartFleetActionsResponse *>(send(request));
 }
 
 /*!
@@ -4368,6 +4303,27 @@ StartMatchmakingResponse * GameLiftClient::startMatchmaking(const StartMatchmaki
 
 /*!
  * Sends \a request to the GameLiftClient service, and returns a pointer to an
+ * StopFleetActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Suspends activity on a fleet. Currently, this operation is used to stop a fleet's auto-scaling activity. It is used to
+ * temporarily stop scaling events triggered by the fleet's scaling policies. The policies can be retained and auto-scaling
+ * activity can be restarted using <a>StartFleetActions</a>. You can view a fleet's stopped actions using
+ *
+ * <a>DescribeFleetAttributes</a>>
+ *
+ * To stop fleet actions, specify the fleet ID and the type of actions to suspend. When auto-scaling fleet actions are
+ * stopped, Amazon GameLift no longer initiates scaling events except to maintain the fleet's desired instances setting
+ * (<a>FleetCapacity</a>. Changes to the fleet's capacity must be done manually using <a>UpdateFleetCapacity</a>.
+ */
+StopFleetActionsResponse * GameLiftClient::stopFleetActions(const StopFleetActionsRequest &request)
+{
+    return qobject_cast<StopFleetActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GameLiftClient service, and returns a pointer to an
  * StopGameSessionPlacementResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4566,11 +4522,19 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -4583,6 +4547,10 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -4612,33 +4580,13 @@ UpdateBuildResponse * GameLiftClient::updateBuild(const UpdateBuildRequest &requ
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const UpdateFleetAttributesRequest &request)
 {
@@ -4657,11 +4605,11 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  *
  * type>
  *
- * If you're using autoscaling (see <a>PutScalingPolicy</a>), you may want to specify a minimum and/or maximum capacity. If
- * you don't provide these, autoscaling can set capacity anywhere between zero and the <a
- * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_gamelift">service
+ * Specify minimum and maximum number of instances. Amazon GameLift will not change fleet capacity to values fall outside
+ * of this range. This is particularly important when using auto-scaling (see <a>PutScalingPolicy</a>) to allow capacity to
+ * adjust based on player demand while imposing limits on automatic
  *
- * limits</a>>
+ * adjustments>
  *
  * To update fleet capacity, specify the fleet ID and the number of instances you want the fleet to host. If successful,
  * Amazon GameLift starts or terminates instances so that the fleet's active instance count matches the desired instance
@@ -4682,11 +4630,19 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -4699,6 +4655,10 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -4728,33 +4688,13 @@ UpdateFleetAttributesResponse * GameLiftClient::updateFleetAttributes(const Upda
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFleetCapacityRequest &request)
 {
@@ -4786,11 +4726,19 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -4803,6 +4751,10 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -4832,33 +4784,13 @@ UpdateFleetCapacityResponse * GameLiftClient::updateFleetCapacity(const UpdateFl
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 UpdateFleetPortSettingsResponse * GameLiftClient::updateFleetPortSettings(const UpdateFleetPortSettingsRequest &request)
 {
@@ -5043,11 +4975,19 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  *
  * </p </li> <li>
  *
+ * <a>DeleteFleet</a>
+ *
+ * </p </li> <li>
+ *
  * Describe
  *
  * fleets> <ul> <li>
  *
  * <a>DescribeFleetAttributes</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeFleetCapacity</a>
  *
  * </p </li> <li>
  *
@@ -5060,6 +5000,10 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  * </p </li> <li>
  *
  * <a>DescribeRuntimeConfiguration</a>
+ *
+ * </p </li> <li>
+ *
+ * <a>DescribeEC2InstanceLimits</a>
  *
  * </p </li> <li>
  *
@@ -5089,33 +5033,13 @@ UpdateMatchmakingConfigurationResponse * GameLiftClient::updateMatchmakingConfig
  *
  * Manage fleet
  *
- * capacity> <ul> <li>
+ * actions> <ul> <li>
  *
- * <a>DescribeFleetCapacity</a>
- *
- * </p </li> <li>
- *
- * <a>UpdateFleetCapacity</a>
+ * <a>StartFleetActions</a>
  *
  * </p </li> <li>
  *
- * <a>PutScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeScalingPolicies</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DeleteScalingPolicy</a> (automatic
- *
- * scaling> </li> <li>
- *
- * <a>DescribeEC2InstanceLimits</a>
- *
- * </p </li> </ul> </li> <li>
- *
- * <a>DeleteFleet</a>
+ * <a>StopFleetActions</a>
  */
 UpdateRuntimeConfigurationResponse * GameLiftClient::updateRuntimeConfiguration(const UpdateRuntimeConfigurationRequest &request)
 {

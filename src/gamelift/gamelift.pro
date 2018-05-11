@@ -216,6 +216,10 @@ HEADERS += \
     searchgamesessionsrequest_p.h \
     searchgamesessionsresponse.h \
     searchgamesessionsresponse_p.h \
+    startfleetactionsrequest.h \
+    startfleetactionsrequest_p.h \
+    startfleetactionsresponse.h \
+    startfleetactionsresponse_p.h \
     startgamesessionplacementrequest.h \
     startgamesessionplacementrequest_p.h \
     startgamesessionplacementresponse.h \
@@ -228,6 +232,10 @@ HEADERS += \
     startmatchmakingrequest_p.h \
     startmatchmakingresponse.h \
     startmatchmakingresponse_p.h \
+    stopfleetactionsrequest.h \
+    stopfleetactionsrequest_p.h \
+    stopfleetactionsresponse.h \
+    stopfleetactionsresponse_p.h \
     stopgamesessionplacementrequest.h \
     stopgamesessionplacementrequest_p.h \
     stopgamesessionplacementresponse.h \
@@ -381,12 +389,16 @@ SOURCES += \
     resolvealiasresponse.cpp \
     searchgamesessionsrequest.cpp \
     searchgamesessionsresponse.cpp \
+    startfleetactionsrequest.cpp \
+    startfleetactionsresponse.cpp \
     startgamesessionplacementrequest.cpp \
     startgamesessionplacementresponse.cpp \
     startmatchbackfillrequest.cpp \
     startmatchbackfillresponse.cpp \
     startmatchmakingrequest.cpp \
     startmatchmakingresponse.cpp \
+    stopfleetactionsrequest.cpp \
+    stopfleetactionsresponse.cpp \
     stopgamesessionplacementrequest.cpp \
     stopgamesessionplacementresponse.cpp \
     stopmatchmakingrequest.cpp \

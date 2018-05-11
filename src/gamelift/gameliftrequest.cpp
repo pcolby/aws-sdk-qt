@@ -86,9 +86,11 @@ namespace GameLift {
  * \value RequestUploadCredentialsAction GameLift RequestUploadCredentials action.
  * \value ResolveAliasAction GameLift ResolveAlias action.
  * \value SearchGameSessionsAction GameLift SearchGameSessions action.
+ * \value StartFleetActionsAction GameLift StartFleetActions action.
  * \value StartGameSessionPlacementAction GameLift StartGameSessionPlacement action.
  * \value StartMatchBackfillAction GameLift StartMatchBackfill action.
  * \value StartMatchmakingAction GameLift StartMatchmaking action.
+ * \value StopFleetActionsAction GameLift StopFleetActions action.
  * \value StopGameSessionPlacementAction GameLift StopGameSessionPlacement action.
  * \value StopMatchmakingAction GameLift StopMatchmaking action.
  * \value UpdateAliasAction GameLift UpdateAlias action.

@@ -49,7 +49,7 @@ namespace GameLift {
  * 
  *  session> </li> <li>
  * 
- *  <b>Configure and manage game server resources</b> -- Manage builds, fleets, queues, and aliases; set autoscaling
+ *  <b>Configure and manage game server resources</b> -- Manage builds, fleets, queues, and aliases; set auto-scaling
  *  policies; retrieve logs and
  * 
  *  metrics> </li> </ul>
@@ -313,21 +313,29 @@ namespace GameLift {
  * 
  *  down> </li> <li>
  * 
- *  Autoscale -- Manage autoscaling rules and apply them to a
+ *  Autoscale -- Manage auto-scaling rules and apply them to a
  * 
  *  fleet> <ul> <li>
  * 
- *  <a>PutScalingPolicy</a> -- Create a new autoscaling policy, or update an existing
+ *  <a>PutScalingPolicy</a> -- Create a new auto-scaling policy, or update an existing
  * 
  *  one> </li> <li>
  * 
- *  <a>DescribeScalingPolicies</a> -- Retrieve an existing autoscaling
+ *  <a>DescribeScalingPolicies</a> -- Retrieve an existing auto-scaling
  * 
  *  policy> </li> <li>
  * 
- *  <a>DeleteScalingPolicy</a> -- Delete an autoscaling policy and stop it from affecting a fleet's
+ *  <a>DeleteScalingPolicy</a> -- Delete an auto-scaling policy and stop it from affecting a fleet's
  * 
- *  capacity> </li> </ul> </li> </ul> </li> <li>
+ *  capacity> </li> <li>
+ * 
+ *  <a>StartFleetActions</a> -- Restart a fleet's auto-scaling
+ * 
+ *  policies> </li> <li>
+ * 
+ *  <a>StopFleetActions</a> -- Suspend a fleet's auto-scaling
+ * 
+ *  policies> </li> </ul> </li> </ul> </li> <li>
  * 
  *  <b>Manage VPC peering connections for fleets</b>
  * 
