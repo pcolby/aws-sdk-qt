@@ -113,9 +113,11 @@
 <tr><td class="memItemLeft rightAlign topAlign"> RequestUploadCredentialsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#requestUploadCredentials">requestUploadCredentials</a></b>(const RequestUploadCredentialsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> ResolveAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#resolveAlias">resolveAlias</a></b>(const ResolveAliasRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> SearchGameSessionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#searchGameSessions">searchGameSessions</a></b>(const SearchGameSessionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartFleetActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#startFleetActions">startFleetActions</a></b>(const StartFleetActionsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> StartGameSessionPlacementResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#startGameSessionPlacement">startGameSessionPlacement</a></b>(const StartGameSessionPlacementRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> StartMatchBackfillResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#startMatchBackfill">startMatchBackfill</a></b>(const StartMatchBackfillRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> StartMatchmakingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#startMatchmaking">startMatchmaking</a></b>(const StartMatchmakingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StopFleetActionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#stopFleetActions">stopFleetActions</a></b>(const StopFleetActionsRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> StopGameSessionPlacementResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#stopGameSessionPlacement">stopGameSessionPlacement</a></b>(const StopGameSessionPlacementRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> StopMatchmakingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#stopMatchmaking">stopMatchmaking</a></b>(const StopMatchmakingRequest &amp;<i>request</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> UpdateAliasResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-gamelift-gameliftclient.html#updateAlias">updateAlias</a></b>(const UpdateAliasRequest &amp;<i>request</i>)</td></tr>
@@ -145,7 +147,7 @@
 <p>sets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;Manage game sessions and player access&lt;/b&gt; -- Retrieve information on available game sessions; create new game sessions; send player requests to join a game</p>
 <p>session&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;Configure and manage game server resources&lt;/b&gt; -- Manage builds, fleets, queues, and aliases; set autoscaling policies; retrieve logs and</p>
+<p>&lt;b&gt;Configure and manage game server resources&lt;/b&gt; -- Manage builds, fleets, queues, and aliases; set auto-scaling policies; retrieve logs and</p>
 <p>metrics&gt; &lt;/li&gt; &lt;/ul&gt;</p>
 <p>This reference guide describes the low-level service API for Amazon <a href="qtaws-gamelift.html">GameLift</a>. You can use the API functionality with these tools:</p>
 <p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
@@ -261,14 +263,18 @@
 <p>level&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt; / &lt;a&gt;UpdateFleetCapacity&lt;/a&gt; -- Retrieve the capacity settings and the current number of instances in a fleet; adjust fleet capacity settings to scale up or</p>
 <p>down&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Autoscale -- Manage autoscaling rules and apply them to a</p>
+<p>Autoscale -- Manage auto-scaling rules and apply them to a</p>
 <p>fleet&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; -- Create a new autoscaling policy, or update an existing</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; -- Create a new auto-scaling policy, or update an existing</p>
 <p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; -- Retrieve an existing autoscaling</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; -- Retrieve an existing auto-scaling</p>
 <p>policy&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; -- Delete an autoscaling policy and stop it from affecting a fleet's</p>
-<p>capacity&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; -- Delete an auto-scaling policy and stop it from affecting a fleet's</p>
+<p>capacity&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt; -- Restart a fleet's auto-scaling</p>
+<p>policies&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt; -- Suspend a fleet's auto-scaling</p>
+<p>policies&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;Manage VPC peering connections for fleets&lt;/b&gt;</p>
 <p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;CreateVpcPeeringAuthorization&lt;/a&gt; -- Authorize a peering connection to one of your</p>
@@ -468,15 +474,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -491,20 +503,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@createFleet -->
 <!-- $$$createGameSession[overload1]$$$createGameSessionconstCreateGameSessionRequest& -->
 <h3 class="fn" id="createGameSession"><a name="createGameSession"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-creategamesessionresponse.html">CreateGameSessionResponse</a></span> *GameLiftClient::<span class="name">createGameSession</span>(const <span class="type"><a href="qtaws-gamelift-creategamesessionrequest.html">CreateGameSessionRequest</a></span> &amp;<i>request</i>)</h3>
@@ -769,15 +771,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -792,20 +800,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@deleteFleet -->
 <!-- $$$deleteGameSessionQueue[overload1]$$$deleteGameSessionQueueconstDeleteGameSessionQueueRequest& -->
 <h3 class="fn" id="deleteGameSessionQueue"><a name="deleteGameSessionQueue"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-deletegamesessionqueueresponse.html">DeleteGameSessionQueueResponse</a></span> *GameLiftClient::<span class="name">deleteGameSessionQueue</span>(const <span class="type"><a href="qtaws-gamelift-deletegamesessionqueuerequest.html">DeleteGameSessionQueueRequest</a></span> &amp;<i>request</i>)</h3>
@@ -848,49 +846,29 @@
 <p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-deletescalingpolicyresponse.html">DeleteScalingPolicyResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes a fleet scaling policy. This action means that the policy is no longer in force and removes all record of it. To delete a scaling policy, specify both the scaling policy name and the fleet ID it is associated</p>
 <p>with&gt;</p>
-<p>Fleet-related operations</p>
+<p>To temporarily suspend scaling policies, call &lt;a&gt;StopFleetActions&lt;/a&gt;. This operation suspends all policies for the</p>
+<p>fleet&gt;</p>
+<p>Operations related to fleet capacity scaling</p>
 <p>include&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;CreateFleet&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>Describe</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Update</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage scaling</p>
+<p>policies&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage fleet</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@deleteScalingPolicy -->
 <!-- $$$deleteVpcPeeringAuthorization[overload1]$$$deleteVpcPeeringAuthorizationconstDeleteVpcPeeringAuthorizationRequest& -->
 <h3 class="fn" id="deleteVpcPeeringAuthorization"><a name="deleteVpcPeeringAuthorization"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-deletevpcpeeringauthorizationresponse.html">DeleteVpcPeeringAuthorizationResponse</a></span> *GameLiftClient::<span class="name">deleteVpcPeeringAuthorization</span>(const <span class="type"><a href="qtaws-gamelift-deletevpcpeeringauthorizationrequest.html">DeleteVpcPeeringAuthorizationRequest</a></span> &amp;<i>request</i>)</h3>
@@ -987,15 +965,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1010,20 +994,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeEC2InstanceLimits -->
 <!-- $$$describeFleetAttributes[overload1]$$$describeFleetAttributesconstDescribeFleetAttributesRequest& -->
 <h3 class="fn" id="describeFleetAttributes"><a name="describeFleetAttributes"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describefleetattributesresponse.html">DescribeFleetAttributesResponse</a></span> *GameLiftClient::<span class="name">describeFleetAttributes</span>(const <span class="type"><a href="qtaws-gamelift-describefleetattributesrequest.html">DescribeFleetAttributesRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1038,15 +1012,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1061,20 +1041,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeFleetAttributes -->
 <!-- $$$describeFleetCapacity[overload1]$$$describeFleetCapacityconstDescribeFleetCapacityRequest& -->
 <h3 class="fn" id="describeFleetCapacity"><a name="describeFleetCapacity"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describefleetcapacityresponse.html">DescribeFleetCapacityResponse</a></span> *GameLiftClient::<span class="name">describeFleetCapacity</span>(const <span class="type"><a href="qtaws-gamelift-describefleetcapacityrequest.html">DescribeFleetCapacityRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1089,15 +1059,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1112,20 +1088,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeFleetCapacity -->
 <!-- $$$describeFleetEvents[overload1]$$$describeFleetEventsconstDescribeFleetEventsRequest& -->
 <h3 class="fn" id="describeFleetEvents"><a name="describeFleetEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describefleeteventsresponse.html">DescribeFleetEventsResponse</a></span> *GameLiftClient::<span class="name">describeFleetEvents</span>(const <span class="type"><a href="qtaws-gamelift-describefleeteventsrequest.html">DescribeFleetEventsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1138,15 +1104,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1161,20 +1133,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeFleetEvents -->
 <!-- $$$describeFleetPortSettings[overload1]$$$describeFleetPortSettingsconstDescribeFleetPortSettingsRequest& -->
 <h3 class="fn" id="describeFleetPortSettings"><a name="describeFleetPortSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describefleetportsettingsresponse.html">DescribeFleetPortSettingsResponse</a></span> *GameLiftClient::<span class="name">describeFleetPortSettings</span>(const <span class="type"><a href="qtaws-gamelift-describefleetportsettingsrequest.html">DescribeFleetPortSettingsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1187,15 +1149,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1210,20 +1178,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeFleetPortSettings -->
 <!-- $$$describeFleetUtilization[overload1]$$$describeFleetUtilizationconstDescribeFleetUtilizationRequest& -->
 <h3 class="fn" id="describeFleetUtilization"><a name="describeFleetUtilization"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describefleetutilizationresponse.html">DescribeFleetUtilizationResponse</a></span> *GameLiftClient::<span class="name">describeFleetUtilization</span>(const <span class="type"><a href="qtaws-gamelift-describefleetutilizationrequest.html">DescribeFleetUtilizationRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1238,15 +1196,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1261,20 +1225,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeFleetUtilization -->
 <!-- $$$describeGameSessionDetails[overload1]$$$describeGameSessionDetailsconstDescribeGameSessionDetailsRequest& -->
 <h3 class="fn" id="describeGameSessionDetails"><a name="describeGameSessionDetails"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describegamesessiondetailsresponse.html">DescribeGameSessionDetailsResponse</a></span> *GameLiftClient::<span class="name">describeGameSessionDetails</span>(const <span class="type"><a href="qtaws-gamelift-describegamesessiondetailsrequest.html">DescribeGameSessionDetailsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1484,15 +1438,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1507,20 +1467,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeRuntimeConfiguration -->
 <!-- $$$describeScalingPolicies[overload1]$$$describeScalingPoliciesconstDescribeScalingPoliciesRequest& -->
 <h3 class="fn" id="describeScalingPolicies"><a name="describeScalingPolicies"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describescalingpoliciesresponse.html">DescribeScalingPoliciesResponse</a></span> *GameLiftClient::<span class="name">describeScalingPolicies</span>(const <span class="type"><a href="qtaws-gamelift-describescalingpoliciesrequest.html">DescribeScalingPoliciesRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1529,49 +1479,29 @@
 <p>fleet&gt;</p>
 <p>To get a fleet's scaling policies, specify the fleet ID. You can filter this request by policy status, such as to retrieve only active scaling policies. Use the pagination parameters to retrieve results as a set of sequential pages. If successful, set of &lt;a&gt;ScalingPolicy&lt;/a&gt; objects is returned for the</p>
 <p>fleet&gt;</p>
-<p>Fleet-related operations</p>
+<p>A fleet may have all of its scaling policies suspended (&lt;a&gt;StopFleetActions&lt;/a&gt;). This action does not affect the status of the scaling policies, which remains ACTIVE. To see whether a fleet's scaling policies are in force or suspended, call &lt;a&gt;DescribeFleetAttributes&lt;/a&gt; and check the stopped</p>
+<p>actions&gt;</p>
+<p>Operations related to fleet capacity scaling</p>
 <p>include&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;CreateFleet&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>Describe</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Update</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage scaling</p>
+<p>policies&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage fleet</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@describeScalingPolicies -->
 <!-- $$$describeVpcPeeringAuthorizations[overload1]$$$describeVpcPeeringAuthorizationsconstDescribeVpcPeeringAuthorizationsRequest& -->
 <h3 class="fn" id="describeVpcPeeringAuthorizations"><a name="describeVpcPeeringAuthorizations"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-describevpcpeeringauthorizationsresponse.html">DescribeVpcPeeringAuthorizationsResponse</a></span> *GameLiftClient::<span class="name">describeVpcPeeringAuthorizations</span>(const <span class="type"><a href="qtaws-gamelift-describevpcpeeringauthorizationsrequest.html">DescribeVpcPeeringAuthorizationsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1704,15 +1634,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1727,79 +1663,67 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@listFleets -->
 <!-- $$$putScalingPolicy[overload1]$$$putScalingPolicyconstPutScalingPolicyRequest& -->
 <h3 class="fn" id="putScalingPolicy"><a name="putScalingPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-putscalingpolicyresponse.html">PutScalingPolicyResponse</a></span> *GameLiftClient::<span class="name">putScalingPolicy</span>(const <span class="type"><a href="qtaws-gamelift-putscalingpolicyrequest.html">PutScalingPolicyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-putscalingpolicyresponse.html">PutScalingPolicyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a scaling policy for a fleet. An active scaling policy prompts Amazon <a href="qtaws-gamelift.html">GameLift</a> to track a certain metric for a fleet and automatically change the fleet's capacity in specific circumstances. Each scaling policy contains one rule statement. Fleets can have multiple scaling policies in force</p>
-<p>simultaneously&gt;</p>
-<p>A scaling policy rule statement has the following</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates or updates a scaling policy for a fleet. Scaling policies are used to automatically scale a fleet's hosting capacity to meet player demand. An active scaling policy instructs Amazon <a href="qtaws-gamelift.html">GameLift</a> to track a fleet metric and automatically change the fleet's capacity when a certain threshold is reached. There are two types of scaling policies: target-based and rule-based. Use a target-based policy to quickly and efficiently manage fleet scaling; this option is the most commonly used. Use rule-based policies when you need to exert fine-grained control over auto-scaling.</p>
+<p>&lt;/p</p>
+<p>Fleets can have multiple scaling policies of each type in force at the same time; you can have one target-based policy, one or multiple rule-based scaling policies, or both. We recommend caution, however, because multiple auto-scaling policies can have unintended</p>
+<p>consequences&gt;</p>
+<p>You can temporarily suspend all scaling policies for a fleet by calling &lt;a&gt;StopFleetActions&lt;/a&gt; with the fleet action AUTO_SCALING. To resume scaling policies, call &lt;a&gt;StartFleetActions&lt;/a&gt; with the same fleet action. To stop just one scaling policy--or to permanently remove it, you must delete the policy with</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;&gt;</p>
+<p>Learn more about how to work with auto-scaling in &lt;a href=&quot;http://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-autoscaling.html&quot;&gt;Set Up Fleet Automatic</p>
+<p>Scaling&lt;/a&gt;&gt;</p>
+<p>&lt;b&gt;Target-based policy&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>A target-based policy tracks a single metric: PercentAvailableGameSessions. This metric tells us how much of a fleet's hosting capacity is ready to host game sessions but is not currently in use. This is the fleet's buffer; it measures the additional player demand that the fleet could handle at current capacity. With a target-based policy, you set your ideal buffer size and leave it to Amazon <a href="qtaws-gamelift.html">GameLift</a> to take whatever action is needed to maintain that target.</p>
+<p>&lt;/p</p>
+<p>For example, you might choose to maintain a 10% buffer for a fleet that has the capacity to host 100 simultaneous game sessions. This policy tells Amazon <a href="qtaws-gamelift.html">GameLift</a> to take action whenever the fleet's available capacity falls below or rises above 10 game sessions. Amazon <a href="qtaws-gamelift.html">GameLift</a> will start new instances or stop unused instances in order to return to the 10% buffer.</p>
+<p>&lt;/p</p>
+<p>To create or update a target-based policy, specify a fleet ID and name, and set the policy type to &quot;TargetBased&quot;. Specify the metric to track (PercentAvailableGameSessions) and reference a &lt;a&gt;TargetConfiguration&lt;/a&gt; object with your desired buffer value. Exclude all other parameters. On a successful request, the policy name is returned. The scaling policy is automatically in force as soon as it's successfully created. If the fleet's auto-scaling actions are temporarily suspended, the new policy will be in force once the fleet actions are</p>
+<p>restarted&gt;</p>
+<p>&lt;b&gt;Rule-based policy&lt;/b&gt;</p>
+<p>&lt;/p</p>
+<p>A rule-based policy tracks specified fleet metric, sets a threshold value, and specifies the type of action to initiate when triggered. With a rule-based policy, you can select from several available fleet metrics. Each policy specifies whether to scale up or scale down (and by how much), so you need one policy for each type of action.</p>
+<p>&lt;/p</p>
+<p>For example, a policy may make the following statement: &quot;If the percentage of idle instances is greater than 20% for more than 15 minutes, then reduce the fleet capacity by</p>
+<p>10%.&gt;</p>
+<p>A policy's rule statement has the following</p>
 <p>structure&gt;</p>
 <p>If &lt;code&gt;[MetricName]&lt;/code&gt; is &lt;code&gt;[ComparisonOperator]&lt;/code&gt; &lt;code&gt;[Threshold]&lt;/code&gt; for &lt;code&gt;[EvaluationPeriods]&lt;/code&gt; minutes, then &lt;code&gt;[ScalingAdjustmentType]&lt;/code&gt; to/by</p>
 <p>&lt;code&gt;[ScalingAdjustment]&lt;/code&gt;&gt;</p>
-<p>For example, this policy: &quot;If the number of idle instances exceeds 20 for more than 15 minutes, then reduce the fleet capacity by 10 instances&quot; could be implemented as the following rule</p>
-<p>statement&gt;</p>
-<p>If [IdleInstances] is [GreaterThanOrEqualToThreshold] [20] for [15] minutes, then [ChangeInCapacity] by</p>
-<p>[-10]&gt;</p>
-<p>To create or update a scaling policy, specify a unique combination of name and fleet ID, and set the rule values. All parameters for this action are required. If successful, the policy name is returned. Scaling policies cannot be suspended or made inactive. To stop enforcing a scaling policy, call</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;&gt;</p>
-<p>Fleet-related operations</p>
+<p>To implement the example, the rule statement would look like</p>
+<p>this&gt;</p>
+<p>If &lt;code&gt;[PercentIdleInstances]&lt;/code&gt; is &lt;code&gt;[GreaterThanThreshold]&lt;/code&gt; &lt;code&gt;[20]&lt;/code&gt; for &lt;code&gt;[15]&lt;/code&gt; minutes, then &lt;code&gt;[PercentChangeInCapacity]&lt;/code&gt; to/by</p>
+<p>&lt;code&gt;[10]&lt;/code&gt;&gt;</p>
+<p>To create or update a scaling policy, specify a unique combination of name and fleet ID, and set the policy type to &quot;RuleBased&quot;. Specify the parameter values for a policy rule statement. On a successful request, the policy name is returned. Scaling policies are automatically in force as soon as they're successfully created. If the fleet's auto-scaling actions are temporarily suspended, the new policy will be in force once the fleet actions are</p>
+<p>restarted&gt;</p>
+<p>Operations related to fleet capacity scaling</p>
 <p>include&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;CreateFleet&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>Describe</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Update</p>
-<p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetAttributes&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetPortSettings&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage scaling</p>
+<p>policies&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage fleet</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@putScalingPolicy -->
 <!-- $$$requestUploadCredentials[overload1]$$$requestUploadCredentialsconstRequestUploadCredentialsRequest& -->
 <h3 class="fn" id="requestUploadCredentials"><a name="requestUploadCredentials"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-requestuploadcredentialsresponse.html">RequestUploadCredentialsResponse</a></span> *GameLiftClient::<span class="name">requestUploadCredentials</span>(const <span class="type"><a href="qtaws-gamelift-requestuploadcredentialsrequest.html">RequestUploadCredentialsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -1836,7 +1760,7 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;gameSessionName&lt;/b&gt; -- Name assigned to a game session. This value is set when requesting a new game session with &lt;a&gt;CreateGameSession&lt;/a&gt; or updating with &lt;a&gt;UpdateGameSession&lt;/a&gt;. Game session names do not need to be unique to a game</p>
 <p>session&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;gameSessionProperties&lt;/b&gt; -- Custom data defined in a game session's &lt;code&gt;GameProperty&lt;/code&gt; parameter. &lt;code&gt;GameProperty&lt;/code&gt; values are stored as key:value pairs; the filter expression must indicate the key and a string to search the data values for. For example, to search for game sessions with custom data containing the key:value pair &quot;gameMode:brawl&quot;, specify the following: gameSessionProperties.gameMode = &quot;brawl&quot;. All custom data values are searched as</p>
+<p>&lt;b&gt;gameSessionProperties&lt;/b&gt; -- Custom data defined in a game session's &lt;code&gt;GameProperty&lt;/code&gt; parameter. &lt;code&gt;GameProperty&lt;/code&gt; values are stored as key:value pairs; the filter expression must indicate the key and a string to search the data values for. For example, to search for game sessions with custom data containing the key:value pair &quot;gameMode:brawl&quot;, specify the following: &lt;code&gt;gameSessionProperties.gameMode = &quot;brawl&quot;&lt;/code&gt;. All custom data values are searched as</p>
 <p>strings&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;maximumSessions&lt;/b&gt; -- Maximum number of player sessions allowed for a game session. This value is set when requesting a new game session with &lt;a&gt;CreateGameSession&lt;/a&gt; or updating with</p>
 <p>&lt;a&gt;UpdateGameSession&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -1874,6 +1798,35 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;StopGameSessionPlacement&lt;/a&gt;</p>
 <!-- @@@searchGameSessions -->
+<!-- $$$startFleetActions[overload1]$$$startFleetActionsconstStartFleetActionsRequest& -->
+<h3 class="fn" id="startFleetActions"><a name="startFleetActions"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-startfleetactionsresponse.html">StartFleetActionsResponse</a></span> *GameLiftClient::<span class="name">startFleetActions</span>(const <span class="type"><a href="qtaws-gamelift-startfleetactionsrequest.html">StartFleetActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-startfleetactionsresponse.html">StartFleetActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Resumes activity on a fleet that was suspended with &lt;a&gt;StopFleetActions&lt;/a&gt;. Currently, this operation is used to restart a fleet's auto-scaling activity.</p>
+<p>&lt;/p</p>
+<p>To start fleet actions, specify the fleet ID and the type of actions to restart. When auto-scaling fleet actions are restarted, Amazon <a href="qtaws-gamelift.html">GameLift</a> once again initiates scaling events as triggered by the fleet's scaling policies. If actions on the fleet were never stopped, this operation will have no effect. You can view a fleet's stopped actions using</p>
+<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;&gt;</p>
+<p>Operations related to fleet capacity scaling</p>
+<p>include&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage scaling</p>
+<p>policies&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt;</p>
+<p>(auto-scaling&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Manage fleet</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
+<!-- @@@startFleetActions -->
 <!-- $$$startGameSessionPlacement[overload1]$$$startGameSessionPlacementconstStartGameSessionPlacementRequest& -->
 <h3 class="fn" id="startGameSessionPlacement"><a name="startGameSessionPlacement"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-startgamesessionplacementresponse.html">StartGameSessionPlacementResponse</a></span> *GameLiftClient::<span class="name">startGameSessionPlacement</span>(const <span class="type"><a href="qtaws-gamelift-startgamesessionplacementrequest.html">StartGameSessionPlacementRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-startgamesessionplacementresponse.html">StartGameSessionPlacementResponse</a> object to track the result.</p>
@@ -1979,6 +1932,13 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;StartMatchBackfill&lt;/a&gt;</p>
 <!-- @@@startMatchmaking -->
+<!-- $$$stopFleetActions[overload1]$$$stopFleetActionsconstStopFleetActionsRequest& -->
+<h3 class="fn" id="stopFleetActions"><a name="stopFleetActions"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-stopfleetactionsresponse.html">StopFleetActionsResponse</a></span> *GameLiftClient::<span class="name">stopFleetActions</span>(const <span class="type"><a href="qtaws-gamelift-stopfleetactionsrequest.html">StopFleetActionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-stopfleetactionsresponse.html">StopFleetActionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Suspends activity on a fleet. Currently, this operation is used to stop a fleet's auto-scaling activity. It is used to temporarily stop scaling events triggered by the fleet's scaling policies. The policies can be retained and auto-scaling activity can be restarted using &lt;a&gt;StartFleetActions&lt;/a&gt;. You can view a fleet's stopped actions using</p>
+<p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;&gt;</p>
+<p>To stop fleet actions, specify the fleet ID and the type of actions to suspend. When auto-scaling fleet actions are stopped, Amazon <a href="qtaws-gamelift.html">GameLift</a> no longer initiates scaling events except to maintain the fleet's desired instances setting (&lt;a&gt;FleetCapacity&lt;/a&gt;. Changes to the fleet's capacity must be done manually using &lt;a&gt;UpdateFleetCapacity&lt;/a&gt;.</p>
+<!-- @@@stopFleetActions -->
 <!-- $$$stopGameSessionPlacement[overload1]$$$stopGameSessionPlacementconstStopGameSessionPlacementRequest& -->
 <h3 class="fn" id="stopGameSessionPlacement"><a name="stopGameSessionPlacement"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-stopgamesessionplacementresponse.html">StopGameSessionPlacementResponse</a></span> *GameLiftClient::<span class="name">stopGameSessionPlacement</span>(const <span class="type"><a href="qtaws-gamelift-stopgamesessionplacementrequest.html">StopGameSessionPlacementRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-stopgamesessionplacementresponse.html">StopGameSessionPlacementResponse</a> object to track the result.</p>
@@ -2070,15 +2030,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -2093,28 +2059,18 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@updateFleetAttributes -->
 <!-- $$$updateFleetCapacity[overload1]$$$updateFleetCapacityconstUpdateFleetCapacityRequest& -->
 <h3 class="fn" id="updateFleetCapacity"><a name="updateFleetCapacity"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-updatefleetcapacityresponse.html">UpdateFleetCapacityResponse</a></span> *GameLiftClient::<span class="name">updateFleetCapacity</span>(const <span class="type"><a href="qtaws-gamelift-updatefleetcapacityrequest.html">UpdateFleetCapacityRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-gamelift-gameliftclient.html">GameLiftClient</a> service, and returns a pointer to an <a href="qtaws-gamelift-updatefleetcapacityresponse.html">UpdateFleetCapacityResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates capacity settings for a fleet. Use this action to specify the number of EC2 instances (hosts) that you want this fleet to contain. Before calling this action, you may want to call &lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt; to get the maximum capacity based on the fleet's EC2 instance</p>
 <p>type&gt;</p>
-<p>If you're using autoscaling (see &lt;a&gt;PutScalingPolicy&lt;/a&gt;), you may want to specify a minimum and/or maximum capacity. If you don't provide these, autoscaling can set capacity anywhere between zero and the &lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_gamelift&quot;&gt;service</p>
-<p>limits&lt;/a&gt;&gt;</p>
+<p>Specify minimum and maximum number of instances. Amazon <a href="qtaws-gamelift.html">GameLift</a> will not change fleet capacity to values fall outside of this range. This is particularly important when using auto-scaling (see &lt;a&gt;PutScalingPolicy&lt;/a&gt;) to allow capacity to adjust based on player demand while imposing limits on automatic</p>
+<p>adjustments&gt;</p>
 <p>To update fleet capacity, specify the fleet ID and the number of instances you want the fleet to host. If successful, Amazon <a href="qtaws-gamelift.html">GameLift</a> starts or terminates instances so that the fleet's active instance count matches the desired instance count. You can view a fleet's current capacity information by calling &lt;a&gt;DescribeFleetCapacity&lt;/a&gt;. If the desired instance count is higher than the instance type's limit, the &quot;Limit Exceeded&quot; exception</p>
 <p>occurs&gt;</p>
 <p>Fleet-related operations</p>
@@ -2123,15 +2079,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -2146,20 +2108,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@updateFleetCapacity -->
 <!-- $$$updateFleetPortSettings[overload1]$$$updateFleetPortSettingsconstUpdateFleetPortSettingsRequest& -->
 <h3 class="fn" id="updateFleetPortSettings"><a name="updateFleetPortSettings"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-updatefleetportsettingsresponse.html">UpdateFleetPortSettingsResponse</a></span> *GameLiftClient::<span class="name">updateFleetPortSettings</span>(const <span class="type"><a href="qtaws-gamelift-updatefleetportsettingsrequest.html">UpdateFleetPortSettingsRequest</a></span> &amp;<i>request</i>)</h3>
@@ -2172,15 +2124,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -2195,20 +2153,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@updateFleetPortSettings -->
 <!-- $$$updateGameSession[overload1]$$$updateGameSessionconstUpdateGameSessionRequest& -->
 <h3 class="fn" id="updateGameSession"><a name="updateGameSession"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-updategamesessionresponse.html">UpdateGameSessionResponse</a></span> *GameLiftClient::<span class="name">updateGameSession</span>(const <span class="type"><a href="qtaws-gamelift-updategamesessionrequest.html">UpdateGameSessionRequest</a></span> &amp;<i>request</i>)</h3>
@@ -2288,15 +2236,21 @@
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;ListFleets&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>Describe</p>
 <p>fleets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetAttributes&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetPortSettings&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetUtilization&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeRuntimeConfiguration&lt;/a&gt;</p>
+<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetEvents&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
@@ -2311,20 +2265,10 @@
 <p>&lt;a&gt;UpdateRuntimeConfiguration&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>Manage fleet</p>
-<p>capacity&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt;</p>
+<p>actions&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt;</p>
 <p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;UpdateFleetCapacity&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; (automatic</p>
-<p>scaling&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeEC2InstanceLimits&lt;/a&gt;</p>
-<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteFleet&lt;/a&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt;</p>
 <!-- @@@updateRuntimeConfiguration -->
 <!-- $$$validateMatchmakingRuleSet[overload1]$$$validateMatchmakingRuleSetconstValidateMatchmakingRuleSetRequest& -->
 <h3 class="fn" id="validateMatchmakingRuleSet"><a name="validateMatchmakingRuleSet"></a><code>[slot] </code><span class="type"><a href="qtaws-gamelift-validatematchmakingrulesetresponse.html">ValidateMatchmakingRuleSetResponse</a></span> *GameLiftClient::<span class="name">validateMatchmakingRuleSet</span>(const <span class="type"><a href="qtaws-gamelift-validatematchmakingrulesetrequest.html">ValidateMatchmakingRuleSetRequest</a></span> &amp;<i>request</i>)</h3>

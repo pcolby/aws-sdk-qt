@@ -92,7 +92,7 @@
 <p>sets&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;Manage game sessions and player access&lt;/b&gt; -- Retrieve information on available game sessions; create new game sessions; send player requests to join a game</p>
 <p>session&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;b&gt;Configure and manage game server resources&lt;/b&gt; -- Manage builds, fleets, queues, and aliases; set autoscaling policies; retrieve logs and</p>
+<p>&lt;b&gt;Configure and manage game server resources&lt;/b&gt; -- Manage builds, fleets, queues, and aliases; set auto-scaling policies; retrieve logs and</p>
 <p>metrics&gt; &lt;/li&gt; &lt;/ul&gt;</p>
 <p>This reference guide describes the low-level service API for Amazon <a href="qtaws-gamelift.html">GameLift</a>. You can use the API functionality with these tools:</p>
 <p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
@@ -208,14 +208,18 @@
 <p>level&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;DescribeFleetCapacity&lt;/a&gt; / &lt;a&gt;UpdateFleetCapacity&lt;/a&gt; -- Retrieve the capacity settings and the current number of instances in a fleet; adjust fleet capacity settings to scale up or</p>
 <p>down&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>Autoscale -- Manage autoscaling rules and apply them to a</p>
+<p>Autoscale -- Manage auto-scaling rules and apply them to a</p>
 <p>fleet&gt; &lt;ul&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; -- Create a new autoscaling policy, or update an existing</p>
+<p>&lt;a&gt;PutScalingPolicy&lt;/a&gt; -- Create a new auto-scaling policy, or update an existing</p>
 <p>one&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; -- Retrieve an existing autoscaling</p>
+<p>&lt;a&gt;DescribeScalingPolicies&lt;/a&gt; -- Retrieve an existing auto-scaling</p>
 <p>policy&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; -- Delete an autoscaling policy and stop it from affecting a fleet's</p>
-<p>capacity&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;DeleteScalingPolicy&lt;/a&gt; -- Delete an auto-scaling policy and stop it from affecting a fleet's</p>
+<p>capacity&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StartFleetActions&lt;/a&gt; -- Restart a fleet's auto-scaling</p>
+<p>policies&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>&lt;a&gt;StopFleetActions&lt;/a&gt; -- Suspend a fleet's auto-scaling</p>
+<p>policies&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;Manage VPC peering connections for fleets&lt;/b&gt;</p>
 <p>&lt;/p &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;a&gt;CreateVpcPeeringAuthorization&lt;/a&gt; -- Authorize a peering connection to one of your</p>
