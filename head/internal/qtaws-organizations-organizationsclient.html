@@ -166,7 +166,7 @@
 <p>string&gt;</p>
 <p>&lt;b&gt;Recording API Requests&lt;/b&gt;</p>
 <p>&lt;/p</p>
-<p>AWS Organizations supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests were successfully made to Organizations, who made the request, when it was made, and so on. For more about AWS Organizations and its support for AWS CloudTrail, see &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_cloudtrail-integration.html&quot;&gt;Logging AWS Organizations Events with AWS CloudTrail&lt;/a&gt; in the &lt;i&gt;AWS Organizations User Guide&lt;/i&gt;. To learn more about CloudTrail, including how to turn it on and find your log files, see the &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html&quot;&gt;AWS CloudTrail User</p>
+<p>AWS Organizations supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests were successfully made to Organizations, who made the request, when it was made, and so on. For more about AWS Organizations and its support for AWS CloudTrail, see &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html#orgs_cloudtrail-integration&quot;&gt;Logging AWS Organizations Events with AWS CloudTrail&lt;/a&gt; in the &lt;i&gt;AWS Organizations User Guide&lt;/i&gt;. To learn more about CloudTrail, including how to turn it on and find your log files, see the &lt;a href=&quot;http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html&quot;&gt;AWS CloudTrail User</p>
 </div>
 <!-- @@@OrganizationsClient -->
 <div class="func">
@@ -203,7 +203,7 @@
 <!-- $$$attachPolicy[overload1]$$$attachPolicyconstAttachPolicyRequest& -->
 <h3 class="fn" id="attachPolicy"><a name="attachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-attachpolicyresponse.html">AttachPolicyResponse</a></span> *OrganizationsClient::<span class="name">attachPolicy</span>(const <span class="type"><a href="qtaws-organizations-attachpolicyrequest.html">AttachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-attachpolicyresponse.html">AttachPolicyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a policy to a root, an organizational unit, or an individual account. How the policy affects accounts depends on the type of</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Attaches a policy to a root, an organizational unit (OU), or an individual account. How the policy affects accounts depends on the type of</p>
 <p>policy&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>&lt;b&gt;Service control policy (SCP)&lt;/b&gt; - An SCP specifies what permissions can be delegated to users in affected member accounts. The scope of influence for a policy depends on what you attach the policy</p>
 <p>to&gt; &lt;ul&gt; &lt;li&gt;</p>
@@ -242,14 +242,14 @@
 <p>This operation can be called only from the organization's master</p>
 <p>account&gt;</p>
 <p>For more information about creating accounts, see &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html&quot;&gt;Creating an AWS Account in Your Organization&lt;/a&gt; in the &lt;i&gt;AWS Organizations User</p>
-<p>Guide&lt;/i&gt;&gt; &lt;b&gt;</p>
+<p>Guide&lt;/i&gt;&gt; &lt;b&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information required for the account to operate as a standalone account, such as a payment method and signing the End User Licence Agreement (EULA) is &lt;i&gt;not&lt;/i&gt; automatically collected. If you must remove an account from your organization later, you can do so only after you provide the missing information. Follow the steps at &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info&quot;&gt; To leave an organization when all required account information has not yet been provided&lt;/a&gt; in the &lt;i&gt;AWS Organizations User</p>
-<p>Guide&lt;/i&gt;&gt; &lt;/b&gt; &lt;note&gt;</p>
+<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you get an exception that indicates that you exceeded your account limits for the organization or that the operation failed because your organization is still initializing, wait one hour and then try again. If the error persists after an hour, then contact &lt;a href=&quot;https://console.aws.amazon.com/support/home#/&quot;&gt;AWS Customer</p>
+<p>Support&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>Because &lt;code&gt;CreateAccount&lt;/code&gt; operates asynchronously, it can return a successful completion message even though account initialization might still be in progress. You might need to wait a few minutes before you can successfully access the account.</p>
+<p>&lt;/p &lt;/li&gt; &lt;/ul&gt; &lt;/b&gt; &lt;note&gt;</p>
 <p>When you create a member account with this operation, you can choose whether to create the account with the &lt;b&gt;IAM User and Role Access to Billing Information&lt;/b&gt; switch enabled. If you enable it, IAM users and roles that have appropriate permissions can view billing information for the account. If you disable this, then only the account root user can access billing information. For information about how to disable this for an account, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html&quot;&gt;Granting Access to Your Billing Information and</p>
-<p>Tools&lt;/a&gt;&gt; &lt;/note&gt;</p>
-<p>This operation can be called only from the organization's master</p>
-<p>account&gt; &lt;b&gt;</p>
-<p>If you get an exception that indicates that you exceeded your account limits for the organization or that you can&quot;t add an account because your organization is still initializing, please contact &lt;a href=&quot;https://console.aws.amazon.com/support/home#/&quot;&gt; AWS Customer</p>
 <!-- @@@createAccount -->
 <!-- $$$createOrganization[overload1]$$$createOrganizationconstCreateOrganizationRequest& -->
 <h3 class="fn" id="createOrganization"><a name="createOrganization"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-createorganizationresponse.html">CreateOrganizationResponse</a></span> *OrganizationsClient::<span class="name">createOrganization</span>(const <span class="type"><a href="qtaws-organizations-createorganizationrequest.html">CreateOrganizationRequest</a></span> &amp;<i>request</i>)</h3>
@@ -290,19 +290,19 @@
 <!-- $$$deleteOrganization[overload1]$$$deleteOrganization -->
 <h3 class="fn" id="deleteOrganization"><a name="deleteOrganization"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-deleteorganizationresponse.html">DeleteOrganizationResponse</a></span> *OrganizationsClient::<span class="name">deleteOrganization</span>()</h3>
 <p>Sends a DeleteOrganization request to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-deleteorganizationresponse.html">DeleteOrganizationResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the organization. You can delete an organization only by using credentials from the master account. The organization must be empty of member accounts, OUs, and</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the organization. You can delete an organization only by using credentials from the master account. The organization must be empty of member accounts, organizational units (OUs), and</p>
 <!-- @@@deleteOrganization -->
 <!-- $$$deleteOrganizationalUnit[overload1]$$$deleteOrganizationalUnitconstDeleteOrganizationalUnitRequest& -->
 <h3 class="fn" id="deleteOrganizationalUnit"><a name="deleteOrganizationalUnit"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-deleteorganizationalunitresponse.html">DeleteOrganizationalUnitResponse</a></span> *OrganizationsClient::<span class="name">deleteOrganizationalUnit</span>(const <span class="type"><a href="qtaws-organizations-deleteorganizationalunitrequest.html">DeleteOrganizationalUnitRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-deleteorganizationalunitresponse.html">DeleteOrganizationalUnitResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an organizational unit from a root or another OU. You must first remove all accounts and child OUs from the OU that you want to</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes an organizational unit (OU) from a root or another OU. You must first remove all accounts and child OUs from the OU that you want to</p>
 <p>delete&gt;</p>
 <p>This operation can be called only from the organization's master</p>
 <!-- @@@deleteOrganizationalUnit -->
 <!-- $$$deletePolicy[overload1]$$$deletePolicyconstDeletePolicyRequest& -->
 <h3 class="fn" id="deletePolicy"><a name="deletePolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-deletepolicyresponse.html">DeletePolicyResponse</a></span> *OrganizationsClient::<span class="name">deletePolicy</span>(const <span class="type"><a href="qtaws-organizations-deletepolicyrequest.html">DeletePolicyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-deletepolicyresponse.html">DeletePolicyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified policy from your organization. Before you perform this operation, you must first detach the policy from all OUs, roots, and</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified policy from your organization. Before you perform this operation, you must first detach the policy from all organizational units (OUs), roots, and</p>
 <p>accounts&gt;</p>
 <p>This operation can be called only from the organization's master</p>
 <!-- @@@deletePolicy -->
@@ -355,7 +355,7 @@
 <!-- $$$detachPolicy[overload1]$$$detachPolicyconstDetachPolicyRequest& -->
 <h3 class="fn" id="detachPolicy"><a name="detachPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-detachpolicyresponse.html">DetachPolicyResponse</a></span> *OrganizationsClient::<span class="name">detachPolicy</span>(const <span class="type"><a href="qtaws-organizations-detachpolicyrequest.html">DetachPolicyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-detachpolicyresponse.html">DetachPolicyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a policy from a target root, organizational unit, or account. If the policy being detached is a service control policy (SCP), the changes to permissions for IAM users and roles in affected accounts are</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Detaches a policy from a target root, organizational unit (OU), or account. If the policy being detached is a service control policy (SCP), the changes to permissions for IAM users and roles in affected accounts are</p>
 <p>immediate&gt;</p>
 <p>&lt;b&gt;Note:&lt;/b&gt; Every root, OU, and account must have at least one SCP attached. If you want to replace the default &lt;code&gt;FullAWSAccess&lt;/code&gt; policy with one that limits the permissions that can be delegated, then you must attach the replacement policy before you can remove the default one. This is the authorization strategy of &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_whitelist&quot;&gt;whitelisting&lt;/a&gt;. If you instead attach a second SCP and leave the &lt;code&gt;FullAWSAccess&lt;/code&gt; SCP still attached, and specify &lt;code&gt;&quot;Effect&quot;: &quot;Deny&quot;&lt;/code&gt; in the second SCP to override the &lt;code&gt;&quot;Effect&quot;: &quot;Allow&quot;&lt;/code&gt; in the &lt;code&gt;FullAWSAccess&lt;/code&gt; policy (or any other attached SCP), then you are using the authorization strategy of &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_blacklist&quot;&gt;blacklisting&lt;/a&gt;.</p>
 <p>&lt;/p</p>
@@ -377,7 +377,7 @@
 <!-- $$$disablePolicyType[overload1]$$$disablePolicyTypeconstDisablePolicyTypeRequest& -->
 <h3 class="fn" id="disablePolicyType"><a name="disablePolicyType"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-disablepolicytyperesponse.html">DisablePolicyTypeResponse</a></span> *OrganizationsClient::<span class="name">disablePolicyType</span>(const <span class="type"><a href="qtaws-organizations-disablepolicytyperequest.html">DisablePolicyTypeRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-disablepolicytyperesponse.html">DisablePolicyTypeResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables an organizational control policy type in a root. A policy of a certain type can be attached to entities in a root only if that type is enabled in the root. After you perform this operation, you no longer can attach policies of the specified type to that root or to any OU or account in that root. You can undo this by using the &lt;a&gt;EnablePolicyType&lt;/a&gt;</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disables an organizational control policy type in a root. A policy of a certain type can be attached to entities in a root only if that type is enabled in the root. After you perform this operation, you no longer can attach policies of the specified type to that root or to any organizational unit (OU) or account in that root. You can undo this by using the &lt;a&gt;EnablePolicyType&lt;/a&gt;</p>
 <p>operation&gt;</p>
 <p>This operation can be called only from the organization's master</p>
 <p>account&gt; &lt;note&gt;</p>
@@ -399,7 +399,7 @@
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-enableallfeaturesresponse.html">EnableAllFeaturesResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables all features in an organization. This enables the use of organization policies that can restrict the services and actions that can be called in each account. Until you enable all features, you have access only to consolidated billing, and you can't use any of the advanced account administration features that AWS Organizations supports. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html&quot;&gt;Enabling All Features in Your Organization&lt;/a&gt; in the &lt;i&gt;AWS Organizations User</p>
 <p>Guide&lt;/i&gt;&gt; &lt;b&gt;</p>
-<p>This operation is required only for organizations that were created explicitly with only the consolidated billing features enabled, or that were migrated from a Consolidated Billing account family to Organizations. Calling this operation sends a handshake to every invited account in the organization. The feature set change can be finalized and the additional features enabled only after all administrators in the invited accounts approve the change by accepting the</p>
+<p>This operation is required only for organizations that were created explicitly with only the consolidated billing features enabled. Calling this operation sends a handshake to every invited account in the organization. The feature set change can be finalized and the additional features enabled only after all administrators in the invited accounts approve the change by accepting the</p>
 <p>handshake&gt; &lt;/b&gt;</p>
 <p>After you enable all features, you can separately enable or disable individual policy types in a root using &lt;a&gt;EnablePolicyType&lt;/a&gt; and &lt;a&gt;DisablePolicyType&lt;/a&gt;. To see the status of policy types in a root, use</p>
 <p>&lt;a&gt;ListRoots&lt;/a&gt;&gt;</p>
@@ -412,7 +412,7 @@
 <!-- $$$enablePolicyType[overload1]$$$enablePolicyTypeconstEnablePolicyTypeRequest& -->
 <h3 class="fn" id="enablePolicyType"><a name="enablePolicyType"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-enablepolicytyperesponse.html">EnablePolicyTypeResponse</a></span> *OrganizationsClient::<span class="name">enablePolicyType</span>(const <span class="type"><a href="qtaws-organizations-enablepolicytyperequest.html">EnablePolicyTypeRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-enablepolicytyperesponse.html">EnablePolicyTypeResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables a policy type in a root. After you enable a policy type in a root, you can attach policies of that type to the root, any OU, or account in that root. You can undo this by using the &lt;a&gt;DisablePolicyType&lt;/a&gt;</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Enables a policy type in a root. After you enable a policy type in a root, you can attach policies of that type to the root, any organizational unit (OU), or account in that root. You can undo this by using the &lt;a&gt;DisablePolicyType&lt;/a&gt;</p>
 <p>operation&gt;</p>
 <p>This operation can be called only from the organization's master</p>
 <p>account&gt;</p>
@@ -424,12 +424,12 @@
 <h3 class="fn" id="inviteAccountToOrganization"><a name="inviteAccountToOrganization"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-inviteaccounttoorganizationresponse.html">InviteAccountToOrganizationResponse</a></span> *OrganizationsClient::<span class="name">inviteAccountToOrganization</span>(const <span class="type"><a href="qtaws-organizations-inviteaccounttoorganizationrequest.html">InviteAccountToOrganizationRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-inviteaccounttoorganizationresponse.html">InviteAccountToOrganizationResponse</a> object to track the result.</p>
 <p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends an invitation to another account to join your organization as a member account. Organizations sends email on your behalf to the email address that is associated with the other account's owner. The invitation is implemented as a &lt;a&gt;Handshake&lt;/a&gt; whose details are in the</p>
-<p>response&gt; &lt;b&gt;</p>
+<p>response&gt; &lt;b&gt; &lt;ul&gt; &lt;li&gt;</p>
 <p>You can invite AWS accounts only from the same seller as the master account. For example, if your organization's master account was created by Amazon Internet Services Pvt. Ltd (AISPL), an AWS seller in India, then you can only invite other AISPL accounts to your organization. You can't combine accounts from AISPL and AWS, or any other AWS seller. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilliing-India.html&quot;&gt;Consolidated Billing in</p>
-<p>India&lt;/a&gt;&gt; &lt;/b&gt;</p>
+<p>India&lt;/a&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
+<p>If you receive an exception that indicates that you exceeded your account limits for the organization or that the operation failed because your organization is still initializing, wait one hour and then try again. If the error persists after an hour, then contact &lt;a href=&quot;https://console.aws.amazon.com/support/home#/&quot;&gt;AWS Customer</p>
+<p>Support&lt;/a&gt;&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/b&gt;</p>
 <p>This operation can be called only from the organization's master</p>
-<p>account&gt; &lt;b&gt;</p>
-<p>If you get an exception that indicates that you exceeded your account limits for the organization or that you can&quot;t add an account because your organization is still initializing, please contact &lt;a href=&quot;https://console.aws.amazon.com/support/home#/&quot;&gt; AWS Customer</p>
 <!-- @@@inviteAccountToOrganization -->
 <!-- $$$leaveOrganization[overload1]$$$leaveOrganization -->
 <h3 class="fn" id="leaveOrganization"><a name="leaveOrganization"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-leaveorganizationresponse.html">LeaveOrganizationResponse</a></span> *OrganizationsClient::<span class="name">leaveOrganization</span>()</h3>
@@ -456,7 +456,7 @@
 <!-- $$$listAccounts[overload1]$$$listAccountsconstListAccountsRequest& -->
 <h3 class="fn" id="listAccounts"><a name="listAccounts"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-listaccountsresponse.html">ListAccountsResponse</a></span> *OrganizationsClient::<span class="name">listAccounts</span>(const <span class="type"><a href="qtaws-organizations-listaccountsrequest.html">ListAccountsRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-listaccountsresponse.html">ListAccountsResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the accounts in the organization. To request only the accounts in a specified root or OU, use the &lt;a&gt;ListAccountsForParent&lt;/a&gt; operation</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the accounts in the organization. To request only the accounts in a specified root or organizational unit (OU), use the &lt;a&gt;ListAccountsForParent&lt;/a&gt; operation</p>
 <p>instead&gt; &lt;note&gt;</p>
 <p>Always check the &lt;code&gt;NextToken&lt;/code&gt; response parameter for a &lt;code&gt;null&lt;/code&gt; value when calling a &lt;code&gt;List*&lt;/code&gt; operation. These operations can occasionally return an empty set of results even when there are more results available. The &lt;code&gt;NextToken&lt;/code&gt; response parameter value is &lt;code&gt;null&lt;/code&gt; &lt;i&gt;only&lt;/i&gt; when there are no more results to</p>
 <p>display&gt; &lt;/note&gt;</p>
@@ -474,7 +474,7 @@
 <!-- $$$listChildren[overload1]$$$listChildrenconstListChildrenRequest& -->
 <h3 class="fn" id="listChildren"><a name="listChildren"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-listchildrenresponse.html">ListChildrenResponse</a></span> *OrganizationsClient::<span class="name">listChildren</span>(const <span class="type"><a href="qtaws-organizations-listchildrenrequest.html">ListChildrenRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-listchildrenresponse.html">ListChildrenResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all of the OUs or accounts that are contained in the specified parent OU or root. This operation, along with &lt;a&gt;ListParents&lt;/a&gt; enables you to traverse the tree structure that makes up this</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all of the organizational units (OUs) or accounts that are contained in the specified parent OU or root. This operation, along with &lt;a&gt;ListParents&lt;/a&gt; enables you to traverse the tree structure that makes up this</p>
 <p>root&gt; &lt;note&gt;</p>
 <p>Always check the &lt;code&gt;NextToken&lt;/code&gt; response parameter for a &lt;code&gt;null&lt;/code&gt; value when calling a &lt;code&gt;List*&lt;/code&gt; operation. These operations can occasionally return an empty set of results even when there are more results available. The &lt;code&gt;NextToken&lt;/code&gt; response parameter value is &lt;code&gt;null&lt;/code&gt; &lt;i&gt;only&lt;/i&gt; when there are no more results to</p>
 <p>display&gt; &lt;/note&gt;</p>
@@ -563,7 +563,7 @@
 <!-- $$$listTargetsForPolicy[overload1]$$$listTargetsForPolicyconstListTargetsForPolicyRequest& -->
 <h3 class="fn" id="listTargetsForPolicy"><a name="listTargetsForPolicy"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-listtargetsforpolicyresponse.html">ListTargetsForPolicyResponse</a></span> *OrganizationsClient::<span class="name">listTargetsForPolicy</span>(const <span class="type"><a href="qtaws-organizations-listtargetsforpolicyrequest.html">ListTargetsForPolicyRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-listtargetsforpolicyresponse.html">ListTargetsForPolicyResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the roots, OUs, and accounts to which the specified policy is</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists all the roots, organizaitonal units (OUs), and accounts to which the specified policy is</p>
 <p>attached&gt; &lt;note&gt;</p>
 <p>Always check the &lt;code&gt;NextToken&lt;/code&gt; response parameter for a &lt;code&gt;null&lt;/code&gt; value when calling a &lt;code&gt;List*&lt;/code&gt; operation. These operations can occasionally return an empty set of results even when there are more results available. The &lt;code&gt;NextToken&lt;/code&gt; response parameter value is &lt;code&gt;null&lt;/code&gt; &lt;i&gt;only&lt;/i&gt; when there are no more results to</p>
 <p>display&gt; &lt;/note&gt;</p>
@@ -572,7 +572,7 @@
 <!-- $$$moveAccount[overload1]$$$moveAccountconstMoveAccountRequest& -->
 <h3 class="fn" id="moveAccount"><a name="moveAccount"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-moveaccountresponse.html">MoveAccountResponse</a></span> *OrganizationsClient::<span class="name">moveAccount</span>(const <span class="type"><a href="qtaws-organizations-moveaccountrequest.html">MoveAccountRequest</a></span> &amp;<i>request</i>)</h3>
 <p>Sends <i>request</i> to the <a href="qtaws-organizations-organizationsclient.html">OrganizationsClient</a> service, and returns a pointer to an <a href="qtaws-organizations-moveaccountresponse.html">MoveAccountResponse</a> object to track the result.</p>
-<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Moves an account from its current source parent root or OU to the specified destination parent root or</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Moves an account from its current source parent root or organizational unit (OU) to the specified destination parent root or</p>
 <p>OU&gt;</p>
 <p>This operation can be called only from the organization's master</p>
 <!-- @@@moveAccount -->
@@ -584,10 +584,8 @@
 <p>The removed account becomes a stand-alone account that is not a member of any organization. It is no longer subject to any policies and is responsible for its own bill payments. The organization's master account is no longer charged for any expenses accrued by the member account after it is removed from the</p>
 <p>organization&gt;</p>
 <p>This operation can be called only from the organization's master account. Member accounts can remove themselves with &lt;a&gt;LeaveOrganization&lt;/a&gt;</p>
-<p>instead&gt; &lt;b&gt; &lt;ul&gt; &lt;li&gt;</p>
+<p>instead&gt; &lt;b&gt;</p>
 <p>You can remove an account from your organization only if the account is configured with the information required to operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information required of standalone accounts is &lt;i&gt;not&lt;/i&gt; automatically collected. For an account that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. To remove an account that does not yet have this information, you must sign in as the member account and follow the steps at &lt;a href=&quot;http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info&quot;&gt; To leave an organization when all required account information has not yet been provided&lt;/a&gt; in the &lt;i&gt;AWS Organizations User</p>
-<p>Guide&lt;/i&gt;&gt; &lt;/li&gt; &lt;li&gt;</p>
-<p>You can remove a member account only after you enable IAM user access to billing in the member account. For more information, see &lt;a href=&quot;http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate&quot;&gt;Activating Access to the Billing and Cost Management Console&lt;/a&gt; in the &lt;i&gt;AWS Billing and Cost Management User</p>
 <!-- @@@removeAccountFromOrganization -->
 <!-- $$$updateOrganizationalUnit[overload1]$$$updateOrganizationalUnitconstUpdateOrganizationalUnitRequest& -->
 <h3 class="fn" id="updateOrganizationalUnit"><a name="updateOrganizationalUnit"></a><code>[slot] </code><span class="type"><a href="qtaws-organizations-updateorganizationalunitresponse.html">UpdateOrganizationalUnitResponse</a></span> *OrganizationsClient::<span class="name">updateOrganizationalUnit</span>(const <span class="type"><a href="qtaws-organizations-updateorganizationalunitrequest.html">UpdateOrganizationalUnitRequest</a></span> &amp;<i>request</i>)</h3>

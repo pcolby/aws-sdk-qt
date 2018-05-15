@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iot1clickdevicesserviceclient.cpp -->
+  <title>IoT1ClickDevicesServiceClient Class | IoT1ClickDevicesService</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiot1clickdevicesservice-index.html">IoT1ClickDevicesService</a></li>
+<li><a href="qtawsiot1clickdevicesservice-module.html">C++ Classes</a></li>
+<li>IoT1ClickDevicesServiceClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoT1ClickDevicesServiceClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">QtAws::IoT1ClickDevicesService::IoT1ClickDevicesServiceClient</a>)<br/></span>
+<!-- $$$IoT1ClickDevicesServiceClient-brief -->
+<p>The <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> class provides access to the AWS IoT 1-Click Devices Service service. <a href="#details">More...</a></p>
+<!-- @@@IoT1ClickDevicesServiceClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoT1ClickDevicesServiceClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#IoT1ClickDevicesServiceClient">IoT1ClickDevicesServiceClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#IoT1ClickDevicesServiceClient-1">IoT1ClickDevicesServiceClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> ClaimDevicesByClaimCodeResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#claimDevicesByClaimCode">claimDevicesByClaimCode</a></b>(const ClaimDevicesByClaimCodeRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#describeDevice">describeDevice</a></b>(const DescribeDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> FinalizeDeviceClaimResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#finalizeDeviceClaim">finalizeDeviceClaim</a></b>(const FinalizeDeviceClaimRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDeviceMethodsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#getDeviceMethods">getDeviceMethods</a></b>(const GetDeviceMethodsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InitiateDeviceClaimResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#initiateDeviceClaim">initiateDeviceClaim</a></b>(const InitiateDeviceClaimRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> InvokeDeviceMethodResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#invokeDeviceMethod">invokeDeviceMethod</a></b>(const InvokeDeviceMethodRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDeviceEventsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#listDeviceEvents">listDeviceEvents</a></b>(const ListDeviceEventsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDevicesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#listDevices">listDevices</a></b>(const ListDevicesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UnclaimDeviceResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#unclaimDevice">unclaimDevice</a></b>(const UnclaimDeviceRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDeviceStateResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#updateDeviceState">updateDeviceState</a></b>(const UpdateDeviceStateRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoT1ClickDevicesServiceClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> class provides access to the AWS IoT 1-Click Devices Service service.</p>
+<p>Stub</p>
+</div>
+<!-- @@@IoT1ClickDevicesServiceClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoT1ClickDevicesServiceClient[overload1]$$$IoT1ClickDevicesServiceClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoT1ClickDevicesServiceClient"><a name="IoT1ClickDevicesServiceClient"></a>IoT1ClickDevicesServiceClient::<span class="name">IoT1ClickDevicesServiceClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@IoT1ClickDevicesServiceClient -->
+<!-- $$$IoT1ClickDevicesServiceClient$$$IoT1ClickDevicesServiceClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoT1ClickDevicesServiceClient-1"><a name="IoT1ClickDevicesServiceClient-1"></a>IoT1ClickDevicesServiceClient::<span class="name">IoT1ClickDevicesServiceClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html#IoT1ClickDevicesServiceClient">IoT1ClickDevicesServiceClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@IoT1ClickDevicesServiceClient -->
+<!-- $$$claimDevicesByClaimCode[overload1]$$$claimDevicesByClaimCodeconstClaimDevicesByClaimCodeRequest& -->
+<h3 class="fn" id="claimDevicesByClaimCode"><a name="claimDevicesByClaimCode"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-claimdevicesbyclaimcoderesponse.html">ClaimDevicesByClaimCodeResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">claimDevicesByClaimCode</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-claimdevicesbyclaimcoderequest.html">ClaimDevicesByClaimCodeRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-claimdevicesbyclaimcoderesponse.html">ClaimDevicesByClaimCodeResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Adds device(s) to your account (i.e&#x2e;, claim one or more devices) if and only if you received a claim code with the</p>
+<!-- @@@claimDevicesByClaimCode -->
+<!-- $$$describeDevice[overload1]$$$describeDeviceconstDescribeDeviceRequest& -->
+<h3 class="fn" id="describeDevice"><a name="describeDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-describedeviceresponse.html">DescribeDeviceResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">describeDevice</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-describedevicerequest.html">DescribeDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-describedeviceresponse.html">DescribeDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a device ID, returns a <a href="qtaws-iot1clickdevicesservice-describedeviceresponse.html">DescribeDeviceResponse</a> object describing the details of the</p>
+<!-- @@@describeDevice -->
+<!-- $$$finalizeDeviceClaim[overload1]$$$finalizeDeviceClaimconstFinalizeDeviceClaimRequest& -->
+<h3 class="fn" id="finalizeDeviceClaim"><a name="finalizeDeviceClaim"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-finalizedeviceclaimresponse.html">FinalizeDeviceClaimResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">finalizeDeviceClaim</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-finalizedeviceclaimrequest.html">FinalizeDeviceClaimRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-finalizedeviceclaimresponse.html">FinalizeDeviceClaimResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a device ID, finalizes the claim request for the associated device.&lt;/p&gt;&lt;note&gt;</p>
+<p>Claiming a device consists of initiating a claim, then publishing a device event, and finalizing the claim. For a device of type button, a device event can be published by simply clicking the</p>
+<!-- @@@finalizeDeviceClaim -->
+<!-- $$$getDeviceMethods[overload1]$$$getDeviceMethodsconstGetDeviceMethodsRequest& -->
+<h3 class="fn" id="getDeviceMethods"><a name="getDeviceMethods"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-getdevicemethodsresponse.html">GetDeviceMethodsResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">getDeviceMethods</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-getdevicemethodsrequest.html">GetDeviceMethodsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-getdevicemethodsresponse.html">GetDeviceMethodsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a device ID, returns the invokable methods associated with the</p>
+<!-- @@@getDeviceMethods -->
+<!-- $$$initiateDeviceClaim[overload1]$$$initiateDeviceClaimconstInitiateDeviceClaimRequest& -->
+<h3 class="fn" id="initiateDeviceClaim"><a name="initiateDeviceClaim"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-initiatedeviceclaimresponse.html">InitiateDeviceClaimResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">initiateDeviceClaim</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-initiatedeviceclaimrequest.html">InitiateDeviceClaimRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-initiatedeviceclaimresponse.html">InitiateDeviceClaimResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a device ID, initiates a claim request for the associated device.&lt;/p&gt;&lt;note&gt;</p>
+<p>Claiming a device consists of initiating a claim, then publishing a device event, and finalizing the claim. For a device of type button, a device event can be published by simply clicking the</p>
+<!-- @@@initiateDeviceClaim -->
+<!-- $$$invokeDeviceMethod[overload1]$$$invokeDeviceMethodconstInvokeDeviceMethodRequest& -->
+<h3 class="fn" id="invokeDeviceMethod"><a name="invokeDeviceMethod"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-invokedevicemethodresponse.html">InvokeDeviceMethodResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">invokeDeviceMethod</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-invokedevicemethodrequest.html">InvokeDeviceMethodRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-invokedevicemethodresponse.html">InvokeDeviceMethodResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Given a device ID, issues a request to invoke a named device method (with possible parameters). See the &quot;Example POST&quot; code snippet</p>
+<!-- @@@invokeDeviceMethod -->
+<!-- $$$listDeviceEvents[overload1]$$$listDeviceEventsconstListDeviceEventsRequest& -->
+<h3 class="fn" id="listDeviceEvents"><a name="listDeviceEvents"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-listdeviceeventsresponse.html">ListDeviceEventsResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">listDeviceEvents</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-listdeviceeventsrequest.html">ListDeviceEventsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-listdeviceeventsresponse.html">ListDeviceEventsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Using a device ID, returns a DeviceEventsResponse object containing an array of events for the</p>
+<!-- @@@listDeviceEvents -->
+<!-- $$$listDevices[overload1]$$$listDevicesconstListDevicesRequest& -->
+<h3 class="fn" id="listDevices"><a name="listDevices"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-listdevicesresponse.html">ListDevicesResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">listDevices</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-listdevicesrequest.html">ListDevicesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-listdevicesresponse.html">ListDevicesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Lists the 1-Click compatible devices associated with your AWS</p>
+<!-- @@@listDevices -->
+<!-- $$$unclaimDevice[overload1]$$$unclaimDeviceconstUnclaimDeviceRequest& -->
+<h3 class="fn" id="unclaimDevice"><a name="unclaimDevice"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-unclaimdeviceresponse.html">UnclaimDeviceResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">unclaimDevice</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-unclaimdevicerequest.html">UnclaimDeviceRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-unclaimdeviceresponse.html">UnclaimDeviceResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Disassociates a device from your AWS account using its device</p>
+<!-- @@@unclaimDevice -->
+<!-- $$$updateDeviceState[overload1]$$$updateDeviceStateconstUpdateDeviceStateRequest& -->
+<h3 class="fn" id="updateDeviceState"><a name="updateDeviceState"></a><code>[slot] </code><span class="type"><a href="qtaws-iot1clickdevicesservice-updatedevicestateresponse.html">UpdateDeviceStateResponse</a></span> *IoT1ClickDevicesServiceClient::<span class="name">updateDeviceState</span>(const <span class="type"><a href="qtaws-iot1clickdevicesservice-updatedevicestaterequest.html">UpdateDeviceStateRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iot1clickdevicesservice-iot1clickdevicesserviceclient.html">IoT1ClickDevicesServiceClient</a> service, and returns a pointer to an <a href="qtaws-iot1clickdevicesservice-updatedevicestateresponse.html">UpdateDeviceStateResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Using a Boolean value (true or false), this operation enables or disables the device given a device</p>
+<!-- @@@updateDeviceState -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>
