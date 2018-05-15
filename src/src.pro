@@ -74,6 +74,8 @@ SUBDIRS += \
     iot/iot.pro \
     iotdataplane/iotdataplane.pro \
     iotjobsdataplane/iotjobsdataplane.pro \
+    iot1clickdevicesservice/iot1clickdevicesservice.pro \
+    iot1clickprojects/iot1clickprojects.pro \
     iotanalytics/iotanalytics.pro \
     kinesis/kinesis.pro \
     kinesisvideoarchivedmedia/kinesisvideoarchivedmedia.pro \

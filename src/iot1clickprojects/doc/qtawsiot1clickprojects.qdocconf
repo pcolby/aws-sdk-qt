@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoT1ClickProjects
+description = AWS IoT1ClickProjects SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiot1clickprojects-index.html"
+navigation.landingtitle = "IoT1ClickProjects"
+navigation.cppclassespage = "IoT1ClickProjects C++ Classes"
