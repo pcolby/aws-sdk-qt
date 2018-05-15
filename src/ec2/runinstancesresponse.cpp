@@ -69,7 +69,7 @@ const RunInstancesRequest * RunInstancesResponse::request() const
  */
 void RunInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RunInstancesResponse);
+    //Q_D(RunInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

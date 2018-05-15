@@ -76,7 +76,7 @@ const UpdateThingGroupsForThingRequest * UpdateThingGroupsForThingResponse::requ
  */
 void UpdateThingGroupsForThingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateThingGroupsForThingResponse);
+    //Q_D(UpdateThingGroupsForThingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

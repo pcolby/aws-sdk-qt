@@ -85,7 +85,7 @@ const DescribeConfigRuleEvaluationStatusRequest * DescribeConfigRuleEvaluationSt
  */
 void DescribeConfigRuleEvaluationStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeConfigRuleEvaluationStatusResponse);
+    //Q_D(DescribeConfigRuleEvaluationStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

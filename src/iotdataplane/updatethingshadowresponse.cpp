@@ -71,7 +71,7 @@ const UpdateThingShadowRequest * UpdateThingShadowResponse::request() const
  */
 void UpdateThingShadowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateThingShadowResponse);
+    //Q_D(UpdateThingShadowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

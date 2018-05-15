@@ -233,7 +233,7 @@ void MobileRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MobileRequest);
+    //Q_D(const MobileRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

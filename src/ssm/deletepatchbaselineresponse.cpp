@@ -89,7 +89,7 @@ const DeletePatchBaselineRequest * DeletePatchBaselineResponse::request() const
  */
 void DeletePatchBaselineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePatchBaselineResponse);
+    //Q_D(DeletePatchBaselineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -77,7 +77,7 @@ const GetNamedQueryRequest * GetNamedQueryResponse::request() const
  */
 void GetNamedQueryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetNamedQueryResponse);
+    //Q_D(GetNamedQueryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

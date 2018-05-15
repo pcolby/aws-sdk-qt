@@ -134,7 +134,7 @@ const DescribeTapeArchivesRequest * DescribeTapeArchivesResponse::request() cons
  */
 void DescribeTapeArchivesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTapeArchivesResponse);
+    //Q_D(DescribeTapeArchivesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

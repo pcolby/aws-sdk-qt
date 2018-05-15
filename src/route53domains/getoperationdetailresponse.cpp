@@ -66,7 +66,7 @@ const GetOperationDetailRequest * GetOperationDetailResponse::request() const
  */
 void GetOperationDetailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetOperationDetailResponse);
+    //Q_D(GetOperationDetailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

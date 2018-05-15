@@ -69,7 +69,7 @@ const RejectVpcPeeringConnectionRequest * RejectVpcPeeringConnectionResponse::re
  */
 void RejectVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RejectVpcPeeringConnectionResponse);
+    //Q_D(RejectVpcPeeringConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ AcmResponse::AcmResponse(AcmResponsePrivate * const d, QObject * const parent)
  */
 void AcmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AcmResponse);
+    //Q_D(AcmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

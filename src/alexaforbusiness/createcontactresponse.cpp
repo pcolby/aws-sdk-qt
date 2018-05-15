@@ -70,7 +70,7 @@ const CreateContactRequest * CreateContactResponse::request() const
  */
 void CreateContactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateContactResponse);
+    //Q_D(CreateContactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

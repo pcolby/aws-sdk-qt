@@ -138,7 +138,7 @@ const DescribeScalableTargetsRequest * DescribeScalableTargetsResponse::request(
  */
 void DescribeScalableTargetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeScalableTargetsResponse);
+    //Q_D(DescribeScalableTargetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

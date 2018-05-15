@@ -79,7 +79,7 @@ const DeleteTrustRequest * DeleteTrustResponse::request() const
  */
 void DeleteTrustResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteTrustResponse);
+    //Q_D(DeleteTrustResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

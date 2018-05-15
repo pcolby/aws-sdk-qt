@@ -65,7 +65,7 @@ const GetObjectTaggingRequest * GetObjectTaggingResponse::request() const
  */
 void GetObjectTaggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetObjectTaggingResponse);
+    //Q_D(GetObjectTaggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

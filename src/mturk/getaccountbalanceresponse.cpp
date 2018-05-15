@@ -65,7 +65,7 @@ const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
  */
 void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAccountBalanceResponse);
+    //Q_D(GetAccountBalanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

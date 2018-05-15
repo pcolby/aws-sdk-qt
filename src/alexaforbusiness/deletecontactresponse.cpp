@@ -70,7 +70,7 @@ const DeleteContactRequest * DeleteContactResponse::request() const
  */
 void DeleteContactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteContactResponse);
+    //Q_D(DeleteContactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

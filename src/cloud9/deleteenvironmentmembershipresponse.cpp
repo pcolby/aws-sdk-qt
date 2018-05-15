@@ -119,7 +119,7 @@ const DeleteEnvironmentMembershipRequest * DeleteEnvironmentMembershipResponse::
  */
 void DeleteEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteEnvironmentMembershipResponse);
+    //Q_D(DeleteEnvironmentMembershipResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

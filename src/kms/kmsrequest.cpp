@@ -259,7 +259,7 @@ void KmsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest KmsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const KmsRequest);
+    //Q_D(const KmsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

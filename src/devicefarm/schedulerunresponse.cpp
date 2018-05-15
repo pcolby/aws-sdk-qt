@@ -67,7 +67,7 @@ const ScheduleRunRequest * ScheduleRunResponse::request() const
  */
 void ScheduleRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ScheduleRunResponse);
+    //Q_D(ScheduleRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

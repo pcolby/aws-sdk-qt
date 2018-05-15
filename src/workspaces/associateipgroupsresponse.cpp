@@ -68,7 +68,7 @@ const AssociateIpGroupsRequest * AssociateIpGroupsResponse::request() const
  */
 void AssociateIpGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateIpGroupsResponse);
+    //Q_D(AssociateIpGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

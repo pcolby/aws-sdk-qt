@@ -69,7 +69,7 @@ const DeleteFleetsRequest * DeleteFleetsResponse::request() const
  */
 void DeleteFleetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFleetsResponse);
+    //Q_D(DeleteFleetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

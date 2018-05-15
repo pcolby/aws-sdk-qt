@@ -69,7 +69,7 @@ const CreateSnapshotRequest * CreateSnapshotResponse::request() const
  */
 void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateSnapshotResponse);
+    //Q_D(CreateSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

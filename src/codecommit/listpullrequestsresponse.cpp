@@ -255,7 +255,7 @@ const ListPullRequestsRequest * ListPullRequestsResponse::request() const
  */
 void ListPullRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPullRequestsResponse);
+    //Q_D(ListPullRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

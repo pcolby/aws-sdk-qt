@@ -129,7 +129,7 @@ const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttribute
  */
 void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyDBClusterSnapshotAttributeResponse);
+    //Q_D(ModifyDBClusterSnapshotAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

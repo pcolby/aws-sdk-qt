@@ -68,7 +68,7 @@ const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() cons
  */
 void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListBootstrapActionsResponse);
+    //Q_D(ListBootstrapActionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

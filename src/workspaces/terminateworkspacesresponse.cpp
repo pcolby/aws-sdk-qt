@@ -68,7 +68,7 @@ const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
  */
 void TerminateWorkspacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateWorkspacesResponse);
+    //Q_D(TerminateWorkspacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

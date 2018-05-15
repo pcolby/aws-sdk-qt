@@ -95,7 +95,7 @@ const ImportCertificateAuthorityCertificateRequest * ImportCertificateAuthorityC
  */
 void ImportCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportCertificateAuthorityCertificateResponse);
+    //Q_D(ImportCertificateAuthorityCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

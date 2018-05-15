@@ -130,7 +130,7 @@ const AddRoleToInstanceProfileRequest * AddRoleToInstanceProfileResponse::reques
  */
 void AddRoleToInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddRoleToInstanceProfileResponse);
+    //Q_D(AddRoleToInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

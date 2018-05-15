@@ -129,7 +129,7 @@ const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::reques
  */
 void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBEngineVersionsResponse);
+    //Q_D(DescribeDBEngineVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -509,7 +509,7 @@ const GetInstanceAccessRequest * GetInstanceAccessResponse::request() const
  */
 void GetInstanceAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInstanceAccessResponse);
+    //Q_D(GetInstanceAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

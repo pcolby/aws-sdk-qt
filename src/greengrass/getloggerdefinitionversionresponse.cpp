@@ -68,7 +68,7 @@ const GetLoggerDefinitionVersionRequest * GetLoggerDefinitionVersionResponse::re
  */
 void GetLoggerDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetLoggerDefinitionVersionResponse);
+    //Q_D(GetLoggerDefinitionVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

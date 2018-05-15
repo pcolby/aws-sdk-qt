@@ -255,7 +255,7 @@ const GetCommitRequest * GetCommitResponse::request() const
  */
 void GetCommitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCommitResponse);
+    //Q_D(GetCommitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

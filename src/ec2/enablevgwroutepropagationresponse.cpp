@@ -69,7 +69,7 @@ const EnableVgwRoutePropagationRequest * EnableVgwRoutePropagationResponse::requ
  */
 void EnableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableVgwRoutePropagationResponse);
+    //Q_D(EnableVgwRoutePropagationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

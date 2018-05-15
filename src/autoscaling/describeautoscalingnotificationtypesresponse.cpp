@@ -68,7 +68,7 @@ const DescribeAutoScalingNotificationTypesRequest * DescribeAutoScalingNotificat
  */
 void DescribeAutoScalingNotificationTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAutoScalingNotificationTypesResponse);
+    //Q_D(DescribeAutoScalingNotificationTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const PutComplianceItemsRequest * PutComplianceItemsResponse::request() const
  */
 void PutComplianceItemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutComplianceItemsResponse);
+    //Q_D(PutComplianceItemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

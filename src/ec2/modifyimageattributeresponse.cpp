@@ -69,7 +69,7 @@ const ModifyImageAttributeRequest * ModifyImageAttributeResponse::request() cons
  */
 void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyImageAttributeResponse);
+    //Q_D(ModifyImageAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

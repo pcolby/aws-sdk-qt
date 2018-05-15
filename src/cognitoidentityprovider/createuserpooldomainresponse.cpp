@@ -75,7 +75,7 @@ const CreateUserPoolDomainRequest * CreateUserPoolDomainResponse::request() cons
  */
 void CreateUserPoolDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateUserPoolDomainResponse);
+    //Q_D(CreateUserPoolDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

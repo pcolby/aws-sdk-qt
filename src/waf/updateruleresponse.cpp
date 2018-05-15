@@ -70,7 +70,7 @@ const UpdateRuleRequest * UpdateRuleResponse::request() const
  */
 void UpdateRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRuleResponse);
+    //Q_D(UpdateRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

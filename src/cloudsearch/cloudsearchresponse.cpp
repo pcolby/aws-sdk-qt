@@ -61,7 +61,7 @@ CloudSearchResponse::CloudSearchResponse(CloudSearchResponsePrivate * const d, Q
  */
 void CloudSearchResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudSearchResponse);
+    //Q_D(CloudSearchResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

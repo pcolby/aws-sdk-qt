@@ -82,7 +82,7 @@ const SubmitTaskStateChangeRequest * SubmitTaskStateChangeResponse::request() co
  */
 void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SubmitTaskStateChangeResponse);
+    //Q_D(SubmitTaskStateChangeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const DescribeReplicationInstanceTaskLogsRequest * DescribeReplicationInstanceTa
  */
 void DescribeReplicationInstanceTaskLogsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReplicationInstanceTaskLogsResponse);
+    //Q_D(DescribeReplicationInstanceTaskLogsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

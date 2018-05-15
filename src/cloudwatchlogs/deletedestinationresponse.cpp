@@ -94,7 +94,7 @@ const DeleteDestinationRequest * DeleteDestinationResponse::request() const
  */
 void DeleteDestinationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDestinationResponse);
+    //Q_D(DeleteDestinationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

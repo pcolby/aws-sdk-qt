@@ -133,7 +133,7 @@ const RefreshTrustedAdvisorCheckRequest * RefreshTrustedAdvisorCheckResponse::re
  */
 void RefreshTrustedAdvisorCheckResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RefreshTrustedAdvisorCheckResponse);
+    //Q_D(RefreshTrustedAdvisorCheckResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

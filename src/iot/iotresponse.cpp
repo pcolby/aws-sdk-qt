@@ -61,7 +61,7 @@ IoTResponse::IoTResponse(IoTResponsePrivate * const d, QObject * const parent)
  */
 void IoTResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IoTResponse);
+    //Q_D(IoTResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

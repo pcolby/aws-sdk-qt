@@ -509,7 +509,7 @@ const DescribeGameSessionQueuesRequest * DescribeGameSessionQueuesResponse::requ
  */
 void DescribeGameSessionQueuesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeGameSessionQueuesResponse);
+    //Q_D(DescribeGameSessionQueuesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

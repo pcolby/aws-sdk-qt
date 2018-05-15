@@ -66,7 +66,7 @@ const CreatePlacementRequest * CreatePlacementResponse::request() const
  */
 void CreatePlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePlacementResponse);
+    //Q_D(CreatePlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

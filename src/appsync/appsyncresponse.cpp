@@ -61,7 +61,7 @@ AppSyncResponse::AppSyncResponse(AppSyncResponsePrivate * const d, QObject * con
  */
 void AppSyncResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AppSyncResponse);
+    //Q_D(AppSyncResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

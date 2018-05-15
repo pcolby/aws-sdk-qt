@@ -89,7 +89,7 @@ const CancelCommandRequest * CancelCommandResponse::request() const
  */
 void CancelCommandResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelCommandResponse);
+    //Q_D(CancelCommandResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

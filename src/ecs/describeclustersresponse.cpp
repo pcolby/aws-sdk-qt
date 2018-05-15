@@ -82,7 +82,7 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeClustersResponse);
+    //Q_D(DescribeClustersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

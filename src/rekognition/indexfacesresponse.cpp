@@ -66,7 +66,7 @@ const IndexFacesRequest * IndexFacesResponse::request() const
  */
 void IndexFacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(IndexFacesResponse);
+    //Q_D(IndexFacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

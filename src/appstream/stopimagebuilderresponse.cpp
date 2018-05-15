@@ -68,7 +68,7 @@ const StopImageBuilderRequest * StopImageBuilderResponse::request() const
  */
 void StopImageBuilderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopImageBuilderResponse);
+    //Q_D(StopImageBuilderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

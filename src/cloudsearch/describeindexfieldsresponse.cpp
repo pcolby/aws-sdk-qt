@@ -76,7 +76,7 @@ const DescribeIndexFieldsRequest * DescribeIndexFieldsResponse::request() const
  */
 void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeIndexFieldsResponse);
+    //Q_D(DescribeIndexFieldsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

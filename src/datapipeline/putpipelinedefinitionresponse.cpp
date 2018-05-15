@@ -83,7 +83,7 @@ const PutPipelineDefinitionRequest * PutPipelineDefinitionResponse::request() co
  */
 void PutPipelineDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutPipelineDefinitionResponse);
+    //Q_D(PutPipelineDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

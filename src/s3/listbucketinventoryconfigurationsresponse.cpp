@@ -65,7 +65,7 @@ const ListBucketInventoryConfigurationsRequest * ListBucketInventoryConfiguratio
  */
 void ListBucketInventoryConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListBucketInventoryConfigurationsResponse);
+    //Q_D(ListBucketInventoryConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

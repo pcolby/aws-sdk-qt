@@ -61,7 +61,7 @@ CloudTrailResponse::CloudTrailResponse(CloudTrailResponsePrivate * const d, QObj
  */
 void CloudTrailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudTrailResponse);
+    //Q_D(CloudTrailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -65,7 +65,7 @@ const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITRespon
  */
 void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListReviewPolicyResultsForHITResponse);
+    //Q_D(ListReviewPolicyResultsForHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -85,7 +85,7 @@ const SetCognitoEventsRequest * SetCognitoEventsResponse::request() const
  */
 void SetCognitoEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetCognitoEventsResponse);
+    //Q_D(SetCognitoEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

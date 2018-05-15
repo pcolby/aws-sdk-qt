@@ -146,7 +146,7 @@ const ListOnPremisesInstancesRequest * ListOnPremisesInstancesResponse::request(
  */
 void ListOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListOnPremisesInstancesResponse);
+    //Q_D(ListOnPremisesInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

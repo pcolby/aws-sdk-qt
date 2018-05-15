@@ -66,7 +66,7 @@ const GetDevicesInPlacementRequest * GetDevicesInPlacementResponse::request() co
  */
 void GetDevicesInPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDevicesInPlacementResponse);
+    //Q_D(GetDevicesInPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

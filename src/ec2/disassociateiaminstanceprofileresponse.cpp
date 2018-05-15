@@ -69,7 +69,7 @@ const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResp
  */
 void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateIamInstanceProfileResponse);
+    //Q_D(DisassociateIamInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() 
  */
 void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutFunctionConcurrencyResponse);
+    //Q_D(PutFunctionConcurrencyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

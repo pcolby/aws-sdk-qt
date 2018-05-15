@@ -255,7 +255,7 @@ const GetCommentsForComparedCommitRequest * GetCommentsForComparedCommitResponse
  */
 void GetCommentsForComparedCommitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCommentsForComparedCommitResponse);
+    //Q_D(GetCommentsForComparedCommitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

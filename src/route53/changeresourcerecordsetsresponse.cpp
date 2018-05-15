@@ -65,7 +65,7 @@ const ChangeResourceRecordSetsRequest * ChangeResourceRecordSetsResponse::reques
  */
 void ChangeResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ChangeResourceRecordSetsResponse);
+    //Q_D(ChangeResourceRecordSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

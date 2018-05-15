@@ -171,7 +171,7 @@ const DescribeServiceErrorsRequest * DescribeServiceErrorsResponse::request() co
  */
 void DescribeServiceErrorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeServiceErrorsResponse);
+    //Q_D(DescribeServiceErrorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

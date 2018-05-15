@@ -70,7 +70,7 @@ const SearchContactsRequest * SearchContactsResponse::request() const
  */
 void SearchContactsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchContactsResponse);
+    //Q_D(SearchContactsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -95,7 +95,7 @@ const ModifyClusterRequest * ModifyClusterResponse::request() const
  */
 void ModifyClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyClusterResponse);
+    //Q_D(ModifyClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

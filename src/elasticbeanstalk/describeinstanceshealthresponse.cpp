@@ -87,7 +87,7 @@ const DescribeInstancesHealthRequest * DescribeInstancesHealthResponse::request(
  */
 void DescribeInstancesHealthResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstancesHealthResponse);
+    //Q_D(DescribeInstancesHealthResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

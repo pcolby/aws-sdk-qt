@@ -72,7 +72,7 @@ const DeleteRuleRequest * DeleteRuleResponse::request() const
  */
 void DeleteRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRuleResponse);
+    //Q_D(DeleteRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

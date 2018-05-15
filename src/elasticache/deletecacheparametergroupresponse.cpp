@@ -79,7 +79,7 @@ const DeleteCacheParameterGroupRequest * DeleteCacheParameterGroupResponse::requ
  */
 void DeleteCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCacheParameterGroupResponse);
+    //Q_D(DeleteCacheParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

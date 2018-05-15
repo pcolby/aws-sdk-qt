@@ -84,7 +84,7 @@ const ScanRequest * ScanResponse::request() const
  */
 void ScanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ScanResponse);
+    //Q_D(ScanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

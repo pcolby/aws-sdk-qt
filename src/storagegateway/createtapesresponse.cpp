@@ -134,7 +134,7 @@ const CreateTapesRequest * CreateTapesResponse::request() const
  */
 void CreateTapesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTapesResponse);
+    //Q_D(CreateTapesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const CreateInvalidationRequest * CreateInvalidationResponse::request() const
  */
 void CreateInvalidationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateInvalidationResponse);
+    //Q_D(CreateInvalidationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() co
  */
 void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAuthorizationTokenResponse);
+    //Q_D(GetAuthorizationTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

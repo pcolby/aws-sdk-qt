@@ -61,7 +61,7 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(SageMakerRuntimeResponsePriva
  */
 void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SageMakerRuntimeResponse);
+    //Q_D(SageMakerRuntimeResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

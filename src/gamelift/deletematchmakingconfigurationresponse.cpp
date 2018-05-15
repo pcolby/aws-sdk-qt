@@ -509,7 +509,7 @@ const DeleteMatchmakingConfigurationRequest * DeleteMatchmakingConfigurationResp
  */
 void DeleteMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteMatchmakingConfigurationResponse);
+    //Q_D(DeleteMatchmakingConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

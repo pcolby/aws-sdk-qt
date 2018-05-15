@@ -61,7 +61,7 @@ ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(ElasticLoadBalanc
  */
 void ElasticLoadBalancingv2Response::parseFailure(QIODevice &response)
 {
-    Q_D(ElasticLoadBalancingv2Response);
+    //Q_D(ElasticLoadBalancingv2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -70,7 +70,7 @@ const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::re
  */
 void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(FlushStageAuthorizersCacheResponse);
+    //Q_D(FlushStageAuthorizersCacheResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

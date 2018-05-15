@@ -79,7 +79,7 @@ const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOffe
  */
 void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseReservedCacheNodesOfferingResponse);
+    //Q_D(PurchaseReservedCacheNodesOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

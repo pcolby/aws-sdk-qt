@@ -171,7 +171,7 @@ const CloneStackRequest * CloneStackResponse::request() const
  */
 void CloneStackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CloneStackResponse);
+    //Q_D(CloneStackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

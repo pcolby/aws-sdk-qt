@@ -133,7 +133,7 @@ const DescribeTrustedAdvisorCheckResultRequest * DescribeTrustedAdvisorCheckResu
  */
 void DescribeTrustedAdvisorCheckResultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTrustedAdvisorCheckResultResponse);
+    //Q_D(DescribeTrustedAdvisorCheckResultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

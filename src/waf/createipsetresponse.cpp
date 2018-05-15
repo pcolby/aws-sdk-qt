@@ -70,7 +70,7 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
  */
 void CreateIPSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateIPSetResponse);
+    //Q_D(CreateIPSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

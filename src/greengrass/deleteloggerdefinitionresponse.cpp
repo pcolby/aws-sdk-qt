@@ -68,7 +68,7 @@ const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() 
  */
 void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLoggerDefinitionResponse);
+    //Q_D(DeleteLoggerDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

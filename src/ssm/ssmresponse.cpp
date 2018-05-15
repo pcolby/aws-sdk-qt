@@ -61,7 +61,7 @@ SsmResponse::SsmResponse(SsmResponsePrivate * const d, QObject * const parent)
  */
 void SsmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SsmResponse);
+    //Q_D(SsmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

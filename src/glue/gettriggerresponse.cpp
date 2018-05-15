@@ -68,7 +68,7 @@ const GetTriggerRequest * GetTriggerResponse::request() const
  */
 void GetTriggerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTriggerResponse);
+    //Q_D(GetTriggerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

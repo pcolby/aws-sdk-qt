@@ -207,7 +207,7 @@ const CreateAccountRequest * CreateAccountResponse::request() const
  */
 void CreateAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAccountResponse);
+    //Q_D(CreateAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const UpdateFieldLevelEncryptionConfigRequest * UpdateFieldLevelEncryptionConfig
  */
 void UpdateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFieldLevelEncryptionConfigResponse);
+    //Q_D(UpdateFieldLevelEncryptionConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

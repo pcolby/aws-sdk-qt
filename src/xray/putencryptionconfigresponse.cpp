@@ -66,7 +66,7 @@ const PutEncryptionConfigRequest * PutEncryptionConfigResponse::request() const
  */
 void PutEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutEncryptionConfigResponse);
+    //Q_D(PutEncryptionConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

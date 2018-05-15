@@ -69,7 +69,7 @@ const RegisterImageRequest * RegisterImageResponse::request() const
  */
 void RegisterImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterImageResponse);
+    //Q_D(RegisterImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

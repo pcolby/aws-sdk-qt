@@ -69,7 +69,7 @@ const CreateEgressOnlyInternetGatewayRequest * CreateEgressOnlyInternetGatewayRe
  */
 void CreateEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateEgressOnlyInternetGatewayResponse);
+    //Q_D(CreateEgressOnlyInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

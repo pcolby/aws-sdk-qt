@@ -76,7 +76,7 @@ const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendin
  */
 void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateConfigurationSetSendingEnabledResponse);
+    //Q_D(UpdateConfigurationSetSendingEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

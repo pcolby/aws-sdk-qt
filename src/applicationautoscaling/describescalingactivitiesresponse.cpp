@@ -138,7 +138,7 @@ const DescribeScalingActivitiesRequest * DescribeScalingActivitiesResponse::requ
  */
 void DescribeScalingActivitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeScalingActivitiesResponse);
+    //Q_D(DescribeScalingActivitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

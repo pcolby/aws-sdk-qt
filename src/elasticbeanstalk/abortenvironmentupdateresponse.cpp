@@ -87,7 +87,7 @@ const AbortEnvironmentUpdateRequest * AbortEnvironmentUpdateResponse::request() 
  */
 void AbortEnvironmentUpdateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AbortEnvironmentUpdateResponse);
+    //Q_D(AbortEnvironmentUpdateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -240,7 +240,7 @@ void CodeBuildRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CodeBuildRequest);
+    //Q_D(const CodeBuildRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -141,7 +141,7 @@ const DescribeSecretRequest * DescribeSecretResponse::request() const
  */
 void DescribeSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSecretResponse);
+    //Q_D(DescribeSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

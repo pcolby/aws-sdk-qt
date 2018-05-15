@@ -81,7 +81,7 @@ const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() cons
  */
 void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterWorkflowTypeResponse);
+    //Q_D(RegisterWorkflowTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

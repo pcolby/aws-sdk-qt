@@ -66,7 +66,7 @@ const GetResolverRequest * GetResolverResponse::request() const
  */
 void GetResolverResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetResolverResponse);
+    //Q_D(GetResolverResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

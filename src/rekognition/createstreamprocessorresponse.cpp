@@ -66,7 +66,7 @@ const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() co
  */
 void CreateStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateStreamProcessorResponse);
+    //Q_D(CreateStreamProcessorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

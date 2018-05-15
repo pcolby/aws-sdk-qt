@@ -79,7 +79,7 @@ const DescribeAlarmsRequest * DescribeAlarmsResponse::request() const
  */
 void DescribeAlarmsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAlarmsResponse);
+    //Q_D(DescribeAlarmsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

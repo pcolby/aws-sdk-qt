@@ -69,7 +69,7 @@ const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() 
  */
 void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetInstanceAttributeResponse);
+    //Q_D(ResetInstanceAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

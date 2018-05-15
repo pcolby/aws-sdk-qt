@@ -130,7 +130,7 @@ const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
  */
 void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeactivateMFADeviceResponse);
+    //Q_D(DeactivateMFADeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

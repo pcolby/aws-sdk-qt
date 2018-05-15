@@ -69,7 +69,7 @@ const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
  */
 void DeleteNamespaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNamespaceResponse);
+    //Q_D(DeleteNamespaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

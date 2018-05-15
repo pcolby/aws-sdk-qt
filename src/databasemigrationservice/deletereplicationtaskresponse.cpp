@@ -76,7 +76,7 @@ const DeleteReplicationTaskRequest * DeleteReplicationTaskResponse::request() co
  */
 void DeleteReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReplicationTaskResponse);
+    //Q_D(DeleteReplicationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

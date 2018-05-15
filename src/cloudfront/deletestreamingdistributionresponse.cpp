@@ -70,7 +70,7 @@ const DeleteStreamingDistributionRequest * DeleteStreamingDistributionResponse::
  */
 void DeleteStreamingDistributionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteStreamingDistributionResponse);
+    //Q_D(DeleteStreamingDistributionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

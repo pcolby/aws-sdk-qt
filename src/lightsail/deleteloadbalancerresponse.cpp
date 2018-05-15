@@ -81,7 +81,7 @@ const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
  */
 void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLoadBalancerResponse);
+    //Q_D(DeleteLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

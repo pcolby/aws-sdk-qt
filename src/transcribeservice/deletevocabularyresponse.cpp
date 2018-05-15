@@ -66,7 +66,7 @@ const DeleteVocabularyRequest * DeleteVocabularyResponse::request() const
  */
 void DeleteVocabularyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVocabularyResponse);
+    //Q_D(DeleteVocabularyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

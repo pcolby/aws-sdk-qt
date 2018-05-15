@@ -79,7 +79,7 @@ const DisableRadiusRequest * DisableRadiusResponse::request() const
  */
 void DisableRadiusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableRadiusResponse);
+    //Q_D(DisableRadiusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

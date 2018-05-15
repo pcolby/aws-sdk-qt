@@ -76,7 +76,7 @@ const DetachThingPrincipalRequest * DetachThingPrincipalResponse::request() cons
  */
 void DetachThingPrincipalResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachThingPrincipalResponse);
+    //Q_D(DetachThingPrincipalResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

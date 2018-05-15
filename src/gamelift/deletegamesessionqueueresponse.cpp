@@ -509,7 +509,7 @@ const DeleteGameSessionQueueRequest * DeleteGameSessionQueueResponse::request() 
  */
 void DeleteGameSessionQueueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteGameSessionQueueResponse);
+    //Q_D(DeleteGameSessionQueueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

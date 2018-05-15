@@ -86,7 +86,7 @@ const DeletePipelineRequest * DeletePipelineResponse::request() const
  */
 void DeletePipelineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePipelineResponse);
+    //Q_D(DeletePipelineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

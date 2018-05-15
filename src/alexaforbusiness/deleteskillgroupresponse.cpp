@@ -70,7 +70,7 @@ const DeleteSkillGroupRequest * DeleteSkillGroupResponse::request() const
  */
 void DeleteSkillGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSkillGroupResponse);
+    //Q_D(DeleteSkillGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

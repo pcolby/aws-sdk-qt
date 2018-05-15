@@ -75,7 +75,7 @@ const ListUsersInGroupRequest * ListUsersInGroupResponse::request() const
  */
 void ListUsersInGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListUsersInGroupResponse);
+    //Q_D(ListUsersInGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

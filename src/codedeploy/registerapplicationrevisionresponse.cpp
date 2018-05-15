@@ -146,7 +146,7 @@ const RegisterApplicationRevisionRequest * RegisterApplicationRevisionResponse::
  */
 void RegisterApplicationRevisionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterApplicationRevisionResponse);
+    //Q_D(RegisterApplicationRevisionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

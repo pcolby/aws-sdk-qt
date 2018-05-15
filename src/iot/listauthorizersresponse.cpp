@@ -76,7 +76,7 @@ const ListAuthorizersRequest * ListAuthorizersResponse::request() const
  */
 void ListAuthorizersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAuthorizersResponse);
+    //Q_D(ListAuthorizersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

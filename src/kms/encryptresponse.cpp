@@ -164,7 +164,7 @@ const EncryptRequest * EncryptResponse::request() const
  */
 void EncryptResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EncryptResponse);
+    //Q_D(EncryptResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

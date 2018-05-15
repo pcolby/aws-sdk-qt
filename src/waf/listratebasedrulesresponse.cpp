@@ -70,7 +70,7 @@ const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
  */
 void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListRateBasedRulesResponse);
+    //Q_D(ListRateBasedRulesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

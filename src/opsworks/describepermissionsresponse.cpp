@@ -171,7 +171,7 @@ const DescribePermissionsRequest * DescribePermissionsResponse::request() const
  */
 void DescribePermissionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePermissionsResponse);
+    //Q_D(DescribePermissionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFrom
  */
 void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveSourceIdentifierFromSubscriptionResponse);
+    //Q_D(RemoveSourceIdentifierFromSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

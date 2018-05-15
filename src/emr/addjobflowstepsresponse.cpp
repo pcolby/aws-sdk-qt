@@ -68,7 +68,7 @@ const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
  */
 void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddJobFlowStepsResponse);
+    //Q_D(AddJobFlowStepsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

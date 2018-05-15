@@ -69,7 +69,7 @@ const DescribeReservedInstancesModificationsRequest * DescribeReservedInstancesM
  */
 void DescribeReservedInstancesModificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReservedInstancesModificationsResponse);
+    //Q_D(DescribeReservedInstancesModificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const StartExportTaskRequest * StartExportTaskResponse::request() const
  */
 void StartExportTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartExportTaskResponse);
+    //Q_D(StartExportTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

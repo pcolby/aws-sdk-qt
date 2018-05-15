@@ -73,7 +73,7 @@ const DeleteInterconnectRequest * DeleteInterconnectResponse::request() const
  */
 void DeleteInterconnectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteInterconnectResponse);
+    //Q_D(DeleteInterconnectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

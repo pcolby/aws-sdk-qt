@@ -95,7 +95,7 @@ const DeleteClusterSnapshotRequest * DeleteClusterSnapshotResponse::request() co
  */
 void DeleteClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteClusterSnapshotResponse);
+    //Q_D(DeleteClusterSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

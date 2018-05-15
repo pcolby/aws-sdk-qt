@@ -298,7 +298,7 @@ void GreengrassRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const GreengrassRequest);
+    //Q_D(const GreengrassRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

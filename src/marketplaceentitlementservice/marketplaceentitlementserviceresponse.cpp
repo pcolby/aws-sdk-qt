@@ -61,7 +61,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(Mar
  */
 void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MarketplaceEntitlementServiceResponse);
+    //Q_D(MarketplaceEntitlementServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

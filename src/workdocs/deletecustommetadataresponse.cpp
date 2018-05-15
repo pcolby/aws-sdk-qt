@@ -94,7 +94,7 @@ const DeleteCustomMetadataRequest * DeleteCustomMetadataResponse::request() cons
  */
 void DeleteCustomMetadataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCustomMetadataResponse);
+    //Q_D(DeleteCustomMetadataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

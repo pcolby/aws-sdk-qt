@@ -87,7 +87,7 @@ const TerminateEnvironmentRequest * TerminateEnvironmentResponse::request() cons
  */
 void TerminateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateEnvironmentResponse);
+    //Q_D(TerminateEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

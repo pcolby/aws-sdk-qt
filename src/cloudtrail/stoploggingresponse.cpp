@@ -88,7 +88,7 @@ const StopLoggingRequest * StopLoggingResponse::request() const
  */
 void StopLoggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopLoggingResponse);
+    //Q_D(StopLoggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

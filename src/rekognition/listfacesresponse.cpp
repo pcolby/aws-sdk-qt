@@ -66,7 +66,7 @@ const ListFacesRequest * ListFacesResponse::request() const
  */
 void ListFacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListFacesResponse);
+    //Q_D(ListFacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

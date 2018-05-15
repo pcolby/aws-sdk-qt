@@ -72,7 +72,7 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
  */
 void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSqlInjectionMatchSetResponse);
+    //Q_D(DeleteSqlInjectionMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

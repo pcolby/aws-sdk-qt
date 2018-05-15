@@ -235,7 +235,7 @@ void ComprehendRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ComprehendRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ComprehendRequest);
+    //Q_D(const ComprehendRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

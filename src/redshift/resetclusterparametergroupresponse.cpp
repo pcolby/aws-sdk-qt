@@ -95,7 +95,7 @@ const ResetClusterParameterGroupRequest * ResetClusterParameterGroupResponse::re
  */
 void ResetClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetClusterParameterGroupResponse);
+    //Q_D(ResetClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

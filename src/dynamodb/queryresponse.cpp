@@ -84,7 +84,7 @@ const QueryRequest * QueryResponse::request() const
  */
 void QueryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(QueryResponse);
+    //Q_D(QueryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

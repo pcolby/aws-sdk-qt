@@ -130,7 +130,7 @@ const DetachGroupPolicyRequest * DetachGroupPolicyResponse::request() const
  */
 void DetachGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachGroupPolicyResponse);
+    //Q_D(DetachGroupPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

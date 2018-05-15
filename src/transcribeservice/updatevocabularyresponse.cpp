@@ -66,7 +66,7 @@ const UpdateVocabularyRequest * UpdateVocabularyResponse::request() const
  */
 void UpdateVocabularyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateVocabularyResponse);
+    //Q_D(UpdateVocabularyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

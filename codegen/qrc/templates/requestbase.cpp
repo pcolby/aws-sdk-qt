@@ -209,7 +209,7 @@ void {{ClassName}}::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const {{ClassName}});
+    //Q_D(const {{ClassName}});
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

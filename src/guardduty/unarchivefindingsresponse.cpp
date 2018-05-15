@@ -65,7 +65,7 @@ const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
  */
 void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnarchiveFindingsResponse);
+    //Q_D(UnarchiveFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -84,7 +84,7 @@ const DescribeTimeToLiveRequest * DescribeTimeToLiveResponse::request() const
  */
 void DescribeTimeToLiveResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTimeToLiveResponse);
+    //Q_D(DescribeTimeToLiveResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

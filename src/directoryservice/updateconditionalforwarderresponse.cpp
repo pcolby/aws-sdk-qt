@@ -79,7 +79,7 @@ const UpdateConditionalForwarderRequest * UpdateConditionalForwarderResponse::re
  */
 void UpdateConditionalForwarderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateConditionalForwarderResponse);
+    //Q_D(UpdateConditionalForwarderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

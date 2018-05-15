@@ -84,7 +84,7 @@ const ListBackupsRequest * ListBackupsResponse::request() const
  */
 void ListBackupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListBackupsResponse);
+    //Q_D(ListBackupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

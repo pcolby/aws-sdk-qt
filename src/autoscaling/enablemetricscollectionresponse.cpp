@@ -70,7 +70,7 @@ const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request(
  */
 void EnableMetricsCollectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableMetricsCollectionResponse);
+    //Q_D(EnableMetricsCollectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

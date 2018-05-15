@@ -70,7 +70,7 @@ const ListSkillsRequest * ListSkillsResponse::request() const
  */
 void ListSkillsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListSkillsResponse);
+    //Q_D(ListSkillsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

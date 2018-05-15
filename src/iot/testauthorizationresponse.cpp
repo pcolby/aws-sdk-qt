@@ -76,7 +76,7 @@ const TestAuthorizationRequest * TestAuthorizationResponse::request() const
  */
 void TestAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestAuthorizationResponse);
+    //Q_D(TestAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

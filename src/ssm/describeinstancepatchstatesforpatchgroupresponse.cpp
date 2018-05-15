@@ -89,7 +89,7 @@ const DescribeInstancePatchStatesForPatchGroupRequest * DescribeInstancePatchSta
  */
 void DescribeInstancePatchStatesForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstancePatchStatesForPatchGroupResponse);
+    //Q_D(DescribeInstancePatchStatesForPatchGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

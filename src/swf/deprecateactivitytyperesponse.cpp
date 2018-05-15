@@ -81,7 +81,7 @@ const DeprecateActivityTypeRequest * DeprecateActivityTypeResponse::request() co
  */
 void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeprecateActivityTypeResponse);
+    //Q_D(DeprecateActivityTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

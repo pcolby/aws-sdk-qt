@@ -69,7 +69,7 @@ const RejectVpcEndpointConnectionsRequest * RejectVpcEndpointConnectionsResponse
  */
 void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RejectVpcEndpointConnectionsResponse);
+    //Q_D(RejectVpcEndpointConnectionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

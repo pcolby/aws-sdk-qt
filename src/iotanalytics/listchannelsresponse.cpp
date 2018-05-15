@@ -86,7 +86,7 @@ const ListChannelsRequest * ListChannelsResponse::request() const
  */
 void ListChannelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListChannelsResponse);
+    //Q_D(ListChannelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

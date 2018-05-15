@@ -69,7 +69,7 @@ const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePrevi
  */
 void GetHostReservationPurchasePreviewResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetHostReservationPurchasePreviewResponse);
+    //Q_D(GetHostReservationPurchasePreviewResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -83,7 +83,7 @@ const ReportTaskRunnerHeartbeatRequest * ReportTaskRunnerHeartbeatResponse::requ
  */
 void ReportTaskRunnerHeartbeatResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReportTaskRunnerHeartbeatResponse);
+    //Q_D(ReportTaskRunnerHeartbeatResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

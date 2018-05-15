@@ -89,7 +89,7 @@ const DescribeMaintenanceWindowTasksRequest * DescribeMaintenanceWindowTasksResp
  */
 void DescribeMaintenanceWindowTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeMaintenanceWindowTasksResponse);
+    //Q_D(DescribeMaintenanceWindowTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

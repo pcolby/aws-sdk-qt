@@ -79,7 +79,7 @@ const DescribeJobsRequest * DescribeJobsResponse::request() const
  */
 void DescribeJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeJobsResponse);
+    //Q_D(DescribeJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

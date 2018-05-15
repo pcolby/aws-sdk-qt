@@ -98,7 +98,7 @@ const PutMailboxPermissionsRequest * PutMailboxPermissionsResponse::request() co
  */
 void PutMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutMailboxPermissionsResponse);
+    //Q_D(PutMailboxPermissionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(DirectoryServiceResponsePriva
  */
 void DirectoryServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DirectoryServiceResponse);
+    //Q_D(DirectoryServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -93,7 +93,7 @@ const SetLoadBalancerListenerSSLCertificateRequest * SetLoadBalancerListenerSSLC
  */
 void SetLoadBalancerListenerSSLCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetLoadBalancerListenerSSLCertificateResponse);
+    //Q_D(SetLoadBalancerListenerSSLCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteInputSecurityGroupRequest * DeleteInputSecurityGroupResponse::reques
  */
 void DeleteInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteInputSecurityGroupResponse);
+    //Q_D(DeleteInputSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

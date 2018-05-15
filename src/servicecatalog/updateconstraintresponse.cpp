@@ -71,7 +71,7 @@ const UpdateConstraintRequest * UpdateConstraintResponse::request() const
  */
 void UpdateConstraintResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateConstraintResponse);
+    //Q_D(UpdateConstraintResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

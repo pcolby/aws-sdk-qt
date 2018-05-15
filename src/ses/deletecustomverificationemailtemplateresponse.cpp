@@ -76,7 +76,7 @@ const DeleteCustomVerificationEmailTemplateRequest * DeleteCustomVerificationEma
  */
 void DeleteCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCustomVerificationEmailTemplateResponse);
+    //Q_D(DeleteCustomVerificationEmailTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

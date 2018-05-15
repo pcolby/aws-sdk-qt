@@ -65,7 +65,7 @@ const DeleteServerCatalogRequest * DeleteServerCatalogResponse::request() const
  */
 void DeleteServerCatalogResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteServerCatalogResponse);
+    //Q_D(DeleteServerCatalogResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

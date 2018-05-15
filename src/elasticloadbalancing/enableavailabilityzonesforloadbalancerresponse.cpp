@@ -93,7 +93,7 @@ const EnableAvailabilityZonesForLoadBalancerRequest * EnableAvailabilityZonesFor
  */
 void EnableAvailabilityZonesForLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableAvailabilityZonesForLoadBalancerResponse);
+    //Q_D(EnableAvailabilityZonesForLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

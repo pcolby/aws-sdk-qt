@@ -129,7 +129,7 @@ const DescribeOptionGroupsRequest * DescribeOptionGroupsResponse::request() cons
  */
 void DescribeOptionGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeOptionGroupsResponse);
+    //Q_D(DescribeOptionGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const DeleteRoomRequest * DeleteRoomResponse::request() const
  */
 void DeleteRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRoomResponse);
+    //Q_D(DeleteRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

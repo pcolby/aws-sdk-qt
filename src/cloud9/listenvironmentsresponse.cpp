@@ -119,7 +119,7 @@ const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
  */
 void ListEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListEnvironmentsResponse);
+    //Q_D(ListEnvironmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

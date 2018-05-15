@@ -66,7 +66,7 @@ const ResendContactReachabilityEmailRequest * ResendContactReachabilityEmailResp
  */
 void ResendContactReachabilityEmailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResendContactReachabilityEmailResponse);
+    //Q_D(ResendContactReachabilityEmailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

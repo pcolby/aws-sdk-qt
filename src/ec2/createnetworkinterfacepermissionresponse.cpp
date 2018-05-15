@@ -69,7 +69,7 @@ const CreateNetworkInterfacePermissionRequest * CreateNetworkInterfacePermission
  */
 void CreateNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateNetworkInterfacePermissionResponse);
+    //Q_D(CreateNetworkInterfacePermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

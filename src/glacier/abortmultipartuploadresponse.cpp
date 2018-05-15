@@ -103,7 +103,7 @@ const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() cons
  */
 void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AbortMultipartUploadResponse);
+    //Q_D(AbortMultipartUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

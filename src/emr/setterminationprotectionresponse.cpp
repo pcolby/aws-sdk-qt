@@ -68,7 +68,7 @@ const SetTerminationProtectionRequest * SetTerminationProtectionResponse::reques
  */
 void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetTerminationProtectionResponse);
+    //Q_D(SetTerminationProtectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

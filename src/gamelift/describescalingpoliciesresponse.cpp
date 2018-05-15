@@ -509,7 +509,7 @@ const DescribeScalingPoliciesRequest * DescribeScalingPoliciesResponse::request(
  */
 void DescribeScalingPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeScalingPoliciesResponse);
+    //Q_D(DescribeScalingPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

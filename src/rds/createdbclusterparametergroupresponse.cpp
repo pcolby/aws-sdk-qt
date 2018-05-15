@@ -129,7 +129,7 @@ const CreateDBClusterParameterGroupRequest * CreateDBClusterParameterGroupRespon
  */
 void CreateDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDBClusterParameterGroupResponse);
+    //Q_D(CreateDBClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

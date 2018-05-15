@@ -61,7 +61,7 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(Applica
  */
 void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ApplicationDiscoveryServiceResponse);
+    //Q_D(ApplicationDiscoveryServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

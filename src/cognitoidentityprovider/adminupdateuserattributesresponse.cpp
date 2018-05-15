@@ -75,7 +75,7 @@ const AdminUpdateUserAttributesRequest * AdminUpdateUserAttributesResponse::requ
  */
 void AdminUpdateUserAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminUpdateUserAttributesResponse);
+    //Q_D(AdminUpdateUserAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

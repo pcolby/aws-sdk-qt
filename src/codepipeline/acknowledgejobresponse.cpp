@@ -240,7 +240,7 @@ const AcknowledgeJobRequest * AcknowledgeJobResponse::request() const
  */
 void AcknowledgeJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AcknowledgeJobResponse);
+    //Q_D(AcknowledgeJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

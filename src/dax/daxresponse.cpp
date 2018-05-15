@@ -61,7 +61,7 @@ DaxResponse::DaxResponse(DaxResponsePrivate * const d, QObject * const parent)
  */
 void DaxResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DaxResponse);
+    //Q_D(DaxResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

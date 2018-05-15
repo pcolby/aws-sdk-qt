@@ -65,7 +65,7 @@ const UpdateAdmChannelRequest * UpdateAdmChannelResponse::request() const
  */
 void UpdateAdmChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAdmChannelResponse);
+    //Q_D(UpdateAdmChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

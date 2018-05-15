@@ -76,7 +76,7 @@ const SendRawEmailRequest * SendRawEmailResponse::request() const
  */
 void SendRawEmailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SendRawEmailResponse);
+    //Q_D(SendRawEmailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

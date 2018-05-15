@@ -68,7 +68,7 @@ const ListShardsRequest * ListShardsResponse::request() const
  */
 void ListShardsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListShardsResponse);
+    //Q_D(ListShardsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

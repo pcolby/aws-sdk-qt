@@ -69,7 +69,7 @@ const DescribeFleetHistoryRequest * DescribeFleetHistoryResponse::request() cons
  */
 void DescribeFleetHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFleetHistoryResponse);
+    //Q_D(DescribeFleetHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

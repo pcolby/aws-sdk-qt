@@ -65,7 +65,7 @@ const CreateReusableDelegationSetRequest * CreateReusableDelegationSetResponse::
  */
 void CreateReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateReusableDelegationSetResponse);
+    //Q_D(CreateReusableDelegationSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

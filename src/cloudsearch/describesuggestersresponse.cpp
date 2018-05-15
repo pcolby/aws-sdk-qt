@@ -76,7 +76,7 @@ const DescribeSuggestersRequest * DescribeSuggestersResponse::request() const
  */
 void DescribeSuggestersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSuggestersResponse);
+    //Q_D(DescribeSuggestersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

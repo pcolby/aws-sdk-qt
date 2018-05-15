@@ -65,7 +65,7 @@ const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() cons
  */
 void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteOriginEndpointResponse);
+    //Q_D(DeleteOriginEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

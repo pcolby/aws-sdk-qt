@@ -69,7 +69,7 @@ const CreatePlacementGroupRequest * CreatePlacementGroupResponse::request() cons
  */
 void CreatePlacementGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePlacementGroupResponse);
+    //Q_D(CreatePlacementGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const ListNamespacesRequest * ListNamespacesResponse::request() const
  */
 void ListNamespacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListNamespacesResponse);
+    //Q_D(ListNamespacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

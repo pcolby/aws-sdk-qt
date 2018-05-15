@@ -75,7 +75,7 @@ const AdminDisableProviderForUserRequest * AdminDisableProviderForUserResponse::
  */
 void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminDisableProviderForUserResponse);
+    //Q_D(AdminDisableProviderForUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -255,7 +255,7 @@ const DeleteCommentContentRequest * DeleteCommentContentResponse::request() cons
  */
 void DeleteCommentContentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCommentContentResponse);
+    //Q_D(DeleteCommentContentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

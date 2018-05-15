@@ -67,7 +67,7 @@ const DeleteContainerPolicyRequest * DeleteContainerPolicyResponse::request() co
  */
 void DeleteContainerPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteContainerPolicyResponse);
+    //Q_D(DeleteContainerPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

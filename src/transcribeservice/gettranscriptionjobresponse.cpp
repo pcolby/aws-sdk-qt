@@ -66,7 +66,7 @@ const GetTranscriptionJobRequest * GetTranscriptionJobResponse::request() const
  */
 void GetTranscriptionJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTranscriptionJobResponse);
+    //Q_D(GetTranscriptionJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

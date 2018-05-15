@@ -103,7 +103,7 @@ const DescribeIdentityPoolRequest * DescribeIdentityPoolResponse::request() cons
  */
 void DescribeIdentityPoolResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeIdentityPoolResponse);
+    //Q_D(DescribeIdentityPoolResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -241,7 +241,7 @@ void ElasticsearchServiceRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ElasticsearchServiceRequest);
+    //Q_D(const ElasticsearchServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

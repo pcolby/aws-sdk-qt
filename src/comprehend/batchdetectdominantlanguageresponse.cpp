@@ -68,7 +68,7 @@ const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::
  */
 void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchDetectDominantLanguageResponse);
+    //Q_D(BatchDetectDominantLanguageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const ModifyDocumentPermissionRequest * ModifyDocumentPermissionResponse::reques
  */
 void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyDocumentPermissionResponse);
+    //Q_D(ModifyDocumentPermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

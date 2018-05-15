@@ -130,7 +130,7 @@ const GetContextKeysForPrincipalPolicyRequest * GetContextKeysForPrincipalPolicy
  */
 void GetContextKeysForPrincipalPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetContextKeysForPrincipalPolicyResponse);
+    //Q_D(GetContextKeysForPrincipalPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

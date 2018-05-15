@@ -71,7 +71,7 @@ const CreateAddressRequest * CreateAddressResponse::request() const
  */
 void CreateAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAddressResponse);
+    //Q_D(CreateAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

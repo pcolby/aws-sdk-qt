@@ -164,7 +164,7 @@ const ImportKeyMaterialRequest * ImportKeyMaterialResponse::request() const
  */
 void ImportKeyMaterialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportKeyMaterialResponse);
+    //Q_D(ImportKeyMaterialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

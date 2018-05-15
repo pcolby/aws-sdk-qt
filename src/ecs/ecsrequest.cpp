@@ -255,7 +255,7 @@ void EcsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest EcsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EcsRequest);
+    //Q_D(const EcsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -79,7 +79,7 @@ const DeleteAlarmsRequest * DeleteAlarmsResponse::request() const
  */
 void DeleteAlarmsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAlarmsResponse);
+    //Q_D(DeleteAlarmsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

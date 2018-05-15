@@ -293,7 +293,7 @@ void WafRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest WafRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const WafRequest);
+    //Q_D(const WafRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -87,7 +87,7 @@ const ApplyEnvironmentManagedActionRequest * ApplyEnvironmentManagedActionRespon
  */
 void ApplyEnvironmentManagedActionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ApplyEnvironmentManagedActionResponse);
+    //Q_D(ApplyEnvironmentManagedActionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

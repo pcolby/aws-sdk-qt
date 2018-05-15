@@ -79,7 +79,7 @@ const UpdateNumberOfDomainControllersRequest * UpdateNumberOfDomainControllersRe
  */
 void UpdateNumberOfDomainControllersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateNumberOfDomainControllersResponse);
+    //Q_D(UpdateNumberOfDomainControllersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -85,7 +85,7 @@ const CreateStorageLocationRequest * CreateStorageLocationResponse::request() co
  */
 void CreateStorageLocationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateStorageLocationResponse);
+    //Q_D(CreateStorageLocationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

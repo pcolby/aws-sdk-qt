@@ -61,7 +61,7 @@ DirectConnectResponse::DirectConnectResponse(DirectConnectResponsePrivate * cons
  */
 void DirectConnectResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DirectConnectResponse);
+    //Q_D(DirectConnectResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

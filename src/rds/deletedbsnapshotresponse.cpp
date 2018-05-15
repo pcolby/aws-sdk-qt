@@ -129,7 +129,7 @@ const DeleteDBSnapshotRequest * DeleteDBSnapshotResponse::request() const
  */
 void DeleteDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDBSnapshotResponse);
+    //Q_D(DeleteDBSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

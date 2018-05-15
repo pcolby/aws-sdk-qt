@@ -72,7 +72,7 @@ const GetSqlInjectionMatchSetRequest * GetSqlInjectionMatchSetResponse::request(
  */
 void GetSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSqlInjectionMatchSetResponse);
+    //Q_D(GetSqlInjectionMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

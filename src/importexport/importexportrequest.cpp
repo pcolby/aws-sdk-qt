@@ -230,7 +230,7 @@ void ImportExportRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ImportExportRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ImportExportRequest);
+    //Q_D(const ImportExportRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

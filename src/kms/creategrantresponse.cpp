@@ -164,7 +164,7 @@ const CreateGrantRequest * CreateGrantResponse::request() const
  */
 void CreateGrantResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateGrantResponse);
+    //Q_D(CreateGrantResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

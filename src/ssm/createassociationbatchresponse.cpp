@@ -89,7 +89,7 @@ const CreateAssociationBatchRequest * CreateAssociationBatchResponse::request() 
  */
 void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAssociationBatchResponse);
+    //Q_D(CreateAssociationBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

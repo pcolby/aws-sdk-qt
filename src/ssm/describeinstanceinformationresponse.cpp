@@ -89,7 +89,7 @@ const DescribeInstanceInformationRequest * DescribeInstanceInformationResponse::
  */
 void DescribeInstanceInformationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstanceInformationResponse);
+    //Q_D(DescribeInstanceInformationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

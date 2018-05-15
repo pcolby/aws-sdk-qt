@@ -82,7 +82,7 @@ const RegisterTaskDefinitionRequest * RegisterTaskDefinitionResponse::request() 
  */
 void RegisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterTaskDefinitionResponse);
+    //Q_D(RegisterTaskDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

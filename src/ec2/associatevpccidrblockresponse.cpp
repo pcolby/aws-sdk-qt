@@ -69,7 +69,7 @@ const AssociateVpcCidrBlockRequest * AssociateVpcCidrBlockResponse::request() co
  */
 void AssociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateVpcCidrBlockResponse);
+    //Q_D(AssociateVpcCidrBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

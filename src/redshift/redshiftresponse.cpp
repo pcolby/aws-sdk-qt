@@ -61,7 +61,7 @@ RedshiftResponse::RedshiftResponse(RedshiftResponsePrivate * const d, QObject * 
  */
 void RedshiftResponse::parseFailure(QIODevice &response)
 {
-    Q_D(RedshiftResponse);
+    //Q_D(RedshiftResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

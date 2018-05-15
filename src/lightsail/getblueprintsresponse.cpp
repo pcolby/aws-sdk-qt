@@ -81,7 +81,7 @@ const GetBlueprintsRequest * GetBlueprintsResponse::request() const
  */
 void GetBlueprintsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBlueprintsResponse);
+    //Q_D(GetBlueprintsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

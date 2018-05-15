@@ -141,7 +141,7 @@ const GetSecretValueRequest * GetSecretValueResponse::request() const
  */
 void GetSecretValueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSecretValueResponse);
+    //Q_D(GetSecretValueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

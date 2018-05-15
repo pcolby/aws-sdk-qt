@@ -76,7 +76,7 @@ const CreateThingGroupRequest * CreateThingGroupResponse::request() const
  */
 void CreateThingGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateThingGroupResponse);
+    //Q_D(CreateThingGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

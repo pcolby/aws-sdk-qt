@@ -74,7 +74,7 @@ const ExportCertificateRequest * ExportCertificateResponse::request() const
  */
 void ExportCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExportCertificateResponse);
+    //Q_D(ExportCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

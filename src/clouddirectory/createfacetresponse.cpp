@@ -72,7 +72,7 @@ const CreateFacetRequest * CreateFacetResponse::request() const
  */
 void CreateFacetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFacetResponse);
+    //Q_D(CreateFacetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

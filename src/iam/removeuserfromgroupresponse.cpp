@@ -130,7 +130,7 @@ const RemoveUserFromGroupRequest * RemoveUserFromGroupResponse::request() const
  */
 void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveUserFromGroupResponse);
+    //Q_D(RemoveUserFromGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

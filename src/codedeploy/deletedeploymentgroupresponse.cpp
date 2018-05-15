@@ -146,7 +146,7 @@ const DeleteDeploymentGroupRequest * DeleteDeploymentGroupResponse::request() co
  */
 void DeleteDeploymentGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDeploymentGroupResponse);
+    //Q_D(DeleteDeploymentGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

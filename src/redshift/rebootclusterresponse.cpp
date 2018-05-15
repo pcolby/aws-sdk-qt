@@ -95,7 +95,7 @@ const RebootClusterRequest * RebootClusterResponse::request() const
  */
 void RebootClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootClusterResponse);
+    //Q_D(RebootClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

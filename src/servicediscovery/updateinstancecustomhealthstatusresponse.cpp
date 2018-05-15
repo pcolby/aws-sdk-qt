@@ -69,7 +69,7 @@ const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatus
  */
 void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateInstanceCustomHealthStatusResponse);
+    //Q_D(UpdateInstanceCustomHealthStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

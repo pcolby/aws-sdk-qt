@@ -130,7 +130,7 @@ const UpdateOpenIDConnectProviderThumbprintRequest * UpdateOpenIDConnectProvider
  */
 void UpdateOpenIDConnectProviderThumbprintResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateOpenIDConnectProviderThumbprintResponse);
+    //Q_D(UpdateOpenIDConnectProviderThumbprintResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

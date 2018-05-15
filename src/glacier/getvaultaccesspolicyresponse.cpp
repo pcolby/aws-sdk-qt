@@ -103,7 +103,7 @@ const GetVaultAccessPolicyRequest * GetVaultAccessPolicyResponse::request() cons
  */
 void GetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetVaultAccessPolicyResponse);
+    //Q_D(GetVaultAccessPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

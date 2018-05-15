@@ -287,7 +287,7 @@ void StorageGatewayRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const StorageGatewayRequest);
+    //Q_D(const StorageGatewayRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

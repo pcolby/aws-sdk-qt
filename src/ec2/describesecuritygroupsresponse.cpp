@@ -69,7 +69,7 @@ const DescribeSecurityGroupsRequest * DescribeSecurityGroupsResponse::request() 
  */
 void DescribeSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSecurityGroupsResponse);
+    //Q_D(DescribeSecurityGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

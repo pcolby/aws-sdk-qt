@@ -65,7 +65,7 @@ const DeleteMLModelRequest * DeleteMLModelResponse::request() const
  */
 void DeleteMLModelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteMLModelResponse);
+    //Q_D(DeleteMLModelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ OrganizationsResponse::OrganizationsResponse(OrganizationsResponsePrivate * cons
  */
 void OrganizationsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(OrganizationsResponse);
+    //Q_D(OrganizationsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

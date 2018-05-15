@@ -76,7 +76,7 @@ const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
  */
 void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListReceiptFiltersResponse);
+    //Q_D(ListReceiptFiltersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

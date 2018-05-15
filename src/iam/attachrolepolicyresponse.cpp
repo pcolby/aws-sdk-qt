@@ -130,7 +130,7 @@ const AttachRolePolicyRequest * AttachRolePolicyResponse::request() const
  */
 void AttachRolePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachRolePolicyResponse);
+    //Q_D(AttachRolePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

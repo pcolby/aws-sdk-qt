@@ -65,7 +65,7 @@ const AssociateVPCWithHostedZoneRequest * AssociateVPCWithHostedZoneResponse::re
  */
 void AssociateVPCWithHostedZoneResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateVPCWithHostedZoneResponse);
+    //Q_D(AssociateVPCWithHostedZoneResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

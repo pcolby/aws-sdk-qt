@@ -67,7 +67,7 @@ const RenewOfferingRequest * RenewOfferingResponse::request() const
  */
 void RenewOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RenewOfferingResponse);
+    //Q_D(RenewOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

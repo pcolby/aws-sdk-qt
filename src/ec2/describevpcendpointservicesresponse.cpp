@@ -69,7 +69,7 @@ const DescribeVpcEndpointServicesRequest * DescribeVpcEndpointServicesResponse::
  */
 void DescribeVpcEndpointServicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVpcEndpointServicesResponse);
+    //Q_D(DescribeVpcEndpointServicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -134,7 +134,7 @@ const NotifyWhenUploadedRequest * NotifyWhenUploadedResponse::request() const
  */
 void NotifyWhenUploadedResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(NotifyWhenUploadedResponse);
+    //Q_D(NotifyWhenUploadedResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

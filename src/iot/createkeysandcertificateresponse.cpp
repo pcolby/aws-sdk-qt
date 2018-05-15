@@ -76,7 +76,7 @@ const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::reques
  */
 void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateKeysAndCertificateResponse);
+    //Q_D(CreateKeysAndCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -79,7 +79,7 @@ const DescribeComputeEnvironmentsRequest * DescribeComputeEnvironmentsResponse::
  */
 void DescribeComputeEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeComputeEnvironmentsResponse);
+    //Q_D(DescribeComputeEnvironmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

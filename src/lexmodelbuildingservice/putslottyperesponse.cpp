@@ -69,7 +69,7 @@ const PutSlotTypeRequest * PutSlotTypeResponse::request() const
  */
 void PutSlotTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutSlotTypeResponse);
+    //Q_D(PutSlotTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

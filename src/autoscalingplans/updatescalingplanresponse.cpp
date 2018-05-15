@@ -76,7 +76,7 @@ const UpdateScalingPlanRequest * UpdateScalingPlanResponse::request() const
  */
 void UpdateScalingPlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateScalingPlanResponse);
+    //Q_D(UpdateScalingPlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

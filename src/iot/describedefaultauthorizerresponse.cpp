@@ -76,7 +76,7 @@ const DescribeDefaultAuthorizerRequest * DescribeDefaultAuthorizerResponse::requ
  */
 void DescribeDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDefaultAuthorizerResponse);
+    //Q_D(DescribeDefaultAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -134,7 +134,7 @@ const DisableGatewayRequest * DisableGatewayResponse::request() const
  */
 void DisableGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableGatewayResponse);
+    //Q_D(DisableGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

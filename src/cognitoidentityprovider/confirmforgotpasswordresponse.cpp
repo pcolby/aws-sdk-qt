@@ -75,7 +75,7 @@ const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() co
  */
 void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ConfirmForgotPasswordResponse);
+    //Q_D(ConfirmForgotPasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

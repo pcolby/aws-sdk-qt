@@ -75,7 +75,7 @@ const StartUserImportJobRequest * StartUserImportJobResponse::request() const
  */
 void StartUserImportJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartUserImportJobResponse);
+    //Q_D(StartUserImportJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

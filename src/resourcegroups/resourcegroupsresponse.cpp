@@ -61,7 +61,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * c
  */
 void ResourceGroupsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ResourceGroupsResponse);
+    //Q_D(ResourceGroupsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

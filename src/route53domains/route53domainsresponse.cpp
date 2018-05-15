@@ -61,7 +61,7 @@ Route53DomainsResponse::Route53DomainsResponse(Route53DomainsResponsePrivate * c
  */
 void Route53DomainsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(Route53DomainsResponse);
+    //Q_D(Route53DomainsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

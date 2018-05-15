@@ -68,7 +68,7 @@ const IncreaseStreamRetentionPeriodRequest * IncreaseStreamRetentionPeriodRespon
  */
 void IncreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(IncreaseStreamRetentionPeriodResponse);
+    //Q_D(IncreaseStreamRetentionPeriodResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

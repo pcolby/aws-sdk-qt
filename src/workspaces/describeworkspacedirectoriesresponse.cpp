@@ -68,7 +68,7 @@ const DescribeWorkspaceDirectoriesRequest * DescribeWorkspaceDirectoriesResponse
  */
 void DescribeWorkspaceDirectoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeWorkspaceDirectoriesResponse);
+    //Q_D(DescribeWorkspaceDirectoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const CreateDocumentRequest * CreateDocumentResponse::request() const
  */
 void CreateDocumentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDocumentResponse);
+    //Q_D(CreateDocumentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

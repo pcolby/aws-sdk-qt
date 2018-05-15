@@ -66,7 +66,7 @@ const ListDomainsRequest * ListDomainsResponse::request() const
  */
 void ListDomainsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListDomainsResponse);
+    //Q_D(ListDomainsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

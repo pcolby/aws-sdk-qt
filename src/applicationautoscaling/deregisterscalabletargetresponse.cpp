@@ -138,7 +138,7 @@ const DeregisterScalableTargetRequest * DeregisterScalableTargetResponse::reques
  */
 void DeregisterScalableTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterScalableTargetResponse);
+    //Q_D(DeregisterScalableTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

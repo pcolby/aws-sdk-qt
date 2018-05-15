@@ -103,7 +103,7 @@ const AbortVaultLockRequest * AbortVaultLockResponse::request() const
  */
 void AbortVaultLockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AbortVaultLockResponse);
+    //Q_D(AbortVaultLockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

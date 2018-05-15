@@ -61,7 +61,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePr
  */
 void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(LexRuntimeServiceResponse);
+    //Q_D(LexRuntimeServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

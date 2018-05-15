@@ -95,7 +95,7 @@ const CreateTagsRequest * CreateTagsResponse::request() const
  */
 void CreateTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTagsResponse);
+    //Q_D(CreateTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const DeleteIpGroupRequest * DeleteIpGroupResponse::request() const
  */
 void DeleteIpGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteIpGroupResponse);
+    //Q_D(DeleteIpGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

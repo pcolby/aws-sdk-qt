@@ -71,7 +71,7 @@ const DeleteProtectionRequest * DeleteProtectionResponse::request() const
  */
 void DeleteProtectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteProtectionResponse);
+    //Q_D(DeleteProtectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

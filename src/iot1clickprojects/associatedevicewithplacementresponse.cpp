@@ -66,7 +66,7 @@ const AssociateDeviceWithPlacementRequest * AssociateDeviceWithPlacementResponse
  */
 void AssociateDeviceWithPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateDeviceWithPlacementResponse);
+    //Q_D(AssociateDeviceWithPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const PutPolicyRequest * PutPolicyResponse::request() const
  */
 void PutPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutPolicyResponse);
+    //Q_D(PutPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

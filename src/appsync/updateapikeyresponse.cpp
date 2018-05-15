@@ -66,7 +66,7 @@ const UpdateApiKeyRequest * UpdateApiKeyResponse::request() const
  */
 void UpdateApiKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateApiKeyResponse);
+    //Q_D(UpdateApiKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

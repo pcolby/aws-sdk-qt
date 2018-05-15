@@ -130,7 +130,7 @@ const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() cons
  */
 void ListInstanceProfilesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListInstanceProfilesResponse);
+    //Q_D(ListInstanceProfilesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

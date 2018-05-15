@@ -79,7 +79,7 @@ const CreateTrustRequest * CreateTrustResponse::request() const
  */
 void CreateTrustResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTrustResponse);
+    //Q_D(CreateTrustResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

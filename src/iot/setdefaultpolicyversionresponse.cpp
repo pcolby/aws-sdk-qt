@@ -76,7 +76,7 @@ const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request(
  */
 void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetDefaultPolicyVersionResponse);
+    //Q_D(SetDefaultPolicyVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

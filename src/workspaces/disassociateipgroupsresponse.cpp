@@ -68,7 +68,7 @@ const DisassociateIpGroupsRequest * DisassociateIpGroupsResponse::request() cons
  */
 void DisassociateIpGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateIpGroupsResponse);
+    //Q_D(DisassociateIpGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

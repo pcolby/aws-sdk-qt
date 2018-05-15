@@ -69,7 +69,7 @@ const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
  */
 void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteUtterancesResponse);
+    //Q_D(DeleteUtterancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

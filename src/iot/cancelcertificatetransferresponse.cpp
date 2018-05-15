@@ -76,7 +76,7 @@ const CancelCertificateTransferRequest * CancelCertificateTransferResponse::requ
  */
 void CancelCertificateTransferResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelCertificateTransferResponse);
+    //Q_D(CancelCertificateTransferResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const CreateResourceDefinitionVersionRequest * CreateResourceDefinitionVersionRe
  */
 void CreateResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateResourceDefinitionVersionResponse);
+    //Q_D(CreateResourceDefinitionVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

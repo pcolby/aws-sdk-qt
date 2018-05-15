@@ -68,7 +68,7 @@ const BatchDetectEntitiesRequest * BatchDetectEntitiesResponse::request() const
  */
 void BatchDetectEntitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchDetectEntitiesResponse);
+    //Q_D(BatchDetectEntitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

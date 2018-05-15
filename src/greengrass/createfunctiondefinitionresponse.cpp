@@ -68,7 +68,7 @@ const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::reques
  */
 void CreateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFunctionDefinitionResponse);
+    //Q_D(CreateFunctionDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

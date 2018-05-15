@@ -61,7 +61,7 @@ ImportExportResponse::ImportExportResponse(ImportExportResponsePrivate * const d
  */
 void ImportExportResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ImportExportResponse);
+    //Q_D(ImportExportResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

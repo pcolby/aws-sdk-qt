@@ -257,7 +257,7 @@ void AppStreamRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AppStreamRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AppStreamRequest);
+    //Q_D(const AppStreamRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

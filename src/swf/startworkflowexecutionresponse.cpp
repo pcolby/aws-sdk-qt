@@ -81,7 +81,7 @@ const StartWorkflowExecutionRequest * StartWorkflowExecutionResponse::request() 
  */
 void StartWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartWorkflowExecutionResponse);
+    //Q_D(StartWorkflowExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

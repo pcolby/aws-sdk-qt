@@ -68,7 +68,7 @@ const DetectSentimentRequest * DetectSentimentResponse::request() const
  */
 void DetectSentimentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetectSentimentResponse);
+    //Q_D(DetectSentimentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

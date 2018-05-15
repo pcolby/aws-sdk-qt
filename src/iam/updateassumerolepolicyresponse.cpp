@@ -130,7 +130,7 @@ const UpdateAssumeRolePolicyRequest * UpdateAssumeRolePolicyResponse::request() 
  */
 void UpdateAssumeRolePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAssumeRolePolicyResponse);
+    //Q_D(UpdateAssumeRolePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

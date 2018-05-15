@@ -240,7 +240,7 @@ void BatchRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const BatchRequest);
+    //Q_D(const BatchRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

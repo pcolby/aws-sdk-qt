@@ -76,7 +76,7 @@ const SendCustomVerificationEmailRequest * SendCustomVerificationEmailResponse::
  */
 void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SendCustomVerificationEmailResponse);
+    //Q_D(SendCustomVerificationEmailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

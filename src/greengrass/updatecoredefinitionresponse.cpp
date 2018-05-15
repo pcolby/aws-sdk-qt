@@ -68,7 +68,7 @@ const UpdateCoreDefinitionRequest * UpdateCoreDefinitionResponse::request() cons
  */
 void UpdateCoreDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCoreDefinitionResponse);
+    //Q_D(UpdateCoreDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

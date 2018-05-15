@@ -171,7 +171,7 @@ const RegisterVolumeRequest * RegisterVolumeResponse::request() const
  */
 void RegisterVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterVolumeResponse);
+    //Q_D(RegisterVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

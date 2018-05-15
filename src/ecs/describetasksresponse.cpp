@@ -82,7 +82,7 @@ const DescribeTasksRequest * DescribeTasksResponse::request() const
  */
 void DescribeTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTasksResponse);
+    //Q_D(DescribeTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

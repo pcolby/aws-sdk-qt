@@ -134,7 +134,7 @@ const DeleteGatewayRequest * DeleteGatewayResponse::request() const
  */
 void DeleteGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteGatewayResponse);
+    //Q_D(DeleteGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

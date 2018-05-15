@@ -61,7 +61,7 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(ServiceDiscoveryResponsePriva
  */
 void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ServiceDiscoveryResponse);
+    //Q_D(ServiceDiscoveryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

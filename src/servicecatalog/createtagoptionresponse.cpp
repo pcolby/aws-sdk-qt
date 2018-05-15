@@ -71,7 +71,7 @@ const CreateTagOptionRequest * CreateTagOptionResponse::request() const
  */
 void CreateTagOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTagOptionResponse);
+    //Q_D(CreateTagOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

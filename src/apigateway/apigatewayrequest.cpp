@@ -344,7 +344,7 @@ void APIGatewayRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest APIGatewayRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const APIGatewayRequest);
+    //Q_D(const APIGatewayRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

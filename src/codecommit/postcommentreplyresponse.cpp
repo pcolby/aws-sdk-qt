@@ -255,7 +255,7 @@ const PostCommentReplyRequest * PostCommentReplyResponse::request() const
  */
 void PostCommentReplyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PostCommentReplyResponse);
+    //Q_D(PostCommentReplyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

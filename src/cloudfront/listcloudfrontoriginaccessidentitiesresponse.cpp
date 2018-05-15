@@ -70,7 +70,7 @@ const ListCloudFrontOriginAccessIdentitiesRequest * ListCloudFrontOriginAccessId
  */
 void ListCloudFrontOriginAccessIdentitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListCloudFrontOriginAccessIdentitiesResponse);
+    //Q_D(ListCloudFrontOriginAccessIdentitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

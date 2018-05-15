@@ -66,7 +66,7 @@ const GetTraceGraphRequest * GetTraceGraphResponse::request() const
  */
 void GetTraceGraphResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTraceGraphResponse);
+    //Q_D(GetTraceGraphResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

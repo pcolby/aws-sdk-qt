@@ -76,7 +76,7 @@ const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() co
  */
 void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReorderReceiptRuleSetResponse);
+    //Q_D(ReorderReceiptRuleSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

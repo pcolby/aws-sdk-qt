@@ -85,7 +85,7 @@ const DescribeAggregateComplianceByConfigRulesRequest * DescribeAggregateComplia
  */
 void DescribeAggregateComplianceByConfigRulesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAggregateComplianceByConfigRulesResponse);
+    //Q_D(DescribeAggregateComplianceByConfigRulesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

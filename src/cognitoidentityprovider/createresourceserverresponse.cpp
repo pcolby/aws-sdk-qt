@@ -75,7 +75,7 @@ const CreateResourceServerRequest * CreateResourceServerResponse::request() cons
  */
 void CreateResourceServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateResourceServerResponse);
+    //Q_D(CreateResourceServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

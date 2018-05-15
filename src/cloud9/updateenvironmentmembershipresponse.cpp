@@ -119,7 +119,7 @@ const UpdateEnvironmentMembershipRequest * UpdateEnvironmentMembershipResponse::
  */
 void UpdateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateEnvironmentMembershipResponse);
+    //Q_D(UpdateEnvironmentMembershipResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -67,7 +67,7 @@ const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
  */
 void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseOfferingResponse);
+    //Q_D(PurchaseOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

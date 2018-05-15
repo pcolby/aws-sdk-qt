@@ -164,7 +164,7 @@ const DescribeKeyRequest * DescribeKeyResponse::request() const
  */
 void DescribeKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeKeyResponse);
+    //Q_D(DescribeKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

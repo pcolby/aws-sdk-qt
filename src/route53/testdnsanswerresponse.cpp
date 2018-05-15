@@ -65,7 +65,7 @@ const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
  */
 void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestDNSAnswerResponse);
+    //Q_D(TestDNSAnswerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

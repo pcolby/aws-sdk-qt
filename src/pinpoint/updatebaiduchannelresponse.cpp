@@ -65,7 +65,7 @@ const UpdateBaiduChannelRequest * UpdateBaiduChannelResponse::request() const
  */
 void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateBaiduChannelResponse);
+    //Q_D(UpdateBaiduChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

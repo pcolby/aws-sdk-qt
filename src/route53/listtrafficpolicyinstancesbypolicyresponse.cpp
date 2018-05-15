@@ -65,7 +65,7 @@ const ListTrafficPolicyInstancesByPolicyRequest * ListTrafficPolicyInstancesByPo
  */
 void ListTrafficPolicyInstancesByPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTrafficPolicyInstancesByPolicyResponse);
+    //Q_D(ListTrafficPolicyInstancesByPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

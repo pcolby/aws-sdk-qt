@@ -133,7 +133,7 @@ const CreateListenerRequest * CreateListenerResponse::request() const
  */
 void CreateListenerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateListenerResponse);
+    //Q_D(CreateListenerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

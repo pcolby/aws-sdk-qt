@@ -69,7 +69,7 @@ const CreateVpcRequest * CreateVpcResponse::request() const
  */
 void CreateVpcResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateVpcResponse);
+    //Q_D(CreateVpcResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

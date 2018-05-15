@@ -66,7 +66,7 @@ const DetectLabelsRequest * DetectLabelsResponse::request() const
  */
 void DetectLabelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetectLabelsResponse);
+    //Q_D(DetectLabelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

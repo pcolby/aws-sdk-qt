@@ -81,7 +81,7 @@ const GetInstanceAccessDetailsRequest * GetInstanceAccessDetailsResponse::reques
  */
 void GetInstanceAccessDetailsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInstanceAccessDetailsResponse);
+    //Q_D(GetInstanceAccessDetailsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ RdsResponse::RdsResponse(RdsResponsePrivate * const d, QObject * const parent)
  */
 void RdsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(RdsResponse);
+    //Q_D(RdsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

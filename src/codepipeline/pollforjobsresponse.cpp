@@ -240,7 +240,7 @@ const PollForJobsRequest * PollForJobsResponse::request() const
  */
 void PollForJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PollForJobsResponse);
+    //Q_D(PollForJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

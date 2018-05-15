@@ -65,7 +65,7 @@ const TagStreamRequest * TagStreamResponse::request() const
  */
 void TagStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TagStreamResponse);
+    //Q_D(TagStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

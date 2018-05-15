@@ -69,7 +69,7 @@ const DeleteBotVersionRequest * DeleteBotVersionResponse::request() const
  */
 void DeleteBotVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBotVersionResponse);
+    //Q_D(DeleteBotVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

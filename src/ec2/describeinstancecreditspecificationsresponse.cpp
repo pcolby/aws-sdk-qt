@@ -69,7 +69,7 @@ const DescribeInstanceCreditSpecificationsRequest * DescribeInstanceCreditSpecif
  */
 void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstanceCreditSpecificationsResponse);
+    //Q_D(DescribeInstanceCreditSpecificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ StorageGatewayResponse::StorageGatewayResponse(StorageGatewayResponsePrivate * c
  */
 void StorageGatewayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(StorageGatewayResponse);
+    //Q_D(StorageGatewayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

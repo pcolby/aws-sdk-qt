@@ -67,7 +67,7 @@ const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() co
  */
 void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteInstanceProfileResponse);
+    //Q_D(DeleteInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

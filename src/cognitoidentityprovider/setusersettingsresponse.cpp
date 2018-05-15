@@ -75,7 +75,7 @@ const SetUserSettingsRequest * SetUserSettingsResponse::request() const
  */
 void SetUserSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetUserSettingsResponse);
+    //Q_D(SetUserSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

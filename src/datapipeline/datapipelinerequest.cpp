@@ -243,7 +243,7 @@ void DataPipelineRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest DataPipelineRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DataPipelineRequest);
+    //Q_D(const DataPipelineRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

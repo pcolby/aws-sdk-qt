@@ -71,7 +71,7 @@ const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
  */
 void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListLaunchPathsResponse);
+    //Q_D(ListLaunchPathsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

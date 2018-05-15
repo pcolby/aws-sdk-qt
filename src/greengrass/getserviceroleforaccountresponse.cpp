@@ -68,7 +68,7 @@ const GetServiceRoleForAccountRequest * GetServiceRoleForAccountResponse::reques
  */
 void GetServiceRoleForAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetServiceRoleForAccountResponse);
+    //Q_D(GetServiceRoleForAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

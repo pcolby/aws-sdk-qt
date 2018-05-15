@@ -72,7 +72,7 @@ const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request(
  */
 void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateSizeConstraintSetResponse);
+    //Q_D(CreateSizeConstraintSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

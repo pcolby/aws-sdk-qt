@@ -72,7 +72,7 @@ const PutPermissionPolicyRequest * PutPermissionPolicyResponse::request() const
  */
 void PutPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutPermissionPolicyResponse);
+    //Q_D(PutPermissionPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

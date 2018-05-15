@@ -76,7 +76,7 @@ const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
  */
 void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCACertificateResponse);
+    //Q_D(UpdateCACertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

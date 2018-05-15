@@ -95,7 +95,7 @@ const AuthorizeSnapshotAccessRequest * AuthorizeSnapshotAccessResponse::request(
  */
 void AuthorizeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AuthorizeSnapshotAccessResponse);
+    //Q_D(AuthorizeSnapshotAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

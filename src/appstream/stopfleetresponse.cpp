@@ -68,7 +68,7 @@ const StopFleetRequest * StopFleetResponse::request() const
  */
 void StopFleetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopFleetResponse);
+    //Q_D(StopFleetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

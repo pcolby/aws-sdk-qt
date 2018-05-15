@@ -509,7 +509,7 @@ const CreatePlayerSessionRequest * CreatePlayerSessionResponse::request() const
  */
 void CreatePlayerSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePlayerSessionResponse);
+    //Q_D(CreatePlayerSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

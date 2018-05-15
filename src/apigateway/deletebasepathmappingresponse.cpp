@@ -70,7 +70,7 @@ const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() co
  */
 void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBasePathMappingResponse);
+    //Q_D(DeleteBasePathMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const GetDiscoverySummaryRequest * GetDiscoverySummaryResponse::request() const
  */
 void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDiscoverySummaryResponse);
+    //Q_D(GetDiscoverySummaryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

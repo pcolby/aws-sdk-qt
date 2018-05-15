@@ -61,7 +61,7 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildin
  */
 void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(LexModelBuildingServiceResponse);
+    //Q_D(LexModelBuildingServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

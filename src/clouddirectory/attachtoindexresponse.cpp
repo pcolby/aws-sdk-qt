@@ -72,7 +72,7 @@ const AttachToIndexRequest * AttachToIndexResponse::request() const
  */
 void AttachToIndexResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachToIndexResponse);
+    //Q_D(AttachToIndexResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -98,7 +98,7 @@ const ResetPasswordRequest * ResetPasswordResponse::request() const
  */
 void ResetPasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetPasswordResponse);
+    //Q_D(ResetPasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

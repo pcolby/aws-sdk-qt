@@ -68,7 +68,7 @@ const EnableEnhancedMonitoringRequest * EnableEnhancedMonitoringResponse::reques
  */
 void EnableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableEnhancedMonitoringResponse);
+    //Q_D(EnableEnhancedMonitoringResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

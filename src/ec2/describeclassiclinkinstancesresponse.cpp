@@ -69,7 +69,7 @@ const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse
  */
 void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeClassicLinkInstancesResponse);
+    //Q_D(DescribeClassicLinkInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

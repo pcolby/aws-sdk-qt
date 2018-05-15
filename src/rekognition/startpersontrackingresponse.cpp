@@ -66,7 +66,7 @@ const StartPersonTrackingRequest * StartPersonTrackingResponse::request() const
  */
 void StartPersonTrackingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartPersonTrackingResponse);
+    //Q_D(StartPersonTrackingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

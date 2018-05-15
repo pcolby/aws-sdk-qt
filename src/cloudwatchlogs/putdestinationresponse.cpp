@@ -94,7 +94,7 @@ const PutDestinationRequest * PutDestinationResponse::request() const
  */
 void PutDestinationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutDestinationResponse);
+    //Q_D(PutDestinationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

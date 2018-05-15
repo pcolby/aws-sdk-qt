@@ -95,7 +95,7 @@ const UntagCertificateAuthorityRequest * UntagCertificateAuthorityResponse::requ
  */
 void UntagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UntagCertificateAuthorityResponse);
+    //Q_D(UntagCertificateAuthorityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

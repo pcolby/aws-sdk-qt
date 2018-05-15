@@ -70,7 +70,7 @@ const UpdateIntegrationRequest * UpdateIntegrationResponse::request() const
  */
 void UpdateIntegrationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateIntegrationResponse);
+    //Q_D(UpdateIntegrationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

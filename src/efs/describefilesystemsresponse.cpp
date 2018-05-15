@@ -71,7 +71,7 @@ const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
  */
 void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFileSystemsResponse);
+    //Q_D(DescribeFileSystemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

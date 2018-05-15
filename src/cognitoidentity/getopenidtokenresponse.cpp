@@ -103,7 +103,7 @@ const GetOpenIdTokenRequest * GetOpenIdTokenResponse::request() const
  */
 void GetOpenIdTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetOpenIdTokenResponse);
+    //Q_D(GetOpenIdTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

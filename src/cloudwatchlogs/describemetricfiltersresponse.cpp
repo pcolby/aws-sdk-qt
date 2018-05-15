@@ -94,7 +94,7 @@ const DescribeMetricFiltersRequest * DescribeMetricFiltersResponse::request() co
  */
 void DescribeMetricFiltersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeMetricFiltersResponse);
+    //Q_D(DescribeMetricFiltersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

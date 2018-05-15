@@ -67,7 +67,7 @@ const DeleteRemoteAccessSessionRequest * DeleteRemoteAccessSessionResponse::requ
  */
 void DeleteRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRemoteAccessSessionResponse);
+    //Q_D(DeleteRemoteAccessSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

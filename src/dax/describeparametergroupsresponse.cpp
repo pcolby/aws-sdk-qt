@@ -69,7 +69,7 @@ const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request(
  */
 void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeParameterGroupsResponse);
+    //Q_D(DescribeParameterGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

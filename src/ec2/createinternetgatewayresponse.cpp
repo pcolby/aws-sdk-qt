@@ -69,7 +69,7 @@ const CreateInternetGatewayRequest * CreateInternetGatewayResponse::request() co
  */
 void CreateInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateInternetGatewayResponse);
+    //Q_D(CreateInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -87,7 +87,7 @@ const UpdateApplicationVersionRequest * UpdateApplicationVersionResponse::reques
  */
 void UpdateApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateApplicationVersionResponse);
+    //Q_D(UpdateApplicationVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressRe
  */
 void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AuthorizeDBSecurityGroupIngressResponse);
+    //Q_D(AuthorizeDBSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

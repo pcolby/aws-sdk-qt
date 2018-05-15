@@ -70,7 +70,7 @@ const GetFieldLevelEncryptionRequest * GetFieldLevelEncryptionResponse::request(
  */
 void GetFieldLevelEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFieldLevelEncryptionResponse);
+    //Q_D(GetFieldLevelEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

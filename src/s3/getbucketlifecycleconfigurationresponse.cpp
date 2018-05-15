@@ -65,7 +65,7 @@ const GetBucketLifecycleConfigurationRequest * GetBucketLifecycleConfigurationRe
  */
 void GetBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketLifecycleConfigurationResponse);
+    //Q_D(GetBucketLifecycleConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

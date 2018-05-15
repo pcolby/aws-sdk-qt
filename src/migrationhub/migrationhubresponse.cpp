@@ -61,7 +61,7 @@ MigrationHubResponse::MigrationHubResponse(MigrationHubResponsePrivate * const d
  */
 void MigrationHubResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MigrationHubResponse);
+    //Q_D(MigrationHubResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

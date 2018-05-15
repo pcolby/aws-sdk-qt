@@ -76,7 +76,7 @@ const DeleteIdentityPolicyRequest * DeleteIdentityPolicyResponse::request() cons
  */
 void DeleteIdentityPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteIdentityPolicyResponse);
+    //Q_D(DeleteIdentityPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

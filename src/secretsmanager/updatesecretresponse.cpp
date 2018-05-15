@@ -141,7 +141,7 @@ const UpdateSecretRequest * UpdateSecretResponse::request() const
  */
 void UpdateSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSecretResponse);
+    //Q_D(UpdateSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

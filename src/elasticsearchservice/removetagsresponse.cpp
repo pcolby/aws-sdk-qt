@@ -74,7 +74,7 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
  */
 void RemoveTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveTagsResponse);
+    //Q_D(RemoveTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

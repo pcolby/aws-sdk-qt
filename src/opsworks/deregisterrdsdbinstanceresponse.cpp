@@ -171,7 +171,7 @@ const DeregisterRdsDbInstanceRequest * DeregisterRdsDbInstanceResponse::request(
  */
 void DeregisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterRdsDbInstanceResponse);
+    //Q_D(DeregisterRdsDbInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -85,7 +85,7 @@ const DeleteEvaluationResultsRequest * DeleteEvaluationResultsResponse::request(
  */
 void DeleteEvaluationResultsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteEvaluationResultsResponse);
+    //Q_D(DeleteEvaluationResultsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

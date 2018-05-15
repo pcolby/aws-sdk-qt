@@ -72,7 +72,7 @@ const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
  */
 void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachTypedLinkResponse);
+    //Q_D(AttachTypedLinkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

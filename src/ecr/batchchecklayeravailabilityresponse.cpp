@@ -69,7 +69,7 @@ const BatchCheckLayerAvailabilityRequest * BatchCheckLayerAvailabilityResponse::
  */
 void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchCheckLayerAvailabilityResponse);
+    //Q_D(BatchCheckLayerAvailabilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

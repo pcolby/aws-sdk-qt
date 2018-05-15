@@ -81,7 +81,7 @@ const UnpeerVpcRequest * UnpeerVpcResponse::request() const
  */
 void UnpeerVpcResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnpeerVpcResponse);
+    //Q_D(UnpeerVpcResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

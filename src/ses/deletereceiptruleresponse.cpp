@@ -76,7 +76,7 @@ const DeleteReceiptRuleRequest * DeleteReceiptRuleResponse::request() const
  */
 void DeleteReceiptRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReceiptRuleResponse);
+    //Q_D(DeleteReceiptRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

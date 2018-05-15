@@ -69,7 +69,7 @@ const ModifySubnetAttributeRequest * ModifySubnetAttributeResponse::request() co
  */
 void ModifySubnetAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifySubnetAttributeResponse);
+    //Q_D(ModifySubnetAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const CreateAliasRequest * CreateAliasResponse::request() const
  */
 void CreateAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAliasResponse);
+    //Q_D(CreateAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

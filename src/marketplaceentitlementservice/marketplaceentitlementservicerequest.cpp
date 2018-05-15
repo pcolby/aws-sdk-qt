@@ -225,7 +225,7 @@ void MarketplaceEntitlementServiceRequest::setParameters(const QVariantMap &para
  */
 QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MarketplaceEntitlementServiceRequest);
+    //Q_D(const MarketplaceEntitlementServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

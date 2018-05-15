@@ -141,7 +141,7 @@ const CancelRotateSecretRequest * CancelRotateSecretResponse::request() const
  */
 void CancelRotateSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelRotateSecretResponse);
+    //Q_D(CancelRotateSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

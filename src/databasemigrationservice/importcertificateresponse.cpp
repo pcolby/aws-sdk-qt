@@ -76,7 +76,7 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
  */
 void ImportCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportCertificateResponse);
+    //Q_D(ImportCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

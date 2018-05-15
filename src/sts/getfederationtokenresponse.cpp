@@ -123,7 +123,7 @@ const GetFederationTokenRequest * GetFederationTokenResponse::request() const
  */
 void GetFederationTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFederationTokenResponse);
+    //Q_D(GetFederationTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

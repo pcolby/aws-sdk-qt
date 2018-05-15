@@ -61,7 +61,7 @@ CodeBuildResponse::CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject
  */
 void CodeBuildResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CodeBuildResponse);
+    //Q_D(CodeBuildResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

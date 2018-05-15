@@ -69,7 +69,7 @@ const ModifyVpcEndpointConnectionNotificationRequest * ModifyVpcEndpointConnecti
  */
 void ModifyVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyVpcEndpointConnectionNotificationResponse);
+    //Q_D(ModifyVpcEndpointConnectionNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DescribeNatGatewaysRequest * DescribeNatGatewaysResponse::request() const
  */
 void DescribeNatGatewaysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeNatGatewaysResponse);
+    //Q_D(DescribeNatGatewaysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

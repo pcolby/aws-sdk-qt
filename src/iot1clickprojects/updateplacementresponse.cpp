@@ -66,7 +66,7 @@ const UpdatePlacementRequest * UpdatePlacementResponse::request() const
  */
 void UpdatePlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdatePlacementResponse);
+    //Q_D(UpdatePlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

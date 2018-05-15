@@ -509,7 +509,7 @@ const UpdateFleetCapacityRequest * UpdateFleetCapacityResponse::request() const
  */
 void UpdateFleetCapacityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFleetCapacityResponse);
+    //Q_D(UpdateFleetCapacityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

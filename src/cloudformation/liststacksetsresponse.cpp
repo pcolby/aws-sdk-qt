@@ -87,7 +87,7 @@ const ListStackSetsRequest * ListStackSetsResponse::request() const
  */
 void ListStackSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListStackSetsResponse);
+    //Q_D(ListStackSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

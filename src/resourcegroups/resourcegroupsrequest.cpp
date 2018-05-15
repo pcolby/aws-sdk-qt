@@ -236,7 +236,7 @@ void ResourceGroupsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ResourceGroupsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ResourceGroupsRequest);
+    //Q_D(const ResourceGroupsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

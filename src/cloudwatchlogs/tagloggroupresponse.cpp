@@ -94,7 +94,7 @@ const TagLogGroupRequest * TagLogGroupResponse::request() const
  */
 void TagLogGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TagLogGroupResponse);
+    //Q_D(TagLogGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -125,7 +125,7 @@ const CreateServerRequest * CreateServerResponse::request() const
  */
 void CreateServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateServerResponse);
+    //Q_D(CreateServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

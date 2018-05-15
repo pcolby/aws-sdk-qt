@@ -87,7 +87,7 @@ const ListStackSetOperationResultsRequest * ListStackSetOperationResultsResponse
  */
 void ListStackSetOperationResultsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListStackSetOperationResultsResponse);
+    //Q_D(ListStackSetOperationResultsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -87,7 +87,7 @@ const ListPlatformVersionsRequest * ListPlatformVersionsResponse::request() cons
  */
 void ListPlatformVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPlatformVersionsResponse);
+    //Q_D(ListPlatformVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() 
  */
 void DeleteDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDBParameterGroupResponse);
+    //Q_D(DeleteDBParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

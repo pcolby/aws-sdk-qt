@@ -68,7 +68,7 @@ const DeleteCoreDefinitionRequest * DeleteCoreDefinitionResponse::request() cons
  */
 void DeleteCoreDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCoreDefinitionResponse);
+    //Q_D(DeleteCoreDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

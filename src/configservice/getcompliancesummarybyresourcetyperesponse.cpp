@@ -85,7 +85,7 @@ const GetComplianceSummaryByResourceTypeRequest * GetComplianceSummaryByResource
  */
 void GetComplianceSummaryByResourceTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetComplianceSummaryByResourceTypeResponse);
+    //Q_D(GetComplianceSummaryByResourceTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

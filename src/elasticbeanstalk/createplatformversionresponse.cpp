@@ -87,7 +87,7 @@ const CreatePlatformVersionRequest * CreatePlatformVersionResponse::request() co
  */
 void CreatePlatformVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePlatformVersionResponse);
+    //Q_D(CreatePlatformVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

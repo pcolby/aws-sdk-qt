@@ -509,7 +509,7 @@ const DescribeFleetAttributesRequest * DescribeFleetAttributesResponse::request(
  */
 void DescribeFleetAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFleetAttributesResponse);
+    //Q_D(DescribeFleetAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

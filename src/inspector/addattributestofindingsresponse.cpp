@@ -70,7 +70,7 @@ const AddAttributesToFindingsRequest * AddAttributesToFindingsResponse::request(
  */
 void AddAttributesToFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddAttributesToFindingsResponse);
+    //Q_D(AddAttributesToFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

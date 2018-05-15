@@ -129,7 +129,7 @@ const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigu
  */
 void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateConfigurationItemsFromApplicationResponse);
+    //Q_D(DisassociateConfigurationItemsFromApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

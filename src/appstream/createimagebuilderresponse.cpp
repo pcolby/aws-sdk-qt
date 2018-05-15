@@ -68,7 +68,7 @@ const CreateImageBuilderRequest * CreateImageBuilderResponse::request() const
  */
 void CreateImageBuilderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateImageBuilderResponse);
+    //Q_D(CreateImageBuilderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

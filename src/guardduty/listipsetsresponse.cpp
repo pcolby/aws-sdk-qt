@@ -65,7 +65,7 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
  */
 void ListIPSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListIPSetsResponse);
+    //Q_D(ListIPSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

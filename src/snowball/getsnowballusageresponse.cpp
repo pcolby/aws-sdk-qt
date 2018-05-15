@@ -71,7 +71,7 @@ const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
  */
 void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSnowballUsageResponse);
+    //Q_D(GetSnowballUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

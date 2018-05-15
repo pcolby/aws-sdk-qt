@@ -146,7 +146,7 @@ const ListGitHubAccountTokenNamesRequest * ListGitHubAccountTokenNamesResponse::
  */
 void ListGitHubAccountTokenNamesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListGitHubAccountTokenNamesResponse);
+    //Q_D(ListGitHubAccountTokenNamesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

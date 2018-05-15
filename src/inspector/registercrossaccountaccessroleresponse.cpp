@@ -70,7 +70,7 @@ const RegisterCrossAccountAccessRoleRequest * RegisterCrossAccountAccessRoleResp
  */
 void RegisterCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterCrossAccountAccessRoleResponse);
+    //Q_D(RegisterCrossAccountAccessRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

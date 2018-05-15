@@ -69,7 +69,7 @@ const DescribeInstanceAttributeRequest * DescribeInstanceAttributeResponse::requ
  */
 void DescribeInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstanceAttributeResponse);
+    //Q_D(DescribeInstanceAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

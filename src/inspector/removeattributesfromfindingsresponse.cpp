@@ -70,7 +70,7 @@ const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse
  */
 void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveAttributesFromFindingsResponse);
+    //Q_D(RemoveAttributesFromFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

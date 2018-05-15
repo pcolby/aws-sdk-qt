@@ -129,7 +129,7 @@ const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() 
  */
 void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyDBParameterGroupResponse);
+    //Q_D(ModifyDBParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

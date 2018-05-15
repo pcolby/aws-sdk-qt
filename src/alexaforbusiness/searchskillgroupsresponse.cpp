@@ -70,7 +70,7 @@ const SearchSkillGroupsRequest * SearchSkillGroupsResponse::request() const
  */
 void SearchSkillGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchSkillGroupsResponse);
+    //Q_D(SearchSkillGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

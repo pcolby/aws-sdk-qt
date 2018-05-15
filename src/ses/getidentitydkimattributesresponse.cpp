@@ -76,7 +76,7 @@ const GetIdentityDkimAttributesRequest * GetIdentityDkimAttributesResponse::requ
  */
 void GetIdentityDkimAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetIdentityDkimAttributesResponse);
+    //Q_D(GetIdentityDkimAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

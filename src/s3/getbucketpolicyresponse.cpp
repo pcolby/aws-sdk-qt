@@ -65,7 +65,7 @@ const GetBucketPolicyRequest * GetBucketPolicyResponse::request() const
  */
 void GetBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketPolicyResponse);
+    //Q_D(GetBucketPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

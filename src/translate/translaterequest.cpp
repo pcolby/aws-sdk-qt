@@ -225,7 +225,7 @@ void TranslateRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const TranslateRequest);
+    //Q_D(const TranslateRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

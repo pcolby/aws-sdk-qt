@@ -67,7 +67,7 @@ const UpdateVPCEConfigurationRequest * UpdateVPCEConfigurationResponse::request(
  */
 void UpdateVPCEConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateVPCEConfigurationResponse);
+    //Q_D(UpdateVPCEConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -85,7 +85,7 @@ const GetResourceConfigHistoryRequest * GetResourceConfigHistoryResponse::reques
  */
 void GetResourceConfigHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetResourceConfigHistoryResponse);
+    //Q_D(GetResourceConfigHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

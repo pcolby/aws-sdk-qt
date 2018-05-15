@@ -76,7 +76,7 @@ const DeleteFunctionConcurrencyRequest * DeleteFunctionConcurrencyResponse::requ
  */
 void DeleteFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFunctionConcurrencyResponse);
+    //Q_D(DeleteFunctionConcurrencyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

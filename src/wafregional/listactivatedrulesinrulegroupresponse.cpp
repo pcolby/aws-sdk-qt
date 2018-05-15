@@ -72,7 +72,7 @@ const ListActivatedRulesInRuleGroupRequest * ListActivatedRulesInRuleGroupRespon
  */
 void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListActivatedRulesInRuleGroupResponse);
+    //Q_D(ListActivatedRulesInRuleGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

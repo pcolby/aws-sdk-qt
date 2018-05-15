@@ -70,7 +70,7 @@ const DeleteDocumentationPartRequest * DeleteDocumentationPartResponse::request(
  */
 void DeleteDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDocumentationPartResponse);
+    //Q_D(DeleteDocumentationPartResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

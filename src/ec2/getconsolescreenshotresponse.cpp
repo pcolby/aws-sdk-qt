@@ -69,7 +69,7 @@ const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() cons
  */
 void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetConsoleScreenshotResponse);
+    //Q_D(GetConsoleScreenshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

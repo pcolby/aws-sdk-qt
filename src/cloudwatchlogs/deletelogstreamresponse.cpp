@@ -94,7 +94,7 @@ const DeleteLogStreamRequest * DeleteLogStreamResponse::request() const
  */
 void DeleteLogStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLogStreamResponse);
+    //Q_D(DeleteLogStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

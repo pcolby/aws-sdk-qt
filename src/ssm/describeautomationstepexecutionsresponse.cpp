@@ -89,7 +89,7 @@ const DescribeAutomationStepExecutionsRequest * DescribeAutomationStepExecutions
  */
 void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAutomationStepExecutionsResponse);
+    //Q_D(DescribeAutomationStepExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

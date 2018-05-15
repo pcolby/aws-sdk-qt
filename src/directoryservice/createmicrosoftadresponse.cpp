@@ -79,7 +79,7 @@ const CreateMicrosoftADRequest * CreateMicrosoftADResponse::request() const
  */
 void CreateMicrosoftADResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateMicrosoftADResponse);
+    //Q_D(CreateMicrosoftADResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

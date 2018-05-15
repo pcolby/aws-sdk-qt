@@ -94,7 +94,7 @@ const CreateCommentRequest * CreateCommentResponse::request() const
  */
 void CreateCommentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCommentResponse);
+    //Q_D(CreateCommentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

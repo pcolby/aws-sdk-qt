@@ -71,7 +71,7 @@ const GetSubscriptionStateRequest * GetSubscriptionStateResponse::request() cons
  */
 void GetSubscriptionStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSubscriptionStateResponse);
+    //Q_D(GetSubscriptionStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

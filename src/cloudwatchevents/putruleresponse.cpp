@@ -88,7 +88,7 @@ const PutRuleRequest * PutRuleResponse::request() const
  */
 void PutRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutRuleResponse);
+    //Q_D(PutRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

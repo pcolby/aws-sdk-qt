@@ -253,7 +253,7 @@ void ElasticLoadBalancingRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ElasticLoadBalancingRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ElasticLoadBalancingRequest);
+    //Q_D(const ElasticLoadBalancingRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

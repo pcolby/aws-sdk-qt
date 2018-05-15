@@ -255,7 +255,7 @@ const MergePullRequestByFastForwardRequest * MergePullRequestByFastForwardRespon
  */
 void MergePullRequestByFastForwardResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(MergePullRequestByFastForwardResponse);
+    //Q_D(MergePullRequestByFastForwardResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

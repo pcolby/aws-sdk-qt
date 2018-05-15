@@ -129,7 +129,7 @@ const DescribeSourceRegionsRequest * DescribeSourceRegionsResponse::request() co
  */
 void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSourceRegionsResponse);
+    //Q_D(DescribeSourceRegionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

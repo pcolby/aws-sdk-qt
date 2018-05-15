@@ -79,7 +79,7 @@ const ModifyCacheParameterGroupRequest * ModifyCacheParameterGroupResponse::requ
  */
 void ModifyCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyCacheParameterGroupResponse);
+    //Q_D(ModifyCacheParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

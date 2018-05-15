@@ -81,7 +81,7 @@ const ReleaseStaticIpRequest * ReleaseStaticIpResponse::request() const
  */
 void ReleaseStaticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReleaseStaticIpResponse);
+    //Q_D(ReleaseStaticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

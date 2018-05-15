@@ -89,7 +89,7 @@ const GetParameterHistoryRequest * GetParameterHistoryResponse::request() const
  */
 void GetParameterHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetParameterHistoryResponse);
+    //Q_D(GetParameterHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

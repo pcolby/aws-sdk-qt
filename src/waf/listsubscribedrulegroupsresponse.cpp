@@ -70,7 +70,7 @@ const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::reques
  */
 void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListSubscribedRuleGroupsResponse);
+    //Q_D(ListSubscribedRuleGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

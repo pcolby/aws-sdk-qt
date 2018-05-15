@@ -61,7 +61,7 @@ IoTDataPlaneResponse::IoTDataPlaneResponse(IoTDataPlaneResponsePrivate * const d
  */
 void IoTDataPlaneResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IoTDataPlaneResponse);
+    //Q_D(IoTDataPlaneResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

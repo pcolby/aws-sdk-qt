@@ -72,7 +72,7 @@ const ListPolicyAttachmentsRequest * ListPolicyAttachmentsResponse::request() co
  */
 void ListPolicyAttachmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPolicyAttachmentsResponse);
+    //Q_D(ListPolicyAttachmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const GetIndexingConfigurationRequest * GetIndexingConfigurationResponse::reques
  */
 void GetIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetIndexingConfigurationResponse);
+    //Q_D(GetIndexingConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceR
  */
 void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ElasticsearchServiceResponse);
+    //Q_D(ElasticsearchServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

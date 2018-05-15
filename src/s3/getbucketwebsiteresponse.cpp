@@ -65,7 +65,7 @@ const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
  */
 void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketWebsiteResponse);
+    //Q_D(GetBucketWebsiteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

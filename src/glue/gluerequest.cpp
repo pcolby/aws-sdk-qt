@@ -302,7 +302,7 @@ void GlueRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest GlueRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const GlueRequest);
+    //Q_D(const GlueRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

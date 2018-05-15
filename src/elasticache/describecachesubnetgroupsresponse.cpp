@@ -79,7 +79,7 @@ const DescribeCacheSubnetGroupsRequest * DescribeCacheSubnetGroupsResponse::requ
  */
 void DescribeCacheSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCacheSubnetGroupsResponse);
+    //Q_D(DescribeCacheSubnetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

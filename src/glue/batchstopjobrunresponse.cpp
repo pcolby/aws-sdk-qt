@@ -68,7 +68,7 @@ const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
  */
 void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchStopJobRunResponse);
+    //Q_D(BatchStopJobRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

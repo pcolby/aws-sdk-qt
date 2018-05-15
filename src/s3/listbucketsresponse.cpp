@@ -63,7 +63,7 @@ const ListBucketsRequest * ListBucketsResponse::request() const
  */
 void ListBucketsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListBucketsResponse);
+    //Q_D(ListBucketsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

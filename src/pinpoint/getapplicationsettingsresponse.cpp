@@ -65,7 +65,7 @@ const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() 
  */
 void GetApplicationSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetApplicationSettingsResponse);
+    //Q_D(GetApplicationSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

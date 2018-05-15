@@ -141,7 +141,7 @@ const GetRandomPasswordRequest * GetRandomPasswordResponse::request() const
  */
 void GetRandomPasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetRandomPasswordResponse);
+    //Q_D(GetRandomPasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

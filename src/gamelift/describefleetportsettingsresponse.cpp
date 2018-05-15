@@ -509,7 +509,7 @@ const DescribeFleetPortSettingsRequest * DescribeFleetPortSettingsResponse::requ
  */
 void DescribeFleetPortSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFleetPortSettingsResponse);
+    //Q_D(DescribeFleetPortSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

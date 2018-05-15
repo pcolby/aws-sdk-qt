@@ -75,7 +75,7 @@ const AdminUpdateDeviceStatusRequest * AdminUpdateDeviceStatusResponse::request(
  */
 void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminUpdateDeviceStatusResponse);
+    //Q_D(AdminUpdateDeviceStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -95,7 +95,7 @@ const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
  */
 void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchMeterUsageResponse);
+    //Q_D(BatchMeterUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

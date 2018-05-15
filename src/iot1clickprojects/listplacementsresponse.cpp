@@ -66,7 +66,7 @@ const ListPlacementsRequest * ListPlacementsResponse::request() const
  */
 void ListPlacementsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPlacementsResponse);
+    //Q_D(ListPlacementsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

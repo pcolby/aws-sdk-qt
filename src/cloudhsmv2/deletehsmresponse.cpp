@@ -67,7 +67,7 @@ const DeleteHsmRequest * DeleteHsmResponse::request() const
  */
 void DeleteHsmResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteHsmResponse);
+    //Q_D(DeleteHsmResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

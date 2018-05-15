@@ -153,7 +153,7 @@ const UntagProjectRequest * UntagProjectResponse::request() const
  */
 void UntagProjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UntagProjectResponse);
+    //Q_D(UntagProjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
  */
 void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteTopicRuleResponse);
+    //Q_D(DeleteTopicRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -87,7 +87,7 @@ const DeleteStackInstancesRequest * DeleteStackInstancesResponse::request() cons
  */
 void DeleteStackInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteStackInstancesResponse);
+    //Q_D(DeleteStackInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

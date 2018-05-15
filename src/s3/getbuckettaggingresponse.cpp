@@ -65,7 +65,7 @@ const GetBucketTaggingRequest * GetBucketTaggingResponse::request() const
  */
 void GetBucketTaggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketTaggingResponse);
+    //Q_D(GetBucketTaggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

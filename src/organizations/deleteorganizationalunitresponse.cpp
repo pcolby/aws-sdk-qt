@@ -207,7 +207,7 @@ const DeleteOrganizationalUnitRequest * DeleteOrganizationalUnitResponse::reques
  */
 void DeleteOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteOrganizationalUnitResponse);
+    //Q_D(DeleteOrganizationalUnitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

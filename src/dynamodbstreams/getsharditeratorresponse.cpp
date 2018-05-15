@@ -98,7 +98,7 @@ const GetShardIteratorRequest * GetShardIteratorResponse::request() const
  */
 void GetShardIteratorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetShardIteratorResponse);
+    //Q_D(GetShardIteratorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

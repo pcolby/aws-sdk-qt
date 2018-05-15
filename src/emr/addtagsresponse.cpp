@@ -68,7 +68,7 @@ const AddTagsRequest * AddTagsResponse::request() const
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddTagsResponse);
+    //Q_D(AddTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

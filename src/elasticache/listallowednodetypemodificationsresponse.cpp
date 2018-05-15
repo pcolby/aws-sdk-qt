@@ -79,7 +79,7 @@ const ListAllowedNodeTypeModificationsRequest * ListAllowedNodeTypeModifications
  */
 void ListAllowedNodeTypeModificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAllowedNodeTypeModificationsResponse);
+    //Q_D(ListAllowedNodeTypeModificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

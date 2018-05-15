@@ -68,7 +68,7 @@ const DisassociateFleetRequest * DisassociateFleetResponse::request() const
  */
 void DisassociateFleetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateFleetResponse);
+    //Q_D(DisassociateFleetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

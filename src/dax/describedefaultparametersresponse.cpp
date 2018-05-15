@@ -69,7 +69,7 @@ const DescribeDefaultParametersRequest * DescribeDefaultParametersResponse::requ
  */
 void DescribeDefaultParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDefaultParametersResponse);
+    //Q_D(DescribeDefaultParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

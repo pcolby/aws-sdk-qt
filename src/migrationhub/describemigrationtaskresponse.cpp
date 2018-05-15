@@ -67,7 +67,7 @@ const DescribeMigrationTaskRequest * DescribeMigrationTaskResponse::request() co
  */
 void DescribeMigrationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeMigrationTaskResponse);
+    //Q_D(DescribeMigrationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

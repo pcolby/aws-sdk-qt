@@ -86,7 +86,7 @@ const DescribeDatasetRequest * DescribeDatasetResponse::request() const
  */
 void DescribeDatasetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDatasetResponse);
+    //Q_D(DescribeDatasetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -509,7 +509,7 @@ const UpdateGameSessionRequest * UpdateGameSessionResponse::request() const
  */
 void UpdateGameSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateGameSessionResponse);
+    //Q_D(UpdateGameSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

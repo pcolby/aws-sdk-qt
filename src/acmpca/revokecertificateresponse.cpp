@@ -95,7 +95,7 @@ const RevokeCertificateRequest * RevokeCertificateResponse::request() const
  */
 void RevokeCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeCertificateResponse);
+    //Q_D(RevokeCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

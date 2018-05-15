@@ -70,7 +70,7 @@ const GetAccountRequest * GetAccountResponse::request() const
  */
 void GetAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAccountResponse);
+    //Q_D(GetAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

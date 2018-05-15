@@ -146,7 +146,7 @@ const DeleteGitHubAccountTokenRequest * DeleteGitHubAccountTokenResponse::reques
  */
 void DeleteGitHubAccountTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteGitHubAccountTokenResponse);
+    //Q_D(DeleteGitHubAccountTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

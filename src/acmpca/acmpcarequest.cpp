@@ -240,7 +240,7 @@ void AcmpcaRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AcmpcaRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AcmpcaRequest);
+    //Q_D(const AcmpcaRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

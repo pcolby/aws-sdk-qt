@@ -61,7 +61,7 @@ PricingResponse::PricingResponse(PricingResponsePrivate * const d, QObject * con
  */
 void PricingResponse::parseFailure(QIODevice &response)
 {
-    Q_D(PricingResponse);
+    //Q_D(PricingResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

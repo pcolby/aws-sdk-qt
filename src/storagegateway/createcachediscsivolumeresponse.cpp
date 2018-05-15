@@ -134,7 +134,7 @@ const CreateCachediSCSIVolumeRequest * CreateCachediSCSIVolumeResponse::request(
  */
 void CreateCachediSCSIVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCachediSCSIVolumeResponse);
+    //Q_D(CreateCachediSCSIVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

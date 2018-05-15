@@ -71,7 +71,7 @@ const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::reques
  */
 void ListPortfoliosForProductResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPortfoliosForProductResponse);
+    //Q_D(ListPortfoliosForProductResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

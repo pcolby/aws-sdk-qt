@@ -72,7 +72,7 @@ const ListAttachedIndicesRequest * ListAttachedIndicesResponse::request() const
  */
 void ListAttachedIndicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAttachedIndicesResponse);
+    //Q_D(ListAttachedIndicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

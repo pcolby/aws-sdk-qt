@@ -71,7 +71,7 @@ const AssociateTagOptionWithResourceRequest * AssociateTagOptionWithResourceResp
  */
 void AssociateTagOptionWithResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateTagOptionWithResourceResponse);
+    //Q_D(AssociateTagOptionWithResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

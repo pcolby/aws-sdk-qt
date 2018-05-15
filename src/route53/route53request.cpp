@@ -280,7 +280,7 @@ void Route53Request::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest Route53Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const Route53Request);
+    //Q_D(const Route53Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

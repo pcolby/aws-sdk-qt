@@ -509,7 +509,7 @@ const SearchGameSessionsRequest * SearchGameSessionsResponse::request() const
  */
 void SearchGameSessionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchGameSessionsResponse);
+    //Q_D(SearchGameSessionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

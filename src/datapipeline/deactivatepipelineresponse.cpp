@@ -83,7 +83,7 @@ const DeactivatePipelineRequest * DeactivatePipelineResponse::request() const
  */
 void DeactivatePipelineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeactivatePipelineResponse);
+    //Q_D(DeactivatePipelineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

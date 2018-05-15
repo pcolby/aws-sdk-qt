@@ -69,7 +69,7 @@ const DisassociateRouteTableRequest * DisassociateRouteTableResponse::request() 
  */
 void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateRouteTableResponse);
+    //Q_D(DisassociateRouteTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

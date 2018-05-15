@@ -74,7 +74,7 @@ const ResendValidationEmailRequest * ResendValidationEmailResponse::request() co
  */
 void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResendValidationEmailResponse);
+    //Q_D(ResendValidationEmailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

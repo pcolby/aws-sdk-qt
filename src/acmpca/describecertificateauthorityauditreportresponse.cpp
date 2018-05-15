@@ -95,7 +95,7 @@ const DescribeCertificateAuthorityAuditReportRequest * DescribeCertificateAuthor
  */
 void DescribeCertificateAuthorityAuditReportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCertificateAuthorityAuditReportResponse);
+    //Q_D(DescribeCertificateAuthorityAuditReportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -134,7 +134,7 @@ const DescribeVTLDevicesRequest * DescribeVTLDevicesResponse::request() const
  */
 void DescribeVTLDevicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVTLDevicesResponse);
+    //Q_D(DescribeVTLDevicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

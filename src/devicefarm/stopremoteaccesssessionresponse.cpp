@@ -67,7 +67,7 @@ const StopRemoteAccessSessionRequest * StopRemoteAccessSessionResponse::request(
  */
 void StopRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopRemoteAccessSessionResponse);
+    //Q_D(StopRemoteAccessSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

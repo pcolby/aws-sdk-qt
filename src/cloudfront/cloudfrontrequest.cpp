@@ -270,7 +270,7 @@ void CloudFrontRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudFrontRequest);
+    //Q_D(const CloudFrontRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

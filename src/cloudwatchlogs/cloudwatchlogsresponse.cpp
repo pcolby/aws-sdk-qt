@@ -61,7 +61,7 @@ CloudWatchLogsResponse::CloudWatchLogsResponse(CloudWatchLogsResponsePrivate * c
  */
 void CloudWatchLogsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudWatchLogsResponse);
+    //Q_D(CloudWatchLogsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

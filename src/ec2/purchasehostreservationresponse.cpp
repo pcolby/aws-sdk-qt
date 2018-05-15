@@ -69,7 +69,7 @@ const PurchaseHostReservationRequest * PurchaseHostReservationResponse::request(
  */
 void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseHostReservationResponse);
+    //Q_D(PurchaseHostReservationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

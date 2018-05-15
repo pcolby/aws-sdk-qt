@@ -130,7 +130,7 @@ const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::reques
  */
 void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetOpenIDConnectProviderResponse);
+    //Q_D(GetOpenIDConnectProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

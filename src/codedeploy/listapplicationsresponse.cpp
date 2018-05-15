@@ -146,7 +146,7 @@ const ListApplicationsRequest * ListApplicationsResponse::request() const
  */
 void ListApplicationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListApplicationsResponse);
+    //Q_D(ListApplicationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

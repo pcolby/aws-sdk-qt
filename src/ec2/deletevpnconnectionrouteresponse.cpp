@@ -69,7 +69,7 @@ const DeleteVpnConnectionRouteRequest * DeleteVpnConnectionRouteResponse::reques
  */
 void DeleteVpnConnectionRouteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVpnConnectionRouteResponse);
+    //Q_D(DeleteVpnConnectionRouteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

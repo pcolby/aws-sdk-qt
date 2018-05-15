@@ -94,7 +94,7 @@ const CreateCustomMetadataRequest * CreateCustomMetadataResponse::request() cons
  */
 void CreateCustomMetadataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCustomMetadataResponse);
+    //Q_D(CreateCustomMetadataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

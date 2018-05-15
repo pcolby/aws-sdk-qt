@@ -69,7 +69,7 @@ const DescribeNetworkAclsRequest * DescribeNetworkAclsResponse::request() const
  */
 void DescribeNetworkAclsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeNetworkAclsResponse);
+    //Q_D(DescribeNetworkAclsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

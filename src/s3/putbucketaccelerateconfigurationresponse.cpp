@@ -65,7 +65,7 @@ const PutBucketAccelerateConfigurationRequest * PutBucketAccelerateConfiguration
  */
 void PutBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketAccelerateConfigurationResponse);
+    //Q_D(PutBucketAccelerateConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

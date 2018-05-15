@@ -66,7 +66,7 @@ const ClaimDevicesByClaimCodeRequest * ClaimDevicesByClaimCodeResponse::request(
  */
 void ClaimDevicesByClaimCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ClaimDevicesByClaimCodeResponse);
+    //Q_D(ClaimDevicesByClaimCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

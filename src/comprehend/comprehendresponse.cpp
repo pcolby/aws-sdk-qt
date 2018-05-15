@@ -61,7 +61,7 @@ ComprehendResponse::ComprehendResponse(ComprehendResponsePrivate * const d, QObj
  */
 void ComprehendResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ComprehendResponse);
+    //Q_D(ComprehendResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

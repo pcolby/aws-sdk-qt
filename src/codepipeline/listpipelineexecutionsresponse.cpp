@@ -240,7 +240,7 @@ const ListPipelineExecutionsRequest * ListPipelineExecutionsResponse::request() 
  */
 void ListPipelineExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPipelineExecutionsResponse);
+    //Q_D(ListPipelineExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

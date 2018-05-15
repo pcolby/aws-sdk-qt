@@ -79,7 +79,7 @@ const CreateReplicationGroupRequest * CreateReplicationGroupResponse::request() 
  */
 void CreateReplicationGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateReplicationGroupResponse);
+    //Q_D(CreateReplicationGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

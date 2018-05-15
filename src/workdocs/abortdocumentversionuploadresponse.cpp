@@ -94,7 +94,7 @@ const AbortDocumentVersionUploadRequest * AbortDocumentVersionUploadResponse::re
  */
 void AbortDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AbortDocumentVersionUploadResponse);
+    //Q_D(AbortDocumentVersionUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const CancelStepsRequest * CancelStepsResponse::request() const
  */
 void CancelStepsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelStepsResponse);
+    //Q_D(CancelStepsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

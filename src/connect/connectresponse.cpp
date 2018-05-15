@@ -61,7 +61,7 @@ ConnectResponse::ConnectResponse(ConnectResponsePrivate * const d, QObject * con
  */
 void ConnectResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ConnectResponse);
+    //Q_D(ConnectResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

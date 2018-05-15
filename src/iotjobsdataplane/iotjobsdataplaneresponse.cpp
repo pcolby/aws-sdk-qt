@@ -61,7 +61,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePriva
  */
 void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IoTJobsDataPlaneResponse);
+    //Q_D(IoTJobsDataPlaneResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

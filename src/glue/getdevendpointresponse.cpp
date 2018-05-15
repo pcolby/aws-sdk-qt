@@ -68,7 +68,7 @@ const GetDevEndpointRequest * GetDevEndpointResponse::request() const
  */
 void GetDevEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDevEndpointResponse);
+    //Q_D(GetDevEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

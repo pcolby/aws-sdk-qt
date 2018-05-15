@@ -171,7 +171,7 @@ const DeleteInstanceRequest * DeleteInstanceResponse::request() const
  */
 void DeleteInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteInstanceResponse);
+    //Q_D(DeleteInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

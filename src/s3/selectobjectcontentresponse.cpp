@@ -65,7 +65,7 @@ const SelectObjectContentRequest * SelectObjectContentResponse::request() const
  */
 void SelectObjectContentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SelectObjectContentResponse);
+    //Q_D(SelectObjectContentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

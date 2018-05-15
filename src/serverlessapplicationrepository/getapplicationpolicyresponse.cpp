@@ -86,7 +86,7 @@ const GetApplicationPolicyRequest * GetApplicationPolicyResponse::request() cons
  */
 void GetApplicationPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetApplicationPolicyResponse);
+    //Q_D(GetApplicationPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

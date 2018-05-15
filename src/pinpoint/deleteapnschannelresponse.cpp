@@ -65,7 +65,7 @@ const DeleteApnsChannelRequest * DeleteApnsChannelResponse::request() const
  */
 void DeleteApnsChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApnsChannelResponse);
+    //Q_D(DeleteApnsChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

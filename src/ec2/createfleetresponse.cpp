@@ -69,7 +69,7 @@ const CreateFleetRequest * CreateFleetResponse::request() const
  */
 void CreateFleetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFleetResponse);
+    //Q_D(CreateFleetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

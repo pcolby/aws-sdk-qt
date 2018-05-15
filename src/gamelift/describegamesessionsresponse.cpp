@@ -509,7 +509,7 @@ const DescribeGameSessionsRequest * DescribeGameSessionsResponse::request() cons
  */
 void DescribeGameSessionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeGameSessionsResponse);
+    //Q_D(DescribeGameSessionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

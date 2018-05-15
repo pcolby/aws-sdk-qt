@@ -70,7 +70,7 @@ const DeleteNotificationConfigurationRequest * DeleteNotificationConfigurationRe
  */
 void DeleteNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNotificationConfigurationResponse);
+    //Q_D(DeleteNotificationConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

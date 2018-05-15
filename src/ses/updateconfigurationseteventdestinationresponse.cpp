@@ -76,7 +76,7 @@ const UpdateConfigurationSetEventDestinationRequest * UpdateConfigurationSetEven
  */
 void UpdateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateConfigurationSetEventDestinationResponse);
+    //Q_D(UpdateConfigurationSetEventDestinationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

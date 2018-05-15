@@ -70,7 +70,7 @@ const CreateWebACLRequest * CreateWebACLResponse::request() const
  */
 void CreateWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateWebACLResponse);
+    //Q_D(CreateWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

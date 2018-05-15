@@ -61,7 +61,7 @@ IoT1ClickProjectsResponse::IoT1ClickProjectsResponse(IoT1ClickProjectsResponsePr
  */
 void IoT1ClickProjectsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IoT1ClickProjectsResponse);
+    //Q_D(IoT1ClickProjectsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

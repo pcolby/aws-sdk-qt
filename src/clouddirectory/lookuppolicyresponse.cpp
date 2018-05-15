@@ -72,7 +72,7 @@ const LookupPolicyRequest * LookupPolicyResponse::request() const
  */
 void LookupPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(LookupPolicyResponse);
+    //Q_D(LookupPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

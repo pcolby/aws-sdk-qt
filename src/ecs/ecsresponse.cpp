@@ -61,7 +61,7 @@ EcsResponse::EcsResponse(EcsResponsePrivate * const d, QObject * const parent)
  */
 void EcsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(EcsResponse);
+    //Q_D(EcsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

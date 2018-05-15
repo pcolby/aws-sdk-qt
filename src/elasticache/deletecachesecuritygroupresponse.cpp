@@ -79,7 +79,7 @@ const DeleteCacheSecurityGroupRequest * DeleteCacheSecurityGroupResponse::reques
  */
 void DeleteCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCacheSecurityGroupResponse);
+    //Q_D(DeleteCacheSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

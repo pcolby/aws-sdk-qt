@@ -82,7 +82,7 @@ const UpdateContainerInstancesStateRequest * UpdateContainerInstancesStateRespon
  */
 void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateContainerInstancesStateResponse);
+    //Q_D(UpdateContainerInstancesStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

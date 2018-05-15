@@ -287,7 +287,7 @@ void RedshiftRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const RedshiftRequest);
+    //Q_D(const RedshiftRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

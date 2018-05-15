@@ -65,7 +65,7 @@ const UpdateFindingsFeedbackRequest * UpdateFindingsFeedbackResponse::request() 
  */
 void UpdateFindingsFeedbackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFindingsFeedbackResponse);
+    //Q_D(UpdateFindingsFeedbackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

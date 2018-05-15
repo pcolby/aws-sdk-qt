@@ -73,7 +73,7 @@ const CreatePublicVirtualInterfaceRequest * CreatePublicVirtualInterfaceResponse
  */
 void CreatePublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePublicVirtualInterfaceResponse);
+    //Q_D(CreatePublicVirtualInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

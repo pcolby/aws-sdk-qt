@@ -95,7 +95,7 @@ const RotateEncryptionKeyRequest * RotateEncryptionKeyResponse::request() const
  */
 void RotateEncryptionKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RotateEncryptionKeyResponse);
+    //Q_D(RotateEncryptionKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

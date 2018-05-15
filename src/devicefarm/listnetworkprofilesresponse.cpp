@@ -67,7 +67,7 @@ const ListNetworkProfilesRequest * ListNetworkProfilesResponse::request() const
  */
 void ListNetworkProfilesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListNetworkProfilesResponse);
+    //Q_D(ListNetworkProfilesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

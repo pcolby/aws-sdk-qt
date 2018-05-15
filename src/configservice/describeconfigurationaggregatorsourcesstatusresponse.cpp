@@ -85,7 +85,7 @@ const DescribeConfigurationAggregatorSourcesStatusRequest * DescribeConfiguratio
  */
 void DescribeConfigurationAggregatorSourcesStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeConfigurationAggregatorSourcesStatusResponse);
+    //Q_D(DescribeConfigurationAggregatorSourcesStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const AttachPrincipalPolicyRequest * AttachPrincipalPolicyResponse::request() co
  */
 void AttachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachPrincipalPolicyResponse);
+    //Q_D(AttachPrincipalPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

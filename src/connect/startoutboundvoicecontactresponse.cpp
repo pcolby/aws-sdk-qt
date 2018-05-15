@@ -68,7 +68,7 @@ const StartOutboundVoiceContactRequest * StartOutboundVoiceContactResponse::requ
  */
 void StartOutboundVoiceContactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartOutboundVoiceContactResponse);
+    //Q_D(StartOutboundVoiceContactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

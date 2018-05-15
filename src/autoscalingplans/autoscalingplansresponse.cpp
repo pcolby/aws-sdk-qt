@@ -61,7 +61,7 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(AutoScalingPlansResponsePriva
  */
 void AutoScalingPlansResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AutoScalingPlansResponse);
+    //Q_D(AutoScalingPlansResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

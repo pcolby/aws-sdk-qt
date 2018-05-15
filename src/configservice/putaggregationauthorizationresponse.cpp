@@ -85,7 +85,7 @@ const PutAggregationAuthorizationRequest * PutAggregationAuthorizationResponse::
  */
 void PutAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutAggregationAuthorizationResponse);
+    //Q_D(PutAggregationAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

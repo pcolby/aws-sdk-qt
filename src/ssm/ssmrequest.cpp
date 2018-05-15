@@ -323,7 +323,7 @@ void SsmRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SsmRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SsmRequest);
+    //Q_D(const SsmRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -71,7 +71,7 @@ const DeleteConstraintRequest * DeleteConstraintResponse::request() const
  */
 void DeleteConstraintResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteConstraintResponse);
+    //Q_D(DeleteConstraintResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

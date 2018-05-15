@@ -74,7 +74,7 @@ const GetSendQuotaRequest * GetSendQuotaResponse::request() const
  */
 void GetSendQuotaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSendQuotaResponse);
+    //Q_D(GetSendQuotaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

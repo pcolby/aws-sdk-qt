@@ -76,7 +76,7 @@ const DeleteVerifiedEmailAddressRequest * DeleteVerifiedEmailAddressResponse::re
  */
 void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVerifiedEmailAddressResponse);
+    //Q_D(DeleteVerifiedEmailAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

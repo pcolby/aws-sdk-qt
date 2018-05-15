@@ -69,7 +69,7 @@ const ModifyInstanceAttributeRequest * ModifyInstanceAttributeResponse::request(
  */
 void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyInstanceAttributeResponse);
+    //Q_D(ModifyInstanceAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

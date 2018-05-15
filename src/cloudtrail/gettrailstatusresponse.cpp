@@ -88,7 +88,7 @@ const GetTrailStatusRequest * GetTrailStatusResponse::request() const
  */
 void GetTrailStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTrailStatusResponse);
+    //Q_D(GetTrailStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

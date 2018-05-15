@@ -71,7 +71,7 @@ const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
  */
 void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFileSystemResponse);
+    //Q_D(DeleteFileSystemResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

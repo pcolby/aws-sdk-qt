@@ -65,7 +65,7 @@ const GetSegmentImportJobsRequest * GetSegmentImportJobsResponse::request() cons
  */
 void GetSegmentImportJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSegmentImportJobsResponse);
+    //Q_D(GetSegmentImportJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

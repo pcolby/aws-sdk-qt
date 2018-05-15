@@ -207,7 +207,7 @@ const DescribePolicyRequest * DescribePolicyResponse::request() const
  */
 void DescribePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePolicyResponse);
+    //Q_D(DescribePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

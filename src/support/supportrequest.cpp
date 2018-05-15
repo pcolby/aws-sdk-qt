@@ -238,7 +238,7 @@ void SupportRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SupportRequest);
+    //Q_D(const SupportRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -69,7 +69,7 @@ const DeleteBotChannelAssociationRequest * DeleteBotChannelAssociationResponse::
  */
 void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBotChannelAssociationResponse);
+    //Q_D(DeleteBotChannelAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -130,7 +130,7 @@ const GetUserRequest * GetUserResponse::request() const
  */
 void GetUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetUserResponse);
+    //Q_D(GetUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

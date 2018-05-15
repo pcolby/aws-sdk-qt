@@ -119,7 +119,7 @@ const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
  */
 void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteEnvironmentResponse);
+    //Q_D(DeleteEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

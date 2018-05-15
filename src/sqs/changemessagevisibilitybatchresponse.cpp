@@ -131,7 +131,7 @@ const ChangeMessageVisibilityBatchRequest * ChangeMessageVisibilityBatchResponse
  */
 void ChangeMessageVisibilityBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ChangeMessageVisibilityBatchResponse);
+    //Q_D(ChangeMessageVisibilityBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

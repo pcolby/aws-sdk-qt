@@ -75,7 +75,7 @@ const ResendConfirmationCodeRequest * ResendConfirmationCodeResponse::request() 
  */
 void ResendConfirmationCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResendConfirmationCodeResponse);
+    //Q_D(ResendConfirmationCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ MTurkResponse::MTurkResponse(MTurkResponsePrivate * const d, QObject * const par
  */
 void MTurkResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MTurkResponse);
+    //Q_D(MTurkResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

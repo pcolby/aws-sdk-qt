@@ -77,7 +77,7 @@ const ModifyHapgRequest * ModifyHapgResponse::request() const
  */
 void ModifyHapgResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyHapgResponse);
+    //Q_D(ModifyHapgResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

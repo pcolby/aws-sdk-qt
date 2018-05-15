@@ -76,7 +76,7 @@ const SetIdentityFeedbackForwardingEnabledRequest * SetIdentityFeedbackForwardin
  */
 void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetIdentityFeedbackForwardingEnabledResponse);
+    //Q_D(SetIdentityFeedbackForwardingEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

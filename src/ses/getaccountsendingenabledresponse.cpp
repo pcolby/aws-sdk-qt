@@ -74,7 +74,7 @@ const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::reques
  */
 void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAccountSendingEnabledResponse);
+    //Q_D(GetAccountSendingEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

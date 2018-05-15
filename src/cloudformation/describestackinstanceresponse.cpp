@@ -87,7 +87,7 @@ const DescribeStackInstanceRequest * DescribeStackInstanceResponse::request() co
  */
 void DescribeStackInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeStackInstanceResponse);
+    //Q_D(DescribeStackInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

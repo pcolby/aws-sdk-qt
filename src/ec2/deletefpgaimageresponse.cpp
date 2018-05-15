@@ -69,7 +69,7 @@ const DeleteFpgaImageRequest * DeleteFpgaImageResponse::request() const
  */
 void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFpgaImageResponse);
+    //Q_D(DeleteFpgaImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

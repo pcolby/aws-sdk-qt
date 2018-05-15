@@ -89,7 +89,7 @@ const UpdateMaintenanceWindowRequest * UpdateMaintenanceWindowResponse::request(
  */
 void UpdateMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateMaintenanceWindowResponse);
+    //Q_D(UpdateMaintenanceWindowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

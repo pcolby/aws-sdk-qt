@@ -69,7 +69,7 @@ const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::requ
  */
 void DecreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DecreaseReplicationFactorResponse);
+    //Q_D(DecreaseReplicationFactorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

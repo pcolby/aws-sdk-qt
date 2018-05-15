@@ -70,7 +70,7 @@ const DeleteAddressBookRequest * DeleteAddressBookResponse::request() const
  */
 void DeleteAddressBookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAddressBookResponse);
+    //Q_D(DeleteAddressBookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

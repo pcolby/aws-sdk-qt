@@ -67,7 +67,7 @@ const InstallToRemoteAccessSessionRequest * InstallToRemoteAccessSessionResponse
  */
 void InstallToRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InstallToRemoteAccessSessionResponse);
+    //Q_D(InstallToRemoteAccessSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

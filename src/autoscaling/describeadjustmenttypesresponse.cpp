@@ -68,7 +68,7 @@ const DescribeAdjustmentTypesRequest * DescribeAdjustmentTypesResponse::request(
  */
 void DescribeAdjustmentTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAdjustmentTypesResponse);
+    //Q_D(DescribeAdjustmentTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

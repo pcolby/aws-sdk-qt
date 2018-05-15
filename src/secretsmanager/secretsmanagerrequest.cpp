@@ -239,7 +239,7 @@ void SecretsManagerRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SecretsManagerRequest);
+    //Q_D(const SecretsManagerRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

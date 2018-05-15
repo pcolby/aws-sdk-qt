@@ -240,7 +240,7 @@ void MigrationHubRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MigrationHubRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MigrationHubRequest);
+    //Q_D(const MigrationHubRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -71,7 +71,7 @@ const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
  */
 void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetJobUnlockCodeResponse);
+    //Q_D(GetJobUnlockCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

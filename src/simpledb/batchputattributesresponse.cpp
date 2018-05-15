@@ -78,7 +78,7 @@ const BatchPutAttributesRequest * BatchPutAttributesResponse::request() const
  */
 void BatchPutAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchPutAttributesResponse);
+    //Q_D(BatchPutAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

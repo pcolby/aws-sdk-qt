@@ -287,7 +287,7 @@ void CloudDirectoryRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudDirectoryRequest);
+    //Q_D(const CloudDirectoryRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -108,7 +108,7 @@ const DescribeSubscribersForNotificationRequest * DescribeSubscribersForNotifica
  */
 void DescribeSubscribersForNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSubscribersForNotificationResponse);
+    //Q_D(DescribeSubscribersForNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

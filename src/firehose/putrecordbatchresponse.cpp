@@ -69,7 +69,7 @@ const PutRecordBatchRequest * PutRecordBatchResponse::request() const
  */
 void PutRecordBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutRecordBatchResponse);
+    //Q_D(PutRecordBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

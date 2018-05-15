@@ -240,7 +240,7 @@ const PutApprovalResultRequest * PutApprovalResultResponse::request() const
  */
 void PutApprovalResultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutApprovalResultResponse);
+    //Q_D(PutApprovalResultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

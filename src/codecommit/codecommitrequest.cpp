@@ -260,7 +260,7 @@ void CodeCommitRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CodeCommitRequest);
+    //Q_D(const CodeCommitRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -252,7 +252,7 @@ void MachineLearningRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MachineLearningRequest);
+    //Q_D(const MachineLearningRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

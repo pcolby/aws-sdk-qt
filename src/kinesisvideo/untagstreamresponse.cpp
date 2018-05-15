@@ -65,7 +65,7 @@ const UntagStreamRequest * UntagStreamResponse::request() const
  */
 void UntagStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UntagStreamResponse);
+    //Q_D(UntagStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

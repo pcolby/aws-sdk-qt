@@ -68,7 +68,7 @@ const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() co
  */
 void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAccountLimitsResponse);
+    //Q_D(DescribeAccountLimitsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

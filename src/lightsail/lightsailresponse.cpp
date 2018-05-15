@@ -61,7 +61,7 @@ LightsailResponse::LightsailResponse(LightsailResponsePrivate * const d, QObject
  */
 void LightsailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(LightsailResponse);
+    //Q_D(LightsailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

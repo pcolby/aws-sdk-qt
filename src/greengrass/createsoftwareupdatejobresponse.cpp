@@ -68,7 +68,7 @@ const CreateSoftwareUpdateJobRequest * CreateSoftwareUpdateJobResponse::request(
  */
 void CreateSoftwareUpdateJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateSoftwareUpdateJobResponse);
+    //Q_D(CreateSoftwareUpdateJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

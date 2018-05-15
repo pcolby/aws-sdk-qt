@@ -68,7 +68,7 @@ const BatchDetectSentimentRequest * BatchDetectSentimentResponse::request() cons
  */
 void BatchDetectSentimentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchDetectSentimentResponse);
+    //Q_D(BatchDetectSentimentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const AssociateContactWithAddressBookRequest * AssociateContactWithAddressBookRe
  */
 void AssociateContactWithAddressBookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateContactWithAddressBookResponse);
+    //Q_D(AssociateContactWithAddressBookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
  */
 void DescribeImagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeImagesResponse);
+    //Q_D(DescribeImagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

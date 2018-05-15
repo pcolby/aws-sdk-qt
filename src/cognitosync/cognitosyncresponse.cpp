@@ -61,7 +61,7 @@ CognitoSyncResponse::CognitoSyncResponse(CognitoSyncResponsePrivate * const d, Q
  */
 void CognitoSyncResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CognitoSyncResponse);
+    //Q_D(CognitoSyncResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

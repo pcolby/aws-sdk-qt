@@ -81,7 +81,7 @@ const DetachInstancesFromLoadBalancerRequest * DetachInstancesFromLoadBalancerRe
  */
 void DetachInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachInstancesFromLoadBalancerResponse);
+    //Q_D(DetachInstancesFromLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

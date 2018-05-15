@@ -70,7 +70,7 @@ const GetGatewayResponsesRequest * GetGatewayResponsesResponse::request() const
  */
 void GetGatewayResponsesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetGatewayResponsesResponse);
+    //Q_D(GetGatewayResponsesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

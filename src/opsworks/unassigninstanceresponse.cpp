@@ -171,7 +171,7 @@ const UnassignInstanceRequest * UnassignInstanceResponse::request() const
  */
 void UnassignInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnassignInstanceResponse);
+    //Q_D(UnassignInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

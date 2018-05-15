@@ -509,7 +509,7 @@ const StartFleetActionsRequest * StartFleetActionsResponse::request() const
  */
 void StartFleetActionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartFleetActionsResponse);
+    //Q_D(StartFleetActionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

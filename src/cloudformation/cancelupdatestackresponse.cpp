@@ -87,7 +87,7 @@ const CancelUpdateStackRequest * CancelUpdateStackResponse::request() const
  */
 void CancelUpdateStackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelUpdateStackResponse);
+    //Q_D(CancelUpdateStackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

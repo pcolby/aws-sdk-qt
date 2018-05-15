@@ -72,7 +72,7 @@ const CreateObjectRequest * CreateObjectResponse::request() const
  */
 void CreateObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateObjectResponse);
+    //Q_D(CreateObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
  */
 void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateWorkerBlockResponse);
+    //Q_D(CreateWorkerBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

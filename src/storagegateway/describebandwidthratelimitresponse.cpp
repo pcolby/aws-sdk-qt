@@ -134,7 +134,7 @@ const DescribeBandwidthRateLimitRequest * DescribeBandwidthRateLimitResponse::re
  */
 void DescribeBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeBandwidthRateLimitResponse);
+    //Q_D(DescribeBandwidthRateLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -75,7 +75,7 @@ const AdminResetUserPasswordRequest * AdminResetUserPasswordResponse::request() 
  */
 void AdminResetUserPasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminResetUserPasswordResponse);
+    //Q_D(AdminResetUserPasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

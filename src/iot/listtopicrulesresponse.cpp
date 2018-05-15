@@ -76,7 +76,7 @@ const ListTopicRulesRequest * ListTopicRulesResponse::request() const
  */
 void ListTopicRulesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTopicRulesResponse);
+    //Q_D(ListTopicRulesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

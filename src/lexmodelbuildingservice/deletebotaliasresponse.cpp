@@ -69,7 +69,7 @@ const DeleteBotAliasRequest * DeleteBotAliasResponse::request() const
  */
 void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBotAliasResponse);
+    //Q_D(DeleteBotAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

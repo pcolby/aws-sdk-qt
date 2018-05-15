@@ -86,7 +86,7 @@ const CreateChannelRequest * CreateChannelResponse::request() const
  */
 void CreateChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateChannelResponse);
+    //Q_D(CreateChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

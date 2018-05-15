@@ -70,7 +70,7 @@ const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() cons
  */
 void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnsubscribeFromEventResponse);
+    //Q_D(UnsubscribeFromEventResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

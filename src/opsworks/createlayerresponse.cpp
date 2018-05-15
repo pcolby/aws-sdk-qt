@@ -171,7 +171,7 @@ const CreateLayerRequest * CreateLayerResponse::request() const
  */
 void CreateLayerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateLayerResponse);
+    //Q_D(CreateLayerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

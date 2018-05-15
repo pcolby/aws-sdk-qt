@@ -207,7 +207,7 @@ const AcceptHandshakeRequest * AcceptHandshakeResponse::request() const
  */
 void AcceptHandshakeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AcceptHandshakeResponse);
+    //Q_D(AcceptHandshakeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

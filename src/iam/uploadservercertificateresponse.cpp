@@ -130,7 +130,7 @@ const UploadServerCertificateRequest * UploadServerCertificateResponse::request(
  */
 void UploadServerCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UploadServerCertificateResponse);
+    //Q_D(UploadServerCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

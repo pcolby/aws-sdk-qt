@@ -317,7 +317,7 @@ void RdsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest RdsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const RdsRequest);
+    //Q_D(const RdsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

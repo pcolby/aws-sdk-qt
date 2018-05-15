@@ -68,7 +68,7 @@ const ImportCatalogToGlueRequest * ImportCatalogToGlueResponse::request() const
  */
 void ImportCatalogToGlueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportCatalogToGlueResponse);
+    //Q_D(ImportCatalogToGlueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

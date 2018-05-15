@@ -85,7 +85,7 @@ const DescribePendingAggregationRequestsRequest * DescribePendingAggregationRequ
  */
 void DescribePendingAggregationRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePendingAggregationRequestsResponse);
+    //Q_D(DescribePendingAggregationRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

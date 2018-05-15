@@ -71,7 +71,7 @@ const CreateFileSystemRequest * CreateFileSystemResponse::request() const
  */
 void CreateFileSystemResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFileSystemResponse);
+    //Q_D(CreateFileSystemResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -240,7 +240,7 @@ const ListActionTypesRequest * ListActionTypesResponse::request() const
  */
 void ListActionTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListActionTypesResponse);
+    //Q_D(ListActionTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

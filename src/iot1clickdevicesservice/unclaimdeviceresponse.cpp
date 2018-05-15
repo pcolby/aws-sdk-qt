@@ -66,7 +66,7 @@ const UnclaimDeviceRequest * UnclaimDeviceResponse::request() const
  */
 void UnclaimDeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnclaimDeviceResponse);
+    //Q_D(UnclaimDeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

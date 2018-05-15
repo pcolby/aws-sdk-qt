@@ -65,7 +65,7 @@ const UpdateHITTypeOfHITRequest * UpdateHITTypeOfHITResponse::request() const
  */
 void UpdateHITTypeOfHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateHITTypeOfHITResponse);
+    //Q_D(UpdateHITTypeOfHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

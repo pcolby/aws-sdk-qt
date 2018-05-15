@@ -65,7 +65,7 @@ const DeleteQualificationTypeRequest * DeleteQualificationTypeResponse::request(
  */
 void DeleteQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteQualificationTypeResponse);
+    //Q_D(DeleteQualificationTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -240,7 +240,7 @@ const RegisterWebhookWithThirdPartyRequest * RegisterWebhookWithThirdPartyRespon
  */
 void RegisterWebhookWithThirdPartyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterWebhookWithThirdPartyResponse);
+    //Q_D(RegisterWebhookWithThirdPartyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const AssociateIamInstanceProfileRequest * AssociateIamInstanceProfileResponse::
  */
 void AssociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateIamInstanceProfileResponse);
+    //Q_D(AssociateIamInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

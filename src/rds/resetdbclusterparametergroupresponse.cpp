@@ -129,7 +129,7 @@ const ResetDBClusterParameterGroupRequest * ResetDBClusterParameterGroupResponse
  */
 void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetDBClusterParameterGroupResponse);
+    //Q_D(ResetDBClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

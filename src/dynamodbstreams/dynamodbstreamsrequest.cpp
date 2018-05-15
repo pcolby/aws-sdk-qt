@@ -228,7 +228,7 @@ void DynamoDBStreamsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DynamoDBStreamsRequest);
+    //Q_D(const DynamoDBStreamsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

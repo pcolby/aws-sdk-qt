@@ -68,7 +68,7 @@ const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() co
  */
 void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartStreamEncryptionResponse);
+    //Q_D(StartStreamEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -234,7 +234,7 @@ void KinesisVideoRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest KinesisVideoRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const KinesisVideoRequest);
+    //Q_D(const KinesisVideoRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

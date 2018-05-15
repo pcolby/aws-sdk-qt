@@ -265,7 +265,7 @@ void CloudFormationRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudFormationRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudFormationRequest);
+    //Q_D(const CloudFormationRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

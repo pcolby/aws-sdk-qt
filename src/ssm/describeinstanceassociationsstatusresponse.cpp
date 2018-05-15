@@ -89,7 +89,7 @@ const DescribeInstanceAssociationsStatusRequest * DescribeInstanceAssociationsSt
  */
 void DescribeInstanceAssociationsStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstanceAssociationsStatusResponse);
+    //Q_D(DescribeInstanceAssociationsStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

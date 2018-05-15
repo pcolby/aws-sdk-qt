@@ -68,7 +68,7 @@ const BatchDeleteTableVersionRequest * BatchDeleteTableVersionResponse::request(
  */
 void BatchDeleteTableVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchDeleteTableVersionResponse);
+    //Q_D(BatchDeleteTableVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

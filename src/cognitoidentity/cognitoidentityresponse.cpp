@@ -61,7 +61,7 @@ CognitoIdentityResponse::CognitoIdentityResponse(CognitoIdentityResponsePrivate 
  */
 void CognitoIdentityResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CognitoIdentityResponse);
+    //Q_D(CognitoIdentityResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -146,7 +146,7 @@ const UpdateDeploymentGroupRequest * UpdateDeploymentGroupResponse::request() co
  */
 void UpdateDeploymentGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDeploymentGroupResponse);
+    //Q_D(UpdateDeploymentGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -289,7 +289,7 @@ void PinpointRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest PinpointRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const PinpointRequest);
+    //Q_D(const PinpointRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

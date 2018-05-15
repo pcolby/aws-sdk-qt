@@ -69,7 +69,7 @@ const DeleteLaunchTemplateRequest * DeleteLaunchTemplateResponse::request() cons
  */
 void DeleteLaunchTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLaunchTemplateResponse);
+    //Q_D(DeleteLaunchTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

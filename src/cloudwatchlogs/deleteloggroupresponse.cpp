@@ -94,7 +94,7 @@ const DeleteLogGroupRequest * DeleteLogGroupResponse::request() const
  */
 void DeleteLogGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLogGroupResponse);
+    //Q_D(DeleteLogGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

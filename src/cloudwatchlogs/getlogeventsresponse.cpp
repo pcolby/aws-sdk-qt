@@ -94,7 +94,7 @@ const GetLogEventsRequest * GetLogEventsResponse::request() const
  */
 void GetLogEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetLogEventsResponse);
+    //Q_D(GetLogEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

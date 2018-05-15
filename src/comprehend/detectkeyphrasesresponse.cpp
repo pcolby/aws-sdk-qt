@@ -68,7 +68,7 @@ const DetectKeyPhrasesRequest * DetectKeyPhrasesResponse::request() const
  */
 void DetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetectKeyPhrasesResponse);
+    //Q_D(DetectKeyPhrasesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

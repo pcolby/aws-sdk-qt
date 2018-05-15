@@ -74,7 +74,7 @@ const ListTagsRequest * ListTagsResponse::request() const
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTagsResponse);
+    //Q_D(ListTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const RegisterPatchBaselineForPatchGroupRequest * RegisterPatchBaselineForPatchG
  */
 void RegisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterPatchBaselineForPatchGroupResponse);
+    //Q_D(RegisterPatchBaselineForPatchGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

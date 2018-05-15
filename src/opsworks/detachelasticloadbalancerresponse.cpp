@@ -171,7 +171,7 @@ const DetachElasticLoadBalancerRequest * DetachElasticLoadBalancerResponse::requ
  */
 void DetachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachElasticLoadBalancerResponse);
+    //Q_D(DetachElasticLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

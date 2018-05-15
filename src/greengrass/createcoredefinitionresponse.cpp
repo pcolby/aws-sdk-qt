@@ -68,7 +68,7 @@ const CreateCoreDefinitionRequest * CreateCoreDefinitionResponse::request() cons
  */
 void CreateCoreDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCoreDefinitionResponse);
+    //Q_D(CreateCoreDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

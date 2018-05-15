@@ -65,7 +65,7 @@ const ListVPCAssociationAuthorizationsRequest * ListVPCAssociationAuthorizations
  */
 void ListVPCAssociationAuthorizationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListVPCAssociationAuthorizationsResponse);
+    //Q_D(ListVPCAssociationAuthorizationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse
  */
 void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetIdentityNotificationTopicResponse);
+    //Q_D(SetIdentityNotificationTopicResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

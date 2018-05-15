@@ -61,7 +61,7 @@ StsResponse::StsResponse(StsResponsePrivate * const d, QObject * const parent)
  */
 void StsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(StsResponse);
+    //Q_D(StsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

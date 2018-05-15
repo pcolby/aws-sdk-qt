@@ -69,7 +69,7 @@ const CancelSpotInstanceRequestsRequest * CancelSpotInstanceRequestsResponse::re
  */
 void CancelSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelSpotInstanceRequestsResponse);
+    //Q_D(CancelSpotInstanceRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

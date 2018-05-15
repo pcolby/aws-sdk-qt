@@ -129,7 +129,7 @@ const StopDBInstanceRequest * StopDBInstanceResponse::request() const
  */
 void StopDBInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopDBInstanceResponse);
+    //Q_D(StopDBInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

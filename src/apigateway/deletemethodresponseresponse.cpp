@@ -70,7 +70,7 @@ const DeleteMethodResponseRequest * DeleteMethodResponseResponse::request() cons
  */
 void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteMethodResponseResponse);
+    //Q_D(DeleteMethodResponseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

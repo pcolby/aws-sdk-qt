@@ -70,7 +70,7 @@ const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurat
  */
 void DescribeNotificationConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeNotificationConfigurationsResponse);
+    //Q_D(DescribeNotificationConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

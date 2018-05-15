@@ -241,7 +241,7 @@ void CognitoSyncRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CognitoSyncRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CognitoSyncRequest);
+    //Q_D(const CognitoSyncRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

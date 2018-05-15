@@ -95,7 +95,7 @@ const CreateHsmConfigurationRequest * CreateHsmConfigurationResponse::request() 
  */
 void CreateHsmConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateHsmConfigurationResponse);
+    //Q_D(CreateHsmConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

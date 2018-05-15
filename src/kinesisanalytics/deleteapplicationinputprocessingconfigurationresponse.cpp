@@ -65,7 +65,7 @@ const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationIn
  */
 void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApplicationInputProcessingConfigurationResponse);
+    //Q_D(DeleteApplicationInputProcessingConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

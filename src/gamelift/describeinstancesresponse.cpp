@@ -509,7 +509,7 @@ const DescribeInstancesRequest * DescribeInstancesResponse::request() const
  */
 void DescribeInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInstancesResponse);
+    //Q_D(DescribeInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

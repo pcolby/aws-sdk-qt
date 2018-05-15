@@ -70,7 +70,7 @@ const ListEventSubscriptionsRequest * ListEventSubscriptionsResponse::request() 
  */
 void ListEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListEventSubscriptionsResponse);
+    //Q_D(ListEventSubscriptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

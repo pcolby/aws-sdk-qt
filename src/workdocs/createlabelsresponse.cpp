@@ -94,7 +94,7 @@ const CreateLabelsRequest * CreateLabelsResponse::request() const
  */
 void CreateLabelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateLabelsResponse);
+    //Q_D(CreateLabelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

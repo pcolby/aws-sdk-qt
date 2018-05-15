@@ -65,7 +65,7 @@ const AddApplicationInputRequest * AddApplicationInputResponse::request() const
  */
 void AddApplicationInputResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddApplicationInputResponse);
+    //Q_D(AddApplicationInputResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

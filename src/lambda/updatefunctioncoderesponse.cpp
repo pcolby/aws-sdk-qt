@@ -76,7 +76,7 @@ const UpdateFunctionCodeRequest * UpdateFunctionCodeResponse::request() const
  */
 void UpdateFunctionCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFunctionCodeResponse);
+    //Q_D(UpdateFunctionCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

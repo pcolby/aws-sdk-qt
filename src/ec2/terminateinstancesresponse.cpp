@@ -69,7 +69,7 @@ const TerminateInstancesRequest * TerminateInstancesResponse::request() const
  */
 void TerminateInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateInstancesResponse);
+    //Q_D(TerminateInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

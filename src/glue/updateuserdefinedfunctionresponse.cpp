@@ -68,7 +68,7 @@ const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::requ
  */
 void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateUserDefinedFunctionResponse);
+    //Q_D(UpdateUserDefinedFunctionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

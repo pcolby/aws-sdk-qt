@@ -95,7 +95,7 @@ const RevokeClusterSecurityGroupIngressRequest * RevokeClusterSecurityGroupIngre
  */
 void RevokeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeClusterSecurityGroupIngressResponse);
+    //Q_D(RevokeClusterSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

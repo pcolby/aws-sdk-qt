@@ -68,7 +68,7 @@ const DescribeStreamSummaryRequest * DescribeStreamSummaryResponse::request() co
  */
 void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeStreamSummaryResponse);
+    //Q_D(DescribeStreamSummaryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

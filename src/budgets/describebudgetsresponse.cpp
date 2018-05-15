@@ -108,7 +108,7 @@ const DescribeBudgetsRequest * DescribeBudgetsResponse::request() const
  */
 void DescribeBudgetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeBudgetsResponse);
+    //Q_D(DescribeBudgetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

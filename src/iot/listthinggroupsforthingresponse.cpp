@@ -76,7 +76,7 @@ const ListThingGroupsForThingRequest * ListThingGroupsForThingResponse::request(
  */
 void ListThingGroupsForThingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListThingGroupsForThingResponse);
+    //Q_D(ListThingGroupsForThingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

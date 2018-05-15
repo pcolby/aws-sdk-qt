@@ -69,7 +69,7 @@ const CreateFlowLogsRequest * CreateFlowLogsResponse::request() const
  */
 void CreateFlowLogsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFlowLogsResponse);
+    //Q_D(CreateFlowLogsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

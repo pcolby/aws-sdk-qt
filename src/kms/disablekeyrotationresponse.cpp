@@ -164,7 +164,7 @@ const DisableKeyRotationRequest * DisableKeyRotationResponse::request() const
  */
 void DisableKeyRotationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableKeyRotationResponse);
+    //Q_D(DisableKeyRotationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

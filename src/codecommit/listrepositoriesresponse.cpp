@@ -255,7 +255,7 @@ const ListRepositoriesRequest * ListRepositoriesResponse::request() const
  */
 void ListRepositoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListRepositoriesResponse);
+    //Q_D(ListRepositoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

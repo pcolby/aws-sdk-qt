@@ -68,7 +68,7 @@ const ExportBundleRequest * ExportBundleResponse::request() const
  */
 void ExportBundleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExportBundleResponse);
+    //Q_D(ExportBundleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

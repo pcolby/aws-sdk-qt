@@ -130,7 +130,7 @@ const SimulateCustomPolicyRequest * SimulateCustomPolicyResponse::request() cons
  */
 void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SimulateCustomPolicyResponse);
+    //Q_D(SimulateCustomPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

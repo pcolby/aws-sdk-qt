@@ -79,7 +79,7 @@ const GetDirectoryLimitsRequest * GetDirectoryLimitsResponse::request() const
  */
 void GetDirectoryLimitsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDirectoryLimitsResponse);
+    //Q_D(GetDirectoryLimitsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

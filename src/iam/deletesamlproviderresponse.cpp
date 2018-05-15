@@ -130,7 +130,7 @@ const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
  */
 void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSAMLProviderResponse);
+    //Q_D(DeleteSAMLProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

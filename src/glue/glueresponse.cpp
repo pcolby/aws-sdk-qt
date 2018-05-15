@@ -61,7 +61,7 @@ GlueResponse::GlueResponse(GlueResponsePrivate * const d, QObject * const parent
  */
 void GlueResponse::parseFailure(QIODevice &response)
 {
-    Q_D(GlueResponse);
+    //Q_D(GlueResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

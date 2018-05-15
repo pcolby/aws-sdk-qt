@@ -86,7 +86,7 @@ const CreateDatastoreRequest * CreateDatastoreResponse::request() const
  */
 void CreateDatastoreResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDatastoreResponse);
+    //Q_D(CreateDatastoreResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

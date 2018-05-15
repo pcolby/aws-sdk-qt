@@ -72,7 +72,7 @@ const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
  */
 void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetRateBasedRuleResponse);
+    //Q_D(GetRateBasedRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateOriginEndpointRequest * CreateOriginEndpointResponse::request() cons
  */
 void CreateOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateOriginEndpointResponse);
+    //Q_D(CreateOriginEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

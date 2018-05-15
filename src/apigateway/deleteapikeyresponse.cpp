@@ -70,7 +70,7 @@ const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
  */
 void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApiKeyResponse);
+    //Q_D(DeleteApiKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

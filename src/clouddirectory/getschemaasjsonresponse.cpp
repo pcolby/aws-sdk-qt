@@ -72,7 +72,7 @@ const GetSchemaAsJsonRequest * GetSchemaAsJsonResponse::request() const
  */
 void GetSchemaAsJsonResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSchemaAsJsonResponse);
+    //Q_D(GetSchemaAsJsonResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -94,7 +94,7 @@ const DescribeResourcePoliciesRequest * DescribeResourcePoliciesResponse::reques
  */
 void DescribeResourcePoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeResourcePoliciesResponse);
+    //Q_D(DescribeResourcePoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

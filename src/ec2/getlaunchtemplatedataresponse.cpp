@@ -69,7 +69,7 @@ const GetLaunchTemplateDataRequest * GetLaunchTemplateDataResponse::request() co
  */
 void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetLaunchTemplateDataResponse);
+    //Q_D(GetLaunchTemplateDataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

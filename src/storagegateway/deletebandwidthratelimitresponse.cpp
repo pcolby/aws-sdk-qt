@@ -134,7 +134,7 @@ const DeleteBandwidthRateLimitRequest * DeleteBandwidthRateLimitResponse::reques
  */
 void DeleteBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBandwidthRateLimitResponse);
+    //Q_D(DeleteBandwidthRateLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

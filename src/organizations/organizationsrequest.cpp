@@ -266,7 +266,7 @@ void OrganizationsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest OrganizationsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const OrganizationsRequest);
+    //Q_D(const OrganizationsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

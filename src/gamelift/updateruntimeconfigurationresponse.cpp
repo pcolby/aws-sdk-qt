@@ -509,7 +509,7 @@ const UpdateRuntimeConfigurationRequest * UpdateRuntimeConfigurationResponse::re
  */
 void UpdateRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRuntimeConfigurationResponse);
+    //Q_D(UpdateRuntimeConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

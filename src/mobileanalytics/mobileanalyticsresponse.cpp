@@ -61,7 +61,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate 
  */
 void MobileAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MobileAnalyticsResponse);
+    //Q_D(MobileAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

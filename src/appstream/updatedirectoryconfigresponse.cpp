@@ -68,7 +68,7 @@ const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() co
  */
 void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDirectoryConfigResponse);
+    //Q_D(UpdateDirectoryConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

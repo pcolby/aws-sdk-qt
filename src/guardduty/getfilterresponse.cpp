@@ -65,7 +65,7 @@ const GetFilterRequest * GetFilterResponse::request() const
  */
 void GetFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFilterResponse);
+    //Q_D(GetFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

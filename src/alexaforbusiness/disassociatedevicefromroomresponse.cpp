@@ -70,7 +70,7 @@ const DisassociateDeviceFromRoomRequest * DisassociateDeviceFromRoomResponse::re
  */
 void DisassociateDeviceFromRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateDeviceFromRoomResponse);
+    //Q_D(DisassociateDeviceFromRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

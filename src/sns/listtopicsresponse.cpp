@@ -79,7 +79,7 @@ const ListTopicsRequest * ListTopicsResponse::request() const
  */
 void ListTopicsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTopicsResponse);
+    //Q_D(ListTopicsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -108,7 +108,7 @@ const CreateBudgetRequest * CreateBudgetResponse::request() const
  */
 void CreateBudgetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBudgetResponse);
+    //Q_D(CreateBudgetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

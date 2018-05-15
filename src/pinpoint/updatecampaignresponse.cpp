@@ -65,7 +65,7 @@ const UpdateCampaignRequest * UpdateCampaignResponse::request() const
  */
 void UpdateCampaignResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCampaignResponse);
+    //Q_D(UpdateCampaignResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

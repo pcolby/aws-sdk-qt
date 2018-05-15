@@ -81,7 +81,7 @@ const RespondActivityTaskCompletedRequest * RespondActivityTaskCompletedResponse
  */
 void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RespondActivityTaskCompletedResponse);
+    //Q_D(RespondActivityTaskCompletedResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

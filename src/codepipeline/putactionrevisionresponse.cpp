@@ -240,7 +240,7 @@ const PutActionRevisionRequest * PutActionRevisionResponse::request() const
  */
 void PutActionRevisionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutActionRevisionResponse);
+    //Q_D(PutActionRevisionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

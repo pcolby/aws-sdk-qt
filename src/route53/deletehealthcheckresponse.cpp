@@ -65,7 +65,7 @@ const DeleteHealthCheckRequest * DeleteHealthCheckResponse::request() const
  */
 void DeleteHealthCheckResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteHealthCheckResponse);
+    //Q_D(DeleteHealthCheckResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

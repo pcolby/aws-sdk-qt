@@ -87,7 +87,7 @@ const ListChangeSetsRequest * ListChangeSetsResponse::request() const
  */
 void ListChangeSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListChangeSetsResponse);
+    //Q_D(ListChangeSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

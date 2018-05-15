@@ -61,7 +61,7 @@ DeviceFarmResponse::DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObj
  */
 void DeviceFarmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DeviceFarmResponse);
+    //Q_D(DeviceFarmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

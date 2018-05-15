@@ -251,7 +251,7 @@ void EmrRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest EmrRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EmrRequest);
+    //Q_D(const EmrRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

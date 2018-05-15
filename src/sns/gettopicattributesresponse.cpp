@@ -79,7 +79,7 @@ const GetTopicAttributesRequest * GetTopicAttributesResponse::request() const
  */
 void GetTopicAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTopicAttributesResponse);
+    //Q_D(GetTopicAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

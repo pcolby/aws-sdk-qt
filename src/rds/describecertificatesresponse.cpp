@@ -129,7 +129,7 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCertificatesResponse);
+    //Q_D(DescribeCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

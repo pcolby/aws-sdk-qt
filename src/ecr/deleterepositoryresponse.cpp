@@ -69,7 +69,7 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
  */
 void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRepositoryResponse);
+    //Q_D(DeleteRepositoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

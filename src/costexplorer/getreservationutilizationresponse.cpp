@@ -83,7 +83,7 @@ const GetReservationUtilizationRequest * GetReservationUtilizationResponse::requ
  */
 void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetReservationUtilizationResponse);
+    //Q_D(GetReservationUtilizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

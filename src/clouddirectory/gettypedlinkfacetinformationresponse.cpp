@@ -72,7 +72,7 @@ const GetTypedLinkFacetInformationRequest * GetTypedLinkFacetInformationResponse
  */
 void GetTypedLinkFacetInformationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTypedLinkFacetInformationResponse);
+    //Q_D(GetTypedLinkFacetInformationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

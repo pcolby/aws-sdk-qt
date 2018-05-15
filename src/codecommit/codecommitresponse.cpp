@@ -61,7 +61,7 @@ CodeCommitResponse::CodeCommitResponse(CodeCommitResponsePrivate * const d, QObj
  */
 void CodeCommitResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CodeCommitResponse);
+    //Q_D(CodeCommitResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

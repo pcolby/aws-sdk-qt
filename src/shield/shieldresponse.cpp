@@ -61,7 +61,7 @@ ShieldResponse::ShieldResponse(ShieldResponsePrivate * const d, QObject * const 
  */
 void ShieldResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ShieldResponse);
+    //Q_D(ShieldResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

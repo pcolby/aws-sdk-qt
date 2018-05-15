@@ -255,7 +255,7 @@ const GetBranchRequest * GetBranchResponse::request() const
  */
 void GetBranchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBranchResponse);
+    //Q_D(GetBranchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

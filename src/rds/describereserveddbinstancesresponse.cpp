@@ -129,7 +129,7 @@ const DescribeReservedDBInstancesRequest * DescribeReservedDBInstancesResponse::
  */
 void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReservedDBInstancesResponse);
+    //Q_D(DescribeReservedDBInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

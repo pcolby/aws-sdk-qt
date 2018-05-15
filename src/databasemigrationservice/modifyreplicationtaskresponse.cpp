@@ -76,7 +76,7 @@ const ModifyReplicationTaskRequest * ModifyReplicationTaskResponse::request() co
  */
 void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyReplicationTaskResponse);
+    //Q_D(ModifyReplicationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

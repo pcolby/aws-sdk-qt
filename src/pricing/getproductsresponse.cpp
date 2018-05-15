@@ -91,7 +91,7 @@ const GetProductsRequest * GetProductsResponse::request() const
  */
 void GetProductsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetProductsResponse);
+    //Q_D(GetProductsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

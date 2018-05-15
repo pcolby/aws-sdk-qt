@@ -70,7 +70,7 @@ const GetSkillGroupRequest * GetSkillGroupResponse::request() const
  */
 void GetSkillGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSkillGroupResponse);
+    //Q_D(GetSkillGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetSmsChannelRequest * GetSmsChannelResponse::request() const
  */
 void GetSmsChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSmsChannelResponse);
+    //Q_D(GetSmsChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

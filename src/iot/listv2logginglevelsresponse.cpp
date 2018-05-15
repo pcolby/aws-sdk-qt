@@ -76,7 +76,7 @@ const ListV2LoggingLevelsRequest * ListV2LoggingLevelsResponse::request() const
  */
 void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListV2LoggingLevelsResponse);
+    //Q_D(ListV2LoggingLevelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

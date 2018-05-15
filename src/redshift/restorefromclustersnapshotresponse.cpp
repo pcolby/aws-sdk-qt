@@ -95,7 +95,7 @@ const RestoreFromClusterSnapshotRequest * RestoreFromClusterSnapshotResponse::re
  */
 void RestoreFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreFromClusterSnapshotResponse);
+    //Q_D(RestoreFromClusterSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() cons
  */
 void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteParameterGroupResponse);
+    //Q_D(DeleteParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

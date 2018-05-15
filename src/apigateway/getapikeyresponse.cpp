@@ -70,7 +70,7 @@ const GetApiKeyRequest * GetApiKeyResponse::request() const
  */
 void GetApiKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetApiKeyResponse);
+    //Q_D(GetApiKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

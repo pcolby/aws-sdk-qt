@@ -75,7 +75,7 @@ const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() cons
  */
 void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetUserMFAPreferenceResponse);
+    //Q_D(SetUserMFAPreferenceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -83,7 +83,7 @@ const DescribePipelinesRequest * DescribePipelinesResponse::request() const
  */
 void DescribePipelinesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePipelinesResponse);
+    //Q_D(DescribePipelinesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

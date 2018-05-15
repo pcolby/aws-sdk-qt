@@ -61,7 +61,7 @@ Cloud9Response::Cloud9Response(Cloud9ResponsePrivate * const d, QObject * const 
  */
 void Cloud9Response::parseFailure(QIODevice &response)
 {
-    Q_D(Cloud9Response);
+    //Q_D(Cloud9Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

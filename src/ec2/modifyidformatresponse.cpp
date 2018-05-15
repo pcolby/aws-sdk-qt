@@ -69,7 +69,7 @@ const ModifyIdFormatRequest * ModifyIdFormatResponse::request() const
  */
 void ModifyIdFormatResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyIdFormatResponse);
+    //Q_D(ModifyIdFormatResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

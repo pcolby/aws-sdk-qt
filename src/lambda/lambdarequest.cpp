@@ -254,7 +254,7 @@ void LambdaRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const LambdaRequest);
+    //Q_D(const LambdaRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

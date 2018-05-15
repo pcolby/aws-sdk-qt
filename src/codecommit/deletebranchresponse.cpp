@@ -255,7 +255,7 @@ const DeleteBranchRequest * DeleteBranchResponse::request() const
  */
 void DeleteBranchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBranchResponse);
+    //Q_D(DeleteBranchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

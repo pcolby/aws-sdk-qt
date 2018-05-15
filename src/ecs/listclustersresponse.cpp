@@ -82,7 +82,7 @@ const ListClustersRequest * ListClustersResponse::request() const
  */
 void ListClustersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListClustersResponse);
+    //Q_D(ListClustersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

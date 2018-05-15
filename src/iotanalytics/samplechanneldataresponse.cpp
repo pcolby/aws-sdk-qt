@@ -86,7 +86,7 @@ const SampleChannelDataRequest * SampleChannelDataResponse::request() const
  */
 void SampleChannelDataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SampleChannelDataResponse);
+    //Q_D(SampleChannelDataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

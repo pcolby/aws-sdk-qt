@@ -69,7 +69,7 @@ const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
  */
 void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSubnetsResponse);
+    //Q_D(DescribeSubnetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

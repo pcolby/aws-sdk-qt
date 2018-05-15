@@ -79,7 +79,7 @@ const ResetCacheParameterGroupRequest * ResetCacheParameterGroupResponse::reques
  */
 void ResetCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetCacheParameterGroupResponse);
+    //Q_D(ResetCacheParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

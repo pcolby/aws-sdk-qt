@@ -509,7 +509,7 @@ const DescribeFleetUtilizationRequest * DescribeFleetUtilizationResponse::reques
  */
 void DescribeFleetUtilizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFleetUtilizationResponse);
+    //Q_D(DescribeFleetUtilizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

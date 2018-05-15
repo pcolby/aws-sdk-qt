@@ -61,7 +61,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(CloudDirectoryResponsePrivate * c
  */
 void CloudDirectoryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudDirectoryResponse);
+    //Q_D(CloudDirectoryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

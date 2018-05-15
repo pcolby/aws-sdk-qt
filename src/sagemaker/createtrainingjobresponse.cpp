@@ -65,7 +65,7 @@ const CreateTrainingJobRequest * CreateTrainingJobResponse::request() const
  */
 void CreateTrainingJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTrainingJobResponse);
+    //Q_D(CreateTrainingJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

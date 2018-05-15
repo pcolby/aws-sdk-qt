@@ -129,7 +129,7 @@ const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() co
  */
 void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDBSecurityGroupResponse);
+    //Q_D(CreateDBSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

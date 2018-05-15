@@ -71,7 +71,7 @@ const TerminateProvisionedProductRequest * TerminateProvisionedProductResponse::
  */
 void TerminateProvisionedProductResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateProvisionedProductResponse);
+    //Q_D(TerminateProvisionedProductResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

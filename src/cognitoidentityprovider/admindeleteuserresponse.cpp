@@ -75,7 +75,7 @@ const AdminDeleteUserRequest * AdminDeleteUserResponse::request() const
  */
 void AdminDeleteUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminDeleteUserResponse);
+    //Q_D(AdminDeleteUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

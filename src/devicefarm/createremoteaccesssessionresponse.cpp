@@ -67,7 +67,7 @@ const CreateRemoteAccessSessionRequest * CreateRemoteAccessSessionResponse::requ
  */
 void CreateRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateRemoteAccessSessionResponse);
+    //Q_D(CreateRemoteAccessSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

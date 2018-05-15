@@ -85,7 +85,7 @@ const DeliverConfigSnapshotRequest * DeliverConfigSnapshotResponse::request() co
  */
 void DeliverConfigSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeliverConfigSnapshotResponse);
+    //Q_D(DeliverConfigSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

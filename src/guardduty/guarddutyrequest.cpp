@@ -266,7 +266,7 @@ void GuardDutyRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const GuardDutyRequest);
+    //Q_D(const GuardDutyRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

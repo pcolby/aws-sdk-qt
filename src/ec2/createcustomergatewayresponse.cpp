@@ -69,7 +69,7 @@ const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() co
  */
 void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCustomerGatewayResponse);
+    //Q_D(CreateCustomerGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

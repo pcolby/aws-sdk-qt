@@ -129,7 +129,7 @@ const RestoreDBClusterFromS3Request * RestoreDBClusterFromS3Response::request() 
  */
 void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreDBClusterFromS3Response);
+    //Q_D(RestoreDBClusterFromS3Response);
     QXmlStreamReader xml(&response);
     /// @todo
 }

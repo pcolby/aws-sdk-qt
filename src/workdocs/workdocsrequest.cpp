@@ -264,7 +264,7 @@ void WorkDocsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest WorkDocsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const WorkDocsRequest);
+    //Q_D(const WorkDocsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

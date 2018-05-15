@@ -61,7 +61,7 @@ TranslateResponse::TranslateResponse(TranslateResponsePrivate * const d, QObject
  */
 void TranslateResponse::parseFailure(QIODevice &response)
 {
-    Q_D(TranslateResponse);
+    //Q_D(TranslateResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

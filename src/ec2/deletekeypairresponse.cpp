@@ -69,7 +69,7 @@ const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
  */
 void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteKeyPairResponse);
+    //Q_D(DeleteKeyPairResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

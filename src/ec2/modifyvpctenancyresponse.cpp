@@ -69,7 +69,7 @@ const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
  */
 void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyVpcTenancyResponse);
+    //Q_D(ModifyVpcTenancyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

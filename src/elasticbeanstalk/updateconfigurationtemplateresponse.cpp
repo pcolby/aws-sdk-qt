@@ -87,7 +87,7 @@ const UpdateConfigurationTemplateRequest * UpdateConfigurationTemplateResponse::
  */
 void UpdateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateConfigurationTemplateResponse);
+    //Q_D(UpdateConfigurationTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

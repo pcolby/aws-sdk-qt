@@ -65,7 +65,7 @@ const GetBucketRequestPaymentRequest * GetBucketRequestPaymentResponse::request(
  */
 void GetBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketRequestPaymentResponse);
+    //Q_D(GetBucketRequestPaymentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

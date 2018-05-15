@@ -94,7 +94,7 @@ const DescribeLogStreamsRequest * DescribeLogStreamsResponse::request() const
  */
 void DescribeLogStreamsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeLogStreamsResponse);
+    //Q_D(DescribeLogStreamsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

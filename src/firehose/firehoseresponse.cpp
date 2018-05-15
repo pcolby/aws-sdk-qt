@@ -61,7 +61,7 @@ FirehoseResponse::FirehoseResponse(FirehoseResponsePrivate * const d, QObject * 
  */
 void FirehoseResponse::parseFailure(QIODevice &response)
 {
-    Q_D(FirehoseResponse);
+    //Q_D(FirehoseResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

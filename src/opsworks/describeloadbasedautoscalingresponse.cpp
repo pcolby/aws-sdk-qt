@@ -171,7 +171,7 @@ const DescribeLoadBasedAutoScalingRequest * DescribeLoadBasedAutoScalingResponse
  */
 void DescribeLoadBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeLoadBasedAutoScalingResponse);
+    //Q_D(DescribeLoadBasedAutoScalingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

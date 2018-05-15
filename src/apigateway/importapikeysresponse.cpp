@@ -70,7 +70,7 @@ const ImportApiKeysRequest * ImportApiKeysResponse::request() const
  */
 void ImportApiKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportApiKeysResponse);
+    //Q_D(ImportApiKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

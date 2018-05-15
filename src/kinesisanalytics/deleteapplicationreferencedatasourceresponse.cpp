@@ -65,7 +65,7 @@ const DeleteApplicationReferenceDataSourceRequest * DeleteApplicationReferenceDa
  */
 void DeleteApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApplicationReferenceDataSourceResponse);
+    //Q_D(DeleteApplicationReferenceDataSourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

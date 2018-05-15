@@ -129,7 +129,7 @@ const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() 
  */
 void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBSubnetGroupsResponse);
+    //Q_D(DescribeDBSubnetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

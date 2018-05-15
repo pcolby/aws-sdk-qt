@@ -61,7 +61,7 @@ CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * 
  */
 void CloudHSMResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudHSMResponse);
+    //Q_D(CloudHSMResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

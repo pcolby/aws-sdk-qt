@@ -79,7 +79,7 @@ const ListPlatformApplicationsRequest * ListPlatformApplicationsResponse::reques
  */
 void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPlatformApplicationsResponse);
+    //Q_D(ListPlatformApplicationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

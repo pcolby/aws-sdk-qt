@@ -69,7 +69,7 @@ const CreateNetworkInterfaceRequest * CreateNetworkInterfaceResponse::request() 
  */
 void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateNetworkInterfaceResponse);
+    //Q_D(CreateNetworkInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

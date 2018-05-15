@@ -153,7 +153,7 @@ const DeleteProjectRequest * DeleteProjectResponse::request() const
  */
 void DeleteProjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteProjectResponse);
+    //Q_D(DeleteProjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

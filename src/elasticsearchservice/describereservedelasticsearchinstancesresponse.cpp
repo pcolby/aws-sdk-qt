@@ -74,7 +74,7 @@ const DescribeReservedElasticsearchInstancesRequest * DescribeReservedElasticsea
  */
 void DescribeReservedElasticsearchInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReservedElasticsearchInstancesResponse);
+    //Q_D(DescribeReservedElasticsearchInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

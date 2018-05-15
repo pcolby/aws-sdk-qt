@@ -70,7 +70,7 @@ const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
  */
 void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetRegexPatternSetResponse);
+    //Q_D(GetRegexPatternSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

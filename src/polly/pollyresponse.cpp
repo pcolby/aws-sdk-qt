@@ -61,7 +61,7 @@ PollyResponse::PollyResponse(PollyResponsePrivate * const d, QObject * const par
  */
 void PollyResponse::parseFailure(QIODevice &response)
 {
-    Q_D(PollyResponse);
+    //Q_D(PollyResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

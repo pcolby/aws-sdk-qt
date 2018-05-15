@@ -76,7 +76,7 @@ const DefineExpressionRequest * DefineExpressionResponse::request() const
  */
 void DefineExpressionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DefineExpressionResponse);
+    //Q_D(DefineExpressionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetMediaForFragmentListRequest * GetMediaForFragmentListResponse::request(
  */
 void GetMediaForFragmentListResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetMediaForFragmentListResponse);
+    //Q_D(GetMediaForFragmentListResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

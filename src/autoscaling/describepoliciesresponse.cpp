@@ -70,7 +70,7 @@ const DescribePoliciesRequest * DescribePoliciesResponse::request() const
  */
 void DescribePoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePoliciesResponse);
+    //Q_D(DescribePoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

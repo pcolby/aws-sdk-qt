@@ -207,7 +207,7 @@ const AttachPolicyRequest * AttachPolicyResponse::request() const
  */
 void AttachPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachPolicyResponse);
+    //Q_D(AttachPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -234,7 +234,7 @@ void ServerlessApplicationRepositoryRequest::setParameters(const QVariantMap &pa
  */
 QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ServerlessApplicationRepositoryRequest);
+    //Q_D(const ServerlessApplicationRepositoryRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

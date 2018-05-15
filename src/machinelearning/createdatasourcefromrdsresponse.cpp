@@ -65,7 +65,7 @@ const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request(
  */
 void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDataSourceFromRDSResponse);
+    //Q_D(CreateDataSourceFromRDSResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

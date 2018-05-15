@@ -61,7 +61,7 @@ CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d
  */
 void CodePipelineResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CodePipelineResponse);
+    //Q_D(CodePipelineResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

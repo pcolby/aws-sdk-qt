@@ -70,7 +70,7 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteTagsResponse);
+    //Q_D(DeleteTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -234,7 +234,7 @@ void SimpleDBRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SimpleDBRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SimpleDBRequest);
+    //Q_D(const SimpleDBRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

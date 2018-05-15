@@ -66,7 +66,7 @@ const ListVocabulariesRequest * ListVocabulariesResponse::request() const
  */
 void ListVocabulariesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListVocabulariesResponse);
+    //Q_D(ListVocabulariesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

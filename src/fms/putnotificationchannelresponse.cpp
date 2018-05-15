@@ -71,7 +71,7 @@ const PutNotificationChannelRequest * PutNotificationChannelResponse::request() 
  */
 void PutNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutNotificationChannelResponse);
+    //Q_D(PutNotificationChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

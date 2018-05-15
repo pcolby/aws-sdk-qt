@@ -79,7 +79,7 @@ const DescribeDirectoriesRequest * DescribeDirectoriesResponse::request() const
  */
 void DescribeDirectoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDirectoriesResponse);
+    //Q_D(DescribeDirectoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

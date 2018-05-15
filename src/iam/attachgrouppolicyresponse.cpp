@@ -130,7 +130,7 @@ const AttachGroupPolicyRequest * AttachGroupPolicyResponse::request() const
  */
 void AttachGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachGroupPolicyResponse);
+    //Q_D(AttachGroupPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

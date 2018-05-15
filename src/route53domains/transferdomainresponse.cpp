@@ -66,7 +66,7 @@ const TransferDomainRequest * TransferDomainResponse::request() const
  */
 void TransferDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TransferDomainResponse);
+    //Q_D(TransferDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

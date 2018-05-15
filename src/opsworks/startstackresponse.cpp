@@ -171,7 +171,7 @@ const StartStackRequest * StartStackResponse::request() const
  */
 void StartStackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartStackResponse);
+    //Q_D(StartStackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

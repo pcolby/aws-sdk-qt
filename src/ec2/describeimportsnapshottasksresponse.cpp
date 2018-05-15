@@ -69,7 +69,7 @@ const DescribeImportSnapshotTasksRequest * DescribeImportSnapshotTasksResponse::
  */
 void DescribeImportSnapshotTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeImportSnapshotTasksResponse);
+    //Q_D(DescribeImportSnapshotTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -75,7 +75,7 @@ const CreateIdentityProviderRequest * CreateIdentityProviderResponse::request() 
  */
 void CreateIdentityProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateIdentityProviderResponse);
+    //Q_D(CreateIdentityProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

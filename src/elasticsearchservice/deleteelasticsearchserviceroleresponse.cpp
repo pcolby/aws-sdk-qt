@@ -72,7 +72,7 @@ const DeleteElasticsearchServiceRoleRequest * DeleteElasticsearchServiceRoleResp
  */
 void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteElasticsearchServiceRoleResponse);
+    //Q_D(DeleteElasticsearchServiceRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

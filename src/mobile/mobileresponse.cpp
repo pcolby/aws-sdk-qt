@@ -61,7 +61,7 @@ MobileResponse::MobileResponse(MobileResponsePrivate * const d, QObject * const 
  */
 void MobileResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MobileResponse);
+    //Q_D(MobileResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

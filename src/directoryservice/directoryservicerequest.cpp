@@ -264,7 +264,7 @@ void DirectoryServiceRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DirectoryServiceRequest);
+    //Q_D(const DirectoryServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

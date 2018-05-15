@@ -61,7 +61,7 @@ RekognitionResponse::RekognitionResponse(RekognitionResponsePrivate * const d, Q
  */
 void RekognitionResponse::parseFailure(QIODevice &response)
 {
-    Q_D(RekognitionResponse);
+    //Q_D(RekognitionResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

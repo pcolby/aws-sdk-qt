@@ -131,7 +131,7 @@ const ListQueueTagsRequest * ListQueueTagsResponse::request() const
  */
 void ListQueueTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListQueueTagsResponse);
+    //Q_D(ListQueueTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

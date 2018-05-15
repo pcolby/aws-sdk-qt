@@ -129,7 +129,7 @@ const ListConfigurationsRequest * ListConfigurationsResponse::request() const
  */
 void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListConfigurationsResponse);
+    //Q_D(ListConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

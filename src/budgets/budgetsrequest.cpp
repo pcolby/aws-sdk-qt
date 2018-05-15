@@ -237,7 +237,7 @@ void BudgetsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const BudgetsRequest);
+    //Q_D(const BudgetsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

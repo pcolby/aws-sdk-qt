@@ -235,7 +235,7 @@ void MediaPackageRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MediaPackageRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MediaPackageRequest);
+    //Q_D(const MediaPackageRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

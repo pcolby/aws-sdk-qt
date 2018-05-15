@@ -129,7 +129,7 @@ const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
  */
 void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyOptionGroupResponse);
+    //Q_D(ModifyOptionGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

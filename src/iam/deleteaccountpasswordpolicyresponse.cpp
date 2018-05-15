@@ -128,7 +128,7 @@ const DeleteAccountPasswordPolicyRequest * DeleteAccountPasswordPolicyResponse::
  */
 void DeleteAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAccountPasswordPolicyResponse);
+    //Q_D(DeleteAccountPasswordPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -229,7 +229,7 @@ void ResourceGroupsTaggingAPIRequest::setParameters(const QVariantMap &parameter
  */
 QNetworkRequest ResourceGroupsTaggingAPIRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ResourceGroupsTaggingAPIRequest);
+    //Q_D(const ResourceGroupsTaggingAPIRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

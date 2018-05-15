@@ -89,7 +89,7 @@ const UpdatePatchBaselineRequest * UpdatePatchBaselineResponse::request() const
  */
 void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdatePatchBaselineResponse);
+    //Q_D(UpdatePatchBaselineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

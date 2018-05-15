@@ -81,7 +81,7 @@ const AttachInstancesToLoadBalancerRequest * AttachInstancesToLoadBalancerRespon
  */
 void AttachInstancesToLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachInstancesToLoadBalancerResponse);
+    //Q_D(AttachInstancesToLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

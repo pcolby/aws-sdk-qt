@@ -70,7 +70,7 @@ const DisassociateSkillGroupFromRoomRequest * DisassociateSkillGroupFromRoomResp
  */
 void DisassociateSkillGroupFromRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateSkillGroupFromRoomResponse);
+    //Q_D(DisassociateSkillGroupFromRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

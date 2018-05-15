@@ -70,7 +70,7 @@ const GetProfileRequest * GetProfileResponse::request() const
  */
 void GetProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetProfileResponse);
+    //Q_D(GetProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

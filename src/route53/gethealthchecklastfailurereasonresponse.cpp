@@ -65,7 +65,7 @@ const GetHealthCheckLastFailureReasonRequest * GetHealthCheckLastFailureReasonRe
  */
 void GetHealthCheckLastFailureReasonResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetHealthCheckLastFailureReasonResponse);
+    //Q_D(GetHealthCheckLastFailureReasonResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

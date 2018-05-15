@@ -66,7 +66,7 @@ const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
  */
 void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutTraceSegmentsResponse);
+    //Q_D(PutTraceSegmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

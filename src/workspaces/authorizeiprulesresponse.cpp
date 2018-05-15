@@ -68,7 +68,7 @@ const AuthorizeIpRulesRequest * AuthorizeIpRulesResponse::request() const
  */
 void AuthorizeIpRulesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AuthorizeIpRulesResponse);
+    //Q_D(AuthorizeIpRulesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

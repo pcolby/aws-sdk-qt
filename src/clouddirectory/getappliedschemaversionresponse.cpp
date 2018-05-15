@@ -72,7 +72,7 @@ const GetAppliedSchemaVersionRequest * GetAppliedSchemaVersionResponse::request(
  */
 void GetAppliedSchemaVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAppliedSchemaVersionResponse);
+    //Q_D(GetAppliedSchemaVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

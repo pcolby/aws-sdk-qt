@@ -171,7 +171,7 @@ const DescribeAgentVersionsRequest * DescribeAgentVersionsResponse::request() co
  */
 void DescribeAgentVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAgentVersionsResponse);
+    //Q_D(DescribeAgentVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

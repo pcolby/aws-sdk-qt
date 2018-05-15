@@ -69,7 +69,7 @@ const UpdateSubnetGroupRequest * UpdateSubnetGroupResponse::request() const
  */
 void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSubnetGroupResponse);
+    //Q_D(UpdateSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

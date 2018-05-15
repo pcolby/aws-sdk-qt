@@ -81,7 +81,7 @@ const DetachStaticIpRequest * DetachStaticIpResponse::request() const
  */
 void DetachStaticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachStaticIpResponse);
+    //Q_D(DetachStaticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

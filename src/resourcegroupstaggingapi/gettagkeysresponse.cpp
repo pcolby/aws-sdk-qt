@@ -120,7 +120,7 @@ const GetTagKeysRequest * GetTagKeysResponse::request() const
  */
 void GetTagKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTagKeysResponse);
+    //Q_D(GetTagKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

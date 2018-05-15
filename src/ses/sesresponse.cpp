@@ -61,7 +61,7 @@ SesResponse::SesResponse(SesResponsePrivate * const d, QObject * const parent)
  */
 void SesResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SesResponse);
+    //Q_D(SesResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

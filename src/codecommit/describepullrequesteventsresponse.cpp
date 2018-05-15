@@ -255,7 +255,7 @@ const DescribePullRequestEventsRequest * DescribePullRequestEventsResponse::requ
  */
 void DescribePullRequestEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePullRequestEventsResponse);
+    //Q_D(DescribePullRequestEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

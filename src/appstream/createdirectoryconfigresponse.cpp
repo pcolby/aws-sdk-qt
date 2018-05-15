@@ -68,7 +68,7 @@ const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() co
  */
 void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDirectoryConfigResponse);
+    //Q_D(CreateDirectoryConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

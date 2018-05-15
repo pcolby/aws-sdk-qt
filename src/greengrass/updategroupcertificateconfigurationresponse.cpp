@@ -68,7 +68,7 @@ const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigu
  */
 void UpdateGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateGroupCertificateConfigurationResponse);
+    //Q_D(UpdateGroupCertificateConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

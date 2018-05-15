@@ -130,7 +130,7 @@ const UpdateSigningCertificateRequest * UpdateSigningCertificateResponse::reques
  */
 void UpdateSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSigningCertificateResponse);
+    //Q_D(UpdateSigningCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

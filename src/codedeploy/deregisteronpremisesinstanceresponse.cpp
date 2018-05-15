@@ -146,7 +146,7 @@ const DeregisterOnPremisesInstanceRequest * DeregisterOnPremisesInstanceResponse
  */
 void DeregisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterOnPremisesInstanceResponse);
+    //Q_D(DeregisterOnPremisesInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

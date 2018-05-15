@@ -69,7 +69,7 @@ const ModifyFpgaImageAttributeRequest * ModifyFpgaImageAttributeResponse::reques
  */
 void ModifyFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyFpgaImageAttributeResponse);
+    //Q_D(ModifyFpgaImageAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

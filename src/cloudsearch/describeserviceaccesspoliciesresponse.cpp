@@ -76,7 +76,7 @@ const DescribeServiceAccessPoliciesRequest * DescribeServiceAccessPoliciesRespon
  */
 void DescribeServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeServiceAccessPoliciesResponse);
+    //Q_D(DescribeServiceAccessPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

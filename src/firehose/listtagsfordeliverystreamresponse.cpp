@@ -69,7 +69,7 @@ const ListTagsForDeliveryStreamRequest * ListTagsForDeliveryStreamResponse::requ
  */
 void ListTagsForDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTagsForDeliveryStreamResponse);
+    //Q_D(ListTagsForDeliveryStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

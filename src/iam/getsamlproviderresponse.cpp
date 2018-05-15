@@ -130,7 +130,7 @@ const GetSAMLProviderRequest * GetSAMLProviderResponse::request() const
  */
 void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSAMLProviderResponse);
+    //Q_D(GetSAMLProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

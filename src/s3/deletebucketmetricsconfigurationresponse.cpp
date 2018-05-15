@@ -65,7 +65,7 @@ const DeleteBucketMetricsConfigurationRequest * DeleteBucketMetricsConfiguration
  */
 void DeleteBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBucketMetricsConfigurationResponse);
+    //Q_D(DeleteBucketMetricsConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

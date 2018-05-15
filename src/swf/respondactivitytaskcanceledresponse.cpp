@@ -81,7 +81,7 @@ const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::
  */
 void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RespondActivityTaskCanceledResponse);
+    //Q_D(RespondActivityTaskCanceledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const DeleteV2LoggingLevelRequest * DeleteV2LoggingLevelResponse::request() cons
  */
 void DeleteV2LoggingLevelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteV2LoggingLevelResponse);
+    //Q_D(DeleteV2LoggingLevelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

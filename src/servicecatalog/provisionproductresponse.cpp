@@ -71,7 +71,7 @@ const ProvisionProductRequest * ProvisionProductResponse::request() const
  */
 void ProvisionProductResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ProvisionProductResponse);
+    //Q_D(ProvisionProductResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

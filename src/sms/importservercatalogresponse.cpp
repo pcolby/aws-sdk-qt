@@ -65,7 +65,7 @@ const ImportServerCatalogRequest * ImportServerCatalogResponse::request() const
  */
 void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportServerCatalogResponse);
+    //Q_D(ImportServerCatalogResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

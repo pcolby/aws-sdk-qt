@@ -70,7 +70,7 @@ const CreateAssessmentTemplateRequest * CreateAssessmentTemplateResponse::reques
  */
 void CreateAssessmentTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAssessmentTemplateResponse);
+    //Q_D(CreateAssessmentTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

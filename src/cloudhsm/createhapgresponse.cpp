@@ -77,7 +77,7 @@ const CreateHapgRequest * CreateHapgResponse::request() const
  */
 void CreateHapgResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateHapgResponse);
+    //Q_D(CreateHapgResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

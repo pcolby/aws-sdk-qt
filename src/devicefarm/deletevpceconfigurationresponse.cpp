@@ -67,7 +67,7 @@ const DeleteVPCEConfigurationRequest * DeleteVPCEConfigurationResponse::request(
  */
 void DeleteVPCEConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVPCEConfigurationResponse);
+    //Q_D(DeleteVPCEConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

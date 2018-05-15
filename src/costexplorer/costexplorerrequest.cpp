@@ -230,7 +230,7 @@ void CostExplorerRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CostExplorerRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CostExplorerRequest);
+    //Q_D(const CostExplorerRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

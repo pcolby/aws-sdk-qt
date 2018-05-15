@@ -130,7 +130,7 @@ const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request(
  */
 void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteServiceLinkedRoleResponse);
+    //Q_D(DeleteServiceLinkedRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

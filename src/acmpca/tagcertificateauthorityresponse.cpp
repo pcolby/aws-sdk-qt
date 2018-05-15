@@ -95,7 +95,7 @@ const TagCertificateAuthorityRequest * TagCertificateAuthorityResponse::request(
  */
 void TagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TagCertificateAuthorityResponse);
+    //Q_D(TagCertificateAuthorityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

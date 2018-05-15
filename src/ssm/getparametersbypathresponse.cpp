@@ -89,7 +89,7 @@ const GetParametersByPathRequest * GetParametersByPathResponse::request() const
  */
 void GetParametersByPathResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetParametersByPathResponse);
+    //Q_D(GetParametersByPathResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

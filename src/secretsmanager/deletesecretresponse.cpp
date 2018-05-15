@@ -141,7 +141,7 @@ const DeleteSecretRequest * DeleteSecretResponse::request() const
  */
 void DeleteSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSecretResponse);
+    //Q_D(DeleteSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

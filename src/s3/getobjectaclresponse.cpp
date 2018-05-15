@@ -65,7 +65,7 @@ const GetObjectAclRequest * GetObjectAclResponse::request() const
  */
 void GetObjectAclResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetObjectAclResponse);
+    //Q_D(GetObjectAclResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

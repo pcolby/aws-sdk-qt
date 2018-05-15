@@ -69,7 +69,7 @@ const DeleteInternetGatewayRequest * DeleteInternetGatewayResponse::request() co
  */
 void DeleteInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteInternetGatewayResponse);
+    //Q_D(DeleteInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

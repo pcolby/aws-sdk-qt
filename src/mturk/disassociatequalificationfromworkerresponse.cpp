@@ -65,7 +65,7 @@ const DisassociateQualificationFromWorkerRequest * DisassociateQualificationFrom
  */
 void DisassociateQualificationFromWorkerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateQualificationFromWorkerResponse);
+    //Q_D(DisassociateQualificationFromWorkerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

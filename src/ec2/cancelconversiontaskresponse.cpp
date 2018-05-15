@@ -69,7 +69,7 @@ const CancelConversionTaskRequest * CancelConversionTaskResponse::request() cons
  */
 void CancelConversionTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelConversionTaskResponse);
+    //Q_D(CancelConversionTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

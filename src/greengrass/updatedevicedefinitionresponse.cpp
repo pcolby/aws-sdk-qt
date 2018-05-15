@@ -68,7 +68,7 @@ const UpdateDeviceDefinitionRequest * UpdateDeviceDefinitionResponse::request() 
  */
 void UpdateDeviceDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDeviceDefinitionResponse);
+    //Q_D(UpdateDeviceDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

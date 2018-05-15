@@ -76,7 +76,7 @@ const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
  */
 void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAuthorizerResponse);
+    //Q_D(DeleteAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

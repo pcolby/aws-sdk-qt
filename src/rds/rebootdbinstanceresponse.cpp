@@ -129,7 +129,7 @@ const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
  */
 void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootDBInstanceResponse);
+    //Q_D(RebootDBInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

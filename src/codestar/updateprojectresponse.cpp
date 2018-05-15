@@ -153,7 +153,7 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
  */
 void UpdateProjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateProjectResponse);
+    //Q_D(UpdateProjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

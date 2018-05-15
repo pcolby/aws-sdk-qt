@@ -75,7 +75,7 @@ const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::requ
  */
 void AdminDeleteUserAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminDeleteUserAttributesResponse);
+    //Q_D(AdminDeleteUserAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

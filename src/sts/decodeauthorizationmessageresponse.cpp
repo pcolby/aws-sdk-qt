@@ -123,7 +123,7 @@ const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::re
  */
 void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DecodeAuthorizationMessageResponse);
+    //Q_D(DecodeAuthorizationMessageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

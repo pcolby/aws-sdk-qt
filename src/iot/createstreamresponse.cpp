@@ -76,7 +76,7 @@ const CreateStreamRequest * CreateStreamResponse::request() const
  */
 void CreateStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateStreamResponse);
+    //Q_D(CreateStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

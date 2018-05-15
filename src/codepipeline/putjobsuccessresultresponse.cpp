@@ -240,7 +240,7 @@ const PutJobSuccessResultRequest * PutJobSuccessResultResponse::request() const
  */
 void PutJobSuccessResultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutJobSuccessResultResponse);
+    //Q_D(PutJobSuccessResultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

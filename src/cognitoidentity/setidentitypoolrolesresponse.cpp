@@ -103,7 +103,7 @@ const SetIdentityPoolRolesRequest * SetIdentityPoolRolesResponse::request() cons
  */
 void SetIdentityPoolRolesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetIdentityPoolRolesResponse);
+    //Q_D(SetIdentityPoolRolesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

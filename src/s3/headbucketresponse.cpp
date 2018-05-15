@@ -65,7 +65,7 @@ const HeadBucketRequest * HeadBucketResponse::request() const
  */
 void HeadBucketResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(HeadBucketResponse);
+    //Q_D(HeadBucketResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

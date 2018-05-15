@@ -75,7 +75,7 @@ const DeleteUserPoolClientRequest * DeleteUserPoolClientResponse::request() cons
  */
 void DeleteUserPoolClientResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteUserPoolClientResponse);
+    //Q_D(DeleteUserPoolClientResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

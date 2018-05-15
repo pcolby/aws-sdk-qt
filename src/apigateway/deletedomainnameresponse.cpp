@@ -70,7 +70,7 @@ const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
  */
 void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDomainNameResponse);
+    //Q_D(DeleteDomainNameResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

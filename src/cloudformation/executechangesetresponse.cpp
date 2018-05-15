@@ -87,7 +87,7 @@ const ExecuteChangeSetRequest * ExecuteChangeSetResponse::request() const
  */
 void ExecuteChangeSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExecuteChangeSetResponse);
+    //Q_D(ExecuteChangeSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

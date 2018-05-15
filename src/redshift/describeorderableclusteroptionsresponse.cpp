@@ -95,7 +95,7 @@ const DescribeOrderableClusterOptionsRequest * DescribeOrderableClusterOptionsRe
  */
 void DescribeOrderableClusterOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeOrderableClusterOptionsResponse);
+    //Q_D(DescribeOrderableClusterOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

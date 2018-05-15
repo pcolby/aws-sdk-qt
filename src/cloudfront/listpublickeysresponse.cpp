@@ -70,7 +70,7 @@ const ListPublicKeysRequest * ListPublicKeysResponse::request() const
  */
 void ListPublicKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPublicKeysResponse);
+    //Q_D(ListPublicKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

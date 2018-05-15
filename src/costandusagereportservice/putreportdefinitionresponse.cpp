@@ -65,7 +65,7 @@ const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
  */
 void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutReportDefinitionResponse);
+    //Q_D(PutReportDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

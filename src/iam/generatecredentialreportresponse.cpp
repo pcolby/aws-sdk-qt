@@ -128,7 +128,7 @@ const GenerateCredentialReportRequest * GenerateCredentialReportResponse::reques
  */
 void GenerateCredentialReportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GenerateCredentialReportResponse);
+    //Q_D(GenerateCredentialReportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -94,7 +94,7 @@ const ListTagsLogGroupRequest * ListTagsLogGroupResponse::request() const
  */
 void ListTagsLogGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTagsLogGroupResponse);
+    //Q_D(ListTagsLogGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

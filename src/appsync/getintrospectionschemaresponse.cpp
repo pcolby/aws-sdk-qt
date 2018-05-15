@@ -66,7 +66,7 @@ const GetIntrospectionSchemaRequest * GetIntrospectionSchemaResponse::request() 
  */
 void GetIntrospectionSchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetIntrospectionSchemaResponse);
+    //Q_D(GetIntrospectionSchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteBucketWebsiteRequest * DeleteBucketWebsiteResponse::request() const
  */
 void DeleteBucketWebsiteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBucketWebsiteResponse);
+    //Q_D(DeleteBucketWebsiteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

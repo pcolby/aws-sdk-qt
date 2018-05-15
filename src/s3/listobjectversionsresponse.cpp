@@ -65,7 +65,7 @@ const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
  */
 void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListObjectVersionsResponse);
+    //Q_D(ListObjectVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

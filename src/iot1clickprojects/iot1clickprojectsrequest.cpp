@@ -237,7 +237,7 @@ void IoT1ClickProjectsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest IoT1ClickProjectsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const IoT1ClickProjectsRequest);
+    //Q_D(const IoT1ClickProjectsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

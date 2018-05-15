@@ -93,7 +93,7 @@ const RegisterInstancesWithLoadBalancerRequest * RegisterInstancesWithLoadBalanc
  */
 void RegisterInstancesWithLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterInstancesWithLoadBalancerResponse);
+    //Q_D(RegisterInstancesWithLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

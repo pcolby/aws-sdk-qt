@@ -226,7 +226,7 @@ void ConnectRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ConnectRequest);
+    //Q_D(const ConnectRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

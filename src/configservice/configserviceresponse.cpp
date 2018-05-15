@@ -61,7 +61,7 @@ ConfigServiceResponse::ConfigServiceResponse(ConfigServiceResponsePrivate * cons
  */
 void ConfigServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ConfigServiceResponse);
+    //Q_D(ConfigServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

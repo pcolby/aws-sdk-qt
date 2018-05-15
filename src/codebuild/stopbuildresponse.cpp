@@ -145,7 +145,7 @@ const StopBuildRequest * StopBuildResponse::request() const
  */
 void StopBuildResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopBuildResponse);
+    //Q_D(StopBuildResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

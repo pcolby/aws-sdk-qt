@@ -76,7 +76,7 @@ const DescribeThingRegistrationTaskRequest * DescribeThingRegistrationTaskRespon
  */
 void DescribeThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeThingRegistrationTaskResponse);
+    //Q_D(DescribeThingRegistrationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

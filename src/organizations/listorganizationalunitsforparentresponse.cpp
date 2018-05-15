@@ -207,7 +207,7 @@ const ListOrganizationalUnitsForParentRequest * ListOrganizationalUnitsForParent
  */
 void ListOrganizationalUnitsForParentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListOrganizationalUnitsForParentResponse);
+    //Q_D(ListOrganizationalUnitsForParentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

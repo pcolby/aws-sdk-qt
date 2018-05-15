@@ -70,7 +70,7 @@ const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::requ
  */
 void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLaunchConfigurationResponse);
+    //Q_D(DeleteLaunchConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

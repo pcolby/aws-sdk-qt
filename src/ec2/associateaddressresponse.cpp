@@ -69,7 +69,7 @@ const AssociateAddressRequest * AssociateAddressResponse::request() const
  */
 void AssociateAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateAddressResponse);
+    //Q_D(AssociateAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

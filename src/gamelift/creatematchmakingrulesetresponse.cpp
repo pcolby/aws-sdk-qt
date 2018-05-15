@@ -509,7 +509,7 @@ const CreateMatchmakingRuleSetRequest * CreateMatchmakingRuleSetResponse::reques
  */
 void CreateMatchmakingRuleSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateMatchmakingRuleSetResponse);
+    //Q_D(CreateMatchmakingRuleSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

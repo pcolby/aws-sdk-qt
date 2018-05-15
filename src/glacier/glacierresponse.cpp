@@ -61,7 +61,7 @@ GlacierResponse::GlacierResponse(GlacierResponsePrivate * const d, QObject * con
  */
 void GlacierResponse::parseFailure(QIODevice &response)
 {
-    Q_D(GlacierResponse);
+    //Q_D(GlacierResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

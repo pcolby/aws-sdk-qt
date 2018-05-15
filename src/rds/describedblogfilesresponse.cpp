@@ -129,7 +129,7 @@ const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
  */
 void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBLogFilesResponse);
+    //Q_D(DescribeDBLogFilesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const DescribeDBClusterBacktracksRequest * DescribeDBClusterBacktracksResponse::
  */
 void DescribeDBClusterBacktracksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBClusterBacktracksResponse);
+    //Q_D(DescribeDBClusterBacktracksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -77,7 +77,7 @@ const CreateHsmRequest * CreateHsmResponse::request() const
  */
 void CreateHsmResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateHsmResponse);
+    //Q_D(CreateHsmResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -153,7 +153,7 @@ const UpdateTeamMemberRequest * UpdateTeamMemberResponse::request() const
  */
 void UpdateTeamMemberResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTeamMemberResponse);
+    //Q_D(UpdateTeamMemberResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

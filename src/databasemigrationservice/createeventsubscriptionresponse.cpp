@@ -76,7 +76,7 @@ const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request(
  */
 void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateEventSubscriptionResponse);
+    //Q_D(CreateEventSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

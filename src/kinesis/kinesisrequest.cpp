@@ -247,7 +247,7 @@ void KinesisRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const KinesisRequest);
+    //Q_D(const KinesisRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

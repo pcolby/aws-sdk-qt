@@ -241,7 +241,7 @@ void MediaLiveRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MediaLiveRequest);
+    //Q_D(const MediaLiveRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

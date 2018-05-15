@@ -130,7 +130,7 @@ const DeleteSigningCertificateRequest * DeleteSigningCertificateResponse::reques
  */
 void DeleteSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSigningCertificateResponse);
+    //Q_D(DeleteSigningCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -84,7 +84,7 @@ const DeleteTableRequest * DeleteTableResponse::request() const
  */
 void DeleteTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteTableResponse);
+    //Q_D(DeleteTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

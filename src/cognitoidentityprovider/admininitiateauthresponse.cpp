@@ -75,7 +75,7 @@ const AdminInitiateAuthRequest * AdminInitiateAuthResponse::request() const
  */
 void AdminInitiateAuthResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminInitiateAuthResponse);
+    //Q_D(AdminInitiateAuthResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

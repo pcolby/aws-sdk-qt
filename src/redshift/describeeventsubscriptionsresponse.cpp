@@ -95,7 +95,7 @@ const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::re
  */
 void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeEventSubscriptionsResponse);
+    //Q_D(DescribeEventSubscriptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

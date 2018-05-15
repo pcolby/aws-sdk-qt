@@ -126,7 +126,7 @@ const DescribeEntityAggregatesRequest * DescribeEntityAggregatesResponse::reques
  */
 void DescribeEntityAggregatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeEntityAggregatesResponse);
+    //Q_D(DescribeEntityAggregatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

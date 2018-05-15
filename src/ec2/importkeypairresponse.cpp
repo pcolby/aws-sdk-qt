@@ -69,7 +69,7 @@ const ImportKeyPairRequest * ImportKeyPairResponse::request() const
  */
 void ImportKeyPairResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportKeyPairResponse);
+    //Q_D(ImportKeyPairResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

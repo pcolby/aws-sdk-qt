@@ -65,7 +65,7 @@ const DeleteBatchPredictionRequest * DeleteBatchPredictionResponse::request() co
  */
 void DeleteBatchPredictionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBatchPredictionResponse);
+    //Q_D(DeleteBatchPredictionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

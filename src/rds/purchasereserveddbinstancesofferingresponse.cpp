@@ -129,7 +129,7 @@ const PurchaseReservedDBInstancesOfferingRequest * PurchaseReservedDBInstancesOf
  */
 void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseReservedDBInstancesOfferingResponse);
+    //Q_D(PurchaseReservedDBInstancesOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

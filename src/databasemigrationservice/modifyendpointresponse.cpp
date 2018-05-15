@@ -76,7 +76,7 @@ const ModifyEndpointRequest * ModifyEndpointResponse::request() const
  */
 void ModifyEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyEndpointResponse);
+    //Q_D(ModifyEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

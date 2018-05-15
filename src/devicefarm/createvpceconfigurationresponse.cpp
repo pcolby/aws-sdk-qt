@@ -67,7 +67,7 @@ const CreateVPCEConfigurationRequest * CreateVPCEConfigurationResponse::request(
  */
 void CreateVPCEConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateVPCEConfigurationResponse);
+    //Q_D(CreateVPCEConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

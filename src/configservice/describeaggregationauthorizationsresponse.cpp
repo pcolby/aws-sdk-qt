@@ -85,7 +85,7 @@ const DescribeAggregationAuthorizationsRequest * DescribeAggregationAuthorizatio
  */
 void DescribeAggregationAuthorizationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAggregationAuthorizationsResponse);
+    //Q_D(DescribeAggregationAuthorizationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

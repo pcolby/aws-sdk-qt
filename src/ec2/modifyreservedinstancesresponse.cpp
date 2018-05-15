@@ -69,7 +69,7 @@ const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request(
  */
 void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyReservedInstancesResponse);
+    //Q_D(ModifyReservedInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

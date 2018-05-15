@@ -76,7 +76,7 @@ const DeleteRoleAliasRequest * DeleteRoleAliasResponse::request() const
  */
 void DeleteRoleAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRoleAliasResponse);
+    //Q_D(DeleteRoleAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

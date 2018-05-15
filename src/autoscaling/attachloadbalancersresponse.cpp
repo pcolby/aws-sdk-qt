@@ -70,7 +70,7 @@ const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
  */
 void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachLoadBalancersResponse);
+    //Q_D(AttachLoadBalancersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

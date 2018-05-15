@@ -76,7 +76,7 @@ const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request(
  */
 void ListEventSourceMappingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListEventSourceMappingsResponse);
+    //Q_D(ListEventSourceMappingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

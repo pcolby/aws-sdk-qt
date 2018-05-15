@@ -130,7 +130,7 @@ const DeleteVirtualMFADeviceRequest * DeleteVirtualMFADeviceResponse::request() 
  */
 void DeleteVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVirtualMFADeviceResponse);
+    //Q_D(DeleteVirtualMFADeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const UpdateTemplateRequest * UpdateTemplateResponse::request() const
  */
 void UpdateTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTemplateResponse);
+    //Q_D(UpdateTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const GetJobManifestRequest * GetJobManifestResponse::request() const
  */
 void GetJobManifestResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetJobManifestResponse);
+    //Q_D(GetJobManifestResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -291,7 +291,7 @@ void GameLiftRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest GameLiftRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const GameLiftRequest);
+    //Q_D(const GameLiftRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

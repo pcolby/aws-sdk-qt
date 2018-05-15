@@ -125,7 +125,7 @@ const DescribeNodeAssociationStatusRequest * DescribeNodeAssociationStatusRespon
  */
 void DescribeNodeAssociationStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeNodeAssociationStatusResponse);
+    //Q_D(DescribeNodeAssociationStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

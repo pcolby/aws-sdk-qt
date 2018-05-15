@@ -238,7 +238,7 @@ void CloudTrailRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudTrailRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudTrailRequest);
+    //Q_D(const CloudTrailRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -95,7 +95,7 @@ const DescribeLoggingStatusRequest * DescribeLoggingStatusResponse::request() co
  */
 void DescribeLoggingStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeLoggingStatusResponse);
+    //Q_D(DescribeLoggingStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

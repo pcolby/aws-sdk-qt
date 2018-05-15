@@ -72,7 +72,7 @@ const RemoveFacetFromObjectRequest * RemoveFacetFromObjectResponse::request() co
  */
 void RemoveFacetFromObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveFacetFromObjectResponse);
+    //Q_D(RemoveFacetFromObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

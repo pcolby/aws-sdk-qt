@@ -141,7 +141,7 @@ const ListSecretsRequest * ListSecretsResponse::request() const
  */
 void ListSecretsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListSecretsResponse);
+    //Q_D(ListSecretsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

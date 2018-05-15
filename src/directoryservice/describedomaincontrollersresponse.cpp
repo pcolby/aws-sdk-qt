@@ -79,7 +79,7 @@ const DescribeDomainControllersRequest * DescribeDomainControllersResponse::requ
  */
 void DescribeDomainControllersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDomainControllersResponse);
+    //Q_D(DescribeDomainControllersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

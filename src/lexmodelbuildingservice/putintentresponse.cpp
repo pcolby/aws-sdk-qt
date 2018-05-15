@@ -69,7 +69,7 @@ const PutIntentRequest * PutIntentResponse::request() const
  */
 void PutIntentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutIntentResponse);
+    //Q_D(PutIntentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

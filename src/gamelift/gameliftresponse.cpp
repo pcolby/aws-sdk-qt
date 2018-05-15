@@ -61,7 +61,7 @@ GameLiftResponse::GameLiftResponse(GameLiftResponsePrivate * const d, QObject * 
  */
 void GameLiftResponse::parseFailure(QIODevice &response)
 {
-    Q_D(GameLiftResponse);
+    //Q_D(GameLiftResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

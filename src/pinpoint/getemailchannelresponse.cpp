@@ -65,7 +65,7 @@ const GetEmailChannelRequest * GetEmailChannelResponse::request() const
  */
 void GetEmailChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetEmailChannelResponse);
+    //Q_D(GetEmailChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

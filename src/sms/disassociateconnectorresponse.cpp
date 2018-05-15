@@ -65,7 +65,7 @@ const DisassociateConnectorRequest * DisassociateConnectorResponse::request() co
  */
 void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateConnectorResponse);
+    //Q_D(DisassociateConnectorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

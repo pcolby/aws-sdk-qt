@@ -65,7 +65,7 @@ const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() co
  */
 void ListNotebookInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListNotebookInstancesResponse);
+    //Q_D(ListNotebookInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

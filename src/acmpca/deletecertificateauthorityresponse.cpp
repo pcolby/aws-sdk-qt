@@ -95,7 +95,7 @@ const DeleteCertificateAuthorityRequest * DeleteCertificateAuthorityResponse::re
  */
 void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCertificateAuthorityResponse);
+    //Q_D(DeleteCertificateAuthorityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

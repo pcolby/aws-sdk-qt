@@ -81,7 +81,7 @@ const StartInstanceRequest * StartInstanceResponse::request() const
  */
 void StartInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartInstanceResponse);
+    //Q_D(StartInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

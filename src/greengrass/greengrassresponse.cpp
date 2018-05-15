@@ -61,7 +61,7 @@ GreengrassResponse::GreengrassResponse(GreengrassResponsePrivate * const d, QObj
  */
 void GreengrassResponse::parseFailure(QIODevice &response)
 {
-    Q_D(GreengrassResponse);
+    //Q_D(GreengrassResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -95,7 +95,7 @@ const CreateHsmClientCertificateRequest * CreateHsmClientCertificateResponse::re
  */
 void CreateHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateHsmClientCertificateResponse);
+    //Q_D(CreateHsmClientCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

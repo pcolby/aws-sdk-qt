@@ -125,7 +125,7 @@ const CreateBackupRequest * CreateBackupResponse::request() const
  */
 void CreateBackupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBackupResponse);
+    //Q_D(CreateBackupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

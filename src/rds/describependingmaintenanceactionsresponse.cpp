@@ -129,7 +129,7 @@ const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActio
  */
 void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePendingMaintenanceActionsResponse);
+    //Q_D(DescribePendingMaintenanceActionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

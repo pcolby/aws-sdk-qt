@@ -133,7 +133,7 @@ const ModifyLoadBalancerAttributesRequest * ModifyLoadBalancerAttributesResponse
  */
 void ModifyLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyLoadBalancerAttributesResponse);
+    //Q_D(ModifyLoadBalancerAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

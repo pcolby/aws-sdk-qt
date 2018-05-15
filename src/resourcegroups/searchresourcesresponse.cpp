@@ -109,7 +109,7 @@ const SearchResourcesRequest * SearchResourcesResponse::request() const
  */
 void SearchResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchResourcesResponse);
+    //Q_D(SearchResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

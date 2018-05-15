@@ -76,7 +76,7 @@ const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::
  */
 void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFunctionConfigurationResponse);
+    //Q_D(UpdateFunctionConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

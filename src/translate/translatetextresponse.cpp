@@ -66,7 +66,7 @@ const TranslateTextRequest * TranslateTextResponse::request() const
  */
 void TranslateTextResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TranslateTextResponse);
+    //Q_D(TranslateTextResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -141,7 +141,7 @@ const ListSecretVersionIdsRequest * ListSecretVersionIdsResponse::request() cons
  */
 void ListSecretVersionIdsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListSecretVersionIdsResponse);
+    //Q_D(ListSecretVersionIdsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

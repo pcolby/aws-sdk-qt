@@ -66,7 +66,7 @@ const CompareFacesRequest * CompareFacesResponse::request() const
  */
 void CompareFacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CompareFacesResponse);
+    //Q_D(CompareFacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -134,7 +134,7 @@ const ListVolumeInitiatorsRequest * ListVolumeInitiatorsResponse::request() cons
  */
 void ListVolumeInitiatorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListVolumeInitiatorsResponse);
+    //Q_D(ListVolumeInitiatorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

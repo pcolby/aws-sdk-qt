@@ -61,7 +61,7 @@ DataPipelineResponse::DataPipelineResponse(DataPipelineResponsePrivate * const d
  */
 void DataPipelineResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DataPipelineResponse);
+    //Q_D(DataPipelineResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

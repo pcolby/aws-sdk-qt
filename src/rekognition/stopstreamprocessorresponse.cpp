@@ -66,7 +66,7 @@ const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
  */
 void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopStreamProcessorResponse);
+    //Q_D(StopStreamProcessorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

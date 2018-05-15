@@ -164,7 +164,7 @@ const ListGrantsRequest * ListGrantsResponse::request() const
  */
 void ListGrantsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListGrantsResponse);
+    //Q_D(ListGrantsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

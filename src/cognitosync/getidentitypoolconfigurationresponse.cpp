@@ -85,7 +85,7 @@ const GetIdentityPoolConfigurationRequest * GetIdentityPoolConfigurationResponse
  */
 void GetIdentityPoolConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetIdentityPoolConfigurationResponse);
+    //Q_D(GetIdentityPoolConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const UpdateRulesOfIpGroupRequest * UpdateRulesOfIpGroupResponse::request() cons
  */
 void UpdateRulesOfIpGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRulesOfIpGroupResponse);
+    //Q_D(UpdateRulesOfIpGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

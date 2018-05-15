@@ -295,7 +295,7 @@ void LightsailRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const LightsailRequest);
+    //Q_D(const LightsailRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

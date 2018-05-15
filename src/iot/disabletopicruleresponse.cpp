@@ -76,7 +76,7 @@ const DisableTopicRuleRequest * DisableTopicRuleResponse::request() const
  */
 void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableTopicRuleResponse);
+    //Q_D(DisableTopicRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

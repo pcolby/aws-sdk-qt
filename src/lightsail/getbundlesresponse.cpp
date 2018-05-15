@@ -81,7 +81,7 @@ const GetBundlesRequest * GetBundlesResponse::request() const
  */
 void GetBundlesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBundlesResponse);
+    //Q_D(GetBundlesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

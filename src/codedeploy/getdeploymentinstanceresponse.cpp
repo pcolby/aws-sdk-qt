@@ -146,7 +146,7 @@ const GetDeploymentInstanceRequest * GetDeploymentInstanceResponse::request() co
  */
 void GetDeploymentInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDeploymentInstanceResponse);
+    //Q_D(GetDeploymentInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

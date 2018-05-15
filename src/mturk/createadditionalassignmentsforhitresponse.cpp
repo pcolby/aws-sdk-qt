@@ -65,7 +65,7 @@ const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForH
  */
 void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAdditionalAssignmentsForHITResponse);
+    //Q_D(CreateAdditionalAssignmentsForHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

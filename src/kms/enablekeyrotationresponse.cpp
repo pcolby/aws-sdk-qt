@@ -164,7 +164,7 @@ const EnableKeyRotationRequest * EnableKeyRotationResponse::request() const
  */
 void EnableKeyRotationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableKeyRotationResponse);
+    //Q_D(EnableKeyRotationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

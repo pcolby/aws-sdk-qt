@@ -79,7 +79,7 @@ const CancelSchemaExtensionRequest * CancelSchemaExtensionResponse::request() co
  */
 void CancelSchemaExtensionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelSchemaExtensionResponse);
+    //Q_D(CancelSchemaExtensionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

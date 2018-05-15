@@ -145,7 +145,7 @@ const StartBuildRequest * StartBuildResponse::request() const
  */
 void StartBuildResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartBuildResponse);
+    //Q_D(StartBuildResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

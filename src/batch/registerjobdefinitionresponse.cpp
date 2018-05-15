@@ -79,7 +79,7 @@ const RegisterJobDefinitionRequest * RegisterJobDefinitionResponse::request() co
  */
 void RegisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterJobDefinitionResponse);
+    //Q_D(RegisterJobDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const CreateRouteRequest * CreateRouteResponse::request() const
  */
 void CreateRouteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateRouteResponse);
+    //Q_D(CreateRouteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

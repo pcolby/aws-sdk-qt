@@ -73,7 +73,7 @@ const CreateInterconnectRequest * CreateInterconnectResponse::request() const
  */
 void CreateInterconnectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateInterconnectResponse);
+    //Q_D(CreateInterconnectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

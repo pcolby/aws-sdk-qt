@@ -68,7 +68,7 @@ const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
  */
 void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListGroupVersionsResponse);
+    //Q_D(ListGroupVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

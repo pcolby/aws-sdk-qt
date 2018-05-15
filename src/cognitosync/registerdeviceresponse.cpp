@@ -85,7 +85,7 @@ const RegisterDeviceRequest * RegisterDeviceResponse::request() const
  */
 void RegisterDeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterDeviceResponse);
+    //Q_D(RegisterDeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

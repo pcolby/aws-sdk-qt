@@ -94,7 +94,7 @@ const AssociateKmsKeyRequest * AssociateKmsKeyResponse::request() const
  */
 void AssociateKmsKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateKmsKeyResponse);
+    //Q_D(AssociateKmsKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

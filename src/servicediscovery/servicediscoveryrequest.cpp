@@ -242,7 +242,7 @@ void ServiceDiscoveryRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ServiceDiscoveryRequest);
+    //Q_D(const ServiceDiscoveryRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

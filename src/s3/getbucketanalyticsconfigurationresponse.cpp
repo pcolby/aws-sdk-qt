@@ -65,7 +65,7 @@ const GetBucketAnalyticsConfigurationRequest * GetBucketAnalyticsConfigurationRe
  */
 void GetBucketAnalyticsConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketAnalyticsConfigurationResponse);
+    //Q_D(GetBucketAnalyticsConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

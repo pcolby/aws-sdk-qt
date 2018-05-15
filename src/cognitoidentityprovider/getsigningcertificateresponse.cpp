@@ -75,7 +75,7 @@ const GetSigningCertificateRequest * GetSigningCertificateResponse::request() co
  */
 void GetSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSigningCertificateResponse);
+    //Q_D(GetSigningCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

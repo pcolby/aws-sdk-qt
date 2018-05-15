@@ -70,7 +70,7 @@ const GetModelRequest * GetModelResponse::request() const
  */
 void GetModelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetModelResponse);
+    //Q_D(GetModelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

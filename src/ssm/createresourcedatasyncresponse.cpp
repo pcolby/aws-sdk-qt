@@ -89,7 +89,7 @@ const CreateResourceDataSyncRequest * CreateResourceDataSyncResponse::request() 
  */
 void CreateResourceDataSyncResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateResourceDataSyncResponse);
+    //Q_D(CreateResourceDataSyncResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

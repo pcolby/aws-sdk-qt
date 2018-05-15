@@ -87,7 +87,7 @@ const ValidateTemplateRequest * ValidateTemplateResponse::request() const
  */
 void ValidateTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ValidateTemplateResponse);
+    //Q_D(ValidateTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

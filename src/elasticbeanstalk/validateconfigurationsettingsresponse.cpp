@@ -87,7 +87,7 @@ const ValidateConfigurationSettingsRequest * ValidateConfigurationSettingsRespon
  */
 void ValidateConfigurationSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ValidateConfigurationSettingsResponse);
+    //Q_D(ValidateConfigurationSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

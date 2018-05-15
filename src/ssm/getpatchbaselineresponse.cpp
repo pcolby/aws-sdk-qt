@@ -89,7 +89,7 @@ const GetPatchBaselineRequest * GetPatchBaselineResponse::request() const
  */
 void GetPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetPatchBaselineResponse);
+    //Q_D(GetPatchBaselineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

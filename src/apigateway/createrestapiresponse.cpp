@@ -70,7 +70,7 @@ const CreateRestApiRequest * CreateRestApiResponse::request() const
  */
 void CreateRestApiResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateRestApiResponse);
+    //Q_D(CreateRestApiResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

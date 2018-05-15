@@ -87,7 +87,7 @@ const SignalResourceRequest * SignalResourceResponse::request() const
  */
 void SignalResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SignalResourceResponse);
+    //Q_D(SignalResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

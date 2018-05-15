@@ -133,7 +133,7 @@ const DescribeCasesRequest * DescribeCasesResponse::request() const
  */
 void DescribeCasesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCasesResponse);
+    //Q_D(DescribeCasesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

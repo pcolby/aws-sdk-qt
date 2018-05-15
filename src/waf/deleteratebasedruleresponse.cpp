@@ -70,7 +70,7 @@ const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
  */
 void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRateBasedRuleResponse);
+    //Q_D(DeleteRateBasedRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

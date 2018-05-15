@@ -134,7 +134,7 @@ const AddWorkingStorageRequest * AddWorkingStorageResponse::request() const
  */
 void AddWorkingStorageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddWorkingStorageResponse);
+    //Q_D(AddWorkingStorageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

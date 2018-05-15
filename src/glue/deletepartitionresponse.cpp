@@ -68,7 +68,7 @@ const DeletePartitionRequest * DeletePartitionResponse::request() const
  */
 void DeletePartitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePartitionResponse);
+    //Q_D(DeletePartitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

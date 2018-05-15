@@ -65,7 +65,7 @@ const CreateQueryLoggingConfigRequest * CreateQueryLoggingConfigResponse::reques
  */
 void CreateQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateQueryLoggingConfigResponse);
+    //Q_D(CreateQueryLoggingConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

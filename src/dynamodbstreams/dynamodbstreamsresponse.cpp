@@ -61,7 +61,7 @@ DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate 
  */
 void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DynamoDBStreamsResponse);
+    //Q_D(DynamoDBStreamsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

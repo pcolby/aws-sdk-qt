@@ -255,7 +255,7 @@ const PostCommentForComparedCommitRequest * PostCommentForComparedCommitResponse
  */
 void PostCommentForComparedCommitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PostCommentForComparedCommitResponse);
+    //Q_D(PostCommentForComparedCommitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

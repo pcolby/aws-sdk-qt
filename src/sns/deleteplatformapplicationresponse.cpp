@@ -79,7 +79,7 @@ const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::requ
  */
 void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePlatformApplicationResponse);
+    //Q_D(DeletePlatformApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

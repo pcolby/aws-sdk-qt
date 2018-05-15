@@ -70,7 +70,7 @@ const UpdateCloudFrontOriginAccessIdentityRequest * UpdateCloudFrontOriginAccess
  */
 void UpdateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCloudFrontOriginAccessIdentityResponse);
+    //Q_D(UpdateCloudFrontOriginAccessIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

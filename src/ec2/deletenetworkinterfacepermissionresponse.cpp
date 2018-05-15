@@ -69,7 +69,7 @@ const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermission
  */
 void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNetworkInterfacePermissionResponse);
+    //Q_D(DeleteNetworkInterfacePermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

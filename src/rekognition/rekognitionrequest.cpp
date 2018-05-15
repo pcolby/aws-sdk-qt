@@ -257,7 +257,7 @@ void RekognitionRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const RekognitionRequest);
+    //Q_D(const RekognitionRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

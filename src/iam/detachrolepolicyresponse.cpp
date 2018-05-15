@@ -130,7 +130,7 @@ const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
  */
 void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachRolePolicyResponse);
+    //Q_D(DetachRolePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

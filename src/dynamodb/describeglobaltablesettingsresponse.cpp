@@ -84,7 +84,7 @@ const DescribeGlobalTableSettingsRequest * DescribeGlobalTableSettingsResponse::
  */
 void DescribeGlobalTableSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeGlobalTableSettingsResponse);
+    //Q_D(DescribeGlobalTableSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const GetConsoleOutputRequest * GetConsoleOutputResponse::request() const
  */
 void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetConsoleOutputResponse);
+    //Q_D(GetConsoleOutputResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

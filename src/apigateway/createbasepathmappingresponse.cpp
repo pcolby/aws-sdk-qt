@@ -70,7 +70,7 @@ const CreateBasePathMappingRequest * CreateBasePathMappingResponse::request() co
  */
 void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBasePathMappingResponse);
+    //Q_D(CreateBasePathMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

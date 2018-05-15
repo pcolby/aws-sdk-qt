@@ -71,7 +71,7 @@ const UpdateTagOptionRequest * UpdateTagOptionResponse::request() const
  */
 void UpdateTagOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTagOptionResponse);
+    //Q_D(UpdateTagOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

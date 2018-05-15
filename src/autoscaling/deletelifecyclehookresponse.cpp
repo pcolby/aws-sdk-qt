@@ -70,7 +70,7 @@ const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
  */
 void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLifecycleHookResponse);
+    //Q_D(DeleteLifecycleHookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

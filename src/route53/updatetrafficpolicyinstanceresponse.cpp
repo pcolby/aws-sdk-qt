@@ -65,7 +65,7 @@ const UpdateTrafficPolicyInstanceRequest * UpdateTrafficPolicyInstanceResponse::
  */
 void UpdateTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTrafficPolicyInstanceResponse);
+    //Q_D(UpdateTrafficPolicyInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

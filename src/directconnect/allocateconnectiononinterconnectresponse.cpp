@@ -73,7 +73,7 @@ const AllocateConnectionOnInterconnectRequest * AllocateConnectionOnInterconnect
  */
 void AllocateConnectionOnInterconnectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AllocateConnectionOnInterconnectResponse);
+    //Q_D(AllocateConnectionOnInterconnectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -79,7 +79,7 @@ const RestoreFromSnapshotRequest * RestoreFromSnapshotResponse::request() const
  */
 void RestoreFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreFromSnapshotResponse);
+    //Q_D(RestoreFromSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

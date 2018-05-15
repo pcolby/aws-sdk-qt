@@ -68,7 +68,7 @@ const StopTriggerRequest * StopTriggerResponse::request() const
  */
 void StopTriggerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopTriggerResponse);
+    //Q_D(StopTriggerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

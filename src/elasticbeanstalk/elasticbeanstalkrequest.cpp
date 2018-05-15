@@ -268,7 +268,7 @@ void ElasticBeanstalkRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ElasticBeanstalkRequest);
+    //Q_D(const ElasticBeanstalkRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

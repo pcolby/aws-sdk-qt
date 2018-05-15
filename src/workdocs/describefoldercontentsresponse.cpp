@@ -94,7 +94,7 @@ const DescribeFolderContentsRequest * DescribeFolderContentsResponse::request() 
  */
 void DescribeFolderContentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFolderContentsResponse);
+    //Q_D(DescribeFolderContentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

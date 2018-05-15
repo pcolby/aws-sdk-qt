@@ -95,7 +95,7 @@ const DisableLoggingRequest * DisableLoggingResponse::request() const
  */
 void DisableLoggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableLoggingResponse);
+    //Q_D(DisableLoggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

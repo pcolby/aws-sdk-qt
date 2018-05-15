@@ -61,7 +61,7 @@ MediaPackageResponse::MediaPackageResponse(MediaPackageResponsePrivate * const d
  */
 void MediaPackageResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MediaPackageResponse);
+    //Q_D(MediaPackageResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

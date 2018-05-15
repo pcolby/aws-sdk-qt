@@ -81,7 +81,7 @@ const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::requ
  */
 void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CountPendingActivityTasksResponse);
+    //Q_D(CountPendingActivityTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -242,7 +242,7 @@ void CognitoIdentityRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CognitoIdentityRequest);
+    //Q_D(const CognitoIdentityRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

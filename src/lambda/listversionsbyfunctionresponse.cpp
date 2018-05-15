@@ -76,7 +76,7 @@ const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() 
  */
 void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListVersionsByFunctionResponse);
+    //Q_D(ListVersionsByFunctionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

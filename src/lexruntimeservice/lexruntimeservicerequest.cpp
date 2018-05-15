@@ -226,7 +226,7 @@ void LexRuntimeServiceRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest LexRuntimeServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const LexRuntimeServiceRequest);
+    //Q_D(const LexRuntimeServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

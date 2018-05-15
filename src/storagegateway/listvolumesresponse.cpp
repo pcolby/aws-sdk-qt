@@ -134,7 +134,7 @@ const ListVolumesRequest * ListVolumesResponse::request() const
  */
 void ListVolumesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListVolumesResponse);
+    //Q_D(ListVolumesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

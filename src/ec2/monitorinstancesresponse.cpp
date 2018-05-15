@@ -69,7 +69,7 @@ const MonitorInstancesRequest * MonitorInstancesResponse::request() const
  */
 void MonitorInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(MonitorInstancesResponse);
+    //Q_D(MonitorInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

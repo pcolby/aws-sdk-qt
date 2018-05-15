@@ -72,7 +72,7 @@ const ListIncomingTypedLinksRequest * ListIncomingTypedLinksResponse::request() 
  */
 void ListIncomingTypedLinksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListIncomingTypedLinksResponse);
+    //Q_D(ListIncomingTypedLinksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

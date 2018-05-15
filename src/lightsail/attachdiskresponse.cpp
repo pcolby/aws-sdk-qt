@@ -81,7 +81,7 @@ const AttachDiskRequest * AttachDiskResponse::request() const
  */
 void AttachDiskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachDiskResponse);
+    //Q_D(AttachDiskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

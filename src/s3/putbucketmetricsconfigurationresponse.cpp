@@ -65,7 +65,7 @@ const PutBucketMetricsConfigurationRequest * PutBucketMetricsConfigurationRespon
  */
 void PutBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketMetricsConfigurationResponse);
+    //Q_D(PutBucketMetricsConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

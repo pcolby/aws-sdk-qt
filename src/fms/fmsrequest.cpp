@@ -236,7 +236,7 @@ void FmsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest FmsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const FmsRequest);
+    //Q_D(const FmsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

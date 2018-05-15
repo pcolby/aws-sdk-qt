@@ -66,7 +66,7 @@ const ListDeviceEventsRequest * ListDeviceEventsResponse::request() const
  */
 void ListDeviceEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListDeviceEventsResponse);
+    //Q_D(ListDeviceEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

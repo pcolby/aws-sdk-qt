@@ -255,7 +255,7 @@ const UpdateDefaultBranchRequest * UpdateDefaultBranchResponse::request() const
  */
 void UpdateDefaultBranchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDefaultBranchResponse);
+    //Q_D(UpdateDefaultBranchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

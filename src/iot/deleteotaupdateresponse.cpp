@@ -76,7 +76,7 @@ const DeleteOTAUpdateRequest * DeleteOTAUpdateResponse::request() const
  */
 void DeleteOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteOTAUpdateResponse);
+    //Q_D(DeleteOTAUpdateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

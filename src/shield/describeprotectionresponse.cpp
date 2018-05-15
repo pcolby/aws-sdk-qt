@@ -71,7 +71,7 @@ const DescribeProtectionRequest * DescribeProtectionResponse::request() const
  */
 void DescribeProtectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeProtectionResponse);
+    //Q_D(DescribeProtectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

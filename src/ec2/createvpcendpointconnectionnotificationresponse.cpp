@@ -69,7 +69,7 @@ const CreateVpcEndpointConnectionNotificationRequest * CreateVpcEndpointConnecti
  */
 void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateVpcEndpointConnectionNotificationResponse);
+    //Q_D(CreateVpcEndpointConnectionNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

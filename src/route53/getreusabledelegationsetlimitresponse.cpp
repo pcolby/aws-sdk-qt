@@ -65,7 +65,7 @@ const GetReusableDelegationSetLimitRequest * GetReusableDelegationSetLimitRespon
  */
 void GetReusableDelegationSetLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetReusableDelegationSetLimitResponse);
+    //Q_D(GetReusableDelegationSetLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

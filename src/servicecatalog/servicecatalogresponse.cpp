@@ -61,7 +61,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(ServiceCatalogResponsePrivate * c
  */
 void ServiceCatalogResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ServiceCatalogResponse);
+    //Q_D(ServiceCatalogResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

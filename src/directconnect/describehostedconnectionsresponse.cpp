@@ -73,7 +73,7 @@ const DescribeHostedConnectionsRequest * DescribeHostedConnectionsResponse::requ
  */
 void DescribeHostedConnectionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeHostedConnectionsResponse);
+    //Q_D(DescribeHostedConnectionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

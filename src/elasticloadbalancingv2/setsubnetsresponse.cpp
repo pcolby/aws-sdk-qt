@@ -133,7 +133,7 @@ const SetSubnetsRequest * SetSubnetsResponse::request() const
  */
 void SetSubnetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetSubnetsResponse);
+    //Q_D(SetSubnetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

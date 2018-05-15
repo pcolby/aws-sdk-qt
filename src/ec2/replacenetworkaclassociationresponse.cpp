@@ -69,7 +69,7 @@ const ReplaceNetworkAclAssociationRequest * ReplaceNetworkAclAssociationResponse
  */
 void ReplaceNetworkAclAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReplaceNetworkAclAssociationResponse);
+    //Q_D(ReplaceNetworkAclAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

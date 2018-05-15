@@ -72,7 +72,7 @@ const ListWebACLsRequest * ListWebACLsResponse::request() const
  */
 void ListWebACLsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListWebACLsResponse);
+    //Q_D(ListWebACLsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

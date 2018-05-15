@@ -94,7 +94,7 @@ const PutSubscriptionFilterRequest * PutSubscriptionFilterResponse::request() co
  */
 void PutSubscriptionFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutSubscriptionFilterResponse);
+    //Q_D(PutSubscriptionFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

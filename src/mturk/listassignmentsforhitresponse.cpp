@@ -65,7 +65,7 @@ const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() co
  */
 void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAssignmentsForHITResponse);
+    //Q_D(ListAssignmentsForHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

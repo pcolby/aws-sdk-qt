@@ -61,7 +61,7 @@ PinpointResponse::PinpointResponse(PinpointResponsePrivate * const d, QObject * 
  */
 void PinpointResponse::parseFailure(QIODevice &response)
 {
-    Q_D(PinpointResponse);
+    //Q_D(PinpointResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

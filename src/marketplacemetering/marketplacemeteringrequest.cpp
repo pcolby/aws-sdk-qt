@@ -227,7 +227,7 @@ void MarketplaceMeteringRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MarketplaceMeteringRequest);
+    //Q_D(const MarketplaceMeteringRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

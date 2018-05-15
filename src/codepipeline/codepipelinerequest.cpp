@@ -256,7 +256,7 @@ void CodePipelineRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CodePipelineRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CodePipelineRequest);
+    //Q_D(const CodePipelineRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -70,7 +70,7 @@ const DisassociateContactFromAddressBookRequest * DisassociateContactFromAddress
  */
 void DisassociateContactFromAddressBookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateContactFromAddressBookResponse);
+    //Q_D(DisassociateContactFromAddressBookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

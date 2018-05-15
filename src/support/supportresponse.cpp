@@ -61,7 +61,7 @@ SupportResponse::SupportResponse(SupportResponsePrivate * const d, QObject * con
  */
 void SupportResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SupportResponse);
+    //Q_D(SupportResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

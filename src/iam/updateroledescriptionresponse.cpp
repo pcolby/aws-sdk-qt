@@ -130,7 +130,7 @@ const UpdateRoleDescriptionRequest * UpdateRoleDescriptionResponse::request() co
  */
 void UpdateRoleDescriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRoleDescriptionResponse);
+    //Q_D(UpdateRoleDescriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

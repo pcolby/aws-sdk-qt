@@ -70,7 +70,7 @@ const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::reques
  */
 void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportDocumentationPartsResponse);
+    //Q_D(ImportDocumentationPartsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

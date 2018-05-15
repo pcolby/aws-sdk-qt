@@ -98,7 +98,7 @@ const DeleteMailboxPermissionsRequest * DeleteMailboxPermissionsResponse::reques
  */
 void DeleteMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteMailboxPermissionsResponse);
+    //Q_D(DeleteMailboxPermissionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateApplicationResponse);
+    //Q_D(UpdateApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

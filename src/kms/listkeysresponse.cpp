@@ -164,7 +164,7 @@ const ListKeysRequest * ListKeysResponse::request() const
  */
 void ListKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListKeysResponse);
+    //Q_D(ListKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

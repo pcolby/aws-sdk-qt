@@ -71,7 +71,7 @@ const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResp
  */
 void DescribeProvisioningParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeProvisioningParametersResponse);
+    //Q_D(DescribeProvisioningParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

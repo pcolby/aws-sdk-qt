@@ -61,7 +61,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(AlexaForBusinessResponsePriva
  */
 void AlexaForBusinessResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AlexaForBusinessResponse);
+    //Q_D(AlexaForBusinessResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

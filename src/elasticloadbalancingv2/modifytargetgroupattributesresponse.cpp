@@ -133,7 +133,7 @@ const ModifyTargetGroupAttributesRequest * ModifyTargetGroupAttributesResponse::
  */
 void ModifyTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyTargetGroupAttributesResponse);
+    //Q_D(ModifyTargetGroupAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

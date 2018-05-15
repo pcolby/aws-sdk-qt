@@ -69,7 +69,7 @@ const DescribeConversionTasksRequest * DescribeConversionTasksResponse::request(
  */
 void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeConversionTasksResponse);
+    //Q_D(DescribeConversionTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -98,7 +98,7 @@ const CreateGroupRequest * CreateGroupResponse::request() const
  */
 void CreateGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateGroupResponse);
+    //Q_D(CreateGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse
  */
 void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListHITsForQualificationTypeResponse);
+    //Q_D(ListHITsForQualificationTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

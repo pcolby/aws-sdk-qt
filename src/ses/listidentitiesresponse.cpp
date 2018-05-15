@@ -76,7 +76,7 @@ const ListIdentitiesRequest * ListIdentitiesResponse::request() const
  */
 void ListIdentitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListIdentitiesResponse);
+    //Q_D(ListIdentitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

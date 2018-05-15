@@ -79,7 +79,7 @@ const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
  */
 void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSnapshotLimitsResponse);
+    //Q_D(GetSnapshotLimitsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

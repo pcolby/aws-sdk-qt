@@ -76,7 +76,7 @@ const CreateScalingPlanRequest * CreateScalingPlanResponse::request() const
  */
 void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateScalingPlanResponse);
+    //Q_D(CreateScalingPlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

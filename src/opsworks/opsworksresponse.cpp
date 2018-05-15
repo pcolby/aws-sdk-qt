@@ -61,7 +61,7 @@ OpsWorksResponse::OpsWorksResponse(OpsWorksResponsePrivate * const d, QObject * 
  */
 void OpsWorksResponse::parseFailure(QIODevice &response)
 {
-    Q_D(OpsWorksResponse);
+    //Q_D(OpsWorksResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -74,7 +74,7 @@ const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::requ
  */
 void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteElasticsearchDomainResponse);
+    //Q_D(DeleteElasticsearchDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

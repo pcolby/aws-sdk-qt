@@ -129,7 +129,7 @@ const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
  */
 void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDBSubnetGroupResponse);
+    //Q_D(DeleteDBSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

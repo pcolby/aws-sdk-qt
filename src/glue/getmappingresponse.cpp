@@ -68,7 +68,7 @@ const GetMappingRequest * GetMappingResponse::request() const
  */
 void GetMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetMappingResponse);
+    //Q_D(GetMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DeleteSpotDatafeedSubscriptionRequest * DeleteSpotDatafeedSubscriptionResp
  */
 void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSpotDatafeedSubscriptionResponse);
+    //Q_D(DeleteSpotDatafeedSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

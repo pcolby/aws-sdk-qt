@@ -76,7 +76,7 @@ const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::requ
  */
 void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReplicationInstanceResponse);
+    //Q_D(DeleteReplicationInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

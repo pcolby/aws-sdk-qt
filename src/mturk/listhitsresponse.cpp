@@ -65,7 +65,7 @@ const ListHITsRequest * ListHITsResponse::request() const
  */
 void ListHITsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListHITsResponse);
+    //Q_D(ListHITsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

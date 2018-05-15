@@ -207,7 +207,7 @@ const EnableAWSServiceAccessRequest * EnableAWSServiceAccessResponse::request() 
  */
 void EnableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableAWSServiceAccessResponse);
+    //Q_D(EnableAWSServiceAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

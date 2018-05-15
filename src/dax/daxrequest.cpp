@@ -245,7 +245,7 @@ void DaxRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest DaxRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DaxRequest);
+    //Q_D(const DaxRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

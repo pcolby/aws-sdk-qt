@@ -79,7 +79,7 @@ const OptInPhoneNumberRequest * OptInPhoneNumberResponse::request() const
  */
 void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(OptInPhoneNumberResponse);
+    //Q_D(OptInPhoneNumberResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

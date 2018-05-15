@@ -61,7 +61,7 @@ WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, Q
  */
 void WAFRegionalResponse::parseFailure(QIODevice &response)
 {
-    Q_D(WAFRegionalResponse);
+    //Q_D(WAFRegionalResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

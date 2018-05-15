@@ -89,7 +89,7 @@ const SendCommandRequest * SendCommandResponse::request() const
  */
 void SendCommandResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SendCommandResponse);
+    //Q_D(SendCommandResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

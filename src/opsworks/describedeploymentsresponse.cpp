@@ -171,7 +171,7 @@ const DescribeDeploymentsRequest * DescribeDeploymentsResponse::request() const
  */
 void DescribeDeploymentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDeploymentsResponse);
+    //Q_D(DescribeDeploymentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

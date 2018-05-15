@@ -70,7 +70,7 @@ const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWi
  */
 void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateStreamingDistributionWithTagsResponse);
+    //Q_D(CreateStreamingDistributionWithTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -79,7 +79,7 @@ const ListSchemaExtensionsRequest * ListSchemaExtensionsResponse::request() cons
  */
 void ListSchemaExtensionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListSchemaExtensionsResponse);
+    //Q_D(ListSchemaExtensionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

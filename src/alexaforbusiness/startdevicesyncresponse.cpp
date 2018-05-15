@@ -70,7 +70,7 @@ const StartDeviceSyncRequest * StartDeviceSyncResponse::request() const
  */
 void StartDeviceSyncResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartDeviceSyncResponse);
+    //Q_D(StartDeviceSyncResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

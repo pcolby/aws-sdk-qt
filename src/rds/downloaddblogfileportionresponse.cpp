@@ -129,7 +129,7 @@ const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::reques
  */
 void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DownloadDBLogFilePortionResponse);
+    //Q_D(DownloadDBLogFilePortionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

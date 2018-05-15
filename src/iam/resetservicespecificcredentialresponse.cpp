@@ -130,7 +130,7 @@ const ResetServiceSpecificCredentialRequest * ResetServiceSpecificCredentialResp
  */
 void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetServiceSpecificCredentialResponse);
+    //Q_D(ResetServiceSpecificCredentialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

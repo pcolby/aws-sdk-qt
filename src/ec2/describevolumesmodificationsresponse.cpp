@@ -69,7 +69,7 @@ const DescribeVolumesModificationsRequest * DescribeVolumesModificationsResponse
  */
 void DescribeVolumesModificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVolumesModificationsResponse);
+    //Q_D(DescribeVolumesModificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

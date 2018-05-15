@@ -65,7 +65,7 @@ const DisassociateMembersRequest * DisassociateMembersResponse::request() const
  */
 void DisassociateMembersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateMembersResponse);
+    //Q_D(DisassociateMembersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

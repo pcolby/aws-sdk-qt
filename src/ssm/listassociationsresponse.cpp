@@ -89,7 +89,7 @@ const ListAssociationsRequest * ListAssociationsResponse::request() const
  */
 void ListAssociationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAssociationsResponse);
+    //Q_D(ListAssociationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

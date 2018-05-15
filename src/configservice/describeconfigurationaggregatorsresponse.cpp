@@ -85,7 +85,7 @@ const DescribeConfigurationAggregatorsRequest * DescribeConfigurationAggregators
  */
 void DescribeConfigurationAggregatorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeConfigurationAggregatorsResponse);
+    //Q_D(DescribeConfigurationAggregatorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

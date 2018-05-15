@@ -70,7 +70,7 @@ const DeleteWebACLRequest * DeleteWebACLResponse::request() const
  */
 void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteWebACLResponse);
+    //Q_D(DeleteWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

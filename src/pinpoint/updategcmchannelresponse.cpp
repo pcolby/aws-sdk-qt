@@ -65,7 +65,7 @@ const UpdateGcmChannelRequest * UpdateGcmChannelResponse::request() const
  */
 void UpdateGcmChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateGcmChannelResponse);
+    //Q_D(UpdateGcmChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

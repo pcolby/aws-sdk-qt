@@ -61,7 +61,7 @@ CodeStarResponse::CodeStarResponse(CodeStarResponsePrivate * const d, QObject * 
  */
 void CodeStarResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CodeStarResponse);
+    //Q_D(CodeStarResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -68,7 +68,7 @@ const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
  */
 void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateJobFlowsResponse);
+    //Q_D(TerminateJobFlowsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

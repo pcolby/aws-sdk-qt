@@ -129,7 +129,7 @@ const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() cons
  */
 void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CopyDBParameterGroupResponse);
+    //Q_D(CopyDBParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

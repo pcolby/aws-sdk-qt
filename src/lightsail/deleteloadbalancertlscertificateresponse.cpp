@@ -81,7 +81,7 @@ const DeleteLoadBalancerTlsCertificateRequest * DeleteLoadBalancerTlsCertificate
  */
 void DeleteLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLoadBalancerTlsCertificateResponse);
+    //Q_D(DeleteLoadBalancerTlsCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

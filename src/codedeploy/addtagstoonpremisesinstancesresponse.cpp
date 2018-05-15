@@ -146,7 +146,7 @@ const AddTagsToOnPremisesInstancesRequest * AddTagsToOnPremisesInstancesResponse
  */
 void AddTagsToOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddTagsToOnPremisesInstancesResponse);
+    //Q_D(AddTagsToOnPremisesInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

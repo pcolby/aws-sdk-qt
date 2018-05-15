@@ -263,7 +263,7 @@ void MTurkRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MTurkRequest);
+    //Q_D(const MTurkRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

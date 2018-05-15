@@ -68,7 +68,7 @@ const SplitShardRequest * SplitShardResponse::request() const
  */
 void SplitShardResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SplitShardResponse);
+    //Q_D(SplitShardResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

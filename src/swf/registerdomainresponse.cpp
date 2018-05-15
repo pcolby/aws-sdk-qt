@@ -81,7 +81,7 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
  */
 void RegisterDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterDomainResponse);
+    //Q_D(RegisterDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

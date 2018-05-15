@@ -127,7 +127,7 @@ const ExportConfigurationsRequest * ExportConfigurationsResponse::request() cons
  */
 void ExportConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExportConfigurationsResponse);
+    //Q_D(ExportConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

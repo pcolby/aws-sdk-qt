@@ -81,7 +81,7 @@ const CreateDiskRequest * CreateDiskResponse::request() const
  */
 void CreateDiskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDiskResponse);
+    //Q_D(CreateDiskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

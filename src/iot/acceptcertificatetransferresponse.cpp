@@ -76,7 +76,7 @@ const AcceptCertificateTransferRequest * AcceptCertificateTransferResponse::requ
  */
 void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AcceptCertificateTransferResponse);
+    //Q_D(AcceptCertificateTransferResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

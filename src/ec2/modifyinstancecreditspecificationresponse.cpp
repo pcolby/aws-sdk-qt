@@ -69,7 +69,7 @@ const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificati
  */
 void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyInstanceCreditSpecificationResponse);
+    //Q_D(ModifyInstanceCreditSpecificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const RevokeSecurityGroupIngressRequest * RevokeSecurityGroupIngressResponse::re
  */
 void RevokeSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeSecurityGroupIngressResponse);
+    //Q_D(RevokeSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::reques
  */
 void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateAdminAccountResponse);
+    //Q_D(DisassociateAdminAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

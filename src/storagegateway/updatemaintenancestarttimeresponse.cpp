@@ -134,7 +134,7 @@ const UpdateMaintenanceStartTimeRequest * UpdateMaintenanceStartTimeResponse::re
  */
 void UpdateMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateMaintenanceStartTimeResponse);
+    //Q_D(UpdateMaintenanceStartTimeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

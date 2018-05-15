@@ -67,7 +67,7 @@ const AssociateCreatedArtifactRequest * AssociateCreatedArtifactResponse::reques
  */
 void AssociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateCreatedArtifactResponse);
+    //Q_D(AssociateCreatedArtifactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

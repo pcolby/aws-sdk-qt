@@ -61,7 +61,7 @@ Ec2Response::Ec2Response(Ec2ResponsePrivate * const d, QObject * const parent)
  */
 void Ec2Response::parseFailure(QIODevice &response)
 {
-    Q_D(Ec2Response);
+    //Q_D(Ec2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

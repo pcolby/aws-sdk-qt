@@ -85,7 +85,7 @@ const StartConfigurationRecorderRequest * StartConfigurationRecorderResponse::re
  */
 void StartConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartConfigurationRecorderResponse);
+    //Q_D(StartConfigurationRecorderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

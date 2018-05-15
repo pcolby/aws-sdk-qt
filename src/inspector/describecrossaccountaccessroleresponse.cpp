@@ -68,7 +68,7 @@ const DescribeCrossAccountAccessRoleRequest * DescribeCrossAccountAccessRoleResp
  */
 void DescribeCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCrossAccountAccessRoleResponse);
+    //Q_D(DescribeCrossAccountAccessRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

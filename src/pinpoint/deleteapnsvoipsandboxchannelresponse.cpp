@@ -65,7 +65,7 @@ const DeleteApnsVoipSandboxChannelRequest * DeleteApnsVoipSandboxChannelResponse
  */
 void DeleteApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApnsVoipSandboxChannelResponse);
+    //Q_D(DeleteApnsVoipSandboxChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

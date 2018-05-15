@@ -68,7 +68,7 @@ const ListTopicsDetectionJobsRequest * ListTopicsDetectionJobsResponse::request(
  */
 void ListTopicsDetectionJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTopicsDetectionJobsResponse);
+    //Q_D(ListTopicsDetectionJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

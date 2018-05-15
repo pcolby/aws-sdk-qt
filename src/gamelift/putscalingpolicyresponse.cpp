@@ -509,7 +509,7 @@ const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
  */
 void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutScalingPolicyResponse);
+    //Q_D(PutScalingPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

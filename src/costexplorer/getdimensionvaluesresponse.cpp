@@ -83,7 +83,7 @@ const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
  */
 void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDimensionValuesResponse);
+    //Q_D(GetDimensionValuesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

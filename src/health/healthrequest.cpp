@@ -230,7 +230,7 @@ void HealthRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest HealthRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const HealthRequest);
+    //Q_D(const HealthRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

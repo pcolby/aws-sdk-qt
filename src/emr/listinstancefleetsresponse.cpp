@@ -68,7 +68,7 @@ const ListInstanceFleetsRequest * ListInstanceFleetsResponse::request() const
  */
 void ListInstanceFleetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListInstanceFleetsResponse);
+    //Q_D(ListInstanceFleetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

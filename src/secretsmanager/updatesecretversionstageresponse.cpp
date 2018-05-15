@@ -141,7 +141,7 @@ const UpdateSecretVersionStageRequest * UpdateSecretVersionStageResponse::reques
  */
 void UpdateSecretVersionStageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSecretVersionStageResponse);
+    //Q_D(UpdateSecretVersionStageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

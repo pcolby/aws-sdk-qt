@@ -76,7 +76,7 @@ const DescribeActiveReceiptRuleSetRequest * DescribeActiveReceiptRuleSetResponse
  */
 void DescribeActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeActiveReceiptRuleSetResponse);
+    //Q_D(DescribeActiveReceiptRuleSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

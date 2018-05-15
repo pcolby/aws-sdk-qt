@@ -76,7 +76,7 @@ const DeleteReceiptFilterRequest * DeleteReceiptFilterResponse::request() const
  */
 void DeleteReceiptFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReceiptFilterResponse);
+    //Q_D(DeleteReceiptFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

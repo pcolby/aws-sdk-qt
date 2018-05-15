@@ -298,7 +298,7 @@ void OpsWorksRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest OpsWorksRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const OpsWorksRequest);
+    //Q_D(const OpsWorksRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

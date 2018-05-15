@@ -129,7 +129,7 @@ const RestoreDBInstanceFromDBSnapshotRequest * RestoreDBInstanceFromDBSnapshotRe
  */
 void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreDBInstanceFromDBSnapshotResponse);
+    //Q_D(RestoreDBInstanceFromDBSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

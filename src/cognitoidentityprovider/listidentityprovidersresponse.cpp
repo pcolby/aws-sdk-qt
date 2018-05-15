@@ -75,7 +75,7 @@ const ListIdentityProvidersRequest * ListIdentityProvidersResponse::request() co
  */
 void ListIdentityProvidersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListIdentityProvidersResponse);
+    //Q_D(ListIdentityProvidersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -79,7 +79,7 @@ const UpdateJobQueueRequest * UpdateJobQueueResponse::request() const
  */
 void UpdateJobQueueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateJobQueueResponse);
+    //Q_D(UpdateJobQueueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

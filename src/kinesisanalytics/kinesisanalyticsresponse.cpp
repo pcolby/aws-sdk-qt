@@ -61,7 +61,7 @@ KinesisAnalyticsResponse::KinesisAnalyticsResponse(KinesisAnalyticsResponsePriva
  */
 void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(KinesisAnalyticsResponse);
+    //Q_D(KinesisAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

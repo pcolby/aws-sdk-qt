@@ -65,7 +65,7 @@ const RotateChannelCredentialsRequest * RotateChannelCredentialsResponse::reques
  */
 void RotateChannelCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RotateChannelCredentialsResponse);
+    //Q_D(RotateChannelCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -81,7 +81,7 @@ const GetDiskSnapshotsRequest * GetDiskSnapshotsResponse::request() const
  */
 void GetDiskSnapshotsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDiskSnapshotsResponse);
+    //Q_D(GetDiskSnapshotsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

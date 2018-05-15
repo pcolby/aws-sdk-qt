@@ -78,7 +78,7 @@ const SelectRequest * SelectResponse::request() const
  */
 void SelectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SelectResponse);
+    //Q_D(SelectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

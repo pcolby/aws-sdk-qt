@@ -129,7 +129,7 @@ const CopyDBClusterSnapshotRequest * CopyDBClusterSnapshotResponse::request() co
  */
 void CopyDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CopyDBClusterSnapshotResponse);
+    //Q_D(CopyDBClusterSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

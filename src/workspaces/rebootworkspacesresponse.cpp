@@ -68,7 +68,7 @@ const RebootWorkspacesRequest * RebootWorkspacesResponse::request() const
  */
 void RebootWorkspacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootWorkspacesResponse);
+    //Q_D(RebootWorkspacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

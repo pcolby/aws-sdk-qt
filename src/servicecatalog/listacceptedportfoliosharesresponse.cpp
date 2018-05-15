@@ -71,7 +71,7 @@ const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::
  */
 void ListAcceptedPortfolioSharesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAcceptedPortfolioSharesResponse);
+    //Q_D(ListAcceptedPortfolioSharesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

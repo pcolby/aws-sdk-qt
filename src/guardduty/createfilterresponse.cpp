@@ -65,7 +65,7 @@ const CreateFilterRequest * CreateFilterResponse::request() const
  */
 void CreateFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFilterResponse);
+    //Q_D(CreateFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

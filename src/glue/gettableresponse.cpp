@@ -68,7 +68,7 @@ const GetTableRequest * GetTableResponse::request() const
  */
 void GetTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTableResponse);
+    //Q_D(GetTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

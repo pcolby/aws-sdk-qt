@@ -75,7 +75,7 @@ const ListResourceServersRequest * ListResourceServersResponse::request() const
  */
 void ListResourceServersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListResourceServersResponse);
+    //Q_D(ListResourceServersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

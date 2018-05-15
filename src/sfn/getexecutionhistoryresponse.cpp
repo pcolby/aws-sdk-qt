@@ -84,7 +84,7 @@ const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
  */
 void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetExecutionHistoryResponse);
+    //Q_D(GetExecutionHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

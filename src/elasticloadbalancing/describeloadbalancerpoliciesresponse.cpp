@@ -93,7 +93,7 @@ const DescribeLoadBalancerPoliciesRequest * DescribeLoadBalancerPoliciesResponse
  */
 void DescribeLoadBalancerPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeLoadBalancerPoliciesResponse);
+    //Q_D(DescribeLoadBalancerPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

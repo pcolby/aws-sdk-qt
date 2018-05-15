@@ -79,7 +79,7 @@ const DeleteComputeEnvironmentRequest * DeleteComputeEnvironmentResponse::reques
  */
 void DeleteComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteComputeEnvironmentResponse);
+    //Q_D(DeleteComputeEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

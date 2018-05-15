@@ -169,7 +169,7 @@ const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::reques
  */
 void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeOperatingSystemsResponse);
+    //Q_D(DescribeOperatingSystemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

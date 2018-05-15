@@ -94,7 +94,7 @@ const DeactivateUserRequest * DeactivateUserResponse::request() const
  */
 void DeactivateUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeactivateUserResponse);
+    //Q_D(DeactivateUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

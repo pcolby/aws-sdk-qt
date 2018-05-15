@@ -69,7 +69,7 @@ const BatchGetImageRequest * BatchGetImageResponse::request() const
  */
 void BatchGetImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetImageResponse);
+    //Q_D(BatchGetImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

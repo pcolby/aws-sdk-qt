@@ -69,7 +69,7 @@ const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() cons
  */
 void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReportInstanceStatusResponse);
+    //Q_D(ReportInstanceStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

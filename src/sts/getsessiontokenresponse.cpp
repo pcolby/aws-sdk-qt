@@ -123,7 +123,7 @@ const GetSessionTokenRequest * GetSessionTokenResponse::request() const
  */
 void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSessionTokenResponse);
+    //Q_D(GetSessionTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

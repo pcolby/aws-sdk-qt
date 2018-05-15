@@ -79,7 +79,7 @@ const DisableAlarmActionsRequest * DisableAlarmActionsResponse::request() const
  */
 void DisableAlarmActionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableAlarmActionsResponse);
+    //Q_D(DisableAlarmActionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

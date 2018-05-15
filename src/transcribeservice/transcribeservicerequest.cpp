@@ -232,7 +232,7 @@ void TranscribeServiceRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest TranscribeServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const TranscribeServiceRequest);
+    //Q_D(const TranscribeServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

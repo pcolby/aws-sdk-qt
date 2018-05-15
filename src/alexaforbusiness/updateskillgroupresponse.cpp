@@ -70,7 +70,7 @@ const UpdateSkillGroupRequest * UpdateSkillGroupResponse::request() const
  */
 void UpdateSkillGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSkillGroupResponse);
+    //Q_D(UpdateSkillGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

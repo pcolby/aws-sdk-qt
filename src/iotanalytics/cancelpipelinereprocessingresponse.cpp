@@ -86,7 +86,7 @@ const CancelPipelineReprocessingRequest * CancelPipelineReprocessingResponse::re
  */
 void CancelPipelineReprocessingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelPipelineReprocessingResponse);
+    //Q_D(CancelPipelineReprocessingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

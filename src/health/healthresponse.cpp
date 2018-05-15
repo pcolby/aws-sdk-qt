@@ -61,7 +61,7 @@ HealthResponse::HealthResponse(HealthResponsePrivate * const d, QObject * const 
  */
 void HealthResponse::parseFailure(QIODevice &response)
 {
-    Q_D(HealthResponse);
+    //Q_D(HealthResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

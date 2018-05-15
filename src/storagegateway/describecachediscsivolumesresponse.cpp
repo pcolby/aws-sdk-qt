@@ -134,7 +134,7 @@ const DescribeCachediSCSIVolumesRequest * DescribeCachediSCSIVolumesResponse::re
  */
 void DescribeCachediSCSIVolumesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCachediSCSIVolumesResponse);
+    //Q_D(DescribeCachediSCSIVolumesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -66,7 +66,7 @@ const GetEncryptionConfigRequest * GetEncryptionConfigResponse::request() const
  */
 void GetEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetEncryptionConfigResponse);
+    //Q_D(GetEncryptionConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

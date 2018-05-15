@@ -70,7 +70,7 @@ const DeletePolicyRequest * DeletePolicyResponse::request() const
  */
 void DeletePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePolicyResponse);
+    //Q_D(DeletePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

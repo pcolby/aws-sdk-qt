@@ -61,7 +61,7 @@ LambdaResponse::LambdaResponse(LambdaResponsePrivate * const d, QObject * const 
  */
 void LambdaResponse::parseFailure(QIODevice &response)
 {
-    Q_D(LambdaResponse);
+    //Q_D(LambdaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

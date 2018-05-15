@@ -68,7 +68,7 @@ const UpdateShardCountRequest * UpdateShardCountResponse::request() const
  */
 void UpdateShardCountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateShardCountResponse);
+    //Q_D(UpdateShardCountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

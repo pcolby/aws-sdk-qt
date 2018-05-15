@@ -61,7 +61,7 @@ AppStreamResponse::AppStreamResponse(AppStreamResponsePrivate * const d, QObject
  */
 void AppStreamResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AppStreamResponse);
+    //Q_D(AppStreamResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

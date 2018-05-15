@@ -171,7 +171,7 @@ const UpdateLayerRequest * UpdateLayerResponse::request() const
  */
 void UpdateLayerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateLayerResponse);
+    //Q_D(UpdateLayerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

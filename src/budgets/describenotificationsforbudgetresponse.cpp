@@ -108,7 +108,7 @@ const DescribeNotificationsForBudgetRequest * DescribeNotificationsForBudgetResp
  */
 void DescribeNotificationsForBudgetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeNotificationsForBudgetResponse);
+    //Q_D(DescribeNotificationsForBudgetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -234,7 +234,7 @@ void CloudHSMV2Request::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudHSMV2Request);
+    //Q_D(const CloudHSMV2Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

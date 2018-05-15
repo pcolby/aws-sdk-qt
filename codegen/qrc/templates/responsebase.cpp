@@ -43,7 +43,7 @@ namespace {{NameSpaceName}} {
  */
 void {{ClassName}}::parseFailure(QIODevice &response)
 {
-    Q_D({{ClassName}});
+    //Q_D({{ClassName}});
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

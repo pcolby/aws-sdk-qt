@@ -69,7 +69,7 @@ const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::reques
  */
 void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateInstanceExportTaskResponse);
+    //Q_D(CreateInstanceExportTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

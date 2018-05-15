@@ -128,7 +128,7 @@ const GetAccountSummaryRequest * GetAccountSummaryResponse::request() const
  */
 void GetAccountSummaryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAccountSummaryResponse);
+    //Q_D(GetAccountSummaryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

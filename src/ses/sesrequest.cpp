@@ -294,7 +294,7 @@ void SesRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SesRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SesRequest);
+    //Q_D(const SesRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

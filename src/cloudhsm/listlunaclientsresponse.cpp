@@ -77,7 +77,7 @@ const ListLunaClientsRequest * ListLunaClientsResponse::request() const
  */
 void ListLunaClientsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListLunaClientsResponse);
+    //Q_D(ListLunaClientsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

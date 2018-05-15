@@ -65,7 +65,7 @@ const DeleteBucketLifecycleRequest * DeleteBucketLifecycleResponse::request() co
  */
 void DeleteBucketLifecycleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBucketLifecycleResponse);
+    //Q_D(DeleteBucketLifecycleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

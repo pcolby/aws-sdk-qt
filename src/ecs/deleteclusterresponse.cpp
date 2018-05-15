@@ -82,7 +82,7 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteClusterResponse);
+    //Q_D(DeleteClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -103,7 +103,7 @@ const LookupDeveloperIdentityRequest * LookupDeveloperIdentityResponse::request(
  */
 void LookupDeveloperIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(LookupDeveloperIdentityResponse);
+    //Q_D(LookupDeveloperIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -207,7 +207,7 @@ const CancelHandshakeRequest * CancelHandshakeResponse::request() const
  */
 void CancelHandshakeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelHandshakeResponse);
+    //Q_D(CancelHandshakeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

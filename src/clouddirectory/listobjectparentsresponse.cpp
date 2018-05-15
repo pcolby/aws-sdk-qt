@@ -72,7 +72,7 @@ const ListObjectParentsRequest * ListObjectParentsResponse::request() const
  */
 void ListObjectParentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListObjectParentsResponse);
+    //Q_D(ListObjectParentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

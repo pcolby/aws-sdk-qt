@@ -66,7 +66,7 @@ const DeleteGraphqlApiRequest * DeleteGraphqlApiResponse::request() const
  */
 void DeleteGraphqlApiResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteGraphqlApiResponse);
+    //Q_D(DeleteGraphqlApiResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

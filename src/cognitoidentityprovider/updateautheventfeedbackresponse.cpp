@@ -75,7 +75,7 @@ const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request(
  */
 void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAuthEventFeedbackResponse);
+    //Q_D(UpdateAuthEventFeedbackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetObjectTorrentRequest * GetObjectTorrentResponse::request() const
  */
 void GetObjectTorrentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetObjectTorrentResponse);
+    //Q_D(GetObjectTorrentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::
  */
 void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReusableDelegationSetResponse);
+    //Q_D(DeleteReusableDelegationSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

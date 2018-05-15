@@ -69,7 +69,7 @@ const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
  */
 void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyVpcAttributeResponse);
+    //Q_D(ModifyVpcAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

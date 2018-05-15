@@ -69,7 +69,7 @@ const EnableVpcClassicLinkDnsSupportRequest * EnableVpcClassicLinkDnsSupportResp
  */
 void EnableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableVpcClassicLinkDnsSupportResponse);
+    //Q_D(EnableVpcClassicLinkDnsSupportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

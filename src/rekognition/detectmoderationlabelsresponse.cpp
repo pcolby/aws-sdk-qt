@@ -66,7 +66,7 @@ const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() 
  */
 void DetectModerationLabelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetectModerationLabelsResponse);
+    //Q_D(DetectModerationLabelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

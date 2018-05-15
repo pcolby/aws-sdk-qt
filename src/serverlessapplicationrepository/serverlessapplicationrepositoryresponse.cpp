@@ -61,7 +61,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
  */
 void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ServerlessApplicationRepositoryResponse);
+    //Q_D(ServerlessApplicationRepositoryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -84,7 +84,7 @@ const DescribeStateMachineRequest * DescribeStateMachineResponse::request() cons
  */
 void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeStateMachineResponse);
+    //Q_D(DescribeStateMachineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

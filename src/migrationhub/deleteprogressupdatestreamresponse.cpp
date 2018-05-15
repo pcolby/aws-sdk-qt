@@ -67,7 +67,7 @@ const DeleteProgressUpdateStreamRequest * DeleteProgressUpdateStreamResponse::re
  */
 void DeleteProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteProgressUpdateStreamResponse);
+    //Q_D(DeleteProgressUpdateStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

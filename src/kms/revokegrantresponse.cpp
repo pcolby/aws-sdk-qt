@@ -164,7 +164,7 @@ const RevokeGrantRequest * RevokeGrantResponse::request() const
  */
 void RevokeGrantResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeGrantResponse);
+    //Q_D(RevokeGrantResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

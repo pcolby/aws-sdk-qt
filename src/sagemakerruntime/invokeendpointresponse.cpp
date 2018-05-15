@@ -66,7 +66,7 @@ const InvokeEndpointRequest * InvokeEndpointResponse::request() const
  */
 void InvokeEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InvokeEndpointResponse);
+    //Q_D(InvokeEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

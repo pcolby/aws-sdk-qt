@@ -61,7 +61,7 @@ MqResponse::MqResponse(MqResponsePrivate * const d, QObject * const parent)
  */
 void MqResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MqResponse);
+    //Q_D(MqResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

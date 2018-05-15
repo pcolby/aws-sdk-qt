@@ -68,7 +68,7 @@ const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::requ
  */
 void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteUserDefinedFunctionResponse);
+    //Q_D(DeleteUserDefinedFunctionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

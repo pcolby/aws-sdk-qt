@@ -133,7 +133,7 @@ const DeleteTargetGroupRequest * DeleteTargetGroupResponse::request() const
  */
 void DeleteTargetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteTargetGroupResponse);
+    //Q_D(DeleteTargetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

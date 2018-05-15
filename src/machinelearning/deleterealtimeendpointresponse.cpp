@@ -65,7 +65,7 @@ const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() 
  */
 void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRealtimeEndpointResponse);
+    //Q_D(DeleteRealtimeEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

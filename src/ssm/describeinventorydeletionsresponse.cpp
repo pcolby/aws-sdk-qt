@@ -89,7 +89,7 @@ const DescribeInventoryDeletionsRequest * DescribeInventoryDeletionsResponse::re
  */
 void DescribeInventoryDeletionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInventoryDeletionsResponse);
+    //Q_D(DescribeInventoryDeletionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateQualificationTypeRequest * CreateQualificationTypeResponse::request(
  */
 void CreateQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateQualificationTypeResponse);
+    //Q_D(CreateQualificationTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
  */
 void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyDBSubnetGroupResponse);
+    //Q_D(ModifyDBSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

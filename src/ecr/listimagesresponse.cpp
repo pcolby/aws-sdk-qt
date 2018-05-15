@@ -69,7 +69,7 @@ const ListImagesRequest * ListImagesResponse::request() const
  */
 void ListImagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListImagesResponse);
+    //Q_D(ListImagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

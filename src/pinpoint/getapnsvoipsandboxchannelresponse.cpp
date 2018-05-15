@@ -65,7 +65,7 @@ const GetApnsVoipSandboxChannelRequest * GetApnsVoipSandboxChannelResponse::requ
  */
 void GetApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetApnsVoipSandboxChannelResponse);
+    //Q_D(GetApnsVoipSandboxChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

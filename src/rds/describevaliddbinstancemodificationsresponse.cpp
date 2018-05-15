@@ -129,7 +129,7 @@ const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModif
  */
 void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeValidDBInstanceModificationsResponse);
+    //Q_D(DescribeValidDBInstanceModificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -81,7 +81,7 @@ const DownloadDefaultKeyPairRequest * DownloadDefaultKeyPairResponse::request() 
  */
 void DownloadDefaultKeyPairResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DownloadDefaultKeyPairResponse);
+    //Q_D(DownloadDefaultKeyPairResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() cons
  */
 void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopNotebookInstanceResponse);
+    //Q_D(StopNotebookInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

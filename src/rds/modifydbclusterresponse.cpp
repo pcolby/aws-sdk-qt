@@ -129,7 +129,7 @@ const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
  */
 void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyDBClusterResponse);
+    //Q_D(ModifyDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

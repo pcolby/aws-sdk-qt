@@ -69,7 +69,7 @@ const UpdateDestinationRequest * UpdateDestinationResponse::request() const
  */
 void UpdateDestinationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDestinationResponse);
+    //Q_D(UpdateDestinationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

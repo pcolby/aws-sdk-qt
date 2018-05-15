@@ -131,7 +131,7 @@ const ChangeMessageVisibilityRequest * ChangeMessageVisibilityResponse::request(
  */
 void ChangeMessageVisibilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ChangeMessageVisibilityResponse);
+    //Q_D(ChangeMessageVisibilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

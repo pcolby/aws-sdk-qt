@@ -68,7 +68,7 @@ const GetUserDefinedFunctionsRequest * GetUserDefinedFunctionsResponse::request(
  */
 void GetUserDefinedFunctionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetUserDefinedFunctionsResponse);
+    //Q_D(GetUserDefinedFunctionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

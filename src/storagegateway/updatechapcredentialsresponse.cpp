@@ -134,7 +134,7 @@ const UpdateChapCredentialsRequest * UpdateChapCredentialsResponse::request() co
  */
 void UpdateChapCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateChapCredentialsResponse);
+    //Q_D(UpdateChapCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

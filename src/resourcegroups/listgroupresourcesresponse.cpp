@@ -109,7 +109,7 @@ const ListGroupResourcesRequest * ListGroupResourcesResponse::request() const
  */
 void ListGroupResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListGroupResourcesResponse);
+    //Q_D(ListGroupResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

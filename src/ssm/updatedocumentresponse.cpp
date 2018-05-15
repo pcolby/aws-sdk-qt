@@ -89,7 +89,7 @@ const UpdateDocumentRequest * UpdateDocumentResponse::request() const
  */
 void UpdateDocumentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDocumentResponse);
+    //Q_D(UpdateDocumentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

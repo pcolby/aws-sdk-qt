@@ -134,7 +134,7 @@ const UpdateBandwidthRateLimitRequest * UpdateBandwidthRateLimitResponse::reques
  */
 void UpdateBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateBandwidthRateLimitResponse);
+    //Q_D(UpdateBandwidthRateLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

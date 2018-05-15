@@ -108,7 +108,7 @@ const DeleteBudgetRequest * DeleteBudgetResponse::request() const
  */
 void DeleteBudgetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBudgetResponse);
+    //Q_D(DeleteBudgetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

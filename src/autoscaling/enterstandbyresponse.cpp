@@ -70,7 +70,7 @@ const EnterStandbyRequest * EnterStandbyResponse::request() const
  */
 void EnterStandbyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnterStandbyResponse);
+    //Q_D(EnterStandbyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

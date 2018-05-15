@@ -171,7 +171,7 @@ const DeregisterElasticIpRequest * DeregisterElasticIpResponse::request() const
  */
 void DeregisterElasticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterElasticIpResponse);
+    //Q_D(DeregisterElasticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

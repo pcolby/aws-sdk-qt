@@ -94,7 +94,7 @@ const DisassociateKmsKeyRequest * DisassociateKmsKeyResponse::request() const
  */
 void DisassociateKmsKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateKmsKeyResponse);
+    //Q_D(DisassociateKmsKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

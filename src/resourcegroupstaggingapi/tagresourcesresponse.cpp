@@ -120,7 +120,7 @@ const TagResourcesRequest * TagResourcesResponse::request() const
  */
 void TagResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TagResourcesResponse);
+    //Q_D(TagResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

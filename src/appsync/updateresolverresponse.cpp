@@ -66,7 +66,7 @@ const UpdateResolverRequest * UpdateResolverResponse::request() const
  */
 void UpdateResolverResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateResolverResponse);
+    //Q_D(UpdateResolverResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

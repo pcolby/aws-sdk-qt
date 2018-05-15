@@ -68,7 +68,7 @@ const ModifyWorkspaceStateRequest * ModifyWorkspaceStateResponse::request() cons
  */
 void ModifyWorkspaceStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyWorkspaceStateResponse);
+    //Q_D(ModifyWorkspaceStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

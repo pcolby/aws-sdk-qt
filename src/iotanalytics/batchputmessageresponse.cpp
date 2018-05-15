@@ -86,7 +86,7 @@ const BatchPutMessageRequest * BatchPutMessageResponse::request() const
  */
 void BatchPutMessageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchPutMessageResponse);
+    //Q_D(BatchPutMessageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() cons
  */
 void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyInstanceGroupsResponse);
+    //Q_D(ModifyInstanceGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

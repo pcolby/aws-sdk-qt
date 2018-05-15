@@ -103,7 +103,7 @@ const DescribeVaultRequest * DescribeVaultResponse::request() const
  */
 void DescribeVaultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVaultResponse);
+    //Q_D(DescribeVaultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
  */
 void PutBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketPolicyResponse);
+    //Q_D(PutBucketPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

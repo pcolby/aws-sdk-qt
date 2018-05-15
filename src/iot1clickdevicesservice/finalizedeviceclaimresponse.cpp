@@ -66,7 +66,7 @@ const FinalizeDeviceClaimRequest * FinalizeDeviceClaimResponse::request() const
  */
 void FinalizeDeviceClaimResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(FinalizeDeviceClaimResponse);
+    //Q_D(FinalizeDeviceClaimResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

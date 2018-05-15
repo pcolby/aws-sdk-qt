@@ -129,7 +129,7 @@ const CreateDBInstanceReadReplicaRequest * CreateDBInstanceReadReplicaResponse::
  */
 void CreateDBInstanceReadReplicaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDBInstanceReadReplicaResponse);
+    //Q_D(CreateDBInstanceReadReplicaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::
  */
 void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateSubnetCidrBlockResponse);
+    //Q_D(DisassociateSubnetCidrBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

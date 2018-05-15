@@ -89,7 +89,7 @@ const PutParameterRequest * PutParameterResponse::request() const
  */
 void PutParameterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutParameterResponse);
+    //Q_D(PutParameterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

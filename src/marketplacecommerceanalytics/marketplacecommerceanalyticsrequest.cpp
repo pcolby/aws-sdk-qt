@@ -226,7 +226,7 @@ void MarketplaceCommerceAnalyticsRequest::setParameters(const QVariantMap &param
  */
 QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MarketplaceCommerceAnalyticsRequest);
+    //Q_D(const MarketplaceCommerceAnalyticsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -69,7 +69,7 @@ const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAv
  */
 void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeScheduledInstanceAvailabilityResponse);
+    //Q_D(DescribeScheduledInstanceAvailabilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

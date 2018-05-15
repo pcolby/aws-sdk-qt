@@ -70,7 +70,7 @@ const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
  */
 void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetXssMatchSetResponse);
+    //Q_D(GetXssMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

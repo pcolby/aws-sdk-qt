@@ -75,7 +75,7 @@ const AssociateSoftwareTokenRequest * AssociateSoftwareTokenResponse::request() 
  */
 void AssociateSoftwareTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateSoftwareTokenResponse);
+    //Q_D(AssociateSoftwareTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

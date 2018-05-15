@@ -71,7 +71,7 @@ const DeleteNotificationChannelRequest * DeleteNotificationChannelResponse::requ
  */
 void DeleteNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNotificationChannelResponse);
+    //Q_D(DeleteNotificationChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

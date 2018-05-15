@@ -81,7 +81,7 @@ const AttachLoadBalancerTlsCertificateRequest * AttachLoadBalancerTlsCertificate
  */
 void AttachLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachLoadBalancerTlsCertificateResponse);
+    //Q_D(AttachLoadBalancerTlsCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

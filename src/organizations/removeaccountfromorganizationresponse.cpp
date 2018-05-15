@@ -207,7 +207,7 @@ const RemoveAccountFromOrganizationRequest * RemoveAccountFromOrganizationRespon
  */
 void RemoveAccountFromOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveAccountFromOrganizationResponse);
+    //Q_D(RemoveAccountFromOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

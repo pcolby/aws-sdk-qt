@@ -81,7 +81,7 @@ const UpdateLoadBalancerAttributeRequest * UpdateLoadBalancerAttributeResponse::
  */
 void UpdateLoadBalancerAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateLoadBalancerAttributeResponse);
+    //Q_D(UpdateLoadBalancerAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

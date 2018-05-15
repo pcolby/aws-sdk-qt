@@ -129,7 +129,7 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
  */
 void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeExportTasksResponse);
+    //Q_D(DescribeExportTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const ListGroupCertificateAuthoritiesRequest * ListGroupCertificateAuthoritiesRe
  */
 void ListGroupCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListGroupCertificateAuthoritiesResponse);
+    //Q_D(ListGroupCertificateAuthoritiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

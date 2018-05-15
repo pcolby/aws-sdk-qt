@@ -81,7 +81,7 @@ const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse
  */
 void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListClosedWorkflowExecutionsResponse);
+    //Q_D(ListClosedWorkflowExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

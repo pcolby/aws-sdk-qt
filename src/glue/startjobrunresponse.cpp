@@ -68,7 +68,7 @@ const StartJobRunRequest * StartJobRunResponse::request() const
  */
 void StartJobRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartJobRunResponse);
+    //Q_D(StartJobRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

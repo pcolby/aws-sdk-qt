@@ -81,7 +81,7 @@ const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
  */
 void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(IsVpcPeeredResponse);
+    //Q_D(IsVpcPeeredResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

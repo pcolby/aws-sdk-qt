@@ -75,7 +75,7 @@ const AdminRemoveUserFromGroupRequest * AdminRemoveUserFromGroupResponse::reques
  */
 void AdminRemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminRemoveUserFromGroupResponse);
+    //Q_D(AdminRemoveUserFromGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

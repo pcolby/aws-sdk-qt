@@ -164,7 +164,7 @@ const ReEncryptRequest * ReEncryptResponse::request() const
  */
 void ReEncryptResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReEncryptResponse);
+    //Q_D(ReEncryptResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

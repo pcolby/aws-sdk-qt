@@ -103,7 +103,7 @@ const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() cons
  */
 void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListMultipartUploadsResponse);
+    //Q_D(ListMultipartUploadsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

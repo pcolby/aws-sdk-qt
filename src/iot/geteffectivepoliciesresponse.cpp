@@ -76,7 +76,7 @@ const GetEffectivePoliciesRequest * GetEffectivePoliciesResponse::request() cons
  */
 void GetEffectivePoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetEffectivePoliciesResponse);
+    //Q_D(GetEffectivePoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

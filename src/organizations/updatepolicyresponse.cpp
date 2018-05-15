@@ -207,7 +207,7 @@ const UpdatePolicyRequest * UpdatePolicyResponse::request() const
  */
 void UpdatePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdatePolicyResponse);
+    //Q_D(UpdatePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

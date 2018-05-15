@@ -240,7 +240,7 @@ const DeregisterWebhookWithThirdPartyRequest * DeregisterWebhookWithThirdPartyRe
  */
 void DeregisterWebhookWithThirdPartyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterWebhookWithThirdPartyResponse);
+    //Q_D(DeregisterWebhookWithThirdPartyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

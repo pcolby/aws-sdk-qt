@@ -93,7 +93,7 @@ const SetLoadBalancerPoliciesForBackendServerRequest * SetLoadBalancerPoliciesFo
  */
 void SetLoadBalancerPoliciesForBackendServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetLoadBalancerPoliciesForBackendServerResponse);
+    //Q_D(SetLoadBalancerPoliciesForBackendServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

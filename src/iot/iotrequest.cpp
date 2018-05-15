@@ -347,7 +347,7 @@ void IoTRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest IoTRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const IoTRequest);
+    //Q_D(const IoTRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

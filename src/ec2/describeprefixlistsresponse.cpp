@@ -69,7 +69,7 @@ const DescribePrefixListsRequest * DescribePrefixListsResponse::request() const
  */
 void DescribePrefixListsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePrefixListsResponse);
+    //Q_D(DescribePrefixListsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

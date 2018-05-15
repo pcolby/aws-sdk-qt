@@ -85,7 +85,7 @@ const ListDatasetsRequest * ListDatasetsResponse::request() const
  */
 void ListDatasetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListDatasetsResponse);
+    //Q_D(ListDatasetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

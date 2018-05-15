@@ -134,7 +134,7 @@ const DescribeTapeRecoveryPointsRequest * DescribeTapeRecoveryPointsResponse::re
  */
 void DescribeTapeRecoveryPointsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTapeRecoveryPointsResponse);
+    //Q_D(DescribeTapeRecoveryPointsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

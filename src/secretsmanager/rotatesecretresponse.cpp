@@ -141,7 +141,7 @@ const RotateSecretRequest * RotateSecretResponse::request() const
  */
 void RotateSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RotateSecretResponse);
+    //Q_D(RotateSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

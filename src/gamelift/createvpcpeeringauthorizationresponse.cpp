@@ -509,7 +509,7 @@ const CreateVpcPeeringAuthorizationRequest * CreateVpcPeeringAuthorizationRespon
  */
 void CreateVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateVpcPeeringAuthorizationResponse);
+    //Q_D(CreateVpcPeeringAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

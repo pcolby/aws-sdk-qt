@@ -509,7 +509,7 @@ const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::reques
  */
 void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RequestUploadCredentialsResponse);
+    //Q_D(RequestUploadCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

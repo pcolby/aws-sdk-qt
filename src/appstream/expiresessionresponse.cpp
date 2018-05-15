@@ -68,7 +68,7 @@ const ExpireSessionRequest * ExpireSessionResponse::request() const
  */
 void ExpireSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExpireSessionResponse);
+    //Q_D(ExpireSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

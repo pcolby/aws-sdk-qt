@@ -94,7 +94,7 @@ const CancelExportTaskRequest * CancelExportTaskResponse::request() const
  */
 void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelExportTaskResponse);
+    //Q_D(CancelExportTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

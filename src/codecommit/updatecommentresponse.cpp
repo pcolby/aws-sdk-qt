@@ -255,7 +255,7 @@ const UpdateCommentRequest * UpdateCommentResponse::request() const
  */
 void UpdateCommentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCommentResponse);
+    //Q_D(UpdateCommentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

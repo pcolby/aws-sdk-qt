@@ -70,7 +70,7 @@ const CreateFieldLevelEncryptionConfigRequest * CreateFieldLevelEncryptionConfig
  */
 void CreateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFieldLevelEncryptionConfigResponse);
+    //Q_D(CreateFieldLevelEncryptionConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

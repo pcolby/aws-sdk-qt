@@ -87,7 +87,7 @@ const UpdateStackInstancesRequest * UpdateStackInstancesResponse::request() cons
  */
 void UpdateStackInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateStackInstancesResponse);
+    //Q_D(UpdateStackInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

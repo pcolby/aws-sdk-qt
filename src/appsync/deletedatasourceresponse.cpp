@@ -66,7 +66,7 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
  */
 void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDataSourceResponse);
+    //Q_D(DeleteDataSourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

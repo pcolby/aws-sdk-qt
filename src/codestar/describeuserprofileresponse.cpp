@@ -153,7 +153,7 @@ const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
  */
 void DescribeUserProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeUserProfileResponse);
+    //Q_D(DescribeUserProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

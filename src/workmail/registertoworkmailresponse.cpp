@@ -98,7 +98,7 @@ const RegisterToWorkMailRequest * RegisterToWorkMailResponse::request() const
  */
 void RegisterToWorkMailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterToWorkMailResponse);
+    //Q_D(RegisterToWorkMailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

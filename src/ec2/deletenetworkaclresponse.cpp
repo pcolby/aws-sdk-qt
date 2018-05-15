@@ -69,7 +69,7 @@ const DeleteNetworkAclRequest * DeleteNetworkAclResponse::request() const
  */
 void DeleteNetworkAclResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNetworkAclResponse);
+    //Q_D(DeleteNetworkAclResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

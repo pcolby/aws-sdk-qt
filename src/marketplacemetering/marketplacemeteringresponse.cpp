@@ -61,7 +61,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(MarketplaceMeteringResp
  */
 void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MarketplaceMeteringResponse);
+    //Q_D(MarketplaceMeteringResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

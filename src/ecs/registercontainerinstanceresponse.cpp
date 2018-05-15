@@ -82,7 +82,7 @@ const RegisterContainerInstanceRequest * RegisterContainerInstanceResponse::requ
  */
 void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterContainerInstanceResponse);
+    //Q_D(RegisterContainerInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

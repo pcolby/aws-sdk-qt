@@ -95,7 +95,7 @@ const CopyClusterSnapshotRequest * CopyClusterSnapshotResponse::request() const
  */
 void CopyClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CopyClusterSnapshotResponse);
+    //Q_D(CopyClusterSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

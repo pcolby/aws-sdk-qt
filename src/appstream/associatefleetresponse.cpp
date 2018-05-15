@@ -68,7 +68,7 @@ const AssociateFleetRequest * AssociateFleetResponse::request() const
  */
 void AssociateFleetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateFleetResponse);
+    //Q_D(AssociateFleetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

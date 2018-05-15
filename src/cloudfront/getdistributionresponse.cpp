@@ -70,7 +70,7 @@ const GetDistributionRequest * GetDistributionResponse::request() const
  */
 void GetDistributionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDistributionResponse);
+    //Q_D(GetDistributionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

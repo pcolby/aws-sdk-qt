@@ -61,7 +61,7 @@ CodeDeployResponse::CodeDeployResponse(CodeDeployResponsePrivate * const d, QObj
  */
 void CodeDeployResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CodeDeployResponse);
+    //Q_D(CodeDeployResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

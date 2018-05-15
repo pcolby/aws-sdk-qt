@@ -71,7 +71,7 @@ const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
  */
 void CreateSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateSubscriptionResponse);
+    //Q_D(CreateSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

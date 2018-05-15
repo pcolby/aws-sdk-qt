@@ -87,7 +87,7 @@ const CreateStackSetRequest * CreateStackSetResponse::request() const
  */
 void CreateStackSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateStackSetResponse);
+    //Q_D(CreateStackSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

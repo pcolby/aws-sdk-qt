@@ -61,7 +61,7 @@ BatchResponse::BatchResponse(BatchResponsePrivate * const d, QObject * const par
  */
 void BatchResponse::parseFailure(QIODevice &response)
 {
-    Q_D(BatchResponse);
+    //Q_D(BatchResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

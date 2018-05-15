@@ -68,7 +68,7 @@ const StopContactRequest * StopContactResponse::request() const
  */
 void StopContactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopContactResponse);
+    //Q_D(StopContactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

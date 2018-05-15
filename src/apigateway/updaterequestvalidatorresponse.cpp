@@ -70,7 +70,7 @@ const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() 
  */
 void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRequestValidatorResponse);
+    //Q_D(UpdateRequestValidatorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

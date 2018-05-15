@@ -75,7 +75,7 @@ const StopUserImportJobRequest * StopUserImportJobResponse::request() const
  */
 void StopUserImportJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopUserImportJobResponse);
+    //Q_D(StopUserImportJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const StartTopicsDetectionJobRequest * StartTopicsDetectionJobResponse::request(
  */
 void StartTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartTopicsDetectionJobResponse);
+    //Q_D(StartTopicsDetectionJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

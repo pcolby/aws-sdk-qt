@@ -164,7 +164,7 @@ const CreateKeyRequest * CreateKeyResponse::request() const
  */
 void CreateKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateKeyResponse);
+    //Q_D(CreateKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

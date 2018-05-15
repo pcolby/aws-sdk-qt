@@ -70,7 +70,7 @@ const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalin
  */
 void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TerminateInstanceInAutoScalingGroupResponse);
+    //Q_D(TerminateInstanceInAutoScalingGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

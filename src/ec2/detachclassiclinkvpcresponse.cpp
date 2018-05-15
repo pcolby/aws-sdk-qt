@@ -69,7 +69,7 @@ const DetachClassicLinkVpcRequest * DetachClassicLinkVpcResponse::request() cons
  */
 void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachClassicLinkVpcResponse);
+    //Q_D(DetachClassicLinkVpcResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

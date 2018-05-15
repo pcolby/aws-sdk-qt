@@ -76,7 +76,7 @@ const CloneReceiptRuleSetRequest * CloneReceiptRuleSetResponse::request() const
  */
 void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CloneReceiptRuleSetResponse);
+    //Q_D(CloneReceiptRuleSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

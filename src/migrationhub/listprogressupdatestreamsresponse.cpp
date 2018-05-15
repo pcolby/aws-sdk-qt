@@ -67,7 +67,7 @@ const ListProgressUpdateStreamsRequest * ListProgressUpdateStreamsResponse::requ
  */
 void ListProgressUpdateStreamsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListProgressUpdateStreamsResponse);
+    //Q_D(ListProgressUpdateStreamsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

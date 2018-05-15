@@ -138,7 +138,7 @@ const RegisterScalableTargetRequest * RegisterScalableTargetResponse::request() 
  */
 void RegisterScalableTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterScalableTargetResponse);
+    //Q_D(RegisterScalableTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

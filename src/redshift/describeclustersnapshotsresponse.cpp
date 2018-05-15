@@ -95,7 +95,7 @@ const DescribeClusterSnapshotsRequest * DescribeClusterSnapshotsResponse::reques
  */
 void DescribeClusterSnapshotsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeClusterSnapshotsResponse);
+    //Q_D(DescribeClusterSnapshotsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const GetBotVersionsRequest * GetBotVersionsResponse::request() const
  */
 void GetBotVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBotVersionsResponse);
+    //Q_D(GetBotVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

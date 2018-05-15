@@ -79,7 +79,7 @@ const ListIpRoutesRequest * ListIpRoutesResponse::request() const
  */
 void ListIpRoutesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListIpRoutesResponse);
+    //Q_D(ListIpRoutesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

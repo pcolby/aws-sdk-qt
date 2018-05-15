@@ -75,7 +75,7 @@ const ChangePasswordRequest * ChangePasswordResponse::request() const
  */
 void ChangePasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ChangePasswordResponse);
+    //Q_D(ChangePasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

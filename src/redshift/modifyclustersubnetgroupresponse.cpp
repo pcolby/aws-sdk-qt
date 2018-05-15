@@ -95,7 +95,7 @@ const ModifyClusterSubnetGroupRequest * ModifyClusterSubnetGroupResponse::reques
  */
 void ModifyClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyClusterSubnetGroupResponse);
+    //Q_D(ModifyClusterSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

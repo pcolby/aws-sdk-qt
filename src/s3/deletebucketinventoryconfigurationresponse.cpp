@@ -65,7 +65,7 @@ const DeleteBucketInventoryConfigurationRequest * DeleteBucketInventoryConfigura
  */
 void DeleteBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBucketInventoryConfigurationResponse);
+    //Q_D(DeleteBucketInventoryConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

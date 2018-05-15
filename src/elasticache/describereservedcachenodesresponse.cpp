@@ -79,7 +79,7 @@ const DescribeReservedCacheNodesRequest * DescribeReservedCacheNodesResponse::re
  */
 void DescribeReservedCacheNodesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReservedCacheNodesResponse);
+    //Q_D(DescribeReservedCacheNodesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

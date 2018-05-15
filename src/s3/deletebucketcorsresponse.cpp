@@ -65,7 +65,7 @@ const DeleteBucketCorsRequest * DeleteBucketCorsResponse::request() const
  */
 void DeleteBucketCorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBucketCorsResponse);
+    //Q_D(DeleteBucketCorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

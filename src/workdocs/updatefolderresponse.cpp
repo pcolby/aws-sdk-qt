@@ -94,7 +94,7 @@ const UpdateFolderRequest * UpdateFolderResponse::request() const
  */
 void UpdateFolderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateFolderResponse);
+    //Q_D(UpdateFolderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

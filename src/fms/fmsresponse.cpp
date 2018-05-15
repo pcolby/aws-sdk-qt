@@ -61,7 +61,7 @@ FmsResponse::FmsResponse(FmsResponsePrivate * const d, QObject * const parent)
  */
 void FmsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(FmsResponse);
+    //Q_D(FmsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

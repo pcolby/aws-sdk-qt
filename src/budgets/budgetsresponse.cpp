@@ -61,7 +61,7 @@ BudgetsResponse::BudgetsResponse(BudgetsResponsePrivate * const d, QObject * con
  */
 void BudgetsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(BudgetsResponse);
+    //Q_D(BudgetsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

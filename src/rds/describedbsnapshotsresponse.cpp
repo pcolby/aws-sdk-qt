@@ -129,7 +129,7 @@ const DescribeDBSnapshotsRequest * DescribeDBSnapshotsResponse::request() const
  */
 void DescribeDBSnapshotsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBSnapshotsResponse);
+    //Q_D(DescribeDBSnapshotsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

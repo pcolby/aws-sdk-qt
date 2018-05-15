@@ -61,7 +61,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(ElasticBeanstalkResponsePriva
  */
 void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ElasticBeanstalkResponse);
+    //Q_D(ElasticBeanstalkResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

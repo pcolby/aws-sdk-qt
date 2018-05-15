@@ -134,7 +134,7 @@ const UpdateNFSFileShareRequest * UpdateNFSFileShareResponse::request() const
  */
 void UpdateNFSFileShareResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateNFSFileShareResponse);
+    //Q_D(UpdateNFSFileShareResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

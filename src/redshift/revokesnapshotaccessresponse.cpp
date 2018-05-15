@@ -95,7 +95,7 @@ const RevokeSnapshotAccessRequest * RevokeSnapshotAccessResponse::request() cons
  */
 void RevokeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeSnapshotAccessResponse);
+    //Q_D(RevokeSnapshotAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

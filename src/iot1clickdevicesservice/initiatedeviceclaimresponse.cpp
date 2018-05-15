@@ -66,7 +66,7 @@ const InitiateDeviceClaimRequest * InitiateDeviceClaimResponse::request() const
  */
 void InitiateDeviceClaimResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InitiateDeviceClaimResponse);
+    //Q_D(InitiateDeviceClaimResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

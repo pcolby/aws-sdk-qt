@@ -70,7 +70,7 @@ const SuspendProcessesRequest * SuspendProcessesResponse::request() const
  */
 void SuspendProcessesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SuspendProcessesResponse);
+    //Q_D(SuspendProcessesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

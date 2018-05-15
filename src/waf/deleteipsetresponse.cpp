@@ -70,7 +70,7 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
  */
 void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteIPSetResponse);
+    //Q_D(DeleteIPSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

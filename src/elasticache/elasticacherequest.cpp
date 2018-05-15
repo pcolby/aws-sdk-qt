@@ -264,7 +264,7 @@ void ElastiCacheRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ElastiCacheRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ElastiCacheRequest);
+    //Q_D(const ElastiCacheRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

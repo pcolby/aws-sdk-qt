@@ -65,7 +65,7 @@ const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
  */
 void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeclineInvitationsResponse);
+    //Q_D(DeclineInvitationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

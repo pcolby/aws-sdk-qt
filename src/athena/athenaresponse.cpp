@@ -61,7 +61,7 @@ AthenaResponse::AthenaResponse(AthenaResponsePrivate * const d, QObject * const 
  */
 void AthenaResponse::parseFailure(QIODevice &response)
 {
-    Q_D(AthenaResponse);
+    //Q_D(AthenaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -73,7 +73,7 @@ const AssociateVirtualInterfaceRequest * AssociateVirtualInterfaceResponse::requ
  */
 void AssociateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateVirtualInterfaceResponse);
+    //Q_D(AssociateVirtualInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

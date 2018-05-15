@@ -69,7 +69,7 @@ const ReplaceRouteRequest * ReplaceRouteResponse::request() const
  */
 void ReplaceRouteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReplaceRouteResponse);
+    //Q_D(ReplaceRouteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

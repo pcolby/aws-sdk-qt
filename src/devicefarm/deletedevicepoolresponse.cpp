@@ -67,7 +67,7 @@ const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
  */
 void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDevicePoolResponse);
+    //Q_D(DeleteDevicePoolResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

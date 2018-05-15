@@ -61,7 +61,7 @@ EmrResponse::EmrResponse(EmrResponsePrivate * const d, QObject * const parent)
  */
 void EmrResponse::parseFailure(QIODevice &response)
 {
-    Q_D(EmrResponse);
+    //Q_D(EmrResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

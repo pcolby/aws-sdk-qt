@@ -76,7 +76,7 @@ const StopThingRegistrationTaskRequest * StopThingRegistrationTaskResponse::requ
  */
 void StopThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopThingRegistrationTaskResponse);
+    //Q_D(StopThingRegistrationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

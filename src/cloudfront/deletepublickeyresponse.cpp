@@ -70,7 +70,7 @@ const DeletePublicKeyRequest * DeletePublicKeyResponse::request() const
  */
 void DeletePublicKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePublicKeyResponse);
+    //Q_D(DeletePublicKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -241,7 +241,7 @@ void ElasticTranscoderRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ElasticTranscoderRequest);
+    //Q_D(const ElasticTranscoderRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

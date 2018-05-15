@@ -69,7 +69,7 @@ const RebootInstancesRequest * RebootInstancesResponse::request() const
  */
 void RebootInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootInstancesResponse);
+    //Q_D(RebootInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -164,7 +164,7 @@ const ListRetirableGrantsRequest * ListRetirableGrantsResponse::request() const
  */
 void ListRetirableGrantsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListRetirableGrantsResponse);
+    //Q_D(ListRetirableGrantsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

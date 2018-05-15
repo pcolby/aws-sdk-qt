@@ -95,7 +95,7 @@ const EnableSnapshotCopyRequest * EnableSnapshotCopyResponse::request() const
  */
 void EnableSnapshotCopyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableSnapshotCopyResponse);
+    //Q_D(EnableSnapshotCopyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

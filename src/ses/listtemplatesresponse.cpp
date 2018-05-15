@@ -76,7 +76,7 @@ const ListTemplatesRequest * ListTemplatesResponse::request() const
  */
 void ListTemplatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTemplatesResponse);
+    //Q_D(ListTemplatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

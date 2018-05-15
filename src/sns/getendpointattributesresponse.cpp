@@ -79,7 +79,7 @@ const GetEndpointAttributesRequest * GetEndpointAttributesResponse::request() co
  */
 void GetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetEndpointAttributesResponse);
+    //Q_D(GetEndpointAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

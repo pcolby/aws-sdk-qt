@@ -61,7 +61,7 @@ SnsResponse::SnsResponse(SnsResponsePrivate * const d, QObject * const parent)
  */
 void SnsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SnsResponse);
+    //Q_D(SnsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -73,7 +73,7 @@ const CreateBGPPeerRequest * CreateBGPPeerResponse::request() const
  */
 void CreateBGPPeerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBGPPeerResponse);
+    //Q_D(CreateBGPPeerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -85,7 +85,7 @@ const DeleteConfigurationAggregatorRequest * DeleteConfigurationAggregatorRespon
  */
 void DeleteConfigurationAggregatorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteConfigurationAggregatorResponse);
+    //Q_D(DeleteConfigurationAggregatorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

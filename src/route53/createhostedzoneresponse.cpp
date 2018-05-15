@@ -65,7 +65,7 @@ const CreateHostedZoneRequest * CreateHostedZoneResponse::request() const
  */
 void CreateHostedZoneResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateHostedZoneResponse);
+    //Q_D(CreateHostedZoneResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

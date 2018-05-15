@@ -65,7 +65,7 @@ const PutBucketNotificationRequest * PutBucketNotificationResponse::request() co
  */
 void PutBucketNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketNotificationResponse);
+    //Q_D(PutBucketNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DisableVgwRoutePropagationRequest * DisableVgwRoutePropagationResponse::re
  */
 void DisableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableVgwRoutePropagationResponse);
+    //Q_D(DisableVgwRoutePropagationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

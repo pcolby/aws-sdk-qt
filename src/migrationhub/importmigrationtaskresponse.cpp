@@ -67,7 +67,7 @@ const ImportMigrationTaskRequest * ImportMigrationTaskResponse::request() const
  */
 void ImportMigrationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportMigrationTaskResponse);
+    //Q_D(ImportMigrationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

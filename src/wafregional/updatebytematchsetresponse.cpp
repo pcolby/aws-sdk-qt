@@ -72,7 +72,7 @@ const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
  */
 void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateByteMatchSetResponse);
+    //Q_D(UpdateByteMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

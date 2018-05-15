@@ -164,7 +164,7 @@ const GetKeyPolicyRequest * GetKeyPolicyResponse::request() const
  */
 void GetKeyPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetKeyPolicyResponse);
+    //Q_D(GetKeyPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

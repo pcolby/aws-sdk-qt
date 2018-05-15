@@ -69,7 +69,7 @@ const UpdateSecurityGroupRuleDescriptionsEgressRequest * UpdateSecurityGroupRule
  */
 void UpdateSecurityGroupRuleDescriptionsEgressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateSecurityGroupRuleDescriptionsEgressResponse);
+    //Q_D(UpdateSecurityGroupRuleDescriptionsEgressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

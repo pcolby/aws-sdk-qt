@@ -234,7 +234,7 @@ void Cloud9Request::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const Cloud9Request);
+    //Q_D(const Cloud9Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

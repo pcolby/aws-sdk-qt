@@ -76,7 +76,7 @@ const DeleteScalingPlanRequest * DeleteScalingPlanResponse::request() const
  */
 void DeleteScalingPlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteScalingPlanResponse);
+    //Q_D(DeleteScalingPlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -77,7 +77,7 @@ const BatchGetNamedQueryRequest * BatchGetNamedQueryResponse::request() const
  */
 void BatchGetNamedQueryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetNamedQueryResponse);
+    //Q_D(BatchGetNamedQueryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

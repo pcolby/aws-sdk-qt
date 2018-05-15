@@ -70,7 +70,7 @@ const DescribeRulesPackagesRequest * DescribeRulesPackagesResponse::request() co
  */
 void DescribeRulesPackagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeRulesPackagesResponse);
+    //Q_D(DescribeRulesPackagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

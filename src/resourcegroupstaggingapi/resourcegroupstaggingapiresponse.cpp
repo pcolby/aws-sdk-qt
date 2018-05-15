@@ -61,7 +61,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(ResourceGroup
  */
 void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ResourceGroupsTaggingAPIResponse);
+    //Q_D(ResourceGroupsTaggingAPIResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

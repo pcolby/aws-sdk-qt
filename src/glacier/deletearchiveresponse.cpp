@@ -103,7 +103,7 @@ const DeleteArchiveRequest * DeleteArchiveResponse::request() const
  */
 void DeleteArchiveResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteArchiveResponse);
+    //Q_D(DeleteArchiveResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const GetExportRequest * GetExportResponse::request() const
  */
 void GetExportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetExportResponse);
+    //Q_D(GetExportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

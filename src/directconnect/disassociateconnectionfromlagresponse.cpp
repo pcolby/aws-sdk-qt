@@ -73,7 +73,7 @@ const DisassociateConnectionFromLagRequest * DisassociateConnectionFromLagRespon
  */
 void DisassociateConnectionFromLagResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateConnectionFromLagResponse);
+    //Q_D(DisassociateConnectionFromLagResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

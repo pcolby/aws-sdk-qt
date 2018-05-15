@@ -79,7 +79,7 @@ const ConfirmSubscriptionRequest * ConfirmSubscriptionResponse::request() const
  */
 void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ConfirmSubscriptionResponse);
+    //Q_D(ConfirmSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

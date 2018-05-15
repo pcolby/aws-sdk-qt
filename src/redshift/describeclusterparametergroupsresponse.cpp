@@ -95,7 +95,7 @@ const DescribeClusterParameterGroupsRequest * DescribeClusterParameterGroupsResp
  */
 void DescribeClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeClusterParameterGroupsResponse);
+    //Q_D(DescribeClusterParameterGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

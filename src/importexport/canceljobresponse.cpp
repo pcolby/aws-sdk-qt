@@ -68,7 +68,7 @@ const CancelJobRequest * CancelJobResponse::request() const
  */
 void CancelJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelJobResponse);
+    //Q_D(CancelJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

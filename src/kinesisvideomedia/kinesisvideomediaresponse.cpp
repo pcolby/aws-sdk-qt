@@ -61,7 +61,7 @@ KinesisVideoMediaResponse::KinesisVideoMediaResponse(KinesisVideoMediaResponsePr
  */
 void KinesisVideoMediaResponse::parseFailure(QIODevice &response)
 {
-    Q_D(KinesisVideoMediaResponse);
+    //Q_D(KinesisVideoMediaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

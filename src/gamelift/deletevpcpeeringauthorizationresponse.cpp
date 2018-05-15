@@ -509,7 +509,7 @@ const DeleteVpcPeeringAuthorizationRequest * DeleteVpcPeeringAuthorizationRespon
  */
 void DeleteVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVpcPeeringAuthorizationResponse);
+    //Q_D(DeleteVpcPeeringAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

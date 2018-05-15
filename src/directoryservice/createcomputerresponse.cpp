@@ -79,7 +79,7 @@ const CreateComputerRequest * CreateComputerResponse::request() const
  */
 void CreateComputerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateComputerResponse);
+    //Q_D(CreateComputerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

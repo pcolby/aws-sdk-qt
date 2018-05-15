@@ -76,7 +76,7 @@ const GetIdentityNotificationAttributesRequest * GetIdentityNotificationAttribut
  */
 void GetIdentityNotificationAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetIdentityNotificationAttributesResponse);
+    //Q_D(GetIdentityNotificationAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

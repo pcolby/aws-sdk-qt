@@ -85,7 +85,7 @@ const BatchGetResourceConfigRequest * BatchGetResourceConfigResponse::request() 
  */
 void BatchGetResourceConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetResourceConfigResponse);
+    //Q_D(BatchGetResourceConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

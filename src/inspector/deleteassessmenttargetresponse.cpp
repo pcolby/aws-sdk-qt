@@ -70,7 +70,7 @@ const DeleteAssessmentTargetRequest * DeleteAssessmentTargetResponse::request() 
  */
 void DeleteAssessmentTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAssessmentTargetResponse);
+    //Q_D(DeleteAssessmentTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

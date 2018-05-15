@@ -76,7 +76,7 @@ const ListPrincipalThingsRequest * ListPrincipalThingsResponse::request() const
  */
 void ListPrincipalThingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPrincipalThingsResponse);
+    //Q_D(ListPrincipalThingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -87,7 +87,7 @@ const DescribeEnvironmentHealthRequest * DescribeEnvironmentHealthResponse::requ
  */
 void DescribeEnvironmentHealthResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeEnvironmentHealthResponse);
+    //Q_D(DescribeEnvironmentHealthResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DeleteVpcEndpointConnectionNotificationsRequest * DeleteVpcEndpointConnect
  */
 void DeleteVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVpcEndpointConnectionNotificationsResponse);
+    //Q_D(DeleteVpcEndpointConnectionNotificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

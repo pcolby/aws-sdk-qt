@@ -61,7 +61,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(ElasticTranscoderResponsePr
  */
 void ElasticTranscoderResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ElasticTranscoderResponse);
+    //Q_D(ElasticTranscoderResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -73,7 +73,7 @@ const DeleteConnectionRequest * DeleteConnectionResponse::request() const
  */
 void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteConnectionResponse);
+    //Q_D(DeleteConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObj
  */
 void APIGatewayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(APIGatewayResponse);
+    //Q_D(APIGatewayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -95,7 +95,7 @@ const UpdateCertificateAuthorityRequest * UpdateCertificateAuthorityResponse::re
  */
 void UpdateCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateCertificateAuthorityResponse);
+    //Q_D(UpdateCertificateAuthorityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

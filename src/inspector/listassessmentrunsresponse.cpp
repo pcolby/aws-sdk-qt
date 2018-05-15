@@ -70,7 +70,7 @@ const ListAssessmentRunsRequest * ListAssessmentRunsResponse::request() const
  */
 void ListAssessmentRunsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAssessmentRunsResponse);
+    //Q_D(ListAssessmentRunsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const DescribeFleetsRequest * DescribeFleetsResponse::request() const
  */
 void DescribeFleetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFleetsResponse);
+    //Q_D(DescribeFleetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

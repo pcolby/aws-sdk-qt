@@ -70,7 +70,7 @@ const UntagResourceRequest * UntagResourceResponse::request() const
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UntagResourceResponse);
+    //Q_D(UntagResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -134,7 +134,7 @@ const SetLocalConsolePasswordRequest * SetLocalConsolePasswordResponse::request(
  */
 void SetLocalConsolePasswordResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetLocalConsolePasswordResponse);
+    //Q_D(SetLocalConsolePasswordResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

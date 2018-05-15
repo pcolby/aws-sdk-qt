@@ -171,7 +171,7 @@ const DeregisterVolumeRequest * DeregisterVolumeResponse::request() const
  */
 void DeregisterVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterVolumeResponse);
+    //Q_D(DeregisterVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

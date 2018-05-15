@@ -171,7 +171,7 @@ const DeregisterEcsClusterRequest * DeregisterEcsClusterResponse::request() cons
  */
 void DeregisterEcsClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterEcsClusterResponse);
+    //Q_D(DeregisterEcsClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

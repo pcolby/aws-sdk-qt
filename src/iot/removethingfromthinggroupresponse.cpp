@@ -76,7 +76,7 @@ const RemoveThingFromThingGroupRequest * RemoveThingFromThingGroupResponse::requ
  */
 void RemoveThingFromThingGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveThingFromThingGroupResponse);
+    //Q_D(RemoveThingFromThingGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

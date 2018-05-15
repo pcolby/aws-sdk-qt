@@ -146,7 +146,7 @@ const GetApplicationRevisionRequest * GetApplicationRevisionResponse::request() 
  */
 void GetApplicationRevisionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetApplicationRevisionResponse);
+    //Q_D(GetApplicationRevisionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const TestRoleRequest * TestRoleResponse::request() const
  */
 void TestRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestRoleResponse);
+    //Q_D(TestRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

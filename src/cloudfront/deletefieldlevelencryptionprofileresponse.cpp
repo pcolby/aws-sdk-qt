@@ -70,7 +70,7 @@ const DeleteFieldLevelEncryptionProfileRequest * DeleteFieldLevelEncryptionProfi
  */
 void DeleteFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFieldLevelEncryptionProfileResponse);
+    //Q_D(DeleteFieldLevelEncryptionProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

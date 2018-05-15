@@ -255,7 +255,7 @@ void SwfRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SwfRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SwfRequest);
+    //Q_D(const SwfRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

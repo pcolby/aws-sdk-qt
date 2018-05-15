@@ -61,7 +61,7 @@ WorkDocsResponse::WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * 
  */
 void WorkDocsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(WorkDocsResponse);
+    //Q_D(WorkDocsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

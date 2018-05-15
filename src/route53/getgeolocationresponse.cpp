@@ -65,7 +65,7 @@ const GetGeoLocationRequest * GetGeoLocationResponse::request() const
  */
 void GetGeoLocationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetGeoLocationResponse);
+    //Q_D(GetGeoLocationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -66,7 +66,7 @@ const ListResolversRequest * ListResolversResponse::request() const
  */
 void ListResolversResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListResolversResponse);
+    //Q_D(ListResolversResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const ClearDefaultAuthorizerRequest * ClearDefaultAuthorizerResponse::request() 
  */
 void ClearDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ClearDefaultAuthorizerResponse);
+    //Q_D(ClearDefaultAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -82,7 +82,7 @@ const DeregisterTaskDefinitionRequest * DeregisterTaskDefinitionResponse::reques
  */
 void DeregisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterTaskDefinitionResponse);
+    //Q_D(DeregisterTaskDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

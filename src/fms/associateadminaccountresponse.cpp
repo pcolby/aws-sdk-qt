@@ -71,7 +71,7 @@ const AssociateAdminAccountRequest * AssociateAdminAccountResponse::request() co
  */
 void AssociateAdminAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateAdminAccountResponse);
+    //Q_D(AssociateAdminAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

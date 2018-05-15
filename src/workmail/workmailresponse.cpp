@@ -61,7 +61,7 @@ WorkMailResponse::WorkMailResponse(WorkMailResponsePrivate * const d, QObject * 
  */
 void WorkMailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(WorkMailResponse);
+    //Q_D(WorkMailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

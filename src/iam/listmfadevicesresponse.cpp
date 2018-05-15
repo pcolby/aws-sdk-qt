@@ -130,7 +130,7 @@ const ListMFADevicesRequest * ListMFADevicesResponse::request() const
  */
 void ListMFADevicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListMFADevicesResponse);
+    //Q_D(ListMFADevicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

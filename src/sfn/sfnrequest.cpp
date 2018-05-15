@@ -243,7 +243,7 @@ void SfnRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SfnRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SfnRequest);
+    //Q_D(const SfnRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

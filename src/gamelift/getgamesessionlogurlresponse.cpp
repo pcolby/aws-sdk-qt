@@ -509,7 +509,7 @@ const GetGameSessionLogUrlRequest * GetGameSessionLogUrlResponse::request() cons
  */
 void GetGameSessionLogUrlResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetGameSessionLogUrlResponse);
+    //Q_D(GetGameSessionLogUrlResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListHostedZonesByNameRequest * ListHostedZonesByNameResponse::request() co
  */
 void ListHostedZonesByNameResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListHostedZonesByNameResponse);
+    //Q_D(ListHostedZonesByNameResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

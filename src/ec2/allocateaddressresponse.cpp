@@ -69,7 +69,7 @@ const AllocateAddressRequest * AllocateAddressResponse::request() const
  */
 void AllocateAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AllocateAddressResponse);
+    //Q_D(AllocateAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -66,7 +66,7 @@ const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
  */
 void SearchFacesByImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchFacesByImageResponse);
+    //Q_D(SearchFacesByImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

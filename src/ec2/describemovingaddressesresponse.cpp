@@ -69,7 +69,7 @@ const DescribeMovingAddressesRequest * DescribeMovingAddressesResponse::request(
  */
 void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeMovingAddressesResponse);
+    //Q_D(DescribeMovingAddressesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

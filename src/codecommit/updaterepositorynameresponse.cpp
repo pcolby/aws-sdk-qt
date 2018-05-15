@@ -255,7 +255,7 @@ const UpdateRepositoryNameRequest * UpdateRepositoryNameResponse::request() cons
  */
 void UpdateRepositoryNameResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRepositoryNameResponse);
+    //Q_D(UpdateRepositoryNameResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

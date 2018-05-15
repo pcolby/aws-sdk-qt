@@ -240,7 +240,7 @@ const EnableStageTransitionRequest * EnableStageTransitionResponse::request() co
  */
 void EnableStageTransitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableStageTransitionResponse);
+    //Q_D(EnableStageTransitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

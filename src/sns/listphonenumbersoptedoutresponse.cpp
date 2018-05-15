@@ -79,7 +79,7 @@ const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::reques
  */
 void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPhoneNumbersOptedOutResponse);
+    //Q_D(ListPhoneNumbersOptedOutResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

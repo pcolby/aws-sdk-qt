@@ -171,7 +171,7 @@ const UpdateRdsDbInstanceRequest * UpdateRdsDbInstanceResponse::request() const
  */
 void UpdateRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateRdsDbInstanceResponse);
+    //Q_D(UpdateRdsDbInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

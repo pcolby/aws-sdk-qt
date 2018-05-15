@@ -61,7 +61,7 @@ CloudFormationResponse::CloudFormationResponse(CloudFormationResponsePrivate * c
  */
 void CloudFormationResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudFormationResponse);
+    //Q_D(CloudFormationResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

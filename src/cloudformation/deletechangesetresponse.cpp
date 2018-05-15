@@ -87,7 +87,7 @@ const DeleteChangeSetRequest * DeleteChangeSetResponse::request() const
  */
 void DeleteChangeSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteChangeSetResponse);
+    //Q_D(DeleteChangeSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

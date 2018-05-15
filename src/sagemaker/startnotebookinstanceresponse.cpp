@@ -65,7 +65,7 @@ const StartNotebookInstanceRequest * StartNotebookInstanceResponse::request() co
  */
 void StartNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartNotebookInstanceResponse);
+    //Q_D(StartNotebookInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

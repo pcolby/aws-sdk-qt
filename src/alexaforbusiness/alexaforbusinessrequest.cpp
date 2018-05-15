@@ -273,7 +273,7 @@ void AlexaForBusinessRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AlexaForBusinessRequest);
+    //Q_D(const AlexaForBusinessRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

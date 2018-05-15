@@ -171,7 +171,7 @@ const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
  */
 void DeleteUserProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteUserProfileResponse);
+    //Q_D(DeleteUserProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

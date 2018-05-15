@@ -66,7 +66,7 @@ const CreateDataSourceRequest * CreateDataSourceResponse::request() const
  */
 void CreateDataSourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDataSourceResponse);
+    //Q_D(CreateDataSourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

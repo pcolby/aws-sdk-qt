@@ -68,7 +68,7 @@ const CreatePartitionRequest * CreatePartitionResponse::request() const
  */
 void CreatePartitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePartitionResponse);
+    //Q_D(CreatePartitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

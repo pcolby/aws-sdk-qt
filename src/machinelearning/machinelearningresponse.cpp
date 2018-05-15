@@ -61,7 +61,7 @@ MachineLearningResponse::MachineLearningResponse(MachineLearningResponsePrivate 
  */
 void MachineLearningResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MachineLearningResponse);
+    //Q_D(MachineLearningResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

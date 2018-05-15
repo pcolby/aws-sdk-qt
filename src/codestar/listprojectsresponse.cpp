@@ -153,7 +153,7 @@ const ListProjectsRequest * ListProjectsResponse::request() const
  */
 void ListProjectsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListProjectsResponse);
+    //Q_D(ListProjectsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

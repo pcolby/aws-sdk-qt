@@ -81,7 +81,7 @@ const GetDiskRequest * GetDiskResponse::request() const
  */
 void GetDiskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDiskResponse);
+    //Q_D(GetDiskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

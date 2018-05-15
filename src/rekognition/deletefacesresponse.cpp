@@ -66,7 +66,7 @@ const DeleteFacesRequest * DeleteFacesResponse::request() const
  */
 void DeleteFacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteFacesResponse);
+    //Q_D(DeleteFacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

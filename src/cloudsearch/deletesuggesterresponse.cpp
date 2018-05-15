@@ -76,7 +76,7 @@ const DeleteSuggesterRequest * DeleteSuggesterResponse::request() const
  */
 void DeleteSuggesterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSuggesterResponse);
+    //Q_D(DeleteSuggesterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

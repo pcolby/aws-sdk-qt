@@ -164,7 +164,7 @@ const GetParametersForImportRequest * GetParametersForImportResponse::request() 
  */
 void GetParametersForImportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetParametersForImportResponse);
+    //Q_D(GetParametersForImportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

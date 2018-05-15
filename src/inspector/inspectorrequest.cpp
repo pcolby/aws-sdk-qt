@@ -257,7 +257,7 @@ void InspectorRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const InspectorRequest);
+    //Q_D(const InspectorRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

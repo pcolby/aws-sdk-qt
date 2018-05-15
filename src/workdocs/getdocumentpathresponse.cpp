@@ -94,7 +94,7 @@ const GetDocumentPathRequest * GetDocumentPathResponse::request() const
  */
 void GetDocumentPathResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDocumentPathResponse);
+    //Q_D(GetDocumentPathResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

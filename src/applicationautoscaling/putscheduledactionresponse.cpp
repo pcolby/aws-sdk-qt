@@ -138,7 +138,7 @@ const PutScheduledActionRequest * PutScheduledActionResponse::request() const
  */
 void PutScheduledActionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutScheduledActionResponse);
+    //Q_D(PutScheduledActionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

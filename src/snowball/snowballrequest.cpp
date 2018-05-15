@@ -241,7 +241,7 @@ void SnowballRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SnowballRequest);
+    //Q_D(const SnowballRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

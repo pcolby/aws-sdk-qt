@@ -68,7 +68,7 @@ const DeleteResourceDefinitionRequest * DeleteResourceDefinitionResponse::reques
  */
 void DeleteResourceDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteResourceDefinitionResponse);
+    //Q_D(DeleteResourceDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

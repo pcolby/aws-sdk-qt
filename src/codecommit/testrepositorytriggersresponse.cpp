@@ -255,7 +255,7 @@ const TestRepositoryTriggersRequest * TestRepositoryTriggersResponse::request() 
  */
 void TestRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestRepositoryTriggersResponse);
+    //Q_D(TestRepositoryTriggersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

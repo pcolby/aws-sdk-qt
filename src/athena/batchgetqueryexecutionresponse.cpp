@@ -77,7 +77,7 @@ const BatchGetQueryExecutionRequest * BatchGetQueryExecutionResponse::request() 
  */
 void BatchGetQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetQueryExecutionResponse);
+    //Q_D(BatchGetQueryExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

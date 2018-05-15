@@ -61,7 +61,7 @@ IamResponse::IamResponse(IamResponsePrivate * const d, QObject * const parent)
  */
 void IamResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IamResponse);
+    //Q_D(IamResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

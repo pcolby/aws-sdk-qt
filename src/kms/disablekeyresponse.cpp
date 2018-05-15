@@ -164,7 +164,7 @@ const DisableKeyRequest * DisableKeyResponse::request() const
  */
 void DisableKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableKeyResponse);
+    //Q_D(DisableKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

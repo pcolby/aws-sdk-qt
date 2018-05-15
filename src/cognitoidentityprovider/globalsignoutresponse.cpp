@@ -75,7 +75,7 @@ const GlobalSignOutRequest * GlobalSignOutResponse::request() const
  */
 void GlobalSignOutResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GlobalSignOutResponse);
+    //Q_D(GlobalSignOutResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

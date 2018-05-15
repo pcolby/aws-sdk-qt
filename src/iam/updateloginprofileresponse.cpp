@@ -130,7 +130,7 @@ const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
  */
 void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateLoginProfileResponse);
+    //Q_D(UpdateLoginProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

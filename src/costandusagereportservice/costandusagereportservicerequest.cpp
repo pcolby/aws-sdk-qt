@@ -227,7 +227,7 @@ void CostandUsageReportServiceRequest::setParameters(const QVariantMap &paramete
  */
 QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CostandUsageReportServiceRequest);
+    //Q_D(const CostandUsageReportServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

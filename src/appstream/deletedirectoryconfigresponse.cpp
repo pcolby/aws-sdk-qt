@@ -68,7 +68,7 @@ const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() co
  */
 void DeleteDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDirectoryConfigResponse);
+    //Q_D(DeleteDirectoryConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -95,7 +95,7 @@ const GetClusterCredentialsRequest * GetClusterCredentialsResponse::request() co
  */
 void GetClusterCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetClusterCredentialsResponse);
+    //Q_D(GetClusterCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

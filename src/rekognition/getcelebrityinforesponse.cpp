@@ -66,7 +66,7 @@ const GetCelebrityInfoRequest * GetCelebrityInfoResponse::request() const
  */
 void GetCelebrityInfoResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCelebrityInfoResponse);
+    //Q_D(GetCelebrityInfoResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const CreateMountTargetRequest * CreateMountTargetResponse::request() const
  */
 void CreateMountTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateMountTargetResponse);
+    //Q_D(CreateMountTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

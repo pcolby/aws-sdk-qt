@@ -68,7 +68,7 @@ const CreateScriptRequest * CreateScriptResponse::request() const
  */
 void CreateScriptResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateScriptResponse);
+    //Q_D(CreateScriptResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

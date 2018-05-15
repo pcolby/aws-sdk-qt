@@ -70,7 +70,7 @@ const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request(
  */
 void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CompleteLifecycleActionResponse);
+    //Q_D(CompleteLifecycleActionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

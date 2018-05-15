@@ -236,7 +236,7 @@ void AcmRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AcmRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AcmRequest);
+    //Q_D(const AcmRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

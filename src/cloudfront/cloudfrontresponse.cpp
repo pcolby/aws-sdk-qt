@@ -61,7 +61,7 @@ CloudFrontResponse::CloudFrontResponse(CloudFrontResponsePrivate * const d, QObj
  */
 void CloudFrontResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CloudFrontResponse);
+    //Q_D(CloudFrontResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

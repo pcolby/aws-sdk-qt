@@ -85,7 +85,7 @@ const DeleteAggregationAuthorizationRequest * DeleteAggregationAuthorizationResp
  */
 void DeleteAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteAggregationAuthorizationResponse);
+    //Q_D(DeleteAggregationAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const CreateVpnConnectionRouteRequest * CreateVpnConnectionRouteResponse::reques
  */
 void CreateVpnConnectionRouteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateVpnConnectionRouteResponse);
+    //Q_D(CreateVpnConnectionRouteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -76,7 +76,7 @@ const ListPolicyPrincipalsRequest * ListPolicyPrincipalsResponse::request() cons
  */
 void ListPolicyPrincipalsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPolicyPrincipalsResponse);
+    //Q_D(ListPolicyPrincipalsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

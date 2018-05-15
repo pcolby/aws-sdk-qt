@@ -82,7 +82,7 @@ const DeregisterContainerInstanceRequest * DeregisterContainerInstanceResponse::
  */
 void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterContainerInstanceResponse);
+    //Q_D(DeregisterContainerInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

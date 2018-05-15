@@ -234,7 +234,7 @@ void FirehoseRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest FirehoseRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const FirehoseRequest);
+    //Q_D(const FirehoseRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

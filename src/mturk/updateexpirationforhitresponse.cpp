@@ -65,7 +65,7 @@ const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() 
  */
 void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateExpirationForHITResponse);
+    //Q_D(UpdateExpirationForHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

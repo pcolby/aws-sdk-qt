@@ -98,7 +98,7 @@ const DescribeGroupRequest * DescribeGroupResponse::request() const
  */
 void DescribeGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeGroupResponse);
+    //Q_D(DescribeGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

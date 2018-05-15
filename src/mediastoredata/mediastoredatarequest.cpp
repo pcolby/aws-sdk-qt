@@ -229,7 +229,7 @@ void MediaStoreDataRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MediaStoreDataRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MediaStoreDataRequest);
+    //Q_D(const MediaStoreDataRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

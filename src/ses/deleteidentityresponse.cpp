@@ -76,7 +76,7 @@ const DeleteIdentityRequest * DeleteIdentityResponse::request() const
  */
 void DeleteIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteIdentityResponse);
+    //Q_D(DeleteIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

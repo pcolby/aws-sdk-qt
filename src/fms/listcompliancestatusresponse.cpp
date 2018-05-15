@@ -71,7 +71,7 @@ const ListComplianceStatusRequest * ListComplianceStatusResponse::request() cons
  */
 void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListComplianceStatusResponse);
+    //Q_D(ListComplianceStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

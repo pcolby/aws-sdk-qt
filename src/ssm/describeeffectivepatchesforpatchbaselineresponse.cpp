@@ -89,7 +89,7 @@ const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatches
  */
 void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeEffectivePatchesForPatchBaselineResponse);
+    //Q_D(DescribeEffectivePatchesForPatchBaselineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

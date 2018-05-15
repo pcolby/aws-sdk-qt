@@ -509,7 +509,7 @@ const DescribeAliasRequest * DescribeAliasResponse::request() const
  */
 void DescribeAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAliasResponse);
+    //Q_D(DescribeAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -66,7 +66,7 @@ const UpdateDomainContactPrivacyRequest * UpdateDomainContactPrivacyResponse::re
  */
 void UpdateDomainContactPrivacyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDomainContactPrivacyResponse);
+    //Q_D(UpdateDomainContactPrivacyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

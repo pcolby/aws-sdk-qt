@@ -171,7 +171,7 @@ const RebootInstanceRequest * RebootInstanceResponse::request() const
  */
 void RebootInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootInstanceResponse);
+    //Q_D(RebootInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

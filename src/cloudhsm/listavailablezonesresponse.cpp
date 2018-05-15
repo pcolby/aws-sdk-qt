@@ -77,7 +77,7 @@ const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
  */
 void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAvailableZonesResponse);
+    //Q_D(ListAvailableZonesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

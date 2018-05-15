@@ -225,7 +225,7 @@ void MobileAnalyticsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest MobileAnalyticsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MobileAnalyticsRequest);
+    //Q_D(const MobileAnalyticsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

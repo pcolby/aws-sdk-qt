@@ -70,7 +70,7 @@ const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
  */
 void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartAssessmentRunResponse);
+    //Q_D(StartAssessmentRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

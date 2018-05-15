@@ -79,7 +79,7 @@ const RevokeCacheSecurityGroupIngressRequest * RevokeCacheSecurityGroupIngressRe
  */
 void RevokeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeCacheSecurityGroupIngressResponse);
+    //Q_D(RevokeCacheSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

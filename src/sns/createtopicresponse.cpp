@@ -79,7 +79,7 @@ const CreateTopicRequest * CreateTopicResponse::request() const
  */
 void CreateTopicResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateTopicResponse);
+    //Q_D(CreateTopicResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

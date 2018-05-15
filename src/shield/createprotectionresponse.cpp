@@ -71,7 +71,7 @@ const CreateProtectionRequest * CreateProtectionResponse::request() const
  */
 void CreateProtectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateProtectionResponse);
+    //Q_D(CreateProtectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

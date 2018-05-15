@@ -235,7 +235,7 @@ void AthenaRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AthenaRequest);
+    //Q_D(const AthenaRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

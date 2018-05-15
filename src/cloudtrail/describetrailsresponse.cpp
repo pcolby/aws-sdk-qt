@@ -88,7 +88,7 @@ const DescribeTrailsRequest * DescribeTrailsResponse::request() const
  */
 void DescribeTrailsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTrailsResponse);
+    //Q_D(DescribeTrailsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

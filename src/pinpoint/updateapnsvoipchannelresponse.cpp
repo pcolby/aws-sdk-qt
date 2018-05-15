@@ -65,7 +65,7 @@ const UpdateApnsVoipChannelRequest * UpdateApnsVoipChannelResponse::request() co
  */
 void UpdateApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateApnsVoipChannelResponse);
+    //Q_D(UpdateApnsVoipChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

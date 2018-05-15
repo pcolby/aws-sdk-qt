@@ -85,7 +85,7 @@ const DeletePendingAggregationRequestRequest * DeletePendingAggregationRequestRe
  */
 void DeletePendingAggregationRequestResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePendingAggregationRequestResponse);
+    //Q_D(DeletePendingAggregationRequestResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const ReplaceRouteTableAssociationRequest * ReplaceRouteTableAssociationResponse
  */
 void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReplaceRouteTableAssociationResponse);
+    //Q_D(ReplaceRouteTableAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

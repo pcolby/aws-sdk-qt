@@ -69,7 +69,7 @@ const CreateLaunchTemplateRequest * CreateLaunchTemplateResponse::request() cons
  */
 void CreateLaunchTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateLaunchTemplateResponse);
+    //Q_D(CreateLaunchTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

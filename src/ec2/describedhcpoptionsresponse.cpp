@@ -69,7 +69,7 @@ const DescribeDhcpOptionsRequest * DescribeDhcpOptionsResponse::request() const
  */
 void DescribeDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDhcpOptionsResponse);
+    //Q_D(DescribeDhcpOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

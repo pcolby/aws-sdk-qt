@@ -61,7 +61,7 @@ SnowballResponse::SnowballResponse(SnowballResponsePrivate * const d, QObject * 
  */
 void SnowballResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SnowballResponse);
+    //Q_D(SnowballResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

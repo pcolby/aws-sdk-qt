@@ -509,7 +509,7 @@ const DescribeRuntimeConfigurationRequest * DescribeRuntimeConfigurationResponse
  */
 void DescribeRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeRuntimeConfigurationResponse);
+    //Q_D(DescribeRuntimeConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

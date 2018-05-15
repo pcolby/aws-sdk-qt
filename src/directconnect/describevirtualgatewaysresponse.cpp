@@ -71,7 +71,7 @@ const DescribeVirtualGatewaysRequest * DescribeVirtualGatewaysResponse::request(
  */
 void DescribeVirtualGatewaysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVirtualGatewaysResponse);
+    //Q_D(DescribeVirtualGatewaysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const PutImageRequest * PutImageResponse::request() const
  */
 void PutImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutImageResponse);
+    //Q_D(PutImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
  */
 void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetInstanceHealthResponse);
+    //Q_D(SetInstanceHealthResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

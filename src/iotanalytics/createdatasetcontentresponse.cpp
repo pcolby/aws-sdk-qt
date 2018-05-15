@@ -86,7 +86,7 @@ const CreateDatasetContentRequest * CreateDatasetContentResponse::request() cons
  */
 void CreateDatasetContentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDatasetContentResponse);
+    //Q_D(CreateDatasetContentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

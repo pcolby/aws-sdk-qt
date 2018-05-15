@@ -257,7 +257,7 @@ void GlacierRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest GlacierRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const GlacierRequest);
+    //Q_D(const GlacierRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -72,7 +72,7 @@ const DeleteSizeConstraintSetRequest * DeleteSizeConstraintSetResponse::request(
  */
 void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSizeConstraintSetResponse);
+    //Q_D(DeleteSizeConstraintSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

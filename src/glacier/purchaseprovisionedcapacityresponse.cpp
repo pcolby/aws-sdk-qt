@@ -103,7 +103,7 @@ const PurchaseProvisionedCapacityRequest * PurchaseProvisionedCapacityResponse::
  */
 void PurchaseProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseProvisionedCapacityResponse);
+    //Q_D(PurchaseProvisionedCapacityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

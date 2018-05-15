@@ -286,7 +286,7 @@ void DeviceFarmRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DeviceFarmRequest);
+    //Q_D(const DeviceFarmRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

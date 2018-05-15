@@ -69,7 +69,7 @@ const PutBotAliasRequest * PutBotAliasResponse::request() const
  */
 void PutBotAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBotAliasResponse);
+    //Q_D(PutBotAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

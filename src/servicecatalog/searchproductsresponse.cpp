@@ -71,7 +71,7 @@ const SearchProductsRequest * SearchProductsResponse::request() const
  */
 void SearchProductsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchProductsResponse);
+    //Q_D(SearchProductsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

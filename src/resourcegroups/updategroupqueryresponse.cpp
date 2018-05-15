@@ -109,7 +109,7 @@ const UpdateGroupQueryRequest * UpdateGroupQueryResponse::request() const
  */
 void UpdateGroupQueryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateGroupQueryResponse);
+    //Q_D(UpdateGroupQueryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

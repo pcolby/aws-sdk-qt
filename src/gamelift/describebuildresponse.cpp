@@ -509,7 +509,7 @@ const DescribeBuildRequest * DescribeBuildResponse::request() const
  */
 void DescribeBuildResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeBuildResponse);
+    //Q_D(DescribeBuildResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

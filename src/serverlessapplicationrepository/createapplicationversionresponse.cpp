@@ -86,7 +86,7 @@ const CreateApplicationVersionRequest * CreateApplicationVersionResponse::reques
  */
 void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateApplicationVersionResponse);
+    //Q_D(CreateApplicationVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

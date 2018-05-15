@@ -65,7 +65,7 @@ const GetCheckerIpRangesRequest * GetCheckerIpRangesResponse::request() const
  */
 void GetCheckerIpRangesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCheckerIpRangesResponse);
+    //Q_D(GetCheckerIpRangesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

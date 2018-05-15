@@ -61,7 +61,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(Marke
  */
 void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MarketplaceCommerceAnalyticsResponse);
+    //Q_D(MarketplaceCommerceAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

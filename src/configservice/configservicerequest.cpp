@@ -264,7 +264,7 @@ void ConfigServiceRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ConfigServiceRequest);
+    //Q_D(const ConfigServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

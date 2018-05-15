@@ -61,7 +61,7 @@ SimpleDBResponse::SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * 
  */
 void SimpleDBResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SimpleDBResponse);
+    //Q_D(SimpleDBResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

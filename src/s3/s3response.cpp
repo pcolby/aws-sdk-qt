@@ -61,7 +61,7 @@ S3Response::S3Response(S3ResponsePrivate * const d, QObject * const parent)
  */
 void S3Response::parseFailure(QIODevice &response)
 {
-    Q_D(S3Response);
+    //Q_D(S3Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -61,7 +61,7 @@ SwfResponse::SwfResponse(SwfResponsePrivate * const d, QObject * const parent)
  */
 void SwfResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SwfResponse);
+    //Q_D(SwfResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

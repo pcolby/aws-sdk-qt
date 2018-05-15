@@ -82,7 +82,7 @@ const StopTaskRequest * StopTaskResponse::request() const
  */
 void StopTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopTaskResponse);
+    //Q_D(StopTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

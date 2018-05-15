@@ -98,7 +98,7 @@ const DisassociateMemberFromGroupRequest * DisassociateMemberFromGroupResponse::
  */
 void DisassociateMemberFromGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateMemberFromGroupResponse);
+    //Q_D(DisassociateMemberFromGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -82,7 +82,7 @@ const ListContainerInstancesRequest * ListContainerInstancesResponse::request() 
  */
 void ListContainerInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListContainerInstancesResponse);
+    //Q_D(ListContainerInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

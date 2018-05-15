@@ -70,7 +70,7 @@ const SearchUsersRequest * SearchUsersResponse::request() const
  */
 void SearchUsersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SearchUsersResponse);
+    //Q_D(SearchUsersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

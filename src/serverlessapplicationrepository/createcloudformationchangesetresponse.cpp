@@ -86,7 +86,7 @@ const CreateCloudFormationChangeSetRequest * CreateCloudFormationChangeSetRespon
  */
 void CreateCloudFormationChangeSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCloudFormationChangeSetResponse);
+    //Q_D(CreateCloudFormationChangeSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

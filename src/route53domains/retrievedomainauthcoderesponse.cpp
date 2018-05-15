@@ -66,7 +66,7 @@ const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() 
  */
 void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RetrieveDomainAuthCodeResponse);
+    //Q_D(RetrieveDomainAuthCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

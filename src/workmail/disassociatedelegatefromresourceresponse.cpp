@@ -98,7 +98,7 @@ const DisassociateDelegateFromResourceRequest * DisassociateDelegateFromResource
  */
 void DisassociateDelegateFromResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateDelegateFromResourceResponse);
+    //Q_D(DisassociateDelegateFromResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

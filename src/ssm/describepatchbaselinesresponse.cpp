@@ -89,7 +89,7 @@ const DescribePatchBaselinesRequest * DescribePatchBaselinesResponse::request() 
  */
 void DescribePatchBaselinesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePatchBaselinesResponse);
+    //Q_D(DescribePatchBaselinesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

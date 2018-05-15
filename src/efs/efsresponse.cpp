@@ -61,7 +61,7 @@ EfsResponse::EfsResponse(EfsResponsePrivate * const d, QObject * const parent)
  */
 void EfsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(EfsResponse);
+    //Q_D(EfsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

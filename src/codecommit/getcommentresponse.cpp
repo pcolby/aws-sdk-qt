@@ -255,7 +255,7 @@ const GetCommentRequest * GetCommentResponse::request() const
  */
 void GetCommentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCommentResponse);
+    //Q_D(GetCommentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

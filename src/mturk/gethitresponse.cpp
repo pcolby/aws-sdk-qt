@@ -65,7 +65,7 @@ const GetHITRequest * GetHITResponse::request() const
  */
 void GetHITResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetHITResponse);
+    //Q_D(GetHITResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

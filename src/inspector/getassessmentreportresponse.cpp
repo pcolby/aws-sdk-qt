@@ -70,7 +70,7 @@ const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
  */
 void GetAssessmentReportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAssessmentReportResponse);
+    //Q_D(GetAssessmentReportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

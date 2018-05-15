@@ -70,7 +70,7 @@ const GetAddressBookRequest * GetAddressBookResponse::request() const
  */
 void GetAddressBookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAddressBookResponse);
+    //Q_D(GetAddressBookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

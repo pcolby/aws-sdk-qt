@@ -66,7 +66,7 @@ const UpdateDomainContactRequest * UpdateDomainContactResponse::request() const
  */
 void UpdateDomainContactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDomainContactResponse);
+    //Q_D(UpdateDomainContactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const DeleteSlotTypeRequest * DeleteSlotTypeResponse::request() const
  */
 void DeleteSlotTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSlotTypeResponse);
+    //Q_D(DeleteSlotTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

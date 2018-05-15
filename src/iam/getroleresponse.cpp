@@ -130,7 +130,7 @@ const GetRoleRequest * GetRoleResponse::request() const
  */
 void GetRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetRoleResponse);
+    //Q_D(GetRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

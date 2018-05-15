@@ -79,7 +79,7 @@ const DeregisterJobDefinitionRequest * DeregisterJobDefinitionResponse::request(
  */
 void DeregisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterJobDefinitionResponse);
+    //Q_D(DeregisterJobDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

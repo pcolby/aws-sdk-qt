@@ -95,7 +95,7 @@ const DisableSnapshotCopyRequest * DisableSnapshotCopyResponse::request() const
  */
 void DisableSnapshotCopyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableSnapshotCopyResponse);
+    //Q_D(DisableSnapshotCopyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

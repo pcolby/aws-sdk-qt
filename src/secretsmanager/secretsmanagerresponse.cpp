@@ -61,7 +61,7 @@ SecretsManagerResponse::SecretsManagerResponse(SecretsManagerResponsePrivate * c
  */
 void SecretsManagerResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SecretsManagerResponse);
+    //Q_D(SecretsManagerResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

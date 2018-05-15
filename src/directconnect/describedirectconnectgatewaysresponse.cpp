@@ -73,7 +73,7 @@ const DescribeDirectConnectGatewaysRequest * DescribeDirectConnectGatewaysRespon
  */
 void DescribeDirectConnectGatewaysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDirectConnectGatewaysResponse);
+    //Q_D(DescribeDirectConnectGatewaysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

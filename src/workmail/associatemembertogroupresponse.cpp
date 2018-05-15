@@ -98,7 +98,7 @@ const AssociateMemberToGroupRequest * AssociateMemberToGroupResponse::request() 
  */
 void AssociateMemberToGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateMemberToGroupResponse);
+    //Q_D(AssociateMemberToGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

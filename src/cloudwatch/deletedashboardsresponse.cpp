@@ -79,7 +79,7 @@ const DeleteDashboardsRequest * DeleteDashboardsResponse::request() const
  */
 void DeleteDashboardsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDashboardsResponse);
+    //Q_D(DeleteDashboardsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -498,7 +498,7 @@ void Ec2Request::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest Ec2Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const Ec2Request);
+    //Q_D(const Ec2Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

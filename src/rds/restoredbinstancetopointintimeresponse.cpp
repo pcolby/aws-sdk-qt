@@ -129,7 +129,7 @@ const RestoreDBInstanceToPointInTimeRequest * RestoreDBInstanceToPointInTimeResp
  */
 void RestoreDBInstanceToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreDBInstanceToPointInTimeResponse);
+    //Q_D(RestoreDBInstanceToPointInTimeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

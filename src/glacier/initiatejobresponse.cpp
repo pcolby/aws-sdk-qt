@@ -103,7 +103,7 @@ const InitiateJobRequest * InitiateJobResponse::request() const
  */
 void InitiateJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InitiateJobResponse);
+    //Q_D(InitiateJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

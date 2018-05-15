@@ -76,7 +76,7 @@ const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
  */
 void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateRoleAliasResponse);
+    //Q_D(CreateRoleAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

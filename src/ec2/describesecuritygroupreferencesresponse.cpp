@@ -69,7 +69,7 @@ const DescribeSecurityGroupReferencesRequest * DescribeSecurityGroupReferencesRe
  */
 void DescribeSecurityGroupReferencesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSecurityGroupReferencesResponse);
+    //Q_D(DescribeSecurityGroupReferencesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

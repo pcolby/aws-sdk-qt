@@ -68,7 +68,7 @@ const GetFunctionDefinitionVersionRequest * GetFunctionDefinitionVersionResponse
  */
 void GetFunctionDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFunctionDefinitionVersionResponse);
+    //Q_D(GetFunctionDefinitionVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

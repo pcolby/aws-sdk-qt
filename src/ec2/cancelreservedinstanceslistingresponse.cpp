@@ -69,7 +69,7 @@ const CancelReservedInstancesListingRequest * CancelReservedInstancesListingResp
  */
 void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CancelReservedInstancesListingResponse);
+    //Q_D(CancelReservedInstancesListingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

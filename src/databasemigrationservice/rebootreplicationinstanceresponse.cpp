@@ -76,7 +76,7 @@ const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::requ
  */
 void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RebootReplicationInstanceResponse);
+    //Q_D(RebootReplicationInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

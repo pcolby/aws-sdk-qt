@@ -76,7 +76,7 @@ const GetFunctionRequest * GetFunctionResponse::request() const
  */
 void GetFunctionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFunctionResponse);
+    //Q_D(GetFunctionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

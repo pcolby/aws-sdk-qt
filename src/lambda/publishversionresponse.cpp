@@ -76,7 +76,7 @@ const PublishVersionRequest * PublishVersionResponse::request() const
  */
 void PublishVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PublishVersionResponse);
+    //Q_D(PublishVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

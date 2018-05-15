@@ -130,7 +130,7 @@ const GetServiceLinkedRoleDeletionStatusRequest * GetServiceLinkedRoleDeletionSt
  */
 void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetServiceLinkedRoleDeletionStatusResponse);
+    //Q_D(GetServiceLinkedRoleDeletionStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

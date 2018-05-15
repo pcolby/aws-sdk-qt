@@ -69,7 +69,7 @@ const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResp
  */
 void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResetNetworkInterfaceAttributeResponse);
+    //Q_D(ResetNetworkInterfaceAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

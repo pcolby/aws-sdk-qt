@@ -65,7 +65,7 @@ const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
  */
 void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInvitationsCountResponse);
+    //Q_D(GetInvitationsCountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const GetInventorySchemaRequest * GetInventorySchemaResponse::request() const
  */
 void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInventorySchemaResponse);
+    //Q_D(GetInventorySchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

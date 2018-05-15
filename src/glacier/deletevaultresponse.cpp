@@ -103,7 +103,7 @@ const DeleteVaultRequest * DeleteVaultResponse::request() const
  */
 void DeleteVaultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVaultResponse);
+    //Q_D(DeleteVaultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -69,7 +69,7 @@ const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::reques
  */
 void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInstancesHealthStatusResponse);
+    //Q_D(GetInstancesHealthStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

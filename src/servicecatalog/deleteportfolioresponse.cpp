@@ -71,7 +71,7 @@ const DeletePortfolioRequest * DeletePortfolioResponse::request() const
  */
 void DeletePortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeletePortfolioResponse);
+    //Q_D(DeletePortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

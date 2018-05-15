@@ -95,7 +95,7 @@ const AuthorizeClusterSecurityGroupIngressRequest * AuthorizeClusterSecurityGrou
  */
 void AuthorizeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AuthorizeClusterSecurityGroupIngressResponse);
+    //Q_D(AuthorizeClusterSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

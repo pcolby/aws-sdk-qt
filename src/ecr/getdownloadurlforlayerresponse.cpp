@@ -69,7 +69,7 @@ const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() 
  */
 void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDownloadUrlForLayerResponse);
+    //Q_D(GetDownloadUrlForLayerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

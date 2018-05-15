@@ -129,7 +129,7 @@ const DescribeDBParametersRequest * DescribeDBParametersResponse::request() cons
  */
 void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDBParametersResponse);
+    //Q_D(DescribeDBParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

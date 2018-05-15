@@ -235,7 +235,7 @@ void EfsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest EfsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EfsRequest);
+    //Q_D(const EfsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

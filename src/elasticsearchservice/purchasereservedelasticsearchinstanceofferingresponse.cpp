@@ -74,7 +74,7 @@ const PurchaseReservedElasticsearchInstanceOfferingRequest * PurchaseReservedEla
  */
 void PurchaseReservedElasticsearchInstanceOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PurchaseReservedElasticsearchInstanceOfferingResponse);
+    //Q_D(PurchaseReservedElasticsearchInstanceOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

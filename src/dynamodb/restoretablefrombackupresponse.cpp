@@ -84,7 +84,7 @@ const RestoreTableFromBackupRequest * RestoreTableFromBackupResponse::request() 
  */
 void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreTableFromBackupResponse);
+    //Q_D(RestoreTableFromBackupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

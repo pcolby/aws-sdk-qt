@@ -79,7 +79,7 @@ const AuthorizeCacheSecurityGroupIngressRequest * AuthorizeCacheSecurityGroupIng
  */
 void AuthorizeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AuthorizeCacheSecurityGroupIngressResponse);
+    //Q_D(AuthorizeCacheSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

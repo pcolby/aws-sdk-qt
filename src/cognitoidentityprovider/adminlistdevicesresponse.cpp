@@ -75,7 +75,7 @@ const AdminListDevicesRequest * AdminListDevicesResponse::request() const
  */
 void AdminListDevicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminListDevicesResponse);
+    //Q_D(AdminListDevicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

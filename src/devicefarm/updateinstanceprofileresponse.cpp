@@ -67,7 +67,7 @@ const UpdateInstanceProfileRequest * UpdateInstanceProfileResponse::request() co
  */
 void UpdateInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateInstanceProfileResponse);
+    //Q_D(UpdateInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::re
  */
 void UpdateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateProvisioningArtifactResponse);
+    //Q_D(UpdateProvisioningArtifactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

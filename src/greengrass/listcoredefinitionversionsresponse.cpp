@@ -68,7 +68,7 @@ const ListCoreDefinitionVersionsRequest * ListCoreDefinitionVersionsResponse::re
  */
 void ListCoreDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListCoreDefinitionVersionsResponse);
+    //Q_D(ListCoreDefinitionVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

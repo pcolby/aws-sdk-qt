@@ -66,7 +66,7 @@ const StartLabelDetectionRequest * StartLabelDetectionResponse::request() const
  */
 void StartLabelDetectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartLabelDetectionResponse);
+    //Q_D(StartLabelDetectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

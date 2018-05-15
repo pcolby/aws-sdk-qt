@@ -85,7 +85,7 @@ const ListAvailableSolutionStacksRequest * ListAvailableSolutionStacksResponse::
  */
 void ListAvailableSolutionStacksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListAvailableSolutionStacksResponse);
+    //Q_D(ListAvailableSolutionStacksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

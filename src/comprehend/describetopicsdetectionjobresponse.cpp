@@ -68,7 +68,7 @@ const DescribeTopicsDetectionJobRequest * DescribeTopicsDetectionJobResponse::re
  */
 void DescribeTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeTopicsDetectionJobResponse);
+    //Q_D(DescribeTopicsDetectionJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -72,7 +72,7 @@ const BatchReadRequest * BatchReadResponse::request() const
  */
 void BatchReadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchReadResponse);
+    //Q_D(BatchReadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

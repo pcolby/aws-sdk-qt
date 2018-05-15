@@ -302,7 +302,7 @@ void S3Request::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const S3Request);
+    //Q_D(const S3Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

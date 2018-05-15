@@ -66,7 +66,7 @@ const ListApiKeysRequest * ListApiKeysResponse::request() const
  */
 void ListApiKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListApiKeysResponse);
+    //Q_D(ListApiKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

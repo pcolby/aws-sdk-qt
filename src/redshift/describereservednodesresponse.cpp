@@ -95,7 +95,7 @@ const DescribeReservedNodesRequest * DescribeReservedNodesResponse::request() co
  */
 void DescribeReservedNodesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReservedNodesResponse);
+    //Q_D(DescribeReservedNodesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

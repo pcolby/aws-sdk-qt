@@ -69,7 +69,7 @@ const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
  */
 void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDhcpOptionsResponse);
+    //Q_D(DeleteDhcpOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOpt
  */
 void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeOrderableDBInstanceOptionsResponse);
+    //Q_D(DescribeOrderableDBInstanceOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -72,7 +72,7 @@ const ListFacetNamesRequest * ListFacetNamesResponse::request() const
  */
 void ListFacetNamesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListFacetNamesResponse);
+    //Q_D(ListFacetNamesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

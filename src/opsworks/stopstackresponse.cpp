@@ -171,7 +171,7 @@ const StopStackRequest * StopStackResponse::request() const
  */
 void StopStackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopStackResponse);
+    //Q_D(StopStackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -234,7 +234,7 @@ void ApplicationAutoScalingRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ApplicationAutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ApplicationAutoScalingRequest);
+    //Q_D(const ApplicationAutoScalingRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

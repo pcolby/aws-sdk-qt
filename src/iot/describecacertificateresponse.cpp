@@ -76,7 +76,7 @@ const DescribeCACertificateRequest * DescribeCACertificateResponse::request() co
  */
 void DescribeCACertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCACertificateResponse);
+    //Q_D(DescribeCACertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -66,7 +66,7 @@ const UpdateTagsForDomainRequest * UpdateTagsForDomainResponse::request() const
  */
 void UpdateTagsForDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTagsForDomainResponse);
+    //Q_D(UpdateTagsForDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

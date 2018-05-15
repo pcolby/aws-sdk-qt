@@ -89,7 +89,7 @@ const RegisterTargetWithMaintenanceWindowRequest * RegisterTargetWithMaintenance
  */
 void RegisterTargetWithMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RegisterTargetWithMaintenanceWindowResponse);
+    //Q_D(RegisterTargetWithMaintenanceWindowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

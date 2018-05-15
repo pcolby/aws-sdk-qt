@@ -171,7 +171,7 @@ const AssignInstanceRequest * AssignInstanceResponse::request() const
  */
 void AssignInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssignInstanceResponse);
+    //Q_D(AssignInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

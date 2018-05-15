@@ -130,7 +130,7 @@ const UpdateServiceSpecificCredentialRequest * UpdateServiceSpecificCredentialRe
  */
 void UpdateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateServiceSpecificCredentialResponse);
+    //Q_D(UpdateServiceSpecificCredentialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -72,7 +72,7 @@ const ListTypedLinkFacetAttributesRequest * ListTypedLinkFacetAttributesResponse
  */
 void ListTypedLinkFacetAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTypedLinkFacetAttributesResponse);
+    //Q_D(ListTypedLinkFacetAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

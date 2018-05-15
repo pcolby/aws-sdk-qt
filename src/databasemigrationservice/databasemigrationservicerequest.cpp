@@ -268,7 +268,7 @@ void DatabaseMigrationServiceRequest::setParameters(const QVariantMap &parameter
  */
 QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const DatabaseMigrationServiceRequest);
+    //Q_D(const DatabaseMigrationServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

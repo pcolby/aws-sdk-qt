@@ -72,7 +72,7 @@ const ApplySchemaRequest * ApplySchemaResponse::request() const
  */
 void ApplySchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ApplySchemaResponse);
+    //Q_D(ApplySchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -227,7 +227,7 @@ void PricingRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest PricingRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const PricingRequest);
+    //Q_D(const PricingRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

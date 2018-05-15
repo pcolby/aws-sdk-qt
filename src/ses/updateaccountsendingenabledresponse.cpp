@@ -76,7 +76,7 @@ const UpdateAccountSendingEnabledRequest * UpdateAccountSendingEnabledResponse::
  */
 void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAccountSendingEnabledResponse);
+    //Q_D(UpdateAccountSendingEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

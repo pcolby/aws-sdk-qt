@@ -70,7 +70,7 @@ const ListFieldLevelEncryptionConfigsRequest * ListFieldLevelEncryptionConfigsRe
  */
 void ListFieldLevelEncryptionConfigsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListFieldLevelEncryptionConfigsResponse);
+    //Q_D(ListFieldLevelEncryptionConfigsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

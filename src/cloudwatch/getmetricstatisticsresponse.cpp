@@ -79,7 +79,7 @@ const GetMetricStatisticsRequest * GetMetricStatisticsResponse::request() const
  */
 void GetMetricStatisticsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetMetricStatisticsResponse);
+    //Q_D(GetMetricStatisticsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

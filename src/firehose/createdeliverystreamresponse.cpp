@@ -69,7 +69,7 @@ const CreateDeliveryStreamRequest * CreateDeliveryStreamResponse::request() cons
  */
 void CreateDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDeliveryStreamResponse);
+    //Q_D(CreateDeliveryStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -94,7 +94,7 @@ const GetCurrentUserRequest * GetCurrentUserResponse::request() const
  */
 void GetCurrentUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCurrentUserResponse);
+    //Q_D(GetCurrentUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

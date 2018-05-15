@@ -76,7 +76,7 @@ const ReplaceTopicRuleRequest * ReplaceTopicRuleResponse::request() const
  */
 void ReplaceTopicRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReplaceTopicRuleResponse);
+    //Q_D(ReplaceTopicRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

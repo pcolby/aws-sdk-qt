@@ -68,7 +68,7 @@ const ListJobsByPipelineRequest * ListJobsByPipelineResponse::request() const
  */
 void ListJobsByPipelineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListJobsByPipelineResponse);
+    //Q_D(ListJobsByPipelineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

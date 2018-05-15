@@ -133,7 +133,7 @@ const ResolveCaseRequest * ResolveCaseResponse::request() const
  */
 void ResolveCaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResolveCaseResponse);
+    //Q_D(ResolveCaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

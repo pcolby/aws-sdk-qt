@@ -61,7 +61,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsag
  */
 void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CostandUsageReportServiceResponse);
+    //Q_D(CostandUsageReportServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

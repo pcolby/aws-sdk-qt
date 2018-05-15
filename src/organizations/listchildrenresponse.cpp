@@ -207,7 +207,7 @@ const ListChildrenRequest * ListChildrenResponse::request() const
  */
 void ListChildrenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListChildrenResponse);
+    //Q_D(ListChildrenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const DescribeMountTargetSecurityGroupsRequest * DescribeMountTargetSecurityGrou
  */
 void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeMountTargetSecurityGroupsResponse);
+    //Q_D(DescribeMountTargetSecurityGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

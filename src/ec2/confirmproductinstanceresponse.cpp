@@ -69,7 +69,7 @@ const ConfirmProductInstanceRequest * ConfirmProductInstanceResponse::request() 
  */
 void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ConfirmProductInstanceResponse);
+    //Q_D(ConfirmProductInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

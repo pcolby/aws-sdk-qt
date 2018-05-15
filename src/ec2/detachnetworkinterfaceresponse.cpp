@@ -69,7 +69,7 @@ const DetachNetworkInterfaceRequest * DetachNetworkInterfaceResponse::request() 
  */
 void DetachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachNetworkInterfaceResponse);
+    //Q_D(DetachNetworkInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -87,7 +87,7 @@ const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
  */
 void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateEnvironmentResponse);
+    //Q_D(CreateEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

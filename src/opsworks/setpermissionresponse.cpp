@@ -171,7 +171,7 @@ const SetPermissionRequest * SetPermissionResponse::request() const
  */
 void SetPermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetPermissionResponse);
+    //Q_D(SetPermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

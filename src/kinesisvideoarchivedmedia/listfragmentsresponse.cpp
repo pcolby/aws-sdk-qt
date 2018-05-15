@@ -65,7 +65,7 @@ const ListFragmentsRequest * ListFragmentsResponse::request() const
  */
 void ListFragmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListFragmentsResponse);
+    //Q_D(ListFragmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

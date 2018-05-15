@@ -70,7 +70,7 @@ const RevokeInvitationRequest * RevokeInvitationResponse::request() const
  */
 void RevokeInvitationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeInvitationResponse);
+    //Q_D(RevokeInvitationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

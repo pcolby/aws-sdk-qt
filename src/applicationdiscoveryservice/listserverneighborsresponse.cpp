@@ -129,7 +129,7 @@ const ListServerNeighborsRequest * ListServerNeighborsResponse::request() const
  */
 void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListServerNeighborsResponse);
+    //Q_D(ListServerNeighborsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

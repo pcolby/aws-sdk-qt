@@ -103,7 +103,7 @@ const CreateIdentityPoolRequest * CreateIdentityPoolResponse::request() const
  */
 void CreateIdentityPoolResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateIdentityPoolResponse);
+    //Q_D(CreateIdentityPoolResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

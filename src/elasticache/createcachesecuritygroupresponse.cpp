@@ -79,7 +79,7 @@ const CreateCacheSecurityGroupRequest * CreateCacheSecurityGroupResponse::reques
  */
 void CreateCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateCacheSecurityGroupResponse);
+    //Q_D(CreateCacheSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

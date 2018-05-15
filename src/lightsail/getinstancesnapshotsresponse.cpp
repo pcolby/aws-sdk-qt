@@ -81,7 +81,7 @@ const GetInstanceSnapshotsRequest * GetInstanceSnapshotsResponse::request() cons
  */
 void GetInstanceSnapshotsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetInstanceSnapshotsResponse);
+    //Q_D(GetInstanceSnapshotsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

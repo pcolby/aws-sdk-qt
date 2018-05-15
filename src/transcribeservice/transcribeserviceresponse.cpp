@@ -61,7 +61,7 @@ TranscribeServiceResponse::TranscribeServiceResponse(TranscribeServiceResponsePr
  */
 void TranscribeServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(TranscribeServiceResponse);
+    //Q_D(TranscribeServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

@@ -89,7 +89,7 @@ const DeleteParametersRequest * DeleteParametersResponse::request() const
  */
 void DeleteParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteParametersResponse);
+    //Q_D(DeleteParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

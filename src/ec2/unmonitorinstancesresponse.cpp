@@ -69,7 +69,7 @@ const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
  */
 void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnmonitorInstancesResponse);
+    //Q_D(UnmonitorInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

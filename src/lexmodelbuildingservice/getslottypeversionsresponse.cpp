@@ -69,7 +69,7 @@ const GetSlotTypeVersionsRequest * GetSlotTypeVersionsResponse::request() const
  */
 void GetSlotTypeVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetSlotTypeVersionsResponse);
+    //Q_D(GetSlotTypeVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

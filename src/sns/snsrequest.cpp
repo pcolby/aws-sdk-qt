@@ -254,7 +254,7 @@ void SnsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SnsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SnsRequest);
+    //Q_D(const SnsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

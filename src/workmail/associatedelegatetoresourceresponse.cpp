@@ -98,7 +98,7 @@ const AssociateDelegateToResourceRequest * AssociateDelegateToResourceResponse::
  */
 void AssociateDelegateToResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateDelegateToResourceResponse);
+    //Q_D(AssociateDelegateToResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const ListRecordHistoryRequest * ListRecordHistoryResponse::request() const
  */
 void ListRecordHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListRecordHistoryResponse);
+    //Q_D(ListRecordHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -74,7 +74,7 @@ const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResp
  */
 void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListElasticsearchInstanceTypesResponse);
+    //Q_D(ListElasticsearchInstanceTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

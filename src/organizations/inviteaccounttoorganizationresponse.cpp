@@ -207,7 +207,7 @@ const InviteAccountToOrganizationRequest * InviteAccountToOrganizationResponse::
  */
 void InviteAccountToOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InviteAccountToOrganizationResponse);
+    //Q_D(InviteAccountToOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

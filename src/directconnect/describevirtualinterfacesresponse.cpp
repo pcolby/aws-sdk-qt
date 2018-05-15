@@ -73,7 +73,7 @@ const DescribeVirtualInterfacesRequest * DescribeVirtualInterfacesResponse::requ
  */
 void DescribeVirtualInterfacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeVirtualInterfacesResponse);
+    //Q_D(DescribeVirtualInterfacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

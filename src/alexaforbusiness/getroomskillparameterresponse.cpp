@@ -70,7 +70,7 @@ const GetRoomSkillParameterRequest * GetRoomSkillParameterResponse::request() co
  */
 void GetRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetRoomSkillParameterResponse);
+    //Q_D(GetRoomSkillParameterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

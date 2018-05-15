@@ -69,7 +69,7 @@ const AssignPrivateIpAddressesRequest * AssignPrivateIpAddressesResponse::reques
  */
 void AssignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssignPrivateIpAddressesResponse);
+    //Q_D(AssignPrivateIpAddressesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

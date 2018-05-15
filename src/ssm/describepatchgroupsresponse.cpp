@@ -89,7 +89,7 @@ const DescribePatchGroupsRequest * DescribePatchGroupsResponse::request() const
  */
 void DescribePatchGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePatchGroupsResponse);
+    //Q_D(DescribePatchGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

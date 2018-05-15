@@ -207,7 +207,7 @@ const DisableAWSServiceAccessRequest * DisableAWSServiceAccessResponse::request(
  */
 void DisableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableAWSServiceAccessResponse);
+    //Q_D(DisableAWSServiceAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

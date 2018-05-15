@@ -103,7 +103,7 @@ const InitiateMultipartUploadRequest * InitiateMultipartUploadResponse::request(
  */
 void InitiateMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(InitiateMultipartUploadResponse);
+    //Q_D(InitiateMultipartUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

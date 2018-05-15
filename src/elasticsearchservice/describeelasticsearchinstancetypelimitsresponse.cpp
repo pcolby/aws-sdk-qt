@@ -74,7 +74,7 @@ const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInst
  */
 void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeElasticsearchInstanceTypeLimitsResponse);
+    //Q_D(DescribeElasticsearchInstanceTypeLimitsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

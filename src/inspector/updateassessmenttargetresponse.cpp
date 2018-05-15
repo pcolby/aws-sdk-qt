@@ -70,7 +70,7 @@ const UpdateAssessmentTargetRequest * UpdateAssessmentTargetResponse::request() 
  */
 void UpdateAssessmentTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAssessmentTargetResponse);
+    //Q_D(UpdateAssessmentTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

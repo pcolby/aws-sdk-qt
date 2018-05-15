@@ -95,7 +95,7 @@ const RestoreTableFromClusterSnapshotRequest * RestoreTableFromClusterSnapshotRe
  */
 void RestoreTableFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreTableFromClusterSnapshotResponse);
+    //Q_D(RestoreTableFromClusterSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

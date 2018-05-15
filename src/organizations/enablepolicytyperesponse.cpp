@@ -207,7 +207,7 @@ const EnablePolicyTypeRequest * EnablePolicyTypeResponse::request() const
  */
 void EnablePolicyTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnablePolicyTypeResponse);
+    //Q_D(EnablePolicyTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

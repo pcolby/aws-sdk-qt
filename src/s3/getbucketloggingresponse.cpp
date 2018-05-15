@@ -65,7 +65,7 @@ const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
  */
 void GetBucketLoggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketLoggingResponse);
+    //Q_D(GetBucketLoggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

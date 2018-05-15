@@ -69,7 +69,7 @@ const DescribeInternetGatewaysRequest * DescribeInternetGatewaysResponse::reques
  */
 void DescribeInternetGatewaysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeInternetGatewaysResponse);
+    //Q_D(DescribeInternetGatewaysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

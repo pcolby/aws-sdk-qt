@@ -94,7 +94,7 @@ const GetFolderPathRequest * GetFolderPathResponse::request() const
  */
 void GetFolderPathResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetFolderPathResponse);
+    //Q_D(GetFolderPathResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

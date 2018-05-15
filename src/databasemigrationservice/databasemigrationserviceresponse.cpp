@@ -61,7 +61,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigra
  */
 void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DatabaseMigrationServiceResponse);
+    //Q_D(DatabaseMigrationServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

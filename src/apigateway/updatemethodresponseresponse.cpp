@@ -70,7 +70,7 @@ const UpdateMethodResponseRequest * UpdateMethodResponseResponse::request() cons
  */
 void UpdateMethodResponseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateMethodResponseResponse);
+    //Q_D(UpdateMethodResponseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

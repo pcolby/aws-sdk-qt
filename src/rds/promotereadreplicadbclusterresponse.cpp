@@ -129,7 +129,7 @@ const PromoteReadReplicaDBClusterRequest * PromoteReadReplicaDBClusterResponse::
  */
 void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PromoteReadReplicaDBClusterResponse);
+    //Q_D(PromoteReadReplicaDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

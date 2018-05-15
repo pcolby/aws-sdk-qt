@@ -171,7 +171,7 @@ const DescribeStackSummaryRequest * DescribeStackSummaryResponse::request() cons
  */
 void DescribeStackSummaryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeStackSummaryResponse);
+    //Q_D(DescribeStackSummaryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

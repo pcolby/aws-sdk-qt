@@ -240,7 +240,7 @@ const PutWebhookRequest * PutWebhookResponse::request() const
  */
 void PutWebhookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutWebhookResponse);
+    //Q_D(PutWebhookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

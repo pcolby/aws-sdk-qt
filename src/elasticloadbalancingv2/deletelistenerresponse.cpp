@@ -133,7 +133,7 @@ const DeleteListenerRequest * DeleteListenerResponse::request() const
  */
 void DeleteListenerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteListenerResponse);
+    //Q_D(DeleteListenerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

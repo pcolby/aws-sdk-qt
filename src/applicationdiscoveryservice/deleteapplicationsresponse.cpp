@@ -129,7 +129,7 @@ const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
  */
 void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteApplicationsResponse);
+    //Q_D(DeleteApplicationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

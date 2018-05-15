@@ -61,7 +61,7 @@ KmsResponse::KmsResponse(KmsResponsePrivate * const d, QObject * const parent)
  */
 void KmsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(KmsResponse);
+    //Q_D(KmsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

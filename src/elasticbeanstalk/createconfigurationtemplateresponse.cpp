@@ -87,7 +87,7 @@ const CreateConfigurationTemplateRequest * CreateConfigurationTemplateResponse::
  */
 void CreateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateConfigurationTemplateResponse);
+    //Q_D(CreateConfigurationTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

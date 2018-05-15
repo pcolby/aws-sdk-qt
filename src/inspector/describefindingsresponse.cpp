@@ -70,7 +70,7 @@ const DescribeFindingsRequest * DescribeFindingsResponse::request() const
  */
 void DescribeFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeFindingsResponse);
+    //Q_D(DescribeFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

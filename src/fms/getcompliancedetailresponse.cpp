@@ -71,7 +71,7 @@ const GetComplianceDetailRequest * GetComplianceDetailResponse::request() const
  */
 void GetComplianceDetailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetComplianceDetailResponse);
+    //Q_D(GetComplianceDetailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

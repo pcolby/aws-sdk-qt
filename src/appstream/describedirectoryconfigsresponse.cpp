@@ -68,7 +68,7 @@ const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::reques
  */
 void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeDirectoryConfigsResponse);
+    //Q_D(DescribeDirectoryConfigsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

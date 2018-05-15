@@ -76,7 +76,7 @@ const DescribeReplicationTaskAssessmentResultsRequest * DescribeReplicationTaskA
  */
 void DescribeReplicationTaskAssessmentResultsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeReplicationTaskAssessmentResultsResponse);
+    //Q_D(DescribeReplicationTaskAssessmentResultsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

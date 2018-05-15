@@ -131,7 +131,7 @@ const TagQueueRequest * TagQueueResponse::request() const
  */
 void TagQueueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TagQueueResponse);
+    //Q_D(TagQueueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

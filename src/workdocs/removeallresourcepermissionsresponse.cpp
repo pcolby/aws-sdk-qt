@@ -94,7 +94,7 @@ const RemoveAllResourcePermissionsRequest * RemoveAllResourcePermissionsResponse
  */
 void RemoveAllResourcePermissionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveAllResourcePermissionsResponse);
+    //Q_D(RemoveAllResourcePermissionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

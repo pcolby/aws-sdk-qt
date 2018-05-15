@@ -69,7 +69,7 @@ const StartImportRequest * StartImportResponse::request() const
  */
 void StartImportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartImportResponse);
+    //Q_D(StartImportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

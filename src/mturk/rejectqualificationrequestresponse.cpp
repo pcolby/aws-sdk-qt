@@ -65,7 +65,7 @@ const RejectQualificationRequestRequest * RejectQualificationRequestResponse::re
  */
 void RejectQualificationRequestResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RejectQualificationRequestResponse);
+    //Q_D(RejectQualificationRequestResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

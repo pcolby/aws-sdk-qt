@@ -65,7 +65,7 @@ const GetQualificationScoreRequest * GetQualificationScoreResponse::request() co
  */
 void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetQualificationScoreResponse);
+    //Q_D(GetQualificationScoreResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const BatchGetPartitionRequest * BatchGetPartitionResponse::request() const
  */
 void BatchGetPartitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetPartitionResponse);
+    //Q_D(BatchGetPartitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

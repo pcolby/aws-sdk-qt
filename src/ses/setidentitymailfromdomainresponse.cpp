@@ -76,7 +76,7 @@ const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::requ
  */
 void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetIdentityMailFromDomainResponse);
+    //Q_D(SetIdentityMailFromDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

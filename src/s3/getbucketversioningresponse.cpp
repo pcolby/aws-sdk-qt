@@ -65,7 +65,7 @@ const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
  */
 void GetBucketVersioningResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketVersioningResponse);
+    //Q_D(GetBucketVersioningResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

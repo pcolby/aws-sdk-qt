@@ -207,7 +207,7 @@ const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() cons
  */
 void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTargetsForPolicyResponse);
+    //Q_D(ListTargetsForPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

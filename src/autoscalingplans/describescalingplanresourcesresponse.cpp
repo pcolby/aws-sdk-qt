@@ -76,7 +76,7 @@ const DescribeScalingPlanResourcesRequest * DescribeScalingPlanResourcesResponse
  */
 void DescribeScalingPlanResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeScalingPlanResourcesResponse);
+    //Q_D(DescribeScalingPlanResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const GetGroupVersionRequest * GetGroupVersionResponse::request() const
  */
 void GetGroupVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetGroupVersionResponse);
+    //Q_D(GetGroupVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

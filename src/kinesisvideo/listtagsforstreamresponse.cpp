@@ -65,7 +65,7 @@ const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
  */
 void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTagsForStreamResponse);
+    //Q_D(ListTagsForStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const ListResourceComplianceSummariesRequest * ListResourceComplianceSummariesRe
  */
 void ListResourceComplianceSummariesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListResourceComplianceSummariesResponse);
+    //Q_D(ListResourceComplianceSummariesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

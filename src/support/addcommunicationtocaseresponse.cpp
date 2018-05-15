@@ -133,7 +133,7 @@ const AddCommunicationToCaseRequest * AddCommunicationToCaseResponse::request() 
  */
 void AddCommunicationToCaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddCommunicationToCaseResponse);
+    //Q_D(AddCommunicationToCaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

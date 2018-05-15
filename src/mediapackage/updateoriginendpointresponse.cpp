@@ -65,7 +65,7 @@ const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() cons
  */
 void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateOriginEndpointResponse);
+    //Q_D(UpdateOriginEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

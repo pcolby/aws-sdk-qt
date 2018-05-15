@@ -103,7 +103,7 @@ const CompleteVaultLockRequest * CompleteVaultLockResponse::request() const
  */
 void CompleteVaultLockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CompleteVaultLockResponse);
+    //Q_D(CompleteVaultLockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

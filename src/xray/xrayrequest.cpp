@@ -232,7 +232,7 @@ void XRayRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest XRayRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const XRayRequest);
+    //Q_D(const XRayRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

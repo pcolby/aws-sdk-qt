@@ -73,7 +73,7 @@ const CreateDirectConnectGatewayAssociationRequest * CreateDirectConnectGatewayA
  */
 void CreateDirectConnectGatewayAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDirectConnectGatewayAssociationResponse);
+    //Q_D(CreateDirectConnectGatewayAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

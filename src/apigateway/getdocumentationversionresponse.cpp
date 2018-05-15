@@ -70,7 +70,7 @@ const GetDocumentationVersionRequest * GetDocumentationVersionResponse::request(
  */
 void GetDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetDocumentationVersionResponse);
+    //Q_D(GetDocumentationVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

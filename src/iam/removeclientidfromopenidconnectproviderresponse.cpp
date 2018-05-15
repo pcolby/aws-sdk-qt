@@ -130,7 +130,7 @@ const RemoveClientIDFromOpenIDConnectProviderRequest * RemoveClientIDFromOpenIDC
  */
 void RemoveClientIDFromOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveClientIDFromOpenIDConnectProviderResponse);
+    //Q_D(RemoveClientIDFromOpenIDConnectProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

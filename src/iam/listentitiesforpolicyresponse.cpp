@@ -130,7 +130,7 @@ const ListEntitiesForPolicyRequest * ListEntitiesForPolicyResponse::request() co
  */
 void ListEntitiesForPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListEntitiesForPolicyResponse);
+    //Q_D(ListEntitiesForPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

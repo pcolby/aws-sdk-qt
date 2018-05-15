@@ -81,7 +81,7 @@ const CloseInstancePublicPortsRequest * CloseInstancePublicPortsResponse::reques
  */
 void CloseInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CloseInstancePublicPortsResponse);
+    //Q_D(CloseInstancePublicPortsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -88,7 +88,7 @@ const LookupEventsRequest * LookupEventsResponse::request() const
  */
 void LookupEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(LookupEventsResponse);
+    //Q_D(LookupEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

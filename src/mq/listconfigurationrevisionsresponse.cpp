@@ -67,7 +67,7 @@ const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::re
  */
 void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListConfigurationRevisionsResponse);
+    //Q_D(ListConfigurationRevisionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

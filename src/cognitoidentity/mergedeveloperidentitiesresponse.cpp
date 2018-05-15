@@ -103,7 +103,7 @@ const MergeDeveloperIdentitiesRequest * MergeDeveloperIdentitiesResponse::reques
  */
 void MergeDeveloperIdentitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(MergeDeveloperIdentitiesResponse);
+    //Q_D(MergeDeveloperIdentitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

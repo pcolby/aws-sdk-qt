@@ -76,7 +76,7 @@ const ListCACertificatesRequest * ListCACertificatesResponse::request() const
  */
 void ListCACertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListCACertificatesResponse);
+    //Q_D(ListCACertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

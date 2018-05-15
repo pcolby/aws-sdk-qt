@@ -79,7 +79,7 @@ const EnableSsoRequest * EnableSsoResponse::request() const
  */
 void EnableSsoResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(EnableSsoResponse);
+    //Q_D(EnableSsoResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

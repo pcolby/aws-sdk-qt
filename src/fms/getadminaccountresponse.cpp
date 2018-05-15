@@ -71,7 +71,7 @@ const GetAdminAccountRequest * GetAdminAccountResponse::request() const
  */
 void GetAdminAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAdminAccountResponse);
+    //Q_D(GetAdminAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::
  */
 void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSecurityConfigurationResponse);
+    //Q_D(DeleteSecurityConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

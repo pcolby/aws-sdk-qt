@@ -83,7 +83,7 @@ const SetStatusRequest * SetStatusResponse::request() const
  */
 void SetStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetStatusResponse);
+    //Q_D(SetStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

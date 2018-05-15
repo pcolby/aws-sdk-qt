@@ -75,7 +75,7 @@ const ForgetDeviceRequest * ForgetDeviceResponse::request() const
  */
 void ForgetDeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ForgetDeviceResponse);
+    //Q_D(ForgetDeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

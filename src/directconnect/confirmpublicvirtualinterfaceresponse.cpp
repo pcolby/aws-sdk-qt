@@ -73,7 +73,7 @@ const ConfirmPublicVirtualInterfaceRequest * ConfirmPublicVirtualInterfaceRespon
  */
 void ConfirmPublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ConfirmPublicVirtualInterfaceResponse);
+    //Q_D(ConfirmPublicVirtualInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

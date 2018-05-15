@@ -76,7 +76,7 @@ const AttachThingPrincipalRequest * AttachThingPrincipalResponse::request() cons
  */
 void AttachThingPrincipalResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AttachThingPrincipalResponse);
+    //Q_D(AttachThingPrincipalResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

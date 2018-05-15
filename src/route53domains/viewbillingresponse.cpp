@@ -66,7 +66,7 @@ const ViewBillingRequest * ViewBillingResponse::request() const
  */
 void ViewBillingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ViewBillingResponse);
+    //Q_D(ViewBillingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

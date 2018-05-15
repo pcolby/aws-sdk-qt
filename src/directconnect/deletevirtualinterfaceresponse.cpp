@@ -73,7 +73,7 @@ const DeleteVirtualInterfaceRequest * DeleteVirtualInterfaceResponse::request() 
  */
 void DeleteVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVirtualInterfaceResponse);
+    //Q_D(DeleteVirtualInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

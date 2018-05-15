@@ -141,7 +141,7 @@ const RestoreSecretRequest * RestoreSecretResponse::request() const
  */
 void RestoreSecretResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RestoreSecretResponse);
+    //Q_D(RestoreSecretResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -284,7 +284,7 @@ void ServiceCatalogRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ServiceCatalogRequest);
+    //Q_D(const ServiceCatalogRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

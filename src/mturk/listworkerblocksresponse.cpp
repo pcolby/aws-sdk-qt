@@ -65,7 +65,7 @@ const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
  */
 void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListWorkerBlocksResponse);
+    //Q_D(ListWorkerBlocksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

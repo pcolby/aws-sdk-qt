@@ -133,7 +133,7 @@ const DescribeAttachmentRequest * DescribeAttachmentResponse::request() const
  */
 void DescribeAttachmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAttachmentResponse);
+    //Q_D(DescribeAttachmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -171,7 +171,7 @@ const DescribeRaidArraysRequest * DescribeRaidArraysResponse::request() const
  */
 void DescribeRaidArraysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeRaidArraysResponse);
+    //Q_D(DescribeRaidArraysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

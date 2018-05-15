@@ -69,7 +69,7 @@ const ImportVolumeRequest * ImportVolumeResponse::request() const
  */
 void ImportVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ImportVolumeResponse);
+    //Q_D(ImportVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

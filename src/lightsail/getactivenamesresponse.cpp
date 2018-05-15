@@ -81,7 +81,7 @@ const GetActiveNamesRequest * GetActiveNamesResponse::request() const
  */
 void GetActiveNamesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetActiveNamesResponse);
+    //Q_D(GetActiveNamesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -131,7 +131,7 @@ const SetQueueAttributesRequest * SetQueueAttributesResponse::request() const
  */
 void SetQueueAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetQueueAttributesResponse);
+    //Q_D(SetQueueAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

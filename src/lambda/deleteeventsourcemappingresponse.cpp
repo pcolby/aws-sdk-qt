@@ -76,7 +76,7 @@ const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::reques
  */
 void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteEventSourceMappingResponse);
+    //Q_D(DeleteEventSourceMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

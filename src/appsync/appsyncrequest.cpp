@@ -251,7 +251,7 @@ void AppSyncRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest AppSyncRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const AppSyncRequest);
+    //Q_D(const AppSyncRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

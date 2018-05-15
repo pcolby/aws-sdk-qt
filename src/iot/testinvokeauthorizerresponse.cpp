@@ -76,7 +76,7 @@ const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() cons
  */
 void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestInvokeAuthorizerResponse);
+    //Q_D(TestInvokeAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

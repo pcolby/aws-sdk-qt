@@ -95,7 +95,7 @@ const DeleteSnapshotCopyGrantRequest * DeleteSnapshotCopyGrantResponse::request(
  */
 void DeleteSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteSnapshotCopyGrantResponse);
+    //Q_D(DeleteSnapshotCopyGrantResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

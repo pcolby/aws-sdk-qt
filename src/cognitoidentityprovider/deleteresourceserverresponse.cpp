@@ -75,7 +75,7 @@ const DeleteResourceServerRequest * DeleteResourceServerResponse::request() cons
  */
 void DeleteResourceServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteResourceServerResponse);
+    //Q_D(DeleteResourceServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() co
  */
 void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateBasePathMappingResponse);
+    //Q_D(UpdateBasePathMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

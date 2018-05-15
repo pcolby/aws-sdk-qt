@@ -65,7 +65,7 @@ const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() 
  */
 void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteReportDefinitionResponse);
+    //Q_D(DeleteReportDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

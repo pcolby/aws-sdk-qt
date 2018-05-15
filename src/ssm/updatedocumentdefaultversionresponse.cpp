@@ -89,7 +89,7 @@ const UpdateDocumentDefaultVersionRequest * UpdateDocumentDefaultVersionResponse
  */
 void UpdateDocumentDefaultVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDocumentDefaultVersionResponse);
+    //Q_D(UpdateDocumentDefaultVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

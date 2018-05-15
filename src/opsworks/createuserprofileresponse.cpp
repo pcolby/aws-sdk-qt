@@ -171,7 +171,7 @@ const CreateUserProfileRequest * CreateUserProfileResponse::request() const
  */
 void CreateUserProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateUserProfileResponse);
+    //Q_D(CreateUserProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

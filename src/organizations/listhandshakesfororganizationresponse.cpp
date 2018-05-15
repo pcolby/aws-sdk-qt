@@ -207,7 +207,7 @@ const ListHandshakesForOrganizationRequest * ListHandshakesForOrganizationRespon
  */
 void ListHandshakesForOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListHandshakesForOrganizationResponse);
+    //Q_D(ListHandshakesForOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

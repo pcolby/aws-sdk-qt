@@ -130,7 +130,7 @@ const DeleteRolePolicyRequest * DeleteRolePolicyResponse::request() const
  */
 void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRolePolicyResponse);
+    //Q_D(DeleteRolePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

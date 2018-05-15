@@ -129,7 +129,7 @@ const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() co
  */
 void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteDBSecurityGroupResponse);
+    //Q_D(DeleteDBSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const DeleteProvisioningArtifactRequest * DeleteProvisioningArtifactResponse::re
  */
 void DeleteProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteProvisioningArtifactResponse);
+    //Q_D(DeleteProvisioningArtifactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

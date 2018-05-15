@@ -171,7 +171,7 @@ const SetTimeBasedAutoScalingRequest * SetTimeBasedAutoScalingResponse::request(
  */
 void SetTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetTimeBasedAutoScalingResponse);
+    //Q_D(SetTimeBasedAutoScalingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

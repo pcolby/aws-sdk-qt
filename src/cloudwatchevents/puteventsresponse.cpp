@@ -88,7 +88,7 @@ const PutEventsRequest * PutEventsResponse::request() const
  */
 void PutEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutEventsResponse);
+    //Q_D(PutEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

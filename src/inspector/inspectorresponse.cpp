@@ -61,7 +61,7 @@ InspectorResponse::InspectorResponse(InspectorResponsePrivate * const d, QObject
  */
 void InspectorResponse::parseFailure(QIODevice &response)
 {
-    Q_D(InspectorResponse);
+    //Q_D(InspectorResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

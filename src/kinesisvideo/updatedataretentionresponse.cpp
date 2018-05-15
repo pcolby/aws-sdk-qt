@@ -65,7 +65,7 @@ const UpdateDataRetentionRequest * UpdateDataRetentionResponse::request() const
  */
 void UpdateDataRetentionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDataRetentionResponse);
+    //Q_D(UpdateDataRetentionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

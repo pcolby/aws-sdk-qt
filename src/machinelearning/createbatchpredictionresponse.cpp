@@ -65,7 +65,7 @@ const CreateBatchPredictionRequest * CreateBatchPredictionResponse::request() co
  */
 void CreateBatchPredictionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBatchPredictionResponse);
+    //Q_D(CreateBatchPredictionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

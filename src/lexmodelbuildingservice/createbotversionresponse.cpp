@@ -69,7 +69,7 @@ const CreateBotVersionRequest * CreateBotVersionResponse::request() const
  */
 void CreateBotVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateBotVersionResponse);
+    //Q_D(CreateBotVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

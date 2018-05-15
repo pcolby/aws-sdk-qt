@@ -93,7 +93,7 @@ const DeleteLoadBalancerListenersRequest * DeleteLoadBalancerListenersResponse::
  */
 void DeleteLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteLoadBalancerListenersResponse);
+    //Q_D(DeleteLoadBalancerListenersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

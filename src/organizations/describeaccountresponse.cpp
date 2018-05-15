@@ -207,7 +207,7 @@ const DescribeAccountRequest * DescribeAccountResponse::request() const
  */
 void DescribeAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAccountResponse);
+    //Q_D(DescribeAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

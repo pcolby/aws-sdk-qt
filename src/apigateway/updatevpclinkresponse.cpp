@@ -70,7 +70,7 @@ const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
  */
 void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateVpcLinkResponse);
+    //Q_D(UpdateVpcLinkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

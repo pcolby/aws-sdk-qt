@@ -75,7 +75,7 @@ const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::reques
  */
 void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AdminLinkProviderForUserResponse);
+    //Q_D(AdminLinkProviderForUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

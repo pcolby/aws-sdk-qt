@@ -86,7 +86,7 @@ const UpdateDatasetRequest * UpdateDatasetResponse::request() const
  */
 void UpdateDatasetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDatasetResponse);
+    //Q_D(UpdateDatasetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

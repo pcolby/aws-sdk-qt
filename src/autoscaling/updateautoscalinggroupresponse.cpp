@@ -70,7 +70,7 @@ const UpdateAutoScalingGroupRequest * UpdateAutoScalingGroupResponse::request() 
  */
 void UpdateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateAutoScalingGroupResponse);
+    //Q_D(UpdateAutoScalingGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

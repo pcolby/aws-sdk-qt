@@ -69,7 +69,7 @@ const DeleteVpcPeeringConnectionRequest * DeleteVpcPeeringConnectionResponse::re
  */
 void DeleteVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVpcPeeringConnectionResponse);
+    //Q_D(DeleteVpcPeeringConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

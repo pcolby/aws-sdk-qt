@@ -69,7 +69,7 @@ const ModifyVpcEndpointServicePermissionsRequest * ModifyVpcEndpointServicePermi
  */
 void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyVpcEndpointServicePermissionsResponse);
+    //Q_D(ModifyVpcEndpointServicePermissionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

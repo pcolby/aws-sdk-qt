@@ -133,7 +133,7 @@ const DescribeSSLPoliciesRequest * DescribeSSLPoliciesResponse::request() const
  */
 void DescribeSSLPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeSSLPoliciesResponse);
+    //Q_D(DescribeSSLPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

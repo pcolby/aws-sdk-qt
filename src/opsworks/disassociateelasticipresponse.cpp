@@ -171,7 +171,7 @@ const DisassociateElasticIpRequest * DisassociateElasticIpResponse::request() co
  */
 void DisassociateElasticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateElasticIpResponse);
+    //Q_D(DisassociateElasticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

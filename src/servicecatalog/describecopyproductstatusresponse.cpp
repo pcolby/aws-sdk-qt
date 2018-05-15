@@ -71,7 +71,7 @@ const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::requ
  */
 void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeCopyProductStatusResponse);
+    //Q_D(DescribeCopyProductStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

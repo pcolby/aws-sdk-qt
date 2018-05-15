@@ -82,7 +82,7 @@ const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() cons
  */
 void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DiscoverPollEndpointResponse);
+    //Q_D(DiscoverPollEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

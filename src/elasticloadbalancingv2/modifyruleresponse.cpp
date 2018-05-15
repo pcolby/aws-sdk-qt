@@ -133,7 +133,7 @@ const ModifyRuleRequest * ModifyRuleResponse::request() const
  */
 void ModifyRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyRuleResponse);
+    //Q_D(ModifyRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

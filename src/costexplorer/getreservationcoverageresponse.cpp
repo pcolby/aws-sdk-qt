@@ -83,7 +83,7 @@ const GetReservationCoverageRequest * GetReservationCoverageResponse::request() 
  */
 void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetReservationCoverageResponse);
+    //Q_D(GetReservationCoverageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -72,7 +72,7 @@ const ListDirectoriesRequest * ListDirectoriesResponse::request() const
  */
 void ListDirectoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListDirectoriesResponse);
+    //Q_D(ListDirectoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

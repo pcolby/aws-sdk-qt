@@ -71,7 +71,7 @@ const ListProvisioningArtifactsRequest * ListProvisioningArtifactsResponse::requ
  */
 void ListProvisioningArtifactsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListProvisioningArtifactsResponse);
+    //Q_D(ListProvisioningArtifactsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

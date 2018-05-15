@@ -70,7 +70,7 @@ const ListDistributionsByWebACLIdRequest * ListDistributionsByWebACLIdResponse::
  */
 void ListDistributionsByWebACLIdResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListDistributionsByWebACLIdResponse);
+    //Q_D(ListDistributionsByWebACLIdResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

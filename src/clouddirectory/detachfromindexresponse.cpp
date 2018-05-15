@@ -72,7 +72,7 @@ const DetachFromIndexRequest * DetachFromIndexResponse::request() const
  */
 void DetachFromIndexResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachFromIndexResponse);
+    //Q_D(DetachFromIndexResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

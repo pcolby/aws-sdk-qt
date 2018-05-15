@@ -77,7 +77,7 @@ const GetQueryExecutionRequest * GetQueryExecutionResponse::request() const
  */
 void GetQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetQueryExecutionResponse);
+    //Q_D(GetQueryExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

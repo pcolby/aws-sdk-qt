@@ -70,7 +70,7 @@ const FlushStageCacheRequest * FlushStageCacheResponse::request() const
  */
 void FlushStageCacheResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(FlushStageCacheResponse);
+    //Q_D(FlushStageCacheResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -98,7 +98,7 @@ const DeregisterFromWorkMailRequest * DeregisterFromWorkMailResponse::request() 
  */
 void DeregisterFromWorkMailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterFromWorkMailResponse);
+    //Q_D(DeregisterFromWorkMailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

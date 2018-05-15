@@ -81,7 +81,7 @@ const CreateDomainEntryRequest * CreateDomainEntryResponse::request() const
  */
 void CreateDomainEntryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateDomainEntryResponse);
+    //Q_D(CreateDomainEntryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

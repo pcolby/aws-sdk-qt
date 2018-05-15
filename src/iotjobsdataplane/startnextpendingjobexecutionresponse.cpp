@@ -79,7 +79,7 @@ const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse
  */
 void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartNextPendingJobExecutionResponse);
+    //Q_D(StartNextPendingJobExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

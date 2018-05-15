@@ -65,7 +65,7 @@ const GetBucketInventoryConfigurationRequest * GetBucketInventoryConfigurationRe
  */
 void GetBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetBucketInventoryConfigurationResponse);
+    //Q_D(GetBucketInventoryConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

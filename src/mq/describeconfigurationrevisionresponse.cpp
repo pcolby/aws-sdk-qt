@@ -67,7 +67,7 @@ const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionRespon
  */
 void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeConfigurationRevisionResponse);
+    //Q_D(DescribeConfigurationRevisionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -129,7 +129,7 @@ const DeleteOptionGroupRequest * DeleteOptionGroupResponse::request() const
  */
 void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteOptionGroupResponse);
+    //Q_D(DeleteOptionGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -260,7 +260,7 @@ void LexModelBuildingServiceRequest::setParameters(const QVariantMap &parameters
  */
 QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const LexModelBuildingServiceRequest);
+    //Q_D(const LexModelBuildingServiceRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

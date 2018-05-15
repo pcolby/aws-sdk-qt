@@ -79,7 +79,7 @@ const ModifyReplicationGroupRequest * ModifyReplicationGroupResponse::request() 
  */
 void ModifyReplicationGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyReplicationGroupResponse);
+    //Q_D(ModifyReplicationGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

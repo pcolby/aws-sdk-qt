@@ -65,7 +65,7 @@ const GetAssignmentRequest * GetAssignmentResponse::request() const
  */
 void GetAssignmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetAssignmentResponse);
+    //Q_D(GetAssignmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

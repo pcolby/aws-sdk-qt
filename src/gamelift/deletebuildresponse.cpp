@@ -509,7 +509,7 @@ const DeleteBuildRequest * DeleteBuildResponse::request() const
  */
 void DeleteBuildResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteBuildResponse);
+    //Q_D(DeleteBuildResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

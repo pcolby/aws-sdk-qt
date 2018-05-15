@@ -61,7 +61,7 @@ CostExplorerResponse::CostExplorerResponse(CostExplorerResponsePrivate * const d
  */
 void CostExplorerResponse::parseFailure(QIODevice &response)
 {
-    Q_D(CostExplorerResponse);
+    //Q_D(CostExplorerResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

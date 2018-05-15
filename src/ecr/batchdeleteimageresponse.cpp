@@ -69,7 +69,7 @@ const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
  */
 void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchDeleteImageResponse);
+    //Q_D(BatchDeleteImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

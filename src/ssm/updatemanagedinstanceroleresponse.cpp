@@ -89,7 +89,7 @@ const UpdateManagedInstanceRoleRequest * UpdateManagedInstanceRoleResponse::requ
  */
 void UpdateManagedInstanceRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateManagedInstanceRoleResponse);
+    //Q_D(UpdateManagedInstanceRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

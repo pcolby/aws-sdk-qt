@@ -68,7 +68,7 @@ const ExportProjectRequest * ExportProjectResponse::request() const
  */
 void ExportProjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ExportProjectResponse);
+    //Q_D(ExportProjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

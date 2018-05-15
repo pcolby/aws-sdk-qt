@@ -65,7 +65,7 @@ const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
  */
 void PutBucketWebsiteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketWebsiteResponse);
+    //Q_D(PutBucketWebsiteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const CreatePortfolioShareRequest * CreatePortfolioShareResponse::request() cons
  */
 void CreatePortfolioShareResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreatePortfolioShareResponse);
+    //Q_D(CreatePortfolioShareResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

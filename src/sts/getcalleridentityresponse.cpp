@@ -123,7 +123,7 @@ const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
  */
 void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCallerIdentityResponse);
+    //Q_D(GetCallerIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

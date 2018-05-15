@@ -65,7 +65,7 @@ const DeleteNotebookInstanceLifecycleConfigRequest * DeleteNotebookInstanceLifec
  */
 void DeleteNotebookInstanceLifecycleConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteNotebookInstanceLifecycleConfigResponse);
+    //Q_D(DeleteNotebookInstanceLifecycleConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

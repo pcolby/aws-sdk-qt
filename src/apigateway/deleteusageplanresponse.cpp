@@ -70,7 +70,7 @@ const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
  */
 void DeleteUsagePlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteUsagePlanResponse);
+    //Q_D(DeleteUsagePlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

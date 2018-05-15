@@ -130,7 +130,7 @@ const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
  */
 void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UploadSSHPublicKeyResponse);
+    //Q_D(UploadSSHPublicKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

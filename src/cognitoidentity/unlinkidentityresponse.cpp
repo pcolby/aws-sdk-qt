@@ -103,7 +103,7 @@ const UnlinkIdentityRequest * UnlinkIdentityResponse::request() const
  */
 void UnlinkIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UnlinkIdentityResponse);
+    //Q_D(UnlinkIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

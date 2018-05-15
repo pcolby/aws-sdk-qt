@@ -65,7 +65,7 @@ const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() cons
  */
 void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateEndpointsBatchResponse);
+    //Q_D(UpdateEndpointsBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

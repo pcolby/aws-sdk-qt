@@ -65,7 +65,7 @@ const UpdateMLModelRequest * UpdateMLModelResponse::request() const
  */
 void UpdateMLModelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateMLModelResponse);
+    //Q_D(UpdateMLModelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

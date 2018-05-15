@@ -129,7 +129,7 @@ const DescribeExportConfigurationsRequest * DescribeExportConfigurationsResponse
  */
 void DescribeExportConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeExportConfigurationsResponse);
+    //Q_D(DescribeExportConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

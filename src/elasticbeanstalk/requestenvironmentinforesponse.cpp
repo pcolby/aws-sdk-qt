@@ -87,7 +87,7 @@ const RequestEnvironmentInfoRequest * RequestEnvironmentInfoResponse::request() 
  */
 void RequestEnvironmentInfoResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RequestEnvironmentInfoResponse);
+    //Q_D(RequestEnvironmentInfoResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

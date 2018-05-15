@@ -248,7 +248,7 @@ void CloudSearchRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudSearchRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudSearchRequest);
+    //Q_D(const CloudSearchRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -70,7 +70,7 @@ const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
  */
 void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVpcLinkResponse);
+    //Q_D(DeleteVpcLinkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

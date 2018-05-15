@@ -68,7 +68,7 @@ const RemoveAutoScalingPolicyRequest * RemoveAutoScalingPolicyResponse::request(
  */
 void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RemoveAutoScalingPolicyResponse);
+    //Q_D(RemoveAutoScalingPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

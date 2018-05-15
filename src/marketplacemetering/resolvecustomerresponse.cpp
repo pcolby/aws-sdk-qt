@@ -95,7 +95,7 @@ const ResolveCustomerRequest * ResolveCustomerResponse::request() const
  */
 void ResolveCustomerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ResolveCustomerResponse);
+    //Q_D(ResolveCustomerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

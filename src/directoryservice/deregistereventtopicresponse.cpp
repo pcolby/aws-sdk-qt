@@ -79,7 +79,7 @@ const DeregisterEventTopicRequest * DeregisterEventTopicResponse::request() cons
  */
 void DeregisterEventTopicResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeregisterEventTopicResponse);
+    //Q_D(DeregisterEventTopicResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

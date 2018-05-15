@@ -75,7 +75,7 @@ const VerifySoftwareTokenRequest * VerifySoftwareTokenResponse::request() const
  */
 void VerifySoftwareTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(VerifySoftwareTokenResponse);
+    //Q_D(VerifySoftwareTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

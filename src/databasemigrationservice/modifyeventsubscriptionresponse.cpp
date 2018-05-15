@@ -76,7 +76,7 @@ const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request(
  */
 void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ModifyEventSubscriptionResponse);
+    //Q_D(ModifyEventSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -61,7 +61,7 @@ WafResponse::WafResponse(WafResponsePrivate * const d, QObject * const parent)
  */
 void WafResponse::parseFailure(QIODevice &response)
 {
-    Q_D(WafResponse);
+    //Q_D(WafResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

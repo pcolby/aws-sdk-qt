@@ -94,7 +94,7 @@ const TestMetricFilterRequest * TestMetricFilterResponse::request() const
  */
 void TestMetricFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(TestMetricFilterResponse);
+    //Q_D(TestMetricFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

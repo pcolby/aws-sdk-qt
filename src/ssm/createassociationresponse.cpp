@@ -89,7 +89,7 @@ const CreateAssociationRequest * CreateAssociationResponse::request() const
  */
 void CreateAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAssociationResponse);
+    //Q_D(CreateAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

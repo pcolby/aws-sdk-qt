@@ -145,7 +145,7 @@ const CreateWebhookRequest * CreateWebhookResponse::request() const
  */
 void CreateWebhookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateWebhookResponse);
+    //Q_D(CreateWebhookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

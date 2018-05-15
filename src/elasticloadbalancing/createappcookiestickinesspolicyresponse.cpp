@@ -93,7 +93,7 @@ const CreateAppCookieStickinessPolicyRequest * CreateAppCookieStickinessPolicyRe
  */
 void CreateAppCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateAppCookieStickinessPolicyResponse);
+    //Q_D(CreateAppCookieStickinessPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

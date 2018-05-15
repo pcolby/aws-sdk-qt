@@ -79,7 +79,7 @@ const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
  */
 void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ConnectDirectoryResponse);
+    //Q_D(ConnectDirectoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

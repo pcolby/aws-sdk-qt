@@ -68,7 +68,7 @@ const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
  */
 void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteCrawlerResponse);
+    //Q_D(DeleteCrawlerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

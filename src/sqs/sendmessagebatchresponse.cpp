@@ -131,7 +131,7 @@ const SendMessageBatchRequest * SendMessageBatchResponse::request() const
  */
 void SendMessageBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SendMessageBatchResponse);
+    //Q_D(SendMessageBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

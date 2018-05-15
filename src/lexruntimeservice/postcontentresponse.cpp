@@ -72,7 +72,7 @@ const PostContentRequest * PostContentResponse::request() const
  */
 void PostContentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PostContentResponse);
+    //Q_D(PostContentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

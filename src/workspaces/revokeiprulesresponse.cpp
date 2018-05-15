@@ -68,7 +68,7 @@ const RevokeIpRulesRequest * RevokeIpRulesResponse::request() const
  */
 void RevokeIpRulesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(RevokeIpRulesResponse);
+    //Q_D(RevokeIpRulesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

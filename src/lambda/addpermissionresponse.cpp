@@ -76,7 +76,7 @@ const AddPermissionRequest * AddPermissionResponse::request() const
  */
 void AddPermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AddPermissionResponse);
+    //Q_D(AddPermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

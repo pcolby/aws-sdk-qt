@@ -70,7 +70,7 @@ const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() cons
  */
 void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTelemetryMetadataResponse);
+    //Q_D(GetTelemetryMetadataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

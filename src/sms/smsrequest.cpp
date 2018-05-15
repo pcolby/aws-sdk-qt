@@ -235,7 +235,7 @@ void SmsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SmsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SmsRequest);
+    //Q_D(const SmsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -98,7 +98,7 @@ const ListResourcesRequest * ListResourcesResponse::request() const
  */
 void ListResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListResourcesResponse);
+    //Q_D(ListResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

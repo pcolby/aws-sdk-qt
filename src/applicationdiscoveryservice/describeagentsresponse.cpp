@@ -129,7 +129,7 @@ const DescribeAgentsRequest * DescribeAgentsResponse::request() const
  */
 void DescribeAgentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeAgentsResponse);
+    //Q_D(DescribeAgentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -84,7 +84,7 @@ const GetItemRequest * GetItemResponse::request() const
  */
 void GetItemResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetItemResponse);
+    //Q_D(GetItemResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

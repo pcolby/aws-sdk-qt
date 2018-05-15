@@ -83,7 +83,7 @@ const ReportTaskProgressRequest * ReportTaskProgressResponse::request() const
  */
 void ReportTaskProgressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ReportTaskProgressResponse);
+    //Q_D(ReportTaskProgressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

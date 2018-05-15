@@ -66,7 +66,7 @@ const StartSchemaCreationRequest * StartSchemaCreationResponse::request() const
  */
 void StartSchemaCreationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartSchemaCreationResponse);
+    //Q_D(StartSchemaCreationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

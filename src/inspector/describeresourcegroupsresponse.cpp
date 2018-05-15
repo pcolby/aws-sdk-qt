@@ -70,7 +70,7 @@ const DescribeResourceGroupsRequest * DescribeResourceGroupsResponse::request() 
  */
 void DescribeResourceGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeResourceGroupsResponse);
+    //Q_D(DescribeResourceGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

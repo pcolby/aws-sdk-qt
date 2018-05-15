@@ -93,7 +93,7 @@ const DetachLoadBalancerFromSubnetsRequest * DetachLoadBalancerFromSubnetsRespon
  */
 void DetachLoadBalancerFromSubnetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetachLoadBalancerFromSubnetsResponse);
+    //Q_D(DetachLoadBalancerFromSubnetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

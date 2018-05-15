@@ -65,7 +65,7 @@ const PutBucketLoggingRequest * PutBucketLoggingResponse::request() const
  */
 void PutBucketLoggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(PutBucketLoggingResponse);
+    //Q_D(PutBucketLoggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

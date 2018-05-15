@@ -73,7 +73,7 @@ const AssociateConnectionWithLagRequest * AssociateConnectionWithLagResponse::re
  */
 void AssociateConnectionWithLagResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(AssociateConnectionWithLagResponse);
+    //Q_D(AssociateConnectionWithLagResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

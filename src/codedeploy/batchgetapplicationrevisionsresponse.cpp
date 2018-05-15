@@ -146,7 +146,7 @@ const BatchGetApplicationRevisionsRequest * BatchGetApplicationRevisionsResponse
  */
 void BatchGetApplicationRevisionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(BatchGetApplicationRevisionsResponse);
+    //Q_D(BatchGetApplicationRevisionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

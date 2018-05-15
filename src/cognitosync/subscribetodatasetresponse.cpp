@@ -85,7 +85,7 @@ const SubscribeToDatasetRequest * SubscribeToDatasetResponse::request() const
  */
 void SubscribeToDatasetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SubscribeToDatasetResponse);
+    //Q_D(SubscribeToDatasetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -68,7 +68,7 @@ const DetectEntitiesRequest * DetectEntitiesResponse::request() const
  */
 void DetectEntitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DetectEntitiesResponse);
+    //Q_D(DetectEntitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

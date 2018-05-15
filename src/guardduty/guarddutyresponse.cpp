@@ -61,7 +61,7 @@ GuardDutyResponse::GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject
  */
 void GuardDutyResponse::parseFailure(QIODevice &response)
 {
-    Q_D(GuardDutyResponse);
+    //Q_D(GuardDutyResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

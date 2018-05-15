@@ -225,7 +225,7 @@ void SageMakerRuntimeRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SageMakerRuntimeRequest);
+    //Q_D(const SageMakerRuntimeRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

@@ -69,7 +69,7 @@ const DescribePrincipalIdFormatRequest * DescribePrincipalIdFormatResponse::requ
  */
 void DescribePrincipalIdFormatResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribePrincipalIdFormatResponse);
+    //Q_D(DescribePrincipalIdFormatResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

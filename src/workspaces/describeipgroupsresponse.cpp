@@ -68,7 +68,7 @@ const DescribeIpGroupsRequest * DescribeIpGroupsResponse::request() const
  */
 void DescribeIpGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeIpGroupsResponse);
+    //Q_D(DescribeIpGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

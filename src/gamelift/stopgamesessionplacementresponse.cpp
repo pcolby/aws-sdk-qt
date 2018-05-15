@@ -509,7 +509,7 @@ const StopGameSessionPlacementRequest * StopGameSessionPlacementResponse::reques
  */
 void StopGameSessionPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StopGameSessionPlacementResponse);
+    //Q_D(StopGameSessionPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

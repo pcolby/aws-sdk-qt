@@ -76,7 +76,7 @@ const GetCustomVerificationEmailTemplateRequest * GetCustomVerificationEmailTemp
  */
 void GetCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetCustomVerificationEmailTemplateResponse);
+    //Q_D(GetCustomVerificationEmailTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

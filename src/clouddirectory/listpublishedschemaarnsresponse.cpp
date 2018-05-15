@@ -72,7 +72,7 @@ const ListPublishedSchemaArnsRequest * ListPublishedSchemaArnsResponse::request(
  */
 void ListPublishedSchemaArnsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListPublishedSchemaArnsResponse);
+    //Q_D(ListPublishedSchemaArnsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -71,7 +71,7 @@ const DescribeLocationsRequest * DescribeLocationsResponse::request() const
  */
 void DescribeLocationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeLocationsResponse);
+    //Q_D(DescribeLocationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

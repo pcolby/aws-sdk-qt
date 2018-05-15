@@ -69,7 +69,7 @@ const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
  */
 void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateFpgaImageResponse);
+    //Q_D(CreateFpgaImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

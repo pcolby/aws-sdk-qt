@@ -66,7 +66,7 @@ const DisassociateDeviceFromPlacementRequest * DisassociateDeviceFromPlacementRe
  */
 void DisassociateDeviceFromPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisassociateDeviceFromPlacementResponse);
+    //Q_D(DisassociateDeviceFromPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

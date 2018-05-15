@@ -164,7 +164,7 @@ const ListKeyPoliciesRequest * ListKeyPoliciesResponse::request() const
  */
 void ListKeyPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListKeyPoliciesResponse);
+    //Q_D(ListKeyPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

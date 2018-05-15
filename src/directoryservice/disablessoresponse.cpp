@@ -79,7 +79,7 @@ const DisableSsoRequest * DisableSsoResponse::request() const
  */
 void DisableSsoResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DisableSsoResponse);
+    //Q_D(DisableSsoResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -509,7 +509,7 @@ const StartMatchmakingRequest * StartMatchmakingResponse::request() const
  */
 void StartMatchmakingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(StartMatchmakingResponse);
+    //Q_D(StartMatchmakingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

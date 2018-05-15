@@ -103,7 +103,7 @@ const ListTagsForVaultRequest * ListTagsForVaultResponse::request() const
  */
 void ListTagsForVaultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(ListTagsForVaultResponse);
+    //Q_D(ListTagsForVaultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -89,7 +89,7 @@ const CreateActivationRequest * CreateActivationResponse::request() const
  */
 void CreateActivationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateActivationResponse);
+    //Q_D(CreateActivationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

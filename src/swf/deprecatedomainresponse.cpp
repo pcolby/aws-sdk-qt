@@ -81,7 +81,7 @@ const DeprecateDomainRequest * DeprecateDomainResponse::request() const
  */
 void DeprecateDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeprecateDomainResponse);
+    //Q_D(DeprecateDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

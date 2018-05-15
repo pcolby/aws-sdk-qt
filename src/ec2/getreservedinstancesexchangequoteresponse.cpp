@@ -69,7 +69,7 @@ const GetReservedInstancesExchangeQuoteRequest * GetReservedInstancesExchangeQuo
  */
 void GetReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetReservedInstancesExchangeQuoteResponse);
+    //Q_D(GetReservedInstancesExchangeQuoteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

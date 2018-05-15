@@ -69,7 +69,7 @@ const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
  */
 void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateSecurityGroupResponse);
+    //Q_D(CreateSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

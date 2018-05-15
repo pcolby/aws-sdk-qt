@@ -76,7 +76,7 @@ const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() 
  */
 void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(SetReceiptRulePositionResponse);
+    //Q_D(SetReceiptRulePositionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

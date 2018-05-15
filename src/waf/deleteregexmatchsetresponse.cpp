@@ -70,7 +70,7 @@ const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
  */
 void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteRegexMatchSetResponse);
+    //Q_D(DeleteRegexMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

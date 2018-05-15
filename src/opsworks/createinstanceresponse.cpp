@@ -171,7 +171,7 @@ const CreateInstanceRequest * CreateInstanceResponse::request() const
  */
 void CreateInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateInstanceResponse);
+    //Q_D(CreateInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

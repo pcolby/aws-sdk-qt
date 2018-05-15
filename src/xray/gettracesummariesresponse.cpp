@@ -66,7 +66,7 @@ const GetTraceSummariesRequest * GetTraceSummariesResponse::request() const
  */
 void GetTraceSummariesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTraceSummariesResponse);
+    //Q_D(GetTraceSummariesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -70,7 +70,7 @@ const GenerateClientCertificateRequest * GenerateClientCertificateResponse::requ
  */
 void GenerateClientCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GenerateClientCertificateResponse);
+    //Q_D(GenerateClientCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

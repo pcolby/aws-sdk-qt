@@ -75,7 +75,7 @@ const DescribeUserPoolDomainRequest * DescribeUserPoolDomainResponse::request() 
  */
 void DescribeUserPoolDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DescribeUserPoolDomainResponse);
+    //Q_D(DescribeUserPoolDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

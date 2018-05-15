@@ -347,7 +347,7 @@ void IamRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest IamRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const IamRequest);
+    //Q_D(const IamRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

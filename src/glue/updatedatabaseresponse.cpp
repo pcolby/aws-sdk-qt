@@ -68,7 +68,7 @@ const UpdateDatabaseRequest * UpdateDatabaseResponse::request() const
  */
 void UpdateDatabaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateDatabaseResponse);
+    //Q_D(UpdateDatabaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

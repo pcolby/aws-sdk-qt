@@ -264,7 +264,7 @@ void CodeDeployRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CodeDeployRequest);
+    //Q_D(const CodeDeployRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

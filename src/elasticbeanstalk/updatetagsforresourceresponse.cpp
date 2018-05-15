@@ -87,7 +87,7 @@ const UpdateTagsForResourceRequest * UpdateTagsForResourceResponse::request() co
  */
 void UpdateTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(UpdateTagsForResourceResponse);
+    //Q_D(UpdateTagsForResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

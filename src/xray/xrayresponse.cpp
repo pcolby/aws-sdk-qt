@@ -61,7 +61,7 @@ XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent
  */
 void XRayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(XRayResponse);
+    //Q_D(XRayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {

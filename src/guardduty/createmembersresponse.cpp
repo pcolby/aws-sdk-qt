@@ -65,7 +65,7 @@ const CreateMembersRequest * CreateMembersResponse::request() const
  */
 void CreateMembersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(CreateMembersResponse);
+    //Q_D(CreateMembersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -230,7 +230,7 @@ void PollyRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest PollyRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const PollyRequest);
+    //Q_D(const PollyRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

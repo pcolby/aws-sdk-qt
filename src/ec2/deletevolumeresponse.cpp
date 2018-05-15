@@ -69,7 +69,7 @@ const DeleteVolumeRequest * DeleteVolumeResponse::request() const
  */
 void DeleteVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteVolumeResponse);
+    //Q_D(DeleteVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

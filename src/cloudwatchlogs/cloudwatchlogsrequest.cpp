@@ -257,7 +257,7 @@ void CloudWatchLogsRequest::setParameters(const QVariantMap &parameters)
  */
 QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const CloudWatchLogsRequest);
+    //Q_D(const CloudWatchLogsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);

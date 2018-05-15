@@ -87,7 +87,7 @@ const GetTemplateSummaryRequest * GetTemplateSummaryResponse::request() const
  */
 void GetTemplateSummaryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(GetTemplateSummaryResponse);
+    //Q_D(GetTemplateSummaryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

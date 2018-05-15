@@ -89,7 +89,7 @@ const DeleteMaintenanceWindowRequest * DeleteMaintenanceWindowResponse::request(
  */
 void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(DeleteMaintenanceWindowResponse);
+    //Q_D(DeleteMaintenanceWindowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }
