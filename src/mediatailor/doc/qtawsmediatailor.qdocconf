@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsMediaTailor
+description = AWS MediaTailor SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsmediatailor-index.html"
+navigation.landingtitle = "MediaTailor"
+navigation.cppclassespage = "MediaTailor C++ Classes"

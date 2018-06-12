@@ -886,9 +886,9 @@ UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the stack set and <i>all</i> associated stack
+ * Updates the stack set, and associated stack instances in the specified accounts and
  *
- * instances>
+ * regions>
  *
  * Even if the stack set operation created by updating the stack set fails (completely or partially, below or above a
  * specified failure tolerance), the stack set is updated with your changes. Subsequent <a>CreateStackInstances</a> calls

@@ -37,16 +37,24 @@ class QTAWS_EXPORT ShieldRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Shield.
     enum Action {
+        AssociateDRTLogBucketAction,
+        AssociateDRTRoleAction,
         CreateProtectionAction,
         CreateSubscriptionAction,
         DeleteProtectionAction,
         DeleteSubscriptionAction,
         DescribeAttackAction,
+        DescribeDRTAccessAction,
+        DescribeEmergencyContactSettingsAction,
         DescribeProtectionAction,
         DescribeSubscriptionAction,
+        DisassociateDRTLogBucketAction,
+        DisassociateDRTRoleAction,
         GetSubscriptionStateAction,
         ListAttacksAction,
         ListProtectionsAction,
+        UpdateEmergencyContactSettingsAction,
+        UpdateSubscriptionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

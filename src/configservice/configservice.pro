@@ -48,6 +48,10 @@ HEADERS += \
     deletependingaggregationrequestrequest_p.h \
     deletependingaggregationrequestresponse.h \
     deletependingaggregationrequestresponse_p.h \
+    deleteretentionconfigurationrequest.h \
+    deleteretentionconfigurationrequest_p.h \
+    deleteretentionconfigurationresponse.h \
+    deleteretentionconfigurationresponse_p.h \
     deliverconfigsnapshotrequest.h \
     deliverconfigsnapshotrequest_p.h \
     deliverconfigsnapshotresponse.h \
@@ -104,6 +108,10 @@ HEADERS += \
     describependingaggregationrequestsrequest_p.h \
     describependingaggregationrequestsresponse.h \
     describependingaggregationrequestsresponse_p.h \
+    describeretentionconfigurationsrequest.h \
+    describeretentionconfigurationsrequest_p.h \
+    describeretentionconfigurationsresponse.h \
+    describeretentionconfigurationsresponse_p.h \
     getaggregatecompliancedetailsbyconfigrulerequest.h \
     getaggregatecompliancedetailsbyconfigrulerequest_p.h \
     getaggregatecompliancedetailsbyconfigruleresponse.h \
@@ -162,6 +170,10 @@ HEADERS += \
     putevaluationsrequest_p.h \
     putevaluationsresponse.h \
     putevaluationsresponse_p.h \
+    putretentionconfigurationrequest.h \
+    putretentionconfigurationrequest_p.h \
+    putretentionconfigurationresponse.h \
+    putretentionconfigurationresponse_p.h \
     startconfigrulesevaluationrequest.h \
     startconfigrulesevaluationrequest_p.h \
     startconfigrulesevaluationresponse.h \
@@ -195,6 +207,8 @@ SOURCES += \
     deleteevaluationresultsresponse.cpp \
     deletependingaggregationrequestrequest.cpp \
     deletependingaggregationrequestresponse.cpp \
+    deleteretentionconfigurationrequest.cpp \
+    deleteretentionconfigurationresponse.cpp \
     deliverconfigsnapshotrequest.cpp \
     deliverconfigsnapshotresponse.cpp \
     describeaggregatecompliancebyconfigrulesrequest.cpp \
@@ -223,6 +237,8 @@ SOURCES += \
     describedeliverychannelstatusresponse.cpp \
     describependingaggregationrequestsrequest.cpp \
     describependingaggregationrequestsresponse.cpp \
+    describeretentionconfigurationsrequest.cpp \
+    describeretentionconfigurationsresponse.cpp \
     getaggregatecompliancedetailsbyconfigrulerequest.cpp \
     getaggregatecompliancedetailsbyconfigruleresponse.cpp \
     getaggregateconfigrulecompliancesummaryrequest.cpp \
@@ -252,6 +268,8 @@ SOURCES += \
     putdeliverychannelresponse.cpp \
     putevaluationsrequest.cpp \
     putevaluationsresponse.cpp \
+    putretentionconfigurationrequest.cpp \
+    putretentionconfigurationresponse.cpp \
     startconfigrulesevaluationrequest.cpp \
     startconfigrulesevaluationresponse.cpp \
     startconfigurationrecorderrequest.cpp \

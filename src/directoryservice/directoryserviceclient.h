@@ -96,6 +96,8 @@ class RemoveIpRoutesRequest;
 class RemoveIpRoutesResponse;
 class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
+class ResetUserPasswordRequest;
+class ResetUserPasswordResponse;
 class RestoreFromSnapshotRequest;
 class RestoreFromSnapshotResponse;
 class StartSchemaExtensionRequest;
@@ -159,6 +161,7 @@ public slots:
     RegisterEventTopicResponse * registerEventTopic(const RegisterEventTopicRequest &request);
     RemoveIpRoutesResponse * removeIpRoutes(const RemoveIpRoutesRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
+    ResetUserPasswordResponse * resetUserPassword(const ResetUserPasswordRequest &request);
     RestoreFromSnapshotResponse * restoreFromSnapshot(const RestoreFromSnapshotRequest &request);
     StartSchemaExtensionResponse * startSchemaExtension(const StartSchemaExtensionRequest &request);
     UpdateConditionalForwarderResponse * updateConditionalForwarder(const UpdateConditionalForwarderRequest &request);

@@ -547,10 +547,10 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  *
  * For more information on copying encrypted DB cluster snapshots from one AWS Region to another, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBClusterSnapshot.CrossRegion">
- * Copying a DB Cluster Snapshot in the Same Account, Either in the Same Region or Across Regions</a> in the Amazon RDS
- * User
+ * Copying a DB Cluster Snapshot in the Same Account, Either in the Same Region or Across Regions</a> in the <i>Amazon RDS
+ * User Guide.</i>
  *
- * Guide>
+ * </p
  *
  * For more information on Amazon Aurora, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
@@ -591,7 +591,7 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  *
  * For more information about copying snapshots, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html">Copying a DB Snapshot</a> in the
- * Amazon RDS User Guide.
+ * <i>Amazon RDS User Guide.</i>
  */
 CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &request)
 {
@@ -774,6 +774,10 @@ CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateD
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new DB security group. DB security groups control access to a DB
+ *
+ * instance> <note>
+ *
+ * A DB security group controls access to EC2-Classic DB instances that are not in a
  */
 CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBSecurityGroupRequest &request)
 {
@@ -2111,7 +2115,7 @@ RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const Resto
  *
  * property>
  *
- * The target database is created with most of the original configuration, but in a system-selected availability zone, with
+ * The target database is created with most of the original configuration, but in a system-selected Availability Zone, with
  * the default security group, the default subnet group, and the default DB parameter group. By default, the new DB
  * instance is created as a single-AZ deployment except when the instance is a SQL Server instance that has an option group
  * that is associated with mirroring; in this case, the instance becomes a mirrored deployment and not a single-AZ

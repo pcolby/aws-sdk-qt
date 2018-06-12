@@ -28,6 +28,10 @@ namespace QtAws {
 namespace Shield {
 
 class ShieldClientPrivate;
+class AssociateDRTLogBucketRequest;
+class AssociateDRTLogBucketResponse;
+class AssociateDRTRoleRequest;
+class AssociateDRTRoleResponse;
 class CreateProtectionRequest;
 class CreateProtectionResponse;
 class CreateSubscriptionRequest;
@@ -38,16 +42,28 @@ class DeleteSubscriptionRequest;
 class DeleteSubscriptionResponse;
 class DescribeAttackRequest;
 class DescribeAttackResponse;
+class DescribeDRTAccessRequest;
+class DescribeDRTAccessResponse;
+class DescribeEmergencyContactSettingsRequest;
+class DescribeEmergencyContactSettingsResponse;
 class DescribeProtectionRequest;
 class DescribeProtectionResponse;
 class DescribeSubscriptionRequest;
 class DescribeSubscriptionResponse;
+class DisassociateDRTLogBucketRequest;
+class DisassociateDRTLogBucketResponse;
+class DisassociateDRTRoleRequest;
+class DisassociateDRTRoleResponse;
 class GetSubscriptionStateRequest;
 class GetSubscriptionStateResponse;
 class ListAttacksRequest;
 class ListAttacksResponse;
 class ListProtectionsRequest;
 class ListProtectionsResponse;
+class UpdateEmergencyContactSettingsRequest;
+class UpdateEmergencyContactSettingsResponse;
+class UpdateSubscriptionRequest;
+class UpdateSubscriptionResponse;
 
 class QTAWS_EXPORT ShieldClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -65,16 +81,24 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateDRTLogBucketResponse * associateDRTLogBucket(const AssociateDRTLogBucketRequest &request);
+    AssociateDRTRoleResponse * associateDRTRole(const AssociateDRTRoleRequest &request);
     CreateProtectionResponse * createProtection(const CreateProtectionRequest &request);
     CreateSubscriptionResponse * createSubscription(const CreateSubscriptionRequest &request);
     DeleteProtectionResponse * deleteProtection(const DeleteProtectionRequest &request);
     DeleteSubscriptionResponse * deleteSubscription(const DeleteSubscriptionRequest &request);
     DescribeAttackResponse * describeAttack(const DescribeAttackRequest &request);
+    DescribeDRTAccessResponse * describeDRTAccess(const DescribeDRTAccessRequest &request);
+    DescribeEmergencyContactSettingsResponse * describeEmergencyContactSettings(const DescribeEmergencyContactSettingsRequest &request);
     DescribeProtectionResponse * describeProtection(const DescribeProtectionRequest &request);
     DescribeSubscriptionResponse * describeSubscription(const DescribeSubscriptionRequest &request);
+    DisassociateDRTLogBucketResponse * disassociateDRTLogBucket(const DisassociateDRTLogBucketRequest &request);
+    DisassociateDRTRoleResponse * disassociateDRTRole(const DisassociateDRTRoleRequest &request);
     GetSubscriptionStateResponse * getSubscriptionState(const GetSubscriptionStateRequest &request);
     ListAttacksResponse * listAttacks(const ListAttacksRequest &request);
     ListProtectionsResponse * listProtections(const ListProtectionsRequest &request);
+    UpdateEmergencyContactSettingsResponse * updateEmergencyContactSettings(const UpdateEmergencyContactSettingsRequest &request);
+    UpdateSubscriptionResponse * updateSubscription(const UpdateSubscriptionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ShieldClient)

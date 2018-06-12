@@ -46,6 +46,7 @@ dynamodbstreams/doc/qtawsdynamodbstreams.qdocconf
 ec2/doc/qtawsec2.qdocconf
 ecr/doc/qtawsecr.qdocconf
 ecs/doc/qtawsecs.qdocconf
+eks/doc/qtawseks.qdocconf
 elasticache/doc/qtawselasticache.qdocconf
 elasticbeanstalk/doc/qtawselasticbeanstalk.qdocconf
 efs/doc/qtawsefs.qdocconf
@@ -91,15 +92,18 @@ medialive/doc/qtawsmedialive.qdocconf
 mediapackage/doc/qtawsmediapackage.qdocconf
 mediastore/doc/qtawsmediastore.qdocconf
 mediastoredata/doc/qtawsmediastoredata.qdocconf
+mediatailor/doc/qtawsmediatailor.qdocconf
 marketplacemetering/doc/qtawsmarketplacemetering.qdocconf
 mobile/doc/qtawsmobile.qdocconf
 mobileanalytics/doc/qtawsmobileanalytics.qdocconf
 cloudwatch/doc/qtawscloudwatch.qdocconf
 mq/doc/qtawsmq.qdocconf
 mturk/doc/qtawsmturk.qdocconf
+neptune/doc/qtawsneptune.qdocconf
 opsworks/doc/qtawsopsworks.qdocconf
 opsworkscm/doc/qtawsopsworkscm.qdocconf
 organizations/doc/qtawsorganizations.qdocconf
+pi/doc/qtawspi.qdocconf
 pinpoint/doc/qtawspinpoint.qdocconf
 polly/doc/qtawspolly.qdocconf
 pricing/doc/qtawspricing.qdocconf

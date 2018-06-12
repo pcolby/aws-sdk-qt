@@ -432,6 +432,10 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
  * received from the previous call. When there are no more records to return, NextToken will be null. For more information,
  * see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
  * Notifications</a>.
+ *
+ * </p
+ *
+ * This action is throttled at 30 transactions per second
  */
 ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformApplication(const ListEndpointsByPlatformApplicationRequest &request)
 {
@@ -471,6 +475,10 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
  * next page, you call <code>ListPlatformApplications</code> using the NextToken string received from the previous call.
  * When there are no more records to return, NextToken will be null. For more information, see <a
  * href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
+ *
+ * </p
+ *
+ * This action is throttled at 15 transactions per second
  */
 ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const ListPlatformApplicationsRequest &request)
 {
@@ -486,6 +494,10 @@ ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const Lis
  * Returns a list of the requester's subscriptions. Each call returns a limited list of subscriptions, up to 100. If there
  * are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListSubscriptions</code> call to get further
+ *
+ * results>
+ *
+ * This action is throttled at 30 transactions per second
  */
 ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptionsRequest &request)
 {
@@ -501,6 +513,10 @@ ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptions
  * Returns a list of the subscriptions to a specific topic. Each call returns a limited list of subscriptions, up to 100.
  * If there are more subscriptions, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in
  * a new <code>ListSubscriptionsByTopic</code> call to get further
+ *
+ * results>
+ *
+ * This action is throttled at 30 transactions per second
  */
 ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const ListSubscriptionsByTopicRequest &request)
 {
@@ -516,6 +532,10 @@ ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const Lis
  * Returns a list of the requester's topics. Each call returns a limited list of topics, up to 100. If there are more
  * topics, a <code>NextToken</code> is also returned. Use the <code>NextToken</code> parameter in a new
  * <code>ListTopics</code> call to get further
+ *
+ * results>
+ *
+ * This action is throttled at 30 transactions per second
  */
 ListTopicsResponse * SnsClient::listTopics(const ListTopicsRequest &request)
 {
@@ -545,11 +565,18 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends a message to all of a topic's subscribed endpoints. When a <code>messageId</code> is returned, the message has
- * been saved and Amazon SNS will attempt to deliver it to the topic's subscribers shortly. The format of the outgoing
- * message to each subscribed endpoint depends on the notification
+ * Sends a message to an Amazon SNS topic or sends a text message (SMS message) directly to a phone number.
  *
- * protocol>
+ * </p
+ *
+ * If you send a message to a topic, Amazon SNS delivers the message to each endpoint that is subscribed to the topic. The
+ * format of the message depends on the notification protocol for each subscribed
+ *
+ * endpoint>
+ *
+ * When a <code>messageId</code> is returned, the message has been saved and Amazon SNS will attempt to deliver it
+ *
+ * shortly>
  *
  * To use the <code>Publish</code> action for sending a message to a mobile endpoint, such as an app on a Kindle device or
  * mobile phone, you must specify the EndpointArn for the TargetArn parameter. The EndpointArn is returned when making a
@@ -637,7 +664,7 @@ SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allows a subscription owner to set an attribute of the topic to a new
+ * Allows a subscription owner to set an attribute of the subscription to a new
  */
 SetSubscriptionAttributesResponse * SnsClient::setSubscriptionAttributes(const SetSubscriptionAttributesRequest &request)
 {
@@ -666,6 +693,10 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
  * Prepares to subscribe an endpoint by sending the endpoint a confirmation message. To actually create a subscription, the
  * endpoint owner must call the <code>ConfirmSubscription</code> action with the token from the confirmation message.
  * Confirmation tokens are valid for three
+ *
+ * days>
+ *
+ * This action is throttled at 100 transactions per second
  */
 SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
 {
@@ -682,6 +713,10 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
  * the topic's owner can unsubscribe, and an AWS signature is required. If the <code>Unsubscribe</code> call does not
  * require authentication and the requester is not the subscription owner, a final cancellation message is delivered to the
  * endpoint, so that the endpoint owner can easily resubscribe to the topic if the <code>Unsubscribe</code> request was
+ *
+ * unintended>
+ *
+ * This action is throttled at 100 transactions per second
  */
 UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
 {

@@ -71,6 +71,7 @@ public:
         RegisterEventTopicAction,
         RemoveIpRoutesAction,
         RemoveTagsFromResourceAction,
+        ResetUserPasswordAction,
         RestoreFromSnapshotAction,
         StartSchemaExtensionAction,
         UpdateConditionalForwarderAction,

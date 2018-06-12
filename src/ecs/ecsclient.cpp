@@ -263,9 +263,9 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  *
  * parameter)> <ul> <li>
  *
- * Sort the valid container instances by the fewest number of running tasks for this service in the same Availability Zone
- * as the instance. For example, if zone A has one running service task and zones B and C each have zero, valid container
- * instances in either zone B or C are considered optimal for
+ * Sort the valid container instances, giving priority to instances that have the fewest number of running tasks for this
+ * service in their respective Availability Zone. For example, if zone A has one running service task and zones B and C
+ * each have zero, valid container instances in either zone B or C are considered optimal for
  *
  * placement> </li> <li>
  *

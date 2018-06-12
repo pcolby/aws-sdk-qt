@@ -22,6 +22,10 @@ HEADERS += \
     createendpointrequest_p.h \
     createendpointresponse.h \
     createendpointresponse_p.h \
+    createhyperparametertuningjobrequest.h \
+    createhyperparametertuningjobrequest_p.h \
+    createhyperparametertuningjobresponse.h \
+    createhyperparametertuningjobresponse_p.h \
     createmodelrequest.h \
     createmodelrequest_p.h \
     createmodelresponse.h \
@@ -74,6 +78,10 @@ HEADERS += \
     describeendpointrequest_p.h \
     describeendpointresponse.h \
     describeendpointresponse_p.h \
+    describehyperparametertuningjobrequest.h \
+    describehyperparametertuningjobrequest_p.h \
+    describehyperparametertuningjobresponse.h \
+    describehyperparametertuningjobresponse_p.h \
     describemodelrequest.h \
     describemodelrequest_p.h \
     describemodelresponse.h \
@@ -98,6 +106,10 @@ HEADERS += \
     listendpointsrequest_p.h \
     listendpointsresponse.h \
     listendpointsresponse_p.h \
+    listhyperparametertuningjobsrequest.h \
+    listhyperparametertuningjobsrequest_p.h \
+    listhyperparametertuningjobsresponse.h \
+    listhyperparametertuningjobsresponse_p.h \
     listmodelsrequest.h \
     listmodelsrequest_p.h \
     listmodelsresponse.h \
@@ -114,6 +126,10 @@ HEADERS += \
     listtagsrequest_p.h \
     listtagsresponse.h \
     listtagsresponse_p.h \
+    listtrainingjobsforhyperparametertuningjobrequest.h \
+    listtrainingjobsforhyperparametertuningjobrequest_p.h \
+    listtrainingjobsforhyperparametertuningjobresponse.h \
+    listtrainingjobsforhyperparametertuningjobresponse_p.h \
     listtrainingjobsrequest.h \
     listtrainingjobsrequest_p.h \
     listtrainingjobsresponse.h \
@@ -128,6 +144,10 @@ HEADERS += \
     startnotebookinstancerequest_p.h \
     startnotebookinstanceresponse.h \
     startnotebookinstanceresponse_p.h \
+    stophyperparametertuningjobrequest.h \
+    stophyperparametertuningjobrequest_p.h \
+    stophyperparametertuningjobresponse.h \
+    stophyperparametertuningjobresponse_p.h \
     stopnotebookinstancerequest.h \
     stopnotebookinstancerequest_p.h \
     stopnotebookinstanceresponse.h \
@@ -160,6 +180,8 @@ SOURCES += \
     createendpointconfigresponse.cpp \
     createendpointrequest.cpp \
     createendpointresponse.cpp \
+    createhyperparametertuningjobrequest.cpp \
+    createhyperparametertuningjobresponse.cpp \
     createmodelrequest.cpp \
     createmodelresponse.cpp \
     createnotebookinstancelifecycleconfigrequest.cpp \
@@ -186,6 +208,8 @@ SOURCES += \
     describeendpointconfigresponse.cpp \
     describeendpointrequest.cpp \
     describeendpointresponse.cpp \
+    describehyperparametertuningjobrequest.cpp \
+    describehyperparametertuningjobresponse.cpp \
     describemodelrequest.cpp \
     describemodelresponse.cpp \
     describenotebookinstancelifecycleconfigrequest.cpp \
@@ -198,6 +222,8 @@ SOURCES += \
     listendpointconfigsresponse.cpp \
     listendpointsrequest.cpp \
     listendpointsresponse.cpp \
+    listhyperparametertuningjobsrequest.cpp \
+    listhyperparametertuningjobsresponse.cpp \
     listmodelsrequest.cpp \
     listmodelsresponse.cpp \
     listnotebookinstancelifecycleconfigsrequest.cpp \
@@ -206,6 +232,8 @@ SOURCES += \
     listnotebookinstancesresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
+    listtrainingjobsforhyperparametertuningjobrequest.cpp \
+    listtrainingjobsforhyperparametertuningjobresponse.cpp \
     listtrainingjobsrequest.cpp \
     listtrainingjobsresponse.cpp \
     sagemakerclient.cpp \
@@ -213,6 +241,8 @@ SOURCES += \
     sagemakerresponse.cpp \
     startnotebookinstancerequest.cpp \
     startnotebookinstanceresponse.cpp \
+    stophyperparametertuningjobrequest.cpp \
+    stophyperparametertuningjobresponse.cpp \
     stopnotebookinstancerequest.cpp \
     stopnotebookinstanceresponse.cpp \
     stoptrainingjobrequest.cpp \

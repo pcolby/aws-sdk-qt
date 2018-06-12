@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsNeptune
+description = AWS Neptune SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsneptune-index.html"
+navigation.landingtitle = "Neptune"
+navigation.cppclassespage = "Neptune C++ Classes"

@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsNeptune
+    \title Neptune C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Neptune functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

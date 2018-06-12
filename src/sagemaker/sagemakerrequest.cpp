@@ -39,6 +39,7 @@ namespace SageMaker {
  * \value AddTagsAction SageMaker AddTags action.
  * \value CreateEndpointAction SageMaker CreateEndpoint action.
  * \value CreateEndpointConfigAction SageMaker CreateEndpointConfig action.
+ * \value CreateHyperParameterTuningJobAction SageMaker CreateHyperParameterTuningJob action.
  * \value CreateModelAction SageMaker CreateModel action.
  * \value CreateNotebookInstanceAction SageMaker CreateNotebookInstance action.
  * \value CreateNotebookInstanceLifecycleConfigAction SageMaker CreateNotebookInstanceLifecycleConfig action.
@@ -52,18 +53,22 @@ namespace SageMaker {
  * \value DeleteTagsAction SageMaker DeleteTags action.
  * \value DescribeEndpointAction SageMaker DescribeEndpoint action.
  * \value DescribeEndpointConfigAction SageMaker DescribeEndpointConfig action.
+ * \value DescribeHyperParameterTuningJobAction SageMaker DescribeHyperParameterTuningJob action.
  * \value DescribeModelAction SageMaker DescribeModel action.
  * \value DescribeNotebookInstanceAction SageMaker DescribeNotebookInstance action.
  * \value DescribeNotebookInstanceLifecycleConfigAction SageMaker DescribeNotebookInstanceLifecycleConfig action.
  * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
  * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
  * \value ListEndpointsAction SageMaker ListEndpoints action.
+ * \value ListHyperParameterTuningJobsAction SageMaker ListHyperParameterTuningJobs action.
  * \value ListModelsAction SageMaker ListModels action.
  * \value ListNotebookInstanceLifecycleConfigsAction SageMaker ListNotebookInstanceLifecycleConfigs action.
  * \value ListNotebookInstancesAction SageMaker ListNotebookInstances action.
  * \value ListTagsAction SageMaker ListTags action.
  * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
+ * \value ListTrainingJobsForHyperParameterTuningJobAction SageMaker ListTrainingJobsForHyperParameterTuningJob action.
  * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
+ * \value StopHyperParameterTuningJobAction SageMaker StopHyperParameterTuningJob action.
  * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
  * \value StopTrainingJobAction SageMaker StopTrainingJob action.
  * \value UpdateEndpointAction SageMaker UpdateEndpoint action.

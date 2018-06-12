@@ -64,6 +64,7 @@ namespace CloudDirectory {
  * \value GetAppliedSchemaVersionAction CloudDirectory GetAppliedSchemaVersion action.
  * \value GetDirectoryAction CloudDirectory GetDirectory action.
  * \value GetFacetAction CloudDirectory GetFacet action.
+ * \value GetLinkAttributesAction CloudDirectory GetLinkAttributes action.
  * \value GetObjectAttributesAction CloudDirectory GetObjectAttributes action.
  * \value GetObjectInformationAction CloudDirectory GetObjectInformation action.
  * \value GetSchemaAsJsonAction CloudDirectory GetSchemaAsJson action.
@@ -94,6 +95,7 @@ namespace CloudDirectory {
  * \value TagResourceAction CloudDirectory TagResource action.
  * \value UntagResourceAction CloudDirectory UntagResource action.
  * \value UpdateFacetAction CloudDirectory UpdateFacet action.
+ * \value UpdateLinkAttributesAction CloudDirectory UpdateLinkAttributes action.
  * \value UpdateObjectAttributesAction CloudDirectory UpdateObjectAttributes action.
  * \value UpdateSchemaAction CloudDirectory UpdateSchema action.
  * \value UpdateTypedLinkFacetAction CloudDirectory UpdateTypedLinkFacet action.

@@ -77,6 +77,8 @@
 #include "getdirectoryresponse.h"
 #include "getfacetrequest.h"
 #include "getfacetresponse.h"
+#include "getlinkattributesrequest.h"
+#include "getlinkattributesresponse.h"
 #include "getobjectattributesrequest.h"
 #include "getobjectattributesresponse.h"
 #include "getobjectinformationrequest.h"
@@ -137,6 +139,8 @@
 #include "untagresourceresponse.h"
 #include "updatefacetrequest.h"
 #include "updatefacetresponse.h"
+#include "updatelinkattributesrequest.h"
+#include "updatelinkattributesresponse.h"
 #include "updateobjectattributesrequest.h"
 #include "updateobjectattributesresponse.h"
 #include "updateschemarequest.h"
@@ -634,6 +638,19 @@ GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request
 
 /*!
  * Sends \a request to the CloudDirectoryClient service, and returns a pointer to an
+ * GetLinkAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves attributes that are associated with a typed
+ */
+GetLinkAttributesResponse * CloudDirectoryClient::getLinkAttributes(const GetLinkAttributesRequest &request)
+{
+    return qobject_cast<GetLinkAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudDirectoryClient service, and returns a pointer to an
  * GetObjectAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1058,6 +1075,20 @@ UntagResourceResponse * CloudDirectoryClient::untagResource(const UntagResourceR
 UpdateFacetResponse * CloudDirectoryClient::updateFacet(const UpdateFacetRequest &request)
 {
     return qobject_cast<UpdateFacetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudDirectoryClient service, and returns a pointer to an
+ * UpdateLinkAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a given typed link’s attributes. Attributes to be updated must not contribute to the typed link’s identity, as
+ * defined by its
+ */
+UpdateLinkAttributesResponse * CloudDirectoryClient::updateLinkAttributes(const UpdateLinkAttributesRequest &request)
+{
+    return qobject_cast<UpdateLinkAttributesResponse *>(send(request));
 }
 
 /*!

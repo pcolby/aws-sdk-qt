@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsEks
+description = AWS EKS SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawseks-index.html"
+navigation.landingtitle = "EKS"
+navigation.cppclassespage = "EKS C++ Classes"

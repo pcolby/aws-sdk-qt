@@ -44,6 +44,7 @@ namespace ConfigService {
  * \value DeleteDeliveryChannelAction ConfigService DeleteDeliveryChannel action.
  * \value DeleteEvaluationResultsAction ConfigService DeleteEvaluationResults action.
  * \value DeletePendingAggregationRequestAction ConfigService DeletePendingAggregationRequest action.
+ * \value DeleteRetentionConfigurationAction ConfigService DeleteRetentionConfiguration action.
  * \value DeliverConfigSnapshotAction ConfigService DeliverConfigSnapshot action.
  * \value DescribeAggregateComplianceByConfigRulesAction ConfigService DescribeAggregateComplianceByConfigRules action.
  * \value DescribeAggregationAuthorizationsAction ConfigService DescribeAggregationAuthorizations action.
@@ -58,6 +59,7 @@ namespace ConfigService {
  * \value DescribeDeliveryChannelStatusAction ConfigService DescribeDeliveryChannelStatus action.
  * \value DescribeDeliveryChannelsAction ConfigService DescribeDeliveryChannels action.
  * \value DescribePendingAggregationRequestsAction ConfigService DescribePendingAggregationRequests action.
+ * \value DescribeRetentionConfigurationsAction ConfigService DescribeRetentionConfigurations action.
  * \value GetAggregateComplianceDetailsByConfigRuleAction ConfigService GetAggregateComplianceDetailsByConfigRule action.
  * \value GetAggregateConfigRuleComplianceSummaryAction ConfigService GetAggregateConfigRuleComplianceSummary action.
  * \value GetComplianceDetailsByConfigRuleAction ConfigService GetComplianceDetailsByConfigRule action.
@@ -73,6 +75,7 @@ namespace ConfigService {
  * \value PutConfigurationRecorderAction ConfigService PutConfigurationRecorder action.
  * \value PutDeliveryChannelAction ConfigService PutDeliveryChannel action.
  * \value PutEvaluationsAction ConfigService PutEvaluations action.
+ * \value PutRetentionConfigurationAction ConfigService PutRetentionConfiguration action.
  * \value StartConfigRulesEvaluationAction ConfigService StartConfigRulesEvaluation action.
  * \value StartConfigurationRecorderAction ConfigService StartConfigurationRecorder action.
  * \value StopConfigurationRecorderAction ConfigService StopConfigurationRecorder action.

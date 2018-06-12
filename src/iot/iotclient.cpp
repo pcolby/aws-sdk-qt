@@ -37,6 +37,8 @@
 #include "cancelcertificatetransferresponse.h"
 #include "canceljobrequest.h"
 #include "canceljobresponse.h"
+#include "canceljobexecutionrequest.h"
+#include "canceljobexecutionresponse.h"
 #include "cleardefaultauthorizerrequest.h"
 #include "cleardefaultauthorizerresponse.h"
 #include "createauthorizerrequest.h"
@@ -71,6 +73,10 @@
 #include "deletecacertificateresponse.h"
 #include "deletecertificaterequest.h"
 #include "deletecertificateresponse.h"
+#include "deletejobrequest.h"
+#include "deletejobresponse.h"
+#include "deletejobexecutionrequest.h"
+#include "deletejobexecutionresponse.h"
 #include "deleteotaupdaterequest.h"
 #include "deleteotaupdateresponse.h"
 #include "deletepolicyrequest.h"
@@ -492,6 +498,19 @@ CancelJobResponse * IoTClient::cancelJob(const CancelJobRequest &request)
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CancelJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the execution of a job for a given
+ */
+CancelJobExecutionResponse * IoTClient::cancelJobExecution(const CancelJobExecutionRequest &request)
+{
+    return qobject_cast<CancelJobExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * ClearDefaultAuthorizerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -794,6 +813,42 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
     return qobject_cast<DeleteCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a job and its related job
+ *
+ * executions>
+ *
+ * Deleting a job may take time, depending on the number of job executions created for the job and various other factors.
+ * While the job is being deleted, the status of the job will be shown as "DELETION_IN_PROGRESS". Attempting to delete or
+ * cancel a job whose status is already "DELETION_IN_PROGRESS" will result in an
+ *
+ * error>
+ *
+ * Only 10 jobs may have status "DELETION_IN_PROGRESS" at the same time, or a LimitExceededException will
+ */
+DeleteJobResponse * IoTClient::deleteJob(const DeleteJobRequest &request)
+{
+    return qobject_cast<DeleteJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteJobExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a job
+ */
+DeleteJobExecutionResponse * IoTClient::deleteJobExecution(const DeleteJobExecutionRequest &request)
+{
+    return qobject_cast<DeleteJobExecutionResponse *>(send(request));
 }
 
 /*!
@@ -1240,7 +1295,8 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets effective
+ * Gets a list of the policies that have an effect on the authorization behavior of the specified device when it connects
+ * to the AWS IoT device
  */
 GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectivePoliciesRequest &request)
 {
@@ -1967,7 +2023,8 @@ StopThingRegistrationTaskResponse * IoTClient::stopThingRegistrationTask(const S
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Test custom
+ * Tests if a specified principal is authorized to perform an AWS IoT action on a specified resource. Use this to test and
+ * debug the authorization behavior of devices that connect to the AWS IoT device
  */
 TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorizationRequest &request)
 {
@@ -1980,7 +2037,8 @@ TestAuthorizationResponse * IoTClient::testAuthorization(const TestAuthorization
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Invoke the specified custom authorizer for testing
+ * Tests a custom authorization behavior by invoking a specified custom authorizer. Use this to test and debug the custom
+ * authorization behavior of devices that connect to the AWS IoT device
  */
 TestInvokeAuthorizerResponse * IoTClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {

@@ -36,16 +36,24 @@ namespace Shield {
  * This enum describes the actions that can be performed as Shield
  * requests.
  *
+ * \value AssociateDRTLogBucketAction Shield AssociateDRTLogBucket action.
+ * \value AssociateDRTRoleAction Shield AssociateDRTRole action.
  * \value CreateProtectionAction Shield CreateProtection action.
  * \value CreateSubscriptionAction Shield CreateSubscription action.
  * \value DeleteProtectionAction Shield DeleteProtection action.
  * \value DeleteSubscriptionAction Shield DeleteSubscription action.
  * \value DescribeAttackAction Shield DescribeAttack action.
+ * \value DescribeDRTAccessAction Shield DescribeDRTAccess action.
+ * \value DescribeEmergencyContactSettingsAction Shield DescribeEmergencyContactSettings action.
  * \value DescribeProtectionAction Shield DescribeProtection action.
  * \value DescribeSubscriptionAction Shield DescribeSubscription action.
+ * \value DisassociateDRTLogBucketAction Shield DisassociateDRTLogBucket action.
+ * \value DisassociateDRTRoleAction Shield DisassociateDRTRole action.
  * \value GetSubscriptionStateAction Shield GetSubscriptionState action.
  * \value ListAttacksAction Shield ListAttacks action.
  * \value ListProtectionsAction Shield ListProtections action.
+ * \value UpdateEmergencyContactSettingsAction Shield UpdateEmergencyContactSettings action.
+ * \value UpdateSubscriptionAction Shield UpdateSubscription action.
  */
 
 /*!

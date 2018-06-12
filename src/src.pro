@@ -49,6 +49,7 @@ SUBDIRS += \
     ec2/ec2.pro \
     ecr/ecr.pro \
     ecs/ecs.pro \
+    eks/eks.pro \
     elasticache/elasticache.pro \
     elasticbeanstalk/elasticbeanstalk.pro \
     efs/efs.pro \
@@ -94,15 +95,18 @@ SUBDIRS += \
     mediapackage/mediapackage.pro \
     mediastore/mediastore.pro \
     mediastoredata/mediastoredata.pro \
+    mediatailor/mediatailor.pro \
     marketplacemetering/marketplacemetering.pro \
     mobile/mobile.pro \
     mobileanalytics/mobileanalytics.pro \
     cloudwatch/cloudwatch.pro \
     mq/mq.pro \
     mturk/mturk.pro \
+    neptune/neptune.pro \
     opsworks/opsworks.pro \
     opsworkscm/opsworkscm.pro \
     organizations/organizations.pro \
+    pi/pi.pro \
     pinpoint/pinpoint.pro \
     polly/polly.pro \
     pricing/pricing.pro \

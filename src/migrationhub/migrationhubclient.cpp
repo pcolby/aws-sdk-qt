@@ -450,10 +450,11 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  *
  * address> </li> <li>
  *
- * Note the instructions regarding the special use case of the <code>ResourceAttributeList</code> parameter when specifying
- * any "VM" related
+ * Note the instructions regarding the special use case of the <a
+ * href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_PutResourceAttributes.html#migrationhub-PutResourceAttributes-request-ResourceAttributeList">
+ * <code>ResourceAttributeList</code> </a> parameter when specifying any "VM" related value.
  *
- * value> </li> </ul> </b> <note>
+ * </p </li> </ul> </b> <note>
  *
  * Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an
  * association was found based on the provided details, call

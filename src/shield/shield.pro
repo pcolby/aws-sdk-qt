@@ -10,6 +10,14 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    associatedrtlogbucketrequest.h \
+    associatedrtlogbucketrequest_p.h \
+    associatedrtlogbucketresponse.h \
+    associatedrtlogbucketresponse_p.h \
+    associatedrtrolerequest.h \
+    associatedrtrolerequest_p.h \
+    associatedrtroleresponse.h \
+    associatedrtroleresponse_p.h \
     createprotectionrequest.h \
     createprotectionrequest_p.h \
     createprotectionresponse.h \
@@ -30,6 +38,14 @@ HEADERS += \
     describeattackrequest_p.h \
     describeattackresponse.h \
     describeattackresponse_p.h \
+    describedrtaccessrequest.h \
+    describedrtaccessrequest_p.h \
+    describedrtaccessresponse.h \
+    describedrtaccessresponse_p.h \
+    describeemergencycontactsettingsrequest.h \
+    describeemergencycontactsettingsrequest_p.h \
+    describeemergencycontactsettingsresponse.h \
+    describeemergencycontactsettingsresponse_p.h \
     describeprotectionrequest.h \
     describeprotectionrequest_p.h \
     describeprotectionresponse.h \
@@ -38,6 +54,14 @@ HEADERS += \
     describesubscriptionrequest_p.h \
     describesubscriptionresponse.h \
     describesubscriptionresponse_p.h \
+    disassociatedrtlogbucketrequest.h \
+    disassociatedrtlogbucketrequest_p.h \
+    disassociatedrtlogbucketresponse.h \
+    disassociatedrtlogbucketresponse_p.h \
+    disassociatedrtrolerequest.h \
+    disassociatedrtrolerequest_p.h \
+    disassociatedrtroleresponse.h \
+    disassociatedrtroleresponse_p.h \
     getsubscriptionstaterequest.h \
     getsubscriptionstaterequest_p.h \
     getsubscriptionstateresponse.h \
@@ -56,8 +80,20 @@ HEADERS += \
     shieldrequest_p.h \
     shieldresponse.h \
     shieldresponse_p.h \
+    updateemergencycontactsettingsrequest.h \
+    updateemergencycontactsettingsrequest_p.h \
+    updateemergencycontactsettingsresponse.h \
+    updateemergencycontactsettingsresponse_p.h \
+    updatesubscriptionrequest.h \
+    updatesubscriptionrequest_p.h \
+    updatesubscriptionresponse.h \
+    updatesubscriptionresponse_p.h \
 
 SOURCES += \
+    associatedrtlogbucketrequest.cpp \
+    associatedrtlogbucketresponse.cpp \
+    associatedrtrolerequest.cpp \
+    associatedrtroleresponse.cpp \
     createprotectionrequest.cpp \
     createprotectionresponse.cpp \
     createsubscriptionrequest.cpp \
@@ -68,10 +104,18 @@ SOURCES += \
     deletesubscriptionresponse.cpp \
     describeattackrequest.cpp \
     describeattackresponse.cpp \
+    describedrtaccessrequest.cpp \
+    describedrtaccessresponse.cpp \
+    describeemergencycontactsettingsrequest.cpp \
+    describeemergencycontactsettingsresponse.cpp \
     describeprotectionrequest.cpp \
     describeprotectionresponse.cpp \
     describesubscriptionrequest.cpp \
     describesubscriptionresponse.cpp \
+    disassociatedrtlogbucketrequest.cpp \
+    disassociatedrtlogbucketresponse.cpp \
+    disassociatedrtrolerequest.cpp \
+    disassociatedrtroleresponse.cpp \
     getsubscriptionstaterequest.cpp \
     getsubscriptionstateresponse.cpp \
     listattacksrequest.cpp \
@@ -81,5 +125,9 @@ SOURCES += \
     shieldclient.cpp \
     shieldrequest.cpp \
     shieldresponse.cpp \
+    updateemergencycontactsettingsrequest.cpp \
+    updateemergencycontactsettingsresponse.cpp \
+    updatesubscriptionrequest.cpp \
+    updatesubscriptionresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

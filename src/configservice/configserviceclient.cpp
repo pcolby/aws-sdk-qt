@@ -37,6 +37,8 @@
 #include "deleteevaluationresultsresponse.h"
 #include "deletependingaggregationrequestrequest.h"
 #include "deletependingaggregationrequestresponse.h"
+#include "deleteretentionconfigurationrequest.h"
+#include "deleteretentionconfigurationresponse.h"
 #include "deliverconfigsnapshotrequest.h"
 #include "deliverconfigsnapshotresponse.h"
 #include "describeaggregatecompliancebyconfigrulesrequest.h"
@@ -65,6 +67,8 @@
 #include "describedeliverychannelsresponse.h"
 #include "describependingaggregationrequestsrequest.h"
 #include "describependingaggregationrequestsresponse.h"
+#include "describeretentionconfigurationsrequest.h"
+#include "describeretentionconfigurationsresponse.h"
 #include "getaggregatecompliancedetailsbyconfigrulerequest.h"
 #include "getaggregatecompliancedetailsbyconfigruleresponse.h"
 #include "getaggregateconfigrulecompliancesummaryrequest.h"
@@ -94,6 +98,8 @@
 #include "putdeliverychannelresponse.h"
 #include "putevaluationsrequest.h"
 #include "putevaluationsresponse.h"
+#include "putretentionconfigurationrequest.h"
+#include "putretentionconfigurationresponse.h"
 #include "startconfigrulesevaluationrequest.h"
 #include "startconfigrulesevaluationresponse.h"
 #include "startconfigurationrecorderrequest.h"
@@ -339,6 +345,19 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
 DeletePendingAggregationRequestResponse * ConfigServiceClient::deletePendingAggregationRequest(const DeletePendingAggregationRequestRequest &request)
 {
     return qobject_cast<DeletePendingAggregationRequestResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteRetentionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the retention
+ */
+DeleteRetentionConfigurationResponse * ConfigServiceClient::deleteRetentionConfiguration(const DeleteRetentionConfigurationRequest &request)
+{
+    return qobject_cast<DeleteRetentionConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -620,6 +639,24 @@ DescribePendingAggregationRequestsResponse * ConfigServiceClient::describePendin
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeRetentionConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the details of one or more retention configurations. If the retention configuration name is not specified, this
+ * action returns the details for all the retention configurations for that
+ *
+ * account> <note>
+ *
+ * Currently, AWS Config supports only one retention configuration per region in your
+ */
+DescribeRetentionConfigurationsResponse * ConfigServiceClient::describeRetentionConfigurations(const DescribeRetentionConfigurationsRequest &request)
+{
+    return qobject_cast<DescribeRetentionConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * GetAggregateComplianceDetailsByConfigRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -781,9 +818,11 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of configuration items for the specified resource. The list contains details about each state of the
- * resource during the specified time
+ * resource during the specified time interval. If you specified a retention period to retain your
+ * <code>ConfigurationItems</code> between a minimum of 30 days and a maximum of 7 years (2557 days), AWS Config returns
+ * the <code>ConfigurationItems</code> for the specified retention period.
  *
- * interval>
+ * </p
  *
  * The response is paginated. By default, AWS Config returns a limit of 10 configuration items per page. You can customize
  * this number with the <code>limit</code> parameter. The response includes a <code>nextToken</code> string. To get the
@@ -989,6 +1028,26 @@ PutDeliveryChannelResponse * ConfigServiceClient::putDeliveryChannel(const PutDe
 PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluationsRequest &request)
 {
     return qobject_cast<PutEvaluationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutRetentionConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates and updates the retention configuration with details about retention period (number of days) that AWS Config
+ * stores your historical information. The API creates the <code>RetentionConfiguration</code> object and names the object
+ * as <b>default</b>. When you have a <code>RetentionConfiguration</code> object named <b>default</b>, calling the API
+ * modifies the default object.
+ *
+ * </p <note>
+ *
+ * Currently, AWS Config supports only one retention configuration per region in your
+ */
+PutRetentionConfigurationResponse * ConfigServiceClient::putRetentionConfiguration(const PutRetentionConfigurationRequest &request)
+{
+    return qobject_cast<PutRetentionConfigurationResponse *>(send(request));
 }
 
 /*!

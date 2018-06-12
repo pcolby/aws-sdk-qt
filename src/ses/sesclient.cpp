@@ -182,15 +182,15 @@ namespace SES {
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
- *  This is the API Reference for <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES). This
- *  documentation is intended to be used in conjunction with the <a
+ *  This document contains reference information for the <a href="https://aws.amazon.com/ses/">Amazon Simple Email
+ *  Service</a> (Amazon SES) API, version 2010-12-01. This document is best used in conjunction with the <a
  *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
  * 
  *  </p <note>
  * 
  *  For a list of Amazon SES endpoints to use in service requests, see <a
  *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/regions.html">Regions and Amazon SES</a> in the <a
- *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer Guide</a>.
+ *  href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
  */
 
 /*!
@@ -302,7 +302,7 @@ CreateConfigurationSetResponse * SesClient::createConfigurationSet(const CreateC
  * destination> <note>
  *
  * When you create or update an event destination, you must provide one, and only one, destination. The destination can be
- * Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon
+ * CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service (Amazon
  *
  * SNS)> </note>
  *
@@ -330,10 +330,9 @@ CreateConfigurationSetEventDestinationResponse * SesClient::createConfigurationS
  * </p
  *
  * By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You
- * can configure a subdomain of your own to handle these events. For information about using configuration sets, see <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Configuring Custom
- * Domains to Handle Open and Click Tracking</a> in the <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ * can configure a subdomain of your own to handle these events. For information about using custom domains, see the <a
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Amazon SES
+ * Developer
  */
 CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSetTrackingOptions(const CreateConfigurationSetTrackingOptionsRequest &request)
 {
@@ -351,7 +350,7 @@ CreateConfigurationSetTrackingOptionsResponse * SesClient::createConfigurationSe
  * template>
  *
  * For more information about custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -497,10 +496,9 @@ DeleteConfigurationSetEventDestinationResponse * SesClient::deleteConfigurationS
  * tracking>
  *
  * By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You
- * can configure a subdomain of your own to handle these events. For information about using configuration sets, see <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Configuring Custom
- * Domains to Handle Open and Click Tracking</a> in the <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ * can configure a subdomain of your own to handle these events. For information about using custom domains, see the <a
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Amazon SES
+ * Developer
  *
  * Guide</a>> <note>
  *
@@ -523,7 +521,7 @@ DeleteConfigurationSetTrackingOptionsResponse * SesClient::deleteConfigurationSe
  * </p
  *
  * For more information about custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -774,9 +772,9 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the email sending status of the Amazon SES
+ * Returns the email sending status of the Amazon SES account for the current
  *
- * account>
+ * region>
  *
  * You can execute this operation no more than once per
  */
@@ -796,7 +794,7 @@ GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
  * specify>
  *
  * For more information about custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -977,7 +975,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides sending statistics for the Amazon SES account. The result is a list of data points, representing the last two
+ * Provides sending statistics for the current AWS Region. The result is a list of data points, representing the last two
  * weeks of sending activity. Each data point in the list contains statistics for a 15-minute period of
  *
  * time>
@@ -1012,8 +1010,8 @@ GetTemplateResponse * SesClient::getTemplate(const GetTemplateRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of the configuration sets associated with your Amazon SES account. For information about using
- * configuration sets, see <a
+ * Provides a list of the configuration sets associated with your Amazon SES account in the current AWS Region. For
+ * information about using configuration sets, see <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html">Monitoring Your Amazon SES
  * Sending Activity</a> in the <i>Amazon SES Developer Guide.</i>
  *
@@ -1035,12 +1033,12 @@ ListConfigurationSetsResponse * SesClient::listConfigurationSets(const ListConfi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the existing custom verification email templates for your
+ * Lists the existing custom verification email templates for your account in the current AWS
  *
- * account>
+ * Region>
  *
  * For more information about custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -1058,8 +1056,8 @@ ListCustomVerificationEmailTemplatesResponse * SesClient::listCustomVerification
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list containing all of the identities (email addresses and domains) for your AWS account, regardless of
- * verification
+ * Returns a list containing all of the identities (email addresses and domains) for your AWS account in the current AWS
+ * Region, regardless of verification
  *
  * status>
  *
@@ -1104,9 +1102,9 @@ ListIdentityPoliciesResponse * SesClient::listIdentityPolicies(const ListIdentit
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the IP address filters associated with your AWS
+ * Lists the IP address filters associated with your AWS account in the current AWS
  *
- * account>
+ * Region>
  *
  * For information about managing IP address filters, see the <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-managing-ip-filters.html">Amazon SES
@@ -1127,8 +1125,8 @@ ListReceiptFiltersResponse * SesClient::listReceiptFilters(const ListReceiptFilt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the receipt rule sets that exist under your AWS account. If there are additional receipt rule sets to be
- * retrieved, you will receive a <code>NextToken</code> that you can provide to the next call to
+ * Lists the receipt rule sets that exist under your AWS account in the current AWS Region. If there are additional receipt
+ * rule sets to be retrieved, you will receive a <code>NextToken</code> that you can provide to the next call to
  * <code>ListReceiptRuleSets</code> to retrieve the additional
  *
  * entries>
@@ -1152,9 +1150,9 @@ ListReceiptRuleSetsResponse * SesClient::listReceiptRuleSets(const ListReceiptRu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the email templates present in your Amazon SES
+ * Lists the email templates present in your Amazon SES account in the current AWS
  *
- * account>
+ * Region>
  *
  * You can execute this operation no more than once per
  */
@@ -1308,14 +1306,14 @@ SendBulkTemplatedEmailResponse * SesClient::sendBulkTemplatedEmail(const SendBul
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of
- * executing this operation, a customized verification email is sent to the specified
+ * Adds an email address to the list of identities for your Amazon SES account in the current AWS Region and attempts to
+ * verify it. As a result of executing this operation, a customized verification email is sent to the specified
  *
  * address>
  *
  * To use this operation, you must first create a custom verification email template. For more information about creating
  * and using custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -1519,6 +1517,20 @@ SendRawEmailResponse * SesClient::sendRawEmail(const SendRawEmailRequest &reques
  * To: address, a CC: address, or a BCC: address. If a recipient email address is invalid (that is, it is not in the format
  * <i>UserName@[SubDomain.]Domain.TopLevelDomain</i>), the entire message will be rejected, even if the message contains
  * other recipients that are
+ *
+ * valid> </li> </ul> <b>
+ *
+ * If your call to the <code>SendTemplatedEmail</code> operation includes all of the required parameters, Amazon SES
+ * accepts it and returns a Message ID. However, if Amazon SES can't render the email because the template contains errors,
+ * it doesn't send the email. Additionally, because it already accepted the message, Amazon SES doesn't return a message
+ * stating that it was unable to send the
+ *
+ * email>
+ *
+ * For these reasons, we highly recommend that you set up Amazon SES to send you notifications when Rendering Failure
+ * events occur. For more information, see <a
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html">Sending Personalized Email
+ * Using the Amazon SES API</a> in the <i>Amazon Simple Email Service Developer
  */
 SendTemplatedEmailResponse * SesClient::sendTemplatedEmail(const SendTemplatedEmailRequest &request)
 {
@@ -1738,9 +1750,9 @@ TestRenderTemplateResponse * SesClient::testRenderTemplate(const TestRenderTempl
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables or disables email sending across your entire Amazon SES account. You can use this operation in conjunction with
- * Amazon CloudWatch alarms to temporarily pause email sending across your Amazon SES account when reputation metrics (such
- * as your bounce on complaint rate) reach certain
+ * Enables or disables email sending across your entire Amazon SES account in the current AWS Region. You can use this
+ * operation in conjunction with Amazon CloudWatch alarms to temporarily pause email sending across your Amazon SES account
+ * in a given AWS Region when reputation metrics (such as your bounce or complaint rates) reach certain
  *
  * thresholds>
  *
@@ -1783,11 +1795,11 @@ UpdateConfigurationSetEventDestinationResponse * SesClient::updateConfigurationS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables or disables the publishing of reputation metrics for emails sent using a specific configuration set. Reputation
- * metrics include bounce and complaint rates. These metrics are published to Amazon CloudWatch. By using Amazon
- * CloudWatch, you can create alarms when bounce or complaint rates exceed a certain
+ * Enables or disables the publishing of reputation metrics for emails sent using a specific configuration set in a given
+ * AWS Region. Reputation metrics include bounce and complaint rates. These metrics are published to Amazon CloudWatch. By
+ * using CloudWatch, you can create alarms when bounce or complaint rates exceed certain
  *
- * threshold>
+ * thresholds>
  *
  * You can execute this operation no more than once per
  */
@@ -1802,9 +1814,9 @@ UpdateConfigurationSetReputationMetricsEnabledResponse * SesClient::updateConfig
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables or disables email sending for messages sent using a specific configuration set. You can use this operation in
- * conjunction with Amazon CloudWatch alarms to temporarily pause email sending for a configuration set when the reputation
- * metrics for that configuration set (such as your bounce on complaint rate) reach certain
+ * Enables or disables email sending for messages sent using a specific configuration set in a given AWS Region. You can
+ * use this operation in conjunction with Amazon CloudWatch alarms to temporarily pause email sending for a configuration
+ * set when the reputation metrics for that configuration set (such as your bounce on complaint rate) exceed certain
  *
  * thresholds>
  *
@@ -1826,10 +1838,9 @@ UpdateConfigurationSetSendingEnabledResponse * SesClient::updateConfigurationSet
  * </p
  *
  * By default, images and links used for tracking open and click events are hosted on domains operated by Amazon SES. You
- * can configure a subdomain of your own to handle these events. For information about using configuration sets, see <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Configuring Custom
- * Domains to Handle Open and Click Tracking</a> in the <a
- * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html">Amazon SES Developer
+ * can configure a subdomain of your own to handle these events. For information about using custom domains, see the <a
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/configure-custom-open-click-domains.html">Amazon SES
+ * Developer
  */
 UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSetTrackingOptions(const UpdateConfigurationSetTrackingOptionsRequest &request)
 {
@@ -1847,7 +1858,7 @@ UpdateConfigurationSetTrackingOptionsResponse * SesClient::updateConfigurationSe
  * template>
  *
  * For more information about custom verification email templates, see <a
- * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
+ * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html">Using Custom Verification
  * Email Templates</a> in the <i>Amazon SES Developer
  *
  * Guide</i>>
@@ -1936,8 +1947,8 @@ VerifyDomainDkimResponse * SesClient::verifyDomainDkim(const VerifyDomainDkimReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a domain to the list of identities for your Amazon SES account and attempts to verify it. For more information
- * about verifying domains, see <a
+ * Adds a domain to the list of identities for your Amazon SES account in the current AWS Region and attempts to verify it.
+ * For more information about verifying domains, see <a
  * href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html">Verifying Email Addresses
  * and Domains</a> in the <i>Amazon SES Developer Guide.</i>
  *
@@ -1969,8 +1980,8 @@ VerifyEmailAddressResponse * SesClient::verifyEmailAddress(const VerifyEmailAddr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an email address to the list of identities for your Amazon SES account and attempts to verify it. As a result of
- * executing this operation, a verification email is sent to the specified
+ * Adds an email address to the list of identities for your Amazon SES account in the current AWS region and attempts to
+ * verify it. As a result of executing this operation, a verification email is sent to the specified
  *
  * address>
  *

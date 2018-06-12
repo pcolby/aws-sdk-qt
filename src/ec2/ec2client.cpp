@@ -1244,12 +1244,9 @@ CancelSpotFleetRequestsResponse * Ec2Client::cancelSpotFleetRequests(const Cance
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels one or more Spot Instance requests. Spot Instances are instances that Amazon EC2 starts on your behalf when the
- * maximum price that you specify exceeds the current Spot price. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * EC2 User Guide for Linux
+ * Cancels one or more Spot Instance
  *
- * Instances</i>> <b>
+ * requests> <b>
  *
  * Canceling a Spot Instance request does not terminate running Spot Instances associated with the
  */
@@ -1783,7 +1780,7 @@ CreateNetworkInterfaceResponse * Ec2Client::createNetworkInterface(const CreateN
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Grants an AWS authorized partner account permission to attach the specified network interface to an instance in their
+ * Grants an AWS-authorized account permission to attach the specified network interface to an instance in their
  *
  * account>
  *
@@ -4072,12 +4069,9 @@ DescribeSpotFleetRequestsResponse * Ec2Client::describeSpotFleetRequests(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the Spot Instance requests that belong to your account. Spot Instances are instances that Amazon EC2 launches
- * when the Spot price that you specify exceeds the current Spot price. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * EC2 User Guide for Linux
+ * Describes the specified Spot Instance
  *
- * Instances</i>>
+ * requests>
  *
  * You can use <code>DescribeSpotInstanceRequests</code> to find a running Spot Instance by examining the response. If the
  * status of the Spot Instance is <code>fulfilled</code>, the instance ID appears in the response and contains the
@@ -5978,10 +5972,12 @@ RequestSpotFleetResponse * Ec2Client::requestSpotFleet(const RequestSpotFleetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Spot Instance request. Spot Instances are instances that Amazon EC2 launches when the maximum price that you
- * specify exceeds the current Spot price. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance Requests</a> in the <i>Amazon
- * EC2 User Guide for Linux
+ * Creates a Spot Instance
+ *
+ * request>
+ *
+ * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot Instance
+ * Requests</a> in the <i>Amazon EC2 User Guide for Linux
  */
 RequestSpotInstancesResponse * Ec2Client::requestSpotInstances(const RequestSpotInstancesRequest &request)
 {

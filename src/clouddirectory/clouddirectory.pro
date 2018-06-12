@@ -128,6 +128,10 @@ HEADERS += \
     getfacetrequest_p.h \
     getfacetresponse.h \
     getfacetresponse_p.h \
+    getlinkattributesrequest.h \
+    getlinkattributesrequest_p.h \
+    getlinkattributesresponse.h \
+    getlinkattributesresponse_p.h \
     getobjectattributesrequest.h \
     getobjectattributesrequest_p.h \
     getobjectattributesresponse.h \
@@ -248,6 +252,10 @@ HEADERS += \
     updatefacetrequest_p.h \
     updatefacetresponse.h \
     updatefacetresponse_p.h \
+    updatelinkattributesrequest.h \
+    updatelinkattributesrequest_p.h \
+    updatelinkattributesresponse.h \
+    updatelinkattributesresponse_p.h \
     updateobjectattributesrequest.h \
     updateobjectattributesrequest_p.h \
     updateobjectattributesresponse.h \
@@ -329,6 +337,8 @@ SOURCES += \
     getdirectoryresponse.cpp \
     getfacetrequest.cpp \
     getfacetresponse.cpp \
+    getlinkattributesrequest.cpp \
+    getlinkattributesresponse.cpp \
     getobjectattributesrequest.cpp \
     getobjectattributesresponse.cpp \
     getobjectinformationrequest.cpp \
@@ -389,6 +399,8 @@ SOURCES += \
     untagresourceresponse.cpp \
     updatefacetrequest.cpp \
     updatefacetresponse.cpp \
+    updatelinkattributesrequest.cpp \
+    updatelinkattributesresponse.cpp \
     updateobjectattributesrequest.cpp \
     updateobjectattributesresponse.cpp \
     updateschemarequest.cpp \

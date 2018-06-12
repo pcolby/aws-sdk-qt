@@ -38,6 +38,10 @@ HEADERS += \
     cancelcertificatetransferrequest_p.h \
     cancelcertificatetransferresponse.h \
     cancelcertificatetransferresponse_p.h \
+    canceljobexecutionrequest.h \
+    canceljobexecutionrequest_p.h \
+    canceljobexecutionresponse.h \
+    canceljobexecutionresponse_p.h \
     canceljobrequest.h \
     canceljobrequest_p.h \
     canceljobresponse.h \
@@ -110,6 +114,14 @@ HEADERS += \
     deletecertificaterequest_p.h \
     deletecertificateresponse.h \
     deletecertificateresponse_p.h \
+    deletejobexecutionrequest.h \
+    deletejobexecutionrequest_p.h \
+    deletejobexecutionresponse.h \
+    deletejobexecutionresponse_p.h \
+    deletejobrequest.h \
+    deletejobrequest_p.h \
+    deletejobresponse.h \
+    deletejobresponse_p.h \
     deleteotaupdaterequest.h \
     deleteotaupdaterequest_p.h \
     deleteotaupdateresponse.h \
@@ -524,6 +536,8 @@ SOURCES += \
     attachthingprincipalresponse.cpp \
     cancelcertificatetransferrequest.cpp \
     cancelcertificatetransferresponse.cpp \
+    canceljobexecutionrequest.cpp \
+    canceljobexecutionresponse.cpp \
     canceljobrequest.cpp \
     canceljobresponse.cpp \
     cleardefaultauthorizerrequest.cpp \
@@ -560,6 +574,10 @@ SOURCES += \
     deletecacertificateresponse.cpp \
     deletecertificaterequest.cpp \
     deletecertificateresponse.cpp \
+    deletejobexecutionrequest.cpp \
+    deletejobexecutionresponse.cpp \
+    deletejobrequest.cpp \
+    deletejobresponse.cpp \
     deleteotaupdaterequest.cpp \
     deleteotaupdateresponse.cpp \
     deletepolicyrequest.cpp \

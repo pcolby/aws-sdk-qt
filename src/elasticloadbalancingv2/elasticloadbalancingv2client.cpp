@@ -365,9 +365,9 @@ CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(co
  *
  * Balancer>
  *
- * Rules are evaluated in priority order, from the lowest value to the highest value. When the condition for a rule is met,
- * the specified action is taken. If no conditions are met, the action for the default rule is taken. For more information,
- * see <a
+ * Rules are evaluated in priority order, from the lowest value to the highest value. When the conditions for a rule are
+ * met, its actions are performed. If the conditions for no rules are met, the actions for the default rule are performed.
+ * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules">Listener
  * Rules</a> in the <i>Application Load Balancers
  *
@@ -560,6 +560,14 @@ DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes the attributes for the specified Application Load Balancer or Network Load
+ *
+ * Balancer>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes">Load
+ * Balancer Attributes</a> in the <i>Application Load Balancers Guide</i> or <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes">Load
+ * Balancer Attributes</a> in the <i>Network Load Balancers
  */
 DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request)
 {
@@ -637,6 +645,14 @@ DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const Describe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes the attributes for the specified target
+ *
+ * group>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes">Target
+ * Group Attributes</a> in the <i>Application Load Balancers Guide</i> or <a
+ * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#target-group-attributes">Target
+ * Group Attributes</a> in the <i>Network Load Balancers
  */
 DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTargetGroupAttributes(const DescribeTargetGroupAttributesRequest &request)
 {
@@ -727,7 +743,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::modifyLoadB
  *
  * values>
  *
- * To modify the default action, use
+ * To modify the actions for the default rule, use
  */
 ModifyRuleResponse * ElasticLoadBalancingv2Client::modifyRule(const ModifyRuleRequest &request)
 {

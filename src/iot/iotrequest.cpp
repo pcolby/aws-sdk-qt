@@ -44,6 +44,7 @@ namespace IoT {
  * \value AttachThingPrincipalAction IoT AttachThingPrincipal action.
  * \value CancelCertificateTransferAction IoT CancelCertificateTransfer action.
  * \value CancelJobAction IoT CancelJob action.
+ * \value CancelJobExecutionAction IoT CancelJobExecution action.
  * \value ClearDefaultAuthorizerAction IoT ClearDefaultAuthorizer action.
  * \value CreateAuthorizerAction IoT CreateAuthorizer action.
  * \value CreateCertificateFromCsrAction IoT CreateCertificateFromCsr action.
@@ -61,6 +62,8 @@ namespace IoT {
  * \value DeleteAuthorizerAction IoT DeleteAuthorizer action.
  * \value DeleteCACertificateAction IoT DeleteCACertificate action.
  * \value DeleteCertificateAction IoT DeleteCertificate action.
+ * \value DeleteJobAction IoT DeleteJob action.
+ * \value DeleteJobExecutionAction IoT DeleteJobExecution action.
  * \value DeleteOTAUpdateAction IoT DeleteOTAUpdate action.
  * \value DeletePolicyAction IoT DeletePolicy action.
  * \value DeletePolicyVersionAction IoT DeletePolicyVersion action.

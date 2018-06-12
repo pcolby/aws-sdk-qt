@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsPi
+description = AWS PI SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawspi-index.html"
+navigation.landingtitle = "PI"
+navigation.cppclassespage = "PI C++ Classes"

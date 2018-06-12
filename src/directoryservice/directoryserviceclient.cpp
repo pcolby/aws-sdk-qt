@@ -89,6 +89,8 @@
 #include "removeiproutesresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
+#include "resetuserpasswordrequest.h"
+#include "resetuserpasswordresponse.h"
 #include "restorefromsnapshotrequest.h"
 #include "restorefromsnapshotresponse.h"
 #include "startschemaextensionrequest.h"
@@ -736,6 +738,19 @@ RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRo
 RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * ResetUserPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Resets the password for any user in your AWS Managed Microsoft AD or Simple AD
+ */
+ResetUserPasswordResponse * DirectoryServiceClient::resetUserPassword(const ResetUserPasswordRequest &request)
+{
+    return qobject_cast<ResetUserPasswordResponse *>(send(request));
 }
 
 /*!

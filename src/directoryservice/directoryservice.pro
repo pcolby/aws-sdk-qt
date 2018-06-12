@@ -152,6 +152,10 @@ HEADERS += \
     removetagsfromresourcerequest_p.h \
     removetagsfromresourceresponse.h \
     removetagsfromresourceresponse_p.h \
+    resetuserpasswordrequest.h \
+    resetuserpasswordrequest_p.h \
+    resetuserpasswordresponse.h \
+    resetuserpasswordresponse_p.h \
     restorefromsnapshotrequest.h \
     restorefromsnapshotrequest_p.h \
     restorefromsnapshotresponse.h \
@@ -249,6 +253,8 @@ SOURCES += \
     removeiproutesresponse.cpp \
     removetagsfromresourcerequest.cpp \
     removetagsfromresourceresponse.cpp \
+    resetuserpasswordrequest.cpp \
+    resetuserpasswordresponse.cpp \
     restorefromsnapshotrequest.cpp \
     restorefromsnapshotresponse.cpp \
     startschemaextensionrequest.cpp \

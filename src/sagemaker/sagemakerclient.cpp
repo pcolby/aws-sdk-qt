@@ -27,6 +27,8 @@
 #include "createendpointresponse.h"
 #include "createendpointconfigrequest.h"
 #include "createendpointconfigresponse.h"
+#include "createhyperparametertuningjobrequest.h"
+#include "createhyperparametertuningjobresponse.h"
 #include "createmodelrequest.h"
 #include "createmodelresponse.h"
 #include "createnotebookinstancerequest.h"
@@ -53,6 +55,8 @@
 #include "describeendpointresponse.h"
 #include "describeendpointconfigrequest.h"
 #include "describeendpointconfigresponse.h"
+#include "describehyperparametertuningjobrequest.h"
+#include "describehyperparametertuningjobresponse.h"
 #include "describemodelrequest.h"
 #include "describemodelresponse.h"
 #include "describenotebookinstancerequest.h"
@@ -65,6 +69,8 @@
 #include "listendpointconfigsresponse.h"
 #include "listendpointsrequest.h"
 #include "listendpointsresponse.h"
+#include "listhyperparametertuningjobsrequest.h"
+#include "listhyperparametertuningjobsresponse.h"
 #include "listmodelsrequest.h"
 #include "listmodelsresponse.h"
 #include "listnotebookinstancelifecycleconfigsrequest.h"
@@ -75,8 +81,12 @@
 #include "listtagsresponse.h"
 #include "listtrainingjobsrequest.h"
 #include "listtrainingjobsresponse.h"
+#include "listtrainingjobsforhyperparametertuningjobrequest.h"
+#include "listtrainingjobsforhyperparametertuningjobresponse.h"
 #include "startnotebookinstancerequest.h"
 #include "startnotebookinstanceresponse.h"
+#include "stophyperparametertuningjobrequest.h"
+#include "stophyperparametertuningjobresponse.h"
 #include "stopnotebookinstancerequest.h"
 #include "stopnotebookinstanceresponse.h"
 #include "stoptrainingjobrequest.h"
@@ -262,6 +272,19 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateHyperParameterTuningJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a hyperparameter tuning
+ */
+CreateHyperParameterTuningJobResponse * SageMakerClient::createHyperParameterTuningJob(const CreateHyperParameterTuningJobRequest &request)
+{
+    return qobject_cast<CreateHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * CreateModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -397,7 +420,7 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a URL that you can use to connect to the Juypter server from a notebook instance. In the Amazon SageMaker
+ * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker
  * console, when you choose <code>Open</code> next to a notebook instance, Amazon SageMaker opens a new tab showing the
  * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.
  */
@@ -488,7 +511,7 @@ DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an endpoint configuration. The <code>DeleteEndpoingConfig</code> API deletes only the specified configuration.
+ * Deletes an endpoint configuration. The <code>DeleteEndpointConfig</code> API deletes only the specified configuration.
  * It does not delete endpoints created using the configuration.
  */
 DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const DeleteEndpointConfigRequest &request)
@@ -588,6 +611,19 @@ DescribeEndpointConfigResponse * SageMakerClient::describeEndpointConfig(const D
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeHyperParameterTuningJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a description of a hyperparameter tuning
+ */
+DescribeHyperParameterTuningJobResponse * SageMakerClient::describeHyperParameterTuningJob(const DescribeHyperParameterTuningJobRequest &request)
+{
+    return qobject_cast<DescribeHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DescribeModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -670,6 +706,19 @@ ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsReques
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListHyperParameterTuningJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of objects that describe the hyperparameter tuning jobs launched in your
+ */
+ListHyperParameterTuningJobsResponse * SageMakerClient::listHyperParameterTuningJobs(const ListHyperParameterTuningJobsRequest &request)
+{
+    return qobject_cast<ListHyperParameterTuningJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListModelsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -736,6 +785,19 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListTrainingJobsForHyperParameterTuningJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of objects that describe the training jobs that a hyperparameter tuning job
+ */
+ListTrainingJobsForHyperParameterTuningJobResponse * SageMakerClient::listTrainingJobsForHyperParameterTuningJob(const ListTrainingJobsForHyperParameterTuningJobRequest &request)
+{
+    return qobject_cast<ListTrainingJobsForHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * StartNotebookInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -747,6 +809,25 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
 StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const StartNotebookInstanceRequest &request)
 {
     return qobject_cast<StartNotebookInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopHyperParameterTuningJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a running hyperparameter tuning job and all running training jobs that the tuning job
+ *
+ * launched>
+ *
+ * All model artifacts output from the training jobs are stored in Amazon Simple Storage Service (Amazon S3). All data that
+ * the training jobs write toAmazon CloudWatch Logs are still available in CloudWatch. After the tuning job moves to the
+ * <code>Stopped</code> state, it releases all reserved resources for the tuning
+ */
+StopHyperParameterTuningJobResponse * SageMakerClient::stopHyperParameterTuningJob(const StopHyperParameterTuningJobRequest &request)
+{
+    return qobject_cast<StopHyperParameterTuningJobResponse *>(send(request));
 }
 
 /*!

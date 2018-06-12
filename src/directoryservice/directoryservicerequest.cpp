@@ -70,6 +70,7 @@ namespace DirectoryService {
  * \value RegisterEventTopicAction DirectoryService RegisterEventTopic action.
  * \value RemoveIpRoutesAction DirectoryService RemoveIpRoutes action.
  * \value RemoveTagsFromResourceAction DirectoryService RemoveTagsFromResource action.
+ * \value ResetUserPasswordAction DirectoryService ResetUserPassword action.
  * \value RestoreFromSnapshotAction DirectoryService RestoreFromSnapshot action.
  * \value StartSchemaExtensionAction DirectoryService StartSchemaExtension action.
  * \value UpdateConditionalForwarderAction DirectoryService UpdateConditionalForwarder action.
