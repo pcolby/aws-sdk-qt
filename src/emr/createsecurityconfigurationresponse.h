@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSecurityConfigurationResponse : public EmrResponse {
 public:
     CreateSecurityConfigurationResponse(const CreateSecurityConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSecurityConfigurationRequest * request() const override;
+    virtual const CreateSecurityConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateSecurityConfigurationResponse)

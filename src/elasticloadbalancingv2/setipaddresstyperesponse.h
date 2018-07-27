@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetIpAddressTypeResponse : public ElasticLoadBalancingv2Respo
 public:
     SetIpAddressTypeResponse(const SetIpAddressTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetIpAddressTypeRequest * request() const override;
+    virtual const SetIpAddressTypeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetIpAddressTypeResponse)

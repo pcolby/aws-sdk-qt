@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNotificationChannelResponse : public FmsResponse {
 public:
     DeleteNotificationChannelResponse(const DeleteNotificationChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNotificationChannelRequest * request() const override;
+    virtual const DeleteNotificationChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNotificationChannelResponse)

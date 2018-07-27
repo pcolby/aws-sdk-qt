@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetModelTemplateResponse : public APIGatewayResponse {
 public:
     GetModelTemplateResponse(const GetModelTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetModelTemplateRequest * request() const override;
+    virtual const GetModelTemplateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetModelTemplateResponse)

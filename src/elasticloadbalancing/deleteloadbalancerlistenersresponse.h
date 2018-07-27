@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLoadBalancerListenersResponse : public ElasticLoadBalan
 public:
     DeleteLoadBalancerListenersResponse(const DeleteLoadBalancerListenersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLoadBalancerListenersRequest * request() const override;
+    virtual const DeleteLoadBalancerListenersRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLoadBalancerListenersResponse)

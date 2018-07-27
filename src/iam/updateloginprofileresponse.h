@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateLoginProfileResponse : public IamResponse {
 public:
     UpdateLoginProfileResponse(const UpdateLoginProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateLoginProfileRequest * request() const override;
+    virtual const UpdateLoginProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateLoginProfileResponse)

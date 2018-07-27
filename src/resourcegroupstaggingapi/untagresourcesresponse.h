@@ -34,10 +34,10 @@ class QTAWS_EXPORT UntagResourcesResponse : public ResourceGroupsTaggingAPIRespo
 public:
     UntagResourcesResponse(const UntagResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UntagResourcesRequest * request() const override;
+    virtual const UntagResourcesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UntagResourcesResponse)

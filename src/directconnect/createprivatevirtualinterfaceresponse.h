@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePrivateVirtualInterfaceResponse : public DirectConnectR
 public:
     CreatePrivateVirtualInterfaceResponse(const CreatePrivateVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePrivateVirtualInterfaceRequest * request() const override;
+    virtual const CreatePrivateVirtualInterfaceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreatePrivateVirtualInterfaceResponse)

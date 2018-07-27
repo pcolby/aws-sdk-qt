@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminCreateUserResponse : public CognitoIdentityProviderRespo
 public:
     AdminCreateUserResponse(const AdminCreateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminCreateUserRequest * request() const override;
+    virtual const AdminCreateUserRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminCreateUserResponse)

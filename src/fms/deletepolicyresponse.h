@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePolicyResponse : public FmsResponse {
 public:
     DeletePolicyResponse(const DeletePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePolicyRequest * request() const override;
+    virtual const DeletePolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeletePolicyResponse)

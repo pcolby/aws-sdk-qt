@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteMethodResponseResponse : public APIGatewayResponse {
 public:
     DeleteMethodResponseResponse(const DeleteMethodResponseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteMethodResponseRequest * request() const override;
+    virtual const DeleteMethodResponseRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteMethodResponseResponse)

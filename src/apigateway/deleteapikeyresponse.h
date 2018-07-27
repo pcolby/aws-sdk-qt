@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApiKeyResponse : public APIGatewayResponse {
 public:
     DeleteApiKeyResponse(const DeleteApiKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApiKeyRequest * request() const override;
+    virtual const DeleteApiKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApiKeyResponse)

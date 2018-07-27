@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminLinkProviderForUserResponse : public CognitoIdentityProv
 public:
     AdminLinkProviderForUserResponse(const AdminLinkProviderForUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminLinkProviderForUserRequest * request() const override;
+    virtual const AdminLinkProviderForUserRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminLinkProviderForUserResponse)

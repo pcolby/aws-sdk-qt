@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDevEndpointResponse : public GlueResponse {
 public:
     GetDevEndpointResponse(const GetDevEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDevEndpointRequest * request() const override;
+    virtual const GetDevEndpointRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetDevEndpointResponse)

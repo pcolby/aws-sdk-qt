@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartTriggerResponse : public GlueResponse {
 public:
     StartTriggerResponse(const StartTriggerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartTriggerRequest * request() const override;
+    virtual const StartTriggerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartTriggerResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ChangePasswordResponse : public CognitoIdentityProviderRespon
 public:
     ChangePasswordResponse(const ChangePasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ChangePasswordRequest * request() const override;
+    virtual const ChangePasswordRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ChangePasswordResponse)

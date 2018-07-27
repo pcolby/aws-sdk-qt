@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTagsForDeliveryStreamResponse : public FirehoseResponse {
 public:
     ListTagsForDeliveryStreamResponse(const ListTagsForDeliveryStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTagsForDeliveryStreamRequest * request() const override;
+    virtual const ListTagsForDeliveryStreamRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTagsForDeliveryStreamResponse)

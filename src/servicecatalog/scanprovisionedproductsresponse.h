@@ -34,10 +34,10 @@ class QTAWS_EXPORT ScanProvisionedProductsResponse : public ServiceCatalogRespon
 public:
     ScanProvisionedProductsResponse(const ScanProvisionedProductsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ScanProvisionedProductsRequest * request() const override;
+    virtual const ScanProvisionedProductsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ScanProvisionedProductsResponse)

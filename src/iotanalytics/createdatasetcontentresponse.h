@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDatasetContentResponse : public IoTAnalyticsResponse {
 public:
     CreateDatasetContentResponse(const CreateDatasetContentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDatasetContentRequest * request() const override;
+    virtual const CreateDatasetContentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateDatasetContentResponse)

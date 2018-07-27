@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRegexPatternSetsResponse : public WafResponse {
 public:
     ListRegexPatternSetsResponse(const ListRegexPatternSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRegexPatternSetsRequest * request() const override;
+    virtual const ListRegexPatternSetsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListRegexPatternSetsResponse)

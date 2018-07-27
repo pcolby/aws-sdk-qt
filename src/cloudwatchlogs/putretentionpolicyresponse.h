@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRetentionPolicyResponse : public CloudWatchLogsResponse {
 public:
     PutRetentionPolicyResponse(const PutRetentionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRetentionPolicyRequest * request() const override;
+    virtual const PutRetentionPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutRetentionPolicyResponse)

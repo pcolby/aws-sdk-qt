@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetHostReservationPurchasePreviewResponse : public Ec2Respons
 public:
     GetHostReservationPurchasePreviewResponse(const GetHostReservationPurchasePreviewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetHostReservationPurchasePreviewRequest * request() const override;
+    virtual const GetHostReservationPurchasePreviewRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetHostReservationPurchasePreviewResponse)

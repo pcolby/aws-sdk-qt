@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNetworkProfileResponse : public DeviceFarmResponse {
 public:
     DeleteNetworkProfileResponse(const DeleteNetworkProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNetworkProfileRequest * request() const override;
+    virtual const DeleteNetworkProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNetworkProfileResponse)

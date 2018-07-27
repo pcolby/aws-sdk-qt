@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetNamespaceResponse : public ServiceDiscoveryResponse {
 public:
     GetNamespaceResponse(const GetNamespaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetNamespaceRequest * request() const override;
+    virtual const GetNamespaceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetNamespaceResponse)

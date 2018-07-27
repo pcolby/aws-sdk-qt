@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteChangeSetResponse : public CloudFormationResponse {
 public:
     DeleteChangeSetResponse(const DeleteChangeSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteChangeSetRequest * request() const override;
+    virtual const DeleteChangeSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteChangeSetResponse)

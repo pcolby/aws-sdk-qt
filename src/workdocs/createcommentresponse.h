@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCommentResponse : public WorkDocsResponse {
 public:
     CreateCommentResponse(const CreateCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCommentRequest * request() const override;
+    virtual const CreateCommentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateCommentResponse)

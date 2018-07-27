@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDirectoryConfigResponse : public AppStreamResponse {
 public:
     UpdateDirectoryConfigResponse(const UpdateDirectoryConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDirectoryConfigRequest * request() const override;
+    virtual const UpdateDirectoryConfigRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDirectoryConfigResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeUserProfilesResponse : public OpsWorksResponse {
 public:
     DescribeUserProfilesResponse(const DescribeUserProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeUserProfilesRequest * request() const override;
+    virtual const DescribeUserProfilesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeUserProfilesResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SynthesizeSpeechResponse : public PollyResponse {
 public:
     SynthesizeSpeechResponse(const SynthesizeSpeechRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SynthesizeSpeechRequest * request() const override;
+    virtual const SynthesizeSpeechRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SynthesizeSpeechResponse)

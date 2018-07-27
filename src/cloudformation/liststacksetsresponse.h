@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListStackSetsResponse : public CloudFormationResponse {
 public:
     ListStackSetsResponse(const ListStackSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListStackSetsRequest * request() const override;
+    virtual const ListStackSetsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListStackSetsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPublicKeyResponse : public CloudFrontResponse {
 public:
     GetPublicKeyResponse(const GetPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPublicKeyRequest * request() const override;
+    virtual const GetPublicKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetPublicKeyResponse)

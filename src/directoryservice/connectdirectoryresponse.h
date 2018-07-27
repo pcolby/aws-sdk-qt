@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConnectDirectoryResponse : public DirectoryServiceResponse {
 public:
     ConnectDirectoryResponse(const ConnectDirectoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConnectDirectoryRequest * request() const override;
+    virtual const ConnectDirectoryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ConnectDirectoryResponse)

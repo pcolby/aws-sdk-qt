@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateChannelResponse : public MediaLiveResponse {
 public:
     UpdateChannelResponse(const UpdateChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateChannelRequest * request() const override;
+    virtual const UpdateChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateChannelResponse)

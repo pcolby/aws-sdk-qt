@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVolumeStatusResponse : public Ec2Response {
 public:
     DescribeVolumeStatusResponse(const DescribeVolumeStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVolumeStatusRequest * request() const override;
+    virtual const DescribeVolumeStatusRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVolumeStatusResponse)

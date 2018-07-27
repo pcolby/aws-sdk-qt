@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnarchiveFindingsResponse : public GuardDutyResponse {
 public:
     UnarchiveFindingsResponse(const UnarchiveFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnarchiveFindingsRequest * request() const override;
+    virtual const UnarchiveFindingsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UnarchiveFindingsResponse)

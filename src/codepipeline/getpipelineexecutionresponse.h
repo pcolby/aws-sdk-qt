@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPipelineExecutionResponse : public CodePipelineResponse {
 public:
     GetPipelineExecutionResponse(const GetPipelineExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPipelineExecutionRequest * request() const override;
+    virtual const GetPipelineExecutionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetPipelineExecutionResponse)

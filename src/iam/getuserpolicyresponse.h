@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUserPolicyResponse : public IamResponse {
 public:
     GetUserPolicyResponse(const GetUserPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUserPolicyRequest * request() const override;
+    virtual const GetUserPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetUserPolicyResponse)

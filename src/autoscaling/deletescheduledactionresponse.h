@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteScheduledActionResponse : public AutoScalingResponse {
 public:
     DeleteScheduledActionResponse(const DeleteScheduledActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteScheduledActionRequest * request() const override;
+    virtual const DeleteScheduledActionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteScheduledActionResponse)

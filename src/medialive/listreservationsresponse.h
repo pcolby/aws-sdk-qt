@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListReservationsResponse : public MediaLiveResponse {
 public:
     ListReservationsResponse(const ListReservationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListReservationsRequest * request() const override;
+    virtual const ListReservationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListReservationsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAddressBookResponse : public AlexaForBusinessResponse {
 public:
     UpdateAddressBookResponse(const UpdateAddressBookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAddressBookRequest * request() const override;
+    virtual const UpdateAddressBookRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAddressBookResponse)

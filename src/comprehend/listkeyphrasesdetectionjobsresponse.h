@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListKeyPhrasesDetectionJobsResponse : public ComprehendRespon
 public:
     ListKeyPhrasesDetectionJobsResponse(const ListKeyPhrasesDetectionJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListKeyPhrasesDetectionJobsRequest * request() const override;
+    virtual const ListKeyPhrasesDetectionJobsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListKeyPhrasesDetectionJobsResponse)

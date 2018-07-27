@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSqlInjectionMatchSetsResponse : public WafResponse {
 public:
     ListSqlInjectionMatchSetsResponse(const ListSqlInjectionMatchSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSqlInjectionMatchSetsRequest * request() const override;
+    virtual const ListSqlInjectionMatchSetsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListSqlInjectionMatchSetsResponse)

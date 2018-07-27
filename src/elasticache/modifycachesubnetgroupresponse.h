@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyCacheSubnetGroupResponse : public ElastiCacheResponse {
 public:
     ModifyCacheSubnetGroupResponse(const ModifyCacheSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyCacheSubnetGroupRequest * request() const override;
+    virtual const ModifyCacheSubnetGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ModifyCacheSubnetGroupResponse)

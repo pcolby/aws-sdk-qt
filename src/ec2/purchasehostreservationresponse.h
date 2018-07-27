@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseHostReservationResponse : public Ec2Response {
 public:
     PurchaseHostReservationResponse(const PurchaseHostReservationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseHostReservationRequest * request() const override;
+    virtual const PurchaseHostReservationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseHostReservationResponse)

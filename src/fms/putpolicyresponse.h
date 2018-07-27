@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutPolicyResponse : public FmsResponse {
 public:
     PutPolicyResponse(const PutPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutPolicyRequest * request() const override;
+    virtual const PutPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutPolicyResponse)

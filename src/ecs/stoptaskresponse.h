@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopTaskResponse : public EcsResponse {
 public:
     StopTaskResponse(const StopTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopTaskRequest * request() const override;
+    virtual const StopTaskRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopTaskResponse)

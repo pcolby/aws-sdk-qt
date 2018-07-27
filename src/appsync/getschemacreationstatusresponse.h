@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSchemaCreationStatusResponse : public AppSyncResponse {
 public:
     GetSchemaCreationStatusResponse(const GetSchemaCreationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSchemaCreationStatusRequest * request() const override;
+    virtual const GetSchemaCreationStatusRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetSchemaCreationStatusResponse)

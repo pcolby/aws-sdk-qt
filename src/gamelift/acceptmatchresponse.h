@@ -34,10 +34,10 @@ class QTAWS_EXPORT AcceptMatchResponse : public GameLiftResponse {
 public:
     AcceptMatchResponse(const AcceptMatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AcceptMatchRequest * request() const override;
+    virtual const AcceptMatchRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AcceptMatchResponse)

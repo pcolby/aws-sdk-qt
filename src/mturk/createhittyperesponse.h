@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateHITTypeResponse : public MTurkResponse {
 public:
     CreateHITTypeResponse(const CreateHITTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateHITTypeRequest * request() const override;
+    virtual const CreateHITTypeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateHITTypeResponse)

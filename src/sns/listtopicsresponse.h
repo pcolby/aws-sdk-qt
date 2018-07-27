@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTopicsResponse : public SnsResponse {
 public:
     ListTopicsResponse(const ListTopicsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTopicsRequest * request() const override;
+    virtual const ListTopicsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTopicsResponse)

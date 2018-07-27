@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobDetailsResponse : public CodePipelineResponse {
 public:
     GetJobDetailsResponse(const GetJobDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobDetailsRequest * request() const override;
+    virtual const GetJobDetailsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetJobDetailsResponse)

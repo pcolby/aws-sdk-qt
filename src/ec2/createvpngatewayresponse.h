@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateVpnGatewayResponse : public Ec2Response {
 public:
     CreateVpnGatewayResponse(const CreateVpnGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateVpnGatewayRequest * request() const override;
+    virtual const CreateVpnGatewayRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateVpnGatewayResponse)

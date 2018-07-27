@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeThingTypeResponse : public IoTResponse {
 public:
     DescribeThingTypeResponse(const DescribeThingTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeThingTypeRequest * request() const override;
+    virtual const DescribeThingTypeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeThingTypeResponse)

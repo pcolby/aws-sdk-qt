@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVaultNotificationsResponse : public GlacierResponse {
 public:
     DeleteVaultNotificationsResponse(const DeleteVaultNotificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVaultNotificationsRequest * request() const override;
+    virtual const DeleteVaultNotificationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVaultNotificationsResponse)

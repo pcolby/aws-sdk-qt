@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReplaceNetworkAclAssociationResponse : public Ec2Response {
 public:
     ReplaceNetworkAclAssociationResponse(const ReplaceNetworkAclAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReplaceNetworkAclAssociationRequest * request() const override;
+    virtual const ReplaceNetworkAclAssociationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReplaceNetworkAclAssociationResponse)

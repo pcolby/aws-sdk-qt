@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTypedLinkFacetResponse : public CloudDirectoryResponse 
 public:
     DeleteTypedLinkFacetResponse(const DeleteTypedLinkFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTypedLinkFacetRequest * request() const override;
+    virtual const DeleteTypedLinkFacetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTypedLinkFacetResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPlaybackConfigurationResponse : public MediaTailorResponse
 public:
     GetPlaybackConfigurationResponse(const GetPlaybackConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPlaybackConfigurationRequest * request() const override;
+    virtual const GetPlaybackConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetPlaybackConfigurationResponse)

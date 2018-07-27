@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateQualificationWithWorkerResponse : public MTurkRespon
 public:
     AssociateQualificationWithWorkerResponse(const AssociateQualificationWithWorkerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateQualificationWithWorkerRequest * request() const override;
+    virtual const AssociateQualificationWithWorkerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateQualificationWithWorkerResponse)

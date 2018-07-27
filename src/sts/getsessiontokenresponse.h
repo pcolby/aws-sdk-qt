@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSessionTokenResponse : public StsResponse {
 public:
     GetSessionTokenResponse(const GetSessionTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSessionTokenRequest * request() const override;
+    virtual const GetSessionTokenRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetSessionTokenResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableRuleResponse : public CloudWatchEventsResponse {
 public:
     DisableRuleResponse(const DisableRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableRuleRequest * request() const override;
+    virtual const DisableRuleRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DisableRuleResponse)

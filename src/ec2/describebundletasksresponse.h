@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeBundleTasksResponse : public Ec2Response {
 public:
     DescribeBundleTasksResponse(const DescribeBundleTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeBundleTasksRequest * request() const override;
+    virtual const DescribeBundleTasksRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeBundleTasksResponse)

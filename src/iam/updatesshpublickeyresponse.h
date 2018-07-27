@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateSSHPublicKeyResponse : public IamResponse {
 public:
     UpdateSSHPublicKeyResponse(const UpdateSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateSSHPublicKeyRequest * request() const override;
+    virtual const UpdateSSHPublicKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateSSHPublicKeyResponse)

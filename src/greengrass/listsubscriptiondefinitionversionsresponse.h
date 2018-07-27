@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSubscriptionDefinitionVersionsResponse : public Greengras
 public:
     ListSubscriptionDefinitionVersionsResponse(const ListSubscriptionDefinitionVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSubscriptionDefinitionVersionsRequest * request() const override;
+    virtual const ListSubscriptionDefinitionVersionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListSubscriptionDefinitionVersionsResponse)

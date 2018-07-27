@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddTagsResponse : public ElasticLoadBalancingResponse {
 public:
     AddTagsResponse(const AddTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddTagsRequest * request() const override;
+    virtual const AddTagsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddTagsResponse)

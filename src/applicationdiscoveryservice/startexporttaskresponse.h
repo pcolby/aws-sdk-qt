@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartExportTaskResponse : public ApplicationDiscoveryServiceR
 public:
     StartExportTaskResponse(const StartExportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartExportTaskRequest * request() const override;
+    virtual const StartExportTaskRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartExportTaskResponse)

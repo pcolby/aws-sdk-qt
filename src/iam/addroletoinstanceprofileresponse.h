@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddRoleToInstanceProfileResponse : public IamResponse {
 public:
     AddRoleToInstanceProfileResponse(const AddRoleToInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddRoleToInstanceProfileRequest * request() const override;
+    virtual const AddRoleToInstanceProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddRoleToInstanceProfileResponse)

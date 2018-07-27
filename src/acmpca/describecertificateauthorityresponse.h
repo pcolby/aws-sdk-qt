@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeCertificateAuthorityResponse : public AcmpcaResponse 
 public:
     DescribeCertificateAuthorityResponse(const DescribeCertificateAuthorityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeCertificateAuthorityRequest * request() const override;
+    virtual const DescribeCertificateAuthorityRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeCertificateAuthorityResponse)

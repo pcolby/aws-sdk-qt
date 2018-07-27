@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTemplateResponse : public SesResponse {
 public:
     DeleteTemplateResponse(const DeleteTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTemplateRequest * request() const override;
+    virtual const DeleteTemplateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTemplateResponse)

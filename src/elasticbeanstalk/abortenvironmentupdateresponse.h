@@ -34,10 +34,10 @@ class QTAWS_EXPORT AbortEnvironmentUpdateResponse : public ElasticBeanstalkRespo
 public:
     AbortEnvironmentUpdateResponse(const AbortEnvironmentUpdateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AbortEnvironmentUpdateRequest * request() const override;
+    virtual const AbortEnvironmentUpdateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AbortEnvironmentUpdateResponse)

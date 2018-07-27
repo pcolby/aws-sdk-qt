@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetServiceRoleForAccountResponse : public GreengrassResponse 
 public:
     GetServiceRoleForAccountResponse(const GetServiceRoleForAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetServiceRoleForAccountRequest * request() const override;
+    virtual const GetServiceRoleForAccountRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetServiceRoleForAccountResponse)

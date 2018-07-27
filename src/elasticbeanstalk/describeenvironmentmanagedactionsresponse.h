@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEnvironmentManagedActionsResponse : public ElasticBea
 public:
     DescribeEnvironmentManagedActionsResponse(const DescribeEnvironmentManagedActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEnvironmentManagedActionsRequest * request() const override;
+    virtual const DescribeEnvironmentManagedActionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEnvironmentManagedActionsResponse)

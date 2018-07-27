@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddIpRoutesResponse : public DirectoryServiceResponse {
 public:
     AddIpRoutesResponse(const AddIpRoutesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddIpRoutesRequest * request() const override;
+    virtual const AddIpRoutesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddIpRoutesResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMergeConflictsResponse : public CodeCommitResponse {
 public:
     GetMergeConflictsResponse(const GetMergeConflictsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMergeConflictsRequest * request() const override;
+    virtual const GetMergeConflictsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetMergeConflictsResponse)

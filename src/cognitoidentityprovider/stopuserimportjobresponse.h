@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopUserImportJobResponse : public CognitoIdentityProviderRes
 public:
     StopUserImportJobResponse(const StopUserImportJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopUserImportJobRequest * request() const override;
+    virtual const StopUserImportJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopUserImportJobResponse)

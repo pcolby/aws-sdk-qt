@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAccessKeyResponse : public IamResponse {
 public:
     DeleteAccessKeyResponse(const DeleteAccessKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAccessKeyRequest * request() const override;
+    virtual const DeleteAccessKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAccessKeyResponse)

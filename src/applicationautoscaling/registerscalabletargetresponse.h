@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterScalableTargetResponse : public ApplicationAutoScalin
 public:
     RegisterScalableTargetResponse(const RegisterScalableTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterScalableTargetRequest * request() const override;
+    virtual const RegisterScalableTargetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RegisterScalableTargetResponse)

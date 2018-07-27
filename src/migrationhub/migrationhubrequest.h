@@ -82,7 +82,7 @@ protected:
     void setParameter(const QString &name, const QVariant &value);
     void setParameters(const QVariantMap &parameters);
 
-    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(MigrationHubRequest)

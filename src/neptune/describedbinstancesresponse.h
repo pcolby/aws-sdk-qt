@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBInstancesResponse : public NeptuneResponse {
 public:
     DescribeDBInstancesResponse(const DescribeDBInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBInstancesRequest * request() const override;
+    virtual const DescribeDBInstancesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBInstancesResponse)

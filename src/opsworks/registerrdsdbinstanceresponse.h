@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterRdsDbInstanceResponse : public OpsWorksResponse {
 public:
     RegisterRdsDbInstanceResponse(const RegisterRdsDbInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterRdsDbInstanceRequest * request() const override;
+    virtual const RegisterRdsDbInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RegisterRdsDbInstanceResponse)

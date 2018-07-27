@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdatePrimaryEmailAddressResponse : public WorkMailResponse {
 public:
     UpdatePrimaryEmailAddressResponse(const UpdatePrimaryEmailAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdatePrimaryEmailAddressRequest * request() const override;
+    virtual const UpdatePrimaryEmailAddressRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdatePrimaryEmailAddressResponse)

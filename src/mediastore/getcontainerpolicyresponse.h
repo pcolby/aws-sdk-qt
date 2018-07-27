@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetContainerPolicyResponse : public MediaStoreResponse {
 public:
     GetContainerPolicyResponse(const GetContainerPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetContainerPolicyRequest * request() const override;
+    virtual const GetContainerPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetContainerPolicyResponse)

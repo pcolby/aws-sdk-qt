@@ -34,10 +34,10 @@ class QTAWS_EXPORT InvokeDeviceMethodResponse : public IoT1ClickDevicesServiceRe
 public:
     InvokeDeviceMethodResponse(const InvokeDeviceMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InvokeDeviceMethodRequest * request() const override;
+    virtual const InvokeDeviceMethodRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(InvokeDeviceMethodResponse)

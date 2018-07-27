@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDhcpOptionsResponse : public Ec2Response {
 public:
     CreateDhcpOptionsResponse(const CreateDhcpOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDhcpOptionsRequest * request() const override;
+    virtual const CreateDhcpOptionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateDhcpOptionsResponse)

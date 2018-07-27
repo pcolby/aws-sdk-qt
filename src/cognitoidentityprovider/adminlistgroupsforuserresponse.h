@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminListGroupsForUserResponse : public CognitoIdentityProvid
 public:
     AdminListGroupsForUserResponse(const AdminListGroupsForUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminListGroupsForUserRequest * request() const override;
+    virtual const AdminListGroupsForUserRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminListGroupsForUserResponse)

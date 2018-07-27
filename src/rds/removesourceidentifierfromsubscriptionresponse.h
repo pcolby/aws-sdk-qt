@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionResponse : public RdsRe
 public:
     RemoveSourceIdentifierFromSubscriptionResponse(const RemoveSourceIdentifierFromSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveSourceIdentifierFromSubscriptionRequest * request() const override;
+    virtual const RemoveSourceIdentifierFromSubscriptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RemoveSourceIdentifierFromSubscriptionResponse)

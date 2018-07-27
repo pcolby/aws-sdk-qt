@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTypeResponse : public AppSyncResponse {
 public:
     UpdateTypeResponse(const UpdateTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTypeRequest * request() const override;
+    virtual const UpdateTypeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTypeResponse)

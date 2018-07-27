@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLoggingOptionsResponse : public IoTAnalyticsResponse 
 public:
     DescribeLoggingOptionsResponse(const DescribeLoggingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLoggingOptionsRequest * request() const override;
+    virtual const DescribeLoggingOptionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLoggingOptionsResponse)

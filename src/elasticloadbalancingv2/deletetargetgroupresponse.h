@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTargetGroupResponse : public ElasticLoadBalancingv2Resp
 public:
     DeleteTargetGroupResponse(const DeleteTargetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTargetGroupRequest * request() const override;
+    virtual const DeleteTargetGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTargetGroupResponse)

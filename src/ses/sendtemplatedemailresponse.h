@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendTemplatedEmailResponse : public SesResponse {
 public:
     SendTemplatedEmailResponse(const SendTemplatedEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendTemplatedEmailRequest * request() const override;
+    virtual const SendTemplatedEmailRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SendTemplatedEmailResponse)

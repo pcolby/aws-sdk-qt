@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteImagePermissionsResponse : public AppStreamResponse {
 public:
     DeleteImagePermissionsResponse(const DeleteImagePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteImagePermissionsRequest * request() const override;
+    virtual const DeleteImagePermissionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteImagePermissionsResponse)

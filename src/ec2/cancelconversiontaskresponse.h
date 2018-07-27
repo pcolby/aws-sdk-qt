@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelConversionTaskResponse : public Ec2Response {
 public:
     CancelConversionTaskResponse(const CancelConversionTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelConversionTaskRequest * request() const override;
+    virtual const CancelConversionTaskRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CancelConversionTaskResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateKmsKeyResponse : public CloudWatchLogsResponse {
 public:
     DisassociateKmsKeyResponse(const DisassociateKmsKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateKmsKeyRequest * request() const override;
+    virtual const DisassociateKmsKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateKmsKeyResponse)

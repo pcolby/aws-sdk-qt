@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetOperationsResponse : public LightsailResponse {
 public:
     GetOperationsResponse(const GetOperationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetOperationsRequest * request() const override;
+    virtual const GetOperationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetOperationsResponse)

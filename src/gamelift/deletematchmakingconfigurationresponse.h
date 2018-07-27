@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteMatchmakingConfigurationResponse : public GameLiftRespo
 public:
     DeleteMatchmakingConfigurationResponse(const DeleteMatchmakingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteMatchmakingConfigurationRequest * request() const override;
+    virtual const DeleteMatchmakingConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteMatchmakingConfigurationResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetIdentityNotificationTopicResponse : public SesResponse {
 public:
     SetIdentityNotificationTopicResponse(const SetIdentityNotificationTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetIdentityNotificationTopicRequest * request() const override;
+    virtual const SetIdentityNotificationTopicRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetIdentityNotificationTopicResponse)

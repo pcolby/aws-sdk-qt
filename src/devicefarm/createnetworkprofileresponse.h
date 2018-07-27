@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNetworkProfileResponse : public DeviceFarmResponse {
 public:
     CreateNetworkProfileResponse(const CreateNetworkProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNetworkProfileRequest * request() const override;
+    virtual const CreateNetworkProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateNetworkProfileResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RetireGrantResponse : public KmsResponse {
 public:
     RetireGrantResponse(const RetireGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RetireGrantRequest * request() const override;
+    virtual const RetireGrantRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RetireGrantResponse)

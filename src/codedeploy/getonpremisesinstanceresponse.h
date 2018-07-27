@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetOnPremisesInstanceResponse : public CodeDeployResponse {
 public:
     GetOnPremisesInstanceResponse(const GetOnPremisesInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetOnPremisesInstanceRequest * request() const override;
+    virtual const GetOnPremisesInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetOnPremisesInstanceResponse)

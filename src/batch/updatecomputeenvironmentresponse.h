@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateComputeEnvironmentResponse : public BatchResponse {
 public:
     UpdateComputeEnvironmentResponse(const UpdateComputeEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateComputeEnvironmentRequest * request() const override;
+    virtual const UpdateComputeEnvironmentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateComputeEnvironmentResponse)

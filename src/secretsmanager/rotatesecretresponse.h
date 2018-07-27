@@ -34,10 +34,10 @@ class QTAWS_EXPORT RotateSecretResponse : public SecretsManagerResponse {
 public:
     RotateSecretResponse(const RotateSecretRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RotateSecretRequest * request() const override;
+    virtual const RotateSecretRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RotateSecretResponse)

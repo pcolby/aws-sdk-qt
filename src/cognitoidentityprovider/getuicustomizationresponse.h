@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUICustomizationResponse : public CognitoIdentityProviderRe
 public:
     GetUICustomizationResponse(const GetUICustomizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUICustomizationRequest * request() const override;
+    virtual const GetUICustomizationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetUICustomizationResponse)

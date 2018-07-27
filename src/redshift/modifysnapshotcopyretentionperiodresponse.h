@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodResponse : public RedshiftRe
 public:
     ModifySnapshotCopyRetentionPeriodResponse(const ModifySnapshotCopyRetentionPeriodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifySnapshotCopyRetentionPeriodRequest * request() const override;
+    virtual const ModifySnapshotCopyRetentionPeriodRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ModifySnapshotCopyRetentionPeriodResponse)

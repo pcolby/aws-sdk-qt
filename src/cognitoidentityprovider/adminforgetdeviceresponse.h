@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminForgetDeviceResponse : public CognitoIdentityProviderRes
 public:
     AdminForgetDeviceResponse(const AdminForgetDeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminForgetDeviceRequest * request() const override;
+    virtual const AdminForgetDeviceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminForgetDeviceResponse)

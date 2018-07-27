@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListBucketMetricsConfigurationsResponse : public S3Response {
 public:
     ListBucketMetricsConfigurationsResponse(const ListBucketMetricsConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListBucketMetricsConfigurationsRequest * request() const override;
+    virtual const ListBucketMetricsConfigurationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListBucketMetricsConfigurationsResponse)

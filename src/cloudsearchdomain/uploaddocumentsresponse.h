@@ -34,10 +34,10 @@ class QTAWS_EXPORT UploadDocumentsResponse : public CloudSearchDomainResponse {
 public:
     UploadDocumentsResponse(const UploadDocumentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UploadDocumentsRequest * request() const override;
+    virtual const UploadDocumentsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UploadDocumentsResponse)

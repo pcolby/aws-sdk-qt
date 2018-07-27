@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListModelsResponse : public SageMakerResponse {
 public:
     ListModelsResponse(const ListModelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListModelsRequest * request() const override;
+    virtual const ListModelsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListModelsResponse)

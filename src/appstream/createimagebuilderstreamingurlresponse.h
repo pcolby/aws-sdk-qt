@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateImageBuilderStreamingURLResponse : public AppStreamResp
 public:
     CreateImageBuilderStreamingURLResponse(const CreateImageBuilderStreamingURLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateImageBuilderStreamingURLRequest * request() const override;
+    virtual const CreateImageBuilderStreamingURLRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateImageBuilderStreamingURLResponse)

@@ -40,9 +40,9 @@ public:
                         const QString &secretKey,
                         QObject * const parent = 0);
 
-    virtual QString accessKeyId() const override;
-    virtual QString secretKey() const override;
-    virtual QString token() const override;
+    virtual QString accessKeyId() const Q_DECL_OVERRIDE;
+    virtual QString secretKey() const Q_DECL_OVERRIDE;
+    virtual QString token() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     virtual void setAccessKeyId(const QString &accessKeyId);

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteProvisionedProductPlanResponse : public ServiceCatalogR
 public:
     DeleteProvisionedProductPlanResponse(const DeleteProvisionedProductPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteProvisionedProductPlanRequest * request() const override;
+    virtual const DeleteProvisionedProductPlanRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteProvisionedProductPlanResponse)

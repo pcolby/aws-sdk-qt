@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReleaseAddressResponse : public Ec2Response {
 public:
     ReleaseAddressResponse(const ReleaseAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReleaseAddressRequest * request() const override;
+    virtual const ReleaseAddressRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReleaseAddressResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSampleFindingsResponse : public GuardDutyResponse {
 public:
     CreateSampleFindingsResponse(const CreateSampleFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSampleFindingsRequest * request() const override;
+    virtual const CreateSampleFindingsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateSampleFindingsResponse)

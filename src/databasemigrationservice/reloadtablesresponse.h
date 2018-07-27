@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReloadTablesResponse : public DatabaseMigrationServiceRespons
 public:
     ReloadTablesResponse(const ReloadTablesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReloadTablesRequest * request() const override;
+    virtual const ReloadTablesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReloadTablesResponse)

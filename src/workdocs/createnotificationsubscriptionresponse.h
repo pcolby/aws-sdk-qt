@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNotificationSubscriptionResponse : public WorkDocsRespo
 public:
     CreateNotificationSubscriptionResponse(const CreateNotificationSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNotificationSubscriptionRequest * request() const override;
+    virtual const CreateNotificationSubscriptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateNotificationSubscriptionResponse)

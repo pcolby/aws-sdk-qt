@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutConfigRuleResponse : public ConfigServiceResponse {
 public:
     PutConfigRuleResponse(const PutConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutConfigRuleRequest * request() const override;
+    virtual const PutConfigRuleRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutConfigRuleResponse)

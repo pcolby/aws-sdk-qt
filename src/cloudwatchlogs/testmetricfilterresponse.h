@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestMetricFilterResponse : public CloudWatchLogsResponse {
 public:
     TestMetricFilterResponse(const TestMetricFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestMetricFilterRequest * request() const override;
+    virtual const TestMetricFilterRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(TestMetricFilterResponse)

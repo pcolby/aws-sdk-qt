@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRegexMatchSetResponse : public WafResponse {
 public:
     DeleteRegexMatchSetResponse(const DeleteRegexMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRegexMatchSetRequest * request() const override;
+    virtual const DeleteRegexMatchSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRegexMatchSetResponse)

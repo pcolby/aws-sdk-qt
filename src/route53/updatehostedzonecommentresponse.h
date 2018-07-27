@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateHostedZoneCommentResponse : public Route53Response {
 public:
     UpdateHostedZoneCommentResponse(const UpdateHostedZoneCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateHostedZoneCommentRequest * request() const override;
+    virtual const UpdateHostedZoneCommentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateHostedZoneCommentResponse)

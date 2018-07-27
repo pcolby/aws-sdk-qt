@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateOriginEndpointResponse : public MediaPackageResponse {
 public:
     UpdateOriginEndpointResponse(const UpdateOriginEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateOriginEndpointRequest * request() const override;
+    virtual const UpdateOriginEndpointRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateOriginEndpointResponse)

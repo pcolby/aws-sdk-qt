@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateContainerInstancesStateResponse : public EcsResponse {
 public:
     UpdateContainerInstancesStateResponse(const UpdateContainerInstancesStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateContainerInstancesStateRequest * request() const override;
+    virtual const UpdateContainerInstancesStateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateContainerInstancesStateResponse)

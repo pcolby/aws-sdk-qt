@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDBSnapshotResponse : public RdsResponse {
 public:
     DeleteDBSnapshotResponse(const DeleteDBSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDBSnapshotRequest * request() const override;
+    virtual const DeleteDBSnapshotRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDBSnapshotResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVaultResponse : public GlacierResponse {
 public:
     DescribeVaultResponse(const DescribeVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVaultRequest * request() const override;
+    virtual const DescribeVaultRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVaultResponse)

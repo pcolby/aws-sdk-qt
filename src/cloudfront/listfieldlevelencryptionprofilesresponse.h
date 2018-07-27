@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListFieldLevelEncryptionProfilesResponse : public CloudFrontR
 public:
     ListFieldLevelEncryptionProfilesResponse(const ListFieldLevelEncryptionProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListFieldLevelEncryptionProfilesRequest * request() const override;
+    virtual const ListFieldLevelEncryptionProfilesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListFieldLevelEncryptionProfilesResponse)

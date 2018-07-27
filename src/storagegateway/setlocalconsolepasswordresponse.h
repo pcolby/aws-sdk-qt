@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetLocalConsolePasswordResponse : public StorageGatewayRespon
 public:
     SetLocalConsolePasswordResponse(const SetLocalConsolePasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetLocalConsolePasswordRequest * request() const override;
+    virtual const SetLocalConsolePasswordRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetLocalConsolePasswordResponse)

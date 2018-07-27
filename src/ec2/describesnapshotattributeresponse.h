@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSnapshotAttributeResponse : public Ec2Response {
 public:
     DescribeSnapshotAttributeResponse(const DescribeSnapshotAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSnapshotAttributeRequest * request() const override;
+    virtual const DescribeSnapshotAttributeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSnapshotAttributeResponse)

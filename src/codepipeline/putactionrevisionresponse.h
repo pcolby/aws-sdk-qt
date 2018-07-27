@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutActionRevisionResponse : public CodePipelineResponse {
 public:
     PutActionRevisionResponse(const PutActionRevisionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutActionRevisionRequest * request() const override;
+    virtual const PutActionRevisionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutActionRevisionResponse)

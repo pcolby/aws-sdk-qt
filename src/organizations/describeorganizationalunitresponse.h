@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeOrganizationalUnitResponse : public OrganizationsResp
 public:
     DescribeOrganizationalUnitResponse(const DescribeOrganizationalUnitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeOrganizationalUnitRequest * request() const override;
+    virtual const DescribeOrganizationalUnitRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeOrganizationalUnitResponse)

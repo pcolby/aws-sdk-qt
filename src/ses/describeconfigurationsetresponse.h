@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeConfigurationSetResponse : public SesResponse {
 public:
     DescribeConfigurationSetResponse(const DescribeConfigurationSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeConfigurationSetRequest * request() const override;
+    virtual const DescribeConfigurationSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeConfigurationSetResponse)

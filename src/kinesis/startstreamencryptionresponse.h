@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartStreamEncryptionResponse : public KinesisResponse {
 public:
     StartStreamEncryptionResponse(const StartStreamEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartStreamEncryptionRequest * request() const override;
+    virtual const StartStreamEncryptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartStreamEncryptionResponse)

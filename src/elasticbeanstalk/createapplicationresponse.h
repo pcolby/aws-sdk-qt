@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateApplicationResponse : public ElasticBeanstalkResponse {
 public:
     CreateApplicationResponse(const CreateApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateApplicationRequest * request() const override;
+    virtual const CreateApplicationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateApplicationResponse)

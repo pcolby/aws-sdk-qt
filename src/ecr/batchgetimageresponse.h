@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetImageResponse : public EcrResponse {
 public:
     BatchGetImageResponse(const BatchGetImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetImageRequest * request() const override;
+    virtual const BatchGetImageRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetImageResponse)

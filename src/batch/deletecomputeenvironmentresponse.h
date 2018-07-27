@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteComputeEnvironmentResponse : public BatchResponse {
 public:
     DeleteComputeEnvironmentResponse(const DeleteComputeEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteComputeEnvironmentRequest * request() const override;
+    virtual const DeleteComputeEnvironmentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteComputeEnvironmentResponse)

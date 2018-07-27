@@ -34,10 +34,10 @@ class QTAWS_EXPORT IsVpcPeeredResponse : public LightsailResponse {
 public:
     IsVpcPeeredResponse(const IsVpcPeeredRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const IsVpcPeeredRequest * request() const override;
+    virtual const IsVpcPeeredRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(IsVpcPeeredResponse)

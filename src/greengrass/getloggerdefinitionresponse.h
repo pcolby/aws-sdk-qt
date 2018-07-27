@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLoggerDefinitionResponse : public GreengrassResponse {
 public:
     GetLoggerDefinitionResponse(const GetLoggerDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLoggerDefinitionRequest * request() const override;
+    virtual const GetLoggerDefinitionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetLoggerDefinitionResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnassignPrivateIpAddressesResponse : public Ec2Response {
 public:
     UnassignPrivateIpAddressesResponse(const UnassignPrivateIpAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnassignPrivateIpAddressesRequest * request() const override;
+    virtual const UnassignPrivateIpAddressesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UnassignPrivateIpAddressesResponse)

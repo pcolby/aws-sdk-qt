@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateExpirationForHITResponse : public MTurkResponse {
 public:
     UpdateExpirationForHITResponse(const UpdateExpirationForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateExpirationForHITRequest * request() const override;
+    virtual const UpdateExpirationForHITRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateExpirationForHITResponse)

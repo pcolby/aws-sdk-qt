@@ -34,10 +34,10 @@ class QTAWS_EXPORT RespondActivityTaskCompletedResponse : public SwfResponse {
 public:
     RespondActivityTaskCompletedResponse(const RespondActivityTaskCompletedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RespondActivityTaskCompletedRequest * request() const override;
+    virtual const RespondActivityTaskCompletedRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RespondActivityTaskCompletedResponse)

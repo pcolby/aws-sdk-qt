@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfirmProductInstanceResponse : public Ec2Response {
 public:
     ConfirmProductInstanceResponse(const ConfirmProductInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfirmProductInstanceRequest * request() const override;
+    virtual const ConfirmProductInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmProductInstanceResponse)

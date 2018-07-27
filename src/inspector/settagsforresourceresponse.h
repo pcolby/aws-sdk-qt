@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetTagsForResourceResponse : public InspectorResponse {
 public:
     SetTagsForResourceResponse(const SetTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetTagsForResourceRequest * request() const override;
+    virtual const SetTagsForResourceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetTagsForResourceResponse)

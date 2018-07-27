@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSentimentDetectionJobResponse : public ComprehendResp
 public:
     DescribeSentimentDetectionJobResponse(const DescribeSentimentDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSentimentDetectionJobRequest * request() const override;
+    virtual const DescribeSentimentDetectionJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSentimentDetectionJobResponse)

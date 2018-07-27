@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCloudFrontOriginAccessIdentityResponse : public CloudFr
 public:
     CreateCloudFrontOriginAccessIdentityResponse(const CreateCloudFrontOriginAccessIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCloudFrontOriginAccessIdentityRequest * request() const override;
+    virtual const CreateCloudFrontOriginAccessIdentityRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateCloudFrontOriginAccessIdentityResponse)

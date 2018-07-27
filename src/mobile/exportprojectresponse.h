@@ -34,10 +34,10 @@ class QTAWS_EXPORT ExportProjectResponse : public MobileResponse {
 public:
     ExportProjectResponse(const ExportProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ExportProjectRequest * request() const override;
+    virtual const ExportProjectRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ExportProjectResponse)

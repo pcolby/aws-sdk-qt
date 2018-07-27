@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableKeyRotationResponse : public KmsResponse {
 public:
     DisableKeyRotationResponse(const DisableKeyRotationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableKeyRotationRequest * request() const override;
+    virtual const DisableKeyRotationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DisableKeyRotationResponse)

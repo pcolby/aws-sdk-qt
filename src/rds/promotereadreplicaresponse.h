@@ -34,10 +34,10 @@ class QTAWS_EXPORT PromoteReadReplicaResponse : public RdsResponse {
 public:
     PromoteReadReplicaResponse(const PromoteReadReplicaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PromoteReadReplicaRequest * request() const override;
+    virtual const PromoteReadReplicaRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PromoteReadReplicaResponse)

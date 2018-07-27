@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFacetResponse : public CloudDirectoryResponse {
 public:
     UpdateFacetResponse(const UpdateFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFacetRequest * request() const override;
+    virtual const UpdateFacetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFacetResponse)

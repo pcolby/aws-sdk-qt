@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetGeoLocationResponse : public Route53Response {
 public:
     GetGeoLocationResponse(const GetGeoLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetGeoLocationRequest * request() const override;
+    virtual const GetGeoLocationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetGeoLocationResponse)

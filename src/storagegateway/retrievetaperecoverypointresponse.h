@@ -34,10 +34,10 @@ class QTAWS_EXPORT RetrieveTapeRecoveryPointResponse : public StorageGatewayResp
 public:
     RetrieveTapeRecoveryPointResponse(const RetrieveTapeRecoveryPointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RetrieveTapeRecoveryPointRequest * request() const override;
+    virtual const RetrieveTapeRecoveryPointRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RetrieveTapeRecoveryPointResponse)

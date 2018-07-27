@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableDomainTransferLockResponse : public Route53DomainsRespo
 public:
     EnableDomainTransferLockResponse(const EnableDomainTransferLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableDomainTransferLockRequest * request() const override;
+    virtual const EnableDomainTransferLockRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(EnableDomainTransferLockResponse)

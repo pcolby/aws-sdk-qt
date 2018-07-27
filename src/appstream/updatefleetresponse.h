@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFleetResponse : public AppStreamResponse {
 public:
     UpdateFleetResponse(const UpdateFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFleetRequest * request() const override;
+    virtual const UpdateFleetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFleetResponse)

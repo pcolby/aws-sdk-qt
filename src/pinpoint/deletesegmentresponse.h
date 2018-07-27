@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSegmentResponse : public PinpointResponse {
 public:
     DeleteSegmentResponse(const DeleteSegmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSegmentRequest * request() const override;
+    virtual const DeleteSegmentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSegmentResponse)

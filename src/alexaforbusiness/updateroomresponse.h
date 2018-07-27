@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRoomResponse : public AlexaForBusinessResponse {
 public:
     UpdateRoomResponse(const UpdateRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRoomRequest * request() const override;
+    virtual const UpdateRoomRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRoomResponse)

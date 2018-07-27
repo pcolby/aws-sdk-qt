@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDomainResponse : public SimpleDBResponse {
 public:
     DeleteDomainResponse(const DeleteDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDomainRequest * request() const override;
+    virtual const DeleteDomainRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDomainResponse)

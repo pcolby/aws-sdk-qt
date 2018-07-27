@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNotebookInstanceLifecycleConfigResponse : public Sage
 public:
     DescribeNotebookInstanceLifecycleConfigResponse(const DescribeNotebookInstanceLifecycleConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNotebookInstanceLifecycleConfigRequest * request() const override;
+    virtual const DescribeNotebookInstanceLifecycleConfigRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNotebookInstanceLifecycleConfigResponse)

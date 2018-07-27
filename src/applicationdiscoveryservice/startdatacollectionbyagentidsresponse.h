@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartDataCollectionByAgentIdsResponse : public ApplicationDis
 public:
     StartDataCollectionByAgentIdsResponse(const StartDataCollectionByAgentIdsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartDataCollectionByAgentIdsRequest * request() const override;
+    virtual const StartDataCollectionByAgentIdsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartDataCollectionByAgentIdsResponse)

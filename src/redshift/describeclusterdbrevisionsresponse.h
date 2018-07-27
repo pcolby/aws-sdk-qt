@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeClusterDbRevisionsResponse : public RedshiftResponse 
 public:
     DescribeClusterDbRevisionsResponse(const DescribeClusterDbRevisionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeClusterDbRevisionsRequest * request() const override;
+    virtual const DescribeClusterDbRevisionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeClusterDbRevisionsResponse)

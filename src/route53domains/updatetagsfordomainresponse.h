@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTagsForDomainResponse : public Route53DomainsResponse {
 public:
     UpdateTagsForDomainResponse(const UpdateTagsForDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTagsForDomainRequest * request() const override;
+    virtual const UpdateTagsForDomainRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTagsForDomainResponse)

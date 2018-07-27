@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopEntitiesDetectionJobResponse : public ComprehendResponse 
 public:
     StopEntitiesDetectionJobResponse(const StopEntitiesDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopEntitiesDetectionJobRequest * request() const override;
+    virtual const StopEntitiesDetectionJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopEntitiesDetectionJobResponse)

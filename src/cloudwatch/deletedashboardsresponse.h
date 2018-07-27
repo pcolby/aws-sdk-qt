@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDashboardsResponse : public CloudWatchResponse {
 public:
     DeleteDashboardsResponse(const DeleteDashboardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDashboardsRequest * request() const override;
+    virtual const DeleteDashboardsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDashboardsResponse)

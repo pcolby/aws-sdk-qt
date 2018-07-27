@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEntitiesDetectionJobResponse : public ComprehendRespo
 public:
     DescribeEntitiesDetectionJobResponse(const DescribeEntitiesDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEntitiesDetectionJobRequest * request() const override;
+    virtual const DescribeEntitiesDetectionJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEntitiesDetectionJobResponse)

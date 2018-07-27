@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCustomMetadataResponse : public WorkDocsResponse {
 public:
     DeleteCustomMetadataResponse(const DeleteCustomMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCustomMetadataRequest * request() const override;
+    virtual const DeleteCustomMetadataRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCustomMetadataResponse)

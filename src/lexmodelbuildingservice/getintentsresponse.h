@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetIntentsResponse : public LexModelBuildingServiceResponse {
 public:
     GetIntentsResponse(const GetIntentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetIntentsRequest * request() const override;
+    virtual const GetIntentsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetIntentsResponse)

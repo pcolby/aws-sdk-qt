@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListV2LoggingLevelsResponse : public IoTResponse {
 public:
     ListV2LoggingLevelsResponse(const ListV2LoggingLevelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListV2LoggingLevelsRequest * request() const override;
+    virtual const ListV2LoggingLevelsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListV2LoggingLevelsResponse)

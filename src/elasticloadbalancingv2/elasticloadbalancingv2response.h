@@ -40,7 +40,7 @@ protected:
     /// @endcond
 
 protected slots:
-    virtual void parseFailure(QIODevice &response) override;
+    virtual void parseFailure(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingv2Response)

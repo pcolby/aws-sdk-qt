@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListItemsResponse : public MediaStoreDataResponse {
 public:
     ListItemsResponse(const ListItemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListItemsRequest * request() const override;
+    virtual const ListItemsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListItemsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHealthCheckResponse : public Route53Response {
 public:
     DeleteHealthCheckResponse(const DeleteHealthCheckRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHealthCheckRequest * request() const override;
+    virtual const DeleteHealthCheckRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHealthCheckResponse)

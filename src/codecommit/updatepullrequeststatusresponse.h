@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdatePullRequestStatusResponse : public CodeCommitResponse {
 public:
     UpdatePullRequestStatusResponse(const UpdatePullRequestStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdatePullRequestStatusRequest * request() const override;
+    virtual const UpdatePullRequestStatusRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdatePullRequestStatusResponse)

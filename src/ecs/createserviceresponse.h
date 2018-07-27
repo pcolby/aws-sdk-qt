@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateServiceResponse : public EcsResponse {
 public:
     CreateServiceResponse(const CreateServiceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateServiceRequest * request() const override;
+    virtual const CreateServiceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateServiceResponse)

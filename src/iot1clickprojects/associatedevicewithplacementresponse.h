@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateDeviceWithPlacementResponse : public IoT1ClickProjec
 public:
     AssociateDeviceWithPlacementResponse(const AssociateDeviceWithPlacementRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateDeviceWithPlacementRequest * request() const override;
+    virtual const AssociateDeviceWithPlacementRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateDeviceWithPlacementResponse)

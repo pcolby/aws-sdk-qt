@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateNFSFileShareResponse : public StorageGatewayResponse {
 public:
     UpdateNFSFileShareResponse(const UpdateNFSFileShareRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateNFSFileShareRequest * request() const override;
+    virtual const UpdateNFSFileShareRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateNFSFileShareResponse)

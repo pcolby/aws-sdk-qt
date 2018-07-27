@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAvailableZonesResponse : public CloudHSMResponse {
 public:
     ListAvailableZonesResponse(const ListAvailableZonesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAvailableZonesRequest * request() const override;
+    virtual const ListAvailableZonesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListAvailableZonesResponse)

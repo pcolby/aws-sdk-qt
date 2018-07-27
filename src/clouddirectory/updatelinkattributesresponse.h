@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateLinkAttributesResponse : public CloudDirectoryResponse 
 public:
     UpdateLinkAttributesResponse(const UpdateLinkAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateLinkAttributesRequest * request() const override;
+    virtual const UpdateLinkAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateLinkAttributesResponse)

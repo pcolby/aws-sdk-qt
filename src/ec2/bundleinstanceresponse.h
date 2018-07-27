@@ -34,10 +34,10 @@ class QTAWS_EXPORT BundleInstanceResponse : public Ec2Response {
 public:
     BundleInstanceResponse(const BundleInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BundleInstanceRequest * request() const override;
+    virtual const BundleInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(BundleInstanceResponse)

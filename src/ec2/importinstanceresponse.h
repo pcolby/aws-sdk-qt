@@ -34,10 +34,10 @@ class QTAWS_EXPORT ImportInstanceResponse : public Ec2Response {
 public:
     ImportInstanceResponse(const ImportInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ImportInstanceRequest * request() const override;
+    virtual const ImportInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ImportInstanceResponse)

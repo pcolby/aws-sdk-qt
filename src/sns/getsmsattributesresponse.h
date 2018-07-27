@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSMSAttributesResponse : public SnsResponse {
 public:
     GetSMSAttributesResponse(const GetSMSAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSMSAttributesRequest * request() const override;
+    virtual const GetSMSAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetSMSAttributesResponse)

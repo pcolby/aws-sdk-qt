@@ -34,10 +34,10 @@ class QTAWS_EXPORT IncreaseReplicationFactorResponse : public DaxResponse {
 public:
     IncreaseReplicationFactorResponse(const IncreaseReplicationFactorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const IncreaseReplicationFactorRequest * request() const override;
+    virtual const IncreaseReplicationFactorRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(IncreaseReplicationFactorResponse)

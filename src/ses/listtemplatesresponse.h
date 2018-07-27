@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTemplatesResponse : public SesResponse {
 public:
     ListTemplatesResponse(const ListTemplatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTemplatesRequest * request() const override;
+    virtual const ListTemplatesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTemplatesResponse)

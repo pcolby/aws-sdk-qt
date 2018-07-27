@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAttributesResponse : public SimpleDBResponse {
 public:
     GetAttributesResponse(const GetAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAttributesRequest * request() const override;
+    virtual const GetAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAttributesResponse)

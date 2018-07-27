@@ -23,11 +23,11 @@ public:
 {% endif %}
 
 {% if operation.input.shape %}
-    virtual const {{OperationName}}Request * request() const override;
+    virtual const {{OperationName}}Request * request() const Q_DECL_OVERRIDE;
 {% endif %}
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE({{ClassName}})

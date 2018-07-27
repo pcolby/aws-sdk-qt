@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNetworkInterfaceAttributeResponse : public Ec2Respons
 public:
     DescribeNetworkInterfaceAttributeResponse(const DescribeNetworkInterfaceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNetworkInterfaceAttributeRequest * request() const override;
+    virtual const DescribeNetworkInterfaceAttributeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNetworkInterfaceAttributeResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutTargetsResponse : public CloudWatchEventsResponse {
 public:
     PutTargetsResponse(const PutTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutTargetsRequest * request() const override;
+    virtual const PutTargetsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutTargetsResponse)

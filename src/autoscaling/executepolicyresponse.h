@@ -34,10 +34,10 @@ class QTAWS_EXPORT ExecutePolicyResponse : public AutoScalingResponse {
 public:
     ExecutePolicyResponse(const ExecutePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ExecutePolicyRequest * request() const override;
+    virtual const ExecutePolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ExecutePolicyResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchDetectDominantLanguageResponse : public ComprehendRespon
 public:
     BatchDetectDominantLanguageResponse(const BatchDetectDominantLanguageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchDetectDominantLanguageRequest * request() const override;
+    virtual const BatchDetectDominantLanguageRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(BatchDetectDominantLanguageResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateRouteTableResponse : public Ec2Response {
 public:
     AssociateRouteTableResponse(const AssociateRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateRouteTableRequest * request() const override;
+    virtual const AssociateRouteTableRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateRouteTableResponse)

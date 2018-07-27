@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteParameterGroupResponse : public DaxResponse {
 public:
     DeleteParameterGroupResponse(const DeleteParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteParameterGroupRequest * request() const override;
+    virtual const DeleteParameterGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteParameterGroupResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateMatchmakingConfigurationResponse : public GameLiftRespo
 public:
     UpdateMatchmakingConfigurationResponse(const UpdateMatchmakingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateMatchmakingConfigurationRequest * request() const override;
+    virtual const UpdateMatchmakingConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateMatchmakingConfigurationResponse)

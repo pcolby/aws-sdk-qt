@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBucketTaggingResponse : public S3Response {
 public:
     GetBucketTaggingResponse(const GetBucketTaggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBucketTaggingRequest * request() const override;
+    virtual const GetBucketTaggingRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetBucketTaggingResponse)

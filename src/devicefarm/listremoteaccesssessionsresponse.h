@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRemoteAccessSessionsResponse : public DeviceFarmResponse 
 public:
     ListRemoteAccessSessionsResponse(const ListRemoteAccessSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRemoteAccessSessionsRequest * request() const override;
+    virtual const ListRemoteAccessSessionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListRemoteAccessSessionsResponse)

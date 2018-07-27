@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountLimitResponse : public Route53Response {
 public:
     GetAccountLimitResponse(const GetAccountLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountLimitRequest * request() const override;
+    virtual const GetAccountLimitRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountLimitResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRealtimeEndpointResponse : public MachineLearningRespon
 public:
     DeleteRealtimeEndpointResponse(const DeleteRealtimeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRealtimeEndpointRequest * request() const override;
+    virtual const DeleteRealtimeEndpointRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRealtimeEndpointResponse)

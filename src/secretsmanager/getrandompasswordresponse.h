@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRandomPasswordResponse : public SecretsManagerResponse {
 public:
     GetRandomPasswordResponse(const GetRandomPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRandomPasswordRequest * request() const override;
+    virtual const GetRandomPasswordRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetRandomPasswordResponse)

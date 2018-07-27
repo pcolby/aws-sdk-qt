@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeMatchmakingResponse : public GameLiftResponse {
 public:
     DescribeMatchmakingResponse(const DescribeMatchmakingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeMatchmakingRequest * request() const override;
+    virtual const DescribeMatchmakingRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeMatchmakingResponse)

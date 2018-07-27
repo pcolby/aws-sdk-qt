@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDBSubnetGroupResponse : public NeptuneResponse {
 public:
     DeleteDBSubnetGroupResponse(const DeleteDBSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDBSubnetGroupRequest * request() const override;
+    virtual const DeleteDBSubnetGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDBSubnetGroupResponse)

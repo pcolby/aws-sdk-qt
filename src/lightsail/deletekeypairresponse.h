@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteKeyPairResponse : public LightsailResponse {
 public:
     DeleteKeyPairResponse(const DeleteKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteKeyPairRequest * request() const override;
+    virtual const DeleteKeyPairRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteKeyPairResponse)

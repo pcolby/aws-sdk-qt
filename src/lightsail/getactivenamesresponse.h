@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetActiveNamesResponse : public LightsailResponse {
 public:
     GetActiveNamesResponse(const GetActiveNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetActiveNamesRequest * request() const override;
+    virtual const GetActiveNamesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetActiveNamesResponse)

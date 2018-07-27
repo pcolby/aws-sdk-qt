@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDomainsResponse : public SwfResponse {
 public:
     ListDomainsResponse(const ListDomainsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDomainsRequest * request() const override;
+    virtual const ListDomainsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListDomainsResponse)

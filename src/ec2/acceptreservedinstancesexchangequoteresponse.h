@@ -34,10 +34,10 @@ class QTAWS_EXPORT AcceptReservedInstancesExchangeQuoteResponse : public Ec2Resp
 public:
     AcceptReservedInstancesExchangeQuoteResponse(const AcceptReservedInstancesExchangeQuoteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AcceptReservedInstancesExchangeQuoteRequest * request() const override;
+    virtual const AcceptReservedInstancesExchangeQuoteRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AcceptReservedInstancesExchangeQuoteResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectSyntaxResponse : public ComprehendResponse {
 public:
     DetectSyntaxResponse(const DetectSyntaxRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectSyntaxRequest * request() const override;
+    virtual const DetectSyntaxRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetectSyntaxResponse)

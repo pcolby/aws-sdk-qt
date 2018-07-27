@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAutomationStepExecutionsResponse : public SsmResponse
 public:
     DescribeAutomationStepExecutionsResponse(const DescribeAutomationStepExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAutomationStepExecutionsRequest * request() const override;
+    virtual const DescribeAutomationStepExecutionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAutomationStepExecutionsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableEnhancedMonitoringResponse : public KinesisResponse {
 public:
     DisableEnhancedMonitoringResponse(const DisableEnhancedMonitoringRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableEnhancedMonitoringRequest * request() const override;
+    virtual const DisableEnhancedMonitoringRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DisableEnhancedMonitoringResponse)

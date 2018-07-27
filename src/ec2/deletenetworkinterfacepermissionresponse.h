@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNetworkInterfacePermissionResponse : public Ec2Response
 public:
     DeleteNetworkInterfacePermissionResponse(const DeleteNetworkInterfacePermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNetworkInterfacePermissionRequest * request() const override;
+    virtual const DeleteNetworkInterfacePermissionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNetworkInterfacePermissionResponse)

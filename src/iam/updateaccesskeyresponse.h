@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAccessKeyResponse : public IamResponse {
 public:
     UpdateAccessKeyResponse(const UpdateAccessKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAccessKeyRequest * request() const override;
+    virtual const UpdateAccessKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAccessKeyResponse)

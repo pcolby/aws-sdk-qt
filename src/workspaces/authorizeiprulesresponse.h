@@ -34,10 +34,10 @@ class QTAWS_EXPORT AuthorizeIpRulesResponse : public WorkSpacesResponse {
 public:
     AuthorizeIpRulesResponse(const AuthorizeIpRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AuthorizeIpRulesRequest * request() const override;
+    virtual const AuthorizeIpRulesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AuthorizeIpRulesResponse)

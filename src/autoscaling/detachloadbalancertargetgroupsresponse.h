@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachLoadBalancerTargetGroupsResponse : public AutoScalingRe
 public:
     DetachLoadBalancerTargetGroupsResponse(const DetachLoadBalancerTargetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachLoadBalancerTargetGroupsRequest * request() const override;
+    virtual const DetachLoadBalancerTargetGroupsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetachLoadBalancerTargetGroupsResponse)

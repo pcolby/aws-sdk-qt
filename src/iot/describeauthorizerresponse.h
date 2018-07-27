@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAuthorizerResponse : public IoTResponse {
 public:
     DescribeAuthorizerResponse(const DescribeAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAuthorizerRequest * request() const override;
+    virtual const DescribeAuthorizerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAuthorizerResponse)

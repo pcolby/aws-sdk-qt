@@ -34,10 +34,10 @@ class QTAWS_EXPORT IndexDocumentsResponse : public CloudSearchResponse {
 public:
     IndexDocumentsResponse(const IndexDocumentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const IndexDocumentsRequest * request() const override;
+    virtual const IndexDocumentsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(IndexDocumentsResponse)

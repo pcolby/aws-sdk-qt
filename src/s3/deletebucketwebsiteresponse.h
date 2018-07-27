@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBucketWebsiteResponse : public S3Response {
 public:
     DeleteBucketWebsiteResponse(const DeleteBucketWebsiteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBucketWebsiteRequest * request() const override;
+    virtual const DeleteBucketWebsiteRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBucketWebsiteResponse)

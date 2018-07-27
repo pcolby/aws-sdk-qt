@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTagsResponse : public CostExplorerResponse {
 public:
     GetTagsResponse(const GetTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTagsRequest * request() const override;
+    virtual const GetTagsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetTagsResponse)

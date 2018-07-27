@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBClusterBacktracksResponse : public RdsResponse {
 public:
     DescribeDBClusterBacktracksResponse(const DescribeDBClusterBacktracksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBClusterBacktracksRequest * request() const override;
+    virtual const DescribeDBClusterBacktracksRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBClusterBacktracksResponse)

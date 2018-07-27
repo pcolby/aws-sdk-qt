@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectFacesResponse : public RekognitionResponse {
 public:
     DetectFacesResponse(const DetectFacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectFacesRequest * request() const override;
+    virtual const DetectFacesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetectFacesResponse)

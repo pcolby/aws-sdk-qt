@@ -33,7 +33,7 @@ class QTAWS_EXPORT AwsSignatureV1 : public AwsSignatureV0 {
 public:
     AwsSignatureV1();
 
-    virtual int version() const override;
+    virtual int version() const Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AwsSignatureV1)

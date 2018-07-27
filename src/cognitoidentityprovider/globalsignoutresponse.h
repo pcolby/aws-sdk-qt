@@ -34,10 +34,10 @@ class QTAWS_EXPORT GlobalSignOutResponse : public CognitoIdentityProviderRespons
 public:
     GlobalSignOutResponse(const GlobalSignOutRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GlobalSignOutRequest * request() const override;
+    virtual const GlobalSignOutRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GlobalSignOutResponse)

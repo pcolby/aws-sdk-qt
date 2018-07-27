@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateContactWithAddressBookResponse : public AlexaForBusi
 public:
     AssociateContactWithAddressBookResponse(const AssociateContactWithAddressBookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateContactWithAddressBookRequest * request() const override;
+    virtual const AssociateContactWithAddressBookRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateContactWithAddressBookResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RotateChannelCredentialsResponse : public MediaPackageRespons
 public:
     RotateChannelCredentialsResponse(const RotateChannelCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RotateChannelCredentialsRequest * request() const override;
+    virtual const RotateChannelCredentialsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RotateChannelCredentialsResponse)

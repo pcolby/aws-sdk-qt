@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDBClusterResponse : public RdsResponse {
 public:
     DeleteDBClusterResponse(const DeleteDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDBClusterRequest * request() const override;
+    virtual const DeleteDBClusterRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDBClusterResponse)

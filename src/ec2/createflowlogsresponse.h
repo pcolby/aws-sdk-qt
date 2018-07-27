@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateFlowLogsResponse : public Ec2Response {
 public:
     CreateFlowLogsResponse(const CreateFlowLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateFlowLogsRequest * request() const override;
+    virtual const CreateFlowLogsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateFlowLogsResponse)

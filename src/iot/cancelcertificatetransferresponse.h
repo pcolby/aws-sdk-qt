@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelCertificateTransferResponse : public IoTResponse {
 public:
     CancelCertificateTransferResponse(const CancelCertificateTransferRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelCertificateTransferRequest * request() const override;
+    virtual const CancelCertificateTransferRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CancelCertificateTransferResponse)

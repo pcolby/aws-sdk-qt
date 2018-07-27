@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateFilterResponse : public GuardDutyResponse {
 public:
     CreateFilterResponse(const CreateFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateFilterRequest * request() const override;
+    virtual const CreateFilterRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateFilterResponse)

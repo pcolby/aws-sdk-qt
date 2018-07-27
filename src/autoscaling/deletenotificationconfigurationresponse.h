@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNotificationConfigurationResponse : public AutoScalingR
 public:
     DeleteNotificationConfigurationResponse(const DeleteNotificationConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNotificationConfigurationRequest * request() const override;
+    virtual const DeleteNotificationConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNotificationConfigurationResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEmergencyContactSettingsResponse : public ShieldRespo
 public:
     DescribeEmergencyContactSettingsResponse(const DescribeEmergencyContactSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEmergencyContactSettingsRequest * request() const override;
+    virtual const DescribeEmergencyContactSettingsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEmergencyContactSettingsResponse)

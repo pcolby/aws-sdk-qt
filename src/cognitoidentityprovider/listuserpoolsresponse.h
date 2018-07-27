@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListUserPoolsResponse : public CognitoIdentityProviderRespons
 public:
     ListUserPoolsResponse(const ListUserPoolsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListUserPoolsRequest * request() const override;
+    virtual const ListUserPoolsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListUserPoolsResponse)

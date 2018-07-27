@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBucketLocationResponse : public S3Response {
 public:
     GetBucketLocationResponse(const GetBucketLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBucketLocationRequest * request() const override;
+    virtual const GetBucketLocationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetBucketLocationResponse)

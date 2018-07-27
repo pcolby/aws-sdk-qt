@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterVolumeResponse : public OpsWorksResponse {
 public:
     DeregisterVolumeResponse(const DeregisterVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterVolumeRequest * request() const override;
+    virtual const DeregisterVolumeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterVolumeResponse)

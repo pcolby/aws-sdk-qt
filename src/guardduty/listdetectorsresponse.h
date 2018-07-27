@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDetectorsResponse : public GuardDutyResponse {
 public:
     ListDetectorsResponse(const ListDetectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDetectorsRequest * request() const override;
+    virtual const ListDetectorsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListDetectorsResponse)

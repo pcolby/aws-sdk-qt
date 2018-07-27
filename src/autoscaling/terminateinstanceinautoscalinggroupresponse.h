@@ -34,10 +34,10 @@ class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupResponse : public AutoScal
 public:
     TerminateInstanceInAutoScalingGroupResponse(const TerminateInstanceInAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TerminateInstanceInAutoScalingGroupRequest * request() const override;
+    virtual const TerminateInstanceInAutoScalingGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(TerminateInstanceInAutoScalingGroupResponse)

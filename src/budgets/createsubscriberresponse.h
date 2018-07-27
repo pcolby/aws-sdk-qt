@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSubscriberResponse : public BudgetsResponse {
 public:
     CreateSubscriberResponse(const CreateSubscriberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSubscriberRequest * request() const override;
+    virtual const CreateSubscriberRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateSubscriberResponse)

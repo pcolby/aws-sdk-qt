@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEndpointConfigResponse : public SageMakerResponse {
 public:
     DescribeEndpointConfigResponse(const DescribeEndpointConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEndpointConfigRequest * request() const override;
+    virtual const DescribeEndpointConfigRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEndpointConfigResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutScheduledUpdateGroupActionResponse : public AutoScalingRes
 public:
     PutScheduledUpdateGroupActionResponse(const PutScheduledUpdateGroupActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutScheduledUpdateGroupActionRequest * request() const override;
+    virtual const PutScheduledUpdateGroupActionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutScheduledUpdateGroupActionResponse)

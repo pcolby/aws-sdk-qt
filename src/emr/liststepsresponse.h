@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListStepsResponse : public EmrResponse {
 public:
     ListStepsResponse(const ListStepsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListStepsRequest * request() const override;
+    virtual const ListStepsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListStepsResponse)

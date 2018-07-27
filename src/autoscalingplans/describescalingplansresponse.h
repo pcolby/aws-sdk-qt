@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScalingPlansResponse : public AutoScalingPlansRespons
 public:
     DescribeScalingPlansResponse(const DescribeScalingPlansRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalingPlansRequest * request() const override;
+    virtual const DescribeScalingPlansRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScalingPlansResponse)

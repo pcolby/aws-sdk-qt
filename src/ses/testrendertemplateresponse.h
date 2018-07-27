@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestRenderTemplateResponse : public SesResponse {
 public:
     TestRenderTemplateResponse(const TestRenderTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestRenderTemplateRequest * request() const override;
+    virtual const TestRenderTemplateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(TestRenderTemplateResponse)

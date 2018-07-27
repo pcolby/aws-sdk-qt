@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLaunchConfigurationResponse : public AutoScalingRespons
 public:
     CreateLaunchConfigurationResponse(const CreateLaunchConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLaunchConfigurationRequest * request() const override;
+    virtual const CreateLaunchConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateLaunchConfigurationResponse)

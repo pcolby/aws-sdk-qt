@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetResourceConfigResponse : public ConfigServiceResponse
 public:
     BatchGetResourceConfigResponse(const BatchGetResourceConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetResourceConfigRequest * request() const override;
+    virtual const BatchGetResourceConfigRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetResourceConfigResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDatastoresResponse : public IoTAnalyticsResponse {
 public:
     ListDatastoresResponse(const ListDatastoresRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDatastoresRequest * request() const override;
+    virtual const ListDatastoresRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListDatastoresResponse)

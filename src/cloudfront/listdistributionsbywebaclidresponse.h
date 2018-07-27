@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDistributionsByWebACLIdResponse : public CloudFrontRespon
 public:
     ListDistributionsByWebACLIdResponse(const ListDistributionsByWebACLIdRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDistributionsByWebACLIdRequest * request() const override;
+    virtual const ListDistributionsByWebACLIdRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListDistributionsByWebACLIdResponse)

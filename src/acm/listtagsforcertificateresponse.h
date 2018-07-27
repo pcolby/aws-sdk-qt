@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTagsForCertificateResponse : public AcmResponse {
 public:
     ListTagsForCertificateResponse(const ListTagsForCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTagsForCertificateRequest * request() const override;
+    virtual const ListTagsForCertificateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTagsForCertificateResponse)

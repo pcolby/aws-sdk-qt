@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAppliedSchemaVersionResponse : public CloudDirectoryRespon
 public:
     GetAppliedSchemaVersionResponse(const GetAppliedSchemaVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAppliedSchemaVersionRequest * request() const override;
+    virtual const GetAppliedSchemaVersionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAppliedSchemaVersionResponse)

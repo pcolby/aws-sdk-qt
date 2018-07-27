@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListResourceDelegatesResponse : public WorkMailResponse {
 public:
     ListResourceDelegatesResponse(const ListResourceDelegatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListResourceDelegatesRequest * request() const override;
+    virtual const ListResourceDelegatesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListResourceDelegatesResponse)

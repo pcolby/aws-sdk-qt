@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBucketInventoryConfigurationResponse : public S3Respons
 public:
     DeleteBucketInventoryConfigurationResponse(const DeleteBucketInventoryConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBucketInventoryConfigurationRequest * request() const override;
+    virtual const DeleteBucketInventoryConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBucketInventoryConfigurationResponse)

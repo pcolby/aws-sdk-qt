@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAccountPasswordPolicyResponse : public IamResponse {
 public:
     UpdateAccountPasswordPolicyResponse(const UpdateAccountPasswordPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAccountPasswordPolicyRequest * request() const override;
+    virtual const UpdateAccountPasswordPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAccountPasswordPolicyResponse)

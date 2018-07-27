@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountResponse : public APIGatewayResponse {
 public:
     GetAccountResponse(const GetAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountRequest * request() const override;
+    virtual const GetAccountRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountResponse)

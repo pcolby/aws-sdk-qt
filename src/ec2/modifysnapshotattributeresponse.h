@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifySnapshotAttributeResponse : public Ec2Response {
 public:
     ModifySnapshotAttributeResponse(const ModifySnapshotAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifySnapshotAttributeRequest * request() const override;
+    virtual const ModifySnapshotAttributeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ModifySnapshotAttributeResponse)

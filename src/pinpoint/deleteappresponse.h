@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAppResponse : public PinpointResponse {
 public:
     DeleteAppResponse(const DeleteAppRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAppRequest * request() const override;
+    virtual const DeleteAppRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAppResponse)

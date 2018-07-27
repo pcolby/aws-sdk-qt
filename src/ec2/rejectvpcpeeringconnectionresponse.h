@@ -34,10 +34,10 @@ class QTAWS_EXPORT RejectVpcPeeringConnectionResponse : public Ec2Response {
 public:
     RejectVpcPeeringConnectionResponse(const RejectVpcPeeringConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RejectVpcPeeringConnectionRequest * request() const override;
+    virtual const RejectVpcPeeringConnectionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RejectVpcPeeringConnectionResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetQueueResponse : public MediaConvertResponse {
 public:
     GetQueueResponse(const GetQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetQueueRequest * request() const override;
+    virtual const GetQueueRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetQueueResponse)

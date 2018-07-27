@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteParametersResponse : public SsmResponse {
 public:
     DeleteParametersResponse(const DeleteParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteParametersRequest * request() const override;
+    virtual const DeleteParametersRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteParametersResponse)

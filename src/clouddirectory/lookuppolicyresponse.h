@@ -34,10 +34,10 @@ class QTAWS_EXPORT LookupPolicyResponse : public CloudDirectoryResponse {
 public:
     LookupPolicyResponse(const LookupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const LookupPolicyRequest * request() const override;
+    virtual const LookupPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(LookupPolicyResponse)

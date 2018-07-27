@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteServiceSpecificCredentialResponse : public IamResponse 
 public:
     DeleteServiceSpecificCredentialResponse(const DeleteServiceSpecificCredentialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteServiceSpecificCredentialRequest * request() const override;
+    virtual const DeleteServiceSpecificCredentialRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteServiceSpecificCredentialResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFileSystemResponse : public EfsResponse {
 public:
     UpdateFileSystemResponse(const UpdateFileSystemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFileSystemRequest * request() const override;
+    virtual const UpdateFileSystemRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFileSystemResponse)

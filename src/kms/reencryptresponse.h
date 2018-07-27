@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReEncryptResponse : public KmsResponse {
 public:
     ReEncryptResponse(const ReEncryptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReEncryptRequest * request() const override;
+    virtual const ReEncryptRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReEncryptResponse)

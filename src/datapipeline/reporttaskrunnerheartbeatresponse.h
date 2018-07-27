@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReportTaskRunnerHeartbeatResponse : public DataPipelineRespon
 public:
     ReportTaskRunnerHeartbeatResponse(const ReportTaskRunnerHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReportTaskRunnerHeartbeatRequest * request() const override;
+    virtual const ReportTaskRunnerHeartbeatRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReportTaskRunnerHeartbeatResponse)

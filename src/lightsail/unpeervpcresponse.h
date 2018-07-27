@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnpeerVpcResponse : public LightsailResponse {
 public:
     UnpeerVpcResponse(const UnpeerVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnpeerVpcRequest * request() const override;
+    virtual const UnpeerVpcRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UnpeerVpcResponse)

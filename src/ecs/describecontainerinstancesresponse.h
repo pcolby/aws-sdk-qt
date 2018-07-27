@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeContainerInstancesResponse : public EcsResponse {
 public:
     DescribeContainerInstancesResponse(const DescribeContainerInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeContainerInstancesRequest * request() const override;
+    virtual const DescribeContainerInstancesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeContainerInstancesResponse)

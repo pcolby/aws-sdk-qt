@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTableResponse : public GlueResponse {
 public:
     GetTableResponse(const GetTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTableRequest * request() const override;
+    virtual const GetTableRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetTableResponse)

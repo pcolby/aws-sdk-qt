@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRoomResponse : public AlexaForBusinessResponse {
 public:
     DeleteRoomResponse(const DeleteRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRoomRequest * request() const override;
+    virtual const DeleteRoomRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRoomResponse)

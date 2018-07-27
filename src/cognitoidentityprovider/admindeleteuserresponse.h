@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminDeleteUserResponse : public CognitoIdentityProviderRespo
 public:
     AdminDeleteUserResponse(const AdminDeleteUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminDeleteUserRequest * request() const override;
+    virtual const AdminDeleteUserRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminDeleteUserResponse)

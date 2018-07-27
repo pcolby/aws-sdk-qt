@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListKeysResponse : public KmsResponse {
 public:
     ListKeysResponse(const ListKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListKeysRequest * request() const override;
+    virtual const ListKeysRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListKeysResponse)

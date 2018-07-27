@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInstancePatchesResponse : public SsmResponse {
 public:
     DescribeInstancePatchesResponse(const DescribeInstancePatchesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInstancePatchesRequest * request() const override;
+    virtual const DescribeInstancePatchesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInstancePatchesResponse)

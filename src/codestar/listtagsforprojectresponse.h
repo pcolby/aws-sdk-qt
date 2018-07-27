@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTagsForProjectResponse : public CodeStarResponse {
 public:
     ListTagsForProjectResponse(const ListTagsForProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTagsForProjectRequest * request() const override;
+    virtual const ListTagsForProjectRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTagsForProjectResponse)

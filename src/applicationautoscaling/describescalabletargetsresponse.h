@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScalableTargetsResponse : public ApplicationAutoScali
 public:
     DescribeScalableTargetsResponse(const DescribeScalableTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalableTargetsRequest * request() const override;
+    virtual const DescribeScalableTargetsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScalableTargetsResponse)

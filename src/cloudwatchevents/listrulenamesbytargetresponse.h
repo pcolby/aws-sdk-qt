@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRuleNamesByTargetResponse : public CloudWatchEventsRespon
 public:
     ListRuleNamesByTargetResponse(const ListRuleNamesByTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRuleNamesByTargetRequest * request() const override;
+    virtual const ListRuleNamesByTargetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListRuleNamesByTargetResponse)

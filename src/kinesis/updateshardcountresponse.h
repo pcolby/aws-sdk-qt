@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateShardCountResponse : public KinesisResponse {
 public:
     UpdateShardCountResponse(const UpdateShardCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateShardCountRequest * request() const override;
+    virtual const UpdateShardCountRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateShardCountResponse)

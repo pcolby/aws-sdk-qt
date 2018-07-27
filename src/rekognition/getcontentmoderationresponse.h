@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetContentModerationResponse : public RekognitionResponse {
 public:
     GetContentModerationResponse(const GetContentModerationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetContentModerationRequest * request() const override;
+    virtual const GetContentModerationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetContentModerationResponse)

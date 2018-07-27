@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutLexiconResponse : public PollyResponse {
 public:
     PutLexiconResponse(const PutLexiconRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutLexiconRequest * request() const override;
+    virtual const PutLexiconRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutLexiconResponse)

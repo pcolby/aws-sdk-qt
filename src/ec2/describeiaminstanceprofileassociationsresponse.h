@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsResponse : public Ec2Re
 public:
     DescribeIamInstanceProfileAssociationsResponse(const DescribeIamInstanceProfileAssociationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeIamInstanceProfileAssociationsRequest * request() const override;
+    virtual const DescribeIamInstanceProfileAssociationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeIamInstanceProfileAssociationsResponse)

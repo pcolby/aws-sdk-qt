@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeExpressionsResponse : public CloudSearchResponse {
 public:
     DescribeExpressionsResponse(const DescribeExpressionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeExpressionsRequest * request() const override;
+    virtual const DescribeExpressionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeExpressionsResponse)

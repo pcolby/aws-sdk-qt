@@ -34,10 +34,10 @@ class QTAWS_EXPORT LabelParameterVersionResponse : public SsmResponse {
 public:
     LabelParameterVersionResponse(const LabelParameterVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const LabelParameterVersionRequest * request() const override;
+    virtual const LabelParameterVersionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(LabelParameterVersionResponse)

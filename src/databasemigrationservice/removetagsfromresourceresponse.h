@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveTagsFromResourceResponse : public DatabaseMigrationServ
 public:
     RemoveTagsFromResourceResponse(const RemoveTagsFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveTagsFromResourceRequest * request() const override;
+    virtual const RemoveTagsFromResourceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RemoveTagsFromResourceResponse)

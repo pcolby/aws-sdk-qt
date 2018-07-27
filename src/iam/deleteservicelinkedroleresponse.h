@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteServiceLinkedRoleResponse : public IamResponse {
 public:
     DeleteServiceLinkedRoleResponse(const DeleteServiceLinkedRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteServiceLinkedRoleRequest * request() const override;
+    virtual const DeleteServiceLinkedRoleRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteServiceLinkedRoleResponse)

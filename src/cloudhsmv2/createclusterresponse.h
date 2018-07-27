@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateClusterResponse : public CloudHSMV2Response {
 public:
     CreateClusterResponse(const CreateClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateClusterRequest * request() const override;
+    virtual const CreateClusterRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateClusterResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeImagePermissionsResponse : public AppStreamResponse {
 public:
     DescribeImagePermissionsResponse(const DescribeImagePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeImagePermissionsRequest * request() const override;
+    virtual const DescribeImagePermissionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeImagePermissionsResponse)

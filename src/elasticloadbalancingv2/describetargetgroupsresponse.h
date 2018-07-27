@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTargetGroupsResponse : public ElasticLoadBalancingv2R
 public:
     DescribeTargetGroupsResponse(const DescribeTargetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTargetGroupsRequest * request() const override;
+    virtual const DescribeTargetGroupsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTargetGroupsResponse)

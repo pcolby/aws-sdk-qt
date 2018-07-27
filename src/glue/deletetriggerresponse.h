@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTriggerResponse : public GlueResponse {
 public:
     DeleteTriggerResponse(const DeleteTriggerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTriggerRequest * request() const override;
+    virtual const DeleteTriggerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTriggerResponse)

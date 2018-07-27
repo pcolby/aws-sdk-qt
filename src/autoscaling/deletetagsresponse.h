@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTagsResponse : public AutoScalingResponse {
 public:
     DeleteTagsResponse(const DeleteTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTagsRequest * request() const override;
+    virtual const DeleteTagsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTagsResponse)

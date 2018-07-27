@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListBuildsForProjectResponse : public CodeBuildResponse {
 public:
     ListBuildsForProjectResponse(const ListBuildsForProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListBuildsForProjectRequest * request() const override;
+    virtual const ListBuildsForProjectRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListBuildsForProjectResponse)

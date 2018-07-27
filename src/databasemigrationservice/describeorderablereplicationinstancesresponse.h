@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeOrderableReplicationInstancesResponse : public Databa
 public:
     DescribeOrderableReplicationInstancesResponse(const DescribeOrderableReplicationInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeOrderableReplicationInstancesRequest * request() const override;
+    virtual const DescribeOrderableReplicationInstancesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeOrderableReplicationInstancesResponse)

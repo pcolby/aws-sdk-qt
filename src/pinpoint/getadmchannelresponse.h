@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAdmChannelResponse : public PinpointResponse {
 public:
     GetAdmChannelResponse(const GetAdmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAdmChannelRequest * request() const override;
+    virtual const GetAdmChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAdmChannelResponse)

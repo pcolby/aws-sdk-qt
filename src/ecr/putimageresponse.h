@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutImageResponse : public EcrResponse {
 public:
     PutImageResponse(const PutImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutImageRequest * request() const override;
+    virtual const PutImageRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutImageResponse)

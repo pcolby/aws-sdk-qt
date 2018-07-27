@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLoginProfileResponse : public IamResponse {
 public:
     CreateLoginProfileResponse(const CreateLoginProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLoginProfileRequest * request() const override;
+    virtual const CreateLoginProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateLoginProfileResponse)

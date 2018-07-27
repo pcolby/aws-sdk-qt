@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRefreshSchemasStatusResponse : public DatabaseMigrati
 public:
     DescribeRefreshSchemasStatusResponse(const DescribeRefreshSchemasStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRefreshSchemasStatusRequest * request() const override;
+    virtual const DescribeRefreshSchemasStatusRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRefreshSchemasStatusResponse)

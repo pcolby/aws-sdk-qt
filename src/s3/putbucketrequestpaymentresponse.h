@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutBucketRequestPaymentResponse : public S3Response {
 public:
     PutBucketRequestPaymentResponse(const PutBucketRequestPaymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutBucketRequestPaymentRequest * request() const override;
+    virtual const PutBucketRequestPaymentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutBucketRequestPaymentResponse)

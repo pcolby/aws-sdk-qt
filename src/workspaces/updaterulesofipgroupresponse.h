@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRulesOfIpGroupResponse : public WorkSpacesResponse {
 public:
     UpdateRulesOfIpGroupResponse(const UpdateRulesOfIpGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRulesOfIpGroupRequest * request() const override;
+    virtual const UpdateRulesOfIpGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRulesOfIpGroupResponse)

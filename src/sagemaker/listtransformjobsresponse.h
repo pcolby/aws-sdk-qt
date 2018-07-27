@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTransformJobsResponse : public SageMakerResponse {
 public:
     ListTransformJobsResponse(const ListTransformJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTransformJobsRequest * request() const override;
+    virtual const ListTransformJobsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListTransformJobsResponse)

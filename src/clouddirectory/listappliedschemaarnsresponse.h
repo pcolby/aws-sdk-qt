@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAppliedSchemaArnsResponse : public CloudDirectoryResponse
 public:
     ListAppliedSchemaArnsResponse(const ListAppliedSchemaArnsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAppliedSchemaArnsRequest * request() const override;
+    virtual const ListAppliedSchemaArnsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListAppliedSchemaArnsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableVpcClassicLinkDnsSupportResponse : public Ec2Response {
 public:
     EnableVpcClassicLinkDnsSupportResponse(const EnableVpcClassicLinkDnsSupportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableVpcClassicLinkDnsSupportRequest * request() const override;
+    virtual const EnableVpcClassicLinkDnsSupportRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(EnableVpcClassicLinkDnsSupportResponse)

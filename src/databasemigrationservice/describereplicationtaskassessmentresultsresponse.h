@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReplicationTaskAssessmentResultsResponse : public Dat
 public:
     DescribeReplicationTaskAssessmentResultsResponse(const DescribeReplicationTaskAssessmentResultsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReplicationTaskAssessmentResultsRequest * request() const override;
+    virtual const DescribeReplicationTaskAssessmentResultsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReplicationTaskAssessmentResultsResponse)

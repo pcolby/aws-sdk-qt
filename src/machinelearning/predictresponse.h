@@ -34,10 +34,10 @@ class QTAWS_EXPORT PredictResponse : public MachineLearningResponse {
 public:
     PredictResponse(const PredictRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PredictRequest * request() const override;
+    virtual const PredictRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PredictResponse)

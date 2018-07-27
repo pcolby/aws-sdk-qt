@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetObjectTorrentResponse : public S3Response {
 public:
     GetObjectTorrentResponse(const GetObjectTorrentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetObjectTorrentRequest * request() const override;
+    virtual const GetObjectTorrentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetObjectTorrentResponse)

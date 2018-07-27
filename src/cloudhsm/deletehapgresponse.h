@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHapgResponse : public CloudHSMResponse {
 public:
     DeleteHapgResponse(const DeleteHapgRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHapgRequest * request() const override;
+    virtual const DeleteHapgRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHapgResponse)

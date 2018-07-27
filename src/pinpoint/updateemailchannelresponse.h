@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEmailChannelResponse : public PinpointResponse {
 public:
     UpdateEmailChannelResponse(const UpdateEmailChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEmailChannelRequest * request() const override;
+    virtual const UpdateEmailChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEmailChannelResponse)

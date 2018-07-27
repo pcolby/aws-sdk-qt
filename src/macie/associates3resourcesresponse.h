@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateS3ResourcesResponse : public MacieResponse {
 public:
     AssociateS3ResourcesResponse(const AssociateS3ResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateS3ResourcesRequest * request() const override;
+    virtual const AssociateS3ResourcesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateS3ResourcesResponse)

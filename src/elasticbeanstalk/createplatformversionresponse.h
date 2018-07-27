@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePlatformVersionResponse : public ElasticBeanstalkRespon
 public:
     CreatePlatformVersionResponse(const CreatePlatformVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePlatformVersionRequest * request() const override;
+    virtual const CreatePlatformVersionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreatePlatformVersionResponse)

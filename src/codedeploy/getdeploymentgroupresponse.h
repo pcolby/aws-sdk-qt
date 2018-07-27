@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDeploymentGroupResponse : public CodeDeployResponse {
 public:
     GetDeploymentGroupResponse(const GetDeploymentGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDeploymentGroupRequest * request() const override;
+    virtual const GetDeploymentGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetDeploymentGroupResponse)

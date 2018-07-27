@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteIPSetResponse : public WafResponse {
 public:
     DeleteIPSetResponse(const DeleteIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteIPSetRequest * request() const override;
+    virtual const DeleteIPSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteIPSetResponse)

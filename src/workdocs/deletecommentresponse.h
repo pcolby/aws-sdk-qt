@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCommentResponse : public WorkDocsResponse {
 public:
     DeleteCommentResponse(const DeleteCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCommentRequest * request() const override;
+    virtual const DeleteCommentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCommentResponse)

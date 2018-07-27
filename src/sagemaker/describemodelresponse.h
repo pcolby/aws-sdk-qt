@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeModelResponse : public SageMakerResponse {
 public:
     DescribeModelResponse(const DescribeModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeModelRequest * request() const override;
+    virtual const DescribeModelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeModelResponse)

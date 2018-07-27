@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRuleGroupResponse : public WAFRegionalResponse {
 public:
     DeleteRuleGroupResponse(const DeleteRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRuleGroupRequest * request() const override;
+    virtual const DeleteRuleGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRuleGroupResponse)

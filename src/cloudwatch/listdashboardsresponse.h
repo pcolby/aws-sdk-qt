@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDashboardsResponse : public CloudWatchResponse {
 public:
     ListDashboardsResponse(const ListDashboardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDashboardsRequest * request() const override;
+    virtual const ListDashboardsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListDashboardsResponse)

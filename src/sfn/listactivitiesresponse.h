@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListActivitiesResponse : public SfnResponse {
 public:
     ListActivitiesResponse(const ListActivitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListActivitiesRequest * request() const override;
+    virtual const ListActivitiesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListActivitiesResponse)

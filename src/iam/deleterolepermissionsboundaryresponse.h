@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRolePermissionsBoundaryResponse : public IamResponse {
 public:
     DeleteRolePermissionsBoundaryResponse(const DeleteRolePermissionsBoundaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRolePermissionsBoundaryRequest * request() const override;
+    virtual const DeleteRolePermissionsBoundaryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRolePermissionsBoundaryResponse)

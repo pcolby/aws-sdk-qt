@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRoleDescriptionResponse : public IamResponse {
 public:
     UpdateRoleDescriptionResponse(const UpdateRoleDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRoleDescriptionRequest * request() const override;
+    virtual const UpdateRoleDescriptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRoleDescriptionResponse)

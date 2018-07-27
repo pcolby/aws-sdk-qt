@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdatePolicyResponse : public OrganizationsResponse {
 public:
     UpdatePolicyResponse(const UpdatePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdatePolicyRequest * request() const override;
+    virtual const UpdatePolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdatePolicyResponse)

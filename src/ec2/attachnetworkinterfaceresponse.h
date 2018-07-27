@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachNetworkInterfaceResponse : public Ec2Response {
 public:
     AttachNetworkInterfaceResponse(const AttachNetworkInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachNetworkInterfaceRequest * request() const override;
+    virtual const AttachNetworkInterfaceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AttachNetworkInterfaceResponse)

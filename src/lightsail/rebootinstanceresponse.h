@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootInstanceResponse : public LightsailResponse {
 public:
     RebootInstanceResponse(const RebootInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootInstanceRequest * request() const override;
+    virtual const RebootInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RebootInstanceResponse)

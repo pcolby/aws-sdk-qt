@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionResponse : public Ec2Response {
 public:
     DeleteSpotDatafeedSubscriptionResponse(const DeleteSpotDatafeedSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSpotDatafeedSubscriptionRequest * request() const override;
+    virtual const DeleteSpotDatafeedSubscriptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSpotDatafeedSubscriptionResponse)

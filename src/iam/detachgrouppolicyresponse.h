@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachGroupPolicyResponse : public IamResponse {
 public:
     DetachGroupPolicyResponse(const DetachGroupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachGroupPolicyRequest * request() const override;
+    virtual const DetachGroupPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetachGroupPolicyResponse)

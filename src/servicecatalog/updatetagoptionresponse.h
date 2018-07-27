@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTagOptionResponse : public ServiceCatalogResponse {
 public:
     UpdateTagOptionResponse(const UpdateTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTagOptionRequest * request() const override;
+    virtual const UpdateTagOptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTagOptionResponse)

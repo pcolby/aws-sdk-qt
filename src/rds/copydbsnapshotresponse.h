@@ -34,10 +34,10 @@ class QTAWS_EXPORT CopyDBSnapshotResponse : public RdsResponse {
 public:
     CopyDBSnapshotResponse(const CopyDBSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CopyDBSnapshotRequest * request() const override;
+    virtual const CopyDBSnapshotRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CopyDBSnapshotResponse)

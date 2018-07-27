@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInventorySchemaResponse : public SsmResponse {
 public:
     GetInventorySchemaResponse(const GetInventorySchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInventorySchemaRequest * request() const override;
+    virtual const GetInventorySchemaRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetInventorySchemaResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLoadBalancerMetricDataResponse : public LightsailResponse 
 public:
     GetLoadBalancerMetricDataResponse(const GetLoadBalancerMetricDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLoadBalancerMetricDataRequest * request() const override;
+    virtual const GetLoadBalancerMetricDataRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetLoadBalancerMetricDataResponse)

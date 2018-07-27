@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetReceiptRulePositionResponse : public SesResponse {
 public:
     SetReceiptRulePositionResponse(const SetReceiptRulePositionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetReceiptRulePositionRequest * request() const override;
+    virtual const SetReceiptRulePositionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetReceiptRulePositionResponse)

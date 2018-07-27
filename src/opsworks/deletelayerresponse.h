@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLayerResponse : public OpsWorksResponse {
 public:
     DeleteLayerResponse(const DeleteLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLayerRequest * request() const override;
+    virtual const DeleteLayerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLayerResponse)

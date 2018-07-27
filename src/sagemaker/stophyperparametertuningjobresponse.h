@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopHyperParameterTuningJobResponse : public SageMakerRespons
 public:
     StopHyperParameterTuningJobResponse(const StopHyperParameterTuningJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopHyperParameterTuningJobRequest * request() const override;
+    virtual const StopHyperParameterTuningJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopHyperParameterTuningJobResponse)

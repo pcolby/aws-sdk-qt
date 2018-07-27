@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateRoleAliasResponse : public IoTResponse {
 public:
     CreateRoleAliasResponse(const CreateRoleAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateRoleAliasRequest * request() const override;
+    virtual const CreateRoleAliasRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateRoleAliasResponse)

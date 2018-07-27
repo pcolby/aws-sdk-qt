@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddApplicationInputResponse : public KinesisAnalyticsResponse
 public:
     AddApplicationInputResponse(const AddApplicationInputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddApplicationInputRequest * request() const override;
+    virtual const AddApplicationInputRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddApplicationInputResponse)

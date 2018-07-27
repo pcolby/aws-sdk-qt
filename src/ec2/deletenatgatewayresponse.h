@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNatGatewayResponse : public Ec2Response {
 public:
     DeleteNatGatewayResponse(const DeleteNatGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNatGatewayRequest * request() const override;
+    virtual const DeleteNatGatewayRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNatGatewayResponse)

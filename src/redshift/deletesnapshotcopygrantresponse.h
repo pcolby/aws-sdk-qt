@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSnapshotCopyGrantResponse : public RedshiftResponse {
 public:
     DeleteSnapshotCopyGrantResponse(const DeleteSnapshotCopyGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSnapshotCopyGrantRequest * request() const override;
+    virtual const DeleteSnapshotCopyGrantRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSnapshotCopyGrantResponse)

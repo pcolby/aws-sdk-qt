@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDataSourceFromS3Response : public MachineLearningRespon
 public:
     CreateDataSourceFromS3Response(const CreateDataSourceFromS3Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDataSourceFromS3Request * request() const override;
+    virtual const CreateDataSourceFromS3Request * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateDataSourceFromS3Response)

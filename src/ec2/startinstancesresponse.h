@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartInstancesResponse : public Ec2Response {
 public:
     StartInstancesResponse(const StartInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartInstancesRequest * request() const override;
+    virtual const StartInstancesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartInstancesResponse)

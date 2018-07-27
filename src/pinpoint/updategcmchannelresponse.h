@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateGcmChannelResponse : public PinpointResponse {
 public:
     UpdateGcmChannelResponse(const UpdateGcmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateGcmChannelRequest * request() const override;
+    virtual const UpdateGcmChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateGcmChannelResponse)

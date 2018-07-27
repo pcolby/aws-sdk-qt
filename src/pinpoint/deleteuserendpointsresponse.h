@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUserEndpointsResponse : public PinpointResponse {
 public:
     DeleteUserEndpointsResponse(const DeleteUserEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUserEndpointsRequest * request() const override;
+    virtual const DeleteUserEndpointsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUserEndpointsResponse)

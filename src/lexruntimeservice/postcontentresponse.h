@@ -34,10 +34,10 @@ class QTAWS_EXPORT PostContentResponse : public LexRuntimeServiceResponse {
 public:
     PostContentResponse(const PostContentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PostContentRequest * request() const override;
+    virtual const PostContentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PostContentResponse)

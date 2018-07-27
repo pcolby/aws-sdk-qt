@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateGraphqlApiResponse : public AppSyncResponse {
 public:
     CreateGraphqlApiResponse(const CreateGraphqlApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateGraphqlApiRequest * request() const override;
+    virtual const CreateGraphqlApiRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateGraphqlApiResponse)

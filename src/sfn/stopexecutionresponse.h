@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopExecutionResponse : public SfnResponse {
 public:
     StopExecutionResponse(const StopExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopExecutionRequest * request() const override;
+    virtual const StopExecutionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopExecutionResponse)

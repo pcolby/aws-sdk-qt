@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterDomainResponse : public SwfResponse {
 public:
     RegisterDomainResponse(const RegisterDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterDomainRequest * request() const override;
+    virtual const RegisterDomainRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RegisterDomainResponse)

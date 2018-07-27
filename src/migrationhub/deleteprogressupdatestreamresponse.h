@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteProgressUpdateStreamResponse : public MigrationHubRespo
 public:
     DeleteProgressUpdateStreamResponse(const DeleteProgressUpdateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteProgressUpdateStreamRequest * request() const override;
+    virtual const DeleteProgressUpdateStreamRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteProgressUpdateStreamResponse)

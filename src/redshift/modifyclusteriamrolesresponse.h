@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyClusterIamRolesResponse : public RedshiftResponse {
 public:
     ModifyClusterIamRolesResponse(const ModifyClusterIamRolesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyClusterIamRolesRequest * request() const override;
+    virtual const ModifyClusterIamRolesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ModifyClusterIamRolesResponse)

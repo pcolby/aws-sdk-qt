@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEventTypesResponse : public HealthResponse {
 public:
     DescribeEventTypesResponse(const DescribeEventTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEventTypesRequest * request() const override;
+    virtual const DescribeEventTypesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEventTypesResponse)

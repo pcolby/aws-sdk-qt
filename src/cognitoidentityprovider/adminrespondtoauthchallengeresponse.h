@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminRespondToAuthChallengeResponse : public CognitoIdentityP
 public:
     AdminRespondToAuthChallengeResponse(const AdminRespondToAuthChallengeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminRespondToAuthChallengeRequest * request() const override;
+    virtual const AdminRespondToAuthChallengeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminRespondToAuthChallengeResponse)

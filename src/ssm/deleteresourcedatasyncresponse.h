@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteResourceDataSyncResponse : public SsmResponse {
 public:
     DeleteResourceDataSyncResponse(const DeleteResourceDataSyncRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteResourceDataSyncRequest * request() const override;
+    virtual const DeleteResourceDataSyncRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteResourceDataSyncResponse)

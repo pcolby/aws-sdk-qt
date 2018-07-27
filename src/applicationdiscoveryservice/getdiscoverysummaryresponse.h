@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDiscoverySummaryResponse : public ApplicationDiscoveryServ
 public:
     GetDiscoverySummaryResponse(const GetDiscoverySummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDiscoverySummaryRequest * request() const override;
+    virtual const GetDiscoverySummaryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetDiscoverySummaryResponse)

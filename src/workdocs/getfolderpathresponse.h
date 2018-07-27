@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetFolderPathResponse : public WorkDocsResponse {
 public:
     GetFolderPathResponse(const GetFolderPathRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetFolderPathRequest * request() const override;
+    virtual const GetFolderPathRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetFolderPathResponse)

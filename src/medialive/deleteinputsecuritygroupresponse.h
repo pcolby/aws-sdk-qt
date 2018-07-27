@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteInputSecurityGroupResponse : public MediaLiveResponse {
 public:
     DeleteInputSecurityGroupResponse(const DeleteInputSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteInputSecurityGroupRequest * request() const override;
+    virtual const DeleteInputSecurityGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteInputSecurityGroupResponse)

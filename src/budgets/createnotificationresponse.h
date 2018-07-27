@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNotificationResponse : public BudgetsResponse {
 public:
     CreateNotificationResponse(const CreateNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNotificationRequest * request() const override;
+    virtual const CreateNotificationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateNotificationResponse)

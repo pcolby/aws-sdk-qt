@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUsagePlanResponse : public APIGatewayResponse {
 public:
     DeleteUsagePlanResponse(const DeleteUsagePlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUsagePlanRequest * request() const override;
+    virtual const DeleteUsagePlanRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUsagePlanResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAssessmentTargetResponse : public InspectorResponse {
 public:
     UpdateAssessmentTargetResponse(const UpdateAssessmentTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAssessmentTargetRequest * request() const override;
+    virtual const UpdateAssessmentTargetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAssessmentTargetResponse)

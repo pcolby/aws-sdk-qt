@@ -37,9 +37,9 @@ public:
 
     virtual void sign(const AwsAbstractCredentials &credentials,
                       const QNetworkAccessManager::Operation operation,
-                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const override;
+                      QNetworkRequest &request, const QByteArray &data = QByteArray()) const Q_DECL_OVERRIDE;
 
-    virtual int version() const override;
+    virtual int version() const Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AwsSignatureV4)

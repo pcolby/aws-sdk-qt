@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBSubnetGroupsResponse : public NeptuneResponse {
 public:
     DescribeDBSubnetGroupsResponse(const DescribeDBSubnetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBSubnetGroupsRequest * request() const override;
+    virtual const DescribeDBSubnetGroupsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBSubnetGroupsResponse)

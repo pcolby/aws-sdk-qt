@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePrefixListsResponse : public Ec2Response {
 public:
     DescribePrefixListsResponse(const DescribePrefixListsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePrefixListsRequest * request() const override;
+    virtual const DescribePrefixListsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribePrefixListsResponse)

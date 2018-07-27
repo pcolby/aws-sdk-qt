@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListS3ResourcesResponse : public MacieResponse {
 public:
     ListS3ResourcesResponse(const ListS3ResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListS3ResourcesRequest * request() const override;
+    virtual const ListS3ResourcesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListS3ResourcesResponse)

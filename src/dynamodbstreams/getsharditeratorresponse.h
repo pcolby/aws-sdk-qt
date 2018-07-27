@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetShardIteratorResponse : public DynamoDBStreamsResponse {
 public:
     GetShardIteratorResponse(const GetShardIteratorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetShardIteratorRequest * request() const override;
+    virtual const GetShardIteratorRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetShardIteratorResponse)

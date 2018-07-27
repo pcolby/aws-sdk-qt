@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTypeResponse : public AppSyncResponse {
 public:
     DeleteTypeResponse(const DeleteTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTypeRequest * request() const override;
+    virtual const DeleteTypeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTypeResponse)

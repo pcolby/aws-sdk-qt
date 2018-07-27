@@ -34,10 +34,10 @@ class QTAWS_EXPORT AllocateHostsResponse : public Ec2Response {
 public:
     AllocateHostsResponse(const AllocateHostsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AllocateHostsRequest * request() const override;
+    virtual const AllocateHostsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AllocateHostsResponse)

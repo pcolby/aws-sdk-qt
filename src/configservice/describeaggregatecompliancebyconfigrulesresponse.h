@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAggregateComplianceByConfigRulesResponse : public Con
 public:
     DescribeAggregateComplianceByConfigRulesResponse(const DescribeAggregateComplianceByConfigRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAggregateComplianceByConfigRulesRequest * request() const override;
+    virtual const DescribeAggregateComplianceByConfigRulesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAggregateComplianceByConfigRulesResponse)

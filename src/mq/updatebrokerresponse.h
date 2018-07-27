@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateBrokerResponse : public MqResponse {
 public:
     UpdateBrokerResponse(const UpdateBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateBrokerRequest * request() const override;
+    virtual const UpdateBrokerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateBrokerResponse)

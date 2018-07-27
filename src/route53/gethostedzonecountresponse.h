@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetHostedZoneCountResponse : public Route53Response {
 public:
     GetHostedZoneCountResponse(const GetHostedZoneCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetHostedZoneCountRequest * request() const override;
+    virtual const GetHostedZoneCountRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetHostedZoneCountResponse)

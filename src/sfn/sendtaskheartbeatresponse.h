@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendTaskHeartbeatResponse : public SfnResponse {
 public:
     SendTaskHeartbeatResponse(const SendTaskHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendTaskHeartbeatRequest * request() const override;
+    virtual const SendTaskHeartbeatRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SendTaskHeartbeatResponse)

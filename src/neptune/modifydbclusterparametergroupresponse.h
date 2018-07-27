@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyDBClusterParameterGroupResponse : public NeptuneRespons
 public:
     ModifyDBClusterParameterGroupResponse(const ModifyDBClusterParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyDBClusterParameterGroupRequest * request() const override;
+    virtual const ModifyDBClusterParameterGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ModifyDBClusterParameterGroupResponse)

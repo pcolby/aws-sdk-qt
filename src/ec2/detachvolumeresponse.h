@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachVolumeResponse : public Ec2Response {
 public:
     DetachVolumeResponse(const DetachVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachVolumeRequest * request() const override;
+    virtual const DetachVolumeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetachVolumeResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectModerationLabelsResponse : public RekognitionResponse {
 public:
     DetectModerationLabelsResponse(const DetectModerationLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectModerationLabelsRequest * request() const override;
+    virtual const DetectModerationLabelsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetectModerationLabelsResponse)

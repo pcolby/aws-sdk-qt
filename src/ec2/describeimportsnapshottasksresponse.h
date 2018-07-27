@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeImportSnapshotTasksResponse : public Ec2Response {
 public:
     DescribeImportSnapshotTasksResponse(const DescribeImportSnapshotTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeImportSnapshotTasksRequest * request() const override;
+    virtual const DescribeImportSnapshotTasksRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeImportSnapshotTasksResponse)

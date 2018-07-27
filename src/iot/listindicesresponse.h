@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListIndicesResponse : public IoTResponse {
 public:
     ListIndicesResponse(const ListIndicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListIndicesRequest * request() const override;
+    virtual const ListIndicesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListIndicesResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFlowLogsResponse : public Ec2Response {
 public:
     DeleteFlowLogsResponse(const DeleteFlowLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFlowLogsRequest * request() const override;
+    virtual const DeleteFlowLogsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFlowLogsResponse)

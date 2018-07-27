@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateIdentityProviderResponse : public CognitoIdentityProvid
 public:
     UpdateIdentityProviderResponse(const UpdateIdentityProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateIdentityProviderRequest * request() const override;
+    virtual const UpdateIdentityProviderRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateIdentityProviderResponse)

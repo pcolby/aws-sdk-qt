@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutUserPermissionsBoundaryResponse : public IamResponse {
 public:
     PutUserPermissionsBoundaryResponse(const PutUserPermissionsBoundaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutUserPermissionsBoundaryRequest * request() const override;
+    virtual const PutUserPermissionsBoundaryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutUserPermissionsBoundaryResponse)

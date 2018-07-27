@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateThingGroupsForThingResponse : public IoTResponse {
 public:
     UpdateThingGroupsForThingResponse(const UpdateThingGroupsForThingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateThingGroupsForThingRequest * request() const override;
+    virtual const UpdateThingGroupsForThingRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateThingGroupsForThingResponse)

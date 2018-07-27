@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApplicationResponse : public ServerlessApplicationRepos
 public:
     DeleteApplicationResponse(const DeleteApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApplicationRequest * request() const override;
+    virtual const DeleteApplicationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationResponse)

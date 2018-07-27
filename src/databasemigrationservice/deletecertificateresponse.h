@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCertificateResponse : public DatabaseMigrationServiceRe
 public:
     DeleteCertificateResponse(const DeleteCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCertificateRequest * request() const override;
+    virtual const DeleteCertificateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCertificateResponse)

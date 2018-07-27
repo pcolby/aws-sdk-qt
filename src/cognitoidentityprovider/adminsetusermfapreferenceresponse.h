@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminSetUserMFAPreferenceResponse : public CognitoIdentityPro
 public:
     AdminSetUserMFAPreferenceResponse(const AdminSetUserMFAPreferenceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminSetUserMFAPreferenceRequest * request() const override;
+    virtual const AdminSetUserMFAPreferenceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AdminSetUserMFAPreferenceResponse)

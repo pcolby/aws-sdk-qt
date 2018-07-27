@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInstancePortStatesResponse : public LightsailResponse {
 public:
     GetInstancePortStatesResponse(const GetInstancePortStatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInstancePortStatesRequest * request() const override;
+    virtual const GetInstancePortStatesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetInstancePortStatesResponse)

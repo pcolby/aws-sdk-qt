@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateIPSetResponse : public WAFRegionalResponse {
 public:
     UpdateIPSetResponse(const UpdateIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateIPSetRequest * request() const override;
+    virtual const UpdateIPSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateIPSetResponse)

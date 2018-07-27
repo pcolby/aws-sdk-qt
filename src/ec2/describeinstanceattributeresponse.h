@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInstanceAttributeResponse : public Ec2Response {
 public:
     DescribeInstanceAttributeResponse(const DescribeInstanceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInstanceAttributeRequest * request() const override;
+    virtual const DescribeInstanceAttributeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInstanceAttributeResponse)

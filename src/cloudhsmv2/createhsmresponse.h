@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateHsmResponse : public CloudHSMV2Response {
 public:
     CreateHsmResponse(const CreateHsmRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateHsmRequest * request() const override;
+    virtual const CreateHsmRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateHsmResponse)

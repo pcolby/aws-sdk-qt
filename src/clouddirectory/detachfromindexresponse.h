@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachFromIndexResponse : public CloudDirectoryResponse {
 public:
     DetachFromIndexResponse(const DetachFromIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachFromIndexRequest * request() const override;
+    virtual const DetachFromIndexRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetachFromIndexResponse)

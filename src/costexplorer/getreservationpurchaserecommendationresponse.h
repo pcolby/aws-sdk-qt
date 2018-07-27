@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetReservationPurchaseRecommendationResponse : public CostExp
 public:
     GetReservationPurchaseRecommendationResponse(const GetReservationPurchaseRecommendationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetReservationPurchaseRecommendationRequest * request() const override;
+    virtual const GetReservationPurchaseRecommendationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetReservationPurchaseRecommendationResponse)

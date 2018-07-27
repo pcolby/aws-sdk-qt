@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeSecurityGroupEgressResponse : public Ec2Response {
 public:
     RevokeSecurityGroupEgressResponse(const RevokeSecurityGroupEgressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeSecurityGroupEgressRequest * request() const override;
+    virtual const RevokeSecurityGroupEgressRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RevokeSecurityGroupEgressResponse)

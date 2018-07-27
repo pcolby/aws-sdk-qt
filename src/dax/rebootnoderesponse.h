@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootNodeResponse : public DaxResponse {
 public:
     RebootNodeResponse(const RebootNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootNodeRequest * request() const override;
+    virtual const RebootNodeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RebootNodeResponse)

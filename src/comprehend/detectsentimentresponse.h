@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectSentimentResponse : public ComprehendResponse {
 public:
     DetectSentimentResponse(const DetectSentimentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectSentimentRequest * request() const override;
+    virtual const DetectSentimentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetectSentimentResponse)

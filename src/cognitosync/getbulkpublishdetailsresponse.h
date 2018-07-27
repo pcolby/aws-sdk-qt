@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBulkPublishDetailsResponse : public CognitoSyncResponse {
 public:
     GetBulkPublishDetailsResponse(const GetBulkPublishDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBulkPublishDetailsRequest * request() const override;
+    virtual const GetBulkPublishDetailsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetBulkPublishDetailsResponse)

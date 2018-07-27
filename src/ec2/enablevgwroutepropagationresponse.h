@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableVgwRoutePropagationResponse : public Ec2Response {
 public:
     EnableVgwRoutePropagationResponse(const EnableVgwRoutePropagationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableVgwRoutePropagationRequest * request() const override;
+    virtual const EnableVgwRoutePropagationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(EnableVgwRoutePropagationResponse)

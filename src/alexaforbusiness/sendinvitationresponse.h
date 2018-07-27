@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendInvitationResponse : public AlexaForBusinessResponse {
 public:
     SendInvitationResponse(const SendInvitationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendInvitationRequest * request() const override;
+    virtual const SendInvitationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SendInvitationResponse)

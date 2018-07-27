@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateGroupQueryResponse : public ResourceGroupsResponse {
 public:
     UpdateGroupQueryResponse(const UpdateGroupQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateGroupQueryRequest * request() const override;
+    virtual const UpdateGroupQueryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateGroupQueryResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchStopJobRunResponse : public GlueResponse {
 public:
     BatchStopJobRunResponse(const BatchStopJobRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchStopJobRunRequest * request() const override;
+    virtual const BatchStopJobRunRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(BatchStopJobRunResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddApplicationCloudWatchLoggingOptionResponse : public Kinesi
 public:
     AddApplicationCloudWatchLoggingOptionResponse(const AddApplicationCloudWatchLoggingOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddApplicationCloudWatchLoggingOptionRequest * request() const override;
+    virtual const AddApplicationCloudWatchLoggingOptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddApplicationCloudWatchLoggingOptionResponse)

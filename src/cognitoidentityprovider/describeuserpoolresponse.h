@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeUserPoolResponse : public CognitoIdentityProviderResp
 public:
     DescribeUserPoolResponse(const DescribeUserPoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeUserPoolRequest * request() const override;
+    virtual const DescribeUserPoolRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeUserPoolResponse)

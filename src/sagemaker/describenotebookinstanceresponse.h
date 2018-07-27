@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNotebookInstanceResponse : public SageMakerResponse {
 public:
     DescribeNotebookInstanceResponse(const DescribeNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNotebookInstanceRequest * request() const override;
+    virtual const DescribeNotebookInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNotebookInstanceResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteProductResponse : public ServiceCatalogResponse {
 public:
     DeleteProductResponse(const DeleteProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteProductRequest * request() const override;
+    virtual const DeleteProductRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteProductResponse)

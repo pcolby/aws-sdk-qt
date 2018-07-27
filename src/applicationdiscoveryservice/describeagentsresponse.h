@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAgentsResponse : public ApplicationDiscoveryServiceRe
 public:
     DescribeAgentsResponse(const DescribeAgentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAgentsRequest * request() const override;
+    virtual const DescribeAgentsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAgentsResponse)

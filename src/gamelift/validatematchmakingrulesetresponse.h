@@ -34,10 +34,10 @@ class QTAWS_EXPORT ValidateMatchmakingRuleSetResponse : public GameLiftResponse 
 public:
     ValidateMatchmakingRuleSetResponse(const ValidateMatchmakingRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ValidateMatchmakingRuleSetRequest * request() const override;
+    virtual const ValidateMatchmakingRuleSetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ValidateMatchmakingRuleSetResponse)

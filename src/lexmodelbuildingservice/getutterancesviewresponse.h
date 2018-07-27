@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUtterancesViewResponse : public LexModelBuildingServiceRes
 public:
     GetUtterancesViewResponse(const GetUtterancesViewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUtterancesViewRequest * request() const override;
+    virtual const GetUtterancesViewRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetUtterancesViewResponse)

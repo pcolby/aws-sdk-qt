@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateAddressResponse : public Ec2Response {
 public:
     AssociateAddressResponse(const AssociateAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateAddressRequest * request() const override;
+    virtual const AssociateAddressRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateAddressResponse)

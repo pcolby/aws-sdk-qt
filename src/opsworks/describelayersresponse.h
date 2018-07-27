@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLayersResponse : public OpsWorksResponse {
 public:
     DescribeLayersResponse(const DescribeLayersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLayersRequest * request() const override;
+    virtual const DescribeLayersRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLayersResponse)

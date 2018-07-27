@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInventoryDeletionsResponse : public SsmResponse {
 public:
     DescribeInventoryDeletionsResponse(const DescribeInventoryDeletionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInventoryDeletionsRequest * request() const override;
+    virtual const DescribeInventoryDeletionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInventoryDeletionsResponse)

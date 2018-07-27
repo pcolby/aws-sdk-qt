@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTypedLinkFacetResponse : public CloudDirectoryResponse 
 public:
     UpdateTypedLinkFacetResponse(const UpdateTypedLinkFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTypedLinkFacetRequest * request() const override;
+    virtual const UpdateTypedLinkFacetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTypedLinkFacetResponse)

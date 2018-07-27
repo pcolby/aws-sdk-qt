@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVpnConnectionRouteResponse : public Ec2Response {
 public:
     DeleteVpnConnectionRouteResponse(const DeleteVpnConnectionRouteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVpnConnectionRouteRequest * request() const override;
+    virtual const DeleteVpnConnectionRouteRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVpnConnectionRouteResponse)

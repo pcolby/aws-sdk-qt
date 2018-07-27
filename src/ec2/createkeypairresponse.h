@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateKeyPairResponse : public Ec2Response {
 public:
     CreateKeyPairResponse(const CreateKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateKeyPairRequest * request() const override;
+    virtual const CreateKeyPairRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateKeyPairResponse)

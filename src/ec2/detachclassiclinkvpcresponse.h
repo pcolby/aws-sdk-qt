@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachClassicLinkVpcResponse : public Ec2Response {
 public:
     DetachClassicLinkVpcResponse(const DetachClassicLinkVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachClassicLinkVpcRequest * request() const override;
+    virtual const DetachClassicLinkVpcRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DetachClassicLinkVpcResponse)

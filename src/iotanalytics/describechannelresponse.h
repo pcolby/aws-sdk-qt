@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeChannelResponse : public IoTAnalyticsResponse {
 public:
     DescribeChannelResponse(const DescribeChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeChannelRequest * request() const override;
+    virtual const DescribeChannelRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeChannelResponse)

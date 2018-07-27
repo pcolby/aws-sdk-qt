@@ -34,10 +34,10 @@ class QTAWS_EXPORT AllocateConnectionOnInterconnectResponse : public DirectConne
 public:
     AllocateConnectionOnInterconnectResponse(const AllocateConnectionOnInterconnectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AllocateConnectionOnInterconnectRequest * request() const override;
+    virtual const AllocateConnectionOnInterconnectRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AllocateConnectionOnInterconnectResponse)

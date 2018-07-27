@@ -34,10 +34,10 @@ class QTAWS_EXPORT RequestEnvironmentInfoResponse : public ElasticBeanstalkRespo
 public:
     RequestEnvironmentInfoResponse(const RequestEnvironmentInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RequestEnvironmentInfoRequest * request() const override;
+    virtual const RequestEnvironmentInfoRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RequestEnvironmentInfoResponse)

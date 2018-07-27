@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRecordsResponse : public CognitoSyncResponse {
 public:
     ListRecordsResponse(const ListRecordsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRecordsRequest * request() const override;
+    virtual const ListRecordsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListRecordsResponse)

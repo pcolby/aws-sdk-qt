@@ -34,10 +34,10 @@ class QTAWS_EXPORT AbortVaultLockResponse : public GlacierResponse {
 public:
     AbortVaultLockResponse(const AbortVaultLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AbortVaultLockRequest * request() const override;
+    virtual const AbortVaultLockRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AbortVaultLockResponse)

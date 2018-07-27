@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTagOptionResponse : public ServiceCatalogResponse {
 public:
     DescribeTagOptionResponse(const DescribeTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTagOptionRequest * request() const override;
+    virtual const DescribeTagOptionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTagOptionResponse)

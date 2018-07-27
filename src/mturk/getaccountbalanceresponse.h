@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountBalanceResponse : public MTurkResponse {
 public:
     GetAccountBalanceResponse(const GetAccountBalanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountBalanceRequest * request() const override;
+    virtual const GetAccountBalanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountBalanceResponse)

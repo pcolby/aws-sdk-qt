@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateSubnetCidrBlockResponse : public Ec2Response {
 public:
     AssociateSubnetCidrBlockResponse(const AssociateSubnetCidrBlockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateSubnetCidrBlockRequest * request() const override;
+    virtual const AssociateSubnetCidrBlockRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateSubnetCidrBlockResponse)

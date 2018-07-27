@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnassignIpv6AddressesResponse : public Ec2Response {
 public:
     UnassignIpv6AddressesResponse(const UnassignIpv6AddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnassignIpv6AddressesRequest * request() const override;
+    virtual const UnassignIpv6AddressesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UnassignIpv6AddressesResponse)

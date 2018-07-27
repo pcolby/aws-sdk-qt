@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDataSourceResponse : public AppSyncResponse {
 public:
     DeleteDataSourceResponse(const DeleteDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDataSourceRequest * request() const override;
+    virtual const DeleteDataSourceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDataSourceResponse)

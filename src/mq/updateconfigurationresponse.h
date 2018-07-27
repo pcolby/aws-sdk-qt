@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConfigurationResponse : public MqResponse {
 public:
     UpdateConfigurationResponse(const UpdateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConfigurationRequest * request() const override;
+    virtual const UpdateConfigurationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationResponse)

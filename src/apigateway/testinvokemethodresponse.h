@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestInvokeMethodResponse : public APIGatewayResponse {
 public:
     TestInvokeMethodResponse(const TestInvokeMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestInvokeMethodRequest * request() const override;
+    virtual const TestInvokeMethodRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(TestInvokeMethodResponse)

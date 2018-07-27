@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeCACertificateResponse : public IoTResponse {
 public:
     DescribeCACertificateResponse(const DescribeCACertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeCACertificateRequest * request() const override;
+    virtual const DescribeCACertificateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeCACertificateResponse)

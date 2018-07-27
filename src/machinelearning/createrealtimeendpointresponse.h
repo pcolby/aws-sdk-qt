@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateRealtimeEndpointResponse : public MachineLearningRespon
 public:
     CreateRealtimeEndpointResponse(const CreateRealtimeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateRealtimeEndpointRequest * request() const override;
+    virtual const CreateRealtimeEndpointRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateRealtimeEndpointResponse)

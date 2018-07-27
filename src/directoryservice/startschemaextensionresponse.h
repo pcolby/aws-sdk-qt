@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartSchemaExtensionResponse : public DirectoryServiceRespons
 public:
     StartSchemaExtensionResponse(const StartSchemaExtensionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartSchemaExtensionRequest * request() const override;
+    virtual const StartSchemaExtensionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartSchemaExtensionResponse)

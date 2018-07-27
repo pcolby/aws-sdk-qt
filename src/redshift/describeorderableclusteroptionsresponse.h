@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeOrderableClusterOptionsResponse : public RedshiftResp
 public:
     DescribeOrderableClusterOptionsResponse(const DescribeOrderableClusterOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeOrderableClusterOptionsRequest * request() const override;
+    virtual const DescribeOrderableClusterOptionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeOrderableClusterOptionsResponse)

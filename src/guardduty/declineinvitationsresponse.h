@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeclineInvitationsResponse : public GuardDutyResponse {
 public:
     DeclineInvitationsResponse(const DeclineInvitationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeclineInvitationsRequest * request() const override;
+    virtual const DeclineInvitationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeclineInvitationsResponse)

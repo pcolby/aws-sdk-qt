@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreServerResponse : public OpsWorksCMResponse {
 public:
     RestoreServerResponse(const RestoreServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreServerRequest * request() const override;
+    virtual const RestoreServerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RestoreServerResponse)

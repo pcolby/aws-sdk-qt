@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateInstanceResponse : public OpsWorksResponse {
 public:
     UpdateInstanceResponse(const UpdateInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateInstanceRequest * request() const override;
+    virtual const UpdateInstanceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateInstanceResponse)

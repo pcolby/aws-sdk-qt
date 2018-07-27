@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListVolumeRecoveryPointsResponse : public StorageGatewayRespo
 public:
     ListVolumeRecoveryPointsResponse(const ListVolumeRecoveryPointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListVolumeRecoveryPointsRequest * request() const override;
+    virtual const ListVolumeRecoveryPointsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListVolumeRecoveryPointsResponse)

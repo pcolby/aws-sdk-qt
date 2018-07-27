@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetTopicAttributesResponse : public SnsResponse {
 public:
     SetTopicAttributesResponse(const SetTopicAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetTopicAttributesRequest * request() const override;
+    virtual const SetTopicAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(SetTopicAttributesResponse)

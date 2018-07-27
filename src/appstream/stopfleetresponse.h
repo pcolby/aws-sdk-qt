@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopFleetResponse : public AppStreamResponse {
 public:
     StopFleetResponse(const StopFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopFleetRequest * request() const override;
+    virtual const StopFleetRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopFleetResponse)

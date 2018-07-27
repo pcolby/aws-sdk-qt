@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateTagOptionWithResourceResponse : public ServiceCatalo
 public:
     AssociateTagOptionWithResourceResponse(const AssociateTagOptionWithResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateTagOptionWithResourceRequest * request() const override;
+    virtual const AssociateTagOptionWithResourceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AssociateTagOptionWithResourceResponse)

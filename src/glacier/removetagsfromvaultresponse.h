@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveTagsFromVaultResponse : public GlacierResponse {
 public:
     RemoveTagsFromVaultResponse(const RemoveTagsFromVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveTagsFromVaultRequest * request() const override;
+    virtual const RemoveTagsFromVaultRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RemoveTagsFromVaultResponse)

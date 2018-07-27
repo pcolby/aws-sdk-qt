@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDominantLanguageDetectionJobResponse : public Compreh
 public:
     DescribeDominantLanguageDetectionJobResponse(const DescribeDominantLanguageDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDominantLanguageDetectionJobRequest * request() const override;
+    virtual const DescribeDominantLanguageDetectionJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDominantLanguageDetectionJobResponse)

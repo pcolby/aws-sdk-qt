@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateRepositoryResponse : public EcrResponse {
 public:
     CreateRepositoryResponse(const CreateRepositoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateRepositoryRequest * request() const override;
+    virtual const CreateRepositoryRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateRepositoryResponse)

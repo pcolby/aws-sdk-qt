@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreDBInstanceToPointInTimeResponse : public RdsResponse {
 public:
     RestoreDBInstanceToPointInTimeResponse(const RestoreDBInstanceToPointInTimeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreDBInstanceToPointInTimeRequest * request() const override;
+    virtual const RestoreDBInstanceToPointInTimeRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RestoreDBInstanceToPointInTimeResponse)

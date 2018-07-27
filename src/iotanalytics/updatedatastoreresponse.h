@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDatastoreResponse : public IoTAnalyticsResponse {
 public:
     UpdateDatastoreResponse(const UpdateDatastoreRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDatastoreRequest * request() const override;
+    virtual const UpdateDatastoreRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDatastoreResponse)

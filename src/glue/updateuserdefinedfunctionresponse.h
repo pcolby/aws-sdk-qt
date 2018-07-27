@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateUserDefinedFunctionResponse : public GlueResponse {
 public:
     UpdateUserDefinedFunctionResponse(const UpdateUserDefinedFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateUserDefinedFunctionRequest * request() const override;
+    virtual const UpdateUserDefinedFunctionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateUserDefinedFunctionResponse)

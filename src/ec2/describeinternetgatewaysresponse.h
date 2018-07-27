@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInternetGatewaysResponse : public Ec2Response {
 public:
     DescribeInternetGatewaysResponse(const DescribeInternetGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInternetGatewaysRequest * request() const override;
+    virtual const DescribeInternetGatewaysRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInternetGatewaysResponse)

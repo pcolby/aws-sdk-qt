@@ -34,10 +34,10 @@ class QTAWS_EXPORT PollForDecisionTaskResponse : public SwfResponse {
 public:
     PollForDecisionTaskResponse(const PollForDecisionTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PollForDecisionTaskRequest * request() const override;
+    virtual const PollForDecisionTaskRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PollForDecisionTaskResponse)

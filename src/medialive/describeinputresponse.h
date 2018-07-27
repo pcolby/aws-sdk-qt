@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInputResponse : public MediaLiveResponse {
 public:
     DescribeInputResponse(const DescribeInputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInputRequest * request() const override;
+    virtual const DescribeInputRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInputResponse)

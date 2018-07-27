@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReplicationGroupsResponse : public ElastiCacheRespons
 public:
     DescribeReplicationGroupsResponse(const DescribeReplicationGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReplicationGroupsRequest * request() const override;
+    virtual const DescribeReplicationGroupsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReplicationGroupsResponse)

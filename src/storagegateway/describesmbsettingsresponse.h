@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSMBSettingsResponse : public StorageGatewayResponse {
 public:
     DescribeSMBSettingsResponse(const DescribeSMBSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSMBSettingsRequest * request() const override;
+    virtual const DescribeSMBSettingsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSMBSettingsResponse)

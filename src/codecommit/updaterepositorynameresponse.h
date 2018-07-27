@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRepositoryNameResponse : public CodeCommitResponse {
 public:
     UpdateRepositoryNameResponse(const UpdateRepositoryNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRepositoryNameRequest * request() const override;
+    virtual const UpdateRepositoryNameRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRepositoryNameResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AllocateStaticIpResponse : public LightsailResponse {
 public:
     AllocateStaticIpResponse(const AllocateStaticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AllocateStaticIpRequest * request() const override;
+    virtual const AllocateStaticIpRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AllocateStaticIpResponse)

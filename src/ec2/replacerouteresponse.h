@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReplaceRouteResponse : public Ec2Response {
 public:
     ReplaceRouteResponse(const ReplaceRouteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReplaceRouteRequest * request() const override;
+    virtual const ReplaceRouteRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ReplaceRouteResponse)

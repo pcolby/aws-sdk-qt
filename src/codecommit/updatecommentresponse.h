@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateCommentResponse : public CodeCommitResponse {
 public:
     UpdateCommentResponse(const UpdateCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateCommentRequest * request() const override;
+    virtual const UpdateCommentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateCommentResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateResourceServerResponse : public CognitoIdentityProvider
 public:
     CreateResourceServerResponse(const CreateResourceServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateResourceServerRequest * request() const override;
+    virtual const CreateResourceServerRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateResourceServerResponse)

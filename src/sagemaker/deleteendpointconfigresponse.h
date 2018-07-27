@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteEndpointConfigResponse : public SageMakerResponse {
 public:
     DeleteEndpointConfigResponse(const DeleteEndpointConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteEndpointConfigRequest * request() const override;
+    virtual const DeleteEndpointConfigRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteEndpointConfigResponse)

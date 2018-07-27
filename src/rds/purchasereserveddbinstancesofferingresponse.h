@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingResponse : public RdsRespo
 public:
     PurchaseReservedDBInstancesOfferingResponse(const PurchaseReservedDBInstancesOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseReservedDBInstancesOfferingRequest * request() const override;
+    virtual const PurchaseReservedDBInstancesOfferingRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseReservedDBInstancesOfferingResponse)

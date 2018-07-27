@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableVolumeIOResponse : public Ec2Response {
 public:
     EnableVolumeIOResponse(const EnableVolumeIORequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableVolumeIORequest * request() const override;
+    virtual const EnableVolumeIORequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(EnableVolumeIOResponse)

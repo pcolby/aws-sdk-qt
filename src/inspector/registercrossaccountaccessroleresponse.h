@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterCrossAccountAccessRoleResponse : public InspectorResp
 public:
     RegisterCrossAccountAccessRoleResponse(const RegisterCrossAccountAccessRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterCrossAccountAccessRoleRequest * request() const override;
+    virtual const RegisterCrossAccountAccessRoleRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(RegisterCrossAccountAccessRoleResponse)

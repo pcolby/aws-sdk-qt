@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVpcEndpointConnectionsResponse : public Ec2Response {
 public:
     DescribeVpcEndpointConnectionsResponse(const DescribeVpcEndpointConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVpcEndpointConnectionsRequest * request() const override;
+    virtual const DescribeVpcEndpointConnectionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVpcEndpointConnectionsResponse)

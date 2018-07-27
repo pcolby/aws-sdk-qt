@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateCustomVerificationEmailTemplateResponse : public SesRes
 public:
     UpdateCustomVerificationEmailTemplateResponse(const UpdateCustomVerificationEmailTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateCustomVerificationEmailTemplateRequest * request() const override;
+    virtual const UpdateCustomVerificationEmailTemplateRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateCustomVerificationEmailTemplateResponse)

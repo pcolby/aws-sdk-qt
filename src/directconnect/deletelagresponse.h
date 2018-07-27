@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLagResponse : public DirectConnectResponse {
 public:
     DeleteLagResponse(const DeleteLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLagRequest * request() const override;
+    virtual const DeleteLagRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLagResponse)

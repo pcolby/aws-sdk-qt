@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBatchPredictionResponse : public MachineLearningRespons
 public:
     CreateBatchPredictionResponse(const CreateBatchPredictionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBatchPredictionRequest * request() const override;
+    virtual const CreateBatchPredictionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateBatchPredictionResponse)

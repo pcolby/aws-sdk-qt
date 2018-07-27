@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeFpgaImagesResponse : public Ec2Response {
 public:
     DescribeFpgaImagesResponse(const DescribeFpgaImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeFpgaImagesRequest * request() const override;
+    virtual const DescribeFpgaImagesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeFpgaImagesResponse)

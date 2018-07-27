@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDocumentationVersionResponse : public APIGatewayRespons
 public:
     UpdateDocumentationVersionResponse(const UpdateDocumentationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDocumentationVersionRequest * request() const override;
+    virtual const UpdateDocumentationVersionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDocumentationVersionResponse)

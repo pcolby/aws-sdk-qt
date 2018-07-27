@@ -34,10 +34,10 @@ class QTAWS_EXPORT TagResourceResponse : public OpsWorksResponse {
 public:
     TagResourceResponse(const TagResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TagResourceRequest * request() const override;
+    virtual const TagResourceRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(TagResourceResponse)

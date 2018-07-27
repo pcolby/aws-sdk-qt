@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStreamingURLResponse : public AppStreamResponse {
 public:
     CreateStreamingURLResponse(const CreateStreamingURLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStreamingURLRequest * request() const override;
+    virtual const CreateStreamingURLRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateStreamingURLResponse)

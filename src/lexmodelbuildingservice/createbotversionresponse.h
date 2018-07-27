@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBotVersionResponse : public LexModelBuildingServiceResp
 public:
     CreateBotVersionResponse(const CreateBotVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBotVersionRequest * request() const override;
+    virtual const CreateBotVersionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CreateBotVersionResponse)

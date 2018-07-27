@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteClusterSnapshotResponse : public RedshiftResponse {
 public:
     DeleteClusterSnapshotResponse(const DeleteClusterSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteClusterSnapshotRequest * request() const override;
+    virtual const DeleteClusterSnapshotRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteClusterSnapshotResponse)

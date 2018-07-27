@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDocumentResponse : public SsmResponse {
 public:
     DescribeDocumentResponse(const DescribeDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDocumentRequest * request() const override;
+    virtual const DescribeDocumentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDocumentResponse)

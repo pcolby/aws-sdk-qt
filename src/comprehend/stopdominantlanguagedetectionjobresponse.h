@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopDominantLanguageDetectionJobResponse : public ComprehendR
 public:
     StopDominantLanguageDetectionJobResponse(const StopDominantLanguageDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopDominantLanguageDetectionJobRequest * request() const override;
+    virtual const StopDominantLanguageDetectionJobRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StopDominantLanguageDetectionJobResponse)

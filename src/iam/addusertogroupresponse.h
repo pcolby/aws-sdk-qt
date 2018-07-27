@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddUserToGroupResponse : public IamResponse {
 public:
     AddUserToGroupResponse(const AddUserToGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddUserToGroupRequest * request() const override;
+    virtual const AddUserToGroupRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AddUserToGroupResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSSHPublicKeyResponse : public IamResponse {
 public:
     DeleteSSHPublicKeyResponse(const DeleteSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSSHPublicKeyRequest * request() const override;
+    virtual const DeleteSSHPublicKeyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSSHPublicKeyResponse)

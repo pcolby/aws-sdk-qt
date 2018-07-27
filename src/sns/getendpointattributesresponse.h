@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetEndpointAttributesResponse : public SnsResponse {
 public:
     GetEndpointAttributesResponse(const GetEndpointAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetEndpointAttributesRequest * request() const override;
+    virtual const GetEndpointAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(GetEndpointAttributesResponse)

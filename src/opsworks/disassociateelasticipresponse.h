@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateElasticIpResponse : public OpsWorksResponse {
 public:
     DisassociateElasticIpResponse(const DisassociateElasticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateElasticIpRequest * request() const override;
+    virtual const DisassociateElasticIpRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateElasticIpResponse)

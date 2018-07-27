@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteInvitationsResponse : public GuardDutyResponse {
 public:
     DeleteInvitationsResponse(const DeleteInvitationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteInvitationsRequest * request() const override;
+    virtual const DeleteInvitationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteInvitationsResponse)

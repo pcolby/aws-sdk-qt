@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateContainerAgentResponse : public EcsResponse {
 public:
     UpdateContainerAgentResponse(const UpdateContainerAgentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateContainerAgentRequest * request() const override;
+    virtual const UpdateContainerAgentRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateContainerAgentResponse)

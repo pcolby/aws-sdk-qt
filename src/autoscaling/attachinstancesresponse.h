@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachInstancesResponse : public AutoScalingResponse {
 public:
     AttachInstancesResponse(const AttachInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachInstancesRequest * request() const override;
+    virtual const AttachInstancesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(AttachInstancesResponse)

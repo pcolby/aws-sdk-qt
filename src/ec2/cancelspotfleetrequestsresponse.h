@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelSpotFleetRequestsResponse : public Ec2Response {
 public:
     CancelSpotFleetRequestsResponse(const CancelSpotFleetRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelSpotFleetRequestsRequest * request() const override;
+    virtual const CancelSpotFleetRequestsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(CancelSpotFleetRequestsResponse)

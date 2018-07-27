@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAttributesResponse : public EcsResponse {
 public:
     ListAttributesResponse(const ListAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAttributesRequest * request() const override;
+    virtual const ListAttributesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(ListAttributesResponse)

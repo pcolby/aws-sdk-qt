@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApplicationOutputResponse : public KinesisAnalyticsResp
 public:
     DeleteApplicationOutputResponse(const DeleteApplicationOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApplicationOutputRequest * request() const override;
+    virtual const DeleteApplicationOutputRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationOutputResponse)

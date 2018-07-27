@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutFunctionConcurrencyResponse : public LambdaResponse {
 public:
     PutFunctionConcurrencyResponse(const PutFunctionConcurrencyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutFunctionConcurrencyRequest * request() const override;
+    virtual const PutFunctionConcurrencyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(PutFunctionConcurrencyResponse)

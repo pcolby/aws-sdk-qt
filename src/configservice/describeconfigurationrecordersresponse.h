@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeConfigurationRecordersResponse : public ConfigService
 public:
     DescribeConfigurationRecordersResponse(const DescribeConfigurationRecordersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeConfigurationRecordersRequest * request() const override;
+    virtual const DescribeConfigurationRecordersRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeConfigurationRecordersResponse)

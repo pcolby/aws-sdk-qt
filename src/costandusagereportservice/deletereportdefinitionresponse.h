@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteReportDefinitionResponse : public CostandUsageReportSer
 public:
     DeleteReportDefinitionResponse(const DeleteReportDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteReportDefinitionRequest * request() const override;
+    virtual const DeleteReportDefinitionRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DeleteReportDefinitionResponse)

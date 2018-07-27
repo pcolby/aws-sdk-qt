@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEndpointsBatchResponse : public PinpointResponse {
 public:
     UpdateEndpointsBatchResponse(const UpdateEndpointsBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEndpointsBatchRequest * request() const override;
+    virtual const UpdateEndpointsBatchRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEndpointsBatchResponse)

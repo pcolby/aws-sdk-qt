@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePullRequestEventsResponse : public CodeCommitResponse
 public:
     DescribePullRequestEventsResponse(const DescribePullRequestEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePullRequestEventsRequest * request() const override;
+    virtual const DescribePullRequestEventsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribePullRequestEventsResponse)

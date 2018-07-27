@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLagsResponse : public DirectConnectResponse {
 public:
     DescribeLagsResponse(const DescribeLagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLagsRequest * request() const override;
+    virtual const DescribeLagsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLagsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartConfigRulesEvaluationResponse : public ConfigServiceResp
 public:
     StartConfigRulesEvaluationResponse(const StartConfigRulesEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartConfigRulesEvaluationRequest * request() const override;
+    virtual const StartConfigRulesEvaluationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(StartConfigRulesEvaluationResponse)

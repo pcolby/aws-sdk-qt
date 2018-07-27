@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeExclusionsResponse : public InspectorResponse {
 public:
     DescribeExclusionsResponse(const DescribeExclusionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeExclusionsRequest * request() const override;
+    virtual const DescribeExclusionsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response) override;
+    virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PRIVATE(DescribeExclusionsResponse)
