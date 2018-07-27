@@ -50,6 +50,7 @@ class DescribeAssessmentTargetsRequest;
 class DescribeAssessmentTargetsResponse;
 class DescribeAssessmentTemplatesRequest;
 class DescribeAssessmentTemplatesResponse;
+class DescribeCrossAccountAccessRoleRequest;
 class DescribeCrossAccountAccessRoleResponse;
 class DescribeExclusionsRequest;
 class DescribeExclusionsResponse;
@@ -129,6 +130,7 @@ public slots:
     DescribeAssessmentRunsResponse * describeAssessmentRuns(const DescribeAssessmentRunsRequest &request);
     DescribeAssessmentTargetsResponse * describeAssessmentTargets(const DescribeAssessmentTargetsRequest &request);
     DescribeAssessmentTemplatesResponse * describeAssessmentTemplates(const DescribeAssessmentTemplatesRequest &request);
+    DescribeCrossAccountAccessRoleResponse * describeCrossAccountAccessRole(const DescribeCrossAccountAccessRoleRequest &request);
     DescribeCrossAccountAccessRoleResponse * describeCrossAccountAccessRole();
     DescribeExclusionsResponse * describeExclusions(const DescribeExclusionsRequest &request);
     DescribeFindingsResponse * describeFindings(const DescribeFindingsRequest &request);

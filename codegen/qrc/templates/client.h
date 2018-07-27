@@ -11,9 +11,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
 {% for name,op in operations.items %}
-{% if op.input.shape %}
 class {{name}}Request;
-{% endif %}
 class {{name}}Response;
 {% endfor %}
 
@@ -34,7 +32,10 @@ public:
 
 public slots:
 {% for name,op in operations.items %}
-    {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %});
+    {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}(const {{name}}Request &request);
+{% if not op.input.shape %}
+    {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}();
+{% endif %}
 {% endfor %}
 
 private:

@@ -60,13 +60,15 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * Constructs a DescribeAccountAttributesResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeAccountAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
+        const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
+    setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);
 }
 

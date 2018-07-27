@@ -21,6 +21,7 @@
 #define QTAWS_GETCREDENTIALREPORTRESPONSE_H
 
 #include "iamresponse.h"
+#include "getcredentialreportrequest.h"
 
 namespace QtAws {
 namespace IAM {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT GetCredentialReportResponse : public IamResponse {
     Q_OBJECT
 
 public:
-    GetCredentialReportResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    GetCredentialReportResponse(const GetCredentialReportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const GetCredentialReportRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

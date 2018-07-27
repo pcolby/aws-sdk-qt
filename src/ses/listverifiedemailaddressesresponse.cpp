@@ -49,13 +49,15 @@ namespace SES {
  */
 
 /*!
- * Constructs a ListVerifiedEmailAddressesResponse object for \a reply, with parent \a parent.
+ * Constructs a ListVerifiedEmailAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
+        const ListVerifiedEmailAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SesResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)
 {
+    setRequest(new ListVerifiedEmailAddressesRequest(request));
     setReply(reply);
 }
 

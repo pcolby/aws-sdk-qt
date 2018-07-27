@@ -37,6 +37,7 @@
 #include "createpolicyresponse.h"
 #include "declinehandshakerequest.h"
 #include "declinehandshakeresponse.h"
+#include "deleteorganizationrequest.h"
 #include "deleteorganizationresponse.h"
 #include "deleteorganizationalunitrequest.h"
 #include "deleteorganizationalunitresponse.h"
@@ -48,6 +49,7 @@
 #include "describecreateaccountstatusresponse.h"
 #include "describehandshakerequest.h"
 #include "describehandshakeresponse.h"
+#include "describeorganizationrequest.h"
 #include "describeorganizationresponse.h"
 #include "describeorganizationalunitrequest.h"
 #include "describeorganizationalunitresponse.h"
@@ -67,6 +69,7 @@
 #include "enablepolicytyperesponse.h"
 #include "inviteaccounttoorganizationrequest.h"
 #include "inviteaccounttoorganizationresponse.h"
+#include "leaveorganizationrequest.h"
 #include "leaveorganizationresponse.h"
 #include "listawsserviceaccessfororganizationrequest.h"
 #include "listawsserviceaccessfororganizationresponse.h"
@@ -624,6 +627,20 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DeleteOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the organization. You can delete an organization only by using credentials from the master account. The
+ * organization must be empty of member accounts, organizational units (OUs), and
+ */
+DeleteOrganizationResponse * OrganizationsClient::deleteOrganization(const DeleteOrganizationRequest &request)
+{
+    return qobject_cast<DeleteOrganizationResponse *>(send(request));
+}
+
+/*!
  * Sends a DeleteOrganization request to the OrganizationsClient service, and returns a pointer to an
  * DeleteOrganizationResponse object to track the result.
  *
@@ -634,7 +651,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
  */
 DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 {
-    return qobject_cast<DeleteOrganizationResponse *>(send());
+    return deleteOrganization(DeleteOrganizationRequest());
 }
 
 /*!
@@ -731,6 +748,28 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * DescribeOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the organization that the user's account belongs
+ *
+ * to>
+ *
+ * This operation can be called from any account in the
+ *
+ * organization> <note>
+ *
+ * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
+ * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
+ */
+DescribeOrganizationResponse * OrganizationsClient::describeOrganization(const DescribeOrganizationRequest &request)
+{
+    return qobject_cast<DescribeOrganizationResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeOrganization request to the OrganizationsClient service, and returns a pointer to an
  * DescribeOrganizationResponse object to track the result.
  *
@@ -749,7 +788,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 {
-    return qobject_cast<DescribeOrganizationResponse *>(send());
+    return describeOrganization(DescribeOrganizationRequest());
 }
 
 /*!
@@ -1026,6 +1065,50 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
 }
 
 /*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * LeaveOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a member account from its parent organization. This version of the operation is performed by the account that
+ * wants to leave. To remove a member account as a user in the master account, use <a>RemoveAccountFromOrganization</a>
+ *
+ * instead>
+ *
+ * This operation can be called only from a member account in the
+ *
+ * organization> <b> <ul> <li>
+ *
+ * The master account in an organization with all features enabled can set service control policies (SCPs) that can
+ * restrict what administrators of member accounts can do, including preventing them from successfully calling
+ * <code>LeaveOrganization</code> and leaving the organization.
+ *
+ * </p </li> <li>
+ *
+ * You can leave an organization as a member account only if the account is configured with the information required to
+ * operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API,
+ * or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For each account
+ * that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide
+ * and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge
+ * for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. Follow
+ * the steps at <a
+ * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">
+ * To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations
+ * User
+ *
+ * Guide</i>> </li> <li>
+ *
+ * You can leave an organization only after you enable IAM user access to billing in your account. For more information,
+ * see <a
+ * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
+ * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
+ */
+LeaveOrganizationResponse * OrganizationsClient::leaveOrganization(const LeaveOrganizationRequest &request)
+{
+    return qobject_cast<LeaveOrganizationResponse *>(send(request));
+}
+
+/*!
  * Sends a LeaveOrganization request to the OrganizationsClient service, and returns a pointer to an
  * LeaveOrganizationResponse object to track the result.
  *
@@ -1066,7 +1149,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
-    return qobject_cast<LeaveOrganizationResponse *>(send());
+    return leaveOrganization(LeaveOrganizationRequest());
 }
 
 /*!

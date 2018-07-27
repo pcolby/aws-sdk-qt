@@ -49,13 +49,15 @@ namespace SES {
  */
 
 /*!
- * Constructs a GetSendStatisticsResponse object for \a reply, with parent \a parent.
+ * Constructs a GetSendStatisticsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSendStatisticsResponse::GetSendStatisticsResponse(
+        const GetSendStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SesResponse(new GetSendStatisticsResponsePrivate(this), parent)
 {
+    setRequest(new GetSendStatisticsRequest(request));
     setReply(reply);
 }
 

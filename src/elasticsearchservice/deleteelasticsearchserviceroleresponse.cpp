@@ -47,13 +47,15 @@ namespace ElasticsearchService {
  */
 
 /*!
- * Constructs a DeleteElasticsearchServiceRoleResponse object for \a reply, with parent \a parent.
+ * Constructs a DeleteElasticsearchServiceRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteElasticsearchServiceRoleResponse::DeleteElasticsearchServiceRoleResponse(
+        const DeleteElasticsearchServiceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticsearchServiceResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
 {
+    setRequest(new DeleteElasticsearchServiceRoleRequest(request));
     setReply(reply);
 }
 

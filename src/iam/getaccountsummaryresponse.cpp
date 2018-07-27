@@ -103,13 +103,15 @@ namespace IAM {
  */
 
 /*!
- * Constructs a GetAccountSummaryResponse object for \a reply, with parent \a parent.
+ * Constructs a GetAccountSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountSummaryResponse::GetAccountSummaryResponse(
+        const GetAccountSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IamResponse(new GetAccountSummaryResponsePrivate(this), parent)
 {
+    setRequest(new GetAccountSummaryRequest(request));
     setReply(reply);
 }
 

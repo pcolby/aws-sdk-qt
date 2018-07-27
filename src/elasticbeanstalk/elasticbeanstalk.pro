@@ -46,6 +46,8 @@ HEADERS += \
     createplatformversionrequest_p.h \
     createplatformversionresponse.h \
     createplatformversionresponse_p.h \
+    createstoragelocationrequest.h \
+    createstoragelocationrequest_p.h \
     createstoragelocationresponse.h \
     createstoragelocationresponse_p.h \
     deleteapplicationrequest.h \
@@ -68,6 +70,8 @@ HEADERS += \
     deleteplatformversionrequest_p.h \
     deleteplatformversionresponse.h \
     deleteplatformversionresponse_p.h \
+    describeaccountattributesrequest.h \
+    describeaccountattributesrequest_p.h \
     describeaccountattributesresponse.h \
     describeaccountattributesresponse_p.h \
     describeapplicationsrequest.h \
@@ -124,6 +128,8 @@ HEADERS += \
     elasticbeanstalkrequest_p.h \
     elasticbeanstalkresponse.h \
     elasticbeanstalkresponse_p.h \
+    listavailablesolutionstacksrequest.h \
+    listavailablesolutionstacksrequest_p.h \
     listavailablesolutionstacksresponse.h \
     listavailablesolutionstacksresponse_p.h \
     listplatformversionsrequest.h \
@@ -206,6 +212,7 @@ SOURCES += \
     createenvironmentresponse.cpp \
     createplatformversionrequest.cpp \
     createplatformversionresponse.cpp \
+    createstoragelocationrequest.cpp \
     createstoragelocationresponse.cpp \
     deleteapplicationrequest.cpp \
     deleteapplicationresponse.cpp \
@@ -217,6 +224,7 @@ SOURCES += \
     deleteenvironmentconfigurationresponse.cpp \
     deleteplatformversionrequest.cpp \
     deleteplatformversionresponse.cpp \
+    describeaccountattributesrequest.cpp \
     describeaccountattributesresponse.cpp \
     describeapplicationsrequest.cpp \
     describeapplicationsresponse.cpp \
@@ -245,6 +253,7 @@ SOURCES += \
     elasticbeanstalkclient.cpp \
     elasticbeanstalkrequest.cpp \
     elasticbeanstalkresponse.cpp \
+    listavailablesolutionstacksrequest.cpp \
     listavailablesolutionstacksresponse.cpp \
     listplatformversionsrequest.cpp \
     listplatformversionsresponse.cpp \

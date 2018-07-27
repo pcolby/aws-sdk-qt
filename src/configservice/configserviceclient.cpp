@@ -77,6 +77,7 @@
 #include "getcompliancedetailsbyconfigruleresponse.h"
 #include "getcompliancedetailsbyresourcerequest.h"
 #include "getcompliancedetailsbyresourceresponse.h"
+#include "getcompliancesummarybyconfigrulerequest.h"
 #include "getcompliancesummarybyconfigruleresponse.h"
 #include "getcompliancesummarybyresourcetyperequest.h"
 #include "getcompliancesummarybyresourcetyperesponse.h"
@@ -720,6 +721,19 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
 }
 
 /*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetComplianceSummaryByConfigRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the number of AWS Config rules that are compliant and noncompliant, up to a maximum of 25 for
+ */
+GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSummaryByConfigRule(const GetComplianceSummaryByConfigRuleRequest &request)
+{
+    return qobject_cast<GetComplianceSummaryByConfigRuleResponse *>(send(request));
+}
+
+/*!
  * Sends a GetComplianceSummaryByConfigRule request to the ConfigServiceClient service, and returns a pointer to an
  * GetComplianceSummaryByConfigRuleResponse object to track the result.
  *
@@ -729,7 +743,7 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
  */
 GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSummaryByConfigRule()
 {
-    return qobject_cast<GetComplianceSummaryByConfigRuleResponse *>(send());
+    return getComplianceSummaryByConfigRule(GetComplianceSummaryByConfigRuleRequest());
 }
 
 /*!

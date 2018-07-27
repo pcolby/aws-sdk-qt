@@ -43,13 +43,15 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeTerminationPolicyTypesResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeTerminationPolicyTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTerminationPolicyTypesResponse::DescribeTerminationPolicyTypesResponse(
+        const DescribeTerminationPolicyTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeTerminationPolicyTypesResponsePrivate(this), parent)
 {
+    setRequest(new DescribeTerminationPolicyTypesRequest(request));
     setReply(reply);
 }
 

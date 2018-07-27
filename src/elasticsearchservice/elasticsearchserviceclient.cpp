@@ -27,6 +27,7 @@
 #include "createelasticsearchdomainresponse.h"
 #include "deleteelasticsearchdomainrequest.h"
 #include "deleteelasticsearchdomainresponse.h"
+#include "deleteelasticsearchservicerolerequest.h"
 #include "deleteelasticsearchserviceroleresponse.h"
 #include "describeelasticsearchdomainrequest.h"
 #include "describeelasticsearchdomainresponse.h"
@@ -40,6 +41,7 @@
 #include "describereservedelasticsearchinstanceofferingsresponse.h"
 #include "describereservedelasticsearchinstancesrequest.h"
 #include "describereservedelasticsearchinstancesresponse.h"
+#include "listdomainnamesrequest.h"
 #include "listdomainnamesresponse.h"
 #include "listelasticsearchinstancetypesrequest.h"
 #include "listelasticsearchinstancetypesresponse.h"
@@ -185,6 +187,22 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * DeleteElasticsearchServiceRoleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the service-linked role that Elasticsearch Service uses to manage and maintain VPC domains. Role deletion will
+ * fail if any existing VPC domains use the role. You must delete any such Elasticsearch domains before deleting the role.
+ * See <a href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-enabling-slr"
+ * target="_blank">Deleting Elasticsearch Service Role</a> in <i>VPC Endpoints for Amazon Elasticsearch Service
+ */
+DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole(const DeleteElasticsearchServiceRoleRequest &request)
+{
+    return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send(request));
+}
+
+/*!
  * Sends a DeleteElasticsearchServiceRole request to the ElasticsearchServiceClient service, and returns a pointer to an
  * DeleteElasticsearchServiceRoleResponse object to track the result.
  *
@@ -197,7 +215,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
  */
 DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole()
 {
-    return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send());
+    return deleteElasticsearchServiceRole(DeleteElasticsearchServiceRoleRequest());
 }
 
 /*!
@@ -283,6 +301,19 @@ DescribeReservedElasticsearchInstancesResponse * ElasticsearchServiceClient::des
 }
 
 /*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * ListDomainNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the name of all Elasticsearch domains owned by the current user's account.
+ */
+ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames(const ListDomainNamesRequest &request)
+{
+    return qobject_cast<ListDomainNamesResponse *>(send(request));
+}
+
+/*!
  * Sends a ListDomainNames request to the ElasticsearchServiceClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
@@ -292,7 +323,7 @@ DescribeReservedElasticsearchInstancesResponse * ElasticsearchServiceClient::des
  */
 ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 {
-    return qobject_cast<ListDomainNamesResponse *>(send());
+    return listDomainNames(ListDomainNamesRequest());
 }
 
 /*!

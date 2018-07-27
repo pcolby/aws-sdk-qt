@@ -21,6 +21,7 @@
 #define QTAWS_LEAVEORGANIZATIONRESPONSE_H
 
 #include "organizationsresponse.h"
+#include "leaveorganizationrequest.h"
 
 namespace QtAws {
 namespace Organizations {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT LeaveOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:
-    LeaveOrganizationResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    LeaveOrganizationResponse(const LeaveOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const LeaveOrganizationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

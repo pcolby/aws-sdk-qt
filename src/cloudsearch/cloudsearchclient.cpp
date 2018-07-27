@@ -61,6 +61,7 @@
 #include "describesuggestersresponse.h"
 #include "indexdocumentsrequest.h"
 #include "indexdocumentsresponse.h"
+#include "listdomainnamesrequest.h"
 #include "listdomainnamesresponse.h"
 #include "updateavailabilityoptionsrequest.h"
 #include "updateavailabilityoptionsresponse.h"
@@ -482,6 +483,19 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
 }
 
 /*!
+ * Sends \a request to the CloudSearchClient service, and returns a pointer to an
+ * ListDomainNamesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all search domains owned by an
+ */
+ListDomainNamesResponse * CloudSearchClient::listDomainNames(const ListDomainNamesRequest &request)
+{
+    return qobject_cast<ListDomainNamesResponse *>(send(request));
+}
+
+/*!
  * Sends a ListDomainNames request to the CloudSearchClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
@@ -491,7 +505,7 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
  */
 ListDomainNamesResponse * CloudSearchClient::listDomainNames()
 {
-    return qobject_cast<ListDomainNamesResponse *>(send());
+    return listDomainNames(ListDomainNamesRequest());
 }
 
 /*!

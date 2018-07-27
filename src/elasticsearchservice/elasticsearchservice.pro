@@ -22,6 +22,8 @@ HEADERS += \
     deleteelasticsearchdomainrequest_p.h \
     deleteelasticsearchdomainresponse.h \
     deleteelasticsearchdomainresponse_p.h \
+    deleteelasticsearchservicerolerequest.h \
+    deleteelasticsearchservicerolerequest_p.h \
     deleteelasticsearchserviceroleresponse.h \
     deleteelasticsearchserviceroleresponse_p.h \
     describeelasticsearchdomainconfigrequest.h \
@@ -54,6 +56,8 @@ HEADERS += \
     elasticsearchservicerequest_p.h \
     elasticsearchserviceresponse.h \
     elasticsearchserviceresponse_p.h \
+    listdomainnamesrequest.h \
+    listdomainnamesrequest_p.h \
     listdomainnamesresponse.h \
     listdomainnamesresponse_p.h \
     listelasticsearchinstancetypesrequest.h \
@@ -88,6 +92,7 @@ SOURCES += \
     createelasticsearchdomainresponse.cpp \
     deleteelasticsearchdomainrequest.cpp \
     deleteelasticsearchdomainresponse.cpp \
+    deleteelasticsearchservicerolerequest.cpp \
     deleteelasticsearchserviceroleresponse.cpp \
     describeelasticsearchdomainconfigrequest.cpp \
     describeelasticsearchdomainconfigresponse.cpp \
@@ -104,6 +109,7 @@ SOURCES += \
     elasticsearchserviceclient.cpp \
     elasticsearchservicerequest.cpp \
     elasticsearchserviceresponse.cpp \
+    listdomainnamesrequest.cpp \
     listdomainnamesresponse.cpp \
     listelasticsearchinstancetypesrequest.cpp \
     listelasticsearchinstancetypesresponse.cpp \

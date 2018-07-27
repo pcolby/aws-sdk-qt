@@ -93,9 +93,11 @@
 #include "describelagsresponse.h"
 #include "describeloarequest.h"
 #include "describeloaresponse.h"
+#include "describelocationsrequest.h"
 #include "describelocationsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
+#include "describevirtualgatewaysrequest.h"
 #include "describevirtualgatewaysresponse.h"
 #include "describevirtualinterfacesrequest.h"
 #include "describevirtualinterfacesresponse.h"
@@ -924,6 +926,20 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
 }
 
 /*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeLocationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the list of AWS Direct Connect locations in the current AWS region. These are the locations that may be selected
+ * when calling <a>CreateConnection</a> or
+ */
+DescribeLocationsResponse * DirectConnectClient::describeLocations(const DescribeLocationsRequest &request)
+{
+    return qobject_cast<DescribeLocationsResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeLocations request to the DirectConnectClient service, and returns a pointer to an
  * DescribeLocationsResponse object to track the result.
  *
@@ -934,7 +950,7 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
  */
 DescribeLocationsResponse * DirectConnectClient::describeLocations()
 {
-    return qobject_cast<DescribeLocationsResponse *>(send());
+    return describeLocations(DescribeLocationsRequest());
 }
 
 /*!
@@ -948,6 +964,26 @@ DescribeLocationsResponse * DirectConnectClient::describeLocations()
 DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsRequest &request)
 {
     return qobject_cast<DescribeTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeVirtualGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of virtual private gateways owned by the AWS
+ *
+ * account>
+ *
+ * You can create one or more AWS Direct Connect private virtual interfaces linking to a virtual private gateway. A virtual
+ * private gateway can be managed via Amazon Virtual Private Cloud (VPC) console or the <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html">EC2
+ * CreateVpnGateway</a>
+ */
+DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways(const DescribeVirtualGatewaysRequest &request)
+{
+    return qobject_cast<DescribeVirtualGatewaysResponse *>(send(request));
 }
 
 /*!
@@ -967,7 +1003,7 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
  */
 DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
 {
-    return qobject_cast<DescribeVirtualGatewaysResponse *>(send());
+    return describeVirtualGateways(DescribeVirtualGatewaysRequest());
 }
 
 /*!

@@ -60,6 +60,8 @@ HEADERS += \
     disassociateconfigurationitemsfromapplicationrequest_p.h \
     disassociateconfigurationitemsfromapplicationresponse.h \
     disassociateconfigurationitemsfromapplicationresponse_p.h \
+    exportconfigurationsrequest.h \
+    exportconfigurationsrequest_p.h \
     exportconfigurationsresponse.h \
     exportconfigurationsresponse_p.h \
     getdiscoverysummaryrequest.h \
@@ -117,6 +119,7 @@ SOURCES += \
     describetagsresponse.cpp \
     disassociateconfigurationitemsfromapplicationrequest.cpp \
     disassociateconfigurationitemsfromapplicationresponse.cpp \
+    exportconfigurationsrequest.cpp \
     exportconfigurationsresponse.cpp \
     getdiscoverysummaryrequest.cpp \
     getdiscoverysummaryresponse.cpp \

@@ -43,6 +43,7 @@
 #include "describetagsresponse.h"
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
 #include "disassociateconfigurationitemsfromapplicationresponse.h"
+#include "exportconfigurationsrequest.h"
 #include "exportconfigurationsresponse.h"
 #include "getdiscoverysummaryrequest.h"
 #include "getdiscoverysummaryresponse.h"
@@ -361,6 +362,26 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
 }
 
 /*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * ExportConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deprecated. Use <code>StartExportTask</code>
+ *
+ * instead>
+ *
+ * Exports all discovered configuration data to an Amazon S3 bucket or an application that enables you to view and evaluate
+ * the data. Data includes tags and tag associations, processes, connections, servers, and system performance. This API
+ * returns an export ID that you can query using the <i>DescribeExportConfigurations</i> API. The system imposes a limit of
+ * two configuration exports in six
+ */
+ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations(const ExportConfigurationsRequest &request)
+{
+    return qobject_cast<ExportConfigurationsResponse *>(send(request));
+}
+
+/*!
  * Sends a ExportConfigurations request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
  * ExportConfigurationsResponse object to track the result.
  *
@@ -377,7 +398,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
-    return qobject_cast<ExportConfigurationsResponse *>(send());
+    return exportConfigurations(ExportConfigurationsRequest());
 }
 
 /*!

@@ -21,6 +21,7 @@
 #define QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_H
 
 #include "sesresponse.h"
+#include "getaccountsendingenabledrequest.h"
 
 namespace QtAws {
 namespace SES {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT GetAccountSendingEnabledResponse : public SesResponse {
     Q_OBJECT
 
 public:
-    GetAccountSendingEnabledResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    GetAccountSendingEnabledResponse(const GetAccountSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const GetAccountSendingEnabledRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

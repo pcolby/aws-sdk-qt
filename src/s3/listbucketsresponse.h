@@ -21,6 +21,7 @@
 #define QTAWS_LISTBUCKETSRESPONSE_H
 
 #include "s3response.h"
+#include "listbucketsrequest.h"
 
 namespace QtAws {
 namespace S3 {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT ListBucketsResponse : public S3Response {
     Q_OBJECT
 
 public:
-    ListBucketsResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    ListBucketsResponse(const ListBucketsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const ListBucketsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

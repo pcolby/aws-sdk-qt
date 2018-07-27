@@ -43,13 +43,15 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeAutoScalingNotificationTypesResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeAutoScalingNotificationTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAutoScalingNotificationTypesResponse::DescribeAutoScalingNotificationTypesResponse(
+        const DescribeAutoScalingNotificationTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeAutoScalingNotificationTypesResponsePrivate(this), parent)
 {
+    setRequest(new DescribeAutoScalingNotificationTypesRequest(request));
     setReply(reply);
 }
 

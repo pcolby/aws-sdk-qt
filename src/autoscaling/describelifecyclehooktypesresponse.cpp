@@ -43,13 +43,15 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeLifecycleHookTypesResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeLifecycleHookTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLifecycleHookTypesResponse::DescribeLifecycleHookTypesResponse(
+        const DescribeLifecycleHookTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeLifecycleHookTypesResponsePrivate(this), parent)
 {
+    setRequest(new DescribeLifecycleHookTypesRequest(request));
     setReply(reply);
 }
 

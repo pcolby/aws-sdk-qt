@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBEORGANIZATIONRESPONSE_H
 
 #include "organizationsresponse.h"
+#include "describeorganizationrequest.h"
 
 namespace QtAws {
 namespace Organizations {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:
-    DescribeOrganizationResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeOrganizationResponse(const DescribeOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeOrganizationRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

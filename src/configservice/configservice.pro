@@ -128,6 +128,8 @@ HEADERS += \
     getcompliancedetailsbyresourcerequest_p.h \
     getcompliancedetailsbyresourceresponse.h \
     getcompliancedetailsbyresourceresponse_p.h \
+    getcompliancesummarybyconfigrulerequest.h \
+    getcompliancesummarybyconfigrulerequest_p.h \
     getcompliancesummarybyconfigruleresponse.h \
     getcompliancesummarybyconfigruleresponse_p.h \
     getcompliancesummarybyresourcetyperequest.h \
@@ -247,6 +249,7 @@ SOURCES += \
     getcompliancedetailsbyconfigruleresponse.cpp \
     getcompliancedetailsbyresourcerequest.cpp \
     getcompliancedetailsbyresourceresponse.cpp \
+    getcompliancesummarybyconfigrulerequest.cpp \
     getcompliancesummarybyconfigruleresponse.cpp \
     getcompliancesummarybyresourcetyperequest.cpp \
     getcompliancesummarybyresourcetyperesponse.cpp \

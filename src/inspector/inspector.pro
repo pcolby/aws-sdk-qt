@@ -54,6 +54,8 @@ HEADERS += \
     describeassessmenttemplatesrequest_p.h \
     describeassessmenttemplatesresponse.h \
     describeassessmenttemplatesresponse_p.h \
+    describecrossaccountaccessrolerequest.h \
+    describecrossaccountaccessrolerequest_p.h \
     describecrossaccountaccessroleresponse.h \
     describecrossaccountaccessroleresponse_p.h \
     describeexclusionsrequest.h \
@@ -186,6 +188,7 @@ SOURCES += \
     describeassessmenttargetsresponse.cpp \
     describeassessmenttemplatesrequest.cpp \
     describeassessmenttemplatesresponse.cpp \
+    describecrossaccountaccessrolerequest.cpp \
     describecrossaccountaccessroleresponse.cpp \
     describeexclusionsrequest.cpp \
     describeexclusionsresponse.cpp \

@@ -115,6 +115,7 @@
 #include "listbucketinventoryconfigurationsresponse.h"
 #include "listbucketmetricsconfigurationsrequest.h"
 #include "listbucketmetricsconfigurationsresponse.h"
+#include "listbucketsrequest.h"
 #include "listbucketsresponse.h"
 #include "listmultipartuploadsrequest.h"
 #include "listmultipartuploadsresponse.h"
@@ -882,6 +883,19 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
 }
 
 /*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * ListBucketsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all buckets owned by the authenticated sender of the
+ */
+ListBucketsResponse * S3Client::listBuckets(const ListBucketsRequest &request)
+{
+    return qobject_cast<ListBucketsResponse *>(send(request));
+}
+
+/*!
  * Sends a ListBuckets request to the S3Client service, and returns a pointer to an
  * ListBucketsResponse object to track the result.
  *
@@ -891,7 +905,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
-    return qobject_cast<ListBucketsResponse *>(send());
+    return listBuckets(ListBucketsRequest());
 }
 
 /*!

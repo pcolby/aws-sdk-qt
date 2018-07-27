@@ -21,6 +21,7 @@
 #define QTAWS_GETACCOUNTPASSWORDPOLICYRESPONSE_H
 
 #include "iamresponse.h"
+#include "getaccountpasswordpolicyrequest.h"
 
 namespace QtAws {
 namespace IAM {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT GetAccountPasswordPolicyResponse : public IamResponse {
     Q_OBJECT
 
 public:
-    GetAccountPasswordPolicyResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    GetAccountPasswordPolicyResponse(const GetAccountPasswordPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const GetAccountPasswordPolicyRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

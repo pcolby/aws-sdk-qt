@@ -222,11 +222,9 @@ bool Generator::generateModelClasses(Grantlee::Context &context, const QString &
     context.insert(QLatin1String("OperationName"), operationName);
 
     // Generate request class.
-    if (operation.contains(QLatin1String("input"))) {
-        context.push();
-        renderClassFiles(QSL("request"), context, projectDir, operationName + QSL("Request"));
-        context.pop();
-    }
+    context.push();
+    renderClassFiles(QSL("request"), context, projectDir, operationName + QSL("Request"));
+    context.pop();
 
     // Generate response class.
     context.push();

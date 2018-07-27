@@ -46,6 +46,8 @@ HEADERS += \
     deleteorganizationalunitrequest_p.h \
     deleteorganizationalunitresponse.h \
     deleteorganizationalunitresponse_p.h \
+    deleteorganizationrequest.h \
+    deleteorganizationrequest_p.h \
     deleteorganizationresponse.h \
     deleteorganizationresponse_p.h \
     deletepolicyrequest.h \
@@ -68,6 +70,8 @@ HEADERS += \
     describeorganizationalunitrequest_p.h \
     describeorganizationalunitresponse.h \
     describeorganizationalunitresponse_p.h \
+    describeorganizationrequest.h \
+    describeorganizationrequest_p.h \
     describeorganizationresponse.h \
     describeorganizationresponse_p.h \
     describepolicyrequest.h \
@@ -102,6 +106,8 @@ HEADERS += \
     inviteaccounttoorganizationrequest_p.h \
     inviteaccounttoorganizationresponse.h \
     inviteaccounttoorganizationresponse_p.h \
+    leaveorganizationrequest.h \
+    leaveorganizationrequest_p.h \
     leaveorganizationresponse.h \
     leaveorganizationresponse_p.h \
     listaccountsforparentrequest.h \
@@ -198,6 +204,7 @@ SOURCES += \
     declinehandshakeresponse.cpp \
     deleteorganizationalunitrequest.cpp \
     deleteorganizationalunitresponse.cpp \
+    deleteorganizationrequest.cpp \
     deleteorganizationresponse.cpp \
     deletepolicyrequest.cpp \
     deletepolicyresponse.cpp \
@@ -209,6 +216,7 @@ SOURCES += \
     describehandshakeresponse.cpp \
     describeorganizationalunitrequest.cpp \
     describeorganizationalunitresponse.cpp \
+    describeorganizationrequest.cpp \
     describeorganizationresponse.cpp \
     describepolicyrequest.cpp \
     describepolicyresponse.cpp \
@@ -226,6 +234,7 @@ SOURCES += \
     enablepolicytyperesponse.cpp \
     inviteaccounttoorganizationrequest.cpp \
     inviteaccounttoorganizationresponse.cpp \
+    leaveorganizationrequest.cpp \
     leaveorganizationresponse.cpp \
     listaccountsforparentrequest.cpp \
     listaccountsforparentresponse.cpp \

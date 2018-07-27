@@ -84,6 +84,7 @@ class GetComplianceDetailsByConfigRuleRequest;
 class GetComplianceDetailsByConfigRuleResponse;
 class GetComplianceDetailsByResourceRequest;
 class GetComplianceDetailsByResourceResponse;
+class GetComplianceSummaryByConfigRuleRequest;
 class GetComplianceSummaryByConfigRuleResponse;
 class GetComplianceSummaryByResourceTypeRequest;
 class GetComplianceSummaryByResourceTypeResponse;
@@ -158,6 +159,7 @@ public slots:
     GetAggregateConfigRuleComplianceSummaryResponse * getAggregateConfigRuleComplianceSummary(const GetAggregateConfigRuleComplianceSummaryRequest &request);
     GetComplianceDetailsByConfigRuleResponse * getComplianceDetailsByConfigRule(const GetComplianceDetailsByConfigRuleRequest &request);
     GetComplianceDetailsByResourceResponse * getComplianceDetailsByResource(const GetComplianceDetailsByResourceRequest &request);
+    GetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule(const GetComplianceSummaryByConfigRuleRequest &request);
     GetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule();
     GetComplianceSummaryByResourceTypeResponse * getComplianceSummaryByResourceType(const GetComplianceSummaryByResourceTypeRequest &request);
     GetDiscoveredResourceCountsResponse * getDiscoveredResourceCounts(const GetDiscoveredResourceCountsRequest &request);

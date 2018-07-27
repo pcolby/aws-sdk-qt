@@ -69,6 +69,7 @@
 #include "describereceiptruleresponse.h"
 #include "describereceiptrulesetrequest.h"
 #include "describereceiptrulesetresponse.h"
+#include "getaccountsendingenabledrequest.h"
 #include "getaccountsendingenabledresponse.h"
 #include "getcustomverificationemailtemplaterequest.h"
 #include "getcustomverificationemailtemplateresponse.h"
@@ -82,7 +83,9 @@
 #include "getidentitypoliciesresponse.h"
 #include "getidentityverificationattributesrequest.h"
 #include "getidentityverificationattributesresponse.h"
+#include "getsendquotarequest.h"
 #include "getsendquotaresponse.h"
+#include "getsendstatisticsrequest.h"
 #include "getsendstatisticsresponse.h"
 #include "gettemplaterequest.h"
 #include "gettemplateresponse.h"
@@ -100,6 +103,7 @@
 #include "listreceiptrulesetsresponse.h"
 #include "listtemplatesrequest.h"
 #include "listtemplatesresponse.h"
+#include "listverifiedemailaddressesrequest.h"
 #include "listverifiedemailaddressesresponse.h"
 #include "putidentitypolicyrequest.h"
 #include "putidentitypolicyresponse.h"
@@ -767,6 +771,23 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
 }
 
 /*!
+ * Sends \a request to the SesClient service, and returns a pointer to an
+ * GetAccountSendingEnabledResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the email sending status of the Amazon SES account for the current
+ *
+ * region>
+ *
+ * You can execute this operation no more than once per
+ */
+GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled(const GetAccountSendingEnabledRequest &request)
+{
+    return qobject_cast<GetAccountSendingEnabledResponse *>(send(request));
+}
+
+/*!
  * Sends a GetAccountSendingEnabled request to the SesClient service, and returns a pointer to an
  * GetAccountSendingEnabledResponse object to track the result.
  *
@@ -780,7 +801,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  */
 GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
 {
-    return qobject_cast<GetAccountSendingEnabledResponse *>(send());
+    return getAccountSendingEnabled(GetAccountSendingEnabledRequest());
 }
 
 /*!
@@ -953,6 +974,23 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
 }
 
 /*!
+ * Sends \a request to the SesClient service, and returns a pointer to an
+ * GetSendQuotaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides the sending limits for the Amazon SES account.
+ *
+ * </p
+ *
+ * You can execute this operation no more than once per
+ */
+GetSendQuotaResponse * SesClient::getSendQuota(const GetSendQuotaRequest &request)
+{
+    return qobject_cast<GetSendQuotaResponse *>(send(request));
+}
+
+/*!
  * Sends a GetSendQuota request to the SesClient service, and returns a pointer to an
  * GetSendQuotaResponse object to track the result.
  *
@@ -966,7 +1004,25 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
  */
 GetSendQuotaResponse * SesClient::getSendQuota()
 {
-    return qobject_cast<GetSendQuotaResponse *>(send());
+    return getSendQuota(GetSendQuotaRequest());
+}
+
+/*!
+ * Sends \a request to the SesClient service, and returns a pointer to an
+ * GetSendStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides sending statistics for the current AWS Region. The result is a list of data points, representing the last two
+ * weeks of sending activity. Each data point in the list contains statistics for a 15-minute period of
+ *
+ * time>
+ *
+ * You can execute this operation no more than once per
+ */
+GetSendStatisticsResponse * SesClient::getSendStatistics(const GetSendStatisticsRequest &request)
+{
+    return qobject_cast<GetSendStatisticsResponse *>(send(request));
 }
 
 /*!
@@ -984,7 +1040,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  */
 GetSendStatisticsResponse * SesClient::getSendStatistics()
 {
-    return qobject_cast<GetSendStatisticsResponse *>(send());
+    return getSendStatistics(GetSendStatisticsRequest());
 }
 
 /*!
@@ -1162,6 +1218,19 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
 }
 
 /*!
+ * Sends \a request to the SesClient service, and returns a pointer to an
+ * ListVerifiedEmailAddressesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deprecated. Use the <code>ListIdentities</code> operation to list the email addresses and domains associated with your
+ */
+ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses(const ListVerifiedEmailAddressesRequest &request)
+{
+    return qobject_cast<ListVerifiedEmailAddressesResponse *>(send(request));
+}
+
+/*!
  * Sends a ListVerifiedEmailAddresses request to the SesClient service, and returns a pointer to an
  * ListVerifiedEmailAddressesResponse object to track the result.
  *
@@ -1171,7 +1240,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
  */
 ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
 {
-    return qobject_cast<ListVerifiedEmailAddressesResponse *>(send());
+    return listVerifiedEmailAddresses(ListVerifiedEmailAddressesRequest());
 }
 
 /*!

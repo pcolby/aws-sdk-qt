@@ -46,13 +46,15 @@ namespace DirectConnect {
  */
 
 /*!
- * Constructs a DescribeLocationsResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeLocationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLocationsResponse::DescribeLocationsResponse(
+        const DescribeLocationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectConnectResponse(new DescribeLocationsResponsePrivate(this), parent)
 {
+    setRequest(new DescribeLocationsRequest(request));
     setReply(reply);
 }
 

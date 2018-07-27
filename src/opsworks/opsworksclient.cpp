@@ -83,7 +83,9 @@
 #include "describelayersresponse.h"
 #include "describeloadbasedautoscalingrequest.h"
 #include "describeloadbasedautoscalingresponse.h"
+#include "describemyuserprofilerequest.h"
 #include "describemyuserprofileresponse.h"
+#include "describeoperatingsystemsrequest.h"
 #include "describeoperatingsystemsresponse.h"
 #include "describepermissionsrequest.h"
 #include "describepermissionsresponse.h"
@@ -1030,6 +1032,25 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
 }
 
 /*!
+ * Sends \a request to the OpsWorksClient service, and returns a pointer to an
+ * DescribeMyUserProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a user's SSH
+ *
+ * information>
+ *
+ * <b>Required Permissions</b>: To use this action, an IAM user must have self-management enabled or an attached policy
+ * that explicitly grants permissions. For more information about user permissions, see <a
+ * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
+ */
+DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile(const DescribeMyUserProfileRequest &request)
+{
+    return qobject_cast<DescribeMyUserProfileResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeMyUserProfile request to the OpsWorksClient service, and returns a pointer to an
  * DescribeMyUserProfileResponse object to track the result.
  *
@@ -1045,7 +1066,20 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  */
 DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 {
-    return qobject_cast<DescribeMyUserProfileResponse *>(send());
+    return describeMyUserProfile(DescribeMyUserProfileRequest());
+}
+
+/*!
+ * Sends \a request to the OpsWorksClient service, and returns a pointer to an
+ * DescribeOperatingSystemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the operating systems that are supported by AWS OpsWorks
+ */
+DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems(const DescribeOperatingSystemsRequest &request)
+{
+    return qobject_cast<DescribeOperatingSystemsResponse *>(send(request));
 }
 
 /*!
@@ -1058,7 +1092,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
  */
 DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
 {
-    return qobject_cast<DescribeOperatingSystemsResponse *>(send());
+    return describeOperatingSystems(DescribeOperatingSystemsRequest());
 }
 
 /*!

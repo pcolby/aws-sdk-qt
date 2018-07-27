@@ -72,8 +72,12 @@ HEADERS += \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    describeaccountlimitsrequest.h \
+    describeaccountlimitsrequest_p.h \
     describeaccountlimitsresponse.h \
     describeaccountlimitsresponse_p.h \
+    describeadjustmenttypesrequest.h \
+    describeadjustmenttypesrequest_p.h \
     describeadjustmenttypesresponse.h \
     describeadjustmenttypesresponse_p.h \
     describeautoscalinggroupsrequest.h \
@@ -84,6 +88,8 @@ HEADERS += \
     describeautoscalinginstancesrequest_p.h \
     describeautoscalinginstancesresponse.h \
     describeautoscalinginstancesresponse_p.h \
+    describeautoscalingnotificationtypesrequest.h \
+    describeautoscalingnotificationtypesrequest_p.h \
     describeautoscalingnotificationtypesresponse.h \
     describeautoscalingnotificationtypesresponse_p.h \
     describelaunchconfigurationsrequest.h \
@@ -94,6 +100,8 @@ HEADERS += \
     describelifecyclehooksrequest_p.h \
     describelifecyclehooksresponse.h \
     describelifecyclehooksresponse_p.h \
+    describelifecyclehooktypesrequest.h \
+    describelifecyclehooktypesrequest_p.h \
     describelifecyclehooktypesresponse.h \
     describelifecyclehooktypesresponse_p.h \
     describeloadbalancersrequest.h \
@@ -104,6 +112,8 @@ HEADERS += \
     describeloadbalancertargetgroupsrequest_p.h \
     describeloadbalancertargetgroupsresponse.h \
     describeloadbalancertargetgroupsresponse_p.h \
+    describemetriccollectiontypesrequest.h \
+    describemetriccollectiontypesrequest_p.h \
     describemetriccollectiontypesresponse.h \
     describemetriccollectiontypesresponse_p.h \
     describenotificationconfigurationsrequest.h \
@@ -118,6 +128,8 @@ HEADERS += \
     describescalingactivitiesrequest_p.h \
     describescalingactivitiesresponse.h \
     describescalingactivitiesresponse_p.h \
+    describescalingprocesstypesrequest.h \
+    describescalingprocesstypesrequest_p.h \
     describescalingprocesstypesresponse.h \
     describescalingprocesstypesresponse_p.h \
     describescheduledactionsrequest.h \
@@ -128,6 +140,8 @@ HEADERS += \
     describetagsrequest_p.h \
     describetagsresponse.h \
     describetagsresponse_p.h \
+    describeterminationpolicytypesrequest.h \
+    describeterminationpolicytypesrequest_p.h \
     describeterminationpolicytypesresponse.h \
     describeterminationpolicytypesresponse_p.h \
     detachinstancesrequest.h \
@@ -243,22 +257,27 @@ SOURCES += \
     deletescheduledactionresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    describeaccountlimitsrequest.cpp \
     describeaccountlimitsresponse.cpp \
+    describeadjustmenttypesrequest.cpp \
     describeadjustmenttypesresponse.cpp \
     describeautoscalinggroupsrequest.cpp \
     describeautoscalinggroupsresponse.cpp \
     describeautoscalinginstancesrequest.cpp \
     describeautoscalinginstancesresponse.cpp \
+    describeautoscalingnotificationtypesrequest.cpp \
     describeautoscalingnotificationtypesresponse.cpp \
     describelaunchconfigurationsrequest.cpp \
     describelaunchconfigurationsresponse.cpp \
     describelifecyclehooksrequest.cpp \
     describelifecyclehooksresponse.cpp \
+    describelifecyclehooktypesrequest.cpp \
     describelifecyclehooktypesresponse.cpp \
     describeloadbalancersrequest.cpp \
     describeloadbalancersresponse.cpp \
     describeloadbalancertargetgroupsrequest.cpp \
     describeloadbalancertargetgroupsresponse.cpp \
+    describemetriccollectiontypesrequest.cpp \
     describemetriccollectiontypesresponse.cpp \
     describenotificationconfigurationsrequest.cpp \
     describenotificationconfigurationsresponse.cpp \
@@ -266,11 +285,13 @@ SOURCES += \
     describepoliciesresponse.cpp \
     describescalingactivitiesrequest.cpp \
     describescalingactivitiesresponse.cpp \
+    describescalingprocesstypesrequest.cpp \
     describescalingprocesstypesresponse.cpp \
     describescheduledactionsrequest.cpp \
     describescheduledactionsresponse.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
+    describeterminationpolicytypesrequest.cpp \
     describeterminationpolicytypesresponse.cpp \
     detachinstancesrequest.cpp \
     detachinstancesresponse.cpp \

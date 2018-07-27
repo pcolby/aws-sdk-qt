@@ -198,6 +198,8 @@ HEADERS += \
     listbucketmetricsconfigurationsrequest_p.h \
     listbucketmetricsconfigurationsresponse.h \
     listbucketmetricsconfigurationsresponse_p.h \
+    listbucketsrequest.h \
+    listbucketsrequest_p.h \
     listbucketsresponse.h \
     listbucketsresponse_p.h \
     listmultipartuploadsrequest.h \
@@ -422,6 +424,7 @@ SOURCES += \
     listbucketinventoryconfigurationsresponse.cpp \
     listbucketmetricsconfigurationsrequest.cpp \
     listbucketmetricsconfigurationsresponse.cpp \
+    listbucketsrequest.cpp \
     listbucketsresponse.cpp \
     listmultipartuploadsrequest.cpp \
     listmultipartuploadsresponse.cpp \

@@ -180,13 +180,15 @@ namespace Organizations {
  */
 
 /*!
- * Constructs a DescribeOrganizationResponse object for \a reply, with parent \a parent.
+ * Constructs a DescribeOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrganizationResponse::DescribeOrganizationResponse(
+        const DescribeOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new DescribeOrganizationResponsePrivate(this), parent)
 {
+    setRequest(new DescribeOrganizationRequest(request));
     setReply(reply);
 }
 

@@ -50,6 +50,7 @@ class DescribeTagsRequest;
 class DescribeTagsResponse;
 class DisassociateConfigurationItemsFromApplicationRequest;
 class DisassociateConfigurationItemsFromApplicationResponse;
+class ExportConfigurationsRequest;
 class ExportConfigurationsResponse;
 class GetDiscoverySummaryRequest;
 class GetDiscoverySummaryResponse;
@@ -93,6 +94,7 @@ public slots:
     DescribeExportTasksResponse * describeExportTasks(const DescribeExportTasksRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     DisassociateConfigurationItemsFromApplicationResponse * disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request);
+    ExportConfigurationsResponse * exportConfigurations(const ExportConfigurationsRequest &request);
     ExportConfigurationsResponse * exportConfigurations();
     GetDiscoverySummaryResponse * getDiscoverySummary(const GetDiscoverySummaryRequest &request);
     ListConfigurationsResponse * listConfigurations(const ListConfigurationsRequest &request);

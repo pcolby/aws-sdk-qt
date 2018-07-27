@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_H
 
 #include "inspectorresponse.h"
+#include "describecrossaccountaccessrolerequest.h"
 
 namespace QtAws {
 namespace Inspector {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeCrossAccountAccessRoleResponse : public InspectorResp
     Q_OBJECT
 
 public:
-    DescribeCrossAccountAccessRoleResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeCrossAccountAccessRoleResponse(const DescribeCrossAccountAccessRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeCrossAccountAccessRoleRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

@@ -122,6 +122,7 @@ class ListBucketInventoryConfigurationsRequest;
 class ListBucketInventoryConfigurationsResponse;
 class ListBucketMetricsConfigurationsRequest;
 class ListBucketMetricsConfigurationsResponse;
+class ListBucketsRequest;
 class ListBucketsResponse;
 class ListMultipartUploadsRequest;
 class ListMultipartUploadsResponse;
@@ -247,6 +248,7 @@ public slots:
     ListBucketAnalyticsConfigurationsResponse * listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request);
     ListBucketInventoryConfigurationsResponse * listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request);
     ListBucketMetricsConfigurationsResponse * listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request);
+    ListBucketsResponse * listBuckets(const ListBucketsRequest &request);
     ListBucketsResponse * listBuckets();
     ListMultipartUploadsResponse * listMultipartUploads(const ListMultipartUploadsRequest &request);
     ListObjectVersionsResponse * listObjectVersions(const ListObjectVersionsRequest &request);

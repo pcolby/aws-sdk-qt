@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBEMYUSERPROFILERESPONSE_H
 
 #include "opsworksresponse.h"
+#include "describemyuserprofilerequest.h"
 
 namespace QtAws {
 namespace OpsWorks {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeMyUserProfileResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:
-    DescribeMyUserProfileResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeMyUserProfileResponse(const DescribeMyUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeMyUserProfileRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

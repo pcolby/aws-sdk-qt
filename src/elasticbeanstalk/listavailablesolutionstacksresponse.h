@@ -21,6 +21,7 @@
 #define QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_H
 
 #include "elasticbeanstalkresponse.h"
+#include "listavailablesolutionstacksrequest.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT ListAvailableSolutionStacksResponse : public ElasticBeanstalk
     Q_OBJECT
 
 public:
-    ListAvailableSolutionStacksResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    ListAvailableSolutionStacksResponse(const ListAvailableSolutionStacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const ListAvailableSolutionStacksRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

@@ -39,6 +39,7 @@
 #include "createenvironmentresponse.h"
 #include "createplatformversionrequest.h"
 #include "createplatformversionresponse.h"
+#include "createstoragelocationrequest.h"
 #include "createstoragelocationresponse.h"
 #include "deleteapplicationrequest.h"
 #include "deleteapplicationresponse.h"
@@ -50,6 +51,7 @@
 #include "deleteenvironmentconfigurationresponse.h"
 #include "deleteplatformversionrequest.h"
 #include "deleteplatformversionresponse.h"
+#include "describeaccountattributesrequest.h"
 #include "describeaccountattributesresponse.h"
 #include "describeapplicationversionsrequest.h"
 #include "describeapplicationversionsresponse.h"
@@ -75,6 +77,7 @@
 #include "describeinstanceshealthresponse.h"
 #include "describeplatformversionrequest.h"
 #include "describeplatformversionresponse.h"
+#include "listavailablesolutionstacksrequest.h"
 #include "listavailablesolutionstacksresponse.h"
 #include "listplatformversionsrequest.h"
 #include "listplatformversionsresponse.h"
@@ -369,6 +372,22 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
 }
 
 /*!
+ * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * CreateStorageLocationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a bucket in Amazon S3 to store application versions, logs, and other files used by Elastic Beanstalk
+ * environments. The Elastic Beanstalk console and EB CLI call this API the first time you create an environment in a
+ * region. If the storage location already exists, <code>CreateStorageLocation</code> still returns the bucket name but
+ * does not create a new
+ */
+CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation(const CreateStorageLocationRequest &request)
+{
+    return qobject_cast<CreateStorageLocationResponse *>(send(request));
+}
+
+/*!
  * Sends a CreateStorageLocation request to the ElasticBeanstalkClient service, and returns a pointer to an
  * CreateStorageLocationResponse object to track the result.
  *
@@ -381,7 +400,7 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
  */
 CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
 {
-    return qobject_cast<CreateStorageLocationResponse *>(send());
+    return createStorageLocation(CreateStorageLocationRequest());
 }
 
 /*!
@@ -471,6 +490,23 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
 }
 
 /*!
+ * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * DescribeAccountAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns attributes related to AWS Elastic Beanstalk that are associated with the calling AWS
+ *
+ * account>
+ *
+ * The result currently has one set of attributes—resource
+ */
+DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
+{
+    return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeAccountAttributes request to the ElasticBeanstalkClient service, and returns a pointer to an
  * DescribeAccountAttributesResponse object to track the result.
  *
@@ -484,7 +520,7 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
  */
 DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttributes()
 {
-    return qobject_cast<DescribeAccountAttributesResponse *>(send());
+    return describeAccountAttributes(DescribeAccountAttributesRequest());
 }
 
 /*!
@@ -667,6 +703,19 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
 }
 
 /*!
+ * Sends \a request to the ElasticBeanstalkClient service, and returns a pointer to an
+ * ListAvailableSolutionStacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the available solution stack names, with the public version first and then in reverse chronological
+ */
+ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolutionStacks(const ListAvailableSolutionStacksRequest &request)
+{
+    return qobject_cast<ListAvailableSolutionStacksResponse *>(send(request));
+}
+
+/*!
  * Sends a ListAvailableSolutionStacks request to the ElasticBeanstalkClient service, and returns a pointer to an
  * ListAvailableSolutionStacksResponse object to track the result.
  *
@@ -676,7 +725,7 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
  */
 ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolutionStacks()
 {
-    return qobject_cast<ListAvailableSolutionStacksResponse *>(send());
+    return listAvailableSolutionStacks(ListAvailableSolutionStacksRequest());
 }
 
 /*!

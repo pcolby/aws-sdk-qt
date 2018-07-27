@@ -96,6 +96,8 @@ HEADERS += \
     indexdocumentsrequest_p.h \
     indexdocumentsresponse.h \
     indexdocumentsresponse_p.h \
+    listdomainnamesrequest.h \
+    listdomainnamesrequest_p.h \
     listdomainnamesresponse.h \
     listdomainnamesresponse_p.h \
     updateavailabilityoptionsrequest.h \
@@ -155,6 +157,7 @@ SOURCES += \
     describesuggestersresponse.cpp \
     indexdocumentsrequest.cpp \
     indexdocumentsresponse.cpp \
+    listdomainnamesrequest.cpp \
     listdomainnamesresponse.cpp \
     updateavailabilityoptionsrequest.cpp \
     updateavailabilityoptionsresponse.cpp \

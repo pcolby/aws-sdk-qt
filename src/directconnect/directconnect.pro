@@ -154,12 +154,16 @@ HEADERS += \
     describeloarequest_p.h \
     describeloaresponse.h \
     describeloaresponse_p.h \
+    describelocationsrequest.h \
+    describelocationsrequest_p.h \
     describelocationsresponse.h \
     describelocationsresponse_p.h \
     describetagsrequest.h \
     describetagsrequest_p.h \
     describetagsresponse.h \
     describetagsresponse_p.h \
+    describevirtualgatewaysrequest.h \
+    describevirtualgatewaysrequest_p.h \
     describevirtualgatewaysresponse.h \
     describevirtualgatewaysresponse_p.h \
     describevirtualinterfacesrequest.h \
@@ -262,9 +266,11 @@ SOURCES += \
     describelagsresponse.cpp \
     describeloarequest.cpp \
     describeloaresponse.cpp \
+    describelocationsrequest.cpp \
     describelocationsresponse.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
+    describevirtualgatewaysrequest.cpp \
     describevirtualgatewaysresponse.cpp \
     describevirtualinterfacesrequest.cpp \
     describevirtualinterfacesresponse.cpp \

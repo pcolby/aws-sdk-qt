@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBEVIRTUALGATEWAYSRESPONSE_H
 
 #include "directconnectresponse.h"
+#include "describevirtualgatewaysrequest.h"
 
 namespace QtAws {
 namespace DirectConnect {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeVirtualGatewaysResponse : public DirectConnectRespons
     Q_OBJECT
 
 public:
-    DescribeVirtualGatewaysResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeVirtualGatewaysResponse(const DescribeVirtualGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeVirtualGatewaysRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

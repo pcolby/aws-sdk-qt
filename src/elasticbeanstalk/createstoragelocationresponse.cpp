@@ -60,13 +60,15 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * Constructs a CreateStorageLocationResponse object for \a reply, with parent \a parent.
+ * Constructs a CreateStorageLocationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStorageLocationResponse::CreateStorageLocationResponse(
+        const CreateStorageLocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new CreateStorageLocationResponsePrivate(this), parent)
 {
+    setRequest(new CreateStorageLocationRequest(request));
     setReply(reply);
 }
 

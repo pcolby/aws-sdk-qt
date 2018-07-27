@@ -69,6 +69,7 @@
 #include "deleteaccesskeyresponse.h"
 #include "deleteaccountaliasrequest.h"
 #include "deleteaccountaliasresponse.h"
+#include "deleteaccountpasswordpolicyrequest.h"
 #include "deleteaccountpasswordpolicyresponse.h"
 #include "deletegrouprequest.h"
 #include "deletegroupresponse.h"
@@ -118,17 +119,21 @@
 #include "detachuserpolicyresponse.h"
 #include "enablemfadevicerequest.h"
 #include "enablemfadeviceresponse.h"
+#include "generatecredentialreportrequest.h"
 #include "generatecredentialreportresponse.h"
 #include "getaccesskeylastusedrequest.h"
 #include "getaccesskeylastusedresponse.h"
 #include "getaccountauthorizationdetailsrequest.h"
 #include "getaccountauthorizationdetailsresponse.h"
+#include "getaccountpasswordpolicyrequest.h"
 #include "getaccountpasswordpolicyresponse.h"
+#include "getaccountsummaryrequest.h"
 #include "getaccountsummaryresponse.h"
 #include "getcontextkeysforcustompolicyrequest.h"
 #include "getcontextkeysforcustompolicyresponse.h"
 #include "getcontextkeysforprincipalpolicyrequest.h"
 #include "getcontextkeysforprincipalpolicyresponse.h"
+#include "getcredentialreportrequest.h"
 #include "getcredentialreportresponse.h"
 #include "getgrouprequest.h"
 #include "getgroupresponse.h"
@@ -981,6 +986,19 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
 }
 
 /*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * DeleteAccountPasswordPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the password policy for the AWS account. There are no
+ */
+DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy(const DeleteAccountPasswordPolicyRequest &request)
+{
+    return qobject_cast<DeleteAccountPasswordPolicyResponse *>(send(request));
+}
+
+/*!
  * Sends a DeleteAccountPasswordPolicy request to the IamClient service, and returns a pointer to an
  * DeleteAccountPasswordPolicyResponse object to track the result.
  *
@@ -990,7 +1008,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
  */
 DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 {
-    return qobject_cast<DeleteAccountPasswordPolicyResponse *>(send());
+    return deleteAccountPasswordPolicy(DeleteAccountPasswordPolicyRequest());
 }
 
 /*!
@@ -1496,6 +1514,21 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
 }
 
 /*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * GenerateCredentialReportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Generates a credential report for the AWS account. For more information about the credential report, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
+ * <i>IAM User
+ */
+GenerateCredentialReportResponse * IamClient::generateCredentialReport(const GenerateCredentialReportRequest &request)
+{
+    return qobject_cast<GenerateCredentialReportResponse *>(send(request));
+}
+
+/*!
  * Sends a GenerateCredentialReport request to the IamClient service, and returns a pointer to an
  * GenerateCredentialReportResponse object to track the result.
  *
@@ -1507,7 +1540,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
  */
 GenerateCredentialReportResponse * IamClient::generateCredentialReport()
 {
-    return qobject_cast<GenerateCredentialReportResponse *>(send());
+    return generateCredentialReport(GenerateCredentialReportRequest());
 }
 
 /*!
@@ -1552,6 +1585,20 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
 }
 
 /*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * GetAccountPasswordPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the password policy for the AWS account. For more information about using a password policy, go to <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingPasswordPolicies.html">Managing an IAM Password
+ */
+GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy(const GetAccountPasswordPolicyRequest &request)
+{
+    return qobject_cast<GetAccountPasswordPolicyResponse *>(send(request));
+}
+
+/*!
  * Sends a GetAccountPasswordPolicy request to the IamClient service, and returns a pointer to an
  * GetAccountPasswordPolicyResponse object to track the result.
  *
@@ -1562,7 +1609,26 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
  */
 GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
 {
-    return qobject_cast<GetAccountPasswordPolicyResponse *>(send());
+    return getAccountPasswordPolicy(GetAccountPasswordPolicyRequest());
+}
+
+/*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * GetAccountSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about IAM entity usage and IAM quotas in the AWS
+ *
+ * account>
+ *
+ * For information about limitations on IAM entities, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations on IAM Entities</a> in the
+ * <i>IAM User
+ */
+GetAccountSummaryResponse * IamClient::getAccountSummary(const GetAccountSummaryRequest &request)
+{
+    return qobject_cast<GetAccountSummaryResponse *>(send(request));
 }
 
 /*!
@@ -1581,7 +1647,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
  */
 GetAccountSummaryResponse * IamClient::getAccountSummary()
 {
-    return qobject_cast<GetAccountSummaryResponse *>(send());
+    return getAccountSummary(GetAccountSummaryRequest());
 }
 
 /*!
@@ -1638,6 +1704,21 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
 }
 
 /*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * GetCredentialReportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a credential report for the AWS account. For more information about the credential report, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/credential-reports.html">Getting Credential Reports</a> in the
+ * <i>IAM User
+ */
+GetCredentialReportResponse * IamClient::getCredentialReport(const GetCredentialReportRequest &request)
+{
+    return qobject_cast<GetCredentialReportResponse *>(send(request));
+}
+
+/*!
  * Sends a GetCredentialReport request to the IamClient service, and returns a pointer to an
  * GetCredentialReportResponse object to track the result.
  *
@@ -1649,7 +1730,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
  */
 GetCredentialReportResponse * IamClient::getCredentialReport()
 {
-    return qobject_cast<GetCredentialReportResponse *>(send());
+    return getCredentialReport(GetCredentialReportRequest());
 }
 
 /*!

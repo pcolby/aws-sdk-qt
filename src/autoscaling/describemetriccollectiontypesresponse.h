@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
+#include "describemetriccollectiontypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeMetricCollectionTypesResponse : public AutoScalingRes
     Q_OBJECT
 
 public:
-    DescribeMetricCollectionTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeMetricCollectionTypesResponse(const DescribeMetricCollectionTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeMetricCollectionTypesRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

@@ -134,8 +134,12 @@ HEADERS += \
     describeloadbasedautoscalingrequest_p.h \
     describeloadbasedautoscalingresponse.h \
     describeloadbasedautoscalingresponse_p.h \
+    describemyuserprofilerequest.h \
+    describemyuserprofilerequest_p.h \
     describemyuserprofileresponse.h \
     describemyuserprofileresponse_p.h \
+    describeoperatingsystemsrequest.h \
+    describeoperatingsystemsrequest_p.h \
     describeoperatingsystemsresponse.h \
     describeoperatingsystemsresponse_p.h \
     describepermissionsrequest.h \
@@ -372,7 +376,9 @@ SOURCES += \
     describelayersresponse.cpp \
     describeloadbasedautoscalingrequest.cpp \
     describeloadbasedautoscalingresponse.cpp \
+    describemyuserprofilerequest.cpp \
     describemyuserprofileresponse.cpp \
+    describeoperatingsystemsrequest.cpp \
     describeoperatingsystemsresponse.cpp \
     describepermissionsrequest.cpp \
     describepermissionsresponse.cpp \

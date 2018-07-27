@@ -43,6 +43,7 @@
 #include "describeassessmenttargetsresponse.h"
 #include "describeassessmenttemplatesrequest.h"
 #include "describeassessmenttemplatesresponse.h"
+#include "describecrossaccountaccessrolerequest.h"
 #include "describecrossaccountaccessroleresponse.h"
 #include "describeexclusionsrequest.h"
 #include "describeexclusionsresponse.h"
@@ -334,6 +335,19 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
 }
 
 /*!
+ * Sends \a request to the InspectorClient service, and returns a pointer to an
+ * DescribeCrossAccountAccessRoleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the IAM role that enables Amazon Inspector to access your AWS
+ */
+DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAccessRole(const DescribeCrossAccountAccessRoleRequest &request)
+{
+    return qobject_cast<DescribeCrossAccountAccessRoleResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeCrossAccountAccessRole request to the InspectorClient service, and returns a pointer to an
  * DescribeCrossAccountAccessRoleResponse object to track the result.
  *
@@ -343,7 +357,7 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
  */
 DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAccessRole()
 {
-    return qobject_cast<DescribeCrossAccountAccessRoleResponse *>(send());
+    return describeCrossAccountAccessRole(DescribeCrossAccountAccessRoleRequest());
 }
 
 /*!

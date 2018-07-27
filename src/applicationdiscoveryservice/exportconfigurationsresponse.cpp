@@ -102,13 +102,15 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * Constructs a ExportConfigurationsResponse object for \a reply, with parent \a parent.
+ * Constructs a ExportConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ExportConfigurationsResponse::ExportConfigurationsResponse(
+        const ExportConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ApplicationDiscoveryServiceResponse(new ExportConfigurationsResponsePrivate(this), parent)
 {
+    setRequest(new ExportConfigurationsRequest(request));
     setReply(reply);
 }
 

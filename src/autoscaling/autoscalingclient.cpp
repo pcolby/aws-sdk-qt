@@ -49,15 +49,19 @@
 #include "deletescheduledactionresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "describeaccountlimitsrequest.h"
 #include "describeaccountlimitsresponse.h"
+#include "describeadjustmenttypesrequest.h"
 #include "describeadjustmenttypesresponse.h"
 #include "describeautoscalinggroupsrequest.h"
 #include "describeautoscalinggroupsresponse.h"
 #include "describeautoscalinginstancesrequest.h"
 #include "describeautoscalinginstancesresponse.h"
+#include "describeautoscalingnotificationtypesrequest.h"
 #include "describeautoscalingnotificationtypesresponse.h"
 #include "describelaunchconfigurationsrequest.h"
 #include "describelaunchconfigurationsresponse.h"
+#include "describelifecyclehooktypesrequest.h"
 #include "describelifecyclehooktypesresponse.h"
 #include "describelifecyclehooksrequest.h"
 #include "describelifecyclehooksresponse.h"
@@ -65,6 +69,7 @@
 #include "describeloadbalancertargetgroupsresponse.h"
 #include "describeloadbalancersrequest.h"
 #include "describeloadbalancersresponse.h"
+#include "describemetriccollectiontypesrequest.h"
 #include "describemetriccollectiontypesresponse.h"
 #include "describenotificationconfigurationsrequest.h"
 #include "describenotificationconfigurationsresponse.h"
@@ -72,11 +77,13 @@
 #include "describepoliciesresponse.h"
 #include "describescalingactivitiesrequest.h"
 #include "describescalingactivitiesresponse.h"
+#include "describescalingprocesstypesrequest.h"
 #include "describescalingprocesstypesresponse.h"
 #include "describescheduledactionsrequest.h"
 #include "describescheduledactionsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
+#include "describeterminationpolicytypesrequest.h"
 #include "describeterminationpolicytypesresponse.h"
 #include "detachinstancesrequest.h"
 #include "detachinstancesresponse.h"
@@ -531,6 +538,25 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeAccountLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the current Auto Scaling resource limits for your AWS
+ *
+ * account>
+ *
+ * For information about requesting an increase in these limits, see <a
+ * href="http://docs.aws.amazon.com/autoscaling/latest/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
+ * <i>Auto Scaling User
+ */
+DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
+{
+    return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeAccountLimits request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAccountLimitsResponse object to track the result.
  *
@@ -546,7 +572,20 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
-    return qobject_cast<DescribeAccountLimitsResponse *>(send());
+    return describeAccountLimits(DescribeAccountLimitsRequest());
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeAdjustmentTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the policy adjustment types for use with
+ */
+DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes(const DescribeAdjustmentTypesRequest &request)
+{
+    return qobject_cast<DescribeAdjustmentTypesResponse *>(send(request));
 }
 
 /*!
@@ -559,7 +598,7 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 {
-    return qobject_cast<DescribeAdjustmentTypesResponse *>(send());
+    return describeAdjustmentTypes(DescribeAdjustmentTypesRequest());
 }
 
 /*!
@@ -589,6 +628,19 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeAutoScalingNotificationTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the notification types that are supported by Auto
+ */
+DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoScalingNotificationTypes(const DescribeAutoScalingNotificationTypesRequest &request)
+{
+    return qobject_cast<DescribeAutoScalingNotificationTypesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeAutoScalingNotificationTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAutoScalingNotificationTypesResponse object to track the result.
  *
@@ -598,7 +650,7 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
  */
 DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoScalingNotificationTypes()
 {
-    return qobject_cast<DescribeAutoScalingNotificationTypesResponse *>(send());
+    return describeAutoScalingNotificationTypes(DescribeAutoScalingNotificationTypesRequest());
 }
 
 /*!
@@ -615,6 +667,19 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeLifecycleHookTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the available types of lifecycle
+ */
+DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes(const DescribeLifecycleHookTypesRequest &request)
+{
+    return qobject_cast<DescribeLifecycleHookTypesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeLifecycleHookTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeLifecycleHookTypesResponse object to track the result.
  *
@@ -624,7 +689,7 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes()
 {
-    return qobject_cast<DescribeLifecycleHookTypesResponse *>(send());
+    return describeLifecycleHookTypes(DescribeLifecycleHookTypesRequest());
 }
 
 /*!
@@ -672,6 +737,24 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeMetricCollectionTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the available CloudWatch metrics for Auto
+ *
+ * Scaling>
+ *
+ * Note that the <code>GroupStandbyInstances</code> metric is not returned by default. You must explicitly request this
+ * metric when calling
+ */
+DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes(const DescribeMetricCollectionTypesRequest &request)
+{
+    return qobject_cast<DescribeMetricCollectionTypesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeMetricCollectionTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeMetricCollectionTypesResponse object to track the result.
  *
@@ -686,7 +769,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes()
 {
-    return qobject_cast<DescribeMetricCollectionTypesResponse *>(send());
+    return describeMetricCollectionTypes(DescribeMetricCollectionTypesRequest());
 }
 
 /*!
@@ -729,6 +812,19 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeScalingProcessTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the scaling process types for use with <a>ResumeProcesses</a> and
+ */
+DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes(const DescribeScalingProcessTypesRequest &request)
+{
+    return qobject_cast<DescribeScalingProcessTypesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeScalingProcessTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeScalingProcessTypesResponse object to track the result.
  *
@@ -738,7 +834,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes()
 {
-    return qobject_cast<DescribeScalingProcessTypesResponse *>(send());
+    return describeScalingProcessTypes(DescribeScalingProcessTypesRequest());
 }
 
 /*!
@@ -780,6 +876,19 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
 }
 
 /*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeTerminationPolicyTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the termination policies supported by Auto
+ */
+DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes(const DescribeTerminationPolicyTypesRequest &request)
+{
+    return qobject_cast<DescribeTerminationPolicyTypesResponse *>(send(request));
+}
+
+/*!
  * Sends a DescribeTerminationPolicyTypes request to the AutoScalingClient service, and returns a pointer to an
  * DescribeTerminationPolicyTypesResponse object to track the result.
  *
@@ -789,7 +898,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
 {
-    return qobject_cast<DescribeTerminationPolicyTypesResponse *>(send());
+    return describeTerminationPolicyTypes(DescribeTerminationPolicyTypesRequest());
 }
 
 /*!

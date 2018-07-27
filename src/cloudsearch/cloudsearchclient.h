@@ -68,6 +68,7 @@ class DescribeSuggestersRequest;
 class DescribeSuggestersResponse;
 class IndexDocumentsRequest;
 class IndexDocumentsResponse;
+class ListDomainNamesRequest;
 class ListDomainNamesResponse;
 class UpdateAvailabilityOptionsRequest;
 class UpdateAvailabilityOptionsResponse;
@@ -112,6 +113,7 @@ public slots:
     DescribeServiceAccessPoliciesResponse * describeServiceAccessPolicies(const DescribeServiceAccessPoliciesRequest &request);
     DescribeSuggestersResponse * describeSuggesters(const DescribeSuggestersRequest &request);
     IndexDocumentsResponse * indexDocuments(const IndexDocumentsRequest &request);
+    ListDomainNamesResponse * listDomainNames(const ListDomainNamesRequest &request);
     ListDomainNamesResponse * listDomainNames();
     UpdateAvailabilityOptionsResponse * updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request);
     UpdateScalingParametersResponse * updateScalingParameters(const UpdateScalingParametersRequest &request);

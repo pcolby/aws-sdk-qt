@@ -106,6 +106,8 @@ HEADERS += \
     describereceiptrulesetrequest_p.h \
     describereceiptrulesetresponse.h \
     describereceiptrulesetresponse_p.h \
+    getaccountsendingenabledrequest.h \
+    getaccountsendingenabledrequest_p.h \
     getaccountsendingenabledresponse.h \
     getaccountsendingenabledresponse_p.h \
     getcustomverificationemailtemplaterequest.h \
@@ -132,8 +134,12 @@ HEADERS += \
     getidentityverificationattributesrequest_p.h \
     getidentityverificationattributesresponse.h \
     getidentityverificationattributesresponse_p.h \
+    getsendquotarequest.h \
+    getsendquotarequest_p.h \
     getsendquotaresponse.h \
     getsendquotaresponse_p.h \
+    getsendstatisticsrequest.h \
+    getsendstatisticsrequest_p.h \
     getsendstatisticsresponse.h \
     getsendstatisticsresponse_p.h \
     gettemplaterequest.h \
@@ -168,6 +174,8 @@ HEADERS += \
     listtemplatesrequest_p.h \
     listtemplatesresponse.h \
     listtemplatesresponse_p.h \
+    listverifiedemailaddressesrequest.h \
+    listverifiedemailaddressesrequest_p.h \
     listverifiedemailaddressesresponse.h \
     listverifiedemailaddressesresponse_p.h \
     putidentitypolicyrequest.h \
@@ -338,6 +346,7 @@ SOURCES += \
     describereceiptruleresponse.cpp \
     describereceiptrulesetrequest.cpp \
     describereceiptrulesetresponse.cpp \
+    getaccountsendingenabledrequest.cpp \
     getaccountsendingenabledresponse.cpp \
     getcustomverificationemailtemplaterequest.cpp \
     getcustomverificationemailtemplateresponse.cpp \
@@ -351,7 +360,9 @@ SOURCES += \
     getidentitypoliciesresponse.cpp \
     getidentityverificationattributesrequest.cpp \
     getidentityverificationattributesresponse.cpp \
+    getsendquotarequest.cpp \
     getsendquotaresponse.cpp \
+    getsendstatisticsrequest.cpp \
     getsendstatisticsresponse.cpp \
     gettemplaterequest.cpp \
     gettemplateresponse.cpp \
@@ -369,6 +380,7 @@ SOURCES += \
     listreceiptrulesetsresponse.cpp \
     listtemplatesrequest.cpp \
     listtemplatesresponse.cpp \
+    listverifiedemailaddressesrequest.cpp \
     listverifiedemailaddressesresponse.cpp \
     putidentitypolicyrequest.cpp \
     putidentitypolicyresponse.cpp \

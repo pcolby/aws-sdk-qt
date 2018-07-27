@@ -23,23 +23,15 @@ namespace {{NameSpaceName}} {
  */
 
 /*!
-{% if operation.input.shape %}
  * Constructs a {{ClassName}} object for \a reply to \a request, with parent \a parent.
-{% else %}
- * Constructs a {{ClassName}} object for \a reply, with parent \a parent.
-{% endif %}
  */
 {{ClassName}}::{{ClassName}}(
-{% if operation.input.shape %}
         const {{OperationName}}Request &request,
-{% endif %}
         QNetworkReply * const reply,
         QObject * const parent)
     : {{ServiceClassName}}Response(new {{ClassName}}Private(this), parent)
 {
-{% if operation.input.shape %}
     setRequest(new {{OperationName}}Request(request));
-{% endif %}
     setReply(reply);
 }
 

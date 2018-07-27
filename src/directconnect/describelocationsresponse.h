@@ -21,6 +21,7 @@
 #define QTAWS_DESCRIBELOCATIONSRESPONSE_H
 
 #include "directconnectresponse.h"
+#include "describelocationsrequest.h"
 
 namespace QtAws {
 namespace DirectConnect {
@@ -31,8 +32,9 @@ class QTAWS_EXPORT DescribeLocationsResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:
-    DescribeLocationsResponse(QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeLocationsResponse(const DescribeLocationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
+    virtual const DescribeLocationsRequest * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

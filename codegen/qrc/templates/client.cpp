@@ -4,9 +4,7 @@
 
 #include "core/awssignaturev4.h"
 {% for name,op in operations.items %}
-{% if op.input.shape %}
 #include "{{name|lower}}request.h"
-{% endif %}
 #include "{{name|lower}}response.h"
 {% endfor %}
 
@@ -96,11 +94,7 @@ namespace {{NameSpaceName}} {
 
 {% for name,op in operations.items %}
 /*!
-{% if op.input.shape %}
  * Sends \a request to the {{ClassName}} service, and returns a pointer to an
-{% else %}
- * Sends a {{name}} request to the {{ClassName}} service, and returns a pointer to an
-{% endif %}
  * {{name}}Response object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -109,15 +103,28 @@ namespace {{NameSpaceName}} {
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  */
-{{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %})
+{{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}(const {{name}}Request &request)
 {
-{% if op.input.shape %}
     return qobject_cast<{{name}}Response *>(send(request));
-{% else %}
-    return qobject_cast<{{name}}Response *>(send());
-{% endif %}
 }
 
+{% if not op.input.shape %}
+/*!
+ * Sends a {{name}} request to the {{ClassName}} service, and returns a pointer to an
+ * {{name}}Response object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+{% for line in op.documentationFormatted %}
+ *{% if line %} {{ line }}{% endif %}
+{% endfor %}
+ */
+{{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}()
+{
+    return {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({{name}}Request());
+}
+
+{% endif %}
 {% endfor %}
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private

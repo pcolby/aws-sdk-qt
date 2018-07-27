@@ -106,6 +106,8 @@ HEADERS += \
     deleteaccountaliasrequest_p.h \
     deleteaccountaliasresponse.h \
     deleteaccountaliasresponse_p.h \
+    deleteaccountpasswordpolicyrequest.h \
+    deleteaccountpasswordpolicyrequest_p.h \
     deleteaccountpasswordpolicyresponse.h \
     deleteaccountpasswordpolicyresponse_p.h \
     deletegrouppolicyrequest.h \
@@ -204,6 +206,8 @@ HEADERS += \
     enablemfadevicerequest_p.h \
     enablemfadeviceresponse.h \
     enablemfadeviceresponse_p.h \
+    generatecredentialreportrequest.h \
+    generatecredentialreportrequest_p.h \
     generatecredentialreportresponse.h \
     generatecredentialreportresponse_p.h \
     getaccesskeylastusedrequest.h \
@@ -214,8 +218,12 @@ HEADERS += \
     getaccountauthorizationdetailsrequest_p.h \
     getaccountauthorizationdetailsresponse.h \
     getaccountauthorizationdetailsresponse_p.h \
+    getaccountpasswordpolicyrequest.h \
+    getaccountpasswordpolicyrequest_p.h \
     getaccountpasswordpolicyresponse.h \
     getaccountpasswordpolicyresponse_p.h \
+    getaccountsummaryrequest.h \
+    getaccountsummaryrequest_p.h \
     getaccountsummaryresponse.h \
     getaccountsummaryresponse_p.h \
     getcontextkeysforcustompolicyrequest.h \
@@ -226,6 +234,8 @@ HEADERS += \
     getcontextkeysforprincipalpolicyrequest_p.h \
     getcontextkeysforprincipalpolicyresponse.h \
     getcontextkeysforprincipalpolicyresponse_p.h \
+    getcredentialreportrequest.h \
+    getcredentialreportrequest_p.h \
     getcredentialreportresponse.h \
     getcredentialreportresponse_p.h \
     getgrouppolicyrequest.h \
@@ -564,6 +574,7 @@ SOURCES += \
     deleteaccesskeyresponse.cpp \
     deleteaccountaliasrequest.cpp \
     deleteaccountaliasresponse.cpp \
+    deleteaccountpasswordpolicyrequest.cpp \
     deleteaccountpasswordpolicyresponse.cpp \
     deletegrouppolicyrequest.cpp \
     deletegrouppolicyresponse.cpp \
@@ -613,17 +624,21 @@ SOURCES += \
     detachuserpolicyresponse.cpp \
     enablemfadevicerequest.cpp \
     enablemfadeviceresponse.cpp \
+    generatecredentialreportrequest.cpp \
     generatecredentialreportresponse.cpp \
     getaccesskeylastusedrequest.cpp \
     getaccesskeylastusedresponse.cpp \
     getaccountauthorizationdetailsrequest.cpp \
     getaccountauthorizationdetailsresponse.cpp \
+    getaccountpasswordpolicyrequest.cpp \
     getaccountpasswordpolicyresponse.cpp \
+    getaccountsummaryrequest.cpp \
     getaccountsummaryresponse.cpp \
     getcontextkeysforcustompolicyrequest.cpp \
     getcontextkeysforcustompolicyresponse.cpp \
     getcontextkeysforprincipalpolicyrequest.cpp \
     getcontextkeysforprincipalpolicyresponse.cpp \
+    getcredentialreportrequest.cpp \
     getcredentialreportresponse.cpp \
     getgrouppolicyrequest.cpp \
     getgrouppolicyresponse.cpp \
