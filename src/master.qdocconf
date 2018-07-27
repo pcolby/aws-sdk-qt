@@ -39,6 +39,7 @@ dax/doc/qtawsdax.qdocconf
 devicefarm/doc/qtawsdevicefarm.qdocconf
 directconnect/doc/qtawsdirectconnect.qdocconf
 applicationdiscoveryservice/doc/qtawsapplicationdiscoveryservice.qdocconf
+dlm/doc/qtawsdlm.qdocconf
 databasemigrationservice/doc/qtawsdatabasemigrationservice.qdocconf
 directoryservice/doc/qtawsdirectoryservice.qdocconf
 dynamodb/doc/qtawsdynamodb.qdocconf
@@ -86,6 +87,7 @@ lexmodelbuildingservice/doc/qtawslexmodelbuildingservice.qdocconf
 lightsail/doc/qtawslightsail.qdocconf
 cloudwatchlogs/doc/qtawscloudwatchlogs.qdocconf
 machinelearning/doc/qtawsmachinelearning.qdocconf
+macie/doc/qtawsmacie.qdocconf
 marketplacecommerceanalytics/doc/qtawsmarketplacecommerceanalytics.qdocconf
 mediaconvert/doc/qtawsmediaconvert.qdocconf
 medialive/doc/qtawsmedialive.qdocconf

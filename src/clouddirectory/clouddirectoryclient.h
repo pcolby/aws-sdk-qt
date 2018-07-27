@@ -110,6 +110,8 @@ class ListIncomingTypedLinksRequest;
 class ListIncomingTypedLinksResponse;
 class ListIndexRequest;
 class ListIndexResponse;
+class ListManagedSchemaArnsRequest;
+class ListManagedSchemaArnsResponse;
 class ListObjectAttributesRequest;
 class ListObjectAttributesResponse;
 class ListObjectChildrenRequest;
@@ -216,6 +218,7 @@ public slots:
     ListFacetNamesResponse * listFacetNames(const ListFacetNamesRequest &request);
     ListIncomingTypedLinksResponse * listIncomingTypedLinks(const ListIncomingTypedLinksRequest &request);
     ListIndexResponse * listIndex(const ListIndexRequest &request);
+    ListManagedSchemaArnsResponse * listManagedSchemaArns(const ListManagedSchemaArnsRequest &request);
     ListObjectAttributesResponse * listObjectAttributes(const ListObjectAttributesRequest &request);
     ListObjectChildrenResponse * listObjectChildren(const ListObjectChildrenRequest &request);
     ListObjectParentPathsResponse * listObjectParentPaths(const ListObjectParentPathsRequest &request);

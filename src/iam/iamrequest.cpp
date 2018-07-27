@@ -69,6 +69,7 @@ namespace IAM {
  * \value DeletePolicyAction IAM DeletePolicy action.
  * \value DeletePolicyVersionAction IAM DeletePolicyVersion action.
  * \value DeleteRoleAction IAM DeleteRole action.
+ * \value DeleteRolePermissionsBoundaryAction IAM DeleteRolePermissionsBoundary action.
  * \value DeleteRolePolicyAction IAM DeleteRolePolicy action.
  * \value DeleteSAMLProviderAction IAM DeleteSAMLProvider action.
  * \value DeleteSSHPublicKeyAction IAM DeleteSSHPublicKey action.
@@ -77,6 +78,7 @@ namespace IAM {
  * \value DeleteServiceSpecificCredentialAction IAM DeleteServiceSpecificCredential action.
  * \value DeleteSigningCertificateAction IAM DeleteSigningCertificate action.
  * \value DeleteUserAction IAM DeleteUser action.
+ * \value DeleteUserPermissionsBoundaryAction IAM DeleteUserPermissionsBoundary action.
  * \value DeleteUserPolicyAction IAM DeleteUserPolicy action.
  * \value DeleteVirtualMFADeviceAction IAM DeleteVirtualMFADevice action.
  * \value DetachGroupPolicyAction IAM DetachGroupPolicy action.
@@ -132,7 +134,9 @@ namespace IAM {
  * \value ListUsersAction IAM ListUsers action.
  * \value ListVirtualMFADevicesAction IAM ListVirtualMFADevices action.
  * \value PutGroupPolicyAction IAM PutGroupPolicy action.
+ * \value PutRolePermissionsBoundaryAction IAM PutRolePermissionsBoundary action.
  * \value PutRolePolicyAction IAM PutRolePolicy action.
+ * \value PutUserPermissionsBoundaryAction IAM PutUserPermissionsBoundary action.
  * \value PutUserPolicyAction IAM PutUserPolicy action.
  * \value RemoveClientIDFromOpenIDConnectProviderAction IAM RemoveClientIDFromOpenIDConnectProvider action.
  * \value RemoveRoleFromInstanceProfileAction IAM RemoveRoleFromInstanceProfile action.

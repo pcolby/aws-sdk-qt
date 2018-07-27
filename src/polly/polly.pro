@@ -22,10 +22,18 @@ HEADERS += \
     getlexiconrequest_p.h \
     getlexiconresponse.h \
     getlexiconresponse_p.h \
+    getspeechsynthesistaskrequest.h \
+    getspeechsynthesistaskrequest_p.h \
+    getspeechsynthesistaskresponse.h \
+    getspeechsynthesistaskresponse_p.h \
     listlexiconsrequest.h \
     listlexiconsrequest_p.h \
     listlexiconsresponse.h \
     listlexiconsresponse_p.h \
+    listspeechsynthesistasksrequest.h \
+    listspeechsynthesistasksrequest_p.h \
+    listspeechsynthesistasksresponse.h \
+    listspeechsynthesistasksresponse_p.h \
     pollyclient.h \
     pollyclient_p.h \
     pollyrequest.h \
@@ -36,6 +44,10 @@ HEADERS += \
     putlexiconrequest_p.h \
     putlexiconresponse.h \
     putlexiconresponse_p.h \
+    startspeechsynthesistaskrequest.h \
+    startspeechsynthesistaskrequest_p.h \
+    startspeechsynthesistaskresponse.h \
+    startspeechsynthesistaskresponse_p.h \
     synthesizespeechrequest.h \
     synthesizespeechrequest_p.h \
     synthesizespeechresponse.h \
@@ -48,13 +60,19 @@ SOURCES += \
     describevoicesresponse.cpp \
     getlexiconrequest.cpp \
     getlexiconresponse.cpp \
+    getspeechsynthesistaskrequest.cpp \
+    getspeechsynthesistaskresponse.cpp \
     listlexiconsrequest.cpp \
     listlexiconsresponse.cpp \
+    listspeechsynthesistasksrequest.cpp \
+    listspeechsynthesistasksresponse.cpp \
     pollyclient.cpp \
     pollyrequest.cpp \
     pollyresponse.cpp \
     putlexiconrequest.cpp \
     putlexiconresponse.cpp \
+    startspeechsynthesistaskrequest.cpp \
+    startspeechsynthesistaskresponse.cpp \
     synthesizespeechrequest.cpp \
     synthesizespeechresponse.cpp \
 

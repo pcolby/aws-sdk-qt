@@ -51,6 +51,7 @@ public:
         GetSnowballUsageAction,
         ListClusterJobsAction,
         ListClustersAction,
+        ListCompatibleImagesAction,
         ListJobsAction,
         UpdateClusterAction,
         UpdateJobAction,

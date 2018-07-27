@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsMacie
+description = AWS Macie SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsmacie-index.html"
+navigation.landingtitle = "Macie"
+navigation.cppclassespage = "Macie C++ Classes"

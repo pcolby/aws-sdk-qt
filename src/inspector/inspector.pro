@@ -22,6 +22,10 @@ HEADERS += \
     createassessmenttemplaterequest_p.h \
     createassessmenttemplateresponse.h \
     createassessmenttemplateresponse_p.h \
+    createexclusionspreviewrequest.h \
+    createexclusionspreviewrequest_p.h \
+    createexclusionspreviewresponse.h \
+    createexclusionspreviewresponse_p.h \
     createresourcegrouprequest.h \
     createresourcegrouprequest_p.h \
     createresourcegroupresponse.h \
@@ -52,6 +56,10 @@ HEADERS += \
     describeassessmenttemplatesresponse_p.h \
     describecrossaccountaccessroleresponse.h \
     describecrossaccountaccessroleresponse_p.h \
+    describeexclusionsrequest.h \
+    describeexclusionsrequest_p.h \
+    describeexclusionsresponse.h \
+    describeexclusionsresponse_p.h \
     describefindingsrequest.h \
     describefindingsrequest_p.h \
     describefindingsresponse.h \
@@ -68,6 +76,10 @@ HEADERS += \
     getassessmentreportrequest_p.h \
     getassessmentreportresponse.h \
     getassessmentreportresponse_p.h \
+    getexclusionspreviewrequest.h \
+    getexclusionspreviewrequest_p.h \
+    getexclusionspreviewresponse.h \
+    getexclusionspreviewresponse_p.h \
     gettelemetrymetadatarequest.h \
     gettelemetrymetadatarequest_p.h \
     gettelemetrymetadataresponse.h \
@@ -98,6 +110,10 @@ HEADERS += \
     listeventsubscriptionsrequest_p.h \
     listeventsubscriptionsresponse.h \
     listeventsubscriptionsresponse_p.h \
+    listexclusionsrequest.h \
+    listexclusionsrequest_p.h \
+    listexclusionsresponse.h \
+    listexclusionsresponse_p.h \
     listfindingsrequest.h \
     listfindingsrequest_p.h \
     listfindingsresponse.h \
@@ -154,6 +170,8 @@ SOURCES += \
     createassessmenttargetresponse.cpp \
     createassessmenttemplaterequest.cpp \
     createassessmenttemplateresponse.cpp \
+    createexclusionspreviewrequest.cpp \
+    createexclusionspreviewresponse.cpp \
     createresourcegrouprequest.cpp \
     createresourcegroupresponse.cpp \
     deleteassessmentrunrequest.cpp \
@@ -169,6 +187,8 @@ SOURCES += \
     describeassessmenttemplatesrequest.cpp \
     describeassessmenttemplatesresponse.cpp \
     describecrossaccountaccessroleresponse.cpp \
+    describeexclusionsrequest.cpp \
+    describeexclusionsresponse.cpp \
     describefindingsrequest.cpp \
     describefindingsresponse.cpp \
     describeresourcegroupsrequest.cpp \
@@ -177,6 +197,8 @@ SOURCES += \
     describerulespackagesresponse.cpp \
     getassessmentreportrequest.cpp \
     getassessmentreportresponse.cpp \
+    getexclusionspreviewrequest.cpp \
+    getexclusionspreviewresponse.cpp \
     gettelemetrymetadatarequest.cpp \
     gettelemetrymetadataresponse.cpp \
     inspectorclient.cpp \
@@ -192,6 +214,8 @@ SOURCES += \
     listassessmenttemplatesresponse.cpp \
     listeventsubscriptionsrequest.cpp \
     listeventsubscriptionsresponse.cpp \
+    listexclusionsrequest.cpp \
+    listexclusionsresponse.cpp \
     listfindingsrequest.cpp \
     listfindingsresponse.cpp \
     listrulespackagesrequest.cpp \

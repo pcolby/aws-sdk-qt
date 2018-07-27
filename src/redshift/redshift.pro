@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    acceptreservednodeexchangerequest.h \
+    acceptreservednodeexchangerequest_p.h \
+    acceptreservednodeexchangeresponse.h \
+    acceptreservednodeexchangeresponse_p.h \
     authorizeclustersecuritygroupingressrequest.h \
     authorizeclustersecuritygroupingressrequest_p.h \
     authorizeclustersecuritygroupingressresponse.h \
@@ -102,6 +106,10 @@ HEADERS += \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    describeclusterdbrevisionsrequest.h \
+    describeclusterdbrevisionsrequest_p.h \
+    describeclusterdbrevisionsresponse.h \
+    describeclusterdbrevisionsresponse_p.h \
     describeclusterparametergroupsrequest.h \
     describeclusterparametergroupsrequest_p.h \
     describeclusterparametergroupsresponse.h \
@@ -126,6 +134,10 @@ HEADERS += \
     describeclustersubnetgroupsrequest_p.h \
     describeclustersubnetgroupsresponse.h \
     describeclustersubnetgroupsresponse_p.h \
+    describeclustertracksrequest.h \
+    describeclustertracksrequest_p.h \
+    describeclustertracksresponse.h \
+    describeclustertracksresponse_p.h \
     describeclusterversionsrequest.h \
     describeclusterversionsrequest_p.h \
     describeclusterversionsresponse.h \
@@ -206,6 +218,14 @@ HEADERS += \
     getclustercredentialsrequest_p.h \
     getclustercredentialsresponse.h \
     getclustercredentialsresponse_p.h \
+    getreservednodeexchangeofferingsrequest.h \
+    getreservednodeexchangeofferingsrequest_p.h \
+    getreservednodeexchangeofferingsresponse.h \
+    getreservednodeexchangeofferingsresponse_p.h \
+    modifyclusterdbrevisionrequest.h \
+    modifyclusterdbrevisionrequest_p.h \
+    modifyclusterdbrevisionresponse.h \
+    modifyclusterdbrevisionresponse_p.h \
     modifyclusteriamrolesrequest.h \
     modifyclusteriamrolesrequest_p.h \
     modifyclusteriamrolesresponse.h \
@@ -270,6 +290,8 @@ HEADERS += \
     rotateencryptionkeyresponse_p.h \
 
 SOURCES += \
+    acceptreservednodeexchangerequest.cpp \
+    acceptreservednodeexchangeresponse.cpp \
     authorizeclustersecuritygroupingressrequest.cpp \
     authorizeclustersecuritygroupingressresponse.cpp \
     authorizesnapshotaccessrequest.cpp \
@@ -316,6 +338,8 @@ SOURCES += \
     deletesnapshotcopygrantresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    describeclusterdbrevisionsrequest.cpp \
+    describeclusterdbrevisionsresponse.cpp \
     describeclusterparametergroupsrequest.cpp \
     describeclusterparametergroupsresponse.cpp \
     describeclusterparametersrequest.cpp \
@@ -328,6 +352,8 @@ SOURCES += \
     describeclustersresponse.cpp \
     describeclustersubnetgroupsrequest.cpp \
     describeclustersubnetgroupsresponse.cpp \
+    describeclustertracksrequest.cpp \
+    describeclustertracksresponse.cpp \
     describeclusterversionsrequest.cpp \
     describeclusterversionsresponse.cpp \
     describedefaultclusterparametersrequest.cpp \
@@ -368,6 +394,10 @@ SOURCES += \
     enablesnapshotcopyresponse.cpp \
     getclustercredentialsrequest.cpp \
     getclustercredentialsresponse.cpp \
+    getreservednodeexchangeofferingsrequest.cpp \
+    getreservednodeexchangeofferingsresponse.cpp \
+    modifyclusterdbrevisionrequest.cpp \
+    modifyclusterdbrevisionresponse.cpp \
     modifyclusteriamrolesrequest.cpp \
     modifyclusteriamrolesresponse.cpp \
     modifyclusterparametergrouprequest.cpp \

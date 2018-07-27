@@ -18,6 +18,10 @@ HEADERS += \
     createsecretrequest_p.h \
     createsecretresponse.h \
     createsecretresponse_p.h \
+    deleteresourcepolicyrequest.h \
+    deleteresourcepolicyrequest_p.h \
+    deleteresourcepolicyresponse.h \
+    deleteresourcepolicyresponse_p.h \
     deletesecretrequest.h \
     deletesecretrequest_p.h \
     deletesecretresponse.h \
@@ -30,6 +34,10 @@ HEADERS += \
     getrandompasswordrequest_p.h \
     getrandompasswordresponse.h \
     getrandompasswordresponse_p.h \
+    getresourcepolicyrequest.h \
+    getresourcepolicyrequest_p.h \
+    getresourcepolicyresponse.h \
+    getresourcepolicyresponse_p.h \
     getsecretvaluerequest.h \
     getsecretvaluerequest_p.h \
     getsecretvalueresponse.h \
@@ -42,6 +50,10 @@ HEADERS += \
     listsecretversionidsrequest_p.h \
     listsecretversionidsresponse.h \
     listsecretversionidsresponse_p.h \
+    putresourcepolicyrequest.h \
+    putresourcepolicyrequest_p.h \
+    putresourcepolicyresponse.h \
+    putresourcepolicyresponse_p.h \
     putsecretvaluerequest.h \
     putsecretvaluerequest_p.h \
     putsecretvalueresponse.h \
@@ -82,18 +94,24 @@ SOURCES += \
     cancelrotatesecretresponse.cpp \
     createsecretrequest.cpp \
     createsecretresponse.cpp \
+    deleteresourcepolicyrequest.cpp \
+    deleteresourcepolicyresponse.cpp \
     deletesecretrequest.cpp \
     deletesecretresponse.cpp \
     describesecretrequest.cpp \
     describesecretresponse.cpp \
     getrandompasswordrequest.cpp \
     getrandompasswordresponse.cpp \
+    getresourcepolicyrequest.cpp \
+    getresourcepolicyresponse.cpp \
     getsecretvaluerequest.cpp \
     getsecretvalueresponse.cpp \
     listsecretsrequest.cpp \
     listsecretsresponse.cpp \
     listsecretversionidsrequest.cpp \
     listsecretversionidsresponse.cpp \
+    putresourcepolicyrequest.cpp \
+    putresourcepolicyresponse.cpp \
     putsecretvaluerequest.cpp \
     putsecretvalueresponse.cpp \
     restoresecretrequest.cpp \

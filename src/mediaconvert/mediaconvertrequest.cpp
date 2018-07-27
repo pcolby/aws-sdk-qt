@@ -53,6 +53,9 @@ namespace MediaConvert {
  * \value ListJobsAction MediaConvert ListJobs action.
  * \value ListPresetsAction MediaConvert ListPresets action.
  * \value ListQueuesAction MediaConvert ListQueues action.
+ * \value ListTagsForResourceAction MediaConvert ListTagsForResource action.
+ * \value TagResourceAction MediaConvert TagResource action.
+ * \value UntagResourceAction MediaConvert UntagResource action.
  * \value UpdateJobTemplateAction MediaConvert UpdateJobTemplate action.
  * \value UpdatePresetAction MediaConvert UpdatePreset action.
  * \value UpdateQueueAction MediaConvert UpdateQueue action.

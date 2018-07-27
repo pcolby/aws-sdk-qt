@@ -383,7 +383,7 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must
- * be specified, in either the <i>s3Targets</i> or the <i>jdbcTargets</i>
+ * be specified, in the <i>s3Targets</i> field, the <i>jdbcTargets</i> field, or the <i>DynamoDBTargets</i>
  */
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
@@ -1046,7 +1046,8 @@ ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, does
+ * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, returns
+ * a <a
  */
 StartCrawlerResponse * GlueClient::startCrawler(const StartCrawlerRequest &request)
 {

@@ -60,6 +60,8 @@ namespace SSM {
  * \value DeregisterTaskFromMaintenanceWindowAction SSM DeregisterTaskFromMaintenanceWindow action.
  * \value DescribeActivationsAction SSM DescribeActivations action.
  * \value DescribeAssociationAction SSM DescribeAssociation action.
+ * \value DescribeAssociationExecutionTargetsAction SSM DescribeAssociationExecutionTargets action.
+ * \value DescribeAssociationExecutionsAction SSM DescribeAssociationExecutions action.
  * \value DescribeAutomationExecutionsAction SSM DescribeAutomationExecutions action.
  * \value DescribeAutomationStepExecutionsAction SSM DescribeAutomationStepExecutions action.
  * \value DescribeAvailablePatchesAction SSM DescribeAvailablePatches action.
@@ -101,6 +103,7 @@ namespace SSM {
  * \value GetParametersByPathAction SSM GetParametersByPath action.
  * \value GetPatchBaselineAction SSM GetPatchBaseline action.
  * \value GetPatchBaselineForPatchGroupAction SSM GetPatchBaselineForPatchGroup action.
+ * \value LabelParameterVersionAction SSM LabelParameterVersion action.
  * \value ListAssociationVersionsAction SSM ListAssociationVersions action.
  * \value ListAssociationsAction SSM ListAssociations action.
  * \value ListCommandInvocationsAction SSM ListCommandInvocations action.
@@ -124,6 +127,7 @@ namespace SSM {
  * \value RemoveTagsFromResourceAction SSM RemoveTagsFromResource action.
  * \value SendAutomationSignalAction SSM SendAutomationSignal action.
  * \value SendCommandAction SSM SendCommand action.
+ * \value StartAssociationsOnceAction SSM StartAssociationsOnce action.
  * \value StartAutomationExecutionAction SSM StartAutomationExecution action.
  * \value StopAutomationExecutionAction SSM StopAutomationExecution action.
  * \value UpdateAssociationAction SSM UpdateAssociation action.

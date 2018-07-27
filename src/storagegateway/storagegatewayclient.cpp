@@ -39,6 +39,8 @@
 #include "createcachediscsivolumeresponse.h"
 #include "createnfsfilesharerequest.h"
 #include "createnfsfileshareresponse.h"
+#include "createsmbfilesharerequest.h"
+#include "createsmbfileshareresponse.h"
 #include "createsnapshotrequest.h"
 #include "createsnapshotresponse.h"
 #include "createsnapshotfromvolumerecoverypointrequest.h"
@@ -79,6 +81,10 @@
 #include "describemaintenancestarttimeresponse.h"
 #include "describenfsfilesharesrequest.h"
 #include "describenfsfilesharesresponse.h"
+#include "describesmbfilesharesrequest.h"
+#include "describesmbfilesharesresponse.h"
+#include "describesmbsettingsrequest.h"
+#include "describesmbsettingsresponse.h"
 #include "describesnapshotschedulerequest.h"
 #include "describesnapshotscheduleresponse.h"
 #include "describestorediscsivolumesrequest.h"
@@ -97,6 +103,8 @@
 #include "describeworkingstorageresponse.h"
 #include "disablegatewayrequest.h"
 #include "disablegatewayresponse.h"
+#include "joindomainrequest.h"
+#include "joindomainresponse.h"
 #include "listfilesharesrequest.h"
 #include "listfilesharesresponse.h"
 #include "listgatewaysrequest.h"
@@ -127,6 +135,8 @@
 #include "retrievetaperecoverypointresponse.h"
 #include "setlocalconsolepasswordrequest.h"
 #include "setlocalconsolepasswordresponse.h"
+#include "setsmbguestpasswordrequest.h"
+#include "setsmbguestpasswordresponse.h"
 #include "shutdowngatewayrequest.h"
 #include "shutdowngatewayresponse.h"
 #include "startgatewayrequest.h"
@@ -143,6 +153,8 @@
 #include "updatemaintenancestarttimeresponse.h"
 #include "updatenfsfilesharerequest.h"
 #include "updatenfsfileshareresponse.h"
+#include "updatesmbfilesharerequest.h"
+#include "updatesmbfileshareresponse.h"
 #include "updatesnapshotschedulerequest.h"
 #include "updatesnapshotscheduleresponse.h"
 #include "updatevtldevicetyperequest.h"
@@ -222,9 +234,9 @@ namespace StorageGateway {
  *  IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
  *  Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
  *  2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
- *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource
+ *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource IDs</a>.
  * 
- *  IDs</a>>
+ *  </p
  * 
  *  For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
  * 
@@ -476,8 +488,8 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a file share on an existing file gateway. In Storage Gateway, a file share is a file system mount point backed
- * by Amazon S3 cloud storage. Storage Gateway exposes file shares using a Network File System (NFS) interface. This
+ * Creates a Network File System (NFS) file share on an existing file gateway. In Storage Gateway, a file share is a file
+ * system mount point backed by Amazon S3 cloud storage. Storage Gateway exposes file shares using a NFS interface. This
  * operation is only supported in the file gateway
  *
  * type> <b>
@@ -494,6 +506,32 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
 CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const CreateNFSFileShareRequest &request)
 {
     return qobject_cast<CreateNFSFileShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * CreateSMBFileShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Server Message Block (SMB) file share on an existing file gateway. In Storage Gateway, a file share is a file
+ * system mount point backed by Amazon S3 cloud storage. Storage Gateway expose file shares using a SMB interface. This
+ * operation is only supported in the file gateway
+ *
+ * type> <b>
+ *
+ * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
+ * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
+ * activate it. For information about how to activate AWS STS, see Activating and Deactivating AWS STS in an AWS Region in
+ * the AWS Identity and Access Management User Guide.
+ *
+ * </p
+ *
+ * File gateway does not support creating hard or symbolic links on a file
+ */
+CreateSMBFileShareResponse * StorageGatewayClient::createSMBFileShare(const CreateSMBFileShareRequest &request)
+{
+    return qobject_cast<CreateSMBFileShareResponse *>(send(request));
 }
 
 /*!
@@ -887,11 +925,40 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a description for one or more file shares from a file gateway. This operation is only supported in the file gateway
+ * Gets a description for one or more Network File System (NFS) file shares from a file gateway. This operation is only
+ * supported in the file gateway
  */
 DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(const DescribeNFSFileSharesRequest &request)
 {
     return qobject_cast<DescribeNFSFileSharesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeSMBFileSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a description for one or more Server Message Block (SMB) file shares from a file gateway. This operation is only
+ * supported in the file gateway
+ */
+DescribeSMBFileSharesResponse * StorageGatewayClient::describeSMBFileShares(const DescribeSMBFileSharesRequest &request)
+{
+    return qobject_cast<DescribeSMBFileSharesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DescribeSMBSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a description of a Server Message Block (SMB) file share settings from a file gateway. This operation is only
+ * supported in the file gateway
+ */
+DescribeSMBSettingsResponse * StorageGatewayClient::describeSMBSettings(const DescribeSMBSettingsRequest &request)
+{
+    return qobject_cast<DescribeSMBSettingsResponse *>(send(request));
 }
 
 /*!
@@ -1059,6 +1126,20 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
 DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatewayRequest &request)
 {
     return qobject_cast<DisableGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * JoinDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a file gateway to an Active Directory domain. This operation is only supported in the file gateway type that
+ * supports the SMB file
+ */
+JoinDomainResponse * StorageGatewayClient::joinDomain(const JoinDomainRequest &request)
+{
+    return qobject_cast<JoinDomainResponse *>(send(request));
 }
 
 /*!
@@ -1351,6 +1432,20 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
 
 /*!
  * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * SetSMBGuestPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the password for the guest user “smbguest”. "smbguest" is the user when the Authentication method for the file
+ * share is
+ */
+SetSMBGuestPasswordResponse * StorageGatewayClient::setSMBGuestPassword(const SetSMBGuestPasswordRequest &request)
+{
+    return qobject_cast<SetSMBGuestPasswordResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
  * ShutdownGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1524,7 +1619,7 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a file share. This operation is only supported in the file gateway
+ * Updates a Network File System (NFS) file share. This operation is only supported in the file gateway
  *
  * type> <note>
  *
@@ -1562,6 +1657,35 @@ UpdateMaintenanceStartTimeResponse * StorageGatewayClient::updateMaintenanceStar
 UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const UpdateNFSFileShareRequest &request)
 {
     return qobject_cast<UpdateNFSFileShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateSMBFileShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a Server Message Block (SMB) file share. This operation is only supported in the file gateway
+ *
+ * type> <note>
+ *
+ * To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported in
+ * the file gateway
+ *
+ * type> </note> <b>
+ *
+ * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
+ * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
+ * activate it. For information about how to activate AWS STS, see Activating and Deactivating AWS STS in an AWS Region in
+ * the AWS Identity and Access Management User Guide.
+ *
+ * </p
+ *
+ * File gateway does not support creating hard or symbolic links on a file
+ */
+UpdateSMBFileShareResponse * StorageGatewayClient::updateSMBFileShare(const UpdateSMBFileShareRequest &request)
+{
+    return qobject_cast<UpdateSMBFileShareResponse *>(send(request));
 }
 
 /*!

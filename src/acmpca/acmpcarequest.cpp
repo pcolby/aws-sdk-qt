@@ -48,6 +48,7 @@ namespace ACMPCA {
  * \value IssueCertificateAction ACMPCA IssueCertificate action.
  * \value ListCertificateAuthoritiesAction ACMPCA ListCertificateAuthorities action.
  * \value ListTagsAction ACMPCA ListTags action.
+ * \value RestoreCertificateAuthorityAction ACMPCA RestoreCertificateAuthority action.
  * \value RevokeCertificateAction ACMPCA RevokeCertificate action.
  * \value TagCertificateAuthorityAction ACMPCA TagCertificateAuthority action.
  * \value UntagCertificateAuthorityAction ACMPCA UntagCertificateAuthority action.

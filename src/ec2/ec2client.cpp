@@ -594,8 +594,32 @@ namespace EC2 {
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
- *  Amazon Elastic Compute Cloud (Amazon EC2) provides resizable computing capacity in the AWS Cloud. Using Amazon EC2
- *  eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ *  Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS cloud. Using
+ *  Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications
+ * 
+ *  faster>
+ * 
+ *  To learn more about Amazon EC2, Amazon EBS, and Amazon VPC, see the following
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/documentation/ec2">Amazon EC2 documentation</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/documentation/vpc">Amazon VPC documentation</a>
  */
 
 /*!
@@ -733,8 +757,8 @@ AllocateAddressResponse * Ec2Client::allocateAddress(const AllocateAddressReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allocates a Dedicated Host to your account. At minimum you need to specify the instance size type, Availability Zone,
- * and quantity of hosts you want to
+ * Allocates a Dedicated Host to your account. At a minimum, specify the instance size type, Availability Zone, and
+ * quantity of hosts to
  */
 AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &request)
 {
@@ -1016,10 +1040,6 @@ AttachNetworkInterfaceResponse * Ec2Client::attachNetworkInterface(const AttachN
  *
  * instance> </li> </ul>
  *
- * For an overview of the AWS Marketplace, see <a href="https://aws.amazon.com/marketplace/help/200900000">Introducing AWS
- *
- * Marketplace</a>>
- *
  * For more information about EBS volumes, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html">Attaching Amazon EBS Volumes</a> in
  * the <i>Amazon Elastic Compute Cloud User
@@ -1126,12 +1146,6 @@ AuthorizeSecurityGroupIngressResponse * Ec2Client::authorizeSecurityGroupIngress
  * preserved> <note>
  *
  * This action is not applicable for Linux/Unix instances or Windows instances that are backed by Amazon
- *
- * EBS> </note>
- *
- * For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_InstanceStoreBacked_WinAMI.html">Creating an
- * Instance Store-Backed Windows
  */
 BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &request)
 {
@@ -1319,16 +1333,16 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  * the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a non-default CMK
  * with the <code>KmsKeyId</code> parameter.
  *
- * </p <note>
+ * </p
  *
  * To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to
  * encrypt the
  *
- * snapshot> </note> <note>
+ * snapshot>
  *
- * Snapshots created by the CopySnapshot action have an arbitrary volume ID that should not be used for any
+ * Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any
  *
- * purpose> </note>
+ * purpose>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-copy-snapshot.html">Copying an
  * Amazon EBS Snapshot</a> in the <i>Amazon Elastic Compute Cloud User
@@ -1997,9 +2011,10 @@ CreateSecurityGroupResponse * Ec2Client::createSecurityGroup(const CreateSecurit
  * protected>
  *
  * You can tag your snapshots during creation. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  *
- * Resources</a>>
+ * Guide</i>>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon Elastic
  * Block Store</a> and <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS
@@ -2121,9 +2136,10 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
  * Guide</i>>
  *
  * You can tag your volumes during creation. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a> in the
+ * <i>Amazon Elastic Compute Cloud User
  *
- * Resources</a>>
+ * Guide</i>>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-volume.html">Creating
  * an Amazon EBS Volume</a> in the <i>Amazon Elastic Compute Cloud User
@@ -2399,10 +2415,10 @@ DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGat
  *
  * Fleet>
  *
- * After you delete an EC2 Fleet, the EC2 Fleet launches no new instances. You must specify whether the EC2 Fleet should
- * also terminate its instances. If you terminate the instances, the EC2 Fleet enters the <code>deleted_terminating</code>
- * state. Otherwise, the EC2 Fleet enters the <code>deleted_running</code> state, and the instances continue to run until
- * they are interrupted or you terminate them manually.
+ * After you delete an EC2 Fleet, it launches no new instances. You must specify whether an EC2 Fleet should also terminate
+ * its instances. If you terminate the instances, the EC2 Fleet enters the <code>deleted_terminating</code> state.
+ * Otherwise, the EC2 Fleet enters the <code>deleted_running</code> state, and the instances continue to run until they are
+ * interrupted or you terminate them manually.
  */
 DeleteFleetsResponse * Ec2Client::deleteFleets(const DeleteFleetsRequest &request)
 {
@@ -2703,11 +2719,11 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
  *
  * Deletes the specified EBS volume. The volume must be in the <code>available</code> state (not attached to an
  *
- * instance)> <note>
+ * instance)>
  *
- * The volume may remain in the <code>deleting</code> state for several
+ * The volume can remain in the <code>deleting</code> state for several
  *
- * minutes> </note>
+ * minutes>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-deleting-volume.html">Deleting
  * an Amazon EBS Volume</a> in the <i>Amazon Elastic Compute Cloud User
@@ -3133,7 +3149,7 @@ DescribeFleetInstancesResponse * Ec2Client::describeFleetInstances(const Describ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified EC2
+ * Describes one or more of your EC2
  */
 DescribeFleetsResponse * Ec2Client::describeFleets(const DescribeFleetsRequest &request)
 {
@@ -3187,15 +3203,16 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the Dedicated Host Reservations that are available to
+ * Describes the Dedicated Host reservations that are available to
  *
  * purchase>
  *
- * The results describe all the Dedicated Host Reservation offerings, including offerings that may not match the instance
- * family and region of your Dedicated Hosts. When purchasing an offering, ensure that the the instance family and region
- * of the offering matches that of the Dedicated Host/s it will be associated with. For an overview of supported instance
- * types, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html">Dedicated Hosts
- * Overview</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+ * The results describe all the Dedicated Host reservation offerings, including offerings that may not match the instance
+ * family and region of your Dedicated Hosts. When purchasing an offering, ensure that the instance family and Region of
+ * the offering matches that of the Dedicated Hosts with which it is to be associated . For more information about
+ * supported instance types, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html">Dedicated Hosts Overview</a> in
+ * the <i>Amazon Elastic Compute Cloud User Guide</i>.
  */
 DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOfferings(const DescribeHostReservationOfferingsRequest &request)
 {
@@ -3208,7 +3225,7 @@ DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOff
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes Dedicated Host Reservations which are associated with Dedicated Hosts in your
+ * Describes reservations that are associated with Dedicated Hosts in your
  */
 DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const DescribeHostReservationsRequest &request)
 {
@@ -3226,7 +3243,7 @@ DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const Des
  * Hosts>
  *
  * The results describe only the Dedicated Hosts in the region you're currently using. All listed instances consume
- * capacity on your Dedicated Host. Dedicated Hosts that have recently been released will be listed with the state
+ * capacity on your Dedicated Host. Dedicated Hosts that have recently been released are listed with the state
  */
 DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &request)
 {
@@ -3660,7 +3677,8 @@ DescribePlacementGroupsResponse * Ec2Client::describePlacementGroups(const Descr
  *
  * Describes available AWS services in a prefix list format, which includes the prefix list name and prefix list ID of the
  * service and the IP address range for the service. A prefix list ID is required for creating an outbound security group
- * rule that allows traffic from a VPC to access an AWS service through a gateway VPC
+ * rule that allows traffic from a VPC to access an AWS service through a gateway VPC endpoint. Currently, the services
+ * that support this action are Amazon S3 and Amazon
  */
 DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefixListsRequest &request)
 {
@@ -4202,10 +4220,11 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
  * , <code>warning</code>, or <code>insufficient-data</code>. If all checks pass, the overall status of the volume is
  * <code>ok</code>. If the check fails, the overall status is <code>impaired</code>. If the status is
  * <code>insufficient-data</code>, then the checks may still be taking place on your volume at the time. We recommend that
- * you retry the request. For more information on volume status, see <a
+ * you retry the request. For more information about volume status, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-status.html">Monitoring the Status of Your
+ * Volumes</a> in the <i>Amazon Elastic Compute Cloud User
  *
- * Volumes</a>>
+ * Guide</i>>
  *
  * <i>Events</i>: Reflect the cause of a volume status and may require you to take action. For example, if your volume
  * returns an <code>impaired</code> status, then the volume event might be <code>potential-data-inconsistency</code>. This
@@ -4219,7 +4238,7 @@ DescribeVolumeAttributeResponse * Ec2Client::describeVolumeAttribute(const Descr
  * shows <code>enable-volume-io</code>. This means that you may want to enable the I/O operations for the volume by calling
  * the <a>EnableVolumeIO</a> action and then check the volume for data
  *
- * consistency> <note>
+ * consistency>
  *
  * Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does
  * not indicate volumes in the <code>error</code> state (for example, when a volume is incapable of accepting
@@ -4277,7 +4296,7 @@ DescribeVolumesResponse * Ec2Client::describeVolumes(const DescribeVolumesReques
  * CloudWatch Events, see the <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon CloudWatch Events
  * User Guide</a>. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods">Monitoring Volume
- * Modifications"</a>.
+ * Modifications"</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeVolumesModificationsResponse * Ec2Client::describeVolumesModifications(const DescribeVolumesModificationsRequest &request)
 {
@@ -5012,11 +5031,11 @@ ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const Mod
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, AWS will place instances that you
- * launch with a tenancy of <code>host</code>, but without targeting a specific host ID, onto any available Dedicated Host
- * in your account which has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID if you
- * want the instance to launch onto a specific host. If no host ID is provided, the instance will be launched onto a
- * suitable host which has auto-placement
+ * Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, any instances that you launch
+ * with a tenancy of <code>host</code> but without a specific host ID are placed onto any available Dedicated Host in your
+ * account that has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID ito have the
+ * instance launch onto a specific host. If no host ID is provided, the instance is launched onto a suitable host with
+ * auto-placement
  */
 ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
 {
@@ -5276,14 +5295,14 @@ ModifyReservedInstancesResponse * Ec2Client::modifyReservedInstances(const Modif
  * snapshot's list of create volume permissions, but you cannot do both in a single API call. If you need to both add and
  * remove account IDs for a snapshot, you must use multiple API
  *
- * calls> <note>
+ * calls>
  *
  * Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with
  * your default CMK cannot be shared with other
  *
- * accounts> </note>
+ * accounts>
  *
- * For more information on modifying snapshot permissions, see <a
+ * For more information about modifying snapshot permissions, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing Snapshots</a>
  * in the <i>Amazon Elastic Compute Cloud User
  */
@@ -5374,16 +5393,16 @@ ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySub
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#monitoring_mods">Monitoring Volume
  * Modifications</a>.
  *
- * </p <note>
+ * </p
  *
  * With previous-generation instance types, resizing an EBS volume may require detaching and reattaching the volume or
- * stopping and restarting the instance. For more information about modifying an EBS volume running Linux, see <a
+ * stopping and restarting the instance. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html">Modifying the Size, IOPS, or Type of an
- * EBS Volume on Linux</a>. For more information about modifying an EBS volume running Windows, see <a
+ * EBS Volume on Linux</a> and <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html">Modifying the Size, IOPS, or Type of
  * an EBS Volume on
  *
- * Windows</a>> </note> <note>
+ * Windows</a>>
  *
  * If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before
  * applying further modifications to the affected EBS
@@ -5708,8 +5727,14 @@ RebootInstancesResponse * Ec2Client::rebootInstances(const RebootInstancesReques
  *
  * Some Linux distributions, such as Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES), use the EC2
  * billing product code associated with an AMI to verify the subscription status for package updates. Creating an AMI from
- * an EBS snapshot does not maintain this billing code, and subsequent instances launched from such an AMI will not be able
- * to connect to package update infrastructure. To create an AMI that must retain billing codes, see
+ * an EBS snapshot does not maintain this billing code, and instances launched from such an AMI are not able to connect to
+ * package update infrastructure. If you purchase a Reserved Instance offering for one of these Linux distributions and
+ * launch instances using an AMI that does not contain the required billing code, your Reserved Instance is not applied to
+ * these
+ *
+ * instances>
+ *
+ * To create an AMI for operating systems that require a billing code, see
  *
  * <a>CreateImage</a>>
  *
@@ -5791,16 +5816,16 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
  *
  * When you no longer want to use an On-Demand Dedicated Host it can be released. On-Demand billing is stopped and the host
  * goes into <code>released</code> state. The host ID of Dedicated Hosts that have been released can no longer be specified
- * in another request, e.g., ModifyHosts. You must stop or terminate all instances on a host before it can be
+ * in another request, for example, ModifyHosts. You must stop or terminate all instances on a host before it can be
  *
  * released>
  *
- * When Dedicated Hosts are released, it make take some time for them to stop counting toward your limit and you may
- * receive capacity errors when trying to allocate new Dedicated hosts. Try waiting a few minutes, and then try
+ * When Dedicated Hosts are released, it may take some time for them to stop counting toward your limit and you may receive
+ * capacity errors when trying to allocate new Dedicated Hosts. Wait a few minutes and then try
  *
  * again>
  *
- * Released hosts will still appear in a <a>DescribeHosts</a>
+ * Released hosts still appear in a <a>DescribeHosts</a>
  */
 ReleaseHostsResponse * Ec2Client::releaseHosts(const ReleaseHostsRequest &request)
 {
@@ -6059,7 +6084,7 @@ ResetNetworkInterfaceAttributeResponse * Ec2Client::resetNetworkInterfaceAttribu
  *
  * snapshot>
  *
- * For more information on modifying snapshot permissions, see <a
+ * For more information about modifying snapshot permissions, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html">Sharing Snapshots</a>
  * in the <i>Amazon Elastic Compute Cloud User
  */

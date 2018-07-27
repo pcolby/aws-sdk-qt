@@ -43,6 +43,8 @@
 #include "describetagsresponse.h"
 #include "modifymounttargetsecuritygroupsrequest.h"
 #include "modifymounttargetsecuritygroupsresponse.h"
+#include "updatefilesystemrequest.h"
+#include "updatefilesystemresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -589,6 +591,19 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {
     return qobject_cast<ModifyMountTargetSecurityGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * UpdateFileSystemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the throughput mode or the amount of provisioned throughput of an existing file
+ */
+UpdateFileSystemResponse * EfsClient::updateFileSystem(const UpdateFileSystemRequest &request)
+{
+    return qobject_cast<UpdateFileSystemResponse *>(send(request));
 }
 
 /*!

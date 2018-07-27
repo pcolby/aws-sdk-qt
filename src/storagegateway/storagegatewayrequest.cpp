@@ -45,6 +45,7 @@ namespace StorageGateway {
  * \value CancelRetrievalAction StorageGateway CancelRetrieval action.
  * \value CreateCachediSCSIVolumeAction StorageGateway CreateCachediSCSIVolume action.
  * \value CreateNFSFileShareAction StorageGateway CreateNFSFileShare action.
+ * \value CreateSMBFileShareAction StorageGateway CreateSMBFileShare action.
  * \value CreateSnapshotAction StorageGateway CreateSnapshot action.
  * \value CreateSnapshotFromVolumeRecoveryPointAction StorageGateway CreateSnapshotFromVolumeRecoveryPoint action.
  * \value CreateStorediSCSIVolumeAction StorageGateway CreateStorediSCSIVolume action.
@@ -65,6 +66,8 @@ namespace StorageGateway {
  * \value DescribeGatewayInformationAction StorageGateway DescribeGatewayInformation action.
  * \value DescribeMaintenanceStartTimeAction StorageGateway DescribeMaintenanceStartTime action.
  * \value DescribeNFSFileSharesAction StorageGateway DescribeNFSFileShares action.
+ * \value DescribeSMBFileSharesAction StorageGateway DescribeSMBFileShares action.
+ * \value DescribeSMBSettingsAction StorageGateway DescribeSMBSettings action.
  * \value DescribeSnapshotScheduleAction StorageGateway DescribeSnapshotSchedule action.
  * \value DescribeStorediSCSIVolumesAction StorageGateway DescribeStorediSCSIVolumes action.
  * \value DescribeTapeArchivesAction StorageGateway DescribeTapeArchives action.
@@ -74,6 +77,7 @@ namespace StorageGateway {
  * \value DescribeVTLDevicesAction StorageGateway DescribeVTLDevices action.
  * \value DescribeWorkingStorageAction StorageGateway DescribeWorkingStorage action.
  * \value DisableGatewayAction StorageGateway DisableGateway action.
+ * \value JoinDomainAction StorageGateway JoinDomain action.
  * \value ListFileSharesAction StorageGateway ListFileShares action.
  * \value ListGatewaysAction StorageGateway ListGateways action.
  * \value ListLocalDisksAction StorageGateway ListLocalDisks action.
@@ -89,6 +93,7 @@ namespace StorageGateway {
  * \value RetrieveTapeArchiveAction StorageGateway RetrieveTapeArchive action.
  * \value RetrieveTapeRecoveryPointAction StorageGateway RetrieveTapeRecoveryPoint action.
  * \value SetLocalConsolePasswordAction StorageGateway SetLocalConsolePassword action.
+ * \value SetSMBGuestPasswordAction StorageGateway SetSMBGuestPassword action.
  * \value ShutdownGatewayAction StorageGateway ShutdownGateway action.
  * \value StartGatewayAction StorageGateway StartGateway action.
  * \value UpdateBandwidthRateLimitAction StorageGateway UpdateBandwidthRateLimit action.
@@ -97,6 +102,7 @@ namespace StorageGateway {
  * \value UpdateGatewaySoftwareNowAction StorageGateway UpdateGatewaySoftwareNow action.
  * \value UpdateMaintenanceStartTimeAction StorageGateway UpdateMaintenanceStartTime action.
  * \value UpdateNFSFileShareAction StorageGateway UpdateNFSFileShare action.
+ * \value UpdateSMBFileShareAction StorageGateway UpdateSMBFileShare action.
  * \value UpdateSnapshotScheduleAction StorageGateway UpdateSnapshotSchedule action.
  * \value UpdateVTLDeviceTypeAction StorageGateway UpdateVTLDeviceType action.
  */

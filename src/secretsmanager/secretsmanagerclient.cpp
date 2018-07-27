@@ -25,18 +25,24 @@
 #include "cancelrotatesecretresponse.h"
 #include "createsecretrequest.h"
 #include "createsecretresponse.h"
+#include "deleteresourcepolicyrequest.h"
+#include "deleteresourcepolicyresponse.h"
 #include "deletesecretrequest.h"
 #include "deletesecretresponse.h"
 #include "describesecretrequest.h"
 #include "describesecretresponse.h"
 #include "getrandompasswordrequest.h"
 #include "getrandompasswordresponse.h"
+#include "getresourcepolicyrequest.h"
+#include "getresourcepolicyresponse.h"
 #include "getsecretvaluerequest.h"
 #include "getsecretvalueresponse.h"
 #include "listsecretversionidsrequest.h"
 #include "listsecretversionidsresponse.h"
 #include "listsecretsrequest.h"
 #include "listsecretsresponse.h"
+#include "putresourcepolicyrequest.h"
+#include "putresourcepolicyresponse.h"
 #include "putsecretvaluerequest.h"
 #include "putsecretvalueresponse.h"
 #include "restoresecretrequest.h"
@@ -381,6 +387,45 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
 
 /*!
  * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * DeleteResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the resource-based permission policy that's attached to the
+ *
+ * secret>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * secretsmanager:DeleteResourcePolic> </li> </ul>
+ *
+ * <b>Related operations</b>
+ *
+ * </p <ul> <li>
+ *
+ * To attach a resource policy to a secret, use
+ *
+ * <a>PutResourcePolicy</a>> </li> <li>
+ *
+ * To retrieve the current resource-based policy that's attached to a secret, use
+ *
+ * <a>GetResourcePolicy</a>> </li> <li>
+ *
+ * To list all of the currently available secrets, use
+ */
+DeleteResourcePolicyResponse * SecretsManagerClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
+{
+    return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
  * DeleteSecretResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -510,6 +555,47 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
 
 /*!
  * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * GetResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the JSON text of the resource-based policy document that's attached to the specified secret. The JSON request
+ * string input and response output are shown formatted with white space and line breaks for better readability. Submit
+ * your input as a single line JSON
+ *
+ * string>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * secretsmanager:GetResourcePolic> </li> </ul>
+ *
+ * <b>Related operations</b>
+ *
+ * </p <ul> <li>
+ *
+ * To attach a resource policy to a secret, use
+ *
+ * <a>PutResourcePolicy</a>> </li> <li>
+ *
+ * To delete the resource-based policy that's attached to a secret, use
+ *
+ * <a>DeleteResourcePolicy</a>> </li> <li>
+ *
+ * To list all of the currently available secrets, use
+ */
+GetResourcePolicyResponse * SecretsManagerClient::getResourcePolicy(const GetResourcePolicyRequest &request)
+{
+    return qobject_cast<GetResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
  * GetSecretValueResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -627,6 +713,53 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
 ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest &request)
 {
     return qobject_cast<ListSecretsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * PutResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attaches the contents of the specified resource-based permission policy to a secret. A resource-based policy is
+ * optional. Alternatively, you can use IAM identity-based policies that specify the secret's Amazon Resource Name (ARN) in
+ * the policy statement's <code>Resources</code> element. You can also use a combination of both identity-based and
+ * resource-based policies. The affected users and roles receive the permissions that are permitted by all of the relevant
+ * policies. For more information, see <a
+ * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html">Using
+ * Resource-Based Policies for AWS Secrets Manager</a>. For the complete description of the AWS policy syntax and grammar,
+ * see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
+ * the <i>IAM User
+ *
+ * Guide</i>>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * secretsmanager:PutResourcePolic> </li> </ul>
+ *
+ * <b>Related operations</b>
+ *
+ * </p <ul> <li>
+ *
+ * To retrieve the resource policy that's attached to a secret, use
+ *
+ * <a>GetResourcePolicy</a>> </li> <li>
+ *
+ * To delete the resource-based policy that's attached to a secret, use
+ *
+ * <a>DeleteResourcePolicy</a>> </li> <li>
+ *
+ * To list all of the currently available secrets, use
+ */
+PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutResourcePolicyRequest &request)
+{
+    return qobject_cast<PutResourcePolicyResponse *>(send(request));
 }
 
 /*!

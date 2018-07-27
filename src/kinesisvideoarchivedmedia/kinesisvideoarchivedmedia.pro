@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    gethlsstreamingsessionurlrequest.h \
+    gethlsstreamingsessionurlrequest_p.h \
+    gethlsstreamingsessionurlresponse.h \
+    gethlsstreamingsessionurlresponse_p.h \
     getmediaforfragmentlistrequest.h \
     getmediaforfragmentlistrequest_p.h \
     getmediaforfragmentlistresponse.h \
@@ -26,6 +30,8 @@ HEADERS += \
     listfragmentsresponse_p.h \
 
 SOURCES += \
+    gethlsstreamingsessionurlrequest.cpp \
+    gethlsstreamingsessionurlresponse.cpp \
     getmediaforfragmentlistrequest.cpp \
     getmediaforfragmentlistresponse.cpp \
     kinesisvideoarchivedmediaclient.cpp \

@@ -56,8 +56,6 @@ class DeleteFieldLevelEncryptionProfileRequest;
 class DeleteFieldLevelEncryptionProfileResponse;
 class DeletePublicKeyRequest;
 class DeletePublicKeyResponse;
-class DeleteServiceLinkedRoleRequest;
-class DeleteServiceLinkedRoleResponse;
 class DeleteStreamingDistributionRequest;
 class DeleteStreamingDistributionResponse;
 class GetCloudFrontOriginAccessIdentityRequest;
@@ -151,7 +149,6 @@ public slots:
     DeleteFieldLevelEncryptionConfigResponse * deleteFieldLevelEncryptionConfig(const DeleteFieldLevelEncryptionConfigRequest &request);
     DeleteFieldLevelEncryptionProfileResponse * deleteFieldLevelEncryptionProfile(const DeleteFieldLevelEncryptionProfileRequest &request);
     DeletePublicKeyResponse * deletePublicKey(const DeletePublicKeyRequest &request);
-    DeleteServiceLinkedRoleResponse * deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request);
     DeleteStreamingDistributionResponse * deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request);
     GetCloudFrontOriginAccessIdentityResponse * getCloudFrontOriginAccessIdentity(const GetCloudFrontOriginAccessIdentityRequest &request);
     GetCloudFrontOriginAccessIdentityConfigResponse * getCloudFrontOriginAccessIdentityConfig(const GetCloudFrontOriginAccessIdentityConfigRequest &request);

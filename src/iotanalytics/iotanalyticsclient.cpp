@@ -65,6 +65,8 @@
 #include "listdatastoresresponse.h"
 #include "listpipelinesrequest.h"
 #include "listpipelinesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putloggingoptionsrequest.h"
 #include "putloggingoptionsresponse.h"
 #include "runpipelineactivityrequest.h"
@@ -73,6 +75,10 @@
 #include "samplechanneldataresponse.h"
 #include "startpipelinereprocessingrequest.h"
 #include "startpipelinereprocessingresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
 #include "updatedatasetrequest.h"
@@ -104,27 +110,26 @@ namespace IoTAnalytics {
  * \ingroup aws-clients
  * \inmodule QtAwsIoTAnalytics
  *
- *  AWS IoT Analytics provides advanced data analysis for AWS IoT. It allows you to collect large amounts of device data,
- *  process messages, store them, and then query the data and run sophisticated analytics to make accurate decisions in your
- *  IoT applications and machine learning use cases. AWS IoT Analytics enables advanced data exploration through integration
- *  with Jupyter Notebooks and data visualization through integration with Amazon
+ *  AWS IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then
+ *  query the data and run sophisticated analytics on it. AWS IoT Analytics enables advanced data exploration through
+ *  integration with Jupyter Notebooks and data visualization through integration with Amazon
  * 
  *  QuickSight>
  * 
  *  Traditional analytics and business intelligence tools are designed to process structured data. IoT data often comes from
- *  devices that record noisy processes (such as temperature, motion, or sound). As a result, the data from these devices
- *  can have significant gaps, corrupted messages, and false readings that must be cleaned up before analysis can occur.
- *  Also, IoT data is often only meaningful in the context of other data from external sources.
+ *  devices that record noisy processes (such as temperature, motion, or sound). As a result the data from these devices can
+ *  have significant gaps, corrupted messages, and false readings that must be cleaned up before analysis can occur. Also,
+ *  IoT data is often only meaningful in the context of other data from external sources.
  * 
  *  </p
  * 
- *  AWS IoT Analytics automates each of the steps required to analyze data from IoT devices. AWS IoT Analytics filters,
- *  transforms, and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service
- *  to collect only the data you need from your devices, apply mathematical transforms to process the data, and enrich the
- *  data with device-specific metadata such as device type and location before storing it. Then, you can analyze your data
- *  by running queries using the built-in SQL query engine, or perform more complex analytics and machine learning
- *  inference. AWS IoT Analytics includes models for common IoT use cases so you can answer questions like which devices are
- *  about to fail or which customers are at risk of abandoning their wearable
+ *  AWS IoT Analytics automates the steps required to analyze data from IoT devices. AWS IoT Analytics filters, transforms,
+ *  and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect
+ *  only the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with
+ *  device-specific metadata such as device type and location before storing it. Then, you can analyze your data by running
+ *  queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. AWS IoT
+ *  Analytics includes pre-built models for common IoT use cases so you can answer questions like which devices are about to
+ *  fail or which customers are at risk of abandoning their wearable
  */
 
 /*!
@@ -478,11 +483,30 @@ ListPipelinesResponse * IoTAnalyticsClient::listPipelines(const ListPipelinesReq
 
 /*!
  * Sends \a request to the IoTAnalyticsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags (metadata) which you have assigned to the
+ */
+ListTagsForResourceResponse * IoTAnalyticsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTAnalyticsClient service, and returns a pointer to an
  * PutLoggingOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets or updates the AWS IoT Analytics logging
+ *
+ * options>
+ *
+ * Note that if you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to
+ * take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to
+ * correct an invalid policy) it takes up to 5 minutes for that change to take effect.
  */
 PutLoggingOptionsResponse * IoTAnalyticsClient::putLoggingOptions(const PutLoggingOptionsRequest &request)
 {
@@ -527,6 +551,32 @@ SampleChannelDataResponse * IoTAnalyticsClient::sampleChannelData(const SampleCh
 StartPipelineReprocessingResponse * IoTAnalyticsClient::startPipelineReprocessing(const StartPipelineReprocessingRequest &request)
 {
     return qobject_cast<StartPipelineReprocessingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTAnalyticsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a
+ */
+TagResourceResponse * IoTAnalyticsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTAnalyticsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the given tags (metadata) from the
+ */
+UntagResourceResponse * IoTAnalyticsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

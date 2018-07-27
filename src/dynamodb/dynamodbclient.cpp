@@ -427,29 +427,25 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
  *
  * </p
  *
- * Tables can only be added as the replicas of a global table group under the following conditions:
+ * If you want to add a new replica table to a global table, each of the following conditions must be
  *
- * </p <ul> <li>
+ * true> <ul> <li>
  *
- * The tables must have the same name.
+ * The table must have the same primary key as all of the other
  *
- * </p </li> <li>
+ * replicas> </li> <li>
  *
- * The tables must contain no items.
+ * The table must have the same name as all of the other
  *
- * </p </li> <li>
+ * replicas> </li> <li>
  *
- * The tables must have the same hash key and sort key (if present).
+ * The table must have DynamoDB Streams enabled, with the stream containing both the new and the old images of the
  *
- * </p </li> <li>
+ * item> </li> <li>
  *
- * The tables must have DynamoDB Streams enabled (NEW_AND_OLD_IMAGES).
+ * None of the replica tables in the global table can contain any
  *
- * </p </li> <li>
- *
- * The tables must have same provisioned and maximum write capacity units.
- *
- * </p </li> </ul>
+ * data> </li> </ul>
  *
  * If global secondary indexes are specified, then the following conditions must also be met:
  *
@@ -461,9 +457,17 @@ CreateBackupResponse * DynamoDBClient::createBackup(const CreateBackupRequest &r
  *
  * The global secondary indexes must have the same hash key and sort key (if present).
  *
- * </p </li> <li>
+ * </p </li> </ul> <b>
  *
- * The global secondary indexes must have the same provisioned and maximum write capacity units.
+ * Write capacity settings should be set consistently across your replica tables and secondary indexes. DynamoDB strongly
+ * recommends enabling auto scaling to manage the write capacity settings for all of your global tables replicas and
+ * indexes.
+ *
+ * </p
+ *
+ * If you prefer to manage write capacity settings manually, you should provision equal replicated write capacity units to
+ * your replica tables. You should also provision equal replicated write capacity units to matching secondary indexes
+ * across your global table.
  */
 CreateGlobalTableResponse * DynamoDBClient::createGlobalTable(const CreateGlobalTableRequest &request)
 {

@@ -40,13 +40,31 @@ namespace Comprehend {
  * \value BatchDetectEntitiesAction Comprehend BatchDetectEntities action.
  * \value BatchDetectKeyPhrasesAction Comprehend BatchDetectKeyPhrases action.
  * \value BatchDetectSentimentAction Comprehend BatchDetectSentiment action.
+ * \value BatchDetectSyntaxAction Comprehend BatchDetectSyntax action.
+ * \value DescribeDominantLanguageDetectionJobAction Comprehend DescribeDominantLanguageDetectionJob action.
+ * \value DescribeEntitiesDetectionJobAction Comprehend DescribeEntitiesDetectionJob action.
+ * \value DescribeKeyPhrasesDetectionJobAction Comprehend DescribeKeyPhrasesDetectionJob action.
+ * \value DescribeSentimentDetectionJobAction Comprehend DescribeSentimentDetectionJob action.
  * \value DescribeTopicsDetectionJobAction Comprehend DescribeTopicsDetectionJob action.
  * \value DetectDominantLanguageAction Comprehend DetectDominantLanguage action.
  * \value DetectEntitiesAction Comprehend DetectEntities action.
  * \value DetectKeyPhrasesAction Comprehend DetectKeyPhrases action.
  * \value DetectSentimentAction Comprehend DetectSentiment action.
+ * \value DetectSyntaxAction Comprehend DetectSyntax action.
+ * \value ListDominantLanguageDetectionJobsAction Comprehend ListDominantLanguageDetectionJobs action.
+ * \value ListEntitiesDetectionJobsAction Comprehend ListEntitiesDetectionJobs action.
+ * \value ListKeyPhrasesDetectionJobsAction Comprehend ListKeyPhrasesDetectionJobs action.
+ * \value ListSentimentDetectionJobsAction Comprehend ListSentimentDetectionJobs action.
  * \value ListTopicsDetectionJobsAction Comprehend ListTopicsDetectionJobs action.
+ * \value StartDominantLanguageDetectionJobAction Comprehend StartDominantLanguageDetectionJob action.
+ * \value StartEntitiesDetectionJobAction Comprehend StartEntitiesDetectionJob action.
+ * \value StartKeyPhrasesDetectionJobAction Comprehend StartKeyPhrasesDetectionJob action.
+ * \value StartSentimentDetectionJobAction Comprehend StartSentimentDetectionJob action.
  * \value StartTopicsDetectionJobAction Comprehend StartTopicsDetectionJob action.
+ * \value StopDominantLanguageDetectionJobAction Comprehend StopDominantLanguageDetectionJob action.
+ * \value StopEntitiesDetectionJobAction Comprehend StopEntitiesDetectionJob action.
+ * \value StopKeyPhrasesDetectionJobAction Comprehend StopKeyPhrasesDetectionJob action.
+ * \value StopSentimentDetectionJobAction Comprehend StopSentimentDetectionJob action.
  */
 
 /*!

@@ -34,10 +34,16 @@ class DescribeVoicesRequest;
 class DescribeVoicesResponse;
 class GetLexiconRequest;
 class GetLexiconResponse;
+class GetSpeechSynthesisTaskRequest;
+class GetSpeechSynthesisTaskResponse;
 class ListLexiconsRequest;
 class ListLexiconsResponse;
+class ListSpeechSynthesisTasksRequest;
+class ListSpeechSynthesisTasksResponse;
 class PutLexiconRequest;
 class PutLexiconResponse;
+class StartSpeechSynthesisTaskRequest;
+class StartSpeechSynthesisTaskResponse;
 class SynthesizeSpeechRequest;
 class SynthesizeSpeechResponse;
 
@@ -60,8 +66,11 @@ public slots:
     DeleteLexiconResponse * deleteLexicon(const DeleteLexiconRequest &request);
     DescribeVoicesResponse * describeVoices(const DescribeVoicesRequest &request);
     GetLexiconResponse * getLexicon(const GetLexiconRequest &request);
+    GetSpeechSynthesisTaskResponse * getSpeechSynthesisTask(const GetSpeechSynthesisTaskRequest &request);
     ListLexiconsResponse * listLexicons(const ListLexiconsRequest &request);
+    ListSpeechSynthesisTasksResponse * listSpeechSynthesisTasks(const ListSpeechSynthesisTasksRequest &request);
     PutLexiconResponse * putLexicon(const PutLexiconRequest &request);
+    StartSpeechSynthesisTaskResponse * startSpeechSynthesisTask(const StartSpeechSynthesisTaskRequest &request);
     SynthesizeSpeechResponse * synthesizeSpeech(const SynthesizeSpeechRequest &request);
 
 private:

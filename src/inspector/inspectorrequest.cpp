@@ -39,6 +39,7 @@ namespace Inspector {
  * \value AddAttributesToFindingsAction Inspector AddAttributesToFindings action.
  * \value CreateAssessmentTargetAction Inspector CreateAssessmentTarget action.
  * \value CreateAssessmentTemplateAction Inspector CreateAssessmentTemplate action.
+ * \value CreateExclusionsPreviewAction Inspector CreateExclusionsPreview action.
  * \value CreateResourceGroupAction Inspector CreateResourceGroup action.
  * \value DeleteAssessmentRunAction Inspector DeleteAssessmentRun action.
  * \value DeleteAssessmentTargetAction Inspector DeleteAssessmentTarget action.
@@ -47,16 +48,19 @@ namespace Inspector {
  * \value DescribeAssessmentTargetsAction Inspector DescribeAssessmentTargets action.
  * \value DescribeAssessmentTemplatesAction Inspector DescribeAssessmentTemplates action.
  * \value DescribeCrossAccountAccessRoleAction Inspector DescribeCrossAccountAccessRole action.
+ * \value DescribeExclusionsAction Inspector DescribeExclusions action.
  * \value DescribeFindingsAction Inspector DescribeFindings action.
  * \value DescribeResourceGroupsAction Inspector DescribeResourceGroups action.
  * \value DescribeRulesPackagesAction Inspector DescribeRulesPackages action.
  * \value GetAssessmentReportAction Inspector GetAssessmentReport action.
+ * \value GetExclusionsPreviewAction Inspector GetExclusionsPreview action.
  * \value GetTelemetryMetadataAction Inspector GetTelemetryMetadata action.
  * \value ListAssessmentRunAgentsAction Inspector ListAssessmentRunAgents action.
  * \value ListAssessmentRunsAction Inspector ListAssessmentRuns action.
  * \value ListAssessmentTargetsAction Inspector ListAssessmentTargets action.
  * \value ListAssessmentTemplatesAction Inspector ListAssessmentTemplates action.
  * \value ListEventSubscriptionsAction Inspector ListEventSubscriptions action.
+ * \value ListExclusionsAction Inspector ListExclusions action.
  * \value ListFindingsAction Inspector ListFindings action.
  * \value ListRulesPackagesAction Inspector ListRulesPackages action.
  * \value ListTagsForResourceAction Inspector ListTagsForResource action.

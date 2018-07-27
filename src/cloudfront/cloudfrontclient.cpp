@@ -49,8 +49,6 @@
 #include "deletefieldlevelencryptionprofileresponse.h"
 #include "deletepublickeyrequest.h"
 #include "deletepublickeyresponse.h"
-#include "deleteservicelinkedrolerequest.h"
-#include "deleteservicelinkedroleresponse.h"
 #include "deletestreamingdistributionrequest.h"
 #include "deletestreamingdistributionresponse.h"
 #include "getcloudfrontoriginaccessidentityrequest.h"
@@ -411,18 +409,6 @@ DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEn
 DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKeyRequest &request)
 {
     return qobject_cast<DeletePublicKeyResponse *>(send(request));
-}
-
-/*!
- * Sends \a request to the CloudFrontClient service, and returns a pointer to an
- * DeleteServiceLinkedRoleResponse object to track the result.
- *
- * \note The caller is to take responsbility for the resulting pointer.
- *
- */
-DeleteServiceLinkedRoleResponse * CloudFrontClient::deleteServiceLinkedRole(const DeleteServiceLinkedRoleRequest &request)
-{
-    return qobject_cast<DeleteServiceLinkedRoleResponse *>(send(request));
 }
 
 /*!

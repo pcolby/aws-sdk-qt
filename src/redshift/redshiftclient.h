@@ -28,6 +28,8 @@ namespace QtAws {
 namespace Redshift {
 
 class RedshiftClientPrivate;
+class AcceptReservedNodeExchangeRequest;
+class AcceptReservedNodeExchangeResponse;
 class AuthorizeClusterSecurityGroupIngressRequest;
 class AuthorizeClusterSecurityGroupIngressResponse;
 class AuthorizeSnapshotAccessRequest;
@@ -74,6 +76,8 @@ class DeleteSnapshotCopyGrantRequest;
 class DeleteSnapshotCopyGrantResponse;
 class DeleteTagsRequest;
 class DeleteTagsResponse;
+class DescribeClusterDbRevisionsRequest;
+class DescribeClusterDbRevisionsResponse;
 class DescribeClusterParameterGroupsRequest;
 class DescribeClusterParameterGroupsResponse;
 class DescribeClusterParametersRequest;
@@ -84,6 +88,8 @@ class DescribeClusterSnapshotsRequest;
 class DescribeClusterSnapshotsResponse;
 class DescribeClusterSubnetGroupsRequest;
 class DescribeClusterSubnetGroupsResponse;
+class DescribeClusterTracksRequest;
+class DescribeClusterTracksResponse;
 class DescribeClusterVersionsRequest;
 class DescribeClusterVersionsResponse;
 class DescribeClustersRequest;
@@ -126,8 +132,12 @@ class EnableSnapshotCopyRequest;
 class EnableSnapshotCopyResponse;
 class GetClusterCredentialsRequest;
 class GetClusterCredentialsResponse;
+class GetReservedNodeExchangeOfferingsRequest;
+class GetReservedNodeExchangeOfferingsResponse;
 class ModifyClusterRequest;
 class ModifyClusterResponse;
+class ModifyClusterDbRevisionRequest;
+class ModifyClusterDbRevisionResponse;
 class ModifyClusterIamRolesRequest;
 class ModifyClusterIamRolesResponse;
 class ModifyClusterParameterGroupRequest;
@@ -171,6 +181,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptReservedNodeExchangeResponse * acceptReservedNodeExchange(const AcceptReservedNodeExchangeRequest &request);
     AuthorizeClusterSecurityGroupIngressResponse * authorizeClusterSecurityGroupIngress(const AuthorizeClusterSecurityGroupIngressRequest &request);
     AuthorizeSnapshotAccessResponse * authorizeSnapshotAccess(const AuthorizeSnapshotAccessRequest &request);
     CopyClusterSnapshotResponse * copyClusterSnapshot(const CopyClusterSnapshotRequest &request);
@@ -194,11 +205,13 @@ public slots:
     DeleteHsmConfigurationResponse * deleteHsmConfiguration(const DeleteHsmConfigurationRequest &request);
     DeleteSnapshotCopyGrantResponse * deleteSnapshotCopyGrant(const DeleteSnapshotCopyGrantRequest &request);
     DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
+    DescribeClusterDbRevisionsResponse * describeClusterDbRevisions(const DescribeClusterDbRevisionsRequest &request);
     DescribeClusterParameterGroupsResponse * describeClusterParameterGroups(const DescribeClusterParameterGroupsRequest &request);
     DescribeClusterParametersResponse * describeClusterParameters(const DescribeClusterParametersRequest &request);
     DescribeClusterSecurityGroupsResponse * describeClusterSecurityGroups(const DescribeClusterSecurityGroupsRequest &request);
     DescribeClusterSnapshotsResponse * describeClusterSnapshots(const DescribeClusterSnapshotsRequest &request);
     DescribeClusterSubnetGroupsResponse * describeClusterSubnetGroups(const DescribeClusterSubnetGroupsRequest &request);
+    DescribeClusterTracksResponse * describeClusterTracks(const DescribeClusterTracksRequest &request);
     DescribeClusterVersionsResponse * describeClusterVersions(const DescribeClusterVersionsRequest &request);
     DescribeClustersResponse * describeClusters(const DescribeClustersRequest &request);
     DescribeDefaultClusterParametersResponse * describeDefaultClusterParameters(const DescribeDefaultClusterParametersRequest &request);
@@ -220,7 +233,9 @@ public slots:
     EnableLoggingResponse * enableLogging(const EnableLoggingRequest &request);
     EnableSnapshotCopyResponse * enableSnapshotCopy(const EnableSnapshotCopyRequest &request);
     GetClusterCredentialsResponse * getClusterCredentials(const GetClusterCredentialsRequest &request);
+    GetReservedNodeExchangeOfferingsResponse * getReservedNodeExchangeOfferings(const GetReservedNodeExchangeOfferingsRequest &request);
     ModifyClusterResponse * modifyCluster(const ModifyClusterRequest &request);
+    ModifyClusterDbRevisionResponse * modifyClusterDbRevision(const ModifyClusterDbRevisionRequest &request);
     ModifyClusterIamRolesResponse * modifyClusterIamRoles(const ModifyClusterIamRolesRequest &request);
     ModifyClusterParameterGroupResponse * modifyClusterParameterGroup(const ModifyClusterParameterGroupRequest &request);
     ModifyClusterSubnetGroupResponse * modifyClusterSubnetGroup(const ModifyClusterSubnetGroupRequest &request);

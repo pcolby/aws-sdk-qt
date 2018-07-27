@@ -60,6 +60,10 @@ HEADERS += \
     modifymounttargetsecuritygroupsrequest_p.h \
     modifymounttargetsecuritygroupsresponse.h \
     modifymounttargetsecuritygroupsresponse_p.h \
+    updatefilesystemrequest.h \
+    updatefilesystemrequest_p.h \
+    updatefilesystemresponse.h \
+    updatefilesystemresponse_p.h \
 
 SOURCES += \
     createfilesystemrequest.cpp \
@@ -87,5 +91,7 @@ SOURCES += \
     efsresponse.cpp \
     modifymounttargetsecuritygroupsrequest.cpp \
     modifymounttargetsecuritygroupsresponse.cpp \
+    updatefilesystemrequest.cpp \
+    updatefilesystemresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -36,6 +36,7 @@ namespace Redshift {
  * This enum describes the actions that can be performed as Redshift
  * requests.
  *
+ * \value AcceptReservedNodeExchangeAction Redshift AcceptReservedNodeExchange action.
  * \value AuthorizeClusterSecurityGroupIngressAction Redshift AuthorizeClusterSecurityGroupIngress action.
  * \value AuthorizeSnapshotAccessAction Redshift AuthorizeSnapshotAccess action.
  * \value CopyClusterSnapshotAction Redshift CopyClusterSnapshot action.
@@ -59,11 +60,13 @@ namespace Redshift {
  * \value DeleteHsmConfigurationAction Redshift DeleteHsmConfiguration action.
  * \value DeleteSnapshotCopyGrantAction Redshift DeleteSnapshotCopyGrant action.
  * \value DeleteTagsAction Redshift DeleteTags action.
+ * \value DescribeClusterDbRevisionsAction Redshift DescribeClusterDbRevisions action.
  * \value DescribeClusterParameterGroupsAction Redshift DescribeClusterParameterGroups action.
  * \value DescribeClusterParametersAction Redshift DescribeClusterParameters action.
  * \value DescribeClusterSecurityGroupsAction Redshift DescribeClusterSecurityGroups action.
  * \value DescribeClusterSnapshotsAction Redshift DescribeClusterSnapshots action.
  * \value DescribeClusterSubnetGroupsAction Redshift DescribeClusterSubnetGroups action.
+ * \value DescribeClusterTracksAction Redshift DescribeClusterTracks action.
  * \value DescribeClusterVersionsAction Redshift DescribeClusterVersions action.
  * \value DescribeClustersAction Redshift DescribeClusters action.
  * \value DescribeDefaultClusterParametersAction Redshift DescribeDefaultClusterParameters action.
@@ -85,7 +88,9 @@ namespace Redshift {
  * \value EnableLoggingAction Redshift EnableLogging action.
  * \value EnableSnapshotCopyAction Redshift EnableSnapshotCopy action.
  * \value GetClusterCredentialsAction Redshift GetClusterCredentials action.
+ * \value GetReservedNodeExchangeOfferingsAction Redshift GetReservedNodeExchangeOfferings action.
  * \value ModifyClusterAction Redshift ModifyCluster action.
+ * \value ModifyClusterDbRevisionAction Redshift ModifyClusterDbRevision action.
  * \value ModifyClusterIamRolesAction Redshift ModifyClusterIamRoles action.
  * \value ModifyClusterParameterGroupAction Redshift ModifyClusterParameterGroup action.
  * \value ModifyClusterSubnetGroupAction Redshift ModifyClusterSubnetGroup action.

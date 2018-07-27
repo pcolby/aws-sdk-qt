@@ -55,6 +55,7 @@ namespace Pinpoint {
  * \value DeleteGcmChannelAction Pinpoint DeleteGcmChannel action.
  * \value DeleteSegmentAction Pinpoint DeleteSegment action.
  * \value DeleteSmsChannelAction Pinpoint DeleteSmsChannel action.
+ * \value DeleteUserEndpointsAction Pinpoint DeleteUserEndpoints action.
  * \value GetAdmChannelAction Pinpoint GetAdmChannel action.
  * \value GetApnsChannelAction Pinpoint GetApnsChannel action.
  * \value GetApnsSandboxChannelAction Pinpoint GetApnsSandboxChannel action.
@@ -69,6 +70,7 @@ namespace Pinpoint {
  * \value GetCampaignVersionAction Pinpoint GetCampaignVersion action.
  * \value GetCampaignVersionsAction Pinpoint GetCampaignVersions action.
  * \value GetCampaignsAction Pinpoint GetCampaigns action.
+ * \value GetChannelsAction Pinpoint GetChannels action.
  * \value GetEmailChannelAction Pinpoint GetEmailChannel action.
  * \value GetEndpointAction Pinpoint GetEndpoint action.
  * \value GetEventStreamAction Pinpoint GetEventStream action.
@@ -84,7 +86,10 @@ namespace Pinpoint {
  * \value GetSegmentVersionsAction Pinpoint GetSegmentVersions action.
  * \value GetSegmentsAction Pinpoint GetSegments action.
  * \value GetSmsChannelAction Pinpoint GetSmsChannel action.
+ * \value GetUserEndpointsAction Pinpoint GetUserEndpoints action.
+ * \value PhoneNumberValidateAction Pinpoint PhoneNumberValidate action.
  * \value PutEventStreamAction Pinpoint PutEventStream action.
+ * \value RemoveAttributesAction Pinpoint RemoveAttributes action.
  * \value SendMessagesAction Pinpoint SendMessages action.
  * \value SendUsersMessagesAction Pinpoint SendUsersMessages action.
  * \value UpdateAdmChannelAction Pinpoint UpdateAdmChannel action.

@@ -216,7 +216,8 @@ StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing vocabulary with new
+ * Updates an existing vocabulary with new values. The <code>UpdateVocabulary</code> operation overwrites all of the
+ * existing information with the values that you provide in the
  */
 UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const UpdateVocabularyRequest &request)
 {

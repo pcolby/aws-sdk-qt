@@ -86,6 +86,10 @@ HEADERS += \
     deletesmschannelrequest_p.h \
     deletesmschannelresponse.h \
     deletesmschannelresponse_p.h \
+    deleteuserendpointsrequest.h \
+    deleteuserendpointsrequest_p.h \
+    deleteuserendpointsresponse.h \
+    deleteuserendpointsresponse_p.h \
     getadmchannelrequest.h \
     getadmchannelrequest_p.h \
     getadmchannelresponse.h \
@@ -142,6 +146,10 @@ HEADERS += \
     getcampaignversionsrequest_p.h \
     getcampaignversionsresponse.h \
     getcampaignversionsresponse_p.h \
+    getchannelsrequest.h \
+    getchannelsrequest_p.h \
+    getchannelsresponse.h \
+    getchannelsresponse_p.h \
     getemailchannelrequest.h \
     getemailchannelrequest_p.h \
     getemailchannelresponse.h \
@@ -202,6 +210,14 @@ HEADERS += \
     getsmschannelrequest_p.h \
     getsmschannelresponse.h \
     getsmschannelresponse_p.h \
+    getuserendpointsrequest.h \
+    getuserendpointsrequest_p.h \
+    getuserendpointsresponse.h \
+    getuserendpointsresponse_p.h \
+    phonenumbervalidaterequest.h \
+    phonenumbervalidaterequest_p.h \
+    phonenumbervalidateresponse.h \
+    phonenumbervalidateresponse_p.h \
     pinpointclient.h \
     pinpointclient_p.h \
     pinpointrequest.h \
@@ -212,6 +228,10 @@ HEADERS += \
     puteventstreamrequest_p.h \
     puteventstreamresponse.h \
     puteventstreamresponse_p.h \
+    removeattributesrequest.h \
+    removeattributesrequest_p.h \
+    removeattributesresponse.h \
+    removeattributesresponse_p.h \
     sendmessagesrequest.h \
     sendmessagesrequest_p.h \
     sendmessagesresponse.h \
@@ -316,6 +336,8 @@ SOURCES += \
     deletesegmentresponse.cpp \
     deletesmschannelrequest.cpp \
     deletesmschannelresponse.cpp \
+    deleteuserendpointsrequest.cpp \
+    deleteuserendpointsresponse.cpp \
     getadmchannelrequest.cpp \
     getadmchannelresponse.cpp \
     getapnschannelrequest.cpp \
@@ -344,6 +366,8 @@ SOURCES += \
     getcampaignversionresponse.cpp \
     getcampaignversionsrequest.cpp \
     getcampaignversionsresponse.cpp \
+    getchannelsrequest.cpp \
+    getchannelsresponse.cpp \
     getemailchannelrequest.cpp \
     getemailchannelresponse.cpp \
     getendpointrequest.cpp \
@@ -374,11 +398,17 @@ SOURCES += \
     getsegmentversionsresponse.cpp \
     getsmschannelrequest.cpp \
     getsmschannelresponse.cpp \
+    getuserendpointsrequest.cpp \
+    getuserendpointsresponse.cpp \
+    phonenumbervalidaterequest.cpp \
+    phonenumbervalidateresponse.cpp \
     pinpointclient.cpp \
     pinpointrequest.cpp \
     pinpointresponse.cpp \
     puteventstreamrequest.cpp \
     puteventstreamresponse.cpp \
+    removeattributesrequest.cpp \
+    removeattributesresponse.cpp \
     sendmessagesrequest.cpp \
     sendmessagesresponse.cpp \
     sendusersmessagesrequest.cpp \

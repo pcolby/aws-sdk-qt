@@ -33,18 +33,30 @@
 #include "deleteinputresponse.h"
 #include "deleteinputsecuritygrouprequest.h"
 #include "deleteinputsecuritygroupresponse.h"
+#include "deletereservationrequest.h"
+#include "deletereservationresponse.h"
 #include "describechannelrequest.h"
 #include "describechannelresponse.h"
 #include "describeinputrequest.h"
 #include "describeinputresponse.h"
 #include "describeinputsecuritygrouprequest.h"
 #include "describeinputsecuritygroupresponse.h"
+#include "describeofferingrequest.h"
+#include "describeofferingresponse.h"
+#include "describereservationrequest.h"
+#include "describereservationresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
 #include "listinputsecuritygroupsrequest.h"
 #include "listinputsecuritygroupsresponse.h"
 #include "listinputsrequest.h"
 #include "listinputsresponse.h"
+#include "listofferingsrequest.h"
+#include "listofferingsresponse.h"
+#include "listreservationsrequest.h"
+#include "listreservationsresponse.h"
+#include "purchaseofferingrequest.h"
+#include "purchaseofferingresponse.h"
 #include "startchannelrequest.h"
 #include "startchannelresponse.h"
 #include "stopchannelrequest.h"
@@ -207,6 +219,18 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteReservationResponse * MediaLiveClient::deleteReservation(const DeleteReservationRequest &request)
+{
+    return qobject_cast<DeleteReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * DescribeChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -243,6 +267,30 @@ DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeOfferingResponse * MediaLiveClient::describeOffering(const DescribeOfferingRequest &request)
+{
+    return qobject_cast<DescribeOfferingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeReservationResponse * MediaLiveClient::describeReservation(const DescribeReservationRequest &request)
+{
+    return qobject_cast<DescribeReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * ListChannelsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -275,6 +323,42 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
 ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
 {
     return qobject_cast<ListInputsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListOfferingsResponse * MediaLiveClient::listOfferings(const ListOfferingsRequest &request)
+{
+    return qobject_cast<ListOfferingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListReservationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListReservationsResponse * MediaLiveClient::listReservations(const ListReservationsRequest &request)
+{
+    return qobject_cast<ListReservationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * PurchaseOfferingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+PurchaseOfferingResponse * MediaLiveClient::purchaseOffering(const PurchaseOfferingRequest &request)
+{
+    return qobject_cast<PurchaseOfferingResponse *>(send(request));
 }
 
 /*!

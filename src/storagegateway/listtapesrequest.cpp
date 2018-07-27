@@ -83,9 +83,9 @@ namespace StorageGateway {
  *  IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
  *  Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
  *  2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
- *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource
+ *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource IDs</a>.
  * 
- *  IDs</a>>
+ *  </p
  * 
  *  For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
  * 

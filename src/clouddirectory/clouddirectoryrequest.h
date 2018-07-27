@@ -78,6 +78,7 @@ public:
         ListFacetNamesAction,
         ListIncomingTypedLinksAction,
         ListIndexAction,
+        ListManagedSchemaArnsAction,
         ListObjectAttributesAction,
         ListObjectChildrenAction,
         ListObjectParentPathsAction,

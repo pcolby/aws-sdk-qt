@@ -50,6 +50,8 @@ class DescribeTagsRequest;
 class DescribeTagsResponse;
 class ModifyMountTargetSecurityGroupsRequest;
 class ModifyMountTargetSecurityGroupsResponse;
+class UpdateFileSystemRequest;
+class UpdateFileSystemResponse;
 
 class QTAWS_EXPORT EfsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -78,6 +80,7 @@ public slots:
     DescribeMountTargetsResponse * describeMountTargets(const DescribeMountTargetsRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     ModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request);
+    UpdateFileSystemResponse * updateFileSystem(const UpdateFileSystemRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EfsClient)

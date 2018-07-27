@@ -46,6 +46,10 @@ HEADERS += \
     createtrainingjobrequest_p.h \
     createtrainingjobresponse.h \
     createtrainingjobresponse_p.h \
+    createtransformjobrequest.h \
+    createtransformjobrequest_p.h \
+    createtransformjobresponse.h \
+    createtransformjobresponse_p.h \
     deleteendpointconfigrequest.h \
     deleteendpointconfigrequest_p.h \
     deleteendpointconfigresponse.h \
@@ -98,6 +102,10 @@ HEADERS += \
     describetrainingjobrequest_p.h \
     describetrainingjobresponse.h \
     describetrainingjobresponse_p.h \
+    describetransformjobrequest.h \
+    describetransformjobrequest_p.h \
+    describetransformjobresponse.h \
+    describetransformjobresponse_p.h \
     listendpointconfigsrequest.h \
     listendpointconfigsrequest_p.h \
     listendpointconfigsresponse.h \
@@ -134,6 +142,10 @@ HEADERS += \
     listtrainingjobsrequest_p.h \
     listtrainingjobsresponse.h \
     listtrainingjobsresponse_p.h \
+    listtransformjobsrequest.h \
+    listtransformjobsrequest_p.h \
+    listtransformjobsresponse.h \
+    listtransformjobsresponse_p.h \
     sagemakerclient.h \
     sagemakerclient_p.h \
     sagemakerrequest.h \
@@ -156,6 +168,10 @@ HEADERS += \
     stoptrainingjobrequest_p.h \
     stoptrainingjobresponse.h \
     stoptrainingjobresponse_p.h \
+    stoptransformjobrequest.h \
+    stoptransformjobrequest_p.h \
+    stoptransformjobresponse.h \
+    stoptransformjobresponse_p.h \
     updateendpointrequest.h \
     updateendpointrequest_p.h \
     updateendpointresponse.h \
@@ -192,6 +208,8 @@ SOURCES += \
     createpresignednotebookinstanceurlresponse.cpp \
     createtrainingjobrequest.cpp \
     createtrainingjobresponse.cpp \
+    createtransformjobrequest.cpp \
+    createtransformjobresponse.cpp \
     deleteendpointconfigrequest.cpp \
     deleteendpointconfigresponse.cpp \
     deleteendpointrequest.cpp \
@@ -218,6 +236,8 @@ SOURCES += \
     describenotebookinstanceresponse.cpp \
     describetrainingjobrequest.cpp \
     describetrainingjobresponse.cpp \
+    describetransformjobrequest.cpp \
+    describetransformjobresponse.cpp \
     listendpointconfigsrequest.cpp \
     listendpointconfigsresponse.cpp \
     listendpointsrequest.cpp \
@@ -236,6 +256,8 @@ SOURCES += \
     listtrainingjobsforhyperparametertuningjobresponse.cpp \
     listtrainingjobsrequest.cpp \
     listtrainingjobsresponse.cpp \
+    listtransformjobsrequest.cpp \
+    listtransformjobsresponse.cpp \
     sagemakerclient.cpp \
     sagemakerrequest.cpp \
     sagemakerresponse.cpp \
@@ -247,6 +269,8 @@ SOURCES += \
     stopnotebookinstanceresponse.cpp \
     stoptrainingjobrequest.cpp \
     stoptrainingjobresponse.cpp \
+    stoptransformjobrequest.cpp \
+    stoptransformjobresponse.cpp \
     updateendpointrequest.cpp \
     updateendpointresponse.cpp \
     updateendpointweightsandcapacitiesrequest.cpp \

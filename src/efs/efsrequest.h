@@ -48,6 +48,7 @@ public:
         DescribeMountTargetsAction,
         DescribeTagsAction,
         ModifyMountTargetSecurityGroupsAction,
+        UpdateFileSystemAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

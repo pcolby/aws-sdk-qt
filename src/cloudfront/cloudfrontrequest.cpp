@@ -50,7 +50,6 @@ namespace CloudFront {
  * \value DeleteFieldLevelEncryptionConfigAction CloudFront DeleteFieldLevelEncryptionConfig action.
  * \value DeleteFieldLevelEncryptionProfileAction CloudFront DeleteFieldLevelEncryptionProfile action.
  * \value DeletePublicKeyAction CloudFront DeletePublicKey action.
- * \value DeleteServiceLinkedRoleAction CloudFront DeleteServiceLinkedRole action.
  * \value DeleteStreamingDistributionAction CloudFront DeleteStreamingDistribution action.
  * \value GetCloudFrontOriginAccessIdentityAction CloudFront GetCloudFrontOriginAccessIdentity action.
  * \value GetCloudFrontOriginAccessIdentityConfigAction CloudFront GetCloudFrontOriginAccessIdentityConfig action.

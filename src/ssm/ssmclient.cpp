@@ -69,6 +69,10 @@
 #include "describeactivationsresponse.h"
 #include "describeassociationrequest.h"
 #include "describeassociationresponse.h"
+#include "describeassociationexecutiontargetsrequest.h"
+#include "describeassociationexecutiontargetsresponse.h"
+#include "describeassociationexecutionsrequest.h"
+#include "describeassociationexecutionsresponse.h"
 #include "describeautomationexecutionsrequest.h"
 #include "describeautomationexecutionsresponse.h"
 #include "describeautomationstepexecutionsrequest.h"
@@ -151,6 +155,8 @@
 #include "getpatchbaselineresponse.h"
 #include "getpatchbaselineforpatchgrouprequest.h"
 #include "getpatchbaselineforpatchgroupresponse.h"
+#include "labelparameterversionrequest.h"
+#include "labelparameterversionresponse.h"
 #include "listassociationversionsrequest.h"
 #include "listassociationversionsresponse.h"
 #include "listassociationsrequest.h"
@@ -197,6 +203,8 @@
 #include "sendautomationsignalresponse.h"
 #include "sendcommandrequest.h"
 #include "sendcommandresponse.h"
+#include "startassociationsoncerequest.h"
+#include "startassociationsonceresponse.h"
 #include "startautomationexecutionrequest.h"
 #include "startautomationexecutionresponse.h"
 #include "stopautomationexecutionrequest.h"
@@ -259,8 +267,9 @@ namespace SSM {
  * 
  *  To get started, verify prerequisites and configure managed instances. For more information, see <a
  *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ *  Prerequisites</a> in the <i>AWS Systems Manager User
  * 
- *  Prerequisites</a>>
+ *  Guide</i>>
  * 
  *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
  *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to
@@ -495,8 +504,8 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  * By default, data is not encrypted in Amazon S3. We strongly recommend that you enable encryption in Amazon S3 to ensure
  * secure data storage. We also recommend that you secure access to the Amazon S3 bucket by creating a restrictive bucket
  * policy. To view an example of a restrictive Amazon S3 bucket policy for Resource Data Sync, see <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html#sysman-inventory-datasync">Configuring
- * Resource Data Sync for
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync-create.html">Create a
+ * Resource Data Sync for Inventory</a> in the <i>AWS Systems Manager User
  */
 CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateResourceDataSyncRequest &request)
 {
@@ -643,7 +652,7 @@ DeleteResourceDataSyncResponse * SsmClient::deleteResourceDataSync(const DeleteR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the server or virtual machine from the list of registered servers. You can reregister the instance again at any
- * time. If you don't plan to use Run Command on the server, we suggest uninstalling the SSM Agent
+ * time. If you don't plan to use Run Command on the server, we suggest uninstalling SSM Agent
  */
 DeregisterManagedInstanceResponse * SsmClient::deregisterManagedInstance(const DeregisterManagedInstanceRequest &request)
 {
@@ -717,6 +726,32 @@ DescribeActivationsResponse * SsmClient::describeActivations(const DescribeActiv
 DescribeAssociationResponse * SsmClient::describeAssociation(const DescribeAssociationRequest &request)
 {
     return qobject_cast<DescribeAssociationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAssociationExecutionTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this API action to view information about a specific execution of a specific
+ */
+DescribeAssociationExecutionTargetsResponse * SsmClient::describeAssociationExecutionTargets(const DescribeAssociationExecutionTargetsRequest &request)
+{
+    return qobject_cast<DescribeAssociationExecutionTargetsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeAssociationExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this API action to view all executions for a specific association ID.
+ */
+DescribeAssociationExecutionsResponse * SsmClient::describeAssociationExecutions(const DescribeAssociationExecutionsRequest &request)
+{
+    return qobject_cast<DescribeAssociationExecutionsResponse *>(send(request));
 }
 
 /*!
@@ -835,6 +870,11 @@ DescribeInstanceAssociationsStatusResponse * SsmClient::describeInstanceAssociat
  * platform, the SSM Agent version (Linux), status etc. If you specify one or more instance IDs, it returns information for
  * those instances. If you do not specify instance IDs, it returns information for all your instances. If you specify an
  * instance ID that is not valid or an instance that you do not own, you receive an error.
+ *
+ * </p <note>
+ *
+ * The IamRole field for this API action is the Amazon Identity and Access Management (IAM) role assigned to on-premises
+ * instances. This call does not return the IAM role for Amazon EC2
  */
 DescribeInstanceInformationResponse * SsmClient::describeInstanceInformation(const DescribeInstanceInformationRequest &request)
 {
@@ -1203,7 +1243,8 @@ GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get information about a parameter by using the parameter name.
+ * Get information about a parameter by using the parameter name. Don't confuse this API action with the
+ * <a>GetParameters</a> API
  */
 GetParameterResponse * SsmClient::getParameter(const GetParameterRequest &request)
 {
@@ -1229,7 +1270,7 @@ GetParameterHistoryResponse * SsmClient::getParameterHistory(const GetParameterH
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get details of a
+ * Get details of a parameter. Don't confuse this API action with the <a>GetParameter</a> API
  */
 GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &request)
 {
@@ -1244,7 +1285,7 @@ GetParametersResponse * SsmClient::getParameters(const GetParametersRequest &req
  *
  * Retrieve parameters in a specific hierarchy. For more information, see <a
  * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-working.html">Working with Systems
- * Manager Parameters</a>.
+ * Manager Parameters</a> in the <i>AWS Systems Manager User Guide</i>.
  *
  * </p
  *
@@ -1287,6 +1328,18 @@ GetPatchBaselineResponse * SsmClient::getPatchBaseline(const GetPatchBaselineReq
 GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup(const GetPatchBaselineForPatchGroupRequest &request)
 {
     return qobject_cast<GetPatchBaselineForPatchGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * LabelParameterVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+LabelParameterVersionResponse * SsmClient::labelParameterVersion(const LabelParameterVersionRequest &request)
+{
+    return qobject_cast<LabelParameterVersionResponse *>(send(request));
 }
 
 /*!
@@ -1671,6 +1724,20 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
 SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 {
     return qobject_cast<SendCommandResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * StartAssociationsOnceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this API action to execute an association immediately and only one time. This action can be helpful when
+ * troubleshooting
+ */
+StartAssociationsOnceResponse * SsmClient::startAssociationsOnce(const StartAssociationsOnceRequest &request)
+{
+    return qobject_cast<StartAssociationsOnceResponse *>(send(request));
 }
 
 /*!

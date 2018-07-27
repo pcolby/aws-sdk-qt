@@ -430,7 +430,7 @@ CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(cons
  *
  * listener>
  *
- * Alternatively, your listener is deleted when you delete the load balancer it is attached to using
+ * Alternatively, your listener is deleted when you delete the load balancer to which it is attached, using
  */
 DeleteListenerResponse * ElasticLoadBalancingv2Client::deleteListener(const DeleteListenerRequest &request)
 {
@@ -861,7 +861,7 @@ RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRe
  *
  * Balancer>
  *
- * Note that Network Load Balancers must use
+ * Network Load Balancers must use
  */
 SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const SetIpAddressTypeRequest &request)
 {
@@ -897,7 +897,7 @@ SetRulePrioritiesResponse * ElasticLoadBalancingv2Client::setRulePriorities(cons
  *
  * groups>
  *
- * Note that you can't specify a security group for a Network Load
+ * You can't specify a security group for a Network Load
  */
 SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(const SetSecurityGroupsRequest &request)
 {
@@ -915,7 +915,7 @@ SetSecurityGroupsResponse * ElasticLoadBalancingv2Client::setSecurityGroups(cons
  *
  * subnets>
  *
- * Note that you can't change the subnets for a Network Load
+ * You can't change the subnets for a Network Load
  */
 SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRequest &request)
 {

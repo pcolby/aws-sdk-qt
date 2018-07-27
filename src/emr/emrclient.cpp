@@ -286,8 +286,7 @@ DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on. For
- * information about the cluster steps, see
+ * Provides cluster-level details including status, hardware and software configuration, VPC settings, and so on.
  */
 DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterRequest &request)
 {

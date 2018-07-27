@@ -48,8 +48,9 @@ namespace SSM {
  * 
  *  To get started, verify prerequisites and configure managed instances. For more information, see <a
  *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
+ *  Prerequisites</a> in the <i>AWS Systems Manager User
  * 
- *  Prerequisites</a>>
+ *  Guide</i>>
  * 
  *  For information about other API actions you can perform on Amazon EC2 instances, see the <a
  *  href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/">Amazon EC2 API Reference</a>. For information about how to

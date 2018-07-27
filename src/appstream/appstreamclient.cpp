@@ -45,6 +45,8 @@
 #include "deleteimageresponse.h"
 #include "deleteimagebuilderrequest.h"
 #include "deleteimagebuilderresponse.h"
+#include "deleteimagepermissionsrequest.h"
+#include "deleteimagepermissionsresponse.h"
 #include "deletestackrequest.h"
 #include "deletestackresponse.h"
 #include "describedirectoryconfigsrequest.h"
@@ -53,6 +55,8 @@
 #include "describefleetsresponse.h"
 #include "describeimagebuildersrequest.h"
 #include "describeimagebuildersresponse.h"
+#include "describeimagepermissionsrequest.h"
+#include "describeimagepermissionsresponse.h"
 #include "describeimagesrequest.h"
 #include "describeimagesresponse.h"
 #include "describesessionsrequest.h"
@@ -85,6 +89,8 @@
 #include "updatedirectoryconfigresponse.h"
 #include "updatefleetrequest.h"
 #include "updatefleetresponse.h"
+#include "updateimagepermissionsrequest.h"
+#include "updateimagepermissionsresponse.h"
 #include "updatestackrequest.h"
 #include "updatestackresponse.h"
 
@@ -201,7 +207,8 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a directory
+ * Creates a Directory Config object in AppStream 2.0. This object includes the information required to join streaming
+ * instances to an Active Directory
  */
 CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const CreateDirectoryConfigRequest &request)
 {
@@ -214,7 +221,7 @@ CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const Cre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a
+ * Creates a fleet. A fleet consists of streaming instances that run a specified
  */
 CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &request)
 {
@@ -227,9 +234,9 @@ CreateFleetResponse * AppStreamClient::createFleet(const CreateFleetRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an image
+ * Creates an image builder. An image builder is a virtual machine that is used to create an
  *
- * builder>
+ * image>
  *
  * The initial state of the builder is <code>PENDING</code>. When it is ready, the state is
  */
@@ -257,7 +264,8 @@ CreateImageBuilderStreamingURLResponse * AppStreamClient::createImageBuilderStre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a
+ * Creates a stack to start streaming applications to users. A stack consists of an associated fleet, user access policies,
+ * and storage configurations.
  */
 CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &request)
 {
@@ -270,7 +278,8 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a URL to start a streaming session for the specified
+ * Creates a temporary URL to start an AppStream 2.0 streaming session for the specified user. A streaming URL enables
+ * application streaming to be tested without user setup.
  */
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
@@ -283,7 +292,8 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified directory
+ * Deletes the specified Directory Config object from AppStream 2.0. This object includes the information required to join
+ * streaming instances to an Active Directory
  */
 DeleteDirectoryConfigResponse * AppStreamClient::deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request)
 {
@@ -309,7 +319,7 @@ DeleteFleetResponse * AppStreamClient::deleteFleet(const DeleteFleetRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified image. You cannot delete an image that is currently in use. After you delete an image, you cannot
+ * Deletes the specified image. You cannot delete an image when it is in use. After you delete an image, you cannot
  * provision new capacity using the
  */
 DeleteImageResponse * AppStreamClient::deleteImage(const DeleteImageRequest &request)
@@ -332,12 +342,26 @@ DeleteImageBuilderResponse * AppStreamClient::deleteImageBuilder(const DeleteIma
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteImagePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes permissions for the specified private image. After you delete permissions for an image, AWS accounts to which
+ * you previously granted these permissions can no longer use the
+ */
+DeleteImagePermissionsResponse * AppStreamClient::deleteImagePermissions(const DeleteImagePermissionsRequest &request)
+{
+    return qobject_cast<DeleteImagePermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DeleteStackResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified stack. After this operation completes, the environment can no longer be activated and any
- * reservations made for the stack are
+ * Deletes the specified stack. After the stack is deleted, the application streaming environment provided by the stack is
+ * no longer available to users. Also, any reservations made for application streaming sessions for the stack are
  */
 DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &request)
 {
@@ -350,8 +374,13 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified directory configurations. Note that although the response syntax in this topic includes the
- * account password, this password is not returned in the actual response.
+ * Retrieves a list that describes one or more specified Directory Config objects for AppStream 2.0, if the names for these
+ * objects are provided. Otherwise, all Directory Config objects in the account are described. These objects include the
+ * information required to join streaming instances to an Active Directory domain.
+ *
+ * </p
+ *
+ * Although the response syntax in this topic includes the account password, this password is not returned in the actual
  */
 DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request)
 {
@@ -364,7 +393,8 @@ DescribeDirectoryConfigsResponse * AppStreamClient::describeDirectoryConfigs(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified fleets or all fleets in the
+ * Retrieves a list that describes one or more specified fleets, if the fleet names are provided. Otherwise, all fleets in
+ * the account are
  */
 DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsRequest &request)
 {
@@ -377,7 +407,8 @@ DescribeFleetsResponse * AppStreamClient::describeFleets(const DescribeFleetsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified image builders or all image builders in the
+ * Retrieves a list that describes one or more specified image builders, if the image builder names are provided.
+ * Otherwise, all image builders in the account are
  */
 DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const DescribeImageBuildersRequest &request)
 {
@@ -386,11 +417,25 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeImagePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes the permissions for a private image that you own.
+ */
+DescribeImagePermissionsResponse * AppStreamClient::describeImagePermissions(const DescribeImagePermissionsRequest &request)
+{
+    return qobject_cast<DescribeImagePermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DescribeImagesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified images or all images in the
+ * Retrieves a list that describes one or more specified images, if the image names are provided. Otherwise, all images in
+ * the account are
  */
 DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -403,9 +448,9 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the streaming sessions for the specified stack and fleet. If a user ID is provided, only the streaming
- * sessions for only that user are returned. If an authentication type is not provided, the default is to authenticate
- * users using a streaming
+ * Retrieves a list that describes the streaming sessions for a specified stack and fleet. If a user ID is provided for the
+ * stack and fleet, only streaming sessions for that user are described. If an authentication type is not provided, the
+ * default is to authenticate users using a streaming
  */
 DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessionsRequest &request)
 {
@@ -418,7 +463,8 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified stacks or all stacks in the
+ * Retrieves a list that describes one or more specified stacks, if the stack names are provided. Otherwise, all stacks in
+ * the account are
  */
 DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksRequest &request)
 {
@@ -444,7 +490,7 @@ DisassociateFleetResponse * AppStreamClient::disassociateFleet(const Disassociat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops the specified streaming
+ * Immediately stops the specified streaming
  */
 ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionRequest &request)
 {
@@ -457,7 +503,7 @@ ExpireSessionResponse * AppStreamClient::expireSession(const ExpireSessionReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the fleets associated with the specified
+ * Retrieves the name of the fleet that is associated with the specified
  */
 ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListAssociatedFleetsRequest &request)
 {
@@ -470,7 +516,7 @@ ListAssociatedFleetsResponse * AppStreamClient::listAssociatedFleets(const ListA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the stacks associated with the specified
+ * Retrieves the name of the stack with which the specified fleet is
  */
 ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListAssociatedStacksRequest &request)
 {
@@ -483,7 +529,8 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders, images, fleets, and
+ * Retrieves a list of all tags for the specified AppStream 2.0 resource. You can tag AppStream 2.0 image builders, images,
+ * fleets, and
  *
  * stacks>
  *
@@ -584,7 +631,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the specified tags from the specified AppStream 2.0
+ * Disassociates one or more specified tags from the specified AppStream 2.0
  *
  * resource>
  *
@@ -607,7 +654,8 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified directory
+ * Updates the specified Directory Config object in AppStream 2.0. This object includes the information required to join
+ * streaming instances to an Active Directory
  */
 UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const UpdateDirectoryConfigRequest &request)
 {
@@ -635,11 +683,24 @@ UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &req
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * UpdateImagePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates permissions for the specified private image.
+ */
+UpdateImagePermissionsResponse * AppStreamClient::updateImagePermissions(const UpdateImagePermissionsRequest &request)
+{
+    return qobject_cast<UpdateImagePermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * UpdateStackResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified
+ * Updates the specified fields for the specified
  */
 UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &request)
 {

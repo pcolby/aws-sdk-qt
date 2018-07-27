@@ -136,6 +136,10 @@ HEADERS += \
     deletepolicyversionrequest_p.h \
     deletepolicyversionresponse.h \
     deletepolicyversionresponse_p.h \
+    deleterolepermissionsboundaryrequest.h \
+    deleterolepermissionsboundaryrequest_p.h \
+    deleterolepermissionsboundaryresponse.h \
+    deleterolepermissionsboundaryresponse_p.h \
     deleterolepolicyrequest.h \
     deleterolepolicyrequest_p.h \
     deleterolepolicyresponse.h \
@@ -168,6 +172,10 @@ HEADERS += \
     deletesshpublickeyrequest_p.h \
     deletesshpublickeyresponse.h \
     deletesshpublickeyresponse_p.h \
+    deleteuserpermissionsboundaryrequest.h \
+    deleteuserpermissionsboundaryrequest_p.h \
+    deleteuserpermissionsboundaryresponse.h \
+    deleteuserpermissionsboundaryresponse_p.h \
     deleteuserpolicyrequest.h \
     deleteuserpolicyrequest_p.h \
     deleteuserpolicyresponse.h \
@@ -390,10 +398,18 @@ HEADERS += \
     putgrouppolicyrequest_p.h \
     putgrouppolicyresponse.h \
     putgrouppolicyresponse_p.h \
+    putrolepermissionsboundaryrequest.h \
+    putrolepermissionsboundaryrequest_p.h \
+    putrolepermissionsboundaryresponse.h \
+    putrolepermissionsboundaryresponse_p.h \
     putrolepolicyrequest.h \
     putrolepolicyrequest_p.h \
     putrolepolicyresponse.h \
     putrolepolicyresponse_p.h \
+    putuserpermissionsboundaryrequest.h \
+    putuserpermissionsboundaryrequest_p.h \
+    putuserpermissionsboundaryresponse.h \
+    putuserpermissionsboundaryresponse_p.h \
     putuserpolicyrequest.h \
     putuserpolicyrequest_p.h \
     putuserpolicyresponse.h \
@@ -563,6 +579,8 @@ SOURCES += \
     deletepolicyresponse.cpp \
     deletepolicyversionrequest.cpp \
     deletepolicyversionresponse.cpp \
+    deleterolepermissionsboundaryrequest.cpp \
+    deleterolepermissionsboundaryresponse.cpp \
     deleterolepolicyrequest.cpp \
     deleterolepolicyresponse.cpp \
     deleterolerequest.cpp \
@@ -579,6 +597,8 @@ SOURCES += \
     deletesigningcertificateresponse.cpp \
     deletesshpublickeyrequest.cpp \
     deletesshpublickeyresponse.cpp \
+    deleteuserpermissionsboundaryrequest.cpp \
+    deleteuserpermissionsboundaryresponse.cpp \
     deleteuserpolicyrequest.cpp \
     deleteuserpolicyresponse.cpp \
     deleteuserrequest.cpp \
@@ -690,8 +710,12 @@ SOURCES += \
     listvirtualmfadevicesresponse.cpp \
     putgrouppolicyrequest.cpp \
     putgrouppolicyresponse.cpp \
+    putrolepermissionsboundaryrequest.cpp \
+    putrolepermissionsboundaryresponse.cpp \
     putrolepolicyrequest.cpp \
     putrolepolicyresponse.cpp \
+    putuserpermissionsboundaryrequest.cpp \
+    putuserpermissionsboundaryresponse.cpp \
     putuserpolicyrequest.cpp \
     putuserpolicyresponse.cpp \
     removeclientidfromopenidconnectproviderrequest.cpp \

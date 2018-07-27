@@ -40,8 +40,11 @@ public:
         DeleteLexiconAction,
         DescribeVoicesAction,
         GetLexiconAction,
+        GetSpeechSynthesisTaskAction,
         ListLexiconsAction,
+        ListSpeechSynthesisTasksAction,
         PutLexiconAction,
+        StartSpeechSynthesisTaskAction,
         SynthesizeSpeechAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

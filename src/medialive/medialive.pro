@@ -34,6 +34,10 @@ HEADERS += \
     deleteinputsecuritygrouprequest_p.h \
     deleteinputsecuritygroupresponse.h \
     deleteinputsecuritygroupresponse_p.h \
+    deletereservationrequest.h \
+    deletereservationrequest_p.h \
+    deletereservationresponse.h \
+    deletereservationresponse_p.h \
     describechannelrequest.h \
     describechannelrequest_p.h \
     describechannelresponse.h \
@@ -46,6 +50,14 @@ HEADERS += \
     describeinputsecuritygrouprequest_p.h \
     describeinputsecuritygroupresponse.h \
     describeinputsecuritygroupresponse_p.h \
+    describeofferingrequest.h \
+    describeofferingrequest_p.h \
+    describeofferingresponse.h \
+    describeofferingresponse_p.h \
+    describereservationrequest.h \
+    describereservationrequest_p.h \
+    describereservationresponse.h \
+    describereservationresponse_p.h \
     listchannelsrequest.h \
     listchannelsrequest_p.h \
     listchannelsresponse.h \
@@ -58,12 +70,24 @@ HEADERS += \
     listinputsrequest_p.h \
     listinputsresponse.h \
     listinputsresponse_p.h \
+    listofferingsrequest.h \
+    listofferingsrequest_p.h \
+    listofferingsresponse.h \
+    listofferingsresponse_p.h \
+    listreservationsrequest.h \
+    listreservationsrequest_p.h \
+    listreservationsresponse.h \
+    listreservationsresponse_p.h \
     medialiveclient.h \
     medialiveclient_p.h \
     medialiverequest.h \
     medialiverequest_p.h \
     medialiveresponse.h \
     medialiveresponse_p.h \
+    purchaseofferingrequest.h \
+    purchaseofferingrequest_p.h \
+    purchaseofferingresponse.h \
+    purchaseofferingresponse_p.h \
     startchannelrequest.h \
     startchannelrequest_p.h \
     startchannelresponse.h \
@@ -98,21 +122,33 @@ SOURCES += \
     deleteinputresponse.cpp \
     deleteinputsecuritygrouprequest.cpp \
     deleteinputsecuritygroupresponse.cpp \
+    deletereservationrequest.cpp \
+    deletereservationresponse.cpp \
     describechannelrequest.cpp \
     describechannelresponse.cpp \
     describeinputrequest.cpp \
     describeinputresponse.cpp \
     describeinputsecuritygrouprequest.cpp \
     describeinputsecuritygroupresponse.cpp \
+    describeofferingrequest.cpp \
+    describeofferingresponse.cpp \
+    describereservationrequest.cpp \
+    describereservationresponse.cpp \
     listchannelsrequest.cpp \
     listchannelsresponse.cpp \
     listinputsecuritygroupsrequest.cpp \
     listinputsecuritygroupsresponse.cpp \
     listinputsrequest.cpp \
     listinputsresponse.cpp \
+    listofferingsrequest.cpp \
+    listofferingsresponse.cpp \
+    listreservationsrequest.cpp \
+    listreservationsresponse.cpp \
     medialiveclient.cpp \
     medialiverequest.cpp \
     medialiveresponse.cpp \
+    purchaseofferingrequest.cpp \
+    purchaseofferingresponse.cpp \
     startchannelrequest.cpp \
     startchannelresponse.cpp \
     stopchannelrequest.cpp \

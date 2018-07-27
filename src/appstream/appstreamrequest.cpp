@@ -48,10 +48,12 @@ namespace AppStream {
  * \value DeleteFleetAction AppStream DeleteFleet action.
  * \value DeleteImageAction AppStream DeleteImage action.
  * \value DeleteImageBuilderAction AppStream DeleteImageBuilder action.
+ * \value DeleteImagePermissionsAction AppStream DeleteImagePermissions action.
  * \value DeleteStackAction AppStream DeleteStack action.
  * \value DescribeDirectoryConfigsAction AppStream DescribeDirectoryConfigs action.
  * \value DescribeFleetsAction AppStream DescribeFleets action.
  * \value DescribeImageBuildersAction AppStream DescribeImageBuilders action.
+ * \value DescribeImagePermissionsAction AppStream DescribeImagePermissions action.
  * \value DescribeImagesAction AppStream DescribeImages action.
  * \value DescribeSessionsAction AppStream DescribeSessions action.
  * \value DescribeStacksAction AppStream DescribeStacks action.
@@ -68,6 +70,7 @@ namespace AppStream {
  * \value UntagResourceAction AppStream UntagResource action.
  * \value UpdateDirectoryConfigAction AppStream UpdateDirectoryConfig action.
  * \value UpdateFleetAction AppStream UpdateFleet action.
+ * \value UpdateImagePermissionsAction AppStream UpdateImagePermissions action.
  * \value UpdateStackAction AppStream UpdateStack action.
  */
 

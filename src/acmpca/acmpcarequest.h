@@ -49,6 +49,7 @@ public:
         IssueCertificateAction,
         ListCertificateAuthoritiesAction,
         ListTagsAction,
+        RestoreCertificateAuthorityAction,
         RevokeCertificateAction,
         TagCertificateAuthorityAction,
         UntagCertificateAuthorityAction,

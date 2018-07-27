@@ -103,6 +103,8 @@
 #include "listincomingtypedlinksresponse.h"
 #include "listindexrequest.h"
 #include "listindexresponse.h"
+#include "listmanagedschemaarnsrequest.h"
+#include "listmanagedschemaarnsresponse.h"
 #include "listobjectattributesrequest.h"
 #include "listobjectattributesresponse.h"
 #include "listobjectchildrenrequest.h"
@@ -199,7 +201,7 @@ CloudDirectoryClient::CloudDirectoryClient(
 : QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
-    d->apiVersion = QStringLiteral("2016-05-10");
+    d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("clouddirectory");
     d->networkAccessManager = manager;
@@ -227,7 +229,7 @@ CloudDirectoryClient::CloudDirectoryClient(
 : QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
     Q_D(CloudDirectoryClient);
-    d->apiVersion = QStringLiteral("2016-05-10");
+    d->apiVersion = QStringLiteral("2017-01-11");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("clouddirectory");
@@ -808,6 +810,20 @@ ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(co
 ListIndexResponse * CloudDirectoryClient::listIndex(const ListIndexRequest &request)
 {
     return qobject_cast<ListIndexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudDirectoryClient service, and returns a pointer to an
+ * ListManagedSchemaArnsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the major version families of each managed schema. If a major version ARN is provided as SchemaArn, the minor
+ * version revisions in that family are listed
+ */
+ListManagedSchemaArnsResponse * CloudDirectoryClient::listManagedSchemaArns(const ListManagedSchemaArnsRequest &request)
+{
+    return qobject_cast<ListManagedSchemaArnsResponse *>(send(request));
 }
 
 /*!

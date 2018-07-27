@@ -260,8 +260,12 @@ S3Client::S3Client(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Aborts a multipart upload.</p><p>To verify that all parts have been removed, so you don't get charged for the part
- * storage, you should call the List Parts operation and ensure the parts list is
+ * Aborts a multipart
+ *
+ * upload>
+ *
+ * To verify that all parts have been removed, so you don't get charged for the part storage, you should call the List
+ * Parts operation and ensure the parts list is
  */
 AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipartUploadRequest &request)
 {
@@ -274,6 +278,7 @@ AbortMultipartUploadResponse * S3Client::abortMultipartUpload(const AbortMultipa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Completes a multipart upload by assembling previously uploaded
  */
 CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const CompleteMultipartUploadRequest &request)
 {
@@ -286,6 +291,7 @@ CompleteMultipartUploadResponse * S3Client::completeMultipartUpload(const Comple
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a copy of an object that is already stored in Amazon
  */
 CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
 {
@@ -298,6 +304,7 @@ CopyObjectResponse * S3Client::copyObject(const CopyObjectRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new
  */
 CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request)
 {
@@ -310,10 +317,13 @@ CreateBucketResponse * S3Client::createBucket(const CreateBucketRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a multipart upload and returns an upload ID.</p><p><b>Note:</b> After you initiate multipart upload and upload
- * one or more parts, you must either complete or abort multipart upload in order to stop getting charged for storage of
- * the uploaded parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and
- * stops charging you for the parts
+ * Initiates a multipart upload and returns an upload
+ *
+ * ID>
+ *
+ * <b>Note:</b> After you initiate multipart upload and upload one or more parts, you must either complete or abort
+ * multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or
+ * abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts
  */
 CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMultipartUploadRequest &request)
 {
@@ -327,6 +337,7 @@ CreateMultipartUploadResponse * S3Client::createMultipartUpload(const CreateMult
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the bucket. All objects (including all object versions and Delete Markers) in the bucket must be deleted before
+ * the bucket itself can be
  */
 DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request)
 {
@@ -339,6 +350,7 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes an analytics configuration for the bucket (specified by the analytics configuration
  */
 DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request)
 {
@@ -351,6 +363,7 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the cors configuration information set for the
  */
 DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequest &request)
 {
@@ -363,6 +376,7 @@ DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the server-side encryption configuration from the
  */
 DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBucketEncryptionRequest &request)
 {
@@ -375,6 +389,7 @@ DeleteBucketEncryptionResponse * S3Client::deleteBucketEncryption(const DeleteBu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes an inventory configuration (identified by the inventory ID) from the
  */
 DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConfiguration(const DeleteBucketInventoryConfigurationRequest &request)
 {
@@ -387,6 +402,7 @@ DeleteBucketInventoryConfigurationResponse * S3Client::deleteBucketInventoryConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the lifecycle configuration from the
  */
 DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBucketLifecycleRequest &request)
 {
@@ -399,6 +415,7 @@ DeleteBucketLifecycleResponse * S3Client::deleteBucketLifecycle(const DeleteBuck
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes a metrics configuration (specified by the metrics configuration ID) from the
  */
 DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfiguration(const DeleteBucketMetricsConfigurationRequest &request)
 {
@@ -411,6 +428,7 @@ DeleteBucketMetricsConfigurationResponse * S3Client::deleteBucketMetricsConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the policy from the
  */
 DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPolicyRequest &request)
 {
@@ -423,6 +441,7 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the replication configuration from the
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
 {
@@ -435,6 +454,7 @@ DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const Delete
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the tags from the
  */
 DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTaggingRequest &request)
 {
@@ -447,6 +467,7 @@ DeleteBucketTaggingResponse * S3Client::deleteBucketTagging(const DeleteBucketTa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * This operation removes the website configuration from the
  */
 DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWebsiteRequest &request)
 {
@@ -460,6 +481,7 @@ DeleteBucketWebsiteResponse * S3Client::deleteBucketWebsite(const DeleteBucketWe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of
+ * the object. If there isn't a null version, Amazon S3 does not remove any
  */
 DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request)
 {
@@ -472,6 +494,7 @@ DeleteObjectResponse * S3Client::deleteObject(const DeleteObjectRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Removes the tag-set from an existing
  */
 DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTaggingRequest &request)
 {
@@ -485,6 +508,7 @@ DeleteObjectTaggingResponse * S3Client::deleteObjectTagging(const DeleteObjectTa
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * This operation enables you to delete multiple objects from a bucket using a single HTTP request. You may specify up to
+ * 1000
  */
 DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &request)
 {
@@ -497,6 +521,7 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the accelerate configuration of a
  */
 GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfiguration(const GetBucketAccelerateConfigurationRequest &request)
 {
@@ -509,6 +534,7 @@ GetBucketAccelerateConfigurationResponse * S3Client::getBucketAccelerateConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Gets the access control policy for the
  */
 GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request)
 {
@@ -521,6 +547,7 @@ GetBucketAclResponse * S3Client::getBucketAcl(const GetBucketAclRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Gets an analytics configuration for the bucket (specified by the analytics configuration
  */
 GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfiguration(const GetBucketAnalyticsConfigurationRequest &request)
 {
@@ -533,6 +560,7 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the cors configuration for the
  */
 GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &request)
 {
@@ -545,6 +573,7 @@ GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the server-side encryption configuration of a
  */
 GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncryptionRequest &request)
 {
@@ -557,6 +586,7 @@ GetBucketEncryptionResponse * S3Client::getBucketEncryption(const GetBucketEncry
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns an inventory configuration (identified by the inventory ID) from the
  */
 GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfiguration(const GetBucketInventoryConfigurationRequest &request)
 {
@@ -569,6 +599,7 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deprecated, see the GetBucketLifecycleConfiguration
  */
 GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecycleRequest &request)
 {
@@ -581,6 +612,7 @@ GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecyc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the lifecycle configuration information set on the
  */
 GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfiguration(const GetBucketLifecycleConfigurationRequest &request)
 {
@@ -593,6 +625,7 @@ GetBucketLifecycleConfigurationResponse * S3Client::getBucketLifecycleConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the region the bucket resides
  */
 GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationRequest &request)
 {
@@ -606,6 +639,7 @@ GetBucketLocationResponse * S3Client::getBucketLocation(const GetBucketLocationR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the logging status of a bucket and the permissions users have to view and modify that status. To use GET, you
+ * must be the bucket
  */
 GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequest &request)
 {
@@ -618,6 +652,7 @@ GetBucketLoggingResponse * S3Client::getBucketLogging(const GetBucketLoggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Gets a metrics configuration (specified by the metrics configuration ID) from the
  */
 GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(const GetBucketMetricsConfigurationRequest &request)
 {
@@ -630,6 +665,7 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deprecated, see the GetBucketNotificationConfiguration
  */
 GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketNotificationRequest &request)
 {
@@ -642,6 +678,7 @@ GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketN
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the notification configuration of a
  */
 GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConfiguration(const GetBucketNotificationConfigurationRequest &request)
 {
@@ -654,6 +691,7 @@ GetBucketNotificationConfigurationResponse * S3Client::getBucketNotificationConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the policy of a specified
  */
 GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest &request)
 {
@@ -666,6 +704,7 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the replication configuration of a
  */
 GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketReplicationRequest &request)
 {
@@ -678,6 +717,7 @@ GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketRep
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the request payment configuration of a
  */
 GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBucketRequestPaymentRequest &request)
 {
@@ -690,6 +730,7 @@ GetBucketRequestPaymentResponse * S3Client::getBucketRequestPayment(const GetBuc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the tag set associated with the
  */
 GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequest &request)
 {
@@ -702,6 +743,7 @@ GetBucketTaggingResponse * S3Client::getBucketTagging(const GetBucketTaggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the versioning state of a
  */
 GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersioningRequest &request)
 {
@@ -714,6 +756,7 @@ GetBucketVersioningResponse * S3Client::getBucketVersioning(const GetBucketVersi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the website configuration for a
  */
 GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequest &request)
 {
@@ -726,6 +769,7 @@ GetBucketWebsiteResponse * S3Client::getBucketWebsite(const GetBucketWebsiteRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves objects from Amazon
  */
 GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
 {
@@ -738,6 +782,7 @@ GetObjectResponse * S3Client::getObject(const GetObjectRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the access control list (ACL) of an
  */
 GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request)
 {
@@ -750,6 +795,7 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the tag-set of an
  */
 GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequest &request)
 {
@@ -762,6 +808,7 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Return torrent files from a
  */
 GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequest &request)
 {
@@ -774,6 +821,7 @@ GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * This operation is useful to determine if a bucket exists and you have permission to access
  */
 HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
 {
@@ -787,6 +835,7 @@ HeadBucketResponse * S3Client::headBucket(const HeadBucketRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * The HEAD operation retrieves metadata from an object without returning the object itself. This operation is useful if
+ * you're only interested in an object's metadata. To use HEAD, you must have READ access to the
  */
 HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
 {
@@ -799,6 +848,7 @@ HeadObjectResponse * S3Client::headObject(const HeadObjectRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the analytics configurations for the
  */
 ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request)
 {
@@ -811,6 +861,7 @@ ListBucketAnalyticsConfigurationsResponse * S3Client::listBucketAnalyticsConfigu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of inventory configurations for the
  */
 ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request)
 {
@@ -823,6 +874,7 @@ ListBucketInventoryConfigurationsResponse * S3Client::listBucketInventoryConfigu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the metrics configurations for the
  */
 ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request)
 {
@@ -835,6 +887,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of all buckets owned by the authenticated sender of the
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
@@ -847,6 +900,7 @@ ListBucketsResponse * S3Client::listBuckets()
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * This operation lists in-progress multipart
  */
 ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipartUploadsRequest &request)
 {
@@ -859,6 +913,7 @@ ListMultipartUploadsResponse * S3Client::listMultipartUploads(const ListMultipar
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns metadata about all of the versions of objects in a
  */
 ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersionsRequest &request)
 {
@@ -872,6 +927,7 @@ ListObjectVersionsResponse * S3Client::listObjectVersions(const ListObjectVersio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
+ * return a subset of the objects in a
  */
 ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
 {
@@ -886,6 +942,7 @@ ListObjectsResponse * S3Client::listObjects(const ListObjectsRequest &request)
  *
  * Returns some or all (up to 1000) of the objects in a bucket. You can use the request parameters as selection criteria to
  * return a subset of the objects in a bucket. Note: ListObjectsV2 is the revised List Objects API and we recommend you use
+ * this revised API for new application
  */
 ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &request)
 {
@@ -898,6 +955,7 @@ ListObjectsV2Response * S3Client::listObjectsV2(const ListObjectsV2Request &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the parts that have been uploaded for a specific multipart
  */
 ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
 {
@@ -910,6 +968,7 @@ ListPartsResponse * S3Client::listParts(const ListPartsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the accelerate configuration of an existing
  */
 PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfiguration(const PutBucketAccelerateConfigurationRequest &request)
 {
@@ -922,6 +981,7 @@ PutBucketAccelerateConfigurationResponse * S3Client::putBucketAccelerateConfigur
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the permissions on a bucket using access control lists
  */
 PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request)
 {
@@ -934,6 +994,7 @@ PutBucketAclResponse * S3Client::putBucketAcl(const PutBucketAclRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets an analytics configuration for the bucket (specified by the analytics configuration
  */
 PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfiguration(const PutBucketAnalyticsConfigurationRequest &request)
 {
@@ -946,6 +1007,7 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the cors configuration for a
  */
 PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &request)
 {
@@ -958,6 +1020,7 @@ PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new server-side encryption configuration (or replaces an existing one, if
  */
 PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncryptionRequest &request)
 {
@@ -970,6 +1033,7 @@ PutBucketEncryptionResponse * S3Client::putBucketEncryption(const PutBucketEncry
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Adds an inventory configuration (identified by the inventory ID) from the
  */
 PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfiguration(const PutBucketInventoryConfigurationRequest &request)
 {
@@ -982,6 +1046,7 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deprecated, see the PutBucketLifecycleConfiguration
  */
 PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecycleRequest &request)
 {
@@ -994,6 +1059,7 @@ PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecyc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets lifecycle configuration for your bucket. If a lifecycle configuration exists, it replaces
  */
 PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfiguration(const PutBucketLifecycleConfigurationRequest &request)
 {
@@ -1007,6 +1073,7 @@ PutBucketLifecycleConfigurationResponse * S3Client::putBucketLifecycleConfigurat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Set the logging parameters for a bucket and to specify permissions for who can view and modify the logging parameters.
+ * To set the logging status of a bucket, you must be the bucket
  */
 PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequest &request)
 {
@@ -1019,6 +1086,7 @@ PutBucketLoggingResponse * S3Client::putBucketLogging(const PutBucketLoggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets a metrics configuration (specified by the metrics configuration ID) for the
  */
 PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(const PutBucketMetricsConfigurationRequest &request)
 {
@@ -1031,6 +1099,7 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deprecated, see the PutBucketNotificationConfiguraiton
  */
 PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketNotificationRequest &request)
 {
@@ -1043,6 +1112,7 @@ PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketN
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Enables notifications of specified events for a
  */
 PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConfiguration(const PutBucketNotificationConfigurationRequest &request)
 {
@@ -1055,6 +1125,7 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Replaces a policy on a bucket. If the bucket already has a policy, the one in this request completely replaces
  */
 PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest &request)
 {
@@ -1067,6 +1138,7 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new replication configuration (or replaces an existing one, if
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
 {
@@ -1094,6 +1166,7 @@ PutBucketRequestPaymentResponse * S3Client::putBucketRequestPayment(const PutBuc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the tags for a
  */
 PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequest &request)
 {
@@ -1106,6 +1179,7 @@ PutBucketTaggingResponse * S3Client::putBucketTagging(const PutBucketTaggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the versioning state of an existing bucket. To set the versioning state, you must be the bucket
  */
 PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersioningRequest &request)
 {
@@ -1118,6 +1192,7 @@ PutBucketVersioningResponse * S3Client::putBucketVersioning(const PutBucketVersi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Set the website configuration for a
  */
 PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequest &request)
 {
@@ -1130,6 +1205,7 @@ PutBucketWebsiteResponse * S3Client::putBucketWebsite(const PutBucketWebsiteRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Adds an object to a
  */
 PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
 {
@@ -1142,6 +1218,7 @@ PutObjectResponse * S3Client::putObject(const PutObjectRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * uses the acl subresource to set the access control list (ACL) permissions for an object that already exists in a
  */
 PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request)
 {
@@ -1154,6 +1231,7 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Sets the supplied tag-set to an object that already exists in a
  */
 PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequest &request)
 {
@@ -1166,6 +1244,7 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Restores an archived copy of an object back into Amazon
  */
 RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &request)
 {
@@ -1181,6 +1260,7 @@ RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &requ
  * This operation filters the contents of an Amazon S3 object based on a simple Structured Query Language (SQL) statement.
  * In the request, along with the SQL expression, you must also specify a data serialization format (JSON or CSV) of the
  * object. Amazon S3 uses this to parse object data into records, and returns only records that match the specified SQL
+ * expression. You must also specify the data serialization format for the
  */
 SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectContentRequest &request)
 {
@@ -1193,10 +1273,13 @@ SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Uploads a part in a multipart upload.</p><p><b>Note:</b> After you initiate multipart upload and upload one or more
- * parts, you must either complete or abort multipart upload in order to stop getting charged for storage of the uploaded
- * parts. Only after you either complete or abort multipart upload, Amazon S3 frees up the parts storage and stops charging
- * you for the parts
+ * Uploads a part in a multipart
+ *
+ * upload>
+ *
+ * <b>Note:</b> After you initiate multipart upload and upload one or more parts, you must either complete or abort
+ * multipart upload in order to stop getting charged for storage of the uploaded parts. Only after you either complete or
+ * abort multipart upload, Amazon S3 frees up the parts storage and stops charging you for the parts
  */
 UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
 {
@@ -1209,6 +1292,7 @@ UploadPartResponse * S3Client::uploadPart(const UploadPartRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Uploads a part by copying data from an existing object as data
  */
 UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &request)
 {

@@ -42,6 +42,7 @@ SUBDIRS += \
     devicefarm/devicefarm.pro \
     directconnect/directconnect.pro \
     applicationdiscoveryservice/applicationdiscoveryservice.pro \
+    dlm/dlm.pro \
     databasemigrationservice/databasemigrationservice.pro \
     directoryservice/directoryservice.pro \
     dynamodb/dynamodb.pro \
@@ -89,6 +90,7 @@ SUBDIRS += \
     lightsail/lightsail.pro \
     cloudwatchlogs/cloudwatchlogs.pro \
     machinelearning/machinelearning.pro \
+    macie/macie.pro \
     marketplacecommerceanalytics/marketplacecommerceanalytics.pro \
     mediaconvert/mediaconvert.pro \
     medialive/medialive.pro \

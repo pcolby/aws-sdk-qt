@@ -60,6 +60,10 @@ HEADERS += \
     deleteimagebuilderrequest_p.h \
     deleteimagebuilderresponse.h \
     deleteimagebuilderresponse_p.h \
+    deleteimagepermissionsrequest.h \
+    deleteimagepermissionsrequest_p.h \
+    deleteimagepermissionsresponse.h \
+    deleteimagepermissionsresponse_p.h \
     deleteimagerequest.h \
     deleteimagerequest_p.h \
     deleteimageresponse.h \
@@ -80,6 +84,10 @@ HEADERS += \
     describeimagebuildersrequest_p.h \
     describeimagebuildersresponse.h \
     describeimagebuildersresponse_p.h \
+    describeimagepermissionsrequest.h \
+    describeimagepermissionsrequest_p.h \
+    describeimagepermissionsresponse.h \
+    describeimagepermissionsresponse_p.h \
     describeimagesrequest.h \
     describeimagesrequest_p.h \
     describeimagesresponse.h \
@@ -144,6 +152,10 @@ HEADERS += \
     updatefleetrequest_p.h \
     updatefleetresponse.h \
     updatefleetresponse_p.h \
+    updateimagepermissionsrequest.h \
+    updateimagepermissionsrequest_p.h \
+    updateimagepermissionsresponse.h \
+    updateimagepermissionsresponse_p.h \
     updatestackrequest.h \
     updatestackrequest_p.h \
     updatestackresponse.h \
@@ -175,6 +187,8 @@ SOURCES += \
     deletefleetresponse.cpp \
     deleteimagebuilderrequest.cpp \
     deleteimagebuilderresponse.cpp \
+    deleteimagepermissionsrequest.cpp \
+    deleteimagepermissionsresponse.cpp \
     deleteimagerequest.cpp \
     deleteimageresponse.cpp \
     deletestackrequest.cpp \
@@ -185,6 +199,8 @@ SOURCES += \
     describefleetsresponse.cpp \
     describeimagebuildersrequest.cpp \
     describeimagebuildersresponse.cpp \
+    describeimagepermissionsrequest.cpp \
+    describeimagepermissionsresponse.cpp \
     describeimagesrequest.cpp \
     describeimagesresponse.cpp \
     describesessionsrequest.cpp \
@@ -217,6 +233,8 @@ SOURCES += \
     updatedirectoryconfigresponse.cpp \
     updatefleetrequest.cpp \
     updatefleetresponse.cpp \
+    updateimagepermissionsrequest.cpp \
+    updateimagepermissionsresponse.cpp \
     updatestackrequest.cpp \
     updatestackresponse.cpp \
 

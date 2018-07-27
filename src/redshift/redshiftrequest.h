@@ -37,6 +37,7 @@ class QTAWS_EXPORT RedshiftRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Redshift.
     enum Action {
+        AcceptReservedNodeExchangeAction,
         AuthorizeClusterSecurityGroupIngressAction,
         AuthorizeSnapshotAccessAction,
         CopyClusterSnapshotAction,
@@ -60,11 +61,13 @@ public:
         DeleteHsmConfigurationAction,
         DeleteSnapshotCopyGrantAction,
         DeleteTagsAction,
+        DescribeClusterDbRevisionsAction,
         DescribeClusterParameterGroupsAction,
         DescribeClusterParametersAction,
         DescribeClusterSecurityGroupsAction,
         DescribeClusterSnapshotsAction,
         DescribeClusterSubnetGroupsAction,
+        DescribeClusterTracksAction,
         DescribeClusterVersionsAction,
         DescribeClustersAction,
         DescribeDefaultClusterParametersAction,
@@ -86,7 +89,9 @@ public:
         EnableLoggingAction,
         EnableSnapshotCopyAction,
         GetClusterCredentialsAction,
+        GetReservedNodeExchangeOfferingsAction,
         ModifyClusterAction,
+        ModifyClusterDbRevisionAction,
         ModifyClusterIamRolesAction,
         ModifyClusterParameterGroupAction,
         ModifyClusterSubnetGroupAction,

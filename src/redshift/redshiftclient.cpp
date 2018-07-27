@@ -21,6 +21,8 @@
 #include "redshiftclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "acceptreservednodeexchangerequest.h"
+#include "acceptreservednodeexchangeresponse.h"
 #include "authorizeclustersecuritygroupingressrequest.h"
 #include "authorizeclustersecuritygroupingressresponse.h"
 #include "authorizesnapshotaccessrequest.h"
@@ -67,6 +69,8 @@
 #include "deletesnapshotcopygrantresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "describeclusterdbrevisionsrequest.h"
+#include "describeclusterdbrevisionsresponse.h"
 #include "describeclusterparametergroupsrequest.h"
 #include "describeclusterparametergroupsresponse.h"
 #include "describeclusterparametersrequest.h"
@@ -77,6 +81,8 @@
 #include "describeclustersnapshotsresponse.h"
 #include "describeclustersubnetgroupsrequest.h"
 #include "describeclustersubnetgroupsresponse.h"
+#include "describeclustertracksrequest.h"
+#include "describeclustertracksresponse.h"
 #include "describeclusterversionsrequest.h"
 #include "describeclusterversionsresponse.h"
 #include "describeclustersrequest.h"
@@ -119,8 +125,12 @@
 #include "enablesnapshotcopyresponse.h"
 #include "getclustercredentialsrequest.h"
 #include "getclustercredentialsresponse.h"
+#include "getreservednodeexchangeofferingsrequest.h"
+#include "getreservednodeexchangeofferingsresponse.h"
 #include "modifyclusterrequest.h"
 #include "modifyclusterresponse.h"
+#include "modifyclusterdbrevisionrequest.h"
+#include "modifyclusterdbrevisionresponse.h"
 #include "modifyclusteriamrolesrequest.h"
 #include "modifyclusteriamrolesresponse.h"
 #include "modifyclusterparametergrouprequest.h"
@@ -257,6 +267,20 @@ RedshiftClient::RedshiftClient(
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * AcceptReservedNodeExchangeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Exchanges a DC1 Reserved Node for a DC2 Reserved Node with no changes to the configuration (term, payment type, or
+ * number of nodes) and no additional costs.
+ */
+AcceptReservedNodeExchangeResponse * RedshiftClient::acceptReservedNodeExchange(const AcceptReservedNodeExchangeRequest &request)
+{
+    return qobject_cast<AcceptReservedNodeExchangeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * AuthorizeClusterSecurityGroupIngressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -345,7 +369,7 @@ CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClus
  *
  * cluster>
  *
- * To create the cluster in Virtual Private Cloud (VPC), you must provide a cluster subnet group name. The cluster subnet
+ * To create a cluster in Virtual Private Cloud (VPC), you must provide a cluster subnet group name. The cluster subnet
  * group identifies the subnets of your VPC that Amazon Redshift uses when creating the cluster. For more information about
  * managing clusters, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon
  * Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management
@@ -726,6 +750,19 @@ DeleteTagsResponse * RedshiftClient::deleteTags(const DeleteTagsRequest &request
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeClusterDbRevisionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of <code>ClusterDbRevision</code>
+ */
+DescribeClusterDbRevisionsResponse * RedshiftClient::describeClusterDbRevisions(const DescribeClusterDbRevisionsRequest &request)
+{
+    return qobject_cast<DescribeClusterDbRevisionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DescribeClusterParameterGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -868,6 +905,19 @@ DescribeClusterSnapshotsResponse * RedshiftClient::describeClusterSnapshots(cons
 DescribeClusterSubnetGroupsResponse * RedshiftClient::describeClusterSubnetGroups(const DescribeClusterSubnetGroupsRequest &request)
 {
     return qobject_cast<DescribeClusterSubnetGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeClusterTracksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all the available maintenance
+ */
+DescribeClusterTracksResponse * RedshiftClient::describeClusterTracks(const DescribeClusterTracksRequest &request)
+{
+    return qobject_cast<DescribeClusterTracksResponse *>(send(request));
 }
 
 /*!
@@ -1309,6 +1359,20 @@ GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetC
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * GetReservedNodeExchangeOfferingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of DC2 ReservedNodeOfferings that matches the payment type, term, and usage price of the given DC1
+ * reserved
+ */
+GetReservedNodeExchangeOfferingsResponse * RedshiftClient::getReservedNodeExchangeOfferings(const GetReservedNodeExchangeOfferingsRequest &request)
+{
+    return qobject_cast<GetReservedNodeExchangeOfferingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * ModifyClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1328,6 +1392,19 @@ GetClusterCredentialsResponse * RedshiftClient::getClusterCredentials(const GetC
 ModifyClusterResponse * RedshiftClient::modifyCluster(const ModifyClusterRequest &request)
 {
     return qobject_cast<ModifyClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyClusterDbRevisionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the database revision of a cluster. The database revision is a unique revision of the database running in a
+ */
+ModifyClusterDbRevisionResponse * RedshiftClient::modifyClusterDbRevision(const ModifyClusterDbRevisionRequest &request)
+{
+    return qobject_cast<ModifyClusterDbRevisionResponse *>(send(request));
 }
 
 /*!

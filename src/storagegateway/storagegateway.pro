@@ -46,6 +46,10 @@ HEADERS += \
     createnfsfilesharerequest_p.h \
     createnfsfileshareresponse.h \
     createnfsfileshareresponse_p.h \
+    createsmbfilesharerequest.h \
+    createsmbfilesharerequest_p.h \
+    createsmbfileshareresponse.h \
+    createsmbfileshareresponse_p.h \
     createsnapshotfromvolumerecoverypointrequest.h \
     createsnapshotfromvolumerecoverypointrequest_p.h \
     createsnapshotfromvolumerecoverypointresponse.h \
@@ -126,6 +130,14 @@ HEADERS += \
     describenfsfilesharesrequest_p.h \
     describenfsfilesharesresponse.h \
     describenfsfilesharesresponse_p.h \
+    describesmbfilesharesrequest.h \
+    describesmbfilesharesrequest_p.h \
+    describesmbfilesharesresponse.h \
+    describesmbfilesharesresponse_p.h \
+    describesmbsettingsrequest.h \
+    describesmbsettingsrequest_p.h \
+    describesmbsettingsresponse.h \
+    describesmbsettingsresponse_p.h \
     describesnapshotschedulerequest.h \
     describesnapshotschedulerequest_p.h \
     describesnapshotscheduleresponse.h \
@@ -162,6 +174,10 @@ HEADERS += \
     disablegatewayrequest_p.h \
     disablegatewayresponse.h \
     disablegatewayresponse_p.h \
+    joindomainrequest.h \
+    joindomainrequest_p.h \
+    joindomainresponse.h \
+    joindomainresponse_p.h \
     listfilesharesrequest.h \
     listfilesharesrequest_p.h \
     listfilesharesresponse.h \
@@ -222,6 +238,10 @@ HEADERS += \
     setlocalconsolepasswordrequest_p.h \
     setlocalconsolepasswordresponse.h \
     setlocalconsolepasswordresponse_p.h \
+    setsmbguestpasswordrequest.h \
+    setsmbguestpasswordrequest_p.h \
+    setsmbguestpasswordresponse.h \
+    setsmbguestpasswordresponse_p.h \
     shutdowngatewayrequest.h \
     shutdowngatewayrequest_p.h \
     shutdowngatewayresponse.h \
@@ -260,6 +280,10 @@ HEADERS += \
     updatenfsfilesharerequest_p.h \
     updatenfsfileshareresponse.h \
     updatenfsfileshareresponse_p.h \
+    updatesmbfilesharerequest.h \
+    updatesmbfilesharerequest_p.h \
+    updatesmbfileshareresponse.h \
+    updatesmbfileshareresponse_p.h \
     updatesnapshotschedulerequest.h \
     updatesnapshotschedulerequest_p.h \
     updatesnapshotscheduleresponse.h \
@@ -288,6 +312,8 @@ SOURCES += \
     createcachediscsivolumeresponse.cpp \
     createnfsfilesharerequest.cpp \
     createnfsfileshareresponse.cpp \
+    createsmbfilesharerequest.cpp \
+    createsmbfileshareresponse.cpp \
     createsnapshotfromvolumerecoverypointrequest.cpp \
     createsnapshotfromvolumerecoverypointresponse.cpp \
     createsnapshotrequest.cpp \
@@ -328,6 +354,10 @@ SOURCES += \
     describemaintenancestarttimeresponse.cpp \
     describenfsfilesharesrequest.cpp \
     describenfsfilesharesresponse.cpp \
+    describesmbfilesharesrequest.cpp \
+    describesmbfilesharesresponse.cpp \
+    describesmbsettingsrequest.cpp \
+    describesmbsettingsresponse.cpp \
     describesnapshotschedulerequest.cpp \
     describesnapshotscheduleresponse.cpp \
     describestorediscsivolumesrequest.cpp \
@@ -346,6 +376,8 @@ SOURCES += \
     describeworkingstorageresponse.cpp \
     disablegatewayrequest.cpp \
     disablegatewayresponse.cpp \
+    joindomainrequest.cpp \
+    joindomainresponse.cpp \
     listfilesharesrequest.cpp \
     listfilesharesresponse.cpp \
     listgatewaysrequest.cpp \
@@ -376,6 +408,8 @@ SOURCES += \
     retrievetaperecoverypointresponse.cpp \
     setlocalconsolepasswordrequest.cpp \
     setlocalconsolepasswordresponse.cpp \
+    setsmbguestpasswordrequest.cpp \
+    setsmbguestpasswordresponse.cpp \
     shutdowngatewayrequest.cpp \
     shutdowngatewayresponse.cpp \
     startgatewayrequest.cpp \
@@ -395,6 +429,8 @@ SOURCES += \
     updatemaintenancestarttimeresponse.cpp \
     updatenfsfilesharerequest.cpp \
     updatenfsfileshareresponse.cpp \
+    updatesmbfilesharerequest.cpp \
+    updatesmbfileshareresponse.cpp \
     updatesnapshotschedulerequest.cpp \
     updatesnapshotscheduleresponse.cpp \
     updatevtldevicetyperequest.cpp \

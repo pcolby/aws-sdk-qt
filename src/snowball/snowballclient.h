@@ -56,6 +56,8 @@ class ListClusterJobsRequest;
 class ListClusterJobsResponse;
 class ListClustersRequest;
 class ListClustersResponse;
+class ListCompatibleImagesRequest;
+class ListCompatibleImagesResponse;
 class ListJobsRequest;
 class ListJobsResponse;
 class UpdateClusterRequest;
@@ -93,6 +95,7 @@ public slots:
     GetSnowballUsageResponse * getSnowballUsage(const GetSnowballUsageRequest &request);
     ListClusterJobsResponse * listClusterJobs(const ListClusterJobsRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListCompatibleImagesResponse * listCompatibleImages(const ListCompatibleImagesRequest &request);
     ListJobsResponse * listJobs(const ListJobsRequest &request);
     UpdateClusterResponse * updateCluster(const UpdateClusterRequest &request);
     UpdateJobResponse * updateJob(const UpdateJobRequest &request);

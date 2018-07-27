@@ -52,6 +52,8 @@ class DeleteImageRequest;
 class DeleteImageResponse;
 class DeleteImageBuilderRequest;
 class DeleteImageBuilderResponse;
+class DeleteImagePermissionsRequest;
+class DeleteImagePermissionsResponse;
 class DeleteStackRequest;
 class DeleteStackResponse;
 class DescribeDirectoryConfigsRequest;
@@ -60,6 +62,8 @@ class DescribeFleetsRequest;
 class DescribeFleetsResponse;
 class DescribeImageBuildersRequest;
 class DescribeImageBuildersResponse;
+class DescribeImagePermissionsRequest;
+class DescribeImagePermissionsResponse;
 class DescribeImagesRequest;
 class DescribeImagesResponse;
 class DescribeSessionsRequest;
@@ -92,6 +96,8 @@ class UpdateDirectoryConfigRequest;
 class UpdateDirectoryConfigResponse;
 class UpdateFleetRequest;
 class UpdateFleetResponse;
+class UpdateImagePermissionsRequest;
+class UpdateImagePermissionsResponse;
 class UpdateStackRequest;
 class UpdateStackResponse;
 
@@ -123,10 +129,12 @@ public slots:
     DeleteFleetResponse * deleteFleet(const DeleteFleetRequest &request);
     DeleteImageResponse * deleteImage(const DeleteImageRequest &request);
     DeleteImageBuilderResponse * deleteImageBuilder(const DeleteImageBuilderRequest &request);
+    DeleteImagePermissionsResponse * deleteImagePermissions(const DeleteImagePermissionsRequest &request);
     DeleteStackResponse * deleteStack(const DeleteStackRequest &request);
     DescribeDirectoryConfigsResponse * describeDirectoryConfigs(const DescribeDirectoryConfigsRequest &request);
     DescribeFleetsResponse * describeFleets(const DescribeFleetsRequest &request);
     DescribeImageBuildersResponse * describeImageBuilders(const DescribeImageBuildersRequest &request);
+    DescribeImagePermissionsResponse * describeImagePermissions(const DescribeImagePermissionsRequest &request);
     DescribeImagesResponse * describeImages(const DescribeImagesRequest &request);
     DescribeSessionsResponse * describeSessions(const DescribeSessionsRequest &request);
     DescribeStacksResponse * describeStacks(const DescribeStacksRequest &request);
@@ -143,6 +151,7 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDirectoryConfigResponse * updateDirectoryConfig(const UpdateDirectoryConfigRequest &request);
     UpdateFleetResponse * updateFleet(const UpdateFleetRequest &request);
+    UpdateImagePermissionsResponse * updateImagePermissions(const UpdateImagePermissionsRequest &request);
     UpdateStackResponse * updateStack(const UpdateStackRequest &request);
 
 private:

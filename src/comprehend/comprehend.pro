@@ -26,12 +26,32 @@ HEADERS += \
     batchdetectsentimentrequest_p.h \
     batchdetectsentimentresponse.h \
     batchdetectsentimentresponse_p.h \
+    batchdetectsyntaxrequest.h \
+    batchdetectsyntaxrequest_p.h \
+    batchdetectsyntaxresponse.h \
+    batchdetectsyntaxresponse_p.h \
     comprehendclient.h \
     comprehendclient_p.h \
     comprehendrequest.h \
     comprehendrequest_p.h \
     comprehendresponse.h \
     comprehendresponse_p.h \
+    describedominantlanguagedetectionjobrequest.h \
+    describedominantlanguagedetectionjobrequest_p.h \
+    describedominantlanguagedetectionjobresponse.h \
+    describedominantlanguagedetectionjobresponse_p.h \
+    describeentitiesdetectionjobrequest.h \
+    describeentitiesdetectionjobrequest_p.h \
+    describeentitiesdetectionjobresponse.h \
+    describeentitiesdetectionjobresponse_p.h \
+    describekeyphrasesdetectionjobrequest.h \
+    describekeyphrasesdetectionjobrequest_p.h \
+    describekeyphrasesdetectionjobresponse.h \
+    describekeyphrasesdetectionjobresponse_p.h \
+    describesentimentdetectionjobrequest.h \
+    describesentimentdetectionjobrequest_p.h \
+    describesentimentdetectionjobresponse.h \
+    describesentimentdetectionjobresponse_p.h \
     describetopicsdetectionjobrequest.h \
     describetopicsdetectionjobrequest_p.h \
     describetopicsdetectionjobresponse.h \
@@ -52,14 +72,66 @@ HEADERS += \
     detectsentimentrequest_p.h \
     detectsentimentresponse.h \
     detectsentimentresponse_p.h \
+    detectsyntaxrequest.h \
+    detectsyntaxrequest_p.h \
+    detectsyntaxresponse.h \
+    detectsyntaxresponse_p.h \
+    listdominantlanguagedetectionjobsrequest.h \
+    listdominantlanguagedetectionjobsrequest_p.h \
+    listdominantlanguagedetectionjobsresponse.h \
+    listdominantlanguagedetectionjobsresponse_p.h \
+    listentitiesdetectionjobsrequest.h \
+    listentitiesdetectionjobsrequest_p.h \
+    listentitiesdetectionjobsresponse.h \
+    listentitiesdetectionjobsresponse_p.h \
+    listkeyphrasesdetectionjobsrequest.h \
+    listkeyphrasesdetectionjobsrequest_p.h \
+    listkeyphrasesdetectionjobsresponse.h \
+    listkeyphrasesdetectionjobsresponse_p.h \
+    listsentimentdetectionjobsrequest.h \
+    listsentimentdetectionjobsrequest_p.h \
+    listsentimentdetectionjobsresponse.h \
+    listsentimentdetectionjobsresponse_p.h \
     listtopicsdetectionjobsrequest.h \
     listtopicsdetectionjobsrequest_p.h \
     listtopicsdetectionjobsresponse.h \
     listtopicsdetectionjobsresponse_p.h \
+    startdominantlanguagedetectionjobrequest.h \
+    startdominantlanguagedetectionjobrequest_p.h \
+    startdominantlanguagedetectionjobresponse.h \
+    startdominantlanguagedetectionjobresponse_p.h \
+    startentitiesdetectionjobrequest.h \
+    startentitiesdetectionjobrequest_p.h \
+    startentitiesdetectionjobresponse.h \
+    startentitiesdetectionjobresponse_p.h \
+    startkeyphrasesdetectionjobrequest.h \
+    startkeyphrasesdetectionjobrequest_p.h \
+    startkeyphrasesdetectionjobresponse.h \
+    startkeyphrasesdetectionjobresponse_p.h \
+    startsentimentdetectionjobrequest.h \
+    startsentimentdetectionjobrequest_p.h \
+    startsentimentdetectionjobresponse.h \
+    startsentimentdetectionjobresponse_p.h \
     starttopicsdetectionjobrequest.h \
     starttopicsdetectionjobrequest_p.h \
     starttopicsdetectionjobresponse.h \
     starttopicsdetectionjobresponse_p.h \
+    stopdominantlanguagedetectionjobrequest.h \
+    stopdominantlanguagedetectionjobrequest_p.h \
+    stopdominantlanguagedetectionjobresponse.h \
+    stopdominantlanguagedetectionjobresponse_p.h \
+    stopentitiesdetectionjobrequest.h \
+    stopentitiesdetectionjobrequest_p.h \
+    stopentitiesdetectionjobresponse.h \
+    stopentitiesdetectionjobresponse_p.h \
+    stopkeyphrasesdetectionjobrequest.h \
+    stopkeyphrasesdetectionjobrequest_p.h \
+    stopkeyphrasesdetectionjobresponse.h \
+    stopkeyphrasesdetectionjobresponse_p.h \
+    stopsentimentdetectionjobrequest.h \
+    stopsentimentdetectionjobrequest_p.h \
+    stopsentimentdetectionjobresponse.h \
+    stopsentimentdetectionjobresponse_p.h \
 
 SOURCES += \
     batchdetectdominantlanguagerequest.cpp \
@@ -70,9 +142,19 @@ SOURCES += \
     batchdetectkeyphrasesresponse.cpp \
     batchdetectsentimentrequest.cpp \
     batchdetectsentimentresponse.cpp \
+    batchdetectsyntaxrequest.cpp \
+    batchdetectsyntaxresponse.cpp \
     comprehendclient.cpp \
     comprehendrequest.cpp \
     comprehendresponse.cpp \
+    describedominantlanguagedetectionjobrequest.cpp \
+    describedominantlanguagedetectionjobresponse.cpp \
+    describeentitiesdetectionjobrequest.cpp \
+    describeentitiesdetectionjobresponse.cpp \
+    describekeyphrasesdetectionjobrequest.cpp \
+    describekeyphrasesdetectionjobresponse.cpp \
+    describesentimentdetectionjobrequest.cpp \
+    describesentimentdetectionjobresponse.cpp \
     describetopicsdetectionjobrequest.cpp \
     describetopicsdetectionjobresponse.cpp \
     detectdominantlanguagerequest.cpp \
@@ -83,9 +165,35 @@ SOURCES += \
     detectkeyphrasesresponse.cpp \
     detectsentimentrequest.cpp \
     detectsentimentresponse.cpp \
+    detectsyntaxrequest.cpp \
+    detectsyntaxresponse.cpp \
+    listdominantlanguagedetectionjobsrequest.cpp \
+    listdominantlanguagedetectionjobsresponse.cpp \
+    listentitiesdetectionjobsrequest.cpp \
+    listentitiesdetectionjobsresponse.cpp \
+    listkeyphrasesdetectionjobsrequest.cpp \
+    listkeyphrasesdetectionjobsresponse.cpp \
+    listsentimentdetectionjobsrequest.cpp \
+    listsentimentdetectionjobsresponse.cpp \
     listtopicsdetectionjobsrequest.cpp \
     listtopicsdetectionjobsresponse.cpp \
+    startdominantlanguagedetectionjobrequest.cpp \
+    startdominantlanguagedetectionjobresponse.cpp \
+    startentitiesdetectionjobrequest.cpp \
+    startentitiesdetectionjobresponse.cpp \
+    startkeyphrasesdetectionjobrequest.cpp \
+    startkeyphrasesdetectionjobresponse.cpp \
+    startsentimentdetectionjobrequest.cpp \
+    startsentimentdetectionjobresponse.cpp \
     starttopicsdetectionjobrequest.cpp \
     starttopicsdetectionjobresponse.cpp \
+    stopdominantlanguagedetectionjobrequest.cpp \
+    stopdominantlanguagedetectionjobresponse.cpp \
+    stopentitiesdetectionjobrequest.cpp \
+    stopentitiesdetectionjobresponse.cpp \
+    stopkeyphrasesdetectionjobrequest.cpp \
+    stopkeyphrasesdetectionjobresponse.cpp \
+    stopsentimentdetectionjobrequest.cpp \
+    stopsentimentdetectionjobresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -27,10 +27,16 @@
 #include "describevoicesresponse.h"
 #include "getlexiconrequest.h"
 #include "getlexiconresponse.h"
+#include "getspeechsynthesistaskrequest.h"
+#include "getspeechsynthesistaskresponse.h"
 #include "listlexiconsrequest.h"
 #include "listlexiconsresponse.h"
+#include "listspeechsynthesistasksrequest.h"
+#include "listspeechsynthesistasksresponse.h"
 #include "putlexiconrequest.h"
 #include "putlexiconresponse.h"
+#include "startspeechsynthesistaskrequest.h"
+#include "startspeechsynthesistaskresponse.h"
 #include "synthesizespeechrequest.h"
 #include "synthesizespeechresponse.h"
 
@@ -187,6 +193,20 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 
 /*!
  * Sends \a request to the PollyClient service, and returns a pointer to an
+ * GetSpeechSynthesisTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a specific SpeechSynthesisTask object based on its TaskID. This object contains information about the given
+ * speech synthesis task, including the status of the task, and a link to the S3 bucket containing the output of the
+ */
+GetSpeechSynthesisTaskResponse * PollyClient::getSpeechSynthesisTask(const GetSpeechSynthesisTaskRequest &request)
+{
+    return qobject_cast<GetSpeechSynthesisTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
  * ListLexiconsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -197,6 +217,20 @@ GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &request)
 {
     return qobject_cast<ListLexiconsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * ListSpeechSynthesisTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of SpeechSynthesisTask objects ordered by their creation date. This operation can filter the tasks by
+ * their status, for example, allowing users to list only tasks that are
+ */
+ListSpeechSynthesisTasksResponse * PollyClient::listSpeechSynthesisTasks(const ListSpeechSynthesisTasksRequest &request)
+{
+    return qobject_cast<ListSpeechSynthesisTasksResponse *>(send(request));
 }
 
 /*!
@@ -216,6 +250,23 @@ ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &requ
 PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 {
     return qobject_cast<PutLexiconResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PollyClient service, and returns a pointer to an
+ * StartSpeechSynthesisTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows the creation of an asynchronous synthesis task, by starting a new <code>SpeechSynthesisTask</code>. This
+ * operation requires all the standard information needed for speech synthesis, plus the name of an Amazon S3 bucket for
+ * the service to store the output of the synthesis task and two optional parameters (OutputS3KeyPrefix and SnsTopicArn).
+ * Once the synthesis task is created, this operation will return a SpeechSynthesisTask object, which will include an
+ * identifier of this task as well as the current
+ */
+StartSpeechSynthesisTaskResponse * PollyClient::startSpeechSynthesisTask(const StartSpeechSynthesisTaskRequest &request)
+{
+    return qobject_cast<StartSpeechSynthesisTaskResponse *>(send(request));
 }
 
 /*!

@@ -58,10 +58,13 @@ namespace IoTAnalytics {
  * \value ListDatasetsAction IoTAnalytics ListDatasets action.
  * \value ListDatastoresAction IoTAnalytics ListDatastores action.
  * \value ListPipelinesAction IoTAnalytics ListPipelines action.
+ * \value ListTagsForResourceAction IoTAnalytics ListTagsForResource action.
  * \value PutLoggingOptionsAction IoTAnalytics PutLoggingOptions action.
  * \value RunPipelineActivityAction IoTAnalytics RunPipelineActivity action.
  * \value SampleChannelDataAction IoTAnalytics SampleChannelData action.
  * \value StartPipelineReprocessingAction IoTAnalytics StartPipelineReprocessing action.
+ * \value TagResourceAction IoTAnalytics TagResource action.
+ * \value UntagResourceAction IoTAnalytics UntagResource action.
  * \value UpdateChannelAction IoTAnalytics UpdateChannel action.
  * \value UpdateDatasetAction IoTAnalytics UpdateDataset action.
  * \value UpdateDatastoreAction IoTAnalytics UpdateDatastore action.

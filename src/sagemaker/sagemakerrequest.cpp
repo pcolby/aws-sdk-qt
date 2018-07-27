@@ -45,6 +45,7 @@ namespace SageMaker {
  * \value CreateNotebookInstanceLifecycleConfigAction SageMaker CreateNotebookInstanceLifecycleConfig action.
  * \value CreatePresignedNotebookInstanceUrlAction SageMaker CreatePresignedNotebookInstanceUrl action.
  * \value CreateTrainingJobAction SageMaker CreateTrainingJob action.
+ * \value CreateTransformJobAction SageMaker CreateTransformJob action.
  * \value DeleteEndpointAction SageMaker DeleteEndpoint action.
  * \value DeleteEndpointConfigAction SageMaker DeleteEndpointConfig action.
  * \value DeleteModelAction SageMaker DeleteModel action.
@@ -58,6 +59,7 @@ namespace SageMaker {
  * \value DescribeNotebookInstanceAction SageMaker DescribeNotebookInstance action.
  * \value DescribeNotebookInstanceLifecycleConfigAction SageMaker DescribeNotebookInstanceLifecycleConfig action.
  * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
+ * \value DescribeTransformJobAction SageMaker DescribeTransformJob action.
  * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
  * \value ListEndpointsAction SageMaker ListEndpoints action.
  * \value ListHyperParameterTuningJobsAction SageMaker ListHyperParameterTuningJobs action.
@@ -67,10 +69,12 @@ namespace SageMaker {
  * \value ListTagsAction SageMaker ListTags action.
  * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
  * \value ListTrainingJobsForHyperParameterTuningJobAction SageMaker ListTrainingJobsForHyperParameterTuningJob action.
+ * \value ListTransformJobsAction SageMaker ListTransformJobs action.
  * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
  * \value StopHyperParameterTuningJobAction SageMaker StopHyperParameterTuningJob action.
  * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
  * \value StopTrainingJobAction SageMaker StopTrainingJob action.
+ * \value StopTransformJobAction SageMaker StopTransformJob action.
  * \value UpdateEndpointAction SageMaker UpdateEndpoint action.
  * \value UpdateEndpointWeightsAndCapacitiesAction SageMaker UpdateEndpointWeightsAndCapacities action.
  * \value UpdateNotebookInstanceAction SageMaker UpdateNotebookInstance action.

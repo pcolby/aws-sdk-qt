@@ -39,8 +39,11 @@ namespace Polly {
  * \value DeleteLexiconAction Polly DeleteLexicon action.
  * \value DescribeVoicesAction Polly DescribeVoices action.
  * \value GetLexiconAction Polly GetLexicon action.
+ * \value GetSpeechSynthesisTaskAction Polly GetSpeechSynthesisTask action.
  * \value ListLexiconsAction Polly ListLexicons action.
+ * \value ListSpeechSynthesisTasksAction Polly ListSpeechSynthesisTasks action.
  * \value PutLexiconAction Polly PutLexicon action.
+ * \value StartSpeechSynthesisTaskAction Polly StartSpeechSynthesisTask action.
  * \value SynthesizeSpeechAction Polly SynthesizeSpeech action.
  */
 

@@ -180,6 +180,10 @@ HEADERS += \
     listindexrequest_p.h \
     listindexresponse.h \
     listindexresponse_p.h \
+    listmanagedschemaarnsrequest.h \
+    listmanagedschemaarnsrequest_p.h \
+    listmanagedschemaarnsresponse.h \
+    listmanagedschemaarnsresponse_p.h \
     listobjectattributesrequest.h \
     listobjectattributesrequest_p.h \
     listobjectattributesresponse.h \
@@ -363,6 +367,8 @@ SOURCES += \
     listincomingtypedlinksresponse.cpp \
     listindexrequest.cpp \
     listindexresponse.cpp \
+    listmanagedschemaarnsrequest.cpp \
+    listmanagedschemaarnsresponse.cpp \
     listobjectattributesrequest.cpp \
     listobjectattributesresponse.cpp \
     listobjectchildrenrequest.cpp \

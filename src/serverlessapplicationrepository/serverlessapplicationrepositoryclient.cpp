@@ -172,7 +172,7 @@ CreateApplicationVersionResponse * ServerlessApplicationRepositoryClient::create
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS CloudFormation ChangeSet for the given
+ * Creates an AWS CloudFormation change set for the given
  */
 CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::createCloudFormationChangeSet(const CreateCloudFormationChangeSetRequest &request)
 {
@@ -211,7 +211,7 @@ GetApplicationResponse * ServerlessApplicationRepositoryClient::getApplication(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the policy for the specified
+ * Retrieves the policy for the
  */
 GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplicationPolicy(const GetApplicationPolicyRequest &request)
 {
@@ -250,7 +250,9 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Puts the policy for the specified
+ * Sets the permission policy for an application. See <a
+ * href="https://docs.aws.amazon.com/serverlessrepo/latest/devguide/access-control-resource-based.html#application-permissions">Application
+ * Permissions</a> for the list of supported actions that can be used with this
  */
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {

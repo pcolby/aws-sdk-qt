@@ -42,12 +42,18 @@ namespace MediaLive {
  * \value DeleteChannelAction MediaLive DeleteChannel action.
  * \value DeleteInputAction MediaLive DeleteInput action.
  * \value DeleteInputSecurityGroupAction MediaLive DeleteInputSecurityGroup action.
+ * \value DeleteReservationAction MediaLive DeleteReservation action.
  * \value DescribeChannelAction MediaLive DescribeChannel action.
  * \value DescribeInputAction MediaLive DescribeInput action.
  * \value DescribeInputSecurityGroupAction MediaLive DescribeInputSecurityGroup action.
+ * \value DescribeOfferingAction MediaLive DescribeOffering action.
+ * \value DescribeReservationAction MediaLive DescribeReservation action.
  * \value ListChannelsAction MediaLive ListChannels action.
  * \value ListInputSecurityGroupsAction MediaLive ListInputSecurityGroups action.
  * \value ListInputsAction MediaLive ListInputs action.
+ * \value ListOfferingsAction MediaLive ListOfferings action.
+ * \value ListReservationsAction MediaLive ListReservations action.
+ * \value PurchaseOfferingAction MediaLive PurchaseOffering action.
  * \value StartChannelAction MediaLive StartChannel action.
  * \value StopChannelAction MediaLive StopChannel action.
  * \value UpdateChannelAction MediaLive UpdateChannel action.

@@ -50,6 +50,7 @@ namespace Snowball {
  * \value GetSnowballUsageAction Snowball GetSnowballUsage action.
  * \value ListClusterJobsAction Snowball ListClusterJobs action.
  * \value ListClustersAction Snowball ListClusters action.
+ * \value ListCompatibleImagesAction Snowball ListCompatibleImages action.
  * \value ListJobsAction Snowball ListJobs action.
  * \value UpdateClusterAction Snowball UpdateCluster action.
  * \value UpdateJobAction Snowball UpdateJob action.

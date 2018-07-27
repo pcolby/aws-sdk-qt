@@ -38,12 +38,15 @@ namespace SecretsManager {
  *
  * \value CancelRotateSecretAction SecretsManager CancelRotateSecret action.
  * \value CreateSecretAction SecretsManager CreateSecret action.
+ * \value DeleteResourcePolicyAction SecretsManager DeleteResourcePolicy action.
  * \value DeleteSecretAction SecretsManager DeleteSecret action.
  * \value DescribeSecretAction SecretsManager DescribeSecret action.
  * \value GetRandomPasswordAction SecretsManager GetRandomPassword action.
+ * \value GetResourcePolicyAction SecretsManager GetResourcePolicy action.
  * \value GetSecretValueAction SecretsManager GetSecretValue action.
  * \value ListSecretVersionIdsAction SecretsManager ListSecretVersionIds action.
  * \value ListSecretsAction SecretsManager ListSecrets action.
+ * \value PutResourcePolicyAction SecretsManager PutResourcePolicy action.
  * \value PutSecretValueAction SecretsManager PutSecretValue action.
  * \value RestoreSecretAction SecretsManager RestoreSecret action.
  * \value RotateSecretAction SecretsManager RotateSecret action.

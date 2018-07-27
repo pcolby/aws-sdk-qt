@@ -102,6 +102,14 @@ HEADERS += \
     describeactivationsrequest_p.h \
     describeactivationsresponse.h \
     describeactivationsresponse_p.h \
+    describeassociationexecutionsrequest.h \
+    describeassociationexecutionsrequest_p.h \
+    describeassociationexecutionsresponse.h \
+    describeassociationexecutionsresponse_p.h \
+    describeassociationexecutiontargetsrequest.h \
+    describeassociationexecutiontargetsrequest_p.h \
+    describeassociationexecutiontargetsresponse.h \
+    describeassociationexecutiontargetsresponse_p.h \
     describeassociationrequest.h \
     describeassociationrequest_p.h \
     describeassociationresponse.h \
@@ -270,6 +278,10 @@ HEADERS += \
     getpatchbaselinerequest_p.h \
     getpatchbaselineresponse.h \
     getpatchbaselineresponse_p.h \
+    labelparameterversionrequest.h \
+    labelparameterversionrequest_p.h \
+    labelparameterversionresponse.h \
+    labelparameterversionresponse_p.h \
     listassociationsrequest.h \
     listassociationsrequest_p.h \
     listassociationsresponse.h \
@@ -368,6 +380,10 @@ HEADERS += \
     ssmrequest_p.h \
     ssmresponse.h \
     ssmresponse_p.h \
+    startassociationsoncerequest.h \
+    startassociationsoncerequest_p.h \
+    startassociationsonceresponse.h \
+    startassociationsonceresponse_p.h \
     startautomationexecutionrequest.h \
     startautomationexecutionrequest_p.h \
     startautomationexecutionresponse.h \
@@ -460,6 +476,10 @@ SOURCES += \
     deregistertaskfrommaintenancewindowresponse.cpp \
     describeactivationsrequest.cpp \
     describeactivationsresponse.cpp \
+    describeassociationexecutionsrequest.cpp \
+    describeassociationexecutionsresponse.cpp \
+    describeassociationexecutiontargetsrequest.cpp \
+    describeassociationexecutiontargetsresponse.cpp \
     describeassociationrequest.cpp \
     describeassociationresponse.cpp \
     describeautomationexecutionsrequest.cpp \
@@ -544,6 +564,8 @@ SOURCES += \
     getpatchbaselineforpatchgroupresponse.cpp \
     getpatchbaselinerequest.cpp \
     getpatchbaselineresponse.cpp \
+    labelparameterversionrequest.cpp \
+    labelparameterversionresponse.cpp \
     listassociationsrequest.cpp \
     listassociationsresponse.cpp \
     listassociationversionsrequest.cpp \
@@ -593,6 +615,8 @@ SOURCES += \
     ssmclient.cpp \
     ssmrequest.cpp \
     ssmresponse.cpp \
+    startassociationsoncerequest.cpp \
+    startassociationsonceresponse.cpp \
     startautomationexecutionrequest.cpp \
     startautomationexecutionresponse.cpp \
     stopautomationexecutionrequest.cpp \

@@ -49,10 +49,12 @@ public:
         DeleteFleetAction,
         DeleteImageAction,
         DeleteImageBuilderAction,
+        DeleteImagePermissionsAction,
         DeleteStackAction,
         DescribeDirectoryConfigsAction,
         DescribeFleetsAction,
         DescribeImageBuildersAction,
+        DescribeImagePermissionsAction,
         DescribeImagesAction,
         DescribeSessionsAction,
         DescribeStacksAction,
@@ -69,6 +71,7 @@ public:
         UntagResourceAction,
         UpdateDirectoryConfigAction,
         UpdateFleetAction,
+        UpdateImagePermissionsAction,
         UpdateStackAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

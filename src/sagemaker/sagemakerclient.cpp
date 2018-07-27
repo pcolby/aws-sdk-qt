@@ -39,6 +39,8 @@
 #include "createpresignednotebookinstanceurlresponse.h"
 #include "createtrainingjobrequest.h"
 #include "createtrainingjobresponse.h"
+#include "createtransformjobrequest.h"
+#include "createtransformjobresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteendpointconfigrequest.h"
@@ -65,6 +67,8 @@
 #include "describenotebookinstancelifecycleconfigresponse.h"
 #include "describetrainingjobrequest.h"
 #include "describetrainingjobresponse.h"
+#include "describetransformjobrequest.h"
+#include "describetransformjobresponse.h"
 #include "listendpointconfigsrequest.h"
 #include "listendpointconfigsresponse.h"
 #include "listendpointsrequest.h"
@@ -83,6 +87,8 @@
 #include "listtrainingjobsresponse.h"
 #include "listtrainingjobsforhyperparametertuningjobrequest.h"
 #include "listtrainingjobsforhyperparametertuningjobresponse.h"
+#include "listtransformjobsrequest.h"
+#include "listtransformjobsresponse.h"
 #include "startnotebookinstancerequest.h"
 #include "startnotebookinstanceresponse.h"
 #include "stophyperparametertuningjobrequest.h"
@@ -91,6 +97,8 @@
 #include "stopnotebookinstanceresponse.h"
 #include "stoptrainingjobrequest.h"
 #include "stoptrainingjobresponse.h"
+#include "stoptransformjobrequest.h"
+#include "stoptransformjobresponse.h"
 #include "updateendpointrequest.h"
 #include "updateendpointresponse.h"
 #include "updateendpointweightsandcapacitiesrequest.h"
@@ -231,6 +239,15 @@ AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
  *
  * For an example, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/ex1.html">Exercise 1: Using the K-Means
  * Algorithm Provided by Amazon SageMaker</a>.
+ *
+ * </p
+ *
+ * If any of the models hosted at this endpoint get model data from an Amazon S3 location, Amazon SageMaker uses AWS
+ * Security Token Service to download model artifacts from the S3 path you provided. AWS STS is activated in your IAM user
+ * account by default. If you previously deactivated AWS STS for a region, you need to reactivate AWS STS for that region.
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ * Deactivating AWS STS i an AWS Region</a> in the <i>AWS Identity and Access Management User
  */
 CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointRequest &request)
 {
@@ -494,6 +511,53 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateTransformJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a transform job. After the results are obtained, Amazon SageMaker saves them to an Amazon S3 location that you
+ *
+ * specify>
+ *
+ * To perform batch transformations, you create a transform job and use the data that you have readily
+ *
+ * available>
+ *
+ * In the request body, you provide the
+ *
+ * following> <ul> <li>
+ *
+ * <code>TransformJobName</code> - Identifies the transform job. The name must be unique within an AWS Region in an AWS
+ *
+ * account> </li> <li>
+ *
+ * <code>ModelName</code> - Identifies the model to
+ *
+ * use> </li> <li>
+ *
+ * <code>TransformInput</code> - Describes the dataset to be transformed and the Amazon S3 location where it is
+ *
+ * stored> </li> <li>
+ *
+ * <code>TransformOutput</code> - Identifies the Amazon S3 location where you want Amazon SageMaker to save the results
+ * from the transform
+ *
+ * job> </li> <li>
+ *
+ * <code>TransformResources</code> - Identifies the ML compute instances for the transform
+ *
+ * job> </li> </ul>
+ *
+ * For more information about how batch transformation works Amazon SageMaker, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html">How It Works</a>.
+ */
+CreateTransformJobResponse * SageMakerClient::createTransformJob(const CreateTransformJobRequest &request)
+{
+    return qobject_cast<CreateTransformJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DeleteEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -680,6 +744,19 @@ DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const Describ
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeTransformJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a transform
+ */
+DescribeTransformJobResponse * SageMakerClient::describeTransformJob(const DescribeTransformJobRequest &request)
+{
+    return qobject_cast<DescribeTransformJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListEndpointConfigsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -710,7 +787,8 @@ ListEndpointsResponse * SageMakerClient::listEndpoints(const ListEndpointsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of objects that describe the hyperparameter tuning jobs launched in your
+ * Gets a list of <a>HyperParameterTuningJobSummary</a> objects that describe the hyperparameter tuning jobs launched in
+ * your
  */
 ListHyperParameterTuningJobsResponse * SageMakerClient::listHyperParameterTuningJobs(const ListHyperParameterTuningJobsRequest &request)
 {
@@ -737,7 +815,7 @@ ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists notebook instance lifestyle configurations created with the
+ * Lists notebook instance lifestyle configurations created with the <a>CreateNotebookInstanceLifecycleConfig</a>
  */
 ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInstanceLifecycleConfigs(const ListNotebookInstanceLifecycleConfigsRequest &request)
 {
@@ -789,11 +867,24 @@ ListTrainingJobsResponse * SageMakerClient::listTrainingJobs(const ListTrainingJ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of objects that describe the training jobs that a hyperparameter tuning job
+ * Gets a list of <a>TrainingJobSummary</a> objects that describe the training jobs that a hyperparameter tuning job
  */
 ListTrainingJobsForHyperParameterTuningJobResponse * SageMakerClient::listTrainingJobsForHyperParameterTuningJob(const ListTrainingJobsForHyperParameterTuningJobRequest &request)
 {
     return qobject_cast<ListTrainingJobsForHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListTransformJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists transform
+ */
+ListTransformJobsResponse * SageMakerClient::listTransformJobs(const ListTransformJobsRequest &request)
+{
+    return qobject_cast<ListTransformJobsResponse *>(send(request));
 }
 
 /*!
@@ -822,7 +913,7 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
  * launched>
  *
  * All model artifacts output from the training jobs are stored in Amazon Simple Storage Service (Amazon S3). All data that
- * the training jobs write toAmazon CloudWatch Logs are still available in CloudWatch. After the tuning job moves to the
+ * the training jobs write to Amazon CloudWatch Logs are still available in CloudWatch. After the tuning job moves to the
  * <code>Stopped</code> state, it releases all reserved resources for the tuning
  */
 StopHyperParameterTuningJobResponse * SageMakerClient::stopHyperParameterTuningJob(const StopHyperParameterTuningJobRequest &request)
@@ -878,6 +969,25 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopTransformJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a transform
+ *
+ * job>
+ *
+ * When Amazon SageMaker receives a <code>StopTransformJob</code> request, the status of the job changes to
+ * <code>Stopping</code>. After Amazon SageMaker stops the job, the status is set to <code>Stopped</code>. When you stop a
+ * transform job before it is completed, Amazon SageMaker doesn't store the job's output in Amazon
+ */
+StopTransformJobResponse * SageMakerClient::stopTransformJob(const StopTransformJobRequest &request)
+{
+    return qobject_cast<StopTransformJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * UpdateEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -891,6 +1001,10 @@ StopTrainingJobResponse * SageMakerClient::stopTrainingJob(const StopTrainingJob
  * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the
  * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the <a
  * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
+ *
+ * </p <note>
+ *
+ * You cannot update an endpoint with the current <code>EndpointConfig</code>. To update an endpoint, you must create a new
  */
 UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -934,7 +1048,7 @@ UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const U
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a notebook instance lifecycle configuration created with the
+ * Updates a notebook instance lifecycle configuration created with the <a>CreateNotebookInstanceLifecycleConfig</a>
  */
 UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookInstanceLifecycleConfig(const UpdateNotebookInstanceLifecycleConfigRequest &request)
 {

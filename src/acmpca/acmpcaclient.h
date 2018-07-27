@@ -52,6 +52,8 @@ class ListCertificateAuthoritiesRequest;
 class ListCertificateAuthoritiesResponse;
 class ListTagsRequest;
 class ListTagsResponse;
+class RestoreCertificateAuthorityRequest;
+class RestoreCertificateAuthorityResponse;
 class RevokeCertificateRequest;
 class RevokeCertificateResponse;
 class TagCertificateAuthorityRequest;
@@ -89,6 +91,7 @@ public slots:
     IssueCertificateResponse * issueCertificate(const IssueCertificateRequest &request);
     ListCertificateAuthoritiesResponse * listCertificateAuthorities(const ListCertificateAuthoritiesRequest &request);
     ListTagsResponse * listTags(const ListTagsRequest &request);
+    RestoreCertificateAuthorityResponse * restoreCertificateAuthority(const RestoreCertificateAuthorityRequest &request);
     RevokeCertificateResponse * revokeCertificate(const RevokeCertificateRequest &request);
     TagCertificateAuthorityResponse * tagCertificateAuthority(const TagCertificateAuthorityRequest &request);
     UntagCertificateAuthorityResponse * untagCertificateAuthority(const UntagCertificateAuthorityRequest &request);

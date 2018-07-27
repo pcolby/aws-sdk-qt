@@ -51,7 +51,6 @@ public:
         DeleteFieldLevelEncryptionConfigAction,
         DeleteFieldLevelEncryptionProfileAction,
         DeletePublicKeyAction,
-        DeleteServiceLinkedRoleAction,
         DeleteStreamingDistributionAction,
         GetCloudFrontOriginAccessIdentityAction,
         GetCloudFrontOriginAccessIdentityConfigAction,

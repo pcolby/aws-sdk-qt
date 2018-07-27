@@ -78,12 +78,24 @@ HEADERS += \
     listqueuesrequest_p.h \
     listqueuesresponse.h \
     listqueuesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     mediaconvertclient.h \
     mediaconvertclient_p.h \
     mediaconvertrequest.h \
     mediaconvertrequest_p.h \
     mediaconvertresponse.h \
     mediaconvertresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatejobtemplaterequest.h \
     updatejobtemplaterequest_p.h \
     updatejobtemplateresponse.h \
@@ -132,9 +144,15 @@ SOURCES += \
     listpresetsresponse.cpp \
     listqueuesrequest.cpp \
     listqueuesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     mediaconvertclient.cpp \
     mediaconvertrequest.cpp \
     mediaconvertresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatejobtemplaterequest.cpp \
     updatejobtemplateresponse.cpp \
     updatepresetrequest.cpp \

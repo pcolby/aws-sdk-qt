@@ -64,6 +64,10 @@ HEADERS += \
     listtagsrequest_p.h \
     listtagsresponse.h \
     listtagsresponse_p.h \
+    restorecertificateauthorityrequest.h \
+    restorecertificateauthorityrequest_p.h \
+    restorecertificateauthorityresponse.h \
+    restorecertificateauthorityresponse_p.h \
     revokecertificaterequest.h \
     revokecertificaterequest_p.h \
     revokecertificateresponse.h \
@@ -109,6 +113,8 @@ SOURCES += \
     listcertificateauthoritiesresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
+    restorecertificateauthorityrequest.cpp \
+    restorecertificateauthorityresponse.cpp \
     revokecertificaterequest.cpp \
     revokecertificateresponse.cpp \
     tagcertificateauthorityrequest.cpp \

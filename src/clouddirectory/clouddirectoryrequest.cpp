@@ -77,6 +77,7 @@ namespace CloudDirectory {
  * \value ListFacetNamesAction CloudDirectory ListFacetNames action.
  * \value ListIncomingTypedLinksAction CloudDirectory ListIncomingTypedLinks action.
  * \value ListIndexAction CloudDirectory ListIndex action.
+ * \value ListManagedSchemaArnsAction CloudDirectory ListManagedSchemaArns action.
  * \value ListObjectAttributesAction CloudDirectory ListObjectAttributes action.
  * \value ListObjectChildrenAction CloudDirectory ListObjectChildren action.
  * \value ListObjectParentPathsAction CloudDirectory ListObjectParentPaths action.

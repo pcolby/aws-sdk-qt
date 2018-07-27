@@ -47,6 +47,7 @@ namespace EFS {
  * \value DescribeMountTargetsAction EFS DescribeMountTargets action.
  * \value DescribeTagsAction EFS DescribeTags action.
  * \value ModifyMountTargetSecurityGroupsAction EFS ModifyMountTargetSecurityGroups action.
+ * \value UpdateFileSystemAction EFS UpdateFileSystem action.
  */
 
 /*!

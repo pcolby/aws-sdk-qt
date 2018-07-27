@@ -220,9 +220,9 @@ RekognitionClient::RekognitionClient(
  *
  * persist> </note>
  *
- * For an example, see
+ * For an example, see Comparing Faces in Images in the Amazon Rekognition Developer
  *
- * <a>faces-compare-images</a>>
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:CompareFaces</code>
  */
@@ -268,8 +268,8 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
  *
  * video>
  *
- * Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. Rekognition Video sends analysis
- * results to Amazon Kinesis Data
+ * Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. Amazon Rekognition Video sends
+ * analysis results to Amazon Kinesis Data
  *
  * Streams>
  *
@@ -384,10 +384,6 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  *
  * data> </note>
  *
- * For an example, see
- *
- * <a>procedure-detecting-faces-in-images</a>>
- *
  * This operation requires permissions to perform the <code>rekognition:DetectFaces</code> action.
  */
 DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &request)
@@ -403,14 +399,18 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  *
  * Detects instances of real-world entities within an image (JPEG or PNG) provided as input. This includes objects like
  * flower, tree, and table; events like wedding, graduation, and birthday party; and concepts like landscape, evening, and
- * nature. For an example, see
+ * nature.
  *
- * <a>images-s3</a>> <note>
+ * </p
+ *
+ * For an example, see Analyzing Images Stored in an Amazon S3 Bucket in the Amazon Rekognition Developer
+ *
+ * Guide> <note>
  *
  * <code>DetectLabels</code> does not support the detection of activities. However, activity detection is supported for
- * label detection in videos. For more information, see
+ * label detection in videos. For more information, see StartLabelDetection in the Amazon Rekognition Developer
  *
- * > </note>
+ * Guide> </note>
  *
  * You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use
  * the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a
@@ -493,9 +493,12 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  * content>
  *
  * To filter images, use the labels returned by <code>DetectModerationLabels</code> to determine which types of content are
- * appropriate. For information about moderation labels, see
  *
- * <a>moderation</a>>
+ * appropriate>
+ *
+ * For information about moderation labels, see Detecting Unsafe Content in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
  * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
@@ -550,7 +553,7 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
  *
  * axis>
  *
- * For more information, see
+ * For more information, see DetectText in the Amazon Rekognition Developer
  */
 DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &request)
 {
@@ -565,9 +568,12 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
  *
  * Gets the name and additional information about a celebrity based on his or her Rekognition ID. The additional
  * information is returned as an array of URLs. If there is no additional information about the celebrity, this list is
- * empty. For more information, see
  *
- * <a>get-celebrity-info-procedure</a>>
+ * empty>
+ *
+ * For more information, see Recognizing Celebrities in an Image in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:GetCelebrityInfo</code> action.
  */
@@ -582,19 +588,22 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the celebrity recognition results for a Rekognition Video analysis started by
+ * Gets the celebrity recognition results for a Amazon Rekognition Video analysis started by
  *
  * >
  *
  * Celebrity recognition in a video is an asynchronous operation. Analysis is started by a call to which returns a job
- * identifier (<code>JobId</code>). When the celebrity recognition operation finishes, Rekognition Video publishes a
+ * identifier (<code>JobId</code>). When the celebrity recognition operation finishes, Amazon Rekognition Video publishes a
  * completion status to the Amazon Simple Notification Service topic registered in the initial call to
  * <code>StartCelebrityRecognition</code>. To get the results of the celebrity recognition analysis, first check that the
  * status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call <code>GetCelebrityDetection</code>
- * and pass the job identifier (<code>JobId</code>) from the initial call to <code>StartCelebrityDetection</code>. For more
- * information, see
+ * and pass the job identifier (<code>JobId</code>) from the initial call to <code>StartCelebrityDetection</code>.
  *
- * <a>video</a>>
+ * </p
+ *
+ * For more information, see Working With Stored Videos in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * <code>GetCelebrityRecognition</code> returns detected celebrities and the time(s) they are detected in an array
  * (<code>Celebrities</code>) of objects. Each <code>CelebrityRecognition</code> contains information about the celebrity
@@ -605,7 +614,7 @@ GetCelebrityInfoResponse * RekognitionClient::getCelebrityInfo(const GetCelebrit
  * <code>GetCelebrityRecognition</code> only returns the default facial attributes (<code>BoundingBox</code>,
  * <code>Confidence</code>, <code>Landmarks</code>, <code>Pose</code>, and <code>Quality</code>). The other facial
  * attributes listed in the <code>Face</code> object of the following response syntax are not returned. For more
- * information, see .
+ * information, see FaceDetail in the Amazon Rekognition Developer Guide.
  *
  * </p </note>
  *
@@ -639,18 +648,22 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the content moderation analysis results for a Rekognition Video analysis started by
+ * Gets the content moderation analysis results for a Amazon Rekognition Video analysis started by
  *
  * >
  *
  * Content moderation analysis of a video is an asynchronous operation. You start analysis by calling . which returns a job
- * identifier (<code>JobId</code>). When analysis finishes, Rekognition Video publishes a completion status to the Amazon
- * Simple Notification Service topic registered in the initial call to <code>StartContentModeration</code>. To get the
- * results of the content moderation analysis, first check that the status value published to the Amazon SNS topic is
+ * identifier (<code>JobId</code>). When analysis finishes, Amazon Rekognition Video publishes a completion status to the
+ * Amazon Simple Notification Service topic registered in the initial call to <code>StartContentModeration</code>. To get
+ * the results of the content moderation analysis, first check that the status value published to the Amazon SNS topic is
  * <code>SUCCEEDED</code>. If so, call <code>GetCelebrityDetection</code> and pass the job identifier (<code>JobId</code>)
- * from the initial call to <code>StartCelebrityDetection</code>. For more information, see <a>video</a>.
+ * from the initial call to <code>StartCelebrityDetection</code>.
  *
  * </p
+ *
+ * For more information, see Working with Stored Videos in the Amazon Rekognition Devlopers
+ *
+ * Guide>
  *
  * <code>GetContentModeration</code> returns detected content moderation labels, and the time they are detected, in an
  * array, <code>ModerationLabels</code>, of objects.
@@ -670,7 +683,7 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * <code>GetContentModeration</code>>
  *
- * For more information, see
+ * For more information, see Detecting Unsafe Content in the Amazon Rekognition Developer
  */
 GetContentModerationResponse * RekognitionClient::getContentModeration(const GetContentModerationRequest &request)
 {
@@ -683,13 +696,13 @@ GetContentModerationResponse * RekognitionClient::getContentModeration(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets face detection results for a Rekognition Video analysis started by
+ * Gets face detection results for a Amazon Rekognition Video analysis started by
  *
  * >
  *
- * Face detection with Rekognition Video is an asynchronous operation. You start face detection by calling which returns a
- * job identifier (<code>JobId</code>). When the face detection operation finishes, Rekognition Video publishes a
- * completion status to the Amazon Simple Notification Service topic registered in the initial call to
+ * Face detection with Amazon Rekognition Video is an asynchronous operation. You start face detection by calling which
+ * returns a job identifier (<code>JobId</code>). When the face detection operation finishes, Amazon Rekognition Video
+ * publishes a completion status to the Amazon Simple Notification Service topic registered in the initial call to
  * <code>StartFaceDetection</code>. To get the results of the face detection operation, first check that the status value
  * published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier
  * (<code>JobId</code>) from the initial call to
@@ -717,19 +730,23 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the face search results for Rekognition Video face search started by . The search returns faces in a collection
- * that match the faces of persons detected in a video. It also includes the time(s) that faces are matched in the
+ * Gets the face search results for Amazon Rekognition Video face search started by . The search returns faces in a
+ * collection that match the faces of persons detected in a video. It also includes the time(s) that faces are matched in
+ * the
  *
  * video>
  *
  * Face search in a video is an asynchronous operation. You start face search by calling to which returns a job identifier
- * (<code>JobId</code>). When the search operation finishes, Rekognition Video publishes a completion status to the Amazon
- * Simple Notification Service topic registered in the initial call to <code>StartFaceSearch</code>. To get the search
- * results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call
- * <code>GetFaceSearch</code> and pass the job identifier (<code>JobId</code>) from the initial call to
- * <code>StartFaceSearch</code>. For more information, see
+ * (<code>JobId</code>). When the search operation finishes, Amazon Rekognition Video publishes a completion status to the
+ * Amazon Simple Notification Service topic registered in the initial call to <code>StartFaceSearch</code>. To get the
+ * search results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so,
+ * call <code>GetFaceSearch</code> and pass the job identifier (<code>JobId</code>) from the initial call to
  *
- * <a>collections</a>>
+ * <code>StartFaceSearch</code>>
+ *
+ * For more information, see Searching Faces in a Collection in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * The search results are retured in an array, <code>Persons</code>, of objects. Each<code>PersonMatch</code> element
  * contains details about the matching faces in the input collection, person information (facial attributes, bounding
@@ -740,7 +757,7 @@ GetFaceDetectionResponse * RekognitionClient::getFaceDetection(const GetFaceDete
  * <code>GetFaceSearch</code> only returns the default facial attributes (<code>BoundingBox</code>,
  * <code>Confidence</code>, <code>Landmarks</code>, <code>Pose</code>, and <code>Quality</code>). The other facial
  * attributes listed in the <code>Face</code> object of the following response syntax are not returned. For more
- * information, see .
+ * information, see FaceDetail in the Amazon Rekognition Developer Guide.
  *
  * </p </note>
  *
@@ -758,7 +775,7 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the label detection results of a Rekognition Video analysis started by .
+ * Gets the label detection results of a Amazon Rekognition Video analysis started by .
  *
  * </p
  *
@@ -796,13 +813,13 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the person tracking results of a Rekognition Video analysis started by
+ * Gets the person tracking results of a Amazon Rekognition Video analysis started by
  *
  * >
  *
  * The person detection operation is started by a call to <code>StartPersonTracking</code> which returns a job identifier
- * (<code>JobId</code>). When the person detection operation finishes, Rekognition Video publishes a completion status to
- * the Amazon Simple Notification Service topic registered in the initial call to
+ * (<code>JobId</code>). When the person detection operation finishes, Amazon Rekognition Video publishes a completion
+ * status to the Amazon Simple Notification Service topic registered in the initial call to
  *
  * <code>StartPersonTracking</code>>
  *
@@ -818,10 +835,13 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  *
  * <code>GetPersonTracking</code> only returns the default facial attributes (<code>BoundingBox</code>,
  * <code>Confidence</code>, <code>Landmarks</code>, <code>Pose</code>, and <code>Quality</code>). The other facial
- * attributes listed in the <code>Face</code> object of the following response syntax are not returned. For more
- * information, see .
+ * attributes listed in the <code>Face</code> object of the following response syntax are not returned.
  *
- * </p </note>
+ * </p
+ *
+ * For more information, see FaceDetail in the Amazon Rekognition Developer
+ *
+ * Guide> </note>
  *
  * By default, the array is sorted by the time(s) a person is tracked in the video. You can sort by tracked persons by
  * specifying <code>INDEX</code> for the <code>SortBy</code> input
@@ -859,9 +879,13 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  * If you are using version 1.0 of the face detection model, <code>IndexFaces</code> indexes the 15 largest faces in the
  * input image. Later versions of the face detection model index the 100 largest faces in the input image. To determine
  * which version of the model you are using, check the the value of <code>FaceModelVersion</code> in the response from
- * <code>IndexFaces</code>. For more information, see
+ * <code>IndexFaces</code>.
  *
- * <a>face-detection-model</a>>
+ * </p
+ *
+ * For more information, see Model Versioning in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * If you provide the optional <code>ExternalImageID</code> for the input image you provided, Amazon Rekognition associates
  * this ID with all faces that it detects. When you call the operation, the response returns the external ID. You can use
@@ -876,9 +900,13 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  * facial attributes (using the <code>detectionAttributes</code> parameter, Amazon Rekognition returns detailed facial
  * attributes such as facial landmarks (for example, location of eye and mount) and other facial attributes such gender. If
  * you provide the same image, specify the same collection, and use the same external ID in the <code>IndexFaces</code>
- * operation, Amazon Rekognition doesn't save duplicate face metadata.
+ * operation, Amazon Rekognition doesn't save duplicate face
  *
- * </p
+ * metadata>
+ *
+ * For more information, see Adding Faces to a Collection in the Amazon Rekognition Developer
+ *
+ * Guide>
  *
  * The input image is passed either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
  * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
@@ -904,9 +932,9 @@ IndexFacesResponse * RekognitionClient::indexFaces(const IndexFacesRequest &requ
  *
  * IDs>
  *
- * For an example, see
+ * For an example, see Listing Collections in the Amazon Rekognition Developer
  *
- * <a>list-collection-procedure</a>>
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:ListCollections</code>
  */
@@ -922,10 +950,10 @@ ListCollectionsResponse * RekognitionClient::listCollections(const ListCollectio
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns metadata for faces in the specified collection. This metadata includes information such as the bounding box
- * coordinates, the confidence (that the bounding box contains a face), and face ID. For an example, see
- * <a>list-faces-in-collection-procedure</a>.
+ * coordinates, the confidence (that the bounding box contains a face), and face ID. For an example, see Listing Faces in a
+ * Collection in the Amazon Rekognition Developer
  *
- * </p
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:ListFaces</code>
  */
@@ -953,7 +981,8 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of celebrities recognized in the input image. For more information, see <a>celebrities</a>.
+ * Returns an array of celebrities recognized in the input image. For more information, see Recognizing Celebrities in the
+ * Amazon Rekognition Developer Guide.
  *
  * </p
  *
@@ -982,9 +1011,9 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  *
  * </p
  *
- * For an example, see
+ * For an example, see Recognizing Celebrities in an Image in the Amazon Rekognition Developer
  *
- * <a>celebrities-procedure-image</a>>
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:RecognizeCelebrities</code>
  */
@@ -1016,9 +1045,9 @@ RecognizeCelebritiesResponse * RekognitionClient::recognizeCelebrities(const Rec
  *
  * </p
  *
- * For an example, see
+ * For an example, see Searching for a Face Using Its Face ID in the Amazon Rekognition Developer
  *
- * <a>search-face-with-id-procedure</a>>
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFaces</code>
  */
@@ -1062,9 +1091,9 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  *
  * </p
  *
- * For an example, see
+ * For an example, Searching for a Face Using an Image in the Amazon Rekognition Developer
  *
- * <a>search-face-with-image-procedure</a>>
+ * Guide>
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFacesByImage</code>
  */
@@ -1083,13 +1112,17 @@ SearchFacesByImageResponse * RekognitionClient::searchFacesByImage(const SearchF
  *
  * video>
  *
- * Rekognition Video can detect celebrities in a video must be stored in an Amazon S3 bucket. Use <a>Video</a> to specify
- * the bucket name and the filename of the video. <code>StartCelebrityRecognition</code> returns a job identifier
+ * Amazon Rekognition Video can detect celebrities in a video must be stored in an Amazon S3 bucket. Use <a>Video</a> to
+ * specify the bucket name and the filename of the video. <code>StartCelebrityRecognition</code> returns a job identifier
  * (<code>JobId</code>) which you use to get the results of the analysis. When celebrity recognition analysis is finished,
- * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in
- * <code>NotificationChannel</code>. To get the results of the celebrity recognition analysis, first check that the status
- * value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier
- * (<code>JobId</code>) from the initial call to <code>StartCelebrityRecognition</code>. For more information, see
+ * Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify
+ * in <code>NotificationChannel</code>. To get the results of the celebrity recognition analysis, first check that the
+ * status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier
+ * (<code>JobId</code>) from the initial call to <code>StartCelebrityRecognition</code>.
+ *
+ * </p
+ *
+ * For more information, see Recognizing Celebrities in the Amazon Rekognition Developer
  */
 StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition(const StartCelebrityRecognitionRequest &request)
 {
@@ -1106,16 +1139,21 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  *
  * video>
  *
- * Rekognition Video can moderate content in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the bucket
- * name and the filename of the video. <code>StartContentModeration</code> returns a job identifier (<code>JobId</code>)
- * which you use to get the results of the analysis. When content moderation analysis is finished, Rekognition Video
- * publishes a completion status to the Amazon Simple Notification Service topic that you specify in
+ * Amazon Rekognition Video can moderate content in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
+ * bucket name and the filename of the video. <code>StartContentModeration</code> returns a job identifier
+ * (<code>JobId</code>) which you use to get the results of the analysis. When content moderation analysis is finished,
+ * Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify
+ * in
  *
  * <code>NotificationChannel</code>>
  *
  * To get the results of the content moderation analysis, first check that the status value published to the Amazon SNS
  * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
- * <code>StartContentModeration</code>. For more information, see
+ * <code>StartContentModeration</code>.
+ *
+ * </p
+ *
+ * For more information, see Detecting Unsafe Content in the Amazon Rekognition Developer
  */
 StartContentModerationResponse * RekognitionClient::startContentModeration(const StartContentModerationRequest &request)
 {
@@ -1132,13 +1170,16 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  *
  * video>
  *
- * Rekognition Video can detect faces in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the bucket name
- * and the filename of the video. <code>StartFaceDetection</code> returns a job identifier (<code>JobId</code>) that you
- * use to get the results of the operation. When face detection is finished, Rekognition Video publishes a completion
- * status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>. To get the
- * results of the label detection operation, first check that the status value published to the Amazon SNS topic is
- * <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
- * <code>StartFaceDetection</code>. For more information, see
+ * Amazon Rekognition Video can detect faces in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
+ * bucket name and the filename of the video. <code>StartFaceDetection</code> returns a job identifier (<code>JobId</code>)
+ * that you use to get the results of the operation. When face detection is finished, Amazon Rekognition Video publishes a
+ * completion status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>.
+ * To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic
+ * is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
+ *
+ * <code>StartFaceDetection</code>>
+ *
+ * For more information, see Detecting Faces in a Stored Video in the Amazon Rekognition Developer
  */
 StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFaceDetectionRequest &request)
 {
@@ -1157,10 +1198,10 @@ StartFaceDetectionResponse * RekognitionClient::startFaceDetection(const StartFa
  *
  * The video must be stored in an Amazon S3 bucket. Use <a>Video</a> to specify the bucket name and the filename of the
  * video. <code>StartFaceSearch</code> returns a job identifier (<code>JobId</code>) which you use to get the search
- * results once the search has completed. When searching is finished, Rekognition Video publishes a completion status to
- * the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>. To get the search
- * results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call and
- * pass the job identifier (<code>JobId</code>) from the initial call to <code>StartFaceSearch</code>. For more
+ * results once the search has completed. When searching is finished, Amazon Rekognition Video publishes a completion
+ * status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>. To get the
+ * search results, first check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so,
+ * call and pass the job identifier (<code>JobId</code>) from the initial call to <code>StartFaceSearch</code>. For more
  * information, see
  */
 StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSearchRequest &request)
@@ -1178,16 +1219,16 @@ StartFaceSearchResponse * RekognitionClient::startFaceSearch(const StartFaceSear
  *
  * video>
  *
- * Rekognition Video can detect labels in a video. Labels are instances of real-world entities. This includes objects like
- * flower, tree, and table; events like wedding, graduation, and birthday party; concepts like landscape, evening, and
- * nature; and activities like a person getting out of a car or a person
+ * Amazon Rekognition Video can detect labels in a video. Labels are instances of real-world entities. This includes
+ * objects like flower, tree, and table; events like wedding, graduation, and birthday party; concepts like landscape,
+ * evening, and nature; and activities like a person getting out of a car or a person
  *
  * skiing>
  *
  * The video must be stored in an Amazon S3 bucket. Use <a>Video</a> to specify the bucket name and the filename of the
  * video. <code>StartLabelDetection</code> returns a job identifier (<code>JobId</code>) which you use to get the results
- * of the operation. When label detection is finished, Rekognition Video publishes a completion status to the Amazon Simple
- * Notification Service topic that you specify in
+ * of the operation. When label detection is finished, Amazon Rekognition Video publishes a completion status to the Amazon
+ * Simple Notification Service topic that you specify in
  *
  * <code>NotificationChannel</code>>
  *
@@ -1209,10 +1250,11 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
  *
  * video>
  *
- * Rekognition Video can track persons in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the bucket
- * name and the filename of the video. <code>StartPersonTracking</code> returns a job identifier (<code>JobId</code>) which
- * you use to get the results of the operation. When label detection is finished, Amazon Rekognition publishes a completion
- * status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>.
+ * Amazon Rekognition Video can track persons in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
+ * bucket name and the filename of the video. <code>StartPersonTracking</code> returns a job identifier
+ * (<code>JobId</code>) which you use to get the results of the operation. When label detection is finished, Amazon
+ * Rekognition publishes a completion status to the Amazon Simple Notification Service topic that you specify in
+ * <code>NotificationChannel</code>.
  *
  * </p
  *

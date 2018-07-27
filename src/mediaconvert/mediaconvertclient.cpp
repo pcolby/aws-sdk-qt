@@ -55,6 +55,12 @@
 #include "listpresetsresponse.h"
 #include "listqueuesrequest.h"
 #include "listqueuesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatejobtemplaterequest.h"
 #include "updatejobtemplateresponse.h"
 #include "updatepresetrequest.h"
@@ -351,6 +357,44 @@ ListPresetsResponse * MediaConvertClient::listPresets(const ListPresetsRequest &
 ListQueuesResponse * MediaConvertClient::listQueues(const ListQueuesRequest &request)
 {
     return qobject_cast<ListQueuesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * MediaConvertClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tag a MediaConvert queue, preset, or job template. For information about these resource types, see the User Guide at
+ */
+TagResourceResponse * MediaConvertClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Untag a MediaConvert queue, preset, or job template. For information about these resource types, see the User Guide at
+ */
+UntagResourceResponse * MediaConvertClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

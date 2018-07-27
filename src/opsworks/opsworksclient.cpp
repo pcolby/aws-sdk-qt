@@ -467,7 +467,7 @@ AttachElasticLoadBalancerResponse * OpsWorksClient::attachElasticLoadBalancer(co
  * stack>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 CloneStackResponse * OpsWorksClient::cloneStack(const CloneStackRequest &request)
@@ -575,7 +575,7 @@ CreateLayerResponse * OpsWorksClient::createLayer(const CreateLayerRequest &requ
  * Stack</a>>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &request)
@@ -594,7 +594,7 @@ CreateStackResponse * OpsWorksClient::createStack(const CreateStackRequest &requ
  * profile>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 CreateUserProfileResponse * OpsWorksClient::createUserProfile(const CreateUserProfileRequest &request)
@@ -699,7 +699,7 @@ DeleteStackResponse * OpsWorksClient::deleteStack(const DeleteStackRequest &requ
  * profile>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DeleteUserProfileResponse * OpsWorksClient::deleteUserProfile(const DeleteUserProfileRequest &request)
@@ -754,7 +754,7 @@ DeregisterElasticIpResponse * OpsWorksClient::deregisterElasticIp(const Deregist
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deregister a registered Amazon EC2 or on-premises instance. This action removes the instance from the stack and returns
- * it to your control. This action can not be used with instances that were created with AWS OpsWorks
+ * it to your control. This action cannot be used with instances that were created with AWS OpsWorks
  *
  * Stacks>
  *
@@ -835,7 +835,7 @@ DescribeAgentVersionsResponse * OpsWorksClient::describeAgentVersions(const Desc
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &request)
@@ -858,7 +858,7 @@ DescribeAppsResponse * OpsWorksClient::describeApps(const DescribeAppsRequest &r
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeCommandsRequest &request)
@@ -881,7 +881,7 @@ DescribeCommandsResponse * OpsWorksClient::describeCommands(const DescribeComman
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const DescribeDeploymentsRequest &request)
@@ -902,7 +902,7 @@ DescribeDeploymentsResponse * OpsWorksClient::describeDeployments(const Describe
  * element>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack or an attached policy that explicitly grants permission. For more information on user permissions, see <a
+ * the stack or an attached policy that explicitly grants permission. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
  * Permissions</a>>
@@ -929,7 +929,7 @@ DescribeEcsClustersResponse * OpsWorksClient::describeEcsClusters(const Describe
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeElasticIpsRequest &request)
@@ -952,7 +952,7 @@ DescribeElasticIpsResponse * OpsWorksClient::describeElasticIps(const DescribeEl
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalancers(const DescribeElasticLoadBalancersRequest &request)
@@ -975,7 +975,7 @@ DescribeElasticLoadBalancersResponse * OpsWorksClient::describeElasticLoadBalanc
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInstancesRequest &request)
@@ -998,7 +998,7 @@ DescribeInstancesResponse * OpsWorksClient::describeInstances(const DescribeInst
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequest &request)
@@ -1021,7 +1021,7 @@ DescribeLayersResponse * OpsWorksClient::describeLayers(const DescribeLayersRequ
  * parameters> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScaling(const DescribeLoadBasedAutoScalingRequest &request)
@@ -1040,7 +1040,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  * information>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have self-management enabled or an attached policy
- * that explicitly grants permissions. For more information on user permissions, see <a
+ * that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
@@ -1095,7 +1095,7 @@ DescribePermissionsResponse * OpsWorksClient::describePermissions(const Describe
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRaidArraysRequest &request)
@@ -1114,7 +1114,7 @@ DescribeRaidArraysResponse * OpsWorksClient::describeRaidArrays(const DescribeRa
  * instances>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
  * Permissions</a>>
@@ -1137,7 +1137,7 @@ DescribeRdsDbInstancesResponse * OpsWorksClient::describeRdsDbInstances(const De
  * errors>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  *
  * Permissions</a>>
@@ -1160,7 +1160,7 @@ DescribeServiceErrorsResponse * OpsWorksClient::describeServiceErrors(const Desc
  * parameters>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvisioningParameters(const DescribeStackProvisioningParametersRequest &request)
@@ -1180,7 +1180,7 @@ DescribeStackProvisioningParametersResponse * OpsWorksClient::describeStackProvi
  * <code>online</code>>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const DescribeStackSummaryRequest &request)
@@ -1199,7 +1199,7 @@ DescribeStackSummaryResponse * OpsWorksClient::describeStackSummary(const Descri
  * stacks>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequest &request)
@@ -1222,7 +1222,7 @@ DescribeStacksResponse * OpsWorksClient::describeStacks(const DescribeStacksRequ
  * parameters> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScaling(const DescribeTimeBasedAutoScalingRequest &request)
@@ -1241,7 +1241,7 @@ DescribeTimeBasedAutoScalingResponse * OpsWorksClient::describeTimeBasedAutoScal
  * users>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const DescribeUserProfilesRequest &request)
@@ -1264,7 +1264,7 @@ DescribeUserProfilesResponse * OpsWorksClient::describeUserProfiles(const Descri
  * parameter> </note>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Show, Deploy, or Manage permissions level for
- * the stack, or an attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * the stack, or an attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 DescribeVolumesResponse * OpsWorksClient::describeVolumes(const DescribeVolumesRequest &request)
@@ -1670,14 +1670,14 @@ TagResourceResponse * OpsWorksClient::tagResource(const TagResourceRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Unassigns a registered instance from all of it's layers. The instance remains in the stack as an unassigned instance and
- * can be assigned to another layer, as needed. You cannot use this action with instances that were created with AWS
- * OpsWorks
+ * Unassigns a registered instance from all layers that are using the instance. The instance remains in the stack as an
+ * unassigned instance, and can be assigned to another layer as needed. You cannot use this action with instances that were
+ * created with AWS OpsWorks
  *
  * Stacks>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have a Manage permissions level for the stack or an
- * attached policy that explicitly grants permissions. For more information on user permissions, see <a
+ * attached policy that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 UnassignInstanceResponse * OpsWorksClient::unassignInstance(const UnassignInstanceRequest &request)
@@ -1806,7 +1806,7 @@ UpdateLayerResponse * OpsWorksClient::updateLayer(const UpdateLayerRequest &requ
  * key>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have self-management enabled or an attached policy
- * that explicitly grants permissions. For more information on user permissions, see <a
+ * that explicitly grants permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 UpdateMyUserProfileResponse * OpsWorksClient::updateMyUserProfile(const UpdateMyUserProfileRequest &request)
@@ -1863,7 +1863,7 @@ UpdateStackResponse * OpsWorksClient::updateStack(const UpdateStackRequest &requ
  * profile>
  *
  * <b>Required Permissions</b>: To use this action, an IAM user must have an attached policy that explicitly grants
- * permissions. For more information on user permissions, see <a
+ * permissions. For more information about user permissions, see <a
  * href="http://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing User
  */
 UpdateUserProfileResponse * OpsWorksClient::updateUserProfile(const UpdateUserProfileRequest &request)

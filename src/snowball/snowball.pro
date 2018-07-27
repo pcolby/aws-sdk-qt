@@ -66,6 +66,10 @@ HEADERS += \
     listclustersrequest_p.h \
     listclustersresponse.h \
     listclustersresponse_p.h \
+    listcompatibleimagesrequest.h \
+    listcompatibleimagesrequest_p.h \
+    listcompatibleimagesresponse.h \
+    listcompatibleimagesresponse_p.h \
     listjobsrequest.h \
     listjobsrequest_p.h \
     listjobsresponse.h \
@@ -114,6 +118,8 @@ SOURCES += \
     listclusterjobsresponse.cpp \
     listclustersrequest.cpp \
     listclustersresponse.cpp \
+    listcompatibleimagesrequest.cpp \
+    listcompatibleimagesresponse.cpp \
     listjobsrequest.cpp \
     listjobsresponse.cpp \
     snowballclient.cpp \

@@ -72,10 +72,6 @@ HEADERS += \
     deletepublickeyrequest_p.h \
     deletepublickeyresponse.h \
     deletepublickeyresponse_p.h \
-    deleteservicelinkedrolerequest.h \
-    deleteservicelinkedrolerequest_p.h \
-    deleteservicelinkedroleresponse.h \
-    deleteservicelinkedroleresponse_p.h \
     deletestreamingdistributionrequest.h \
     deletestreamingdistributionrequest_p.h \
     deletestreamingdistributionresponse.h \
@@ -233,8 +229,6 @@ SOURCES += \
     deletefieldlevelencryptionprofileresponse.cpp \
     deletepublickeyrequest.cpp \
     deletepublickeyresponse.cpp \
-    deleteservicelinkedrolerequest.cpp \
-    deleteservicelinkedroleresponse.cpp \
     deletestreamingdistributionrequest.cpp \
     deletestreamingdistributionresponse.cpp \
     getcloudfrontoriginaccessidentityconfigrequest.cpp \

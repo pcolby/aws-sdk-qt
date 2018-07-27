@@ -645,7 +645,7 @@ DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrives detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires <a
+ * Retrieves detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires <a
  * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html">enhanced health
  */
 DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealth(const DescribeInstancesHealthRequest &request)

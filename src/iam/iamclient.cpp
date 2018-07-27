@@ -86,6 +86,8 @@
 #include "deletepolicyversionresponse.h"
 #include "deleterolerequest.h"
 #include "deleteroleresponse.h"
+#include "deleterolepermissionsboundaryrequest.h"
+#include "deleterolepermissionsboundaryresponse.h"
 #include "deleterolepolicyrequest.h"
 #include "deleterolepolicyresponse.h"
 #include "deletesamlproviderrequest.h"
@@ -102,6 +104,8 @@
 #include "deletesigningcertificateresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
+#include "deleteuserpermissionsboundaryrequest.h"
+#include "deleteuserpermissionsboundaryresponse.h"
 #include "deleteuserpolicyrequest.h"
 #include "deleteuserpolicyresponse.h"
 #include "deletevirtualmfadevicerequest.h"
@@ -208,8 +212,12 @@
 #include "listvirtualmfadevicesresponse.h"
 #include "putgrouppolicyrequest.h"
 #include "putgrouppolicyresponse.h"
+#include "putrolepermissionsboundaryrequest.h"
+#include "putrolepermissionsboundaryresponse.h"
 #include "putrolepolicyrequest.h"
 #include "putrolepolicyresponse.h"
+#include "putuserpermissionsboundaryrequest.h"
+#include "putuserpermissionsboundaryresponse.h"
 #include "putuserpolicyrequest.h"
 #include "putuserpolicyresponse.h"
 #include "removeclientidfromopenidconnectproviderrequest.h"
@@ -1170,6 +1178,24 @@ DeleteRoleResponse * IamClient::deleteRole(const DeleteRoleRequest &request)
 
 /*!
  * Sends \a request to the IamClient service, and returns a pointer to an
+ * DeleteRolePermissionsBoundaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the permissions boundary for the specified IAM role.
+ *
+ * </p <b>
+ *
+ * Deleting the permissions boundary for a role might increase its permissions by allowing anyone who assumes the role to
+ * perform all the actions granted in its permissions policies.
+ */
+DeleteRolePermissionsBoundaryResponse * IamClient::deleteRolePermissionsBoundary(const DeleteRolePermissionsBoundaryRequest &request)
+{
+    return qobject_cast<DeleteRolePermissionsBoundaryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
  * DeleteRolePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1337,6 +1363,24 @@ DeleteSigningCertificateResponse * IamClient::deleteSigningCertificate(const Del
 DeleteUserResponse * IamClient::deleteUser(const DeleteUserRequest &request)
 {
     return qobject_cast<DeleteUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * DeleteUserPermissionsBoundaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the permissions boundary for the specified IAM
+ *
+ * user> <b>
+ *
+ * Deleting the permissions boundary for a user might increase its permissions by allowing the user to perform all the
+ * actions granted in its permissions policies.
+ */
+DeleteUserPermissionsBoundaryResponse * IamClient::deleteUserPermissionsBoundary(const DeleteUserPermissionsBoundaryRequest &request)
+{
+    return qobject_cast<DeleteUserPermissionsBoundaryResponse *>(send(request));
 }
 
 /*!
@@ -2529,6 +2573,32 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
 
 /*!
  * Sends \a request to the IamClient service, and returns a pointer to an
+ * PutRolePermissionsBoundaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates the policy that is specified as the IAM role's permissions boundary. You can use an AWS managed policy
+ * or a customer managed policy to set the boundary for a role. Use the boundary to control the maximum permissions that
+ * the role can have. Setting a permissions boundary is an advanced feature that can affect the permissions for the
+ *
+ * role>
+ *
+ * You cannot set the boundary for a service-linked role.
+ *
+ * </p <b>
+ *
+ * Policies used as permissions boundaries do not provide permissions. You must also attach a permissions policy to the
+ * role. To learn how the effective permissions for a role are evaluated, see <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html">IAM JSON Policy
+ * Evaluation Logic</a> in the IAM User Guide.
+ */
+PutRolePermissionsBoundaryResponse * IamClient::putRolePermissionsBoundary(const PutRolePermissionsBoundaryRequest &request)
+{
+    return qobject_cast<PutRolePermissionsBoundaryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
  * PutRolePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2566,6 +2636,28 @@ PutGroupPolicyResponse * IamClient::putGroupPolicy(const PutGroupPolicyRequest &
 PutRolePolicyResponse * IamClient::putRolePolicy(const PutRolePolicyRequest &request)
 {
     return qobject_cast<PutRolePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IamClient service, and returns a pointer to an
+ * PutUserPermissionsBoundaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates the policy that is specified as the IAM user's permissions boundary. You can use an AWS managed policy
+ * or a customer managed policy to set the boundary for a user. Use the boundary to control the maximum permissions that
+ * the user can have. Setting a permissions boundary is an advanced feature that can affect the permissions for the
+ *
+ * user> <b>
+ *
+ * Policies that are used as permissions boundaries do not provide permissions. You must also attach a permissions policy
+ * to the user. To learn how the effective permissions for a user are evaluated, see <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html">IAM JSON Policy
+ * Evaluation Logic</a> in the IAM User Guide.
+ */
+PutUserPermissionsBoundaryResponse * IamClient::putUserPermissionsBoundary(const PutUserPermissionsBoundaryRequest &request)
+{
+    return qobject_cast<PutUserPermissionsBoundaryResponse *>(send(request));
 }
 
 /*!
@@ -3049,7 +3141,7 @@ UpdateServerCertificateResponse * IamClient::updateServerCertificate(const Updat
  *
  * Sets the status of a service-specific credential to <code>Active</code> or <code>Inactive</code>. Service-specific
  * credentials that are inactive cannot be used for authentication to the service. This operation can be used to disable a
- * user’s service-specific credential as part of a credential rotation work
+ * user's service-specific credential as part of a credential rotation work
  */
 UpdateServiceSpecificCredentialResponse * IamClient::updateServiceSpecificCredential(const UpdateServiceSpecificCredentialRequest &request)
 {

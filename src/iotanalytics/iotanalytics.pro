@@ -104,6 +104,10 @@ HEADERS += \
     listpipelinesrequest_p.h \
     listpipelinesresponse.h \
     listpipelinesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     putloggingoptionsrequest.h \
     putloggingoptionsrequest_p.h \
     putloggingoptionsresponse.h \
@@ -120,6 +124,14 @@ HEADERS += \
     startpipelinereprocessingrequest_p.h \
     startpipelinereprocessingresponse.h \
     startpipelinereprocessingresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatechannelrequest.h \
     updatechannelrequest_p.h \
     updatechannelresponse.h \
@@ -185,6 +197,8 @@ SOURCES += \
     listdatastoresresponse.cpp \
     listpipelinesrequest.cpp \
     listpipelinesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     putloggingoptionsrequest.cpp \
     putloggingoptionsresponse.cpp \
     runpipelineactivityrequest.cpp \
@@ -193,6 +207,10 @@ SOURCES += \
     samplechanneldataresponse.cpp \
     startpipelinereprocessingrequest.cpp \
     startpipelinereprocessingresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatechannelrequest.cpp \
     updatechannelresponse.cpp \
     updatedatasetrequest.cpp \
